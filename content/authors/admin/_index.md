@@ -69,4 +69,4 @@ user_groups:
 
 Greetings! My name is Krisna. I am a PhD student at Crawford School of Public Policy, the Australian National University (ANU), Canberra. My research is about trade and investment policy and how it affects Indonesian firms. I use some structured equation such as GTAP model, but also do some empirics like gravity models.
 
- I use this website as a place to store my CV. I also ocassionally writes (check out posts tab) in english but mostly in Indonesian. 
+ I use this website as a place to store my CV. I also ocassionally writes (check out posts tab) in english but mostly in Indonesian with mostly serious content. I do sarcasm on twitter so do follow (tweets in Indonesian, mostly). Lastly, I use this site to post my musical hobby. Don't click hobby unless you are prepared to hear some crappy voice. I warned you.
