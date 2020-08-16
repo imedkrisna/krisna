@@ -5,8 +5,8 @@ headless = true  # This file represents a page section.
 active = true  # Activate this widget? true/false
 weight = 40  # Order that this section will appear.
 
-title = "Experience"
-subtitle = ""
+title = "Teaching Experience"
+subtitle = "and some other work experiences"
 
 # Date format for experience
 #   Refer to https://sourcethemes.com/academic/docs/customization/#date-format
@@ -18,27 +18,36 @@ date_format = "Jan 2006"
 #   Leave `date_end` empty if it's your current employer.
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
 [[experience]]
-  title = "CEO"
-  company = "GenCoin"
-  company_url = ""
-  location = "California"
-  date_start = "2017-01-01"
+  title = "Tutor"
+  company = "Australian National University"
+  company_url = "https://www.cbe.anu.edu.au/"
+  location = "Canberra"
+  date_start = "2017-08-01"
   date_end = ""
   description = """
-  Responsibilities include:
+  Courses I tutored:
   
-  * Analysing
-  * Modelling
-  * Deploying
+  * POLS3025 Contemporary Political Analysis, using STATA in political analyses (2017)
+  * ECON3101 Microeconomics 3 (2018-2020)
+  * ECON2102 Macroeconomics 2 (2019)
+  * EMET3008 Applied Macro and Financial Econometrics (2020)
   """
 
 [[experience]]
-  title = "Professor"
-  company = "University X"
+  title = "Lecturer"
+  company = "Politeknik APP Jakarta"
   company_url = ""
-  location = "California"
+  location = "Jakarta"
   date_start = "2016-01-01"
   date_end = "2016-12-31"
-  description = """Taught electronic engineering and researched semiconductor physics."""
+  description = """Taught business statistics."""
 
+[[experience]]
+  title = "Junior Staff"
+  company = "Ministry of Industry, Republic of Indonesia"
+  company_url = "https://kemenperin.go.id/"
+  location = "Jakarta"
+  date_start = "2010-03-01"
+  date_end = "2015-08-31"
+  description = """Administering planning and budgetting documents"""
 +++
