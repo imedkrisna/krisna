@@ -1,6 +1,8 @@
 ---
 title: "Krisna Gupta's CV"
-output: pdf_document
+output: 
+  pdf_document:
+    highlight: tango
 ---
 
 ```{r setup, include=FALSE}
