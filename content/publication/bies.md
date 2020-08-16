@@ -13,7 +13,6 @@ featured: true
 draft: false
 publication_types: "2"
 publication: "*Bulletin of Indonesian Economic Studies*"
-url: "https://doi-org.virtual.anu.edu.au/10.1080/00074918.2020.1747596"
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.
 # Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
