@@ -22,14 +22,14 @@ tags:
 - Economics
 - Kebijakan
 title: "The Importance of Financial Liberalisation to Economic Growth: The Case of Indonesia"
-url_code: '#'
-url_dataset: '#'
-url_pdf: '#'
-url_poster: '#'
+url_code: ''
+url_dataset: ''
+url_pdf: ''
+url_poster: ''
 url_project: ""
 url_slides: ""
-url_source: '#'
-url_video: '#'
+url_source: ''
+url_video: ''
 ---
 
 <a href="https://www.scimagojr.com/journalsearch.php?q=19966&amp;tip=sid&amp;exact=no" title="SCImago Journal &amp; Country Rank"><img border="0" src="https://www.scimagojr.com/journal_img.php?id=19966" alt="SCImago Journal &amp; Country Rank"  />test</a>
