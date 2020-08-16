@@ -16,8 +16,8 @@ height = "300px"
 # Slides.
 # Duplicate an `[[item]]` block to add more slides.
 [[item]]
-  title = "Hello"
-  content = " Greetings! I use this website as a place to store my CV. I also ocassionally writes (check out posts tab) in english but mostly in Indonesian with mostly serious content."
+  title = "Welcome to my page!"
+  content = "I use this website as a place to store my CV. I also ocassionally writes (check out posts tab) in english but mostly in Indonesian with mostly serious content. This page is powered by hugo academic theme"
   align = "center"  # Choose `center`, `left`, or `right`.
 
   # Overlay a color or image (optional).
@@ -35,7 +35,7 @@ height = "300px"
   cta_icon = "graduation-cap"
 
 [[item]]
-  title = "Left"
+  title = "I tweets"
   content = " I do sarcasm on twitter so do follow (tweets in Indonesian, mostly). Lastly, I use this site to post my musical hobby"
   align = "center"
 
@@ -44,7 +44,7 @@ height = "300px"
   overlay_filter = 0.5  # Darken the image. Value in range 0-1.
 
 [[item]]
-  title = "Right"
+  title = "I also store hobby in this page"
   content = "Don't click hobby unless you are prepared to hear some crappy voice. I warned you."
   align = "right"
 
