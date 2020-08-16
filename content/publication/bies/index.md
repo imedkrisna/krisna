@@ -13,7 +13,7 @@ links:
 - name: Custom Link
   url: https://www-tandfonline-com.virtual.anu.edu.au/doi/full/10.1080/00074918.2020.1747596
 publication: "Bulletin of Indonesian Economic Studies"
-publication_short: ""
+publication_short: "BIES"
 publication_types:
 - "3"
 publishDate: "2020-04-07T00:00:00Z"
