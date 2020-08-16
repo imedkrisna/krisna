@@ -3,7 +3,7 @@ abstract: Indonesia has been struggling to return to its pre-Asian Financial Cri
 authors:
 - admin
 date: "2020-04-07T00:00:00Z"
-doi: "https://doi-org.virtual.anu.edu.au/10.1080/00074918.2020.1747596"
+doi: "https://doi-org/10.1080/00074918.2020.1747596"
 featured: true
 image:
   caption: 'Image credit: [**Unsplash**](https://unsplash.com/photos/s9CC2SKySJM)'
@@ -17,8 +17,7 @@ publication_short: ""
 publication_types:
 - "3"
 publishDate: "2020-04-07T00:00:00Z"
-summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus
-  ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum.
+summary: In this article, I examine Indonesia's experience with capital account liberalisation. To be successful in fulfilling its development plan, capital access become essential.
 tags:
 - Economics
 - Kebijakan
@@ -33,4 +32,4 @@ url_source: '#'
 url_video: '#'
 ---
 
-<a href="https://www.scimagojr.com/journalsearch.php?q=19966&amp;tip=sid&amp;exact=no" title="SCImago Journal &amp; Country Rank"><img border="0" src="https://www.scimagojr.com/journal_img.php?id=19966" alt="SCImago Journal &amp; Country Rank"  /></a>
+<a href="https://www.scimagojr.com/journalsearch.php?q=19966&amp;tip=sid&amp;exact=no" title="SCImago Journal &amp; Country Rank"><img border="0" src="https://www.scimagojr.com/journal_img.php?id=19966" alt="SCImago Journal &amp; Country Rank"  />test</a>
