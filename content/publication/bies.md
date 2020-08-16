@@ -4,12 +4,12 @@
 title: "The Importance of Financial Liberalisation to Economic Growth"
 subtitle: "The Case of Indonesia"
 summary: ""
-authors: [Krisna Gupta]
-tags: []
-categories: []
-date: 2020-08-16T21:17:57+10:00
-lastmod: 2020-08-16T21:17:57+10:00
-featured: false
+authors: admin
+tags: [publication]
+categories: [economics, kebijakan]
+date: '2020-08-16T21:17:57+10:00'
+lastmod: '2020-08-16T21:17:57+10:00'
+featured: true
 draft: false
 publication_types: "2"
 publication: "*Bulletin of Indonesian Economic Studies*"
@@ -29,3 +29,5 @@ image:
 #   Otherwise, set `projects = []`.
 projects: []
 ---
+My pre-print at 
+<a href="https://www.scimagojr.com/journalsearch.php?q=19966&amp;tip=sid&amp;exact=no" title="SCImago Journal &amp; Country Rank"><img border="0" src="https://www.scimagojr.com/journal_img.php?id=19966" alt="SCImago Journal &amp; Country Rank"  />Bulletin of Indonesian Economic Studies</a>

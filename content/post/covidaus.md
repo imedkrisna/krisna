@@ -3,6 +3,8 @@ layout: post
 title: "Aku, Canberra, dan COVID-19"
 categories: [blog]
 tags: [coronavirus COVID-19]
+date: '2020-03-19'
+author: admin
 ---
 
 Hae gais. Dah lama banget saya gak *update* blog. Kesibukan lagi agak menggila nih. Semua gara-gara COVID-19.

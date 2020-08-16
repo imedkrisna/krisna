@@ -3,6 +3,8 @@ layout: post
 title: Mencari hubungan antara anggaran Kementerian dengan growth industri
 categories: [blog]
 tags: [Economics]
+date: '2020-03-05'
+author: admin
 ---
 
 Hai semua. Pada postingan kali ini, saya akan melanjutkan postingan saya sebelumnya [tentang Kebijakan Industri](imedkrisna.github.io/evaluasi/) yang mengatakan bahwa untuk memajukan industri manufaktur, Indonesia butuh lebih dari sekedar Kementerian Perindustrian. Jangan-jangan target yang diusung Kementerian Perindustrian agak terlalu makro alias kurang spesifik?

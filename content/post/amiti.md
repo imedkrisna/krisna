@@ -1,9 +1,10 @@
 ---
 layout: post
 title: Amiti and Konings 2007
-author: amiti2007
+author: admin
 category: [blog]
 tags: [Review]
+date: '2020-02-25'
 ---
 Sebenarnya udah lama sih mau ngeblogin review papernya {% assign author = site.data.article[page.author] %}
 <a rel="author"

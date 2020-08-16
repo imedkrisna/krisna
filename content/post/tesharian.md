@@ -3,7 +3,9 @@ layout: post
 title: "Jumlah tes COVID-19 per hari di Indonesia"
 categories: [blog]
 tags: [coronavirus COVID-19]
-
+author: admin
+date: '2020-05-31'
+slug: tesharian
 ---
 
 Sepertinya pemerintah semakin semangat menyongsong “New Normal” dan mulai membuka ekonominya. Telah beredar buku pedoman bagaimana menghadapi “New Normal” [dari BPOM](https://investor.id/lifestyle/bpom-menerbitkan-buku-panduan-lengkap-covid19). Berita bahwa mal akan dibuka santer beredar di mana-mana (tapi katanya [summarecon mal bekasi gak jadi buka](https://metro.tempo.co/read/1346375/ini-agenda-presiden-jokowi-ke-bekasi-siang-ini-bukan-buka-mal) ntahlah akupun bingung). Ekonomi akan kembali bergeliat!

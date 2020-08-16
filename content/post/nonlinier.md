@@ -3,6 +3,8 @@ layout: post
 title: Belajar estimasi non-linear Constant Elasticity of Substitution (CES) pakai ADMB
 categories: [blog]
 tags: [Economics]
+date: '2020-02-27'
+author: admin
 ---
 
 baru-baru ini saya menemukan software gratisan bernama ADMB. Software ini fungsinya untuk mengestimasi regresi non-linear. Saya perlu estimasi regresi non-linear untuk dapet parameter elastisitas yang bukan 1.

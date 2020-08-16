@@ -3,6 +3,8 @@ layout: post
 title: "Unboxing IA-CEPA: How Will It Affect Indonesia on Trade and Beyond?"
 category: [blog]
 tags: [Kebijakan, English]
+date: '2020-02-19'
+author: admin
 ---
 
 

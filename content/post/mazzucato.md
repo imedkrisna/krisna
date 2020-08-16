@@ -3,6 +3,8 @@ layout: post
 title: "The Value of Everything: Sebuah Ulasan"
 categories: [blog]
 tags: [Review]
+date: '2020-05-07'
+author: admin
 ---
 
 Belum lama ini, saya menyelesaikan salah satu buku yang rame banget di kalangan ekonom, yaitu "The Value of Everything: Making and Taking in the Global Economy" karangan bu [Mariana Mazzucato](https://marianamazzucato.com/publications/books/value-of-everything/). Menurut saya, melalui buku ini, Bu Mazzucato berusaha menyediakan kritik terhadap kapitalisme (atau, secara umum, "marginalists view"), tanpa mengatakan bahwa kapitalisme adalah sistem yang gagal.

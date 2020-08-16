@@ -1,9 +1,10 @@
 ---
 layout: post
 title: Thorbecke 2019
-author: thorbecke2019
 category: [blog]
 tags: [Review]
+date: '2020-02-25'
+author: admin
 ---
 Untuk postingan review paper pertama, saya akan coba pake papernya {% assign author = site.data.article[page.author] %}
 <a rel="author"

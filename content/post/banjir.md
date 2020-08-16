@@ -3,6 +3,8 @@ layout: post
 title: "Kebakaran dan Kebanjiran: Sebuah Pelajaran"
 category: [blog]
 tags: [Sosial Ekonomi]
+date: '2020-01-12'
+author: admin
 ---
 
 Australia sedang berduka. Kebakaran hebat melanda di benua ini, tepatnya di provinsi New South Wales (NSW), yang sekarang merambat ke Victoria juga. Kebakaran kali ini luasnya sampai jutaan hektar, sebuah rekor baru. Korban jiwa mencapai puluhan orang dan kerugian aset penduduk mencapai ratusan ribu dolar.

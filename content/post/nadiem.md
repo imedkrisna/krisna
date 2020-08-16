@@ -3,6 +3,8 @@ layout: post
 title: Sebuah Catatan Tentang Kampus Merdeka-nya Mas Menteri
 Categories: blog
 tags: [Kebijakan]
+date: '2020-01-31'
+author: admin
 ---
 
 Belum lama ini channel youtube Kementerian Pendidikan dan Kebudayaan meluncurkan video baru, yaitu presentasi Menteri Nadiem Makarim tentang Kampus Merdeka. Bagi saya, Kementerian Pendidikan dan Kebudayaan adalah kementerian paling penting dari semua kementerian yang ada. Selain karena duitnya banyak, mereka adalah Kementerian yang mengatur masa depan kita. Bagi saya, sebuah bangsa hanya akan menjadi sebesar apa yang mereka ajarkan ke anak-anaknya. Anak-anak ini adalah masa depan kita. Oleh karena itu, ketika Jokowi mengumumkan nama Nadiem sebagai Mendikbud, saya lumayan *excited*.

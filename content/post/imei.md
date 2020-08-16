@@ -3,6 +3,8 @@ layout: post
 title: "Perang Melawan Ponsel Ilegal: Implikasi Kebijakan TKDN?"
 categories: [blog]
 tags: [Kebijakan]
+date: '2020-03-02'
+author: admin
 ---
 
 DISCLAIMER: Tulisan ini bersifat murni pendapat pribadi penulis, ditulis iseng-iseng aja, tanpa mewakili pandangan institusi manapun.

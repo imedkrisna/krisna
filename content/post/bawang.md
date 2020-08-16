@@ -3,6 +3,8 @@ layout: post
 title: "Pelajaran dari Kisruh Impor Bawang: Quota Impor Sebagai Kebijakan Proteksi Petani"
 categories: [blog]
 tags: [Kebijakan]
+date: '2020-03-02'
+author: admin
 ---
 
 Baru-baru ini netijen dihebohkan oleh berita [OTT kasus penyuapan impor bawang putih](https://beritagar.id/artikel-amp/berita/urus-impor-bawang-putih-nyoman-minta-imbalan-rp36-m?__twitter_impression=true). Beritagar lumayan detil mendokumentasikan kasus ini, dan setiap reportase mereka menurut saya pribadi sangat menarik untuk dibaca. OTT tersebut berhasil mendapatkan bukti transfer sebesar 2 milyar rupiah dari total deal sebesar “…Rp3,6 miliar dan imbalan komitmen Rp1.700 — Rp1.800 dari setiap kg bawang putih yang diimpor”. Gile ye, 2 milyar kalo dibeliin bubur ayam bisa buat anak cucu tuh!

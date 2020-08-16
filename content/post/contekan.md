@@ -3,6 +3,8 @@ layout: post
 title: "Sumber-sumber contekan belajar"
 categories: [blog]
 tags: [Macem-macem]
+date: '2020-08-10'
+author: admin
 ---
 
 Postingan ini khusus buat contekan belajaran waktu nyoba-nyoba. Akan coba dibagi berdasarkan program. Contekan ini akan diupdate terus sambil saya belajaran.

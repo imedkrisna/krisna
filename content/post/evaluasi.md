@@ -3,6 +3,8 @@ layout: post
 title: Target Pembangunan Industri Menurut Kebijakan Industri
 categories: [blog]
 tags: [Kebijakan]
+date: '2020-02-27'
+author: admin
 ---
 
 Perencanaan adalah hal yang penting. Seperti kata pepatah:

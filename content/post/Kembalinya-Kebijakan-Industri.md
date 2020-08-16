@@ -3,6 +3,8 @@ layout: post
 title: Kembalinya Kebijakan Industri
 Categories: blog
 tags: [Kebijakan]
+author: admin
+date: '2020-01-04'
 ---
 
 Liberalisasi tidak untuk semua. Kebijakan serba liberalisasi mendapatkan tekanan setelah dianggap menjadi penyebab baik krisis finansial Asia pada tahun 1998, maupun kemudian krisis finansial global pada tahun 2008. Asumsi pasar sempurna yang menjadi basis argumen kebijakan liberalisasi finansial langsung patah begitu terjadi kedua krisis tersebut. 

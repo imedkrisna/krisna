@@ -3,6 +3,8 @@ layout: post
 title: "Kebijakan Perdagangan Indonesia di tengah COVID-19"
 categories: [blog]
 tags: [coronavirus COVID-19]
+date: '2020-04-15'
+author: admin
 ---
 
 Hari ini saya lihat di twitter sebuah kerisauan atas berita tentang di kompas online. Beritanya berbunyi bahwa [Indonesia akan tetap mengekspor Alat Pelindung Diri (APD)](https://nasional.kompas.com/read/2020/04/14/19223961/menkeu-sebut-ri-tetap-ekspor-apd-tanpa-kurangi-kebutuhan-dalam-negeri). Konteksnya, apalagi kalau bukan COVID-19: di tengah pecahnya pandemi, Indonesia sendiri membutuhkan banyak APD. Kok bisa-bisanya malah mengekspor ke negara lain?

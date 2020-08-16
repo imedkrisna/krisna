@@ -3,6 +3,8 @@ layout: post
 title: "Media dan politik: bagaimana TV mengubah demokrasi"
 Categories: blog
 tags: [Sosial Ekonomi]
+date: '2020-02-22'
+author: admin
 ---
 ### Pendahuluan: Kunjungan ke Museum of Australian Democracy
 Sekitar setahunan lalu, saya dan istri saya mengunjungi sebuah musium di Canberra yang namanya [Museum of Australian Democracy](https://www.moadoph.gov.au/). Musium ini menggunakan gedung parlemen Australia jadul (parlemennya sekarang kerja di gedung baru). Di dalam musium ini ada berbagai macam teks dan penjelasan soal kejadian-kejadian terkait politik dan demokrasi di Australia, juga para Perdana Menteri lama. Kalo cuma foto-foto di luar sih gratis, tapi kalau mau masuk cukup bayar 2$ per orang. Menurut kami sih *worth it* lah 2$ per kepala. Berikut ini saya sertakan beberapa foto kami berdua ^^

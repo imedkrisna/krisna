@@ -3,6 +3,8 @@ layout: post
 title: "Running a PPML regression in python using GME package from USITC"
 categories: [blog]
 tags: [Economics, English]
+date: '2020-08-12'
+author: admin
 ---
 [click here for a more friendly version of this post](https://imedkrisna.netlify.app/post/2020-08-12-ppml/)
 

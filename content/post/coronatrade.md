@@ -3,6 +3,8 @@ layout: post
 title: "Perdagangan dan COVID-19: kelemahan comparative advantage di tengah coronavirus?"
 categories: [blog]
 tags: [coronavirus COVID-19]
+date: '2020-03-25'
+author: admin
 ---
 
 COVID-19 sepertinya masih akan berlanjut. [Update terbaru](https://www.worldometers.info/coronavirus/country/indonesia/) mengatakan bahwa saat ini kita berada di 686 kasus. Seiring dengan meningkatnya testing, kasus ini akan meningkat dengan lebih cepat lagi. Dengan kondisi seperti ini saja, tenaga kesehatan kita seperti kesulitan mengatasi kekurangan Alat Pelindung Diri (APD) seperti baju Hazmat dan masker.

@@ -3,6 +3,8 @@ layout: post
 title: Benarkah Memiliki Anak Berpotensi Merugikan Perempuan? Perspektif Ekonomi
 categories: [blog]
 tags: [Sosial Ekonomi]
+date: '2020-01-06'
+author: admin
 ---
 
 Baru-baru ini cwider lagi rame gara-gara ada dokter yang ngetwit tentang dampak negatif menyusui terhadap si ibu.

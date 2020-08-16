@@ -3,6 +3,8 @@ layout: post
 title: "Application of Infrastructure Development Problem (Long Chu Style) to Indonesia’s Toll Road"
 categories: [blog]
 tags: [Economics, English]
+date: '2020-02-27'
+author: admin
 ---
 
 This article is originally appears [here on my medium blog](https://medium.com/@imedkrisna/application-of-infrastructure-development-problem-long-chu-style-to-indonesias-toll-road-7ccdc68ee817). I remake it in this blog because here I can use $$\LaTeX$$!! yay!! I don't change anything so if you've red this in my medium domain then skip this. 

@@ -1,9 +1,10 @@
 ---
 layout: post
 title: Henningsen and Henningsen 2011
-author: henningsen2011
 category: [blog]
 tags: [Review]
+date: '2020-02-25'
+author: admin
 ---
 
 Paper ini saya baca karena kebutuhan untuk estimasi fungsi produksi Constant Elasticity of Substitution (CES). Umumnya ketika melakukan estimasi Total Factor Productivity (TFP), ekonom lebih suka menggunakan fungsi Cobb-Douglass yang gampang dibikin linear, dan parameternya lebih berguna untuk diterjemahkan ke dunia nyata. Sayangnya, kalau mau menggunakan model terstruktur seperti model Computable General Equilibrium (CGE), model estimasi pake Cobb-Douglass punya kelemahan berupa parameter substitusinya akan selalu 1. Hari gini mana ada model CGE yang pake substitusi=1?

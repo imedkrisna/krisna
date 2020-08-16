@@ -3,6 +3,8 @@ layout: post
 title: "Praktik Kebijakan Publik Cara Indonesia"
 categories: [blog]
 tags: [Kebijakan]
+date: '2020-02-25'
+author: admin
 ---
 
 Apakah anda seorang pengamat kebijakan publik? Gak harus profesional lho ya. Bahkan orang yang suka komentarin kebijakan pemerintah di waktu luang dan bukan kerjaan utamanya, sudah sewajarnya karena kebijakan tersebut mungkin mempengaruhi kehidupan anda sehari-hari. Contoh kecil saja, temen saya yang kerjaan sampingannya jualan *model kit* tentu sangat terpengaruh kebijakan pemerintah soal Standar Nasional Indonesia (SNI) untuk produk mainan anak, meskipun beliau gak pernah sekolah di disiplin ilmu kebijakan publik.
