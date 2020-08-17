@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Mencari hubungan antara anggaran Kementerian dengan growth industri
-categories: [blog]
+categories: [industri]
 tags: [Economics]
 date: '2020-03-05'
 author: admin

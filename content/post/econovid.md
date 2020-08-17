@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "COVID-19 and The Economy of Informal Sectors"
-categories: [blog]
-tags: [coronavirus COVID-19, English]
+categories: [english]
+tags: [coronavirus COVID-19]
 date: '2020-03-19'
 author: admin
 ---

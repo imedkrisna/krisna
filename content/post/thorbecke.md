@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Thorbecke 2019
-category: [blog]
-tags: [Review]
+category: [Review]
+tags: [Economics]
 date: '2020-02-25'
 author: admin
 ---

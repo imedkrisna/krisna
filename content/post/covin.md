@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Peranan Industri Manufaktur di Tengah Badai COVID19
-categories: [blog]
+categories: [industri]
 tags: [coronavirus COVID-19]
 date: '2020-03-22'
 author: admin

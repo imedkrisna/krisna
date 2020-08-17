@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Target Pembangunan Industri Menurut Kebijakan Industri
-categories: [blog]
+categories: [industri]
 tags: [Kebijakan]
 date: '2020-02-27'
 author: admin
