@@ -4,7 +4,7 @@ authors:
 - admin
 date: "2020-04-15T00:00:00Z"
 doi: ""
-featured: false
+featured: true
 image:
   caption: ''
   focal_point: ""
@@ -12,8 +12,8 @@ image:
 links:
 - name: Custom Link
   url: http://obor.or.id/Mewujudkan-Indonesia-4-0-Kumpulan-Pemikiran-Pelajar-Indonesia-di-Australia
-publication: "Yayasan Pustaka Obor Indonesia"
-publication_short: ""
+publication: "In Denny Irawan, Wasisto Raharjo Jati, Oscar Karnalim, Asrul Sidiq (Eds), *Mewujudkan Indonesia 4.0: Kumpulan Pemikiran Pelajar Indonesia di Australia*. Jakarta: Yayasan Pustaka Obor Indonesia"
+publication_short: "In Denny Irawan, Wasisto Raharjo Jati, Oscar Karnalim, Asrul Sidiq (Eds), *Mewujudkan Indonesia 4.0: Kumpulan Pemikiran Pelajar Indonesia di Australia*. Jakarta: Yayasan Pustaka Obor Indonesia"
 publication_types:
 - "6"
 publishDate: "2020-04-15T00:00:00Z"
