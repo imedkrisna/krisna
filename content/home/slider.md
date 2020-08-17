@@ -16,8 +16,8 @@ height = "250px"
 # Slides.
 # Duplicate an `[[item]]` block to add more slides.
 [[item]]
-  title = "Welcome to my page!"
-  content = "I use this website as a place to store my CV. I also ocassionally writes (check out posts tab) in english but mostly in Indonesian with mostly serious content."
+  title = "Welcome!"
+  content = "I use this page to store my CV and blogs. I blogs in english but mostly in Indonesian."
   align = "center"  # Choose `center`, `left`, or `right`.
 
   # Overlay a color or image (optional).
@@ -35,8 +35,8 @@ height = "250px"
   cta_icon = "graduation-cap"
 
 [[item]]
-  title = "I also store hobby in this page"
-  content = "Don't click hobby unless you are prepared to hear some crappy voice. I warned you."
+  title = "Hobbies"
+  content = "I also store hobby in this page. Don't click hobby unless you are prepared to hear some crappy voice. I warned you."
   align = "center"
 
   overlay_color = "#555"  # An HTML color value.
@@ -44,9 +44,9 @@ height = "250px"
   overlay_filter = 0.5  # Darken the image. Value in range 0-1.
 
 [[item]]
-  title = "This is my new page"
-  content = "powered by [hugo academic theme](https://sourcethemes.com/academic/). Feel free to visit [my old, jekyll-powered blog](https://imedkrisna.github.io/)"
-  align = "right"
+  title = "This new page"
+  content = "is powered by [hugo academic theme](https://sourcethemes.com/academic/). Feel free to visit [my old, jekyll-powered blog](https://imedkrisna.github.io/)"
+  align = "center"
 
   overlay_color = "#333"  # An HTML color value.
   overlay_img = ""  # Image path relative to your `static/media/` folder.
