@@ -32,7 +32,7 @@ height = "250px"
   cta_label = "Posts"
   cta_url = "https://krisna.netlify.app/post"
   cta_icon_pack = "fas"
-  cta_icon = "graduation-cap"
+  cta_icon = "blog"
 
 [[item]]
   title = "Hobbies"
@@ -43,6 +43,11 @@ height = "250px"
   overlay_img = ""  # Image path relative to your `static/media/` folder.
   overlay_filter = 0.5  # Darken the image. Value in range 0-1.
 
+  cta_label = "Hobby"
+  cta_url = "https://krisna.netlify.app/hobby"
+  cta_icon_pack = "fas"
+  cta_icon = "music"
+
 [[item]]
   title = "This new page"
   content = "is powered by [hugo academic theme](https://sourcethemes.com/academic/). Feel free to visit [my old, jekyll-powered blog](https://imedkrisna.github.io/)"
@@ -52,8 +57,4 @@ height = "250px"
   overlay_img = ""  # Image path relative to your `static/media/` folder.
   overlay_filter = 0.5  # Darken the image. Value in range 0-1.
 
-  cta_label = "Hobby"
-  cta_url = "https://krisna.netlify.app/hobby"
-  # cta_icon_pack = "fas"
-  # cta_icon = "graduation-cap"
 +++
