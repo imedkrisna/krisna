@@ -34,6 +34,15 @@ height = "300px"
   cta_icon_pack = "fas"
   cta_icon = "blog"
 
+# [[item]]
+#   title = "courses"
+#   content = "this page hosts my courses as well (in Indonesian)"
+#   align = "center"
+
+#   overlay_color = "#333"  # An HTML color value.
+#   overlay_img = ""  # Image path relative to your `static/media/` folder.
+#   overlay_filter = 0.5  # Darken the image. Value in range 0-1.
+
 [[item]]
   title = "Hobbies"
   content = "I also store hobby in this page. Don't click hobby unless you are prepared to hear some crappy voice. I warned you."
@@ -48,13 +57,6 @@ height = "300px"
   cta_icon_pack = "fas"
   cta_icon = "music"
 
-[[item]]
-  title = "This new page"
-  content = "is powered by [hugo academic theme](https://sourcethemes.com/academic/). Feel free to visit [my old, jekyll-powered blog](https://imedkrisna.github.io/)"
-  align = "center"
 
-  overlay_color = "#333"  # An HTML color value.
-  overlay_img = ""  # Image path relative to your `static/media/` folder.
-  overlay_filter = 0.5  # Darken the image. Value in range 0-1.
 
 +++
