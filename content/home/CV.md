@@ -7,7 +7,7 @@ active = true
 date = 2016-04-20T00:00:00
 
 # Note: a full width section format can be enabled by commenting out the `title` and `subtitle` with a `#`.
-title = "CV"
+title = "Curriculum Vitae"
 subtitle = ""
 
 # Order that this section will appear in.
@@ -15,4 +15,4 @@ weight = 65
 
 +++
 
-My CV is available in [HTML](files/cv.html) or [download in PDF](files/cv.pdf) form. (Last updated: August 18, 2020)
+My CV is available in [HTML](files/cv.html) or you can [download it in PDF](files/cv.pdf) form. (Last updated: August 18, 2020)
