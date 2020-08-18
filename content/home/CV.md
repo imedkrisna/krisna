@@ -15,4 +15,4 @@ weight = 65
 
 +++
 
-My CV is available in [HTML](files/cv.html) or you can [download it in PDF](files/cv.pdf) form. (Last updated: August 18, 2020)
+To see my CV, [click here (html)](files/cv.html) or [click here to download it in PDF](files/cv.pdf) form. (Last updated: August 18, 2020)
