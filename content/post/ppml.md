@@ -13,12 +13,12 @@ A couple of month ago, I just learned from a professor from my course about the 
 For non-economics bunch, us trade people called international trade estimation models as ["gravity model"](https://en.wikipedia.org/wiki/Gravity_model_of_trade). According to wikipedia, this model first introduced by Walter Isard, an American economics, in 1954, it is a model constructed to mimic a gravity. It takes the form of:
 
 $$
-Trade_{ij}=\frac{GDP_{i}*GDP_{j}}{Distance_{ij}} \label{1}
+Trade_{ij}=\frac{GDP_{i}*GDP_{j}}{Distance_{ij}} \label{eq1}
 $$
 
 That is, the amount of bilateral trade made by two countries $i$ and $j$ is related to their economic size (mass in the normal gravity equation) and their distance, as a proxy for trade cost. Obviously these days there are many extension to this model, but I won't dwell on it for now. For now, let's focus on the PPML extension.
 
-Normally, we linearised \ref{1} by log transformation. That way, it is easy to estimate \ref{1} (or it's extensions) with OLS. Silva and Tenreyro (2006) critised the use of log-log OLS by showing that it is very hard to treat heteroskedasticity, common in trade data, with OLS extensions. In the paper, they show that non-linear regression especially PPLM performs much better. The paper became wildly popular among trade modeler. These days, it is hard to find a gravity modeler not using this method.
+Normally, we linearised \ref{eq1} by log transformation. That way, it is easy to estimate \ref{eq1} (or it's extensions) with OLS. Silva and Tenreyro (2006) critised the use of log-log OLS by showing that it is very hard to treat heteroskedasticity, common in trade data, with OLS extensions. In the paper, they show that non-linear regression especially PPLM performs much better. The paper became wildly popular among trade modeler. These days, it is hard to find a gravity modeler not using this method.
 
 Running PPLM is pretty easy in STATA. Specialised packages such as this really makes it hard for me to switch to other language like R or python. As an international trade scholar, I have to rely on this package so I can focus on my research context. But now that I know PPLM package is out there, moving to python full-time become extra compelling!
 
