@@ -1,7 +1,7 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "Static efficiency vs dynamic efficiency"
+title: "Diversification as a strategy to survive"
 subtitle: "what can we learn from us?"
 summary: ""
 authors: [admin]
