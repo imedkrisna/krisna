@@ -5,8 +5,8 @@ title: "Static efficiency vs dynamic efficiency"
 subtitle: "what can we learn from us?"
 summary: ""
 authors: [admin]
-tags: [blog, economics]
-categories: []
+tags: [blog, English]
+categories: [Macem-macem]
 date: 2020-08-21T15:41:24+10:00
 lastmod: 2020-08-21T15:41:24+10:00
 featured: false
