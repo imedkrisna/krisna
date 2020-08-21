@@ -2,10 +2,10 @@
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
 title: "Adding equation numbering on my hugo academic theme blog."
-subtitle: ""
-summary: ""
+subtitle: "Goodbye ???"
+summary: "In this post, I addressed the only problem I had with migrating to hugo which is equation labeling"
 authors: []
-tags: [blog]
+tags: [blog, english]
 categories: [blog]
 date: 2020-08-21T11:01:29+10:00
 lastmod: 2020-08-21T11:01:29+10:00
@@ -28,7 +28,7 @@ image:
 projects: []
 ---
 
-I just recently migrated my blog from Jekyll powered website to hugo powered one using academic theme. The migration went quite smoothly especially since I really have little content when I moved away from Jekyll. Everything works great in the hugo academic, but one.
+I just recently migrated my blog from Jekyll powered website to hugo powered one using academic theme. The migration went quite smoothly. All I did was copying my md content from previous blog to `\post` and update the metadata. It didn't take too much time since I really have little content when I moved away from Jekyll. Everything works great in the hugo academic, but one.
 
 I didn't understand at first why Hugo Academic Theme does not render equation labelling correctly. When I use a snippet like this:
 
