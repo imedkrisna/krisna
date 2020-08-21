@@ -18,10 +18,11 @@ Postingan ini khusus buat contekan belajaran waktu nyoba-nyoba. Akan coba dibagi
 - [Bookdown, bikin buku pakai Rmd](https://bookdown.org/yihui/bookdown/)
 - [Rmarkdown cheatsheet](https://blog.rstudio.com/2014/08/01/the-r-markdown-cheat-sheet/)
 
-### html
+### html and blog
 - [cara bikin multi-kolom](https://stackoverflow.com/questions/31753897/2-column-section-in-r-markdown)
 - [Kode icons buat html](https://html-css-js.com/html/character-codes/icons/)
 - [academic theme](https://sourcethemes.com/academic/templates/)
+- [adding equation labeling in hugo academic theme](https://krisna.netlify.app/post/mathjax/)
 
 ### Python
 - [Contekan grafik pakai Seaborn](https://seaborn.pydata.org/tutorial.html)
