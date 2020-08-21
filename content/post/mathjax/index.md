@@ -30,7 +30,12 @@ projects: []
 
 I just recently migrated my blog from Jekyll powered website to hugo powered one using academic theme. The migration went quite smoothly especially since I really have little content when I moved away from Jekyll. Everything works great in the hugo academic, but one.
 
-I didn't understand at first why Hugo Academic Theme does not render equation labelling correctly. It worked on my Jekyll blog. I was trying to look for easy solution everywhere with no luck (sorry I am lazy and not a programmer).
+I didn't understand at first why Hugo Academic Theme does not render equation labelling correctly. When I use a snippet like this:
+
+```html
+$$ some-equation \label{1} $$
+```
+and then tried to refer them using `\ref{1}`, it was rendered as '???'. It worked on my Jekyll blog. I was trying to look for easy solution everywhere with no luck (sorry I am lazy and not a programmer).
 
 But then I remembered that my Jekyll blog also did not load $\LaTeX$ correctly first time either. I followed an approach conducted by [CSega](http://csega.github.io/mypost/2017/03/28/how-to-set-up-mathjax-on-jekyll-and-github-properly.html) to solve this easily and it worked. Perhaps I can also use this approach for my Hugo blog. Be warned though that I am not 100% understand why this approach worked.
 
