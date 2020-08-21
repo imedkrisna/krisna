@@ -39,7 +39,7 @@ As the highest, most complex being on the planet, humans use sex as a means to r
 
 The sperm literally only adds copies of father's DNA to the egg. The rest of the ingredients are coming from the ladies. So yeah boys, your sperm is not contributing all that much. 
 
-In fact, according to Dr. Mukherjee, it will be much more efficient for humanity if the girls can do [Parthenogenesis](https://en.wikipedia.org/wiki/Parthenogenesis), an automatic development of egg with no fertilization. There's no need to find mates, risking a girl to enter an abusive relationship, no need for rules to govern marriage. Sounds much better.
+In fact, according to Dr. Mukherjee, it will be much more efficient for humanity if the girls can do [Parthenogenesis](https://en.wikipedia.org/wiki/Parthenogenesis), an automatic development of egg with no fertilization. There's no need to find mates, risking a girl to enter an abusive relationship, no need for rules to govern marriage. Sounds much better. (I mean Dr. Mukherjee presented a much better cases than marriage problem but that's all that stuck in my head sorry)
 
 It turns out, efficiency isn't the main reason why the most complex being, top of the food chain, the homo sapies, evolved sexual reproduction as its main way to reproduce. The main reason is to increase diversity.
 
