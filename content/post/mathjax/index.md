@@ -1,12 +1,12 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "Mathjax"
+title: "Adding equation numbering on my hugo academic theme blog."
 subtitle: ""
 summary: ""
 authors: []
-tags: []
-categories: []
+tags: [blog]
+categories: [blog]
 date: 2020-08-21T11:01:29+10:00
 lastmod: 2020-08-21T11:01:29+10:00
 featured: false
