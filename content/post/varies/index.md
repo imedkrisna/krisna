@@ -32,6 +32,8 @@ Just recently I finished a book titled [The Gene: an Intimate History](https://w
 
 The book wave a history of our understanding of the genes, starting as far back as Mendel, and even socrates. It then moving on to Darwin's highly influencial "the origin of species", and continued to the finished "the genome project". To me who takes humanity's understanding of genes and DNA for granted, the history of finding ourselves is really a great story to be told. There are so much to take from this book if you are like me, a non-biologist. The story of how we misused the knowledge (the times of eugenics), how we understand genetic illness, how we understand reproduction.
 
+A disclaimer before we go: I am no biologist so please read with a grain of salt.
+
 ## Why do we have sex?
 As the highest, most complex being on the planet, humans use sex as a means to reproduce. To make a baby, two types of individuals will be needed: one who produce egg, and another who produce sperm. The sperm then swim [with style](https://www.sciencenews.org/article/human-sperm-tail-swim-biophysics#:~:text=Sperm%20have%20long%20fooled%20scientists,out%20the%20off%2Dcenter%20strokes.) to the place where egg resides, and then inject its content (which is just a DNA, i.e. a blueprint) to the egg.
 
