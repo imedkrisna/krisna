@@ -32,7 +32,7 @@ I just recently migrated my blog from Jekyll powered website to hugo powered one
 
 I didn't understand at first why Hugo Academic Theme does not render equation labelling correctly. It worked on my Jekyll blog. I was trying to look for easy solution everywhere with no luck (sorry I am lazy and not a programmer).
 
-But then I remembered that my Jekyll blog also did not load $\latex$ correctly first time either. I followed an approach conducted by [CSega](http://csega.github.io/mypost/2017/03/28/how-to-set-up-mathjax-on-jekyll-and-github-properly.html) to solve this easily and it worked. Perhaps I can also use this approach for my Hugo blog. Be warned though that I am not 100% understand why this approach worked.
+But then I remembered that my Jekyll blog also did not load \\(\latex\\) correctly first time either. I followed an approach conducted by [CSega](http://csega.github.io/mypost/2017/03/28/how-to-set-up-mathjax-on-jekyll-and-github-properly.html) to solve this easily and it worked. Perhaps I can also use this approach for my Hugo blog. Be warned though that I am not 100% understand why this approach worked.
 
 I copied a code snippet from CSega on the head.html file.
 
