@@ -53,7 +53,7 @@ Di buku ini, anda hanya akan mempelajari python yang esensial untuk menjalankan 
 Python sendiri adalah bahasa yang sangat general dan *user interface*-nya sama sekali tidak friendly. Untungnya ada yang disebut Jupyter Notebook, sebuah *software* yang bikin ngetik kode Python lebih intuitif dan sangat mudah mendokumentasikan kode Python yang anda miliki. Python dan Jupyter Notebook tidak perlu diinstall secara terpisah, tapi diinstall sekaligus dalam *environment control* bernama Anaconda.
 
 ## Menginstall Anaconda
-Anaconda dapat di-unduh di [anaconda.com/products/individual](https://www.anaconda.com/products/individual). Klik sesuai OS yang anda miliki. Jika anda di windows dan tidak tau apakah windows anda 32-bit atau 64-bit, klik kanan di @icn-windows start, lalu klik "system". lihat di system type, akan keliatan 32-bit atau 64-bit.
+Anaconda dapat di-unduh di [anaconda.com/products/individual](https://www.anaconda.com/products/individual). Klik sesuai OS yang anda miliki. Jika anda di windows dan tidak tau apakah windows anda 32-bit atau 64-bit, klik kanan di @icon-windows start, lalu klik "system". lihat di system type, akan keliatan 32-bit atau 64-bit.
 
 Setelah selesai diunduh, install dengan menggunakan *recommended settings*. Jika anda menginstall dengan menggunakan *recommended settings* (alias pencet next-next terus sampai capek), maka anda Anaconda anda akan terinstall di C:\Users\<nama-user>\Anaconda3.
 
