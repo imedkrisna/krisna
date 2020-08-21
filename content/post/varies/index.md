@@ -5,8 +5,8 @@ title: "Diversification as a strategy to survive"
 subtitle: "what can we learn from us?"
 summary: ""
 authors: [admin]
-tags: [blog, English]
-categories: [Macem-macem]
+tags: [Sosial Ekonomi]
+categories: [blog, English]
 date: 2020-08-21T15:41:24+10:00
 lastmod: 2020-08-21T15:41:24+10:00
 featured: false
