@@ -68,5 +68,5 @@ conda install nbconvert
 ```
 lalu enter. biarkan sampai instalasi selesai.
 
-## menginstall MikTeX dan Pandoc
-Anda juga memerlukan 2 program yaitu menginstall [MikTeX (klik)](https://pandoc.org/installing.html) dan [pandoc (klik)](https://miktex.org/download). Jika anda punya [RStudio](https://rstudio.com/), ada kemungkinan anda udah punya pandoc. Tapi ya menginstall dua kali tidak ada pengaruh apapun sih. Paling cuma makan kuota internet aja. Tapi anda akan butuh MikTeX dan Pandoc untuk mengubah notebook anda menjadi pdf atau word.
+## menginstall Pandoc
+Pandoc dapat diinstal dengan [mengikuti link ini (pandoc)](https://miktex.org/download). Jika anda punya [RStudio](https://rstudio.com/), ada kemungkinan anda udah punya pandoc. Tapi ya menginstall dua kali tidak ada pengaruh apapun sih. Paling cuma makan kuota internet aja. Tapi anda akan butuh Pandoc untuk mengubah notebook anda menjadi pdf atau word.
