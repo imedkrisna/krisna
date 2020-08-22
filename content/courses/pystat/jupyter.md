@@ -23,5 +23,6 @@ Jupyter Notebook dapat dibuka dengan dua cara:
 
 Jika Anaconda diinstall dengan settingan *default*, Jupyter Notebook akan jalan di komputer anda di working directory "C:\Users\<your-username>\Anaconda3". File Jupyter Notebook akan memiliki ekstensi .ipynb (ekstensi tuh yang titik setelah nama file. Sebagai perbandingan, Kalau excel .xlsx, kalau word .docx dll). Jika anda tidak mengubah-ubah lokasi apapun, maka setiap kali menjalankan Jupyter Notebook, anda akan berada di lokasi yang sama yaitu "C:\Users\<your-username>" jadi file anda akan ada di sana secara otomatis. Tidak perlu terlalu dipusingkan.
 
-## Tampilan Jupyter Notebook
+#### Tampilan Jupyter Notebook
 Jupyter Notebook akan jalan di *browser default* anda. 
+![tampilan Jupyter Notebook](jupyter.png)
