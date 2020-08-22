@@ -59,4 +59,14 @@ Anaconda dapat di-unduh di [anaconda.com/products/individual](https://www.anacon
 
 Setelah selesai diunduh, install dengan menggunakan *recommended settings*. Jika anda menginstall dengan menggunakan *recommended settings* (alias pencet next-next terus sampai capek), maka anda Anaconda anda akan terinstall di C:\Users\<nama-user>\Anaconda3.
 
-Anda juga perlu rajin-rajin mengupdate anaconda
+Beberapa program yang kita perlukan harus membuka anaconda prompt. Anda perlu menginstall nbconvert untuk mendapatkan pdf dan word file.
+
+Di menu, sebelah tanda {{< icon name="windows" pack="fab" >}} start, di kotak "{{< icon name="search" pack="fab" >}} Type here to search" lalu ketik "anaconda prompt", jalankan. Nanti akan muncul kotak hitam di mana anda bisa ngetik sesuatu. Ketik:
+
+```
+conda install nbconvert
+```
+lalu enter. biarkan sampai instalasi selesai.
+
+## menginstall MikTeX dan Pandoc
+Anda juga memerlukan 2 program yaitu menginstall [MikTeX (klik)](https://pandoc.org/installing.html) dan [pandoc (klik)](https://miktex.org/download). Jika anda punya [RStudio](https://rstudio.com/), ada kemungkinan anda udah punya pandoc. Tapi ya menginstall dua kali tidak ada pengaruh apapun sih. Paling cuma makan kuota internet aja. Tapi anda akan butuh MikTeX dan Pandoc untuk mengubah notebook anda menjadi pdf atau word.
