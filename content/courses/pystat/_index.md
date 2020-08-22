@@ -17,11 +17,13 @@ commentable: false
 ---
 
 ## Tentang buku ini
-Di masa di mana sebagian besar institusi penting dan berpengaruh menggunakan data sebagai analisis (dan bukan perasaan belaka), skill menggunakan *software* untuk analisis data semakin tinggi peminatnya. Indonesia termasuk negara yang tidak banyak punya *programmer*, padahal belajar *programming* bukan sesuatu yang maha sulit dan dapat dipelajari semenjak dini.
-
-Untuk itu buku ini dibuat. Sebagai seorang yang mendapatkan manfaat dari mempelajari bahasa pemrograman, saya ingin mencoba mempermudah akses belajar bahasa pemrograman bagi teman-teman di Indonesia.
+Di masa di mana sebagian besar institusi penting dan berpengaruh menggunakan data sebagai analisis (dan bukan perasaan belaka), skill menggunakan *software* untuk analisis data semakin tinggi peminatnya. Indonesia termasuk negara yang tidak banyak punya *programmer*, padahal belajar *programming* bukan sesuatu yang maha sulit dan dapat dipelajari semenjak dini.Untuk itu buku ini dibuat. Sebagai seorang yang mendapatkan manfaat dari mempelajari bahasa pemrograman, saya ingin mencoba mempermudah akses belajar bahasa pemrograman bagi teman-teman di Indonesia.
 
 Buku ini sekaligus menjadi dokumentasi saya pribadi dalam belajar menggunakan bahasa pemrograman Python. Saya akan terus meng-update buku ini sesuai input-input yang didapat. Dengan dibuatnya buku ini, saya tinggal buka buku ini aja kalau ada beberapa *command* yang lupa.
+
+Dalam membuat buku ini, saya menggunakan berbagai sumber-sumber yang tersebar secara acak. Ada yang on-line course, off-line course selama mengambil program doktor, ada juga hasil googling. Kelebihan dari menggunakan Python adalah banyaknya jumlah pengguna dan komunitas yang berkontribusi baik berupa paket program, pertanyaan, maupun jawaban dan tutorial. Salah satu sumber yang menurut saya paling enak diikuti adalah [QuantEcon](https://quantecon.org/) buatan [Tom Sargent](http://www.tomsargent.com/), [John Stachurski](https://johnstachurski.net/), dan kawan-kawan.
+
+Buku ini dibuat sesederhana mungkin sebagai pengantar untuk programming {{< icon name="python" pack="fab" >}} python dan bagaimana menggunakannya untuk mengutak-atik *data frame* dan melakukan analisis statistik. Struktur di buku ini sedapat mungkin mengikuti konten perkuliahan statistik untuk level D3 atau S1, sehingga akan lebih baik jika pembaca memiliki pengetahuan tentang statistik sebelum/sembari mengikuti isi buku ini. {{< icon name="python" pack="fab" >}} python sendiri memiliki banyak kesaktian dan tujuan aslinya adalah untuk melakukan komputasi umum, yang bisa berguna jika anda ingin berkarir di bidang programming. 
 
 Mohon maaf apabila ada beberapa istilah yang keliru atau kesalahan lainnya secara umum. Saya sendiri bukan programmer dan tidak terlalu mengerti tentang istilah-istilah programmer. Saran dan kritik akan ditampung dan kesalahan di buku ini akan langsung di-update jika memang ada laporan.
 
