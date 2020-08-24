@@ -46,7 +46,7 @@ Inilah salah satu kekuatan GVC. Dengan satu produsen saja, berapa banyak rumah t
 Bumbu pecel tidak hanya kompetitif (merknya banyak dan harganya murah-murah), tapi juga dapat disuplai ke rumah tangga bahkan di negara lain. Negara yang tidak banyak tukang pecel-nya jadi bisa menikmati pecel dengan mudah dan murah.
 
 ## Memblokir impor bumbu pecel
-Mungkin ada aja ya suami yang tidak suka kalau istrinya masak pakai bumbu jadi. Si suami maunya semua bahan-bahannya bikin sendiri. Munculah niat untuk melarang pembelian bumbu pecel. Tidak hanya itu, si suami juga berencana menganggarkan subsidi agar si istri bisa bikin semuanya sendiri: mulai dari nanam kacangnya, nguleg sendiri, sampai jadi ketoprak. Dalam kebijakan publik, 
+Mungkin ada aja ya suami yang tidak suka kalau istrinya masak pakai bumbu jadi. Si suami maunya semua bahan-bahannya bikin sendiri. Munculah niat untuk melarang pembelian bumbu pecel. Tidak hanya itu, si suami juga berencana menganggarkan subsidi agar si istri bisa bikin semuanya sendiri: mulai dari nanam kacangnya, nguleg sendiri, sampai jadi ketoprak. 
 
 Anda bisa langsung bayangkan apa yang akan terjadi. Membuat bumbu pecel bukanlah sesuatu yang semua istri bisa lakukan dengan efisien. Hanya demi bikin bumbu pecel, berkuranglah waktu para istri untuk melakukan hal lain yang lebih produktif. Kalo istri saya saya kasih duit buat bikin bumbu pecel sendiri, mungkin yang akan dia lakukan adalah tetep beli bumbu pecel dan memakai duit sisanya untuk *upgrade* ketoprak jadi lebih mewah, misalnya nambahin ayam ke ketopraknya. Jadi pecel ayam donk?
 
