@@ -33,3 +33,6 @@ Postingan ini khusus buat contekan belajaran waktu nyoba-nyoba. Akan coba dibagi
 - [trade data bulk download WTO](https://www.wto.org/english/res_e/statis_e/trade_datasets_e.htm)
 - [Link to a bunch of US economic data](http://cameron.econ.ucdavis.edu/e102/data.html)
 - [free icons from font awesome](https://fontawesome.com/icons?m=free)
+
+### Academics
+- [mindmap generator untuk paper akademis](https://www.connectedpapers.com/)
