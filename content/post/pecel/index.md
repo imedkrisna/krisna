@@ -55,7 +55,7 @@ Apalagi jika si istri ini super produktif. Jika dia ibu rumah tangga, mungkin wa
 Namun mungkin beberapa rumah tangga memang sangat bangga dengan pecel buatan sendiri. Ya ndak papa juga. Mungkin dalam jangka panjang, skill istrinya akan meningkat dan jadi cukup jago untuk buka restoran pecel sendiri. Ya gpp sih bagus juga. Tapi ya tentu saja tidak semua wanita mau menjadi tukang pecel. Kalo semua wanita jadi tukang pecel, kerjaan lainnya siapa yang ngerjain? Lelaki? Meh.
 
 ## *Welfare effect* bagi para tukang pecel?
-Mungkin yang paling sebel kalau ada pabrik pembuat bumbu pecel adalah tukang pecel. Kalau semua rumah tangga menyuplai pecel dari beli bumbu jadi, laba usaha para tukang pecel bisa menurun karena kastamernya pada bikin pecel sendiri. Tapi jika memang dari awalsi suami adalah pelanggan pecel, ga mungkin juga dia jadi anti beli pecel di luar wkwk. hipokrit dong.
+Mungkin yang paling sebel kalau ada pabrik pembuat bumbu pecel adalah tukang pecel. Kalau semua rumah tangga menyuplai pecel dari beli bumbu jadi, laba usaha para tukang pecel bisa menurun karena kastamernya pada bikin pecel sendiri. Tapi jika memang dari awal si suami adalah pelanggan pecel, ga mungkin juga dia jadi anti beli pecel di luar wkwk. hipokrit dong.
 
 Tapi tentu saja tukang pecel terbaik akan mau bersaing dengan bumbu pecel buatan. Membuatnya lebih enak dan lebih spesial, ditambahin isi yang lebih ciamik, jual paket pecel+kopi enak, atau menyediakan free wi-fi juga bisa. Semua ini akan membuat konsumen lebih bahagia.
 
