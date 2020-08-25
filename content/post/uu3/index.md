@@ -10,7 +10,7 @@ categories: []
 date: 2020-08-25T21:48:14+10:00
 lastmod: 2020-08-25T21:48:14+10:00
 featured: false
-draft: false
+draft: true
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.
@@ -27,3 +27,11 @@ image:
 #   Otherwise, set `projects = []`.
 projects: []
 ---
+
+## Undang-undang 
+Undang-Undang No.3 Tentang Perindustrian
+
+## Peraturan Pemerintah
+- PP 107 2015 Tentang Izin Usahan Industri
+- PP 41 2015 Tentang Sumber Daya Industri
+- PP 142 2015 Tentang Kawasan Industri
