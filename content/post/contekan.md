@@ -17,6 +17,7 @@ Postingan ini khusus buat contekan belajaran waktu nyoba-nyoba. Akan coba dibagi
 - [Contekan ggplot2 untuk time-series](https://www.r-graph-gallery.com/279-plotting-time-series-with-ggplot2.html)
 - [Bookdown, bikin buku pakai Rmd](https://bookdown.org/yihui/bookdown/)
 - [Rmarkdown cheatsheet](https://blog.rstudio.com/2014/08/01/the-r-markdown-cheat-sheet/)
+- [Business forecasting](https://otexts.com/fpp2/judgmental.html)
 
 ### html and blog
 - [cara bikin multi-kolom](https://stackoverflow.com/questions/31753897/2-column-section-in-r-markdown)
