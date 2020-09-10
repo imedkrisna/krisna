@@ -40,7 +40,7 @@ date_format = "Jan 2006"
   location = "Jakarta"
   date_start = "2016-01-01"
   date_end = "2016-12-31"
-  description = """Taught business statistics."""
+  description = """business statistics."""
 
 [[experience]]
   title = "Junior Staff"
