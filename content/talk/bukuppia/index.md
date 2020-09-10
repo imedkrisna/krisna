@@ -81,4 +81,6 @@ Acara ini sendiri dibuka dengan *keynote speak* dari Menteri Perindustrian, Bapa
 
 Acara ini disiarkan di kanal {{< icon name="youtube" pack="fab" >}}Youtube Sobat Cyber Indonesia. Paparan dari Menteri Perindustrian dan para narasumber dapat diakses di [google drive](https://drive.google.com/drive/folders/12E8567Ibdex1FfE5ColmqvKeKmIQx8Wn?usp=sharing), atau ketuk `slides` di atas.
 
+Berikut rekamannya dari kanal {{< icon name="youtube" pack="fab" >}}Youtube Sobat Cyber Indonesia. Acara dimulai dari menit 22:55, jadi langsung diskip saja ke menit 22:55 yah!
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/sqfMf4WN_d4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
