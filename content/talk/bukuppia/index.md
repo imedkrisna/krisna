@@ -79,6 +79,6 @@ Acara kali ini fokus pada aspek ekonomi, industri dan investasi dari buku ini. B
 
 Acara ini sendiri dibuka dengan *keynote speak* dari Menteri Perindustrian, Bapak Dr. Agus Gumiwang Kartasasmita, M.Si. Beliau memberikan sedikit gambaran mengenai kondisi perekonomian dan industri manufaktur di Indonesia, serta bagaimana COVID-19 membuat Indonesia harus mengupdate sedikit aspek dari Making Indonesia 4.0, utamanya memberikan tekanan pentingnya berinvestasi di industri farmasi dan alat kesehatan.
 
-Acara ini disiarkan di kanal {{< icon name="youtube" pack="fab" >}}Youtube Sobat Cyber Indonesia.
+Acara ini disiarkan di kanal {{< icon name="youtube" pack="fab" >}}Youtube Sobat Cyber Indonesia. Paparan dari Menteri Perindustrian dan para narasumber dapat diakses di [google drive](https://drive.google.com/drive/folders/12E8567Ibdex1FfE5ColmqvKeKmIQx8Wn?usp=sharing), atau ketuk `slides` di atas.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/sqfMf4WN_d4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
