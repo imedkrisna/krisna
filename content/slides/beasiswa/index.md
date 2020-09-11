@@ -100,7 +100,7 @@ Presentasi ini dapat diakses di [krisna.netlify.app/talk/beasiswa](https://krisn
 * Beberapa *privilege* yang menguntungkan:
   * keunggulan akademik (IPK, TPA, bahasa)
   * punya uang lebih
-  * kenal orang penting
+  * kenal orang penting / spv
   * kesibukan sehari-hari
 
 * Tidak punya itu semua? Bersiaplah bekerja keras.
@@ -252,7 +252,7 @@ Banyak hal yang harus dipersiapkan setelah diterima ~~misalnya bucket list tempa
 
 ## Penutup
 
-- Jika anda bukan privilege, work harder.
+- _No privilege? work harder._
 - Persisten dan jangan menyerah.
 - Bersiap menyambut peluang.
 
