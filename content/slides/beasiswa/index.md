@@ -1,5 +1,5 @@
 ---
-title: "Beasiswa"
+title: "Strategi sukses meraih beasiswa pendidikan lanjut"
 summary: "Presentasi mengenai pengalaman serta tips mendapatkan beasiswa."
 authors: [admin]
 tags: []
@@ -13,8 +13,8 @@ slides:
   highlight_style: dracula
 ---
 
-## Tips Mengejar Beasiswa  
-## Master dan PhD
+## Strategi sukses meraih  
+## beasiswa pendidikan lanjut
 
 <br />
 

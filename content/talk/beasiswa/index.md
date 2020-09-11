@@ -1,7 +1,7 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "Beasiswa"
+title: "Strategi sukses meraih beasiswa pendidikan lanjut"
 event: "BDI Surabaya Webinar Series Season 3"
 event_url:
 location: "Zoom and Balai Diklat Industri Surabaya Youtube Channel"
@@ -12,7 +12,7 @@ address:
   postcode:
   country:
 summary: "Dalam kesempatan ini, saya berbagi pengalaman saya dalam mencari beasiswa S2 dan S3 kepada rekan-rekan saya di Kementerian Perindustrian"
-abstract:
+abstract: "Dalam kesempatan ini, saya berbagi pengalaman saya dalam mencari beasiswa S2 dan S3 kepada rekan-rekan saya di Kementerian Perindustrian"
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
@@ -46,7 +46,7 @@ image:
 #   icon: twitter
 
 # Optional filename of your slides within your talk's folder or a URL.
-url_slides:
+url_slides: "content/slides/beasiswa"
 
 url_code:
 url_pdf:
