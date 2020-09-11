@@ -7,15 +7,18 @@ categories: []
 date: "2019-02-05T00:00:00Z"
 slides:
   # Choose a theme from https://github.com/hakimel/reveal.js#theming
-  theme: moon
+  theme: solarized
   # Choose a code highlighting style (if highlighting enabled in `params.toml`)
   #   Light style: github. Dark style: dracula (default).
   highlight_style: dracula
 ---
 
-# Tips Mengejar Beasiswa Master dan PhD
+## Tips Mengejar Beasiswa  
+## Master dan PhD
 
-I Made Krisna  
+<br />
+
+I Made Krisna Gupta  
 18 September 2020  
 Presentasi ini dapat diakses di [krisna.netlify.app/talk/beasiswa](https://krisna.netlify.app/talk/beasiswa)
 
