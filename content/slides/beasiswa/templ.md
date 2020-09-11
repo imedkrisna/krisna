@@ -1,7 +1,7 @@
 ---
-title: Slides
-summary: An introduction to using Academic's Slides feature.
-authors: []
+title: Beasiswa
+summary: Presentasi mengenai pengalaman serta tips mendapatkan beasiswa.
+authors: [admin]
 tags: []
 categories: []
 date: "2019-02-05T00:00:00Z"
