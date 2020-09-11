@@ -12,7 +12,7 @@ address:
   postcode:
   country:
 summary: "Dalam kesempatan ini, saya berbagi pengalaman saya dalam mencari beasiswa S2 dan S3 kepada rekan-rekan saya di Kementerian Perindustrian"
-abstract: "Dalam kesempatan ini, saya berbagi pengalaman saya dalam mencari beasiswa S2 dan S3 kepada rekan-rekan saya di Kementerian Perindustrian"
+abstract: "Dalam kesempatan ini, saya berbagi pengalaman saya dalam mencari beasiswa S2 dan S3 kepada rekan-rekan saya di Kementerian Perindustrian. Ketuk `slides` di atas untuk melihat presentasinya"
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
@@ -21,7 +21,7 @@ date_end: 2020-09-18T21:22:27+10:00
 all_day: false
 
 # Schedule page publish date (NOT talk date).
-publishDate: 2020-09-10T21:22:27+10:00
+publishDate: 2020-09-18T21:22:27+10:00
 
 authors: [admin]
 tags: []
@@ -39,11 +39,11 @@ image:
 
 # Custom links (optional).
 #   Uncomment and edit lines below to show custom links.
-# links:
-# - name: Follow
-#   url: https://twitter.com
-#   icon_pack: fab
-#   icon: twitter
+links:
+- name: Follow
+  url: https://twitter.com/imedkrisna
+  icon_pack: fab
+  icon: twitter
 
 # Optional filename of your slides within your talk's folder or a URL.
 url_slides: "https://krisna.netlify.app/slides/beasiswa/#/"
