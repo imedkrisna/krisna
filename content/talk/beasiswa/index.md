@@ -46,7 +46,7 @@ image:
 #   icon: twitter
 
 # Optional filename of your slides within your talk's folder or a URL.
-url_slides: "content/slides/beasiswa"
+url_slides: "https://krisna.netlify.app/slides/beasiswa/#/"
 
 url_code:
 url_pdf:
