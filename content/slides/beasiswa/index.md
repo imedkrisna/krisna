@@ -101,9 +101,11 @@ Presentasi ini dapat diakses di [krisna.netlify.app/talk/beasiswa](https://krisn
   * keunggulan akademik (IPK, TPA, bahasa)
   * punya uang lebih
   * kenal orang penting / spv
-  * kesibukan sehari-hari
-
-* Tidak punya itu semua? Bersiaplah bekerja keras.
+  
+* *No privilege? Work harder!*
+  * perbanyak membaca dan menulis
+  * perkaya kegiatan sosial
+  * pindah fungsional 😜
 
 ---
 
@@ -180,16 +182,69 @@ Setiap beasiswa punya persyaratan khusus yang mungkin berbeda satu sama lain
   
 ---
 
+## Menulis essay
+
+- beasiswa pada umumnya mensyaratkan essay
+- mulai dengan kerangka yang baik
+  - gunakan tujuan beasiswa sebagai acuan
+  - di mana posisi kita?
+- baca kembali dan tanya: paragraf ini menjawab pertanyaan apa?
+- minta partner untuk membaca
+- perbanyak latihan (sekalian IELTS/TOEFL)
+  
+---
+
+## Menulis essay
+
+- beberapa beasiswa menyediakan form khusus
+- Informasi yang biasanya ditanyakan:
+  - memilih program
+  - kontribusi hasil studi
+  - cerita sukses
+- Konteks sangatlah penting
+  - kaitkan dengan pekerjaan
+  - kolaborasi dengan institusi / negara donor
+
+---
+
+## Wawancara
+
+- Wawancara pada umumnya menanyakan pertanyaan yang mirip dengan di aplikasi.
+- persiapan yang baik mengurangi derajat kepanikan dan meningkatkan rasa percaya diri
+- beberapa persiapan yang saya rekomendasikan:
+  - antisipasi pertanyaan
+  - persiapkan jawaban
+  - baca yang banyak tentang beasiswa
+  - latihan
+- move on
+
+---
+
 ## Tips ekstra untuk S3
 
 - Struktural lebih sulit (mungkin)
-  - 4-5 tahun adalah waktu yang lama
+  - susah dapat ijin (kelamaan)
   - tidak banyak benefit bagi institusi
   - juga bagi anda pribadi
 - sepertinya menjadi fungsional dosen membantu
   - institusi mendapat benefit
   - angkatan saya (AAS) banyak fungsional
 - Ilmu dari S3 sangat dalam dan spesifik
+
+---
+
+## Pengalaman pribadi (dosen)
+
+- Kontribusi dosen sangat mudah dan terukur:
+  - dosen PhD di Indonesia masih sedikit
+  - publikasi akademis sangat sedikit
+  
+- Tidak perlu berkhayal terlalu jauh
+  - kolaborasi riset antar lembaga
+
+- Kerjaan mendukung untuk PhD
+  - otomatis rajin membaca dan menulis
+  - mudah dikontekstualisasi dengan aplikasi
 
 ---
 
@@ -211,6 +266,7 @@ Setiap beasiswa punya persyaratan khusus yang mungkin berbeda satu sama lain
   - metode dan data (kalau sudah punya rencana mau pakai data apa)
   - *timeline*. Apakah bisa selesai dalam jangka waktu S3?
 - Demonstrasi bahwa anda mengikuti literatur di bidang anda adalah nilai plus.
+- Tunjukan hal-hal yang sudah anda kerjakan
 - *Resource* apa di kampus yang bisa membantu?
 
 ---
@@ -250,11 +306,26 @@ Banyak hal yang harus dipersiapkan setelah diterima ~~misalnya bucket list tempa
 
 ---
 
+## Tips ketika sudah sekolah
+
+- beasiswa (_and life in general_) _is a long-term project_.
+- mencari beasiswa S2 dimulai sejak S1
+- mencari beasiswa S3 dimulai sejak S2
+  - sekolah S2 yang bener
+  - jalin relasi dengan pembimbing
+- Selalu ingat ilmu padi
+  - dapat beasiswa $\neq$ hebat
+  - Dirasani? balas dengan karya
+
+---
+
 ## Penutup
 
+- baca, baca, dan baca
 - _No privilege? work harder._
-- Persisten dan jangan menyerah.
-- Bersiap menyambut peluang.
+  - _or be prepare to make 'sacrifice'_
+- Persisten dan jangan menyerah
+- Bersiap menyambut peluang
 
 ---
 
