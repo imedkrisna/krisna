@@ -262,10 +262,10 @@ Setiap beasiswa punya persyaratan khusus yang mungkin berbeda satu sama lain
 ## Mempersiapkan research proposal
 
 - Informasi yang wajib ada di proposal riset:
-  - pendahuluan, tekankan di latar belakang dan motivasi
+  - pendahuluan, tekankan di latar belakang, motivasi, obyektif
   - metode dan data (kalau sudah punya rencana mau pakai data apa)
   - *timeline*. Apakah bisa selesai dalam jangka waktu S3?
-- Demonstrasi bahwa anda mengikuti literatur di bidang anda adalah nilai plus.
+- Demonstrasi bahwa anda mengikuti literatur di bidang anda.
 - Tunjukan hal-hal yang sudah anda kerjakan
 - *Resource* apa di kampus yang bisa membantu?
 
