@@ -217,7 +217,7 @@ Setiap beasiswa punya persyaratan khusus yang mungkin berbeda satu sama lain
   - persiapkan jawaban
   - baca yang banyak tentang beasiswa
   - latihan
-- Saya dulu mengumpulkan potensi pertanyaan. [Saya share di link ini](wwcraas.pdf)
+- [Saya bikin list potensi pertanyaan AAS](wwcraas.pdf)
 
 ---
 
