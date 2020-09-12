@@ -3,25 +3,25 @@
 
 title: "Strategi sukses meraih beasiswa pendidikan lanjut"
 event: "BDI Surabaya Webinar Series Season 3"
-event_url:
+event_url: https://www.youtube.com/channel/UC1qCli39e2_v7CjUzqfC14g
 location: "Zoom and Balai Diklat Industri Surabaya Youtube Channel"
 address:
   street:
   city: Surabaya
-  region:
+  region: Jawa Barat
   postcode:
-  country:
+  country: Indonesia
 summary: "Dalam kesempatan ini, saya berbagi pengalaman saya dalam mencari beasiswa S2 dan S3 kepada rekan-rekan saya di Kementerian Perindustrian"
-abstract: "Dalam kesempatan ini, saya berbagi pengalaman saya dalam mencari beasiswa S2 dan S3 kepada rekan-rekan saya di Kementerian Perindustrian. Ketuk `slides` di atas untuk melihat presentasinya"
+abstract: "Dalam kesempatan ini, saya berbagi pengalaman saya dalam mencari beasiswa S2 dan S3 kepada rekan-rekan saya di Kementerian Perindustrian. Pengalaman mencari beasiswa berbeda-beda untuk setiap orang, namun diharapkan sharing ini dapat membantu. Ketuk `slides` di atas untuk melihat presentasinya."
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
 date: 2020-09-18T21:22:27+10:00
-date_end: 2020-09-18T21:22:27+10:00
+# date_end: 2020-09-18T21:22:27+10:00
 all_day: false
 
 # Schedule page publish date (NOT talk date).
-publishDate: 2020-09-18T21:22:27+10:00
+publishDate: 2020-09-17T21:22:27+10:00
 
 authors: [admin]
 tags: []
@@ -46,7 +46,7 @@ links:
   icon: twitter
 
 # Optional filename of your slides within your talk's folder or a URL.
-url_slides: "https://krisna.netlify.app/slides/beasiswa/#/"
+url_slides: ""
 
 url_code:
 url_pdf:
