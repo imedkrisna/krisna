@@ -319,6 +319,20 @@ Banyak hal yang harus dipersiapkan setelah diterima ~~misalnya bucket list tempa
 
 ---
 
+## Tips ketika sudah sekolah
+
+- Pastikan anda memang ingin sekolah
+  - rumput tetangga *effect*
+  - ingat yang tidak dapat
+  
+- Terutama bagi PhD
+  - rate depresi cukup tinggi
+  - 5 tahun sekolah vs 5 tahun bekerja
+  - *Make sure you love what you do*.
+  - *supervisor matters*
+
+---
+
 ## Penutup
 
 - baca, baca, dan baca
