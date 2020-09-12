@@ -204,6 +204,7 @@ Setiap beasiswa punya persyaratan khusus yang mungkin berbeda satu sama lain
 - Konteks sangatlah penting
   - kaitkan dengan pekerjaan
   - kolaborasi dengan institusi / negara donor
+- [Contoh essay saya dulu apply AAS](essay.pdf)
 
 ---
 
@@ -216,7 +217,7 @@ Setiap beasiswa punya persyaratan khusus yang mungkin berbeda satu sama lain
   - persiapkan jawaban
   - baca yang banyak tentang beasiswa
   - latihan
-- move on
+- Saya dulu mengumpulkan potensi pertanyaan. [Saya share di link ini](wwcraas.pdf)
 
 ---
 
@@ -267,7 +268,7 @@ Setiap beasiswa punya persyaratan khusus yang mungkin berbeda satu sama lain
   - *timeline*. Apakah bisa selesai dalam jangka waktu S3?
 - Demonstrasi bahwa anda mengikuti literatur di bidang anda.
 - Tunjukan hal-hal yang sudah anda kerjakan
-- *Resource* apa di kampus yang bisa membantu?
+- [Contoh salah satu proposal pendek](rp.pdf)
 
 ---
 
