@@ -255,6 +255,78 @@ background-image: url(normal.png)
 
 <br />
 
+# Coverage ratio
+
+.pull-left[
+- Table 5 shows simple mean and coverage ratios
+
+- As expected, tariff lies between MFN and FTAs
+
+- Import licensing and quotas is more important than SPS and TBT
+
+- Coverage ratios vs simple mean:
+ - no visual difference on tariff
+ - firms import more goods with NTMs
+
+]
+
+.pull-right[
+Table 5. Coverage ratios
+```{r echo=FALSE}
+library(kableExtra)
+library(formattable)
+Variable<-c('Tariff',
+'Tariff Coverage Ratio (T)',
+'SPS (A)',
+'TBT (B)',
+'Pre-shipment inspection (C)',
+'Licensing, quota, etc (E)',
+'Price control etc (F)', 
+'Competition measures (H)',
+'Export-related (P)',
+'Coverage ratio A',
+'Coverage ratio B',
+'Coverage ratio C',
+'Coverage ratio E',
+'Coverage ratio F',
+'Coverage ratio H',
+'Coverage ratio P'
+)
+Obs<-comma(c(407532,407532,407532,407532,407532,407532,407532,407532,407532,407532,407532,407532,407532,407532,407532,407532),format="d")
+Mean<-c(3.503,
+3.420,
+0.108,
+0.140,
+0.028,
+0.321,
+0.000,
+0.007,
+0.063,
+0.246,
+0.202,
+0.059,
+0.337,
+0.000,
+0.014,
+0.110
+)
+St.Dev.<-c(4.971,5.646,0.718,0.663,0.214,0.550,0.008,0.083,0.376,0.931,.478,0.237,0.468,0.001,0.083,0.353)
+Min<-c(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)
+Max<-c(150,150,29,13,5,6,2,2,7,19,9,4,6,0,1,7)
+tab5<-data.frame(Variable,Obs,Mean,St.Dev.,Min,Max)
+kbl(tab5,'html') %>%
+  kable_styling(bootstrap_options = "striped", font_size = 9)
+
+```
+]
+
+
+---
+
+background-image: url(normal.png)
+
+<br />
+
 # TFP Results
 
 .center[
