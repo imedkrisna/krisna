@@ -1215,7 +1215,7 @@ background-image: url(normal.png)
 
 &lt;br /&gt;
 
-# TFP Results
+# Zero capital problem
 
 .center[
 Zero capital and energy consumption skewed the regression for both SI observations (left) and customs data (right).
@@ -1230,6 +1230,312 @@ background-image: url(normal.png)
 &lt;br /&gt;
 
 # TFP Results
+
+- `\(k,n=0\)` have smaller RTS and much smaller coefficient for `\(k\)` and `\(n\)`
+- Lost `\(\pm\)` 30% of observations
+
+.pull-left[
+table 6a. Factor multipliers with `\(k,n=0\)`
+&lt;table class="table table-striped" style="font-size: 11px; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Variables &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; All_SI &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Non_customs &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Customs_only &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;vertical-align: middle !important;" rowspan="2"&gt; Labour (l) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.354*** &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.355*** &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.268*** &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   
+   &lt;td style="text-align:left;"&gt; (0.005) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.005) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.011) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-weight: bold;color: black !important;background-color: yellow !important;vertical-align: middle !important;" rowspan="2"&gt; Capital (k) &lt;/td&gt;
+   &lt;td style="text-align:left;font-weight: bold;color: black !important;background-color: yellow !important;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:left;font-weight: bold;color: black !important;background-color: yellow !important;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:left;font-weight: bold;color: black !important;background-color: yellow !important;"&gt; 0 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   
+   &lt;td style="text-align:left;font-weight: bold;color: black !important;background-color: yellow !important;"&gt; (0.000) &lt;/td&gt;
+   &lt;td style="text-align:left;font-weight: bold;color: black !important;background-color: yellow !important;"&gt; (0.000) &lt;/td&gt;
+   &lt;td style="text-align:left;font-weight: bold;color: black !important;background-color: yellow !important;"&gt; (0.002) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;vertical-align: middle !important;" rowspan="2"&gt; Energy (n) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.035*** &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.037*** &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.019*** &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   
+   &lt;td style="text-align:left;"&gt; (0.001) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.001) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.003) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;vertical-align: middle !important;" rowspan="2"&gt; input (m) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.234*** &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.251*** &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.344*** &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   
+   &lt;td style="text-align:left;"&gt; (0.013) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.017) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.056) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; RTS &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.623 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.643 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.631 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Obs &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 117,598 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 108,662 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 8,936 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+]
+
+.pull-right[
+Table 6b. Factor multipliers with `\(k,n&gt;0\)`
+&lt;table class="table table-striped" style="font-size: 11px; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Variables &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; All_SI &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Non_customs &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Customs_only &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;vertical-align: middle !important;" rowspan="2"&gt; Labour (l) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.307*** &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.307*** &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.254*** &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   
+   &lt;td style="text-align:left;"&gt; (0.005) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.006) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.015) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-weight: bold;color: black !important;background-color: yellow !important;vertical-align: middle !important;" rowspan="2"&gt; Capital (k) &lt;/td&gt;
+   &lt;td style="text-align:left;font-weight: bold;color: black !important;background-color: yellow !important;"&gt; 0.223*** &lt;/td&gt;
+   &lt;td style="text-align:left;font-weight: bold;color: black !important;background-color: yellow !important;"&gt; 0.219*** &lt;/td&gt;
+   &lt;td style="text-align:left;font-weight: bold;color: black !important;background-color: yellow !important;"&gt; 0.161*** &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   
+   &lt;td style="text-align:left;font-weight: bold;color: black !important;background-color: yellow !important;"&gt; (0.014) &lt;/td&gt;
+   &lt;td style="text-align:left;font-weight: bold;color: black !important;background-color: yellow !important;"&gt; (0.015) &lt;/td&gt;
+   &lt;td style="text-align:left;font-weight: bold;color: black !important;background-color: yellow !important;"&gt; (0.038) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;vertical-align: middle !important;" rowspan="2"&gt; Energy (n) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.114*** &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.114*** &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.097*** &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   
+   &lt;td style="text-align:left;"&gt; (0.003) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.002) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.008) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;vertical-align: middle !important;" rowspan="2"&gt; input (m) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.281*** &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.255*** &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.226*** &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   
+   &lt;td style="text-align:left;"&gt; (0.024) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.024) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.075) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; RTS &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.925 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.895 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.738 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Obs &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 73,265 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 68,294 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 4,971 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+]
+
+---
+
+background-image: url(normal.png)
+
+&lt;br /&gt;
+
+# TFP Results
+
+- table 7a over-estimates TFPs (not Indonesian miracle)
+- Firms in customs data is in
+
+.pull-left[
+table 7a. TFP with `\(k,n=0\)`
+&lt;table class="table table-striped" style="font-size: 11px; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Variables &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; All_SI &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Non_customs &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Customs_only &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;vertical-align: middle !important;" rowspan="2"&gt; TFP all SI &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 241,611.20 &lt;/td&gt;
+   &lt;td style="text-align:left;vertical-align: middle !important;" rowspan="2"&gt; - &lt;/td&gt;
+   &lt;td style="text-align:left;vertical-align: middle !important;" rowspan="4"&gt; - &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   
+   &lt;td style="text-align:left;"&gt; (4,444,240) &lt;/td&gt;
+   
+   
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;vertical-align: middle !important;" rowspan="2"&gt; Non customs &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 221,284.30 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 216,246.40 &lt;/td&gt;
+   
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   
+   &lt;td style="text-align:left;"&gt; (4,542,027) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (4,361,599) &lt;/td&gt;
+   
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;vertical-align: middle !important;" rowspan="2"&gt; Customs only &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 488,787.80 &lt;/td&gt;
+   &lt;td style="text-align:left;vertical-align: middle !important;" rowspan="2"&gt; - &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 341,643.80 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   
+   &lt;td style="text-align:left;"&gt; (3,000,124) &lt;/td&gt;
+   
+   &lt;td style="text-align:left;"&gt; (8,542,388) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;vertical-align: middle !important;" rowspan="2"&gt; V/L &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 137,987.1 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 126,073.5 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 282,856.5 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   
+   &lt;td style="text-align:left;"&gt; (2,515,300) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (2,600,177) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (1,012,159) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; obs &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 117,598 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 108,662 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 8,936 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+]
+
+.pull-right[
+Table 7b. TFP with `\(k,n&gt;0\)`
+&lt;table class="table table-striped" style="font-size: 11px; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Variables &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; All_SI &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Non_customs &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Customs_only &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;vertical-align: middle !important;" rowspan="2"&gt; TFP all SI &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 107,036.90 &lt;/td&gt;
+   &lt;td style="text-align:left;vertical-align: middle !important;" rowspan="2"&gt; - &lt;/td&gt;
+   &lt;td style="text-align:left;vertical-align: middle !important;" rowspan="4"&gt; - &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   
+   &lt;td style="text-align:left;"&gt; (2,792,543) &lt;/td&gt;
+   
+   
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;vertical-align: middle !important;" rowspan="2"&gt; Non customs &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 98,534.27 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 115,020.70 &lt;/td&gt;
+   
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   
+   &lt;td style="text-align:left;"&gt; (2,826,922) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (2,719,907) &lt;/td&gt;
+   
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;vertical-align: middle !important;" rowspan="2"&gt; Customs only &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 210,429.20 &lt;/td&gt;
+   &lt;td style="text-align:left;vertical-align: middle !important;" rowspan="2"&gt; - &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 177,280.20 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   
+   &lt;td style="text-align:left;"&gt; (2,331,985) &lt;/td&gt;
+   
+   &lt;td style="text-align:left;"&gt; (4,609,524) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;vertical-align: middle !important;" rowspan="2"&gt; V/L &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 111,455.8 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 100,510.9 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 261,822.6 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   
+   &lt;td style="text-align:left;"&gt; (2,538,721) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (2,614,048) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (1,043,383) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; obs &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 73,265 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 68,294 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 4,971 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+]
 
 ---
 
@@ -1261,7 +1567,7 @@ background-image: url(normal.png)
   - may lead to more intervention
 
 - If scared with CAD, find other ways
-  - let IDR weakened?
+  - let IDR weaken?
   - bad debt management `\(\Rightarrow\)` costing manufacturers and consumers
   - become more attractive to business (both domestic and foreign)
   

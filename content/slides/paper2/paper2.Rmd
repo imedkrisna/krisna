@@ -516,7 +516,7 @@ background-image: url(normal.png)
 
 <br />
 
-# TFP Results
+# Zero capital problem
 
 .center[
 Zero capital and energy consumption skewed the regression for both SI observations (left) and customs data (right).
@@ -531,6 +531,76 @@ background-image: url(normal.png)
 <br />
 
 # TFP Results
+
+- $k,n=0$ have smaller RTS and much smaller coefficient for $k$ and $n$
+- Lost $\pm$ 30% of observations
+
+.pull-left[
+table 6a. Factor multipliers with $k,n=0$
+```{r echo=FALSE}
+Variables<-c('Labour (l)','Labour (l)','Capital (k)','Capital (k)','Energy (n)','Energy (n)','input (m)','input (m)','RTS','Obs')
+All_SI<-c('0.354***','(0.005)',0.000,'(0.000)','0.035***','(0.001)','0.234***','(0.013)',0.623,'117,598')
+Non_customs<-c('0.355***','(0.005)',0.000,'(0.000)','0.037***','(0.001)','0.251***','(0.017)',0.643,'108,662')
+Customs_only<-c('0.268***','(0.011)',0.000,'(0.002)','0.019***','(0.003)','0.344***','(0.056)',0.631,'8,936')
+tab6a<-data.frame(Variables,All_SI,Non_customs,Customs_only)
+kbl(tab6a,'html') %>%
+  kable_styling(bootstrap_options = "striped", font_size = 11) %>%
+  row_spec(3:4, bold=T,color="black",background="yellow") %>%
+  collapse_rows()
+```
+]
+
+.pull-right[
+Table 6b. Factor multipliers with $k,n>0$
+```{r echo=FALSE}
+All_SI<-c('0.307***','(0.005)','0.223***','(0.014)','0.114***','(0.003)','0.281***','(0.024)',0.925,'73,265')
+Non_customs<-c('0.307***','(0.006)','0.219***','(0.015)','0.114***','(0.002)','0.255***','(0.024)',0.895,'68,294')
+Customs_only<-c('0.254***','(0.015)','0.161***','(0.038)','0.097***','(0.008)','0.226***','(0.075)',0.738,'4,971')
+tab6b<-data.frame(Variables,All_SI,Non_customs,Customs_only)
+kbl(tab6b,'html') %>%
+  kable_styling(bootstrap_options = "striped", font_size = 11) %>%
+  row_spec(3:4, bold=T,color="black",background="yellow") %>%
+  collapse_rows()
+```
+]
+
+---
+
+background-image: url(normal.png)
+
+<br />
+
+# TFP Results
+
+- table 7a over-estimates TFPs (not Indonesian miracle)
+- Firms in customs data is in
+
+.pull-left[
+table 7a. TFP with $k,n=0$
+```{r echo=FALSE}
+Variables<-c('TFP all SI','TFP all SI','Non customs','Non customs','Customs only','Customs only','V/L','V/L','obs')
+All_SI<-c('241,611.20','(4,444,240)','221,284.30','(4,542,027)','488,787.80','(3,000,124)','137,987.1','(2,515,300)','117,598')
+Non_customs<-c('-','-','216,246.40','(4,361,599)','-','-','126,073.5','(2,600,177)','108,662')
+Customs_only<-c('-','-','-','-','341,643.80','(8,542,388)','282,856.5','(1,012,159)','8,936')
+tab7a<-data.frame(Variables,All_SI,Non_customs,Customs_only)
+kbl(tab7a,'html') %>%
+  kable_styling(bootstrap_options = "striped", font_size = 11) %>%
+  collapse_rows()
+```
+]
+
+.pull-right[
+Table 7b. TFP with $k,n>0$
+```{r echo=FALSE}
+All_SI<-c('107,036.90','(2,792,543)','98,534.27','(2,826,922)','210,429.20','(2,331,985)','111,455.8','(2,538,721)','73,265')
+Non_customs<-c('-','-','115,020.70','(2,719,907)','-','-','100,510.9','(2,614,048)','68,294')
+Customs_only<-c('-','-','-','-','177,280.20','(4,609,524)','261,822.6','(1,043,383)','4,971')
+tab7b<-data.frame(Variables,All_SI,Non_customs,Customs_only)
+kbl(tab7b,'html') %>%
+  kable_styling(bootstrap_options = "striped", font_size = 11) %>%
+  collapse_rows()
+```
+]
 
 ---
 
