@@ -960,19 +960,19 @@ background-image: url(normal.png)
 
 # Some problems
 
-error term contains a productivity shock observed only by managers, and may correlates with production decisions.
-
+let
 `$$\epsilon_{it}=\omega_{it}+\mu_{it}$$`
-where `\(\mu_{it}\)` is iid. Meanwhile:
 
-Olley and Pakes (1996) suggest `\(\omega_{it}\)` can be observed via investment.
+where `\(\mu_{it}\)` is iid, while `\(\omega_{it}\)` is a productivity shock observed only by managers and may correlates with production decisions.
+
+Olley and Pakes (1996) suggest `\(\omega_{it}\)` follows a first order markov process and affects a firm's decision on how much to invest (or divest)
 
 `$$I_{it}=i(k_{it},\omega_{it})$$`
-inverse, then let `\(\omega\)` follows a first order markov process:
+inversed:
 
 `$$\omega_{it}=\phi(I_{it},k_{it})$$`
 Weaknesses of using investment (Levinsohn and Petrin 2003):
-- zero reported investment `\(\neq\)` shock
+- zero investment featured in many datasets (including SI)
 - less flexible compared to intermediate input
 
 ---
@@ -1021,25 +1021,6 @@ background-image: url(normal.png)
 
 &lt;br /&gt;
 
-# Second-Stage
-
-The second stage regression then:
-
-`$$tfp_{it}=\gamma_0+\gamma_Tt_{it}+\sum_\theta c_{\theta it}+FO_{it}+\alpha_i+ISIC_i+\eta_{it}$$`
-Where:
-- `\(tfp_{it} = log(TFP_{it})\)`
-- `\(t_{it} = log(1+T_{it})\)`
-- `\(c_{\theta it} = log(1+C_{\theta it})\)`
-- `\(FO_{it} =\)` foreign ownership of firm i at time t (%)
-
-along with firm's fixed effect and ISIC dummy.
-
----
-
-background-image: url(normal.png)
-
-&lt;br /&gt;
-
 # Coverage ratio
 
 .pull-left[
@@ -1052,7 +1033,6 @@ background-image: url(normal.png)
 - Coverage ratios vs simple mean:
  - no visual difference on tariff
  - firms import more goods with NTMs
-
 ]
 
 .pull-right[
@@ -1205,6 +1185,26 @@ Table 5. Coverage ratios
 ---
 
 background-image: url(normal.png)
+
+&lt;br /&gt;
+
+# Second-Stage
+
+The second stage regression then:
+
+`$$tfp_{it}=\gamma_0+\gamma_Tt_{it}+\sum_\theta c_{\theta it}+FO_{it}+\alpha_i+ISIC_i+\eta_{it}$$`
+
+Where:
+- `\(tfp_{it} = log(TFP_{it})\)`
+- `\(t_{it} = log(1+T_{it})\)`
+- `\(c_{\theta it} = log(1+C_{\theta it})\)`
+- `\(FO_{it} =\)` foreign ownership of firm i at time t (%)
+
+along with firm's fixed effect and ISIC dummy.
+
+---
+
+background-image: url(normal.png)
 class:center,middle
 
 # Results
@@ -1217,9 +1217,9 @@ background-image: url(normal.png)
 
 # Zero capital problem
 
-.center[
-Zero capital and energy consumption skewed the regression for both SI observations (left) and customs data (right).
+Zero capital and energy consumption exists both for SI observations (left) and customs data (right).
 
+.center[
 ![zero capital](kap.png)
 ]
 
@@ -1446,7 +1446,7 @@ table 7a. TFP with `\(k,n=0\)`
    &lt;td style="text-align:left;"&gt; (8,542,388) &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-   &lt;td style="text-align:left;vertical-align: middle !important;" rowspan="2"&gt; V/L &lt;/td&gt;
+   &lt;td style="text-align:left;vertical-align: middle !important;" rowspan="2"&gt; Va/L &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; 137,987.1 &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; 126,073.5 &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; 282,856.5 &lt;/td&gt;
@@ -1516,7 +1516,7 @@ Table 7b. TFP with `\(k,n&gt;0\)`
    &lt;td style="text-align:left;"&gt; (4,609,524) &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-   &lt;td style="text-align:left;vertical-align: middle !important;" rowspan="2"&gt; V/L &lt;/td&gt;
+   &lt;td style="text-align:left;vertical-align: middle !important;" rowspan="2"&gt; Va/L &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; 111,455.8 &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; 100,510.9 &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; 261,822.6 &lt;/td&gt;
@@ -1532,6 +1532,869 @@ Table 7b. TFP with `\(k,n&gt;0\)`
    &lt;td style="text-align:left;"&gt; 73,265 &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; 68,294 &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; 4,971 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+]
+
+
+---
+
+background-image:url(normal.png)
+
+&lt;br /&gt;
+
+.pull-left[
+
+# Trade policies vs TFP
+
+##### observations = 4,971
+- 1,512 firms
+- only customs, `\(k,n&gt;0\)`
+- TFP1 estimated with all SI
+- TFP2 estimated only customs
+- `\(VaL=\frac{Value Added}{Labour}\)`
+
+##### Table 8a:
+- Simple OLS
+- robust standard error
+- TBT is good?
+- Price control is big
+- others are not significant
+]
+
+.pull-right[
+&lt;table class="table table-striped" style="font-size: 11px; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Variables &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; TFP1 &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; TFP2 &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; VaL &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;vertical-align: middle !important;" rowspan="2"&gt; tariff &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; -0.027 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; -0.025 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; -0.072*** &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   
+   &lt;td style="text-align:left;"&gt; (0.020) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.019) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.023) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;vertical-align: middle !important;" rowspan="2"&gt; SPS &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; -0.094* &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; -0.079 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; -0.164** &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   
+   &lt;td style="text-align:left;"&gt; (0.048) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.049) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.073) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;vertical-align: middle !important;" rowspan="2"&gt; TBT &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.289*** &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.254*** &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.379*** &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   
+   &lt;td style="text-align:left;"&gt; (0.092) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.078) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.099) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;vertical-align: middle !important;" rowspan="2"&gt; Pre-shipment inspection &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.082 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.067 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.295* &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   
+   &lt;td style="text-align:left;"&gt; (0.109) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.109) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.161) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;vertical-align: middle !important;" rowspan="2"&gt; licensing &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; -0.064 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; -0.036 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; -0.004 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   
+   &lt;td style="text-align:left;"&gt; (0.059) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.058) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.087) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;vertical-align: middle !important;" rowspan="2"&gt; price control &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 281.992*** &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 585.429*** &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 539.567*** &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   
+   &lt;td style="text-align:left;"&gt; (87.628) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (111.394) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (134.382) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;vertical-align: middle !important;" rowspan="2"&gt; competition measures &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.114 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.084 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.111 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   
+   &lt;td style="text-align:left;"&gt; (0.320) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.315) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.348) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;vertical-align: middle !important;" rowspan="2"&gt; export-related &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.009 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.035 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.057 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   
+   &lt;td style="text-align:left;"&gt; (0.081) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.081) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.140) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;vertical-align: middle !important;" rowspan="2"&gt; dummy FDI &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.171*** &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.176*** &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.153** &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   
+   &lt;td style="text-align:left;"&gt; (0.059) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.054) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.074) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;vertical-align: middle !important;" rowspan="2"&gt; foreign ownership &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.039*** &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.040*** &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.044*** &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   
+   &lt;td style="text-align:left;"&gt; (0.013) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.012) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.016) &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+]
+
+---
+
+background-image:url(normal.png)
+
+&lt;br /&gt;
+
+.pull-left[
+
+# Trade policies vs TFP
+
+##### observations = 4,971
+- 1,512 firms
+- only customs, `\(k,n&gt;0\)`
+- TFP1 estimated with all SI
+- TFP2 estimated only customs
+- `\(VaL=\frac{Value Added}{Labour}\)`
+
+##### Table 8b:
+- Firm, year, and ISIC FE
+- Only TBT remains significant
+]
+
+.pull-right[
+&lt;table class="table table-striped" style="font-size: 11px; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Variables &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; TFP1 &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; TFP2 &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; VaL &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;vertical-align: middle !important;" rowspan="2"&gt; tariff &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; -0.019 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; -0.013 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.002 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   
+   &lt;td style="text-align:left;"&gt; (0.022) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.021) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.028) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;vertical-align: middle !important;" rowspan="2"&gt; SPS &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; -0.011 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; -0.025 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; -0.038 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   
+   &lt;td style="text-align:left;"&gt; (0.065) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.062) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.082) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;vertical-align: middle !important;" rowspan="2"&gt; TBT &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.182** &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.142* &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.184* &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   
+   &lt;td style="text-align:left;"&gt; (0.078) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.074) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.098) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;vertical-align: middle !important;" rowspan="2"&gt; Pre-shipment inspection &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; -0.063 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; -0.077 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; -0.057 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   
+   &lt;td style="text-align:left;"&gt; (0.114) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.107) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.143) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;vertical-align: middle !important;" rowspan="2"&gt; licensing &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; -0.093 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; -0.095 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; -0.116 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   
+   &lt;td style="text-align:left;"&gt; (0.076) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.072) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.096) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;vertical-align: middle !important;" rowspan="2"&gt; price control &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 138.837 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 374.367 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 116.246 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   
+   &lt;td style="text-align:left;"&gt; (1,557.471) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (1,469.290) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (1,957.694) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;vertical-align: middle !important;" rowspan="2"&gt; competition measures &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.27 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.238 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; -0.048 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   
+   &lt;td style="text-align:left;"&gt; (0.351) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.332) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.442) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;vertical-align: middle !important;" rowspan="2"&gt; export-related &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.073 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.094 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.04 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   
+   &lt;td style="text-align:left;"&gt; (0.105) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.100) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.133) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;vertical-align: middle !important;" rowspan="2"&gt; dummy FDI &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.079 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.08 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; -0.03 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   
+   &lt;td style="text-align:left;"&gt; (0.066) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.062) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.083) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;vertical-align: middle !important;" rowspan="2"&gt; foreign ownership &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.021 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.02 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.026 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   
+   &lt;td style="text-align:left;"&gt; (0.015) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.014) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.019) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; R-sq &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.023 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.025 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.061 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+]
+
+---
+
+background-image: url(normal.png)
+
+&lt;br \&gt;
+
+# Trade policy doesn't seem to matter
+
+.pull-middle[
+- Firms in the customs data (possibly) are different
+  - they are generally bigger, and bigger firms may have ways to offset trade costs
+  
+- if size matters, it can be discovered using size interaction.
+
+- `\(l_{it}=log(Labour_{it})\)` is used as a proxy
+
+`$$size\_tfp_{it}=tfp_{it}+\gamma_Tt_{it}*l_{it}+\sum_\theta c_{\theta it}*l_{it}$$`
+]
+
+---
+
+background-image: url(normal.png)
+
+&lt;br /&gt;
+
+# Size Matters (Right=Left with FE)
+
+.pull-left[
+&lt;table class="table table-striped" style="font-size: 10px; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Variables &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; TFP1 &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; TFP2 &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; VaL &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;vertical-align: middle !important;" rowspan="2"&gt; tariff &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; -0.357*** &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; -0.630*** &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.071 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   
+   &lt;td style="text-align:left;"&gt; (0.067) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.065) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.090) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;vertical-align: middle !important;" rowspan="2"&gt; tariff.l &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.061*** &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.112*** &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; -0.026 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   
+   &lt;td style="text-align:left;"&gt; (0.012) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.011) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.017) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;vertical-align: middle !important;" rowspan="2"&gt; SPS &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; -0.250 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; -0.517** &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; -0.124 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   
+   &lt;td style="text-align:left;"&gt; (0.234) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.260) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.381) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;vertical-align: middle !important;" rowspan="2"&gt; SPS.l &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.026 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.076* &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; -0.008 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   
+   &lt;td style="text-align:left;"&gt; (0.042) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.046) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.067) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;vertical-align: middle !important;" rowspan="2"&gt; TBT &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.213 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.194 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.486 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   
+   &lt;td style="text-align:left;"&gt; (0.483) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.419) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.408) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;vertical-align: middle !important;" rowspan="2"&gt; TBT.l &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.014 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.012 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; -0.019 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   
+   &lt;td style="text-align:left;"&gt; (0.083) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.072) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.067) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;vertical-align: middle !important;" rowspan="2"&gt; Pre-shipment inspection &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.418 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.749 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; -0.005 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   
+   &lt;td style="text-align:left;"&gt; (0.531) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.558) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.758) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;vertical-align: middle !important;" rowspan="2"&gt; Pre-shipment inspection.l &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; -0.058 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; -0.116 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.051 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   
+   &lt;td style="text-align:left;"&gt; (0.094) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.098) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.134) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;vertical-align: middle !important;" rowspan="2"&gt; licensing &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; -0.650** &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; -1.444*** &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.640* &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   
+   &lt;td style="text-align:left;"&gt; (0.266) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.263) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.371) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;vertical-align: middle !important;" rowspan="2"&gt; licensing.l &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.107** &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.258*** &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; -0.119* &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   
+   &lt;td style="text-align:left;"&gt; (0.047) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.046) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.064) &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+]
+
+.pull-right[
+&lt;table class="table table-striped" style="font-size: 10px; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Variables &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; TFP1 &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; TFP2 &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; VaL &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;vertical-align: middle !important;" rowspan="2"&gt; tariff &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; -0.205** &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; -0.371*** &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.259** &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   
+   &lt;td style="text-align:left;"&gt; (0.083) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.077) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.104) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;vertical-align: middle !important;" rowspan="2"&gt; tariff.l &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.036** &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.068*** &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; -0.048** &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   
+   &lt;td style="text-align:left;"&gt; (0.015) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.014) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.019) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;vertical-align: middle !important;" rowspan="2"&gt; SPS &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; -0.260 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; -0.381 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.103 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   
+   &lt;td style="text-align:left;"&gt; (0.297) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.278) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.372) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;vertical-align: middle !important;" rowspan="2"&gt; SPS.l &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.043 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.062 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; -0.029 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   
+   &lt;td style="text-align:left;"&gt; (0.051) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.048) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.064) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;vertical-align: middle !important;" rowspan="2"&gt; TBT &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.124 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.074 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.462 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   
+   &lt;td style="text-align:left;"&gt; (0.330) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.310) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.415) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;vertical-align: middle !important;" rowspan="2"&gt; TBT.l &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.011 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.013 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; -0.051 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   
+   &lt;td style="text-align:left;"&gt; (0.058) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.055) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.073) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;vertical-align: middle !important;" rowspan="2"&gt; Pre-shipment inspection &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; -0.115 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.16 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; -0.637 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   
+   &lt;td style="text-align:left;"&gt; (0.520) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.488) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.652) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;vertical-align: middle !important;" rowspan="2"&gt; Pre-shipment inspection.l &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.01 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; -0.043 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.1 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   
+   &lt;td style="text-align:left;"&gt; (0.093) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.087) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.117) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;vertical-align: middle !important;" rowspan="2"&gt; licensing &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; -0.451 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; -0.896*** &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 1.477*** &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   
+   &lt;td style="text-align:left;"&gt; (0.311) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.292) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.390) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;vertical-align: middle !important;" rowspan="2"&gt; licensing.l &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.065 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.147*** &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; -0.295*** &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   
+   &lt;td style="text-align:left;"&gt; (0.056) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.052) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.070) &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+]
+
+---
+
+background-image: url(normal.png)
+
+&lt;br /&gt;
+
+# Size Matters (Right=Left with FE)
+
+.pull-left[
+&lt;table class="table table-striped" style="font-size: 11px; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Variables &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; TFP1 &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; TFP2 &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; VaL &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;vertical-align: middle !important;" rowspan="2"&gt; price control &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; -8,559*** &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; -12,147*** &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; -29,052*** &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   
+   &lt;td style="text-align:left;"&gt; (3,235) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (2,984) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (4,029) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;vertical-align: middle !important;" rowspan="2"&gt; price control.l &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 1,383*** &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 1,985*** &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 4,718*** &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   
+   &lt;td style="text-align:left;"&gt; (514) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (474) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (640) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;vertical-align: middle !important;" rowspan="2"&gt; competition &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; -1.155 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; -0.693 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; -2.269* &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   
+   &lt;td style="text-align:left;"&gt; (1.152) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (1.095) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (1.194) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;vertical-align: middle !important;" rowspan="2"&gt; competition.l &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.228 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.129 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.434** &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   
+   &lt;td style="text-align:left;"&gt; (0.216) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.210) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.213) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;vertical-align: middle !important;" rowspan="2"&gt; export-related &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; -0.341 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; -0.475 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.343 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   
+   &lt;td style="text-align:left;"&gt; (0.357) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.385) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.679) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;vertical-align: middle !important;" rowspan="2"&gt; export-related.l &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.066 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.095 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; -0.049 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   
+   &lt;td style="text-align:left;"&gt; (0.062) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.066) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.125) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;vertical-align: middle !important;" rowspan="2"&gt; dummy FDI &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.157*** &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.152*** &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.156** &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   
+   &lt;td style="text-align:left;"&gt; (0.059) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.052) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.073) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;vertical-align: middle !important;" rowspan="2"&gt; foreign ownership &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.039*** &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.040*** &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.045*** &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   
+   &lt;td style="text-align:left;"&gt; (0.013) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.012) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.016) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; R-sq &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; - &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; - &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; - &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+]
+
+.pull-right[
+&lt;table class="table table-striped" style="font-size: 11px; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Variables &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; TFP1 &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; TFP2 &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; VaL &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;vertical-align: middle !important;" rowspan="2"&gt; price control &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; -7,559 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; -10,221 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; -25,902 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   
+   &lt;td style="text-align:left;"&gt; (41,100) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (38,558) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (51,565) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;vertical-align: middle !important;" rowspan="2"&gt; price control.l &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 1,214 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 1,666 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 4,154 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   
+   &lt;td style="text-align:left;"&gt; (6,533) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (6,129) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (8,197) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;vertical-align: middle !important;" rowspan="2"&gt; competition &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; -2.027 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; -2.204* &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; -4.609*** &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   
+   &lt;td style="text-align:left;"&gt; (1.277) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (1.198) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (1.602) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;vertical-align: middle !important;" rowspan="2"&gt; competition.l &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.393* &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.413** &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.834*** &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   
+   &lt;td style="text-align:left;"&gt; (0.220) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.206) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.276) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;vertical-align: middle !important;" rowspan="2"&gt; export-related &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; -0.096 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; -0.291 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.48 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   
+   &lt;td style="text-align:left;"&gt; (0.476) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.446) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.597) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;vertical-align: middle !important;" rowspan="2"&gt; export-related.l &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.036 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.075 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; -0.073 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   
+   &lt;td style="text-align:left;"&gt; (0.083) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.078) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.104) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;vertical-align: middle !important;" rowspan="2"&gt; dummy FDI &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.066 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.061 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; -0.022 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   
+   &lt;td style="text-align:left;"&gt; (0.066) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.062 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.083) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;vertical-align: middle !important;" rowspan="2"&gt; foreign ownership &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.023 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.024* &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.025 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   
+   &lt;td style="text-align:left;"&gt; (0.015) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.014) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; (0.019) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; R-sq &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.029 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.041 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.07 &lt;/td&gt;
   &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -1567,11 +2430,11 @@ background-image: url(normal.png)
   - may lead to more intervention
 
 - If scared with CAD, find other ways
+  - become more attractive to business (both domestic and foreign)
   - let IDR weaken?
   - bad debt management `\(\Rightarrow\)` costing manufacturers and consumers
-  - become more attractive to business (both domestic and foreign)
   
-- Commodities are still the main driver of export, and halting GVC may lead to even more reliance on commodities to keep CA&gt;0
+- Commodities are still the main driver of export, and halting GVC may lead to even more reliance on commodities to keep CA `\(&gt;0\)`
   
 ---
 
