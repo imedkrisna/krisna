@@ -21,7 +21,7 @@ date: 2020-09-18T21:22:27+10:00
 all_day: false
 
 # Schedule page publish date (NOT talk date).
-publishDate: 2020-09-17T21:22:27+10:00
+publishDate: 2020-09-16T21:22:27+10:00
 
 authors: [admin]
 tags: []
@@ -49,7 +49,7 @@ links:
 url_slides: ""
 
 url_code:
-url_pdf:
+url_pdf: "talk/beasiswa/slide.pdf"
 url_video:
 
 # Markdown Slides (optional).
