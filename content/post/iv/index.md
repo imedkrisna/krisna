@@ -48,7 +48,7 @@ Salah satu problem yang dapat menjangkiti OLS adalah *endogeneity* atau
 ternyata tidak independen, alias variabel *X* nya ternyata terpengaruh
 oleh variabel lain yang tidak ada di regresi, alias ada informasi yang
 terkandung di variabel *X* ternyata masih tersimpan di error term, alias
-*E*\[*M**X**M**ϵ*\] ≠ 0.
+$E[MXM\epsilon] \neq 0$.
 
 Akibatnya, kita tidak dapat mengatakan dengan yakin bahwa *X*
 mempengaruhi *Y*, karena bisa saja hubungan kausalitasnya ternyata
@@ -69,7 +69,7 @@ Problem IV
 
 IV sendiri punya banyak problem (huft). Salah satunya adalah IV bisa
 jadi malah bikin bias OLS jika hubungan *Z* dan *X* tidak linear. Kita
-coba dengan melakukan generasi data untuk *Z*, *X**d**a**n**Y* lalu kita
+coba dengan melakukan generasi data untuk $Z,X$ dan $Y$ lalu kita
 regresi hasilnya.
 
 Setting
@@ -88,8 +88,8 @@ yang sedang kena negative shock otomatis *cash flow*-nya negatif) baru
 diregresi ke *borrowing*.
 
 Kita buat 2,000 observasi, di mana separuhnya mengalami shock negatif
-yang rata ( − 3 + *r**a**n**d*()) sementara yang shock positif memiliki
-fungsi *X* = *Z* + *r**a**n**d*() alias koefisien beta untuk Z adalah 1.
+yang rata $( − 3 + rand())$ sementara yang shock positif memiliki
+fungsi $X = Z + rand()$ alias koefisien beta untuk Z adalah 1.
 
     data <- data.frame(
       id=c(1:2000)
