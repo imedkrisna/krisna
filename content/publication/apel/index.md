@@ -15,7 +15,7 @@ links:
 publication: "Asian-Pacific Economic Literature"
 publication_short: "APEL"
 publication_types:
-- "2"
+- "9"
 publishDate: "2020-04-15T00:00:00Z"
 summary: "A review on the book World Trade Evolution: Growth, Productivity and Employment ‐ edited by Lili Yan Ing and Miaojie Yu (eds)"
 tags:

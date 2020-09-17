@@ -15,7 +15,7 @@ links:
 publication: ""
 publication_short: ""
 publication_types:
-- "0"
+- "8"
 publishDate: "2020-04-15T00:00:00Z"
 summary: "Opeds I wrote with my colleagues on issues mainly related to trade and investment in Indonesian context."
 tags:
