@@ -16,7 +16,7 @@ publication: "Bulletin of Indonesian Economic Studies"
 publication_short: "BIES"
 publication_types:
 - "3"
-publishDate: "2020-04-07T00:00:00Z"
+publishDate: "2020-08-07T00:00:00Z"
 summary: In this article, I examine Indonesia's experience with capital account liberalisation. To be successful in fulfilling its development plan, capital access become essential.
 tags:
 - Economics
