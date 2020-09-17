@@ -45,30 +45,30 @@ Apa itu IV?
 
 Salah satu problem yang dapat menjangkiti OLS adalah *endogeneity* atau
 *reverse causality*. Ini terjadi ketika variabel independen anda
-ternyata tidak independen, alias variabel *X* nya ternyata terpengaruh
+ternyata tidak independen, alias variabel $X$ nya ternyata terpengaruh
 oleh variabel lain yang tidak ada di regresi, alias ada informasi yang
-terkandung di variabel *X* ternyata masih tersimpan di error term, alias
+terkandung di variabel $X$ ternyata masih tersimpan di error term, alias
 $E[MXM\epsilon] \neq 0$.
 
-Akibatnya, kita tidak dapat mengatakan dengan yakin bahwa *X*
-mempengaruhi *Y*, karena bisa saja hubungan kausalitasnya ternyata
-terbalik, yaitu *Y* mempengaruhi *X*. Jika anda seorang pengambil
+Akibatnya, kita tidak dapat mengatakan dengan yakin bahwa $X$
+mempengaruhi $Y$, karena bisa saja hubungan kausalitasnya ternyata
+terbalik, yaitu $Y$ mempengaruhi $X$. Jika anda seorang pengambil
 keputusan, *reverse causality* sungguh problematis. Bayangkan pertanyaan
 berikut: gaji mempengaruhi kinerja, atau kinerja mempengaruhi gaji?
 
 IV adalah salah satu treatment untuk masalah ini. IV adalah sebuah
-variabel ke-3 *Z*, yang punya korelasi kuat dengan variabel independen
-*X*, tapi tidak punya korelasi dengan *Y*. Jadi di sini, *Z* menjadi
+variabel ke-3 $Z$, yang punya korelasi kuat dengan variabel independen
+$X$, tapi tidak punya korelasi dengan $Y$. Jadi di sini, $Z$ menjadi
 variabel independen yang paling independen (haha) untuk menangkap
-variasi dari *X*. Jika setelah ditangkap oleh *Z* lalu *X* masih
-terkorelasi kuat dengan *Y*, kita bisa katakan dengan lebih yakin bahwa
-*X* *causes* *Y* dan tidak sebaliknya.
+variasi dari $X$. Jika setelah ditangkap oleh $Z$ lalu $X$ masih
+terkorelasi kuat dengan $Y$, kita bisa katakan dengan lebih yakin bahwa
+$X$ *causes* $Y$ dan tidak sebaliknya.
 
 Problem IV
 ----------
 
 IV sendiri punya banyak problem (huft). Salah satunya adalah IV bisa
-jadi malah bikin bias OLS jika hubungan *Z* dan *X* tidak linear. Kita
+jadi malah bikin bias OLS jika hubungan $Z$ dan $X$ tidak linear. Kita
 coba dengan melakukan generasi data untuk $Z,X$ dan $Y$ lalu kita
 regresi hasilnya.
 
@@ -128,7 +128,7 @@ fungsi $X = Z + rand()$ alias koefisien beta untuk Z adalah 1.
     ## 5  0  1 2.993298
     ## 6  1  0 1.145938
 
-Kode di atas membuat *cash flow* *X* memiliki karakteristik bahwa cash
+Kode di atas membuat *cash flow* $X$ memiliki karakteristik bahwa cash
 flow positif punya hubungan linear dengan koefisien 1 terhadap
 *productivity shock* positif, tapi hubungan konstan  − 3 terhadap
 *productivity shock* negatif. Shock positif tu misalnya kayak tiba-tiba
@@ -138,7 +138,7 @@ sebaliknya, misalnya pandemik. wabah wereng di masa pemilu mengakibatkan
 shock yang tidak rata: positif buat tukang sablon tapi negatif untuk
 petani.
 
-Coba kita plot *Z* di sumbu horizontal, *X* di sumbu vertikal:
+Coba kita plot $Z$ di sumbu horizontal, $X$ di sumbu vertikal:
 
     library(ggplot2)
     a<-ggplot(data, aes(Z,X, colour=B1)) +
@@ -149,11 +149,11 @@ Coba kita plot *Z* di sumbu horizontal, *X* di sumbu vertikal:
 
 Di mana warna biru menandakan shock positif sementara hitam menandakan
 shock negatif. keliatan ya? Shock positif sesuai 45<sup>∘</sup> dari
-*X* = 1, sementara shock negatif garis lurus aja di sekitar *X* =  − 3.
+$X = 1$, sementara shock negatif garis lurus aja di sekitar $X =  − 3$.
 Patternnya keliatan banget ya? wkwk ya wajar karena ini adalah data
 hasil generasi, bukan survey atau sejenisnya.
 
-Sekarang kita coba plot *X* di sumbu datar, dan *Y* di sumbu tegak:
+Sekarang kita coba plot $X$ di sumbu datar, dan $Y$ di sumbu tegak:
 
     b<-ggplot(data,aes(X,Y,colour=X1)) +
       geom_point()
@@ -163,12 +163,12 @@ Sekarang kita coba plot *X* di sumbu datar, dan *Y* di sumbu tegak:
 
 *Firm’s borrowing* sudah pasti positif, dan kita buat sedemikian
 sehingga perusahaan meminjam sesuai *cash flow* (alias koefisien
-beta-nya = 1). Nah, ketika *X* =  − 3, mereka minjamnya *Y* = 3, makanya
-yang hitam ngumpul di (*X*, *Y*) = ( − 3, 3) semua, sementara yang biru
-punya tren lurus dengan sudut 45<sup>∘</sup> alias *Y* = *X*.
+beta-nya = 1). Nah, ketika $X$ =  − 3, mereka minjamnya $Y$ = 3, makanya
+yang hitam ngumpul di ($X$, $Y$) = ( − 3, 3) semua, sementara yang biru
+punya tren lurus dengan sudut 45<sup>∘</sup> alias $Y$ = $X$.
 
-Jika kita, ceritanya nggak tau hubungan *x*, *Y* dan *Z* di dunia nyata,
-meregresikan *X* dan *Y* dengan OLS biasa, kira-kira seperti apa
+Jika kita, ceritanya nggak tau hubungan $X$, $Y$ dan $Z$ di dunia nyata,
+meregresikan $X$ dan $Y$ dengan OLS biasa, kira-kira seperti apa
 bentuknya?
 
     b +
@@ -179,9 +179,9 @@ bentuknya?
 Keliatan bias banget yah?
 
 Bagaimana dengan koefisiennya? Coba anda bisa nebak gak? ingat bahwa
-ketika *X* positif, *X* naik 1 beriringan dengan *Y* naik sebanyak 1,
-sementara ketika *X* negatif, *X* turun 1 beriringan dengan *Y* naik 1
-juga. Sementara itu ada 50% *X* yang negatif, dan 50% *X* yang positif.
+ketika $X$ positif, $X$ naik 1 beriringan dengan $Y$ naik sebanyak 1,
+sementara ketika $X$ negatif, $X$ turun 1 beriringan dengan $Y$ naik 1
+juga. Sementara itu ada 50% $X$ yang negatif, dan 50% $X$ yang positif.
 Jika kita regresi biasa, kira-kira koefisiennya berapa? Coba tebak!
 
     # Regression
@@ -216,7 +216,7 @@ Regresi IV malah bikin tambah jelek
 
 Tentu saja OLS belum ngasih kita koefisien yang kita inginkan ya (tentu saja masalah bias masih ada). Yang jadi masalah, regresi IV malah bikin koefisiennya makin menjauh dari 0.5!
 
-Coba kita regresi *Y* dan *X* dengan menggunakan *Z* sebagai instrumen:
+Coba kita regresi $Y$ dan $X$ dengan menggunakan $Z$ sebagai instrumen:
 
     library (AER)
 
@@ -280,7 +280,7 @@ kita regresi hanya shock positif saja:
 
 Ini benar. Intercept = 0, dan koefisiennya 1, sesuai dengan yang kita
 buat. Tentu saja yang negatif tidak perlu kita IV karena ketika negatif,
-*X* akan otomatis -3. Artinya, untuk yang negatif, *X* sudah eksogen!
+$X$ akan otomatis -3. Artinya, untuk yang negatif, $X$ sudah eksogen!
 Tidak perlu ditreatment apa-apa (meskipun, coba lihat bagaimana saya
 *generate* error term?)
 
