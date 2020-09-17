@@ -1,12 +1,12 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "Iv"
+title: "Salah satu problem menggunakan Instrumental Variable (IV)"
 subtitle: ""
-summary: ""
-authors: []
-tags: []
-categories: []
+summary: "Salah satu masalah di IV adalah 'weak instrument', yaitu instrumennya tidak dengan baik menjelaskan variabel endogen yang mau di-treat. Weak instrument membuat regresi anda bisa jadi lebih buruk daripada OLS. Postingan kali ini mencoba mendemonstrasikannya dengan data hasi generasi"
+authors: [admin]
+tags: [R, Econometrics, Indonesian]
+categories: [R, Econometrics, Indonesian]
 date: 2020-09-16T18:46:31+10:00
 lastmod: 2020-09-16T18:46:31+10:00
 featured: false
@@ -16,9 +16,9 @@ draft: false
 # To use, add an image named `featured.jpg/png` to your page's folder.
 # Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
 image:
-  caption: ""
-  focal_point: ""
-  preview_only: false
+  caption: "Bias OLS"
+  focal_point: "smart"
+  preview_only: true
 
 # Projects (optional).
 #   Associate this post with one or more of your projects.
@@ -174,7 +174,7 @@ bentuknya?
     b +
       geom_smooth(method = "lm")
 
-![Graph 3](graph3.png)
+![Graph 3](featured.png)
 
 Keliatan bias banget yah?
 
