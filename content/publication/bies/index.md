@@ -32,4 +32,4 @@ url_source: ''
 url_video: ''
 ---
 
-<a href="https://www.scimagojr.com/journalsearch.php?q=19966&amp;tip=sid&amp;exact=no" title="SCImago Journal &amp; Country Rank"><img border="0" src="https://www.scimagojr.com/journal_img.php?id=19966" alt="SCImago Journal &amp; Country Rank"  />test</a>
+<a href="https://www.scimagojr.com/journalsearch.php?q=19966&amp;tip=sid&amp;exact=no" title="SCImago Journal &amp; Country Rank"><img border="0" src="https://www.scimagojr.com/journal_img.php?id=19966" alt="SCImago Journal &amp; Country Rank"  /></a>
