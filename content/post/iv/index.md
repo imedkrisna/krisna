@@ -3,7 +3,7 @@
 
 title: "Salah satu problem menggunakan Instrumental Variable (IV)"
 subtitle: ""
-summary: "Salah satu masalah di IV adalah 'weak instrument', yaitu instrumennya tidak dengan baik menjelaskan variabel endogen yang mau di-treat. Weak instrument membuat regresi anda bisa jadi lebih buruk daripada OLS. Postingan kali ini mencoba mendemonstrasikannya dengan data hasi generasi"
+summary: "Salah satu masalah di IV adalah 'weak instrument', yang dapat membuat regresi anda bisa jadi lebih buruk daripada OLS. Postingan ini mencoba mendemonstrasikannya dengan data hasi generasi pakai R"
 authors: [admin]
 tags: [R, Econometrics, Indonesian]
 categories: [R, Econometrics, Indonesian]
@@ -149,7 +149,7 @@ Coba kita plot $Z$ di sumbu horizontal, $X$ di sumbu vertikal:
 
 Di mana warna biru menandakan shock positif sementara hitam menandakan
 shock negatif. keliatan ya? Shock positif sesuai 45<sup>∘</sup> dari
-$X = 1$, sementara shock negatif garis lurus aja di sekitar $X =  − 3$.
+$X = 0$, sementara shock negatif garis lurus aja di sekitar $X =  − 3$.
 Patternnya keliatan banget ya? wkwk ya wajar karena ini adalah data
 hasil generasi, bukan survey atau sejenisnya.
 
@@ -244,9 +244,9 @@ Coba kita regresi $Y$ dan $X$ dengan menggunakan $Z$ sebagai instrumen:
 
 Setelah di-*treat* dengan IV, koefisien X dan Y malah bermasalah. Tapi
 sebenernya kan memang kita meregresikan X dan Y dengan koefisien 1
-(meskipun aslinya 50 doang, 50-nya lagi koefisien -1) Tentu saja, IV-nya
-hanya menangkap 50 dari fenomena, dan 50-nya lagi akhirnya diserahkan ke
-*intercept*. OLS emang masih ada bias, tapi IV malah bikin tambah parah.
+(meskipun aslinya 50% doang, 50%-nya lagi koefisien -1) Tentu saja, IV-nya
+hanya menangkap 50% dari fenomena, dan 50%-nya lagi akhirnya diserahkan ke
+*intercept* (dan error). OLS emang masih ada bias, tapi IV malah bikin tambah parah.
 Inilah salah satu contoh problem menggunakan IV, jika hubungan IV nya
 sendiri bias.
 
@@ -287,7 +287,7 @@ Tidak perlu ditreatment apa-apa (meskipun, coba lihat bagaimana saya
 Intinya, hati-hati menggunakan IV
 ---------------------------------
 
-IV dapat berbahaya jika instrumennya tidak menjelaskan dengan baik
+Tentu saja di dunia nyata kita tidak tau fungsi asli dari $Y=f(X)$, dan biasanya memang IV kita gunakan untuk memperbaiki kelemahan OLS. Sayangnya IV dapat berbahaya jika instrumennya tidak menjelaskan dengan baik
 penyebaran dari variabel endogen yang di-*treat*, atau jika anda tidak
 tau-tau banget hubungan si instrumen dengan variabel yang di-*treat*.
 Bukannya memperbaiki, malah bikin OLS tambah parah. Tentu saja masalah
@@ -300,7 +300,7 @@ si-*shock* ini akan punya pengaruh ke *borrowing*. Wkkwkwk.
 Biasanya yang kita lakukan di paper adalah menunjukkan hasil regresi OLS
 dan IV, sehingga bisa dilihat pola-nya apakah IV memperbaiki OLS atau
 tidak. Tentu saja justifikasi dari publikasi lain soal keabsahan IV juga
-harus ditulis di paper kita wkwk
+harus ditulis di paper kita wkwk. Di Crawford sendiri, jika anda menggunakan IV, siap-siaplah ditanya-tanyain soal kekuatan instrumennya. Ha ha ha ha!
 
 IV memang ribet. Moga-moga kita tidak harus berurusan dengan IV. wwkwkw.
 Ok sekian semoga postingannya berguna.
