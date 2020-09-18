@@ -48,6 +48,12 @@ social:
 - icon: google-scholar
   icon_pack: ai
   link: https://scholar.google.com/citations?user=FtBxfAcAAAAJ&hl=en
+- icon: orcid
+  icon_pack: ai
+  link: https://orcid.org/0000-0001-8695-0514
+- icon: researchgate
+  icon_pack: ai
+  link: https://www.researchgate.net/profile/Krisna_Gupta
 - icon: github
   icon_pack: fab
   link: https://github.com/imedkrisna

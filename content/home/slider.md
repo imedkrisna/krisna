@@ -7,7 +7,7 @@ weight = 1  # Order that this section will appear.
 
 # Slide interval.
 # Use `false` to disable animation or enter a time in ms, e.g. `5000` (5s).
-interval = false
+interval = 5000
 
 # Slide height (optional).
 # E.g. `500px` for 500 pixels or `calc(100vh - 70px)` for full screen.
@@ -17,7 +17,7 @@ height = "300px"
 # Duplicate an `[[item]]` block to add more slides.
 [[item]]
   title = "Welcome!"
-  content = "I use this page to store my CV and blogs. I blogs in english but mostly in Indonesian."
+  content = "I use this page to store my CV and blogs. I blog mostly in Indonesian, sometimes english."
   align = "center"  # Choose `center`, `left`, or `right`.
 
   # Overlay a color or image (optional).
