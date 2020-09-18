@@ -236,9 +236,9 @@ Setiap beasiswa punya persyaratan khusus yang mungkin berbeda satu sama lain
 
 ## Tips ekstra S3 & S2 untuk swasta
 
-- Yakinkan diri anda bahwa beasiswa berguna untuk karir
+- Apakah beasiswa berguna untuk karir?
   - S3 harus mikir lebih ekstra
-  - 5 tahun kerja vs 5 tahun sekolah?
+  - 5 tahun kerja vs 5 tahun sekolah
 
 - beberapa kantor mau re-employ
   - tapi sangat jarang yang begini
