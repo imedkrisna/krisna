@@ -3,8 +3,8 @@
 
 title: "webinar dan bedah buku bidang ekonomi Mewujudkan Indonesia 4.0: Kumpulan pemikiran pelajar Indonesia di Australia"
 event:
-event_url:
-location:
+event_url: https://www.youtube.com/watch?v=sqfMf4WN_d4&t=1376s
+location: '[Youtube Channel Sobat Cyber Indonesia](https://www.youtube.com/channel/UCl_e8NwGVoNhSGr8tniUHGg)'
 address:
   street:
   city:
@@ -17,13 +17,13 @@ abstract:
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
 date: 2020-09-10T21:56:48+10:00
-date_end: 2020-09-10T21:56:48+10:00
+date_end: 
 all_day: false
 
 # Schedule page publish date (NOT talk date).
 publishDate: 2020-09-10T21:56:48+10:00
 
-authors: [admin]
+authors: [Prof. Dr. Suharnomo, Aditia Prasta, Monasisca Noviannei, admin]
 tags: []
 
 # Is this a featured talk? (true/false)
@@ -50,7 +50,7 @@ url_slides: https://drive.google.com/drive/folders/12E8567Ibdex1FfE5ColmqvKeKmIQ
 
 url_code:
 url_pdf:
-url_video:
+url_video: https://www.youtube.com/watch?v=sqfMf4WN_d4&t=1376s
 
 # Markdown Slides (optional).
 #   Associate this talk with Markdown slides.
@@ -79,8 +79,8 @@ Acara kali ini fokus pada aspek ekonomi, industri dan investasi dari buku ini. B
 
 Acara ini sendiri dibuka dengan *keynote speak* dari Menteri Perindustrian, Bapak Dr. Agus Gumiwang Kartasasmita, M.Si. Beliau memberikan sedikit gambaran mengenai kondisi perekonomian dan industri manufaktur di Indonesia, serta bagaimana COVID-19 membuat Indonesia harus mengupdate sedikit aspek dari Making Indonesia 4.0, utamanya memberikan tekanan pentingnya berinvestasi di industri farmasi dan alat kesehatan.
 
-Acara ini disiarkan di kanal [{{< icon name="youtube" pack="fab" >}}Youtube Sobat Cyber Indonesia](https://www.youtube.com/channel/UCl_e8NwGVoNhSGr8tniUHGg). Paparan dari Menteri Perindustrian dan para narasumber dapat diakses di [google drive](https://drive.google.com/drive/folders/12E8567Ibdex1FfE5ColmqvKeKmIQx8Wn?usp=sharing), atau ketuk `slides` di atas.
+Acara ini disiarkan di [{{< icon name="youtube" pack="fab" >}}Sobat Cyber Indonesia](https://www.youtube.com/channel/UCl_e8NwGVoNhSGr8tniUHGg). Paparan dari Menteri Perindustrian dan para narasumber dapat diakses di [{{< icon name="google-drive" pack="fab" >}}google drive](https://drive.google.com/drive/folders/12E8567Ibdex1FfE5ColmqvKeKmIQx8Wn?usp=sharing), atau ketuk `slides` di atas.
 
-Berikut rekamannya dari kanal {{< icon name="youtube" pack="fab" >}}Youtube Sobat Cyber Indonesia. Acara dimulai dari menit 22:55, jadi langsung diskip saja ke menit 22:55 yah!
+Berikut rekamannya dari kanal [{{< icon name="youtube" pack="fab" >}}Sobat Cyber Indonesia](https://www.youtube.com/channel/UCl_e8NwGVoNhSGr8tniUHGg). Acara dimulai dari menit 22:55, jadi langsung diskip saja ke menit 22:55 yah!
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/sqfMf4WN_d4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

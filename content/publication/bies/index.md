@@ -10,12 +10,16 @@ image:
   focal_point: ""
   preview_only: false
 links:
-- name: Custom Link
-  url: https://www-tandfonline-com.virtual.anu.edu.au/doi/full/10.1080/00074918.2020.1747596
+# - name: Custom Link
+#   url: https://www-tandfonline-com.virtual.anu.edu.au/doi/full/10.1080/00074918.2020.1747596
+- name: Follow
+  url: https://twitter.com/imedkrisna
+  icon_pack: fab
+  icon: twitter
 publication: "Bulletin of Indonesian Economic Studies"
 publication_short: "BIES"
 publication_types:
-- "3"
+- "2"
 publishDate: "2020-08-07T00:00:00Z"
 summary: In this article, I examine Indonesia's experience with capital account liberalisation. To be successful in fulfilling its development plan, capital access become essential.
 tags:
@@ -28,7 +32,7 @@ url_pdf: ''
 url_poster: ''
 url_project: ""
 url_slides: ""
-url_source: ''
+url_source: 'https://www-tandfonline-com.virtual.anu.edu.au/doi/full/10.1080/00074918.2020.1747596'
 url_video: ''
 ---
 
