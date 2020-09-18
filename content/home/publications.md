@@ -68,5 +68,5 @@ subtitle = ""
 +++
 
 {{% alert note %}}
-[see all publications]({{< ref "/publication/_index.md" >}}).
+[Click here to filter my publications]({{< ref "/publication/_index.md" >}}).
 {{% /alert %}}
