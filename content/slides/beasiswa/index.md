@@ -105,7 +105,7 @@ Presentasi ini dapat diakses di [krisna.netlify.app/talk/beasiswa](https://krisn
 * *No privilege? Work harder!*
   * perbanyak membaca dan menulis
   * perkaya kegiatan sosial
-  * pindah fungsional 😜
+  * jadi dosen/peneliti 😜
 
 ---
 
@@ -115,7 +115,7 @@ Presentasi ini dapat diakses di [krisna.netlify.app/talk/beasiswa](https://krisn
 * Ikuti sumber berita yang ter-*update*.
   * akun sosial media beasiswa.
   * ikuti forum khusus beasiswa jurusan tertentu.
-  * Jangan lupa intranet dan Pusdiklat.
+  * ASN biasanya punya portal internal
 * Kenali syarat yang sejenis.
   * kopi transkrip, surat rekomendasi, tes bahasa inggris, TPA, LOA.
 * Catat tanggal-tanggal penting.
@@ -127,7 +127,7 @@ Presentasi ini dapat diakses di [krisna.netlify.app/talk/beasiswa](https://krisn
 * Organisasi yang baik akan lebih efisien.
   * Buat folder untuk setiap aplikasi.
   * menyiapkan *checklist* sangat membantu.
-  * integrasi tanggal penting ke kalender.
+  * punya *reminder* / pengingat.
 * siapkan waktu dan ongkos untuk translasi dan legalisir.
 * _take your time_. Kalau submisi on-line, hati-hati *traffic* di detik-detik akhir.
 * Punya partner akan sangat menolong.
@@ -178,7 +178,7 @@ Setiap beasiswa punya persyaratan khusus yang mungkin berbeda satu sama lain
 - Perlukah mengambil les persiapan?
   - IELTS secara umum lebih murah
   - beli buku, online, partner
-  - _practice makes perfect_
+  - _practice makes perfect_, ala bisa karena biasa
   
 ---
 
@@ -221,16 +221,31 @@ Setiap beasiswa punya persyaratan khusus yang mungkin berbeda satu sama lain
 
 ---
 
-## Tips ekstra untuk S3
+## Tips ekstra S3 untuk ASN
 
-- Struktural lebih sulit (mungkin)
+- Struktural/manajerial lebih sulit (mungkin)
   - susah dapat ijin (kelamaan)
   - tidak banyak benefit bagi institusi
   - juga bagi anda pribadi
-- sepertinya menjadi fungsional dosen membantu
+- sepertinya menjadi dosen membantu
   - institusi mendapat benefit
   - angkatan saya (AAS) banyak fungsional
 - Ilmu dari S3 sangat dalam dan spesifik
+
+---
+
+## Tips ekstra S3 & S2 untuk swasta
+
+- Yakinkan diri anda bahwa beasiswa berguna untuk karir
+  - S3 harus mikir lebih ekstra
+  - 5 tahun kerja vs 5 tahun sekolah?
+
+- beberapa kantor mau re-employ
+  - tapi sangat jarang yang begini
+  - siap-siap mantab (makan tabungan)
+
+- akan lebih baik jika sudah punya tujuan kerja
+  - misalnya dosen / peneliti
 
 ---
 
@@ -315,7 +330,7 @@ Banyak hal yang harus dipersiapkan setelah diterima ~~misalnya bucket list tempa
   - sekolah S2 yang bener
   - jalin relasi dengan pembimbing
 - Selalu ingat ilmu padi
-  - dapat beasiswa $\neq$ hebat
+  - jangan cepat berpuas diri
   - Dirasani? balas dengan karya
 
 ---
@@ -350,7 +365,7 @@ Banyak hal yang harus dipersiapkan setelah diterima ~~misalnya bucket list tempa
   - _don't waste the privilege_
 - Evaluasi pasca-lulus biasanya tidak ada
   - anda harus memikirkan sendiri pola karir anda
-- Fungsional jadi semakin menarik
+- Dosen / peneliti jadi semakin menarik
   - Indonesia kekurangan dosen dan peneliti
   - Kesempatan meneliti di institusi terbaik
   - usahakan publikasi
