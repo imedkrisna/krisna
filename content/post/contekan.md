@@ -31,6 +31,7 @@ Postingan ini khusus buat contekan belajaran waktu nyoba-nyoba. Akan coba dibagi
 - [GME, paket buat PPLM dari USITC](https://www.usitc.gov/data/gravity/gme.htm), untuk general (ada databasenya) di [sini](https://www.usitc.gov/data/gravity/index.htm)
 - [Bikin paper pakai Jupyter Notebook](https://sylvaindeville.net/2015/07/17/writing-academic-papers-in-plain-text-with-markdown-and-jupyter-notebook/)
 - [using pivot and melt in pandas](https://stackoverflow.com/questions/22127569/opposite-of-melt-in-python-pandas)
+- [R di Jupyter (dan konten2 pada umumnya)](https://datatofish.com/r-jupyter-notebook/)
 
 ### Dataset
 - [trade data bulk download WTO](https://www.wto.org/english/res_e/statis_e/trade_datasets_e.htm)
