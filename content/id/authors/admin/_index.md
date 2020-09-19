@@ -10,7 +10,7 @@ authors:
 superuser: true
 
 # Role/position
-role: Mahasiswa PhD
+role: Mahasiswa Doktoral
 
 # Organizations/Affiliations
 organizations:
@@ -18,7 +18,7 @@ organizations:
   url: "https://crawford.anu.edu.au/people/phd/krisna-gupta"
 
 # Short bio (displayed in user profile at end of posts)
-bio: Mahasiswa PhD di ANU yang meneliti tentang dampak kebijakan perdagangan dan investasi terhadap ekonomi Indonesia, terutama manufaktur.
+bio: Mahasiswa doktoral di ANU yang meneliti tentang dampak kebijakan perdagangan dan investasi terhadap ekonomi Indonesia, terutama manufaktur.
 
 interests:
 - Perdagangan internasional

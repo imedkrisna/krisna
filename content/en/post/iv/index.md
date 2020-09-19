@@ -1,12 +1,12 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "Salah satu problem menggunakan Instrumental Variable (IV)"
+title: "When Instrumental Variable (IV) is problematic"
 subtitle: ""
-summary: "Salah satu masalah di IV adalah 'weak instrument', yang dapat membuat regresi anda bisa jadi lebih buruk daripada OLS. Postingan ini mencoba mendemonstrasikannya dengan data hasi generasi pakai R"
+summary: "One problem with IV is weak instrument, which may worsen an OLS. A course from CBE demonstrate weak instrument issue with R"
 authors: [admin]
-tags: [R, Econometrics, Indonesian]
-categories: [R, Econometrics, Indonesian]
+tags: [R, Econometrics]
+categories: [R, Econometrics]
 date: 2020-09-16T18:46:31+10:00
 lastmod: 2020-09-16T18:46:31+10:00
 featured: false
@@ -28,68 +28,29 @@ image:
 projects: []
 ---
 
-Salah satu kebahagiaan utama dari bekerja sebagai tutor untuk AAS dan
-ANU adalah saya jadi belajar konten mata kuliah yang saya tutor yang
-tidak saya ikuti semasa saya kuliah di ANU. Di ANU banyak banget mata
-kuliah yang isinya sangat menarik yang tidak mungkin semua diikuti.
-Menjadi tutor membuat saya ‘mengikuti’ perkuliahan lebih banyak daripada
-seharusnya ha ha.
+As a tutor for both Australia Awards Scholarship and ANU, I get the privilege to learn many courses. There's a lot of great content in ANU in terms of courses which I can't cope with. But as a tutor, I am 'forced' to learn many of these courses so that's definitely something. Haha!
 
-Kali ini, saya mau berbagi ilmu tentang kelemahan Instrumental Variable
-(IV) regression, salah satu teknik di ekonometri untuk melakukan
-*treatment* terhadap bias OLS. Ilmu ini saya dapatkan ketika menutor dua
-mahasiswa keren saya, Grani dan Riza.
+This time, i'd like to write about a demonstration of weak instrument that I learned from a course at CBE.
 
-Apa itu IV?
+What's an IV?
 -----------
 
-Salah satu problem yang dapat menjangkiti OLS adalah *endogeneity* atau
-*reverse causality*. Ini terjadi ketika variabel independen anda
-ternyata tidak independen, alias variabel $X$ nya ternyata terpengaruh
-oleh variabel lain yang tidak ada di regresi, alias ada informasi yang
-terkandung di variabel $X$ ternyata masih tersimpan di error term, alias
-$E[MXM\epsilon] \neq 0$.
+One problem with OLS is endogeneity/reverse causality. This happens when our independent variable is actually depending on something else. This something else is then absorbed by the error term and violate $E[MXM\epsilon] \neq 0$.
 
-Akibatnya, kita tidak dapat mengatakan dengan yakin bahwa $X$
-mempengaruhi $Y$, karena bisa saja hubungan kausalitasnya ternyata
-terbalik, yaitu $Y$ mempengaruhi $X$. Jika anda seorang pengambil
-keputusan, *reverse causality* sungguh problematis. Bayangkan pertanyaan
-berikut: gaji mempengaruhi kinerja, atau kinerja mempengaruhi gaji?
-
-IV adalah salah satu treatment untuk masalah ini. IV adalah sebuah
-variabel ke-3 $Z$, yang punya korelasi kuat dengan variabel independen
-$X$, tapi tidak punya korelasi dengan $Y$. Jadi di sini, $Z$ menjadi
-variabel independen yang paling independen (haha) untuk menangkap
-variasi dari $X$. Jika setelah ditangkap oleh $Z$ lalu $X$ masih
-terkorelasi kuat dengan $Y$, kita bisa katakan dengan lebih yakin bahwa
-$X$ *causes* $Y$ dan tidak sebaliknya.
+We often use IV as one of the treatment to this problem. IV is a third variable $Z$ that should be independent from $Y$ but have high correlation with $X$. IV will establish $X$ causes $Y$ but not $Y$ causes $X$.
 
 Problem IV
 ----------
 
-IV sendiri punya banyak problem (huft). Salah satunya adalah IV bisa
-jadi malah bikin bias OLS jika hubungan $Z$ dan $X$ tidak linear. Kita
-coba dengan melakukan generasi data untuk $Z,X$ dan $Y$ lalu kita
-regresi hasilnya.
+However, when the instrument $Z$ is not explaining $X$ very well, IV may lead to even more bias. We try to simulate this using R below.
 
 Setting
 -------
 
-Di sini kita coba bikin kasus mencari kausalitas apakah *cash flow*
-mempengaruhi *firm’s borrowing*. Sebuah perusahaan yang *cash flow*-nya
-sedang negatif akan meminjam dari bank atau dari masyarakat untuk
-bertahan, dan akan dibayar di masa datang ketika sudah dapat *revenue*.
-Namun perusahaan yang *cash flow*-nya sedang positif juga bisa saja
-meminjam karena *cash flow* positif menandakan perusahaan sedang tumbuh
-dan butuh modal lebih. Artinya, hubungan antara *cash flow* dan
-*borrowing* tidak jelas kalau di-OLS kan. Salah satu caranya adalah
-menggunakan *productivity* untuk memprediksi *cash flow* (perusahaan
-yang sedang kena negative shock otomatis *cash flow*-nya negatif) baru
-diregresi ke *borrowing*.
+Here, we try to use finance setting. Let $X$ be a firm's cash flow while $Y$ is firm's borrowing. We try to establish causal relationship between $X$ and $Y$. When firm's cash flow is negative, it will need to borrow from financial market to survive for the next revenue collection time. However, when firm's cash flow is positive, it may also borrow if the positive cash flow is a sign of positive shock and the firm needs fund to expand. We can use technological shock $Z$ as an instrument for $X$.
 
-Kita buat 2,000 observasi, di mana separuhnya mengalami shock negatif
-yang rata $( − 3 + rand())$ sementara yang shock positif memiliki
-fungsi $X = Z + rand()$ alias koefisien beta untuk Z adalah 1.
+Generate 2,000 observation, where half experienced a flat negative shock $( − 3 + rand())$ while half experience positive shock 
+$X = Z + rand()$.
 
     data <- data.frame(
       id=c(1:2000)
@@ -128,17 +89,9 @@ fungsi $X = Z + rand()$ alias koefisien beta untuk Z adalah 1.
     ## 5  0  1 2.993298
     ## 6  1  0 1.145938
 
-Kode di atas membuat *cash flow* $X$ memiliki karakteristik bahwa cash
-flow positif punya hubungan linear dengan koefisien 1 terhadap
-*productivity shock* positif, tapi hubungan konstan  − 3 terhadap
-*productivity shock* negatif. Shock positif tu misalnya kayak tiba-tiba
-ada klien duit banyak banget datang ke anda nawarin proyek (misalnya
-anda tukang sablon, pemilu adalah shock positif). negatif shock ya
-sebaliknya, misalnya pandemik. wabah wereng di masa pemilu mengakibatkan
-shock yang tidak rata: positif buat tukang sablon tapi negatif untuk
-petani.
+Positive cash flow $X$ have a 1-on-1 relationship with positive $Z$, but a flat $-3$ with negative $Z$.
 
-Coba kita plot $Z$ di sumbu horizontal, $X$ di sumbu vertikal:
+Let's try plot $Z$ and $X$
 
     library(ggplot2)
     a<-ggplot(data, aes(Z,X, colour=B1)) +
@@ -147,13 +100,9 @@ Coba kita plot $Z$ di sumbu horizontal, $X$ di sumbu vertikal:
 
 ![Graph 1](graph1.png)
 
-Di mana warna biru menandakan shock positif sementara hitam menandakan
-shock negatif. keliatan ya? Shock positif sesuai 45<sup>∘</sup> dari
-$X = 0$, sementara shock negatif garis lurus aja di sekitar $X =  − 3$.
-Patternnya keliatan banget ya? wkwk ya wajar karena ini adalah data
-hasil generasi, bukan survey atau sejenisnya.
+Blue is those experience positive shock while black is those who get negative shock. Positive shock has 45<sup>∘</sup> from $X = 0$ while all the negative ones are flat around $X = -3$. Look at that. What a bad pattern. Horrible for researchers 🤣🤣.
 
-Sekarang kita coba plot $X$ di sumbu datar, dan $Y$ di sumbu tegak:
+Now let's try $X$ and $Y$:
 
     b<-ggplot(data,aes(X,Y,colour=X1)) +
       geom_point()
