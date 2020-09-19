@@ -17,7 +17,7 @@ height = "300px"
 # Duplicate an `[[item]]` block to add more slides.
 [[item]]
   title = "Welcome!"
-  content = "This is Krisna 'imed' Gupta! use the top right menu to set the theme (light/dark) and language (en/id). Lihat menu kanan atas untuk Bahasa Indonesia atau ketuk ini"
+  content = "This is Krisna Gupta! Use the top right menu to set the theme (light/dark) and language (en/id). Untuk Bahasa Indonesia, ketuk ini"
   align = "center"
 
   cta_label = "Bahasa Indonesia"
