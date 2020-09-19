@@ -3,10 +3,10 @@
 widget = "accomplishments"  # See https://sourcethemes.com/academic/docs/page-builder/
 headless = true  # This file represents a page section.
 active = false  # Activate this widget? true/false
-weight = 50  # Order that this section will appear.
+weight = 45  # Order that this section will appear.
 
-title = "Accomplish&shy;ments"
-subtitle = ""
+title = "Awards"
+subtitle = "Beberapa penghargaan dan sertifikasi"
 
 # Date format
 #   Refer to https://sourcethemes.com/academic/docs/customization/#date-format
@@ -19,10 +19,10 @@ date_format = "Jan 2006"
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
 
 [[item]]
-  organization = "Coursera"
-  organization_url = "https://www.coursera.org"
-  title = "Neural Networks and Deep Learning"
-  url = ""
+  organization = "VU Unisersity Amsterdam"
+  organization_url = "https://vuweb.vu.nl/en/"
+  title = "VU Fellowship Programme"
+  url = "https://vuweb.vu.nl/en/more-about/scholarships-for-international-masters-students"
   certificate_url = "https://www.coursera.org"
   date_start = "2018-10-01"
   date_end = ""
