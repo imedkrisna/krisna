@@ -4,7 +4,7 @@
 title: "webinar dan bedah buku bidang ekonomi Mewujudkan Indonesia 4.0: Kumpulan pemikiran pelajar Indonesia di Australia"
 event:
 event_url: https://www.youtube.com/watch?v=sqfMf4WN_d4&t=1376s
-location: '[Youtube Channel Sobat Cyber Indonesia](https://www.youtube.com/channel/UCl_e8NwGVoNhSGr8tniUHGg)'
+location: 'On-line'
 address:
   street:
   city:
@@ -16,8 +16,8 @@ abstract:
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
-date: 2020-09-10T21:56:48+10:00
-date_end: 
+date: 2020-09-10T13:30:00+07:00
+date_end: 2020-09-10T15:30:00+07:00
 all_day: false
 
 # Schedule page publish date (NOT talk date).

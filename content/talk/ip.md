@@ -4,7 +4,7 @@
 title: "Trade, industry and investment: dealing with Covid-19"
 subtitle: ""
 summary: "I join with my colleague, Andree Surianta and Deasy Pane to discuss about Indonesia's trade, industry and investment policies during COVID-19 pandemic"
-authors: []
+authors: [admin, Andree Surianta, Deasy Pane]
 tags: [coronavirus COVID-19]
 categories: []
 date: 2020-08-16T19:33:41+10:00

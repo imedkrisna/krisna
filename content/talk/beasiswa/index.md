@@ -16,15 +16,15 @@ abstract: "Dalam kesempatan ini, saya berbagi pengalaman saya dalam mencari beas
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
-date: 2020-09-18T21:22:27+10:00
-# date_end: 2020-09-18T21:22:27+10:00
+date: 2020-09-18T09:00:00+07:00
+date_end: 2020-09-18T11:00:00+07:00
 all_day: false
 
 # Schedule page publish date (NOT talk date).
 publishDate: 2020-09-16T21:22:27+10:00
 
 authors: [admin]
-tags: []
+tags: [macem-macem]
 
 # Is this a featured talk? (true/false)
 featured: false
