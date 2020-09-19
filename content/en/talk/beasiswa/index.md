@@ -3,7 +3,7 @@
 
 title: "Strategi sukses meraih beasiswa pendidikan lanjut"
 event: "BDI Surabaya Webinar Series Season 3"
-event_url: https://www.youtube.com/channel/UC1qCli39e2_v7CjUzqfC14g
+event_url: https://www.youtube.com/watch?v=r3sev9-Gk2c
 location: "Zoom and Balai Diklat Industri Surabaya Youtube Channel"
 address:
   street:
