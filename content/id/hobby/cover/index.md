@@ -1,10 +1,10 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "Cover Music Video on Youtube"
+title: "Cover Music Video di Youtube"
 subtitle: ""
-summary: "I did some cover videos with my friends. The collaboration is done completely online, which is very convinient since COVID-19 requires measures of physical distancing and we have no plan violating those measures. I mainly sing in these vids while also play some instruments. It is also fun to learn a bit of mixing although my mixing skill is really crappy."
-authors: []
+summary: "Saya dan beberapa teman di Indonesia suka bikin cover video musik. Semua dikerjain on-line lho!"
+authors: [admin]
 tags: []
 categories: []
 date: 2020-08-16T19:33:41+10:00

@@ -3,8 +3,8 @@
 
 title: "Smule (a karaoke app)"
 subtitle: ""
-summary: "Ok so I also play with this app called Smule which basically a karaoke app. In this app, I often sing japanese song such as L`arc~en~Ciel and One Ok Rock, and I really love dueting with people! If you also play smule, let's follow each other!"
-authors: []
+summary: "Saya suka bernyanyi di aplikasi karaoke namanya Smule. Di smule saya seringnya nyanyi lagu-lagu band Jepang L`arc~en~Ciel"
+authors: [admin]
 tags: []
 categories: []
 date: 2020-08-16T19:33:41+10:00
