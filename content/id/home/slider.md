@@ -59,14 +59,14 @@ height = "300px"
 
 [[item]]
   title = "Hobi"
-  content = "Saya suka menyanyi di waktu luang. Maaf jelek tapi 🤣🤣"
+  content = "Saya suka menyanyi di waktu luang. Tapi jelek maaf 🤣🤣"
   align = "center"
 
   overlay_color = "#555"  # An HTML color value.
   overlay_img = "sing.jpg"  # Image path relative to your `static/media/` folder.
   overlay_filter = 0.5  # Darken the image. Value in range 0-1.
 
-  cta_label = "Hobby"
+  cta_label = "Hobi"
   cta_url = "https://krisna.netlify.app/hobby"
   cta_icon_pack = "fas"
   cta_icon = "music"
