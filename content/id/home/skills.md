@@ -5,7 +5,7 @@ headless = true  # This file represents a page section.
 active = true  # Activate this widget? true/false
 weight = 30  # Order that this section will appear.
 
-title = "Skills"
+title = "Keahlian"
 subtitle = ""
 
 # Showcase personal skills or business features.
@@ -29,7 +29,7 @@ subtitle = ""
 [[feature]]
   icon = "microphone-alt"
   icon_pack = "fas"
-  name = "Singing"
+  name = "Bernyanyi"
   description = "100%"
 
 # Uncomment to use emoji icons.

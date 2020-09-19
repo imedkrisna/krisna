@@ -7,7 +7,7 @@ weight = 1  # Order that this section will appear.
 
 # Slide interval.
 # Use `false` to disable animation or enter a time in ms, e.g. `5000` (5s).
-interval = 5000
+interval = 8000
 
 # Slide height (optional).
 # E.g. `500px` for 500 pixels or `calc(100vh - 70px)` for full screen.
@@ -17,8 +17,13 @@ height = "300px"
 # Duplicate an `[[item]]` block to add more slides.
 [[item]]
   title = "Welcome!"
-  content = "This is Krisna 'imed' Gupta! use the top right menu to set the theme (light/dark) and language (en/id)"
+  content = "This is Krisna 'imed' Gupta! use the top right menu to set the theme (light/dark) and language (en/id). Lihat menu kanan atas untuk Bahasa Indonesia atau ketuk ini"
   align = "center"
+
+  cta_label = "Bahasa Indonesia"
+  cta_url = "https://krisna.netlify.app/id"
+  cta_icon_pack = "far"
+  cta_icon = "window-maximize"
 
   overlay_color = "#888"  # An HTML color value.
   overlay_img = "headers/bubbles-wide.jpg"  # Image path relative to your `static/media/` folder.
@@ -58,7 +63,7 @@ height = "300px"
   align = "center"
 
   overlay_color = "#555"  # An HTML color value.
-  overlay_img = ""  # Image path relative to your `static/media/` folder.
+  overlay_img = "sing.jpg"  # Image path relative to your `static/media/` folder.
   overlay_filter = 0.5  # Darken the image. Value in range 0-1.
 
   cta_label = "Hobby"

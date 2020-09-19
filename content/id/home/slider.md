@@ -7,7 +7,7 @@ weight = 1  # Order that this section will appear.
 
 # Slide interval.
 # Use `false` to disable animation or enter a time in ms, e.g. `5000` (5s).
-interval = 5000
+interval = 8000
 
 # Slide height (optional).
 # E.g. `500px` for 500 pixels or `calc(100vh - 70px)` for full screen.
@@ -17,8 +17,13 @@ height = "300px"
 # Duplicate an `[[item]]` block to add more slides.
 [[item]]
   title = "Selamat Datang!"
-  content = "di situs pribadi Krisna 'imed' Gupta! Gunakan menu di kanan atas untuk tema gelap/terang atau ganti ke bahasa inggris."
+  content = "di situs pribadi Krisna 'imed' Gupta! Gunakan menu di kanan atas untuk tema gelap/terang. See top right menu to go english or click here"
   align = "center"
+
+  cta_label = "go english!"
+  cta_url = "https://krisna.netlify.app/en"
+  cta_icon_pack = "fas"
+  cta_icon = "flag-usa"
 
   overlay_color = "#888"  # An HTML color value.
   overlay_img = "headers/bubbles-wide.jpg"  # Image path relative to your `static/media/` folder.
@@ -26,7 +31,7 @@ height = "300px"
 
 [[item]]
   title = "Blog!"
-  content = "Situs ini untuk menyimpan profil saya. Saya juga sering nge-blog."
+  content = "Situs ini untuk menyimpan profil saya. Saya juga sering nge-blog dalam bahasa Indonesia dan Inggris."
   align = "center"  # Choose `center`, `left`, or `right`.
 
   # Overlay a color or image (optional).
@@ -39,7 +44,7 @@ height = "300px"
   #   Activate the button by specifying a URL and button label below.
   #   Deactivate by commenting out parameters, prefixing lines with `#`.
   cta_label = "Posts"
-  cta_url = "https://krisna.netlify.app/post"
+  cta_url = "https://krisna.netlify.app/id/post"
   cta_icon_pack = "fas"
   cta_icon = "blog"
 
@@ -58,7 +63,7 @@ height = "300px"
   align = "center"
 
   overlay_color = "#555"  # An HTML color value.
-  overlay_img = ""  # Image path relative to your `static/media/` folder.
+  overlay_img = "sing.jpg"  # Image path relative to your `static/media/` folder.
   overlay_filter = 0.5  # Darken the image. Value in range 0-1.
 
   cta_label = "Hobby"

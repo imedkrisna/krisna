@@ -8,8 +8,8 @@ headless = true  # This file represents a page section.
 active = true  # Activate this widget? true/false
 weight = 49  # Order that this section will appear.
 
-title = "Featured Publications"
-subtitle = "List of featured publication. Keep scrolling to see my full list of publications."
+title = "Etalase publikasi"
+subtitle = "Beberapa publikasi terpilih. Geser ke bawah untuk melihat publikasi lengkap"
 
 [content]
   # Page type to display. E.g. post, talk, or publication.

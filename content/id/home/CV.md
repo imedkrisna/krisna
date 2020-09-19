@@ -15,4 +15,4 @@ weight = 65
 
 +++
 
-To see my CV, [click here (html)](files/cv.html) or [click here to download it in PDF](files/cv.pdf) form. (Last updated: August 18, 2020)
+Untuk melihat CV saya tanpa mengunduh, [ketuk di sini (html)](files/cv.html). Untuk mengunduh CV saya dalam format pdf, [ketuk di sini](files/cv.pdf) form. (diperbarui pada 15 September 2020)
