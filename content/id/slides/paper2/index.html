@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>The heterogenous impact of tariff and NTM on total factor productivity of Indonesian firms</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Krisna Gupta" />
+    <script src="libs/header-attrs-2.3/header-attrs.js"></script>
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+background-image: url(title.png)
+class: middle
+
+.center[
+# The heterogenous impact of tariff and NTM on total factor productivity of Indonesian firms
+]
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+
+
+Krisna Gupta  
+Crawford PhD Seminar  
+October 2, 2020  
+Arianto Patunru, Paul Gretton, Budy Resosudarmo
+
+
+---
+
+background-image: url(normal.png)
+
+&lt;br /&gt;
+
+# Content
+
+- intro
+- review
+- method
+- data
+- results
+- discussion
+
+---
+
+background-image: url(normal.png)
+
+&lt;br /&gt;
+
+# Introduction
+
+.pull-left[
+- Indonesia insists on relying to manufacturing to boost its growth  
+&lt;br /&gt;
+- Emphasize on tech upgrade  
+&lt;br /&gt;
+- also on export-led  
+&lt;br /&gt;
+- The role of openness will be greater
+ - financing R&amp;D
+ - import `\(\Rightarrow\)` tech-upgrade (Castellani and Fassio 2019)
+]
+
+.pull-right[
+![Indonesia 4.0](making.PNG)  
+Source: [kemenperin.go.id](https://www.kemenperin.go.id/download/19347)
+] 
+
+---
+
+background-image: url(normal.png)
+
+&lt;br /&gt;
+
+# Introduction
+
+- However, Protectionism is on the rise, including in Indonesia (Patunru 2018)
+
+- While overall tariff went down, Non-Tariff Measures went up
+
+- The role of Ministry of Industry is on the rise from National Standards (SNI) and Local Content Requirement (LCR) (Munadi 2018)
+
+- Pandemic accelerates the trend, potentially using tariff as well
+&gt; "Roadmap sedang disusun. Nanti output-nya **subtitusi impor** pada akhir **2022** sebesar **35%**," kata Menteri Perindustrian Agus Gumiwang dalam sebuah webinar, Selasa (28/7).  
+&lt;br /&gt;
+Source: [katadata.co.id](https://katadata.co.id/happyfajrian/berita/5f2026bce0f69/siapkan-roadmap-kemenperin-optimis-subtitusi-impor-capai-35-di-2022?utm_source=Direct&amp;utm_medium=Tags%20Kementerian%20Perindustrian&amp;utm_campaign=Indeks%20Pos%201)
+
+- Protectionism policies may lead to more policies:
+ - US Case: iron `\(\Rightarrow\)` appliances
+ - Indonesian Case: corn &amp; soybean `\(\Rightarrow\)` chicken, mobile phone
+
+---
+
+background-image: url(normal.png)
+
+&lt;br /&gt;
+
+# Introduction
+
+- The straight forward question:
+
+&gt; To what extent tariff and NTM affects firm's productivity?
+
+- Further investigation is conducted:
+
+ - does size matters? (core question since Melitz (2003))
+ 
+ - how protectionism affects employment?
+ 
+ - can NTM reduces firm's import in general?
+ 
+- Building from Amiti and Konnings (2007), I estimate TFP and use it as dependent variable
+
+- Tariff is scrapped from MoF regulations, NTM from TRAINS database
+
+- Other databases: Survey Industri and Customs data from BPS
+
+---
+
+background-image: url(normal.png)
+
+&lt;br /&gt;
+
+# Some literatures
+
+---
+
+background-image: url(normal.png)
+
+&lt;br /&gt;
+
+# Data
+
+---
+
+background-image: url(normal.png)
+
+&lt;br /&gt;
+
+# TFP estimation
+
+The framework is using two-stage regression:  
+first, estimating TFP
+
+`$$y_{it}=\beta_0 + \beta_ll_{it}+\beta_kk_{it}+\beta_mm_{it}+\beta_nn_{it}+\epsilon_{it}$$`
+where:  
+`\(y_{it}\)`  &amp;nbsp; = Revenue of firm i at time t  
+`\(l_{it}\)`  &amp;nbsp;&amp;nbsp;&amp;nbsp;= number of labour  
+`\(k_{it}\)` &amp;nbsp; = fixed assets  
+`\(m_{it}\)` &amp;nbsp;= intermediate materials  
+`\(n_{it}\)` &amp;nbsp; = energy consumption
+
+Use the coefficient to predict TFP:
+
+`$$TFP_{it}=y_{it}-\hat{\beta}_{l}l_{it}-\hat{\beta}_kk_{it}-\hat{\beta}_mm_{it}-\hat{\beta}_nn_{it}$$`
+then estimate the second stage:
+
+`$$TFP_{it}=\gamma_0+\gamma_{tariff}tariff_{it}+\gamma_{NTM}NTM_{it}+\eta_{it}$$`
+
+---
+
+background-image: url(normal.png)
+
+&lt;br /&gt;
+
+# Some problems
+
+error term contains a productivity shock observed only by managers, and may correlates with production decisions.
+
+`$$\epsilon_{it}=\omega_{it}+\mu_{it}$$`
+where `\(\mu_{it}\)` is iid. Meanwhile:
+
+Olley and Pakes (1996) suggest `\(\omega_{it}\)` can be observed via investment.
+
+`$$I_{it}=i(k_{it},\omega_{it})$$`
+inverse, then let `\(\omega\)` follows a first order markov process:
+
+`$$\omega_{it}=\phi(I_{it},k_{it})$$`
+Weaknesses of using investment (Levinsohn and Petrin 2003):
+- zero reported investment `\(\neq\)` shock
+- less flexible compared to intermediate input
+
+---
+
+background-image: url(normal.png)
+
+&lt;br /&gt;
+
+# LP Method
+
+Levinsohn and Petrin (2003) suggest using intermediate input
+
+`$$\omega_{it}=\phi(m_{it},k_{it})$$`
+Therefore, the first-stage becomes:
+
+`$$y_{it}=\beta_0 + \beta_ll_{it}+\beta_nn_{it}+\phi(m_{it},k_{it})+\mu_{it}$$`
+Then proceed as follows to estimate TFP.
+
+`$$TFP_{it}=y_{it}-\hat{\beta}_{l}l_{it}-\hat{\beta}_kk_{it}-\hat{\beta}_mm_{it}-\hat{\beta}_nn_{it}$$`
+The command `levpet` in STATA allows for practical use of the LP method (Petrin, Poi and Levinsohn 2005).
+
+---
+
+background-image: url(normal.png)
+&lt;br /&gt;
+
+# Trade policy variable
+
+
+
+The dataset allows for multiple goods imported for each firm. The most practical way is to use coverage ratios.
+
+`$$T_{it}=\frac{\sum tariff_{sc}V_{sc}}{\sum V_{sc}}*100$$`
+where:
+- `\(T_{it}=\)` tariff coverage ratio of firm i at time t,
+- `\(tariff_{sc}=\)` tariff imposed on good s from country c at time t
+- `\(V_{sc}=\)` value of good s imported from country c by firm i at time t
+
+And for NTMs:
+
+`$$C_{\theta it}=\frac{\sum NTM_{\theta sc}V_{sc}}{\sum V_{sc}}*100$$`
+
+where `\(NTM_{\theta sc}\)` is the number of NTM `\(\theta\)` imposed on good `\(s\)` from country `\(c\)`
+
+---
+
+background-image: url(normal.png)
+
+&lt;br /&gt;
+
+# Second-Stage
+
+The second stage regression then:
+
+`$$tfp_{it}=\gamma_0+\gamma_Tt_{it}+\sum_\theta c_{\theta it}+FO_{it}+\alpha_i+ISIC_i+\eta_{it}$$`
+Where:
+- `\(tfp_{it} = log(TFP_{it})\)`
+- `\(t_{it} = log(1+T_{it})\)`
+- `\(c_{\theta it} = log(1+C_{\theta it})\)`
+- `\(FO_{it} =\)` foreign ownership of firm i at time t (%)
+
+along with firm's fixed effect and ISIC dummy.
+
+---
+
+background-image: url(normal.png)
+
+&lt;br /&gt;
+
+# TFP Results
+
+.center[
+Zero capital and energy consumption skewed the regression for both SI observations (left) and customs data (right).
+
+![zero capital](kap.png)
+]
+
+---
+
+background-image: url(normal.png)
+
+&lt;br /&gt;
+
+# TFP Results
+
+---
+
+background-image: url(normal.png)
+
+&lt;br /&gt;
+
+# Discussions
+
+---
+
+background-image: url(normal.png)
+
+&lt;br /&gt;
+
+# Conclusions
+
+---
+
+background-image: url(normal.png)
+
+class: center, middle
+
+# The End
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
