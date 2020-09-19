@@ -59,7 +59,7 @@ height = "300px"
 
 [[item]]
   title = "Hobbies"
-  content = "I also store hobby in this page. Don't click hobby unless you are prepared to hear some crappy voice. I warned you."
+  content = "I also store hobby in this page. Be prepared to hear some crappy voice 🤣🤣"
   align = "center"
 
   overlay_color = "#555"  # An HTML color value.
