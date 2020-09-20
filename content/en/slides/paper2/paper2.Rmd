@@ -124,18 +124,18 @@ background-image: url(normal.png)
  
  - can NTM reduces firm's import in general?
  
-- Building from Amiti and Konnings (2007), I estimate TFP and use it as dependent variable
+- Building from Amiti and Konnings (2007), I estimate TFP and use it as the dependent variable
 
 - Tariff is scrapped from MoF regulations, NTM from TRAINS database
 
-- Other databases: Survey Industri and Customs data from BPS from 2008 to 2012
+- Firm's chara & trade: Survey Industri and Customs data from BPS from 2008 to 2012
 
 ---
 
 background-image: url(normal.png)
 class:center,middle
 
-# Literature Review
+# Brief Literature Review
 
 ---
 
@@ -143,7 +143,64 @@ background-image: url(normal.png)
 
 <br />
 
-# Some literatures
+# On trade and industry
+
+- On The role of international trade and trade policies to firm's performance, literature is abundant:
+
+  - help firm access better inputs (Amiti and konings 2007; Bas and Strauss-Kahn 2014; Castellani and Fassio 2019; Ing, Yu and Zhang 2019)
+  - help firms innovate and be more productive (Bas and Strauss-Kahn 2014, Pierola, Fernandez and Farole 2018; Ing, Yu and Zhang 2019; Pane and Patunru 2019)
+  - Help firms from developing countries accessing the more lucrative foreign market (An and Maskus 2009; Cadot et al. 2015; Fugazza, Olarreaga and Ugarte 2017)
+
+- How to measure performance of industries and firms:
+  
+  - most of the literature uses export (value, quantity, price, scope)
+  - some criticism includes endogeneity and the role of export to more meaningful metrics (such as GDP, employment and wage)
+  - The alternative is using TFP (Amiti and Konings 2007; Pane and Patunru 2019)
+  
+---
+
+background-image: url(normal.png)
+
+<br />
+
+# On Using TFP
+
+- Using TFP is preferable (Indonesian context):
+  
+  - Trade policy is arguably 'less endogen' to Firm's TFP:
+        - Indonesian government often aim for CAD (Patunru 2018), not firms TFP.
+        - Manufacturing Firms' influence over tariff is less strong (Amiti and Konings 2007; Mobarak and Purbasari 2005)
+  
+  - Firm's TFP is a more meaningful metric than export
+
+- TFP estimation:
+  - non-linear method (Henningsen and Henningsen 2012) have less restriction, but harder to converge and contain less economic intuition.
+  - Linear method is preferable but endogeneity needs to be treated:
+      - using investment proxy (Olley and Pakes 1998)
+      - using intermediate input proxy (Amiti and Konings 2007; Levinsohn and Petrin 2003)
+
+---
+
+background-image: url(normal.png)
+
+<br />
+
+# On Trade Policies
+
+- The impact of tariff is established, but NTM's impact is mixed (Kee et al. 2009; Cadot et al. 2015)
+
+### On NTMs:
+
+- Price-difference method & Indonesian context (Marks 2018):
+  - NTMs correlate with higher domestic price
+  - Hard to get consistent data on price
+  - possibility that price reflects quality
+  
+- Most are using categorical variable with AVE-style estimation
+
+- UNCTAD (2017) built an NTM database called TRAINS:
+  - Less judgmental (NTM vs NTB)
+  - lack depth (Cadot et al. 2015)
 
 ---
 
@@ -173,7 +230,7 @@ background-image: url(normal.png)
   - can't say for sure if the import is directly used for production
 
 - Not all firms reporting export and import in SI exist in the customs data, and vice-versa
-  - may be using third party
+  - may be using third party traders
   
 ---
 
@@ -275,14 +332,16 @@ background-image: url(normal.png)
 Table 3. Indonesia's NTM, TRAINS 2015 set
 ```{r echo=F}
 NTM<-c('Sanitary & Phytosanitary (SPS)','Sanitary & Phytosanitary (SPS)','Technical Barrier to Trade (TBT)','Technical Barrier to Trade (TBT)','Pre-shipment inspections and other formalities','Pre-shipment inspections and other formalities','Non-automatic licensing, quotas, QC, etc','Non-automatic licensing, quotas, QC, etc','Price-control measures, extra taxes, charges','Price-control measures, extra taxes, charges','Measures affecting competition','Measures affecting competition','Export-related measures','Export-related measures','observations')
+Codes<-c('A','A','B','B','C','C','E','E','F','F','H','H','P','P','-')
+Examples<-c('Authorization requirements','Quarantine requirements','Testing requirements','labeling requirements','pre-shipment inspection','only trough specific ports','licensing','quota','customs service fee','consumption tax','Only SOEs','-','export permit','export quota','-')
 N2008<-c(1.715,'(2.644)',0.481,'(0.962)',0.562,'(1.202)',0.623,'(0.809)',0.000,'(0.000)',0.019,'(0.139)',0.901,'(1.172)','1,675')
 N2009<-c(2.337,'(4.018)',0.455,'(0.978)',0.466,'(1.081)',0.560,'(0.818)',0.000,'(0.000)',0.052,'(0.238)',0.704,'(1.132)','2,204')
 N2010<-c(2.222,'(3.950)',0.641,'(1.334)',0.443,'(1.059)',0.605,'(0.873)',0.015,'(0.168)',0.050,'(0.233)',0.708,'(1.109)','2,318')
 N2011<-c(2.255,'(4.054)',0.682,'(1.361)',0.462,'(1.046)',0.618,'(0.861)',0.014,'(0.165)',0.048,'(0.229)',0.683,'(1.098)','2,400')
 N2012<-c(2.774,'(5.128)',0.663,'(1.352)',0.776,'(1.075)',0.594,'(0.853)',0.016,'(0.168)',0.046,'(0.224)',1.172,'(1.465)','2,510')
-tab3<-data.frame(NTM,N2008,N2009,N2010,N2011,N2012)
+tab3<-data.frame(NTM,Codes,N2008,N2009,N2010,N2011,N2012,Examples)
 kbl(tab3,'html') %>%
-  kable_styling(bootstrap_options = "striped", font_size = 11) %>%
+  kable_styling(bootstrap_options = "striped", full_width=F, font_size = 11) %>%
   collapse_rows()
 ```
 
@@ -482,7 +541,6 @@ kbl(tab5,'html') %>%
 ```
 ]
 
-
 ---
 
 background-image: url(normal.png)
@@ -493,7 +551,7 @@ background-image: url(normal.png)
 
 The second stage regression then:
 
-$$tfp_{it}=\gamma_0+\gamma_Tt_{it}+\sum_\theta c_{\theta it}+FO_{it}+\alpha_i+ISIC_i+\eta_{it}$$
+$$tfp_{it}=\gamma_0+\gamma_Tt_{it}+\sum_\theta \gamma_{\theta}c_{\theta it}+FO_{it}+\alpha_i+ISIC_i+\eta_{it}$$
 
 Where:
 - $tfp_{it} = log(TFP_{it})$
@@ -573,7 +631,10 @@ background-image: url(normal.png)
 # TFP Results
 
 - table 7a over-estimates TFPs (not Indonesian miracle)
-- Firms in customs data is in
+- 3 TFPs are used. 2 from the row customs only, table 7b:
+  - TFP1 = estimated together with other firms in SI (all_SI)
+  - TFP2 = estimated within customs only firms (customs_only)
+  - Value added per labour is used for robustness
 
 .pull-left[
 table 7a. TFP with $k,n=0$
@@ -765,6 +826,150 @@ kbl(tab9d,'html') %>%
 ---
 
 background-image: url(normal.png)
+
+<br />
+
+# Employment effect
+
+Results from VaL is confusing
+- Perhaps employment is more sensitive to change in production cost compared to reported value added?
+  
+Use change in labour as LHS with the consequence of losing 2008
+
+$$\Delta l_t = log(L_t) - log(L_{t-1})$$
+Four regressions are conducted, involving:
+- No size interaction (L0) and with size interaction (L1)
+- with firm,year,ISIC FE and without FE
+
+---
+
+background-image: url(normal.png)
+
+<br />
+
+# Employment effect
+
+.pull-left[
+```{r echo=F}
+Variables<-c('tariff','tariff','SPS','SPS','TBT','TBT','Pre-shipment','Pre-shipment','licensing','licensing','Price-control','Price-control', 'competition','competition','Export-related','Export-related','foreign dummy','foreign dummy','obs')
+L0<-c(-0.008,'(0.009)',-0.028,'(0.020)',0.034,'(0.038)',-0.041,'(0.040)',-0.015,'(0.033)',135,-88,0.072,'(0.289)',-0.017,'(0.028)',0.031,'(0.030)','3,726')
+L0FE<-c(-0.028,'(0.021)','-0.120*','(0.066)',-0.075,'(0.075)',0.121,'(0.100)',-0.042,'(0.073)','1,543','-1,185',0.094,'(0.387)',0.097,'(0.091)','0.147**','(0.065)','3,726')
+L1<-c('-0.260***','(0.047)',-0.176,'(0.153)',0.064,'(0.236)',0.066,'(0.349)','-0.818***','(0.190)','14,832***','(4,381)',-0.999,'(1.563)',-0.246,'(0.203)',0.028,'(0.031)','3,726')
+L1FE<-c('-1.368***','(0.063)','-1.650***','(0.230)','0.452*','(0.257)','1.997***','(0.370)','-4.455***','(0.237)','6,015','-25,570','-2.788***','(1.006)','-0.617*','(0.333)','0.091*','(0.053)','3,726')
+tab10a<-data.frame(Variables,L0,L0FE,L1,L1FE)
+kbl(tab10a,'html') %>%
+  kable_styling(bootstrap_options = "striped", font_size = 10) %>%
+  collapse_rows()
+```
+]
+
+.pull-right[
+```{r echo=F}
+Variables<-c('tariff*l','tariff*l','SPS*l','SPS*l','TBT*l','TBT*l','Pre-shipment*l','Pre-shipment*l','licensing*l','licensing*l','Price-control*l','Price-control*l','competition*l','competition*l','Export-related*l','Export-related*l','% foreign','% foreign','R-sq')
+L0<-c('-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-',-0.008,'(0.007)','-')
+L0FE<-c('-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-0.026*','(0.014)',0.028)
+L1<-c('0.043***','(0.008)',0.021,'(0.027)',-0.008,'(0.043)',-0.008,'(0.061)','0.140***','(0.036)','-2,312***','(695)',0.207,'(0.335)',0.042,'(0.036)',-0.009,'(0.007)','-')
+L1FE<-c('0.251***','(0.011)','0.288***','(0.041)','-0.095**','(0.045)','-0.345***','(0.066)','0.809***','(0.042)','-802','(4,064)','0.360**','(0.163)','0.132**','(0.059)','-0.007','(0.011)','0.355')
+tab10b<-data.frame(Variables,L0,L0FE,L1,L1FE)
+kbl(tab10b,'html') %>%
+  kable_styling(bootstrap_options = "striped", font_size = 10) %>%
+  collapse_rows()
+```
+]
+
+---
+
+background-image: url(normal.png)
+
+<br />
+
+# Import value, TFP, and trade policies
+
+- Lastly, I investigate if the main driver of the TFP changes is import.
+
+- I use PPML (Silva and Tenreyro 2008) to regress import value (LHS) against the three different TFPs and trade policies.
+  - TFPs are used for interaction as well.
+
+- Gravity variables are sourced from CEPII.
+
+- The regression is conducted in HS-8-digit level.
+
+- Fixed effects (right table) are ISIC, country of origin, and year<sup>1</sup>.
+
+.footnote[
+<sup>1</sup> the regression did not converge when the firm fixed effect was used.
+]
+
+---
+
+background-image: url(normal.png)
+
+<br />
+
+# Import value, TFP, and trade policies
+
+.pull-left[
+```{r echo=F}
+Variables<-c('tfp','tfp','tariff','tariff','SPS','SPS','TBT','TBT','Pre-shipment','Pre-shipment','licensing','licensing','Price-control','Price-control', 'competition','competition','Export-related','Export-related')
+tfp1<-c('0.113***','(0.013)','-0.546***','(0.100)','1.076***','(0.277)','-1.090***','(0.286)','-1.852***','(0.581)','1.211***','(0.419)','25.021***','(6.582)','3.581***','(1.159)','0.509','(0.525)')
+tfp2<-c('0.312***','(0.017)','-0.600***','(0.144)','1.577***','(0.280)','-1.106***','(0.281)','-1.910***','(0.588)','2.612***','(0.436)','22.841***','(7.251)','2.027*','(1.140)','0.926*','(0.540)')
+VaL<-c('0.331***','(0.032)','-0.841***','(0.247)','2.026***','(0.324)','-1.903***','(0.301)','-2.655***','(0.751)','2.065***','(0.520)','27.486***','(7.961)','4.164***','(1.264)','1.234*','(0.668)')
+tab12a<-data.frame(Variables,tfp1,tfp2,VaL)
+kbl(tab12a,'html') %>%
+  kable_styling(bootstrap_options = "striped", font_size = 10) %>%
+  collapse_rows()
+```
+]
+
+.pull-right[
+```{r echo=F}
+Variables<-c('tfp','tfp','tariff','tariff','SPS','SPS','TBT','TBT','Pre-shipment','Pre-shipment','licensing','licensing','Price-control','Price-control', 'competition','competition','Export-related','Export-related')
+tfp1<-c('0.136***','(0.017)','-0.464***','(0.121)','1.191***','(0.299)','-1.100***','(0.284)','-2.632***','(0.649)','1.359***','(0.457)','33.873***','(7.584)','3.241***','(1.080)','0.815','(0.649)')
+tfp2<-c('0.342***','(0.021)','-0.433***','(0.163)','1.632***','(0.309)','-1.071***','(0.279)','-2.658***','(0.658)','2.650***','(0.470)','31.596***','(7.985)','1.892*','(1.080)','1.300*','(0.676)')
+VaL<-c('0.226***','(0.033)','-0.743***','(0.248)','1.771***','(0.331)','-1.698***','(0.304)','-3.145***','(0.768)','1.636***','(0.521)','32.040***','(7.898)','3.855***','(1.163)','1.347*','(0.722)')
+tab12b<-data.frame(Variables,tfp1,tfp2,VaL)
+kbl(tab12b,'html') %>%
+  kable_styling(bootstrap_options = "striped", font_size = 10) %>%
+  collapse_rows()
+```
+]
+
+---
+
+background-image: url(normal.png)
+
+<br />
+
+# Import value, TFP, and trade policies
+
+.pull-left[
+```{r echo=F}
+Variables<-c('tariff*tfp','tariff*tfp','SPS*tfp','SPS*tfp','TBT*tfp','TBT*tfp','Pre-shipment*tfp','Pre-shipment*tfp','licensing*tfp','licensing*tfp','Price-control*tfp','Price-control*tfp','competition*tfp','competition*tfp','Export-related*tfp','Export-related*tfp','observations','R-sq')
+tfp1<-c('0.035***','(0.012)','-0.044','(0.041)','0.157***','(0.038)','0.387***','(0.082)','-0.172***','(0.056)','-4.530***','(0.995)','-0.372**','(0.162)','-0.139*','(0.074)','192,928',0.009)
+tfp2<-c('0.030**','(0.014)','-0.114***','(0.042)','0.159***','(0.037)','0.395***','(0.083)',"-0.372***",'(0.058)','-4.204***','(1.096)','-0.161','(0.157)','-0.197***','(0.076)','192,928',0.009)
+VaL<-c('0.045**','(0.021)','-0.179***','(0.049)','0.273***','(0.040)','0.488***','(0.108)','-0.306***','(0.072)','-4.890***','(1.201)','-0.476***','(0.177)','-0.247**','(0.097)','192,928',0.011)
+tab12c<-data.frame(Variables,tfp1,tfp2,VaL)
+kbl(tab12c,'html') %>%
+  kable_styling(bootstrap_options = "striped", font_size = 10) %>%
+  collapse_rows()
+```
+]
+
+.pull-right[
+```{r echo=F}
+tfp1<-c('0.027*','(0.015)','-0.073','(0.045)','0.172***','(0.038)','0.458***','(0.092)','-0.217***','(0.062)','-5.759***','(1.138)','-0.370**','(0.150)','-0.173*','(0.093)','192,928',0.012)
+tfp2<-c('0.016','(0.016)','-0.135***','(0.046)','0.167***','(0.036)','0.461***','(0.092)','-0.402***','(0.064)','-5.423***','(1.199)','-0.185','(0.149)','-0.241**','(0.097)','192,928',0.013)
+VaL<-c('0.038*','(0.021)','-0.155***','(0.050)','0.256***','(0.041)','0.535***','(0.110)','-0.258***','(0.073)','-5.507***','(1.184)','-0.464***','(0.161)','-0.253**',(0.106),'192,928',0.013)
+tab12d<-data.frame(Variables,tfp1,tfp2,VaL)
+kbl(tab12d,'html') %>%
+  kable_styling(bootstrap_options = "striped", font_size = 10) %>%
+  collapse_rows()
+```
+]
+
+---
+
+background-image: url(normal.png)
 class:center,middle
 
 # Discussion and Policy Recommendation
@@ -777,6 +982,19 @@ background-image: url(normal.png)
 
 # Discussions
 
+##### Trade policies and TFPs
+- tariff is negatively affecting TFPs, and the impact is less profound for bigger firms:
+  - consistent when fixed effects are used
+- Only two NTMs are significant after fixed effects: licensing and competition measures.
+- More productive firms import more
+- NTM have mixed results: Only TBT and preshipment reduces import
+
+##### Employment
+- Tariff also reduces employment, but bigger firms have smaller effect.
+- Not all NTMs show a visible significance:
+  - SPS, licensing, and export-related measures have the same directional impact as tariff.
+  - Pre-shipment inspection have different direction
+
 ---
 
 background-image: url(normal.png)
@@ -785,14 +1003,18 @@ background-image: url(normal.png)
 
 # Policy recommendation
 
+- More import restriction isn't great
+  - especially if the goal is manufacturing growth.
+  - firms have many problems. Import isn't one of them.
+
 - Sometimes, less is more
   - Intervening with trade is usually inefficient
   - at what (who's) cost?
-  - ban import doesn't mean domestic will catch up
   - may lead to more intervention
 
-- If scared with CAD, find other ways
+- If the goal is CAD, find other ways
   - become more attractive to business (both domestic and foreign)
+  - Make non-commodity export viable
   - let IDR weaken?
   - bad debt management $\Rightarrow$ costing manufacturers and consumers
   
