@@ -11,6 +11,7 @@ Postingan ini khusus buat contekan belajaran waktu nyoba-nyoba. Akan coba dibagi
 
 ### STATA
 - [memakai outreg2 untuk bikin tabel regresi dan summary statistics](https://www.princeton.edu/~otorres/Outreg2.pdf)
+- [comprehensive latex output](https://lukestein.github.io/stata-latex-workflows/)
 
 ### R dan Rmarkdown
 - [Mengontrol ukuran gambar di Rmarkdown](http://zevross.com/blog/2017/06/19/tips-and-tricks-for-working-with-images-and-figures-in-r-markdown-documents/)
