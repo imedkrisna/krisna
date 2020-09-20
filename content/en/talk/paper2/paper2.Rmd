@@ -1,0 +1,1054 @@
+---
+title: "The heterogenous impact of tariff and NTM on total factor productivity of Indonesian firms"
+subtitle: ""
+author: "Krisna Gupta"
+institute: "Australian National University"
+date: "2016/12/12"
+background-image: url(title.PNG)
+always_allow_html: true
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    seal: false
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+background-image: url(title.PNG)
+class: middle
+
+.center[
+# The heterogenous impact of tariff and NTM on total factor productivity of Indonesian firms
+]
+<br />
+<br />
+<br />
+<br />
+
+
+Krisna Gupta  
+Crawford PhD Seminar  
+October 2, 2020  
+Arianto Patunru, Paul Gretton, Budy Resosudarmo
+
+
+---
+
+background-image: url(normal.PNG)
+
+<br />
+
+# Content
+
+- intro
+- literature review
+- data
+- method
+- results
+- discussion & Policy recommendations
+
+---
+
+background-image: url(normal.PNG)
+class:center,middle
+
+# Introduction
+
+---
+
+background-image: url(normal.PNG)
+
+<br />
+
+# Introduction
+
+.pull-left[
+- Indonesia insists on relying to manufacturing to boost its growth  
+<br />
+- Emphasize on tech upgrade  
+<br />
+- also on export-led  
+<br />
+- The role of openness will be greater
+ - financing R&D
+ - import $\Rightarrow$ tech-upgrade (Castellani and Fassio 2019)
+]
+
+.pull-right[
+![Indonesia 4.0](making.PNG)  
+Source: [kemenperin.go.id](https://www.kemenperin.go.id/download/19347)
+] 
+
+---
+
+background-image: url(normal.PNG)
+
+<br />
+
+# Introduction
+
+- However, Protectionism is on the rise, including in Indonesia (Patunru 2018)
+
+- While overall tariff went down, Non-Tariff Measures went up
+
+- The role of Ministry of Industry is on the rise from National Standards (SNI) and Local Content Requirement (LCR) (Munadi 2018)
+
+- Pandemic accelerates the trend, potentially using tariff as well
+> "Roadmap sedang disusun. Nanti output-nya **subtitusi impor** pada akhir **2022** sebesar **35%**," kata Menteri Perindustrian Agus Gumiwang dalam sebuah webinar, Selasa (28/7).  
+<br />
+Source: [katadata.co.id](https://katadata.co.id/happyfajrian/berita/5f2026bce0f69/siapkan-roadmap-kemenperin-optimis-subtitusi-impor-capai-35-di-2022?utm_source=Direct&utm_medium=Tags%20Kementerian%20Perindustrian&utm_campaign=Indeks%20Pos%201)
+
+- Protectionism policies may lead to more policies:
+ - US Case: iron $\Rightarrow$ appliances
+ - Indonesian Case: corn & soybean $\Rightarrow$ chicken, mobile phone
+
+---
+
+background-image: url(normal.PNG)
+
+<br />
+
+# Introduction
+
+- The straight forward question:
+
+> To what extent tariff and NTM affects firm's productivity?
+
+- Further investigation is conducted:
+
+ - does size matters? (core question since Melitz (2003))
+ 
+ - how protectionism affects employment?
+ 
+ - can NTM reduces firm's import in general?
+ 
+- Building from Amiti and Konnings (2007), I estimate TFP and use it as the dependent variable
+
+- Tariff is scrapped from MoF regulations, NTM from TRAINS database
+
+- Firm's chara & trade: Survey Industri and Customs data from BPS from 2008 to 2012
+
+---
+
+background-image: url(normal.PNG)
+class:center,middle
+
+# Brief Literature Review
+
+---
+
+background-image: url(normal.PNG)
+
+<br />
+
+# On trade and industry
+
+- On The role of international trade and trade policies to firm's performance, literature is abundant:
+
+  - help firm access better inputs (Amiti and konings 2007; Bas and Strauss-Kahn 2014; Castellani and Fassio 2019; Ing, Yu and Zhang 2019)
+  - help firms innovate and be more productive (Bas and Strauss-Kahn 2014, Pierola, Fernandez and Farole 2018; Ing, Yu and Zhang 2019; Pane and Patunru 2019)
+  - Help firms from developing countries accessing the more lucrative foreign market (An and Maskus 2009; Cadot et al. 2015; Fugazza, Olarreaga and Ugarte 2017)
+
+- How to measure performance of industries and firms:
+  
+  - most of the literature uses export (value, quantity, price, scope)
+  - some criticism includes endogeneity and the role of export to more meaningful metrics (such as GDP, employment and wage)
+  - The alternative is using TFP (Amiti and Konings 2007; Pane and Patunru 2019)
+  
+---
+
+background-image: url(normal.PNG)
+
+<br />
+
+# On Using TFP
+
+- Using TFP is preferable (Indonesian context):
+  
+  - Trade policy is arguably 'less endogen' to Firm's TFP:
+        - Indonesian government often aim for CAD (Patunru 2018), not firms TFP.
+        - Manufacturing Firms' influence over tariff is less strong (Amiti and Konings 2007; Mobarak and Purbasari 2005)
+  
+  - Firm's TFP is a more meaningful metric than export
+
+- TFP estimation:
+  - non-linear method (Henningsen and Henningsen 2012) have less restriction, but harder to converge and contain less economic intuition.
+  - Linear method is preferable but endogeneity needs to be treated:
+      - using investment proxy (Olley and Pakes 1998)
+      - using intermediate input proxy (Amiti and Konings 2007; Levinsohn and Petrin 2003)
+
+---
+
+background-image: url(normal.PNG)
+
+<br />
+
+# On Trade Policies
+
+- The impact of tariff is established, but NTM's impact is mixed (Kee et al. 2009; Cadot et al. 2015)
+
+### On NTMs:
+
+- Price-difference method & Indonesian context (Marks 2018):
+  - NTMs correlate with higher domestic price
+  - Hard to get consistent data on price
+  - possibility that price reflects quality
+  
+- Most are using categorical variable with AVE-style estimation
+
+- UNCTAD (2017) built an NTM database called TRAINS:
+  - Less judgmental (NTM vs NTB)
+  - lack depth (Cadot et al. 2015)
+
+---
+
+background-image: url(normal.PNG)
+class:center,middle
+
+# Data
+
+---
+
+background-image: url(normal.PNG)
+
+<br />
+
+# Firms
+
+- Survey Industri (SI), BPS
+  - follows many Indonesian manufacturing since 1970s
+  - infos include factor used, foreign ownership, output, fraction of export and import
+  - unbalanced, unfortunately
+  - Inconsistent fixed asset and energy consumption
+  
+- Customs data
+  - 2008-2012 with firm id to integrate with SI
+  - varies with countries and HS-8-digit
+  - not exactly match one-on-one with SI
+  - can't say for sure if the import is directly used for production
+
+- Not all firms reporting export and import in SI exist in the customs data, and vice-versa
+  - may be using third party traders
+  
+---
+
+background-image: url(normal.PNG)
+
+<br />
+
+# What Indonesian firms are trading?
+
+.pull-left[
+Table 1a. Import
+```{r echo=FALSE}
+library(kableExtra)
+library(formattable)
+HS2<-c(72,84,85,29,39,23,52)
+Description<-c('Iron and steel','Mechanical Machinery','Electrical Machinery','Organic Chemicals','Plastics and articles','Food Waste','Cotton')
+M2008<-comma(c(2060,2030 ,1610 ,1180 ,875 ,642 ,571), format="d")
+M2009<-comma(c(1070,1520,1580 ,925 ,753,616,465),format="d")
+M2010<-comma(c(1810,2580,2300,1250,1110,597,710),format="d")
+M2011<-comma(c(2280,3360,2880,1560,1560,1080,1090),format="d")
+M2012<-comma(c(2660,4130,2540,1850,1680,1270,854),format="d")
+tab1a<-data.frame(HS2,Description,M2008,M2009,M2010,M2011,M2012)
+kbl(tab1a,'html') %>%
+  kable_styling(bootstrap_options = "striped", font_size = 11)
+```
+]
+
+.pull-right[
+Table 1b. Export
+```{r echo=FALSE}
+library(kableExtra)
+library(formattable)
+HS2<-c(85,40,15,87,84,61,62)
+Description<-c('Electrical Machinery','Rubber and Articles','Animal or Vegetable Fats','Non-railway Vehicles','Mechanical Machinery','Knitted apparels','Non-knitted apparels')
+X2008<-comma(c(2070,1760,1330,1150,986,636,643), format="d")
+X2009<-comma(c(2990,1590,1700,1370,993,989,1150),format="d")
+X2010<-comma(c(4340,3680,2730,2060,1440,1040,1360),format="d")
+X2011<-comma(c(4890,5770,4270,2290,1790,1370,1560),format="d")
+X2012<-comma(c(4750,4130,4540,3500,1660,1320,1290),format="d")
+tab1b<-data.frame(HS2,Description,X2008,X2009,X2010,X2011,X2012)
+kbl(tab1b,'html') %>%
+  kable_styling(bootstrap_options = "striped", font_size = 11)
+```
+]
+
+<Br />
+
+Suggests integration with Global Value Chain, which is not surprising.
+
+---
+
+background-image: url(normal.PNG)
+
+<br />
+
+### Firm's Characteristics
+
+Table 2. Firm's characteristics, 2018-2012
+```{r echo=F}
+Characteristics<-c('foreign ownership (%)','foreign ownership (%)','fraction of output exported (%)','fraction of output exported (%)','fraction of input imported (%)','fraction of input imported (%)','no. of labour employed','no. of labour employed','capital stock (Million IDR)','capital stock (Million IDR)','total intermediate input (Million IDR)','total intermediate input (Million IDR)','total output (Million IDR)','total output (Million IDR)','total value added (Million IDR)','total value added (Million IDR)','value added per labour (IDR)','value added per labour (IDR)','No. of observation')
+All_SI<-c(8.15,'(26.17)',22.51,'(37.52)',0.08,'(0.24)',191.07,'(711.73)',198.00,'(44,800.00)',50.80,'(617.00)',90.30,'(958.00)',38.50,'(455.00)','137,987.10','(2,515,300.00)','117,598')
+Non_customs<-c(5.96,'(22.60)',0.21,'(0.37)',0.07,'(0.21)',162.75,'(602.46)',194,'(46,500)',41,'(515)',73.30,'(861)',31.60,'(414)','126,074','(2,600,177)','108,662')
+Customs_only<-c(34.77,'(45.06)',0.40,'(0.42)',0.31,'(0.38)',535.44,'(1,457.65)',250,'(10,400)',170,'(1,330)',296,'(1,740)',123,'(789)','282,857','(1,012,159)','8,915')
+tab2<-data.frame(Characteristics,All_SI,Non_customs,Customs_only)
+kbl(tab2,'html') %>%
+  kable_styling(bootstrap_options = "striped", font_size = 9) %>%
+  collapse_rows()
+  
+```
+
+---
+
+background-image: url(normal.PNG)
+
+<br />
+
+## Trade Policies
+
+##### Tariff
+- Tariff is scrapped from Ministry of Finance's regulations from 2008 to 2012.
+- For practicality, also used are source from FTA partners.
+- FTAs during 2008-2012 includes with ASEAN, China, Japan, South Korea, India, Australia and New Zealand.
+
+##### NTMs
+- TRAINS (UNCTAD 2017) is used for NTM
+- Count data (=1 if an NTM is applied to a good in HS-6-Digit)
+  - neutral, but lack depth
+- Doesn't really follow (cross section)
+  - but do have `Start Date` and `End Date`
+
+---
+
+background-image: url(normal.PNG)
+
+<br />
+
+# TRAINS database
+
+Table 3. Indonesia's NTM, TRAINS 2015 set
+```{r echo=F}
+NTM<-c('Sanitary & Phytosanitary (SPS)','Sanitary & Phytosanitary (SPS)','Technical Barrier to Trade (TBT)','Technical Barrier to Trade (TBT)','Pre-shipment inspections and other formalities','Pre-shipment inspections and other formalities','Non-automatic licensing, quotas, QC, etc','Non-automatic licensing, quotas, QC, etc','Price-control measures, extra taxes, charges','Price-control measures, extra taxes, charges','Measures affecting competition','Measures affecting competition','Export-related measures','Export-related measures','observations')
+Codes<-c('A','A','B','B','C','C','E','E','F','F','H','H','P','P','-')
+Examples<-c('Authorization requirements','Quarantine requirements','Testing requirements','labeling requirements','pre-shipment inspection','only trough specific ports','licensing','quota','customs service fee','consumption tax','Only SOEs','-','export permit','export quota','-')
+N2008<-c(1.715,'(2.644)',0.481,'(0.962)',0.562,'(1.202)',0.623,'(0.809)',0.000,'(0.000)',0.019,'(0.139)',0.901,'(1.172)','1,675')
+N2009<-c(2.337,'(4.018)',0.455,'(0.978)',0.466,'(1.081)',0.560,'(0.818)',0.000,'(0.000)',0.052,'(0.238)',0.704,'(1.132)','2,204')
+N2010<-c(2.222,'(3.950)',0.641,'(1.334)',0.443,'(1.059)',0.605,'(0.873)',0.015,'(0.168)',0.050,'(0.233)',0.708,'(1.109)','2,318')
+N2011<-c(2.255,'(4.054)',0.682,'(1.361)',0.462,'(1.046)',0.618,'(0.861)',0.014,'(0.165)',0.048,'(0.229)',0.683,'(1.098)','2,400')
+N2012<-c(2.774,'(5.128)',0.663,'(1.352)',0.776,'(1.075)',0.594,'(0.853)',0.016,'(0.168)',0.046,'(0.224)',1.172,'(1.465)','2,510')
+tab3<-data.frame(NTM,Codes,N2008,N2009,N2010,N2011,N2012,Examples)
+kbl(tab3,'html') %>%
+  kable_styling(bootstrap_options = "striped", full_width=F, font_size = 11) %>%
+  collapse_rows()
+```
+
+---
+
+background-image: url(normal.PNG)
+
+<br />
+
+# Tariff from 2008-2012
+
+.center[
+Table 4. Tariff from MoF regulations (left) compared to WITS (right)
+]
+
+.pull-left[
+```{r echo=F}
+Kind<-c('MFN','MFN','ASEAN','ASEAN','China','China','South Korea','South Korea','India','India','Japan','Japan','ANZ','ANZ')
+T2008<-c(7.049,'(12.213)',2.478,'(11.094)',7.049,'(12.213)',7.049,'(12.213)',7.049,'(12.213)',6.110,'(11.967)',7.049,'(12.213)')
+T2009<-c(7.612,'(12.536)',2.490,'(11.206)',3.819,'(12.673)',2.624,'(12.265)',7.612,'(12.536)',4.639,'(12.356)',6.446,'(11.922)')
+T2010<-c(6.928,'(8.037)',0.150,'(4.559)',2.193,'(7.941)',1.912,'(7.131)',6.394,'(7.809)',3.274,'(7.353)',2.948,'(6.765)')
+T2011<-c(6.975,'(7.231)',0.150,'(4.559)',2.208,'(7.941)',1.912,'(7.131)',5.874,'(7.517)',2.618,'(7.114)',2.278,'(6.318)')
+T2012<-c(6.960,'(7.145)',0.150,'(4.559)',1.941,'(7.927)',1.542,'(7.102)',5.341,'(7.322)',2.230,'(6.487)',1.545,'(6.065)')
+tab4a<-data.frame(Kind,T2008,T2009,T2010,T2011,T2012)
+kbl(tab4a,'html') %>%
+  kable_styling(bootstrap_options = "striped", font_size = 11) %>%
+  collapse_rows()
+```
+]
+
+.pull-right[
+```{r echo=F}
+T2008<-c(7.762,'(12.631)','-','-','-','-','-','-','-','-','-','-','-','-')
+T2009<-c(7.595,'(12.456)',1.840,'(11.079)',3.665,'(12.342)',2.564,'(12.087)','-','-','-','-','-','-')
+T2010<-c(7.564,'(12.412)',1.843,'(11.067)',2.743,'(12.392)',2.560,'(12.084)','-','-','-','-','-','-')
+T2011<-c(7.051,'(7.015)',0.152,'(4.285)',1.850,'(6.853)',1.698,'(6.395)',5.409,'(6.726)','-','-','-','-')
+T2012<-c(7.053,'(7.016)',0.152,'(4.287)',1.579,'(6.823)',1.326,'(6.349)',4.991,'(6.620)','-','-','-','-')
+tab4b<-data.frame(Kind,T2008,T2009,T2010,T2011,T2012)
+kbl(tab4b,'html') %>%
+  kable_styling(bootstrap_options = "striped", font_size = 11) %>%
+  collapse_rows()
+```
+]
+
+---
+
+background-image: url(normal.PNG)
+class:center,middle
+
+# Method
+
+---
+
+background-image: url(normal.PNG)
+
+<br />
+
+# TFP estimation
+
+The framework is using two-stage regression:  
+first, estimating TFP
+
+$$y_{it}=\beta_0 + \beta_ll_{it}+\beta_kk_{it}+\beta_mm_{it}+\beta_nn_{it}+\epsilon_{it}$$
+where:  
+$y_{it}$  &nbsp; = Revenue of firm i at time t  
+$l_{it}$  &nbsp;&nbsp;&nbsp;= number of labour  
+$k_{it}$ &nbsp; = fixed assets  
+$m_{it}$ &nbsp;= intermediate materials  
+$n_{it}$ &nbsp; = energy consumption
+
+Use the coefficient to predict TFP:
+
+$$TFP_{it}=y_{it}-\hat{\beta}_{l}l_{it}-\hat{\beta}_kk_{it}-\hat{\beta}_mm_{it}-\hat{\beta}_nn_{it}$$
+then estimate the second stage:
+
+$$TFP_{it}=\gamma_0+\gamma_{tariff}tariff_{it}+\gamma_{NTM}NTM_{it}+\eta_{it}$$
+
+---
+
+background-image: url(normal.PNG)
+
+<br />
+
+# Some problems
+
+let
+$$\epsilon_{it}=\omega_{it}+\mu_{it}$$
+
+where $\mu_{it}$ is iid, while $\omega_{it}$ is a productivity shock observed only by managers and may correlates with production decisions.
+
+Olley and Pakes (1996) suggest $\omega_{it}$ follows a first order markov process and affects a firm's decision on how much to invest (or divest)
+
+$$I_{it}=i(k_{it},\omega_{it})$$
+inversed:
+
+$$\omega_{it}=\phi(I_{it},k_{it})$$
+Weaknesses of using investment (Levinsohn and Petrin 2003):
+- zero investment featured in many datasets (including SI)
+- less flexible compared to intermediate input
+
+---
+
+background-image: url(normal.PNG)
+
+<br />
+
+# LP Method
+
+Levinsohn and Petrin (2003) suggest using intermediate input
+
+$$\omega_{it}=\phi(m_{it},k_{it})$$
+Therefore, the first-stage becomes:
+
+$$y_{it}=\beta_0 + \beta_ll_{it}+\beta_nn_{it}+\phi(m_{it},k_{it})+\mu_{it}$$
+Then proceed as follows to estimate TFP.
+
+$$TFP_{it}=y_{it}-\hat{\beta}_{l}l_{it}-\hat{\beta}_kk_{it}-\hat{\beta}_mm_{it}-\hat{\beta}_nn_{it}$$
+The command `levpet` in STATA allows for practical use of the LP method (Petrin, Poi and Levinsohn 2005).
+
+---
+
+background-image: url(normal.PNG)
+<br />
+
+# Trade policy variable
+
+The dataset allows for multiple goods imported for each firm. The most practical way is to use coverage ratios.
+
+$$T_{it}=\frac{\sum tariff_{sc}V_{sc}}{\sum V_{sc}}*100$$
+where:
+- $T_{it}=$ tariff coverage ratio of firm i at time t,
+- $tariff_{sc}=$ tariff imposed on good s from country c at time t
+- $V_{sc}=$ value of good s imported from country c by firm i at time t
+
+And for NTMs:
+
+$$C_{\theta it}=\frac{\sum NTM_{\theta sc}V_{sc}}{\sum V_{sc}}*100$$
+
+where $NTM_{\theta sc}$ is the number of NTM $\theta$ imposed on good $s$ from country $c$
+
+---
+
+background-image: url(normal.PNG)
+
+<br />
+
+# Coverage ratio
+
+.pull-left[
+- Table 5 shows simple mean and coverage ratios
+
+- As expected, tariff lies between MFN and FTAs
+
+- Import licensing and quotas is more important than SPS and TBT
+
+- Coverage ratios vs simple mean:
+ - no visual difference on tariff
+ - firms import more goods with NTMs
+]
+
+.pull-right[
+Table 5. Coverage ratios
+```{r echo=FALSE}
+library(kableExtra)
+library(formattable)
+Variable<-c('Tariff',
+'Tariff Coverage Ratio (T)',
+'SPS (A)',
+'TBT (B)',
+'Pre-shipment inspection (C)',
+'Licensing, quota, etc (E)',
+'Price control etc (F)', 
+'Competition measures (H)',
+'Export-related (P)',
+'Coverage ratio A',
+'Coverage ratio B',
+'Coverage ratio C',
+'Coverage ratio E',
+'Coverage ratio F',
+'Coverage ratio H',
+'Coverage ratio P'
+)
+Obs<-comma(c(407532,407532,407532,407532,407532,407532,407532,407532,407532,407532,407532,407532,407532,407532,407532,407532),format="d")
+Mean<-c(3.503,3.420,0.108,0.140,0.028,0.321,0.000,0.007,0.063,0.246,0.202,0.059,0.337,0.000,0.014,0.110)
+St.Dev.<-c(4.971,5.646,0.718,0.663,0.214,0.550,0.008,0.083,0.376,0.931,.478,0.237,0.468,0.001,0.083,0.353)
+Min<-c(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)
+Max<-c(150,150,29,13,5,6,2,2,7,19,9,4,6,0,1,7)
+tab5<-data.frame(Variable,Obs,Mean,St.Dev.,Min,Max)
+kbl(tab5,'html') %>%
+  kable_styling(bootstrap_options = "striped", font_size = 9) %>%
+  row_spec(3, bold=T,color="black",background="yellow") %>%
+  row_spec(10, bold=T,color="black",background="yellow") %>%
+  row_spec(4, bold=T,color="white",background="blue") %>%
+  row_spec(11, bold=T,color="white",background="blue") %>%
+  row_spec(6, bold=T,color="white",background="red") %>%
+  row_spec(13, bold=T,color="white",background="red")
+```
+]
+
+---
+
+background-image: url(normal.PNG)
+
+<br />
+
+# Second-Stage
+
+The second stage regression then:
+
+$$tfp_{it}=\gamma_0+\gamma_Tt_{it}+\sum_\theta \gamma_{\theta}c_{\theta it}+FO_{it}+\alpha_i+ISIC_i+\eta_{it}$$
+
+Where:
+- $tfp_{it} = log(TFP_{it})$
+- $t_{it} = log(1+T_{it})$
+- $c_{\theta it} = log(1+C_{\theta it})$
+- $FO_{it} =$ foreign ownership of firm i at time t (%)
+
+along with firm's fixed effect and ISIC dummy.
+
+---
+
+background-image: url(normal.PNG)
+class:center,middle
+
+# Results
+
+---
+
+background-image: url(normal.PNG)
+
+<br />
+
+# Zero capital problem
+
+Zero capital and energy consumption exists both for SI observations (left) and customs data (right).
+
+.center[
+![zero capital](kap.png)
+]
+
+---
+
+background-image: url(normal.PNG)
+
+<br />
+
+# TFP Results
+
+- $k,n=0$ have smaller RTS and much smaller coefficient for $k$ and $n$
+- Lost $\pm$ 30% of observations
+
+.pull-left[
+table 6a. Factor multipliers with $k,n=0$
+```{r echo=FALSE}
+Variables<-c('Labour (l)','Labour (l)','Capital (k)','Capital (k)','Energy (n)','Energy (n)','input (m)','input (m)','RTS','Obs')
+All_SI<-c('0.354***','(0.005)',0.000,'(0.000)','0.035***','(0.001)','0.234***','(0.013)',0.623,'117,598')
+Non_customs<-c('0.355***','(0.005)',0.000,'(0.000)','0.037***','(0.001)','0.251***','(0.017)',0.643,'108,662')
+Customs_only<-c('0.268***','(0.011)',0.000,'(0.002)','0.019***','(0.003)','0.344***','(0.056)',0.631,'8,936')
+tab6a<-data.frame(Variables,All_SI,Non_customs,Customs_only)
+kbl(tab6a,'html') %>%
+  kable_styling(bootstrap_options = "striped", font_size = 11) %>%
+  row_spec(3:4, bold=T,color="black",background="yellow") %>%
+  collapse_rows()
+```
+]
+
+.pull-right[
+Table 6b. Factor multipliers with $k,n>0$
+```{r echo=FALSE}
+All_SI<-c('0.307***','(0.005)','0.223***','(0.014)','0.114***','(0.003)','0.281***','(0.024)',0.925,'73,265')
+Non_customs<-c('0.307***','(0.006)','0.219***','(0.015)','0.114***','(0.002)','0.255***','(0.024)',0.895,'68,294')
+Customs_only<-c('0.254***','(0.015)','0.161***','(0.038)','0.097***','(0.008)','0.226***','(0.075)',0.738,'4,971')
+tab6b<-data.frame(Variables,All_SI,Non_customs,Customs_only)
+kbl(tab6b,'html') %>%
+  kable_styling(bootstrap_options = "striped", font_size = 11) %>%
+  row_spec(3:4, bold=T,color="black",background="yellow") %>%
+  collapse_rows()
+```
+]
+
+---
+
+background-image: url(normal.PNG)
+
+<br />
+
+# TFP Results
+
+- table 7a over-estimates TFPs (not Indonesian miracle)
+- 3 TFPs are used. 2 from the row customs only, table 7b:
+  - TFP1 = estimated together with other firms in SI (all_SI)
+  - TFP2 = estimated within customs only firms (customs_only)
+  - Value added per labour is used for robustness
+
+.pull-left[
+table 7a. TFP with $k,n=0$
+```{r echo=FALSE}
+Variables<-c('TFP all SI','TFP all SI','Non customs','Non customs','Customs only','Customs only','Va/L','Va/L','obs')
+All_SI<-c('241,611.20','(4,444,240)','221,284.30','(4,542,027)','488,787.80','(3,000,124)','137,987.1','(2,515,300)','117,598')
+Non_customs<-c('-','-','216,246.40','(4,361,599)','-','-','126,073.5','(2,600,177)','108,662')
+Customs_only<-c('-','-','-','-','341,643.80','(8,542,388)','282,856.5','(1,012,159)','8,936')
+tab7a<-data.frame(Variables,All_SI,Non_customs,Customs_only)
+kbl(tab7a,'html') %>%
+  kable_styling(bootstrap_options = "striped", font_size = 11) %>%
+  collapse_rows()
+```
+]
+
+.pull-right[
+Table 7b. TFP with $k,n>0$
+```{r echo=FALSE}
+All_SI<-c('107,036.90','(2,792,543)','98,534.27','(2,826,922)','210,429.20','(2,331,985)','111,455.8','(2,538,721)','73,265')
+Non_customs<-c('-','-','115,020.70','(2,719,907)','-','-','100,510.9','(2,614,048)','68,294')
+Customs_only<-c('-','-','-','-','177,280.20','(4,609,524)','261,822.6','(1,043,383)','4,971')
+tab7b<-data.frame(Variables,All_SI,Non_customs,Customs_only)
+kbl(tab7b,'html') %>%
+  kable_styling(bootstrap_options = "striped", font_size = 11) %>%
+  collapse_rows()
+```
+]
+
+
+---
+
+background-image:url(normal.PNG)
+
+<br />
+
+.pull-left[
+
+# Trade policies vs TFP
+
+##### observations = 4,971
+- 1,512 firms
+- only customs, $k,n>0$
+- TFP1 estimated with all SI
+- TFP2 estimated only customs
+- $VaL=\frac{Value Added}{Labour}$
+
+##### Table 8a:
+- Simple OLS
+- robust standard error
+- TBT is good?
+- Price control is big
+- others are not significant
+]
+
+.pull-right[
+```{r echo=F}
+Variables<-c('tariff','tariff','SPS','SPS','TBT','TBT','Pre-shipment inspection','Pre-shipment inspection','licensing','licensing','price control','price control','competition measures','competition measures','export-related','export-related','dummy FDI','dummy FDI','foreign ownership','foreign ownership')
+TFP1<-c(-0.027,'(0.020)','-0.094*','(0.048)','0.289***','(0.092)',0.082,'(0.109)',-0.064,'(0.059)','281.992***','(87.628)',0.114,'(0.320)',0.009,'(0.081)','0.171***','(0.059)','0.039***','(0.013)')
+TFP2<-c(-0.025,'(0.019)','-0.079','(0.049)','0.254***','(0.078)',0.067,'(0.109)',-0.036,'(0.058)','585.429***','(111.394)',0.084,'(0.315)',0.035,'(0.081)','0.176***','(0.054)','0.040***','(0.012)')
+VaL<-c('-0.072***','(0.023)','-0.164**','(0.073)','0.379***','(0.099)','0.295*','(0.161)',-0.004,'(0.087)','539.567***','(134.382)',0.111,'(0.348)',0.057,'(0.140)','0.153**','(0.074)','0.044***','(0.016)')
+tab8a<-data.frame(Variables,TFP1,TFP2,VaL)
+kbl(tab8a,'html') %>%
+  kable_styling(bootstrap_options = "striped", font_size = 11) %>%
+  collapse_rows()
+```
+]
+
+---
+
+background-image:url(normal.PNG)
+
+<br />
+
+.pull-left[
+
+# Trade policies vs TFP
+
+##### observations = 4,971
+- 1,512 firms
+- only customs, $k,n>0$
+- TFP1 estimated with all SI
+- TFP2 estimated only customs
+- $VaL=\frac{Value Added}{Labour}$
+
+##### Table 8b:
+- Firm, year, and ISIC FE
+- Only TBT remains significant
+]
+
+.pull-right[
+```{r echo=F}
+Variables<-c('tariff','tariff','SPS','SPS','TBT','TBT','Pre-shipment inspection','Pre-shipment inspection','licensing','licensing','price control','price control','competition measures','competition measures','export-related','export-related','dummy FDI','dummy FDI','foreign ownership','foreign ownership','R-sq')
+TFP1<-c(-0.019,'(0.022)',-0.011,'(0.065)','0.182**','(0.078)',-0.063,'(0.114)',-0.093,'(0.076)',138.837,'(1,557.471)',0.270,'(0.351)',0.073,'(0.105)',0.079,'(0.066)',0.021,'(0.015)',0.023)
+TFP2<-c(-0.013,'(0.021)',-0.025,'(0.062)','0.142*','(0.074)',-0.077,'(0.107)',-0.095,'(0.072)',374.367,'(1,469.290)',0.238,'(0.332)',0.094,'(0.100)',0.080,'(0.062)',0.020,'(0.014)',0.025)
+VaL<-c(0.002,'(0.028)',-0.038,'(0.082)','0.184*','(0.098)',-0.057,'(0.143)',-0.116,'(0.096)',116.246,'(1,957.694)',-0.048,'(0.442)',0.040,'(0.133)',-0.030,'(0.083)',0.026,'(0.019)',0.061)
+tab8b<-data.frame(Variables,TFP1,TFP2,VaL)
+kbl(tab8b,'html') %>%
+  kable_styling(bootstrap_options = "striped", font_size = 11) %>%
+  collapse_rows()
+```
+]
+
+---
+
+background-image: url(normal.PNG)
+
+<br \>
+
+# Trade policy doesn't seem to matter
+
+.pull-middle[
+- Firms in the customs data (possibly) are different
+  - they are generally bigger, and bigger firms may have ways to offset trade costs
+  
+- if size matters, it can be discovered using size interaction.
+
+- $l_{it}=log(Labour_{it})$ is used as a proxy
+
+$$size\_tfp_{it}=tfp_{it}+\gamma_Tt_{it}*l_{it}+\sum_\theta c_{\theta it}*l_{it}$$
+]
+
+---
+
+background-image: url(normal.PNG)
+
+<br />
+
+# Size Matters (Right=Left with FE)
+
+.pull-left[
+```{r echo=F}
+Variables<-c('tariff','tariff','tariff.l','tariff.l','SPS','SPS','SPS.l','SPS.l','TBT','TBT','TBT.l','TBT.l','Pre-shipment inspection','Pre-shipment inspection','Pre-shipment inspection.l','Pre-shipment inspection.l','licensing','licensing','licensing.l','licensing.l')
+TFP1<-c('-0.357***','(0.067)','0.061***','(0.012)','-0.250','(0.234)','0.026','(0.042)','0.213','(0.483)',0.014,'(0.083)',0.418,'(0.531)',-0.058,'(0.094)','-0.650**','(0.266)','0.107**','(0.047)')
+TFP2<-c('-0.630***','(0.065)','0.112***','(0.011)','-0.517**','(0.260)','0.076*','(0.046)','0.194','(0.419)',0.012,'(0.072)',0.749,'(0.558)',-0.116,'(0.098)','-1.444***','(0.263)','0.258***','(0.046)')
+VaL<-c(0.071,'(0.090)',-0.026,'(0.017)',-0.124,'(0.381)',-0.008,'(0.067)',0.486,'(0.408)',-0.019,'(0.067)',-0.005,'(0.758)',0.051,'(0.134)','0.640*','(0.371)','-0.119*','(0.064)')
+tab9a<-data.frame(Variables,TFP1,TFP2,VaL)
+kbl(tab9a,'html') %>%
+  kable_styling(bootstrap_options = "striped", font_size = 10) %>%
+  collapse_rows()
+```
+]
+
+.pull-right[
+```{r echo=F}
+Variables<-c('tariff','tariff','tariff.l','tariff.l','SPS','SPS','SPS.l','SPS.l','TBT','TBT','TBT.l','TBT.l','Pre-shipment inspection','Pre-shipment inspection','Pre-shipment inspection.l','Pre-shipment inspection.l','licensing','licensing','licensing.l','licensing.l')
+TFP1<-c('-0.205**','(0.083)','0.036**','(0.015)','-0.260','(0.297)',0.043,'(0.051)',0.124,'(0.330)',0.011,'(0.058)',-0.115,'(0.520)',0.010,'(0.093)','-0.451','(0.311)','0.065','(0.056)')
+TFP2<-c('-0.371***','(0.077)','0.068***','(0.014)',-0.381,'(0.278)',0.062,'(0.048)',0.074,'(0.310)',0.013,'(0.055)',0.160,'(0.488)',-0.043,'(0.087)','-0.896***','(0.292)','0.147***','(0.052)')
+VaL<-c('0.259**','(0.104)','-0.048**','(0.019)',0.103,'(0.372)',-0.029,'(0.064)',0.462,'(0.415)',-0.051,'(0.073)',-0.637,'(0.652)',0.100,'(0.117)','1.477***','(0.390)','-0.295***','(0.070)')
+tab9b<-data.frame(Variables,TFP1,TFP2,VaL)
+kbl(tab9b,'html') %>%
+  kable_styling(bootstrap_options = "striped", font_size = 10) %>%
+  collapse_rows()
+```
+]
+
+---
+
+background-image: url(normal.PNG)
+
+<br />
+
+# Size Matters (Right=Left with FE)
+
+.pull-left[
+```{r echo=F}
+Variables<-c('price control','price control','price control.l','price control.l','competition','competition','competition.l','competition.l','export-related','export-related','export-related.l','export-related.l','dummy FDI','dummy FDI','foreign ownership','foreign ownership','R-sq')
+TFP1<-c('-8,559***','(3,235)','1,383***','(514)','-1.155','(1.152)',0.228,'(0.216)','-0.341','(0.357)','0.066','(0.062)','0.157***','(0.059)','0.039***','(0.013)','-')
+TFP2<-c('-12,147***','(2,984)','1,985***','(474)',-0.693,'(1.095)',0.129,'(0.210)',-0.475,'(0.385)',0.095,'(0.066)','0.152***','(0.052)','0.040***','(0.012)','-')
+VaL<-c('-29,052***','(4,029)','4,718***','(640)','-2.269*','(1.194)','0.434**','(0.213)',0.343,'(0.679)',-0.049,'(0.125)','0.156**','(0.073)','0.045***','(0.016)','-')
+tab9c<-data.frame(Variables,TFP1,TFP2,VaL)
+kbl(tab9c,'html') %>%
+  kable_styling(bootstrap_options = "striped", font_size = 11) %>%
+  collapse_rows()
+```
+]
+
+.pull-right[
+```{r echo=F}
+TFP1<-c('-7,559','(41,100)','1,214','(6,533)','-2.027','(1.277)','0.393*','(0.220)',-0.096,'(0.476)',0.036,'(0.083)',0.066,'(0.066)',0.023,'(0.015)',0.029)
+TFP2<-c('-10,221','(38,558)','1,666','(6,129)','-2.204*','(1.198)','0.413**','(0.206)','-0.291','(0.446)',0.075,'(0.078)',0.061,(0.062),'0.024*','(0.014)',0.041)
+VaL<-c('-25,902','(51,565)','4,154','(8,197)','-4.609***','(1.602)','0.834***','(0.276)',0.480,'(0.597)',-0.073,'(0.104)',-0.022,'(0.083)',0.025,'(0.019)',0.070)
+tab9d<-data.frame(Variables,TFP1,TFP2,VaL)
+kbl(tab9d,'html') %>%
+  kable_styling(bootstrap_options = "striped", font_size = 11) %>%
+  collapse_rows()
+```
+]
+
+---
+
+background-image: url(normal.PNG)
+
+<br />
+
+# Employment effect
+
+Results from VaL is confusing
+- Perhaps employment is more sensitive to change in production cost compared to reported value added?
+  
+Use change in labour as LHS with the consequence of losing 2008
+
+$$\Delta l_t = log(L_t) - log(L_{t-1})$$
+Four regressions are conducted, involving:
+- No size interaction (L0) and with size interaction (L1)
+- with firm,year,ISIC FE and without FE
+
+---
+
+background-image: url(normal.PNG)
+
+<br />
+
+# Employment effect
+
+.pull-left[
+```{r echo=F}
+Variables<-c('tariff','tariff','SPS','SPS','TBT','TBT','Pre-shipment','Pre-shipment','licensing','licensing','Price-control','Price-control', 'competition','competition','Export-related','Export-related','foreign dummy','foreign dummy','obs')
+L0<-c(-0.008,'(0.009)',-0.028,'(0.020)',0.034,'(0.038)',-0.041,'(0.040)',-0.015,'(0.033)',135,-88,0.072,'(0.289)',-0.017,'(0.028)',0.031,'(0.030)','3,726')
+L0FE<-c(-0.028,'(0.021)','-0.120*','(0.066)',-0.075,'(0.075)',0.121,'(0.100)',-0.042,'(0.073)','1,543','-1,185',0.094,'(0.387)',0.097,'(0.091)','0.147**','(0.065)','3,726')
+L1<-c('-0.260***','(0.047)',-0.176,'(0.153)',0.064,'(0.236)',0.066,'(0.349)','-0.818***','(0.190)','14,832***','(4,381)',-0.999,'(1.563)',-0.246,'(0.203)',0.028,'(0.031)','3,726')
+L1FE<-c('-1.368***','(0.063)','-1.650***','(0.230)','0.452*','(0.257)','1.997***','(0.370)','-4.455***','(0.237)','6,015','-25,570','-2.788***','(1.006)','-0.617*','(0.333)','0.091*','(0.053)','3,726')
+tab10a<-data.frame(Variables,L0,L0FE,L1,L1FE)
+kbl(tab10a,'html') %>%
+  kable_styling(bootstrap_options = "striped", font_size = 10) %>%
+  collapse_rows()
+```
+]
+
+.pull-right[
+```{r echo=F}
+Variables<-c('tariff*l','tariff*l','SPS*l','SPS*l','TBT*l','TBT*l','Pre-shipment*l','Pre-shipment*l','licensing*l','licensing*l','Price-control*l','Price-control*l','competition*l','competition*l','Export-related*l','Export-related*l','% foreign','% foreign','R-sq')
+L0<-c('-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-',-0.008,'(0.007)','-')
+L0FE<-c('-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-0.026*','(0.014)',0.028)
+L1<-c('0.043***','(0.008)',0.021,'(0.027)',-0.008,'(0.043)',-0.008,'(0.061)','0.140***','(0.036)','-2,312***','(695)',0.207,'(0.335)',0.042,'(0.036)',-0.009,'(0.007)','-')
+L1FE<-c('0.251***','(0.011)','0.288***','(0.041)','-0.095**','(0.045)','-0.345***','(0.066)','0.809***','(0.042)','-802','(4,064)','0.360**','(0.163)','0.132**','(0.059)','-0.007','(0.011)','0.355')
+tab10b<-data.frame(Variables,L0,L0FE,L1,L1FE)
+kbl(tab10b,'html') %>%
+  kable_styling(bootstrap_options = "striped", font_size = 10) %>%
+  collapse_rows()
+```
+]
+
+---
+
+background-image: url(normal.PNG)
+
+<br />
+
+# Import value, TFP, and trade policies
+
+- Lastly, I investigate if the main driver of the TFP changes is import.
+
+- I use PPML (Silva and Tenreyro 2008) to regress import value (LHS) against the three different TFPs and trade policies.
+  - TFPs are used for interaction as well.
+
+- Gravity variables are sourced from CEPII.
+
+- The regression is conducted in HS-8-digit level.
+
+- Fixed effects (right table) are ISIC, country of origin, and year<sup>1</sup>.
+
+.footnote[
+<sup>1</sup> the regression did not converge when the firm fixed effect was used.
+]
+
+---
+
+background-image: url(normal.PNG)
+
+<br />
+
+# Import value, TFP, and trade policies
+
+.pull-left[
+```{r echo=F}
+Variables<-c('tfp','tfp','tariff','tariff','SPS','SPS','TBT','TBT','Pre-shipment','Pre-shipment','licensing','licensing','Price-control','Price-control', 'competition','competition','Export-related','Export-related')
+tfp1<-c('0.113***','(0.013)','-0.546***','(0.100)','1.076***','(0.277)','-1.090***','(0.286)','-1.852***','(0.581)','1.211***','(0.419)','25.021***','(6.582)','3.581***','(1.159)','0.509','(0.525)')
+tfp2<-c('0.312***','(0.017)','-0.600***','(0.144)','1.577***','(0.280)','-1.106***','(0.281)','-1.910***','(0.588)','2.612***','(0.436)','22.841***','(7.251)','2.027*','(1.140)','0.926*','(0.540)')
+VaL<-c('0.331***','(0.032)','-0.841***','(0.247)','2.026***','(0.324)','-1.903***','(0.301)','-2.655***','(0.751)','2.065***','(0.520)','27.486***','(7.961)','4.164***','(1.264)','1.234*','(0.668)')
+tab12a<-data.frame(Variables,tfp1,tfp2,VaL)
+kbl(tab12a,'html') %>%
+  kable_styling(bootstrap_options = "striped", font_size = 10) %>%
+  collapse_rows()
+```
+]
+
+.pull-right[
+```{r echo=F}
+Variables<-c('tfp','tfp','tariff','tariff','SPS','SPS','TBT','TBT','Pre-shipment','Pre-shipment','licensing','licensing','Price-control','Price-control', 'competition','competition','Export-related','Export-related')
+tfp1<-c('0.136***','(0.017)','-0.464***','(0.121)','1.191***','(0.299)','-1.100***','(0.284)','-2.632***','(0.649)','1.359***','(0.457)','33.873***','(7.584)','3.241***','(1.080)','0.815','(0.649)')
+tfp2<-c('0.342***','(0.021)','-0.433***','(0.163)','1.632***','(0.309)','-1.071***','(0.279)','-2.658***','(0.658)','2.650***','(0.470)','31.596***','(7.985)','1.892*','(1.080)','1.300*','(0.676)')
+VaL<-c('0.226***','(0.033)','-0.743***','(0.248)','1.771***','(0.331)','-1.698***','(0.304)','-3.145***','(0.768)','1.636***','(0.521)','32.040***','(7.898)','3.855***','(1.163)','1.347*','(0.722)')
+tab12b<-data.frame(Variables,tfp1,tfp2,VaL)
+kbl(tab12b,'html') %>%
+  kable_styling(bootstrap_options = "striped", font_size = 10) %>%
+  collapse_rows()
+```
+]
+
+---
+
+background-image: url(normal.PNG)
+
+<br />
+
+# Import value, TFP, and trade policies
+
+.pull-left[
+```{r echo=F}
+Variables<-c('tariff*tfp','tariff*tfp','SPS*tfp','SPS*tfp','TBT*tfp','TBT*tfp','Pre-shipment*tfp','Pre-shipment*tfp','licensing*tfp','licensing*tfp','Price-control*tfp','Price-control*tfp','competition*tfp','competition*tfp','Export-related*tfp','Export-related*tfp','observations','R-sq')
+tfp1<-c('0.035***','(0.012)','-0.044','(0.041)','0.157***','(0.038)','0.387***','(0.082)','-0.172***','(0.056)','-4.530***','(0.995)','-0.372**','(0.162)','-0.139*','(0.074)','192,928',0.009)
+tfp2<-c('0.030**','(0.014)','-0.114***','(0.042)','0.159***','(0.037)','0.395***','(0.083)',"-0.372***",'(0.058)','-4.204***','(1.096)','-0.161','(0.157)','-0.197***','(0.076)','192,928',0.009)
+VaL<-c('0.045**','(0.021)','-0.179***','(0.049)','0.273***','(0.040)','0.488***','(0.108)','-0.306***','(0.072)','-4.890***','(1.201)','-0.476***','(0.177)','-0.247**','(0.097)','192,928',0.011)
+tab12c<-data.frame(Variables,tfp1,tfp2,VaL)
+kbl(tab12c,'html') %>%
+  kable_styling(bootstrap_options = "striped", font_size = 10) %>%
+  collapse_rows()
+```
+]
+
+.pull-right[
+```{r echo=F}
+tfp1<-c('0.027*','(0.015)','-0.073','(0.045)','0.172***','(0.038)','0.458***','(0.092)','-0.217***','(0.062)','-5.759***','(1.138)','-0.370**','(0.150)','-0.173*','(0.093)','192,928',0.012)
+tfp2<-c('0.016','(0.016)','-0.135***','(0.046)','0.167***','(0.036)','0.461***','(0.092)','-0.402***','(0.064)','-5.423***','(1.199)','-0.185','(0.149)','-0.241**','(0.097)','192,928',0.013)
+VaL<-c('0.038*','(0.021)','-0.155***','(0.050)','0.256***','(0.041)','0.535***','(0.110)','-0.258***','(0.073)','-5.507***','(1.184)','-0.464***','(0.161)','-0.253**',(0.106),'192,928',0.013)
+tab12d<-data.frame(Variables,tfp1,tfp2,VaL)
+kbl(tab12d,'html') %>%
+  kable_styling(bootstrap_options = "striped", font_size = 10) %>%
+  collapse_rows()
+```
+]
+
+---
+
+background-image: url(normal.PNG)
+class:center,middle
+
+# Discussion and Policy Recommendation
+
+---
+
+background-image: url(normal.PNG)
+
+<br />
+
+# Discussions
+
+##### Trade policies and TFPs
+- tariff is negatively affecting TFPs, and the impact is less profound for bigger firms:
+  - consistent when fixed effects are used
+- Only two NTMs are significant after fixed effects: licensing and competition measures.
+- More productive firms import more
+- NTM have mixed results: Only TBT and preshipment reduces import
+
+##### Employment
+- Tariff also reduces employment, but bigger firms have smaller effect.
+- Not all NTMs show a visible significance:
+  - SPS, licensing, and export-related measures have the same directional impact as tariff.
+  - Pre-shipment inspection have different direction
+
+---
+
+background-image: url(normal.PNG)
+
+<br />
+
+# Policy recommendation
+
+- More import restriction isn't great
+  - especially if the goal is manufacturing growth.
+  - firms have many problems. Import isn't one of them.
+
+- Sometimes, less is more
+  - Intervening with trade is usually inefficient
+  - at what (who's) cost?
+  - may lead to more intervention
+
+- If the goal is CAD, find other ways
+  - become more attractive to business (both domestic and foreign)
+  - Make non-commodity export viable
+  - let IDR weaken?
+  - bad debt management $\Rightarrow$ costing manufacturers and consumers
+  
+- Commodities are still the main driver of export, and halting GVC may lead to even more reliance on commodities to keep CA $>0$
+  
+---
+
+background-image: url(normal.PNG)
+
+<br />
+
+# Caveats
+
+- NTMs have mixed results.
+  - Count data isn't ideal
+  - May have different impact for different types of NTMs
+  - May have different impact on different goods
+  - More in-depth studies are needed
+  
+- The sample is quite restrictive.
+  - Importers are different compared to general firms
+  - the number of importers is very small
+  
+- Data isn't perfect.
+  - NTM collected in 2015 have slight variation compared to 2018
+  - SI have many problems
+  - Customs have not go beyond 2012 yet
+
+---
+
+background-image: url(normal.PNG)
+
+class: center, middle
+
+# The End
+
+
