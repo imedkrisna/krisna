@@ -1,7 +1,7 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "webinar dan bedah buku bidang ekonomi Mewujudkan Indonesia 4.0: Kumpulan pemikiran pelajar Indonesia di Australia"
+title: "webinar dan book unboxing, economic section, Mewujudkan Indonesia 4.0: Kumpulan pemikiran pelajar Indonesia di Australia"
 event:
 event_url: https://www.youtube.com/watch?v=sqfMf4WN_d4&t=1376s
 location: 'On-line'
@@ -67,20 +67,18 @@ slides: ""
 projects: []
 ---
 
-Pada hari Kamis 10 September 2020, saya berkesempatan menjadi host sekaligus moderator di acara webinar dan bedah buku Mewujudkan Indonesia 4.0: Kumpulan pemikiran pelajar Indonesia di Australia. Acara ini terselenggara berkat kerjasama Perkumpulan Pelajar Indonesia di Australia atau PPI Australia dan Sobat Cyber Indonesia.
+On Thursday, September 10<sup>th</sup> 2020, I was appointed as a host as well as moderator in a webinar series of our book (in Bahasa Indonesia), "Mewujudkan Indonesia 4.0: Kumpulan pemikiran pelajar Indonesia di Australia." This event is a joint effort of Indonesian Students’ Association of Australia (PPI Australia) and Sobat Cyber Indonesia.
 
-Acara pada hari ini adalah salah satu dari serangkaian acara grand launching buku Mewujudkan Indonesia 4.0: Kumpulan pemikiran pelajar Indonesia di Australia yang diterbitkan oleh Yayasan Pustaka Obor Indonesia. Grand Launching buku ini telah dilaksanakan di KBRI Australia dan di dunia maya tepat seminggu sebelumnya pada tanggal 3 September 2020. Kemudian, kami menyelenggarakan serangkaian acara bedah buku untuk setiap aspek atau bidang yang dibahas di buku ini. Jangan lewatkan rangkaian acara lainnya yang detilnya dapat anda lihat di Instagram PPI Australia di [@ppiaustralia](https://www.instagram.com/ppiaustralia/?hl=en)
+This event is a part of a series of launching our book. The Grand launching was conducted with a collaboration with Indonesian embassy in Canberra a week before, September 3<sup>rd</sup> 2020 to be exact. We then follow it up with webinars for each of a section after that. The detailed webinar series is available at PPI Australia's instagram account, [@ppiaustralia](https://www.instagram.com/ppiaustralia/?hl=en)
 
-Acara kali ini fokus pada aspek ekonomi, industri dan investasi dari buku ini. Beberapa narasumber yang turut berpartisipasi adalah:
+In this event focused on economics, the speakers are:
 
-- Professor doctor Suharnomo, Dekan FEB Universitas Diponegoro sekaligus Ketua Asosiasi Fakultas Ekonomi dan Bisnis Indonesia (AFEBI). 
-- Aditia Prasta, ST., MM, Kepala Indonesia Investment Promotion Center (IIPC) London. 
-- Monasisca Noviani, pelajar di Monash University, Melbourne dan salah satu penulis buku Mewujudkan Indonesia 4.0: Kumpulan pemikiran pelajar Indonesia di Australia
+- Professor doctor Suharnomo, Dekan FEB Universitas Diponegoro, also the head of Indonesian association of economic and business faculty (AFEBI). 
+- Aditia Prasta, ST., MM, head of Indonesia Investment Promotion Center (IIPC) London. 
+- Monasisca Noviani, a master student from Monash University, Melbourne and also one of the author of a chapter in the book
 
-Acara ini sendiri dibuka dengan *keynote speak* dari Menteri Perindustrian, Bapak Dr. Agus Gumiwang Kartasasmita, M.Si. Beliau memberikan sedikit gambaran mengenai kondisi perekonomian dan industri manufaktur di Indonesia, serta bagaimana COVID-19 membuat Indonesia harus mengupdate sedikit aspek dari Making Indonesia 4.0, utamanya memberikan tekanan pentingnya berinvestasi di industri farmasi dan alat kesehatan.
+The keynote speaker of this event was Indonesian Ministry of Industry, Dr. Agus Gumiwang Kartasasmita, M.Si. The Minister share a little bit about Indonesian economy and manufacturing in Indonesia, and how it was impacted by the COVID-19. Making Indonesia 4.0 is also experiencing some revisions amid the pandemic.
 
-Acara ini disiarkan di [{{< icon name="youtube" pack="fab" >}}Sobat Cyber Indonesia](https://www.youtube.com/channel/UCl_e8NwGVoNhSGr8tniUHGg). Paparan dari Menteri Perindustrian dan para narasumber dapat diakses di [{{< icon name="google-drive" pack="fab" >}}google drive](https://drive.google.com/drive/folders/12E8567Ibdex1FfE5ColmqvKeKmIQx8Wn?usp=sharing), atau ketuk `slides` di atas.
-
-Berikut rekamannya dari kanal [{{< icon name="youtube" pack="fab" >}}Sobat Cyber Indonesia](https://www.youtube.com/channel/UCl_e8NwGVoNhSGr8tniUHGg). Acara dimulai dari menit 22:55, jadi langsung diskip saja ke menit 22:55 yah!
+The webinar is recorded in [{{< icon name="youtube" pack="fab" >}}Sobat Cyber Indonesia](https://www.youtube.com/channel/UCl_e8NwGVoNhSGr8tniUHGg), while the slides are available at this [{{< icon name="google-drive" pack="fab" >}}google drive](https://drive.google.com/drive/folders/12E8567Ibdex1FfE5ColmqvKeKmIQx8Wn?usp=sharing). The video started from min 22:55 and in Bahasa Indonesia.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/sqfMf4WN_d4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
