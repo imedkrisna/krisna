@@ -20,7 +20,7 @@ background-image: url(title.PNG)
 class: middle
 
 .center[
-# The heterogenous impact of tariff and NTM on total factor productivity of Indonesian firms
+# Tariff and Non-Tariff Measures: Heterogenous Impacts on Productivity  of Indonesian firms
 ]
 <br />
 <br />
@@ -65,11 +65,11 @@ background-image: url(normal.PNG)
 # Introduction
 
 .pull-left[
-- Indonesia insists on relying to manufacturing to boost its growth  
+- Indonesia relies in manufacturing sector to boost growth  
 <br />
-- Emphasize on tech upgrade  
+- Emphasize on tech upgrade
 <br />
-- also on export-led  
+- also on export-led  growth
 <br />
 - The role of openness will be greater
  - financing R&D
@@ -93,12 +93,9 @@ background-image: url(normal.PNG)
 
 - While overall tariff went down, Non-Tariff Measures went up
 
-- The role of Ministry of Industry is on the rise from National Standards (SNI) and Local Content Requirement (LCR) (Munadi 2018)
+- The role of Ministry of Industry is increasing (e.g., National Standards (SNI) and Local Content Requirement (LCR)) (Munadi 2019)
 
 - Pandemic accelerates the trend, potentially using tariff as well
-> "Roadmap sedang disusun. Nanti output-nya **subtitusi impor** pada akhir **2022** sebesar **35%**," kata Menteri Perindustrian Agus Gumiwang dalam sebuah webinar, Selasa (28/7).  
-<br />
-Source: [katadata.co.id](https://katadata.co.id/happyfajrian/berita/5f2026bce0f69/siapkan-roadmap-kemenperin-optimis-subtitusi-impor-capai-35-di-2022?utm_source=Direct&utm_medium=Tags%20Kementerian%20Perindustrian&utm_campaign=Indeks%20Pos%201)
 
 - Protectionism policies may lead to more policies:
  - US Case: iron $\Rightarrow$ appliances
@@ -112,23 +109,23 @@ background-image: url(normal.PNG)
 
 # Introduction
 
-- The straight forward question:
+- The straightforward question:
 
-> To what extent tariff and NTM affects firm's productivity?
+> To what extent tariff and NTMs affect firm's productivity?
 
 - Further investigation is conducted:
 
- - does size matters? (core question since Melitz (2003))
+ - does size matter? (core question since Melitz (2003))
  
- - how protectionism affects employment?
+ - how does protectionism affect employment?
  
- - can NTM reduces firm's import in general?
+ - can NTM reduce firm's import in general?
  
 - Building from Amiti and Konnings (2007), I estimate TFP and use it as the dependent variable
 
-- Tariff is scrapped from MoF regulations, NTM from TRAINS database
+- Tariff data are scrapped from MoF regulations, NTM from TRAINS database
 
-- Firm's chara & trade: Survey Industri and Customs data from BPS from 2008 to 2012
+- Firm's characteristics & trade: Survei Industri and Customs data from BPS from 2008 to 2012
 
 ---
 
@@ -145,17 +142,17 @@ background-image: url(normal.PNG)
 
 # On trade and industry
 
-- On The role of international trade and trade policies to firm's performance, literature is abundant:
+- On the role of international trade and trade policies to firm's performance, literature is abundant:
 
-  - help firm access better inputs (Amiti and konings 2007; Bas and Strauss-Kahn 2014; Castellani and Fassio 2019; Ing, Yu and Zhang 2019)
-  - help firms innovate and be more productive (Bas and Strauss-Kahn 2014, Pierola, Fernandez and Farole 2018; Ing, Yu and Zhang 2019; Pane and Patunru 2019)
-  - Help firms from developing countries accessing the more lucrative foreign market (An and Maskus 2009; Cadot et al. 2015; Fugazza, Olarreaga and Ugarte 2017)
+  - help firm **access better inputs** (Amiti and konings 2007; Bas and Strauss-Kahn 2014; Castellani and Fassio 2019; Ing, Yu and Zhang 2019)
+  - help firms **innovate** and be **more productive** (Bas and Strauss-Kahn 2014, Pierola, Fernandez and Farole 2018; Ing, Yu and Zhang 2019; Pane and Patunru 2019)
+  - Help firms from developing countries **access** the more lucrative **foreign markets** (An and Maskus 2009; Cadot et al. 2015; Fugazza, Olarreaga and Ugarte 2017)
 
 - How to measure performance of industries and firms:
   
-  - most of the literature uses export (value, quantity, price, scope)
-  - some criticism includes endogeneity and the role of export to more meaningful metrics (such as GDP, employment and wage)
-  - The alternative is using TFP (Amiti and Konings 2007; Pane and Patunru 2019)
+  - most of the literature **uses export** (value, quantity, price, scope)
+  - some criticism includes **endogeneity** and the role of export to more **meaningful metrics** (such as GDP, employment and wage)
+  - The alternative is using **TFP** (Amiti and Konings 2007; Pane and Patunru 2019)
   
 ---
 
@@ -167,14 +164,14 @@ background-image: url(normal.PNG)
 
 - Using TFP is preferable (Indonesian context):
   
-  - Trade policy is arguably 'less endogen' to Firm's TFP:
+  - Trade policy is arguably 'less endogenous' to firm's TFP:
         - Indonesian government often aim for CAD (Patunru 2018), not firms TFP.
         - Manufacturing Firms' influence over tariff is less strong (Amiti and Konings 2007; Mobarak and Purbasari 2005)
   
   - Firm's TFP is a more meaningful metric than export
 
 - TFP estimation:
-  - non-linear method (Henningsen and Henningsen 2012) have less restriction, but harder to converge and contain less economic intuition.
+  - non-linear method (Henningsen and Henningsen 2012) has less restriction, but it is harder to converge and contain less economic intuition.
   - Linear method is preferable but endogeneity needs to be treated:
       - using investment proxy (Olley and Pakes 1998)
       - using intermediate input proxy (Amiti and Konings 2007; Levinsohn and Petrin 2003)
@@ -217,7 +214,7 @@ background-image: url(normal.PNG)
 
 # Firms
 
-- Survey Industri (SI), BPS
+- Survei Industri (SI), BPS
   - follows many Indonesian manufacturing since 1970s
   - infos include factor used, foreign ownership, output, fraction of export and import
   - unbalanced, unfortunately
@@ -286,9 +283,9 @@ background-image: url(normal.PNG)
 
 <br />
 
-### Firm's Characteristics
+### Firms' Characteristics
 
-Table 2. Firm's characteristics, 2018-2012
+Table 2. Firms' characteristics, 2018-2012
 ```{r echo=F}
 Characteristics<-c('foreign ownership (%)','foreign ownership (%)','fraction of output exported (%)','fraction of output exported (%)','fraction of input imported (%)','fraction of input imported (%)','no. of labour employed','no. of labour employed','capital stock (Million IDR)','capital stock (Million IDR)','total intermediate input (Million IDR)','total intermediate input (Million IDR)','total output (Million IDR)','total output (Million IDR)','total value added (Million IDR)','total value added (Million IDR)','value added per labour (IDR)','value added per labour (IDR)','No. of observation')
 All_SI<-c(8.15,'(26.17)',22.51,'(37.52)',0.08,'(0.24)',191.07,'(711.73)',198.00,'(44,800.00)',50.80,'(617.00)',90.30,'(958.00)',38.50,'(455.00)','137,987.10','(2,515,300.00)','117,598')
@@ -310,7 +307,7 @@ background-image: url(normal.PNG)
 ## Trade Policies
 
 ##### Tariff
-- Tariff is scrapped from Ministry of Finance's regulations from 2008 to 2012.
+- Tariff data are scrapped from Ministry of Finance's regulations from 2008 to 2012.
 - For practicality, also used are source from FTA partners.
 - FTAs during 2008-2012 includes with ASEAN, China, Japan, South Korea, India, Australia and New Zealand.
 
@@ -329,7 +326,7 @@ background-image: url(normal.PNG)
 
 # TRAINS database
 
-Table 3. Indonesia's NTM, TRAINS 2015 set
+Table 3. Indonesia's NTM, TRAINS, mean and (st.dev), HS-6-digits.
 ```{r echo=F}
 NTM<-c('Sanitary & Phytosanitary (SPS)','Sanitary & Phytosanitary (SPS)','Technical Barrier to Trade (TBT)','Technical Barrier to Trade (TBT)','Pre-shipment inspections and other formalities','Pre-shipment inspections and other formalities','Non-automatic licensing, quotas, QC, etc','Non-automatic licensing, quotas, QC, etc','Price-control measures, extra taxes, charges','Price-control measures, extra taxes, charges','Measures affecting competition','Measures affecting competition','Export-related measures','Export-related measures','observations')
 Codes<-c('A','A','B','B','C','C','E','E','F','F','H','H','P','P','-')
@@ -401,7 +398,7 @@ background-image: url(normal.PNG)
 
 # TFP estimation
 
-The framework is using two-stage regression:  
+The framework uses two-stage regression:  
 first, estimating TFP
 
 $$y_{it}=\beta_0 + \beta_ll_{it}+\beta_kk_{it}+\beta_mm_{it}+\beta_nn_{it}+\epsilon_{it}$$
@@ -430,9 +427,9 @@ background-image: url(normal.PNG)
 let
 $$\epsilon_{it}=\omega_{it}+\mu_{it}$$
 
-where $\mu_{it}$ is iid, while $\omega_{it}$ is a productivity shock observed only by managers and may correlates with production decisions.
+where $\mu_{it}$ is iid, while $\omega_{it}$ is a productivity shock observed only by managers and may correlate with production decisions.
 
-Olley and Pakes (1996) suggest $\omega_{it}$ follows a first order markov process and affects a firm's decision on how much to invest (or divest)
+Olley and Pakes (1996) suggest $\omega_{it}$ follows a first order Markov process and affects a firm's decision on how much to invest (or divest)
 
 $$I_{it}=i(k_{it},\omega_{it})$$
 inversed:
@@ -459,7 +456,7 @@ $$y_{it}=\beta_0 + \beta_ll_{it}+\beta_nn_{it}+\phi(m_{it},k_{it})+\mu_{it}$$
 Then proceed as follows to estimate TFP.
 
 $$TFP_{it}=y_{it}-\hat{\beta}_{l}l_{it}-\hat{\beta}_kk_{it}-\hat{\beta}_mm_{it}-\hat{\beta}_nn_{it}$$
-The command `levpet` in STATA allows for practical use of the LP method (Petrin, Poi and Levinsohn 2005).
+The command `levpet` in Stata allows for practical use of the LP method (Petrin, Poi and Levinsohn 2005).
 
 ---
 
@@ -493,9 +490,9 @@ background-image: url(normal.PNG)
 .pull-left[
 - Table 5 shows simple mean and coverage ratios
 
-- As expected, tariff lies between MFN and FTAs
+- As expected, tariffs lie between MFN and FTAs
 
-- Import licensing and quotas is more important than SPS and TBT
+- Import licenses and quotas are more important than SPS and TBT
 
 - Coverage ratios vs simple mean:
  - no visual difference on tariff
@@ -591,10 +588,10 @@ background-image: url(normal.PNG)
 # TFP Results
 
 - $k,n=0$ have smaller RTS and much smaller coefficient for $k$ and $n$
-- Lost $\pm$ 30% of observations
+- Lose $\pm$ 30% of observations
 
 .pull-left[
-table 6a. Factor multipliers with $k,n=0$
+table 6a. $k,n\geq0$
 ```{r echo=FALSE}
 Variables<-c('Labour (l)','Labour (l)','Capital (k)','Capital (k)','Energy (n)','Energy (n)','input (m)','input (m)','RTS','Obs')
 All_SI<-c('0.354***','(0.005)',0.000,'(0.000)','0.035***','(0.001)','0.234***','(0.013)',0.623,'117,598')
@@ -609,7 +606,7 @@ kbl(tab6a,'html') %>%
 ]
 
 .pull-right[
-Table 6b. Factor multipliers with $k,n>0$
+Table 6b. $k,n>0$
 ```{r echo=FALSE}
 All_SI<-c('0.307***','(0.005)','0.223***','(0.014)','0.114***','(0.003)','0.281***','(0.024)',0.925,'73,265')
 Non_customs<-c('0.307***','(0.006)','0.219***','(0.015)','0.114***','(0.002)','0.255***','(0.024)',0.895,'68,294')
@@ -634,7 +631,7 @@ background-image: url(normal.PNG)
 - 3 TFPs are used. 2 from the row customs only, table 7b:
   - TFP1 = estimated together with other firms in SI (all_SI)
   - TFP2 = estimated within customs only firms (customs_only)
-  - Value added per labour is used for robustness
+  - Value added per labour is used for robustness check
 
 .pull-left[
 table 7a. TFP with $k,n=0$
@@ -839,7 +836,7 @@ Use change in labour as LHS with the consequence of losing 2008
 $$\Delta l_t = log(L_t) - log(L_{t-1})$$
 Four regressions are conducted, involving:
 - No size interaction (L0) and with size interaction (L1)
-- with firm,year,ISIC FE and without FE
+- with firm, year, ISIC FE and without FE
 
 ---
 
@@ -851,7 +848,7 @@ background-image: url(normal.PNG)
 
 .pull-left[
 ```{r echo=F}
-Variables<-c('tariff','tariff','SPS','SPS','TBT','TBT','Pre-shipment','Pre-shipment','licensing','licensing','Price-control','Price-control', 'competition','competition','Export-related','Export-related','foreign dummy','foreign dummy','obs')
+Variables<-c('tariff','tariff','SPS','SPS','TBT','TBT','Pre-shipment','Pre-shipment','licensing','licensing','Price-control','Price-control', 'competition','competition','Export-related','Export-related','foreign dummy','foreign dummy','observations')
 L0<-c(-0.008,'(0.009)',-0.028,'(0.020)',0.034,'(0.038)',-0.041,'(0.040)',-0.015,'(0.033)',135,-88,0.072,'(0.289)',-0.017,'(0.028)',0.031,'(0.030)','3,726')
 L0FE<-c(-0.028,'(0.021)','-0.120*','(0.066)',-0.075,'(0.075)',0.121,'(0.100)',-0.042,'(0.073)','1,543','-1,185',0.094,'(0.387)',0.097,'(0.091)','0.147**','(0.065)','3,726')
 L1<-c('-0.260***','(0.047)',-0.176,'(0.153)',0.064,'(0.236)',0.066,'(0.349)','-0.818***','(0.190)','14,832***','(4,381)',-0.999,'(1.563)',-0.246,'(0.203)',0.028,'(0.031)','3,726')
@@ -1003,23 +1000,23 @@ background-image: url(normal.PNG)
 
 # Policy recommendation
 
-- More import restriction isn't great
-  - especially if the goal is manufacturing growth.
-  - firms have many problems. Import isn't one of them.
-
-- Sometimes, less is more
-  - Intervening with trade is usually inefficient
-  - at what (who's) cost?
-  - may lead to more intervention
-
-- If the goal is CAD, find other ways
-  - become more attractive to business (both domestic and foreign)
-  - Make non-commodity export viable
-  - let IDR weaken?
-  - bad debt management $\Rightarrow$ costing manufacturers and consumers
+- More import restriction isn't great:
+  - especially if the goal is manufacturing productivity growth.
+  - less competitive firms: 
+      - less competitive products.
+      - less non-commodity exports.
+  - may lead to more downstream protection.
+  - invites retaliations and decoupling.
   
-- Commodities are still the main driver of export, and halting GVC may lead to even more reliance on commodities to keep CA $>0$
+- Targeting CAD may not be ideal
+  - Many countries are fine with long exposure to CAD
+  - Intervening with trade is usually inefficient:
+      - Halting GVC may lead to even more reliance on commodities to keep CA $>0$
+  - the real problem may not actually be trade:
+      - discourage import but let SOE issues foreign borrowing?
+      - bad debt management $\Rightarrow$ costing manufacturers and consumers
   
+
 ---
 
 background-image: url(normal.PNG)
