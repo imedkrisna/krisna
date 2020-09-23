@@ -67,12 +67,13 @@ background-image: url(normal.PNG)
 
 .pull-left[
 - Indonesia relies in manufacturing sector to boost growth  
-<br />
+
 - Emphasize on tech upgrade
-<br />
+
 - also on export-led  growth
-<br />
+
 - This means more openness:
+
  - financing R&D
  - import $\Rightarrow$ tech-upgrade (Castellani and Fassio 2019)
 ]
