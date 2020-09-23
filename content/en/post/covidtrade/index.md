@@ -27,3 +27,5 @@ image:
 #   Otherwise, set `projects = []`.
 projects: []
 ---
+
+HS classification reference for Covid-19 medical supplies 3.0 Edition [link](http://www.wcoomd.org/en/media/newsroom/2020/june/new-edition-of-the-wco-who-hs-classification-list-for-covid-19-medical-supplies-now-available.aspx)
