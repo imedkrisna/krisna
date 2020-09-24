@@ -21,7 +21,7 @@ date_end: 2020-10-02T12:00:00+10:00
 all_day: false
 
 # Schedule page publish date (NOT talk date).
-publishDate: 2020-10-02T00:00:01+10:00
+publishDate: 2020-09-23T00:00:01+10:00
 
 authors: [admin]
 tags: [Economics, English, Econometrics, Trade]
@@ -46,10 +46,10 @@ links:
   icon: twitter
 
 # Optional filename of your slides within your talk's folder or a URL.
-url_slides: paper2.html
+url_slides: paper2fix.html
 
 url_code:
-url_pdf: talk/paper2/paper22.pdf
+url_pdf:
 url_video:
 
 # Markdown Slides (optional).
