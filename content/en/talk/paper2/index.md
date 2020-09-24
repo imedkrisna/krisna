@@ -46,7 +46,7 @@ links:
   icon: twitter
 
 # Optional filename of your slides within your talk's folder or a URL.
-url_slides: paper2fix.html
+url_slides: 
 
 url_code:
 url_pdf:
@@ -57,7 +57,7 @@ url_video:
 #   Simply enter your slide deck's filename without extension.
 #   E.g. `slides = "example-slides"` references `content/slides/example-slides.md`.
 #   Otherwise, set `slides = ""`.
-slides: ""
+slides: "paper2"
 
 # Projects (optional).
 #   Associate this post with one or more of your projects.
