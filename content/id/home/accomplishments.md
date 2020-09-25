@@ -2,7 +2,7 @@
 # Accomplishments widget.
 widget = "accomplishments"  # See https://sourcethemes.com/academic/docs/page-builder/
 headless = true  # This file represents a page section.
-active = false  # Activate this widget? true/false
+active = true  # Activate this widget? true/false
 weight = 45  # Order that this section will appear.
 
 title = "Awards"
@@ -19,33 +19,33 @@ date_format = "Jan 2006"
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
 
 [[item]]
-  organization = "VU Unisersity Amsterdam"
+  organization = "VU University Amsterdam"
   organization_url = "https://vuweb.vu.nl/en/"
   title = "VU Fellowship Programme"
   url = "https://vuweb.vu.nl/en/more-about/scholarships-for-international-masters-students"
-  certificate_url = "https://www.coursera.org"
-  date_start = "2018-10-01"
-  date_end = ""
-  description = ""
+  certificate_url = ""
+  date_start = "2013-08-01"
+  date_end = "2014-06-01"
+  description = "Beasiswa master dihadiahkan oleh VU University"
 
 [[item]]
-  organization = "edX"
-  organization_url = "https://www.edx.org"
-  title = "Blockchain Fundamentals"
-  url = "https://www.edx.org/professional-certificate/uc-berkeleyx-blockchain-fundamentals"
-  certificate_url = "https://www.edx.org"
-  date_start = "2018-03-01"
+  organization = "Department of Foreign Affairs and Trade, Australian Government"
+  organization_url = "https://www.dfat.gov.au"
+  title = "Australia Awards Indonesia"
+  url = "https://www.australiaawardsindonesia.org/"
+  certificate_url = ""
+  date_start = "2016-09-01"
   date_end = ""
-  description = "Formulated informed blockchain models, hypotheses, and use cases."
+  description = "Beasiswa S3 dari pemerintah Australia."
   
 [[item]]
-  organization = "DataCamp"
-  organization_url = "https://www.datacamp.com"
-  title = "Object-Oriented Programming in R: S3 and R6 Course"
-  url = ""
-  certificate_url = "https://www.datacamp.com"
-  date_start = "2017-07-01"
-  date_end = "2017-12-21"
-  description = ""
+  organization = "Department of Foreign Affairs and Trade, Australian Government"
+  organization_url = "https://www.dfat.gov.au"
+  title = "Hadi Soesastro Prize"
+  url = "https://www.australiaawardsindonesia.org/content/208/12/hadi-soesastro-prize#:~:text=The%20Prize%2C%20up%20to%20%2425%2C000,that%20is%20a%20priority%20for"
+  certificate_url = ""
+  date_start = "2019-02-01"
+  date_end = ""
+  description = "Bantuan finansial dari pemerintah Australia untuk mahasiswa S3 penerima Australia Awards Indonesia. Diberikan untuk 2 orang per tahun."
 
 +++
