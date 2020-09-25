@@ -27,7 +27,7 @@ date_format = "Jan 2006"
   description = """
   Mata kuliah:
   
-  * POLS3025 Contemporary Political Analysis, using STATA in political analyses (2017)
+  * POLS3025 Contemporary Political Analysis, menggunakan Stata untuk analisis politik (2017)
   * ECON3101 Microeconomics 3 (2018-2020)
   * ECON2102 Macroeconomics 2 (2019)
   * EMET3008 Applied Macro and Financial Econometrics (2020)
