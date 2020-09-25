@@ -6,7 +6,7 @@ active = true  # Activate this widget? true/false
 weight = 45  # Order that this section will appear.
 
 title = "Awards"
-subtitle = "Beberapa penghargaan dan sertifikasi"
+subtitle = "Some prizes and awards I luckily got"
 
 # Date format
 #   Refer to https://sourcethemes.com/academic/docs/customization/#date-format
@@ -26,7 +26,7 @@ date_format = "Jan 2006"
   certificate_url = ""
   date_start = "2013-08-01"
   date_end = "2014-06-01"
-  description = "A Scholarship from VU for my master degree's tuition fee."
+  description = "A Scholarship from VU for my master degree's tuition fee. I receive this privilege along with other International masters students from different part of the world!"
 
 [[item]]
   organization = "Department of Foreign Affairs and Trade, Australian Government"
@@ -36,7 +36,7 @@ date_format = "Jan 2006"
   certificate_url = ""
   date_start = "2016-09-01"
   date_end = ""
-  description = "Scholarship to pursue my PhD"
+  description = "A Scholarship to pursue my PhD. Australia Awards Indonesia grant around 300 scholarships for Indonesians each year, around 15% are PhD scholars."
   
 [[item]]
   organization = "Department of Foreign Affairs and Trade, Australian Government"

@@ -26,7 +26,7 @@ date_format = "Jan 2006"
   certificate_url = ""
   date_start = "2013-08-01"
   date_end = "2014-06-01"
-  description = "Beasiswa master dihadiahkan oleh VU University"
+  description = "Beasiswa master dihadiahkan oleh VU University. Beasiswa ini diberikan oleh beberapa mahasiswa master degree dari berbagai belahan dunia!"
 
 [[item]]
   organization = "Department of Foreign Affairs and Trade, Australian Government"
@@ -36,7 +36,7 @@ date_format = "Jan 2006"
   certificate_url = ""
   date_start = "2016-09-01"
   date_end = ""
-  description = "Beasiswa S3 dari pemerintah Australia."
+  description = "Beasiswa S3 dari pemerintah Australia. Australia Awards Indonesia adalah beasiswa yang diberikan pemerintah Australia untuk penduduk Indonesia. 15% diantaranya adalah beasiswa S3."
   
 [[item]]
   organization = "Department of Foreign Affairs and Trade, Australian Government"
