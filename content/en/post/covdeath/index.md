@@ -1,8 +1,8 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "Rasio tingkat kematian akibat COVID-19 di dunia terus menurun"
-subtitle: "bagaimana dengan Indonesia?"
+title: "The world's death rate amid COVID-19 is decreasing"
+subtitle: "what about Indonesia?"
 summary: ""
 authors: [admin]
 tags: [coronavirus COVID-19]
@@ -28,18 +28,18 @@ image:
 projects: []
 ---
 
-Pagi ini, seperti biasa, saya menyiapkan sarapan dan mencuci piring yang semalam saya tidak cuci sambil mendengarkan podcast. Salah satu podcast yang hari ini saya dengar adalah [Babbage](https://www.economist.com/podcasts/2020/09/23/the-pandemics-progress-what-is-the-next-stage-in-the-fight-against-covid-19) di google podcast. Salah satu yang bikin penasaran adalah penurunan tingkat kematian.
+This morning, as usual, I prepared breakfast, did the dishes, all while listening to a podcast. One of my favorite, [Babbage](https://www.economist.com/podcasts/2020/09/23/the-pandemics-progress-what-is-the-next-stage-in-the-fight-against-covid-19) aired the recent development of COVID-19, including the decreasing death rate across the world.
 
-Seiring dengan meningkatnya jumlah kasus, wajarnya-nya tingkat kematian juga meningkat. Namun yang terjadi tidak seperti itu. Di Babbage, Bu [Slavea Chankova](https://mediadirectory.economist.com/people/slavea-chankova/), healthcare-correspondent The Economist, mengatakan bahwa para dokter telah berhasil mempelajari cara-cara yang lebih baik dalam menangani pasien COVID-19. Penggunaan ICU juga berhasil ditekan.
+As cases grow, we should expect a still increasing death rate as well. What happens is the contrary. [Slavea Chankova](https://mediadirectory.economist.com/people/slavea-chankova/), the healthcare-correspondent at The Economist, said that healthcare workers now have the knowledge to better treat COVID-19 patients. They also able to reduce the use of ICU bed, which is a good thing.
 
-Beberapa sumber lain juga mengatakan hal serupa. Misalnya, sebuah postingan dari [The Conversation](https://theconversation.com/coronavirus-why-arent-death-rates-rising-with-case-numbers-145865) mengatakan bahwa seiring dengan meningkatnya proporsi usia muda diantara penderita COVID-19, tingkat kematian akan menurun karena memang virus ini lebih fatal terhadap orang berusia lanjut. Tentu saja seiring meningkatnya kapasitas tes, kita semakin banyak mendapatkan orang-orang tanpa gejala (OTG) yang tidak memerlukan perawatan apapun. Sampel yang besar akan semakin representatif dan tingkat kematian akan 'converge' ke tingkat kematian yang sebenarnya.
+Other publications also say similar things. A post from [The Conversation](https://theconversation.com/coronavirus-why-arent-death-rates-rising-with-case-numbers-145865) says that the decreased death rate is the result of increased proportion of young age. As test capacity increases, the death rate converges to the 'true' death rate.
 
-## Bagaimana dengan Indonesia?
-Postingan dari [The Conversation](https://theconversation.com/coronavirus-why-arent-death-rates-rising-with-case-numbers-145865) tersebut menunjukkan bahwa di Inggris Raya, tingkat kematian baru yang stagnan, meskipun kasus baru masih meningkat.
+## What about Indonesia?
+Furthermore, [The Conversation post](https://theconversation.com/coronavirus-why-arent-death-rates-rising-with-case-numbers-145865) shows a graph where albeit increased number of new cases, new deaths are going down. This is in UK btw.
 
-![ini di Inggris](https://images.theconversation.com/files/357224/original/file-20200909-20-bgqow8.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1000&fit=clip)
+![This is in UK](https://images.theconversation.com/files/357224/original/file-20200909-20-bgqow8.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1000&fit=clip)
 
-Di Indonesia sendiri, sepertinya tingkat kematian baru masih meningkat seiring dengan bertambahnya kasus. Saya mencoba mengilustrasikan ini menggunakan data dari [Our World in Data](https://ourworldindata.org/coronavirus)
+This is not the case in Indonesia. I try to re-create the graph for Indonesian context using data from [Our World in Data](https://ourworldindata.org/coronavirus)
 
 
 ```python
@@ -76,13 +76,13 @@ plt.show()
 ![png](./Untitled_2_1.png)
 
 
-Gambar di atas menunjukkan bahwa jumlah kematian baru di Indonesia per hari masih meningkat tajam seiring dengan masih meningkatnya jumlah kasus baru. Indonesia sendiri masih mengalami tingkat kasus baru yang naik secara eksponensial. Di saat negara lain mengalami gelombang kedua, Indonesia sepertinya masih belum melewati gelombang pertama seiring pertambahan kasus yang masih [belum melambat sama sekali](https://tirto.id/update-corona-indonesia-24-september-angka-kematian-capai-10-ribu-f48j). Meskipun telah berhasil meningkatkan kapasitas tes secara signifikan, pemerintah masih mendapatkan kritikan soal [ masih belum cukupnya kapasitas tes di Indonesia saat ini](https://theconversation.com/3-overlooked-facts-behind-indonesias-high-covid-19-death-rate-135223). 
+As you can see from the graph above, Indonesia's new deaths are still on the increase as new cases goes up. New cases in Indonesia is [still increasing](https://tirto.id/update-corona-indonesia-24-september-angka-kematian-capai-10-ribu-f48j), with new record breaking number of cases every day. Indeed, Indonesia, albeit its ability to ramp-up testing capacity, is still being criticised for [not testing enough.](https://theconversation.com/3-overlooked-facts-behind-indonesias-high-covid-19-death-rate-135223)
 
-## Tingkat Kematian Telah Berkurang
+## Death Ratio is converging
 
-Tingkat kematian sendiri di Indonesia sebenarnya telah berkurang. Harian [The Jakarta Post](https://www.thejakartapost.com/news/2020/08/05/indonesias-covid-19-mortality-rate-still-tops-global-average-task-force.html), mengutip jubir Wiku Adisasmito, melaporkan bahwa rasio kematian di Indonesia berkurang terus sejak bulan April, meskipun saat ini masih di atas rata-rata dunia. Ini bisa jadi merupakan kabar baik, meskipun di Indonesia saat ini sedang ramai [polemik pengubahan definisi kematian akibat COVID-19](https://katadata.co.id/pingitaria/berita/5f6b179d9567c/polemik-usulan-perubahan-definisi-angka-kematian-covid-19).
+But when in comes to death rate, Indonesia is indeed converging to the world. [The Jakarta Post](https://www.thejakartapost.com/news/2020/08/05/indonesias-covid-19-mortality-rate-still-tops-global-average-task-force.html), citing the satgas' spokeperson Wiku Adisasmito, report that Indonesia's death rate is constantly decreasing since April, although still above the world's average.This may be at least a silver lining, although in Indonesia there's also a ruckuss about [the government trying to propose change the definition of COVID-19 death](https://katadata.co.id/pingitaria/berita/5f6b179d9567c/polemik-usulan-perubahan-definisi-angka-kematian-covid-19).
 
-Memang tingkat kematian Indonesia, dengan menggunakan definisi jumlah total kematian per total kasus, terus menurun sejak bulan April 2020. Namun demikian, Indonesia konsistem memiliki tingkat kematian yang lebih tinggi dibandingkan dengan negara lain yang juga mengalami kritik tajam dari warganya soal penanganan COVID-19, seperti Brazil, India, dan Amerika Serikat. Ilustrasi di bawah menggunakan data dari [Our World in Data](https://ourworldindata.org/coronavirus).
+using $death rate = frac{total cases}{total deaths}*100$, I try to illustrate Indonesia's death rate and compare them to some countries I feel comparable. Data from [Our World in Data](https://ourworldindata.org/coronavirus).
 
 
 ```python
@@ -94,34 +94,17 @@ plt.figure(figsize=(15,5))
 sns.lineplot(x="date", y="rate", hue="iso_code", style="iso_code",data=cn)
 ```
 
-    C:\Users\DELL\Anaconda3\lib\site-packages\ipykernel_launcher.py:2: SettingWithCopyWarning: 
-    A value is trying to be set on a copy of a slice from a DataFrame.
-    Try using .loc[row_indexer,col_indexer] = value instead
-    
-    See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
-      
-    
-
-
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x1665c7a4c08>
-
-
-
-
 ![png](./Untitled_4_2.png)
 
+Apart from Vietnam, the deathrate among these countries seem to have similar patterns. The explanation might be similar: better knowledge on how to treat patient, more, converging tests, and increased fraction of young population.
 
-Kecuali Vietnam, tingkat total kematian per total kasus di negara-negara yang saya pilih di atas sepertinya memiliki pola serupa. Demikian, penyebabnya pun mungkin serupa. Para dokter telah memahami cara-cara terbaik dalam menangani pasien COVID-19, setelah mengalami pandemi berjalan lebih dari 6 bulan. Di samping itu, seiring dengan meningkatnya kapasistas tes, tingkat kematian di seluruh dunia akan mengalami konvergensi ke arah yang lebih representatif. Orang muda yang masih memiliki mobilitas tinggi tentu saja akan memiliki kemungkinan terjangkit virus yang lebih tinggi, dan kasus-kasus orang muda ini akan menurunkan tingkat kematian total.
+## So, all is good?
+Not necessarily. Remember, Indonesia's case is still increasing fast, and with it, its new deaths. [Hospital capacity](https://katadata.co.id/ekarina/berita/5f5f0c5f3618e/kapasitas-rumah-sakit-hampir-penuh-dokter-dukung-psbb-jakarta) and [the availability of healthcare workers](https://www.kompas.com/tren/read/2020/08/13/080500665/berikut-4-rs-yang-sempat-ditutup-karena-tenaga-medisnya-terpapar-covid-19?page=all) are increasingly become issues in handling COVID-19. This is still a big concern.
 
-## Berarti semua akan baik-baik saja?
-Sepertinya belum tentu. Di Indonesia sendiri saat ini telah ramai soal [kapasitas rumah sakit yang semakin terbatas seiring dengan meningkatnya jumlah kasus](https://katadata.co.id/ekarina/berita/5f5f0c5f3618e/kapasitas-rumah-sakit-hampir-penuh-dokter-dukung-psbb-jakarta). Jumlah tenaga kesehatan tidak dapat ditingkatkan dengan cepat, bahkan cenderung berkurang sampai [beberapa rumah sakit sempat tutup](https://www.kompas.com/tren/read/2020/08/13/080500665/berikut-4-rs-yang-sempat-ditutup-karena-tenaga-medisnya-terpapar-covid-19?page=all). Hal ini tentu sangat berbahaya dan penanganan medis yang berkurang efektivitasnya akan kembali meningkatkan rasio kematian.
+Naively speaking, there are two possible ways to handle this. One is to decrease the viral infection's sped (so called flattening the curve), and the other is to improve healthcare capacity. Which one's easier?
 
-Indonesia sendiri masih memiliki tingkat kasus baru yang terus meningkat. Tingkat kematian, meskipun secara proporsi mungkin berkurang, masih terus meningkat. Sementara itu, sumber daya penting tidak dapat ditingkatkan dengan rasio yang sama dengan penyebaran virus yang masih sangat cepat.
+Another big recent news in Indonesia is the resignation of [Professor Akmal Taher,](https://www.thejakartapost.com/news/2020/09/25/top-indonesian-doctor-quits-covid-19-task-force.html) a respectable doctor, from Indonesia's COVID-19 task force. His reason was that improving testing and tracing would be easier to be done from outside of the task force. To me, this is very interesting development. What other place with better authority and resource to improve testing and tracing? Resource-wise, there can't be a better place?
 
-Tentu saja ada dua solusi yang mungkin, yaitu antara mengurangi laju persebaran, dengan meningkatkan kapasitas sumber daya kesehatan seperti rumah sakit dan tenaga kesehatan. Mana yang lebih mudah dilakukan?
+Does this means the top structure of the task force does not put testing and tracing as the main strategy? It is possible that the task force is prioritizing healthcare infrastructure, which is not what Akmal Taher would want. Me, being nobody, have not enough information to assess the best strategy in handling COVID-19, but it does seem that Indonesian government is having a lot of problems in terms of conducting a proper test and trace. Does that mean it is easier to buy hospital beds and recruit doctors and nurses?
 
-Baru-baru ini, hal lain yang bikin geger di Indonesia adalah mundurnya [Profesor Akmal Taher dari satgas COVID-19](https://www.thejakartapost.com/news/2020/09/25/top-indonesian-doctor-quits-covid-19-task-force.html). Alasan yang dikemukakan, salah satunya, adalah karena *testing* dan *tracing* belum optimal dilakukan oleh institusi di Indonesia. Beliau merasa bahwa keinginannya untuk meningkatkan *testing* dan *tracing* dapat dilakukannya di tempat lain. 
-
-Apakah ini artinya satgas COVID-19 lebih mementingkan intervensi satunya lagi, yaitu penguatan infrastruktur rumah sakit? Yah, yang manapun yang dilakukan, fakta bahwa kasus masih meningkat, tingkat kematian masih meningkat, dan tantangan terhadap kapasitas rumah sakit masih ada. Sebagai rakyat jelata yang tidak ngapa-ngapain untuk membantu menangani COVID-19, saya hanya bisa berharap pemerintah melakukan segala yang terbaik.
+Alas, this post provides more question than answer. So what do you think? Testing and tracing or improving healthcare capacity? Or both?
