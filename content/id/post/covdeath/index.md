@@ -34,10 +34,12 @@ Seiring dengan meningkatnya jumlah kasus, wajarnya-nya tingkat kematian juga men
 
 Beberapa sumber lain juga mengatakan hal serupa. Misalnya, sebuah postingan dari [The Conversation](https://theconversation.com/coronavirus-why-arent-death-rates-rising-with-case-numbers-145865) mengatakan bahwa seiring dengan meningkatnya proporsi usia muda diantara penderita COVID-19, tingkat kematian akan menurun karena memang virus ini lebih fatal terhadap orang berusia lanjut. Tentu saja seiring meningkatnya kapasitas tes, kita semakin banyak mendapatkan orang-orang tanpa gejala (OTG) yang tidak memerlukan perawatan apapun. Sampel yang besar akan semakin representatif dan tingkat kematian akan 'converge' ke tingkat kematian yang sebenarnya.
 
-## Bagaimana dengan Indonesia?
 Postingan dari [The Conversation](https://theconversation.com/coronavirus-why-arent-death-rates-rising-with-case-numbers-145865) tersebut menunjukkan bahwa di Inggris Raya, tingkat kematian baru yang stagnan, meskipun kasus baru masih meningkat.
 
 ![ini di Inggris](https://images.theconversation.com/files/357224/original/file-20200909-20-bgqow8.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1000&fit=clip)
+ini di inggris
+
+## Bagaimana dengan Indonesia?
 
 Di Indonesia sendiri, sepertinya tingkat kematian baru masih meningkat seiring dengan bertambahnya kasus. Saya mencoba mengilustrasikan ini menggunakan data dari [Our World in Data](https://ourworldindata.org/coronavirus)
 

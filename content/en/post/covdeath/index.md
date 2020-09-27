@@ -34,13 +34,13 @@ As cases grow, we should expect a still increasing death rate as well. What happ
 
 Other publications also say similar things. A post from [The Conversation](https://theconversation.com/coronavirus-why-arent-death-rates-rising-with-case-numbers-145865) says that the decreased death rate is the result of increased proportion of young age. As test capacity increases, the death rate converges to the 'true' death rate.
 
-## What about Indonesia?
 Furthermore, [The Conversation post](https://theconversation.com/coronavirus-why-arent-death-rates-rising-with-case-numbers-145865) shows a graph where albeit increased number of new cases, new deaths are going down. This is in UK btw.
 
 ![This is in UK](https://images.theconversation.com/files/357224/original/file-20200909-20-bgqow8.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1000&fit=clip)
-This is in UK
 
-This is not the case in Indonesia. I try to re-create the graph for Indonesian context using data from [Our World in Data](https://ourworldindata.org/coronavirus)
+## What about Indonesia?
+
+The case in Indonesia is a bit different. I try to re-create the graph for Indonesian context using data from [Our World in Data](https://ourworldindata.org/coronavirus)
 
 
 ```python
