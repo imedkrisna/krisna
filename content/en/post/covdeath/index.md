@@ -79,6 +79,7 @@ As you can see from the graph above, Indonesia's new deaths are still on the inc
 
 But when in comes to death rate, Indonesia is indeed converging to the world. [The Jakarta Post](https://www.thejakartapost.com/news/2020/08/05/indonesias-covid-19-mortality-rate-still-tops-global-average-task-force.html), citing the satgas' spokeperson Wiku Adisasmito, report that Indonesia's death rate is constantly decreasing since April, although still above the world's average.This may be at least a silver lining, although in Indonesia there's also a ruckuss about [the government trying to propose change the definition of COVID-19 death](https://katadata.co.id/pingitaria/berita/5f6b179d9567c/polemik-usulan-perubahan-definisi-angka-kematian-covid-19).
 
+
 using $death rate = \frac{total cases}{total deaths} * 100$ , I try to illustrate Indonesia's death rate and compare them to some countries I feel comparable. Data from [Our World in Data](https://ourworldindata.org/coronavirus).
 
 
