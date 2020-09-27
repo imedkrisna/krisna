@@ -1,8 +1,8 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "Rasio tingkat kematian akibat COVID-19 di dunia terus menurun"
-subtitle: "bagaimana dengan Indonesia?"
+title: "Rasio tingkat kematian akibat COVID-19 di Indonesia"
+subtitle: "rasio kematian akibat COVID-19 mengalami penurunan, tapi kita harus tetap waspada"
 summary: ""
 authors: [admin]
 tags: [coronavirus COVID-19]
@@ -95,7 +95,7 @@ sns.lineplot(x="date", y="rate", hue="iso_code", style="iso_code",data=cn)
 ```
 
 ![png](./Untitled_4_2.png)
-
+Ini di UK
 
 Kecuali Vietnam, tingkat total kematian per total kasus di negara-negara yang saya pilih di atas sepertinya memiliki pola serupa. Demikian, penyebabnya pun mungkin serupa. Para dokter telah memahami cara-cara terbaik dalam menangani pasien COVID-19, setelah mengalami pandemi berjalan lebih dari 6 bulan. Di samping itu, seiring dengan meningkatnya kapasistas tes, tingkat kematian di seluruh dunia akan mengalami konvergensi ke arah yang lebih representatif. Orang muda yang masih memiliki mobilitas tinggi tentu saja akan memiliki kemungkinan terjangkit virus yang lebih tinggi, dan kasus-kasus orang muda ini akan menurunkan tingkat kematian total.
 

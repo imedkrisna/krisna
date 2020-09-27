@@ -1,8 +1,8 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "The world's death rate amid COVID-19 is decreasing"
-subtitle: "what about Indonesia?"
+title: "COVID-19 death rate in Indonesia"
+subtitle: "is it converging?"
 summary: ""
 authors: [admin]
 tags: [coronavirus COVID-19]
@@ -38,6 +38,7 @@ Other publications also say similar things. A post from [The Conversation](https
 Furthermore, [The Conversation post](https://theconversation.com/coronavirus-why-arent-death-rates-rising-with-case-numbers-145865) shows a graph where albeit increased number of new cases, new deaths are going down. This is in UK btw.
 
 ![This is in UK](https://images.theconversation.com/files/357224/original/file-20200909-20-bgqow8.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1000&fit=clip)
+This is in UK
 
 This is not the case in Indonesia. I try to re-create the graph for Indonesian context using data from [Our World in Data](https://ourworldindata.org/coronavirus)
 
@@ -67,10 +68,6 @@ plt.show()
 #sns.lineplot(x=x, y=y, data=c)
 # sns.lineplot(x=x, y=y4, data=c)
 ```
-
-
-    <Figure size 1080x360 with 0 Axes>
-
 
 
 ![png](./Untitled_2_1.png)
