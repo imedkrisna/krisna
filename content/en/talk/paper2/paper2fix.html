@@ -1091,6 +1091,32 @@ Where:
 
 along with firm's fixed effect and ISIC dummy.
 
+
+---
+
+background-image: url(normal.PNG)
+
+&lt;br \&gt;
+
+##### Adding size to the regression
+
+- Firms in the customs data are different: bigger, more productive
+
+- if size matters, it can be discovered using size interaction.
+
+- `\(l_{it}=log(Labour_{it})\)` is used as a proxy for size
+
+`$$size\_tfp_{it}=tfp_{it}+\gamma_Tt_{it}*l_{it}+\sum_\theta c_{\theta it}*l_{it}$$`
+
+- Observations:
+    - only customs, 2008-2012, only `\(k,n&gt;0\)`
+    - 4,971 observations of 1,512 firms and 5 years
+
+- 3 Proxies for TFPs:
+    - TFP1 estimated within all SI observations (estimate first, drop later)
+    - TFP2 estimated within only customs (drop first, estimate later)
+    - `\(VaL=Log\left(\frac{Value Added}{Labour}\right)\)` for robustness
+
 ---
 
 background-image: url(normal.PNG)
@@ -1428,29 +1454,6 @@ Table 7b. TFP with `\(k,n&gt;0\)`
 &lt;/tbody&gt;
 &lt;/table&gt;
 ]
-
----
-
-background-image: url(normal.PNG)
-
-&lt;br \&gt;
-
-# Adding size to the regression
-
-- Firms in the customs data (possibly) are different
-  - they are generally bigger, and bigger firms may have ways to offset trade costs
-  
-- if size matters, it can be discovered using size interaction.
-
-- `\(l_{it}=log(Labour_{it})\)` is used as a proxy
-
-`$$size\_tfp_{it}=tfp_{it}+\gamma_Tt_{it}*l_{it}+\sum_\theta c_{\theta it}*l_{it}$$`
-- In all:
-    - 4,971 observations of 1,512 firms
-    - only customs, `\(k,n&gt;0\)`
-    - TFP1 estimated with all SI
-    - TFP2 estimated only customs
-    - `\(VaL=\frac{Value Added}{Labour}\)`
 
 ---
 
