@@ -276,7 +276,7 @@ N2010<-c(2.222,'(3.950)',0.641,'(1.334)',0.443,'(1.059)',0.605,'(0.873)',0.015,'
 N2011<-c(2.255,'(4.054)',0.682,'(1.361)',0.462,'(1.046)',0.618,'(0.861)',0.014,'(0.165)',0.048,'(0.229)',0.683,'(1.098)','2,400')
 N2012<-c(2.774,'(5.128)',0.663,'(1.352)',0.776,'(1.075)',0.594,'(0.853)',0.016,'(0.168)',0.046,'(0.224)',1.172,'(1.465)','2,510')
 tab3<-data.frame(NTM,Codes,N2008,N2009,N2010,N2011,N2012,Examples)
-kbl(tab3,'html') %>%
+kable(tab3, format = "html") %>%
   kable_styling(bootstrap_options = "bordered", full_width=F, font_size = 11) %>%
   collapse_rows()
 ```
@@ -290,7 +290,7 @@ background-image: url(normal.PNG)
 # Simple average of tariffs from 2008-2012
 
 .center[
-Table 3. Tariff from MoF regulations (left) compared to WITS (right)
+Table 3. Tariff from MoF regulations (left) compared to WTO-IDB (right)
 ]
 
 .pull-left[
@@ -865,12 +865,12 @@ background-image: url(normal.PNG)
   - consistent when fixed effects are used
 - Only two NTMs are significant after fixed effects: licensing and competition measures.
 - More productive firms import more
-- NTM have mixed results: Only TBT and preshipment reduces import
+- NTM have mixed results: Only TBT and pre-shipment reduces import
 
 ##### Employment
 - Tariff also reduces employment, but bigger firms have smaller magnitude.
 - Not all NTMs show a visible significance:
-  - SPS, licensing, and export-related measures have the same directional impact as tariff.
+  - SPS, licensing, and export-related measures have the same directional correlation as tariff.
   - Pre-shipment inspection have different direction
 
 ---
@@ -909,8 +909,7 @@ background-image: url(normal.PNG)
 
 - NTMs have mixed results.
   - Count data isn't ideal
-  - May have different impact for different types of NTMs
-  - May have different impact on different goods
+  - May have different relationship for different types of NTMs on different goods
   - More in-depth studies are needed
   
 - The sample is quite restrictive.
