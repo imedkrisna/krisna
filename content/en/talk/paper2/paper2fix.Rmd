@@ -245,7 +245,7 @@ background-image: url(normal.PNG)
 Table 1. Firms' characteristics, 2008-2012
 ```{r echo=F}
 library(kableExtra)
-Characteristics<-c('foreign ownership (%)','foreign ownership (%)','fraction of output exported (%)','fraction of output exported','fraction of input imported (%)','fraction of input imported (%)','no. of labour employed','no. of labour employed','capital stock (Million IDR)','capital stock (Million IDR)','total intermediate input (Million IDR)','total intermediate input (Million IDR)','total output (Million IDR)','total output (Million IDR)','total value added (Million IDR)','total value added (Million IDR)','value added per labour (IDR)','value added per labour (IDR)','No. of observation')
+Characteristics<-c('foreign ownership (%)','foreign ownership (%)','fraction of output exported (%)','fraction of output exported (%)','fraction of input imported (%)','fraction of input imported (%)','no. of labour employed','no. of labour employed','capital stock (Million IDR)','capital stock (Million IDR)','total intermediate input (Million IDR)','total intermediate input (Million IDR)','total output (Million IDR)','total output (Million IDR)','total value added (Million IDR)','total value added (Million IDR)','value added per labour (IDR)','value added per labour (IDR)','No. of observation')
 All_SI<-c(8.15,'(26.17)',0.23,'(37.52)',0.08,'(0.24)',191.07,'(711.73)',198.00,'(44,800.00)',50.80,'(617.00)',90.30,'(958.00)',38.50,'(455.00)','137,987.10','(2,515,300.00)','117,598')
 Non_customs<-c(5.96,'(22.60)',0.21,'(0.37)',0.07,'(0.21)',162.75,'(602.46)',194,'(46,500)',41,'(515)',73.30,'(861)',31.60,'(414)','126,074','(2,600,177)','108,662')
 Customs_only<-c(34.77,'(45.06)',0.40,'(0.42)',0.31,'(0.38)',535.44,'(1,457.65)',250,'(10,400)',170,'(1,330)',296,'(1,740)',123,'(789)','282,857','(1,012,159)','8,915')
@@ -266,6 +266,7 @@ background-image: url(normal.PNG)
 
 Table 2. Mean (St.Dev) of each NTM for all HS-6-digits
 ```{r echo=F}
+library(kableExtra)
 NTM<-c('Sanitary & Phytosanitary (SPS)','Sanitary & Phytosanitary (SPS)','Technical Barrier to Trade (TBT)','Technical Barrier to Trade (TBT)','Pre-shipment inspections and other formalities','Pre-shipment inspections and other formalities','Non-automatic licensing, quotas, QC, etc','Non-automatic licensing, quotas, QC, etc','Price-control measures, extra taxes, charges','Price-control measures, extra taxes, charges','Measures affecting competition','Measures affecting competition','Export-related measures','Export-related measures','observations')
 Codes<-c('A','A','B','B','C','C','E','E','F','F','H','H','P','P','-')
 Examples<-c('Authorization requirements','Quarantine requirements','Testing requirements','labeling requirements','pre-shipment inspection','only trough specific ports','licensing','quota','customs service fee','consumption tax','Only SOEs','-','export permit','export quota','-')
@@ -276,7 +277,7 @@ N2011<-c(2.255,'(4.054)',0.682,'(1.361)',0.462,'(1.046)',0.618,'(0.861)',0.014,'
 N2012<-c(2.774,'(5.128)',0.663,'(1.352)',0.776,'(1.075)',0.594,'(0.853)',0.016,'(0.168)',0.046,'(0.224)',1.172,'(1.465)','2,510')
 tab3<-data.frame(NTM,Codes,N2008,N2009,N2010,N2011,N2012,Examples)
 kbl(tab3,'html') %>%
-  kable_styling(bootstrap_options = "striped", full_width=F, font_size = 11) %>%
+  kable_styling(bootstrap_options = "bordered", full_width=F, font_size = 11) %>%
   collapse_rows()
 ```
 
