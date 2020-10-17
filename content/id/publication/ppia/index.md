@@ -36,3 +36,5 @@ url_video: 'talk/bukuppia'
 Judul Buku: Mewujudkan Indonesia 4.0: Kumpulan Pemikiran Pelajar Indonesia di Australia.  
 
 Para editor: Denny Irawan, Wasisto Raharjo Jati, Oscar Karnalim, Asrul Sidiq (Eds)
+
+ISBN: 978-602-433-918-0
