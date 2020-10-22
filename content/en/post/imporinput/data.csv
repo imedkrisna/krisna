@@ -1,0 +1,64 @@
+﻿Classification,Year,Period,Period Desc.,Aggregate Level,Is Leaf Code,Trade Flow Code,Trade Flow,Reporter Code,Reporter,Reporter ISO,Partner Code,Partner,Partner ISO,2nd Partner Code,2nd Partner,2nd Partner ISO,Customs Proc. Code,Customs,Mode of Transport Code,Mode of Transport,Commodity Code,Commodity,Qty Unit Code,Qty Unit,Qty,Alt Qty Unit Code,Alt Qty Unit,Alt Qty,Netweight (kg),Gross weight (kg),Trade Value (US$),CIF Trade Value (US$),FOB Trade Value (US$),Flag
+BE,2015,2015,2015,1,0,1,Import,360,Indonesia,IDN,0,World,WLD,,,,,,,,1,Food and beverages,1,No Quantity,,,,,,,10278507559,,,0
+BE,2015,2015,2015,1,0,1,Import,360,Indonesia,IDN,0,World,WLD,,,,,,,,2,Industrial supplies nes,1,No Quantity,,,,,,,55528874227,,,0
+BE,2015,2015,2015,1,0,1,Import,360,Indonesia,IDN,0,World,WLD,,,,,,,,3,Fuels and lubricants,1,No Quantity,,,,,,,24544865534,,,0
+BE,2015,2015,2015,1,0,1,Import,360,Indonesia,IDN,0,World,WLD,,,,,,,,4,"Capital goods (except transport equipment), and parts and accessories thereof",1,No Quantity,,,,,,,36836914241,,,0
+BE,2015,2015,2015,1,0,1,Import,360,Indonesia,IDN,0,World,WLD,,,,,,,,5,"Transport equipment, and parts and accessories thereof",1,No Quantity,,,,,,,9055977726,,,0
+BE,2015,2015,2015,1,0,1,Import,360,Indonesia,IDN,0,World,WLD,,,,,,,,6,Consumption goods nes,1,No Quantity,,,,,,,5364313908,,,0
+BE,2015,2015,2015,1,1,1,Import,360,Indonesia,IDN,0,World,WLD,,,,,,,,7,Goods nes,1,No Quantity,,,,,,,1085348993,,,0
+BE,2016,2016,2016,1,0,1,Import,360,Indonesia,IDN,0,World,WLD,,,,,,,,1,Food and beverages,1,No Quantity,,,,,,,12429045646,,,0
+BE,2016,2016,2016,1,0,1,Import,360,Indonesia,IDN,0,World,WLD,,,,,,,,2,Industrial supplies nes,1,No Quantity,,,,,,,52618663573,,,0
+BE,2016,2016,2016,1,0,1,Import,360,Indonesia,IDN,0,World,WLD,,,,,,,,3,Fuels and lubricants,1,No Quantity,,,,,,,18885555360,,,0
+BE,2016,2016,2016,1,0,1,Import,360,Indonesia,IDN,0,World,WLD,,,,,,,,4,"Capital goods (except transport equipment), and parts and accessories thereof",1,No Quantity,,,,,,,35326269115,,,0
+BE,2016,2016,2016,1,0,1,Import,360,Indonesia,IDN,0,World,WLD,,,,,,,,5,"Transport equipment, and parts and accessories thereof",1,No Quantity,,,,,,,9248979896,,,0
+BE,2016,2016,2016,1,0,1,Import,360,Indonesia,IDN,0,World,WLD,,,,,,,,6,Consumption goods nes,1,No Quantity,,,,,,,5982135726,,,0
+BE,2016,2016,2016,1,1,1,Import,360,Indonesia,IDN,0,World,WLD,,,,,,,,7,Goods nes,1,No Quantity,,,,,,,1162150476,,,0
+BE,2017,2017,2017,1,0,1,Import,360,Indonesia,IDN,0,World,WLD,,,,,,,,1,Food and beverages,1,No Quantity,0,,,,0,,13642403087,,,4
+BE,2017,2017,2017,1,0,1,Import,360,Indonesia,IDN,0,World,WLD,,,,,,,,2,Industrial supplies nes,1,No Quantity,0,,,,0,,61451660339,,,4
+BE,2017,2017,2017,1,0,1,Import,360,Indonesia,IDN,0,World,WLD,,,,,,,,3,Fuels and lubricants,1,No Quantity,0,,,,0,,24800685448,,,4
+BE,2017,2017,2017,1,0,1,Import,360,Indonesia,IDN,0,World,WLD,,,,,,,,4,"Capital goods (except transport equipment), and parts and accessories thereof",1,No Quantity,0,,,,0,,37642262263,,,4
+BE,2017,2017,2017,1,0,1,Import,360,Indonesia,IDN,0,World,WLD,,,,,,,,5,"Transport equipment, and parts and accessories thereof",1,No Quantity,0,,,,0,,11353880598,,,4
+BE,2017,2017,2017,1,0,1,Import,360,Indonesia,IDN,0,World,WLD,,,,,,,,6,Consumption goods nes,1,No Quantity,0,,,,0,,6670106615,,,4
+BE,2017,2017,2017,1,1,1,Import,360,Indonesia,IDN,0,World,WLD,,,,,,,,7,Goods nes,1,No Quantity,0,,,,0,,15575857459,,,4
+BE,2018,2018,2018,1,0,1,Import,360,Indonesia,IDN,0,World,WLD,,,,,,,,1,Food and beverages,1,No Quantity,0,,,,0,,14992039753,,,4
+BE,2018,2018,2018,1,0,1,Import,360,Indonesia,IDN,0,World,WLD,,,,,,,,2,Industrial supplies nes,1,No Quantity,0,,,,0,,74120674161,,,4
+BE,2018,2018,2018,1,0,1,Import,360,Indonesia,IDN,0,World,WLD,,,,,,,,3,Fuels and lubricants,1,No Quantity,0,,,,0,,30708803497,,,4
+BE,2018,2018,2018,1,0,1,Import,360,Indonesia,IDN,0,World,WLD,,,,,,,,4,"Capital goods (except transport equipment), and parts and accessories thereof",1,No Quantity,0,,,,0,,45517161414,,,4
+BE,2018,2018,2018,1,0,1,Import,360,Indonesia,IDN,0,World,WLD,,,,,,,,5,"Transport equipment, and parts and accessories thereof",1,No Quantity,0,,,,0,,13878693083,,,4
+BE,2018,2018,2018,1,0,1,Import,360,Indonesia,IDN,0,World,WLD,,,,,,,,6,Consumption goods nes,1,No Quantity,0,,,,0,,8249828635,,,4
+BE,2018,2018,2018,1,1,1,Import,360,Indonesia,IDN,0,World,WLD,,,,,,,,7,Goods nes,1,No Quantity,0,,,,0,,18487173846,,,4
+BE,2010,2010,2010,1,0,1,Import,360,Indonesia,IDN,0,World,WLD,,,,,,,,1,Food and beverages,1,No Quantity,,,,,,,8717397214,,,0
+BE,2010,2010,2010,1,0,1,Import,360,Indonesia,IDN,0,World,WLD,,,,,,,,2,Industrial supplies nes,1,No Quantity,,,,,,,46231108843,,,0
+BE,2010,2010,2010,1,0,1,Import,360,Indonesia,IDN,0,World,WLD,,,,,,,,3,Fuels and lubricants,1,No Quantity,,,,,,,27258315590,,,0
+BE,2010,2010,2010,1,0,1,Import,360,Indonesia,IDN,0,World,WLD,,,,,,,,4,"Capital goods (except transport equipment), and parts and accessories thereof",1,No Quantity,,,,,,,33522932992,,,0
+BE,2010,2010,2010,1,0,1,Import,360,Indonesia,IDN,0,World,WLD,,,,,,,,5,"Transport equipment, and parts and accessories thereof",1,No Quantity,,,,,,,13796860183,,,0
+BE,2010,2010,2010,1,0,1,Import,360,Indonesia,IDN,0,World,WLD,,,,,,,,6,Consumption goods nes,1,No Quantity,,,,,,,4206266590,,,0
+BE,2010,2010,2010,1,1,1,Import,360,Indonesia,IDN,0,World,WLD,,,,,,,,7,Goods nes,1,No Quantity,,,,,,,1930398802,,,0
+BE,2011,2011,2011,1,0,1,Import,360,Indonesia,IDN,0,World,WLD,,,,,,,,1,Food and beverages,1,No Quantity,,,,,,,12837878165,,,0
+BE,2011,2011,2011,1,0,1,Import,360,Indonesia,IDN,0,World,WLD,,,,,,,,2,Industrial supplies nes,1,No Quantity,,,,,,,60207700319,,,0
+BE,2011,2011,2011,1,0,1,Import,360,Indonesia,IDN,0,World,WLD,,,,,,,,3,Fuels and lubricants,1,No Quantity,,,,,,,40532474425,,,0
+BE,2011,2011,2011,1,0,1,Import,360,Indonesia,IDN,0,World,WLD,,,,,,,,4,"Capital goods (except transport equipment), and parts and accessories thereof",1,No Quantity,,,,,,,40512061164,,,0
+BE,2011,2011,2011,1,0,1,Import,360,Indonesia,IDN,0,World,WLD,,,,,,,,5,"Transport equipment, and parts and accessories thereof",1,No Quantity,,,,,,,16317027381,,,0
+BE,2011,2011,2011,1,0,1,Import,360,Indonesia,IDN,0,World,WLD,,,,,,,,6,Consumption goods nes,1,No Quantity,,,,,,,5015284638,,,0
+BE,2011,2011,2011,1,1,1,Import,360,Indonesia,IDN,0,World,WLD,,,,,,,,7,Goods nes,1,No Quantity,,,,,,,2013124215,,,0
+BE,2012,2012,2012,1,0,1,Import,360,Indonesia,IDN,0,World,WLD,,,,,,,,1,Food and beverages,1,No Quantity,,,,,,,11699727416,,,0
+BE,2012,2012,2012,1,0,1,Import,360,Indonesia,IDN,0,World,WLD,,,,,,,,2,Industrial supplies nes,1,No Quantity,,,,,,,65075353964,,,0
+BE,2012,2012,2012,1,0,1,Import,360,Indonesia,IDN,0,World,WLD,,,,,,,,3,Fuels and lubricants,1,No Quantity,,,,,,,42190061272,,,0
+BE,2012,2012,2012,1,0,1,Import,360,Indonesia,IDN,0,World,WLD,,,,,,,,4,"Capital goods (except transport equipment), and parts and accessories thereof",1,No Quantity,,,,,,,44604983947,,,0
+BE,2012,2012,2012,1,0,1,Import,360,Indonesia,IDN,0,World,WLD,,,,,,,,5,"Transport equipment, and parts and accessories thereof",1,No Quantity,,,,,,,19890728121,,,0
+BE,2012,2012,2012,1,0,1,Import,360,Indonesia,IDN,0,World,WLD,,,,,,,,6,Consumption goods nes,1,No Quantity,,,,,,,5771630065,,,0
+BE,2012,2012,2012,1,1,1,Import,360,Indonesia,IDN,0,World,WLD,,,,,,,,7,Goods nes,1,No Quantity,,,,,,,2458423294,,,0
+BE,2013,2013,2013,1,0,1,Import,360,Indonesia,IDN,0,World,WLD,,,,,,,,1,Food and beverages,1,No Quantity,,,,,,,11639385584,,,0
+BE,2013,2013,2013,1,0,1,Import,360,Indonesia,IDN,0,World,WLD,,,,,,,,2,Industrial supplies nes,1,No Quantity,,,,,,,64599921875,,,0
+BE,2013,2013,2013,1,0,1,Import,360,Indonesia,IDN,0,World,WLD,,,,,,,,3,Fuels and lubricants,1,No Quantity,,,,,,,44860319844,,,0
+BE,2013,2013,2013,1,0,1,Import,360,Indonesia,IDN,0,World,WLD,,,,,,,,4,"Capital goods (except transport equipment), and parts and accessories thereof",1,No Quantity,,,,,,,42825997294,,,0
+BE,2013,2013,2013,1,0,1,Import,360,Indonesia,IDN,0,World,WLD,,,,,,,,5,"Transport equipment, and parts and accessories thereof",1,No Quantity,,,,,,,14541995609,,,0
+BE,2013,2013,2013,1,0,1,Import,360,Indonesia,IDN,0,World,WLD,,,,,,,,6,Consumption goods nes,1,No Quantity,,,,,,,6296049404,,,0
+BE,2013,2013,2013,1,1,1,Import,360,Indonesia,IDN,0,World,WLD,,,,,,,,7,Goods nes,1,No Quantity,,,,,,,1864961010,,,0
+BE,2014,2014,2014,1,0,1,Import,360,Indonesia,IDN,0,World,WLD,,,,,,,,1,Food and beverages,1,No Quantity,,,,,,,12207284588,,,0
+BE,2014,2014,2014,1,0,1,Import,360,Indonesia,IDN,0,World,WLD,,,,,,,,2,Industrial supplies nes,1,No Quantity,,,,,,,63184136145,,,0
+BE,2014,2014,2014,1,0,1,Import,360,Indonesia,IDN,0,World,WLD,,,,,,,,3,Fuels and lubricants,1,No Quantity,,,,,,,43331670200,,,0
+BE,2014,2014,2014,1,0,1,Import,360,Indonesia,IDN,0,World,WLD,,,,,,,,4,"Capital goods (except transport equipment), and parts and accessories thereof",1,No Quantity,,,,,,,41258986399,,,0
+BE,2014,2014,2014,1,0,1,Import,360,Indonesia,IDN,0,World,WLD,,,,,,,,5,"Transport equipment, and parts and accessories thereof",1,No Quantity,,,,,,,10779398194,,,0
+BE,2014,2014,2014,1,0,1,Import,360,Indonesia,IDN,0,World,WLD,,,,,,,,6,Consumption goods nes,1,No Quantity,,,,,,,5907223118,,,0
+BE,2014,2014,2014,1,1,1,Import,360,Indonesia,IDN,0,World,WLD,,,,,,,,7,Goods nes,1,No Quantity,,,,,,,1510641554,,,0
