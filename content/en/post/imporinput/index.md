@@ -16,9 +16,9 @@ draft: false
 # To use, add an image named `featured.jpg/png` to your page's folder.
 # Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
 image:
-  caption: ""
-  focal_point: ""
-  preview_only: false
+  caption: "Indonesia's current account balance"
+  focal_point: "smart"
+  preview_only: true
 
 # Projects (optional).
 #   Associate this post with one or more of your projects.
@@ -227,7 +227,7 @@ plt.show()
 ```
 
 
-![png](./Untitled_7_0.png)
+![png](./featured.png)
 
 
 The above graph is Indonesia's current account balance. I suppose it is clear to us that Indonesia were running a current account deficit since the collapse of oil price in the early 80s. Financial liberalization were then took place around the same period and was getting more progressive up until right before Asian Financial Crisis (AFC) in 1998. Indeed, running a mismanaged CAD is somewhat dangerous when the investment is not allocated efficiently. Those investment were not productive and Indonesia failed to earn enough foreign currency to pay back its debt. The economy was then crash, and perhaps haunt us until now. This is, perhaps, the reason why we hate CAD so much.

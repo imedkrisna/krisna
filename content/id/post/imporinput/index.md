@@ -1,12 +1,12 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: "A quick look at Indonesia's current account and balance of trade using World Bank's API in Python"
+title: "Melihat neraca pembayaran dan neraca perdagangan Indonesia menggunakan data World Bank dengan Python"
 subtitle: ""
 summary: ""
 authors: [admin]
-tags: [python, economics]
-categories: [python, economics]
+tags: [python, ekonomi]
+categories: [python, ekonomi]
 date: 2020-10-21T21:07:25+11:00
 lastmod: 2020-10-21T21:07:25+11:00
 featured: false
@@ -16,9 +16,9 @@ draft: false
 # To use, add an image named `featured.jpg/png` to your page's folder.
 # Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
 image:
-  caption: ""
-  focal_point: ""
-  preview_only: false
+  caption: "neraca pembayaran Indonesia"
+  focal_point: "smart"
+  preview_only: true
 
 # Projects (optional).
 #   Associate this post with one or more of your projects.
@@ -28,19 +28,19 @@ image:
 projects: []
 ---
 
-Indonesia has been always famed for its lack of depth and innovation in its financial market. Banks are powerful and aim mostly at consumer banking. Indeed, the role of foreign investment is quite central to Joko 'Jokowi' Widodo's development policy, from building infrastructures and the same-price gasoline policy, both relies on SOE's corporate bonds, to attracting FDI to provide jobs. The high influx of foreign investment of course leads to a current account deficit, which means increase the surge of imports. This is a basic GDP accounting where current account balance is $=S-I=X-M$.
+Pasar financial Indonesia sering dikatakan masih dangkal dan sederhana. Perbankan masih memainkan peranan yang sangat penting dan proporsi *consumer banking*-nya masih tinggi. Karena itu, peran investasi asing menjadi semakin penting bagi program-program Pemerintah Indonesia. Pembangunan infrastruktur dan penyamaan harga bensin dibiayai dengan utang BUMN. Pemerintah juga sering menyampaikan pentingnya Penanaman Modal Asing (PMA) untuk meningkatkan lapangan kerja dan pertumbuhan ekonomi. Peningkatan investasi asing tentu saja akan memberi tekanan ke neraca pembayaran.
 
-Interestingly, minimizing Current Account Deficit (CAD) has been something Indonesian government set as their de facto policy targeting. Targeting CAD may be important(?) for stability, but might not be something you would want if you aim for growth. In this blog, I try to have a look at Indonesia's CAD, what's causing it, and a bit of insight from looking at it. My visualization relies on Python's Seaborn and [World Bank's API manager](https://github.com/OliverSherouse/wbdata), `wbdata`. My learning resources are [Abdul Baqi's blog](http://abdulbaqi.io/2017/09/13/Wdi/) and World Bank's [blog](https://blogs.worldbank.org/opendata/accessing-world-bank-data-apis-python-r-ruby-stata) and [documentation](https://wbdata.readthedocs.io/en/stable/).
+Menariknya, mengurangi defisit neraca pembayaran juga adalah program pemerintah. Menjaga neraca pembayaran mungkin penting untuk menjaga stabilitas, tapi dapat mengekang pertumbuhan ekonomi. Di blog ini, saya mencoba melihat neraca pembayaran Indonesia. Visualisasi di blog ini akan menggunakan seaborn dan [World Bank's API manager](https://github.com/OliverSherouse/wbdata), `wbdata`. Saya belajar dari [Abdul Baqi's blog](http://abdulbaqi.io/2017/09/13/Wdi/) dan World Bank's [blog](https://blogs.worldbank.org/opendata/accessing-world-bank-data-apis-python-r-ruby-stata) dan [documentation](https://wbdata.readthedocs.io/en/stable/).
 
-## Using wbdata
+## Menggunakan wbdata
 
-install it first using:
+Install dengan:
 
 ```
 pip install -U wbdata
 ```
 
-We then import it and see what are the source.
+Jangan lupa diimpor, dan mengecek isi databases di World Bank databank:
 
 
 ```python
@@ -120,7 +120,7 @@ wb.get_source()
 
 
 
-So many databases, but we will get what we want from World Development Indicators, number 2 on the above list. Now, let's search current account balance in the database
+Ada banyak ya, Tapi kita cuma butuh World Development Indicators (WDI), yaitu nomer 2 di list di atas. Sekarang, coba kita cari neraca pembayaran di database tersebut:
 
 
 ```python
@@ -137,7 +137,7 @@ wb.search_indicators('current account balance',source=2)
 
 
 
-I will use one with % of GDP. I will take the current account balance only for Indonesia and only from 1981 to 2019. Don't forget to create a datetime tuple to limit the year you're taking.
+Saya akan pakai yang proporsional dengan PDB. Saya akan tarik data dari World Bank hanya untuk Indonesia di tahun 1981 sampai 2019. Jangan lupa untuk membuat tuple untuk membatasi tahun yang kita sedot.
 
 
 ```python
@@ -227,16 +227,18 @@ plt.show()
 ```
 
 
-![png](./Untitled_7_0.png)
+![png](./featured.png)
 
 
-The above graph is Indonesia's current account balance. I suppose it is clear to us that Indonesia were running a current account deficit since the collapse of oil price in the early 80s. Financial liberalization were then took place around the same period and was getting more progressive up until right before Asian Financial Crisis (AFC) in 1998. Indeed, running a mismanaged CAD is somewhat dangerous when the investment is not allocated efficiently. Those investment were not productive and Indonesia failed to earn enough foreign currency to pay back its debt. The economy was then crash, and perhaps haunt us until now. This is, perhaps, the reason why we hate CAD so much.
+Grafik di atas menampilkan current account Indonesia. Indonesia mengalami defisit current account (CAD) sejak jatuhnya harga minyak dunia di awal tahun 1980-an. Pemerintah berusaha menarik investasi asing dengan liberalisasi financial di tahun ini untuk diversifikasi ekonomi dari minyak. Defisit ini terus terjadi sampai krisis finansial di 1998. Memang meningkatkan dana asing di neraca dapat meningkatkan risiko apabila pinjaman tersebut tidak digunakan dengan efisien. Investasi yang tidak produktif tidak menghasilkan lapangan kerja dan pertumbuhan ekonomi yang berkelanjutan. Bayangkan jika anda ngutang untuk beli *handphone* bukannya bikin pabrik. Atau kalau bikin pabrik, pengelolaannya jelek sehingga rugi terus. Fenomena ini mungkin yang menyebabkan kita sangat anti terhadap defisit current account: krisis 98 masih menghantui para pembuat kebijakan.
 
-Indonesia was having a positive current account since then, but starting 2011, the CAD started to happen. Since then, CAD has been happening consistently up until now. The anti-import sentiment was return, and the government has been rising Non-Tariff Measures to combat it. In fact, according to [ERIA's publication](https://www.eria.org/uploads/media/10.ERIA_Book_2019_NTM_Update_Chapter_3.pdf), NTM shot up by almost 30% in numbers, from 2015 to 2018.
+Sejak krisis, current account Indonesia selalu positif. Namun pada 2011, defisit kembali terjadi sampai hari ini. Sentimen anti-impor pun kembali, dan Pemerintah Indonesia bereaksi dengan meningkatkan Non-Tariff Measures (NTMs). Menurut publikasi [ERIA](https://www.eria.org/uploads/media/10.ERIA_Book_2019_NTM_Update_Chapter_3.pdf), NTMs bertambah banyak hampir 30% di antara 2015 sampai 2018.
 
-## What causes our CAD?
+## Apa penyebab CAD?
 
-Interestingly, Indonesia's trade balance (export - import) has always been positive. We have been exporting enough to offset our import. Our deficit was mainly driven by a negative net primary income. The negative net primary income was driven by interest payment from portfolio and FDI. Indonesia's foreign investment inflow has largely been used to actually pay these interests. That's one reason why Indonesian policy makers talk a lot on speeding up growth and improving export relative to import, because reducing net primary income deficit is much harder in the short run.
+Lucunya, neraca perdagangan (export - import) Indonesia biasanya positif. Penyebab defisit ternyata adalah dari negative net primary income. Ini adalah akun yang berisi (*mostly*) pembayaran bunga utang ke luar negeri. Dengan kata lain, investasi yang masuk selama ini sebagian besar digunakan untuk membayar bunga utang sebelumnya, bukan untuk meningkatkan impor. Hal ini tidak masalah jika Indonesia dapat bertumbuh dengan cepat, dengan *rate* lebih tinggi daripada bunga utang. Sayangnya, Ekonom Faisal Basri berulang kali mengatakan bahwa investasi Indonesia tidak produktif dan tidak efisien.
+
+Artinya, perdagangan seharusnya bukan problem di sini. Tapi bisa saja kita *offset* dengan meningkatkan expor atau menurunkan impor.
 
 
 ```python
@@ -260,9 +262,9 @@ plt.show()
 ![png](./Untitled_9_0.png)
 
 
-## Increasing export or reducing import?
+## Menaikan ekspor atau menurunkan impor?
 
-If we take a look at the graph below, Indonesia's import follows its export closely. 
+Menurut grafik di bawah ini, ekspor dan impor Indonesia nampak jalan secara beriringan.
 
 
 ```python
@@ -285,9 +287,9 @@ plt.show()
 ![png](./Untitled_11_0.png)
 
 
-Improving export in the short run can be challenging, especially given the current global situation. Indonesia's two main industries mining and plantation, are still performing quite well, but these two commodities are very sensitive to price volatility, and [COVID-19 makes it worse](https://www.eastasiaforum.org/2020/07/16/covid-19-punishes-indonesian-commodity-exporters/).
+Di jangka pendek, meningkatkan ekspor bisa jadi sangat sulit, terutama mengingat situasi global yang semakin tidak pasti. Industri andalan Indonesia, pertambangan dan perkebunan, masih lumayan produktif. Namun mengandalkan komoditas agak sulit mengingat harganya sangat fluktuatif. [COVID-19 makes it worse](https://www.eastasiaforum.org/2020/07/16/covid-19-punishes-indonesian-commodity-exporters/).
 
-Unfortunately, trying to reduce import is also not ideal. Indonesian imports are currently consist of many industrial supplies and capital goods, needed for firms to operate. In fact, for firms operate in the Global Value Chain (GVC), imported inputs are crucial for them to be competitive in the global market. This is perhaps the reason why Indonesian import and export are moving together, because its exporting firms need imports to be able to export. Reducing imports can be bad both in the short run (industrial supplies) and in the long run (capital goods).
+Kalau begitu, nurunin impor? Sayangnya, menurunkan impor juga tidak ideal. Impor Indonesia sebagian besar isinya adalah bahan baku industri dan barang modal. Bagi perusahaan yang beroprasi dengan memanfaatkan Global Value Chain (GVC), impor bahan baku merupakan hal yang sangat penting untuk berkompetisi di pasar global (alias naikin ekspor). Mungkin ini alasannya impor dan ekspor Indonesia berjalan beriringan. Kita tidak bisa meningkatkan ekspor tanpa meningkatkan impor. Mengurangi impor bisa berbahaya di jangka pendek (karena bahan baku dibutuhkan untuk produksi) dan jangka panjang (karena barang modal seperti mesin dibutuhkan untuk berkembang).
 
 
 ```python
@@ -316,4 +318,4 @@ g.legend(loc='upper left', ncol=1)
 ![png](./Untitled_13_1.png)
 
 
-Indeed, Indonesia face challenge again during this times. I personally think that reducing import is a bad move. What is important is to make sure its investment pays off and keep [foreign inventor's confidence high](https://www.eastasiaforum.org/2020/10/19/can-bank-indonesia-protect-its-independence/).
+Kembali Indonesia dihadapkan dengan tantangan yang tidak mudah. Saya rasa mengurangi impor bukan jalan keluar yang baik. Yang paling penting adalah memastikan bahwa investasi Indonesia semakin produktif dan menjaga agar [kepercayaan investor global tetap tinggi](https://www.eastasiaforum.org/2020/10/19/can-bank-indonesia-protect-its-independence/).
