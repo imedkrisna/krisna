@@ -1,12 +1,12 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: "Indonesia's export and import for COVID-19-related goods"
+title: "Indonesia's export and import for COVID-19-related goods: July 2020"
 subtitle: ""
 summary: ""
 authors: [admin]
-tags: []
-categories: []
+tags: [coronavirus COVID-19,r,perdagangan]
+categories: [coronavirus COVID-19,r,perdagangan]
 date: 2020-11-01T23:10:58+11:00
 lastmod: 2020-11-01T23:10:58+11:00
 featured: false
@@ -38,10 +38,8 @@ First, let's take a look at export.
 
 ``` r
 # Loading and cleaning the data
-library(dplyr)
 library(tidyverse)
 library(lubridate)
-library(ggplot2)
 
 expor<-read.csv('Book1.csv') # read the data
 a<-colnames(expor)           # add column names to a for easy rename
