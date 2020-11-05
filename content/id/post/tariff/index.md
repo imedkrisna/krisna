@@ -5,8 +5,8 @@ title: "Dinamika tariff di Indonesia dari 2000 sampai 2018"
 subtitle: "Ilustrasi dengan python dan WITS API"
 summary: ""
 authors: [admin]
-tags: [python,tariff,trade,economics]
-categories: [python,tariff,trade,economics]
+tags: [python,tarif,perdagangan,ekonomi]
+categories: [python,tarif,perdagangan,ekonomi]
 date: 2020-11-05T22:26:15+11:00
 lastmod: 2020-11-05T22:26:15+11:00
 featured: false
