@@ -1,12 +1,12 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: "Dinamika tariff di Indonesia dari 2000 sampai 2018"
+title: "Dinamika tariff di Indonesia dari 2000 - 2018"
 subtitle: "Ilustrasi dengan python dan WITS API"
 summary: ""
 authors: [admin]
-tags: [python,tariff,trade,economics]
-categories: [python,tariff,trade,economics]
+tags: [python,tarif,perdagangan,ekonomi]
+categories: [python,tarif,perdagangan,ekonomi]
 date: 2020-11-05T22:26:15+11:00
 lastmod: 2020-11-05T22:26:15+11:00
 featured: false
@@ -27,7 +27,6 @@ image:
 #   Otherwise, set `projects = []`.
 projects: []
 ---
-
 
 Tempo hari, saya diundang oleh kolega saya Ibu [Deasy Pane](https://www.linkedin.com/in/deasy-damayanti-p-pane-a618a68/?originalSubdomain=id) dari Bappenas untuk ngobrol-ngobrol tentang trade. Tentu saja via zoom. Hadir juga rekan saya [Donny](https://www.linkedin.com/in/donny-pasaribu/?originalSubdomain=au) dan [Mas Chandra](https://crawford.anu.edu.au/people/phd/chandra-putra). 
 
@@ -155,7 +154,7 @@ Tiga grafik di bawah ini adalah dinamika *effective applied tariff*. Setelah kri
 
 ```python
 # FIGURES FOR AHS
-plt.figure(figsize=(10,5))
+plt.figure(figsize=(10,7))
 sns.lineplot(data=p,x='Year',y='Value',hue='ProductCode')
 plt.axvline('2016', color='black')
 ```
@@ -163,19 +162,19 @@ plt.axvline('2016', color='black')
 
 
 
-    <matplotlib.lines.Line2D at 0x2cd91428280>
+    <matplotlib.lines.Line2D at 0x158f6ff5070>
 
 
 
 
-![png](./Untitled_7_1.png)
+![png](output_7_1.png)
 
 
 Pertama kita melihat produk-peroduk primer. Food products ini tariffnya jauh banget ya kalau dibandingkan sama animal, vegetable dan minerals. wk wk wk. Menjelang krisis 2008 memang banyak negara meningkatkan proteksi terhadap bahan pangan sih, jadi ndak heran kalau Indonesia ikut-ikutan. Tapi sepertinya masih tinggi  sampai sekarang. Namun secara keseluruhan, tariff produk primer secara umum sepertinya tetap rendah sampai sekarang. Gak tau ya kalau NTM. wk wk wk.
 
 
 ```python
-plt.figure(figsize=(10,5))
+plt.figure(figsize=(10,7))
 sns.lineplot(data=q,x='Year',y='Value',hue='ProductCode')
 plt.axvline('2016', color='black')
 ```
@@ -183,19 +182,19 @@ plt.axvline('2016', color='black')
 
 
 
-    <matplotlib.lines.Line2D at 0x2cd916f6fa0>
+    <matplotlib.lines.Line2D at 0x158f07cfa60>
 
 
 
 
-![png](./Untitled_9_1.png)
+![png](output_9_1.png)
 
 
-Penurunan tariff yang signifikan terjadi di sektor manufaktur. Menariknya, dulu sekitar tahun 2005-an, kita ramai-ramai dibilang *sunset industry* atau deindustrialisasi prematur justru ketika tariff di sektor ini tinggi-tinggi. I mean, lihat tekstil dan kimia. Setelah 2008 tariffnya turun. Tapi sepertinya tariff-tariff ini mulai naik pelan-pelan sejak sekitar tahun 2016 (ingat, 2014 dan 2015 tariffnya *missing*). Deindustrialisasi lagi?
+Penurunan tariff yang signifikan terjadi di sektor manufaktur. Menariknya, dulu sekitar tahun 2005-an, kita ramai-ramai dibilang *sunset industry* atau deindustrialisasi prematur justru ketika tariff di sektor ini tinggi-tinggi. *I mean*, lihat tekstil dan kimia. Setelah 2008 tariffnya turun. Tapi sepertinya tariff-tariff ini mulai naik pelan-pelan sejak sekitar tahun 2016 (ingat, 2014 dan 2015 tariffnya *missing*). Deindustrialisasi lagi? Kira-kira ada kejadian besar apa di tahun 2014/2015?
 
 
 ```python
-plt.figure(figsize=(10,5))
+plt.figure(figsize=(10,7))
 sns.lineplot(data=r,x='Year',y='Value',hue='ProductCode')
 plt.axvline('2016', color='black')
 ```
@@ -203,24 +202,26 @@ plt.axvline('2016', color='black')
 
 
 
-    <matplotlib.lines.Line2D at 0x2cd8ab94e80>
+    <matplotlib.lines.Line2D at 0x158f07cfe80>
 
 
 
 
-![png](./Untitled_11_1.png)
+![png](output_11_1.png)
 
 
 Sementara itu, level tariff di sektor-sektor terkait produk mesin dan elektronik relatif lebih rendah dibandingkan sektor lain, terutama sejak krisis 2008. Sektor mesin dan elektronik termasuk yang maju di Indonesia gak sih? Sektor ini juga sangat tinggi intensitas Global Value Chain (GVC)-nya. Make sense.
 
 ## MFN, simple average
 
-Ini sama tapi MFN. Kali ini daripada saya mulu yang komentar, gimana kalau gantian? Coba drop komentar anda di komen di bawah ini atau mensyen saya di twitter supaya kita bisa diskusi he he he. Bosen diskusi sama Mbak Deasy, Donny dan Mas Chandra mulu ha ha ha ha.
+Ini sama tapi MFN. Secara umum, harusnya MFN lebih tinggi daripada effectively applied tariff. Tentu saja masih mungkin ada gap yang super tipis di sektor tertentu, terutama jika *Free Trade Agreement* yang diikuti Indonesia tidak meng-*cover* sektor tersebut. Tambah lagi, MFN seharusnya cenderung lebih stabil daripada effective applied, karena sifatnya universal. Kalo effective applied kan langsung ngikutin tiap kali ada FTA baru.
+
+Kali ini daripada saya mulu yang komentar, gimana kalau gantian? Coba drop komentar anda tentang tariff MFN di komen di bawah ini atau mensyen saya di [{{< icon name="twitter" pack="fas" >}}twitter](https://twitter.com/imedkrisna) supaya kita bisa diskusi he he he.
 
 
 ```python
 # FIGURES FOR AHS
-plt.figure(figsize=(10,5))
+plt.figure(figsize=(10,7))
 sns.lineplot(data=c,x='Year',y='Value',hue='ProductCode')
 plt.axvline('2016', color='black')
 ```
@@ -228,17 +229,17 @@ plt.axvline('2016', color='black')
 
 
 
-    <matplotlib.lines.Line2D at 0x2cd91b863a0>
+    <matplotlib.lines.Line2D at 0x158f72fd820>
 
 
 
 
-![png](./Untitled_13_1.png)
+![png](output_13_1.png)
 
 
 
 ```python
-plt.figure(figsize=(10,5))
+plt.figure(figsize=(10,7))
 sns.lineplot(data=d,x='Year',y='Value',hue='ProductCode')
 plt.axvline('2016', color='black')
 ```
@@ -246,17 +247,17 @@ plt.axvline('2016', color='black')
 
 
 
-    <matplotlib.lines.Line2D at 0x2cd914294f0>
+    <matplotlib.lines.Line2D at 0x158f73da0d0>
 
 
 
 
-![png](./Untitled_14_1.png)
+![png](output_14_1.png)
 
 
 
 ```python
-plt.figure(figsize=(10,5))
+plt.figure(figsize=(10,7))
 sns.lineplot(data=e,x='Year',y='Value',hue='ProductCode')
 plt.axvline('2016', color='black')
 ```
@@ -264,10 +265,10 @@ plt.axvline('2016', color='black')
 
 
 
-    <matplotlib.lines.Line2D at 0x2cd91442130>
+    <matplotlib.lines.Line2D at 0x158f7384fd0>
 
 
 
 
-![png](./Untitled_15_1.png)
+![png](output_15_1.png)
 
