@@ -15,12 +15,31 @@ slides:
   highlight_style: dracula
 ---
 
-# Title
+# Review literatur
 
-Author Name
+Krisna Gupta
+
+Australian National University
+
+PhD Candidate in Economics
+
+krisna.gupta@anu.edu.au
+
+krisna.netlify.app
 
 ---
 
-## Slide 2
+## beberapa riset dan publikasi
+
+<p style="font-size:30px">{{< cite page="/publication/bies" view="4" >}}</p>
+{{< cite page="/publication/apel" view="4" >}}
+
+---
+
+{{< slide font-size="very small" >}}
+
+## haiya
+
+bagaimana ini
 
 ...
