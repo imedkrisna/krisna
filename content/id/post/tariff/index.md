@@ -109,11 +109,13 @@ import seaborn as sns; sns.set()
 import matplotlib.pyplot as plt
 pd.options.display.max_rows=999
 b=wits.get_products('tradestats-tariff')
-b=b.loc[(b.grouptype=='Sector') & (b.index!='Total')].productdescription.values
+b=b.loc[(b.grouptype=='Sector') & (
+    b.index!='Total')].productdescription.values
 
 # MFN tariff, weighted average
 a=wits.get_indicator(indicator='MFN-SMPL-AVRG',
-reporter='IDN',datasource='tradestats-tariff',year=['2000','2019'])
+reporter='IDN',datasource='tradestats-tariff',
+                     year=['2000','2019'])
 a=a.reset_index()
 a=a.set_index('ProductCode')
 c,d,e=a.loc[b[0:4]],a.loc[b[5:10]],a.loc[b[11:]]
@@ -122,7 +124,8 @@ a=a.reset_index()
 
 # Effective applied tariff, weighted average
 o=wits.get_indicator(indicator='AHS-SMPL-AVRG',
-reporter='IDN',datasource='tradestats-tariff',year=['2000','2019'])
+reporter='IDN',datasource='tradestats-tariff',
+                     year=['2000','2019'])
 o=o.reset_index()
 o=o.set_index('ProductCode')
 p,q,r=o.loc[b[0:4]],o.loc[b[5:10]],o.loc[b[11:]]
@@ -165,7 +168,7 @@ plt.axvline('2008', color='black')
 
 
 
-    <matplotlib.lines.Line2D at 0x2086ac4e370>
+    <matplotlib.lines.Line2D at 0x1e40eab19d0>
 
 
 
@@ -186,7 +189,7 @@ plt.axvline('2008', color='black')
 
 
 
-    <matplotlib.lines.Line2D at 0x20871662610>
+    <matplotlib.lines.Line2D at 0x1e4154d98e0>
 
 
 
@@ -207,7 +210,7 @@ plt.axvline('2008', color='black')
 
 
 
-    <matplotlib.lines.Line2D at 0x2087171e6a0>
+    <matplotlib.lines.Line2D at 0x1e4156eeb20>
 
 
 
@@ -235,7 +238,7 @@ plt.axvline('2008', color='black')
 
 
 
-    <matplotlib.lines.Line2D at 0x20871782430>
+    <matplotlib.lines.Line2D at 0x1e4155688e0>
 
 
 
@@ -254,7 +257,7 @@ plt.axvline('2008', color='black')
 
 
 
-    <matplotlib.lines.Line2D at 0x20871812130>
+    <matplotlib.lines.Line2D at 0x1e41566fc40>
 
 
 
@@ -273,7 +276,7 @@ plt.axvline('2008', color='black')
 
 
 
-    <matplotlib.lines.Line2D at 0x20871958880>
+    <matplotlib.lines.Line2D at 0x1e415725b80>
 
 
 
