@@ -2,4 +2,4 @@ module github.com/gcushen/hugo-academic
 
 go 1.14
 
-require github.com/wowchemy/wowchemy-hugo-modules/wowchemy v0.0.0-20201102170205-80fce98e72a9 // indirect
+require github.com/wowchemy/wowchemy-hugo-modules/wowchemy v0.0.0-20201106215012-eb76e56841f8 // indirect
