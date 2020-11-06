@@ -227,7 +227,7 @@ On this group, it seems like in general tariff are progressing to the lower end.
 
 Here's MFN! In general, we should expect a higher level of tariff using MFN. But the trends are pretty much the same: aside from food products, crisis reduce the overall tariff level. 2016, everything jumped up.
 
-This time, let me hear more from you! Please do comment on this blog or mention me on [{{< icon name="twitter" pack="fas" >}}twitter](https://twitter.com/imedkrisna) for a discussion!
+This time, let me hear more from you! Please do comment on this blog or mention me on [{{< icon name="twitter" pack="fab" >}}twitter](https://twitter.com/imedkrisna) for a discussion!
 
 
 ```python

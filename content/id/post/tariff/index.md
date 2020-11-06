@@ -224,7 +224,7 @@ Sementara itu, level tariff di sektor-sektor terkait produk mesin dan elektronik
 
 Ini sama tapi MFN. Secara umum, harusnya MFN lebih tinggi daripada effectively applied tariff. Tentu saja masih mungkin ada gap yang super tipis di sektor tertentu, terutama jika *Free Trade Agreement* yang diikuti Indonesia tidak meng-*cover* sektor tersebut. Tambah lagi, MFN seharusnya cenderung lebih stabil daripada effective applied, karena sifatnya universal. Kalo effective applied kan langsung ngikutin tiap kali ada FTA baru.
 
-Secara umum sih tren-nya mirip: turun setelah krisis 98, naik di 2016. Tapi kali ini daripada saya mulu yang komentar, gimana kalau gantian? Coba drop komentar anda tentang tariff MFN di komen di bawah ini atau mensyen saya di [{{< icon name="twitter" pack="fas" >}}twitter](https://twitter.com/imedkrisna) supaya kita bisa diskusi he he he.
+Secara umum sih tren-nya mirip: turun setelah krisis 98, naik di 2016. Tapi kali ini daripada saya mulu yang komentar, gimana kalau gantian? Coba drop komentar anda tentang tariff MFN di komen di bawah ini atau mensyen saya di [{{< icon name="twitter" pack="fab" >}}twitter](https://twitter.com/imedkrisna) supaya kita bisa diskusi he he he.
 
 
 ```python
