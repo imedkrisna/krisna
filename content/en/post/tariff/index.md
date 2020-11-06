@@ -169,7 +169,7 @@ plt.axvline('2008', color='black')
 
 
 
-![png](output_7_1.png)
+![png](./index_7_1.png)
 
 
 Firstly, primary products. You can straight away see a far higher tariff in food producing sector compared to animal, vegetables, and minerals. The GFC clearly increased Indonesian food protectionism (as with other countries during that time). Overall, other sectors aren't that highly protected by tariff, which hover around 2-4%. Same thing can't be said for NTMs, however. But that's for another post.
@@ -190,7 +190,7 @@ plt.axvline('2008', color='black')
 
 
 
-![png](output_9_1.png)
+![png](./index_9_1.png)
 
 
 In some manufacturing, you see a higher tariff. These sectors were highly protected before Asian Financial Crisis (AFC) in 1998. It was lowered after AFC, but also after GFC, interestingly. Indeed, bad times lead to good policy. Another interesting thing is that Indonesia was famed to have a premature deindustrialisation during 2005s if my memory serves. These are times where textiles got more protection, as you can see from the graph.
@@ -213,7 +213,7 @@ plt.axvline('2008', color='black')
 
 
 
-![png](output_11_1.png)
+![png](./index_11_1.png)
 
 
 On this group, it seems like in general tariff are progressing to the lower end. Especially after AFC and GFC, protection given to transportation is stripped up, but also in metals, machinery, electronics, and other equipments. These are also sectors that have large intensity of Global Value Chain (GVC). Make sense to lower the trade cost of these stuff as low as possible. Again, you can see a bit of a jump in 2016.
@@ -241,7 +241,7 @@ plt.axvline('2008', color='black')
 
 
 
-![png](output_13_1.png)
+![png](./index_13_1.png)
 
 
 
@@ -260,7 +260,7 @@ plt.axvline('2008', color='black')
 
 
 
-![png](output_14_1.png)
+![png](./index_14_1.png)
 
 
 
@@ -279,5 +279,5 @@ plt.axvline('2008', color='black')
 
 
 
-![png](output_15_1.png)
+![png](./index_15_1.png)
 
