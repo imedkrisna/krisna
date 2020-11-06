@@ -21,6 +21,7 @@ Postingan ini khusus buat contekan belajaran waktu nyoba-nyoba. Akan coba dibagi
 - [Business forecasting](https://otexts.com/fpp2/judgmental.html)
 - [table with kableExtra](http://haozhu233.github.io/kableExtra/awesome_table_in_html.html#Installation)
 - [statistik dasar](https://uc-r.github.io/)
+- [international trade network](https://github.com/MatthewSmith430/ITNr)
 
 ### html and blog
 - [cara bikin multi-kolom](https://stackoverflow.com/questions/31753897/2-column-section-in-r-markdown)
