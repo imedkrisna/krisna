@@ -112,7 +112,8 @@ b=wits.get_products('tradestats-tariff')
 b=b.loc[(b.grouptype=='Sector') & (b.index!='Total')].productdescription.values
 
 # MFN tariff, weighted average
-a=wits.get_indicator(indicator='MFN-SMPL-AVRG',reporter='IDN',datasource='tradestats-tariff',year=['2000','2019'])
+a=wits.get_indicator(indicator='MFN-SMPL-AVRG',
+reporter='IDN',datasource='tradestats-tariff',year=['2000','2019'])
 a=a.reset_index()
 a=a.set_index('ProductCode')
 c,d,e=a.loc[b[0:4]],a.loc[b[5:10]],a.loc[b[11:]]
@@ -120,7 +121,8 @@ c,d,e=c.reset_index(),d.reset_index(),e.reset_index()
 a=a.reset_index()
 
 # Effective applied tariff, weighted average
-o=wits.get_indicator(indicator='AHS-SMPL-AVRG',reporter='IDN',datasource='tradestats-tariff',year=['2000','2019'])
+o=wits.get_indicator(indicator='AHS-SMPL-AVRG',
+reporter='IDN',datasource='tradestats-tariff',year=['2000','2019'])
 o=o.reset_index()
 o=o.set_index('ProductCode')
 p,q,r=o.loc[b[0:4]],o.loc[b[5:10]],o.loc[b[11:]]
@@ -168,7 +170,7 @@ plt.axvline('2008', color='black')
 
 
 
-![png](output_7_1.png)
+![png](./index_7_1.png)
 
 
 Pertama kita melihat produk-peroduk primer. Food products ini tariffnya jauh banget ya kalau dibandingkan sama animal, vegetable dan minerals. wk wk wk. Menjelang krisis 2008 memang banyak negara meningkatkan proteksi terhadap bahan pangan sih, jadi ndak heran kalau Indonesia ikut-ikutan. Tapi sepertinya masih tinggi  sampai sekarang. Namun secara keseluruhan, tariff produk primer secara umum sepertinya tetap rendah sampai sekarang. Gak tau ya kalau NTM. wk wk wk.
@@ -189,7 +191,7 @@ plt.axvline('2008', color='black')
 
 
 
-![png](output_9_1.png)
+![png](./index_9_1.png)
 
 
 Penurunan tariff yang signifikan terjadi di sektor manufaktur. Menariknya, dulu sekitar tahun 2005-an, kita ramai-ramai dibilang *sunset industry* atau deindustrialisasi prematur justru ketika tariff di sektor ini tinggi-tinggi. *I mean*, lihat tekstil dan kimia. Setelah 2008 tariffnya turun. Tapi sepertinya tariff-tariff ini mulai naik pelan-pelan sejak sekitar tahun 2016 (ingat, 2014 dan 2015 tariffnya *missing*). Deindustrialisasi lagi? Kira-kira ada kejadian besar apa di tahun 2014/2015?
@@ -210,7 +212,7 @@ plt.axvline('2008', color='black')
 
 
 
-![png](output_11_1.png)
+![png](./index_11_1.png)
 
 
 Sementara itu, level tariff di sektor-sektor terkait produk mesin dan elektronik relatif lebih rendah dibandingkan sektor lain, terutama sejak krisis 2008. Sektor mesin dan elektronik termasuk yang maju di Indonesia gak sih? Sektor ini juga sangat tinggi intensitas Global Value Chain (GVC)-nya. Make sense.
@@ -238,7 +240,7 @@ plt.axvline('2008', color='black')
 
 
 
-![png](output_13_1.png)
+![png](./index_13_1.png)
 
 
 
@@ -257,7 +259,7 @@ plt.axvline('2008', color='black')
 
 
 
-![png](output_14_1.png)
+![png](./index_14_1.png)
 
 
 
@@ -276,5 +278,5 @@ plt.axvline('2008', color='black')
 
 
 
-![png](output_15_1.png)
+![png](./index_15_1.png)
 
