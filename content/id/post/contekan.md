@@ -20,6 +20,7 @@ Postingan ini khusus buat contekan belajaran waktu nyoba-nyoba. Akan coba dibagi
 - [Rmarkdown cheatsheet](https://blog.rstudio.com/2014/08/01/the-r-markdown-cheat-sheet/)
 - [Business forecasting](https://otexts.com/fpp2/judgmental.html)
 - [table with kableExtra](http://haozhu233.github.io/kableExtra/awesome_table_in_html.html#Installation)
+- [statistik dasar](https://uc-r.github.io/)
 
 ### html and blog
 - [cara bikin multi-kolom](https://stackoverflow.com/questions/31753897/2-column-section-in-r-markdown)
