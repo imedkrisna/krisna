@@ -108,10 +108,13 @@ import seaborn as sns; sns.set()
 import matplotlib.pyplot as plt
 pd.options.display.max_rows=999
 b=wits.get_products('tradestats-tariff')
-b=b.loc[(b.grouptype=='Sector') & (b.index!='Total')].productdescription.values
+b=b.loc[(b.grouptype=='Sector') & (
+    b.index!='Total')].productdescription.values
 
 # MFN tariff, weighted average
-a=wits.get_indicator(indicator='MFN-SMPL-AVRG',reporter='IDN',datasource='tradestats-tariff',year=['2000','2019'])
+a=wits.get_indicator(indicator='MFN-SMPL-AVRG',
+reporter='IDN',datasource='tradestats-tariff',
+                     year=['2000','2019'])
 a=a.reset_index()
 a=a.set_index('ProductCode')
 c,d,e=a.loc[b[0:4]],a.loc[b[5:10]],a.loc[b[11:]]
@@ -119,7 +122,9 @@ c,d,e=c.reset_index(),d.reset_index(),e.reset_index()
 a=a.reset_index()
 
 # Effective applied tariff, weighted average
-o=wits.get_indicator(indicator='AHS-SMPL-AVRG',reporter='IDN',datasource='tradestats-tariff',year=['2000','2019'])
+o=wits.get_indicator(indicator='AHS-SMPL-AVRG',
+reporter='IDN',datasource='tradestats-tariff',
+                     year=['2000','2019'])
 o=o.reset_index()
 o=o.set_index('ProductCode')
 p,q,r=o.loc[b[0:4]],o.loc[b[5:10]],o.loc[b[11:]]
@@ -155,7 +160,7 @@ These FTAs eventually lower effective applied tariff.
 
 ```python
 # FIGURES FOR AHS
-plt.figure(figsize=(10,7))
+plt.figure(figsize=(9,6))
 sns.lineplot(data=p,x='Year',y='Value',hue='ProductCode')
 plt.axvline('2016', color='black')
 plt.axvline('2008', color='black')
@@ -164,7 +169,7 @@ plt.axvline('2008', color='black')
 
 
 
-    <matplotlib.lines.Line2D at 0x262584bb310>
+    <matplotlib.lines.Line2D at 0x165b71fc790>
 
 
 
@@ -176,7 +181,7 @@ Firstly, primary products. You can straight away see a far higher tariff in food
 
 
 ```python
-plt.figure(figsize=(10,7))
+plt.figure(figsize=(9,6))
 sns.lineplot(data=q,x='Year',y='Value',hue='ProductCode')
 plt.axvline('2016', color='black')
 plt.axvline('2008', color='black')
@@ -185,7 +190,7 @@ plt.axvline('2008', color='black')
 
 
 
-    <matplotlib.lines.Line2D at 0x2625eee11f0>
+    <matplotlib.lines.Line2D at 0x165bdbb2760>
 
 
 
@@ -199,7 +204,7 @@ Lastly, these tariff shot up in 2016 (remember, 2014 and 2015 are missing). What
 
 
 ```python
-plt.figure(figsize=(10,7))
+plt.figure(figsize=(9,6))
 sns.lineplot(data=r,x='Year',y='Value',hue='ProductCode')
 plt.axvline('2016', color='black')
 plt.axvline('2008', color='black')
@@ -208,7 +213,7 @@ plt.axvline('2008', color='black')
 
 
 
-    <matplotlib.lines.Line2D at 0x2625ef1ab80>
+    <matplotlib.lines.Line2D at 0x165bdc9ef10>
 
 
 
@@ -227,7 +232,7 @@ This time, let me hear more from you! Please do comment on this blog or mention 
 
 ```python
 # FIGURES FOR AHS
-plt.figure(figsize=(10,7))
+plt.figure(figsize=(9,6))
 sns.lineplot(data=c,x='Year',y='Value',hue='ProductCode')
 plt.axvline('2016', color='black')
 plt.axvline('2008', color='black')
@@ -236,7 +241,7 @@ plt.axvline('2008', color='black')
 
 
 
-    <matplotlib.lines.Line2D at 0x2625f0e5760>
+    <matplotlib.lines.Line2D at 0x165bdd830a0>
 
 
 
@@ -246,7 +251,7 @@ plt.axvline('2008', color='black')
 
 
 ```python
-plt.figure(figsize=(10,7))
+plt.figure(figsize=(9,6))
 sns.lineplot(data=d,x='Year',y='Value',hue='ProductCode')
 plt.axvline('2016', color='black')
 plt.axvline('2008', color='black')
@@ -255,7 +260,7 @@ plt.axvline('2008', color='black')
 
 
 
-    <matplotlib.lines.Line2D at 0x2625f081700>
+    <matplotlib.lines.Line2D at 0x165bdedc280>
 
 
 
@@ -265,7 +270,7 @@ plt.axvline('2008', color='black')
 
 
 ```python
-plt.figure(figsize=(10,7))
+plt.figure(figsize=(9,6))
 sns.lineplot(data=e,x='Year',y='Value',hue='ProductCode')
 plt.axvline('2016', color='black')
 plt.axvline('2008', color='black')
@@ -274,7 +279,7 @@ plt.axvline('2008', color='black')
 
 
 
-    <matplotlib.lines.Line2D at 0x2625efa2e50>
+    <matplotlib.lines.Line2D at 0x165bde1e8b0>
 
 
 
