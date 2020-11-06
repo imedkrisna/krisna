@@ -157,12 +157,13 @@ Tiga grafik di bawah ini adalah dinamika *effective applied tariff*. Setelah kri
 plt.figure(figsize=(10,7))
 sns.lineplot(data=p,x='Year',y='Value',hue='ProductCode')
 plt.axvline('2016', color='black')
+plt.axvline('2008', color='black')
 ```
 
 
 
 
-    <matplotlib.lines.Line2D at 0x158f6ff5070>
+    <matplotlib.lines.Line2D at 0x2086ac4e370>
 
 
 
@@ -177,12 +178,13 @@ Pertama kita melihat produk-peroduk primer. Food products ini tariffnya jauh ban
 plt.figure(figsize=(10,7))
 sns.lineplot(data=q,x='Year',y='Value',hue='ProductCode')
 plt.axvline('2016', color='black')
+plt.axvline('2008', color='black')
 ```
 
 
 
 
-    <matplotlib.lines.Line2D at 0x158f07cfa60>
+    <matplotlib.lines.Line2D at 0x20871662610>
 
 
 
@@ -197,12 +199,13 @@ Penurunan tariff yang signifikan terjadi di sektor manufaktur. Menariknya, dulu 
 plt.figure(figsize=(10,7))
 sns.lineplot(data=r,x='Year',y='Value',hue='ProductCode')
 plt.axvline('2016', color='black')
+plt.axvline('2008', color='black')
 ```
 
 
 
 
-    <matplotlib.lines.Line2D at 0x158f07cfe80>
+    <matplotlib.lines.Line2D at 0x2087171e6a0>
 
 
 
@@ -216,7 +219,7 @@ Sementara itu, level tariff di sektor-sektor terkait produk mesin dan elektronik
 
 Ini sama tapi MFN. Secara umum, harusnya MFN lebih tinggi daripada effectively applied tariff. Tentu saja masih mungkin ada gap yang super tipis di sektor tertentu, terutama jika *Free Trade Agreement* yang diikuti Indonesia tidak meng-*cover* sektor tersebut. Tambah lagi, MFN seharusnya cenderung lebih stabil daripada effective applied, karena sifatnya universal. Kalo effective applied kan langsung ngikutin tiap kali ada FTA baru.
 
-Kali ini daripada saya mulu yang komentar, gimana kalau gantian? Coba drop komentar anda tentang tariff MFN di komen di bawah ini atau mensyen saya di [{{< icon name="twitter" pack="fas" >}}twitter](https://twitter.com/imedkrisna) supaya kita bisa diskusi he he he.
+Secara umum sih tren-nya mirip: turun setelah krisis 98, naik di 2016. Tapi kali ini daripada saya mulu yang komentar, gimana kalau gantian? Coba drop komentar anda tentang tariff MFN di komen di bawah ini atau mensyen saya di [{{< icon name="twitter" pack="fas" >}}twitter](https://twitter.com/imedkrisna) supaya kita bisa diskusi he he he.
 
 
 ```python
@@ -224,12 +227,13 @@ Kali ini daripada saya mulu yang komentar, gimana kalau gantian? Coba drop komen
 plt.figure(figsize=(10,7))
 sns.lineplot(data=c,x='Year',y='Value',hue='ProductCode')
 plt.axvline('2016', color='black')
+plt.axvline('2008', color='black')
 ```
 
 
 
 
-    <matplotlib.lines.Line2D at 0x158f72fd820>
+    <matplotlib.lines.Line2D at 0x20871782430>
 
 
 
@@ -242,12 +246,13 @@ plt.axvline('2016', color='black')
 plt.figure(figsize=(10,7))
 sns.lineplot(data=d,x='Year',y='Value',hue='ProductCode')
 plt.axvline('2016', color='black')
+plt.axvline('2008', color='black')
 ```
 
 
 
 
-    <matplotlib.lines.Line2D at 0x158f73da0d0>
+    <matplotlib.lines.Line2D at 0x20871812130>
 
 
 
@@ -260,12 +265,13 @@ plt.axvline('2016', color='black')
 plt.figure(figsize=(10,7))
 sns.lineplot(data=e,x='Year',y='Value',hue='ProductCode')
 plt.axvline('2016', color='black')
+plt.axvline('2008', color='black')
 ```
 
 
 
 
-    <matplotlib.lines.Line2D at 0x158f7384fd0>
+    <matplotlib.lines.Line2D at 0x20871958880>
 
 
 
