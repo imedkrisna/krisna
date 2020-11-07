@@ -9,37 +9,249 @@ categories: []
 date: 2020-11-06T21:03:23+11:00
 slides:
   # Choose a theme from https://github.com/hakimel/reveal.js#theming
-  theme: black
+  theme: night
   # Choose a code highlighting style (if highlighting enabled in `params.toml`)
   #   Light style: github. Dark style: dracula (default).
   highlight_style: dracula
 ---
 
-# Review literatur
+# Tinjauan literatur
 
-Krisna Gupta
-
-Australian National University
-
-PhD Candidate in Economics
-
-krisna.gupta@anu.edu.au
-
-krisna.netlify.app
+##### Kuliah Tamu Seminar Ekonomi Internasional
+##### Senin, 9 November 2020  
+Krisna 'Imed' Gupta  
+Australian National University  
+PhD Candidate in Economics  
+[krisna.netlify.app](krisna.netlify.app)
 
 ---
+
+{{< slide class="small" >}}
 
 ## beberapa riset dan publikasi
 
-<p style="font-size:30px">{{< cite page="/publication/bies" view="4" >}}</p>
-{{< cite page="/publication/apel" view="4" >}}
+- {{< cite page="/publication/bies" view="4" >}}
+- {{< cite page="/publication/ppia" view="4" >}}
+- {{< cite page="/publication/conf2" view="4" >}}
+- {{< cite page="/publication/covppe" view="4" >}}
+- {{< cite page="/publication/iacepa" view="4" >}}
 
 ---
 
-{{< slide font-size="very small" >}}
+### Tentang hari ini
 
-## haiya
+- Pengalaman pribadi
+- beberapa referensi untuk memberi struktur
+- diskusi
 
-bagaimana ini
+---
 
-...
+{{< slide class="lol" >}}
+
+### First up: a quiz
+
+please navigate to:
+
+[pollev.com/imedkrisna007](https://pollev.com/imedkrisna007)
+
+Masukan username anda
+
+Mulai memilih!
+
+lulus mau jadi apa?
+skripsinya tentang apa?
+fokus di metode atau isu? policy? forecasting? GE? lainnya?
+
+---
+
+### Literature review?
+
+- Peneliti pemula seringkali bingung bagaimana memulai tinjauan literatur
+
+- Sebenarnya, tinjauan literatur (dan *referencing*) adalah *skill* yang kita perlukan untuk semua jenis pekerjaan!
+
+*It's a way of thinking!*
+
+---
+
+### Kenapa melakukan tinjauan literatur
+
+- Kita tidak bisa meneliti sesuatu yang kita tidak tau!
+  - mendapatkan konteks
+  - metode termutakhir
+  - mencari *gap* di literatur: metode / konteks
+
+- Meyakinkan pembaca bahwa riset kita <ins>relevan</ins>:
+  - terupdate
+  - penting
+
+---
+
+### Mulai dari mana?
+
+- Kata kunci-nya adalah relevan!
+  - meneliti tentang Kazakhstan bagi audience Indonesia mungkin kurang rame
+  
+- Paling mudah adalah mulai dari isu yang relevan dengan kita:
+  - Misal, sesuatu yang kita sering dengar (misalnya korupsi daging sapi, omnibus law)
+  - Bisa juga yang relevan dengan kerjaan kita
+
+- Bisa juga mulai dari metode. Tapi jarang.
+
+---
+
+### Mulai dari mana?
+
+- Sebagian besar pertanyaan di bidang ilmu ekonomi adalah tentang hubungan dua variabel:
+
+> Does X causes Y?
+
+$$ Y = X\beta + \varepsilon $$
+
+Kita bisa mulai mencari menggunakan kata kunci Y atau X, atau keduanya.
+
+---
+
+### Mulai dari mana?
+
+- beberapa pertanyaan yang bisa dijawab, misalnya:
+
+$Y \Rightarrow X$ atau $X \Rightarrow Y$?  
+bagaimana dengan $Z$?  
+di Amerika, $X \Rightarrow Y$. Bagaimana dengan di Indonesia?
+
+---
+
+{{< slide class="table" >}}
+
+### Tabel dapat membantu proses berpikir kita
+
+| Author | Y | X | sign | context | method |
+| ------ | - | - | ---- | ------- | ------ |
+| Amiti & Konings 2007 | TFP | input tariff | + | Indonesia, firm level | levpet, gravity |
+| Kee, Nicita, Olarreaga 2009 | import val | NTM count | + | global | cross-section gravity |
+| Fugazza, Olarreaga, Ugarte 2017 | export val | NTM count | +,- | Peru | gravity, firm size |
+| Cadot et al 2015 | export val | NTM count, Reg. dist. | + | global | gravity cross-section |
+
+> Contoh di atas adalah pencarian yang berfokus pada $X$: Bagaimana Non-Tariff Measures (NTMs) mempengaruhi perdagangan dan produktivitas (dan lainnya kalau ada)
+
+---
+
+{{< slide class="table" >}}
+
+### Diisi juga kontribusi atau gap
+
+| Author | + | - |
+| ------ | - | - | 
+| Amiti & Konings 2007 | Jurnal AER, konteks Indonesia, firm level, TFP | Tidak ada NTM |
+| Kee, Nicita, Olarreaga 2009 | Seminal utk AVE | Terlalu global dan makro |
+| Fugazza, Olarreaga, Ugarte 2017 | heterogenous firm, firm level | konteks Peru, export may not be best measure, no PPML |
+| Cadot et al 2015 | Seminal NTM, konsep *regulatory distance* | Cross section, terlalu makro |
+
+> Saya dapat berkontribusi di konteks Indonesia, firm level dengan TFP. Trade policy measures adalah tariff dan NTMs. Measures untuk firm level export dapat dipakai untuk *robustness*. Data ada, metode ada, export lebih baik dimodelkan dengan PPML. Sip!
+
+---
+
+### Mulai dari mana?
+
+- Literaturnya literatur: akan ada *author(s)* yang disebut berkali-kali oleh literatur yang anda sudah temukan.
+
+  - Trade context: Krugman, Melitz, Grossman & Helpman, Bernard, Kee, Cadot
+
+  - General equilibrium: Hertel, Horridge, McKibbin, Dixon, Costinot
+
+  - Indonesian context: Sjoholm, Hill, Aswicahyono, Patunru
+
+- Bisa juga tanya dosen
+
+---
+
+### Mulai dari mana?
+
+- *report* lembaga penting seperti IMF, World Bank dan Kementerian/Lembaga.
+
+- *textbook* dan referensinya.
+
+- Google (scholar) sangat berguna karena repositori-nya sangat luas. Namun harus agak berhati-hati. Pastikan yang anda sitasi adalah yang *peer-reviewed*.
+
+- Mulai dari wikipedia jika anda bener-bener newb juga boleh. Jangan lupa lihat sitasi yang ada di Wikipedia, jangan Wikipedianya langsung ya.
+
+- Jika ragu, tanya pembimbing anda.
+
+---
+
+{{< slide background-image="aaa.PNG" >}}
+
+---
+
+### butuh berapa referensi?
+
+- *Rule of thumb* saya: minimal 10 referensi utama di 5 tahun terakhir, tentang metode.
+
+- Dari 10 itu, ambil referensi mereka yang paling relevan (cek abstrak).
+
+- Gunakan referensi lain untuk *setting* konteks.
+  - Misalnya, saya pake [Patunru dan Rahardja (2015)](https://think-asia.org/handle/11540/6410) untuk pembukaan saja, bukan metodenya.
+
+- Tapi jumlahnya kira-kira aja. Sebaiknya tanya pembimbing.
+
+---
+
+### Menggunakan *reference manager*
+
+- *Reference manager* adalah piranti lunak yang sangat membantu dalam me-*manage* daftar pustaka kita.
+
+- Dengan *Reference manager*, kita bisa dengan cepat melakukan sitasi dan membuat daftar pustaka dengan format yang kita inginkan.
+
+- *Reference manager* juga membantu kita mengelompokan dan memasang tag di referensi-referensi kita.
+
+- Zotero dan Mendeley termasuk *software* gratisan yang paling terkenal. Google Scholar Library juga layak coba
+
+---
+
+### Menggunakan google scholar
+
+<p style="font-size:30px">gunakan AND atau & untuk irisan, dan OR untuk *union* </p>
+
+```python
+Indonesia AND Australia # will show only Indonesia & AUstralia included
+```
+```python
+Indonesia OR Australia # will show results also when only one of them is present
+```
+
+---
+
+### Menggunakan google scholar
+
+<p style="font-size:30px">gunakan tanda petik untuk mencari satu rangkaian kata</p>
+
+```python
+"the case of indonesia"
+```
+<p style="font-size:30px">gunakan author:"nama-author" untuk mencari karya peneliti tersebut</p>
+
+```python
+author:"Costinot"
+```
+
+---
+
+### Menggunakan google scholar
+
+- pakai tanda bintang untuk mencari lanjutan. Misalnya, `indust*` akan mencarikan `industri`, `industry`, `industrial` dan `industrialisasi`.
+
+- gunakan tanda tanya untuk men
+
+---
+
+### Kesimpulan
+
+- Jika bingung, tanya pembimbing
+
+---
+
+## References
+- Lange, Cheryl. (N.D.). [Writing your literature review](https://www.student.uwa.edu.au/__data/assets/pdf_file/0011/2521658/3_Write_literature_review_sem1.pdf?utm_content=bufferbbda3&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer). *Studysmarter research series*. The University of Western Australia.
+
+- Rowland, DR. (N.D.). [Reviewing the literature: a short guide for research students](https://my.uq.edu.au/files/11020/guide-literature-review-research-students.pdf?utm_content=buffer0f227&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer). The University of Queensland.

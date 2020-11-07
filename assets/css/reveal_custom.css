@@ -1,0 +1,47 @@
+.reveal {
+  font-family: 'Cherry Swash', cursive;
+  font-size: 2.2em;
+}
+
+.reveal section h1,
+.reveal section h2,
+.reveal section h3 {
+  font-family: 'Calistoga', cursive;
+  color: #76eb16;
+}
+
+.reveal section h4,
+.reveal section h5,
+.reveal section h6 {
+  color: #b1374c;
+}
+
+.reveal a:link,
+.reveal a:hover,
+.reveal a:active {
+    color: #DD8D29; /*Fantastic Mr. Fox */
+    text-decoration: none;
+}
+
+/* visited link */
+.reveal a:visited {
+    color: #618994; /* gray */
+    text-decoration: none;
+}
+
+/* mouse over link */
+.reveal a:hover {
+    color: #46ACC8;
+}
+
+.reveal .small {
+  font-family: "Raleway";
+  font-size: 0.5em;
+  font-weight: normal;
+}
+
+.reveal .table {
+  font-family: "Raleway";
+  font-size: 0.7em;
+  font-weight: normal;
+}
