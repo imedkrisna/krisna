@@ -26,6 +26,20 @@ PhD Candidate in Economics
 
 ---
 
+### A bit about me
+
+- PhD student at Crawford School of Public Policy, Australian National University.
+  - My working thesis is the impact of trade and investment policy to Indonesian firms.
+
+- Lecturer at [Politeknik APP Jakarta](https://poltekapp.ac.id)
+  - Statistics and international finance
+
+- Teaching Assistant includes:
+  - PPIE, UI: Macroeconomics 2, Microeconomics 2
+  - CBE, ANU: Macro 3, Micro 2, Applied forcasting
+
+---
+
 {{< slide class="small" >}}
 
 ## beberapa riset dan publikasi
