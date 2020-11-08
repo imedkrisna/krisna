@@ -28,6 +28,7 @@ Postingan ini khusus buat contekan belajaran waktu nyoba-nyoba. Akan coba dibagi
 - [Kode icons buat html](https://html-css-js.com/html/character-codes/icons/)
 - [academic theme](https://sourcethemes.com/academic/templates/)
 - [adding equation labeling in hugo academic theme](https://krisna.netlify.app/post/mathjax/)
+- [free svgs](https://undraw.co/)
 
 ### Python
 - [Contekan grafik pakai Seaborn](https://seaborn.pydata.org/tutorial.html)
