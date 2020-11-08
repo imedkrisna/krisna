@@ -1,7 +1,7 @@
 
 
-@import url('https://fonts.googleapis.com/css2?family=Cherry+Swash&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Calistoga&display=swap');
+<style>@import url('https://fonts.googleapis.com/css2?family=Cherry+Swash&display=swap');</style>
+<style>@import url('https://fonts.googleapis.com/css2?family=Calistoga&display=swap');</style>
 
 .reveal {
   font-family: 'Cherry Swash', cursive;
