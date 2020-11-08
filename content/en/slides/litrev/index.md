@@ -227,7 +227,7 @@ Kita bisa mulai mencari menggunakan kata kunci Y atau X, atau keduanya.
 
 ---
 
-{{< slide background-image="media/aaa.PNG" >}}
+{{< slide background-image="/media/aaa.PNG" >}}
 
 ---
 
