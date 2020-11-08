@@ -26,7 +26,7 @@ PhD Candidate in Economics
 
 ---
 
-### A bit about me
+### A bit about me 😃
 
 - PhD student at Crawford School of Public Policy, Australian National University.
   - My working thesis is the impact of trade and investment policy to Indonesian firms.
@@ -42,7 +42,7 @@ PhD Candidate in Economics
 
 {{< slide class="small" >}}
 
-## beberapa riset dan publikasi
+## beberapa riset dan publikasi 😎
 
 - {{< cite page="/publication/bies" view="4" >}}
 - {{< cite page="/publication/ppia" view="4" >}}
@@ -52,7 +52,7 @@ PhD Candidate in Economics
 
 ---
 
-### Tentang hari ini
+### Tentang hari ini 👀
 
 - Tips and trick
 - Some tools
@@ -64,7 +64,7 @@ Silakan gunakan raise hand atau chat jika ingin bertanya di tengah jalan
 
 {{< slide class="lol" >}}
 
-### First up: a quiz
+### First up: a quiz 🤣
 
 please navigate to:
 
@@ -94,7 +94,7 @@ Mulai memilih!
 
 ---
 
-### Bayangkan kasus berikut ini
+### Bayangkan kasus berikut ini 🤔
 
 {{< fragment >}} Pada suatu sore saya tengok twitter, tiba-tiba orang-orang di *timeline* pada ngetwit tentang di-*pehape* "pasal lima ayat satu"
 
@@ -362,9 +362,9 @@ Indonesia AND Trade 2010..2018
 
 - Tinjauan literatur sejatinya adalah investigasi
 
-- Literatur sangat penting untuk memposisikan diri kita di literatur
+- Kata kuncinya adalah relevan!
 
-- Capek, namun melatih cara berpikir, dan menulis keseluruhan skripsi
+- Gunakan semua resources yang ada!
 
 - Jika bingung, tanya pembimbing
 
