@@ -44,6 +44,8 @@ PhD Candidate in Economics
 - Some tools
 - diskusi
 
+Silakan gunakan raise hand atau chat jika ingin bertanya di tengah jalan
+
 ---
 
 {{< slide class="lol" >}}
@@ -345,6 +347,10 @@ Indonesia AND Trade 2010..2018
 ### Kesimpulan
 
 - Tinjauan literatur sejatinya adalah investigasi
+
+- Literatur sangat penting untuk memposisikan diri kita di literatur
+
+- Capek, namun melatih cara berpikir, dan menulis keseluruhan skripsi
 
 - Jika bingung, tanya pembimbing
 
