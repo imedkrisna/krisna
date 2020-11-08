@@ -1,8 +1,8 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: "Tinjauan Literatur"
-event: "Kuliah Tamu Seminar Ekonomi Internasional di Universitas Indonesia"
+title: "Guest lecture at Universitas Indonesia on literature review"
+event: "Guest lecture at Universitas Indonesia on literature review in International Economics Seminar"
 event_url:
 location:
 address:
@@ -11,8 +11,8 @@ address:
   region:
   postcode:
   country:
-summary: "Saya diundang oleh pengajar Seminar Ekonomi Internasional untuk memberikan kuliah tamu mengenai cara melakukan tinjauan literatur. Saya menggunakan beberapa sumber dari kampus di Australia dan pengalaman saya sendiri sebagai seorang peneliti"
-abstract: "Saya diundang oleh pengajar Seminar Ekonomi Internasional untuk memberikan kuliah tamu mengenai cara melakukan tinjauan literatur. Saya menggunakan beberapa sumber dari kampus di Australia dan pengalaman saya sendiri sebagai seorang peneliti"
+summary: "I am invited by the lecturer of International Economics Seminar to give a guess lecture on how to conduct a literature review. I use some resources from Australian University and my own experience"
+abstract: "I am invited by the lecturer of International Economics Seminar to give a guess lecture on how to conduct a literature review. I use some resources from Australian University and my own experience. Slides in Indonesian"
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.

@@ -1,7 +1,7 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: "Tinjauan Literatur"
+title: "Kuliah tamu di Universitas Indonesia tentang tinjauan literatur"
 event: "Kuliah Tamu Seminar Ekonomi Internasional di Universitas Indonesia"
 event_url:
 location:
