@@ -1,10 +1,9 @@
 
 
-/*.reveal {
-  font-family: 'Cherry Swash', cursive;
+.reveal {
+/*  font-family: 'Cherry Swash', cursive; */
   font-size: 2.2em;
-} */
-
+}
 .reveal section h1,
 .reveal section h2,
 .reveal section h3 {
