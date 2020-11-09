@@ -60,6 +60,10 @@ PhD Candidate in Economics
 
 Silakan gunakan raise hand atau chat jika ingin bertanya di tengah jalan
 
+Slide dapat diakses di [blog saya](https://krisna.netlify.app/), [krisna.netlify.app/slides/litrev/](https://s.id/utNne)
+
+pake ini juga bisa $\rightarrow$ https://s.id/utNne
+
 ---
 
 {{< slide class="lol" >}}
