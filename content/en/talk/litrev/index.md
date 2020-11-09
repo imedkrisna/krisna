@@ -16,12 +16,12 @@ abstract: "I am invited by the lecturer of International Economics Seminar to gi
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
-date: 2020-11-09T11:44:06+15:00
-date_end: 2020-11-09T11:44:06+17:00
+date: 2020-11-16T11:44:06+15:00
+date_end: 2020-11-16T11:44:06+17:00
 all_day: false
 
 # Schedule page publish date (NOT talk date).
-publishDate: 2020-11-08T11:44:06+11:00
+publishDate: 2020-11-15T11:44:06+11:00
 
 authors: [admin]
 tags: [economics, trade, academics]
