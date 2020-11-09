@@ -98,23 +98,7 @@ Mulai memilih!
 
 ---
 
-### Bayangkan kasus berikut ini 🤔
-
-{{< fragment >}} Pada suatu sore saya tengok twitter, tiba-tiba orang-orang di *timeline* pada ngetwit tentang di-*pehape* "pasal lima ayat satu"
-
-{{< /fragment >}}  
-
-{{< fragment >}} Untuk *engage* dengan warga twitter, saya melakukan tinjauan literatur:
-
-{{< /fragment >}}  
-{{< fragment >}} Saya scroll-scroll timeline
-
-{{< /fragment >}}
-{{< fragment >}} dan tanya teman-teman twitter
-
-{{< /fragment >}}
-
-{{< fragment >}} Setelah paham bahwa referensinya adalah omnibus law, baru saya bisa ikutan ngetwit "pasal lima ayat satu" juga {{< /fragment >}}
+![](/media/mathmeme.jpg)
 
 ---
 
