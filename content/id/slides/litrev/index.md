@@ -139,7 +139,18 @@ Mulai memilih!
   - terupdate
   - penting
 
-- membantu mengarahkan yang baru mau terjun ke bidang kita!
+- Bonus: membantu mengarahkan yang baru mau terjun ke bidang kita!
+
+---
+
+### Beberapa kesalahan pemula
+
+| Problem | Komentar |
+| ------- | -------- |
+| Kurang terorganisir | fokus ke isu, bukan paper. Gunakan mindmap dapat membantu |
+| Kurang relevan | Seminal paper biasanya jadul. Penting, tapi fokus ke yang lebih baru |
+| Kurang kritis | Ingat, anda bukan <ins>hanya</ins> merangkum, tapi juga mencari *gap* |
+| Takut salah | Mahasiswa adalah tempatnya salah. Yang penting kita belajar dari situ |
 
 ---
 
@@ -240,6 +251,19 @@ Kita bisa mulai mencari menggunakan kata kunci Y atau X, atau keduanya.
 - Jika ragu, tanya pembimbing anda.
 
 ---
+
+### Final tips
+
+- Tinjauan literatur sangat penting dilakukan meskipun skripsi anda tidak punya bab berjudul "tinjauan literatur"
+
+- Baca bab *literature review* orang lain, dan coba bedah strukturnya
+
+- Minta tolong orang lain membaca bab *literature review* anda (kalau ada)
+
+- tanya dosen / pembimbing / teman anda yang pintar
+
+---
+
 
 {{< slide background-image="/media/aaa.PNG" >}}
 
