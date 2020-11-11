@@ -8,7 +8,7 @@ location: "Zoom and Balai Diklat Industri Surabaya Youtube Channel"
 address:
   street:
   city: Surabaya
-  region: Jawa Barat
+  region: Jawa Timur
   postcode:
   country: Indonesia
 summary: "Dalam kesempatan ini, saya berbagi pengalaman saya dalam mencari beasiswa S2 dan S3 kepada rekan-rekan saya di Kementerian Perindustrian"
