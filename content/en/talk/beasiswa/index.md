@@ -8,7 +8,7 @@ location: "Zoom and Balai Diklat Industri Surabaya Youtube Channel"
 address:
   street:
   city: Surabaya
-  region: Jawa Timur
+  region: East Java
   postcode:
   country: Indonesia
 summary: "In this talk, I share my experience with my colleagues in The Ministry in search for scholarships. The talk was in Bahasa Indonesia."
