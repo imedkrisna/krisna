@@ -104,7 +104,13 @@ Mulai memilih!
 
 ### Untuk menulis 10 ribu kata, anda harus membaca 100 ribu kata!
 
-{{< fragment >}} Baca $\Rightarrow$ Tulis $\Rightarrow$ Bicara {{< /fragment >}}
+{{< fragment >}} $$\max_{B,T,S} \{f(B,T,S): B+T+S \leq 24\}$$ {{< /fragment >}}
+
+{{< fragment >}} $B>T>S$ {{< /fragment >}}
+
+</Br>
+
+{{< fragment >}} Baca $\Rightarrow$ Tulis $\Rightarrow$ Speak {{< /fragment >}}
 
 </Br>
 
@@ -112,7 +118,7 @@ Mulai memilih!
 
 </Br>
 
-{{< fragment >}} hehe {{< /fragment >}}
+{{< fragment >}} hehe 😊 {{< /fragment >}}
 
 ---
 
