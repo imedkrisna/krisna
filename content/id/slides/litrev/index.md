@@ -80,6 +80,10 @@ Mulai memilih!
 
 ---
 
+<iframe src="https://embed.polleverywhere.com/multiple_choice_polls/y9pHFzXBSDUmB6NwVHpJQ?controls=none&short_poll=true" width="800" height="600" frameBorder="0"></iframe>
+
+---
+
 {{< slide background-image="/media/litrev.svg" >}}
 
 # Literature Review!
