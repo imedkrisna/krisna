@@ -84,6 +84,14 @@ Mulai memilih!
 
 ---
 
+<iframe src="https://embed.polleverywhere.com/multiple_choice_polls/ko6FJlIrIly8NQuc7nJtd?controls=none&short_poll=true" width="800" height="600" frameBorder="0"></iframe>
+
+---
+
+<iframe src="https://embed.polleverywhere.com/multiple_choice_polls/t6dnA54dyePbWJ1IAJluv?controls=none&short_poll=true" width="800" height="600" frameBorder="0"></iframe>
+
+---
+
 {{< slide background-image="/media/litrev.svg" >}}
 
 # Literature Review!
