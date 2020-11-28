@@ -31,6 +31,8 @@ projects: []
 Sedikit statistik tentang RCEP. Untuk menghubung-hubungkan dengan [Global Value Chain](https://theconversation.com/kebijakan-untuk-meningkatkan-partisipasi-perusahaan-perusahaan-indonesia-dalam-rantai-pasok-global-150062), saya akan menggunakna klasifikasi Stage of Production (SoP) dari UNCTAD. Klasifikasinya antara lain:
 
 
+
+
 <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -100,9 +102,7 @@ Sedikit statistik tentang RCEP. Untuk menghubung-hubungkan dengan [Global Value 
 
 
 
-
 Statistiknya sebagai berikut:
-
 
 
 
@@ -179,11 +179,6 @@ Statistiknya sebagai berikut:
 Saya membandingkan juga dengan total perdagangan Indonesia dengan dunia. Ada RCEP countries di `World` jadi tentu saja angka-angkanya lebih banyak. Jadi `World`-nya tidak saya kurangkan dengan `RCEP`. `World` itu total ekspor impor Indonesia. Oh ya, data-data ini berdasarkan statistik perdagangan tahun 2018 yang dikumpulkan oleh World Bank.
 
 Sepertinya saya sudah pernah menulis pentingnya peran impor bagi produksi Indonesia karena [sebagian besar impor Indonesia adalah produk-produk penunjuang produksi](https://krisna.netlify.app/post/imporinput/). Hal ini terefleksi juga di perdagangan Indonesia di tahun 2018 ini, di mana `Consumption goods` hanya sekitar 23% dari total Impor Indonesia, yaitu
-
-
-```python
-print(str(df2.loc[3,'Consumption goods']/df2.loc[3,'All goods']*100)+' %')
-```
 
     23.83376244573637 %
     
