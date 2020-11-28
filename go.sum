@@ -5,6 +5,8 @@ github.com/wowchemy/wowchemy-hugo-modules/netlify-cms-academic v0.0.0-2020110723
 github.com/wowchemy/wowchemy-hugo-modules/netlify-cms-academic v0.0.0-20201107234021-93ce3d22adfc/go.mod h1:TU3QDPUdBSQnvDP5QVCwjAkBIdVMS/bKFA8jr3eI5AY=
 github.com/wowchemy/wowchemy-hugo-modules/netlify-cms-academic v0.0.0-20201113213807-9ee65a120fe8 h1:md77MNLWh5zN/D+kQhrk1HxoWeOR31RkSqaNBrRLN+M=
 github.com/wowchemy/wowchemy-hugo-modules/netlify-cms-academic v0.0.0-20201113213807-9ee65a120fe8/go.mod h1:TU3QDPUdBSQnvDP5QVCwjAkBIdVMS/bKFA8jr3eI5AY=
+github.com/wowchemy/wowchemy-hugo-modules/netlify-cms-academic v0.0.0-20201127232226-e0d593e68892 h1:PXfWoCmgnkYZSUcJonrsC26VAZ3RioozGsqxg2BKDko=
+github.com/wowchemy/wowchemy-hugo-modules/netlify-cms-academic v0.0.0-20201127232226-e0d593e68892/go.mod h1:TU3QDPUdBSQnvDP5QVCwjAkBIdVMS/bKFA8jr3eI5AY=
 github.com/wowchemy/wowchemy-hugo-modules/wowchemy v0.0.0-20201102170205-80fce98e72a9 h1:Xlur4C1LriYTITcDsTo5Sl/eyxyspJhccS0EYXcRacA=
 github.com/wowchemy/wowchemy-hugo-modules/wowchemy v0.0.0-20201102170205-80fce98e72a9/go.mod h1:H22qfH9qj3FWwsk7+bAZpmT24yRGNQURah2/IRwjbn8=
 github.com/wowchemy/wowchemy-hugo-modules/wowchemy v0.0.0-20201106215012-eb76e56841f8 h1:M/vkofRJdtMp0L967Wprqp7KF7IrtuPxPWXmV7iKTfg=
@@ -13,3 +15,5 @@ github.com/wowchemy/wowchemy-hugo-modules/wowchemy v0.0.0-20201107234021-93ce3d2
 github.com/wowchemy/wowchemy-hugo-modules/wowchemy v0.0.0-20201107234021-93ce3d22adfc/go.mod h1:H22qfH9qj3FWwsk7+bAZpmT24yRGNQURah2/IRwjbn8=
 github.com/wowchemy/wowchemy-hugo-modules/wowchemy v0.0.0-20201113213807-9ee65a120fe8 h1:8kEOyQzH8x2FI/FSSdOS6N+a/3DvCXB2WaSR04EBHiY=
 github.com/wowchemy/wowchemy-hugo-modules/wowchemy v0.0.0-20201113213807-9ee65a120fe8/go.mod h1:H22qfH9qj3FWwsk7+bAZpmT24yRGNQURah2/IRwjbn8=
+github.com/wowchemy/wowchemy-hugo-modules/wowchemy v0.0.0-20201127232226-e0d593e68892 h1:yl6x54FxYFApKeqMkT8Iuu2l6DEWmKeQj9s0NHNkKfU=
+github.com/wowchemy/wowchemy-hugo-modules/wowchemy v0.0.0-20201127232226-e0d593e68892/go.mod h1:H22qfH9qj3FWwsk7+bAZpmT24yRGNQURah2/IRwjbn8=
