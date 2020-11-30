@@ -22,6 +22,8 @@ Postingan ini khusus buat contekan belajaran waktu nyoba-nyoba. Akan coba dibagi
 - [table with kableExtra](http://haozhu233.github.io/kableExtra/awesome_table_in_html.html#Installation)
 - [statistik dasar](https://uc-r.github.io/)
 - [international trade network](https://github.com/MatthewSmith430/ITNr)
+- [World Bank API](https://blogs.worldbank.org/opendata/accessing-world-bank-data-apis-python-r-ruby-stata)
+- [UNCOMTRADE API aca comtrader](https://cran.r-project.org/web/packages/comtradr/vignettes/comtradr-vignette.html)
 
 ### html and blog
 - [cara bikin multi-kolom](https://stackoverflow.com/questions/31753897/2-column-section-in-r-markdown)
