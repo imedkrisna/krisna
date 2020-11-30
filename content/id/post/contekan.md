@@ -39,6 +39,7 @@ Postingan ini khusus buat contekan belajaran waktu nyoba-nyoba. Akan coba dibagi
 - [using pivot and melt in pandas](https://stackoverflow.com/questions/22127569/opposite-of-melt-in-python-pandas)
 - [R di Jupyter (dan konten2 pada umumnya)](https://datatofish.com/r-jupyter-notebook/)
 - [javascript for coda toggle](http://blog.nextgenetics.net/?e=102), also [this one](https://chris-said.io/2016/02/13/how-to-make-polished-jupyter-presentations-with-optional-code-visibility/)
+- [night mode in jupyter notebook](https://medium.com/@rbmsingh/making-jupyter-dark-mode-great-5adaedd814db)
 
 ### Dataset
 - [trade data bulk download WTO](https://www.wto.org/english/res_e/statis_e/trade_datasets_e.htm)
