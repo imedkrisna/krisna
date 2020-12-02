@@ -1,7 +1,7 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: "Model konsumsi intertemporal 3 periode: bekerja, pensiun, dan akhirat."
+title: "Revisiting 3-period intertemporal consumption model: work, retire, afterlife"
 subtitle: ""
 summary: ""
 authors: [admin]
@@ -28,15 +28,11 @@ image:
 projects: []
 ---
 
-Dulu jaman saya masih ngeblog di medium, saya pernah menulis tentang model intertemporal [3-periode](https://medium.com/@imedkrisna/extending-a-simple-2-period-consumption-problem-the-third-period-afterlife-9223cf5467d): bekerja, pensiun, meninggal. Kali ini saya mau coba menulis ulang tapi di blog yang baru di mana saya bisa pakai jupyter notebook jadinya bisa diitungin secara otomatis. gak harus pakek tulis tangan.
+I discussed this theme in my [medium blog]()(https://medium.com/@imedkrisna/extending-a-simple-2-period-consumption-problem-the-third-period-afterlife-9223cf5467d). I recycle this with a bit of an addition to a more generalised utility function and exploiting python this time so I don't have to do it by hand, which is nice. One reason why I left Medium ha ha ha.
 
-## Bekerja dan pensiun.
+## Work and retirement
 
-Model intertemporal ini biasa diajarkan di makroekonomi level S1 tahun akhir atau di level master. Intinya, model ini mau kasih liat rasionalitas _consumption smoothing_, yaitu fenomena di mana anda akan menjaga konsumsi agar tidak fluktuatif. Misalnya hari ini kejatuhan duren, daripada semua dikonsumsi, orang akan cenderung menabung supaya konsumsi esok gak terlalu jomplang. Pun sebaliknya, jika seseorang tau di masa depan akan dapat uang banyak, maka orang tersebut akan meminjam dan mengembalikan pinjamannya setelah uangnya datang. Inilah salah satu fungsi penting sektor perbankan, meminjamkan ke yang butuh duit, menyediakan tabungan buat yang belum butuh duit. Setidaknya begitu menurut teori.
-
-Kalo di makro, salah satu model yang penting adalah soal pensiun. Yha penting karena banyak negara maju sudah mencapai _ageing population_ jadi kudu dipikir dari sekarang. Ini salah satu model _entry level_ yang cukup sederhana. Ketika seseorang mengambil keputusan untuk konsumsi atau menabung, ia dihadapkan ke dalam pilihan untuk menentukan 2 periode konsumsi. Periode 1 adalah ketika ia masih bekerja dan menerima gaji sebesar $Y$. Gaji tersebut dapat ia gunakan untuk konsumsi sebesar $C_1$, dan/atau menabung sebanyak $s$.
-
-Di periode 2, ia akan pensiun dan kehilangan pemasukannya. Namun demikian, ia masih harus konsumsi. Duitnya dari mana? Ya dari tabungan dongs! Ia akan menghabiskan tabungannya dan konsumsi sebanyak $C_2=(1+r)s$ di mana $r$ adalah bunga yang ia dapat dari tabungannya. Problem yang ia hadapi adalah sebagai berikut:
+It started with a standard, very simple undergrad style intertemporal consumption model which demonstrate _consumption smoothing_
 
 $$
 \begin{equation}
@@ -48,13 +44,9 @@ s.t.: \ & C_1 = Y - s \\
 \end{equation}
 $$
 
-Persamaan di atas dapat diselesaikan dengan menggunakan Lagrange dan euler equation. Seluruh tabungannya akan dihabiskan di  periode 2 karena setelah periode 2 ia akan mati dan tidak perlu lagi memikirkan optimisasi apapun.
-
-Tapi apakah benar demikian? Tentu saja persamaan itu hanya (sebagian) benar jika dia adalah atheis!
+I extend the above model with a third period: the afterlife.
 
 ## Bekerja, pensiun dan masuk surga.
-
-Sebagai bagian dari masyarakat yang agamis, tentu saja saya agak tertarik memperhitungkan soal kehidupan setelah mati. Bagaimana saya bisa pergi ke surga jika semasa hidup hanya berfoya-foya memikirkan konsumsi? Tentu saja semasa hidup kita harus menyisihkan sebagian pemasukan kita untuk bersedekah menjalankan perintah agama. Model sederhana di atas saya tambah jadi 3 periode, di mana di periode ke-3 kita akan mengonsumsi amal perbuatan kita ketika di dunia. Seberapa banyak kita bisa konsumsi di surga? Tergantung seberapa banyak kita menyisihkan sebagian rejeki kita untuk amal.
 
 Modelnya diekstensi jadi:
 
@@ -216,7 +208,7 @@ tabel
 
 
 
-Dengan parameter di atas, dapat dilihat bahwa model ini mengarah ke orang yang sangat-sangat menjunjung tinggi _comsumption smoothing_. Penghasilan yang ia dapatkan $(Y)$ dibagi rata untuk konsumsi, menabung dan juga beramal. Kombinasi ini memiliki total utility yang so pasti maksimal. Ingat, yang dimaksimalkan bukanlah $u$ untuk masing-masing periode tetapi $u(C_1)+\beta u(C_2)+ \delta u(C_3).
+Dengan parameter di atas, dapat dilihat bahwa model ini mengarah ke orang yang sangat-sangat menjunjung tinggi _comsumption smoothing_. Penghasilan yang ia dapatkan $(Y)$ dibagi rata untuk konsumsi, menabung dan juga beramal. Kombinasi ini memiliki total utility yang so pasti maksimal. Ingat, yang dimaksimalkan bukanlah $u$ untuk masing-masing periode tetapi $u(C_1)+\beta u(C_2)+ \delta u(C_3)$.
 
 Angka ini bisa berubah tidak hanya berdasarkan karakteristik si individu (alias parameter $\beta$ dan $\delta$) tetapi juga tergantung dengan kondisi di luar seperti besarnya tingkat suku bunga $r$. seandainya saya naikin suku bunga, _ceteris paribus_, kira-kira apa yang akan terjadi?
 
@@ -363,8 +355,3 @@ Menurut model ini, maka yang terjadi adalah kita akan menghabiskan tabungan kita
 Jangan lupa bahwa ini model yang sangat sederhana sekali dan banyak _caveat_-nya. Saya sudah tuliskan beberapa di blog medium di atas. Bagaimanapun juga, banyak juga peluang untuk memperlebarnya. Misalnya, dibikin $p$ boleh negatif dengan konsekuensi $Y$ naik, yang bisa kita terjemahkan sebagai perilaku korupsi: Berdosa demi meningkatkan pendapatan dan akan dibayar di neraka nanti. Ini cuma satu contoh. Ada banyak aplikasi lain dengan model yang lebih ribet yang bisa kita buat. hahha.
 
 Yaudah segini dulu. semoga tulisan ini menghibur dan menginspirasi anda untuk beramal dan berbuat kebajikan bagi masyarakat!
-
-
-```python
-
-```
