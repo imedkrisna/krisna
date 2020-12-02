@@ -216,7 +216,7 @@ tabel
 
 
 
-Dengan parameter di atas, dapat dilihat bahwa model ini mengarah ke orang yang sangat-sangat menjunjung tinggi _comsumption smoothing_. Penghasilan yang ia dapatkan $(Y)$ dibagi rata untuk konsumsi, menabung dan juga beramal. Kombinasi ini memiliki total utility yang so pasti maksimal. Ingat, yang dimaksimalkan bukanlah $u$ untuk masing-masing periode tetapi $u(C_1)+\beta u(C_2)+ \delta u(C_3).
+Dengan parameter di atas, dapat dilihat bahwa model ini mengarah ke orang yang sangat-sangat menjunjung tinggi _comsumption smoothing_. Penghasilan yang ia dapatkan $(Y)$ dibagi rata untuk konsumsi, menabung dan juga beramal. Kombinasi ini memiliki total utility yang so pasti maksimal. Ingat, yang dimaksimalkan bukanlah $u$ untuk masing-masing periode tetapi $u(C_1)+\beta u(C_2)+ \delta u(C_3)$.
 
 Angka ini bisa berubah tidak hanya berdasarkan karakteristik si individu (alias parameter $\beta$ dan $\delta$) tetapi juga tergantung dengan kondisi di luar seperti besarnya tingkat suku bunga $r$. seandainya saya naikin suku bunga, _ceteris paribus_, kira-kira apa yang akan terjadi?
 
@@ -363,8 +363,3 @@ Menurut model ini, maka yang terjadi adalah kita akan menghabiskan tabungan kita
 Jangan lupa bahwa ini model yang sangat sederhana sekali dan banyak _caveat_-nya. Saya sudah tuliskan beberapa di blog medium di atas. Bagaimanapun juga, banyak juga peluang untuk memperlebarnya. Misalnya, dibikin $p$ boleh negatif dengan konsekuensi $Y$ naik, yang bisa kita terjemahkan sebagai perilaku korupsi: Berdosa demi meningkatkan pendapatan dan akan dibayar di neraka nanti. Ini cuma satu contoh. Ada banyak aplikasi lain dengan model yang lebih ribet yang bisa kita buat. hahha.
 
 Yaudah segini dulu. semoga tulisan ini menghibur dan menginspirasi anda untuk beramal dan berbuat kebajikan bagi masyarakat!
-
-
-```python
-
-```
