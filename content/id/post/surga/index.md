@@ -59,16 +59,13 @@ Sebagai bagian dari masyarakat yang agamis, tentu saja saya agak tertarik memper
 Modelnya diekstensi jadi:
 
 $$
-\begin{equation}
-\max_{C_1,C_2} u(C_1)+\beta u(C_2)+\delta u(C_3) \\
-\begin{split}
-s.t.: \ & C_1 = Y -s -p \\
-& C_2 = s(1+r) \\
-& C_3 = p(1+x) \\
-& s \geq 0
-\end{split}
-\end{equation}
+\max_{C_1,C_2} u(C_1)+\beta u(C_2)+\delta u(C_3)
 $$
+$$s.t.: C_1 = Y -s -p$$
+$$C_2 = s(1+r)$$
+$$C_3 = p(1+x)$$
+$$s \geq 0$$
+
 
 Seperti dapat dilihat, kali ini kita punya 3 $C$, di mana $C_3$ adalah konsumsi di akherat. Ketika masih di periode satu, kita punya opsi tidak hanya menyisihkan pendapatan $Y$ untuk menabung sebanyak $s$, tapi juga beramal sebanyak $p$. Tidak seperti tabungan, amal tersebut tidak dapat kita gunakan untuk konsumsi di periode 2. Akan tetapi, kita akan menikmati hasil amal kita ketika sudah meninggal. Di akherat, kita akan konsumsi sebanyak $p(1+x)$ di mana $x$ adalah seberapa besar amalam kita berlipat ganda di surga nanti.
 
@@ -81,13 +78,12 @@ $$
 Optimisasinya tidak berbeda jauh dengan dua periode:
 
 $$
-\mathcal{L}(C_t)=u(C_1)+\beta u(C_2)+\delta u(C_3) + \lambda (Y - C_1 - \frac{C_2}{(1+r)} - \frac{C_3}{1+x}) \\
-\begin{split}
-F.O.C.: \ & \frac{d\mathcal{L}}{dC_1}=u'(C_1)-\lambda=0 \\
-& \frac{d\mathcal{L}}{dC_2}=\beta u'(C_2)-\lambda \frac{1}{(1+r)}=0 \\
-& \frac{d\mathcal{L}}{dC_3}=\delta u'(C_3)-\lambda \frac{1}{(1+x)}=0
-\end{split}
+\mathcal{L}(C_t)=u(C_1)+\beta u(C_2)+\delta u(C_3)+\lambda \left(Y-C_1-\frac{C_2}{(1+r)}-\frac{C_3}{1+x}\right)
 $$
+$$F.O.C.: \frac{d\mathcal{L}}{dC_1}=u'(C_1)-\lambda=0$$
+$$\frac{d\mathcal{L}}{dC_2}=\beta u'(C_2)-\lambda \frac{1}{(1+r)}=0$$
+$$\frac{d\mathcal{L}}{dC_3}=\delta u'(C_3)-\lambda \frac{1}{(1+x)}=0$$
+
 
 Dari `F.O.C.` yang pertama didapat:
 
@@ -97,14 +93,10 @@ $$
 
 Ganti semua $\lambda$:
 
-$$
-\begin{align*}
-u'(C_2)&=\frac{u'(C_1)}{\beta (1+r)} \\
-u'(C_3)&=\frac{u'(C_1)}{\delta (1+x)}
-\end{align*}
-$$
+$$u'(C_2)=\frac{u'(C_1)}{\beta (1+r)}$$
+$$u'(C_3)=\frac{u'(C_1)}{\delta (1+x)}$$
 
-Supaya bisa diitung dengan mudah, kita kasihkan standard CRRA [_utility function_ ](https://brilliant.org/wiki/utility-functions/#:~:text=A%20utility%20function%20is%20a,something%2C%20and%20it%20is%20relative.) $u(C_t)=\frac{C_t^{1-\gamma}}{1-\gamma}$. Dengan begini, problem 3 periode di atas dapat kita selesaikan. Kita bisa saja selesaikan dengan tidak terlalu sulit menggunakan pensil dan kertas, tapi kali ini mari kita manfaatkan Python untuk menghitung kelanjutan dari persamaan di atas. Pertama definisikan fungsi utilitas dan turunannya:
+Supaya bisa diitung dengan mudah, kita kasihkan standard CRRA [_utility function_ ](https://brilliant.org/wiki/utility-functions/#:~:text=A%20utility%20function%20is%20a,something%2C%20and%20it%20is%20relative.) $$u(C_t)=\frac{C_t^{1-\gamma}}{1-\gamma}$$. Dengan begini, problem 3 periode di atas dapat kita selesaikan. Kita bisa saja selesaikan dengan tidak terlalu sulit menggunakan pensil dan kertas, tapi kali ini mari kita manfaatkan Python untuk menghitung kelanjutan dari persamaan di atas. Pertama definisikan fungsi utilitas dan turunannya:
 
 
 ```python
