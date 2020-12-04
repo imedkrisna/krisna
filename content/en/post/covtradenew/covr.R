@@ -4,6 +4,7 @@ library(tidyverse)
 library(lubridate)
 library(ggplot2)
 library(hrbrthemes)
+setwd("c:/github/krisna/content/en/post/covtradenew")
 expor<-read.csv('Book1.csv') # read the data
 a<-colnames(expor)           # add column names to a for easy rename
 expor<-expor %>%             # rename variable names
