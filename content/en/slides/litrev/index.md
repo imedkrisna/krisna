@@ -3,7 +3,7 @@
 
 title: "Litrev"
 summary: ""
-authors: []
+authors: [admin]
 tags: []
 categories: []
 date: 2020-11-06T21:03:23+11:00
