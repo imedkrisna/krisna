@@ -202,4 +202,24 @@ Hobby [ngeblog](https://krisna.netlify.app), nyanyi, ngefans L'arc~en~Ciel.
 
 ---
 
+### Bagaimana jika tidak ada data yang mendukung cerita kita?
+
+- Cari terus sampai dapat!
+
+- Jika masih tidak ada, be humble!
+
+- Bagaimana jika data yang kita dapatkan malah melawan argumen kita?
+
+{{< fragment >}} then, change your mind {{< /fragment >}}  
+
+</Br>
+
+{{< fragment >}} Menulis adalah proses pendewasaan logika {{< /fragment >}}  
+
+</Br>
+
+{{< fragment >}} *Makes mistakes is an important part of life* {{< /fragment >}}  
+
+---
+
 # The End
