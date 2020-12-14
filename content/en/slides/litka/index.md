@@ -167,6 +167,9 @@ Hobby [ngeblog](https://krisna.netlify.app), nyanyi, ngefans L'arc~en~Ciel.
 - Data tidak harus yang berupa statistik.
   - bisa juga referensi seperti pasal atau argumen orang lain.
 
+- Data harus relevan!
+  - jangan pasang data yang anda ga pake.
+
 - Hati-hati dengan informasi yang partisan.
 
 ---
