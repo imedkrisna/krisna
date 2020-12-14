@@ -20,9 +20,33 @@ slides:
 # data
 #### serta sumber bacaan
 
-Krisna Gupta & Denny Irawan  
+Krisna Gupta ft. Denny Irawan
 Dirlitka PPI Dunia   
 [krisna.netlify.app](https://krisna.netlify.app/)
+
+---
+
+### Siapa tuh Krisna Gupta 👀
+
+Economics PhD Student di Australian National University.  
+
+Double degree Master in Econ dari [UI / VU Amsterdam.](http://ppia.feb.ui.ac.id/en/joint-degree-with-vrije-universiteit-amsterdam/)
+
+Meneliti dampak kebijakan perdagangan dan investasi.  
+
+Dosen [Politeknik APP Jakarta.](https://poltekapp.ac.id/)  
+
+Hobby [ngeblog](https://krisna.netlify.app), nyanyi, ngefans L'arc~en~Ciel.
+
+---
+
+## beberapa riset dan publikasi 😎
+
+- {{< cite page="/publication/bies" view="4" >}}
+- {{< cite page="/publication/ppia" view="4" >}}
+- {{< cite page="/publication/conf2" view="4" >}}
+- {{< cite page="/publication/covppe" view="4" >}}
+- {{< cite page="/publication/iacepa" view="4" >}}
 
 ---
 
