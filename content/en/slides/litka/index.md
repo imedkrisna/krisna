@@ -206,7 +206,7 @@ Hobby [ngeblog](https://krisna.netlify.app), nyanyi, ngefans L'arc~en~Ciel.
 
 - Cari terus sampai dapat!
 
-- Jika masih tidak ada, be humble!
+- Jika masih tidak ada, be humble! Alim == Pendiam
 
 - Bagaimana jika data yang kita dapatkan malah melawan argumen kita?
 
@@ -218,7 +218,7 @@ Hobby [ngeblog](https://krisna.netlify.app), nyanyi, ngefans L'arc~en~Ciel.
 
 </Br>
 
-{{< fragment >}} *Makes mistakes is an important part of life* {{< /fragment >}}
+{{< fragment >}} Makes mistakes is an important part of life {{< /fragment >}}
 
 ---
 
