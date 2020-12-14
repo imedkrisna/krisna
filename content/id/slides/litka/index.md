@@ -20,13 +20,15 @@ slides:
 # data
 #### serta sumber bacaan
 
-Krisna Gupta ft. Denny Irawan
+Krisna Gupta ft. Denny Irawan  
 Dirlitka PPI Dunia   
 [krisna.netlify.app](https://krisna.netlify.app/)
 
 ---
 
 ### Siapa tuh Krisna Gupta 👀
+
+Sering dipanggil Imed  
 
 Economics PhD Student di Australian National University.  
 
@@ -39,6 +41,8 @@ Dosen [Politeknik APP Jakarta.](https://poltekapp.ac.id/)
 Hobby [ngeblog](https://krisna.netlify.app), nyanyi, ngefans L'arc~en~Ciel.
 
 ---
+
+{{< slide class="small" >}}
 
 ## beberapa riset dan publikasi 😎
 
