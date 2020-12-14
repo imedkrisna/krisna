@@ -118,6 +118,7 @@ Dirlitka PPI Dunia
 ### Mengapa kita menggunakan data?
 
 - Data dapat menyampaikan konteks dengan efisien.
+  - pembaca orang sibuk. makanya harus efisien.
 
 - Data sangat *powerful* untuk menyampaikan pesan.
 
