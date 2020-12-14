@@ -28,11 +28,13 @@ Dirlitka PPI Dunia
 
 ### Siapa tuh Krisna Gupta 👀
 
-Sering dipanggil Imed  
+Ketua Komisi Ekonomi.  
 
-Economics PhD Student di Australian National University.  
+Sering dipanggil Imed.  
 
-Double degree Master in Econ dari [UI / VU Amsterdam.](http://ppia.feb.ui.ac.id/en/joint-degree-with-vrije-universiteit-amsterdam/)
+Economics PhD Student di [Australian National University](https://crawford.anu.edu.au/people/phd/krisna-gupta).  
+
+Double degree Master in Econ dari [UI / VU Amsterdam.](http://ppia.feb.ui.ac.id/en/joint-degree-with-vrije-universiteit-amsterdam/)  
 
 Meneliti dampak kebijakan perdagangan dan investasi.  
 
@@ -54,7 +56,7 @@ Hobby [ngeblog](https://krisna.netlify.app), nyanyi, ngefans L'arc~en~Ciel.
 
 ---
 
-### Tentang hari ini
+### Tentang hari ini 👍
 
 - literatur
 
