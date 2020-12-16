@@ -39,6 +39,7 @@ Postingan ini khusus buat contekan belajaran waktu nyoba-nyoba. Akan coba dibagi
 - [free svgs](https://undraw.co/)
 
 ### Python
+- [Time series in python](https://jakevdp.github.io/PythonDataScienceHandbook/03.11-working-with-time-series.html
 - [Contekan grafik pakai Seaborn](https://seaborn.pydata.org/tutorial.html)
 - [GME, paket buat PPLM dari USITC](https://www.usitc.gov/data/gravity/gme.htm), untuk general (ada databasenya) di [sini](https://www.usitc.gov/data/gravity/index.htm)
 - [Bikin paper pakai Jupyter Notebook](https://sylvaindeville.net/2015/07/17/writing-academic-papers-in-plain-text-with-markdown-and-jupyter-notebook/)
@@ -47,6 +48,10 @@ Postingan ini khusus buat contekan belajaran waktu nyoba-nyoba. Akan coba dibagi
 - [javascript for coda toggle](http://blog.nextgenetics.net/?e=102), also [this one](https://chris-said.io/2016/02/13/how-to-make-polished-jupyter-presentations-with-optional-code-visibility/)
 - [night mode in jupyter notebook](https://medium.com/@rbmsingh/making-jupyter-dark-mode-great-5adaedd814db)
 - [Econometrics with python](http://www.upfie.net/)
+- [Seaborn customisation cheatsheet](https://towardsdatascience.com/all-the-ways-you-can-customize-your-charts-and-graphs-in-seaborn-9be90fa6f5b5)
+- [Another Seaborn customisation](https://elitedatascience.com/python-seaborn-tutorial)
+- [Seaborn design by codecademy](https://www.codecademy.com/articles/seaborn-design-i)
+- [resource dari marsja](https://www.marsja.se/links/)
 
 ### Dataset
 - [trade data bulk download WTO](https://www.wto.org/english/res_e/statis_e/trade_datasets_e.htm)
