@@ -39,7 +39,7 @@ Postingan ini khusus buat contekan belajaran waktu nyoba-nyoba. Akan coba dibagi
 - [free svgs](https://undraw.co/)
 
 ### Python
-- [Time series in python](https://jakevdp.github.io/PythonDataScienceHandbook/03.11-working-with-time-series.html
+- [Time series in python](https://jakevdp.github.io/PythonDataScienceHandbook/03.11-working-with-time-series.html)
 - [Contekan grafik pakai Seaborn](https://seaborn.pydata.org/tutorial.html)
 - [GME, paket buat PPLM dari USITC](https://www.usitc.gov/data/gravity/gme.htm), untuk general (ada databasenya) di [sini](https://www.usitc.gov/data/gravity/index.htm)
 - [Bikin paper pakai Jupyter Notebook](https://sylvaindeville.net/2015/07/17/writing-academic-papers-in-plain-text-with-markdown-and-jupyter-notebook/)
