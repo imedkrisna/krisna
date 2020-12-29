@@ -30,7 +30,7 @@ projects: []
 
 Semester ini saya sibuk banget. Banyak kerjaan, [presentasi](https://krisna.netlify.app/talk/paper2/) salah satu milestone disertasi saya, dan ngajar. Khusus untuk ngajar, kali ini saya cukup beruntung karena di masa korona ini, kampus mengurangi staff besar-besaran dan saya termasuk yang masih dikaryakan. hehe. Masalahnya, karena yang di-_hire_ dikit, saya ketimpaan banyak banget _marking_ alias meriksa tugas dan UAS. Stres banget deh.
 
-Untungnya sih bayarannya lumayan. Karena sebagian besar gaji saya semester ini datang dari marking, bukan perkuliahan, akibatnya pas klaim marking langsung berasa kaya mendadak. Seiring dengan berakhirnya semester (dan perasaan kaya mendadak tersebut), datang pula Black Friday + cyber monday + Boxing day, adalah serangkaian hari-hari penuh diskon di Australia. 
+Seiring dengan berakhirnya semester datang pula Black Friday + cyber monday + Boxing day, adalah serangkaian hari-hari penuh diskon di Australia. Hmmm, kupikir. Berhubung selama ini jarang foya-foya, boleh deh sekali-kali nraktir diri sendiri.
 
 Diantara yang berdiskon, barang-barang elektronik kebagian diskon yang gede-gedean. Berhubung lagi ada duit, saya memutuskan untuk nyoba beli keyboard buat gantiin keyboard yang sekarang. Saya selama ini pake [logitech MX Keys](https://www.jbhifi.com.au/products/logitech-mx-keys-advanced-wireless-illuminated-keyboard), keyboard yg sangat keren dan enak. Kalau liat-liat di forum, keyboard mekanikal katanya lebih enak buat ngetik. Karena itu saya coba beli keyboard baru.
 
@@ -55,7 +55,7 @@ Beberapa keterangan:
 ) pake tingkat kesulitan medium selama 3 menit. WPM = Word per Minute (kata per menit)
 1. Angka-angka lain didapat dari [rtings.com](https://www.rtings.com/), namun khusus yg logitech dikopas dari [website resmi logitech](https://www.logitechg.com/en-au/innovation/mechanical-switches.html).
 
-Saya mau coba kasih review dan alasan kenapa saya gak cocok dengan Logitech G512 dan Razer BlackWidow. Sekarang masih tahap coba-coba dengan huntsman. Moga-moga cocok.
+Saya mau coba kasih review dan alasan kenapa saya gak cocok dengan Logitech G512 dan Razer BlackWidow. Sekarang masih tahap coba-coba dengan huntsman. Moga-moga cocok. Saya akan fokus ke ketik-mengetik dan _switch_ nya, karena _switch_ itu alasan utama saya coba-coba keyboard mekanik.
 
 ## Logitech MX Keys
 
