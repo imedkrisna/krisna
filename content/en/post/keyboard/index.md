@@ -59,4 +59,4 @@ Saya mau coba kasih review dan alasan kenapa saya gak cocok dengan Logitech G512
 
 ## Logitech MX Keys
 
-{{< icon name="exclamation-triangle" pack="fas" >}} under construction {{< icon name="exclamation-triangle" pack="fas" >}}
+{{< icon name="exclamation-triangle" pack="fas" >}} nanti diupdate lagi {{< icon name="exclamation-triangle" pack="fas" >}}
