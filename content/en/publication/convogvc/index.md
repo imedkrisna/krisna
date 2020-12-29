@@ -2,7 +2,7 @@
 # Documentation: https://wowchemy.com/docs/managing-content/
 
 title: "Kebijakan untuk meningkatkan partisipasi perusahaan-perusahaan Indonesia dalam rantai pasok global"
-authors: [admin, Wishnu Mahraddika]
+authors: [Wishnu Mahraddika, admin]
 date: 2020-12-04T21:34:47+11:00
 doi: ""
 
