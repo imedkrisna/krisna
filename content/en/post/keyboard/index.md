@@ -83,6 +83,8 @@ Kita juga bisa lihat dari tabel di atas, bahwa keyboard ini (dan keyboard mekani
 
 Keyboard ini juga tinggi banget dibandingkan MX Keys. Tangan kurang pas rasanya ngetik. terpaksa beli wrist rest yg agak tinggi supaya tangan bisa lurus. Lumayan agak lebih nyaman, tapi tetep pegel kalo ngetik lama. Ketinggian keyboard juga disumbang oleh tinggi _keycaps_ nya dan travel distance yang emang lebih jauh. Lagi, keliatannya bedanya tipis ya, tapi kalo ngetik seharian ya pegel juga.
 
+Soal speed, kecepatan ngetik saya malah drop pake ini, meskipun awalnya coba pindah mekanikal karena lebih enak buat ngetik. Wah udah ga enak, slow juga, bener-bener bad investment dah. Untungnya masih bisa dituker.
+
 Saya jadinya nyoba yang clicky, karena katanya pake yg clicky lebih enak dan lebih berasa _actuation point_-nya ketimbang yg _tactile_, sehingga lebih enak ngetiknya ga harus pencet ampe dalem-dalem banget.
 
 ## Razer BlackWidow
@@ -106,6 +108,8 @@ Keyboard terakhir yang saya coba adalah Razer huntsman. Dia pakai teknologi baru
 Tapi yang membuatku tertarik nyoba ini adalah karena dia punya actuation force yang lebih ringan dan travel distance yang lebih pendek daripada mekanikal biasa, namun dengan clicky feeling yang sama dengan si razer green switch. Dengan begitu, harusnya bisa lebih nyaman di jari buat ngetik. Terutama buat pengetik yang baru mulai pake mekanikal keyboard.
 
 Clicky feelingnya menurut saya gak semenyenangkan Razer BlackWidow. Tapi tetep enak sih. Yang lebih penting adalah sejauh ini tangan masih baik-baik aja. Lebih enak ngetik di sini buat saya daripada green switch. Mudah-mudahan kedepannya saya cocok dengan keyboard ini. hahah.
+
+Tapi emang kalo soal kecepatan, sejauh ini pake switch ini memberikan typing speed paling cepat sih (80 WPM), bahkan lebih cepat daripada MX Keys di 73 WPM. Memang lebih nyaman ngetik di sini. Perlu dilihat lagi lah beberapa lama ke depan, seberapa nyaman pake switch yang ini. Tapi sejauh ini memang Huntsman menurut saya lebih enak dibandingkan dua keyboard sebelum ini.
 
 ## Kesimpulan
 Sejauh ini, saya masih merasa Logitech MX Keys masih enak dan saya masih bertanya-tanya mengapa aku membeli ini semua huhuhu. Mungkin karena kebiasaan ya. Ngetik di MX Keys sebenernya udah enak. Meskipun mencetnya sampai ujung (ya iya tipis banget soalnya), tapi tangan tetep ga pegel. Fitur wireless-nya yg bisa pindah-pindah device dan bisa dibawa ngopas juga sangat-sangat berguna. Unifying receiver bikin meja rapih ga ada kabel dan dongle cuma 1 untuk keyboard dan mouse itu bikin hemat slot USB. Logitech ni emang the best deh kalo bikin produk office.
