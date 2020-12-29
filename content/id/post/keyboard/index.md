@@ -103,7 +103,7 @@ Keyboard ini lebih enak daripada Logitech GX-Brown, tapi sepertinya masih belum 
 ## Razer Huntsman
 Keyboard terakhir yang saya coba adalah Razer huntsman. Dia pakai teknologi baru yang namanya opto-mechanical. Tidak pakai pelat besi, switch di keyboard ini pake sinar laser untuk mengirimkan sinyal dari keyboard ke komputer. Katanya si razer, mengirim sinyal dengan laser membuatnya jadi jauuuuuuuuuuuuuuuuuuuuuuuuuuuh lebih cepat daripada pake pelat besi. Tapi kayaknya gak terlalu ngefek sih, apalagi buat orang tua seperti saya yg refleknya dah kayak siput kwwk.
 
-<div style='position:relative; padding-bottom:calc(85.71% + 44px)'><iframe src='https://gfycat.com/ifr/VainPaltryCornsnake' frameborder='0' scrolling='no' width='50%' height='50%' style='position:absolute;top:0;left:0;' allowfullscreen></iframe></div>
+<iframe src='https://gfycat.com/ifr/VainPaltryCornsnake' frameborder='0' scrolling='no' allowfullscreen width='640' height='593'></iframe>
 
 Tapi yang membuatku tertarik nyoba ini adalah karena dia punya actuation force yang lebih ringan dan travel distance yang lebih pendek daripada mekanikal biasa, namun dengan clicky feeling yang sama dengan si razer green switch. Dengan begitu, harusnya bisa lebih nyaman di jari buat ngetik. Terutama buat pengetik yang baru mulai pake mekanikal keyboard.
 
