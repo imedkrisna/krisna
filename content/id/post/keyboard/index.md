@@ -75,7 +75,7 @@ Keyboard ini adalah yang pertama saya beli, sekaligus keyboard mekanis pertama y
 
 Switchh GX-Brown adalah switch logitech yang katanya _tactile_ tapi ga ada bunyi klik-kliknya kayak mekanis pada umumnya. Keyboard mengirimkan sinyal ketika pelatnya tersambung pas tombolnya diklik.
 
-{{< figure src="brown-off.png" title="GX-Brown Switch. Gambar dari situs logitech G" >}}
+![GX-Brown](gx_brown.gif)
 
 Setelah dicoba-coba, ternyata pake G512 bikin capek dan kurang cocok buat saya. Jari malah agak pegel dan telapak tangan sekitar kelingking malah pegel. Sepertinya karena kebiasaan pake keyboard yang pendek, saya mencetnya selalu sampe ujung. Padahal harusnya semi-terbang gitu, ga usah dalem-dalem mencetnya. Cukup sampe _actuation point_ aja.
 
@@ -90,7 +90,7 @@ Saya jadinya nyoba yang clicky, karena katanya pake yg clicky lebih enak dan leb
 ## Razer BlackWidow
 Saya tuker sama Razer BlackWidow. Ini adalah produk razer pertama yang saya coba. Keyboard ini punya switch yang clicky, alias bunyi-bunyi pas dipencet. 
 
-{{< figure src="razer-green-switch.gif" title="Razer Green Switch, dicomot dari situs Razer" >}}
+![razer_green](razer-green-switch.gif)
 
 Ternyata bener sih, mendingan yang clicky sekalian daripada yang nanggung. Asli enak banget mencetnya pas bunyi klik-klik gitu wkwkw. Tapi ternyata pake keyboard ini juga kurang pewe. Jari tetep pegel mencetnya. Keyboard ini kalo berdasarkan spek juga punya travel distance dan actuation force yang gede, setara dengan MX-Brown. Saya juga mungkin ngetiknya masih sampe bawah, meskipun ada bunyi klik-kliknya.
 
@@ -103,7 +103,7 @@ Keyboard ini lebih enak daripada Logitech GX-Brown, tapi sepertinya masih belum 
 ## Razer Huntsman
 Keyboard terakhir yang saya coba adalah Razer huntsman. Dia pakai teknologi baru yang namanya opto-mechanical. Tidak pakai pelat besi, switch di keyboard ini pake sinar laser untuk mengirimkan sinyal dari keyboard ke komputer. Katanya si razer, mengirim sinyal dengan laser membuatnya jadi jauuuuuuuuuuuuuuuuuuuuuuuuuuuh lebih cepat daripada pake pelat besi. Tapi kayaknya gak terlalu ngefek sih, apalagi buat orang tua seperti saya yg refleknya dah kayak siput kwwk.
 
-<iframe src='https://gfycat.com/ifr/VainPaltryCornsnake' frameborder='0' scrolling='no' allowfullscreen width='450' height='415'></iframe>
+![razer_purple](razer-purple.gif)
 
 Tapi yang membuatku tertarik nyoba ini adalah karena dia punya actuation force yang lebih ringan dan travel distance yang lebih pendek daripada mekanikal biasa, namun dengan clicky feeling yang sama dengan si razer green switch. Dengan begitu, harusnya bisa lebih nyaman di jari buat ngetik. Terutama buat pengetik yang baru mulai pake mekanikal keyboard.
 
