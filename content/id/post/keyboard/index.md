@@ -94,11 +94,11 @@ Saya tuker sama Razer BlackWidow. Ini adalah produk razer pertama yang saya coba
 
 Ternyata bener sih, mendingan yang clicky sekalian daripada yang nanggung. Asli enak banget mencetnya pas bunyi klik-klik gitu wkwkw. Tapi ternyata pake keyboard ini juga kurang pewe. Jari tetep pegel mencetnya. Keyboard ini kalo berdasarkan spek juga punya travel distance dan actuation force yang gede, setara dengan MX-Brown. Saya juga mungkin ngetiknya masih sampe bawah, meskipun ada bunyi klik-kliknya.
 
-Meskipun begitu, ternyata keyboard yang bunyinya klik-klik enak juga dipake. Berasa ngetik sesuatu yang penting banget. ha ha ha. Tentu saja jeleknya adalah keyboard ini lumayan berisik. Agak mengganggu kalo kerja di kantor gitu. Istri saya bilang bahwa suaranya lumayan, meski ga terlalu ganggu, tapi susah kalo pas istri saya mau tidur*.
+Meskipun begitu, ternyata keyboard yang bunyinya klik-klik enak juga dipake. Berasa ngetik sesuatu yang penting banget. ha ha ha. Tentu saja jeleknya adalah keyboard ini lumayan berisik. Agak mengganggu kalo kerja di kantor gitu. Istri saya bilang bahwa suaranya lumayan, meski ga terlalu ganggu, tapi susah kalo pas istri saya mau tidur[^1].
 
 Keyboard ini lebih enak daripada Logitech GX-Brown, tapi sepertinya masih belum ideal. Jadinya coba lagi yang lain.
 
-*) Tempat WFH saya = kamar tidur. apa boleh buat. Maklum nyewa unit yang kecil supaya murah.
+[^1]: Tempat WFH saya = kamar tidur. apa boleh buat. Maklum nyewa unit yang kecil supaya murah.
 
 ## Razer Huntsman
 Keyboard terakhir yang saya coba adalah Razer huntsman. Dia pakai teknologi baru yang namanya opto-mechanical. Tidak pakai pelat besi, switch di keyboard ini pake sinar laser untuk mengirimkan sinyal dari keyboard ke komputer. Katanya si razer, mengirim sinyal dengan laser membuatnya jadi jauuuuuuuuuuuuuuuuuuuuuuuuuuuh lebih cepat daripada pake pelat besi. Tapi kayaknya gak terlalu ngefek sih, apalagi buat orang tua seperti saya yg refleknya dah kayak siput kwwk.
