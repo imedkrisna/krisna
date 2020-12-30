@@ -73,7 +73,7 @@ Ketiga, keyboard ini tipis banget, lumayan kecil, dan build qualitynya oke bange
 ## Logitech G512 GX-Brown
 Keyboard ini adalah yang pertama saya beli, sekaligus keyboard mekanis pertama yang pernah saya punya. Harganya termasuk lumayan murah untuk keyboard mekanikal, dan waktu itu lagi diskon. Berhubung pertama kali, saya nyoba yang murah dulu. Ga berani langsung yg mahal. hehe.
 
-Switchh GX-Brown adalah switch logitech yang katanya _tactile_ tapi ga ada bunyi klik-kliknya kayak mekanis pada umumnya. Keyboard mengirimkan sinyal ketika pelatnya tersambung pas tombolnya diklik.
+Switchh GX-Brown adalah switch logitech yang katanya _tactile_ tapi ga ada bunyi klik-kliknya kayak mekanis pada umumnya. Keyboard mengirimkan sinyal ketika pelatnya tersambung pas tombolnya diklik. Sayangnya nggak begitu keliatan di gif ini yang saya bikin dari gambar yang ada di website logitech.
 
 ![GX-Brown](gx_brown.gif)
 
@@ -88,9 +88,11 @@ Soal speed, kecepatan ngetik saya malah drop pake ini, meskipun awalnya coba pin
 Saya jadinya nyoba yang clicky, karena katanya pake yg clicky lebih enak dan lebih berasa _actuation point_-nya ketimbang yg _tactile_, sehingga lebih enak ngetiknya ga harus pencet ampe dalem-dalem banget.
 
 ## Razer BlackWidow
-Saya tuker sama Razer BlackWidow. Ini adalah produk razer pertama yang saya coba. Keyboard ini punya switch yang clicky, alias bunyi-bunyi pas dipencet. 
+Saya tuker sama Razer BlackWidow. Ini adalah produk razer pertama yang saya coba. Keyboard ini punya switch yang clicky, alias bunyi-bunyi pas dipencet. Di gif di bawah ini yang saya ambil dari situs resmi razer, kita bisa lihat ketika keyboardnya dipencet, ada plat yang nubruk plat di dalamnya. Ketika itulah key-nya teregister dan tombol yang kita pencet terdeteksi oleh komputer.
 
 ![razer_green](razer-green-switch.gif)
+
+Kita juga bisa lihat bahwa platnya nubruk tanpa perlu keycap nya kita pencet sampe mentok.
 
 Ternyata bener sih, mendingan yang clicky sekalian daripada yang nanggung. Asli enak banget mencetnya pas bunyi klik-klik gitu wkwkw. Tapi ternyata pake keyboard ini juga kurang pewe. Jari tetep pegel mencetnya. Keyboard ini kalo berdasarkan spek juga punya travel distance dan actuation force yang gede, setara dengan MX-Brown. Saya juga mungkin ngetiknya masih sampe bawah, meskipun ada bunyi klik-kliknya.
 
@@ -101,9 +103,11 @@ Keyboard ini lebih enak daripada Logitech GX-Brown, tapi sepertinya masih belum 
 [^1]: Tempat WFH saya = kamar tidur. apa boleh buat. Maklum nyewa unit yang kecil supaya murah.
 
 ## Razer Huntsman
-Keyboard terakhir yang saya coba adalah Razer huntsman. Dia pakai teknologi baru yang namanya opto-mechanical. Tidak pakai pelat besi, switch di keyboard ini pake sinar laser untuk mengirimkan sinyal dari keyboard ke komputer. Katanya si razer, mengirim sinyal dengan laser membuatnya jadi jauuuuuuuuuuuuuuuuuuuuuuuuuuuh lebih cepat daripada pake pelat besi. Tapi kayaknya gak terlalu ngefek sih, apalagi buat orang tua seperti saya yg refleknya dah kayak siput kwwk.
+Keyboard terakhir yang saya coba adalah Razer huntsman. Dia pakai teknologi baru yang namanya opto-mechanical. Kalau switch sebelumnya pakai sinyal elektrik dari plat besi, switch di keyboard ini pake sinar laser untuk mengirimkan sinyal dari keyboard ke komputer. Pas keyboard-nya dipencet, lasernya nyambung ke penerimanya, lalu mengirimkan sinyal bahwa tombolnya udah dipencet.
 
 ![razer_purple](razer-purple.gif)
+
+Katanya si razer, mengirim sinyal dengan laser membuatnya jadi jauuuuuuuuuuuuuuuuuuuuuuuuuuuh lebih cepat daripada pake pelat besi. Tapi kayaknya gak terlalu ngefek sih, apalagi buat orang tua seperti saya yg refleknya dah kayak siput kwwk.
 
 Tapi yang membuatku tertarik nyoba ini adalah karena dia punya actuation force yang lebih ringan dan travel distance yang lebih pendek daripada mekanikal biasa, namun dengan clicky feeling yang sama dengan si razer green switch. Dengan begitu, harusnya bisa lebih nyaman di jari buat ngetik. Terutama buat pengetik yang baru mulai pake mekanikal keyboard.
 
