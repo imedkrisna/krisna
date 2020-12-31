@@ -28,39 +28,35 @@ image:
 projects: []
 ---
 
-Saya kurang suka jalan-jalan, apalagi yang jauh-jauh. Tapi sepertinya kesempatan kali ini agak sayang untuk dilewatkan karena Tidbinbilla lagi ada promo gratis masuk sampai tahun baru.
+Traveling isn't really my forte. However, The year-end free entry to Tidbinbilla Natural Reserve can't really be missed can't it?
 
-[Tidbinbilla](https://www.tidbinbilla.act.gov.au/) adalah semacam cagar alam di kawasan Canberra, ibu kota Australia. Dia lokasinya di agak gunung gitu. Kalau dari kota, nyetir dulu sekitar 40an menit. Di sana, kita bisa lihat berbagai vegetasi khas Australia seperti hutan _eucalyptus_. Di sini juga banyak hewan-hewan khas Australia seperti Kangguru, Wallabies, Koala, Platypus, dan berbagai jenis burung, serangga dan reptil. Tidbinbilla cocok banget buat orang yang seneng jalan-jalan di alam gitu. Banyak _walking trail_ dari yang mudah, beraspal, cuma 1-2 km-an, sampe yang sulit, nanjak dan berbatu-batu.
+[Tidbinbilla](https://www.tidbinbilla.act.gov.au/) is a natural reserve in Canberra, Australia. Reachable from the city center by car, and you would prolly need around 40 minutes driving to get there. Here, you can walk in many bushwalking trail from the very easy, 1-2 km to the hard one with rocky and hilly climb. You will be able to see many Australian vegetation like eucalyptus and also its animals like birds, Kangaroos, Wallabies, Koala and Platypus.
 
-Tidbinbilla ini luas banget! Kalau mau menjelajah semuanya, harus seharian ada di sini kayaknya. Sebelum datang ke sini, sebaiknya memang baca-baca dulu mau ke mana aja. Lihat petanya dan jalur-jalurnya. Sama lah kayak merencanakan jalan-jalan pada umumnya. Kalau mau lihat peta fullnya, lihat [di sini](https://www.tidbinbilla.act.gov.au/__data/assets/pdf_file/0005/572288/Tidbinbilla-Map-and-Guide.pdf).
+Tidbinbilla is a very huge place. To explore all, you will need a whole day and a good prep. Check out its full map [over here](https://www.tidbinbilla.act.gov.au/__data/assets/pdf_file/0005/572288/Tidbinbilla-Map-and-Guide.pdf).
 
 ![tidbinbilla_map](tidbinbilla_map.PNG)
 
-Saya dan istri hanya pergi ke daerah hutan eukaliptus dan tempat yang namanya Sanctuary. Walking trail-nya gampang.
+Me and wife only aim for its eucalyptus forest and a place called Sanctuary.
 
-Pertama mampir dulu di visitor center (kanan atas kalo di peta). Di sini bisa nanya-nanya Ranger-nya soal kondisi di Tidbinbilla, hewan apa yang lagi aktif, mana yg lagi ngumpet, lagi musim apa dll. Beli kopi sama suvenir juga bisa di sini. Dari visitor center juga ada beberapa walking trail yang lucu dan gampang. Kalo walking trail yang di visitor center, kita bisa lihat emu (semacem burung unta gitu) dan kangguru.
-
-Kebetulan kami lihat dua-duanya!
+We first come to the visitor center to grab some maps, information and coffee. Maps and infos are necessary since you will prolly get no connection once you step inside the park. From here, you can actually go to a few walking trails to see Emu and Kangaroos. We actually saw both without even going to the trail!
 
 ![emu](emu.gif)
 ![kangguru](kangguru.gif)
 
-Lucu ya! Asal jangan deket-deket wkkw. Ini aslinya video, kubikin gif pake [ezgif](https://ezgif.com/video-to-gif). Paling atas kalo search "make a gif from video" di google.
-
-Nah, dari visitor center, pergi ke tempat namanya sanctuary. Gede banget sih ni tempat. Ga bisa pergi ke semuanya. Harus pilih-pilih.
+We drive to the sanctuary from the visitor center.
 
 ![sanctuary_map](sanctuary_map.PNG)
 
-Pertama ke [hutan eukaliptus](https://www.tidbinbilla.act.gov.au/do/the-eucalypt-forest) dulu. Di pintu masuk langsung dikasi liat penangkaran koala. Jadi koala masi kecil dibesarin di sini.
+First up, [eucalyptus forest](https://www.tidbinbilla.act.gov.au/do/the-eucalypt-forest)
 
 ![koala](featured.jpg)
 
-Kami ambil jalur yang namanya Koala Path. Cuma sekitar 500m aja. Baunya minyak kayu putih banget!
+We took the Koala Path, the easier bit.
 
 ![eukaliptus1](eukaliptus1.jpg)
 ![eukaliptus2](eukaliptus2.jpg)
 
-Berikutnya kami pergi ke Sanctuary. Tempatnya keren banget. Di sini katanya ada Wallabies (semacem kangguru juga tapi kecil) dan platypus. Sayangnya kagak keliatan Wallabies dan platypusnya 😢
+From here, we went to the sanctuary. Unfortunately, no sight of Platypus 😢
 
 ![s1](s1.jpg)
 ![s2](s2.jpg)
@@ -68,4 +64,4 @@ Berikutnya kami pergi ke Sanctuary. Tempatnya keren banget. Di sini katanya ada 
 ![s4](s4.jpg)
 ![s5](s5.jpg)
 
-Tracknya lumayan dan dapat banyak foto-foto bagus. Udaranya juga seger banget. Overall, tripnya asik deh. Sayangnya ga dapet liat Platypus. Kalo kata Ranger-nya, Platypus (dan hewan lain pada umumnya) lebih suka muncul pagi-pagi banget atau sore-sore banget. Kata webnya, Platypus pada nongol di musim semi, bulan-bulan Agustus gitu. Sepertinya harus ke sini lagi di musim yang berbeda biar bisa liat Platypus. wkwkkw
+According to the ranger, most animals including Platypus are shy and learn to avoid human. They can only be seen around early in the morning or later afternoon (something like 6pm-ish). Additionally, Platypus are said to be active around spring time. So I might need to go back here later in the different time!
