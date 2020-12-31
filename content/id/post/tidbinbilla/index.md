@@ -4,9 +4,9 @@
 title: "Jalan-jalan di Tidbinbilla Natural Reserve di Canberra, Australia"
 subtitle: ""
 summary: ""
-authors: []
-tags: []
-categories: []
+authors: [admin]
+tags: [macem-macem]
+categories: [macem-macem]
 date: 2021-01-01T09:04:02+11:00
 lastmod: 2021-01-01T09:04:02+11:00
 featured: false
@@ -16,8 +16,8 @@ draft: false
 # To use, add an image named `featured.jpg/png` to your page's folder.
 # Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
 image:
-  caption: ""
-  focal_point: ""
+  caption: "Koala"
+  focal_point: "smart"
   preview_only: false
 
 # Projects (optional).
@@ -53,7 +53,7 @@ Nah, dari visitor center, pergi ke tempat namanya sanctuary. Gede banget sih ni 
 
 Pertama ke [hutan eukaliptus](https://www.tidbinbilla.act.gov.au/do/the-eucalypt-forest) dulu. Di pintu masuk langsung dikasi liat penangkaran koala. Jadi koala masi kecil dibesarin di sini.
 
-![koala](koala1.jpg)
+![koala](featured.jpg)
 
 Kami ambil jalur yang namanya Koala Path. Cuma sekitar 500m aja. Baunya minyak kayu putih banget!
 
