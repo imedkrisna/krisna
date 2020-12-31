@@ -16,7 +16,7 @@ draft: false
 # To use, add an image named `featured.jpg/png` to your page's folder.
 # Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
 image:
-  caption: "Koala"
+  caption: "Bogong Moth"
   focal_point: "smart"
   preview_only: false
 
@@ -53,7 +53,7 @@ Nah, dari visitor center, pergi ke tempat namanya sanctuary. Gede banget sih ni 
 
 Pertama ke [hutan eukaliptus](https://www.tidbinbilla.act.gov.au/do/the-eucalypt-forest) dulu. Di pintu masuk langsung dikasi liat penangkaran koala. Jadi koala masi kecil dibesarin di sini.
 
-![koala](featured.jpg)
+![koala](koala.jpg)
 
 Kami ambil jalur yang namanya Koala Path. Cuma sekitar 500m aja. Baunya minyak kayu putih banget!
 
@@ -63,7 +63,6 @@ Kami ambil jalur yang namanya Koala Path. Cuma sekitar 500m aja. Baunya minyak k
 Berikutnya kami pergi ke Sanctuary. Tempatnya keren banget. Di sini katanya ada Wallabies (semacem kangguru juga tapi kecil) dan platypus. Sayangnya kagak keliatan Wallabies dan platypusnya 😢
 
 ![s1](s1.jpg)
-![s2](s2.jpg)
 ![s3](s3.jpg)
 ![s4](s4.jpg)
 ![s5](s5.jpg)

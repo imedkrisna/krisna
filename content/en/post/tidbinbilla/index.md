@@ -16,8 +16,8 @@ draft: false
 # To use, add an image named `featured.jpg/png` to your page's folder.
 # Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
 image:
-  caption: ""
-  focal_point: ""
+  caption: "bogong moth"
+  focal_point: "smart"
   preview_only: false
 
 # Projects (optional).
@@ -49,7 +49,7 @@ We drive to the sanctuary from the visitor center.
 
 First up, [eucalyptus forest](https://www.tidbinbilla.act.gov.au/do/the-eucalypt-forest)
 
-![koala](featured.jpg)
+![koala](koala.jpg)
 
 We took the Koala Path, the easier bit.
 
@@ -59,9 +59,8 @@ We took the Koala Path, the easier bit.
 From here, we went to the sanctuary. Unfortunately, no sight of Platypus 😢
 
 ![s1](s1.jpg)
-![s2](s2.jpg)
-![s3](s3.jpg)
 ![s4](s4.jpg)
+![s3](s3.jpg)
 ![s5](s5.jpg)
 
 According to the ranger, most animals including Platypus are shy and learn to avoid human. They can only be seen around early in the morning or later afternoon (something like 6pm-ish). Additionally, Platypus are said to be active around spring time. So I might need to go back here later in the different time!
