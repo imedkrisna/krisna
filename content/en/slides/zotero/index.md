@@ -41,6 +41,7 @@ Australian National University
 
 - Membuat reference manager yang cantiq dan otomatis.
 - membuat menjadi plain text agar mudah digabung.
+- di akhir workshop, peserta harus mengumpulkan file word di [drive ini](https://drive.google.com/drive/folders/11g0-aYmDNyWxx9fs9COhs0BonLiBtf0Q?usp=sharing)
 
 ---
 
@@ -85,16 +86,33 @@ download installer-nya (kiri), lalu install plug-innya utk browser kesayangan an
 
 ---
 
-## Jadwal Workshop
+## Cek google docs plugin
 
-- Memakai browser plug-in
-- input references
-  - setelah input tetap harus edit
-- membuat reference list di word
-  - memilih format APA 7
-- export library utk dikasi ke orang lain
-- membuang metadata
-  - alias save as plain text
+- Untuk menggunakan plugin zotero di google docs, anda harus membuka aplikasi zoteronya.
+- pluginnya ada di atas, mirip di microsoft word.
+
+![a](install44.jpg)
+
+---
+
+## Cek google docs plugin
+
+- Extra step jika e-mail zotero anda tidak sama dengan e-mail google drive anda.
+- tambahkan e-mail google drive anda di akun zotero.
+- buka [link ini](https://www.zotero.org/settings/account)
+- masukkan e-mail google drive anda di situ, lalu klik "add"
+- lakukan verifikasi.
+
+---
+
+## Agenda Workshop
+
+- Input referensi secara manual dan menggunakan browser plug-in.
+- edit metadata.
+- export library.
+- in-text citation dan reference list di microsoft word.
+- in-text citation dan reference list di google docs word.
+- remove metadata / create plain text.
 
 ---
 
