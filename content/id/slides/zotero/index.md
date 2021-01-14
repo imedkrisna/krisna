@@ -15,12 +15,12 @@ slides:
   highlight_style: dracula
 ---
 
-## Menggunakan Zotero di dalam penulisan ilmiah
+## Menggunakan Zotero di dalam penulisan ilmiah  
+#### 16 Januari 2021, 16.00 WIB  
 
 Krisna Gupta  
 Ketua Komisi Ekonomi Ditlitka 2020/2021  
 Australian National University  
-14 Januari 2021
 
 ---
 
