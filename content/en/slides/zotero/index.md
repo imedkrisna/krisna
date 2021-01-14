@@ -30,10 +30,11 @@ Australian National University
   - Waktu: 16 Januari 2021, 16.00 WIB
   - Lokasi: [LINK ZOOM](https://anu.zoom.us/j/81268573633?pwd=azdiSGZxV3JTckV0TXAxeHQxQjNvdz09)
 - kenapa zotero:
-  - gratis
-  - mudah
+  - gratis (the most important)
+  - mudah diinstall
+  - Dibuat oleh [organisasi nirlaba](https://www.google.com/search?client=firefox-b-d&q=whos+behind+zotero)
   - bekerja juga di google docs
-- lebih lengkap tentang dokumentasi zotero dapat dibaca di [sini](https://www.zotero.org/support/quick_start_guide)
+- Dokumentasi zotero dapat dibaca di [sini](https://www.zotero.org/support/quick_start_guide)
 
 ---
 
@@ -60,7 +61,7 @@ Australian National University
 
 - Klik [link ini](https://www.zotero.org/download/), anda akan melihat seperti ini
 
-![a](install11.jpg)
+<img src="install1.jpg" alt="drawing" width="600"/>
 
 download installer-nya (kiri), lalu install plug-innya utk browser kesayangan anda (kanan).
 
@@ -71,7 +72,7 @@ download installer-nya (kiri), lalu install plug-innya utk browser kesayangan an
 - install zotero seperti anda menginstall program-program lain.
 - buka zotero, lalu login dengan akun yang sudah anda buat.
 
-![a](install22.jpg)
+<img src="install2.jpg" alt="drawing" width="500"/>
 
 "set up syncing" untuk pakai cloud, "install a zotero connector" hanya jika anda belum install browser plug-in 
 
@@ -82,7 +83,7 @@ download installer-nya (kiri), lalu install plug-innya utk browser kesayangan an
 - Zotero menginstall plugin microsoft word secara otomatis ketika anda sudah selesai install zotero.
 - dicek aja. Buka word, anda akan melihat tab zotero.
 
-![a](install33.jpg)
+<img src="install33.jpg" alt="drawing" width="800"/>
 
 ---
 
@@ -91,7 +92,7 @@ download installer-nya (kiri), lalu install plug-innya utk browser kesayangan an
 - Untuk menggunakan plugin zotero di google docs, anda harus membuka aplikasi zoteronya.
 - pluginnya ada di atas, mirip di microsoft word.
 
-![a](install44.jpg)
+<img src="install44.jpg" alt="drawing" width="800"/>
 
 ---
 
