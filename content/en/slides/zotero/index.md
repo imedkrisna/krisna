@@ -16,9 +16,6 @@ slides:
 ---
 
 ## Menggunakan Zotero di dalam penulisan ilmiah  
-#### 16 Januari 2021, 16.00 WIB  
-
-[LINK ZOOM](https://anu.zoom.us/j/81268573633?pwd=azdiSGZxV3JTckV0TXAxeHQxQjNvdz09)  
 
 Krisna Gupta  
 Ketua Komisi Ekonomi Ditlitka 2020/2021  
@@ -28,7 +25,10 @@ Australian National University
 
 ## Slide apa ini?
 
-- Instruksi untuk menginstall Zotero, salah satu reference manager untuk menulis artikel ilmiah.
+- Instruksi untuk menginstall Zotero, salah satu reference manager untuk menulis artikel ilmiah. Zotero akan digunakan dalam workshop.
+- Detil Workshop:
+  - Waktu: 16 Januari 2021, 16.00 WIB
+  - Lokasi: [LINK ZOOM](https://anu.zoom.us/j/81268573633?pwd=azdiSGZxV3JTckV0TXAxeHQxQjNvdz09)
 - kenapa zotero:
   - gratis
   - mudah
