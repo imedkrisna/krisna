@@ -70,4 +70,4 @@ slides: ""
 
 In this article, me and my colleague Wishnu Mahraddika write about the recent development of Indonesia's new MoU with South Korean cell battery producer, LG Energy Solution. We think this is a great momentum for Indonesia to get back to its manufacturing trajectory path, strengthening itself in the electric vehicle value chain. More needs to be done, however, to ensure that the flow of goods remain strong so it can explore global export market as well as input market.
 
-See the complete publication [here](https://theconversation.com/mengapa-tren-kendaraan-listrik-adalah-momentum-transformasi-industri-otomotif-indonesia-152958)
+See the complete publication in Bahasa Indonesia [here](https://theconversation.com/mengapa-tren-kendaraan-listrik-adalah-momentum-transformasi-industri-otomotif-indonesia-152958)
