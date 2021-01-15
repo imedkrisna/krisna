@@ -10,7 +10,7 @@ menu:
 summary: Melakukan analisis statistika sederhana dengan menggunakan Python
 title: Overview
 toc: true
-type: docs
+type: book
 weight: 1
 editable: false
 commentable: false
