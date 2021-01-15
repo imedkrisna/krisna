@@ -24,8 +24,8 @@ abstract: ""
 # Summary. An optional shortened abstract.
 summary: ""
 
-tags: [economics, electric vehicle, trade, industry]
-categories: [economics, electric vehicle, trade, industry]
+tags: [ekonomi, kendaraan listrik, perdagangan, industri]
+categories: [ekonomi, kendaraan listrik, perdagangan, industri]
 featured: false
 
 # Custom links (optional).
@@ -68,6 +68,6 @@ projects: []
 slides: ""
 ---
 
-In this article, me and my colleague Wishnu Mahraddika write about the recent development of Indonesia's new MoU with South Korean cell battery producer, LG Energy Solution. We think this is a great momentum for Indonesia to get back to its manufacturing trajectory path, strengthening itself in the electric vehicle value chain. More needs to be done, however, to ensure that the flow of goods remain strong so it can explore global export market as well as input market.
+Di artikel ini, saya dan kolega saya Wishnu Mahraddika menulis tentang peluang dari momentum penandatanganan MoU baru dengan produsen sel baterai asal korea selatan, LG Energy Solution. Menurut kami, ini adalah momentum yang sangat baik bagi Indonesia untuk kembali mengembangan industri manufakturnya terutama otomotif, memperkuat Indonesia sebagai sentra produsen sel baterai dan mengambil bagian di dalam rantai pasok kendaraan listrik. Pemerintah harus memastikan perdagangan dapat berjalan lancar sehingga Indonesia dapat memanfaatkan pasar ekspor sekaligus pasar impor untuk komponen.
 
-See the complete publication [here](https://theconversation.com/mengapa-tren-kendaraan-listrik-adalah-momentum-transformasi-industri-otomotif-indonesia-152958)
+Tulisan lengkap dapat di baca di [sini](https://theconversation.com/mengapa-tren-kendaraan-listrik-adalah-momentum-transformasi-industri-otomotif-indonesia-152958)
