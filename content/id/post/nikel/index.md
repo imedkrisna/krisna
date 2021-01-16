@@ -62,6 +62,8 @@ Tentu saja problem utama dari mengandalkan ekspor adalah retaliasi. Pagi ini, ak
 
 Ini baru pengajuan awal. Bisa saja negara lain akan turut serta mendukung Uni Eropa di kasus ini. Jika Indonesia kalah, maka Indonesia harus merevisi peraturan larangan nikel tersebut. Hal ini akan berdampak terhadap investor-investor yang sudah terlanjur membangun smelter dan industri pengolahan nikel lainnya, karena pembukaan kembali ekspor nikel akan membuat harga nikel Indonesia terkerek naik, mengganggu hitung-hitungan balik modal mereka.
 
+Kita juga tidak boleh lupa bahwa nikel, meskipun sangat penting, hanyalah sebagian dari total kebutuhan mobil listrik. Produksi mobil listrik tetap membutuhkan beberapa produk yang tidak dimiliki oleh Indonesia saat ini. Dapat dibayangkan buruknya retaliasi terhadap supply chain secara keseluruhan. 
+
 Larangan ekspor seperti ini pernah dilakukan oleh RRT. Pada tahun 2010, RRT memblokir ekspor _rare-earth metal_. Banding WTO pada 2014 memutuskan bahwa RRT telah menyalahi peraturan WTO dan larangan tersebut [harus direvisi](https://www.reuters.com/article/us-china-wto-rareearths-idUSBREA2P0ZK20140326).
 
 WTO saat ini sedang lemah dan belum jelas berapa lama kasus EU-Indonesia ini akan diselesaikan. Namun hal ini dapat berujung pada retaliasi. Bisa saja EU akan melarang atau memajaki ekspor sel baterai atau mobil listrik dari Indonesia nantinya. Hal ini mungkin akan sedikit mengurangi potensi eksplorasi pasar dunia bagi Indonesia sendiri.
