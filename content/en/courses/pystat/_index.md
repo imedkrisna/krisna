@@ -1,6 +1,6 @@
 ---
 date: "2020-08-20T00:00:00Z"
-draft: false
+draft: true
 lastmod: "2020-08-20T00:00:00Z"
 linktitle: Statistika dengan Python
 menu:
