@@ -8,7 +8,7 @@ menu:
     weight: 2
 title: Menggunakan Numpy
 toc: true
-type: docs
+type: book
 weight: 2
 editable: false
 commentable: false

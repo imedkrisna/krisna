@@ -1,13 +1,13 @@
 ---
 date: "2020-08-20T00:00:00Z"
-draft: true
+draft: False
 lastmod: "2020-08-20T00:00:00Z"
-linktitle: Statistika dengan Python
+linktitle: Dasar-dasar Python
 menu:
   example:
-    name: Pembukaan
+    name: Intro Python
     weight: 1
-summary: Melakukan analisis statistika sederhana dengan menggunakan Python
+summary: Dasar-dasar Python
 title: Overview
 toc: true
 type: book
@@ -16,6 +16,9 @@ editable: false
 commentable: false
 ---
 
+{{% callout note %}}
+Laman ini adalah catatan pribadi supaya saya tidak bolak-balik googling. Mudah-mudahan berguna untuk anda juga. Saya mengupdate-nya secara reguler.
+{{% /callout %}}
 ## Tentang buku ini
 Di masa di mana sebagian besar institusi penting dan berpengaruh menggunakan data sebagai analisis (dan bukan perasaan belaka), skill menggunakan *software* untuk analisis data semakin tinggi peminatnya. Indonesia termasuk negara yang tidak banyak punya *programmer*, padahal belajar *programming* bukan sesuatu yang maha sulit dan dapat dipelajari semenjak dini.Untuk itu buku ini dibuat. Sebagai seorang yang mendapatkan manfaat dari mempelajari bahasa pemrograman, saya ingin mencoba mempermudah akses belajar bahasa pemrograman bagi teman-teman di Indonesia.
 

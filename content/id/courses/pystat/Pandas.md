@@ -8,7 +8,7 @@ menu:
     weight: 3
 title: Menggunakan Pandas
 toc: true
-type: docs
+type: book
 weight: 3
 editable: false
 commentable: false

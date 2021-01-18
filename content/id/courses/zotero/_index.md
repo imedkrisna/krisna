@@ -5,7 +5,7 @@ lastmod: "2020-08-20T00:00:00Z"
 linktitle: Zotero untuk pemula
 menu:
   example:
-    name: Pembukaan
+    name: Intro Zotero
     weight: 1
 summary: Melakukan analisis statistika sederhana dengan menggunakan Python
 title: Menggunakan Zotero untuk membuat daftar pustaka
