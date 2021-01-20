@@ -20,5 +20,10 @@ Jika kita baru menginstall Zotero, maka dapat dipastikan _library_ kita masih ko
 1. menggunakan web plugin
 1. manual
 
+Jika anda menginput dengan plugin (otomatis), selalu ingat untuk ngecek _metadata_ karena Zotero (maupun piranti lunak lain) tidak sempurna dan mungkin saja memiliki beberapa kesalahan.
 
+## Menginput dengan file .ris
 
+## Menginput dengan web plugin
+
+## Menginput secara manual
