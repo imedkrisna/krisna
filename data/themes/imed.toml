@@ -1,0 +1,42 @@
+# Theme metadata
+name = "imed"
+
+# Is theme light or dark?
+light = true
+
+# Primary
+# primary = "rgb(255, 0, 60)"
+# primary = "rgb(255, 30, 30)"
+primary = "#4d822c"
+# primary = "#66b933"
+
+# Menu
+menu_primary = "#000"
+menu_text = "#fff"
+menu_text_active = "rgb(255, 0, 60)"
+menu_title = "#fff"
+
+# Backgrounds
+background = "#fff"
+home_section_odd = "rgb(250,250,250)"
+home_section_even = "rgb(230,230,230)"
+
+link = "#4d822c"
+link_hover = "rgb(230, 60, 60)"
+
+[dark]
+  primary = "#66b933"
+  # Menu
+  menu_primary = "#66b933"
+  menu_text = "#000"
+  menu_text_active = "#000"
+  menu_title = "#000"
+
+  # Backgrounds
+  background = "#000"
+  home_section_odd = "rgb(0,0,0)"
+  home_section_even = "rgb(20,20,20)"
+
+  # link
+  link = "#66b933"
+  link_hover = "rgb(230, 60, 60)"
