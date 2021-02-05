@@ -7,13 +7,13 @@ light = true
 # Primary
 # primary = "rgb(255, 0, 60)"
 # primary = "rgb(255, 30, 30)"
-primary = "#4d822c"
+primary = "#60a336"
 # primary = "#66b933"
 
 # Menu
 menu_primary = "#000"
 menu_text = "#fff"
-menu_text_active = "rgb(255, 0, 60)"
+menu_text_active = "#66b933"
 menu_title = "#fff"
 
 # Backgrounds
@@ -21,7 +21,7 @@ background = "#fff"
 home_section_odd = "rgb(250,250,250)"
 home_section_even = "rgb(230,230,230)"
 
-link = "#4d822c"
+link = "#60a336"
 link_hover = "rgb(230, 60, 60)"
 
 [dark]
