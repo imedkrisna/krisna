@@ -1,15 +1,4 @@
-body {
-  -webkit-animation-duration: 0.1s;
-  -webkit-animation-name: fontfix;
-  -webkit-animation-iteration-count: 1;
-  -webkit-animation-timing-function: linear;
-  -webkit-animation-delay: 0.1s;
-}
 
-@-webkit-keyframes fontfix {
-  from { opacity: 1; }
-  to { opacity: 1; }
-}
 
 .reveal {
 /*  font-family: 'Cherry Swash', cursive; */
@@ -18,18 +7,24 @@ body {
 .reveal section h1,
 .reveal section h2,
 .reveal section h3 {
-  font-family: 'Calistoga', cursive;
-  color: #76eb16;
+  font-family: 'Pangolin', cursive;
+  color: #66B933;
 }
 
-.reveal section h4,
-.reveal section h5,
-.reveal section h6 {
+.reveal section h5 {
+  color: #5E78FC;
+}
+
+.reveal section h4 {
+  font-family: 'Indie Flower', cursive;
   color: #b1374c;
 }
 
+.reveal section h6 {
+  color: #ffff00
+}
+
 .reveal a:link,
-.reveal a:hover,
 .reveal a:active {
     color: #DD8D29; /*Fantastic Mr. Fox */
     text-decoration: none;
@@ -37,7 +32,8 @@ body {
 
 /* visited link */
 .reveal a:visited {
-    color: #618994; /* gray */
+  /* color: #618994; /* gray */
+    color: #24E1BB; /* gray */
     text-decoration: none;
 }
 
