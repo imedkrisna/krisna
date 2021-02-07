@@ -1,6 +1,6 @@
 ---
 date: "2020-08-20T00:00:00Z"
-draft: False
+draft: true
 lastmod: "2020-08-20T00:00:00Z"
 linktitle: Dasar-dasar Python
 menu:
@@ -8,7 +8,7 @@ menu:
     name: Intro Python
     weight: 1
 summary: Dasar-dasar Python
-title: Overview
+title: Dasar-dasar Python
 toc: true
 type: book
 weight: 1
@@ -17,8 +17,9 @@ commentable: false
 ---
 
 {{% callout note %}}
-Laman ini adalah catatan pribadi supaya saya tidak bolak-balik googling. Mudah-mudahan berguna untuk anda juga. Saya mengupdate-nya secara reguler.
+This is a notebook for myself to store some codes so I don't have to keep googling. Will be updated regularly. It is in Indonesian.
 {{% /callout %}}
+
 ## Tentang buku ini
 Di masa di mana sebagian besar institusi penting dan berpengaruh menggunakan data sebagai analisis (dan bukan perasaan belaka), skill menggunakan *software* untuk analisis data semakin tinggi peminatnya. Indonesia termasuk negara yang tidak banyak punya *programmer*, padahal belajar *programming* bukan sesuatu yang maha sulit dan dapat dipelajari semenjak dini.Untuk itu buku ini dibuat. Sebagai seorang yang mendapatkan manfaat dari mempelajari bahasa pemrograman, saya ingin mencoba mempermudah akses belajar bahasa pemrograman bagi teman-teman di Indonesia.
 

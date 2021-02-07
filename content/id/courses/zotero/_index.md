@@ -1,14 +1,14 @@
 ---
 date: "2020-08-20T00:00:00Z"
-draft: false
+draft: true
 lastmod: "2020-08-20T00:00:00Z"
 linktitle: Zotero untuk pemula
 menu:
   example:
     name: Intro Zotero
     weight: 1
-summary: Melakukan analisis statistika sederhana dengan menggunakan Python
-title: Menggunakan Zotero untuk membuat daftar pustaka
+summary: Menggunakan Zotero untuk membuat daftar pustaka
+title: Zotero
 toc: true
 type: book
 weight: 1
