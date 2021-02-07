@@ -1,6 +1,6 @@
 ---
 date: "2020-08-20T00:00:00Z"
-draft: false
+draft: true
 lastmod: "2020-08-20T00:00:00Z"
 linktitle: Dasar-dasar Python
 menu:
@@ -8,7 +8,7 @@ menu:
     name: Intro Python
     weight: 1
 summary: Dasar-dasar Python
-title: Overview
+title: Dasar-dasar Python
 toc: true
 type: book
 weight: 1
