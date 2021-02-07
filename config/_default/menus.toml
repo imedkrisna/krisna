@@ -31,7 +31,7 @@
 [[main]]
   name = "courses"
   url = "/courses"
-  weight = 45
+  weight = 48
 
 [[main]]
   name = "Hobby"
