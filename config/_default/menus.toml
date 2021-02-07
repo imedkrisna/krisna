@@ -24,12 +24,12 @@
   weight = 40
 
 [[main]]
-  name = "talks"
+  name = "Talks"
   url = "#talks"
   weight = 45
 
 [[main]]
-  name = "courses"
+  name = "Courses"
   url = "/courses"
   weight = 48
 
