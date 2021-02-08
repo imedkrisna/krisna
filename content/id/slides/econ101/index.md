@@ -431,4 +431,13 @@ Monday, February $8^{th}$ 2021
 
 ---
 
+## Housekeeping!
+
+- Joy is the class rep.
+- We'll use Zoom over Google Meet.
+- Quizizz is used for everyday lecture.
+- what else?
+
+---
+
 ## Next week: Supply and demand
