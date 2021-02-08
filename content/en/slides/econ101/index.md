@@ -211,13 +211,27 @@ Monday, February $8^{th}$ 2021
 
 ## Some tools
 
-- all course materials are accessible through lentera and google class in pdf.
-- Use my website if you don't like downloading.
-  - this course can be accessed [here]({{< relref "/courses/econ101" >}}).
+- All course materials are accessible through lentera and [google classroom](https://classroom.google.com/u/1/c/MjY5NTUzNzc0NTg5) in pdf.
+- All announcement will be posted on lentera and google classroom.
+  - I believe it will patch through your Petra e-mail as well.
+  - Feel free to let me know what's best for your learning.
+- The course is also available at my website, [s.id/econ101]({{< relref "/courses/econ101" >}}).
+  - It is in html format so you don't have to download.
+  - Also can be viewed on your phone.
 - I will update the course on a weekly basis.
-- Quizzes are conducted using pollev and quizziz.
-- Join pollev.com by navigating to pollev.com/imedkrisna007
-- Join quizizz by navigating to 
+
+---
+
+## Some tools
+
+- The mid-lecture pop quiz (ungraded) will be conducted via poll everywhere.
+  - Please prepare a tab in your browser to [pollev.com/imedkrisna007](https://pollev.com/imedkrisna007/)
+  - You can also use your smartphone's browser.
+
+- The tool for the end-lecture quiz (graded) is still being explored.
+  - we will test [quizizz](https://joinmyquiz.com/) by the end of today's lecture.
+  - We can also use google form.
+  - You are free to let me know your preference.
 
 ---
 
@@ -385,7 +399,31 @@ Monday, February $8^{th}$ 2021
 - However, intervention is often used.
   - education is an example where government intervene heavily.
   - Gojek used subsidy to incentivies drivers and users.
-- things tend to move to equilibrium
+- Intervention may be temporary.
+  - The COVID-19 relieve bill (PEN) will likely stop after the pandemic.
+  - Gojek's subsidy is removed once they reach economies of scale.
+
+---
+
+### Things tend to move to equilibrium
+
+- When there is an incentive to do something, there will be more and more people exploit it.
+- As more people do it, the incentive decreases to a point where it is not worth it anymore.
+- examples:
+  - City becomes more crowded (and costly to live in).
+  - Stock price stops growing few moments after its IPO.
+  - Countries' economic growth reduced after they get rich.
+- Movement towards equilibrium, however, varies.
+  - short run vs long run.
+  - individual vs aggregate.
+  
+---
+
+### Conclusion
+
+- We will see how these principles come up again and again as we delve deeper into the course.
+- The principle will be carried over to your overall degree, and life in general.
+- I am not trying to make you an economist, but the principles are very useful.
 
 ---
 
