@@ -5,8 +5,8 @@ title: "Sektor digital di Indonesia: peluang dan tantangan."
 subtitle: ""
 summary: ""
 authors: [admin]
-tags: [economics, digital, technology]
-categories: [economics, digital, technology]
+tags: [ekonomi, digital, teknologi]
+categories: [ekonomi, digital, teknologi]
 date: 2021-02-08T18:19:57+11:00
 lastmod: 2021-02-08T18:19:57+11:00
 featured: false
