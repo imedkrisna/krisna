@@ -28,7 +28,9 @@ image:
 projects: []
 ---
 
-Postingan kali ini adalah tentang apa yang saya ketahui tentang ekonomi digital di Indonesia. Saat ini Indonesia (dan sebenarnya seluruh dunia sih) sedang latah-latahnya industri 4.0, ekonomi digital, internet of things and the likes. Digitalisasi sepertinya memang tidak terhindarkan. Ketika globalisasi meredup, tren pertukaran data malah naik gila-gilaan. Saya sempat menulis sedikit soal ekonomi digital untuk beberapa pihak, dan kali ini mau saya coba rangkum di postingan ini. Disclaimer dulu bahwa saya bukan ahli di perekonomian digital Indonesia. Postingan ini buat isi waktu luang aja karena sektor ini sangat menarik, banyak yang membicarakan, dan sepertinya memang tidak terhindarkan di masa depan. Jika mau diskusi, yuk!
+Postingan kali ini adalah tentang apa yang saya ketahui tentang ekonomi digital di Indonesia. Saat ini Indonesia (dan sebenarnya seluruh dunia sih) sedang latah-latahnya industri 4.0, ekonomi digital, internet of things and the likes. Digitalisasi sepertinya memang tidak terhindarkan. Ketika globalisasi meredup, tren pertukaran data malah naik gila-gilaan. Beberapa isi postingan ini juga tertuang di [buku kolaborasi PPI Australia tentang Indonesia 4.0]({{ relref "/publication/ppia"}}). Di buku itu, yg dibahas lebih banyak lagi, termasuk pengaruh digitalisasi di sektor kesehatan, pendidikan, dan lain sebagainya.
+
+Disclaimer dulu bahwa saya bukan ahli di perekonomian digital Indonesia. Postingan ini buat isi waktu luang aja karena sektor ini sangat menarik, banyak yang membicarakan, dan sepertinya memang tidak terhindarkan di masa depan. Jika mau diskusi, yuk!
 
 
 ## Ekonomi digital dan kesiapan Indonesia.
