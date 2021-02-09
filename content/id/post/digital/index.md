@@ -16,7 +16,7 @@ draft: false
 # To use, add an image named `featured.jpg/png` to your page's folder.
 # Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
 image:
-  caption: ""
+  caption: "Industri 4.0 (Bappenas)"
   focal_point: ""
   preview_only: true
 
@@ -91,7 +91,7 @@ Tantangan investasi jaringan bukan hanya di mempercepat dan memperbanyak akses i
 
 Berikutnya adalah tantangan khusus pertumbuhan e-commerce tanpa diikuti pertumbuhan kapasitas produksi. Kita sudah bahas di atas bahwa dorongan permintaan (*market size*) dapat meningkatkan stimulasi dorongan penawaran dari sisi dana (*foreign investment*). Tapi tanpa diikuti oleh dorongan penawaran lain seperti iklim bisnis dan investasi serta kualitas tenaga kerja, kita akan ketinggalan di sisi produksi. E-commerce hanya fasilitator pasar, tapi produksi bisa datang dari mana saja. Jika produksi dalam negeri tidak mampu bersaing, maka akibatnya adalah meningkatnya impor.
 
-Jakarta Post pada Februari 2019 mengutip Menteri Keuangan yang mengatakan bahwa [impor produk e-commerce tumbuh 9.11 persen pada 2019](https://www.thejakartapost.com/news/2019/02/13/e-commerce-responsible-for-worsening-trade-deficit.html). Hal ini tentunya memberi tekanan pada neraca perdagangan, sesuatu yang sangat penting bagi Pemerintah Indonesia. 
+Jakarta Post pada Februari 2019 mengutip Menteri Keuangan yang mengatakan bahwa [impor produk e-commerce tumbuh 9.11 persen pada 2019](https://www.thejakartapost.com/news/2019/02/13/e-commerce-responsible-for-worsening-trade-deficit.html). Hal ini tentunya memberi tekanan pada neraca perdagangan, sesuatu yang sangat dikhawatirkan oleh Pemerintah Indonesia.
 
 > The Finance Ministry’s Customs and Excise Directorate General recorded that the contribution of import duties from e-commerce products to state revenue was recorded at Rp 1.19 trillion ($84.65 million) last year, about Rp 99.2 billion per month on average. However, the total import of e-commerce products reached US$17.17 billion in 2018 or 9.11 percent higher than the previous year’s figure. Meanwhile, the country’s trade deficit was recorded at US$8.57 in 2018.
 
