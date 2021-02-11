@@ -74,3 +74,7 @@ Memang mengandalkan lartas perdagangan biasanya bukanlah cara terbaik untuk meni
 Tapi kita tetap optimis. Bisa saja investasi ini akan memiliki _trickle-down_ kepada industri lain dan juga sektor UMKM, seperti hal-nya keinginan pemerintah. Kita juga masih perlu melihat apakah UU CK akan berhasil mereformasi lingkungan usaha di Indonesia menjadi lebih baik, efisien dan memiliki kepastian hukum. Dampak terhadap supply chain juga sudah pasti diperhitungkan dengan baik oleh pemerintah sebelum mengeluarkan kebijakan ini.
 
 Tentu saja kita harus optimis Kementerian Perdagangan akan berhasil menyelesaikan persoalan ini. Indonesia saat ini punya RCEP juga, yang mungkin akan punya mekanisme sendiri nantinya. Meskipun merelakan potensi _recovery_ ekspor, mudah-mudahan semuanya akan terbayar dengan industri mobil listrik yang maju di masa depan. Level skeptis yang sehat tetap harus dijaga, namun tentu saja kita semua harus tetap optimis!
+
+## Update
+
+Tesla dikatakan akan lebih peka terhadap ESG sementara praktik ESG di Indonesia sepertinya [kurang baik](https://tirto.id/potensi-investasi-tesla-terganjal-karena-indonesia-tak-ramah-esg-gaa9).
