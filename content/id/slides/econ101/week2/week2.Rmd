@@ -1015,6 +1015,6 @@ ggplot(mapping = aes(x=x,y=y))+
 
 - What happens when the government intervene in a perfect market?
 
-- We will learn tomorron in:
+- We will learn tomorrow in:
 
 ## Meddling with the market
