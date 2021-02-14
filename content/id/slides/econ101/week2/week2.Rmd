@@ -1,0 +1,1020 @@
+---
+title: "Supply and Demand"
+subtitle: "Week 2"
+author: "Krisna Gupta"
+institute: "IBE Petra"
+date: "15 February 2021 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: monokai
+      highlightLines: true
+      countIncrementalSlides: false
+    css: ["default","dark.css","dark-fonts.css"]
+---
+
+# Today's content
+
+- Supply and demand: a model of competitive market
+
+- Demand curve
+
+- Supply curve
+
+- The perfect equilibrium
+
+---
+
+class: middle, center
+
+# Supply and demand
+
+## a model of competitive market
+
+---
+
+class: center, middle
+
+# What happen to chip?
+
+![chip](chip.jpg)
+
+---
+
+# Some problems
+
+.pull-left[
+- More stuff are smart these days
+
+- Lockdown force people to buy gadget to work and play
+
+- more servers for service provider
+
+]
+
+.pull-right[
+- Lockdown forced stand-downs
+
+- US-China trade war
+]
+
+---
+
+class: top, left
+
+# Supply and demand
+
+- COVID-19 and trade war cause demand and supply shocks
+  
+  - Demand for electronices rose up, while supply can hardly keep-up
+
+- Supply, demand and price are important to making decision.
+
+  - high price incentivies producer to expand, hence lower price.
+
+---
+
+# Market
+
+- Chip makers and chip users create the market for chip.
+
+- Market is a "place" where buyers and sellers meet to exchange goods and services for payment.
+
+- When there are 'many' buyers and 'many' sellers, we often say the maket is **competitive**.
+
+- How many is 'many'? 100? 1.000?
+
+---
+
+# Competitive market
+
+- The important feature of competitive market is power.
+
+- In the competitive market, buyer and seller cannot control price.
+
+  - Seller trying to sell above market price won't get any buyer, vice versa.
+  
+- Competitive market is also known as **perfect market** or **perfect competition**.
+
+---
+
+class: middle
+
+# Competitive market
+
+- Competitive market is characterised by low entry and exit cost.
+  - It is easy to start production or file for bankruptcy.
+
+- On the other extreme, there is **monopoly**, where the buyer/seller have absolute power.
+
+- Most markets are somewhere in between.
+  
+---
+
+# Competitive market
+
+- As previously discussed, we analyze with model.
+
+- While no market is exactly perfect, we always start with competitive market.
+
+  - Like all model, we start with something simple.
+  
+  - as we move forward, we will see the implication of relaxing the perfect market assumption.
+  
+---
+
+<iframe src="https://embed.polleverywhere.com/multiple_choice_polls/kCLaPj1TxWcd4kjiT3PpP?controls=none&short_poll=true" width="800px" height="600px"></iframe>
+
+---
+
+class: middle, center
+
+# Demand curve
+
+## demand & price in 
+
+#### a competitive market
+
+---
+
+# Demand
+
+- Demand is the consumer side of the market, measured by quantity.
+  
+- It is generally accepted that people buy less goods if it is expensive, *ceteris paribus* <sup>1</sup>.
+
+- People say this is the **law of demand**.
+
+- economists usually measure this using the **demand schedule** & **demand curve**.
+
+.footnote[
+[1]: All other things being equal.
+]
+
+---
+
+class: middle, center
+
+# Intermezzo
+
+#### Is *ceteris paribus* realistic?
+
+What makes it hard to say exactly high price decrease demand?
+
+---
+
+# Demand schedule
+
+- A demand schedule is a table showing how much people will want to buy a certain product given prices.
+
+- If everyone in a country face the same price, we can measure demand by adding up all demand for a given price.
+
+- Making a demand schedule is not easy, in part because *ceteris paribus* isn't realistic.
+  - prices change, but so other things.
+  
+---
+
+class: center, middle
+
+# Price and demand
+
+![gas](gas.png)
+
+---
+
+# Demand schedule
+
+.center[A hypothetical demand schedule for rice in Indonesia]
+
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library(kableExtra)
+p <- c(12,11,10.5,10,9.5)
+q <- c(116,130,141,154,170)
+data<-data.frame(p,q)
+data %>%
+  kable("html", align="cc",col.names = c('(1.000 IDR per kg)','(kg per person per year)')) %>%
+  kable_styling(font_size = 20) %>%
+  add_header_above(c('P','Q')) %>%
+  add_header_above(c('Price of rice','Rice Consumption'))
+```
+
+---
+
+# Demand curve
+
+- We can illustrate the demand schedule in a graph.
+
+- A High school reminder of a Cartesian diagram:
+  - Two planes, $x$ (horizontal) and $y$ (vertical).
+  - $y=f(x)$
+  
+- We plot price on the y-axis, and quantity on the x-axis.
+  - however, perfect market implies $Q^D=f(P)$
+
+---
+
+class: center, middle
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library(dplyr)
+library(ggplot2)
+library(ggdark)
+demand<-data.frame(Hmisc::bezier(x=c(170,120,113) ,y=c(9.5,11,12.5)))
+ggplot(demand,aes(x=x,y=y))+
+  geom_path(color='blue',size=2)+
+  geom_point(data=data,
+             aes(x=q,y=p),color='orange',size=3)+
+  labs(title="demand curve for rice",
+       x="Rice consumption (kg/person/year)",
+       y="Price of rice (1.000 IDR per kg)")+
+  dark_theme_bw(base_size=20)+
+  theme(text=element_text(color='gray'))
+
+```
+
+---
+
+# Demand curve
+
+### High school reminder
+
+- Change in price leads to change in quantity along the lines.
+
+- We say **quantity is a function of price**
+
+$$
+Q^D=f(P)
+$$
+- Price is exogenous, quantity is endogenous.
+  - quantity does not affect price.
+  - That's why perfect market is convinient.
+
+---
+
+class: center, middle
+
+### Change in price, ceteris paribus
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library(dplyr)
+library(ggplot2)
+library(ggdark)
+
+plot_label <- data_frame(label = c("D[1]", "D[2]"),
+                          y = c(10.7,10.2),
+                          x = c(130,141))
+
+demand<-data.frame(Hmisc::bezier(x=c(170,120,113) ,y=c(9.5,11,12.5)))
+ggplot(demand,aes(x=x,y=y))+
+  geom_path(color='blue',size=2)+
+  geom_point(data=data,
+             aes(x=q,y=p),color='orange',size=3)+
+  geom_text(data = plot_label,
+            aes(x = x, y = y, label = label), parse = TRUE,
+            family = "Source Sans Pro", size=8)+
+  annotate("segment", x = 130, xend = 139, y = 10.9, yend = 10.5,
+           arrow = arrow(length = unit(2, "lines")), size=1.1, colour = "green")+
+  labs(title="demand curve for rice",
+       x="Rice consumption (kg/person/year)",
+       y="Price of rice (1.000 IDR per kg)")+
+  dark_theme_bw(base_size=20)+
+  theme(text=element_text(color='gray'))
+
+```
+
+---
+
+# Demand curve
+
+- There are plenty of things affect demand:
+  - increased income, change of taste, influencers, etc.
+
+- Additionally, prices change too:
+  - Technology, disaster, tax, etc.
+  
+- As long as the change doesn't cause by buyers & sellers.
+- When this happen, we shift the curve.
+
+---
+
+class: center, middle
+
+### Change in something else
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library(dplyr)
+library(ggplot2)
+library(ggdark)
+demand<-data.frame(Hmisc::bezier(x=c(170,120,113) ,y=c(9.5,11,12.5)))
+demand2<-data.frame(Hmisc::bezier(x=c(190,140,133) ,y=c(9.5,11,12.5)))
+plot_label <- data_frame(label = c("D[1]", "D[2]"),
+                          y = c(10.7,10.7),
+                          x = c(130,150))
+ggplot(mapping=aes(x=x,y=y))+
+  geom_path(data=demand,color='blue',size=2,linetype='dashed')+
+  geom_path(data=demand2,color='blue',size=2)+
+  geom_point(data=data_frame(p=c(11,11),q=c(130,150)),
+             aes(x=q,y=p),color='orange',size=3)+
+    geom_text(data = plot_label,
+            aes(x = x, y = y, label = label), parse = TRUE,
+            family = "Source Sans Pro", size=8)+
+  annotate("segment", x = 130, xend = 150, y = 10.9, yend = 10.9,
+           arrow = arrow(length = unit(2, "lines")), size=1.1, colour = "green")+
+  labs(title="demand curve for rice",
+       x="Rice consumption (kg/person/year)",
+       y="Price of rice (1.000 IDR per kg)")+
+  dark_theme_bw(base_size=20)+
+  theme(text=element_text(color='gray'))
+
+```
+
+---
+
+# Key take away
+
+- We use graph to show relationship between price and quantity.
+
+- In perfect competitive market, buyers and sellers can't affect price. Hence price is **exogenous** and quantity is **endogenous**.
+
+- Change in price $\Rightarrow$ movement along the curve.
+
+- Change in everything else $\Rightarrow$ shift the curve.
+
+---
+
+# Back to demand
+
+- Shift the curve is what generally means by economist when we say **increase in demand** or **decrease in demand**.
+  - i.e., at the same price point, demand change.
+
+- What shift the demand curve?
+  - Changes in the prices of related goods.
+  - Changes in income.
+  - Changes in taste.
+  - Changes in expectations.
+  - Changes in the number of consumers.
+
+---
+
+class: middle, center
+
+# What shifts the demand curve?
+
+## Finding This out is your job as a businessman!
+
+---
+
+#### Changes in the prices of related goods or services
+
+- Most normal goods have a **substitutes**.
+
+- A Substitute is another good which serve the same purpose.
+  - you will not likely to buy it if you have your main good.
+  
+- Bread, noodle, and pasta can be considered a substitute for rice. What else?
+
+- When $P_{noodle}$ goes down, you might want to switch to noodle, hence reducing demand for rice even when $P_{rice}$ doesn't change.
+
+---
+
+#### Changes in the prices of related goods or services
+
+- The opposite of substitute is **complements** $^2$
+
+- Demand is reduced if its complement is also reduced in demand.
+
+- Demand for combustion engine car reduced when gasoline (*bensin*) prices go up.
+  - similarly, people tend to buy electric car if charging it is relatively cheaper.
+
+.footnote[[2]: not compliment. different word]
+
+---
+
+#### Changes in income
+
+- In most goods, people buy more when their income increases.
+  - that's why businesses pay attention to a country's economic growth.
+  
+- Most goods are **normal goods**, not **inferior goods**.
+
+- **inferior goods** behave the other way around: buy less when income goes up.
+  - you buy less of instant noodle when you're richer.
+
+---
+
+<iframe src="https://embed.polleverywhere.com/multiple_choice_polls/0ok1Kh10igzuTlSWS3Xdj?controls=none&short_poll=true" width="800px" height="600px"></iframe>
+
+---
+
+#### Changes in tastes.
+
+- Changes in taste is straightforward.
+  - nobody listens to K-Pop back in the 90s.
+
+- We don't know how, but people's taste is changing.
+  - Marketers and advertisers would like to disagree.
+  
+- If you can detect changes in tastes, or even better, influence other people's taste, you have an advantage in business!
+  
+---
+
+#### Changes in expectations.
+
+- People reacts on signal and what they expect for the future.
+
+- Some people hold back purchasing some goods because they know those goods will have a discount in the near future.
+
+- People buy more stocks when vaccine introduced cuz they expect the economy to grow in the near future.
+
+- Knowledge is an advantage
+  - that's why insider trading is illegal.
+
+---
+
+#### Changes in the number of buyer
+
+- Similar with income, more buyer means more demand given the same price.
+
+- This is why *warteg* often gets higher demand when there is a new construction site nearby.
+
+- As the number of middle-class increases, demand for things that they usually buy also increase.
+
+---
+
+class: center, middle
+
+# Break time
+
+---
+
+class: center, middle
+
+# Supply & Prices
+
+---
+
+# Supply
+
+- Is the other side of the market.
+
+- Like demand but the opposite:
+  - Supply goes up when prices goes up.
+  - When surgical facemask's price went up, even [Polytron supplies facemasks](https://www.tokopedia.com/tokosinarbarujakarta/masker-kesehatan-polytron-3ply?src=topads).
+  
+- We also express supply with **supply schedule** and **supply curve**.
+
+---
+
+# Demand schedule
+
+.center[A hypothetical demand schedule for rice in Indonesia]
+
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+p <- c(12,11,10.5,10,9.5)
+q <- c(170,154,141,129,113)
+datas<-data.frame(p,q)
+datas %>%
+  kable("html", align="cc",col.names = c('(1.000 IDR per kg)','(kg per person per year)')) %>%
+  kable_styling(font_size = 20) %>%
+  add_header_above(c('P','Q')) %>%
+  add_header_above(c('Price of rice','Supply of rice'))
+```
+
+---
+
+class: center, middle
+
+#### Supply curve
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+
+supply<-data.frame(Hmisc::bezier(x=c(113,160,170) ,y=c(9.5,11,12)))
+ggplot(supply,aes(x=x,y=y))+
+  geom_path(color='red',size=2)+
+  geom_point(data=datas,
+             aes(x=q,y=p),color='green',size=3)+
+  labs(title="supply curve for rice",
+       x="Rice production (kg/person/year)",
+       y="Price of rice (1.000 IDR per kg)")+
+  dark_theme_bw(base_size=20)+
+  theme(text=element_text(color='gray'))
+
+```
+
+---
+
+# Supply Curve
+
+- When price changes, quantity supplied go up.
+
+- like demand, if sellers can't affect the market price, they follow the market price.
+
+$$
+Q^S=f(P)
+$$
+- the difference is, prices positively correlated with $Q^S$, $i.e.,$ $\frac{dQ^S}{dP} > 0$, $i.e.,$ upward sloping.
+
+- Hence, $P$ is exogen, $Q^s$ is endogen.
+
+---
+
+class: center, middle
+
+#### Change in price, ceteris paribus
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+plot_labels2 <- data_frame(label = c("S[1]", "S[2]"),
+                          y = c(10.3,10.8),
+                          x = c(141,153))
+
+ggplot(supply,aes(x=x,y=y))+
+  geom_path(color='red',size=2)+
+  geom_point(data=datas,
+             aes(x=q,y=p),color='green',size=3)+
+  geom_text(data = plot_labels2,
+            aes(x = x, y = y, label = label), parse = TRUE,
+            family = "Source Sans Pro", size=8)+
+  annotate("segment", x = 140, xend = 152, y = 10.6, yend = 11.1,
+           arrow = arrow(length = unit(2, "lines")), size=1.1, colour = "yellow")+
+  labs(title="Supply curve for rice",
+       x="Rice production (kg/person/year)",
+       y="Price of rice (1.000 IDR per kg)")+
+  dark_theme_bw(base_size=20)+
+  theme(text=element_text(color='gray'))
+
+```
+
+---
+
+# Supply curve
+
+- Plenty of things that are not prices also affects the supply curve.
+
+- Affecting farmers' decision to supply includes:
+  - change in import price.
+  - change in minimum  wage in manufacturing.
+  - Draught or flood.
+  - Adoption in tech, etc.
+  - we'll learn more about production cost later.
+
+- When these changes, we shift the curve.
+
+---
+
+class: center, middle
+
+### Changes in something else
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library(dplyr)
+library(ggplot2)
+library(ggdark)
+supply2<-data.frame(Hmisc::bezier(x=c(133,180,190) ,y=c(9.5,11,12)))
+plot_labels2 <- data_frame(label = c("S[1]", "S[2]"),
+                          y = c(10.8,10.8),
+                          x = c(153,173))
+ggplot(mapping=aes(x=x,y=y))+
+  geom_path(data=supply,color='red',size=2,linetype='dashed')+
+  geom_path(data=supply2,color='red',size=2)+
+  geom_point(data=data_frame(p=c(11,11),q=c(153,173)),
+             aes(x=q,y=p),color='green',size=3)+
+    geom_text(data = plot_labels2,
+            aes(x = x, y = y, label = label), parse = TRUE,
+            family = "Source Sans Pro", size=8)+
+  annotate("segment", x = 155, xend = 170, y = 10.97, yend = 10.97,
+           arrow = arrow(length = unit(2, "lines")), size=1.1, colour = "yellow")+
+  labs(title="demand curve for rice",
+       x="Rice consumption (kg/person/year)",
+       y="Price of rice (1.000 IDR per kg)")+
+  dark_theme_bw(base_size=20)+
+  theme(text=element_text(color='gray'))
+
+```
+
+---
+
+## What shifts the supply curve?
+
+- Like demand, there are several generelised factors affecting the supply curve.
+
+- They are:
+  - Changes in input prices
+  - Changes in the prices of related goods or services
+  - Changes in technology
+  - Changes in expectations
+  - Changes in the number of producers
+  
+---
+
+#### Changes in input prices
+
+- To produce, you need inputs
+  - labour, seeds, fertilizers, price of land.
+
+- $P_{input} \uparrow \enspace \Rightarrow$ Increase in production cost.
+  - needs higher price to supply same amount of goods.
+
+- In a sense, a producer in a market may be a consumer in another market.
+
+  - A Factory outlet is a producer in the shirt market, but a consumer in the fabric market.
+  
+---
+
+#### Changes in the prices of related goods or services
+
+- Especially important for producers which sell many types of products with a very similar inputs.
+
+- Toyota produces a lot of Avanza in Indonesia.
+  - taxes for sedan and utility vehicles is higher in Indonesia.
+  - You won't see Avanza in Australia. Instead, there's a lot of Camries and Hiluxes.
+  
+---
+
+#### Changes in expectation
+
+- Suppliers also tend to react to expectation.
+  
+- When a producer think there will be increase in price of its good in the future, it will hold to sell it.
+
+- In fact, hoarding is a part of a producer's strategy.
+
+- There's a trade-off between selling it now vs storing it and sell it later. 
+
+---
+
+#### Changes in the number of sellers
+
+- Similar with income, more seller means more supply given the same price.
+
+- The rise of Gojek and the likes leads to higher supply of transportation service.
+
+- Similarly when China started to rise up in manufacturing: more supply for cheap labour for electronic industry.
+
+---
+
+class: center, middle
+
+# Perfect market equilibrium
+
+---
+
+# Market equilibrium
+
+- Now that we learn that buyer and seller react to price on a curve, it is time to unite them!
+
+- The perfect market is when quantity supplied matches quantity demanded.
+
+$$ Q^D=Q^S $$
+- The price that causes this is called **equilibrium price** or **market clearing price**.
+
+- The easiest way is to graph the two Q together.
+
+
+---
+
+class: center, middle
+
+#### Equilibrium price
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+
+ggplot(mapping = aes(x=x,y=y))+
+  geom_path(data=supply, color='red',size=2)+
+  geom_path(data=demand, color='blue',size=2)+
+  geom_point(data=data_frame(q=141,p=10.5),
+             aes(x=q,y=p),color='green',size=5)+
+  geom_segment(data = data_frame(q=141,p=10.5),
+               aes(x = q, y = 9.5, xend=q,yend=p), lty = "dotted", size=2) +
+  geom_segment(data = data_frame(q=141,p=10.5),
+               aes(x = 110, y = p, xend = q, yend = p), lty = "dotted", size=2) +
+  labs(title="Market for rice",
+       x="Rice production (kg/person/year)",
+       y="Price of rice (1.000 IDR per kg)")+
+  dark_theme_bw(base_size=20)+
+  theme(text=element_text(color='gray'))
+
+```
+
+---
+
+class: center, middle
+
+#### Excess Supply
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+
+plott <- data_frame(label = c("Qd=131", "Qs=151"),
+                          y = c(11.2,11.2),
+                          x = c(131,154.5))
+
+ggplot(mapping = aes(x=x,y=y))+
+  geom_path(data=supply, color='red',size=2)+
+  geom_path(data=demand, color='blue',size=2)+
+  geom_point(data=data_frame(q=154.5,p=11),
+             aes(x=q,y=p),color='green',size=5)+
+  geom_point(data=data_frame(q=131,p=11),
+             aes(x=q,y=p),color='green',size=5)+
+  geom_segment(data = data_frame(q=154.5,p=11),
+               aes(x = q, y = 9.5, xend=q,yend=p), lty = "dotted", size=2) +
+  geom_segment(data = data_frame(q=154.5,p=11),
+               aes(x = 110, y = p, xend = q, yend = p), lty = "dotted", size=2) +
+  geom_segment(data = data_frame(q=131,p=11),
+               aes(x = q, y = 9.5, xend = q, yend = p), lty = "dotted", size=2) +
+  annotate(geom="text", x=140, y=11.5, label="Excess supply",
+              color="grey",size=8)+
+  geom_text(data = plott,
+            aes(x = x, y = y, label = label), parse = FALSE,
+            family = "Source Sans Pro", size=8)+
+  labs(title="Market for rice",
+       x="Rice production (kg/person/year)",
+       y="Price of rice (1.000 IDR per kg)")+
+  dark_theme_bw(base_size=20)+
+  theme(text=element_text(color='gray'))
+
+```
+
+---
+
+class: center, middle
+
+#### Excess Demand
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+
+plottt <- data_frame(label = c("Qs=127", "Qd=151"),
+                          y = c(10.2,10.2),
+                          x = c(127,154.5))
+
+ggplot(mapping = aes(x=x,y=y))+
+  geom_path(data=supply, color='red',size=2)+
+  geom_path(data=demand, color='blue',size=2)+
+  geom_point(data=data_frame(q=154.5,p=10),
+             aes(x=q,y=p),color='green',size=5)+
+  geom_point(data=data_frame(q=127,p=10),
+             aes(x=q,y=p),color='green',size=5)+
+  geom_segment(data = data_frame(q=154.5,p=10),
+               aes(x = q, y = 9.5, xend=q,yend=p), lty = "dotted", size=2) +
+  geom_segment(data = data_frame(q=154.5,p=10),
+               aes(x = 110, y = p, xend = q, yend = p), lty = "dotted", size=2) +
+  geom_segment(data = data_frame(q=127,p=10),
+               aes(x = q, y = 9.5, xend = q, yend = p), lty = "dotted", size=2) +
+  annotate(geom="text", x=140, y=9.8, label="Excess demand",
+              color="grey",size=8)+
+  geom_text(data = plottt,
+            aes(x = x, y = y, label = label), parse = FALSE,
+            family = "Source Sans Pro", size=8)+
+  labs(title="Market for rice",
+       x="Rice production (kg/person/year)",
+       y="Price of rice (1.000 IDR per kg)")+
+  dark_theme_bw(base_size=20)+
+  theme(text=element_text(color='gray'))
+
+```
+
+---
+
+# Market equilibrium
+
+.s[
+- If price is **above market price**, there will be excess supply. Many goods are left unsold as the price isn't worth it for some buyers.
+
+- Some of the less competitive supplier will close, driving price down.
+
+- If price is **below market price**, there will be excess demand. Not enough goods are supplied and there will be **scarcity** in the market. People will try to sell more as producers increase production.
+
+- sometimes it is even worth it to invest. Many alcohol producer turns to making hand sanitiser. Also, Polytron.
+
+]
+
+---
+
+# Market equilibrium
+
+- Price equilibrium may take some time to adjust.
+
+- Some Markets are constantly moving (stock price is a good example)
+
+- Shocks to demand and/or supply will move market equilibrium to a new position.
+
+- **New market equilibrium** basically means a new equilibrium price and equilibrium quantity is formed.
+
+---
+
+class: middle, center
+
+#### Equilibrium amid demand shock
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+
+plot_label2 <- data_frame(label = c("D[1]", "D[2]"),
+                          y = c(12,12),
+                          x = c(120,140))
+
+ggplot(mapping = aes(x=x,y=y))+
+  geom_path(data=supply, color='red',size=2)+
+  geom_path(data=demand, color='blue',size=2, linetype='dashed' )+
+  geom_path(data=demand2, color='blue', size=2)+
+  geom_point(data=data_frame(q=141,p=10.5),
+             aes(x=q,y=p),color='orange',size=5)+
+  geom_point(data=data_frame(q=152,p=11),
+             aes(x=q,y=p),color='orange',size=5)+
+  geom_segment(data = data_frame(q=152,p=11),
+               aes(x = q, y = 9.5, xend=q,yend=p), lty = "dotted", size=2) +
+  geom_segment(data = data_frame(q=152,p=11),
+               aes(x = 110, y = p, xend = q, yend = p), lty = "dotted", size=2) +
+  geom_text(data = plot_label2,
+            aes(x = x, y = y, label = label), parse = TRUE,
+            family = "Source Sans Pro", size=8)+
+  annotate("segment", x = 120, xend = 135, y = 11.85, yend = 11.85,
+           arrow = arrow(length = unit(2, "lines")), size=1.1, colour = "green")+
+  annotate("segment", x = 141, xend = 152, y = 10.5, yend = 11,
+           arrow = arrow(length = unit(2, "lines")), size=1.1, colour = "yellow")+
+  labs(title="Market for rice",
+       x="Rice production (kg/person/year)",
+       y="Price of rice (1.000 IDR per kg)")+
+  dark_theme_bw(base_size=20)+
+  theme(text=element_text(color='gray'))
+
+```
+
+---
+
+class: middle, center
+
+#### Equilibrium amid supply shock
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+
+plot_labels2 <- data_frame(label = c("S[1]", "S[2]"),
+                          y = c(12,12),
+                          x = c(165,183))
+
+ggplot(mapping = aes(x=x,y=y))+
+  geom_path(data=supply, color='red',size=2, linetype='dashed')+
+  geom_path(data=demand, color='blue',size=2)+
+  geom_path(data=supply2, color='red', size=2)+
+  geom_point(data=data_frame(q=141,p=10.5),
+             aes(x=q,y=p),color='orange',size=5)+
+  geom_point(data=data_frame(q=152,p=10.1),
+             aes(x=q,y=p),color='orange',size=5)+
+  geom_segment(data = data_frame(q=152,p=10.1),
+               aes(x = q, y = 9.5, xend=q,yend=p), lty = "dotted", size=2) +
+  geom_segment(data = data_frame(q=152,p=10.1),
+               aes(x = 110, y = p, xend = q, yend = p), lty = "dotted", size=2) +
+  geom_text(data = plot_labels2,
+            aes(x = x, y = y, label = label), parse = TRUE,
+            family = "Source Sans Pro", size=8)+
+  annotate("segment", x = 165, xend = 183, y = 11.8, yend = 11.8,
+           arrow = arrow(length = unit(2, "lines")), size=1.1, colour = "green")+
+  annotate("segment", x = 141, xend = 152, y = 10.5, yend = 10.1,
+           arrow = arrow(length = unit(2, "lines")), size=1.1, colour = "yellow")+
+  labs(title="Market for rice",
+       x="Rice production (kg/person/year)",
+       y="Price of rice (1.000 IDR per kg)")+
+  dark_theme_bw(base_size=20)+
+  theme(text=element_text(color='gray'))
+
+```
+
+---
+
+## Equilibrium after shock
+
+- A positive demand shock leads to a higher equilibrium quantity and price.
+
+- A positive supply shock leads to a higher equilibrium quantity but a lower price.
+
+- A negative demand shock leads to a lower equilibrium quantity and price, and lower equilibrium quantity with a higher price.
+
+---
+
+class: middle, center
+
+#### Equilibrium amid demand shock
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+
+plot_label3 <- data_frame(label = c("D[1]", "D[2]"),
+                          y = c(12,12),
+                          x = c(120,140))
+
+ggplot(mapping = aes(x=x,y=y))+
+  geom_path(data=supply, color='red',size=2)+
+  geom_path(data=demand, color='blue',size=2, linetype='dashed' )+
+  geom_path(data=demand2, color='blue', size=2)+
+  geom_point(data=data_frame(q=141,p=10.5),
+             aes(x=q,y=p),color='orange',size=5)+
+  geom_point(data=data_frame(q=152,p=11),
+             aes(x=q,y=p),color='orange',size=5)+
+  geom_segment(data = data_frame(q=152,p=11),
+               aes(x = q, y = 9.5, xend=q,yend=p), lty = "dotted", size=2) +
+  geom_segment(data = data_frame(q=152,p=11),
+               aes(x = 110, y = p, xend = q, yend = p), lty = "dotted", size=2) +
+  geom_text(data = plot_label3,
+            aes(x = x, y = y, label = label), parse = TRUE,
+            family = "Source Sans Pro", size=8)+
+  annotate("segment", x = 120, xend = 135, y = 11.85, yend = 11.85,
+           arrow = arrow(length = unit(2, "lines")), size=1.1, colour = "green")+
+  annotate("segment", x = 141, xend = 151.5, y = 10.5, yend = 11,
+           arrow = arrow(length = unit(2, "lines")), size=1.1, colour = "yellow")+
+  labs(title="Market for rice",
+       x="Rice production (kg/person/year)",
+       y="Price of rice (1.000 IDR per kg)")+
+  dark_theme_bw(base_size=20)+
+  theme(text=element_text(color='gray'))
+
+```
+
+---
+
+class: middle, center
+
+#### Equilibrium amid demand shock then supply shock
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+
+plot_label3 <- data_frame(label = c("D[1]", "D[2]"),
+                          y = c(12,12),
+                          x = c(120,140))
+
+plot_labels3 <- data_frame(label = c("S[1]", "S[2]"),
+                          y = c(12.3,12.3),
+                          x = c(165,183))
+
+supply3<-data.frame(Hmisc::bezier(x=c(135,175,185) ,y=c(9.5,11,12)))
+
+ggplot(mapping = aes(x=x,y=y))+
+  geom_path(data=supply, color='red',size=2, linetype='dashed')+
+  geom_path(data=demand, color='blue',size=2, linetype='dashed' )+
+  geom_path(data=demand2, color='blue', size=2)+
+  geom_path(data=supply3, color='red', size=2)+
+  geom_point(data=data_frame(q=141,p=10.5),
+             aes(x=q,y=p),color='orange',size=5)+
+  geom_point(data=data_frame(q=160.8,p=10.55),
+             aes(x=q,y=p),color='orange',size=5)+
+  geom_point(data=data_frame(q=152,p=11),
+             aes(x=q,y=p),color='orange',size=5)+
+  geom_segment(data = data_frame(q=160.8,p=10.55),
+               aes(x = q, y = 9.5, xend=q,yend=p), lty = "dotted", size=2) +
+  geom_segment(data = data_frame(q=160.8,p=10.55),
+               aes(x = 110, y = p, xend = q, yend = p), lty = "dotted", size=2) +
+  geom_text(data = plot_label3,
+            aes(x = x, y = y, label = label), parse = TRUE,
+            family = "Source Sans Pro", size=8)+
+  geom_text(data = plot_labels3,
+            aes(x = x, y = y, label = label), parse = TRUE,
+            family = "Source Sans Pro", size=8)+
+  annotate("segment", x = 120, xend = 135, y = 11.85, yend = 11.85,
+           arrow = arrow(length = unit(2, "lines")), size=1.1, colour = "green")+
+  annotate("segment", x = 171.5, xend = 183, y = 12.05, yend = 12.05,
+           arrow = arrow(length = unit(2, "lines")), size=1, colour = "green")+
+  annotate("segment", x = 140, xend = 150.5, y = 10.65, yend = 11.05,
+           arrow = arrow(length = unit(2, "lines")), size=1.1, colour = "yellow")+
+  annotate("segment", x = 152.5, xend = 161, y = 11.05, yend = 10.65,
+           arrow = arrow(length = unit(2, "lines")), size=1.1, colour = "yellow")+
+  labs(title="Market for rice",
+       x="Rice production (kg/person/year)",
+       y="Price of rice (1.000 IDR per kg)")+
+  dark_theme_bw(base_size=20)+
+  theme(text=element_text(color='gray'))
+
+```
+
+---
+
+# Double positive shocks
+
+- As you can see, if the positive shock is big enough, it can offset the rise in price with even higher increase in demand.
+
+- You might note as well that the slope of the curve matters.
+  - steeper curve change quantity even more.
+  
+- We will learn more later on **elasticity**.
+
+---
+
+# Perfect market
+
+- So we learned a bit on how perfect market operates:
+  - Supply and demand will eventually settle on a market clearing price.
+  - Market clearing price adjust quickly.
+  - No single buyer or seller can affect it.
+  
+- Movement along the curve occurs when price change
+
+- while exogenous shock (non-price change) shifts the curve.
+
+---
+
+# Next week
+
+- What happens when market prices doesn't adjust as quickly?
+
+- What happens when the government intervene in a perfect market?
+
+- We will learn tomorron in:
+
+## Meddling with the market
