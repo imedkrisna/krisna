@@ -10,7 +10,7 @@ weight: 20
 slides:
 
 - [week 1: Introduction]({{< relref "/slides/econ101" >}})
-- [week 2: Supply and demand](../week2)
+- [week 2: Supply and demand](https://krisna.netlify.app/slides/econ101/week2)
 - [week 3: Meddling with the market]()
 - [week 4: Firm problem]()
 - [week 5: Monopoly & oligopoly]()
