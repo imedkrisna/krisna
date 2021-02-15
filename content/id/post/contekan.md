@@ -30,7 +30,8 @@ Postingan ini khusus buat contekan belajaran waktu nyoba-nyoba. Akan coba dibagi
 - [Complete ggplot2 by r-statistics](http://r-statistics.co/Complete-Ggplot2-Tutorial-Part2-Customizing-Theme-With-R-Code.html)
 - [change default.r](https://stackoverflow.com/questions/35158708/how-to-set-default-template-for-new-r-files-in-rstudio)
 - [ggplot default themes](https://ggplot2.tidyverse.org/reference/ggtheme.html)
-- [Graphs for economics teaching](https://r-coder.com/economics-charts-r/)
+- [Simple Graphs for economics teaching](https://r-coder.com/economics-charts-r/)
+- [Graphs for economics teaching with function](https://eric.netlify.app/2017/09/19/plotting-consumer-and-producer-surpluses-in-ggplot2/)
 
 ### html and blog
 - [cara bikin multi-kolom](https://stackoverflow.com/questions/31753897/2-column-section-in-r-markdown)
