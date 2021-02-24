@@ -23,3 +23,9 @@ Buku ini kami tuangkan ke dalam enam pertemuan berbeda. Masing-masing pertemuan 
 ## Penulis
 
 Buku ini ditulis oleh [Donny Pasaribu, PhD](https://www.linkedin.com/checkpoint/challengesV2/AQHzkyD_NxOE5AAAAXfSymHba-hQrI3l4oLVxy0rOei4eX32dZFmF7Yoq7x7tRBSZaWtdBLne1Af0-ft4ceuymGAWYoOX_E43g?original_referer=https%3A%2F%2Fwww.google.com%2F), [Chandra Putra](https://www.linkedin.com/checkpoint/challengesV2/AQEN2hc-mAOYTgAAAXfSyvksnC4g3vGRU2aGqssQY9dCYjpVAKBsOKfbkwPRC4Gbsj-Ny0Jad8xf6LVpXQvp6qrTc5x3v9WiVg?original_referer=https%3A%2F%2Fwww.google.com%2F), dan {{< mention "admin" >}}
+
+## Penggunaan
+
+Buku ini dapat digunakan dengan memerhatikan hal berikut:
+
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.
