@@ -28,4 +28,9 @@ This course teaches the basic principle of economics. It is designed to provide 
 
 please let me know thru {{< icon name="envelope" pack="fas" >}}<a href="mailto:krisna.gupta@outlook.com">e-mail</a> or mention me on {{< icon name="twitter" pack="fab" >}}[twitter](https://www.twitter.com/imedkrisna).
 
+## License
+
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.
+
+
 [^1]: Krugman, P. R., & Wells, R. (2016). [Essentials of economics (Fourth ed.)](](https://www.periplus.com/p/9781464186653/essentials-of-economics?filter_name=essentials%20of%20economics)). New York, NY: Worth Publishers, Macmillan Learning.
