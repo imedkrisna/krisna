@@ -1,17 +1,16 @@
 ---
-title: perkembangan
+title: Perkembangan perdagangan dan investasi di Indonesia
+linktitle: perkembangan
 date: '2021-01-01'
 type: book
 weight: 20
 ---
 
-# Perkembangan perdagangan dan investasi di Indonesia
-
 Sepanjang sejarah, interaksi dengan dunia luar selalu memiliki peran sentral dalam perkembangan ekonomi dan sosial Indonesia. Jauh sebelum negara Indonesia berdiri, migrasi dan perdagangan internasional telah memfasilitasi penyebaran ide dan kebudayaan yang kini membentuk karakteristik negara ini. Proses ini terus berlanjut dan berevolusi meskipun kecepatan dan tingkat interaksi dengan dunia luar terkadang naik atau turun.
 
 Interaksi dengan ekonomi global juga berperan penting dalam membentuk struktur ekonomi Indonesia. Reformasi struktural ekonomi Indonesia tidak terlepas dari respons ekonomi domestik terhadap perkembangan ekonomi global. Hal ini sangat jelas terlihat dalam transformasi ekspor Indonesia. Gambar 1 menunjukkan perubahan komposisi ekspor Indonesia dari negara yang didominasi oleh ekspor minyak hingga pertengahan dekade 1980-an, menjadi negara pengekspor manufaktur padat karya, dan kemudian menjadi pengekspor batu bara dan minyak sawit (CPO). Garis putih di Gambar 1 menunjukkan komposisi ekspor komoditas sumber daya alam dari total ekspor barang Indonesia. Perubahan proporsi ekspor merupakan hasil dari kombinasi antara keputusan aktor-aktor dalam perekonomian dan kebijakan perdagangan dan investasi yang ditetapkan pemerintah. 
 
-<img src="/media/bappenas/gambar1.png" alt="drawing" title="Gambar 1 Komposisi Ekspor Barang Indonesia, Sumber: UN Comtrade (2020), diolah penulis" width="500"/>
+{{< figure library="true" src="/bappenas/gambar1.png" title="Komposisi Ekspor Barang Indonesia, Sumber: UN Comtrade (2020), diolah penulis" numbered="true" >}}
 
 Selama lebih dari setengah abad, pola ekspor Indonesia mengalami fluktuasi yang cukup drastis. Proporsi ekspor sumber daya alam terus tinggi hingga pertengahan dekade 1980-an, kemudian bertransformasi menuju ekspor manufaktur selama satu dekade, sebelum kemudian beralih kembali ke ekspor sumber daya alam setelah krisis ekonomi di tahun 1998. Transformasi dan fluktuasi ini sangat dipengaruhi oleh kebijakan pemerintah dalam bidang perdagangan dan investasi.
 
@@ -27,3 +26,52 @@ Ketergantungan Indonesia terhadap ekspor minyak memicu kekhawatiran beberapa eko
 Basri dan Hill (2004) berargumen bahwa kebijakan perdagangan pada periode Orde Baru ditentukan oleh seberapa kuat pengaruh dari grup yang dekat dengan presiden Suharto. Mereka mengidentifikasi setidaknya ada empat grup yang memiliki andil dalam pembuatan kebijakan perdagangan selama orde baru: Teknokrat (technocrats), Nasionalis ekonomi (economic nationalists), pengejar rente (rent seekers), dan institusi asing (foreign institutions). Andil mereka dalam pengambilan kebijakan perdagangan berfluktuasi seiring dengan perubahan ekonomi global dan domestik. 
 
 Pertumbuhan ekonomi yang relatif tinggi dan melonjaknya pendapatan pemerintah dari ekspor migas mengurangi kebutuhan akan reformasi perdagangan dan investasi. Sebaliknya, kebijakan substitusi impor melalui subsidi industri dan kebijakan perdagangan proteksionisme kemudian didanai oleh pendapatan migas. Sejalan dengan kebijakan perdagangan, kebijakan investasi juga relatif tertutup selama periode bonanza minyak (Gambar 2). Namun, terdapat indikasi masuknya investasi asing di sektor substitusi impor untuk melompati hambatan tarif yang tinggi (Kinoshita, 1986; K.-W. Thee, 1984). Kebijakan ini berhasil memicu peningkatan output industri berat, meskipun sebagian besar bersumber dari industri berat yang berkaitan dengan migas.
+
+{{< figure library="true" src="/bappenas/gambar2.png" title="Kebijakan perdagangan Indonesia 1966-95 (Basri dan Hill, 2004)" numbered="true" width=500 >}}
+
+{{< figure library="true" src="/bappenas/gambar3.png" title="Kebijakan PMA Indonesia sejak orde baru (Basri dan Hill, 2004)" numbered="true" width=500 >}}
+
+Periode bonanza minyak berakhir pada pertengahan dekade 1980-an seiring dengan jatuhnya harga minyak. Bersamaan dengan itu, pertumbuhan ekonomi Indonesia mengalami perlambatan drastis antara tahun 1983-85. Perlambatan ini memicu pemerintah Indonesia untuk mencari sumber pertumbuhan lain dan beralih dari strategi substitusi impor menuju strategi promosi ekspor. Strategi promosi ekspor dilakukan dengan membuka perekonomian Indonesia kepada perdagangan dan investasi asing, serta meningkatkan peran sektor swasta dalam perekonomian. Pendekatan ini relatif sukses mengembalikan pertumbuhan ekonomi. 
+
+Deregulasi mempermudah masuknya investasi asing ke sektor manufaktur non-migas, terutama dari negara-negara yang baru saja terindustrialisasi di Asia (K.-W. Thee, 1991). PMA meningkat delapan kali lipat antara tahun 1986 dan 1991. Sejalan dengan tren tersebut, sektor manufaktur non-migas tumbuh lebih dari 10 persen per tahun antara tahun 1986 dan 1996, dan pertumbuhan ekonomi secara keseluruhan mencapai 7.1 persen per tahun. Proporsi ekspor migas dalam total ekspor juga berkurang dengan cepat, dari lebih dari 90 persen pada tahun 1981 menjadi kurang dari 40 persen di tahun 1998. Pertumbuhan ekspor didorong oleh ekspor manufaktur, terutama tekstil, mesin, dan perabotan.
+
+Pertumbuhan yang didorong orientasi ekspor tersebut tiba-tiba berakhir pada tahun 1998 saat terjadinya Krisis Finansial Asia, yang juga mengakhiri periode Orde Baru. Pertumbuhan ekonomi jatuh ke -13.6 persen di tahun 1998 dan Rupiah terdepresiasi dari Rp 2.500 per US dolar pada bulan Juli 1997 ke Rp 17.500 per US dolar pada bulan Mei 1998. Periode reformasi ditandai dengan demokratisasi politik dan desentralisasi otoritas dari pusat ke daerah. Sebagai salah satu syarat menerima pinjaman dari IMF, Indonesia juga menerapkan reformasi ekonomi seperti mengurangi hambatan perdagangan internasional dan investasi asing. 
+
+Gambar 3 menunjukkan timeline perubahan kebijakan perdagangan internasional sejak era Reformasi. Mekanisme pembuatan kebijakan perdagangan yang sebelumnya tergantung pada kedekatan dan peran grup tertentu dengan presiden telah ditinggalkan. Demokratisasi membuat kebijakan perdagangan ikut dipengaruhi oleh persepsi publik dan kepentingan politik. Hal ini meningkatkan kompleksitas pembuatan kebijakan perdagangan. Risiko peningkatan proteksionisme melalui hambatan perdagangan, terutama untuk bahan pangan dan produk industri, meningkat seiring dengan tuntutan politik untuk menerapkan kebijakan yang populer (Basri & Patunru, 2012). Meskipun demikian, pembuatan kebijakan dan respons aktor ekonomi domestik tetap dipengaruhi oleh perubahan ekonomi global.
+
+Periode pasca Krisis 1998 diikuti oleh partisipasi aktif Indonesia dalam komunitas regional Association of Southeast Asian Nations (ASEAN). Perjanjian perdagangan bebas dengan ASEAN dan komitmen Indonesia dalam World Trade Organization (WTO) menjaga Indonesia relatif tetap terbuka pada perdagangan internasional (Pangestu et al., 2015). Hal ini menjadi faktor penting dalam pembuatan kebijakan perdagangan pada era Reformasi. 
+
+{{< figure library="true" src="/bappenas/gambar4.png" title="Kebijakan perdagangan sejak reformasi" numbered="true" width=500 >}}
+
+## Perkembangan aliran PMA dan perdagangan sejak reformasi
+
+Di luar Indonesia, perkembangan ekonomi global juga berubah dengan cepat. Pertumbuhan ekonomi Cina yang mencapai dua digit selama beberapa dekade terakhir mendorong beberapa tren secara bersamaan: kompetisi ketat di pasar produk manufaktur global, berkembangnya rantai pasok global (RPG) di seluruh Asia, dan peningkatan permintaan komoditas sumber daya alam. Pada tahun 2004, harga komoditas mulai meningkat dengan tajam, seiring dengan bergabungnya Cina secara resmi ke dalam WTO pada tahun 2005. 
+
+Bagi Indonesia, yang baru saja pulih dari krisis ekonomi dan tengah mengalami transformasi drastis dalam sistem pemerintahan, kondisi global ini menjadi peluang sekaligus tantangan. Peningkatan harga komoditas meningkatkan pendapatan ekspor sumber daya alam. Berbeda dengan bonanza minyak pada periode 1970-an, ekspor komoditas Indonesia kali ini didominasi oleh batu bara dan minyak kelapa sawit (crude palm oil atau CPO). Hal ini dimungkinkan oleh desentralisasi pasca Reformasi yang membuat ekspansi tambang batu bara dan pembukaan lahan sawit lebih mudah dan menguntungkan dibandingkan eksplorasi migas. Di saat yang sama, persaingan ketat di pasar manufaktur global dan kondisi investasi dan regulasi ketenagakerjaan yang kurang kondusif di Indonesia menjadi faktor penghambat berkembangnya ekspor manufaktur Indonesia. Sementara itu, negara-negara tetangga Indonesia di Asia, seperti Malaysia, Thailand, dan Vietnam, turut berlomba-lomba meliberalisasi kebijakan perdagangan dan investasinya demi menarik investor asing di sektor manufaktur.  
+
+Seiring dengan berakhirnya boom komoditas semenjak tahun 2013, proporsi ekspor komoditas sumber daya alam Indonesia dalam total ekspor telah berkurang secara perlahan. Tetapi, perubahan tersebut lebih disebabkan oleh penurunan harga global komoditas sumber daya alam dan bukan oleh peningkatan ekspor lainnya. Malahan, volume ekspor Indonesia relatif stagnan dalam periode yang sama
+
+{{< figure library="true" src="/bappenas/gambar5.png" title="Indeks volume ekspor (2000=100). Sumber: World Development Indicator (World Bank, 2020)." numbered="true" >}}
+
+Di sisi lain, kombinasi berbagai faktor domestik dan internasional mengakibatkan aliran PMA yang masuk ke Indonesia sejak periode reformasi relatif rendah dibanding negara tetangga di Asia Tenggara. PMA bahkan mengalami aliran keluar (negatif) selama beberapa tahun sejak krisis 1998 sebelum kembali masuk. Dampaknya, total stok PMA di Indonesia pada tahun 2005 masih lebih rendah dibandingkan tahun 2000 dan relatif lebih rendah sebagai proporsi PDB dibandingkan negara lain di Asia Tenggara kecuali Filipina.
+
+{{< figure library="true" src="/bappenas/gambar6.png" title="Aliran masuk PMA (% PDB) . Sumber: UNCTAD (2020)" numbered="true" width=500 >}}
+
+{{< figure library="true" src="/bappenas/gambar7.png" title="Gambar 7 Total stok PMA (% PDB). Sumber: UNCTAD (2020)" numbered="true" width=500 >}}
+
+Keberhasilan berbagai negara tetangga Indonesia dalam menarik PMA menimbulkan pertanyaan penting tentang apa yang dapat Indonesia pelajari dari negara-negara tersebut. Dari sisi tingkat keterbukaan perdagangan, yang diukur dari rasio total perdagangan (ekspor ditambah dengan impor) terhadap PDB, Indonesia relatif rendah bila dibandingkan dengan negara tetangga seperti Malaysia, Thailand dan Vietnam (gambar 8). Meskipun rasio ini memiliki kelemahan, yaitu membandingkan negara-negara dengan ukuran yang berbeda, namun tingkat rasio Indonesia memang terus turun sejak Krisis Ekonomi tahun 1998. Sebaliknya, rasio perdagangan terhadap PDB di Vietnam terus meningkat tajam pada periode yang sama. 
+
+Penurunan rasio ini tidak serta-merta berarti Indonesia menerapkan lebih banyak hambatan tarif sejak tahun 1998. Faktanya, data UNCTAD (2019) menunjukkan tingkat tarif Indonesia untuk barang impor tidak meningkat drastis. Gambar 9 menunjukkan, meskipun tingkat rata-rata tarif Indonesia meningkat sejak tahun 2015, rerata tingkat tarif tidak lebih tinggi dibanding Vietnam maupun Thailand. Namun, hambatan impor non-tarif juga mengalami peningkatan jumlah pada periode yang sama.
+
+{{< figure library="true" src="/bappenas/gambar8.png" title="Rasio total perdagangan dan PDB (%). Sumber: World Development Indicator (World Bank, 2020)." numbered="true" width=500 >}}
+{{< figure library="true" src="/bappenas/gambar9.png" title="Rerata tingkat tarif untuk barang ekspor dari seluruh dunia berdasarkan negara tujuan (tiap 5 tahun). Sumber: TRAINS (UNCTAD, 2020)." numbered="true" width=500 >}}
+
+Dari sisi keterbukaan terhadap investasi asing, Indonesia masih relatif tertutup untuk beberapa sektor tertentu. Gambar 11 menunjukkan perbandingan indeks tingkat hambatan (restriksi) Indonesia terhadap investasi asing dibandingkan dengan negara berkembang lainnya. Hingga tahun 2019, Indonesia memiliki tingkat hambatan investasi yang relatif tinggi dibanding negara lainnya pada sektor manufaktur, listrik, konstruksi, distribusi, transportasi, dan jasa bisnis (business services). Hambatan-hambatan investasi ini pada umumnya berbentuk batasan kepemilikan asing, jumlah pekerja asing, dan berbagai hambatan lainnya. 
+
+Memiliki tingkat keterbukaan yang tinggi juga belum cukup untuk dapat mengundang PMA masuk ke Indonesia. Kondisi perekonomian domestik yang kompetitif juga menjadi pertimbangan bagi investor. Gambar 12 menunjukkan indeks Global competitiveness Indonesia dibandingkan beberapa negara di Asia Tenggara. Indeks competitiveness Indonesia telah meningkat cukup tajam selama sepuluh tahun terakhir, namun masih memiliki kelemahan dalam bidang kesehatan dan pendidikan, efisiensi pasar tenaga kerja, dan kesiapan teknologi. 
+
+Selain kebijakan pemerintah dan seberapa kompetitif perekonomian domestik, berbagai faktor lain juga mempengaruhi perilaku aktor ekonomi dalam mengambil keputusan ekspor dan investasi. Hal ini dikarenakan setiap aktor ekonomi, baik perusahaan, eksportir, ataupun investor, masing-masing memiliki kemampuan untuk mengambil keputusan yang mengoptimalkan pencapaian tujuan mereka. Laporan ini akan membahas teori-teori ekonomi untuk menjelaskan proses pengambilan keputusan tersebut sehingga pembuat kebijakan dapat menyusun kebijakan yang sesuai untuk dalam bidang perdagangan dan PMA. Bab berikutnya akan membahas perkembangan teori perdagangan internasional, dilanjutkan dengan bab berikutnya tentang teori PMA, dan diikuti dengan pembahasan tentang kebijakan perdagangan serta perbandingan dengan beberapa negara lain.
+
+{{< figure library="true" src="/bappenas/gambar10.png" title="Investment restrictiveness index, Indonesia dan negara berkembang lain, tahun 2019. Sumber: OECD (2020)" numbered="true" width=500 >}}
+
+{{< figure library="true" src="/bappenas/gambar11.png" title="Gambar 12 Global competitiveness index (keseluruhan). Sumber: World Economic Forum (2018)" numbered="true" width=500 >}}
