@@ -1,7 +1,7 @@
 ---
-title: BE4158 Economics
+title: Introduction to Economics
 linkTitle: Introduction
-summary: A course as a part of International Business Engineering (IBE) program at Universitas Kristen Petra
+summary: An introduction to economics for non-economics programs
 date: '2021-01-24'
 type: book
 ---
