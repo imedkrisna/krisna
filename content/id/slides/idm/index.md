@@ -39,7 +39,7 @@ slides:
     menu_enabled: true
 ---
 
-# Judul
+# Recovery dari ekspor
 
 ---
 
@@ -49,6 +49,8 @@ slides:
 
 # Vaccine roll-out
 
+Grafik vaksinasi
+
 - Indonesia
 
 - Elsewhere
@@ -57,21 +59,44 @@ slides:
 
 # GDP graph
 
+OECD atau IMF outlook
+
 ---
 
-# Expor impor
+# Neraca Perdagangan
+
+Grafik neraca perdagangan
+
+- Kinerja ekspor tampak tidak terpengaruh oleh PSBB
+
+- Indonesia pernah kabur dari krisis berkat ekspor + rise of China
+
+- Recovery negara lain bisa jadi berkah:
+  - EU dan US menambah stimulus ekonomi
 
 ---
 
 # prices
 
+- harga ekspor indon
+
 ---
 
-# Prices
+# Mengamanatkan value added dalam negeri
+
+- padahal investasi butuh waktu utk running
+
+---
+
+# Seiring dunia menghijau
+
+- Perlu mengurangi batubara dan sawit.
 
 ---
 
 # UU Cipta Kerja
+
+- Bisa larang ekspor
 
 ---
 
