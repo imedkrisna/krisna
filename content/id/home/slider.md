@@ -27,7 +27,7 @@ height = "calc(100vh - 70px)"
   cta_icon = "flag-usa"
 
   overlay_color = "#888"  # An HTML color value.
-  overlay_img = "welcome.svg"  # Image path relative to your `static/media/` folder.
+  overlay_img = "emu.gif"  # Image path relative to your `static/media/` folder.
   overlay_filter = 0.5  # Darken the image. Value in range 0-1.
 
   
