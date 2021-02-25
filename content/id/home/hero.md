@@ -24,7 +24,7 @@ hero_media = ""
   # gradient_end = "#2b94c3"
   
   # Background image.
-  image = "hnet2.gif"  
+  image = "hnett.gif"  
   # Name of image in `static/media/`.
   image_darken = 0.45
     # Darken the image? Range 0-1 where 0 is transparent and 1 is opaque.
@@ -57,4 +57,4 @@ Selamat datang di website Krisna 'Imed' Gupta. Saya menggunakan situs ini untuk 
 
 Scroll for more!
 
-<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Lisensi Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a><br />Ciptaan disebarluaskan di bawah <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Lisensi Creative Commons Atribusi 4.0 Internasional</a>. Kanggurunya rekam sendiri dan digif pakai <a href="https://gifmaker.me/">gifmaker</a>. Website ini dibuat dengan bantuan <a href="https://wowchemy.com/?utm_campaign=poweredby">Wowchemy</a>
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Lisensi Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Ciptaan disebarluaskan di bawah <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Lisensi Creative Commons Atribusi 4.0 Internasional</a>. Kanggurunya rekam sendiri dan digif pakai <a href="https://gifmaker.me/">gifmaker</a>. Website ini dibuat dengan bantuan <a href="https://wowchemy.com/?utm_campaign=poweredby">Wowchemy</a>
