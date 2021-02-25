@@ -55,8 +55,8 @@ hero_media = ""
 
 Welcome to the site of Krisna 'Imed' Gupta. I use this platform to host my [profile](#about) and [CV](#CV). I also [blogs](#posts) here. Additionally, I put my [publications](#publications), [talks](#talks) and [courses](/courses) in this site. Use the [search](/search) button to get the content most relevant to you.
 
-Scroll for more!
+Switch to [Bahasa Indonesia](/id) or scroll for more!
 
-</br>
+
 
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>. The roos're native to my backyard and gifed using <a href="https://gifmaker.me/">gifmaker</a>. This website is powered by <a href="https://wowchemy.com/?utm_campaign=poweredby">Wowchemy</a>
