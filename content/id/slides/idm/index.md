@@ -7,7 +7,7 @@ authors: [admin]
 tags: [economics, coronavirus COVID-19]
 categories: [economics, coronavirus COVID-19]
 date: 2021-02-04T22:04:07+11:00
-draft: true
+draft: false
 slides:
   # Choose a theme from https://github.com/hakimel/reveal.js#theming
   theme: black
