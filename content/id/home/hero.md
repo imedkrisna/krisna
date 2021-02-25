@@ -55,6 +55,6 @@ hero_media = ""
 
 Selamat datang di website Krisna 'Imed' Gupta. Saya menggunakan situs ini untuk [profil](#about) dan menaruh [CV](#CV). Di samping itu, saya menggunakan situs ini untuk [menulis blog](#posts). Saya juga menaruh beberapa [pulikasi](#publications) [presentasi](#talks) dan [kuliah](/courses) di situs ini. Gunakan tombol [pencarian](/search) untuk mencari konten yang relevan dengan anda.
 
-Switch to [English](/en) or Scroll for more!
+Switch to [{{< icon name="flag-usa" pack="fas" >}} English](/en) or Scroll for more!
 
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Lisensi Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Ciptaan disebarluaskan di bawah <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Lisensi Creative Commons Atribusi 4.0 Internasional</a>. Kanggurunya rekam sendiri dan digif pakai <a href="https://gifmaker.me/">gifmaker</a>. Website ini dibuat dengan bantuan <a href="https://wowchemy.com/?utm_campaign=poweredby">Wowchemy</a>
