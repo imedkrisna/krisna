@@ -47,57 +47,123 @@ slides:
 
 ---
 
-# Vaccine roll-out
+# Hari ini
 
-Grafik vaksinasi
-
-- Indonesia
-
-- Elsewhere
+- 
 
 ---
 
-# GDP graph
+{{< slide class="table" >}}
+## Kecepatan vaksin perlu ditingkatkan
 
-OECD atau IMF outlook
+{{< figure library="true" src="/idm/gambar1.svg" title="" numbered="true" width=700 >}}
 
----
-
-# Neraca Perdagangan
-
-Grafik neraca perdagangan
-
-- Kinerja ekspor tampak tidak terpengaruh oleh PSBB
-
-- Indonesia pernah kabur dari krisis berkat ekspor + rise of China
-
-- Recovery negara lain bisa jadi berkah:
-  - EU dan US menambah stimulus ekonomi
+Sumber: [Our World in Data](https://ourworldindata.org/coronavirus-data-explorer?zoomToSelection=true&time=2020-03-01..latest&country=IDN~BRA~TUR~IND&region=World&vaccinationsMetric=true&interval=total&perCapita=true&smoothing=0&pickerMetric=total_vaccinations_per_hundred&pickerSort=desc)
 
 ---
 
-# prices
+{{< slide class="table" >}}
+### GDP Terkendali
 
-- harga ekspor indon
+Data [Weekly tracker](http://www.oecd.org/economy/weekly-tracker-of-gdp-growth/) dari OECD menunjukkan Indonesia tidak cukup dalam terkoreksi, namun _recovery_ sepertinya masih butuh waktu.
 
----
-
-# Mengamanatkan value added dalam negeri
-
-- padahal investasi butuh waktu utk running
+{{< figure library="true" src="/idm/gambar2.png" title="" numbered="true" width=500 >}}
 
 ---
 
-# Seiring dunia menghijau
+{{< slide class="table" >}}
+### Recovery dari ekspor
 
-- Perlu mengurangi batubara dan sawit.
+Indonesia dan negara ASEAN lainnya mengandalkan ekspor untuk _recovery_ AFC 1998. Bedanya: COVID-19 adalah krisis global, tidak terjadi depresiasi rupiah yang dalam, namun stimulus di negara tujuan ekspor bisa jadi peluang.
 
----
-
-# UU Cipta Kerja
-
-- Bisa larang ekspor
+{{< figure library="true" src="/idm/gambar3.png" title="" numbered="true" width=500 >}}
 
 ---
 
-# PP Perdagangan
+{{< slide class="table" >}}
+### Recovery dari ekspor
+
+Indonesia dan negara ASEAN lainnya mengandalkan ekspor untuk _recovery_ AFC 1998. Bedanya: COVID-19 adalah krisis global, tidak terjadi depresiasi rupiah yang dalam, namun stimulus di negara tujuan ekspor bisa jadi peluang.
+
+{{< figure library="true" src="/idm/gambar4.png" title="" numbered="true" width=700 >}}
+
+---
+
+{{< slide class="table" >}}
+### Recovery dari ekspor
+
+Indonesia dan negara ASEAN lainnya mengandalkan ekspor untuk _recovery_ AFC 1998. Bedanya: COVID-19 adalah krisis global, tidak terjadi depresiasi rupiah yang dalam, namun stimulus di negara tujuan ekspor bisa jadi peluang.
+
+{{< figure library="true" src="/idm/gambar5.png" title="" numbered="true" width=700 >}}
+
+---
+{{< slide class="table" >}}
+### Recovery dari ekspor
+
+Indonesia dan negara ASEAN lainnya mengandalkan ekspor untuk _recovery_ AFC 1998. Bedanya: COVID-19 adalah krisis global, tidak terjadi depresiasi rupiah yang dalam, namun stimulus di negara tujuan ekspor bisa jadi peluang.
+
+{{< figure library="true" src="/idm/gambar6.png" title="" numbered="true" width=700 >}}
+
+---
+
+{{< slide class="table" >}}
+### Recovery dari ekspor
+
+Indonesia dan negara ASEAN lainnya mengandalkan ekspor untuk _recovery_ AFC 1998. Bedanya: COVID-19 adalah krisis global, tidak terjadi depresiasi rupiah yang dalam, namun stimulus di negara tujuan ekspor bisa jadi peluang.
+
+{{< figure library="true" src="/idm/gambar7.png" title="" numbered="true" width=700 >}}
+
+---
+
+{{< slide class="table" >}}
+### Recovery dari ekspor
+
+Indonesia dan negara ASEAN lainnya mengandalkan ekspor untuk _recovery_ AFC 1998. Bedanya: COVID-19 adalah krisis global, tidak terjadi depresiasi rupiah yang dalam, namun stimulus di negara tujuan ekspor bisa jadi peluang.
+
+{{< figure library="true" src="/idm/gambar8.png" title="" numbered="true" width=700 >}}
+
+---
+
+{{< slide class="table" >}}
+### Recovery dari ekspor
+
+Indonesia dan negara ASEAN lainnya mengandalkan ekspor untuk _recovery_ AFC 1998. Bedanya: COVID-19 adalah krisis global, tidak terjadi depresiasi rupiah yang dalam, namun stimulus di negara tujuan ekspor bisa jadi peluang.
+
+{{< figure library="true" src="/idm/gambar9.png" title="" numbered="true" width=700 >}}
+
+---
+
+{{< slide class="table" >}}
+### Recovery dari ekspor
+
+Indonesia dan negara ASEAN lainnya mengandalkan ekspor untuk _recovery_ AFC 1998. Bedanya: COVID-19 adalah krisis global, tidak terjadi depresiasi rupiah yang dalam, namun stimulus di negara tujuan ekspor bisa jadi peluang.
+
+{{< figure library="true" src="/idm/gambar10.png" title="" numbered="true" width=700 >}}
+
+---
+
+{{< slide class="table" >}}
+### Recovery dari ekspor
+
+Indonesia dan negara ASEAN lainnya mengandalkan ekspor untuk _recovery_ AFC 1998. Bedanya: COVID-19 adalah krisis global, tidak terjadi depresiasi rupiah yang dalam, namun stimulus di negara tujuan ekspor bisa jadi peluang.
+
+{{< figure library="true" src="/idm/gambar11.png" title="" numbered="true" width=700 >}}
+
+---
+
+{{< slide class="table" >}}
+### Recovery dari ekspor
+
+Indonesia dan negara ASEAN lainnya mengandalkan ekspor untuk _recovery_ AFC 1998. Bedanya: COVID-19 adalah krisis global, tidak terjadi depresiasi rupiah yang dalam, namun stimulus di negara tujuan ekspor bisa jadi peluang.
+
+{{< figure library="true" src="/idm/gamba12.png" title="" numbered="true" width=700 >}}
+
+---
+
+# Kesimpulan
+
+---
+
+## Klasifikasi
+
+{{< figure library="true" src="/idm/kelompok.png" title="" numbered="true" width=600 >}}
