@@ -3,16 +3,16 @@
 
 title: "Strategi sukses meraih beasiswa pendidikan lanjut"
 event: "BDI Surabaya Webinar Series Season 3"
-event_url: https://www.youtube.com/watch?v=r3sev9-Gk2c
+event_url: https://www.youtube.com/channel/UC1qCli39e2_v7CjUzqfC14g
 location: "Zoom and Balai Diklat Industri Surabaya Youtube Channel"
 address:
   street:
   city: Surabaya
-  region: East Java
+  region: Jawa Timur
   postcode:
   country: Indonesia
-summary: "In this talk, I share my experience with my colleagues in The Ministry in search for scholarships. The talk was in Bahasa Indonesia."
-abstract: "In this talk, I share my experience with my colleagues in The Ministry in search for scholarships. The talk was in Bahasa Indonesia."
+summary: "Dalam kesempatan ini, saya berbagi pengalaman saya dalam mencari beasiswa S2 dan S3 kepada rekan-rekan saya di Kementerian Perindustrian"
+abstract: "Dalam kesempatan ini, saya berbagi pengalaman saya dalam mencari beasiswa S2 dan S3 kepada rekan-rekan saya di Kementerian Perindustrian. Pengalaman mencari beasiswa berbeda-beda untuk setiap orang, namun diharapkan sharing ini dapat membantu. Ketuk `slides` di atas untuk melihat presentasinya."
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.

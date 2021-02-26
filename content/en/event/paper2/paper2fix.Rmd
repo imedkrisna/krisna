@@ -70,9 +70,9 @@ background-image: url(normal.PNG)
 .pull-left[
 - Indonesia relies in manufacturing sector to boost growth  
 
-- Emphasize on tech upgrade:
-    - Increased efficiency
-    - Increased R&D spending
+- Emphasize on tech upgrade
+
+- also on export-led  growth
 
 - This means more openness:
 
@@ -115,7 +115,7 @@ background-image: url(normal.PNG)
 
 - The straightforward question:
 
-> To what extent tariff and NTMs on firms' import affect firm's productivity?
+> To what extent tariff and NTMs affect firm's productivity?
 
 - Further investigation is conducted:
 
@@ -128,9 +128,9 @@ background-image: url(normal.PNG)
 - Building from Amiti and Konnings (2007), I estimate TFP and use it as the dependent variable
 
 - Key data sources:
-  - Tariff: MoF regulations + FTA partners
-  - NTM: UNCTAD TRAINS database
-  - Firm's characteristics & trade: Survei Industri (SI) + Customs data
+  - Tariff data are scrapped from MoF regulations
+  - NTM from TRAINS database
+  - Firm's characteristics & trade: Survei Industri and Customs data from BPS from 2008 to 2012
 
 ---
 
@@ -245,7 +245,7 @@ background-image: url(normal.PNG)
 Table 1. Firms' characteristics, 2008-2012
 ```{r echo=F}
 library(kableExtra)
-Characteristics<-c('foreign ownership (%)','foreign ownership (%)','fraction of output exported (%)','fraction of output exported (%)','fraction of input imported (%)','fraction of input imported (%)','no. of labour employed','no. of labour employed','capital stock (Million IDR)','capital stock (Million IDR)','total intermediate input (Million IDR)','total intermediate input (Million IDR)','total output (Million IDR)','total output (Million IDR)','total value added (Million IDR)','total value added (Million IDR)','value added per labour (IDR)','value added per labour (IDR)','No. of observation')
+Characteristics<-c('foreign ownership (%)','foreign ownership (%)','fraction of output exported (%)','fraction of output exported','fraction of input imported (%)','fraction of input imported (%)','no. of labour employed','no. of labour employed','capital stock (Million IDR)','capital stock (Million IDR)','total intermediate input (Million IDR)','total intermediate input (Million IDR)','total output (Million IDR)','total output (Million IDR)','total value added (Million IDR)','total value added (Million IDR)','value added per labour (IDR)','value added per labour (IDR)','No. of observation')
 All_SI<-c(8.15,'(26.17)',0.23,'(37.52)',0.08,'(0.24)',191.07,'(711.73)',198.00,'(44,800.00)',50.80,'(617.00)',90.30,'(958.00)',38.50,'(455.00)','137,987.10','(2,515,300.00)','117,598')
 Non_customs<-c(5.96,'(22.60)',0.21,'(0.37)',0.07,'(0.21)',162.75,'(602.46)',194,'(46,500)',41,'(515)',73.30,'(861)',31.60,'(414)','126,074','(2,600,177)','108,662')
 Customs_only<-c(34.77,'(45.06)',0.40,'(0.42)',0.31,'(0.38)',535.44,'(1,457.65)',250,'(10,400)',170,'(1,330)',296,'(1,740)',123,'(789)','282,857','(1,012,159)','8,915')
@@ -266,7 +266,6 @@ background-image: url(normal.PNG)
 
 Table 2. Mean (St.Dev) of each NTM for all HS-6-digits
 ```{r echo=F}
-library(kableExtra)
 NTM<-c('Sanitary & Phytosanitary (SPS)','Sanitary & Phytosanitary (SPS)','Technical Barrier to Trade (TBT)','Technical Barrier to Trade (TBT)','Pre-shipment inspections and other formalities','Pre-shipment inspections and other formalities','Non-automatic licensing, quotas, QC, etc','Non-automatic licensing, quotas, QC, etc','Price-control measures, extra taxes, charges','Price-control measures, extra taxes, charges','Measures affecting competition','Measures affecting competition','Export-related measures','Export-related measures','observations')
 Codes<-c('A','A','B','B','C','C','E','E','F','F','H','H','P','P','-')
 Examples<-c('Authorization requirements','Quarantine requirements','Testing requirements','labeling requirements','pre-shipment inspection','only trough specific ports','licensing','quota','customs service fee','consumption tax','Only SOEs','-','export permit','export quota','-')
@@ -276,8 +275,8 @@ N2010<-c(2.222,'(3.950)',0.641,'(1.334)',0.443,'(1.059)',0.605,'(0.873)',0.015,'
 N2011<-c(2.255,'(4.054)',0.682,'(1.361)',0.462,'(1.046)',0.618,'(0.861)',0.014,'(0.165)',0.048,'(0.229)',0.683,'(1.098)','2,400')
 N2012<-c(2.774,'(5.128)',0.663,'(1.352)',0.776,'(1.075)',0.594,'(0.853)',0.016,'(0.168)',0.046,'(0.224)',1.172,'(1.465)','2,510')
 tab3<-data.frame(NTM,Codes,N2008,N2009,N2010,N2011,N2012,Examples)
-kable(tab3, format = "html") %>%
-  kable_styling(bootstrap_options = "bordered", full_width=F, font_size = 11) %>%
+kbl(tab3,'html') %>%
+  kable_styling(bootstrap_options = "striped", full_width=F, font_size = 11) %>%
   collapse_rows()
 ```
 
@@ -290,7 +289,7 @@ background-image: url(normal.PNG)
 # Simple average of tariffs from 2008-2012
 
 .center[
-Table 3. Tariff from MoF regulations (left) compared to WTO-IDB (right)
+Table 3. Tariff from MoF regulations (left) compared to WITS (right)
 ]
 
 .pull-left[
@@ -505,32 +504,6 @@ Where:
 
 along with firm's fixed effect and ISIC dummy.
 
-
----
-
-background-image: url(normal.PNG)
-
-<br \>
-
-##### Adding size to the regression
-
-- Firms in the customs data are different: bigger, more productive
-
-- if size matters, it can be discovered using size interaction.
-
-- $l_{it}=log(Labour_{it})$ is used as a proxy for size
-
-$$size\_tfp_{it}=tfp_{it}+\gamma_Tt_{it}*l_{it}+\sum_\theta c_{\theta it}*l_{it}$$
-
-- Observations:
-    - only customs, 2008-2012, only $k,n>0$
-    - 4,971 observations of 1,512 firms and 5 years
-
-- 3 Proxies for TFPs:
-    - TFP1 estimated within all SI observations (estimate first, drop later)
-    - TFP2 estimated within only customs (drop first, estimate later)
-    - $VaL=Log\left(\frac{Value Added}{Labour}\right)$ for robustness
-
 ---
 
 background-image: url(normal.PNG)
@@ -633,6 +606,29 @@ kbl(tab7b,'html') %>%
   collapse_rows()
 ```
 ]
+
+---
+
+background-image: url(normal.PNG)
+
+<br \>
+
+# Adding size to the regression
+
+- Firms in the customs data (possibly) are different
+  - they are generally bigger, and bigger firms may have ways to offset trade costs
+  
+- if size matters, it can be discovered using size interaction.
+
+- $l_{it}=log(Labour_{it})$ is used as a proxy
+
+$$size\_tfp_{it}=tfp_{it}+\gamma_Tt_{it}*l_{it}+\sum_\theta c_{\theta it}*l_{it}$$
+- In all:
+    - 4,971 observations of 1,512 firms
+    - only customs, $k,n>0$
+    - TFP1 estimated with all SI
+    - TFP2 estimated only customs
+    - $VaL=\frac{Value Added}{Labour}$
 
 ---
 
@@ -865,12 +861,12 @@ background-image: url(normal.PNG)
   - consistent when fixed effects are used
 - Only two NTMs are significant after fixed effects: licensing and competition measures.
 - More productive firms import more
-- NTM have mixed results: Only TBT and pre-shipment reduces import
+- NTM have mixed results: Only TBT and preshipment reduces import
 
 ##### Employment
 - Tariff also reduces employment, but bigger firms have smaller magnitude.
 - Not all NTMs show a visible significance:
-  - SPS, licensing, and export-related measures have the same directional correlation as tariff.
+  - SPS, licensing, and export-related measures have the same directional impact as tariff.
   - Pre-shipment inspection have different direction
 
 ---
@@ -909,7 +905,8 @@ background-image: url(normal.PNG)
 
 - NTMs have mixed results.
   - Count data isn't ideal
-  - May have different relationship for different types of NTMs on different goods
+  - May have different impact for different types of NTMs
+  - May have different impact on different goods
   - More in-depth studies are needed
   
 - The sample is quite restrictive.

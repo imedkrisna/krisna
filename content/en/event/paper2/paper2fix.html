@@ -68,9 +68,9 @@ background-image: url(normal.PNG)
 .pull-left[
 - Indonesia relies in manufacturing sector to boost growth  
 
-- Emphasize on tech upgrade:
-    - Increased efficiency
-    - Increased R&amp;D spending
+- Emphasize on tech upgrade
+
+- also on export-led  growth
 
 - This means more openness:
 
@@ -113,7 +113,7 @@ background-image: url(normal.PNG)
 
 - The straightforward question:
 
-&gt; To what extent tariff and NTMs on firms' import affect firm's productivity?
+&gt; To what extent tariff and NTMs affect firm's productivity?
 
 - Further investigation is conducted:
 
@@ -126,9 +126,9 @@ background-image: url(normal.PNG)
 - Building from Amiti and Konnings (2007), I estimate TFP and use it as the dependent variable
 
 - Key data sources:
-  - Tariff: MoF regulations + FTA partners
-  - NTM: UNCTAD TRAINS database
-  - Firm's characteristics &amp; trade: Survei Industri (SI) + Customs data
+  - Tariff data are scrapped from MoF regulations
+  - NTM from TRAINS database
+  - Firm's characteristics &amp; trade: Survei Industri and Customs data from BPS from 2008 to 2012
 
 ---
 
@@ -264,13 +264,13 @@ Table 1. Firms' characteristics, 2008-2012
    &lt;td style="text-align:left;"&gt; (45.06) &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-   &lt;td style="text-align:left;vertical-align: middle !important;" rowspan="2"&gt; fraction of output exported (%) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; fraction of output exported (%) &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; 0.23 &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; 0.21 &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; 0.4 &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-   
+   &lt;td style="text-align:left;"&gt; fraction of output exported &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; (37.52) &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; (0.37) &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; (0.42) &lt;/td&gt;
@@ -377,7 +377,7 @@ background-image: url(normal.PNG)
 # Average number of SPS is the highest
 
 Table 2. Mean (St.Dev) of each NTM for all HS-6-digits
-&lt;table class="table table-bordered" style="font-size: 11px; width: auto !important; margin-left: auto; margin-right: auto;"&gt;
+&lt;table class="table table-striped" style="font-size: 11px; width: auto !important; margin-left: auto; margin-right: auto;"&gt;
  &lt;thead&gt;
   &lt;tr&gt;
    &lt;th style="text-align:left;"&gt; NTM &lt;/th&gt;
@@ -553,7 +553,7 @@ background-image: url(normal.PNG)
 # Simple average of tariffs from 2008-2012
 
 .center[
-Table 3. Tariff from MoF regulations (left) compared to WTO-IDB (right)
+Table 3. Tariff from MoF regulations (left) compared to WITS (right)
 ]
 
 .pull-left[
@@ -1091,32 +1091,6 @@ Where:
 
 along with firm's fixed effect and ISIC dummy.
 
-
----
-
-background-image: url(normal.PNG)
-
-&lt;br \&gt;
-
-##### Adding size to the regression
-
-- Firms in the customs data are different: bigger, more productive
-
-- if size matters, it can be discovered using size interaction.
-
-- `\(l_{it}=log(Labour_{it})\)` is used as a proxy for size
-
-`$$size\_tfp_{it}=tfp_{it}+\gamma_Tt_{it}*l_{it}+\sum_\theta c_{\theta it}*l_{it}$$`
-
-- Observations:
-    - only customs, 2008-2012, only `\(k,n&gt;0\)`
-    - 4,971 observations of 1,512 firms and 5 years
-
-- 3 Proxies for TFPs:
-    - TFP1 estimated within all SI observations (estimate first, drop later)
-    - TFP2 estimated within only customs (drop first, estimate later)
-    - `\(VaL=Log\left(\frac{Value Added}{Labour}\right)\)` for robustness
-
 ---
 
 background-image: url(normal.PNG)
@@ -1454,6 +1428,29 @@ Table 7b. TFP with `\(k,n&gt;0\)`
 &lt;/tbody&gt;
 &lt;/table&gt;
 ]
+
+---
+
+background-image: url(normal.PNG)
+
+&lt;br \&gt;
+
+# Adding size to the regression
+
+- Firms in the customs data (possibly) are different
+  - they are generally bigger, and bigger firms may have ways to offset trade costs
+  
+- if size matters, it can be discovered using size interaction.
+
+- `\(l_{it}=log(Labour_{it})\)` is used as a proxy
+
+`$$size\_tfp_{it}=tfp_{it}+\gamma_Tt_{it}*l_{it}+\sum_\theta c_{\theta it}*l_{it}$$`
+- In all:
+    - 4,971 observations of 1,512 firms
+    - only customs, `\(k,n&gt;0\)`
+    - TFP1 estimated with all SI
+    - TFP2 estimated only customs
+    - `\(VaL=\frac{Value Added}{Labour}\)`
 
 ---
 
@@ -2850,12 +2847,12 @@ background-image: url(normal.PNG)
   - consistent when fixed effects are used
 - Only two NTMs are significant after fixed effects: licensing and competition measures.
 - More productive firms import more
-- NTM have mixed results: Only TBT and pre-shipment reduces import
+- NTM have mixed results: Only TBT and preshipment reduces import
 
 ##### Employment
 - Tariff also reduces employment, but bigger firms have smaller magnitude.
 - Not all NTMs show a visible significance:
-  - SPS, licensing, and export-related measures have the same directional correlation as tariff.
+  - SPS, licensing, and export-related measures have the same directional impact as tariff.
   - Pre-shipment inspection have different direction
 
 ---
@@ -2894,7 +2891,8 @@ background-image: url(normal.PNG)
 
 - NTMs have mixed results.
   - Count data isn't ideal
-  - May have different relationship for different types of NTMs on different goods
+  - May have different impact for different types of NTMs
+  - May have different impact on different goods
   - More in-depth studies are needed
   
 - The sample is quite restrictive.
