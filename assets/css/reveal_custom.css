@@ -5,10 +5,13 @@
   font-size: 2.2em;
 }
 .reveal h1,
-.reveal h2,
-.reveal h3 {
+.reveal h2 {
   font-family: 'Pangolin', cursive;
   color: #66B933;
+}
+
+.reveal h3 {
+  color: orange;
 }
 
 .reveal section h5 {
