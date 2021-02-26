@@ -54,7 +54,7 @@ slides:
 
 - Ketua komisi ekonomi Direktorat Penelitian dan Kajian PPI Dunia
 
-- Lebih lanjut tentang saya klik [krisna.netlify.app](https://krisna.netlify.app/)
+- Lebih lanjut tentang saya klik [s.id/krisnagupta](https://krisna.netlify.app/)
 
 ---
 
@@ -72,7 +72,7 @@ slides:
 
 ### Slide ini
 
-dapat diakses di [krisna.netlify.app/slides/idm](https://krisna.netlify.app/slides/idm/)
+dapat diakses di [s.id/krisnaidm](https://krisna.netlify.app/slides/idm/)
 
 ---
 
