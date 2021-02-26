@@ -51,6 +51,6 @@
    weight = 70
 
 [[main]]
-  name = "🔍"
+  name = "🔎"
   url = "/search"
   weight = 100

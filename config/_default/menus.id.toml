@@ -34,7 +34,7 @@
   weight = 48
 
 [[main]]
-  name = "Hobi"
+  name = "🎵"
   url = "#hobby"
   weight = 50
 
@@ -51,6 +51,6 @@
    weight = 70
 
 [[main]]
-  name = "🔍"
+  name = "🔎"
   url = "/search"
   weight = 100
