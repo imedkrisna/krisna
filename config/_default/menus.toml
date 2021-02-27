@@ -34,11 +34,6 @@
   weight = 48
 
 [[main]]
-  name = "🎵"
-  url = "#hobby"
-  weight = 50
-
-[[main]]
   name = "Contact"
   url = "#contact"
   weight = 60
@@ -50,6 +45,11 @@
    url = "#CV"
    weight = 70
 
+[[main]]
+  name = "🎵"
+  url = "#hobby"
+  weight = 90
+  
 [[main]]
   name = "🔎"
   url = "/search"
