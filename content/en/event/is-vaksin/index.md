@@ -65,6 +65,7 @@ slides: ""
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: []
+draft: true
 ---
 
 Rasanya sangat lumrah jika ada ketertarikan yang tinggi terhadap program vaksinasi di Indonesia. [Indonesia Synergy](https://www.facebook.com/Indonesia-Synergy-965003336858339), sekumpulan mahasiswa di Canberra, mencoba mangakomodir keinginan beberapa warga Canberra terutama para mahasiswa untuk mengadakan diskusi santai mengenai beberapa permasalahan dan optimisme mengenai program vaksinasi massal ini.
