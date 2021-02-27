@@ -47,7 +47,7 @@ links:
  - name: IDM
    url: https://twitter.com/idmcoop/status/1365231406180233218?s=20
    icon_pack: fab
-   icon: facebook
+   icon: twitter
  - name: IDM
    url: https://www.instagram.com/p/CLwS7SuA2Mt/?utm_source=ig_web_copy_link
    icon_pack: fab
@@ -78,6 +78,8 @@ projects: []
 ## Pendahuluan
 
 Di saat pandemi, kebijakan ekonomi yang terbaik adalah kebijakan kesehatan. Vaksin seringkali dikatakan akan menjadi penyelamat ekonomi Indonesia. Seandainya hal itu benar pun, kecepatan vaksinasi akan menentukan seberapa cepat ekonomi bisa pulih. Data dari [our world in data](https://ourworldindata.org/coronavirus-data-explorer?zoomToSelection=true&time=2020-03-01..latest&country=IDN~BRA~TUR~IND&region=World&vaccinationsMetric=true&interval=total&perCapita=true&smoothing=0&pickerMetric=total_vaccinations_per_hundred&pickerSort=desc) menunjukkan bahwa kecepatan vaksinasi Indonesia masih perlu ditingkatkan, setidaknya jika dibandingkan dengan Brazil dan Turki.
+
+{{< figure library="true" src="/idm/gambar1.svg" title="" numbered="" width=630 >}}
 
 Namun, sepertinya vaksinasi tidak memiliki korelasi dengan pertumbuhan ekonomi. Meskipun Indonesia tertinggal jauh daripada Turki dalam hal vaksinasi, pertumbuhan PDB cukup seimbang. Menurut data weekly tracker dari OECD, pertumbuhan ekonomi Indonesia, Turki, Brazil dan India cukup seimbang. Bahkan ketika awal terjadinya pandemi, Indonesia termasuk negara yang jatuhnya paling kecil.
 
@@ -154,7 +156,7 @@ GVC dapat meningkatkan impor karena untuk kompetitif di pasar global, perusahaan
 - besi baja dan bahan kimia;
 - serat sintetis, dll
 
-Di samping itu, strategi nilai tambah melalui larangan ekspor mineral mungkin butuh waktu sebelum dapat dituai berupa ekspor barang dengan nilai tambah lebih tinggi. Salah satu contohnya adalah investasi industri sel baterai yang mungkin membutuhkan waktu setidaknya 2 tahun. Sementara itu, mengandalkan fiskal menjadi sebuah keharusan.
+Di samping itu, strategi nilai tambah melalui larangan ekspor mineral mungkin butuh waktu sebelum dapat dituai berupa ekspor barang dengan nilai tambah lebih tinggi. Salah satu contohnya adalah investasi industri sel baterai yang mungkin membutuhkan waktu setidaknya 2 tahun. Vaksin memiliki peran yang mungkin lebih tinggi dalam melancarkan investasi asing dan produksi dalam negeri ketimbang ekspor. Sementara itu, mengandalkan fiskal menjadi sebuah keharusan.
 
 Yang jelas, saat ini permintaan dunia yang tinggi akan komoditas meberikan peluang. Pemerintah perlu mencermati kebijakan lartasnya. PP turunan UU Cipta Kerja berorientasi ke penambahan nilai tambah dalam negeri dan investasi asing. Namun hal ini berpeluang menekan neraca pembayaran, setidaknya dalam waktu dekat. Hasilnya mungkin akan dituai agak lama. Dukungan fiskal yang cukup dapat menjadi solusi jangka pendek, sambil memantau peningkatan daya saing industri dalam negeri.
 

@@ -47,7 +47,7 @@ links:
  - name: IDM
    url: https://twitter.com/idmcoop/status/1365231406180233218?s=20
    icon_pack: fab
-   icon: facebook
+   icon: twitter
  - name: IDM
    url: https://www.instagram.com/p/CLwS7SuA2Mt/?utm_source=ig_web_copy_link
    icon_pack: fab
@@ -163,13 +163,6 @@ Yang jelas, saat ini permintaan dunia yang tinggi akan komoditas meberikan pelua
 Permasalahan lain menggunakan lartas:Waspada bahaya retaliasi. Negara lain masih bisa mengakses mineral dari negara lain, sehingga daya tawar mereka sebenarnya tidak terlalu rendah. Jika negara lain melakukan retaliasi, hal ini dapat berpotensi membatasi skala ekonomis.
 
 Meningkatkan nilai tambah dalam negeri tentunya adalah hal yang baik. Mungkin pertanyaannya lebih ke apakah sekarang saat yang tepat untuk melakukannya?
-
-## Tanya jawab
-
-1. 
-
-1. 
-
 
 ## rumus
 
