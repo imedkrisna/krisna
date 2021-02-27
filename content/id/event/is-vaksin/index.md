@@ -96,6 +96,8 @@ Diskusi ditutup dengan pesan dari kedua narasumber untuk senantiasa mengabarkan 
 
 Berikut foto-foto pasca diskusi. Canberra sendiri sudah membolehkan penduduknya beraktivitas seperti biasa. Mulai senin, saya sendiri akan memulai pengajaran offline untuk pertama kali. Pemerintah Australia agak santai dalam menjalankan program vaksinasinya, _partly_ karena COVID-19 di Australia sudah cukup terkendali.
 
-{{< figure library="true" src="diskusi1.jpg" title="target dan jenis vaksin" numbered="true" width=500 >}}
+{{< figure library="true" src="diskusi1.jpg" title="situasi saat diskusi" numbered="true" width=500 >}}
 
-{{< figure library="true" src="diskusi2.jpg" title="beberapa permasalahan di Indonesia" numbered="true" width=500 >}}
+{{< figure library="true" src="vaksin3.jpg" title="situasi setelah diskusi" numbered="true" width=500 >}}
+
+{{< figure library="true" src="vaksin4.jpg" title="situasi setelah diskusi" numbered="true" width=500 >}}
