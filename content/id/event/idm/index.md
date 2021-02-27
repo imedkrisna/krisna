@@ -83,7 +83,7 @@ Di saat pandemi, kebijakan ekonomi yang terbaik adalah kebijakan kesehatan. Vaks
 
 Namun, sepertinya vaksinasi tidak memiliki korelasi dengan pertumbuhan ekonomi. Meskipun Indonesia tertinggal jauh daripada Turki dalam hal vaksinasi, pertumbuhan PDB cukup seimbang. Menurut data weekly tracker dari OECD, pertumbuhan ekonomi Indonesia, Turki, Brazil dan India cukup seimbang. Bahkan ketika awal terjadinya pandemi, Indonesia termasuk negara yang jatuhnya paling kecil.
 
-{{< figure library="true" src="/idm/gambar2.png" title="" numbered="" width=630 >}}
+{{< figure library="true" src="/idm/gambar2.png" title="" numbered="" width=450 >}}
 
 Sedikit catatan mengenai weekly tracker dari OECD, data ini adalah sebuah estimasi berdasarkan algoritma _machine learning_ dan data dari Google Trends. OECD menggunakan beberapa term pencarian yang berkorelasi dengan aktivitas ekonomi seperti mencari harga rumah dan mobil. Keunggulannya adalah Google Trends dapat dikumpulkan secara real time sehingga weekly tracker ini sifatnya lebih ke _nowcasting_ daripada _forecasting_. Saya rasa narasumber lain sudah cukup memaparkan data yang lebih valid daripada weekly tracker.
 
