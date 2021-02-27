@@ -98,6 +98,6 @@ Berikut foto-foto pasca diskusi. Canberra sendiri sudah membolehkan penduduknya 
 
 {{< figure library="true" src="diskusi1.jpg" title="situasi saat diskusi" numbered="true" width=500 >}}
 
-{{< figure library="true" src="vaksin3.jpg" title="situasi setelah diskusi" numbered="true" width=500 >}}
+{{< figure library="true" src="vaksin3.jpeg" title="situasi setelah diskusi" numbered="true" width=500 >}}
 
-{{< figure library="true" src="vaksin4.jpg" title="situasi setelah diskusi" numbered="true" width=500 >}}
+{{< figure library="true" src="vaksin4.jpeg" title="situasi setelah diskusi" numbered="true" width=500 >}}
