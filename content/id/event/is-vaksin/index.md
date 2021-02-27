@@ -84,6 +84,8 @@ Dari sana, diskusi bergerak ke arah target Pemerintah, apakah target ini realist
 
 Diskusi yang mungkin paling seru terjadi ketika membahas privatisasi. Mbak Liza memberikan penekanan ekstra pada bahaya kegagalan pasar (_market failure_). Privatisasi berpotensi menggerus jatah pemerintah dan mendistribusikan vaksin tidak sesuai dengan target, yaitu nakes dahulu, lansia dan pekerja esensial seperti guru, baru masyarakat luas. Bli Tarsa setuju dengan hal tersebut, mengatakan bahwa _approach_ terbaik tetap terpimpin atau _top down_. Namun Mbak Liza menambahkan bahwa skema _Public-Private Partnership_ dapat berjalan selama distribusi tetap sesuai dengan kebutuhan epidemiologis, bukan semata-mata ekonomi.
 
+{{< figure library="true" src="diskusi1.jpg" title="situasi saat diskusi" numbered="true" width=500 >}}
+
 Basis data juga menjadi perhatian serius. Bli Tarsa mengatakan pentingnya memiliki basis data, terutama karena _approach_ yang beliau sarankan adalah distribusi dari atas, namun dilakukan melalui _grass root_ seperti RT/RW. Dengan kata lain, pendataan yang nyambung menjadi sangat penting. Pendataan beguna tidak hanya untuk _targeting_ orang yang belum divaksin tapi harus divaksin, tetapi juga memastikan bahwa orang yang _eligible_ memang sudah divaksin. Tentunya kita tidak ingin ada kasus seperti tes PCR palsu: orang yang belum divaksin ngaku-ngaku divaksin demi bisa jalan-jalan.
 
 Kedua narasumber juga tidak menyetujui sanksi seperti denda dan kurungan. _approach_ yang lebih baik adalah dengan mengeluarkan semacam insentif. Contohnya di Australia, pemaksaan vaksin tidak ada, namun ada kemungkinan pemerintah akan melobi perusahaan penerbangan untuk mewajibkan semua penumpang untung divaksin. Hal ini akan memberikan kebutuhan vaksinasi bagi setiap orang. Tentunya ini akan kembali lagi ke pentingnya pendataan untuk menghindari sertifikat vaksin palsu atau semacamnya.
@@ -95,8 +97,6 @@ Poin terakhir adalah soal mutasi. Mutasi dapat menjadi momok apabila mutasi ters
 Diskusi ditutup dengan pesan dari kedua narasumber untuk senantiasa mengabarkan hal yang benar. Harapan yang tinggi juga diberikan kepada pemerintah untuk menyukseskan vaksinasi massal ini, sesuatu yang belum pernah dilakukan sebelumnya.
 
 Berikut foto-foto pasca diskusi. Canberra sendiri sudah membolehkan penduduknya beraktivitas seperti biasa. Mulai senin, saya sendiri akan memulai pengajaran offline untuk pertama kali. Pemerintah Australia agak santai dalam menjalankan program vaksinasinya, _partly_ karena COVID-19 di Australia sudah cukup terkendali.
-
-{{< figure library="true" src="diskusi1.jpg" title="situasi saat diskusi" numbered="true" width=500 >}}
 
 {{< figure library="true" src="vaksin3.jpeg" title="situasi setelah diskusi" numbered="true" width=500 >}}
 
