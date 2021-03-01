@@ -45,6 +45,11 @@ links:
    icon_pack: fab
    icon: facebook
 
+ - name: Twitter
+   url: https://twitter.com/SynergIndonesia
+   icon_pack: fab
+   icon: twitter   
+
 # Optional filename of your slides within your event's folder or a URL.
 url_slides:
 
