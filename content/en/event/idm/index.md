@@ -1,7 +1,7 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: "Ekspor sebagai strategi economic recovery pasca COVID-19"
+title: "Economic recovery through export"
 event: "IDM Co-op FGD: Badai Pandemi, Vaksinasi dan Harapan Pemulihan Ekonomi"
 event_url:
 location:
