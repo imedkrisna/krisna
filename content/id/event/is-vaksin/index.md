@@ -84,7 +84,7 @@ Kami mengundang Mbak Liza dan Bli Tarsa, dua orang peneliti di Australian Nation
 Diskusi berjalan sangat lancar dan seru. Berikut sedikit kesimpulan dari diskusi hari itu.
 
 {{< callout note >}}
-Resensi ini adalah hasil interpretasi pribadi saya, dan belum tentu merefleksikan kedua narasumber dengan tepat 100%
+Resensi ini adalah hasil interpretasi pribadi saya, dan belum tentu merefleksikan pandangan kedua narasumber dengan ketepatan 100%
 {{< /callout note>}}
 
 Diskusi dimulai dengan mengangkat soal efikasi. Mbak Liza menjelaskan bahwa efikasi sebenarnya digunakan untuk mengestimasi seberapa banyak populasi yang harus divaksinasi untuk mencapai _herd immunity_. Beliau juga menjelaskan bahwa desain vaksin-vaksin yang ada saat ini memberikan penekanan kepada penurunan gejala sedang sampai berat, sehingga dapat mengurangi beban rumah sakit. Bli Tarsa menambahkan bahwa mengukur efektivitas vaksin memerlukan waktu yang cukup lama, dan untuk saat ini melihat _hospitalization rate_ dapat lebih menjelaskan hal tersebut.
