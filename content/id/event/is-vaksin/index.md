@@ -83,6 +83,10 @@ Kami mengundang Mbak Liza dan Bli Tarsa, dua orang peneliti di Australian Nation
 
 Diskusi berjalan sangat lancar dan seru. Berikut sedikit kesimpulan dari diskusi hari itu.
 
+{{< callout note >}}
+Resensi ini adalah hasil interpretasi pribadi saya, dan belum tentu merefleksikan kedua narasumber dengan tepat 100%
+{{< /callout note>}}
+
 Diskusi dimulai dengan mengangkat soal efikasi. Mbak Liza menjelaskan bahwa efikasi sebenarnya digunakan untuk mengestimasi seberapa banyak populasi yang harus divaksinasi untuk mencapai _herd immunity_. Beliau juga menjelaskan bahwa desain vaksin-vaksin yang ada saat ini memberikan penekanan kepada penurunan gejala sedang sampai berat, sehingga dapat mengurangi beban rumah sakit. Bli Tarsa menambahkan bahwa mengukur efektivitas vaksin memerlukan waktu yang cukup lama, dan untuk saat ini melihat _hospitalization rate_ dapat lebih menjelaskan hal tersebut.
 
 Dari sana, diskusi bergerak ke arah target Pemerintah, apakah target ini realistis atau tidak. Menurut Bli Tarsa, target ini cukup realistis, namun dengan memerhatikan rumitnya kondisi logistik di lapangan. Pemerintah juga harus meningkatkan jumlah vaksinator, karena target tersebut akan sulit terealisasi jika hanya mengandalkan fasilitas dan tenaga kesehatan yang ada saat ini. Program seperti melatih sukarelawan vaksinator di komunitas (seperti RT/RW) dapat menjadi jalan keluar karena vaksin COVID-19 tidak terlalu sulit diinjeksi (cukup lewat otot) dan komunitas berpotensi memiliki data yang lebih baik dan personal. Ia juga menambahkan _best practice_ dari banjar di Bali.
