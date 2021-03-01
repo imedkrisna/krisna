@@ -11,8 +11,8 @@ address:
   region:
   postcode:
   country:
-summary: I share a possible recovery through export. There seem to be a trade-off between going ahead with commodity export with an import substitution policy.
-abstract: I share a possible recovery through export. There seem to be a trade-off between going ahead with commodity export with an import substitution policy.
+summary: Saya mencoba memaparkan kemungkinan _economic recovery_ melalui ekspor. Sering dengan meningkatnya harga komoditi saat ini, ekspor bisa jadi peluang yang baik. Dilemma-nya adalah adanya larangan ekspor barang tambang demi nilai tambah dalam negeri.
+abstract: Saya mencoba memaparkan kemungkinan _economic recovery_ melalui ekspor. Sering dengan meningkatnya harga komoditi saat ini, ekspor bisa jadi peluang yang baik. Dilemma-nya adalah adanya larangan ekspor barang tambang demi nilai tambah dalam negeri. Klik `slides` untuk melihat bahan presentasi saya, atau klik `videos` untuk rekamannya di Youtube
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
@@ -58,7 +58,7 @@ url_slides:
 
 url_code:
 url_pdf:
-url_video:
+url_video: https://www.youtube.com/watch?v=aJx7ymHrQqI
 
 # Markdown Slides (optional).
 #   Associate this event with Markdown slides.
