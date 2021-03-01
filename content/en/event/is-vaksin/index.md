@@ -81,6 +81,8 @@ Rasanya sangat lumrah jika ada ketertarikan yang tinggi terhadap program vaksina
 
 Kami mengundang Mbak Liza dan Bli Tarsa, dua orang peneliti di Australian National University (ANU). [Dr Syarifah Munira](https://rsph.anu.edu.au/people/academics/dr-syarifah-liza-munira) adalah peneliti di Research School of Population Health, sementara [I Nyoman Sutarsa](https://medicalschool.anu.edu.au/people/academics/dr-sutarsa-nyoman) adalah dosen dan peneliti di Rural Clinical School, Medical School, The Australian National University. Bli Tarsa juga terafiliasi dengan Department of Public Health and Preventative Medicine, Faculty of Medicine Udayana University, Indonesia.
 
+Bli Tarsa juga sempat menjadi pembicara di ANU Indonesia Project Global Seminar Series dua hari sebelum diskusi ini terjadi. Saya rekomen pada nonton rekamannya di youtube ANU Indonesia Project di [sini](https://www.youtube.com/watch?v=BI8lS0KnxlE).
+
 Diskusi berjalan sangat lancar dan seru. Berikut sedikit kesimpulan dari diskusi hari itu.
 
 {{% callout note %}}
