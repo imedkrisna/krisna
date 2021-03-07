@@ -1,0 +1,1554 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Cost curve of the firm</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Krisna Gupta" />
+    <script src="libs/header-attrs-2.6/header-attrs.js"></script>
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <script src="libs/kePrint-0.0.1/kePrint.js"></script>
+    <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+    <link rel="stylesheet" href="dark.css" type="text/css" />
+    <link rel="stylesheet" href="dark-fonts.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Cost curve of the firm
+## Week 5
+### Krisna Gupta
+### 8 March 2021 (updated: 2021-03-07)
+
+---
+
+
+## Recap on last week
+
+- Elasticities matter, as they dictate how surpluses are distributed in a market.
+
+- It is important also for the government.
+
+- Demand elasticity varies depending on preference and the state of the good
+  - substitute vs complement, luxury vs normal, etc
+  - usually hard to change market preferences.
+  - preference can be estimated but it is beyond the cover of this course.
+  
+---
+
+## Today's cover
+  
+- Supply curve is a bit different: 
+  
+  - Cost can be easier to guess.
+  - Easier to make framework.
+  - Has an important implication to the market.
+
+- What we will learn today is:
+
+  - The production function.
+  - Types of cost.
+  - Implication to the supply curve and the market.
+  
+---
+
+class: middle, center
+
+# The Production Function
+
+&lt;iframe src="https://giphy.com/embed/dJZi221XtSnHW" width="480" height="273" frameBorder="0" class="giphy-embed" allowFullScreen&gt;&lt;/iframe&gt;&lt;p&gt;&lt;a href="https://giphy.com/gifs/dog-lawnmower-yard-work-dJZi221XtSnHW"&gt;via GIPHY&lt;/a&gt;&lt;/p&gt;
+
+---
+
+## The production function
+
+- A firm is an organization that produces goods and services.
+
+- To produce, it uses inputs and transform them into a final product and then sell it to the market.
+
+- This relationship:
+
+$$
+input \xrightarrow{magic!} output
+$$
+
+&amp;nbsp; &amp;nbsp; &amp;nbsp;  &amp;nbsp;  &amp;nbsp;is called **production function**
+
+---
+
+## Reminder: What is a function?
+
+- Function is a mathematical expression to show a relationship between two or more variables.
+
+- Let `\(X\)` be input and `\(Y\)` be output, a production function is:
+
+$$
+Y=f(X)
+$$
+
+- How labor makes rice is sometimes not the main emphasize for economist.
+
+- We care more on how much `\(X\)` is needed to make `\(Y\)`.
+
+---
+
+## The production function
+
+- Let there be a hypothetical **rice** farmer named Kensi.
+
+- Kensi own a hectare of **land**. In the short run, Kensi can't increase his number of land.
+
+- However, Kensi can hire a **labour** to work at his farm.
+
+- In this case, the inputs are land and labour, while the output is rice.
+
+---
+
+## Fixed and variable input
+
+- We call land a **fixed input**, an input which can't be changed.
+
+- We call labour a **variable input** because Kensi can hire or fire labour anytime.
+
+- It is important to distinguish the two, because a producer can adjust variable input to adjust demand.
+  - In good times, hire more labour. In bad times, fires.
+  
+---
+
+## Short and long run
+
+- Fixed input won't probably be fixed for long.
+
+  - buying and selling new land may take time, but it is doable.
+  - However, when there's a quick shock to demand, it is not easy to adjust it.
+  
+- For example, the price for surgical mask at one point rose to 150k IDR a box, but it is now settled back to around 30k IDR a box.
+  - In the short run, fixed input can't keep up.
+  
+- TSMC and Samsung need time to build new factories.
+
+---
+
+## Short and long run
+
+- How long is 'long run'? depends on how quickly the fixed input can adjust.
+
+- In the case of masks, it catched up to the demand shock in less than a year. Hand sanitizer is even faster.
+
+- In the case of chip, the new capacity for TSMC will operate somewhere in 2022, while Samsung needs even longer time.
+
+- Knowing how long is the demand shock is also important.
+  - forecasting demand is a useful skill to have.
+  
+---
+
+## The hypothetical farmer
+
+- Kensi can't change his arable land, but can change how much labour he employs.
+
+.pull-left[
+&lt;table class="table table-striped" style="font-size: 20px; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:center;"&gt; Quantity 
+ of 
+ labour L 
+ (workers)  &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt; Quantity of 
+ rice Q 
+ (ton) &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt; MPL &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; - &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 19 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 19 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 36 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 17 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 3 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 51 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 15 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 4 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 64 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 13 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 5 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 75 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 11 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 6 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 84 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 9 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 7 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 91 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 7 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 8 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 96 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 5 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+]
+
+.pull-right[
+- MPL is short for **Marginal Product of Labour**
+`$$MPL=\frac{\Delta Q}{\Delta L}$$`
+- MPL shows how much Q increase if we increase L by 1.
+]
+
+---
+
+class: center, middle
+
+## Total product curve
+
+![](week5_files/figure-html/rice1-1.png)&lt;!-- --&gt;
+
+---
+
+## Marginal product
+
+- In general, **marginal product** of an input is the additional quantity of output produced by using one more additional unit of that input.
+
+- In our case, we have MPL of every one more additional worker. But if that data is not possible, we can just use the formula in general
+
+- for example, Kensi have only two data points: one where he work alone and one when he hire 7 workers.
+
+---
+
+## Marginal product
+
+| worker | production |
+| ------ | ---------- |
+| 1 | 19 |
+| 8 | 96 |
+
+$$
+MPL=\frac{\Delta Q}{\Delta L}=\frac{96-19}{8-1}=11
+$$
+
+- In our case, MPL decreases as the number of worker increases: 
+  - it is better to have a smooth data point.
+  - We call this a **diminishing return to labour**
+
+---
+
+## Marginal product curve
+
+![](week5_files/figure-html/rice2-1.png)&lt;!-- --&gt;
+
+---
+
+## Diminishing return to an input
+
+- When you have 1 hectare of land, 1 worker can only work so much before he gets tired.
+
+- It is sensible to hire one more person to work on a larger area. This will lead to a huge gain in harvest.
+
+- If the land area is fixed, as we introduce more people, each person will have to work in a smaller area.
+
+- Too much people become inefficient.
+
+- In an office setting: imagine if you add workers without adding the number of computers.
+
+---
+
+## Marginal product and the fixed input
+
+- If Kensi would like to scale up production, increasing only labour will be inefficient.
+
+- Kensi can start planning to increase its land to 2 hectare by buying or renting his  neighbour's land, for example.
+
+- Suppose it takes one year for Kensi to buy one more hectare of land, what's his TP and MPL would look like one year later?
+
+---
+
+### TP shifts up with additional land
+
+![](week5_files/figure-html/beras1-1.png)&lt;!-- --&gt;
+
+---
+
+### MPL is still diminishing, but higher
+
+![](week5_files/figure-html/beras2-1.png)&lt;!-- --&gt;
+
+---
+
+## Marginal product
+
+- The crucial point of the diminishing marginal product concept is *ceteris paribus*.
+
+  - if you increase labour AND land, then MPL will look like it goes up.
+  
+- Hence, when we measure MP of an input, it must be the case that **everything else is held fixed**.
+
+- Production function can be a bit more complex.
+
+  1 programmer in 12 months `\(\not\rightarrow\)` 12 programmers in 1 month.
+  
+---
+
+# Cost
+
+&lt;iframe src="https://giphy.com/embed/3ohjV1wV5q38uFVjG0" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen&gt;&lt;/iframe&gt;&lt;p&gt;&lt;a href="https://giphy.com/gifs/mootvideo-animation-illustration-3ohjV1wV5q38uFVjG0"&gt;via GIPHY&lt;/a&gt;&lt;/p&gt;
+
+---
+
+## From production function to profit
+
+- Kensi understand how his farm work. He would like to profit from his farm.
+
+- If Kensi can't control the selling price (rice is competitive), he needs to know how to control his own cost.
+
+- He has to know at least two things:
+  - **fixed cost** (FC), the cost of his land, and
+  - **variable cost** (VC), the cost of labour.
+
+---
+
+## Kensi's hypothetical cost
+
+- Suppose Kensi's land's rent price is 200 k IDR, while the wage rate in his neighbourhood is 100k IDR.
+
+&lt;table class="table table-striped" style="font-size: 20px; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:center;"&gt; point &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt; L 
+ (workers) &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt; Q 
+ (ton) &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt; FC &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt; VC &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt; TC=FC+VC &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; A &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 200 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 200 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; B &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 19 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 200 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 100 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 300 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; C &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 36 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 200 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 200 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 400 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; D &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 3 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 51 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 200 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 300 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 500 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; E &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 4 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 64 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 200 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 400 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 600 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; F &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 5 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 75 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 200 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 500 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 700 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; G &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 6 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 84 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 200 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 600 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 800 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; H &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 7 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 91 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 200 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 700 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 900 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; I &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 8 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 96 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 200 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 800 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 1000 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+## Total cost curve for Kensi's farm
+
+![](week5_files/figure-html/kensi1-1.png)&lt;!-- --&gt;
+
+---
+
+## Total product curve vs total cost curve
+
+- Both are upward sloping
+
+- however, as production increase, TP is getting flatter, while TC is increasingly steeper.
+
+- Using more labour increases additional TC but decreases additional TP.
+
+---
+
+class: middle, center
+
+# Intermezzo
+
+Since the land is owned by Kensi, does it make sense to put the rent price as his fixed cost?
+
+--
+
+yes because **opportunity cost** is also a cost: Kensi can rent his land to someone else.
+
+---
+
+class: center, middle
+
+# Two key concepts:
+
+### Marginal cost &amp; average cost
+
+---
+
+class: middle, center
+
+### Liv's fancy footwear
+
+.s[Liv is a learning entrepreneur. She start her fancy footwear business in New York with this cost structure:]
+
+&lt;table class="table table-bordered table-striped table-responsive" style="font-size: 20px; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:center;"&gt; Q &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt; FC &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt; VC &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt; TC &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 108 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 108 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 108 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 12 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 120 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 108 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 48 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 156 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 3 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 108 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 108 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 216 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 4 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 108 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 192 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 300 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 5 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 108 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 300 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 408 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 6 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 108 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 432 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 540 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 7 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 108 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 588 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 696 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 8 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 108 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 768 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 876 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 9 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 108 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 972 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 1080 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 10 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 108 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 1200 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 1308 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+## Marginal cost
+
+- **Marginal cost** (MC) is the change in **total cost** generated by producing one additional unit of output.
+
+$$
+MC = \frac{\text{Change in }TC}{\text{change in }Q}=\frac{\Delta TC}{\Delta Q}
+$$
+- Let's add MC on Liv's fancy footwear cost structure
+
+---
+
+### Liv' fancy footwear cost structure
+
+.pull-left[
+&lt;table class="table table-bordered table-striped table-responsive" style="font-size: 20px; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:center;"&gt; Q &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt; FC &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt; VC &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt; TC &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt; MC &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 108 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 108 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 108 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 12 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 120 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 12 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 108 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 48 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 156 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 36 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 3 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 108 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 108 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 216 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 60 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 4 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 108 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 192 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 300 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 84 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 5 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 108 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 300 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 408 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 108 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 6 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 108 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 432 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 540 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 132 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 7 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 108 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 588 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 696 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 156 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 8 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 108 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 768 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 876 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 180 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 9 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 108 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 972 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 1080 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 204 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 10 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 108 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 1200 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 1308 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 228 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+]
+
+.pull-right[.s[
+- For the first fancy footwear produced, liv's `\(\Delta\)`Q is 1, while her `\(\Delta\)`TC is 120-108
+
+- The second fancy footwear, her `\(\Delta TC=156-120=36\)` 
+
+- And so on.
+
+- In our case, we have complete one fancy footwear incremental. In the real world, you might not have this kind of data.
+
+- But the principle is the same.
+]]
+
+---
+
+## Liv's fancy footwear
+
+.pull-left[
+
+![](week5_files/figure-html/grafikliv1-1.png)&lt;!-- --&gt;
+]
+
+.pull-right[ .s[
+- The cost is upward sloping, but the incremental is faster.
+
+- An additional pair of fancy footwear from 1 to 2 costs an additional $36
+
+- The additional cost is $180 from 7 pairs to 8 pairs
+]]
+
+---
+
+## Liv's fancy footwear
+
+.pull-left[
+
+![](week5_files/figure-html/grafikliv2-1.png)&lt;!-- --&gt;
+]
+
+.pull-right[ .s[
+- The marginal cost is also upward sloping.
+  - in this case, the cost structure is designed to be **diminishing in return**
+  
+- It means, the additional bobba needs more input as the fancy footwear increases.
+
+- recall that the TP curve in Kensi's case is flattening because of this.
+
+]]
+
+---
+
+## Average Total Cost (ATC)
+
+- There is also **average total cost**, or simply **Average Cost**
+
+$$
+ATC=\frac{TC}{Q}
+$$
+
+- ATC is important because it tells the cost of each fancy footwear given the current state of production.
+
+- Be careful, `\(ATC \neq MC\)`
+
+- Which one would Liv use to set the price?
+
+---
+
+### Liv's fancy footwear cost structure
+
+&lt;table class="table table-bordered table-striped table-responsive" style="font-size: 20px; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:center;"&gt; Q &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt; FC &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt; VC &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt; TC &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt; MC &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt; AFC &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt; AVC &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt; ATC &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 108 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 108 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; Inf &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; NaN &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; Inf &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 108 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 12 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 120 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 12 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 108.00 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 12 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 120.00 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 108 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 48 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 156 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 36 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 54.00 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 24 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 78.00 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 3 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 108 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 108 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 216 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 60 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 36.00 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 36 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 72.00 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 4 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 108 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 192 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 300 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 84 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 27.00 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 48 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 75.00 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 5 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 108 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 300 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 408 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 108 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 21.60 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 60 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 81.60 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 6 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 108 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 432 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 540 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 132 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 18.00 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 72 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 90.00 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 7 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 108 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 588 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 696 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 156 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 15.43 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 84 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 99.43 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 8 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 108 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 768 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 876 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 180 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 13.50 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 96 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 109.50 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 9 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 108 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 972 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 1080 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 204 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 12.00 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 108 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 120.00 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 10 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 108 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 1200 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 1308 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 228 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 10.80 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 120 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 130.80 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+---
+
+## Liv's cost structure
+
+.pull-left[
+&lt;table class="table table-bordered table-striped table-responsive" style="font-size: 20px; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:center;"&gt; Q &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt; TC &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt; AFC &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt; AVC &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt; ATC &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 108 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; Inf &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; NaN &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; Inf &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 120 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 108.00 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 12 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 120.00 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 156 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 54.00 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 24 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 78.00 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 3 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 216 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 36.00 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 36 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 72.00 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 4 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 300 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 27.00 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 48 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 75.00 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 5 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 408 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 21.60 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 60 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 81.60 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 6 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 540 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 18.00 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 72 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 90.00 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 7 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 696 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 15.43 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 84 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 99.43 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 8 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 876 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 13.50 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 96 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 109.50 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 9 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 1080 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 12.00 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 108 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 120.00 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 10 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 1308 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 10.80 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 120 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 130.80 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+]
+
+.pull-right[.s[
+- Note that ATC decreases before it increases.
+
+- AFC drives ATC down: Fixed cost doesn't change no matter how much fancy footwear is produced (**spreading effect**).
+
+- AVC increases as Q increases due to **diminishing returns effect**.
+
+- at what Q does ATC at its lowest point?
+]]
+
+---
+
+### Liv's fancy footwear Average Total Cost Curve
+
+![](week5_files/figure-html/liv4-1.png)&lt;!-- --&gt;
+
+---
+
+## MC and ATC
+
+- It is probably best to produce at the lowest ATC. Q=3 is the **minimum-cost output**.
+
+- Note that:
+  - at `\(Q=3\)`, `\(ATC=MC\)`;
+  - at `\(Q&lt;3\)`, `\(ATC&lt;MC\)`;
+  - at `\(Q&gt;3\)`, `\(ATC&gt;MC\)`.
+  
+- Works like your GPA: At GPA=3.0, an additional A will increase your GPA, a C will decrease your GPA, while a B doesn't change your GPA.
+
+---
+
+### Cost Curves
+
+![](week5_files/figure-html/liv5-1.png)&lt;!-- --&gt;
+---
+
+## Cost curves
+
+- Note that in our graph, ATC is not exactly equals to MC.
+
+- This is because MC is an incremental cost from Q:
+  - for example, a marginal cost from Q=1 to Q=2 should be plotted somewhere between Q=1 and Q=2, not exactly at Q=2.
+
+- It easier to understand the logic when we use function.
+
+- The logic remains: a Q where cost is lowest is when MC=ATC
+
+---
+
+## Short run and long run
+
+- In the long run, Liv can upgrade (or downgrade) her capacity by changing her fixed cost.
+
+- Higher fixed cost leads to higher overall cost, but typically can reduces variable cost at a higher Q.
+
+- If Liv's client is just 3 people, buying a automated sewing machine might be an overkill.
+
+- If Liv's business is forecasted to grow in the future, she can prepare for an upgrade.
+
+---
+
+## High capacity vs low capacity
+
+![](week5_files/figure-html/liv6-1.png)&lt;!-- --&gt;
+
+---
+
+## High capacity vs low capacity
+
+- Upgrading is only worth it if Liv sell at least 5 pairs of shoes.
+
+- If upgraded, the minimum-cost output is `\(Q=6\)`
+
+- In the long run, fixed cost can be changed (hence become variable to some extent)
+
+- The most important is to know:
+  - How the different capacity ATC looks like;
+  - How easy each input can be changed;
+  - whether changes in the market is long lasting or not.
+
+---
+
+## High capacity vs low capacity
+
+.pull-left[![fryer](cafe.jpg)]
+.pull-right[![gorengan](gorengan.jpg)]
+
+---
+
+## Returns to scale
+
+---
+
+## Long run cost curves
+
+- **Long run average cost** (LRAC) is an average total cost which treat the fixed cost as a variable cost.
+
+- Calculating LRAC requires many curves corresponding with different level of fixed cost.
+
+- In fact, with so many other costs, using graph may no longer be practical.
+
+- We won't cover it in this course, but it is useful to know that LRAC exists and can be useful for you in the future.
+
+---
+
+class: middle, center
+
+# Calculating profit
+
+---
+
+## Perfect competition
+
+- We learned in the perfect competition, producer takes price as given.
+
+- This is called **price-taking producers** (and **price-taking consumers**)
+
+- essentially means nobody can affect prices.
+
+--
+
+- How much should Liv produce? Depends on the **revenue**.
+
+- For now, let's assume that the fancy footwear a highly competitive industry, where P=$100
+
+---
+
+### Liv's cost, revenue and profit (Total)
+
+
+&lt;table class="table table-striped" style="font-size: 20px; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+&lt;tr&gt;
+&lt;th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1"&gt;&lt;div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; "&gt;Quantity sold&lt;/div&gt;&lt;/th&gt;
+&lt;th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1"&gt;&lt;div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; "&gt;Total Cost&lt;/div&gt;&lt;/th&gt;
+&lt;th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1"&gt;&lt;div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; "&gt;Total Revenue&lt;/div&gt;&lt;/th&gt;
+&lt;th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1"&gt;&lt;div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; "&gt;Total Profit&lt;/div&gt;&lt;/th&gt;
+&lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:center;"&gt; Q &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt; TC &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt; TR &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt; TR-TC &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 120 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 100 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; -20 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 156 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 200 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 44 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 3 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 216 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 300 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 84 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;background-color: blue !important;"&gt; 4 &lt;/td&gt;
+   &lt;td style="text-align:center;background-color: blue !important;"&gt; 300 &lt;/td&gt;
+   &lt;td style="text-align:center;background-color: blue !important;"&gt; 400 &lt;/td&gt;
+   &lt;td style="text-align:center;background-color: blue !important;"&gt; 100 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 5 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 408 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 500 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 92 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 6 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 540 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 600 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 60 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 7 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 696 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 700 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 4 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 8 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 876 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 800 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; -76 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 9 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 1080 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 900 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; -180 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 10 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 1308 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 1000 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; -308 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+### Liv's cost, revenue and profit (total)
+
+
+![](week5_files/figure-html/pc2-1.png)&lt;!-- --&gt;
+
+---
+
+### Liv's cost, revenue and profit (per unit)
+
+&lt;table class="table table-striped" style="font-size: 20px; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+&lt;tr&gt;
+&lt;th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1"&gt;&lt;div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; "&gt;Quantity sold&lt;/div&gt;&lt;/th&gt;
+&lt;th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1"&gt;&lt;div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; "&gt;Average Total Cost&lt;/div&gt;&lt;/th&gt;
+&lt;th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1"&gt;&lt;div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; "&gt;Price per pair&lt;/div&gt;&lt;/th&gt;
+&lt;th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1"&gt;&lt;div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; "&gt;margin&lt;/div&gt;&lt;/th&gt;
+&lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:center;"&gt; Q &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt; ATC &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt; P &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt; P-ATC &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 120.00 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 100 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; -20.00 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 78.00 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 100 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 22.00 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;background-color: blue !important;"&gt; 3 &lt;/td&gt;
+   &lt;td style="text-align:center;background-color: blue !important;"&gt; 72.00 &lt;/td&gt;
+   &lt;td style="text-align:center;background-color: blue !important;"&gt; 100 &lt;/td&gt;
+   &lt;td style="text-align:center;background-color: blue !important;"&gt; 28.00 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 4 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 75.00 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 100 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 25.00 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 5 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 81.60 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 100 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 18.40 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 6 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 90.00 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 100 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 10.00 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 7 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 99.43 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 100 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0.57 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 8 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 109.50 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 100 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; -9.50 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 9 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 120.00 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 100 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; -20.00 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 10 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 130.80 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 100 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; -30.80 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+## Profit under perfect market
+
+- The necessary condition for profit maximisation is as close as possible with:
+
+$$ MR = MC $$
+
+- MR is short for **Marginal Revenue**, how much additional revenue you get from selling one more good.
+
+$$
+MR = \frac{\Delta TR}{\Delta Q}
+$$
+- It is like **marginal cost**, but revenue.
+
+- This is why **marginal cost** is important.
+
+---
+
+## Marginal Revenue &amp; Marginal Cost
+
+&lt;table class="table table-striped" style="font-size: 20px; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+&lt;tr&gt;
+&lt;th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1"&gt;&lt;div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; "&gt;Quantity &lt;br&gt; sold&lt;/div&gt;&lt;/th&gt;
+&lt;th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1"&gt;&lt;div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; "&gt;Total &lt;br&gt; cost&lt;/div&gt;&lt;/th&gt;
+&lt;th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1"&gt;&lt;div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; "&gt;Total &lt;br&gt; revenue&lt;/div&gt;&lt;/th&gt;
+&lt;th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1"&gt;&lt;div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; "&gt;Total &lt;br&gt; Profit&lt;/div&gt;&lt;/th&gt;
+&lt;th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1"&gt;&lt;div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; "&gt;Marginal &lt;br&gt; revenue&lt;/div&gt;&lt;/th&gt;
+&lt;th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1"&gt;&lt;div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; "&gt;Marginal &lt;br&gt; cost&lt;/div&gt;&lt;/th&gt;
+&lt;th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1"&gt;&lt;div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; "&gt;condition&lt;/div&gt;&lt;/th&gt;
+&lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:center;"&gt; Q &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt; TC &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt; TR &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt; TR-TC &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt; MR &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt; MC &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt; MR-MC &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 120 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 100 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; -20 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 100 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 12 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 88 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 156 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 200 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 44 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 100 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 36 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 64 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 3 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 216 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 300 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 84 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 100 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 60 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 40 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;background-color: blue !important;"&gt; 4 &lt;/td&gt;
+   &lt;td style="text-align:center;background-color: blue !important;"&gt; 300 &lt;/td&gt;
+   &lt;td style="text-align:center;background-color: blue !important;"&gt; 400 &lt;/td&gt;
+   &lt;td style="text-align:center;background-color: blue !important;"&gt; 100 &lt;/td&gt;
+   &lt;td style="text-align:center;background-color: blue !important;"&gt; 100 &lt;/td&gt;
+   &lt;td style="text-align:center;background-color: blue !important;"&gt; 84 &lt;/td&gt;
+   &lt;td style="text-align:center;background-color: blue !important;"&gt; 16 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 5 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 408 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 500 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 92 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 100 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 108 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; -8 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 6 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 540 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 600 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 60 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 100 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 132 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; -32 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 7 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 696 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 700 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 4 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 100 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 156 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; -56 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 8 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 876 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 800 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; -76 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 100 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 180 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; -80 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 9 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 1080 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 900 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; -180 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 100 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 204 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; -104 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 10 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 1308 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 1000 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; -308 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 100 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 228 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; -128 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+## MR, MC and AC in action
+
+![](week5_files/figure-html/pc5-1.png)&lt;!-- --&gt;
+
+---
+
+![](week5_files/figure-html/pc6-1.png)&lt;!-- --&gt;
+
+---
+
+![](week5_files/figure-html/pc7-1.png)&lt;!-- --&gt;
+
+---
+
+## MR &amp; MC
+
+- Profit is equals to margin times quantity sold
+
+$$ \pi=(P-ATC) \times Q$$
+
+- hence the red area on the previous 2 graphs.
+
+- When `\(MR &lt; MC\)`, the additional Q that we produce reduces profit.
+
+- When `\(MR &gt; MC\)`, the additional Q that we produce increases profit.
+
+- That is why at `\(MR = MC\)`, we have **profit-maximizing output**. 
+
+---
+
+## MR &amp; MC
+
+- In Liv's case, she doesn't have any point where `\(MR=MC\)`
+
+- In this case, she produce as close as possible with `\(MR=MC\)`, but still `\(MR&gt;MC\)`
+
+  - profit is starting to go down when `\(MR&lt;MC\)`
+  
+- In a bigger firm with more Q and more continuous data point, `\(MR=MC\)` is very useful and approachable.
+
+---
+
+## Perfect market
+
+- In the perfect market, producers are price-taking (_pasrah_).
+
+- That is why `\(MR=P\)`
+  - no matter how much (or less) a producer produce, the price will always be the same
+  
+- We will see next week how the market will look like when producer's action can change prices.
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "monokai",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
