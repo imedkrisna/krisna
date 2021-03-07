@@ -13,7 +13,7 @@ slides:
 - [week 2: Supply and demand](https://krisna.netlify.app/slides/econ101/week2)
 - [week 3: Meddling with the market](https://krisna.netlify.app/slides/econ101/week3)
 - [week 4: Elasticities and taxation](https://krisna.netlify.app/slides/econ101/week4)
-- [week 5: Firm problem]()
+- [week 5: Firm problem](https://krisna.netlify.app/slides/econ101/week5)
 - [week 6: Monopoly & oligopoly]()
 - [week 7: Externalities & public goods]()
 - [week 8: Intro to macroeconomics]()
