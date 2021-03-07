@@ -52,8 +52,6 @@ slides:
 
 - [Mahasiswa doktoral](https://crawford.anu.edu.au/people/phd/krisna-gupta) di Crawford School of Public Policy, Australian National University
 
-- Ketua komisi ekonomi Direktorat Penelitian dan Kajian PPI Dunia
-
 - Lebih lanjut tentang saya klik [s.id/krisnagupta](https://krisna.netlify.app/)
 
 ---
