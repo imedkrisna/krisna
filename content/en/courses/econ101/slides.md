@@ -14,7 +14,7 @@ slides:
 - [week 3: Meddling with the market](https://krisna.netlify.app/slides/econ101/week3)
 - [week 4: Elasticities and taxation](https://krisna.netlify.app/slides/econ101/week4)
 - [week 5: Firm problem](https://krisna.netlify.app/slides/econ101/week5)
-- [week 6: Monopoly & oligopoly]()
+- [week 6: Monopoly & oligopoly](https://krisna.netlify.app/slides/econ101/week6)
 - [week 7: Externalities & public goods]()
 - [week 8: Intro to macroeconomics]()
 - [week 9: GDP, inflation and unemployment]()
