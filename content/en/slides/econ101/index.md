@@ -301,7 +301,7 @@ Monday, February $8^{th}$ 2021
 - To get a glimpse of what economists usually do, you can take a look at my blog. examples:
   - [Consumption-saving decision]({{< relref "post/surga" >}})
   - [how to set the price on toll road]({{< relref "post/jorr" >}})
-  - [FDI, trade and industry policy (in Indonesian)]({{< relref "post/hitektrade" >}})
+ 
 
 -  Questions you might be interested in:
    - should I expand to other market or continue serving my niche?

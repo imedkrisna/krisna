@@ -15,4 +15,4 @@ weight = 65
 
 +++
 
-Untuk melihat CV saya tanpa mengunduh, [ketuk di sini (html)](files/cv.html). Untuk mengunduh CV saya dalam format pdf, [ketuk di sini](files/cv.pdf). (diperbarui pada 15 September 2020)
+{{% staticref "files/CV.html" %}}ketuk di sini untuk CV dalam html{{% /staticref %}}. Untuk mengunduh CV saya dalam format pdf, {{% staticref "files/CV.pdf" %}}ketuk di sini (pdf){{% /staticref %}}. (diperbarui pada 19 Maret 2021)
