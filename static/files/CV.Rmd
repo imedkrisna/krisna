@@ -21,7 +21,7 @@ Contact Info {#contact}
 --------------------------------------------------------------------------------
 
 - <i class="fa fa-envelope"></i> krisna.gupta@anu.edu.au
-- <i class="fa fa-globe"></i> [krisna.netlify.app](https://krisna.netlify.app/)
+- <i class="fa fa-globe"></i> [krisna.or.id](https://krisna.or.id/)
 - For more information, please contact me via email.
 
 Skills {#skills}
@@ -101,12 +101,12 @@ N/A
 
 ### Popular Publications / Oped
 
-- Gupta, Krisna. 2020. ["Managing investment, trade deficit: are omnibus law panacea for growth?"](https://www.thejakartapost.com/academia/2020/01/31/managing-investment-trade-deficit-are-omnibus-laws-panacea-for-growth.html). *The Jakarta Post Academic Opinion*.
+- Gupta, Krisna and Deasy Pane. 2021. ["Restrictive regulations on foreign trade may hurt economy"](https://www.thejakartapost.com/paper/2021/03/11/restrictive-regulations-on-foreign-trade-may-hurt-economy.html). *The Jakarta Post*.
+- Gupta, Krisna and Wishnu Mahraddika. 2021. ["Mengapa tren kendaraan listrik adalah momentum transformasi industri otomotif Indonesia" ](https://theconversation.com/mengapa-tren-kendaraan-listrik-adalah-momentum-transformasi-industri-otomotif-indonesia-152958). *The Conversation Indonesia*.
 - Pasaribu, Donny and Krisna Gupta. 2020. ["Will IA-CEPA be the boost to Australia-Indonesia relations leaders are banking on?"](https://indonesiaatmelbourne.unimelb.edu.au/will-ia-cepa-be-the-boost-to-the-australia-indonesia-relationship-leaders-are-banking-on/), *Indonesia At Melbourne*.
 - Patunru, Arianto and Krisna Gupta. 2020. ["Indonesia's PPE export ban backfires"](https://www.eastasiaforum.org/2020/06/16/indonesias-ppe-export-ban-backfires/), *East Asia Forum*.
-- Pasaribu, Donny and Krisna Gupta. 2020. ["COVID-19 punishes Indonesian commodity exporters"](https://www.eastasiaforum.org/2020/07/16/covid-19-punishes-indonesian-commodity-exporters/). *East Asia Forum*.
-- Gupta, Krisna and Andree Surianta. 2020. ["IA-CEPA will not solve Indonesia’s FDI problem"](https://www.eastasiaforum.org/2020/08/05/ia-cepa-will-not-solve-indonesias-fdi-problem/). *East Asia Forum*.
 - Patunru, Arianto and Krisna Gupta. 2020. ["COVID-19 dan Anjloknya Indeks PMI Indonesia: Uraian Singkat untuk Menteri Perindustrian, Republik Indonesia"](https://www.covid19indonesia.net/indonesian-minister-of-industry). Indonesia Project, ANU. 
+- Gupta, Krisna. 2020. ["Managing investment, trade deficit: are omnibus law panacea for growth?"](https://www.thejakartapost.com/academia/2020/01/31/managing-investment-trade-deficit-are-omnibus-laws-panacea-for-growth.html). *The Jakarta Post Academic Opinion*.
 
 N/A
 
@@ -122,7 +122,7 @@ N/A
 ### Tutor at Australian National University
 
 - [POLS3025](https://programsandcourses.anu.edu.au/2015/course/pols3025) Contemporary Political Analysis, using STATA in political analyses (2017)
-- [ECON3101](https://programsandcourses.anu.edu.au/course/econ3101) Microeconomics 3 (2018-2020)
+- [ECON3101](https://programsandcourses.anu.edu.au/course/econ3101) Microeconomics 3 (2018-2021)
 - [ECON2102](https://programsandcourses.anu.edu.au/course/econ2102) Macroeconomics 2 (2019)
 - [EMET3008](https://programsandcourses.anu.edu.au/course/emet3008) Applied Macro and Financial Econometrics (2020)
 
