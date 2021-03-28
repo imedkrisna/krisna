@@ -16,7 +16,7 @@ slides:
 - [week 5: Firm problem](https://krisna.netlify.app/slides/econ101/week5)
 - [week 6: Monopoly & oligopoly](https://krisna.netlify.app/slides/econ101/week6)
 - [week 7: Externalities & public goods](https://krisna.netlify.app/slides/econ101/week7)
-- [week 8: Intro to macroeconomics]()
+- [week 8: Intro to macroeconomics](https://krisna.netlify.app/slides/econ101/week8)
 - [week 9: GDP, inflation and unemployment]()
 - [week 10: Long run economic growth]()
 - [week 11: Fiscal policy]()
