@@ -40,7 +40,7 @@ slides:
 
 # Kondisi perekonomian 
 ## di masa COVID-19
-### Acara
+### Kuliah Tamu Makroekonomi MESP Universitas Sebelas Maret
 #### Krisna Gupta
 ##### 8 April 2020
 [krisna.or.id](https://www.krisna.or.id/)
