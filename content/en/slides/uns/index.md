@@ -80,7 +80,7 @@ slides:
 
 - Bagaimana ke depannya
 
-Slide ini dapat diakses di
+Slide ini dapat diakses di [krisna.or.id/event/uns](https://krisna.or.id/event/uns)
 
 ---
 
