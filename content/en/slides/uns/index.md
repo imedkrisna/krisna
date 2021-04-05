@@ -84,4 +84,40 @@ Slide ini dapat diakses di [krisna.or.id/event/uns](https://krisna.or.id/event/u
 
 ---
 
-## Konten
+## growth
+
+---
+
+## sectoral gdp
+
+---
+
+## unemployment
+
+---
+
+## inflation
+
+---
+
+## export import
+
+---
+
+## PEN
+
+---
+
+## debt
+
+---
+
+## Pajak
+
+---
+
+## kurs dan suku bunga
+
+---
+
+## hot takes
