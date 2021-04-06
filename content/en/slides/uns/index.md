@@ -32,7 +32,7 @@ slides:
     mouse_wheel: true
     transition: fade  # none/fade/slide/convex/concave/zoom
     transitionSpeed: default  # default/fast/slow
-    background_transition: slide  # none/fade/slide/convex/concave/zoom
+    background_transition: fade  # none/fade/slide/convex/concave/zoom
     touch: true
     loop: false
     menu_enabled: true
@@ -76,9 +76,9 @@ Krisna Gupta
 
 ## Tentang hari ini
 
-- Kondisi ekonomi Indonesia
+- Sekilas update pandemi COVID-19
 
-- 
+- Respons fiskal dan moneter
 
 - 
 
@@ -86,11 +86,11 @@ Slide ini dapat diakses di [krisna.or.id/event/uns](https://krisna.or.id/event/u
 
 ---
 
-<iframe src="https://ourworldindata.org/grapher/positive-rate-daily-smoothed?tab=chart" loading="lazy" style="width: 100%; height: 600px; border: 0px none;"></iframe>
+<iframe src="https://ourworldindata.org/grapher/positive-rate-daily-smoothed?tab=chart&country=BRA~IND~RUS~IDN~CHN~BGD~PHL~VNM~TUR~THA~MY" loading="lazy" style="width: 100%; height: 600px; border: 0px none;"></iframe>
 
 ---
 
-<iframe src="https://ourworldindata.org/grapher/positive-rate-daily-smoothed?tab=chart" loading="lazy" style="width: 100%; height: 600px; border: 0px none;"></iframe>
+<iframe src="https://ourworldindata.org/grapher/daily-tests-per-thousand-people-smoothed-7-day?tab=chart&country=BRA~IND~RUS~IDN~CHN~BGD~PHL~VNM~TUR~THA~MY" loading="lazy" style="width: 100%; height: 600px; border: 0px none;"></iframe>
 
 ---
 
@@ -98,6 +98,22 @@ Slide ini dapat diakses di [krisna.or.id/event/uns](https://krisna.or.id/event/u
 
 ---
 
+{{< slide class="small" >}}
+
+## Respons fiskal[^1]
+
+| Bidang | Budget (Triliun rupiah) | Deskripsi |
+| ---- | ---- | ---- |
+| Kesehatan | 88 | Pengadaan peralatan medis dan insentif nakes |
+| Sosial | 204 | Penambahan PKH, kartu pekerja, dan bantuan sosial lainnya |
+| insentif bisnis | 121 | pemotongan pajak penghasilan, penundaan bea masuk untuk manufaktur, dll |
+| stimulus UMKM | 123 | Subsidi KUR |
+| Stimulus BUMN | 54 | bantuan modal |
+| Stimulus Pemda | 106 | bantuan melalui pemda |
+
+[^1]: OECD (2021), OECD Economic Surveys: Indonesia 2021, OECD Publishing, Paris, https://doi.org/10.1787/fd7e6249-en.
+
+---
 
 ## Indikator makro
   <div class="twocolumn">
