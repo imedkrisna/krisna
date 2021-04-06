@@ -84,7 +84,9 @@ Slide ini dapat diakses di [krisna.or.id/event/uns](https://krisna.or.id/event/u
 
 ---
 
-## growth
+## Indikator makro (+ ramalan IMF)
+
+{{< figure library="true" src="/uns/gambar1.png" title="" numbered="true" >}}
 
 ---
 
