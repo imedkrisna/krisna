@@ -42,10 +42,10 @@ slides:
 ## di masa COVID-19
 ### Kuliah Tamu Makroekonomi 
 
-#### MESP Universitas Sebelas Maret
+##### MESP Universitas Sebelas Maret
 
-##### Krisna Gupta
-###### 8 April 2020
+Krisna Gupta  
+8 April 2020  
 [krisna.or.id](https://www.krisna.or.id/)
 
 ---
@@ -76,17 +76,44 @@ slides:
 
 ## Tentang hari ini
 
-- Kondisi beberapa kondisi makro
+- Kondisi ekonomi Indonesia
 
-- Bagaimana ke depannya
+- 
+
+- 
 
 Slide ini dapat diakses di [krisna.or.id/event/uns](https://krisna.or.id/event/uns)
 
 ---
 
-## Indikator makro (+ ramalan IMF)
+<iframe src="https://ourworldindata.org/grapher/positive-rate-daily-smoothed?tab=chart" loading="lazy" style="width: 100%; height: 600px; border: 0px none;"></iframe>
 
-{{< figure library="true" src="/uns/gambar1.png" title="" numbered="true" >}}
+---
+
+<iframe src="https://ourworldindata.org/grapher/positive-rate-daily-smoothed?tab=chart" loading="lazy" style="width: 100%; height: 600px; border: 0px none;"></iframe>
+
+---
+
+<iframe src="https://ourworldindata.org/explorers/coronavirus-data-explorer?zoomToSelection=true&pickerSort=desc&pickerMetric=population&Metric=People+vaccinated&Interval=Cumulative&Relative+to+Population=true&Align+outbreaks=false&country=BRA~IND~RUS~IDN~CHN~BGD~PHL~VNM~TUR~THA~MYS&hideControls=true" loading="lazy" style="width: 100%; height: 600px; border: 0px none;"></iframe>
+
+---
+
+
+## Indikator makro
+  <div class="twocolumn">
+    <div>
+      {{< figure library="true" src="/uns/gambar1.png" title="" numbered="true" >}}
+    </div>
+    <div>
+      <ul>
+      <li> Indonesia terbantu oleh tingginya harga komoditas pada tahun 2000-an </li>
+      <li> Di saat yang sama, harga komoditas juga mengakibatkan inflasi yang tinggi </li>
+      <li> COVID-19 datang di saat inflasi telah terkendali </li>
+      <li> Namun pertumbuhan ekonomi yang selama ini telah baik mengalami kontraksi </li>
+      <li> IMF meramalkan ekonomi Indonesia akan pulih dengan cepat </li>
+      </ul>
+    </div>
+  </div>
 
 ---
 
@@ -98,7 +125,9 @@ Slide ini dapat diakses di [krisna.or.id/event/uns](https://krisna.or.id/event/u
 
 ---
 
-## inflation
+## Interest rate
+
+<iframe src='https://d3fy651gv2fhd3.cloudfront.net/embed/?s=idbirate&v=202104052315V20200908&d1=19210501&h=300&w=600' height='300' width='600'  frameborder='0' scrolling='no'></iframe><br />source: <a href='https://tradingeconomics.com/indonesia/interest-rate'>tradingeconomics.com</a>
 
 ---
 
