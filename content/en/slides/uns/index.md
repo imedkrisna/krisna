@@ -52,13 +52,13 @@ slides:
 
 ## Tentang saya
 
-- Mahasiswa doktoral di Crawford School of Public Policy, Australian National University
+- Mahasiswa doktoral di Crawford School of Public Policy, Australian National University.
 
-- Penelitian tentang
+- Fokus penelitian di kebijakan publik terkait perdagangan internasional dan investasi, khususnya dampak kebijakan-kebijakan tersebut terhadap performa perdagangan dan industri manufaktur di Indonesia.
 
-- Kadang-kadang nulis di koran, forum akademis dan [blog pribadi](https://www.krisna.or.id/post/).
+- Kontributor di beberapa forum akademis seperti [East Asia Forum](https://www.eastasiaforum.org/contributors/#), [The Conversation Indonesia](https://theconversation.com/profiles/krisna-gupta-1133995) dan [ANU Indonesia Project](https://www.covid19indonesia.net/contributors)
 
-- Hobby
+- Kadang-kadang mengisi [blog pribadi](https://www.krisna.or.id/post/) dan berkicau di [twitter](https://www.twitter.com/imedkrisna/)
 
 ---
 
