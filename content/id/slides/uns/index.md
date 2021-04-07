@@ -62,7 +62,7 @@ Krisna Gupta
 
 ---
 
-- Selengkapnya tentang saya di [sini](/CV.md)
+- Selengkapnya tentang saya di [sini](#CV) wkwkw
 
 ---
 
