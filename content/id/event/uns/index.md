@@ -11,8 +11,8 @@ address:
   region:
   postcode:
   country:
-summary: "Saya diundang oleh kolega saya Bu Evi dari Universitas Sebelas Maret untuk memberikan sedikit pemaparan terhadap kondisi perekonomian di Indonesia kepada mahasiswa magister ekonomi di Universitas Sebelas Maret"
-abstract: "Saya diundang oleh kolega saya Bu Evi dari Universitas Sebelas Maret untuk memberikan sedikit pemaparan terhadap kondisi perekonomian di Indonesia kepada mahasiswa magister ekonomi di Universitas Sebelas Maret"
+summary: "Saya diundang oleh kolega saya Bu Evi dari Universitas Sebelas Maret untuk memberikan sedikit pemaparan terhadap kondisi perekonomian di Indonesia kepada mahasiswa magister ekonomi di Universitas Sebelas Maret. Sungguh sebuah kehormatan dapat berbagi panggung dengan Bapak Lukman Hakim, PhD."
+abstract: "Saya diundang oleh kolega saya Bu Evi dari Universitas Sebelas Maret untuk memberikan sedikit pemaparan terhadap kondisi perekonomian di Indonesia kepada mahasiswa magister ekonomi di Universitas Sebelas Maret. Sungguh sebuah kehormatan dapat berbagi panggung dengan Bapak Lukman Hakim, PhD."
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
