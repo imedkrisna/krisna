@@ -62,6 +62,10 @@ Krisna Gupta
 
 ---
 
+- Selengkapnya tentang saya di [sini](/CV.md)
+
+---
+
 {{< slide class="small" >}}
 
 ## Beberapa Publikasi 😎

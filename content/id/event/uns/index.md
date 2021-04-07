@@ -2,26 +2,26 @@
 # Documentation: https://wowchemy.com/docs/managing-content/
 
 title: "Kondisi perekonomian di masa COVID-19"
-event:
+event: "Guest lecture 2 Universitas Sebelas Maret"
 event_url:
-location:
+location: Online
 address:
   street:
   city:
   region:
   postcode:
   country:
-summary:
-abstract:
+summary: "Saya diundang oleh kolega saya Bu Evi dari Universitas Sebelas Maret untuk memberikan sedikit pemaparan terhadap kondisi perekonomian di Indonesia kepada mahasiswa magister ekonomi di Universitas Sebelas Maret"
+abstract: "Saya diundang oleh kolega saya Bu Evi dari Universitas Sebelas Maret untuk memberikan sedikit pemaparan terhadap kondisi perekonomian di Indonesia kepada mahasiswa magister ekonomi di Universitas Sebelas Maret"
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
-date: 2021-04-08T20:59:48+11:00
-date_end: 2021-04-08T20:59:48+11:00
+date: 2021-04-08T12:30:00+11:00
+date_end: 2021-04-08T14:00:00+11:00
 all_day: false
 
 # Schedule page publish date (NOT event date).
-publishDate: 2021-04-08T20:59:48+11:00
+publishDate: 2021-04-06T20:59:48+11:00
 
 authors: [admin]
 tags: [ekonomi, presentasi, coronavirus COVID-19]
@@ -33,8 +33,8 @@ featured: false
 # To use, add an image named `featured.jpg/png` to your page's folder. 
 # Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
 image:
-  caption: ""
-  focal_point: ""
+  caption: "Kuliah umum UNS"
+  focal_point: "Smart"
   preview_only: false
 
 # Custom links (optional).
@@ -57,7 +57,7 @@ url_video:
 #   Simply enter your slide deck's filename without extension.
 #   E.g. `slides = "example-slides"` references `content/slides/example-slides.md`.
 #   Otherwise, set `slides = ""`.
-slides: ""
+slides: "uns"
 
 # Projects (optional).
 #   Associate this post with one or more of your projects.
