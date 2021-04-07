@@ -76,6 +76,14 @@ Krisna Gupta
 
 ---
 
+<iframe src="https://embed.polleverywhere.com/multiple_choice_polls/jSRlSKYkubaNnmUfB2Ye8?controls=none&short_poll=true" width="800px" height="600px"></iframe>
+
+---
+
+<iframe src="https://embed.polleverywhere.com/free_text_polls/wj2aN43nDTfJMteb9ZZrr?controls=none&short_poll=true" width="800px" height="600px"></iframe>
+
+---
+
 ## Tentang hari ini 👍🏾
 
 - Sekilas update pandemi COVID-19 dan respons pemerintah.
