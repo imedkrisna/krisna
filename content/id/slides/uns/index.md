@@ -58,11 +58,9 @@ Krisna Gupta
 
 - Kontributor di beberapa forum akademis seperti [East Asia Forum](https://www.eastasiaforum.org/contributors/#), [The Conversation Indonesia](https://theconversation.com/profiles/krisna-gupta-1133995) dan [ANU Indonesia Project](https://www.covid19indonesia.net/contributors)
 
-- Kadang-kadang mengisi [blog pribadi](https://www.krisna.or.id/post/) dan berkicau di [twitter](https://www.twitter.com/imedkrisna/)
+- Kadang-kadang mengisi [blog pribadi](../../post/) dan berkicau di [twitter](https://www.twitter.com/imedkrisna/)
 
----
-
-- Selengkapnya tentang saya di [sini](#CV) wkwkw
+- Selengkapnya tentang saya di [sini](../../files/CV.html)
 
 ---
 
