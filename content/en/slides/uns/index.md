@@ -254,7 +254,39 @@ COVID-19 datang ketika Indonesia sedang berusaha mengejar ketertinggalan produkt
 
 - _debt service_ dan pembayaran _equity_ membebani _net primary income_
 
-- Akibatnya, tanpa didukung ekspor dan foreign investment flow, neraca pembayaran menjadi defisit.
+- Akibatnya, tanpa didukung ekspor dan _foreign investment flow_, neraca pembayaran menjadi defisit.
+
+---
+
+## Masalah keseimbangan eksternal
+
+<iframe src="https://giphy.com/embed/myDXHnYYPxT4od4NEN" width="400" height="400" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/myDXHnYYPxT4od4NEN">via GIPHY</a></p>
+
+---
+
+## Kondisi eksternal
+
+- Awal tahun 2010an merupakan _double hit_ (Basri 2017):
+  + berakhirnya ledakan harga komoditas
+  + _taper-off_ the Fed
+
+- BI membiarkan rupiah terkoreksi ke teritori 14.000 rupiah per dolar.
+
+- Para peminjam dolar berhadapan dengan pengembalian utang yang mahal (interest parity)
+
+- Pengalaman krismon 1998 memberikan efek traumatis bagi pengambil kebijakan khususnya moneter.
+
+---
+
+## Mengendalikan neraca
+
+- Kesulitan ekspor berakibat pada keinginan kuat pemerintah untuk menekan impor.
+
+- Problemnya, Indonesia banyak mengimpor [bahan pangan, bahan baku, bahan penolong dan barang modal](/post/imporinput).
+
+- Jika Indonesia ingin ekspor manufakturnya kompetitif, maka terlibat dalam Global Value Chain (GVC) adalah suatu keharusan.
+
+- Pemerintah harus berhati-hati dalam melakukan pembatasan perdagangan, yang berpotensi memiliki [dampak buruk terhadap ekonomi](https://www.thejakartapost.com/paper/2021/03/11/restrictive-regulations-on-foreign-trade-may-hurt-economy.html) terutama di [era GVC](/publication/hetfirm).
 
 ---
 
@@ -268,46 +300,68 @@ COVID-19 datang ketika Indonesia sedang berusaha mengejar ketertinggalan produkt
 
 {{< figure library="true" src="/uns/grafik5.png" title="" numbered="true" >}}
 
-defisit neraca pembayaran berkorelasi dengan melemahnya nilai rupiah.
+---
+
+### Impor didominasi barang keperluan produksi
+
+{{< figure library="true" src="/uns/grafik6.png" title="" numbered="true" >}}
 
 ---
 
-## Kondisi eksternal
-
-- Awal tahun 2010an merupakan _double hit_:
-  + berakhirnya ledakan harga komoditas
-  + _taper-off_ the Fed
-
-- BI membiarkan rupiah terkoreksi ke teritori 14.000 rupiah per dolar.
-
-- Para peminjam dolar berhadapan dengan pengembalian utang yang mahal (interest parity)
-
----
-
-## Mengendalikan neraca
-
-- Kesulitan ekspor berakibat pada keinginan kuat pemerintah untuk menekan impor.
-
-- Problemnya, Indonesia banyak mengimpor bahan pangan, bahan baku, bahan penolong dan barang modal.
-
-- Jika Indonesia ingin ekspor manufakturnya kompetitif, maka terlibat dalam Global Value Chain (GVC) adalah suatu keharusan.
-
-- Pemerintah harus berhati-hati dalam melakukan pembatasan perdagangan, karena biasanya permasalahan industri yang tidak kompetitif tidak dapat diselesaikan dengan melarang ekspor dan impor.
-
----
-
-## Masalah keseimbangan eksternal
+## Dari masalah kredit ke neraca
 
 - Dengan kata lain, Indonesia mengalami permasalahan keseimbangan eksternal karena sangat tergantung dengan kondisi ekonomi dunia.
 
 - Iklim bisnis yang kurang baik mengakibatkan pembiayaan modal domestik yang mahal, sehingga memanfaatkan utang luar negeri.
 
-- _return to investment_ yang tidak tepat mengakibatkan neraca pembayaran yang tertekan dan mata uang yang melemah.
+---
 
-- Akibatnya, Pemerintah membatasi perdagangan.
+## Dari masalah kredit ke neraca
+
+- defisit neraca pembayaran bukan masalah besar selama hitung-hitungan bisnisnya tepat:
+  + _return_ yang didapat cukup untuk membayar cicilan utang
+  + _long-term_ project tidak didanai oleh utang jangka pendek
+  + negara mampu memiliki utang yang berkelanjutan
 
 ---
 
+## Dari masalah kredit ke neraca
+
+- _return to investment_ yang tidak tepat mengakibatkan neraca pembayaran yang tertekan dan mata uang yang melemah.
+  + pertumbuhan utang eksternal tidak dibarengi dengan pertumbuhan sektor ekspor.
+  + suku bunga internasional yang murah menjadi mahal karena rupiah melemah (interest rate parity rule).
+  
+---
+
+## Dari masalah kredit ke neraca
+
+- BI menjaga nilai cadangan devisa sehingga membatasi intervensi pasar uang.
+
+- Akibatnya pemerintah merasa perlu mengintervensi melalui pembatasan impor.
+
+- Padahal impor adalah konsekuensi dari tingginya investasi asing.
+
+---
+
+## Peluang ekspor
+
+- Pandemi COVID-19 memukul impor dan meningkatkan ekspor.
+
+- Ekspor dapat menjadi pilihan untuk kembali pulih dari resesi:
+  + harga-harga komoditas andalan Indonesia mulai pulih
+  + stimulus US,EU dan trading partner lainnya
+
+- Pemerintah berniat membatasi ekspor komoditas demi nilai tambah dalam negeri.
+
+- Selengkapnya tentang peluang pemulihan ekspor dapat dilihat di [sini](/event/idm)
+
+---
+
+## Update harga
+
+{{< figure library="true" src="/uns/grafik7.png" title="" numbered="true" >}}
+
+---
 # Permasalahan fiskal
 
 <iframe src="https://giphy.com/embed/qojMeV7qOvzcGUgvbE" width="400" height="300" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/news-election-2020-first-presidential-debate-i-dont-want-to-pay-tax-qojMeV7qOvzcGUgvbE">via GIPHY</a></p>
@@ -321,27 +375,71 @@ defisit neraca pembayaran berkorelasi dengan melemahnya nilai rupiah.
   + memiliki penerimaan negara yang tinggi sangat penting.
   + _fiscal rule_ yang terkontrol dapat diekspansi di saat genting.
 
-- Basis data untuk penerima bantuan harus cukup luas.
+- Sayangnya, pendapatan negara masih jauh dari ideal.
 
 ---
 
-## Tax ratio
+## Tax ratio rendah
+
+{{< figure library="true" src="/uns/grafik8.png" title="" numbered="true" >}}
 
 ---
 
-## Utang pemerintah
+## Utang pemerintah terkendali
 
-- 
-
----
-
-## Coverage yang minim
+{{< figure library="true" src="/uns/grafik9.png" title="" numbered="true" >}}
 
 ---
 
-## Produktivitas
+## Manajemen fiskal yang baik?
 
-- Sekolah
+- Pemerintah sukses menghapus subsidi energi dan menggenjot infrastruktur tanpa pajak dan utang.
+
+- turunnya harga energi sejak akhir ledakan harga komoditas sangat menolong.
+
+- Tetapi kuncinya adalah mengoper penerbitan bonds dari Pemerintah ke BUMN.
+
+- Hal ini membebani _balance sheet_ BUMN seperti Pertamina, PLN, dan konstruksi (Triggs et al 2019).
+
+---
+
+## Memindahkan beban utang
+
+- Jika hitung-hitungan proyeknya tidak tepat, utang bisa jadi keburu jatuh tempo sebelum _return_ memadai.
+
+- Solusi terbaik tentu saja adalah BUMN yang lebih efisien.
+
+- Namun jika solusinya adalah penyertaan modal, maka hal ini akan kembali berakibat ke pembebanan APBN.
+
+- Meningkatkan penerimaan negara menjadi semakin penting.
+
+---
+
+## Penerimaan negara
+
+- Namun pandemi memberikan tantangan yang sulit:
+  + kebutuhan fiskal untuk bantuan sosial meningkat tajam.
+  + industri meminta berbagai insentif fiskal seperti pemotongan pajak dan harga gas.
+  + Penerimaan berkurang karena ekonomi sedang lesu.
+
+- Dengan level utang saat ini, Pemerintah masih memiliki ruang.
+  + tantangannya adalah penyaluran (_disbursement_)
+
+- Namun ke depan, Pemerintah harus lebih agresif dalam melakukan reformasi fiskal.  
+
+---
+
+## Summary
+
+- Pandemi membuka masalah yang selama ini _dormant_:
+  + ekonomi yang tidak kompetitif
+  + sektor finansial yang tidak kompetitif
+  + utang BUMN dan penerimaan pajak yang rendah
+
+- Indonesia berada di posisi yang relatif baik (tingkat suku bunga, tingkat utang dan defisit, inflasi)
+  + Namun tetap harus berhati-hati ke depannya
+
+- Solusinya? {{% fragment %}} Saya serahkan ke teman-teman UNS! (bisa jadi judul thesis lho!) {{% /fragment %}}
 
 ---
 
@@ -351,7 +449,11 @@ defisit neraca pembayaran berkorelasi dengan melemahnya nilai rupiah.
 
 ---
 
+{{< slide class="small" >}}
+
 ## Some references
+
+- Basri, M. Chatib. 2017. "India and Indonesia: Lessons Learned from the 2013 Taper Tantrum." Bulletin of Indonesian Economic Studies 53 (2): 137-160. https://doi.org/10.1080/00074918.2017.1392922. https://doi.org/10.1080/00074918.2017.1392922.
 
 - OECD (2021), OECD Economic Surveys: Indonesia 2021, OECD Publishing, Paris, https://doi.org/10.1787/fd7e6249-en.
 
