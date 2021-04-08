@@ -26,7 +26,7 @@ summary: "Me and my colleague Deasy Pane of Bappenas look at how the follow-up r
 
 tags: [English, Trade, Industry]
 categories: [English, Trade, Industry]
-featured: false
+featured: true
 
 # Custom links (optional).
 #   Uncomment and edit lines below to show custom links.

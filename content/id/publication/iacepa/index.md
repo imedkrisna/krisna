@@ -26,7 +26,7 @@ summary: "IA-CEPA excited everyone when it was taken into effect, a result of 10
 
 tags: [English, IACEPA]
 categories: [English, IACEPA]
-featured: true
+featured: false
 
 # Custom links (optional).
 #   Uncomment and edit lines below to show custom links.
