@@ -24,9 +24,9 @@ hero_media = ""
   # gradient_end = "#2b94c3"
   
   # Background image.
-  image = "hnet.gif"  
+  image = "fotox.jpg"  
   # Name of image in `static/media/`.
-  image_darken = 0.45
+  image_darken = 0.4
     # Darken the image? Range 0-1 where 0 is transparent and 1 is opaque.
   # image_size = "cover"  #  Options are `cover` (default), `contain`, or `actual` size.
   # image_position = "center"  # Options include `left`, `center` (default), or `right`.
@@ -59,4 +59,4 @@ Switch to [Bahasa Indonesia](/id) or scroll for more!
 
 
 
-<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>. The roos're native to my backyard and gifed using <a href="https://gifmaker.me/">gifmaker</a>. This website is powered by <a href="https://wowchemy.com/?utm_campaign=poweredby">Wowchemy</a>
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>. This website is powered by <a href="https://wowchemy.com/?utm_campaign=poweredby">Wowchemy</a>
