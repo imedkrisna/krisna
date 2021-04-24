@@ -40,12 +40,11 @@ Kenapa harga internasional bisa berbeda dari harga lokal? Jawabannya, tentu saja
 Impor jagung sendiri diatur oleh Peraturan Menteri Perdagangan Nomor 21 Tahun 2018 tentang ketentuan impor jagung. Menurut peraturan ini, impor jagung untuk pakan hanya boleh dilakukan oleh BULOG, sementara impor jagung untuk bahan makanan dan industri boleh dilakukan oleh BULOG dan pabrik. Tentu saja kapan dan berapa banyaknya diatur oleh pemerintah.
 
 Sama dengan ayam. Petani jagung ingin harga tinggi, peternak ayam ingin harga rendah. Pemerintah, daripada keduanya berantem, memilih mendamaikan dengan cara mereka yang atur harga. Cinta damai banget yah kita ehe ehe.
-Lalu dari mana kita impor jagung? pic1 di bawah ini menunjukkannya.
+Lalu dari mana kita impor jagung? [Gambar di bawah ini](https://trendeconomy.com/data/h2/Indonesia/1005) menunjukkannya.
 
-![Impor jagung Indonesia pada 2018. Sumber:UNCOMTRADE](/images/impor_jagung.png "Impor jagung Indonesia pada 2018. Sumber:UNCOMTRADE")
-pic1. Impor Jagung Indonesia pada 2018. Sumber:UNCOMTRADE
+{{< figure src="impor_jagung.jpg" caption="Impor jagung Indonesia pada 2019 (sumber: tradeconomy.com)" theme="light" >}}
 
-YHA! Impor jagung kita ternyata adalah dari Argentina dan Brazil!! Yak, anda tida salah, jagung kita ternyata adalah latino. Ya pantes aja ayam Brazil bisa murah, soalnya emang mereka termasuk produsen jagung yang murah, sampe bisa ekspor segala. Jadi peternak kita akan bersaing dengan negara yang sumber pakannya sama, cuma di kita lebih mahal karena impor jagung dibatasi (dan tentu saja ada margin cost freight and insurance di sana).
+YHA! Sebagian besar Impor jagung kita ternyata adalah dari Argentina dan Brazil!! Yak, anda tida salah, jagung kita ternyata adalah latino. Ya pantes aja ayam Brazil bisa murah, soalnya emang mereka termasuk produsen jagung yang murah, sampe bisa ekspor segala. Jadi peternak kita akan bersaing dengan negara yang sumber pakannya sama, cuma di kita lebih mahal karena impor jagung dibatasi (dan tentu saja ada margin cost freight and insurance di sana).
 
 ## Tumpuk Menumpuk Kebijakan
 
