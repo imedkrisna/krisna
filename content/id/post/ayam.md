@@ -27,7 +27,7 @@ Tentu saja yang dirugikan adalah konsumen langsung. Saya, anda, ibu kita di ruma
 
 Sebenarnya cerita ayam ini agak mirip bawang. Produksi luar negeri lebih murah, dibatasi, lalu yang impor dapet untung. Tapi ayam agak sedikit lebih seru karena minimal 2 hal.
 
-Pertama, tidak seperti bawang yang impornya bisa mencapai 95% dari total kebutuhan bawang Indonesia, impor ayam relatif kecil, yaitu sekitar 76 ribu ton pada 2018. Produksi daging ayam ras di Indonesia memiliki tren yang naik terus, dan pada 2018 mencapai 2,1 juta ton. Dengan kata lain, banyak banget peternak rugi jika tiba-tiba ayam Brazil masuk. Banyak warga NKRI yang bergantung pada ayam untuk mencari makan.
+Pertama, tidak seperti bawang yang impornya bisa mencapai 95% dari total kebutuhan bawang Indonesia, impor ayam relatif kecil, yaitu sekitar 76 ribu ton pada 2018. Produksi daging ayam ras di Indonesia memiliki tren yang naik terus, dan pada 2018 mencapai 2,1 juta ton. Tidak seperti bawang yang petaninya tidak banyak, industri peternakan ayam ukurannya lumayan besar. Dengan kata lain, banyak banget peternak rugi jika tiba-tiba ayam Brazil masuk. Banyak warga NKRI yang bergantung pada ayam untuk mencari makan.
 
 Alasan kedua, masih soal makan, tapi dari sisi ayam. Ada banyak alasan kenapa peternak kita kalah produktif dibandingkan peternak negeri samba (mungkin), tapi sepertinya masalah nomer satu adalah pakan ayam. Pakan utama untuk ternak adalah jagung, dan harga jagung di Indonesia rupanya cukup mahal. Pakan yang tinggi mengakibatkan peternak tidak bisa menekan harga produksi. Ini yang tidak saya bahas di postingan tentang bawang. Saya hanya bilang bahwa petani bawang kita kalah produktif, tapi saya tidak terlalu paham gimana cara mengungguli petani dari RRT.
 
