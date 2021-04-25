@@ -18,7 +18,7 @@ slides:
 - [week 7: Externalities & public goods](https://krisna.netlify.app/slides/econ101/week7)
 - [week 8: Intro to macroeconomics](https://krisna.netlify.app/slides/econ101/week8)
 - [week 9: GDP, inflation and unemployment](https://krisna.netlify.app/slides/econ101/week9)
-- [week 10: Long run economic growth]()
+- [week 10: Long run economic growth & AD-AS framework](https://krisna.netlify.app/slides/econ101/week10)
 - [week 11: Fiscal policy]()
 - [week 12: Financial system]()
 - [week 13: Monetary policy]()
