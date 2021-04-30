@@ -56,4 +56,6 @@ regulating fintech. fintech good at reaching more but should be regulated like a
 
 kapitalis bisa lebih powerful dari negara. bayangin klo kita trade pake gopay dan ga mau pake rupiah? Ant group disikat.
 
+industy protection for locally advantageous industry.- 
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/vUKl0uapYBk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
