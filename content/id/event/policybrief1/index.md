@@ -3,7 +3,7 @@
 
 title: "Mencermati Stimulus Kebijakan Program Percepatan Ekonomi Nasional (PEN) di Tengah Krisis Pandemi COVID-19"
 event: "Diseminasi Policy Brief 1 PPID"
-event_url:
+event_url: https://www.instagram.com/p/COULrIvF05P/?utm_source=ig_web_button_share_sheet
 location:
 address:
   street:
@@ -49,8 +49,8 @@ image:
 # Optional filename of your slides within your event's folder or a URL.
 url_slides: 
 
-url_code:
-url_pdf:
+url_code: https://doi.org/10.13140/RG.2.2.12009.21605
+url_pdf: https://drive.google.com/file/d/1c-GQ2A-QZl9PjYavSlsVeG_J8gLlhF7g/view?usp=sharing
 url_video:
 
 # Markdown Slides (optional).
