@@ -25,7 +25,7 @@ all_day: false
 publishDate: 2021-04-30T13:57:09+10:00
 
 authors: [admin]
-tags: [kebijakan, ekonomi, coronavirus COVID-19, fiskal]
+tags: [kebijakan, ekonomi, coronavirus COVID-19, fiskal, PPID]
 
 # Is this a featured event? (true/false)
 featured: false

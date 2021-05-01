@@ -1,8 +1,8 @@
 ---
-title: lol
-summary: An introduction to using Wowchemy's Slides feature.
-authors: []
-tags: []
+title: PEN brief
+summary: Kami mencermati stimulus kebijakan program Percepatan Ekonomi Nasional (PEN)
+authors: [admin]
+tags: [kebijakan, ekonomi, coronavirus COVID-19, fiskal, PPID]
 categories: []
 date: "2019-02-05T00:00:00Z"
 slides:
