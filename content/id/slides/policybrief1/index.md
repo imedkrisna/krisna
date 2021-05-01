@@ -224,12 +224,13 @@ Sebagai negara yang masih tumbuh dan berinvestasi, posisi utang pemerintah masih
 ## Kesimpulan
 
 - Memperkuat permintaan melalui stimulus pemerintah merupakan solusi yang terbaik saat ini.
+  - Mendorong permintaan, menghindari *youth unemployment*
 
 - Masalah utama bukan di sumber pendanaan, tetapi di *disbursement*.
 
 - Pemerintah perlu lebih agresif dalam melakukan pendataan dan mendorong birokrasi yang efisien.
 
-- Mengawal dengan ketat "program prioritas"
+- Mengawal dengan ketat "program prioritas".
 
 ---
 
