@@ -52,7 +52,7 @@ Komisi ekonomi DITLITKA PPID
 
 - Rekomendasi kebijakan
 
-Presentasi dapat diakses di $\Rightarrow$ [s.id/EconomicPolicyTalkDay1](https://www.krisna.or.id/slides/policybrief1)
+Presentasi ini dapat diakses di $\Rightarrow$ [s.id/EconomicPolicyTalkDay1](https://www.krisna.or.id/slides/policybrief1)
 
 ---
 
