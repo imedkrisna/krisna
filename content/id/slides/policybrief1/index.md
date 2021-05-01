@@ -168,7 +168,7 @@ Secara keseluruhan, PEN 2021 meningkat 22% dibandingkan dengan realisasi PEN 202
 
 - Bidang perlindungan sosial mengalami penurunan
   - Realisasi dianggap lambat karena permasalahan data.
-  - Muncul bidang "proram prioritas".
+  - Muncul bidang "proram prioritas" $\Rightarrow$ *opportunity cost*?
 
 - Data Terpadu Kesejahteraan Sosial (DTKS) terfokus pada rakyat miskin dan bias rural (Sparrow et al, 2020).
   - Dampak Pandemi lebih terasa di perkotaan dan masyarakat rentan dan menengah bawah.
@@ -228,6 +228,8 @@ Sebagai negara yang masih tumbuh dan berinvestasi, posisi utang pemerintah masih
 - Masalah utama bukan di sumber pendanaan, tetapi di *disbursement*.
 
 - Pemerintah perlu lebih agresif dalam melakukan pendataan dan mendorong birokrasi yang efisien.
+
+- Mengawal dengan ketat "program prioritas"
 
 ---
 
