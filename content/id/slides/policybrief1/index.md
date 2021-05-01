@@ -95,7 +95,7 @@ Data *weekly tracker* OECD (Woloszko, 2020) menyiratkan adanya pemulihan. Perlu 
 
 ## Dampak Pandemi terhadap tenaga kerja
 
-Meskipun pengangguran "hanya" meningkat dari 5.3% ke 8%, namun terjadi pengurangan jam kerja terjadi secara signifikan. Hal ini dibarengi dengan pengurangan kapasitas produksi dari 80% UMKM (Temenggung dkk, 2020)
+Meskipun pengangguran "hanya" meningkat dari 5.3% ke 8%, namun terjadi pengurangan jam kerja terjadi secara signifikan terutama di kota dan usia muda. Hal ini dibarengi dengan pengurangan kapasitas produksi dari 80% UMKM (Temenggung dkk, 2020)
 
 | Dalam juta orang |	Laki-laki |	Perempuan |	Kota |	Desa |	Usia 15-24 |	Usia 25-29 |	Usia 60+ |	Total |
 | ---------------- | ------------ | -------- | ----- | ----- | ----------- | ------------- | ----------- | ------ |
