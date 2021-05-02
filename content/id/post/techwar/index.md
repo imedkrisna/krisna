@@ -30,7 +30,7 @@ projects: []
 
 Akhirnya saya punya waktu luang untuk menonton kuliah umum yang dibawakan oleh [Profesor Keyu Jin from LSE](https://www.lse.ac.uk/economics/people/faculty/keyu-jin). Beliau bercerita tentang tekno-nasionalisme dan mendiskusikan tentang apakah hal tersebut baik atau tidak. Diskusi ia mulai dengan menjelaskan perbedaan antara _tech giants_ dengan manufaktur konvensional pada umumnya.
 
-Menurut beliau, jasa teknologi tinggi semacam GAFAM ({{< icon name="google" pack="fab" >}}{{< icon name="amazon" pack="fab" >}}{{< icon name="facebook" pack="fab" >}}{{< icon name="apple" pack="fab" >}}{{< icon name="microsoft" pack="fab" >}}) punya kurva biaya yang berbeda. Bagi mereka, begitu sebuah produk selesai dikembangkan, _marginal cost_ untuk menjual satu barang tambahan adalah hampir nol. Mereka tidak perlu bikin barang fisik, tinggal kopas aja, kasih _product key_ atau _password_ aja. Begitu produk selesai dibuat (misalnya netflix barusan beres bikin satu filem), biaya distribusi ke 100 ataupun 10.000 orang itu sama aja.
+Menurut beliau, jasa teknologi tinggi semacam GAFAM[^1] ({{< icon name="google" pack="fab" >}}{{< icon name="amazon" pack="fab" >}}{{< icon name="facebook" pack="fab" >}}{{< icon name="apple" pack="fab" >}}{{< icon name="microsoft" pack="fab" >}}) punya kurva biaya yang berbeda. Bagi mereka, begitu sebuah produk selesai dikembangkan, _marginal cost_ untuk menjual satu barang tambahan adalah hampir nol. Mereka tidak perlu bikin barang fisik, tinggal kopas aja, kasih _product key_ atau _password_ aja. Begitu produk selesai dibuat (misalnya netflix barusan beres bikin satu filem), biaya distribusi ke 100 ataupun 10.000 orang itu sama aja.
 
 Sudah begitu, sebagian besar jasa teknologi memiliki ciri _increasing returns to scale_ gara-gara apa yang disebut _network effect_. Anda memakai {{< icon name="twitter" pack="fab" >}} karena banyak orang memakai {{< icon name="twitter" pack="fab" >}}. Raksasa teknologi juga dapat menggunakan data-data penggunanya untuk meningkatkan kekuatan penjelasan dari algoritma mereka dan menghasilkan layanan yang lebih baik.
 
@@ -47,3 +47,5 @@ Hal kedua yang dapat mendelegitimasi "besar itu baik" menurut prof. Keyu adalah 
 Ini full videonya jika anda tertarik.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/vUKl0uapYBk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+[^1]: bukan hardwarenya lho ya (iPhone, Google Pixel, Surface, Kindle), tapi jasa-nya. Ha ha ha. "semacam GAFAM" tentu saja termasuk netflix2an.
