@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Investment, Uncertainty, and Principal Agent Problem</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Krisna Gupta" />
+    <script src="libs/header-attrs-2.8/header-attrs.js"></script>
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link rel="stylesheet" href="dark.css" type="text/css" />
+    <link rel="stylesheet" href="dark-fonts.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Investment, Uncertainty, and Principal Agent Problem
+## Week 15
+### Krisna Gupta
+### 31 May 2021 (updated: 2021-05-31)
+
+---
+
+
+## This week
+
+- We have covered most of the macro-materials
+
+- This week:
+  + investment
+  + more on market failure
+  
+---
+
+class: middle, center
+
+# Investment
+
+---
+
+## Investment
+
+- We have discussed how generally we divide our wealth:
+  + amount we spent on consumption
+  + amount we not spent on consumption
+
+- whatever we do that's not consumption is considered an **investment**:
+  + put it in your wallet
+  + saving account
+  + bonds
+  + lend it to your friend, etc
+  
+---
+
+## Investment
+
+- Why do we save?
+  + mainly to consume in the future
+
+- Given the same amount of money, we like to have money now rather than later.
+
+- What determine our willingness to part with our money today?
+  + higher return later (interest rate)
+  + risk-free return (what's the chance your friend pretend to die when you ask your money back?)
+  
+---
+
+## present value
+
+- People still like money now rather than later, though.
+  + this can be expressed using **present value**.
+  + the value of the future is **discounted** in today's term.
+  + the easiest way is to use time deposit rate.
+  
+- Suppose you want to plan a holiday for next year, and you need Rp10 million to do that.
+
+- If you put your money in a [Bank Mandiri time deposit](https://www.bankmandiri.co.id/suku-bunga-dana) with 2.85% per annum (p.a.), you will only need
+`$$\frac{10M}{1+0.0285}=9.73M$$`
+- Rp9.73 million is the **net present value** of the holiday.
+
+---
+
+## present value
+
+- These days, it is very possible to purchase your holiday tickets in advance.
+
+- You can always use the interest rate to calculate how much cost you want to pay in advance.
+
+- For example, if the cost of plane tickets and hotels you pay right now is less than Rp9.73 million, it's better to pay them instead of putting it in the deposit.
+
+- Note that you might have an alternative to deposit which pays higher returns (eg SUN or stocks).
+
+- Time deposit is also somewhat safer should you change your mind or changes in circumstances (eg travel ban).
+
+- **Exchange rate effect is similar to interest rate**: remember, it is basically the value of your currency.
+
+---
+
+## present value
+
+- The present value of something is the total of discounted stream of future face values.
+
+- Interest rate is usually used as the discount rate.
+
+- Suppose `\(r_1\)` is the interest rate in year 1, `\(r_2\)` is the interest rate in year 2, etc:
+.s[
+`$$PV=A_0+\frac{A_1}{1+r_1}+\frac{A_2}{(1+r_1)(1+r_2)}+\frac{A_3}{(1+r_1)(1+r_2)(1+r_3)}+...$$`
+]
+
+- where A is a stream of payment / return.
+
+---
+
+## present value
+
+- Suppose we have a fixed interest rate `\(r\)` and a fixed payment `\(A\)` starting at the end of next year, then the formula becomes:
+
+`$$PV=\sum_{t=1}^{\infty} \frac{A}{(1+r)^t}$$`
+An annual payment forever has net present value:
+
+`$$PV=A \times \frac{1}{r}$$`
+
+With a fixed payment, the most important part is `\(\frac{1}{r}\)`
+
+---
+
+## Compound interest
+
+- Using the forever payment rule is useful to calculate long spell of fixed interest rate.
+
+- A present value of payment for `\(n\)` number of years can be expressed as:
+
+`$$PV=A \times \frac{1}{r} \left( 1- \frac{1}{(1+r)^n} \right)$$`
+
+---
+
+## Mortgage
+
+- suppose `\(r\)` is a monthly interest rate. A 360-month (ie 30 years) mortgage with monthly rate 0.5% has PV:
+
+`\begin{align}
+PV &amp;= A \times \frac{1}{0.005} \left( 1- \frac{1}{(1+0.005)^{360}} \right) \\ 
+PV &amp;= A \times 166.79
+\end{align}`
+
+
+- If the price of the house is Rp500 million, then the monthly installment should be:
+
+
+`\begin{align}
+A &amp;= \frac{500M}{166.79} \\ 
+A &amp;= Rp 2,997,782. \\
+A &amp;\approx Rp 3 million.
+\end{align}`
+
+---
+
+## Mortgage
+
+- Thumb rule: your monthly payment should be at most `\(\frac{1}{3}\)` of your monthly income.
+  + By this calculation, you need an income at least Rp9,000,000 / month to buy Rp500 million house in 30 years installment where the interest rate is 0.5% per month.
+  
+- This calculation would vary based on interest rate and length of the installment.
+  
+---
+
+class: middle, center
+
+# Investment decision
+
+---
+
+## Investment decision
+
+- we use NPV analysis as our main tool to decide whether to invest.
+
+- NPV usually looks like this:
+
+.s[
+`$$NPV=-I+\frac{R_1}{1+r}+\frac{R_2}{(1+r)^2}+\frac{R_3}{(1+r)^3}+...$$`
+]
+- Where `\(-I\)` is the initial investment and `\(R_t\)` is the revenue in time `\(t\)`.
+
+- Three main important things: knowing your `\(-I\)`, `\(r\)` and `\(R_t\)`.
+
+---
+
+## Investment decision
+
+- Calculating investment cost can be hard and unpredictable.
+  + Sydney opera house was estimated to cost \$7 million, ended up costing \$105 million
+  + Indonesian high speed rail also reported to have [higher-than-estimated cost](https://ekonomi.bisnis.com/read/20210325/98/1372567/dana-proyek-kereta-cepat-bengkak-kcic-lakukan-ini?utm_source=Desktop&amp;utm_medium=Artikel&amp;utm_campaign=BacaJuga_2)
+  
+- Calculating `\(R_t\)` also problematic because of uncertainty
+
+- Project manager has an incentive to overstate the potential return while understate the investment cost.
+
+- In the case of internal financing, a firm can use **potential return of other project** as an interest rate.
+  + rule of thumb is 15-20%
+  
+---
+
+## Example
+
+An investment opportunity for a silver mine with this characteristics:
+
+1. First four year costing 4 million USD.
+1. Fifth year potential profit of 4 million USD.
+1. The mine have 40 years operational time.
+1. Cost of fund is 18%.
+
+##### Investment phase
+
+`$$NPV_I=-4+\frac{-4}{1.18}+\frac{-4}{1.18^2}+\frac{-4}{1.18^3}$$`
+
+##### Revenue phase
+
+.s[
+`$$NPV_R=\frac{4}{1.18^4}+\frac{4}{1.18^5}+\frac{4}{1.18^6}+...+\frac{4}{1.18^{43}}$$`
+]
+
+---
+
+## Example
+
+| Year | Earnings ( $ M/year) | PV ( $ M) |
+| --- | --- | --- |
+| 0-3 | -4 | -12.69709 |
+| 4-43 | 4 | 13.50711 |
+| Net | | 0.81002 |
+
+The net present value is barely positive, but still worth the investment.
+
+The reason is the discount factor: 18% is very expensive cost of fund!
+
+---
+
+## Investment under uncertainty
+
+- Some projects are riskier than others.
+
+- Take oil exploration, for example.
+  + Success rate in Indonesia is just [10%](https://www.thejakartapost.com/academia/2019/09/03/oil-gas-exploration-counts.html). It's around 25% in the US and 43% in Australia.
+  + Oil price also highly fluctuates.
+  
+- The value of an uncertain project can be calculated using **expected value**.
+
+`$$EV=\sum_i \pi_i \times V_i$$`
+
+Where `\(\pi\)` is a probability of a value `\(V_i\)` happen in an event `\(i\)`
+
+---
+
+## Example: oil exploration
+
+An oil field exploration project characterised as follows:
+
+1. Exploration costs $1 million for 1 year.
+1. 90% probability it's a dry field.
+1. 10% probability the field produce oil for 20 years with annual revenue $1 million.
+1. cost of fund is 18%
+
+#### NPV of successful exploration
+
+`$$NPV_R=\frac{1}{1.18}+\frac{1}{1.18^2}+...+\frac{1}{1.18^{20}}$$`
+
+`$$NPV_R=5.352746$$`
+
+---
+
+## Example: oil exploration
+
+- However, the successful exploration only has 10% chance.
+
+- Than means, expected value of a successful exploration is:
+
+`\begin{align}
+EV_R &amp;= \pi_{success} \times V_{success} + \pi_{failed} \times V_{failed} \\
+EV_R &amp;= 0.1 \times 5.352746 + 0.9 \times 0 \\
+EV_R &amp;= 0.5352746 \\
+EV_R &amp;\approx 0.535
+\end{align}`
+
+| year | revenue | NPV |
+| --- | --- | --- |
+| 0 | -1 | -1 |
+| 1-21| EV | 0.535 |
+| net | | -0.465 |
+
+The exploration is not worth it.
+
+---
+
+class: middle, center
+
+# Agency problem
+
+---
+
+## Agency problem
+
+- An **agent** is a person or an entity that is tasked to do something for a **principal**.
+
+- If you are hired by a firm to do some work, you are the agent and the firm is the principal.
+
+- other examples:
+
+| principal | agent |
+| --- | --- |
+| board members | board of directors |
+| people | president |
+| president | government official |
+| seller | courier |
+| passanger | driver |
+
+---
+
+## Agency problem
+
+- Agency problem arise because of the high cost of supervising
+  + It is in the interest of the principal that the agent work hard.
+  + The agent has the incentive to be lazy.
+  
+- The agency game is as follows:
+  + First, principal offer a contract to do something.
+  + Next, the agent choose to either accept the contract, or reject.
+  + If the agent accept, the agent then decide whether to work hard or to be lazy.
+  
+- The principal has to design a contract that maximise his/her gain.
+
+---
+
+## Agency problem
+
+- Suppose the principal offers a payment `\(sx+y\)`, where `\(y\)` is a base salary, and `\(s\)` is a bonus depending on how much `\(x\)` the agent works.
+  + consider a marketing representative who gets a monthly salary but gets a bonus everytime the marketing sold a product.
+  
+- A big `\(s\)` would incentivise the marketing to work more. While a big `\(y\)` would be the safest for them.
+
+- However, big `\(s\)` laid the risk to the agent:
+  + when economic crisis happen and it's hard to get client, the marketing would earn very little.
+  + They might reject the contract from the get go.
+  
+---
+
+## Agency problem
+
+- This is the reason why many payment structure these days are based on variable work of agents:
+  + daily rate is preferable for home owner to pay home builder compared to lump-sup (*borongan*).
+  + Ride-sharing app pays based on kms.
+  
+- Also the reason why labours prefer monthly payment, and labour union advocate for higher monthly payment.
+
+---
+
+## Example 1 of an agency game
+
+- An owner of a parking lot has no time to manage it. The owner hires an agent to do that.
+
+- The parking lot has various potential revenue: during a busy day, it can go up to Rp30 million. During a slowest day, it's just Rp5 million.
+
+- The owner (ie the principal) can hire an agent with two kind of contracts:
+  1. Lease the parking lot with a fixed amount of money, and let the agent take the rest of the revenue.
+  1. Pay the agent with a fixed amount of money, and then reap the rest of revenue.
+  
+- Option one is preferable when the parking lot is harder to supervise (eg the payment is not electronic) because the profit is in-line with the agent's interest.
+
+---
+
+## Example 2 of an agency game
+.s[
+- Let a principal needs to repair its code to run faster. An upgraded version would benefit the principal Rp1 billion. The old version doesn't change the principal's profit.
+
+- The principal hire an agent who is an expert in this field. A contract is drafted to hire such agent.
+
+- The worker has two options: work hard will cost the agent Rp30 million, while work lazy will cost 0. This action is invisible to the principal.
+
+- High effort leads to `\(\frac{2}{3}\)` probability of useful product, while low effort has only `\(\frac{1}{3}\)` probability of producing good product.
+
+- good product will fix the code (hence benefit the principal Rp1 billion), while the bad product is worthless for the principal.
+
+- The agent can accept this contract or other contract which will give the agent Rp100 million without extra export.
+]
+
+---
+
+## Example 2
+
+- The principal needs to design a contract such that maximise its benefit regardless of the agent's behavior.
+  + This is mainly because the agent's behavior is unobservable
+  
+- The principal's problem: 
+  1. high salary contract can provide incentive to agent to work hard, but leads to low benefit for the principal.
+  1. low salary contract benefits principal, but may not motivate agent to work hard.
+  
+- However, the principal can offer a contract based on the product: high salary for good product, low salary for bad product.
+  + but how high is high? How low is low?
+  
+---
+
+## The last week
+
+- This is the last material.
+
+- Next week, we will discuss the assignment and the answer to example 2.
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "monokai",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

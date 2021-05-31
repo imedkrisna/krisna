@@ -23,3 +23,5 @@ slides:
 - [week 12: Monetary policy](https://krisna.netlify.app/slides/econ101/week12)
 - [week 13: International trade](https://krisna.netlify.app/slides/econ101/week13)
 - [week 14: International finance](https://krisna.netlify.app/slides/econ101/week14)
+- [week 15: Investment, uncertainty, agency problem](https://krisna.netlify.app/slides/econ101/week15)
+- [week 16: Agency problem, uncertainty](https://krisna.netlify.app/slides/econ101/week16)
