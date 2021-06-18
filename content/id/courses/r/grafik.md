@@ -1,8 +1,8 @@
 ---
-title: Slides
+title: Grafik
 date: '2021-01-01'
 type: book
-weight: 20
+weight: 30
 ---
 
 Menarik file yang di-host di google drive:
