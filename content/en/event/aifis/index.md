@@ -46,9 +46,9 @@ image:
 #   icon: twitter
 
 # Optional filename of your slides within your event's folder or a URL.
-url_slides: 
+url_slides: https://www.krisna.or.id/en/slides/aifis/#1
 
-url_code: https://www.krisna.or.id/en/slides/aifis/#1
+url_code: 
 url_pdf: https://www.researchgate.net/publication/346626166_THE_HETEROGENOUS_IMPACT_OF_TARIFF_AND_NTM_ON_TOTAL_FACTOR_PRODUCTIVITY_OF_INDONESIAN_FIRMS
 url_video:
 
