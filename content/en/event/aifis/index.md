@@ -1,17 +1,17 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: "Aifis"
-event:
-event_url:
-location:
+title: "The Heterogenous Impact of Tariff and NTM on Total Factor Productivity of Indonesian Firms"
+event: "AIFIS-MSU Conference on Indonesian Studies"
+event_url: https://www.eventbrite.com/e/aifis-msu-conference-on-indonesian-studies-tickets-141830022415
+location: On-line
 address:
   street:
   city:
   region:
   postcode:
   country:
-summary:
+summary: 
 abstract:
 
 # Talk start and end times.
@@ -23,8 +23,8 @@ all_day: false
 # Schedule page publish date (NOT event date).
 publishDate: 2021-06-24T12:59:46+10:00
 
-authors: []
-tags: []
+authors: [admin]
+tags: [Industry, Trade, Conference]
 
 # Is this a featured event? (true/false)
 featured: false
@@ -49,7 +49,7 @@ image:
 url_slides:
 
 url_code:
-url_pdf:
+url_pdf: https://www.researchgate.net/publication/346626166_THE_HETEROGENOUS_IMPACT_OF_TARIFF_AND_NTM_ON_TOTAL_FACTOR_PRODUCTIVITY_OF_INDONESIAN_FIRMS
 url_video:
 
 # Markdown Slides (optional).

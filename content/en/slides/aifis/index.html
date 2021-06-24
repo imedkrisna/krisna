@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>The heterogenous impact of tariff and NTM on Total Factor Productivity</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Krisna GuptaAIFIS-MSU Conference on Indonesian Studies" />
+    <script src="libs/header-attrs-2.9/header-attrs.js"></script>
+    <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link rel="stylesheet" href="anutemplate/anu-fonts.css" type="text/css" />
+    <link rel="stylesheet" href="anutemplate/anu.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: left, middle, title-slide
+
+# The heterogenous impact of tariff and NTM on Total Factor Productivity
+### Krisna Gupta</br>AIFIS-MSU Conference on Indonesian Studies
+### 25 June 2021 (updated: 2021-06-24)
+
+---
+
+
+layout: true
+
+background-image: url(anutemplate/footer.jpg)
+background-size: cover
+
+&lt;div class="my-footer"&gt;&lt;span&gt;
+&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;
+Australian National University | Heterogenous impact of trade policy
+&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;
+&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;
+&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;
+&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;
+25 June 2021&lt;/span&gt;&lt;/div&gt; 
+
+---
+
+.judul[
+# Introduction
+
+&lt;iframe src="https://giphy.com/embed/tIeCLkB8geYtW" width="480" height="300" frameBorder="0" class="giphy-embed" allowFullScreen&gt;&lt;/iframe&gt;&lt;p&gt;&lt;a href="https://giphy.com/gifs/shaun-the-sheep-movie-not-my-gif-2016-oscar-nominations-tIeCLkB8geYtW"&gt;via GIPHY&lt;/a&gt;&lt;/p&gt;
+
+]
+
+.isi[
+
+
+```r
+install.packages("lol")
+```
+  
+]
+
+???
+
+first of all, let me congratulate you for the third paper presentation. Your CGE will surely be useful for policy making scenario, especially now that many countries declare carbon neutrality, Indonesia included.
+
+As you mentioned in your paper, developing countries seem to care for GDP much more than emission. The closed-loop CGE, linking the two together, would be useful in trying to convince that climate will negatively affect GDP in the long run.
+
+Unfortunately your result also seems to suggest that abatement cost doesn't show a great deal of consequences to climate change, especially to manufacturing sectors. Should we rely on service?
+
+This work is another step forward in modeling the baseline scenario. Now let me discuss some more points I think would be able to improve your work.
+
+---
+
+.judul[
+# Explaining Mechanisms
+
+&lt;iframe src="https://giphy.com/embed/QwU1cVYSFqUyF4cTgE" width="250" height="250" frameBorder="0" class="giphy-embed" allowFullScreen&gt;&lt;/iframe&gt;&lt;p&gt;&lt;a href="https://giphy.com/gifs/msnbc-steve-kornacki-tracking-QwU1cVYSFqUyF4cTgE"&gt;via GIPHY&lt;/a&gt;&lt;/p&gt;
+
+]
+
+.isi[
+
+## A bit more explanation on important mechamism
+
+- Disclaimer: I am not familiar with IRSA model.
+
+- mechanism behind the fiscal policy
+  - especially how government import for SIM3 and SIM4
+  - important to explain the GDP results
+
+- reasons why use the policy in SIM3 and SIM4
+]
+
+???
+
+I wish I can discuss more on your model, but unfortunately I am not familiar with IRSA model. However, I do have several things in mind reading your paper. first is the mechanisms. I think your focus in explaining production and the closed-loop part is great, but  I think the mechanism behind the fiscal policy and trade needs more explanation. It will be very important as you can use them to explain the channel to your findings in the model.
+
+Additionally, if most of your readers are as clueless as I am, perhaps you need a bit more explaination why you picked the SIM3 and SIM4 compared to other possibilities stated in Leung et al 2014.
+
+---
+
+.judul[
+# On sensitivity and abatement cost
+
+&lt;iframe src="https://giphy.com/embed/STqhOfgGxg4aNNbzT5" width="200" height="150" frameBorder="0" class="giphy-embed" allowFullScreen&gt;&lt;/iframe&gt;&lt;p&gt;&lt;a href="https://giphy.com/gifs/Friends-season-2-episode-5-friends-tv-STqhOfgGxg4aNNbzT5"&gt;via GIPHY&lt;/a&gt;&lt;/p&gt;
+
+]
+
+.isi[
+## need more discussion on sensitivity
+
+- Justify using `\(\pm 0.5 \times \sigma^{ely}_{i,d},\sigma^{en}_{i,d}\)` for sensitivity.
+  - output &amp; emission change is small.
+  - how about sectoral output?
+
+- `\(\psi, \xi\)` are also important
+
+## should discuss `\(DAM_{i,d}\)` more.
+
+
+- stats, its linkage with GDP, sectoral output, and income.
+  
+
+]
+
+???
+
+sensitivity is another thing that I would say require more exploration. Using 50% plus minus with your parameter seems ok, as it give very small changes on output and emission change. You might want to test on sectoral output as well.
+
+More importantly, I really think psi and xi are very important. The two commands your abatement costs, hence very important to the closed-loop mechanism which is your stated main contribution. In fact, discussion on the abatement cost expressed as DAM(i,d) is really lacking in the paper. I was looking for something like how much DAMs are, its contribution to change in GDP, and income. The story of closed-loop mechanisms only kinda show up in the intro but how it affects the original IRSA_EA model is not apparent.
+---
+
+.judul[
+# On GDP
+&lt;iframe src="https://giphy.com/embed/1eEAmkVgNqqatFdatx" width="300" height="300" frameBorder="0" class="giphy-embed" allowFullScreen&gt;&lt;/iframe&gt;&lt;p&gt;&lt;a href="https://giphy.com/gifs/loosekeys-work-beam-workers-1eEAmkVgNqqatFdatx"&gt;via GIPHY&lt;/a&gt;&lt;/p&gt;
+
+]
+
+.isi[
+
+## Channel from GDP changes
+
+- How important is factor movement?
+  - labour movement seems missing.
+  - could explain `XCOI(e,SRV,IDN)` `\(\Uparrow\)` in SIM3,SIM4.
+
+- Does abatement cost also affects services sector?
+
+- how you calculate import? How big was it?
+
+]
+
+???
+
+You probably need to discuss more on channels outside of government transfers. I would guess the movement of labour matters quite a lot in altering sectoral GDP. Labour movements will explain increase in service sectors' production since you have also non-transportation in it (eg education, health, etc).
+
+Will be more apparent if abatement cost does not affect service sectors' productivity.
+
+I think your import result is kinda interesting. I guess a bit more transparency on SIM3 and SIM4 would be important. I did not get the sense of how big the import will be, and how long it will be spread across time.
+
+---
+
+.judul[
+# On Usefulness
+
+&lt;iframe src="https://giphy.com/embed/Lgb9p7eXSEcp2" width="300" height="300" frameBorder="0" class="giphy-embed" allowFullScreen&gt;&lt;/iframe&gt;&lt;p&gt;&lt;a href="https://giphy.com/gifs/is-this-real-life-david-after-dentist-Lgb9p7eXSEcp2"&gt;via GIPHY&lt;/a&gt;&lt;/p&gt;
+
+]
+
+.isi[
+
+## More discussion on:
+
+- between-country externality:
+  - global emission may matter.
+  - potential free-riding scenario.
+
+- market structure may be important.
+  - generator, distributor, retailer.
+
+- long run vs short run
+  - fixed factor, immediate deficit, long-run `\(DAM_{i,d}\)`
+]
+???
+While the model would be a good framework, but I feel like a discussion how it deviates from realilty would be useful to make your paper less a technical report, more a policy paper. Deviation I can think of includes possibility of global and universal abatement cost.
+
+Moreover, market structure could have a huge difference, especially when you try to experiment with tweak with cars and with power plant.
+
+lastly, discussion on short &amp; long run is needed as I feel like it is a bit hazy. How long the conversion will take place (cant help but remember the Indonesian gas converter kit). The abatement cost is obvously will have long term impact on productivity while the import is a bit more short-term.
+
+---
+
+.middle[.center[
+&lt;iframe src="https://giphy.com/embed/g9582DNuQppxC" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen&gt;&lt;/iframe&gt;&lt;p&gt;&lt;a href="https://giphy.com/gifs/hero0fwar-karmawhore-rhyming-g9582DNuQppxC"&gt;via GIPHY&lt;/a&gt;&lt;/p&gt;
+
+# Congratulations Mas Yuve!! 🥳🥳🥳
+]]
+
+???
+
+That's the end of my comments. I think it's a great paper. CGE on environmental impact is rarely discussed in Indonesia, and I am glad you will return to Indonesia as this knowledge will be very useful for the government. Hope it useful and congratulations once again!
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "monokai-sublime",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9",
+"slideNumberFormat": "%current%"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
