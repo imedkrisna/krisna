@@ -110,15 +110,19 @@ Situasi saat ini, Indonesia sudah merdeka dan memiliki pemerintahan yang sah. Ak
 
 Terakhir adalah peran yang lebih ke intelektual-intelektualan. Mahasiswa Indonesia saat ini ada di mana-mana. Di Australia aja kampusnya macem-macem. Di negara-negara lain tentu ada banyak mahasiswa yang belajar ilmu yang meski satu disiplin, tapi memiliki spesialisasi yang berbeda, menggunakan teknik yang berbeda di gemblengan dosen yang juga berbeda-beda. PPI dapat menjadi wadah untuk mempertemukan intelektual-intelektual muda ini, dan memberikan ruang untuk kolaborasi penelitian.
 
+Sebagai mahasiswa yang hobinya kuliah pulang, sebenernya fungsi ini sangat menarik dan mungkin bisa membantu 
+
 ## Jadi, yang mana PPI, yang mana yang bukan?
 
 Pada akhirnya, diskusi ngalor-ngidulnya tidak bener-bener membahas yang mana, dari ke-5 alasan di atas, yang beneran alasan yang pas untuk menjustifikasi keberadaan PPI. Kami semua keburu laper dan kalau tidak segera makan mungkin bakalan rusuh acaranya wkkwkw.
 
-Tapi kami sempet bahas dikit soal "level" di PPI. Hal-hal terkait student welfare tentunya lebih masuk akal dilakukan PPI level kota, atau maksimal negara. Mungkin PPI Dunia gak terlalu lah. Tapi PPID bisa aja mengadvokasikan, misalnya, hal yang lebih  umum seperti mengusahakan legalisasi payung perlindungan warga Indonesia di luar negeri, atau semacamnya.
+Kami sempet bahas dikit soal "level" di PPI. Hal-hal terkait student welfare tentunya lebih masuk akal dilakukan PPI level kota, atau maksimal negara. Mungkin PPI Dunia gak terlalu lah. Tapi PPID bisa aja mengadvokasikan, misalnya, hal yang lebih  umum seperti mengusahakan legalisasi payung perlindungan warga Indonesia di luar negeri, atau semacamnya.
 
-Saya sendiri merasa pada akhirnya fungsi mana yang akan diambil oleh PPI, semua tergantung ketua dan susunan kabinetnya. Misalnya program bengkel mas Haly belum tentu diteruskan pengurus selanjutnya. Pun dengan program pembuatan buku (yang bisa dibilang fungsi nomor 5), belum tentu diteruskan fungsi PPID berikutnya. Tidak ada yang benar, dan tidak ada yang salah.
+Saya sendiri merasa pada akhirnya fungsi mana yang akan diambil oleh PPI, semua tergantung ketua dan susunan kabinetnya. Misalnya program bengkel mas Haly belum tentu diteruskan pengurus selanjutnya. Pun dengan program pembuatan buku (yang bisa dibilang fungsi nomor 5), belum tentu diteruskan fungsi PPID berikutnya.
 
-Mahasiswa Indonesia yang memiliki aspirasi tentu saja ga harus melulu melalui PPI. IS, misalnya, dibentuk secara ga sengaja untuk menjalankan fungsi intelektual karena di ANU suka banyak kedatangan tamu-tamu yang bisa diajak diskusi seru. Sebelum pandemi, terakhir kami kedatangan Bu Mari Pangestu, Pak Adrianus dari Kompolnas, Prof Arif Ansori Yusuf, dan Pak Burhanuddin Muhtadi.
+Jangan lupa bahwa keterlibatan di dalam organisasi kemahasiswaan sifatnya *voluntary*. Berbeda dengan PARSA, PPI *generally* ga punya sumber funding gede dan konsisten, apalagi untuk bayar orang untuk ngerjain fungsi-fungsi tertentu terkait *student welfare* dan advokasi. Kita tidak bisa menghakimi orang-orang yang bergabung ke dalam PPI. Apakah orangnya emang suka berorganisasi? Apakah orangnya *altruistik* dan berniat membantu sesama mahasiswa? Atau orangnya punya agenda tertentu? Mau menggunakan PPI untuk tujuan politik pribadi dan panjat sosial? Kalaupun iya, apakah itu salah?
+
+Dan jangan lupa, kegiatan kemahasiswaan juga bisa memiliki bentuk non-PPI. [IS](https://www.facebook.com/IndonesiaSynergyAU/), misalnya, dibentuk secara ga sengaja untuk menjalankan fungsi intelektual karena di ANU suka banyak kedatangan tamu-tamu yang bisa diajak diskusi seru. Sebelum pandemi, terakhir kami kedatangan Bu Mari Pangestu, Pak Adrianus dari Kompolnas, Prof Arif Ansori Yusuf, dan Pak Burhanuddin Muhtadi.
 
 Aktivisme juga tidak harus lewat PPI juga sebenarnya bisa. IS sendiri pernah beberapa kali menjalankan fungsi aktivisme waktu Mbak Chitra masih di Canberra.
 
