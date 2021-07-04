@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Praktik Kebijakan Publik Cara Indonesia"
-categories: [blog]
+categories: [kebijakan]
 tags: [Kebijakan]
 date: '2020-02-25'
 author: admin

@@ -2,7 +2,7 @@
 layout: post
 title: Benarkah Memiliki Anak Berpotensi Merugikan Perempuan? Perspektif Ekonomi
 categories: [blog]
-tags: [Sosial Ekonomi]
+tags: [macem-macem]
 date: '2020-01-06'
 author: admin
 ---

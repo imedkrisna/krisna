@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "The Value of Everything: Sebuah Ulasan"
-categories: [Review]
-tags: [Economics]
+categories: [ekonomi]
+tags: [ekonomi]
 date: '2020-05-07'
 author: admin
 ---

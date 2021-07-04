@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Jumlah tes COVID-19 per hari di Indonesia"
-categories: [blog]
+categories: [coronavirus COVID-19]
 tags: [coronavirus COVID-19]
 author: admin
 date: '2020-05-31'

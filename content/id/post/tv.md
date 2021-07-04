@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Media dan politik: bagaimana TV mengubah demokrasi"
-Categories: blog
-tags: [Sosial Ekonomi]
+Categories: [macem-macem]
+tags: [macem-macem]
 date: '2020-02-22'
 author: admin
 ---

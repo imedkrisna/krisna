@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Henningsen and Henningsen 2011
-category: [Review]
-tags: [Economics]
+category: [ekonomi]
+tags: [ekonomi]
 date: '2020-02-25'
 author: admin
 ---

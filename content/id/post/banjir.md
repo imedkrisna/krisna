@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Kebakaran dan Kebanjiran: Sebuah Pelajaran"
-category: [blog]
-tags: [Sosial Ekonomi]
+category: [macem-macem]
+tags: [macem-macem]
 date: '2020-01-12'
 author: admin
 ---

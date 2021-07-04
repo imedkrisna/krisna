@@ -5,8 +5,8 @@ title: "Statistik ekspor impor Indonesia di 2018 dengan negara-negara RCEP"
 subtitle: ""
 summary: ""
 authors: [admin]
-tags: [python, perdagangan, rcep]
-categories: [python, perdagangan, rcep]
+tags: [python, perdagangan]
+categories: [python, perdagangan]
 date: 2020-11-28T13:39:10+11:00
 lastmod: 2020-11-28T13:39:10+11:00
 featured: false

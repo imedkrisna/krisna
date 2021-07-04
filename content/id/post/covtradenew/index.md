@@ -5,8 +5,8 @@ title: "Ekspor dan impor barang-barang terkait COVID-19: Data bulan Juli"
 subtitle: ""
 summary: ""
 authors: [admin]
-tags: [coronavirus COVID-19,r,perdagangan]
-categories: [coronavirus COVID-19,r,perdagangan]
+tags: [coronavirus COVID-19,R,perdagangan]
+categories: [coronavirus COVID-19,R,perdagangan]
 date: 2020-11-01T23:10:58+11:00
 lastmod: 2020-11-01T23:10:58+11:00
 featured: false

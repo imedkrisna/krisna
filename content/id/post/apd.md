@@ -2,7 +2,7 @@
 layout: post
 title: "drama larangan ekspor dan relaksasi standar di pasar APD Indonesia"
 categories: [industri]
-tags: [coronavirus COVID-19]
+tags: [coronavirus COVID-19, perdagangan, industri]
 date: '2020-06-10'
 author: admin
 ---

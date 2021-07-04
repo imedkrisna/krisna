@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Perang Melawan Ponsel Ilegal: Implikasi Kebijakan TKDN?"
-categories: [industri]
-tags: [Kebijakan]
+categories: [industri, kebijakan]
+tags: [Kebijakan, industri]
 date: '2020-03-02'
 author: admin
 ---

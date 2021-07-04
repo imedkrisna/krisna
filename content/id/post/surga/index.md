@@ -5,8 +5,8 @@ title: "Model konsumsi intertemporal 3 periode: bekerja, pensiun, dan akhirat."
 subtitle: ""
 summary: ""
 authors: [admin]
-tags: [ekonomi, surga, iseng]
-categories: [ekonomi, surga, iseng]
+tags: [ekonomi, macem-macem]
+categories: [ekonomi, macem-macem]
 date: 2020-12-02T10:48:50+11:00
 lastmod: 2020-12-02T10:48:50+11:00
 featured: false

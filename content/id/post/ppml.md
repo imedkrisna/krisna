@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Running a PPML regression in python using GME package from USITC"
-categories: [blog, English]
-tags: [Economics]
+categories: [ekonomi, ekonometri]
+tags: [ekonomi, ekonometri]
 date: '2020-08-12'
 author: admin
 ---

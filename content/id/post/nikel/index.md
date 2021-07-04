@@ -5,8 +5,8 @@ title: "Sentra produksi mobil listrik: investasi berbasis larangan ekspor?"
 subtitle: ""
 summary: ""
 authors: [admin]
-tags: [ekonomi,perdagangan,industri,mobil listrik]
-categories: [ekonomi,perdagangan,industri,mobil listrik]
+tags: [ekonomi,perdagangan,industri, teknologi]
+categories: [ekonomi,perdagangan,industri, teknologi]
 date: 2021-01-16T14:53:17+11:00
 lastmod: 2021-01-16T14:53:17+11:00
 featured: false

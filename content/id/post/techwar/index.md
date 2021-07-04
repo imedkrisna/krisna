@@ -5,8 +5,8 @@ title: "Catatan mengenai kuliah umum Professor Keyu Jin berjudul:"
 subtitle: "Techno-nationalism and Technology Competition"
 summary: ""
 authors: [admin]
-tags: [tech]
-categories: []
+tags: [teknologi]
+categories: [teknologi]
 date: 2021-04-26T10:39:06+10:00
 lastmod: 2021-04-26T10:39:06+10:00
 featured: false

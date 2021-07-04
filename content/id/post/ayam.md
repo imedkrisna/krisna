@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Kisruh Impor Ayam Brazil: Ada Jagung, Ada Ayam"
-categories: [industri]
-tags: [Kebijakan]
+categories: [perdagangan, industri, ekonomi, kebijakan]
+tags: [perdagangan, industri, ekonomi, kebijakan]
 date: '2020-03-02'
 author: admin
 ---

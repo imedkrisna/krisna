@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Aku, Canberra, dan COVID-19"
-categories: [blog]
-tags: [coronavirus COVID-19]
+categories: [coronavirus COVID-19, macem-macem]
+tags: [coronavirus COVID-19, macem-macem]
 date: '2020-03-19'
 author: admin
 ---

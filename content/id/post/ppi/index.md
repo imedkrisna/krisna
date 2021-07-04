@@ -126,4 +126,4 @@ Dan jangan lupa, kegiatan kemahasiswaan juga bisa memiliki bentuk non-PPI. [IS](
 
 Aktivisme juga tidak harus lewat PPI juga sebenarnya bisa. IS sendiri pernah beberapa kali menjalankan fungsi aktivisme waktu Mbak Chitra masih di Canberra.
 
-Jadi, apa fungsi PPI? Kenapa PPI harus ada? Ada yang punya ide?
+Jadi, apa fungsi PPI? Kenapa PPI harus ada? Ada yang punya ide? [reply di sini](https://twitter.com/iMedKrisna/status/1409152620527190016?s=20) ya! 😁
