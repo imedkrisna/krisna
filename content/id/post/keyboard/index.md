@@ -122,7 +122,8 @@ Tapi emang ngetik clicky-clicky memberi perasaan bahagia yg saya juga ga tau dat
 
 Sekian review ga jelas ini. moga-moga berguna. Oh iya, katanya sih buat yang terbiasa pake keyboard tipis (macem MX Keys atau keyboard laptop) sebenernya lebih bagus pake keyboard membran. Hahaha jadi tambah bingung aja. 
 
-Tapi apa iya mekanikal lebih baik buat ngetik daripada jenis switch lain? Boleh dong dikomen kalo punya nasehat atau tips n trik soal keyboard. Mumpung gw masih bisa nuker nih di JB-Hifi wkwkwk.
+{{< icon name="exclamation-triangle" pack="fas" >}} UPDATE {{< icon name="exclamation-triangle" pack="fas" >}}
 
-{{< icon name="exclamation-triangle" pack="fas" >}} nanti diupdate lagi {{< icon name="exclamation-triangle" pack="fas" >}}
+Daripada update post ini, saya akhirnya memilih untuk menulis post baru! Ternyata huntsman menjadi pilihan saya untuk waktu yang cukup lama. Saya sekarang menjadi pengguna razer! Dan malah beli keyboard lain pas kemaren ada sale besar-besaran.
 
+Update tulisan ini bisa dibaca di [sini](https://krisna.netlify.app/post/keyboard2)
