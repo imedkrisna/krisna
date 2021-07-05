@@ -54,7 +54,7 @@ hero_media = ""
 #   label = '<a class="js-github-release" href="https://sourcethemes.com/academic/updates" data-repo="gcushen/hugo-academic">Latest release<!-- V #  --></a>'
 +++
 
-Selamat datang di website Krisna 'Imed' Gupta. Saya menggunakan situs ini untuk [profil](#about) dan menaruh [CV](#CV). Di samping itu, saya menggunakan situs ini untuk [menulis blog](#posts). Saya juga menaruh beberapa [pulikasi](#publications) [presentasi](#talks) dan [kuliah](/courses) di situs ini. Gunakan tombol [pencarian](/search) untuk mencari konten yang relevan dengan anda.
+Selamat datang di website Krisna 'Imed' Gupta. Saya menggunakan situs ini untuk [profil](#about) dan menaruh [CV](#CV). Di samping itu, saya menggunakan situs ini untuk [menulis blog](#posts). Saya juga menaruh beberapa [pulikasi](#publications), [presentasi](#talks) dan [kuliah](/courses) di situs ini. Gunakan tombol [pencarian](/search) untuk mencari konten yang relevan dengan anda.
 
 Switch to [{{< icon name="flag-usa" pack="fas" >}} English](/en) or Scroll for more!
 
