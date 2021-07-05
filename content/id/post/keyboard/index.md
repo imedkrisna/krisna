@@ -126,4 +126,4 @@ Sekian review ga jelas ini. moga-moga berguna. Oh iya, katanya sih buat yang ter
 
 Daripada update post ini, saya akhirnya memilih untuk menulis post baru! Ternyata huntsman menjadi pilihan saya untuk waktu yang cukup lama. Saya sekarang menjadi pengguna razer! Dan malah beli keyboard lain pas kemaren ada sale besar-besaran.
 
-Update tulisan ini bisa dibaca di [sini](https://krisna.netlify.app/post/keyboard2)
+Update tulisan ini bisa dibaca di [sini](https://krisna.netlify.app/post/keyboard2/)
