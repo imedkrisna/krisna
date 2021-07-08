@@ -32,6 +32,7 @@ Postingan ini khusus buat contekan belajaran waktu nyoba-nyoba. Akan coba dibagi
 - [ggplot default themes](https://ggplot2.tidyverse.org/reference/ggtheme.html)
 - [Simple Graphs for economics teaching](https://r-coder.com/economics-charts-r/)
 - [Graphs for economics teaching with function](https://eric.netlify.app/2017/09/19/plotting-consumer-and-producer-surpluses-in-ggplot2/)
+- [more efficient use of xaringan](https://www.r-bloggers.com/2019/04/tips-to-reduce-the-complexity-of-slide-making-with-xaringan/)
 
 ### html and blog
 - [cara bikin multi-kolom](https://stackoverflow.com/questions/31753897/2-column-section-in-r-markdown)
