@@ -55,6 +55,7 @@ Postingan ini khusus buat contekan belajaran waktu nyoba-nyoba. Akan coba dibagi
 - [Another Seaborn customisation](https://elitedatascience.com/python-seaborn-tutorial)
 - [Seaborn design by codecademy](https://www.codecademy.com/articles/seaborn-design-i)
 - [resource dari marsja](https://www.marsja.se/links/)
+- [time series econometrics pak Kevin Sheppard](https://www.kevinsheppard.com/teaching/python/companion-course/)
 
 ### Dataset
 - [trade data bulk download WTO](https://www.wto.org/english/res_e/statis_e/trade_datasets_e.htm)
