@@ -5,8 +5,8 @@ title: "Why Indonesian Sugar is Expensive? A closer look on Indonesian trade pol
 subtitle: ""
 summary: ""
 authors: [admin]
-tags: [trade, policy]
-categories: [trade, policy]
+tags: [trade, policy, python]
+categories: [trade, policy, python]
 date: 2021-06-27T21:57:43+10:00
 lastmod: 2021-06-27T21:57:43+10:00
 featured: false
@@ -35,113 +35,13 @@ I downloaded data from CEIC Indonesia Premium Database[^3] and FAO website[^4] a
 
 
 ```python
-url='secret' # url is deleted because I can't freely distribute data from CEIC sorry
+url='secret!' # url is deleted because I can't freely distribute data from CEIC sorry
 a=pd.read_csv(url) # taking data from google drive
 a=pd.melt(a,id_vars='date',value_vars=['tprice','mprice','ip']) # melt it to fit my plot
 # making a neat x axis
 lol=pd.date_range('2016-07-01','2021-07-01', 
               freq='6MS').strftime("%m/%Y").tolist()
 ```
-
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>date</th>
-      <th>variable</th>
-      <th>value</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>07/2016</td>
-      <td>tprice</td>
-      <td>1.269</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>08/2016</td>
-      <td>tprice</td>
-      <td>1.208</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>09/2016</td>
-      <td>tprice</td>
-      <td>1.143</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>10/2016</td>
-      <td>tprice</td>
-      <td>1.116</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>11/2016</td>
-      <td>tprice</td>
-      <td>1.061</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>175</th>
-      <td>02/2021</td>
-      <td>ip</td>
-      <td>0.450</td>
-    </tr>
-    <tr>
-      <th>176</th>
-      <td>03/2021</td>
-      <td>ip</td>
-      <td>0.490</td>
-    </tr>
-    <tr>
-      <th>177</th>
-      <td>04/2021</td>
-      <td>ip</td>
-      <td>0.470</td>
-    </tr>
-    <tr>
-      <th>178</th>
-      <td>05/2021</td>
-      <td>ip</td>
-      <td>0.440</td>
-    </tr>
-    <tr>
-      <th>179</th>
-      <td>06/2021</td>
-      <td>ip</td>
-      <td>0.430</td>
-    </tr>
-  </tbody>
-</table>
-<p>180 rows × 3 columns</p>
-</div>
-
-
 
 
 ```python
@@ -157,7 +57,7 @@ plt.ylabel('USD/Kg')
 
 
 
-    <matplotlib.legend.Legend at 0x1862ca8fbe0>
+    Text(0, 0.5, 'USD/Kg')
 
 
 
@@ -184,12 +84,12 @@ sequenceDiagram
   participant C as Surveyor
   participant D as Coordination meeting
   participant E as Ministry of Trade
-  A->B: Provide an import plan for production input through SIINAS
-  B->C: point a surveyor to audit the request
-  C->B: Agree that the plan make sense
-  B->D: use data from A to argue for a quota
-  D->E: Quota is settled and registered at INATRADE and INSW
-  A->B: apply for a recommendation through SIINAS
+  A->>B: Provide an import plan
+  B->>C: Audit request
+  C->>B: Report back
+  B->>D: Argue for quota
+  D->>E: Quota is settled
+  
 ```
 In short, the data Ministries are using come from (partially) sugar-using firms. Surveyor is needed to make sure that the asked quota is in-line to firms' actual production capacity. A small firms asking for a big quota might turn out to be a reseller, a rent-seeker if you will, hence needs to be audited. This process happens every year.
 
@@ -201,11 +101,11 @@ sequenceDiagram
   participant B as Ministry of Industry
   participant C as Ministry of Trade
   participant D as Customs
-  A->B: Apply for a recommendation through SIINAS
-  B->A: Provide recommendation letter
-  A->C: Apply for the import quota
-  C->A: Provide the right to import
-  A->D: Use the right to import as a part of import documents
+  A->>B: Apply for a recommendation
+  B->>A: Provide recommendation letter
+  A->>C: Apply for the import quota
+  C->>A: Provide the right to import
+  A->>D: Use the right to import as a part of import documents
 ```
 
 The process is rather tedious, involving many agencies and web applications. Ministries may only grant a fraction of the asked quota. This process is not very transparent, in the sense that you may not always know why your quota is cut, or how much quota is left for the taking[^1]. Additionally, some firms who get refined sugar intended for industry were also sometimes sold as white sugar in the consumer market which priced higher, creating an illegal trade[^1].
@@ -220,7 +120,9 @@ There is this thing called ['Neraca Komoditas'](https://money.kompas.com/read/20
 
 Neraca Komoditas wants to cut a process of negotiating how much sugar is imported in the coordination meeting. Remember my impression about sugar producer vs sugar-using industries? The data for sugar production mainly comes from Ministry of Agriculture, while the data for sugar consumption comes from Ministry of Industry (like in the first diagram). When the two clashes, Ministry of Industry might accuse Ministry of Agriculture of inflating their figures, as Industry still have hard times getting sugar. With Neraca Komoditas as the one sole data which rule them all, this dispute is (hopefully?) no more. This is hypothesized to cut a bit of a red-tape as the coordination meeting may not last as long.
 
-Interestingly, the red tape faced by industries seems to be staying. Neraca Komoditas might help bureaucrats in their debates of settling in a quota (remember, Neraca Komoditas is not only about sugar, but also a huge lists of 'commodities'). But it seems like it won't affect industries that much.
+It will be much more interesting if Neraca Komoditas actually cuts the need to apply for recommendation letters. It is possible that the web portal SIINAS to actually remember how much quota firms planned for the import, the quota is set per firms instead of in aggregate. Firms can feel safer as ministries can no longer cut their proposed quota. It may reduce rent-seeking activity. It will be even better if ministries actually publish the data, the quota, and who gets how much. It will be easier for firms to check their actual allowance and for public to audit the system.
+
+If the whole recommendation letters are still in place, then the red tape faced by industries seems to be staying. Neraca Komoditas might help bureaucrats in their debates of settling in a quota (remember, Neraca Komoditas is not only about sugar, but also a huge lists of 'commodities'). But it seems like it won't affect industries that much.
 
 At the end of the day, it is still going to be the good ol' quota. Neraca Komoditas might solve the data issue, but the old quota problem seems to not be addressed. If firms granted by the quota is still restricted, it won't solve the problem. If how much quota left or how fast it is disbursed to the market is not clear, it won't solve the problem. If industries which import industrial inputs will still mask their refined sugar to white crystal and do shadow trading, it won't solve the problem.
 
