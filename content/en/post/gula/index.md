@@ -130,6 +130,8 @@ There will be a material center for small business who can't import their own in
 
 It is easy to be pessimistic, but let's give the benefit of the doubt to the government. Again.
 
+What do you think? Please comment on my {{< icon name="twitter-square" pack="fab" >}}[twitter!](https://twitter.com/iMedKrisna/status/1413547344407138304?s=20)
+
 [^1]: Saputri, N. K., & Respatiadi, H. (2018). Policy reform to lower sugar prices in Indonesia. CIPS Indonesia. https://repository.cips-indonesia.org/media/270481-policy-reform-to-lower-sugar-prices-in-i-839081a1.pdf 
 
 [^2]: Amanta, F. (2021). The cost of Non-Tariff Measures on Food and Agriculture in Indonesia. CIPS Policy Paper, 36. https://www.cips-indonesia.org/cost-of-ntm 

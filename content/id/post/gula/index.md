@@ -131,6 +131,8 @@ Oh iya, untuk perusahaan kecil yang ga punya ijin impor industri, aturan Neraca 
 
 Memang mudah yah jadi pesimis wkwkw. Tapi mari kita berikan prasangka baik bagi pemerintah. Sekali lagi.
 
+Oh iya kalo ada komen atau masukan, boleh lhoo. Tujukan aja ke {{< icon name="twitter-square" pack="fab" >}}[twitter-ku](https://twitter.com/iMedKrisna/status/1413549454188154880?s=20).
+
 
 
 [^1]: Saputri, N. K., & Respatiadi, H. (2018). Policy reform to lower sugar prices in Indonesia. CIPS Indonesia. https://repository.cips-indonesia.org/media/270481-policy-reform-to-lower-sugar-prices-in-i-839081a1.pdf 
