@@ -99,7 +99,7 @@ sequenceDiagram
 ```
 In short, the data Ministries are using come from (partially) sugar-using firms. Surveyor is needed to make sure that the asked quota is in-line to firms' actual production capacity. A small firms asking for a big quota might turn out to be a reseller, a rent-seeker if you will, hence needs to be audited. This process happens every year.
 
-Now that the quota has been settled, sugar-using firms need to apply for the actual quota.
+Now that the quota has been settled, sugar refineries need to apply for the actual quota.
 
 ```mermaid
 sequenceDiagram
@@ -114,7 +114,7 @@ sequenceDiagram
   A->>D: Use the right to import as a part of import documents
 ```
 
-The process is rather tedious, involving many agencies and web applications. Ministries may only grant a fraction of the asked quota. This process is not very transparent, in the sense that you may not always know why your quota is cut, or how much quota is left for the taking[^1]. Additionally, some firms who get refined sugar intended for industry were also sometimes sold as white sugar in the consumer market which priced higher, creating an illegal trade[^1].
+The process is rather tedious, involving many agencies and web applications. Ministries may only grant a fraction of the asked quota. This process is not very transparent, in the sense that you may not always know why your quota is cut, or how much quota is left for the taking[^1]. Additionally, some firms who get refined sugar intended for industry were also sometimes sold as white sugar in the consumer market which priced higher, creating an illegal trading[^1].
 
 The quota to import sugar for household is granted by the ministry only to 3 or 4 State-Owned Enterprises[^1]. These firms are also prone to badly time their imports and rent-seeking behavior can't be excluded since these firms will always get the quota even when they don't realize the quota[^1]. 
 

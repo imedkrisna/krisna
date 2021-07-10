@@ -82,7 +82,7 @@ sebelumnya saya nulis bahwa industri pengguna gula seperti industri makanan dan 
 
 Perdagangan gula diatur dengan [Peraturan Menteri Perdagangan Nomor 14 Tahun 2020](http://jdih.kemendag.go.id/peraturan/detail/1960/2) yang menggantikan Peraturan Menteri Perdagangan Nomor 117 Tahun 2015. Peraturan ini memberikan kuota impor. Menurut peraturan ini, impor gula hanya diperbolehkan untuk kebutuhan industri ataupun mengontrol inflasi dan memenuhi kebutuhan domestik. Seberapa banyak kuota impor pada tahun $t$ ditentukan oleh rapat koordinasi dengan Menteri Koordinator Perekonomian pada $t-1$. Ntah kenapa saya merasa ini sebenarnya arena pertarungan antara Menteri Pertanian yang meminta agar kuota rendah aja untuk melindungi petani gula, sementara Menteri Perindustrian meminta agar kuota impor tinggi aja supaya industri bisa akses bahan baku murah. Tapi bisa aja saya salah sih. ini sotoy aja wkwkw.
 
-Nah, bagi industri pengguna gula, langkah-langkahnya kira-kira begini:
+Nah, bagi industri gula rafinasi, langkah-langkahnya kira-kira begini:
 
 ```mermaid
 sequenceDiagram
