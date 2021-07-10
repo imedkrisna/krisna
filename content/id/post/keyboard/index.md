@@ -152,4 +152,6 @@ Sejauh ini, saya masih merasa Logitech MX Keys masih enak dan saya masih bertany
 
 Tapi emang ngetik clicky-clicky memberi perasaan bahagia yg saya juga ga tau datang dari mana. wkwk. Keyboard mekanikal juga punya segudang makro yg sangat berguna buat naroh command / method yg kepake banget buat koding. Mungkin saya cuma kurang terbiasa aja ngetik di keyboard tebel karena dah keseringan pake laptop dan MX Keys. Sejauh ini belum terlalu jauh merasakan enaknya keyboard mekanikal dibandingkan dengan MX Keys (selain klak klik-nya). Oh iya lama-lama lucu juga ngeliatin RGB wkwkw.
 
+Update: razer huntsman akhirnya jadi my daily driver. Setelah bisa ngetik yg bener pake mechanical keyboard, clicky switchesnya razer ternyata enak banget. Fully programmablenya juga bagus banget. I do miss MX Keys' versatile wireless capability tapi programmability dan clicky switch wins me.
+
 Baca juga percobaan yellow switch dengan keyboard Razer Blackwidow V3 Mini di [sini](https://krisna.netlify.app/post/keyboard2/)
