@@ -60,20 +60,36 @@ Saya mau coba kasih review dan alasan kenapa saya gak cocok dengan Logitech G512
 Perlu diketahui sebelumnya bahwa saya bukan antusias keyboard. Saya cuma user biasa yang brosing-brosing aja. Ga bener-bener pemerhati keyboard. Saya baca macem-macem review dari Rtings, Tomshardware, dll. Juga nonton macem-macem video youtube dari channel seperti RandomFrankP atau Hardware Canuch. Kalo perlu review yang serius, boleh coba main ke sana.
 
 ## Logitech MX Keys
+
+| what I love | What I hate |
+| --------- | ---------- |
+| tipis dan compact | programmable cuma di tombol F1-F12 |
+| enak buat ngetik | mahal |
+| wireless-nya bagus banget | |
+| batre tahan lama | |
+| logitech flow is amazing | |
+
 Di awal-awal COVID-19 masih ramai di Australia (sekitar awal Maret), Kampus saya mengizinkan pemindahan sebagian alokasi dana penelitian mahasiswa untuk membeli perlengkapan _Work From Home_ (WFH). ALasannya tentu saja karena kampus mau ditutup dan seluruh staf dan mahasiswa diharuskan untuk bekerja dari rumah. Pada umumnya, dana penelitian sering kali dipakai untuk menghadiri konferensi akademis. Berhubung korona juga kan ya, jadi ga mungkin juga ada konferensi dalam waktu dekat. Yaudah deh dimanfaatkanlah itu dana untuk beli perlengkapan WFH.
 
 Logitech MX Keys saya pilih sebagai keyboard buat di rumah. Ga ada alasan khusus sih waktu itu, karena saya fans logitech aja.
 
-Ternyata keyboard ini enak banget. Switch-nya menurut saya lebih enak daripada keyboard di kantor. Namun ada beberapa kelebihan yang bisa saya katakan. Pertama, dia wireless, bisa pake dongle (2.4 Ghz) dan bluetooth. Wirelessnya bisa pake unified dongle, alias keyboard dan mouse (juga logitech) bisa pake 1 dongle yang sama. Bluetoothnya bisa konek ke komputer lain tapi juga tablet dan _smartphone_. Sangat menolong ketika saya mau ngetik di tab atau _smartphone_. _setup_ wireless juga enak banget karena bikin meja rapih.
+Ternyata keyboard ini enak banget. Switch-nya menurut saya lebih enak daripada keyboard di kantor. Namun ada beberapa kelebihan yang bisa saya katakan. Pertama, dia wireless, bisa pake dongle (2.4 Ghz) dan bluetooth. Wirelessnya bisa pake unified dongle, alias keyboard dan mouse (juga logitech) bisa pake 1 dongle yang sama. Bluetoothnya bisa konek ke 3devices, bisa komputer lain tapi juga tablet dan _smartphone_. Sangat menolong ketika saya mau ngetik di tab atau _smartphone_. _setup_ wireless juga enak banget karena bikin meja rapih. Di samping itu, switching antara wireless dongle dan 3 device bluetooth sangat-sangat mudah karena ada tombol fisiknya di keyboard.
 
 Kedua, Logitech juga punya teknologi yang namanya _flow_. Kalau saya kopi tulisan di laptop, saya bisa kopas ke tablet. membantu banget deh.
 
 Ketiga, keyboard ini tipis banget, lumayan kecil, dan build qualitynya oke banget. Meja jadi berasa lega dan posisi tangan tuh enak banget karena keyboardnya tipis jadi ga perlu ngangkat jari tinggi-tinggi. Ga pegel ngetik di sini karena _actuation point_ nya pendek dan force-nya kecil.
 
 ## Logitech G512 GX-Brown
+
+| What I love | What I hate |
+| ----------- | ----------- |
+| Harga cukup terjangkau | kabelnya ga enak banget |
+| | switch-nya |
+| | ga ada makro |
+
 Keyboard ini adalah yang pertama saya beli, sekaligus keyboard mekanis pertama yang pernah saya punya. Harganya termasuk lumayan murah untuk keyboard mekanikal, dan waktu itu lagi diskon. Berhubung pertama kali, saya nyoba yang murah dulu. Ga berani langsung yg mahal. hehe.
 
-Switchh GX-Brown adalah switch logitech yang katanya _tactile_ tapi ga ada bunyi klik-kliknya kayak mekanis pada umumnya. Keyboard mengirimkan sinyal ketika pelatnya tersambung pas tombolnya diklik. Sayangnya nggak begitu keliatan di gif ini yang saya bikin dari gambar yang ada di website logitech.
+Switch GX-Brown adalah switch logitech yang katanya _tactile_ tapi ga ada bunyi klik-kliknya kayak mekanis pada umumnya. Keyboard mengirimkan sinyal ketika pelatnya tersambung pas tombolnya diklik. Sayangnya nggak begitu keliatan di gif ini yang saya bikin dari gambar yang ada di website logitech.
 
 ![GX-Brown](gx_brown.gif)
 
@@ -88,6 +104,13 @@ Soal speed, kecepatan ngetik saya malah drop pake ini, meskipun awalnya coba pin
 Saya jadinya nyoba yang clicky, karena katanya pake yg clicky lebih enak dan lebih berasa _actuation point_-nya ketimbang yg _tactile_, sehingga lebih enak ngetiknya ga harus pencet ampe dalem-dalem banget.
 
 ## Razer BlackWidow
+
+| What I love | What I hate |
+| ----------- | ----------- |
+| Razer green switch is amazing | Good value for money | 
+| Fully programmable | |
+| RGB-nya rame bgt | |
+
 Saya tuker sama Razer BlackWidow. Ini adalah produk razer pertama yang saya coba. Keyboard ini punya switch yang clicky, alias bunyi-bunyi pas dipencet. Di gif di bawah ini yang saya ambil dari situs resmi razer, kita bisa lihat ketika keyboardnya dipencet, ada plat yang nubruk plat di dalamnya. Ketika itulah key-nya teregister dan tombol yang kita pencet terdeteksi oleh komputer.
 
 ![razer_green](razer-green-switch.gif)
@@ -96,13 +119,22 @@ Kita juga bisa lihat bahwa platnya nubruk tanpa perlu keycap nya kita pencet sam
 
 Ternyata bener sih, mendingan yang clicky sekalian daripada yang nanggung. Asli enak banget mencetnya pas bunyi klik-klik gitu wkwkw. Tapi ternyata pake keyboard ini juga kurang pewe. Jari tetep pegel mencetnya. Keyboard ini kalo berdasarkan spek juga punya travel distance dan actuation force yang gede, setara dengan MX-Brown. Saya juga mungkin ngetiknya masih sampe bawah, meskipun ada bunyi klik-kliknya.
 
-Meskipun begitu, ternyata keyboard yang bunyinya klik-klik enak juga dipake. Berasa ngetik sesuatu yang penting banget. ha ha ha. Tentu saja jeleknya adalah keyboard ini lumayan berisik. Agak mengganggu kalo kerja di kantor gitu. Istri saya bilang bahwa suaranya lumayan, meski ga terlalu ganggu, tapi susah kalo pas istri saya mau tidur[^1].
+Meskipun begitu, ternyata keyboard yang bunyinya klik-klik enak juga dipake. Berasa ngetik sesuatu yang penting banget. ha ha ha. Tentu saja jeleknya adalah keyboard ini lumayan berisik. Agak mengganggu kalo kerja di kantor gitu. Istri saya bilang bahwa suaranya lumayan berisik, meski ga terlalu ganggu, tapi susah kalo pas istri saya mau tidur[^1].
 
-Keyboard ini lebih enak daripada Logitech GX-Brown, tapi sepertinya masih belum ideal. Jadinya coba lagi yang lain.
+Keyboard ini fully programmable, jadinya bener-bener semua key bisa diganti dengan tombol lain dan pilihannya banyak banget, seperti bisa jadi alt dan shift juga, bisa buat launch program atau website, dan yg terpenting bisa buat nyimpen text.
+
+Keyboard ini lebih enak daripada Logitech GX-Brown. Menurut saya, Razer Green Switch termasuk switch yg enak banget dipake, apalagi kalo udah terbiasa ngetik ngambang gitu. Tapi awal-awal sih masih agak berat. Learning curve-nya lumayan kalo baru datang dari keyboard membran tipis. Tapi begitu udah terbiasa, beeeh enak.
 
 [^1]: Tempat WFH saya = kamar tidur. apa boleh buat. Maklum nyewa unit yang kecil supaya murah.
 
 ## Razer Huntsman
+
+| What I love | What I hate |
+| ----------- | ----------- |
+| Razer purple switch is amazing | Mahal | 
+| Fully programmable | |
+| RGB-nya rame bgt | |
+
 Keyboard terakhir yang saya coba adalah Razer huntsman. Dia pakai teknologi baru yang namanya opto-mechanical. Kalau switch sebelumnya pakai sinyal elektrik dari plat besi, switch di keyboard ini pake sinar laser untuk mengirimkan sinyal dari keyboard ke komputer. Pas keyboard-nya dipencet, lasernya nyambung ke penerimanya, lalu mengirimkan sinyal bahwa tombolnya udah dipencet.
 
 ![razer_purple](razer-purple.gif)
@@ -120,10 +152,4 @@ Sejauh ini, saya masih merasa Logitech MX Keys masih enak dan saya masih bertany
 
 Tapi emang ngetik clicky-clicky memberi perasaan bahagia yg saya juga ga tau datang dari mana. wkwk. Keyboard mekanikal juga punya segudang makro yg sangat berguna buat naroh command / method yg kepake banget buat koding. Mungkin saya cuma kurang terbiasa aja ngetik di keyboard tebel karena dah keseringan pake laptop dan MX Keys. Sejauh ini belum terlalu jauh merasakan enaknya keyboard mekanikal dibandingkan dengan MX Keys (selain klak klik-nya). Oh iya lama-lama lucu juga ngeliatin RGB wkwkw.
 
-Sekian review ga jelas ini. moga-moga berguna. Oh iya, katanya sih buat yang terbiasa pake keyboard tipis (macem MX Keys atau keyboard laptop) sebenernya lebih bagus pake keyboard membran. Hahaha jadi tambah bingung aja. 
-
-{{< icon name="exclamation-triangle" pack="fas" >}} UPDATE {{< icon name="exclamation-triangle" pack="fas" >}}
-
-Daripada update post ini, saya akhirnya memilih untuk menulis post baru! Ternyata huntsman menjadi pilihan saya untuk waktu yang cukup lama. Saya sekarang menjadi pengguna razer! Dan malah beli keyboard lain pas kemaren ada sale besar-besaran.
-
-Update tulisan ini bisa dibaca di [sini](https://krisna.netlify.app/post/keyboard2/)
+Baca juga percobaan yellow switch dengan keyboard Razer Blackwidow V3 Mini di [sini](https://krisna.netlify.app/post/keyboard2/)
