@@ -74,6 +74,10 @@ Tidak semudah itu, Ferguso. Kenapa? Karena perdagangan internasional gula dibata
 
 Indonesia mengimpor hampir 70% dari kebutuhan gula domestik pada 2018[^2]. Tidak hanya warganya yang doyan gula, gula juga sangat penting bagi industri gula rafinasi. Industri gula rafinasi domestik inilah yang akhirnya menyuplai gula yang digunakan industri lain seperti makanan dan minuman. Hal ini seperti disampaikan oleh sohib saya, Risetio.
 
+{{% callout note %}}
+sebelumnya saya nulis bahwa industri pengguna gula seperti industri makanan dan minuman termasuk yang harus mengajukan permohonan impor ke Kemenperin dan Kemendag. Namun menurut Risetio, orang yang pernah terlibat di industri ini, yang ngimpor gula sebagian besar adalah industri gula rafinasi domestik. Industri gula rafinasi inilah yang kemudian nyuplai industri lain. Si industri lainnya kayaknya ga bisa impor langsung. Lihat twitter thread di bawah ini.
+{{% /callout %}}
+
 <blockquote class="twitter-tweet"><p lang="in" dir="ltr">Balesnya di sini aja Med. Jadi kalau baca artikel tersebut, ada 1 kesalahan paling krusial. Perusahaan industri pengguna gula (industri makanan dan minuman) TIDAK meminta rekomendasi impor maupun persetujuan impor gula.</p>&mdash; Risetioz (@risetioz) <a href="https://twitter.com/risetioz/status/1413680694774038531?ref_src=twsrc%5Etfw">July 10, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
 
 Perdagangan gula diatur dengan [Peraturan Menteri Perdagangan Nomor 14 Tahun 2020](http://jdih.kemendag.go.id/peraturan/detail/1960/2) yang menggantikan Peraturan Menteri Perdagangan Nomor 117 Tahun 2015. Peraturan ini memberikan kuota impor. Menurut peraturan ini, impor gula hanya diperbolehkan untuk kebutuhan industri ataupun mengontrol inflasi dan memenuhi kebutuhan domestik. Seberapa banyak kuota impor pada tahun $t$ ditentukan oleh rapat koordinasi dengan Menteri Koordinator Perekonomian pada $t-1$. Ntah kenapa saya merasa ini sebenarnya arena pertarungan antara Menteri Pertanian yang meminta agar kuota rendah aja untuk melindungi petani gula, sementara Menteri Perindustrian meminta agar kuota impor tinggi aja supaya industri bisa akses bahan baku murah. Tapi bisa aja saya salah sih. ini sotoy aja wkwkw.
@@ -133,7 +137,7 @@ Oh iya, untuk perusahaan kecil yang ga punya ijin impor industri, aturan Neraca 
 
 Memang mudah yah jadi pesimis wkwkw. Tapi mari kita berikan prasangka baik bagi pemerintah. Sekali lagi.
 
-Oh iya kalo ada komen atau masukan, boleh lhoo. Tujukan aja ke {{< icon name="twitter-square" pack="fab" >}}[twitter-ku](https://twitter.com/iMedKrisna/status/1413549454188154880?s=20).
+Oh iya kalo ada komen atau masukan, boleh lhoo. Tujukan aja ke {{< icon name="twitter-square" pack="fab" >}}[twitter-ku](https://twitter.com/iMedKrisna/status/1413659834138841089?s=20).
 
 
 

@@ -73,6 +73,10 @@ As the graph above show, Indonesian domestic price of sugar is consistently high
 
 Indonesia import almost 70% of its sugar consumption from international market[^2]. Not only Indonesians love its teh manis, but sugar is also play a crucial role in sugar refining industry. This industry is then supplying other industries like sugary drinks.
 
+{{% callout note %}}
+Previously I wrote that sugar-using industry also need to apply for sugar import to Ministry of Industry and Ministry of Trade. However according to Risetio, a person who once involved in this industry, sugar-using industry don't import. Instead, they buy domestically from sugar refinery who do the import. Not sure why sugar-using industry don't import directly. See thread below.
+{{% /callout %}}
+
 <blockquote class="twitter-tweet"><p lang="in" dir="ltr">Balesnya di sini aja Med. Jadi kalau baca artikel tersebut, ada 1 kesalahan paling krusial. Perusahaan industri pengguna gula (industri makanan dan minuman) TIDAK meminta rekomendasi impor maupun persetujuan impor gula.</p>&mdash; Risetioz (@risetioz) <a href="https://twitter.com/risetioz/status/1413680694774038531?ref_src=twsrc%5Etfw">July 10, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
 
 The regulation that restrict trade of sugar is MOT regulations. To be precise, it's [Peraturan Menteri Perdagangan Nomor 14 Tahun 2020](http://jdih.kemendag.go.id/peraturan/detail/1960/2) which superseeds Peraturan Menteri Perdagangan Nomor 117 Tahun 2015. This regulation put a quota restriction on sugar. According to the regulation, imports are allowed only to supply domestic industry and control inflation. How much quota to import is determined in a coordination meeting held by Coordinating Ministry of Economy. I feel like this is basically Ministry of Agriculture asking for low quota to protect farmers, while Ministry of Industry asking for high quota to help sugar-using industries. But I might be wrong.
