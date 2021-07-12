@@ -95,6 +95,6 @@ So far, kelebihan space yang dipunya dan mouse yang jadi lebih dekat dengan keyb
 
 Jeleknya? Tentu saja harga. Dengan harga segini, anda bisa dapat keyboard yang kualitasnya mungkin mirip. Sekarang dengan berkurangnya harga switch mekanik, anda bisa dapat keyboard serupa dengan harga mungkin setengahnya. Tentunya saya dapat diskon utk keyboard ini, makanya berani beli. Saya juga tidak terlalu percaya diri untuk nyoba keyboard lain yang settingan programmable buttonnya saya gak yakin. Tapi kalau anda pengen beli keyboard mekanikal 65% biasa, mendingan beli yang lain sih.
 
-Sejauh ini, ngetik dengan clicky menurutku lebih enak. Kecuali anda kompetitif gamer, mungkin sebaiknya pilih yang clicky. Emang sih keyboard ini lebih silent, tapi tetep enakan ngetik di clicky. Yah trade-off lah. Tapi saya sendiri ga nyesel beli yang yellow. he he .
+Sejauh ini, ngetik dengan clicky menurutku lebih enak. Kecuali anda kompetitif gamer, mungkin sebaiknya pilih yang clicky. Emang sih keyboard ini lebih silent, tapi tetep enakan ngetik di clicky. Yah trade-off lah. Tapi saya sendiri ga nyesel beli yang yellow. he he.
 
 Sekian! 
