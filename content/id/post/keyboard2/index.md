@@ -65,7 +65,7 @@ Sebelum ke yellow switch, yuk kita liat dulu beberapa perbandingan switches raze
 | Total travel (mm) | 4.0 | 3.5 | 3.5 |
 | typing speed (WPM) | 84 | 84 | 81 |
 
-Dari stat di atas, bisa kita lihat bahwa yellow switch adalah switch yang paling eneng. Travelnya juga nggak sedalam clicky switches. Yellow switch-nya razer kalau mau dibandingkan itu sama dengan cherry mx red. Feel-nya linear dan actuationnya cepat.
+Dari stat di atas, bisa kita lihat bahwa yellow switch adalah switch yang paling enteng. Travelnya juga nggak sedalam clicky switches. Yellow switch-nya razer kalau mau dibandingkan itu sama dengan cherry mx red. Feel-nya linear dan actuationnya cepat.
 
 Gamers biasanya suka yang actuationnya cepat. Ini karena dia travelnya pendek, jadi kita ga harus ngangkat switch tinggi-tinggi untuk 'reset' dan pencet lagi. Cocok buat pemain game yang cepat dan butuh reaksi tinggi semacem First Person Shooter. Jadi strafe-nya (gerakan ke kiri dan ke kanan) bisa lebih cepet.
 
@@ -85,7 +85,11 @@ Keunggulannya adalah space. Mouse bisa lebih deket dengan tangan kiri karena sek
 
 {{< figure src="v3mini3.jpg" caption="V3 mini in action" numbered="true" >}}
 
-Sampe sekarang masih suka kagok sih. Beberapa adjustment perlu kulakukan untuk tombol. Selain caps lock, saya juga ganti pg up, pg down dan ins dengan tombol lain. Spasi untuk naroh makro jadi berkurang karena kalo hunstman kan tombolnya banyak. Tapi so far, kelebihan space yang dipunya dan mouse yang jadi lebih dekat dengan keyboard sepertinya merupakan trade off yang lumayan oke. Mungkin perlu pembiasaan aja lagi sedikit.
+Sampe sekarang masih suka kagok sih. Beberapa adjustment perlu kulakukan untuk tombol. Selain caps lock, saya juga ganti pg up, pg down dan ins dengan tombol lain. Spasi untuk naroh makro jadi berkurang karena kalo hunstman kan tombolnya banyak.
+
+Nah makanya key remapping jadi sangat penting kalo mau beli keyboard 65%. Misalnya, di V3 mini ini kan ga ada home dan end, 2 key yang cukup sering saya pake. Malah ada INS yang ga pernah saya pake sama sekali. Jadi kudu di-remap. Kalau beli yang ga punya fitur remap, pastikan keynya yang dipasang di situ adalah yang sering kamu pake.
+
+So far, kelebihan space yang dipunya dan mouse yang jadi lebih dekat dengan keyboard sepertinya merupakan trade off yang lumayan oke. Mungkin perlu pembiasaan aja lagi sedikit.
 
 ## Kesimpulan
 
