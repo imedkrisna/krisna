@@ -28,7 +28,7 @@ image:
 projects: []
 ---
 
-Pada postingan saya yang lalu, saya nulis tentang [perpindahan saya ke keyboard mekanik untuk pertama kalinya](https://krisna.netlify.app/post/keyboard/). Keyboard non mekanik saya terakhir adalah [Logitech MX Keys](https://www.logitech.com/en-au/products/keyboards/mx-keys-wireless-keyboard.920-009418.html) yang saya beli dalam rangka work from home. Di situ juga saya tulis perjalanan saya sampai pada nyobain [Razer Huntsman](https://www2.razer.com/au-en/gaming-keyboards-keypads/razer-huntsman), sebuah keyboard mekanik tapi sebenernya optikal.
+Pada postingan saya yang lalu, saya nulis tentang [perpindahan saya ke keyboard mekanik untuk pertama kalinya]({{< relref "/post/keyboard" >}}). Keyboard non mekanik saya terakhir adalah [Logitech MX Keys](https://www.logitech.com/en-au/products/keyboards/mx-keys-wireless-keyboard.920-009418.html) yang saya beli dalam rangka work from home. Di situ juga saya tulis perjalanan saya sampai pada nyobain [Razer Huntsman](https://www2.razer.com/au-en/gaming-keyboards-keypads/razer-huntsman), sebuah keyboard mekanik tapi sebenernya optikal.
 
 ## Kenapa Keyboard Mekanik dan Razer?
 
