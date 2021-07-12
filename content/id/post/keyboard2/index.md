@@ -37,7 +37,7 @@ Saya pindah keyboard mekanik karena banyak dianjurkan di forum-forum typist. Di 
 Khusus untuk nambahin fungsi dan alternatif fungsi pada keyboard, saya mendapati bahwa Razer termasuk yang paling bagus. Dia bisa ganti semua key dan nambahin fungsi untuk semua key (Razer menamakannya [Hypershift](https://insider.razer.com/index.php?threads/what-exactly-is-hypershift.33117/)). Saya bisa masukin, misalnya, teks ini:
 
 ```
-{{< icon name="exclamation-triangle" pack="fas" >}}
+{{</* icon name="exclamation-triangle" pack="fas" */>}}
 ```
 ke huruf K. Saya bisa munculin teks tersebut dengan pencet fn+K. Dan setiap key bisa diginiin.
 
