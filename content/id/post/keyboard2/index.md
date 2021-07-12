@@ -1,7 +1,7 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: "Review 3 keyboard razer dengan 3 switches berbeda: green, purple dan yellow switches."
+title: "Apakah Blackwidow V3 Mini Hyperspeed bagus? Mencoba versi yellow switch!"
 subtitle: ""
 summary: ""
 authors: [admin]
