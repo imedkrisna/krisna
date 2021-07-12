@@ -69,7 +69,9 @@ Dari stat di atas, bisa kita lihat bahwa yellow switch adalah switch yang paling
 
 Gamers biasanya suka yang actuationnya cepat. Ini karena dia travelnya pendek, jadi kita ga harus ngangkat switch tinggi-tinggi untuk 'reset' dan pencet lagi. Cocok buat pemain game yang cepat dan butuh reaksi tinggi semacem First Person Shooter. Jadi strafe-nya (gerakan ke kiri dan ke kanan) bisa lebih cepet.
 
-Tapi kalo buat ngetik, gw ngerasa masih enakan yg clicky. Emang bener yang clicky itu travelnya lebih jauh, tapi kita kalo ngetik kan ga harus pencet dalem-dalem. Feedback dari click-nya itu masih lebih enak buat ngetik. Tapi emang yg clicky lebih berisik. Razer yellow ini lumayan silent. ga terlalu berisik.
+Tapi kalo buat ngetik, gw ngerasa masih enakan yg clicky. Emang bener yang clicky itu travelnya lebih jauh, tapi kita kalo ngetik kan ga harus pencet dalem-dalem. Feedback dari click-nya itu masih lebih enak buat ngetik. Bisa dilihat di tabel di atas, speed gw turun sedikit sejak pake yellow switch, tapi berasa banget akurasinya ngedrop jauh. Jadi sering banget typo karena switchnya keentengan.
+
+Kalo soal berisik sih emang yg clicky lebih berisik. Razer yellow ini lumayan silent. ga terlalu berisik.
 
 ## Kenapa mini?
 
