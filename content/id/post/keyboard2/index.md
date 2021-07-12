@@ -34,7 +34,7 @@ Pada postingan saya yang lalu, saya nulis tentang [perpindahan saya ke keyboard 
 
 Saya pindah keyboard mekanik karena banyak dianjurkan di forum-forum typist. Di samping itu, keyboard mekanik bisa diprogram untuk pasang makro dan ngubah-ubah keynya dan diisi fungsi-fungsi tertentu. Ini sangat berguna buat kerjaan saya sehari-hari. Fungsi ekstra keyboard saya sekarang diisi berbagai macam _text_ buat _command_ / _method_ bahasa-bahasa yang sering saya pakai seperti _(R)markdown syntax_, python dan Stata.
 
-Khusus untuk nambahin fungsi dan alternatif fungsi pada keyboard, saya mendapati bahwa Razer termasuk yang paling bagus. Dia bisa ganti semua key dan nambahin fungsi untuk semua key (Razer menamakannya [Hypershift](https://insider.razer.com/index.php?threads/what-exactly-is-hypershift.33117/)). Saya bisa masukin, misalnya, teks `{{< icon name="exclamation-triangle" pack="fas" >}}` ke huruf  K. Saya bisa munculin teks tersebut dengan pencet fn+K. Dan setiap key bisa diginiin.
+Khusus untuk nambahin fungsi dan alternatif fungsi pada keyboard, saya mendapati bahwa Razer termasuk yang paling bagus. Dia bisa ganti semua key dan nambahin fungsi untuk semua key (Razer menamakannya [Hypershift](https://insider.razer.com/index.php?threads/what-exactly-is-hypershift.33117/)). Saya bisa masukin, misalnya, teks ```{{< icon name="exclamation-triangle" pack="fas" >}}``` ke huruf  K. Saya bisa munculin teks tersebut dengan pencet fn+K. Dan setiap key bisa diginiin.
 
 btw _syntax_ di atas kalau di blog saya berubah menjadi tanda ini -> {{< icon name="exclamation-triangle" pack="fas" >}}
 
