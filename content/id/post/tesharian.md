@@ -2,7 +2,7 @@
 layout: post
 title: "Jumlah tes COVID-19 per hari di Indonesia"
 categories: [coronavirus COVID-19]
-tags: [coronavirus COVID-19]
+tags: [coronavirus COVID-19,python]
 author: admin
 date: '2020-05-31'
 slug: tesharian
