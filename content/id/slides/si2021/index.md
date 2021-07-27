@@ -78,6 +78,7 @@ Akses slide ini di [s.id/ekonomisi](s.id/ekonomisi)
 - Ketua Komisi Ekonomi Ditlitka PPID 2020/2021.
 - PPI Australia.
 - More about me: [krisna.or.id](https://www.krisna.or.id/)  
+</br>
 
 
 ##### <div class="left">Presidium 2: Enny Susilowati Mardjono</div>
