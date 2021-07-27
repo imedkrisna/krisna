@@ -92,7 +92,7 @@ Akses slide ini di [s.id/ekonomisi](s.id/ekonomisi)
 
 ---
 
-<iframe src="https://drive.google.com/file/d/18X7fkyMcfvkKpE7dzQdP0YWsj4GuMdQW/preview" width="800" height="700" allow="autoplay"></iframe>
+<iframe src="https://drive.google.com/file/d/18X7fkyMcfvkKpE7dzQdP0YWsj4GuMdQW/preview" width="800" height="640" allow="autoplay"></iframe>
 
 ---
 
@@ -100,62 +100,8 @@ Akses slide ini di [s.id/ekonomisi](s.id/ekonomisi)
 
 ---
 
-## Poin 1
+<iframe src="https://drive.google.com/file/d/15WmDz-DmVHfNUcELjiYLAKB3uXw1zfhb/preview" width="800" height="640" allow="autoplay"></iframe>
 
 ---
 
-## Poin 2
-
----
-
-## Poin 3
-
----
-
-## Poin 4
-
----
-
-## Poin 5
-
----
-
-## Poin 6
-
----
-
-## Poin 7
-
----
-
-## Poin 8
-
----
-
-## Poin 9
-
----
-
-## Poin 10
-
----
-
-## Poin 11
-
----
-
-## Poin 12
-
----
-
-## Poin 13
-
----
-
-## Poin 14
-
----
-
-## Poin 15
-
----
+## Istrirahat 15 menit
