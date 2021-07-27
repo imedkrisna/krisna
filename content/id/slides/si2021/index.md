@@ -92,7 +92,7 @@ Akses slide ini di [s.id/ekonomisi](s.id/ekonomisi)
 
 ---
 
-<iframe src="https://drive.google.com/file/d/18X7fkyMcfvkKpE7dzQdP0YWsj4GuMdQW/preview" width="800" height="640" allow="autoplay"></iframe>
+<iframe src="https://drive.google.com/file/d/18X7fkyMcfvkKpE7dzQdP0YWsj4GuMdQW/preview" width="900" height="640" allow="autoplay"></iframe>
 
 ---
 
@@ -100,7 +100,7 @@ Akses slide ini di [s.id/ekonomisi](s.id/ekonomisi)
 
 ---
 
-<iframe src="https://drive.google.com/file/d/15WmDz-DmVHfNUcELjiYLAKB3uXw1zfhb/preview" width="800" height="640" allow="autoplay"></iframe>
+<iframe src="https://drive.google.com/file/d/15WmDz-DmVHfNUcELjiYLAKB3uXw1zfhb/preview" width="900" height="640" allow="autoplay"></iframe>
 
 ---
 
