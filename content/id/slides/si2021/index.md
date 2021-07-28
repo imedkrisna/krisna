@@ -105,4 +105,4 @@ Akses slide ini di [s.id/ekonomisi](s.id/ekonomisi)
 
 ---
 
-## Istrirahat 15 menit
+## Break
