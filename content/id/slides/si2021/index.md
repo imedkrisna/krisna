@@ -77,7 +77,7 @@ Akses slide ini di [s.id/ekonomisi](s.id/ekonomisi)
 - PhD Student in Economics at [Crawford School of Public Policy](https://crawford.anu.edu.au/people/phd/krisna-gupta), Australian National University.
 - Ketua Komisi Ekonomi Ditlitka PPID 2020/2021.
 - PPI Australia.
-- More about me: [krisna.or.id](https://www.krisna.or.id/)  
+- [krisna.or.id](https://www.krisna.or.id/)  
 </br>
 
 
