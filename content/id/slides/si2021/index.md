@@ -52,7 +52,7 @@ Komisi Ekonomi PPI Dunia
 
 - Pendahuluan
 - Pembacaan tata tertib sidang
-- diskusi per poin
+- memulai sidang
 - penutup
 
 Akses slide ini di [s.id/ekonomisi](s.id/ekonomisi)
@@ -97,7 +97,7 @@ Akses slide ini di [s.id/ekonomisi](s.id/ekonomisi)
 
 ---
 
-# Pencapaian Kuorum 15 Poin Rekomendasi
+# Sidang dimulai
 
 ---
 
