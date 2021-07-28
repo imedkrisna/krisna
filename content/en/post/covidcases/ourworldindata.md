@@ -1,42 +1,12 @@
----
-# Documentation: https://wowchemy.com/docs/managing-content/
-
-title: "New update of the recent second wave (or third?) of COVID-19 in Indonesia"
-subtitle: ""
-summary: ""
-authors: [admin]
-tags: [coronavirus COVID-19, python]
-categories: [coronavirus COVID-19, python]
-date: 2021-07-28T10:18:28+10:00
-lastmod: 2021-07-28T10:18:28+10:00
-featured: false
-draft: false
-
-# Featured image
-# To use, add an image named `featured.jpg/png` to your page's folder.
-# Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
-image:
-  caption: ""
-  focal_point: ""
-  preview_only: false
-
-# Projects (optional).
-#   Associate this post with one or more of your projects.
-#   Simply enter your project's folder or file name without extension.
-#   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
-#   Otherwise, set `projects = []`.
-projects: []
----
-
-It has been a while since i last wrote about COVID-19. Today i'd like to check out Indonesia's statistic on COVID-19, especially since it seem to get worse these days, unfortunately, and so many people talked about possibility of the government intentionally undertest to push down new cases at the cost of human lives.
+Saya sangat jarang nulis di blog tentang COVID-19. Terakhir ngepost tentang stats covid kayaknya waktu bahas soal [kematian](https://www.krisna.or.id/post/covdeath/). Hari ini mau coba lihat lagi statistik COVID-19 di Indonesia, terutama belakangan ini karena lagi ramai lagi soal undertesting.
 
 <blockquote class="twitter-tweet"><p lang="in" dir="ltr">Penambahan kasus Covid-19 harian cenderung menurun. Hal ini terjadi seiring dengan turunnya jumlah pemeriksaan secara signifikan. Masih terlalu dini untuk menyimpulkan bahwa gelombang Covid-19 telah terkendali. <a href="https://twitter.com/hashtag/Humaniora?src=hash&amp;ref_src=twsrc%5Etfw">#Humaniora</a> <a href="https://twitter.com/hashtag/AdadiKompas?src=hash&amp;ref_src=twsrc%5Etfw">#AdadiKompas</a> <a href="https://twitter.com/aik_arif?ref_src=twsrc%5Etfw">@aik_arif</a> <a href="https://t.co/eYvloMmpIC">https://t.co/eYvloMmpIC</a></p>&mdash; Harian Kompas (@hariankompas) <a href="https://twitter.com/hariankompas/status/1417642983227236357?ref_src=twsrc%5Etfw">July 21, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
 
-I rely heavily on [Our World in Data](https://ourworldindata.org/coronavirus-source-data#deaths-and-cases-our-data-source) [^1] which give [free access of COVID-19 data](https://github.com/owid/covid-19-data/tree/master/public/data).
+Tentu saja andalan saya adalah [Our World in Data](https://ourworldindata.org/coronavirus-source-data#deaths-and-cases-our-data-source) [^1] yang datanya [bisa diakses siapa saja](https://github.com/owid/covid-19-data/tree/master/public/data) dengan mudah.
 
 [^1]: Hannah Ritchie, Esteban Ortiz-Ospina, Diana Beltekian, Edouard Mathieu, Joe Hasell, Bobbie Macdonald, Charlie Giattino, Cameron Appel, Lucas Rodés-Guirao and Max Roser (2020) - "Coronavirus Pandemic (COVID-19)". Published online at OurWorldInData.org. Retrieved from: 'https://ourworldindata.org/coronavirus' [Online Resource]
 
-Grab the data and show 6 tops
+Kita tarik dulu datanya dari internet dan menampilkan 10 baris teratas.
 
 
 ```python
@@ -241,7 +211,7 @@ df.head(6) # menampilkan 10 baris paling atas
 
 
 
-I am not super familiar with its variable. So let's check them out with `df.columns`.
+Berhubung saya jarang banget ngeliatin data COVID-19, saya ga hapal apa aja variabel yang dikumpulkan oleh Ritchie dkk. Panggil dulu semua kolomnya dengan `df.columns`.
 
 
 ```python
@@ -277,16 +247,16 @@ df.columns # untuk panggil list dari nama-nama variabel
 
 
 
-There's a huge chunk of variable names! Musta been a super hard work collecting all the data. Shout out to Hannah Ritchie et al.
+Wah gilaaa banyak banget ya nama variabelnya. Cape banget pasti ngumpulin ini semua. Hebat emang Hannah Ritchie dkk. Oke deh sekarang coba kita ngelihat jumlah kasus baru. ada setidaknya tiga nama variabel yang bisa diambil, yaitu `new_cases` dan `new_cases_smoothed`. Kalau dari namanya sih ketaker ya kalo yang smoothed itu kayaknya moving average, alias diambil alusnya dari data `new_cases` yang bisa jadi sangat volatil. Sering terjadi di data harian gini karena, misalnya, setiap hari senin selalu membludak, sementara sabtu minggu selalu sepi. Apa malah kebalik, sabtu minggu malah rame karena orang libur jadi bisa datang ke tempat testing. Yg jelas ada *pattern* mingguan yang bikin data harian jadi volatil. Nah kita ambil dua-duanya yok!
 
-Aight now let's check new cases! New cases tends to be volatile, especially if there's seasonality in the data itself. It is quite common to see seasonality on daily data just because of weekends. Thankfully, there's `new_cases_smoothed` which I imagine take into account seasonality by plotting 7-day rolling average. I only take Indonesian data for this post.
+Kalau kamu cuma tertarik ambil data Indonesia, maka jangan lupa diambil yang Indonesia aja.
 
 
 ```python
 indo=df[["iso_code","date","new_cases","new_cases_smoothed"]].query('iso_code == "IDN"')
 ```
 
-Plot time!
+Saatnya diplot!
 
 
 ```python
@@ -318,7 +288,7 @@ plt.xticks(rotation=45)
     
 
 
-I try to make my own 7-day rolling average by [copying codes from here](https://datavizpyr.com/how-to-make-a-time-series-plot-with-rolling-average-in-python/) 
+kayaknya new_cases_smoothed ini adalah 7-day rollong average. Seperti yang saya tulis sebelumnya, data harian biasanya punya tren mingguan. Makanya dibuat *rolling average* dalam 7 hari adalah hal yang umum dilakukan. Yok kita cek! Saya pake rolling averagenya panda yang [saya contek di sini](https://datavizpyr.com/how-to-make-a-time-series-plot-with-rolling-average-in-python/) dengan tambahan shift(-3) untuk mundurin NaN 3 hari ke depan dan 3 hari ke belakang.
 
 
 ```python
@@ -440,7 +410,8 @@ indo.head(10)
 </div>
 
 
-Which confirms that `new_cases_smoothed` is indeed 7-day rolling average.
+
+Seperti bisa dilihat di atas, sepertinya bener `new_cases_smoothed` adalah 7-day average soalnya ada 6 NaN berturut-turut. Kayaknya bedanya adalah sama si Ritchie dkk nggak di-shift. ya gpp kita tes plot aja yuk.
 
 
 ```python
@@ -465,7 +436,8 @@ plt.xlabel('tanggal')
 ![png](./ourworldindata_11_1.png)
     
 
-A year and a half is a bit too long (dear god it's already a year and a half??), so let's cut it to just 2021. 
+
+berhubung satu setengah tahun adalah waktu yang panjang (gila lama juga ya covid ga beres-beres), maka kita potong aja deh tahun 2020. Kalo dilihat di atas sih sepertinya first wave yang sebenarnya malah baru keliatna di awal-awal 2021 ya. Oh iya jangan lupa Indonesia juga undertesting kalau dilihat positive rate. Anyway, ayo kita pangkas lagi data kita di `indo` dengan membuah tahun 2020. Oh iya satu lagi, kita pakai aja `new_cases_smoothed` yang dari aslinya ga usah kita buat *rolling average* sendiri.
 
 
 ```python
@@ -492,7 +464,9 @@ plt.xlabel('tanggal')
     
 
 
-Cases is indeed seem to go down even with the smoothed one. But is this because of undertesting? We can also see it from our dataset. We add positive rate to really make sure.
+Hmm keliatannya sih emang new cases nya cenderung turun lagi ya. Turunnya dalem juga, bahkan setelah di-*smooth*. Coba sekarang kita bandingkan dengan testing. Jumlah tes baru juga dicatat oleh Our World in Data. mantap banget.
+
+Sekarang kita ulangi ambil datanya, kali ini ambil lebih banyak variabel dari data asli Our World in Data. Sama kita plot tahun 2021 aja.
 
 
 ```python
@@ -532,7 +506,10 @@ axes[1].set_title('positive rate')
     
 
 
-And yes test is indeed goes down. At the same time, positive rate seem to be trending down as well. This will depend on how testing is conducted in terms of selecting who gets to be tested and who's not. We can be sure if we check hospitalisation and death. Unfortunately Indonesian hospitalisation number is non-existent in this dataset.
+Memang benar tes-nya berkurang. Tapi di saat yang sama, positive rate juga berkurang di akhir-akhir. Kalau misalnya tes-nya dikurangi tapi kasus di lapangan tetap tinggi, mestinya sih positive rate naik ya. Kecuali ya tes-nya disasar ke orang-orang yang cenderung keliatan ga bergejala.
+
+Sebenernya ini bisa ketawan kalo ternyata yang masuk rumah sakit banyak atau tingkat kematian masih tinggi. Sayangnya data Indonesia untuk hospital dan ICU admissions nggak ada.
+
 
 ```python
 df.query('iso_code=="IDN"')[['weekly_icu_admissions','weekly_hosp_admissions']]
@@ -626,7 +603,7 @@ df.query('iso_code=="IDN"')[['weekly_icu_admissions','weekly_hosp_admissions']]
 
 
 
-On death (*Dear God, bless all the lost souls and those who they left*), situation is rather gloom.
+Sementara itu, jika dilihat plot kematian (*Dear God, bless all the lost souls and those who they left*), sepertinya belum ada tanda-tanda berkurang.
 
 
 ```python
@@ -654,10 +631,8 @@ plt.xlabel('tanggal')
     
 
 
-Judging from the death data, pandemic still far from over. Note that death may follow new cases, hence have a lag in its trending down. However, if we cannot trust test data, death data is also hard to be trusted. I think with unreliable data, it is hard to react on any news really, whether cases go up or down. It is hard to make a good case for the government, because people's like: low cases: bad data! bad testing!. High cases: Government is stupid!
+Jika dilihat dari tingkat kematian, sepertinya pandemi masih belum selesai, sayangnya. Perlu dicatat bahwa mungkin tingkat kematian akan turun seiring dengan turunnya kasus, karena bisa jadi tingkat kematian agak mundur dibandingkan tingkat ketahuan positif. Namun demikian, jika tes-nya bermasalah, ada kemungkinan pencatatan kematian juga bermasalah. Sepertinya sih memang kita tidak bisa bereaksi berlebihan, baik ketika kasus naik maupun kasus turun, selama integritas datanya masih dapat dipertanyakan.
 
-So yeah. I guess it is helping if we don't overreact over the new cases because it might not reveal the true state of Indonesian COVID-19 Pandemic situation.
-
-What about vaccination? Judging from all of our graph up there, new cases and positive rate shot up during June-ish. What happen during that month? Delta entrance? What kind of crowdy events happen during that time? What high mobility event took place during that date? The government might let high mobility events to take place amid vaccination program has started. So let me end this blog by posting vaccination speed between countries, including Indonesia.
+Berarti apakah kita bisa bergantung pada vaksinasi? Kalau dilihat dari grafik di atas, kasus baru harian dan positive rate meningkat sejak bulan Juni. Apakah bulan Juni adalah bulan-bulan di mana mulai masuk varian delta? Ada keramaian apa bulan itu? Mobilitas tinggi apa yang dibiarkan di bulan sekitar itu? Mungkin Pemerintah bertaruh membiarkan mobilitas karena program vaksinasi sudah dimulai ya? Kalau begitu, saya akan akhiri postingan kali ini dengan data vaksinasi, dengan komparasi negara-negara lain.
 
 <iframe src="https://ourworldindata.org/grapher/daily-covid-vaccination-doses-per-capita?country=BRA~CHN~IND~LKA~TUR~OWID_WRL~IDN" loading="lazy" style="width: 100%; height: 600px; border: 0px none;"></iframe>
