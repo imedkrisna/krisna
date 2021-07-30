@@ -70,8 +70,14 @@ Amsterdam, The Netherlands
 2014
 
 
-Research and Publications {data-icon=laptop}
+Selected Research and Publications {data-icon=laptop}
 --------------------------------------------------------------------------------
+
+### Book
+
+- Gupta, Krisna and Enny Mardjono (2021). *Indonesia Emas Berkelanjutan 2045: Kumpulan Pemikiran Pelajar Indonesia Sedunia Seri 01 Ekonomi*. Jakarta: LIPI Press. [ISBN: 978-602-496-208-1](https://lipipress.lipi.go.id/detailpost/indonesia-emas-berkelanjutan-2045-kumpulan-pemikiran-pelajar-indonesia-sedunia-seri-01-ekonomi)
+
+N/A
 
 ### Journal Article
 
@@ -95,7 +101,6 @@ N/A
 
 - Gupta, Krisna, Intan Vierke, Arif Ibrahim, Joni Suwandi dan Arifin Selowidodo. 2019. "Boosting Global Competitiveness in Indonesia: is Industri 4.0 the answer?". in Abdullah, Widiaty and Abdullah (eds). [*Global Competitiveness: Business Transformation in the Digital Era*](https://www.taylorfrancis.com/books/e/9780429202629). London: Routledge.
 - Gupta, Krisna, Bayu Sutjiatmo and Muhammad Kurniawan. 2019. "How Trump's steel and aluminium tariff shapes future world trade". in Abdullah, Widiaty and Abdullah (eds). [*Global Competitiveness: Business Transformation in the Digital Era*](https://www.taylorfrancis.com/books/e/9780429202629). London: Routledge.
-- Ratana, Dhany and Krisna Gupta. 2019. "Can cryptocurrency help business to be more competitive?" in Abdullah, Widiaty and Abdullah (eds). [*Global Competitiveness: Business Transformation in the Digital Era*](https://www.taylorfrancis.com/books/e/9780429202629). London: Routledge.
 
 N/A
 
@@ -103,10 +108,9 @@ N/A
 
 - Gupta, Krisna and Deasy Pane. 2021. ["Restrictive regulations on foreign trade may hurt economy"](https://www.thejakartapost.com/paper/2021/03/11/restrictive-regulations-on-foreign-trade-may-hurt-economy.html). *The Jakarta Post*.
 - Gupta, Krisna and Wishnu Mahraddika. 2021. ["Mengapa tren kendaraan listrik adalah momentum transformasi industri otomotif Indonesia" ](https://theconversation.com/mengapa-tren-kendaraan-listrik-adalah-momentum-transformasi-industri-otomotif-indonesia-152958). *The Conversation Indonesia*.
-- Pasaribu, Donny and Krisna Gupta. 2020. ["Will IA-CEPA be the boost to Australia-Indonesia relations leaders are banking on?"](https://indonesiaatmelbourne.unimelb.edu.au/will-ia-cepa-be-the-boost-to-the-australia-indonesia-relationship-leaders-are-banking-on/), *Indonesia At Melbourne*.
-- Patunru, Arianto and Krisna Gupta. 2020. ["Indonesia's PPE export ban backfires"](https://www.eastasiaforum.org/2020/06/16/indonesias-ppe-export-ban-backfires/), *East Asia Forum*.
-- Patunru, Arianto and Krisna Gupta. 2020. ["COVID-19 dan Anjloknya Indeks PMI Indonesia: Uraian Singkat untuk Menteri Perindustrian, Republik Indonesia"](https://www.covid19indonesia.net/indonesian-minister-of-industry). Indonesia Project, ANU. 
-- Gupta, Krisna. 2020. ["Managing investment, trade deficit: are omnibus law panacea for growth?"](https://www.thejakartapost.com/academia/2020/01/31/managing-investment-trade-deficit-are-omnibus-laws-panacea-for-growth.html). *The Jakarta Post Academic Opinion*.
+- Pasaribu, Donny and Krisna Gupta. 2020. ["Will IA-CEPA be the boost to Australia-Indonesia relations leaders are banking on?"](https://indonesiaatmelbourne.unimelb.edu.au/will-ia-cepa-be-the-boost-to-the-australia-indonesia-relationship-leaders-are-banking-on/). *Indonesia At Melbourne*.
+- Patunru, Arianto and Krisna Gupta. 2020. ["Indonesia's PPE export ban backfires"](https://www.eastasiaforum.org/2020/06/16/indonesias-ppe-export-ban-backfires/). *East Asia Forum*.
+- Gupta, Krisna and Andree Surianta. 2020. ["IA-CEPA will not solve Indonesia's FDI Problem."](https://www.eastasiaforum.org/2020/08/05/ia-cepa-will-not-solve-indonesias-fdi-problem/). *East Asia Forum*.
 
 
 
@@ -128,6 +132,7 @@ N/A
 
 - [POLS3025](https://programsandcourses.anu.edu.au/2015/course/pols3025) Contemporary Political Analysis, using STATA in political analyses (2017)
 - [ECON3101](https://programsandcourses.anu.edu.au/course/econ3101) Microeconomics 3 (2018-2021)
+- [ECON3102](https://programsandcourses.anu.edu.au/course/econ3102) Macroeconomics 3 (2021)
 - [ECON2102](https://programsandcourses.anu.edu.au/course/econ2102) Macroeconomics 2 (2019)
 - [EMET3008](https://programsandcourses.anu.edu.au/course/emet3008) Applied Macro and Financial Econometrics (2020)
 
