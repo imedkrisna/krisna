@@ -4,7 +4,7 @@ authors:
 - admin
 date: "2020-04-15T00:00:00Z"
 doi: ""
-featured: true
+featured: false
 image:
   caption: ''
   focal_point: ""
