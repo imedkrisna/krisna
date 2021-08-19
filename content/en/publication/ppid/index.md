@@ -65,11 +65,7 @@ projects: []
 #   Simply enter your slide deck's filename without extension.
 #   E.g. `slides: "example"` references `content/slides/example/index.md`.
 #   Otherwise, set `slides: ""`.
-slides: "bukuppid"
+slides: "ppid"
 ---
 
-LIPI Press berkolaborasi dengan Perhimpunan Pelajar Indonesia (PPI) Dunia menerbitkan rangkaian buku seri Indonesia Emas Berkelanjutan 2045: Kumpulan Pemikiran Pelajar Indonesia Sedunia. Rangkaian bunga rampai ini terdiri dari 12 buku dengan sejumlah topik yang mendukung Tujuan Pembangunan Berkelanjutan atau Sustainable Development Goals (SDGs) untuk mencapai tujuan Indonesia Emas 2045. Buku ini merupakan seri pertama dari rangkaian tersebut.
-
-Seri Ekonomi membahas beberapa potensi masalah yang dapat menghambat pertumbuhan ekonomi Indonesia. Dari 17 target SDGs yang ada, bunga rampai ini memilih tiga target sebagai fokus bahasan, yaitu “mengakhiri kemiskinan dalam segala bentuk di mana pun” (poin pertama), “mendukung pertumbuhan ekonomi yang inklusif dan berkelanjutan untuk menciptakan kondisi lapangan pekerjaan yang berkualitas” (poin kedelapan), serta “mengurangi ketimpangan di dalam dan antarnegara (poin kesepuluh).
-
-Buku ini diharapkan dapat menjadi bacaan yang bermanfaat bagi masyarakat Indonesia, khususnya para pemangku kepentingan di bidang pembangunan. Temukan beragam sudut pandang serta sumbangsih pemikiran dari perwakilan pelajar Indonesia di seluruh dunia terkait pertumbuhan ekonomi Indonesia yang berkelanjutan. Selamat membaca!
+LIPI Press and Overseas Indonesian Students Association Alliance [(OISAA)](https://twitter.com/oisaa) published a series called "Indonesia Emas Berkelanjutan 2045: Kumpulan Pemikiran Pelajar Indonesia Sedunia", written in Bahasa Indonesia. This series in particular discusses the Indonesian Vision 2045 through the lens of Sustainable Development Goals (SDGs), in particular Poverty eradication (target 1), Sustainable and inclusive economic growth (target 8), and reduced inequality (target 10).
