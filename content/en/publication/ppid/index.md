@@ -65,7 +65,7 @@ projects: []
 #   Simply enter your slide deck's filename without extension.
 #   E.g. `slides: "example"` references `content/slides/example/index.md`.
 #   Otherwise, set `slides: ""`.
-slides: ""
+slides: "bukuppid"
 ---
 
 LIPI Press berkolaborasi dengan Perhimpunan Pelajar Indonesia (PPI) Dunia menerbitkan rangkaian buku seri Indonesia Emas Berkelanjutan 2045: Kumpulan Pemikiran Pelajar Indonesia Sedunia. Rangkaian bunga rampai ini terdiri dari 12 buku dengan sejumlah topik yang mendukung Tujuan Pembangunan Berkelanjutan atau Sustainable Development Goals (SDGs) untuk mencapai tujuan Indonesia Emas 2045. Buku ini merupakan seri pertama dari rangkaian tersebut.
