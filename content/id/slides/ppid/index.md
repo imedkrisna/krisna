@@ -98,3 +98,5 @@ Indonesia Emas Berkelanjutan 2045: Kumpulan Pemikiran Pelajar Indonesia Sedunia
 ### Profesor (Emeritus) Dorodjatun Kuntjoro-Jakti
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/IJDFjKuqtvo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+atau [pergi ke YouTube](https://www.youtube.com/watch?v=IJDFjKuqtvo)
