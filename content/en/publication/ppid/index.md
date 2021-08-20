@@ -41,7 +41,7 @@ url_code:
 url_dataset:
 url_poster:
 url_project:
-url_slides:
+url_slides: https://drive.google.com/drive/folders/1VK80F_CLLt26Nq_qZ0knrArXPWzl42Hu?usp=sharing
 url_source: https://e-service.lipipress.lipi.go.id/press/catalog/book/357
 url_video:
 
@@ -69,3 +69,7 @@ slides: "ppid"
 ---
 
 LIPI Press and Overseas Indonesian Students Association Alliance [(OISAA)](https://twitter.com/oisaa) published a series called "Indonesia Emas Berkelanjutan 2045: Kumpulan Pemikiran Pelajar Indonesia Sedunia", written in Bahasa Indonesia. This series in particular discusses the Indonesian Vision 2045 through the lens of Sustainable Development Goals (SDGs), in particular Poverty eradication (target 1), Sustainable and inclusive economic growth (target 8), and reduced inequality (target 10).
+
+Keynote speech from Professor (Emeritus) Dorodjatun Kuntjoro-Jakti (in Indonesian)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/IJDFjKuqtvo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

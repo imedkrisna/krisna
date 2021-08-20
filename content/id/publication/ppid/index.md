@@ -41,7 +41,7 @@ url_code:
 url_dataset:
 url_poster:
 url_project:
-url_slides:
+url_slides: https://drive.google.com/drive/folders/1VK80F_CLLt26Nq_qZ0knrArXPWzl42Hu?usp=sharing
 url_source: https://e-service.lipipress.lipi.go.id/press/catalog/book/357
 url_video:
 
@@ -73,3 +73,7 @@ LIPI Press berkolaborasi dengan Perhimpunan Pelajar Indonesia (PPI) Dunia menerb
 Seri Ekonomi membahas beberapa potensi masalah yang dapat menghambat pertumbuhan ekonomi Indonesia. Dari 17 target SDGs yang ada, bunga rampai ini memilih tiga target sebagai fokus bahasan, yaitu “mengakhiri kemiskinan dalam segala bentuk di mana pun” (poin pertama), “mendukung pertumbuhan ekonomi yang inklusif dan berkelanjutan untuk menciptakan kondisi lapangan pekerjaan yang berkualitas” (poin kedelapan), serta “mengurangi ketimpangan di dalam dan antarnegara (poin kesepuluh).
 
 Buku ini diharapkan dapat menjadi bacaan yang bermanfaat bagi masyarakat Indonesia, khususnya para pemangku kepentingan di bidang pembangunan. Temukan beragam sudut pandang serta sumbangsih pemikiran dari perwakilan pelajar Indonesia di seluruh dunia terkait pertumbuhan ekonomi Indonesia yang berkelanjutan. Selamat membaca!
+
+Keynote Speech Professor (Emeritus) Dorodjatun Kuntjoro-Jakti
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/IJDFjKuqtvo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
