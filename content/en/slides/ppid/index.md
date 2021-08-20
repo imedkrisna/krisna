@@ -44,7 +44,7 @@ Indonesia Emas Berkelanjutan 2045: Kumpulan Pemikiran Pelajar Indonesia Sedunia
 
 ## Series 01 Ekonomi
 
-[s.id/BukuPPID](https://s.id/bukuppid)
+[s.id/bukuppid](https://s.id/bukuppid)
 
 ---
 
