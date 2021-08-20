@@ -74,6 +74,8 @@ Seri Ekonomi membahas beberapa potensi masalah yang dapat menghambat pertumbuhan
 
 Buku ini diharapkan dapat menjadi bacaan yang bermanfaat bagi masyarakat Indonesia, khususnya para pemangku kepentingan di bidang pembangunan. Temukan beragam sudut pandang serta sumbangsih pemikiran dari perwakilan pelajar Indonesia di seluruh dunia terkait pertumbuhan ekonomi Indonesia yang berkelanjutan. Selamat membaca!
 
+[bahan-bahan narasumber](https://drive.google.com/drive/folders/1VK80F_CLLt26Nq_qZ0knrArXPWzl42Hu?usp=sharing)
+
 Keynote Speech Professor (Emeritus) Dorodjatun Kuntjoro-Jakti
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/IJDFjKuqtvo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
