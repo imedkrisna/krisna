@@ -71,7 +71,7 @@ Indonesia Emas Berkelanjutan 2045: Kumpulan Pemikiran Pelajar Indonesia Sedunia
 </Br>
 </br>  
 
-### Goals 8: Sustainable and inclusive economic growth
+### Goals 8: Decent work and economic Growth
 
 - Economic growth, labor productivity, tourism, (youth) employment and skill and education progress, among others  
 
