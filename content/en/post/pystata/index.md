@@ -335,8 +335,6 @@ stata_setup.config("C:/Program Files/Stata17/", "mp")
 
     
 
-Aren't you just love the Stata logo???
-
 Next, we load the dataset to Stata! I use Stata magic to do this. there is also a possibility calling Stata with API like [this one](https://www.stata.com/python/pystata/notebook/Example5.html#) and [this one](https://www.stata.com/new-in-stata/pystata/), but in Jupyter, using magic is somewhat easier for me.
 
 Now lets call the data and describe it.
@@ -396,11 +394,8 @@ Awesome!! Now let's do our ppml command.
 ```python
 %%stata
 ppml Export Tariff pop_d agree_fta gdp_wdi_cur_d distance
-outreg2 using myreg,label
 ```
 
-    
-    . ppml Export Tariff pop_d agree_fta gdp_wdi_cur_d distance
     note: checking the existence of the estimates
     WARNING: Tariff has very large values, consider rescaling  or recentering
     WARNING: pop_d has very large values, consider rescaling  or recentering
@@ -435,12 +430,117 @@ outreg2 using myreg,label
     Number of regressors dropped to ensure that the estimates exist: 0
     Option strict is off
     
-    . outreg2 using myreg,label
-    dir : seeout
+
+woohoo! The result is also great considering how under-specified the model is! High $R^2$ , Tariff is negative and strong, FTA and GDP are both highly important in determining foreign demand!
+
+Now one thing I can't quite work out is to extract the information from the regression back to pandas. I usually just go with outreg and do it manually, but it's no fun if I can't integrate the regression result in my notebook.
+
+What I can do is to export the result to csv and read it thru Pandas.
+
+
+```python
+%%stata
+eststo
+esttab using hehe.csv, plain replace wide
+```
+
+    
+    . eststo
+    (est1 stored)
+    
+    . esttab using hehe.csv, plain replace wide
+    (output written to hehe.csv)
     
     . 
     
 
-woohoo! The result is also great considering how under-specified the model is! High $R^2$ , Tariff is negative and strong, FTA and GDP are both highly important in determining foreign demand!
+
+```python
+dff=pd.read_csv('hehe.csv')
+dff
+```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Unnamed: 0</th>
+      <th>est1</th>
+      <th>Unnamed: 2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>NaN</td>
+      <td>b</td>
+      <td>t</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Tariff</td>
+      <td>-.0906943</td>
+      <td>-1.670947</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>pop_d</td>
+      <td>-.0002608</td>
+      <td>-.5535483</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>agree_fta</td>
+      <td>2.28588</td>
+      <td>4.262802</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>gdp_wdi_cur_d</td>
+      <td>2.04e-13</td>
+      <td>5.688106</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>distance</td>
+      <td>-.0000199</td>
+      <td>-.3056529</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>_cons</td>
+      <td>-.488918</td>
+      <td>-.6730031</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>N</td>
+      <td>114</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+The result is not the best so this is kinda bummer. But at least I have something. haha. There may be a better way to do this but let me look for it and post it later on. If you have a suggestion please mention me on twitter!
 
 Anyway, that's it for now. I hope this post is enjoyable!
