@@ -335,6 +335,8 @@ stata_setup.config("C:/Program Files/Stata17/", "mp")
 
     
 
+Look at how georgeous Stata logo is.
+
 Next, we load the dataset to Stata! I use Stata magic to do this. there is also a possibility calling Stata with API like [this one](https://www.stata.com/python/pystata/notebook/Example5.html#) and [this one](https://www.stata.com/new-in-stata/pystata/), but in Jupyter, using magic is somewhat easier for me.
 
 Now lets call the data and describe it.
