@@ -1,7 +1,7 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: "Misteri harga cabai: harganya rendah gara-gara impor?"
+title: "Misteri harga cabai: rendah gara-gara impor?"
 subtitle: ""
 summary: ""
 authors: [admin]
