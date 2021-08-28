@@ -57,7 +57,7 @@ Tapi terlepas fakta tersebut, saya lumayan tertarik dengan narasinya. Beliau men
 
 Tentunya susah ya membuktikannya secara komprehensif dan koheren. Tapi mungkin kita bisa setidaknya mengira-ngira beberapa hal.
 
-Pertama, supaya impor mempengaruhi harga domestik, paling tidak kita harus menemukan besarnya impor relatif terhadap produksi lokal maupun impor. Menurut cuplikan berita di atas, produksi nasional adalah 2.77 juta ton. Tidak hanya itu, Indonesia bahkan adalah eksportir cabai!
+Pertama, supaya impor mempengaruhi harga domestik, paling tidak kita harus menemukan besarnya impor relatif terhadap produksi lokal maupun ekspor. Menurut cuplikan berita di atas, produksi nasional adalah 2.77 juta ton. Tidak hanya itu, Indonesia bahkan adalah eksportir cabai!
 
 Hal kedua adalah bahwa impor cabai yang tinggi adalah disebabkan oleh UU CK. Artinya, sebelum ada UU CK, impor harusnya lebih sedikit atau bahkan tidak signifikan sama sekali, lalu naik di 2020 dan 2021.
 
