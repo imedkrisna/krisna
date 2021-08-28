@@ -247,13 +247,13 @@ axes[1].xaxis.set_ticks([2016,2017,2018,2019,2020])
     
 
 
-Sesuai tabel dan grafik di atas, kita bisa liat bahwa kita emang impor cabai mentahnya kuecil banget. Bahkan tahun 2020, pas UU CK berlaku, bukannya naik, malah turun. UNCOMTRADE ga punya data impor cabai mentah di tahun 2016 dan 2017, mungkin karena emang tahun segitu kita ga impor cabe mentah.
+Sesuai tabel dan grafik di atas, kita bisa liat bahwa kita emang impor cabai mentahnya kuecil banget. Bahkan tahun 2020, pas UU CK berlaku, bukannya naik, malah turun. Data UN COMTRADE bilang bahwa tahun 2020, Indonesia mengimpor 6 kilogram cabai. Jelas angka ini jauh di bawah angka produksi 2.77 ton. UNCOMTRADE ga punya data impor cabai mentah di tahun 2016 dan 2017, mungkin karena emang tahun segitu kita ga impor cabe mentah.
 
 Bahkan, kita termasuk negara pengekspor cabe mentah. Hal yang sebenarnya menarik. Artinya, negara kita lumayan kompetitif dalam produksi cabe. Bukannya impor, kita malah ekspor banyak! Kalau begitu kenapa Petani merugi? Apakah para petani cabai cuma lebay?
 
 Belum tentu! Ada banyak hal yang bisa diangkat. Bisa jadi distribusi ke pasar, mungkin ada yang tahan suplai, bisa aja ga semua petani bisa akses pasar ekspor, bisa jadi demand masyarakat yang lemah, bisa jadi masa tanam yang tidak dikoordinasi. Misalnya, pas masa tanam, semua tanam dan ga ada yg panen, sehingga cabai langka di pasar. Pas panen, semua panen secara bersamaan, sehingga terjadi lonjakan _supply_ cabai di pasar. Ketika suplai banyak, harga jatuh.
 
-Ada banyak kemungkinan masalahnya yang saya ga terlalu menguasai. Tapi yang jelas, impor bukan masalahnya. Jangan salah, ada banyak masalah yang ditimbulkan rente impor (dan rente ekspor), tapi sepertinya tidak untuk cabai.
+Ada banyak kemungkinan masalahnya yang saya ga terlalu menguasai. Tapi yang jelas, impor bukan masalahnya. Jangan salah, ada banyak masalah yang ditimbulkan rente impor (dan rente ekspor), tapi sepertinya tidak untuk cabai. 
 
 ## Cabai Kering
 
