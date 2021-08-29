@@ -63,7 +63,7 @@ Hal kedua adalah bahwa impor cabai yang tinggi adalah disebabkan oleh UU CK. Art
 
 Kita coba cek dengan data ekspor impor. Pada postingan kali ini, saya pakai API-nya [UN COMTRADE](https://comtrade.un.org/Data/) karena datanya lumayan lengkap dan bisa diakses siapa saja. Skip aja bagian ini kalau males liat kode yg dipakai.
 
-Gw akan ambil data total ekspor dan impor Indonesia dari dan ke negara-negara lain. Barang yang akan saya tarik datanya ada 2. Pertama adalah Cabai Mentah dengan kode HS-6-digit 070960, yang dituduhkan kita impor banyak sejak UU CK berlaku. Barang yang kedua adalah Cabai Kering dengan kode HS-6-digit 090421, barang yang ternyata diimpor sesuai dengan berita di atas. Tuh ya cabe mentah dan cabe kering kode HS-nya aja beda. hahaha. Emang bahaya baca judul doang.
+Gw akan ambil data total ekspor dan impor Indonesia dari dan ke negara-negara lain. Barang yang akan saya tarik datanya ada 2. Pertama adalah Cabai Mentah dengan kode HS-6-digit 070960, yang dituduhkan kita impor banyak sejak UU CK berlaku. Barang yang kedua adalah Cabai Kering (non-crushed) dengan kode HS-6-digit 090421, barang yang ternyata diimpor sesuai dengan berita di atas. Tuh ya cabe mentah dan cabe kering kode HS-nya aja beda. hahaha. Emang bahaya baca judul doang.
 
 Dari keduad ata tersebut, mari kita lihat apakah iya kita impor banyak Cabai Mentah sejak tahun 2020, tahun di mana UU CK mulai berlaku. Sayangnya UN COMTRADE belum punya data tahun 2021. Tentunya BPS punya data bulanan, tapi karena tidak semua orang punya akses terhadap data tsb, hold dulu tahun 2021-nya. He he.
 
@@ -249,13 +249,13 @@ axes[1].xaxis.set_ticks([2016,2017,2018,2019,2020])
 
 Sesuai tabel dan grafik di atas, kita bisa liat bahwa kita emang impor cabai mentahnya kuecil banget. Bahkan tahun 2020, pas UU CK berlaku, bukannya naik, malah turun. Data UN COMTRADE bilang bahwa tahun 2020, Indonesia mengimpor 6 kilogram cabai. Jelas angka ini jauh di bawah angka produksi 2.77 ton. UNCOMTRADE ga punya data impor cabai mentah di tahun 2016 dan 2017, mungkin karena emang tahun segitu kita ga impor cabe mentah.
 
-Bahkan, kita termasuk negara pengekspor cabe mentah. Hal yang sebenarnya menarik. Artinya, negara kita lumayan kompetitif dalam produksi cabe. Bukannya impor, kita malah ekspor banyak! Kalau begitu kenapa Petani merugi? Apakah para petani cabai cuma lebay?
+Bahkan, kita termasuk negara pengekspor cabe mentah. Hal yang sebenarnya menarik. Artinya, negara kita lumayan kompetitif dalam produksi cabe (mungkin?). Bukannya impor, kita malah ekspor banyak! Kalau begitu kenapa Petani merugi? Apakah para petani cabai cuma lebay?
 
 Belum tentu! Ada banyak hal yang bisa diangkat. Bisa jadi distribusi ke pasar, mungkin ada yang tahan suplai, bisa aja ga semua petani bisa akses pasar ekspor, bisa jadi demand masyarakat yang lemah, bisa jadi masa tanam yang tidak dikoordinasi. Misalnya, pas masa tanam, semua tanam dan ga ada yg panen, sehingga cabai langka di pasar. Pas panen, semua panen secara bersamaan, sehingga terjadi lonjakan _supply_ cabai di pasar. Ketika suplai banyak, harga jatuh.
 
 Ada banyak kemungkinan masalahnya yang saya ga terlalu menguasai. Tapi yang jelas, impor bukan masalahnya. Jangan salah, ada banyak masalah yang ditimbulkan rente impor (dan rente ekspor), tapi sepertinya tidak untuk cabai. 
 
-## Cabai Kering
+## Cabai Kering (non-crushed)
 
 Salah satu problem yang bisa kita hipotesiskan adalah lemahnya daya serap industri terhadap cabe petani. Hal ini dapat terefleksi dari impor cabe kering. Logikanya, Jika cabe merah suplainya banyak, harusnya cabe-cabe tersebut dapat digunakan untuk produksi cabe kering, sehingga impor cabe kering dapat ditekan. Mari kita lihat bagaimana kondisi ekspor dan impor cabe kering di tabel dan grafik di bawah.
 
@@ -382,13 +382,17 @@ Nah kalo cabe kering beda ya situasinya. Ternyata meskipun ada ekspornya, impor 
 
 Bagaimanapun juga, harga cabai petani yang rendah tetap menjadi sebuah permasalahan. Kita sudah rule-out masalah impor cabai mentah, tetapi tidak berarti masalah tersebut hilang. Saya coba gali-gali dikit soal masalah cabai ini, dan cuma nemu 1 paper yg sepertinya sepakat bahwa masalahnya banyak, tapi bukan impor.
 
-Muflikh dkk (2021)[^1] mengatakan bahwa sejak 2016, Indonesia sudah berhenti sama sekali impor cabai karena kebijakan penetapan harga acuan cabai sama sekali tidak berhasil mengendalikan harga cabai yang selalu volatil setiap tahunnya. Hal ini bisa jadi mempengaruhi alasan kenapa industri mengimpor banyak sekali cabai kering: di luar negeri, produsen cabai kering dapat _free access_ terhadap cabai mentah. Berhubung industri dalam negeri sulit mengimpor cabai, maka impor saja cabai keringnya. Seperti saya sebut sebelumnya, industri makanan Indonesia termasuk industri yang sangat besar dan cepat pertumbuhannya.
+Muflikh dkk (2021)[^1] mengatakan bahwa sejak 2016, Indonesia sudah berhenti sama sekali impor cabai karena kebijakan penetapan harga acuan cabai sama sekali tidak berhasil mengendalikan harga cabai yang selalu volatil setiap tahunnya. Hal ini bisa jadi mempengaruhi alasan kenapa industri mengimpor banyak sekali cabai kering: di luar negeri, produsen cabai kering dapat _free access_ terhadap cabai mentah yang murah harganya. Berhubung industri dalam negeri sulit mengimpor cabai, maka impor saja cabai keringnya. Seperti saya sebut sebelumnya, industri makanan Indonesia termasuk industri yang sangat besar dan cepat pertumbuhannya.
+
+Well, jika masalahnya di harga internasional yang rendah, sudah jelas permasalahan petani cabai jauh lebih fundamental daripada impor ataupun UU CK. Cabe mentah dalam negeri, meskipun petani mengeluhkan harganya yang murah, tetap relatif lebih mahal daripada di luar neger. Hal ini tetap problematik **bahkan** di tengah larangan impor cabai. Hal ini menunjukkan permasalahan domestik yang lebih fundamental ketimbang mempermasalahkan impor.
 
 selain itu, Muflikh dkk (2021) mengatakan:
 
 > The volatility is caused mainly by seasonal production, unorganised market governance, and consumer preference for fresh chillies. 
 
 Dengan kata lain, sepertinya permasalahan harga cabai Indonesia memang lebih banyak adalah permasalahan domestik.
+
+Berikutnya terkait UU CK. Hal ini sudah lama terjadi, yang artinya sulit untuk menyalahkan UU CK. UU CK memang sebuah peraturan yang kontroversial. Banyak yang dapat kita kritisi dari situ, tapi memang sebaiknya kita kritisi dengan kepala dingin dan tepat sasaran.
 
 Sepertinya saya akan berhenti di sini saja. Saya lumayan paham soal perdagangan internasional, tapi bukan ekspert cabai. Moga-moga tulisan ini dapat memotivasi orang-orang yang ingin memajukan pertanian, khususnya pertanian cabai, di Indonesia. Seperti saya bilang, sepertinya masih ada ruang untuk _rigorous study_ tentang cabai di Indonesia, yang bisa menjadi judul thesis yang sangat menarik. Tentu saja lebih keren lagi kalau bisa turun langsung ke lapangan. Hehe.
 
