@@ -402,6 +402,8 @@ Saya sudahi dulu postingan kali ini. Terima kasih sudah membaca!
 
 ## Update
 
+#### Larangan impor cabe keriting?
+
 Saya _embed_ beberapa respon di twitter terkait cabe di bagian ini. Kalau ada yang menarik akan kuupdate terus.
 
 <blockquote class="twitter-tweet"><p lang="in" dir="ltr">Hrg cabe dlm negeri lg hancur, hrg hancur sdh berbulan², klo pun dipanen malah petani tambah merugi. Sebagian petani membiarkan cabenya membusuk dilahan.<br><br>Masyarakat konsumsi cabe segar jng cabe kering, krn kita kalah bersaing dng hrg cabe kering impor.<br><br>Mari kita diskusikan ini. <a href="https://t.co/dZD3SwSPr7">https://t.co/dZD3SwSPr7</a> <a href="https://t.co/nZcyT4QfBe">pic.twitter.com/nZcyT4QfBe</a></p>&mdash; Petani Rasional (@PetaniRasional) <a href="https://twitter.com/PetaniRasional/status/1431632092429905925?ref_src=twsrc%5Etfw">August 28, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
@@ -412,9 +414,15 @@ Solusinya, larang impor cabe kering juga? Mungkin dibahas lagi di postingan lain
 
 <blockquote class="twitter-tweet"><p lang="in" dir="ltr">Tujuan impor cabe kering yg harusnya untuk kebutuhan industri ((( KONON KATANYA ))), tetapi faktanya bocor sampai beredar dipasaran tradisional, ditambah lg petani dlm negri lg panen raya. Dampaknya harga cabe hancur dalam tempo waktu yg lama, petani menjerit. <a href="https://t.co/coalvk1m7L">pic.twitter.com/coalvk1m7L</a></p>&mdash; Petani Rasional (@PetaniRasional) <a href="https://twitter.com/PetaniRasional/status/1430719631887458307?ref_src=twsrc%5Etfw">August 26, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
 
+#### Tanam komoditas lain
+
 twit di bawah ini juga menarik: tanam komoditas yang bisa diekspor. market riset sendiri, dan forget pemerintah. Tentunya ga semua petani bisa seperti ini, dan ga berarti kita harus berhenti kritisi program pemerintah terkait pertanian.
 
-<blockquote class="twitter-tweet"><p lang="in" dir="ltr">Aku Petani mas.<br>Tapi subsidi dan kredit itu bukan solusi dari masalah kami. Bicara efisiensi itu di harga perawatan serta tenaga kerja. Masalahnya HPP(Harga proses produksi) sekarang gak masuk di pasar kita. Makanya kebanyakan petani lokal harga jualnya mahal</p>&mdash; Calon Ketua RT (@bukanboslagi) <a href="https://twitter.com/bukanboslagi/status/1431964957650739202?ref_src=twsrc%5Etfw">August 29, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+<blockquote class="twitter-tweet"><p lang="in" dir="ltr">Mas,<br>Aku tanam Lemon California, walau gak begitu banyak. Di bulang juni-juli kemarin juga kena badai harga. Di petani anjlok sampai 1500-2000 perkilo. Sedang harga dipasaran tetap sama. Kenapa gak dipasarkan langsung? Mana ada waktu dan tenaganya. Belum lagi biayanya untuk itu.</p>&mdash; Calon Ketua RT (@bukanboslagi) <a href="https://twitter.com/bukanboslagi/status/1432002620969807876?ref_src=twsrc%5Etfw">August 29, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+#### Kesulitan subsidi dan membentuk kelompok tani
+
+<blockquote class="twitter-tweet"><p lang="in" dir="ltr">Pupuk subsidi itu hanya diperoleh kelompok tani. Jgn lupa masih sgt banyak petani yg tdk masuk kelompok tani. Bentuk kelompok tani jg gak mudah di daerah.<br>Jd distribusi pupuk subsidi gak semulus yg dibayangkan. Kacaunya anggota kel tani jual balik pupuk subsidi dgn harga pasar.</p>&mdash; Andreas S Kurniawan (@ansyaku) <a href="https://twitter.com/ansyaku/status/1432143731503759363?ref_src=twsrc%5Etfw">August 30, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
 
 [^1]: Muflikh, Y. N., Smith, C., Brown, C., & Aziz, A. A. (2021). Analysing price volatility in agricultural value chains using systems thinking: A case study of the Indonesian chilli value chain. Agricultural Systems, 192, 103179. https://doi.org/https://doi.org/10.1016/j.agsy.2021.103179 
 
