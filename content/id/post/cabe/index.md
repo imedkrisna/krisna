@@ -376,15 +376,17 @@ axes[1].xaxis.set_ticks([2016,2017,2018,2019,2020])
     
 
 
-Nah kalo cabe kering beda ya situasinya. Ternyata meskipun ada ekspornya, impor masih mendominasi. Skala di impor di grafik saking gedenya sampe harus dibikin 1e7 (atau $10^7$) hahaha. Nah kalau cabe kering baru gede impornya. Saya juga ga tau apakah cabai kering impornya dikontrol seperti cabai merah, tapi kalau dilihat, harusnya ini tidak memiliki dampak yang terlalu signifikan terhadap harga petani. Indonesia punya industri makanan yang sangat besar, jadi sebenernya cukup wajar jika butuh pasokan yang lebih banyak daripada yang dapat disuplai oleh petani.
+Nah kalo cabe kering beda ya situasinya. Ternyata meskipun ada ekspornya, impor masih mendominasi. Skala di impor di grafik saking gedenya sampe harus dibikin 1e7 (atau $10^7$) hahaha. Nah kalau cabe kering baru gede impornya. Saya juga ga tau apakah cabai kering impornya dikontrol seperti cabai merah, tapi kalau dilihat, harusnya ini tidak memiliki dampak yang terlalu signifikan terhadap harga petani. Indonesia punya industri makanan yang sangat besar, jadi sebenernya cukup wajar jika butuh pasokan yang lebih banyak daripada yang dapat disuplai oleh petani. Di samping itu, Cabe kering memang memiliki keunggulan di _storage_, di mana bisa kita beli banyak lalu disimpen. Artinya, harga cabe kering kemungkinan tidak perlu tergantung kapan panennya. Menguntungkan bagi industri.
+
+Problemnnya, tentunya, adalah ketika masyarakat yang beli cabe juga ikutan beli cabe kering. Jika diskrepansi harganya memang sejauh itu, bisa jadi masyarakat yang sebenernya lebih suka cabe segar, jadi memilih cabe kering. Seperti disebut di atas, cabe kering impornya gede. Seberapa banyak yang beneran dipake industri? Apakah solusinya adalah melarang impor cabe kering juga? Bagaimana dengan industri pengguna cabe yang harus membeli cabe lebih mahal?
 
 ## Misteri cabai
 
-Bagaimanapun juga, harga cabai petani yang rendah tetap menjadi sebuah permasalahan. Kita sudah rule-out masalah impor cabai mentah, tetapi tidak berarti masalah tersebut hilang. Saya coba gali-gali dikit soal masalah cabai ini, dan cuma nemu 1 paper yg sepertinya sepakat bahwa masalahnya banyak, tapi bukan impor.
+Bagaimanapun juga, harga cabai petani yang rendah tetap menjadi sebuah permasalahan. Saya coba gali-gali dikit soal masalah cabai ini, dan cuma nemu 1 paper yg sepertinya sepakat bahwa masalahnya banyak, tapi bukan impor.
 
 Muflikh dkk (2021)[^1] mengatakan bahwa sejak 2016, Indonesia sudah berhenti sama sekali impor cabai karena kebijakan penetapan harga acuan cabai sama sekali tidak berhasil mengendalikan harga cabai yang selalu volatil setiap tahunnya. Hal ini bisa jadi mempengaruhi alasan kenapa industri mengimpor banyak sekali cabai kering: di luar negeri, produsen cabai kering dapat _free access_ terhadap cabai mentah yang murah harganya. Berhubung industri dalam negeri sulit mengimpor cabai, maka impor saja cabai keringnya. Seperti saya sebut sebelumnya, industri makanan Indonesia termasuk industri yang sangat besar dan cepat pertumbuhannya.
 
-Well, jika masalahnya di harga internasional yang rendah, sudah jelas permasalahan petani cabai jauh lebih fundamental daripada impor ataupun UU CK. Cabe mentah dalam negeri, meskipun petani mengeluhkan harganya yang murah, tetap relatif lebih mahal daripada di luar neger. Hal ini tetap problematik **bahkan** di tengah larangan impor cabai. Hal ini menunjukkan permasalahan domestik yang lebih fundamental ketimbang mempermasalahkan impor.
+Well, jika masalahnya di harga internasional yang rendah, sudah jelas permasalahan petani cabai jauh lebih fundamental daripada impor ataupun UU CK. Cabe mentah dalam negeri, meskipun petani mengeluhkan harganya yang murah, tetap relatif lebih mahal daripada di luar negeri. Hal ini tetap problematik **bahkan** di tengah larangan impor cabai. Hal ini menunjukkan permasalahan domestik yang lebih fundamental ketimbang mempermasalahkan impor.
 
 selain itu, Muflikh dkk (2021) mengatakan:
 
