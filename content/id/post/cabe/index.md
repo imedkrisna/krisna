@@ -422,6 +422,8 @@ twit di bawah ini juga menarik: tanam komoditas yang bisa diekspor. market riset
 
 #### Kesulitan subsidi dan membentuk kelompok tani
 
+Subsidi tidak tepat sasaran sepertinya sudah menjadi hal lumrah ya di negara yang birokrasinya jelek. Ini twit yang memberikan cerita lebih mendetil tentang karut marut subsidi pupuk, mulai dari sulitnya akses (susah gabung kelompok tani) sampai ke penjualan kembali ke harga pasar (bukannya pupuknya dipake, malah jualan pupuk a la rent seeker).
+
 <blockquote class="twitter-tweet"><p lang="in" dir="ltr">Pupuk subsidi itu hanya diperoleh kelompok tani. Jgn lupa masih sgt banyak petani yg tdk masuk kelompok tani. Bentuk kelompok tani jg gak mudah di daerah.<br>Jd distribusi pupuk subsidi gak semulus yg dibayangkan. Kacaunya anggota kel tani jual balik pupuk subsidi dgn harga pasar.</p>&mdash; Andreas S Kurniawan (@ansyaku) <a href="https://twitter.com/ansyaku/status/1432143731503759363?ref_src=twsrc%5Etfw">August 30, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
 
 [^1]: Muflikh, Y. N., Smith, C., Brown, C., & Aziz, A. A. (2021). Analysing price volatility in agricultural value chains using systems thinking: A case study of the Indonesian chilli value chain. Agricultural Systems, 192, 103179. https://doi.org/https://doi.org/10.1016/j.agsy.2021.103179 
