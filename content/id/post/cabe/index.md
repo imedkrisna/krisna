@@ -394,7 +394,7 @@ selain itu, Muflikh dkk (2021) mengatakan:
 
 Dengan kata lain, sepertinya permasalahan harga cabai Indonesia memang lebih banyak adalah permasalahan domestik.
 
-Berikutnya terkait UU CK. Hal ini sudah lama terjadi, yang artinya sulit untuk menyalahkan UU CK. UU CK memang sebuah peraturan yang kontroversial. Banyak yang dapat kita kritisi dari situ, tapi memang sebaiknya kita kritisi dengan kepala dingin dan tepat sasaran.
+Berikutnya terkait UU CK. volatilitas harga cabai sudah lama terjadi, begitupun dengan regulasi impor cabe mentah dan tingginya impor cabe kering. Artinya, agak sulit untuk menyalahkan UU CK, setidaknya saat ini. Mungkin kita harus lihat data 2021 untuk secara gamblang menyalahkan UU CK, atau melihat realisasi peraturan turunan yang memang menyasar impor cabe mentah dan cabe kering. UU CK memang sebuah peraturan yang kontroversial. Banyak yang dapat kita kritisi dari situ, tapi memang sebaiknya kita kritisi dengan kepala dingin dan tepat sasaran. Apalagi pakai screenshot headline tanpa mencantumkan sumbernya, sebaiknya kita hindari.
 
 Sepertinya saya akan berhenti di sini saja. Saya lumayan paham soal perdagangan internasional, tapi bukan ekspert cabai. Moga-moga tulisan ini dapat memotivasi orang-orang yang ingin memajukan pertanian, khususnya pertanian cabai, di Indonesia. Seperti saya bilang, sepertinya masih ada ruang untuk _rigorous study_ tentang cabai di Indonesia, yang bisa menjadi judul thesis yang sangat menarik. Tentu saja lebih keren lagi kalau bisa turun langsung ke lapangan. Hehe.
 
