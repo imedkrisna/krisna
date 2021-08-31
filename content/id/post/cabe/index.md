@@ -394,6 +394,8 @@ selain itu, Muflikh dkk (2021) mengatakan:
 
 Dengan kata lain, sepertinya permasalahan harga cabai Indonesia memang lebih banyak adalah permasalahan domestik.
 
+## misteri UU CK
+
 Berikutnya terkait UU CK. volatilitas harga cabai sudah lama terjadi, begitupun dengan regulasi impor cabe mentah dan tingginya impor cabe kering. Cabe Mentah sudah diproteksi selama ini, dan sejak 2016 tidak ada lagi impor cabe mentah. Di samping itu, cabe kering selama ini memang tidak ada pembatasan impor. Apa yang mau jadi "lebih bebas impornya" kalau selama ini memang sudah bebas? 
 
 Artinya, agak sulit untuk menyalahkan UU CK, setidaknya saat ini. Mungkin kita harus lihat data 2021 untuk secara gamblang menyalahkan UU CK, atau melihat realisasi peraturan turunan yang memang menyasar impor cabe mentah dan cabe kering. UU CK memang sebuah peraturan yang kontroversial. Banyak yang dapat kita kritisi dari situ, tapi memang sebaiknya kita kritisi dengan kepala dingin dan tepat sasaran. Apalagi pakai screenshot headline tanpa mencantumkan sumbernya, sebaiknya kita hindari.
