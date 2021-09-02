@@ -438,7 +438,7 @@ Saya ga ngerti juga kenapa banyak negara mengedepankan solusi anti impor ketimba
 
 Ini pertanyaan yang nanti bisa kemana-mana lagi jawabannya wkwkw. Tapi sepanjang yang saya tau, kita punya program subsidi pupuk dan subsidi bibit. Tapi program [subsidi pupuk](https://news.detik.com/berita-jawa-timur/d-5376557/kejaksaan-tetapkan-satu-tersangka-korupsi-pupuk-bersubsidi-di-jombang) dan [subsidi bibit](https://majalah.tempo.co/read/hukum/141840/benih-bersubsidi-bersemai-korupsi) juga tidak terlepas dari kasus korupsi. wkwkk.
 
-Di samping itu, program-program seperti subsidi memerlukan pendanaan dari APBN. Sementara itu, tidak perlu dana ekstra untuk melakukan pembatasan impor. Jadi meskipun sama-sama dikorup, di mata Kementerian yang memikirkan pembiayaan APBN, mungkin mendingan melakukan pembatasan impor daripada membiayai program-program baru yang akan dijalankan oleh Kementerian yang efisiensinya perlu dipertanyakan. Ini mungkin lho!
+Di samping itu, program-program seperti subsidi memerlukan pendanaan dari APBN. Sementara itu, tidak perlu dana ekstra untuk melakukan pembatasan impor. Jadi meskipun sama-sama dikorup, pembatasan impor lebih "hemat anggaran". Di mata Kementerian yang memikirkan pembiayaan APBN, mungkin mendingan melakukan pembatasan impor daripada membiayai program-program baru yang akan dijalankan oleh Kementerian yang efisiensinya perlu dipertanyakan. Ini mungkin lho!
 
 Tapi oke deh Sekian dulu postingan ini! Mari kita selalu optimis menjadi bangsa yang besar, maju, dan berdaya saing! Dan tetap makan gado-gado!
 
