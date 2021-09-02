@@ -112,7 +112,7 @@ Tanpa berpanjang lebar lagi, mari kita coba cek 'kandungan internasional' di dal
 
 
 
-Tentunya saya ga begitu paham struktur industri bumbu gado-gado. Karena itu, kita akan pake kira-kira aja. Dari bungkus belakang bumbu ini, dapat dilihat bahwa bumbunya antara lain adalah kacang tanah, cabe (capsicum), coconut sugar, bawang putih, bawang merah, garem, gula, dan pengawet (hiii baru ngeh ada pengawetnya tidaaaak).
+Tentunya saya ga begitu paham struktur industri bumbu gado-gado. Karena itu, kita akan pake kira-kira aja. Dari bungkus belakang bumbu ini, dapat dilihat bahwa bumbunya antara lain adalah kacang tanah, cabe (capsicum), coconut sugar, bawang putih, bawang merah, garem, gula, dan pengawet.
 
 
 
@@ -225,7 +225,7 @@ desc.drop_duplicates() # print
 
 
 
-Seperti dapat dilihat, deskripsinya agak menyebalkan wkwk. Saya sertakan juga bubuk bawang di situ. Untuk cabe, saya pake cabe kering. Saya ga gitu tau Coconut sugar pake HS yg mana, tapi jadinya di sini saya pake 170290. Feel free to disagree with my choices hahaha.
+Seperti dapat dilihat, deskripsinya agak panjang dan njelimet wkwk. Saya sertakan juga bubuk bawang di situ. Untuk cabe, saya pake cabe kering. Saya ga gitu tau Coconut sugar pake HS yg mana, tapi jadinya di sini saya pake 170290. Feel free to disagree with my choices hahaha.
 
 
 
@@ -397,7 +397,7 @@ Indonesia tidak perlu menunggu Donald Trump untuk membatasi impor. Diantara baha
 
 Pembatasan ini dirasa perlu karena Pemerintah berupaya melindungi petani, peternak dan nelayan di Indonesia dari kompetisi internasional. Indonesia memang memiliki beragam masalah dalam memajukan sektor pertanian. Solusi paling mudah dan populer adalah dengan melakukan pembatasan impor. Kenapa bisa populer ya? Ntahlah.
 
-## Snowball
+## Efek Domino Pembatasan Impor ke Industri
 
 Problem utama dari pembatasan impor adalah efeknya kepada konsumen dan industri hilir. Dampak langsung kepada konsumen (termasuk petani itu sendiri) dapat dilihat dari inflasi. Memang sebagian besar strategi impor pemerintah adalah untuk mengendalikan harga dan inflasi. Seperti kata akun ini:
 
@@ -407,21 +407,24 @@ Tentunya cabe agak beda ya, karena cabe merah bener-bener distop impornya, semen
 
 Dampak langsung juga dirasakan oleh industri hilir. Ketika harga bahan baku naik, maka harga produk turunannya juga akan naik. Seandainya PT Enak harus membeli bahan baku dengan harga lebih mahal, otomatis harga bumbu gado-gadonya akan naik. Jika pembatasan perdagangannya sangat-sangat ketat, sementara domestik tidak bisa suplai bahan baku yang kompetitif, akan ada dua kemungkinan. Pertama, PT Enak bisa jadi memilih untuk pindah negara, dan beroperasi di negara yang boleh impor bahan baku dengan relatif lebih bebas. Kemungkinan kedua, PT Enak akan tetap operasi di Indonesia dan menaikkan harga. Tapi jika harganya terlalu tinggi, PT Enak akan kalah bersaing dari perusahaan yang ada di negara yang membolehkan impor. Ekspornya bisa jadi berkurang, atau malah bumbu gado-gado impor akan mulai menarik bagi konsumen Indonesia. Jika ini yang terjadi, kemungkinan PT Enak akan melobi pemerintah dan minta diproteksi juga.
 
-Di kasus tarif baja AS, tidak lama setelahnya, Trump harus [memberlakukan tarif kepada mesin cuci](https://www.economist.com/finance-and-economics/2021/02/11/washing-machines-reveal-how-trade-and-competition-are-linked) karena industri pembuatan mesin cuci di AS kalah bersaing dengan mesin cuci impor yang bajanya ga kena tarif. Kalau di Indonesia, mungkin contoh paling baik adalah tekstil. Ketika bahan kena kuota impor, maka baju jadi mahal. Akhirnya impor baju juga minta diproteksi.
+Di kasus tarif baja AS, tidak lama setelahnya, Trump harus [memberlakukan tarif kepada mesin cuci](https://www.economist.com/finance-and-economics/2021/02/11/washing-machines-reveal-how-trade-and-competition-are-linked) karena industri pembuatan mesin cuci di AS kalah bersaing dengan mesin cuci impor yang bajanya ga kena tarif. Kalau di Indonesia, mungkin contoh paling baik adalah tekstil. Ketika bahan-bahan tekstil kena kuota impor, maka harga baju jadi mahal. Akhirnya industri baju juga minta diproteksi dengan pembatasan impor. 
 
 Dampak pada industri hilir ini secara tidak langsung akan dirasakan oleh konsumen.
 
 ## Pembatasan impor adalah soal keberpihakan
 
-Pada prinsipnya, kebijakan pembatasan impor adalah sebuah keberpihakan. Ketika pemerintah memberlakukan kuota impor atau tariff pada industri hulu (seperti agraris), maka pemerintah sedang berpihak pada industri hulu dengan mengorbankan industri hilir. Begitupun sebaliknya. Jika proteksi diberlakukan pada dua-duanya? Korbannya tentu saja adalah konsumen. Di samping itu, ekonomi yang terlalu proteksionis akan memiliki masalah dalam bersaing di pasar global. Akhirnya kita akan ketinggal GVC, dan jadi perlu dipertanyakan juga ngapain kita ikut perjanjian perdagangan bebas? Apakah saatnya kita vote untuk Indonexit (voting keluar dari ASEAN gitu. Ala-ala Brexit kwkwk)?
+Pada prinsipnya, kebijakan pembatasan impor adalah sebuah keberpihakan. Ketika pemerintah memberlakukan kuota impor atau tariff pada industri hulu (seperti agraris), maka pemerintah sedang berpihak pada industri hulu dengan mengorbankan industri hilir. Begitupun sebaliknya. Jika proteksi diberlakukan pada dua-duanya? Korbannya tentu saja adalah konsumen. Di samping itu, ekonomi yang terlalu proteksionis akan memiliki masalah dalam bersaing di pasar global. Akhirnya kita akan ketinggal GVC, dan perdagangan secara umum akan jauh berkurang. Perusahaan PT Enak Jaya berpotensi gulung tikar atau pindah ke negara lain jika ingin tetap mempertahankan model bisnis GVC. Perlu dipertanyakan juga: ngapain kita ikut perjanjian perdagangan bebas? Apakah saatnya kita vote untuk Indonexit (voting keluar dari ASEAN gitu. Ala-ala Brexit kwkwk)?
 
-Dari sisi konstituen? Industri agrikultur masih merupakan penyumbang tenaga kerja yang besar. Petani di Indonesia masih banyak. Tentunya jika ada pemilu, program-program pro petani akan lebih populer.
+Dari sisi konstituen? Industri agrikultur masih merupakan penyumbang tenaga kerja yang besar. Petani di Indonesia masih banyak. Tentunya jika ada pemilu, program-program pro petani akan lebih populer. 
 
-Bagaimana dari sisi pemerintah? Coba kita bahas dari sisi baik. Sepanjang pengetahuan saya, industri manufaktur adalah penyumbang pajak mayoritas. Penting bagi pemerintah Indonesia untuk memiliki industri manufaktur yang tajir, karena duit APBN datang dari situ. Jika pemerintah ingin memaksimalkan pajak, maka wajar jika pemerintah berpihak kepada industri manufaktur. Industri manufaktur juga kayaknya lebih banyak diisi pekerja yang formal daripada yang informal. Mungkin lebih baik jika industrialisasi diperkuat dan petani pada beralih kerja menjadi pekerja atau pemilik pabrik?
+Dari sisi konstituen? Industri agrikultur masih merupakan penyumbang tenaga kerja yang besar. Petani di Indonesia masih banyak. Tentunya jika ada pemilu, program-program pro petani akan lebih populer. 
+Bagaimana dari sisi pemerintah? Coba kita bahas dari sisi baik. Sepanjang pengetahuan saya, industri manufaktur adalah penyumbang pajak mayoritas. Penting bagi pemerintah Indonesia untuk memiliki industri manufaktur yang tajir, karena duit APBN datang dari situ. Jika pemerintah ingin memaksimalkan pajak, maka wajar jika pemerintah berpihak kepada industri manufaktur. Di samping itu, Industri manufaktur juga kayaknya lebih banyak diisi pekerja yang formal daripada yang [informal](https://www.bps.go.id/indicator/6/1171/1/persentase-tenaga-kerja-informal-sektor-pertanian.html). Dari sisi ini, pajak yang dihasilkan oleh industri manufaktur dapat digunakan untuk menjalankan program yang memberikan "kompensasi" pada sektor pertanian. Hal ini lebih produktif daripada pembatasan impor.
 
-Jika kita mau berpikir jelek, pembatasan impor memberikan "insentif" tertentu bagi elit-elit di pemerintahan. Udah segudang kasus korupsi yang melibatkan kuota impor. Diantara kasus korupsi kuota impor yang paling terkenal mungkin adalah [kasus suap kuota daging sapi](https://nasional.tempo.co/read/458101/suap-daging-pks-begini-awal-mulanya) yang melibatkan petinggi penting sebuah parpol. Namun kasus korupsi juga tidak jauh dari bumbu gado-gado yang saya beli. Diantaranya kasus suap [kuota bawang putih](https://nasional.tempo.co/read/1290541/bin-dituduh-punya-jatah-dalam-kasus-suap-impor-bawang-putih/full&view=ok), yang akhirnya pelakunya dipenjara meskipun di bawah tuntutan. Di samping itu, ada juga kasus [korupsi gula](https://nasional.tempo.co/read/1341932/suap-impor-gula-kpk-tuntut-eks-bos-ptpn-iii-6-tahun-penjara) yang melibatkan eks bos BUMN gula, dan ada juga tersangka [pengadaan garam impor](https://tirto.id/korupsi-dan-sengkarut-pengelolaan-garam-cqvi). Suap-menyuap ini, [menurut KPPU](https://bisnis.tempo.co/read/1454576/kppu-ingatkan-pemerintah-soal-potensi-rente-impor-garam/full&view=ok), diakibatkan oleh buruknya transparansi penunjukkan perusahaan yang berhak mendapatkan kuota.
+Jika kita mau berpikir jelek, pembatasan impor juga menarik karena pembatasan impor memberikan "insentif" tertentu bagi elit-elit di pemerintahan. Udah segudang kasus korupsi yang melibatkan kuota impor. Diantara kasus korupsi kuota impor yang paling terkenal mungkin adalah [kasus suap kuota daging sapi](https://nasional.tempo.co/read/458101/suap-daging-pks-begini-awal-mulanya) yang melibatkan petinggi penting sebuah parpol. Namun kasus korupsi juga tidak jauh dari bumbu gado-gado yang saya beli. Diantaranya kasus suap [kuota bawang putih](https://nasional.tempo.co/read/1290541/bin-dituduh-punya-jatah-dalam-kasus-suap-impor-bawang-putih/full&view=ok), yang akhirnya pelakunya dipenjara meskipun di bawah tuntutan. Di samping itu, ada juga kasus [korupsi gula](https://nasional.tempo.co/read/1341932/suap-impor-gula-kpk-tuntut-eks-bos-ptpn-iii-6-tahun-penjara) yang melibatkan eks bos BUMN gula, dan ada juga tersangka [pengadaan garam impor](https://tirto.id/korupsi-dan-sengkarut-pengelolaan-garam-cqvi). Suap-menyuap ini, [menurut KPPU](https://bisnis.tempo.co/read/1454576/kppu-ingatkan-pemerintah-soal-potensi-rente-impor-garam/full&view=ok), diakibatkan oleh buruknya transparansi penunjukkan perusahaan yang berhak mendapatkan kuota.
 
-Tidak semuanya kasus korupsi. kadang pengendalian perdagangan juga tidak sempurna dan mengakibatkan adanya barang ilegal atau palsu, seperti di kasus [bawang merah](https://www.merdeka.com/uang/pemerintah-dituding-berperan-ciptakan-kasus-bawang-merah-palsu.html).
+Jadi kalo pemerintah bilang pembatasan impor adalah demi rakyat, ya mungkin bisa dipikir-pikir lagi wkwkw.
+
+Oh ya, Tidak semua jeleknya pembatasan impor adalah terkait kasus korupsi. kadang pengendalian perdagangan juga tidak sempurna dan mengakibatkan adanya barang ilegal atau palsu, seperti di kasus [bawang merah](https://www.merdeka.com/uang/pemerintah-dituding-berperan-ciptakan-kasus-bawang-merah-palsu.html).
 
 Salah satu penelitian yang mencoba mendokumentasikan hal-hal ini ditulis oleh kolega saya Felippa Amanta yang bisa dibaca di [sini](https://repository.cips-indonesia.org/media/341330-dampak-negatif-kebijakan-perdagangan-non-d6b37e99.pdf).
 
