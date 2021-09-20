@@ -73,7 +73,7 @@ pake ini juga bisa $\rightarrow$ https://s.id/utNne
 
 please navigate to:
 
-[pollev.com/imedkrisna007](https://pollev.com/kgupta180)
+[pollev.com/kgupta180](https://pollev.com/kgupta180)
 
 Masukan username anda
 
