@@ -46,10 +46,10 @@ PhD Candidate in Economics
 ## beberapa riset dan publikasi 😎
 
 - {{< cite page="/publication/bies" view="4" >}}
-- {{< cite page="/publication/ppia" view="4" >}}
+- {{< cite page="/publication/ppid" view="4" >}}
 - {{< cite page="/publication/conf2" view="4" >}}
 - {{< cite page="/publication/covppe" view="4" >}}
-- {{< cite page="/publication/iacepa" view="4" >}}
+- {{< cite page="/publication/neracakomoditas" view="4" >}}
 
 ---
 
