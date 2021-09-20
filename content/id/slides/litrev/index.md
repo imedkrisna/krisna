@@ -18,11 +18,11 @@ slides:
 # Tinjauan literatur
 
 ##### Kuliah Tamu Seminar Ekonomi Internasional
-##### Senin, 9 November 2020  
+##### Senin, 20 September 2021  
 Krisna 'Imed' Gupta  
 Australian National University  
 PhD Candidate in Economics  
-[krisna.netlify.app](krisna.netlify.app)
+[krisna.or.id](https://krisna.or.id/)
 
 ---
 
@@ -37,7 +37,7 @@ PhD Candidate in Economics
   - PPIE, UI: Macroeconomics 2, Microeconomics 2
   - CBE, ANU: Macro 3, Micro 2, Applied forecasting
 
-- Sparetime activity includes blogging, twitter-ranting, casual sports & singing
+- Sparetime activity includes blogging, [twitter-ranting](https://twitter.com/imedkrisna/), casual sports & singing
 
 ---
 
@@ -61,7 +61,7 @@ PhD Candidate in Economics
 
 Silakan gunakan raise hand atau chat jika ingin bertanya di tengah jalan
 
-Slide dapat diakses di [blog saya](https://krisna.netlify.app/), [krisna.netlify.app/slides/litrev/](https://s.id/utNne)
+Slide dapat diakses di [blog saya](https://krisna.netlify.app/), [krisna.or.id/slides/litrev/](https://s.id/utNne)
 
 pake ini juga bisa $\rightarrow$ https://s.id/utNne
 
@@ -73,7 +73,7 @@ pake ini juga bisa $\rightarrow$ https://s.id/utNne
 
 please navigate to:
 
-[pollev.com/imedkrisna007](https://pollev.com/imedkrisna007)
+[pollev.com/imedkrisna007](https://pollev.com/kgupta180)
 
 Masukan username anda
 
@@ -81,15 +81,7 @@ Mulai memilih!
 
 ---
 
-<iframe src="https://embed.polleverywhere.com/multiple_choice_polls/y9pHFzXBSDUmB6NwVHpJQ?controls=none&short_poll=true" width="800" height="600" frameBorder="0"></iframe>
-
----
-
-<iframe src="https://embed.polleverywhere.com/multiple_choice_polls/ko6FJlIrIly8NQuc7nJtd?controls=none&short_poll=true" width="800" height="600" frameBorder="0"></iframe>
-
----
-
-<iframe src="https://embed.polleverywhere.com/multiple_choice_polls/t6dnA54dyePbWJ1IAJluv?controls=none&short_poll=true" width="800" height="600" frameBorder="0"></iframe>
+<iframe src="https://embed.polleverywhere.com/multiple_choice_polls/y9pHFzXBSDUmB6NwVHpJQ?controls=none&short_poll=true" width="800px" height="600px"></iframe>
 
 ---
 
@@ -239,7 +231,7 @@ Kita bisa mulai mencari menggunakan kata kunci Y atau X, atau keduanya.
 
   - General equilibrium: Hertel, Horridge, McKibbin, Dixon, Costinot
 
-  - Indonesian context: Sjoholm, Hill, Aswicahyono, Patunru
+  - Indonesian context: Sjoholm, Hill, Aswicahyono, Patunru, Sparrow
 
 - Bisa juga tanya dosen
 
