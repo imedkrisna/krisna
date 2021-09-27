@@ -68,3 +68,4 @@ Postingan ini khusus buat contekan belajaran waktu nyoba-nyoba. Akan coba dibagi
 
 ### Academics
 - [mindmap generator untuk paper akademis](https://www.connectedpapers.com/)
+- [Open source econ book](https://core-econ.org/the-economy/book/text/17.html?utm_source=sendinblue&utm_campaign=CORE_Teachers_update__25_August&utm_medium=email#figure-17-24d)
