@@ -36,7 +36,7 @@ featured: false
 #   icon_pack: fab
 #   icon: twitter
 
-url_pdf: "https://www.researchgate.net/publication/346626166_THE_HETEROGENOUS_IMPACT_OF_TARIFF_AND_NTM_ON_TOTAL_FACTOR_PRODUCTIVITY_OF_INDONESIAN_FIRMS"
+url_pdf: "https://acde.crawford.anu.edu.au/publication/working-papers-trade-and-development/19325/heterogeneous-impact-tariff-and-non-tariff"
 url_code:
 url_dataset:
 url_poster:
@@ -68,4 +68,4 @@ projects: []
 slides: "paper2/index.html"
 ---
 
-Artikel ini masih di tahap pengembangan dan belum mengalami 'peer review'. Artikel ini telah dipresentasikan di Economics PhD Seminar di Crawford School of Public Policy. Slide presentasi dapat diakses [di sini](https://krisna.netlify.app/talk/paper2/index.html)
+Artikel ini telah diterima untuk diterbitkan di Bulletin of Indonesian Economic Studies (BIES) dan sedang mengalami proses edit. Artikel versi pre-edit dapat diakses di [sini](https://acde.crawford.anu.edu.au/publication/working-papers-trade-and-development/19325/heterogeneous-impact-tariff-and-non-tariff). Artikel ini telah dipresentasikan di Economics PhD Seminar di Crawford School of Public Policy. Slide presentasi dapat diakses [di sini](https://krisna.netlify.app/talk/paper2/index.html)
