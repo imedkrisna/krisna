@@ -1,8 +1,8 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: "Bukusdgs"
-event:
+title: "Isu-isu ekonomi dalam kerangka SDGs di Indonesia"
+event: Webinar Fakultas Ekonomi dan Bisnis UNS Universitas Negeri Solo
 event_url:
 location:
 address:
@@ -11,8 +11,8 @@ address:
   region:
   postcode:
   country:
-summary:
-abstract:
+summary: Saya bersama kolega saya membahas buku PPI Dunia tentang Indonesia Emas Berkelanjutan seri 1 Ekonomi terbitan LIPI Press
+abstract: Saya bersama kolega saya membahas buku PPI Dunia tentang Indonesia Emas Berkelanjutan seri 1 Ekonomi terbitan LIPI Press
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
@@ -23,8 +23,8 @@ all_day: false
 # Schedule page publish date (NOT event date).
 publishDate: 2021-10-06T20:29:40+11:00
 
-authors: []
-tags: []
+authors: [admin]
+tags: [economics]
 
 # Is this a featured event? (true/false)
 featured: false
@@ -57,7 +57,7 @@ url_video:
 #   Simply enter your slide deck's filename without extension.
 #   E.g. `slides = "example-slides"` references `content/slides/example-slides.md`.
 #   Otherwise, set `slides = ""`.
-slides: ""
+slides: "bukusdgs"
 
 # Projects (optional).
 #   Associate this post with one or more of your projects.
@@ -66,3 +66,5 @@ slides: ""
 #   Otherwise, set `projects = []`.
 projects: []
 ---
+
+Klik `presentasi` di atas untuk melihat paparan saya. akses bukunya di [sini](https://lipipress.lipi.go.id/detailpost/indonesia-emas-berkelanjutan-2045-kumpulan-pemikiran-pelajar-indonesia-sedunia-seri-01-ekonomi) yaa 
