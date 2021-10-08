@@ -11,8 +11,8 @@ address:
   region:
   postcode:
   country:
-summary: Saya bersama kolega saya membahas buku PPI Dunia tentang Indonesia Emas Berkelanjutan seri 1 Ekonomi terbitan LIPI Press
-abstract: Saya bersama kolega saya membahas buku PPI Dunia tentang Indonesia Emas Berkelanjutan seri 1 Ekonomi terbitan LIPI Press
+summary: Saya bersama kolega saya berkesempatan membahas buku PPI Dunia tentang Indonesia Emas Berkelanjutan seri 1 Ekonomi terbitan LIPI Press. Sangat senang dapat berbagi layar dengan Pak Suryanto dan juga teman-teman mahasiswa di UNS!
+abstract: Saya bersama kolega saya membahas buku PPI Dunia tentang Indonesia Emas Berkelanjutan seri 1 Ekonomi terbitan LIPI Press. Sangat senang dapat berbagi layar dengan Pak Suryanto dan juga teman-teman mahasiswa di UNS!
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
@@ -67,4 +67,8 @@ slides: "bukusdgs"
 projects: []
 ---
 
-Klik `presentasi` di atas untuk melihat paparan saya. akses bukunya di [sini](https://lipipress.lipi.go.id/detailpost/indonesia-emas-berkelanjutan-2045-kumpulan-pemikiran-pelajar-indonesia-sedunia-seri-01-ekonomi) yaa 
+Klik `presentasi` di atas untuk melihat paparan saya. akses bukunya di [sini](https://lipipress.lipi.go.id/detailpost/indonesia-emas-berkelanjutan-2045-kumpulan-pemikiran-pelajar-indonesia-sedunia-seri-01-ekonomi) yaa.
+
+Rekamannya:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lEVKShEPnWM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
