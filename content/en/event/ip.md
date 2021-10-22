@@ -12,6 +12,8 @@ lastmod: 2020-08-16T19:33:41+10:00
 featured: true
 draft: false
 
+url_pdf: https://www.researchgate.net/publication/346643698_A_REVIEW_ON_INDONESIAN_TRADE_POLICY_IN_RESPONSE_TO_COVID-19
+
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.
 # Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
@@ -28,6 +30,8 @@ image:
 projects: []
 ---
 [the talk can be find in this link](https://www.covid19indonesia.net/events/trade-industry-and-investment-dealing-with-covid-19)
+
+
 [paper here](https://www.researchgate.net/publication/346643698_A_REVIEW_ON_INDONESIAN_TRADE_POLICY_IN_RESPONSE_TO_COVID-19)
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/x3nUgPQhF1U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
