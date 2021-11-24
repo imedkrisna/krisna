@@ -18,4 +18,11 @@ sns.set_context("paper",font_scale=1.5)
 plt.figure(figsize=(5,4),dpi=80, facecolor='w', edgecolor='k')
 ```
 
-hohoho
+## Control x and y axis in matplotlib
+```python
+ax.set_xlabel(‘angle’)
+ax.set_title('sine')
+ax.set_xticks([0,2,4,6])
+ax.set_xticklabels(['zero','two','four','six'])
+ax.set_yticks([-1,0,1])
+```
