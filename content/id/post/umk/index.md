@@ -4,9 +4,9 @@
 title: "Tentang upah minimum kabupaten/kota: ketinggian apa kerendahan?"
 subtitle: ""
 summary: ""
-authors: []
-tags: []
-categories: []
+authors: [admin]
+tags: [python, ekonomi, industri]
+categories: [python, ekonomi, industri]
 date: 2021-12-08T00:12:12+11:00
 lastmod: 2021-12-08T00:12:12+11:00
 featured: false
