@@ -101,7 +101,7 @@ Beberapa tambahan fakta tentang UMK 2019 (dalam rupiah):
 | Jawa Barat | Karawang | 4.594.324 | Kota Banjar | 1.831.884 |
 | Jawa Tengah | Kota Semarang | 2.715.000 | Banjarnegara | 1.748.000 |
 | D.I. Yogyakarta | Kota Yogyakarta | 1.846.400 | Gunung Kidul | 1.571.000 |
-| Jawa Timur | banyak | 1.763.267 |  Kota Surabaya | 3.871.052.6 |
+| Jawa Timur | Kota Surabaya | 3.871.052.6 | banyak | 1.763.267 | 
 
 UMK tertinggi adalah bar merah, terendah adalah yang hijau, dan biru adalah rata-rata. Di Jawa Timur, Kab/Kota yang paling rendah UMK-nya antara lain adalah PAMEKASAN, NGAWI, PONOROGO, SITUBONDO, MADIUN, MAGETAN, PACITAN, SAMPANG, dan TRENGGALEK (maaf hurup gede semua gara-gara label di Stata-nya wkwk. males kukecilin).
 
@@ -208,7 +208,7 @@ Untungnya hal ini juga bisa dilihat di report yang sama.
 
 ![MW3](mw3.jpg)
 
-Gambar di atas menunjukkan $\frac{\text{upah minimum}}{\text{upah rata-rata}}$ (bar merah) dan $\frac{\text{upah minimum}}{\text{upah median}}$ (bar biru). 100% artinya upah minimum sama dengan upah rata-rata atau upah median. Seperti kita lihat, upah minimum Indonesia berada di atas rata-rata dunia jika kita mengukur tinggi/rendahnya upah minimum dengan rasio $\frac{\text{upah minimum}}{\text{upah rata-rata}}$ dan $\frac{\text{upah minimum}}{\text{upah rata-rata}}$. Dengan instrumen ini, bisa dikatakan peraturan upah minimum Indonesia agak-agak ketinggian dibandingkan dengan level upah regionalnya (rata-rata atau median), jika kita bandingkan dengan Vietnam, China, Filipina dan Thailand.
+Gambar di atas menunjukkan $\frac{\text{upah minimum}}{\text{upah rata-rata}}$ (bar merah) dan $\frac{\text{upah minimum}}{\text{upah median}}$ (bar biru). 100% artinya upah minimum sama dengan upah rata-rata atau upah median. Seperti kita lihat, upah minimum Indonesia berada di atas rata-rata dunia jika kita mengukur tinggi/rendahnya upah minimum dengan rasio $\frac{\text{upah minimum}}{\text{upah rata-rata}}$ dan $\frac{\text{upah minimum}}{\text{upah median}}$. Dengan instrumen ini, bisa dikatakan peraturan upah minimum Indonesia agak-agak ketinggian dibandingkan dengan level upah regionalnya (rata-rata atau median), jika kita bandingkan dengan Vietnam, China, Filipina dan Thailand.
 
 Dengan kata lain, ada banyak indikator untuk mengatakan apakah peraturan upah minimum di Indonesia ini "ketinggian" atau "kerendahan". Kita gak terlalu tau Menaker menggunakan alat ukur yang mana ketika dia bilang upah minimum di Indonesia ketinggian. Ada banyak *layering* sampai ke keramaian di twitter kan. Menaker mengucapkannya pada siaran pers, yang mana sebagian besar dari kita tidak datang ke acaranya. Pers menuliskannya dalam berita, pasang judul yang "representatif", lalu dipost ditwitter dan disebarluaskan oleh para netizen dengan konteks masing-masing. Distorsi komunikasi bisa datang dari level manapun pada proses barusan. Kita nggak tau apakah yang baca hasil cuitan netizen ini buka beritanya atau tidak, buka reportnya atau tidak, dst.
 
