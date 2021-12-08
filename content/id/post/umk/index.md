@@ -101,7 +101,7 @@ Beberapa tambahan fakta tentang UMK 2019 (dalam rupiah):
 | Jawa Barat | Karawang | 4.594.324 | Kota Banjar | 1.831.884 |
 | Jawa Tengah | Kota Semarang | 2.715.000 | Banjarnegara | 1.748.000 |
 | D.I. Yogyakarta | Kota Yogyakarta | 1.846.400 | Gunung Kidul | 1.571.000 |
-| Jawa Timur | Kota Surabaya | 3.871.052.6 | banyak | 1.763.267 | 
+| Jawa Timur | Kota Surabaya | 3.871.052 | banyak | 1.763.267 | 
 
 UMK tertinggi adalah bar merah, terendah adalah yang hijau, dan biru adalah rata-rata. Di Jawa Timur, Kab/Kota yang paling rendah UMK-nya antara lain adalah PAMEKASAN, NGAWI, PONOROGO, SITUBONDO, MADIUN, MAGETAN, PACITAN, SAMPANG, dan TRENGGALEK (maaf hurup gede semua gara-gara label di Stata-nya wkwk. males kukecilin).
 
