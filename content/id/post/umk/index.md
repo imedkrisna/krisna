@@ -214,6 +214,10 @@ Dengan kata lain, ada banyak indikator untuk mengatakan apakah peraturan upah mi
 
 Nah, kalau menurut berita di [idxchannel ini](https://www.idxchannel.com/economics/menaker-sebut-upah-minimum-di-indonesia-terlalu-tinggi-ini-penjelasannya), Menaker menggunakan Kaitz Index. Kaitz Index sendiri lebih cocok kita kaitkan dengan $\frac{\text{upah minimum}}{\text{upah median}}$. Sepertinya sih kalau pakai instrumen yang ini, pernyataan Menaker cukup valid.
 
+UMK yang terlalu tinggi juga dapat dilihat dari perubahan pada tingkat informalitas ekonomi. Ekonomi informal, atau ekonomi yang isinya adalah para pelaku ekonomi (pegawai maupun pemilik usaha) yang tidak terdaftar pada basis data dunia usaha. Para pelaku ekonomi informal umumnya tidak punya NPWP (dan ga bayar pajak), dan jarang punya perlindungan seperti asuransi ketenagakerjaan ataupun dana pensiun. Karena sifatnya yang tidak terdata, para pelaku usaha informal tentunya juga lebih mungkin tidak bayar gaji sesuai UMK, dan pekerja informal juga umumnya digaji di bawah UMK.
+
+Dengan kata lain, semakin tinggi UMK, semakin kecil alasan bagi pelaku usaha untuk jadi formal, karena mereka jadi harus bayar sesuai UMK. Pun dengan pekerja, seiring dengan berkurangnya lapangan kerja yang membayar di atas UMK, maka mereka dengan terpaksa akan bergabung ke ekonomi informal dan menerima gaji di bawah UMK. Dengan kata lain, UMK yang terlalu tinggi dapat berdampak pada peningkatan "pasar gelap" di dalam pasar ketenagakerjaan. Indonesia sendiri termasuk salah satu negara dengan [tingkat ekonomi informal yang cukup tinggi](https://www.lowyinstitute.org/the-interpreter/true-challenge-indonesia-s-large-informal-economy).
+
 Sekian postingan kali ini. Jadi apakah UMK ketinggian apa kerendahan? Hahaha tanya Dika aja ya jangan tanya saya wkwkwk. Intinya sih selalu kritis dalam menerima informasi baik dari postingan di twitter maupun sumber lainnya (termasuk blog ini!). Selalu kroscek dan rajin-rajin baca studi yang lebih mendalam, atau bahkan lebih baik lagi, buatlah studinya sendiri!
 
 n.b.: Data UMK Pulau Jawa 2019 lihat di bawah ini yaa. Untuk yang 2002-2014 boleh coba kontak Dika hahaha.
