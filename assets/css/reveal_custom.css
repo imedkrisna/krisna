@@ -27,6 +27,10 @@
   color: #ffff00
 }
 
+.reveal strong {
+  color: orange;
+}
+
 .reveal a:link,
 .reveal a:active {
     color: #DD8D29; /*Fantastic Mr. Fox */

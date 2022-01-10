@@ -40,7 +40,7 @@ slides:
 
 # Neraca Komoditas
 
-## Brief for External Relation
+### Brief for External Relation
 
 Krisna Gupta  
 12 January 2021
@@ -114,15 +114,15 @@ The neutral:
 ## Is NK Good? More or less
 
 The, uh, not so good:
-- PP28/2021 contains many goods currently not quota-controlled by the government. Does this mean the government can control it in the future?
-- Less flexible: if NK is used without compromised, then it will hard to adjust changes in the global economic condition. Case in point: coal.
-- Price is absent in the NK discussion (AFAIK). We know that price has been influential in government’s decision to open/close trade.
-- One portal: merging many ministries & bodies’ online system into one system may not be as smooth. Traffic, compatibility, sectoral ego, etc.
-- Illusion of power: just because we have the data doesn’t mean its good. Just because its good doesn’t mean it provides information we want. Just cuz we have the information doesn’t mean it is easy to control trade.
-- Moving up to more complex, heavily GVC goods increase NK’s complexity. Simple supply-demand data becomes even more nuanced.
-- Kemendag becomes very powerful(See Permendag 18,19,20 2021)
-- UU CK is under scrutiny by MK, which adds uncertainty regarding its legality.
-- Unclear about Material Center.
+- PP28/2021 contains many goods **currently not quota-controlled by the government**. Does this mean the government can control it in the future?
+- **Less flexible**: if NK is used without compromised, then it will hard to adjust changes in the global economic condition. Case in point: coal.
+- **Price is absent** in the NK discussion (AFAIK). We know that price has been influential in government’s decision to open/close trade.
+- **One portal**: merging many ministries & bodies’ online system into one system may not be as smooth. Traffic, compatibility, sectoral ego, etc.
+- **Illusion of power**: just because we have the data doesn’t mean its good. Just because its good doesn’t mean it provides information we want. Just cuz we have the information doesn’t mean it is easy to control trade.
+- Moving up to **more complex, heavily GVC goods** will increase NK’s complexity. Simple supply-demand data becomes even more nuanced.
+- **Kemendag becomes very powerful**(See Permendag 18,19,20 2021)
+- UU CK is under scrutiny by MK, which adds **uncertainty regarding its legality**.
+- Unclear about **Material Center**.
 
 ---
 
@@ -132,7 +132,8 @@ The, uh, not so good:
 
 - There is a potential for pareto improvement compared to the status quo.
 - quota is still bad
-- NK as a data is good. Using it for quota, not so good.
+- NK as a data is good. Using it for quota, not so good.  
+
 - We recommend:
   - Be very careful using NK for setting quota, especially when moving up the value chain.
   - Make sure that transparency is improved especially regarding how much quota is available for who.
@@ -142,4 +143,4 @@ The, uh, not so good:
 
 ---
 
-## Q & A
+<iframe src="https://giphy.com/embed/DAtJCG1t3im1G" width="800" height="600" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/maudit-buster-keaton-the-end-blacksmith-DAtJCG1t3im1G">via GIPHY</a></p>
