@@ -429,12 +429,3 @@ plt.legend(bbox_to_anchor=(1,0.5))
 Daaan memang Stainless Steel Indonesia bisa dibilang yang paling murah diantara negara-negara di atas. Tentunya kita harus berhati-hati menggunakan harga ini ya. Kalau produknya sama, berarti Indonesia justru hebat karena bisa produksi dengan harga miring. Tapi wajar sih ya yang lain kan harus akses Nikel yang harga internasionalnya mahal, sementara produsen di Indonesia pakai produk sendiri yang ekspornya dilarang, jadi harga bahan baku bisa ditekan. Di samping itu, bisa saja di negara yang lebih maju, *concern* tentang emisi mengakibatkan biaya produksi yang lebih tinggi daripada negara yang tidak terlalu mengutamakan isu lingkungan.
 
 Yaudah sih sekian dulu postingan hari ini. Masih banyak info yang perlu digali, tapi bisa jadi ini adalah contoh sukses penggunaan larangan ekspor untuk menarik investasi asing dan tenaga kerja untuk meningkatkan nilai tambah di dalam negeri. Gimana menurut anda? Apakah ini adalah hal yang baik? Mensen saya di [@twitter](https://twitter.com/imedkrisna) ya buat berdiskusi!
-
-N.B.: Data yang saya pake semua didownload di [UNCOMTRADE]() secara gratis. Bisa dicek di bawah ini kalau mau ngutik-ngutik sendiri. ada 2 tabel yaa.
-
-{{< table path="stainlesssteel.csv" header="true" caption="Table 1: Ekspor 3 jenis stainless steel Indonesia" >}}
-{{< table path="stainlesssteel2.csv" header="true" caption="Table 2: Ekspor HS 7218 oleh berbagai negara" >}}
-
-```python
-
-```
