@@ -1,17 +1,17 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: "NK"
-event:
+title: "Unpacking the Neraca Komoditas"
+event: "CIPS Policy Roundtable"
 event_url:
-location:
+location: zoom
 address:
   street:
   city:
   region:
   postcode:
   country:
-summary:
+summary: In this event, I discussed
 abstract:
 
 # Talk start and end times.
@@ -49,7 +49,7 @@ image:
 url_slides:
 
 url_code:
-url_pdf:
+url_pdf: https://cutt.ly/cips-pp47
 url_video:
 
 # Markdown Slides (optional).
