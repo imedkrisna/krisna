@@ -11,8 +11,8 @@ address:
   region:
   postcode:
   country:
-summary: In this event, I discussed a paper written by me, Deasy and Donny about indonesia's recent development of trade policy, the Neraca Komoditas. Neraca Komoditas is one of Omnibus Law's follow-up regulation on trade, said to use data on supply and demand to set quota on export and import. It aims to help firms access intermediate inputs. We provide some analysis on how it may not actually help the cause.
-abstract: In this event, I discussed a paper written by me, Deasy and Donny about indonesia's recent development of trade policy, the Neraca Komoditas. Neraca Komoditas is one of Omnibus Law's follow-up regulation on trade, said to use data on supply and demand to set quota on export and import. It aims to help firms access intermediate inputs. We provide some analysis on how it may not actually help the cause.
+summary: In this event, I discusses CIPS Policy Paper No. 47 "The Advent of A New Trade Governance After The Omnibus Law, Neraca komoditas" by me, Deasy and Donny. The paper is about indonesia's recent development of trade policy, the Neraca Komoditas. Neraca Komoditas is one of Omnibus Law's follow-up regulation on trade, said to use data on supply and demand to set quota on export and import. It aims to help firms access intermediate inputs. We provide some analysis on how it may not actually help the cause.
+abstract: In this event, I discusses CIPS Policy Paper No. 47 "The Advent of A New Trade Governance After The Omnibus Law, Neraca komoditas" by me, Deasy and Donny. The paper is about indonesia's recent development of trade policy, the Neraca Komoditas. Neraca Komoditas is one of Omnibus Law's follow-up regulation on trade, said to use data on supply and demand to set quota on export and import. It aims to help firms access intermediate inputs. We provide some analysis on how it may not actually help the cause.
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
@@ -66,3 +66,5 @@ slides: ""
 #   Otherwise, set `projects = []`.
 projects: []
 ---
+
+To access the paper, click the thumbnail above or alternatively click [here](https://repository.cips-indonesia.org/publications/354718/the-advent-of-a-new-trade-governance-after-the-omnibus-law-neraca-komoditas)
