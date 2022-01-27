@@ -3,7 +3,7 @@
 
 title: "Unpacking the Neraca Komoditas"
 event: "CIPS Policy Roundtable"
-event_url:
+event_url: https://cutt.ly/ThePolicyRoundtable-27Jan
 location: zoom
 address:
   street:
