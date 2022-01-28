@@ -5,9 +5,9 @@
 
 # Appearance
 
-theme: razer
+theme: minimal
 day_night: true
-font: native
+font: ''
 font_size: M
 
 # SEO
