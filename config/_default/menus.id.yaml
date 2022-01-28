@@ -1,0 +1,35 @@
+# Navigation Links
+#   To link a homepage widget, specify the URL as a hash `#` followed by the filename of the
+#     desired widget in your `content/home/` folder.
+#   The weight parameter defines the order that the links will appear in.
+
+main:
+  - name: Beranda
+    url: '#about'
+    weight: 10
+  - name: Blog
+    url: '#posts'
+    weight: 20
+  - name: Publikasi
+    url: '#featured'
+    weight: 30
+  - name: Presentasi
+    url: '#events'
+    weight: 40
+  - name: Kontak
+    url: '#contact'
+    weight: 60
+
+# Link to a PDF of your resume/CV from the menu.
+# To enable, copy your resume/CV to `static/uploads/resume.pdf` and uncomment the lines below.
+  - name: CV
+    url: '#CV'
+    weight: 70
+
+  - name: "🎵"
+    url: "#hobby"
+    weight: 90
+  
+  - name: "🔎"
+    url: "/search"
+    weight: 100
