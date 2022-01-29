@@ -50,7 +50,7 @@ url_slides: https://drive.google.com/file/d/1ozl2gV9zOeYZReF5fcx1cpYyuIrdsMiv/vi
 
 url_code:
 url_pdf: https://cutt.ly/cips-pp47
-url_video:
+url_video: https://www.youtube.com/watch?v=rj2MhtJXnMc
 
 # Markdown Slides (optional).
 #   Associate this event with Markdown slides.
@@ -68,3 +68,7 @@ projects: []
 ---
 
 To access the paper, click the thumbnail above or alternatively click [here](https://repository.cips-indonesia.org/publications/354718/the-advent-of-a-new-trade-governance-after-the-omnibus-law-neraca-komoditas)
+
+The recorded event:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rj2MhtJXnMc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
