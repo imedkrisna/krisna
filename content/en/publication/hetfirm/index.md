@@ -24,8 +24,8 @@ abstract: "Indonesian government has been working hard in engaging with the worl
 # Summary. An optional shortened abstract.
 summary: ""
 
-tags: [economics,firms,trade,total factor productivity]
-categories: [economics,firms,trade,total factor productivity]
+tags: [ekonomi,perusahaan,perdagangan,total factor productivity]
+categories: [ekonomi,perusahaan,perdagangan,total factor productivity]
 featured: false
 
 # Custom links (optional).
@@ -36,7 +36,7 @@ featured: false
 #   icon_pack: fab
 #   icon: twitter
 
-url_pdf: "https://acde.crawford.anu.edu.au/publication/working-papers-trade-and-development/19325/heterogeneous-impact-tariff-and-non-tariff"
+url_pdf: https://www.tandfonline.com/doi/full/10.1080/00074918.2021.2016613
 url_code:
 url_dataset:
 url_poster:
@@ -68,4 +68,6 @@ projects: []
 slides: "paper2/index.html"
 ---
 
-This paper has been accepted for publication at Bulletin of Indonesian Economic Studies (BIES) and is in the editing process at the moment. The pre-edit version is available at [ACDE Working Paper Series](https://acde.crawford.anu.edu.au/publication/working-papers-trade-and-development/19325/heterogeneous-impact-tariff-and-non-tariff). This paper has been peresented in Economics PhD Seminar at Crawford School of Public Policy. Presentation is available [in this link](https://krisna.netlify.app/talk/paper2/index.html)
+Artikel ini telah diterima untuk diterbitkan di Bulletin of Indonesian Economic Studies (BIES) dan sedang mengalami proses edit. Artikel versi pre-edit dapat diakses di [sini](https://acde.crawford.anu.edu.au/publication/working-papers-trade-and-development/19325/heterogeneous-impact-tariff-and-non-tariff). Artikel ini telah dipresentasikan di Economics PhD Seminar di Crawford School of Public Policy. Slide presentasi dapat diakses [di sini](https://krisna.netlify.app/talk/paper2/index.html)
+
+<a href="https://www.scimagojr.com/journalsearch.php?q=19966&amp;tip=sid&amp;exact=no" title="SCImago Journal &amp; Country Rank"><img border="0" src="https://www.scimagojr.com/journal_img.php?id=19966" alt="SCImago Journal &amp; Country Rank"  /></a>

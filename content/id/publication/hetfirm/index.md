@@ -36,7 +36,7 @@ featured: false
 #   icon_pack: fab
 #   icon: twitter
 
-url_pdf: "https://acde.crawford.anu.edu.au/publication/working-papers-trade-and-development/19325/heterogeneous-impact-tariff-and-non-tariff"
+url_pdf: https://www.tandfonline.com/doi/full/10.1080/00074918.2021.2016613
 url_code:
 url_dataset:
 url_poster:
@@ -69,3 +69,5 @@ slides: "paper2/index.html"
 ---
 
 Artikel ini telah diterima untuk diterbitkan di Bulletin of Indonesian Economic Studies (BIES) dan sedang mengalami proses edit. Artikel versi pre-edit dapat diakses di [sini](https://acde.crawford.anu.edu.au/publication/working-papers-trade-and-development/19325/heterogeneous-impact-tariff-and-non-tariff). Artikel ini telah dipresentasikan di Economics PhD Seminar di Crawford School of Public Policy. Slide presentasi dapat diakses [di sini](https://krisna.netlify.app/talk/paper2/index.html)
+
+<a href="https://www.scimagojr.com/journalsearch.php?q=19966&amp;tip=sid&amp;exact=no" title="SCImago Journal &amp; Country Rank"><img border="0" src="https://www.scimagojr.com/journal_img.php?id=19966" alt="SCImago Journal &amp; Country Rank"  /></a>
