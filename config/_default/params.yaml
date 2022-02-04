@@ -5,9 +5,10 @@
 
 # Appearance
 
-theme: razer
+theme: mr robot
+
 day_night: true
-font: ''
+font: 'Mr Robot'
 font_size: M
 
 # SEO
@@ -130,7 +131,7 @@ comments:
     publication: true
     event: true
   disqus:
-    shortname: ''
+    shortname: 'imedkrisna'
     show_count: true
   commento:
     url: ''
