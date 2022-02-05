@@ -4,7 +4,7 @@
 # This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
 
 title: "Krisna 'imed' Gupta"  # Website name
-baseurl: 'https:krisna.or.id/' # Website URL
+baseurl: 'https://www.krisna.or.id/' # Website URL
 copyright: '' # Footer text, e.g. '© {year} Me'
 
 ############################
