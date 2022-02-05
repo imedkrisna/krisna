@@ -5,7 +5,7 @@ type: book
 weight: 30
 ---
 
-{{< callout note >}} This page is still under development. Expect weekly changes. {{< /callout >}}
+{{% callout note %}} This page is still under development. Expect weekly changes. {{% /callout %}}
 
 ## Assignment 1
 

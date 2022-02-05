@@ -6,7 +6,7 @@ date: '2021-01-24'
 type: book
 ---
 
-{{< callout note >}} This page is still under development. Expect weekly changes. {{< /callout >}}
+{{% callout note %}} This page is still under development. Expect weekly changes. {{% /callout %}}
 
 This is a course I designed and teach for bachelor level students at International Business Engineering (IBE) program at Universitas Kristen Petra, 2$^{nd}$ semester of 2020/2021. I use Essentials of Economics[^1] (Krugman and Wells, 2016) as my guide. The book is chosen because it mainly includes many global business examples and very easy to follow for business students but also for non-economics programs in general. Some examples used in this course may be tailored a bit on Indonesian context.
 
