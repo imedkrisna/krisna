@@ -131,7 +131,7 @@ comments:
     publication: true
     event: true
   disqus:
-    shortname: 'imedkrisna'
+    shortname: 'imedimud'
     show_count: true
   commento:
     url: ''
