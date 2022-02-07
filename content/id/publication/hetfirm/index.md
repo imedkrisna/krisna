@@ -42,7 +42,7 @@ url_code:
 url_dataset:
 url_poster:
 url_project:
-url_slides: "https://krisna.netlify.app/talk/paper2/index.html"
+url_slides: https://krisna.or.id/slides/paper2
 url_source:
 url_video:
 
@@ -66,9 +66,9 @@ projects: []
 #   Simply enter your slide deck's filename without extension.
 #   E.g. `slides: "example"` references `content/slides/example/index.md`.
 #   Otherwise, set `slides: ""`.
-slides: "paper2/index.html"
+slides: paper2
 ---
 
-Artikel ini telah diterima untuk diterbitkan di Bulletin of Indonesian Economic Studies (BIES) dan sedang mengalami proses edit. Artikel versi pre-edit dapat diakses di [sini](https://acde.crawford.anu.edu.au/publication/working-papers-trade-and-development/19325/heterogeneous-impact-tariff-and-non-tariff). Artikel ini telah dipresentasikan di Economics PhD Seminar di Crawford School of Public Policy. Slide presentasi dapat diakses [di sini](https://krisna.netlify.app/talk/paper2/index.html)
+Artikel ini telah diterima untuk diterbitkan di Bulletin of Indonesian Economic Studies (BIES) dan sedang mengalami proses edit. Artikel versi pre-edit dapat diakses di [sini](https://acde.crawford.anu.edu.au/publication/working-papers-trade-and-development/19325/heterogeneous-impact-tariff-and-non-tariff). Artikel ini telah dipresentasikan di Economics PhD Seminar di Crawford School of Public Policy. Slide presentasi dapat diakses [di sini](https://krisna.netlify.app/slides/paper2)
 
 <a href="https://www.scimagojr.com/journalsearch.php?q=19966&amp;tip=sid&amp;exact=no" title="SCImago Journal &amp; Country Rank"><img border="0" src="https://www.scimagojr.com/journal_img.php?id=19966" alt="SCImago Journal &amp; Country Rank"  /></a>
