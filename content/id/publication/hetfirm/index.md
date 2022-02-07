@@ -10,10 +10,11 @@ doi: "10.13140/RG.2.2.13503.53925"
 publishDate: 2020-12-04T21:12:42+11:00
 
 # Publication type.
+
 # Legend: 0 = Uncategorized; 1 = Conference paper; 2 = Journal article;
 # 3 = Preprint / Working Paper; 4 = Report; 5 = Book; 6 = Book section;
-# 7 = Thesis; 8 = Patent
-publication_types: ["3"]
+# 7 = Thesis; 8 = Patent; 9=popular; 10=review
+publication_types: ["2"]
 
 # Publication name and optional abbreviated publication name.
 publication: ""
