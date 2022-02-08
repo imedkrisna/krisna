@@ -16,5 +16,5 @@ weight = 65
 +++
 
 - Lihat CV saya dalam {{% staticref "files/CV.html" %}}format html{{% /staticref %}}.
-- Unduh saya dalam {{% staticref "files/CV.pdf" %}}format pdf{{% /staticref %}}.
+- Unduh CV saya dalam {{% staticref "files/CV.pdf" %}}format pdf{{% /staticref %}}.
 - Jika diperlukan, unduh foto saya dalam {{% staticref "files/foto_krisna.jpg" %}}format jpg{{% /staticref %}}.

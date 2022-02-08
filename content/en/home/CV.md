@@ -15,6 +15,6 @@ weight = 65
 
 +++
 
-- My CV {{% staticref "files/CV.html" %}}My CV in html{{% /staticref %}}.
-- My CV {{% staticref "files/CV.pdf" %}}My CV in pdf (download){{% /staticref %}}.
-- If need my photo, {{% staticref "files/foto_krisna.jpg" %}}Click here (jpg, download){{% /staticref %}}
+- My CV {{% staticref "files/CV.html" %}}in html{{% /staticref %}}.
+- My CV {{% staticref "files/CV.pdf" %}}in pdf (download){{% /staticref %}}.
+- If my photo is needed, {{% staticref "files/foto_krisna.jpg" %}}Click here (jpg, download){{% /staticref %}}
