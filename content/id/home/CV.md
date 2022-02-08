@@ -15,6 +15,6 @@ weight = 65
 
 +++
 
-{{% staticref "files/CV.html" %}}ketuk di sini untuk CV dalam html{{% /staticref %}}. Untuk mengunduh CV saya dalam format pdf, {{% staticref "files/CV.pdf" %}}ketuk di sini (pdf){{% /staticref %}}. (diperbarui pada 8 Februari 2022)
-
-Jika ada membutuhkan foto saya, silakan klik {{% staticref "files/foto_krisna.jpg" %}}di sini (jpg){{% /staticref %}}
+- Lihat CV saya dalam {{% staticref "files/CV.html" %}}format html{{% /staticref %}}.
+- Unduh saya dalam {{% staticref "files/CV.pdf" %}}format pdf{{% /staticref %}}.
+- Jika diperlukan, unduh foto saya dalam {{% staticref "files/foto_krisna.jpg" %}}format jpg{{% /staticref %}}.

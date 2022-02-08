@@ -15,6 +15,6 @@ weight = 65
 
 +++
 
-For a CV in a html format, {{% staticref "files/CV.html" %}}Click here (html){{% /staticref %}}. If you need a pdf format, {{% staticref "files/CV.pdf" %}}download here (pdf){{% /staticref %}}. (last update 8 February 2022)
-
-If you need my photo, {{% staticref "files/foto_krisna.jpg" %}}Click here (jpg){{% /staticref %}}
+- My CV {{% staticref "files/CV.html" %}}My CV in html{{% /staticref %}}.
+- My CV {{% staticref "files/CV.pdf" %}}My CV in pdf (download){{% /staticref %}}.
+- If need my photo, {{% staticref "files/foto_krisna.jpg" %}}Click here (jpg, download){{% /staticref %}}
