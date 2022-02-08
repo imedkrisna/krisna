@@ -15,6 +15,6 @@ weight = 65
 
 +++
 
-To see my CV, [click here (html)](files/cv.html) or [click here to download it in PDF](files/cv.pdf). (Last updated: August 18, 2020)
-
 For a CV in a html format, {{% staticref "files/CV.html" %}}Click here (html){{% /staticref %}}. If you need a pdf format, {{% staticref "files/CV.pdf" %}}download here (pdf){{% /staticref %}}. (last update 30 Juli 2021)
+
+If you need my photo, {{% staticref "files/foto_krisna.jpg" %}}Click here (jpg){{% /staticref %}}
