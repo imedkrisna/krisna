@@ -14,7 +14,7 @@ Aside
 ================================================================================
 
 
-![krisna Gupta](Avatar.jpg){width=35%}
+![krisna Gupta](foto_krisna.jpg){width=35%}
 
 
 Contact Info {#contact}
