@@ -26,7 +26,7 @@ summary: ""
 
 tags: [perdagangan,kebijakan]
 categories: [perdagangan, kebijakan]
-featured: false
+featured: true
 
 # Custom links (optional).
 #   Uncomment and edit lines below to show custom links.
