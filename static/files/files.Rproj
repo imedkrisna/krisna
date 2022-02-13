@@ -14,3 +14,7 @@ LaTeX: pdfLaTeX
 
 AutoAppendNewline: Yes
 StripTrailingWhitespace: Yes
+
+PythonType: conda
+PythonVersion: 3.8.12
+PythonPath: C:/Users/imedk/anaconda3/python.exe
