@@ -5,8 +5,8 @@ title: "Sentra produksi mobil listrik: investasi berbasis larangan ekspor?"
 subtitle: ""
 summary: ""
 authors: [admin]
-tags: [ekonomi,perdagangan,industri, teknologi]
-categories: [ekonomi,perdagangan,industri, teknologi]
+tags: [ekonomi,perdagangan,industri,mobil listrik]
+categories: [ekonomi,perdagangan,industri,mobil listrik]
 date: 2021-01-16T14:53:17+11:00
 lastmod: 2021-01-16T14:53:17+11:00
 featured: false
@@ -37,6 +37,23 @@ Hal yang tidak saya bahas di sana secara ekstensif adalah mengenai pentingnya pe
 Namun pelarangan ekspor mineral bukannya tanpa masalah. Dalam jangka pendek, pembatasan tersebut berakibat pada berkurangnya investasi dan lapangan kerja di [sektor hilir](https://www.iisd.org/sites/default/files/publications/case-study-indonesia-downstream-linkages.pdf). Harga jual nikel diatur oleh Kementerian ESDM untuk menjaga skala ekonomis smelter, yang berakibat pada harga jual di [bawah harga internasional](https://tirto.id/harga-patokan-nikel-ditetapkan-30-di-bawah-harga-internasional-fSwz). Proses pengawasan dan pengaturan harga ini dianggap belum efektif karena pengawasan yang [tidak tegas](https://katadata.co.id/sortatobing/berita/5f7b0de0c8da2/kisruh-penambang-vs-pemilik-smelter-soal-harga-bijih-nikel?utm_source=Direct&utm_medium=Tags%20Pelarangan%20Ekspor%20Nikel&utm_campaign=BIG%20HL%20Slide%201).
 
 Berikut ini harga nikel LME, saya comot dari IMF Cross Country Macroeconomic Statistics, sedot dari quandl.
+
+```python
+import quandl
+import datetime
+quandl.ApiConfig.api_key = 'vDm7zkSvztuywGuZuuvY'
+mydata = quandl.get('ODA/PNICK_USD', start_date="2010-01-31", paginate=True)
+mydata = mydata.reset_index()
+sns.lineplot(data=mydata,x='Date',y='Value')
+plt.axvline(x=pd.to_datetime("2013-12-31"),color='grey')
+plt.axvline(x=pd.to_datetime("2016-12-31"),color='grey')
+plt.axvline(x=pd.to_datetime("2019-12-31"),color='grey')
+plt.text(pd.to_datetime("2014-02-28"),25000,'larangan',fontsize=14)
+plt.text(pd.to_datetime("2017-02-28"),22500,'relaksasi',fontsize=14)
+plt.text(pd.to_datetime("2020-02-28"),25000,'larangan',fontsize=14)
+plt.title('Nickel; melting grade; LME spot price;\nCIF European ports; US$ per metric ton\nIMF Cross Country Macroeconomic Statistics via Nasdaq data link')
+plt.ylabel('US$')
+```
 
 
 
@@ -77,4 +94,42 @@ Tentu saja kita harus optimis Kementerian Perdagangan akan berhasil menyelesaika
 
 ## Update
 
-Tesla dikatakan akan lebih peka terhadap ESG sementara praktik ESG di Indonesia sepertinya [kurang baik](https://tirto.id/potensi-investasi-tesla-terganjal-karena-indonesia-tak-ramah-esg-gaa9).
+- Tesla dikatakan akan lebih peka terhadap ESG sementara praktik ESG di Indonesia sepertinya [kurang baik](https://tirto.id/potensi-investasi-tesla-terganjal-karena-indonesia-tak-ramah-esg-gaa9).
+
+- meskipun sempat turun, tapi investasi nikel sepertinya kembali menggeliat naik. ini dibarengi dengan semakin tajamnya investasi asing di industri logam dasar. Baterai (terdapat di dalam klasifikasi KBLI 27 "peralatan listrik") belum menunjukkan kenaikan yang signifikan.
+
+```python
+# sns.set_theme(style="white", palette="bright")
+dat=pd.read_csv('investasi_nikel.csv',parse_dates=['tahun'])
+sns.lineplot(data=dat,x="tahun",y="jutaUSD",hue="industri",style="industri",linewidth=2)
+plt.title('Gambar 1. Realisasi investasi di industri pertambangan,\nlogam dasar, dan peralatan listrik (BKPM)\n',fontsize=16)
+plt.ylabel('Juta Dolar AS',fontsize=14)
+plt.xlabel('Tahun',fontsize=14)
+plt.xlim(pd.to_datetime("2009"),)
+plt.legend(labels=['Pertambangan', 'Logam dasar', 'Peralatan listrik'],title='Jenis industri (KBLI 2 digit)',
+            bbox_to_anchor=(0.95,-0.1),ncol=3,fontsize=14)
+plt.ticklabel_format(style='plain', axis='y')
+plt.axvline(x=pd.to_datetime("2014"),color='grey')
+plt.axvline(x=pd.to_datetime("2017"),color='grey')
+plt.axvline(x=pd.to_datetime("2020"),color='grey')
+plt.text(pd.to_datetime("2012"),4e6,'larangan',fontsize=14)
+plt.text(pd.to_datetime("2015"),5e6,'relaksasi',fontsize=14)
+plt.text(pd.to_datetime("2018"),6.5e6,'larangan',fontsize=14)            
+```
+
+
+
+
+    Text(2018-01-01 00:00:00, 6500000.0, 'larangan')
+
+
+
+
+    
+![png](./index_3_1.png)
+    
+
+
+```python
+
+```

@@ -119,16 +119,31 @@ Untuk barang stainless steel yang ekspornya 1,6 miliar Dolar Amerika di 2020 sep
 Sekarang menjawab apakah kenaikan ini adalah sesuatu yang terjadi baru-baru ini saja, atau sebenernya ekspor Indonesia emang segitu tiap tahun? Saya coba tarik datanya dari tahun 2006 sampai 2020. Mari kita plot.
 
 ```python
-sns.lineplot(data=wew.query('`Commodity Code` == 7218'),x="Year",y="Trade Value (US$)",color="green")
-sns.lineplot(data=wew.query('`Commodity Code` == 7219'),x="Year",y="Trade Value (US$)",color="orange")
-sns.lineplot(data=wew.query('`Commodity Code` == 720260'),x="Year",y="Trade Value (US$)",color="magenta")
-plt.legend(labels=['7218','7219','ferro-nickel'])
+# sns.set_theme(style="white", palette="bright")
+plt.ticklabel_format(style='plain', axis='y')
+wew['value']=wew['Trade Value (US$)']/1000000
+sns.lineplot(data=wew.query('`Commodity Code` == 7218'),x="Year",y="value",color="green",linestyle='dashed',linewidth=2)
+sns.lineplot(data=wew.query('`Commodity Code` == 7219'),x="Year",y="value",color="blue",linestyle='dotted',linewidth=2)
+sns.lineplot(data=wew.query('`Commodity Code` == 720260'),x="Year",y="value",color="magenta",linewidth=2)
+#plt.legend(labels=['7218','7219','ferro-nickel'])
+plt.xlim(2009,)
+plt.ylabel('Juta Dolar AS',fontsize=14)
+plt.xlabel('Tahun',fontsize=14)
+plt.title('Gambar 2. Ekspor produk turunan bijih nikel, 2009-2020 (UN Comtrade) \n',fontsize=16)
+plt.axvline(x=2014,color='grey')
+plt.axvline(x=2017,color='grey')
+plt.axvline(x=2020,color='grey')
+plt.text(2012,3000,'larangan',fontsize=14)
+plt.text(2015,3500,'relaksasi',fontsize=14)
+plt.text(2018,4100,'larangan',fontsize=14)
+plt.legend(labels=['Stainless steel, ingots','Stainless steel, flat-rolled','Ferro-nickel'],title='',
+            bbox_to_anchor=(0.85,-0.1),ncol=2,fontsize=14)
 ```
 
 
 
 
-    <matplotlib.legend.Legend at 0x220e4898ca0>
+    <matplotlib.legend.Legend at 0x17c1f4dd100>
 
 
 
@@ -171,6 +186,7 @@ wew.query('(Year == 2016 | Year == 2020) & `Commodity Code`>7200')
       <th>Netweight (kg)</th>
       <th>Trade Value (US$)</th>
       <th>USD/ton</th>
+      <th>value</th>
     </tr>
   </thead>
   <tbody>
@@ -182,6 +198,7 @@ wew.query('(Year == 2016 | Year == 2020) & `Commodity Code`>7200')
       <td>2874022704</td>
       <td>4739112331</td>
       <td>1648.947423</td>
+      <td>4739.112331</td>
     </tr>
     <tr>
       <th>11</th>
@@ -191,6 +208,7 @@ wew.query('(Year == 2016 | Year == 2020) & `Commodity Code`>7200')
       <td>1087854208</td>
       <td>1630911693</td>
       <td>1499.200611</td>
+      <td>1630.911693</td>
     </tr>
     <tr>
       <th>15</th>
@@ -200,33 +218,37 @@ wew.query('(Year == 2016 | Year == 2020) & `Commodity Code`>7200')
       <td>1801937373</td>
       <td>2993037641</td>
       <td>1661.010913</td>
+      <td>2993.037641</td>
     </tr>
     <tr>
-      <th>23</th>
+      <th>25</th>
       <td>2016</td>
       <td>720260</td>
       <td>Ferro-alloys; ferro-nickel</td>
       <td>411438077</td>
       <td>571298623</td>
       <td>1388.540961</td>
+      <td>571.298623</td>
     </tr>
     <tr>
-      <th>28</th>
+      <th>30</th>
       <td>2016</td>
       <td>7218</td>
       <td>Stainless steel in ingots or other primary for...</td>
       <td>24614238</td>
       <td>30434580</td>
       <td>1236.462408</td>
+      <td>30.434580</td>
     </tr>
     <tr>
-      <th>33</th>
+      <th>35</th>
       <td>2016</td>
       <td>7219</td>
       <td>Stainless steel; flat-rolled products of width...</td>
       <td>49912515</td>
       <td>74135846</td>
       <td>1485.315777</td>
+      <td>74.135846</td>
     </tr>
   </tbody>
 </table>
@@ -249,7 +271,7 @@ plt.axhline(color='grey')
 
 
 
-    <matplotlib.lines.Line2D at 0x220e495deb0>
+    <matplotlib.lines.Line2D at 0x17c1f4f82b0>
 
 
 
@@ -365,14 +387,14 @@ b.query('Year == 2020')
       <td>14563591</td>
     </tr>
     <tr>
-      <th>683</th>
+      <th>857</th>
       <td>2020</td>
-      <td>Rep. of Korea</td>
-      <td>KOR</td>
+      <td>Sweden</td>
+      <td>SWE</td>
       <td>7218</td>
       <td>Stainless steel in ingots or other primary for...</td>
-      <td>2.022914e+06</td>
-      <td>2851620</td>
+      <td>4.217050e+07</td>
+      <td>147560969</td>
     </tr>
   </tbody>
 </table>
@@ -399,9 +421,30 @@ sns.lineplot(data=b,x="Year",y="Netweight (kg)",hue="Reporter", ax=ax[1])
     
 
 
-Gambar di atas, sebelah kiri adalah dalam Dolar Amerika sementara sebelah kanan dalam kilogram. Nilai ekspor ngedrop pada 2016 kayaknya gara-gara Presiden AS memberlakukan tariff terhadap baja. Tapi sekotar 2017 Uni Eropa berhasil nego dikit. Tapi jelas kelihatan bahwa seiring kenaikan ekspor Indonesia, ekspor negara lain menurun, terutama negara-negara barat. India dan RRT merupakan produsen, namun mereka menggunakan sebagian besar produknya untuk kepentingan domestik sehingga ekspornya kurang banyak. 
+Gambar di atas, sebelah kiri adalah dalam Dolar Amerika sementara sebelah kanan dalam kilogram. Nilai ekspor ngedrop pada 2016 kayaknya gara-gara Presiden AS memberlakukan tariff terhadap baja. Tapi sekotar 2017 Uni Eropa berhasil nego dikit. Tapi jelas kelihatan bahwa seiring kenaikan ekspor Indonesia, ekspor negara lain menurun, terutama negara-negara barat. India dan RRT merupakan produsen, namun mereka menggunakan sebagian besar produknya untuk kepentingan domestik sehingga ekspornya kurang banyak. Bahkan, hampir semua ferro-nickel Indonesia sebenernya buat dipake di RRT.
 
-Kalo RRT wajar sih, karena memang perusahaan China lah yang pindah ke Indonesia. Jadi sebenernya produsennya dia lagi dia lagi tapi pindah lokasi aja ke Indonesia. [India](https://economictimes.indiatimes.com/industry/indl-goods/svs/steel/import-of-stainless-steel-from-indonesia-grows-nearly-nine-times/articleshow/67852205.cms?from=mdr) dan Uni Eropa sama-sama lagi mengatur strategi bagaimana mengurangi impor dari Indonesia, sementara Taiwan memilih untuk mengikuti arus dan beli aja dari Indonesia daripada proteksi. Sementara itu, Produsen di Korea Selatan memilih untuk mengubah jenis baja yang mereka produksi, mengurangi stainless steel grade rendah dan meningkatkan produksi stainless steel yang lebih tinggi.
+```python
+ax=sns.barplot(data=pd.read_csv('ferronickel.csv'),x="Nilai Ekspor (Juta USD)",y="Tujuan Ekspor")
+ax.set_yticklabels(["RRT","India","Korea\nSelatan","Asia\nLain","Belgia"])
+plt.title("gambar 3. Negara tujuan ekspor ferro-nickel Indonesia, 2020 (UN Comtrade)\n",size=14)
+plt.ylabel("Negara Tujuan Ekspor",size=14)
+plt.xlabel("Nilai Ekspor (Juta USD)",size=14)
+```
+
+
+
+
+    Text(0.5, 0, 'Nilai Ekspor (Juta USD)')
+
+
+
+
+    
+![png](./index_12_1.png)
+    
+
+
+Kalo RRT wajar sih, karena memang perusahaan China lah yang pindah ke Indonesia. Jadi sebenernya produsennya dia lagi dia lagi tapi pindah lokasi aja ke Indonesia. India dan Uni Eropa sama-sama lagi mengatur strategi bagaimana mengurangi impor dari Indonesia, sementara Taiwan memilih untuk mengikuti arus dan beli aja dari Indonesia daripada proteksi. Sementara itu, Produsen di Korea Selatan memilih untuk mengubah jenis baja yang mereka produksi, mengurangi stainless steel grade rendah dan meningkatkan produksi stainless steel yang lebih tinggi.
 
 Kalau lihat strateginya korsel, berarti sepertinya stainless steel sendiri memiliki banyak grade meski ada di HS-Code yang sama. Berhubung saya sendiri bukan pemerhati nikel dan stainless steel yang berdedikasi, saya ga punya cukup info untuk menggali hal ini. Tapi kita dapat kira-kira kualitas stainless steelnya dari harga. Kita asumsikan aja kalo harganya mahal berarti stainless steelnya lebih bagus. BTW Korsel ga saya masukin karena produksi mereka juga kebanyakan dipakai sendiri jadi ekspornya dikit.
 
@@ -422,10 +465,19 @@ plt.legend(bbox_to_anchor=(1,0.5))
 
 
     
-![png](./index_12_1.png)
+![png](./index_14_1.png)
     
 
 
 Daaan memang Stainless Steel Indonesia bisa dibilang yang paling murah diantara negara-negara di atas. Tentunya kita harus berhati-hati menggunakan harga ini ya. Kalau produknya sama, berarti Indonesia justru hebat karena bisa produksi dengan harga miring. Tapi wajar sih ya yang lain kan harus akses Nikel yang harga internasionalnya mahal, sementara produsen di Indonesia pakai produk sendiri yang ekspornya dilarang, jadi harga bahan baku bisa ditekan. Di samping itu, bisa saja di negara yang lebih maju, *concern* tentang emisi mengakibatkan biaya produksi yang lebih tinggi daripada negara yang tidak terlalu mengutamakan isu lingkungan.
 
 Yaudah sih sekian dulu postingan hari ini. Masih banyak info yang perlu digali, tapi bisa jadi ini adalah contoh sukses penggunaan larangan ekspor untuk menarik investasi asing dan tenaga kerja untuk meningkatkan nilai tambah di dalam negeri. Gimana menurut anda? Apakah ini adalah hal yang baik? Mensen saya di [@twitter](https://twitter.com/imedkrisna) ya buat berdiskusi!
+
+N.B.: Data yang saya pake semua didownload di [UNCOMTRADE]() secara gratis. Bisa dicek di bawah ini kalau mau ngutik-ngutik sendiri. ada 2 tabel yaa.
+
+{{< table path="stainlesssteel.csv" header="true" caption="Table 1: Ekspor 3 jenis stainless steel Indonesia" >}}
+{{< table path="stainlesssteel2.csv" header="true" caption="Table 2: Ekspor HS 7218 oleh berbagai negara" >}}
+
+```python
+
+```
