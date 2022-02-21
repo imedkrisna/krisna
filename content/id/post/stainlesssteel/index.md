@@ -473,11 +473,4 @@ Daaan memang Stainless Steel Indonesia bisa dibilang yang paling murah diantara 
 
 Yaudah sih sekian dulu postingan hari ini. Masih banyak info yang perlu digali, tapi bisa jadi ini adalah contoh sukses penggunaan larangan ekspor untuk menarik investasi asing dan tenaga kerja untuk meningkatkan nilai tambah di dalam negeri. Gimana menurut anda? Apakah ini adalah hal yang baik? Mensen saya di [@twitter](https://twitter.com/imedkrisna) ya buat berdiskusi!
 
-N.B.: Data yang saya pake semua didownload di [UNCOMTRADE]() secara gratis. Bisa dicek di bawah ini kalau mau ngutik-ngutik sendiri. ada 2 tabel yaa.
 
-{{< table path="stainlesssteel.csv" header="true" caption="Table 1: Ekspor 3 jenis stainless steel Indonesia" >}}
-{{< table path="stainlesssteel2.csv" header="true" caption="Table 2: Ekspor HS 7218 oleh berbagai negara" >}}
-
-```python
-
-```
