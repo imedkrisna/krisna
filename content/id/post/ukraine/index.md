@@ -78,6 +78,12 @@ Ukraina adalah pemasok penting [material](https://asia.nikkei.com/Politics/Ukrai
 
 Pembuatan mobil baru saat ini tengah terganggu pasokannya akibat kekurangan semikonduktor (salah satu alasan kenapa mobil bekas harganya naik tahun kemaren). Sekarang, rantai pasok baja untuk mobil akan makin terganggu karena Rusia dan Ukraina adalah pemasok penting nikel, palladium dan baja pada umumnya.
 
+## The C-factor
+
+Beberapa orang membanding-bandingkan Ukraina-Rusia dengan Taiwan-Cina. Tentunya konflik Taiwan-Cina maupun klaim 9-dash-line Cina di Laut Cina Selatan adalah konflik geopolitik yang lebih dekat ke kita. Cina dan Taiwan juga lebih dekat secara ekonomi dengan Indonesia daripada Ukraina dan Rusia. Sejauh ini, Cina adalah tetangga yang paling bisa diandalkan oleh Rusia untuk menghadapi sanksi-sanksi ekonomi dari negara-negara barat. Seandainya Cina ikut terseret, atau misalnya Cina terinspirasi untuk makin macem-macem di Laut Cina Selatan, maka dampaknya bisa sangat-sangat serem tidak cuma buat Indonesia tapi juga dunia.
+
+Moga-moga nggak ya cyn...
+
 ## Indonesia mesti ngapain?
 
 Sejauh ini inflasi Indonesia masih [cukup terkendali](https://www.bps.go.id/statictable/2009/06/15/907/indeks-harga-konsumen-dan-inflasi-bulanan-indonesia-2006-2022.html). produk-produk sembako yang selama ini memang dikontrol perdagangannya bisa direlaksasi kuotanya jika memang inflasi mulai menekan. Kebetulan selama ini sembako di Indonesia emang udah lebih mahal daripada pasar dunia akibat pembatasan impor dan berbagai hal pelik lainnya. Jadi, relaksasi keran impor bisa digunakan untuk menjaga kestabilan perubahan harga. Di samping itu, sepertinya kenaikan harga beras masih lebih terkendali dibandingkan gandum, jagung ataupun kedelai. Selama beras masih jadi makanan pokok, mestinya aman.
