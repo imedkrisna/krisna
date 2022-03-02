@@ -68,11 +68,15 @@ Di sisi lain, Indonesia merupakan negara yang juga diuntungkan dari naiknya harg
 
 Di samping itu, naiknya harga-harga komoditas ini akan meningkatkan insentif bagi perusahaan di bidang ekspor komoditas untuk menjual barangnya ke luar negeri. Siap-siap potensi perpanjangan krisis minyak goreng dan PLN ke depannya.
 
-## Non Perdagangan
+## Climate change & tech
 
 Perang ini memaksa negara-negara lain, khususnya eropa daratan, untuk mengalihkan sumber dayanya dari isu-isu lain. Uni Eropa yang tengah mengalami krisis energi diramalkan akan semakin terpukul dengan terputusnya pasokan dari Rusia. Ada kemungkinan mereka harus mengandalkan subsidi Pemerintah untuk menekan gejolak inflasi dari energi dan pangan. Mereka juga mungkin harus mengandalkan sumber energi lain yang lebih banyak tersedia seperti batu bara, yang mana Indonesia punya banyak dan berpotensi mengerek naik harga batu bara lebih jauh.
 
-Di samping itu, negara-negara eropa mulai sadar untuk meningkatkan kemampuan militernya, dan menaikkan belanja negara untuk keperluan militer. tentunya ini mengurangi anggaran untuk alokasi lain seperti _climate change_.
+Di samping itu, negara-negara eropa mulai sadar untuk meningkatkan kemampuan militernya, dan menaikkan belanja negara untuk keperluan militer. tentunya ini mengurangi anggaran untuk alokasi lain seperti _climate change_.Padahal, Harga-harga komoditas yang tinggi (Rusia adalah pemasok tembaga yang cukup penting) berpotensi meningkatkan harga barang-barang yang penting untuk membuat panel surya dan pembangkit listrik tenaga angin.
+
+Ukraina adalah pemasok penting material untuk pembuatan semikonduktor seperti gas neon, argon, krypton dan xenon. Gas-gas ini berpotensi mengganggu rantai pasok semikonduktor di jangka menengah.
+
+Pembuatan mobil baru saat ini tengah terganggu pasokannya akibat kekurangan semikonduktor (salah satu alasan kenapa mobil bekas harganya naik tahun kemaren). Sekarang, rantai pasok baja untuk mobil akan makin terganggu karena Rusia dan Ukraina adalah pemasok penting nikel, palladium dan baja pada umumnya.
 
 ## Indonesia mesti ngapain?
 
