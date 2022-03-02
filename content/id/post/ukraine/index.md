@@ -28,7 +28,7 @@ image:
 projects: []
 ---
 
-Pada tanggal 24 Februari 2021, Rusia tiba-tiba menyerang Ukraina. Sebenernya ga bisa dibilang tiba-tiba juga sih soalnya sepertinya [intelijen Amerika Serikat](https://www.bbc.com/news/world-europe-60355295) udah tau Rusia bakal nyerang Ukraina dalam waktu dekat. Saat blog ini ditulis, perang masih berjalan. Pihak Rusia menyerang dari [3 arah](https://www.aljazeera.com/news/2022/2/28/us-announces-plan-to-expel-russian-diplomats-from-un-liveblog), dan sisi laut hitam dari Ukraina sudah hampir sepenuhnya dikuasai Rusia.
+Pada tanggal 24 Februari 2022, Rusia tiba-tiba menyerang Ukraina. Sebenernya ga bisa dibilang tiba-tiba juga sih soalnya sepertinya [intelijen Amerika Serikat](https://www.bbc.com/news/world-europe-60355295) udah tau Rusia bakal nyerang Ukraina dalam waktu dekat. Saat blog ini ditulis, perang masih berjalan. Pihak Rusia menyerang dari [3 arah](https://www.aljazeera.com/news/2022/2/28/us-announces-plan-to-expel-russian-diplomats-from-un-liveblog), dan sisi laut hitam dari Ukraina sudah hampir sepenuhnya dikuasai Rusia.
 
 Sementara itu, Rusia mendapatkan sanksi dari negara-negara barat yang membuat Rusia kesulitan untuk berdagang dengan dunia luar. Hal ini membuat nilai mata uang Rusia, Ruble, [jatuh](https://www.aljazeera.com/news/2022/2/28/us-announces-plan-to-expel-russian-diplomats-from-un-liveblog) cukup dalam dan memaksa bank sentral Rusia untuk menaikkan tingkat suku bunga dari 9.5% ke 20% hanya dalam sehari.
 
