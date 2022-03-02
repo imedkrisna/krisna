@@ -74,7 +74,7 @@ Perang ini memaksa negara-negara lain, khususnya eropa daratan, untuk mengalihka
 
 Di samping itu, negara-negara eropa mulai sadar untuk meningkatkan kemampuan militernya, dan menaikkan belanja negara untuk keperluan militer. tentunya ini mengurangi anggaran untuk alokasi lain seperti _climate change_.Padahal, Harga-harga komoditas yang tinggi (Rusia adalah pemasok tembaga yang cukup penting) berpotensi meningkatkan harga barang-barang yang penting untuk membuat panel surya dan pembangkit listrik tenaga angin.
 
-Ukraina adalah pemasok penting material untuk pembuatan semikonduktor seperti gas neon, argon, krypton dan xenon. Gas-gas ini berpotensi mengganggu rantai pasok semikonduktor di jangka menengah.
+Ukraina adalah pemasok penting [material](https://asia.nikkei.com/Politics/Ukraine-conflict/How-Russia-s-Ukraine-attack-affects-Asian-business-5-things-to-know2) untuk pembuatan semikonduktor seperti gas neon, argon, krypton dan xenon. Gas-gas ini berpotensi mengganggu rantai pasok semikonduktor di jangka menengah.
 
 Pembuatan mobil baru saat ini tengah terganggu pasokannya akibat kekurangan semikonduktor (salah satu alasan kenapa mobil bekas harganya naik tahun kemaren). Sekarang, rantai pasok baja untuk mobil akan makin terganggu karena Rusia dan Ukraina adalah pemasok penting nikel, palladium dan baja pada umumnya.
 
