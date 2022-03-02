@@ -64,7 +64,7 @@ Invasi Rusia ke Ukraina juga diramalkan akan mengganggu jalur perkapalan di laut
 
 Intinya, inflasi yang memang sedang naik-naiknya, akan semakin tinggi akibat invasi Rusia ke Ukraina.
 
-Di sisi lain, Indonesia merupakan negara yang juga diuntungkan dari naiknya harga-harga komoditas. Batu bara, minyak nabati dan nikel adalah barang-barang ekspor Indonesia secara tradisional. Tentu saja program larangan ekspor nikel dan larangan ekspor produk lainnya di masa datang menjadi mahal harganya karena _opportunity cost_ yang tinggi.
+Di sisi lain, Indonesia merupakan negara yang juga diuntungkan dari naiknya harga-harga komoditas. Batu bara, minyak nabati dan nikel adalah barang-barang ekspor Indonesia secara tradisional. Tentu saja program [larangan ekspor nikel]({{< relref "/post/stainlesssteel" >}}) dan larangan ekspor produk lainnya di masa datang menjadi mahal harganya karena _opportunity cost_ yang tinggi.
 
 Di samping itu, naiknya harga-harga komoditas ini akan meningkatkan insentif bagi perusahaan di bidang ekspor komoditas untuk menjual barangnya ke luar negeri. Siap-siap potensi perpanjangan krisis minyak goreng dan PLN ke depannya.
 
