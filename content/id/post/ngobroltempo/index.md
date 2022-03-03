@@ -7,8 +7,8 @@ summary: ""
 authors: [admin]
 tags: [perdagangan, industri, kebijakan]
 categories: [perdagangan, industri, kebijakan]
-date: 2022-03-03T00:05:38+07:00
-lastmod: 2022-03-03T00:05:38+07:00
+date: 2022-03-04T00:05:38+07:00
+lastmod: 2022-03-04T00:05:38+07:00
 featured: false
 draft: false
 
@@ -99,9 +99,11 @@ Balik lagi ke diskusi pertama: Perdagangan ini soal makro. Banyak banget yang ha
 
 soal proteksi hulu, lucu juga mendengar India disebut-sebut otomotifnya lebih murah dari Indo meski Indonesia udah bener-bener menganakemaskan otomotif sejak 80an (dikasih banyak insentif dan dilindungi). Jgn lupa, Baja di India itu lbh murah dan kompetitif daripada di Indonesia. Kalau baja bisa murah, literally hampir semua industri lain juga akan lebih murah (termasuk bikin gedung dan barang modal lain).
 
-Dari acara ini saya masih agak merasa kebijakan-kebijakan yang diambil masih lumayan _fragmented_ dan kurang terkoordinir. Sepertinya kedua kementerian mesti ngobrol dengan institusi lain yang mengontrol aliran modal, suku bunga, energi, barang-barang ekspor seperti tambang, CPO dan batubara, dan laiiiiiiiiiiin sebagainya. Ya wajar sih ya kan narsumnya dari Kementerian Perindustrian dan Kementerian Perdagangan. Tapi saya sangat setuju dengan Sekjen Gabel: Substitusi impor ini, kalau mau serius, harus dibicarakan secara nasional. Terlalu banyak hal yang berperan. Terlalu sering saya dengar program substitusi impor 35% ini dikumandangkan Kemenperin tapi yang lain (Kemenkeu, Kementan, KemenESDM, Bank Indonesia, dll) sepertinya ga pernah.
+Dari acara ini saya masih agak merasa kebijakan-kebijakan yang diambil masih lumayan _fragmented_ dan kurang terkoordinir. Sepertinya kedua kementerian mesti ngobrol dengan institusi lain yang mengurusi aliran modal, suku bunga, energi, barang-barang ekspor seperti tambang, CPO dan batubara, dan laiiiiiiiiiiin sebagainya. Ya wajar sih ya kan narsumnya dari Kementerian Perindustrian dan Kementerian Perdagangan, jadi kebijakan yang dibicarakan lebih fokus ke _trade barriers_. 
 
-Satu lagi. Tidak ada negara yang bisa mengekspor segala hal. Tidak semua sektor harus jadi primadona dan harus ada ekspornya. Tidak semua yang ekspornya gede di satu bidang (Vietnam di elektronika-nya) harus gede di bidang lain (Vietnam ga ekspor batubara ataupun CPO). Kebijakan yang inefisien dan tidak meningkatkan daya beli masyarakat malah akan berdampak pada berkurangnya kemampuan masyarakat untuk meningkatkan daya beli, dan kita akan kembali ke penjualan produk low-end.
+Tapi sekjen Gabel mengatakan hal yang cukup menarik: Substitusi impor ini, kalau mau serius, harus dibicarakan secara nasional. Terlalu banyak hal yang berpengaruh. Terlalu sering saya dengar program substitusi impor 35% ini dikumandangkan Kemenperin tapi yang lain (Kemenkeu, Kementan, KemenESDM, Bank Indonesia, dll) sepertinya ga pernah.
+
+Satu lagi. Tidak ada negara yang bisa mengekspor segala hal. Tidak semua sektor harus jadi primadona dan harus ada ekspornya. Tidak semua yang ekspornya gede di satu bidang (Vietnam di elektronika-nya) harus gede di bidang lain (Vietnam ga ekspor batubara ataupun CPO). Kebijakan yang inefisien malah akan berdampak pada berkurangnya kemampuan masyarakat untuk meningkatkan daya beli, dan kita akan kembali ke penjualan produk low-end.
 
 BTW acara yg saya tonton bisa dilihat di bawah ini. Let me know what you think! Mention me at {{< icon name="twitter" pack="fab" >}} [@imedkrisna](https://twitter.com/imedkrisna)
 
