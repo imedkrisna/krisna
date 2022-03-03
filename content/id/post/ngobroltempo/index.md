@@ -65,7 +65,7 @@ Tambah lagi, kita juga sama kan? Indonesia ekspor batubara dan CPO gede, tapi li
 
 Di acara ini juga disinggung beberapa hal terkait kebijakan yang cukup menarik. Jadi para panelis ditanyain kebijakan apa aja yang sedang dan mau dilakukan untuk meningkatkan daya saing produk elektronika dan membendung impor. Secara eksplisit para narasumber juga mengatakan WTO _constraint_ mereka dalam membuat kebijakan. Atau dengan kata lain, kebijakan yang mau dilakukan harus _in-line_ dengan peraturan internasional seperti perjanjian dagang dan WTO.
 
-#### Hambatan Perdagangan
+##### Hambatan Perdagangan
 
 Beberapa kebijakan terkait perdagangan yang disebut:
 
@@ -83,7 +83,7 @@ Masalahnya, lisensi impor dengan pertimbangan teknis seperti ini adalah sesuatu 
 
 Satu lagi, menggunakan pertimbangan teknis maupun Neraca Komoditas juga bakal kena masalah di WTO krn itu basically quota restriction. Inilah yang terjadi pada [ayam brazil]({{< relref "/post/ayam" >}}). Sekarang tinggal apakah negara-negara eksportir utama ke Indonesia seperti China, Jepang dan Korea Selatan akan ngajuin _dispute_ seperti Brazil atau tidak.
 
-#### Kebijakan investasi: Expertise atau financing?
+##### Kebijakan investasi: Expertise atau financing?
 
 Terkait investasi, sepertinya investasi baru akan dapat keringanan pajak yang disebut _tax holiday_ atau pengurangan pph badan. Insentif ini tentunya berangkat dari logika bahwa investasi asing akan membantu meningkatkan kapasitas produksi dalam negeri. Lagi-lagi Vietnam sering dijadikan contoh sukses mengundang investasi asing dan meningkatkan ekspor. Kenapa? Karena investasi asing membawa tidak hanya kapital fisik, tapi juga _know-how_ (baik manajerial maupun teknikal), dan juga jejaring produksi internasional (_supplier_ dan _buyer_ luar negeri). Investasi asing juga menyerap banyak tenaga kerja dan _outsource_ macem-macem dari produsen domestik (_spillover_). Semua kelebihan ini membuat potensi kehilangan pajak akibat _tax holiday_ jadi sepadan.
 
@@ -93,7 +93,7 @@ Kalau gitu, peran investasi asing dari sisi _know-how_ teknis sebenernya hampir 
 
 Tapi emang invest di Indo kan susah ya. Interest rate gede, bank ga menerima peralatan produksi sebagai jaminan, dan pemerintah masih rajin ngeluarin surat utang dengan bunga menggiurkan (_crowding out_). Investor dalam negeri kekurangan likuiditas, sementara investor asing seneng-seneng aja masuk Indo karena interest rate di luar negeri rendah dan Bank Indonesia yang sangat-sangat menjaga nilai mata uang Indonesia agar selalu stabil (dengan naikin interest rate wkwkw). _Crowding out_ makin nyata ketika sektor ekspor tidak bantu naikin likuiditas domestik.
 
-#### Kebijakan yang fragmented
+##### Kebijakan yang fragmented
 
 Balik lagi ke diskusi pertama: Perdagangan ini soal makro. Banyak banget yang harus dipikirkan. Kompetisi, efek domino, dst. Listrik mahal, pungli, dan proteksi industri hulu (seperti baja) sangat berperan penting. Ekspor sektor lain (CPO dan batubara, misalnya), jumlah dolar beredar, besarnya nilai tukar dan tingkat suku bunga sangat-sangat ngefek. Tentunya sulit menggunakan kacamata makro (jumlah impor) untuk membuat kebijakan di fenomena mikro (daya saing industri elektronika dengan hambatan perdagangan).
 
