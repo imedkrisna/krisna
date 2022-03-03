@@ -69,10 +69,11 @@ Di acara ini juga disinggung beberapa hal terkait kebijakan yang cukup menarik. 
 
 Beberapa kebijakan terkait perdagangan yang disebut:
 
-- Kebijakan non-tariff barrier (NTB) seperti SNI dan TKDN.
-- Trade remedy dan anti-dumping.
-- Pengajuan pertimbangan teknis (jatuhnya NTB juga).
-- Penggunaan [Neraca Komoditas](https://www.cips-indonesia.org/neraca-komoditas-policy-paper) (jatuhnya NTB juga).
+1. Kebijakan non-tariff barrier (NTB) seperti SNI dan TKDN.
+1. Trade remedy dan anti-dumping.
+1. Mereview kembali perjanjian dagang,  termasuk [Information Technology Agreement](https://www.wto.org/english/tratop_e/inftec_e/inftec_e.htm)
+1. Pengajuan pertimbangan teknis (jatuhnya NTB juga).
+1. Penggunaan [Neraca Komoditas](https://www.cips-indonesia.org/neraca-komoditas-policy-paper) (jatuhnya NTB juga).
 
 Pengenaan NTB tersebut akan difokuskan ke 25 produk elektronika yang kebanyakan isinya adalah _consumer electronics_. Katanya peraturan persetujuan impor AC melalui Permendag 64/2020 berhasil meningkatkan investasi asing ke dalam negeri. Menurut Gabel, berkat NTB baru ini, pasokan AC domestik naik dari 20% dari total penjualan AC di Indonesia (atau 80% impor) jadi 30% (atau impornya turun jadi 70%). Seperti biasa, yang marah-marah tentunya adalah [peritel AC](https://industri.kontan.co.id/news/persetujuan-impor-ac-belum-terbit-berkat-elektrik-berpotensi-kehilangan-penjualan) yang stoknya didapatkan dari impor.
 
@@ -80,7 +81,7 @@ Pengenaan NTB tersebut akan difokuskan ke 25 produk elektronika yang kebanyakan 
 
 Masalahnya, lisensi impor dengan pertimbangan teknis seperti ini adalah sesuatu yang coba dihapus oleh Neraca Komoditas. Nantinya, produk yang ada Neraca Komoditasnya akan bisa diimpor sesuai Neraca Komoditas tanpa perlu ada pertimbangan teknis. Jadi nanti cukup lewat Kementerian Perdagangan. Sekarang Neraca Komoditas udah mau diterapkan secara penuh pada 2023, tapi kenapa malah ngajuin pertimbangan teknis? 
 
-Satu lagi, menggunakan pertimbangan teknis maupun Neraca Komoditas juga bakal kena masalah di WTO krn itu basically quota restriction. Inilah yang terjadi pada [ayam brazil](https://krisna.netlify.app/post/ayam/). Sekarang tinggal apakah negara-negara eksportir utama ke Indonesia seperti China, Jepang dan Korea Selatan akan ngajuin _dispute_ seperti Brazil atau tidak.
+Satu lagi, menggunakan pertimbangan teknis maupun Neraca Komoditas juga bakal kena masalah di WTO krn itu basically quota restriction. Inilah yang terjadi pada [ayam brazil]({{< relref "/post/ayam" >}}). Sekarang tinggal apakah negara-negara eksportir utama ke Indonesia seperti China, Jepang dan Korea Selatan akan ngajuin _dispute_ seperti Brazil atau tidak.
 
 #### Kebijakan investasi: Expertise atau financing?
 
