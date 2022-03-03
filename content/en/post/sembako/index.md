@@ -1,12 +1,12 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: "Manajemen harga sembako ala pemerintah Indonesia"
+title: "Managing food inflation, Indonesian style"
 subtitle: ""
 summary: ""
 authors: [admin]
-tags: [perdagangan, kebijakan]
-categories: [perdagangan, kebijakan]
+tags: [trade, public policy,food]
+categories: [public policy, trade,food]
 date: 2022-03-04T08:00:50+07:00
 lastmod: 2022-03-04T08:33:50+07:00
 featured: false
@@ -28,17 +28,11 @@ image:
 projects: []
 ---
 
-Apakah naiknya harga komoditas internasional akan berpengaruh besar pada harga sembako? Bisa jadi ya. Di acara ig live dengan merdeka beberapa waktu lalu, saya sempat menjelaskan bahwa kenaikan harga beberapa sembako kemungkinan akan cukup stabil. Hal ini akibat kebijakan quota impor yang diterapkan oleh Kementerian perdagangan.
+Many have said the possible increase the price of various important commodities. However, Indonesia may be able to limit the inflation of some of these goods. This is because Indonesia imposes quota restriction in many of those goods.
 
-Beberapa komoditas sembako dikenakan kuota impor demi menjaga nilai tukar petani dan juga menjaga volatilitas harga. Jadi kita tidak bisa semena-mena mengimpor. Jumlah impornya dibatasi. Ketika suplai domestik dirasa cukup, maka keran impor akan ditutup. Namun ketika harga mulai dirasa terlalu tinggi, maka keran impor dibuka.
+Amid quota restriction, domestic price of these goods are constantly higher than international prices. When domestic prices started to rise, the government needs only to relax quota, buy from the cheaper international market, increase supply and limit the price hike. As long as international price does not rise more than domestic prices, then the government can always use quota to manage domestic prices.
 
-Kuota impor mengakibatkan harga domestik selalu lebih tinggi daripada harga internasional secara konstan. Ketika harga domestik dirasa terlalu tinggi (mungkin ada gagal panen atau semacamnya), maka kuota impor segera dibuka supaya kenaikan harga dapat dibatasi. Selama harga internasional selalu lebih rendah daripada harga domestik, maka jurus ini akan selalu bisa dilakukan.
-
-Akan tetapi, jika harga pangan dunia naik terlalu tinggi melebihi harga domestik, maka meskipun kuota impor dibuka sebebas-bebasnya, maka harga tidak akan turun. Jadi, jika harga domestik naik, kita tinggal buka keran impor. Selama harga internasional selalu lebih rendah daripada harga domestik, maka cara ini akan bisa mengendalikan inflasi.
-
-Problemnya tentu saja ketika harga internasional naik lebih tinggi daripada harga domestik. Maka dibuka impor selebar apapun tetap tidak akan ngaruh ke harga.
-
-Di bawah ini saya perlihatkan data harga internasional vs harga domestik dari 4 komoditas yang saya berhasil temukan, yaitu beras, ayam, daging sapi dan gula. keempatnya diatur perdagangannya dengan kuota.
+In this blog, I try to plot international prices vs domestic prices of 4 commodities: rice, chicken, beef and sugar. All of them is controlled by quota.
 
 ```python
 ## Download international prices from Nasdaq Data Link (previously quandl)
@@ -117,15 +111,15 @@ fig.legend(bbox_to_anchor=(0.7,0.05),labels=['International Price, IMF via Nasda
     
 
 
-Bisa kita lihat bahwa harga internasional selalu lebih rendah daripada harga domestik. Kita juga bisa lihat bahwa harga internasional cenderung menanjak selama pandemi, tetapi harga domestik relatif stabil. Hal ini karena pemerintah tinggal naikin kuota aja jika harga domestik mulai naik. Semakin tipis gap antara harga domestik dengan harga internasional, maka semakin besar kuota yang dibuka.
+As we can see, international price is consistently higher than domestic price of all 4 goods. Well, mostly. We can also see that while international prices are quite volatile especially during the pandemic, domestic prices are relatively more stable. This is because of the quota management.
 
-**Ayam** agak berbeda ya. Harga domestik udah mirip sama harga internasional sejak 2014. Kenapa ya? Mungkin ini fenomena Amerika Serikat aja sih karena data IMF ngambil spot price-nya Georgia, Amerika Serikat. Ayam Indonesia kayaknya ga ngambil dari situ.
+**Chicken** is a bit different. Domestic vs international price converges around 2017. I am not sure why. It is possible this is just a US thingy cuz the chicken price is taken from the US market. I believe Indonesia's chicken are mostly imported from South America. Unfortunately I can't find the data from IMF Macroeconomic Statistics.
 
-Harga-harga domestik diambil dari CEIC yang ngambil dari BPS. Kalo harga internasional dari IMF Cross Country Macroeconomic Statistics, di mana:
+Domestic prices is downloaded from CEIC (source is National Statistics Body, the BPS), where BPS surveys domestic markets every month.International prices, taken from IMF Cross Country Macroeconomic Statistics via Quandle, are:
 
-1. Beras: Rice; 5 percent broken milled white rice; Thailand nominal price quote; US$ per metric ton
-1. Ayam: Poultry (chicken); Whole bird spot price; Ready-to-cook; whole; iced; Georgia docks; US cents per pound
-1. Daging Sapi: Beef; Australian and New Zealand 85\% lean fores; CIF U.S. import price; US cents per pound
-1. Gula: Sugar; U.S. import price; contract no.14 nearest futures position; US cents per pound (Footnote: No. 14 revised to No. 16)
+1. Rice; 5 percent broken milled white rice; Thailand nominal price quote; US$ per metric ton
+1. Poultry (chicken); Whole bird spot price; Ready-to-cook; whole; iced; Georgia docks; US cents per pound
+1. Beef; Australian and New Zealand 85\% lean fores; CIF U.S. import price; US cents per pound
+1. Sugar; U.S. import price; contract no.14 nearest futures position; US cents per pound (Footnote: No. 14 revised to No. 16)
 
 Sekian postingan kali ini. Semoga bermanfaat.
