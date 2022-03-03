@@ -90,7 +90,7 @@ Ada hal menarik dari Gabel soal industri elektronika di Indonesia. Katanya, Indo
 
 Kalau gitu, peran investasi asing dari sisi _know-how_ teknis sebenernya hampir ga ada. Karena produknya masih low-end, fitur-fitur hi-end maupun kapasitas gede dengan produksi yang kompleks masih ga perlu-perlu banget. Kalau ga perlu-perlu banget _know-how_, harusnya investasi dalam negeri masih bisa dong?
 
-Tapi emang invest di Indo kan susah ya. Interest rate gede, bank ga menerima peralatan produksi sebagai jaminan, dan pemerintah masih rajin ngeluarin surat utang dengan bunga menggiurkan (_crowding out_). Investor dalam negeri kekurangan likuiditas, sementara investor asing seneng-seneng aja masuk Indo karena interest rate di luar negeri rendah dan Bank Indonesia sangat-sangat menjaga nilai mata uang Indonesia agar selalu stabil (dengan naikin interest rate wkwkw).
+Tapi emang invest di Indo kan susah ya. Interest rate gede, bank ga menerima peralatan produksi sebagai jaminan, dan pemerintah masih rajin ngeluarin surat utang dengan bunga menggiurkan (_crowding out_). Investor dalam negeri kekurangan likuiditas, sementara investor asing seneng-seneng aja masuk Indo karena interest rate di luar negeri rendah dan Bank Indonesia yang sangat-sangat menjaga nilai mata uang Indonesia agar selalu stabil (dengan naikin interest rate wkwkw). _Crowding out_ makin nyata ketika sektor ekspor tidak bantu naikin likuiditas domestik.
 
 #### Kebijakan yang fragmented
 
