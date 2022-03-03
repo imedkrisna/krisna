@@ -7,8 +7,8 @@ summary: ""
 authors: [admin]
 tags: [perdagangan, industri, kebijakan]
 categories: [perdagangan, industri, kebijakan]
-date: 2022-03-04T12:05:38+07:00
-lastmod: 2022-03-04T12:05:38+07:00
+date: 2022-03-03T00:05:38+07:00
+lastmod: 2022-03-03T00:05:38+07:00
 featured: false
 draft: false
 
@@ -38,7 +38,7 @@ Di acara ini, pandangan merkantilisnya cukup segmented, fokus di produk-produk e
 
 Memang agak sulit menggunakan ekspor dan impor sebagai indikator daya saing industri. Sulit menarik masalah trade deficit ini di level mikro, karena trade deficit sebenernya merupakan masalah yang cukup makro. Jaman sekarang di mana transaksi financial sangat cepat, kita tidak bisa ngomongin trade deficit tanpa ngomongin transaksi financial. Sebagai negara yang menargetkan _capital inflow_, ya wajar kalo transaksi neraca pembayaran negatif. Apalagi, Indonesia banyak mengimpor produk kapital dan komponen yang bisa dibilang adalah cara penggunaan FDI yang baik.
 
-Trade deficit juga harus dibarengi dengan melihat perdagangan secara keseluruhan. Indonesia ini ekspornya gede banget di produk lain. Masa mau semua ekspor? Jangan lupa soal _dutch disease_ di mana ekspor sebuah sektor mengakibatkan penurunan daya saing sektor lain. Jadi mau bicara defisit di satu sektor saja rasanya susah ya. Di samping membicarakan bagaimana menahan impor, pemerintah juga harus mempertanyakan manajemen finansial yang dilakukan oleh perusahaan di industri yang ekspornya tinggi. Apakah mereka banyak saving? Pegang cash? Ngasih deviden? Reinvest? Savingnya di luar negeri apa di dalam negeri? Berapa revenue negara dari industri ekspor?
+Trade deficit juga harus dibarengi dengan melihat perdagangan secara keseluruhan. Indonesia ini ekspornya gede banget di produk lain. Masa mau semua ekspor? Jangan lupa soal _dutch disease_ di mana ekspor sebuah sektor mengakibatkan penurunan daya saing sektor lain. Jadi mau bicara defisit di satu sektor saja rasanya susah ya. Di samping membicarakan bagaimana menahan impor, pemerintah juga harus mempertanyakan manajemen finansial yang dilakukan oleh perusahaan di industri yang ekspornya tinggi. Apakah mereka banyak saving? Pegang cash? Ngasih deviden? Reinvest? Savingnya di [luar negeri](https://www.indonesia-investments.com/news/todays-headlines/indonesia-and-the-panama-papers-names-and-numbers/item6674) apa di dalam negeri? Berapa revenue negara dari industri ekspor?
 
 ### Membandingkan dengan Vietnam
 
@@ -46,10 +46,10 @@ Khas yang kedua adalah membandingkan dengan Vietnam. Ini sebenernya cukup ngetre
 
 Beberapa permasalahan membandingkan Indonesia dengan Vietnam:
 
-- Vietnam negaranya kecil. GDP dan $\frac{text{GDP}}{\text{kapita}}$-nya masih di bawah Indonesia. Mereka ga punya market, jadi terpaksa memanfaatkan market dunia. Indonesia? Market domestiknya aja gede banget. Makanya "gampang" aja bikin kebijakan proteksionis.
+- Vietnam negaranya kecil. GDP dan $\frac{\text{GDP}}{\text{kapita}}$-nya masih di bawah Indonesia. Mereka ga punya market, jadi terpaksa memanfaatkan market dunia. Indonesia? Market domestiknya aja gede banget. Makanya "gampang" aja bikin kebijakan proteksionis.
 - Ekspornya gede tapi impornya juga gede. Alias, Value add-nya kecil. Yang disebut "ekspor elektronika Vietnam gede banget" itu sebenernya adalah hasil kerja banyak negara. Cuma kebetulan tempat pembuatan akhirnya aja di Vietnam. Akibatnya, kalau lihat dari statistik trade aja, kita jadi mengoverestimate produksi industri elektronika Vietnam.
 - Vietnam disebut sebagai negara yang sukses menerapkan GVC, bukan karena mereka proteksionis, tapi justru menyambut globalisasi. Inilah kenapa impor mereka gede banget. Karena mereka terbuka dengan globalisasi juga lah mereka berhasil punya banyak perjanjian dagang dengan ngera-negara lain dengan lebih cepat dari Indonesia. Disebut TPT Indonesia ke Uni Eropa kena tariff 15% sementara Vietnam 0% ya salah satunya karena ini.
-- Bisa lihat di bawah, meski $\frac{text{trade}}{\text{GDP}}$-nya gede banget, tapi trade balance ga beda jauh dari Indo. Jgn lupa mereka trade balance-nya deficit terus 1986-2011. Kalo nggak salah, akhir 90an itu waktu-waktunya mereka mulai FDI.
+- Bisa lihat di bawah, meski $\frac{\text{trade}}{\text{GDP}}$-nya gede banget, tapi trade balance ga beda jauh dari Indo. Jgn lupa mereka trade balance-nya deficit terus 1986-2011. Kalo nggak salah, akhir 90an itu waktu-waktunya mereka mulai FDI.
 
 <iframe src="https://data.worldbank.org/share/widget?end=2020&indicators=NE.RSB.GNFS.ZS&locations=ID-VN&start=1987" width='450' height='300' frameBorder='0' scrolling="no" ></iframe>
 
@@ -96,9 +96,11 @@ Tapi emang invest di Indo kan susah ya. Interest rate gede, bank ga menerima per
 
 Balik lagi ke diskusi pertama: Perdagangan ini soal makro. Banyak banget yang harus dipikirkan. Kompetisi, efek domino, dst. Listrik mahal, pungli, dan proteksi industri hulu (seperti baja) sangat berperan penting. Ekspor sektor lain (CPO dan batubara, misalnya), jumlah dolar beredar, besarnya nilai tukar dan tingkat suku bunga sangat-sangat ngefek. Tentunya sulit menggunakan kacamata makro (jumlah impor) untuk membuat kebijakan di fenomena mikro (daya saing industri elektronika dengan hambatan perdagangan).
 
-Dari acara ini saya masih agak merasa kebijakan-kebijakan yang diambil masih lumayan _fragmented_ dan kurang terkoordinir. Sepertinya kedua kementerian mesti ngobrol dengan institusi lain yang mengontrol aliran modal, suku bunga, energi, barang-barang ekspor seperti tambang, CPO dan batubara, dan laiiiiiiiiiiin sebagainya.
+soal proteksi hulu, lucu juga mendengar India disebut-sebut otomotifnya lebih murah dari Indo meski Indonesia udah bener-bener menganakemaskan otomotif sejak 80an (dikasih banyak insentif dan dilindungi). Jgn lupa, Baja di India itu lbh murah dan kompetitif daripada di Indonesia. Kalau baja bisa murah, literally hampir semua industri lain juga akan lebih murah (termasuk bikin gedung dan barang modal lain).
 
-Satu lagi. Tidak ada negara yang bisa mengekspor segala hal. Tidak semua sektor harus jadi primadona dan harus ada ekspornya. Kebijakan yang inefisien dan tidak meningkatkan daya beli masyarakat malah akan berdampak pada berkurangnya kemampuan masyarakat untuk meningkatkan daya beli, dan kita akan kembali ke penjualan produk low-end.
+Dari acara ini saya masih agak merasa kebijakan-kebijakan yang diambil masih lumayan _fragmented_ dan kurang terkoordinir. Sepertinya kedua kementerian mesti ngobrol dengan institusi lain yang mengontrol aliran modal, suku bunga, energi, barang-barang ekspor seperti tambang, CPO dan batubara, dan laiiiiiiiiiiin sebagainya. Ya wajar sih ya kan narsumnya dari Kementerian Perindustrian dan Kementerian Perdagangan. Tapi saya sangat setuju dengan Sekjen Gabel: Substitusi impor ini, kalau mau serius, harus dibicarakan secara nasional. Terlalu banyak hal yang berperan. Terlalu sering saya dengar program substitusi impor 35% ini dikumandangkan Kemenperin tapi yang lain (Kemenkeu, Kementan, KemenESDM, Bank Indonesia, dll) sepertinya ga pernah.
+
+Satu lagi. Tidak ada negara yang bisa mengekspor segala hal. Tidak semua sektor harus jadi primadona dan harus ada ekspornya. Tidak semua yang ekspornya gede di satu bidang (Vietnam di elektronika-nya) harus gede di bidang lain (Vietnam ga ekspor batubara ataupun CPO). Kebijakan yang inefisien dan tidak meningkatkan daya beli masyarakat malah akan berdampak pada berkurangnya kemampuan masyarakat untuk meningkatkan daya beli, dan kita akan kembali ke penjualan produk low-end.
 
 BTW acara yg saya tonton bisa dilihat di bawah ini. Let me know what you think! Mention me at {{< icon name="twitter" pack="fab" >}} [@imedkrisna](https://twitter.com/imedkrisna)
 
