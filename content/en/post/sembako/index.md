@@ -7,8 +7,8 @@ summary: ""
 authors: [admin]
 tags: [trade, public policy,food]
 categories: [public policy, trade,food]
-date: 2022-03-04T08:00:50+07:00
-lastmod: 2022-03-04T08:33:50+07:00
+date: 2022-03-04T07:29:50+07:00
+lastmod: 2022-03-04T07:29:50+07:00
 featured: false
 draft: false
 
