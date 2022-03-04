@@ -7,8 +7,8 @@ summary: ""
 authors: [admin]
 tags: [perdagangan, industri, kebijakan]
 categories: [perdagangan, industri, kebijakan]
-date: 2022-03-04T00:05:38+07:00
-lastmod: 2022-03-04T00:05:38+07:00
+date: 2022-03-04T07:17:38+07:00
+lastmod: 2022-03-04T07:17:38+07:00
 featured: false
 draft: false
 
