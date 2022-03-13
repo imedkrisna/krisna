@@ -32,6 +32,8 @@ Beberapa link yang sering kupencet:
 - [World Bank API](https://blogs.worldbank.org/opendata/accessing-world-bank-data-apis-python-r-ruby-stata)
 - [UNCOMTRADE API aca comtrader](https://cran.r-project.org/web/packages/comtradr/vignettes/comtradr-vignette.html)
 - [Econometrics with r](http://www.urfie.net/)
+
+##### Plotting
 - [Complete ggplot2 by zevross](http://zevross.com/blog/2014/08/04/beautiful-plotting-in-r-a-ggplot2-cheatsheet-3/)
 - [Complete ggplot2 by sthda](http://www.sthda.com/english/articles/32-r-graphics-essentials/125-ggplot-cheat-sheet-for-great-customization/)
 - [Complete ggplot2 by r-statistics](http://r-statistics.co/Complete-Ggplot2-Tutorial-Part2-Customizing-Theme-With-R-Code.html)
@@ -67,6 +69,9 @@ Beberapa link yang sering kupencet:
 - [Seaborn design by codecademy](https://www.codecademy.com/articles/seaborn-design-i)
 - [resource dari marsja](https://www.marsja.se/links/)
 - [time series econometrics pak Kevin Sheppard](https://www.kevinsheppard.com/teaching/python/companion-course/)
+
+##### Seaborn
+- [Seaborn color palette guide](https://medium.com/@morganjonesartist/color-guide-to-seaborn-palettes-da849406d44f)
 
 ### Dataset
 - [trade data bulk download WTO](https://www.wto.org/english/res_e/statis_e/trade_datasets_e.htm)

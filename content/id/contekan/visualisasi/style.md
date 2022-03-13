@@ -10,19 +10,41 @@ weight: 10
 Contekan dasar set styling seaborn [dari sini](http://seaborn.pydata.org/tutorial/aesthetics.html) dan [dari sini](https://seaborn.pydata.org/generated/seaborn.set_style.html)
 
 
-Style grafik saya di buku PPID.
+## Seaborn
 
+#### Dark
 ```python
-sns.set_style("white")
-sns.set_context("paper",font_scale=1.5)
-plt.figure(figsize=(5,4),dpi=80, facecolor='w', edgecolor='k')
+from jupyterthemes import jtplot
+jtplot.style(theme='monokai', context='notebook', ticks=True, grid=False)
 ```
 
-## Control x and y axis in matplotlib
+#### Light
+
 ```python
-ax.set_xlabel(‘angle’)
-ax.set_title('sine')
-ax.set_xticks([0,2,4,6])
-ax.set_xticklabels(['zero','two','four','six'])
-ax.set_yticks([-1,0,1])
+jtplot.reset() ## I use dark mode by default hence needs to turn it off for books and stuff
+custom_params = {"axes.spines.right": False, "axes.spines.top": False} ## ngilangin kotak sudut kanan atas
+sns.set_theme(style="ticks", context='paper',font_scale=1,rc=custom_params) ## Kadang pake style "white" juga bisa
+# plt.figure(figsize=(5,4),dpi=80, facecolor='w', edgecolor='k') ## biasanya ga perlu. context aja udah cukup
+```
+
+## ggplot
+
+#### Dark
+
+```r
+library('ggplot2')
+library('ggdark')
+graph<-ggplot()+
+  dark_theme_bw(base_size=18)+
+  theme(text = element_text(color='#e0e0e0'),
+        panel.border = element_blank(),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        axis.line = element_line(colour = "#e0e0e0"))
+```
+
+#### Light
+
+```r
+theme_classic()
 ```
