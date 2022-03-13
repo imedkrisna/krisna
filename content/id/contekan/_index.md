@@ -16,11 +16,11 @@ Daftar isi:
 
 Beberapa link yang sering kupencet:
 
-### STATA
+## STATA
 - [memakai outreg2 untuk bikin tabel regresi dan summary statistics](https://www.princeton.edu/~otorres/Outreg2.pdf)
 - [comprehensive latex output](https://lukestein.github.io/stata-latex-workflows/)
 
-### R dan Rmarkdown
+## R dan Rmarkdown
 - [Mengontrol ukuran gambar di Rmarkdown](http://zevross.com/blog/2017/06/19/tips-and-tricks-for-working-with-images-and-figures-in-r-markdown-documents/)
 - [Contekan ggplot2 untuk time-series](https://www.r-graph-gallery.com/279-plotting-time-series-with-ggplot2.html)
 - [Bookdown, bikin buku pakai Rmd](https://bookdown.org/yihui/bookdown/)
@@ -33,7 +33,7 @@ Beberapa link yang sering kupencet:
 - [UNCOMTRADE API aca comtrader](https://cran.r-project.org/web/packages/comtradr/vignettes/comtradr-vignette.html)
 - [Econometrics with r](http://www.urfie.net/)
 
-##### Plotting
+#### ggplot
 - [Complete ggplot2 by zevross](http://zevross.com/blog/2014/08/04/beautiful-plotting-in-r-a-ggplot2-cheatsheet-3/)
 - [Complete ggplot2 by sthda](http://www.sthda.com/english/articles/32-r-graphics-essentials/125-ggplot-cheat-sheet-for-great-customization/)
 - [Complete ggplot2 by r-statistics](http://r-statistics.co/Complete-Ggplot2-Tutorial-Part2-Customizing-Theme-With-R-Code.html)
@@ -41,20 +41,14 @@ Beberapa link yang sering kupencet:
 - [ggplot default themes](https://ggplot2.tidyverse.org/reference/ggtheme.html)
 - [Simple Graphs for economics teaching](https://r-coder.com/economics-charts-r/)
 - [Graphs for economics teaching with function](https://eric.netlify.app/2017/09/19/plotting-consumer-and-producer-surpluses-in-ggplot2/)
+- [Multiple plots with Patchwork](https://patchwork.data-imaginist.com/articles/guides/annotation.html#styling-the-patchwork-1)
 
-##### Xaringan
+#### Xaringan
 - [more efficient use of xaringan](https://www.r-bloggers.com/2019/04/tips-to-reduce-the-complexity-of-slide-making-with-xaringan/)
 - [using proper mermaid in xaringan](https://github.com/yihui/xaringan/issues/144)
 - [Xaringan Themer](https://cran.r-project.org/web/packages/xaringanthemer/vignettes/xaringanthemer.html)
 
-### html and blog
-- [cara bikin multi-kolom](https://stackoverflow.com/questions/31753897/2-column-section-in-r-markdown)
-- [Kode icons buat html](https://html-css-js.com/html/character-codes/icons/)
-- [academic theme](https://sourcethemes.com/academic/templates/)
-- [adding equation labeling in hugo academic theme](https://krisna.netlify.app/post/mathjax/)
-- [free svgs](https://undraw.co/)
-
-### Python
+## Python
 - [Time series in python](https://jakevdp.github.io/PythonDataScienceHandbook/03.11-working-with-time-series.html)
 - [Contekan grafik pakai Seaborn](https://seaborn.pydata.org/tutorial.html)
 - [GME, paket buat PPLM dari USITC](https://www.usitc.gov/data/gravity/gme.htm), untuk general (ada databasenya) di [sini](https://www.usitc.gov/data/gravity/index.htm)
@@ -70,13 +64,28 @@ Beberapa link yang sering kupencet:
 - [resource dari marsja](https://www.marsja.se/links/)
 - [time series econometrics pak Kevin Sheppard](https://www.kevinsheppard.com/teaching/python/companion-course/)
 
-##### Seaborn
+#### Seaborn
 - [Seaborn color palette guide](https://medium.com/@morganjonesartist/color-guide-to-seaborn-palettes-da849406d44f)
 
-### Dataset
+## Dataset
 - [trade data bulk download WTO](https://www.wto.org/english/res_e/statis_e/trade_datasets_e.htm)
 - [Link to a bunch of US economic data](http://cameron.econ.ucdavis.edu/e102/data.html)
 - [free icons from font awesome](https://fontawesome.com/icons?m=free)
 
-### Academics
+## Academics
 - [mindmap generator untuk paper akademis](https://www.connectedpapers.com/)
+
+## ETC
+
+#### some CSS
+
+- [cara bikin multi-kolom](https://stackoverflow.com/questions/31753897/2-column-section-in-r-markdown)
+- [Kode icons buat html](https://html-css-js.com/html/character-codes/icons/)
+- [adding equation labeling in hugo academic theme](https://krisna.netlify.app/post/mathjax/)
+
+#### Pics
+- [undraw](https://undraw.co/)
+- [unsplash](https://unsplash.com/)
+- [freepik](https://www.freepik.com/)
+- [lottie files](https://lottiefiles.com/)
+- [dafont](https://www.dafont.com/)
