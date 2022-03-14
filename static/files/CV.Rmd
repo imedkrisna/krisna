@@ -81,8 +81,8 @@ N/A
 
 ### Journal Article
 
-- Gupta, Krisna. (2022). *The Heterogenous Impact of Tariff and NTM on Total Factor Productivity of Indonesian Firms*. [Bulletin of Indonesian Economic Studies](https://www.tandfonline.com/doi/full/10.1080/00074918.2021.2016613)
-- Gupta, Krisna. (2021). *The Importance of Financial Liberalisation for Economic Growth: The Case of Indonesia*. Bulletin of Indonesian Economic Studies, 57:2, 175-201, [DOI: 10.1080/00074918.2020.1747596](https://www.tandfonline.com/doi/full/10.1080/00074918.2020.1747596)
+- Gupta, Krisna. (2022). The Heterogenous Impact of Tariff and NTM on Total Factor Productivity of Indonesian Firms. *Bulletin of Indonesian Economic Studies*. [DOI: 10.1080/00074918.2021.2016613](https://www.tandfonline.com/doi/full/10.1080/00074918.2021.2016613)
+- Gupta, Krisna. (2021). The Importance of Financial Liberalisation for Economic Growth: The Case of Indonesia. *Bulletin of Indonesian Economic Studies*, 57:2, 175-201, [DOI: 10.1080/00074918.2020.1747596](https://www.tandfonline.com/doi/full/10.1080/00074918.2020.1747596)
 
 N/A
 
@@ -94,10 +94,10 @@ N/A
 
 ### Policy Paper
 
-- Gupta, Krisna, Deasy Pane and Donny Pasaribu. (2020). ["The advent of a new trade governance after the Omnibus Law: Neraca Komoditas"](https://www.cips-indonesia.org/neraca-komoditas-policy-paper). *CIPS Policy Paper* no.47.
+- Gupta, Krisna, Deasy Pane and Donny Pasaribu. (2022). ["The advent of a new trade governance after the Omnibus Law: Neraca Komoditas"](https://www.cips-indonesia.org/neraca-komoditas-policy-paper). *CIPS Policy Paper* no.47.
 
 N/A
-                   
+
 ### Book Review
 
 - Gupta, Krisna. (2020). "World Trade Evolution: Growth, Productivity and Employment ‐ edited by Lili Yan Ing and Miaojie Yu". *Asian-Pacific Economic Literature*. [https://doi.org/DOI:10.1111/apel.12291](https://doi.org/DOI:10.1111/apel.12291)
@@ -113,9 +113,7 @@ N/A
 ### Popular Publications / Oped
 
 - Gupta, Krisna and Deasy Pane. 2021. ["Restrictive regulations on foreign trade may hurt economy"](https://www.thejakartapost.com/paper/2021/03/11/restrictive-regulations-on-foreign-trade-may-hurt-economy.html). *The Jakarta Post*.
-- Gupta, Krisna and Wishnu Mahraddika. 2021. ["Mengapa tren kendaraan listrik adalah momentum transformasi industri otomotif Indonesia" ](https://theconversation.com/mengapa-tren-kendaraan-listrik-adalah-momentum-transformasi-industri-otomotif-indonesia-152958). *The Conversation Indonesia*.
 - Pasaribu, Donny and Krisna Gupta. 2020. ["Will IA-CEPA be the boost to Australia-Indonesia relations leaders are banking on?"](https://indonesiaatmelbourne.unimelb.edu.au/will-ia-cepa-be-the-boost-to-the-australia-indonesia-relationship-leaders-are-banking-on/). *Indonesia At Melbourne*.
-- Patunru, Arianto and Krisna Gupta. 2020. ["Indonesia's PPE export ban backfires"](https://www.eastasiaforum.org/2020/06/16/indonesias-ppe-export-ban-backfires/). *East Asia Forum*.
 
 
 
@@ -127,9 +125,10 @@ N/A
 Teaching Experience {data-icon=chalkboard-teacher}
 --------------------------------------------------------------------------------
 
-### Lecturer at Politeknik APP Jakarta
+### Lecturer
 
-- Business Statistics (2016-2017)
+- Politeknik APP (home institution): Business Statistics (2016-2017)
+- Universitas Petra: [Intro to Economics](https://www.krisna.or.id/courses/econ101/) (2020)
 
 N/A
 
@@ -143,7 +142,7 @@ N/A
 
 N/A
 
-### Teaching Assistant at Universitas Indonesia
+### Teaching Assistant (graduate) at Universitas Indonesia
 
 - Macroeconomics 2 (2016)
 - Microeconomics 2 (2015)
