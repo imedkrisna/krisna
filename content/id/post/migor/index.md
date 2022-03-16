@@ -4,7 +4,7 @@
 title: "Migor"
 subtitle: ""
 summary: ""
-authors: []
+authors: [admin]
 tags: []
 categories: []
 date: 2022-03-16T10:26:01+07:00
@@ -27,3 +27,29 @@ image:
 #   Otherwise, set `projects = []`.
 projects: []
 ---
+
+## Bekgron
+
+## Asumsi masalah: dari luar negeri
+
+![wew](migor.png "harga migor")
+
+![wew](plo_com.svg "harga CPO")
+
+[harga CPO](https://tradingeconomics.com/commodity/palm-oil)
+
+[harga bulanan minyak goreng](https://hargapangan.id/tabel-harga/pasar-tradisional/komoditas)
+
+## Kemungkinan masalah: dari dalam negeri
+
+#### Biodiesel
+
+#### Minyak goreng kemasan
+
+## Problem baru
+
+#### Bias kelas
+
+#### Bias wilayah
+
+## Apakah salah kemendag?
