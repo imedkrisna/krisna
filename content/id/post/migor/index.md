@@ -64,7 +64,7 @@ Ternyata migor masih juga langka meskipun dengan semua kebijakan tersebut. Deduk
 
 Tapi mungkinkah ada masalah lain?
 
-## Kemungkinan masalah: dari dalam negeri
+## Kemungkinan masalah lain: dari dalam negeri
 
 Jika masalahnya memang adalah harga internasional, maka mestinya DMO dan DPO akan menyelesaikannya. DMO dan DPO, sayangnya, tidak terlalu berguna jika ada masalah lain yang mungkin timbul dari dalam negeri.
 
