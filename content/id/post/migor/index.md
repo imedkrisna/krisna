@@ -50,6 +50,8 @@ Instrumen DMO yang digunakan tentunya berangkat dari asumsi bahwa penyebab migor
 
 ![wew](plo_com.svg "gambar 1. harga CPO")
 
+BTW lihat deh harga setelah Januari. haha. Harga makin tinggi setelah Indonesia menerapkan DMO dan DPO.
+
 Sementara itu, data yang ditunjukkan oleh Mendag pada [Konferensi Pers](https://www.youtube.com/watch?v=FTS9TGx_scM) (menit 5) pada 9 Maret 2022 lalu menunjukkan kenaikan tipis pada bulan Juli 2021, dan pada sekitar bulan November 2021 barulah terjadi kenaikan yang cukup tajam. Sepertinya kenaikan di November ini yang memicu reaksi dari Pemerintah. Beliau juga menunjukkan ada penurunan terhadap harga minyak goreng pada bulan Februari 2022.
 
 Berbekal informasi ini, rasanya wajar jika Kemendag kemudian mendeduksi bahwa kenaikan harga CPO inilah yang menjadi biang naiknya harga migor. Jika demikian, maka cara penyelesaiannya adalah dengan mengurangi kemudahan ekspor (dalam hal ini dengan menggunakan DMO) sehingga kenaikan harga CPO di dalam negeri dapat ditekan. 
