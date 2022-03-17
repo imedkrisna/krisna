@@ -103,6 +103,14 @@ Jika memang ada variasi harga meskipun pada hari biasa, maka HET mengancam kelan
 
 Sebenarnya HET Minyak goreng kemasan sudah lama mau diatur oleh pemerintah, sejak 2016 (kalau gak salah). Ada aturan yang mewajibkan retailer untuk menjual migor dalam kemasan, ga boleh lagi curah. Namun peraturan ini tertunda terus karena migor kemasan akan jadi terlalu mahal jika dipaksakan untuk semua produsen dan konsumen. Akhirnya sampe sekarang pun aturan tersebut terus tertunda. Harusnya sih kalau berkaca dari penundaan-penundaan ini, HET sudah dapat diduga akan menimbulkan masalah. In fact, kayaknya blm pernah ada HET yang berhasil di Indonesia.
 
+#### Mafia?
+
+Banyak juga yang mengatakan bahwa ada mafia yang bermain, atau minyak goreng adalah industri kartel. Saya rasa tuduhan-tuduhan tersebut cukup beralasan, mengingat reputasi Indonesia yang kurang baik perihal [korupsi dan inefisiensi birokrasi](https://www3.weforum.org/docs/GCR2017-2018/03CountryProfiles/Standalone2-pagerprofiles/WEF_GCI_2017_2018_Profile_Indonesia.pdf) dalam memulai usaha, dengan [ekonomi kapitalis kroni](https://www.economist.com/finance-and-economics/2022/03/12/our-crony-capitalism-index-offers-a-window-into-russias-billionaire-wealth) nomor 8 dunia menurut majalah The Economist. Di samping itu, hampir 50% penjualan migor dikuasai oleh [4 perusahaan](https://bisnis.tempo.co/read/1556268/4-jawara-produsen-minyak-goreng-di-indonesia/full&view=ok) saja.
+
+Kalo soal mafia si susah ya. mungkin bukan cuma masalah di migor aja. Apalagi kalau integrasi kebun-produk turunannya ini malah lebih efisien dilakukan oleh perusahaan besar. Pemerintah mungkin memilih mengintervensi industrinya karena tidak punya cukup _tools_ untuk menindak yang besar-besar (karena satu dan lain hal). Namun, intervensi di migor justru berpotensi berefek buruk ke yang kecil-kecil, karena yang besar-besar pasti bisa bermanuver.
+
+<iframe style="height:550px; width:100%; border: none;" src="https://databoks.katadata.co.id/datapublishembed/113928/luas-perkebunan-sawit-rakyat-406-dari-total-perkebunan-sawit-indonesia"></iframe>
+
 ## Penutup
 
 Masalah ini mungkin malah jadi makin parah gara-gara DMO,DPO dan HET tidak berhasil juga menstabilkan harga dan ketersediaan. Bahkan, masyarakat yang kehilangan kepercayaan diri pada pemerintah untuk bisa mengamankan stok, malah akan mulai melakukan penimbunan yang malah akan makin memperparah keadaan. 
