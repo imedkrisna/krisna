@@ -116,7 +116,7 @@ Kalo soal mafia si susah ya. mungkin bukan cuma masalah di migor aja. Apalagi ka
 
 Di samping itu, gambar 2 menunjukkan penukikan tajam di bulan November 2021. Kalau memang mafia memiliki peran yang signifikan, seharusnya mahalnya dari dulu. Kenapa baru November? Apa mafianya baru terbentuk bulan ini? Apa mereka baru-baru aja bikin pertemuan ngeset harga? Kayaknya nggak ya. Kenaikan tajam ini malah berkorelasi dengan konsumsi CPO oleh produsen biodiesel yang jumlahnya melewati CPO untuk pangan.
 
-Jadi, argumen mafia saya rasa sangat mungkin. Malah mungkin bisa ada mafia baru gara-gara HET bikin insentif nimbun dan nyelundupin naik signifikan karena ada disparitas harga. Tapi rasanya bukan penjelasan utama kenaikan tajam harga migor. Kalaupun benar mafia perannya sangat besar, HET dan DMO rasanya bukan solusi yang tepat.
+Argumen mafia saya rasa sangat mungkin. Malah mungkin bisa ada mafia baru gara-gara HET bikin insentif nimbun dan nyelundupin naik signifikan karena ada disparitas harga. Akan tetapi, rasanya sulit menjadikan mafia sebagai penjelasan utama kenaikan tajam harga migor. Kalaupun benar mafia perannya sangat besar, HET dan DMO rasanya bukan solusi yang tepat, malah bisa jadi menambah insentif bagi mafia existing maupun calon mafia baru.
 
 ## Penutup
 
