@@ -43,7 +43,7 @@ Beberapa hari ini pemerintah sedang dihebohkan dengan naiknya harga minyak goren
 | 6 | 10 Februari 2022 | Kempmendag 129/2022 | DMO ditetapkan sebesar 20%. |
 | 7 | 9 Maret 2022 | Kempmendag 170/2022 | DMO ditetapkan sebesar 30%. |
 
-Perkembangan terakhir, pemerintah akan [melepas HET](https://katadata.co.id/happyfajrian/berita/6230c963601c9/pemerintah-lepas-harga-minyak-goreng-kemasan-ke-mekanisme-pasar) untuk minyak goreng kemasan. Sementara itu, migor curah akan mematuhi HET 14 ribu rupiah per liter. Hal ini efektif berlaku pada 16 Maret 2022. Kenapa? Karena dengan HET seperti nomor 4 di tabel 1, terjadi kelangkaan pasokan migor sehingga banyak masyarakat tidak kebagian migor, bahkan sampai ada yang [meninggal](https://www.kompas.tv/article/270000/seorang-ibu-meninggal-saat-antre-minyak-goreng-pengamat-memilukan-terpaksa-demi-cukupi-kebutuhan) saat mengantri migor.
+Perkembangan terakhir, pemerintah akan [melepas HET](https://katadata.co.id/happyfajrian/berita/6230c963601c9/pemerintah-lepas-harga-minyak-goreng-kemasan-ke-mekanisme-pasar) untuk minyak goreng kemasan. Sementara itu, migor curah akan mematuhi HET 14 ribu rupiah per liter. Hal ini efektif berlaku pada 16 Maret 2022. Kenapa melepas HET? Karena dengan HET seperti nomor 4 di tabel 1, terjadi kelangkaan pasokan migor sehingga banyak masyarakat tidak kebagian migor, bahkan sampai ada yang [meninggal](https://www.kompas.tv/article/270000/seorang-ibu-meninggal-saat-antre-minyak-goreng-pengamat-memilukan-terpaksa-demi-cukupi-kebutuhan) saat mengantri migor.
 
 ## Asumsi permasalahan
 
