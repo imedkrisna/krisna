@@ -32,6 +32,7 @@ projects: []
 
 Beberapa hari ini pemerintah sedang dihebohkan dengan naiknya harga minyak goreng. Pemerintah berusaha agar harga minyak goreng (migor) bisa ditahan di harga rendah. Presiden [menugaskan Kementerian Perdagangan](https://www.jawapos.com/ekonomi/04/01/2022/jokowi-minta-mendag-stabilkan-harga-minyak-goreng/) untuk menjaga agar harga migor bisa terkendali. Sementara itu, instrumen yang digunakan oleh Kementerian Perdagangan (Kemendag) adalah pengenaan _Domestic Market Obligation_ (DMO) bagi minyak kelapa sawit sebagai bahan baku migor dan penetapan _Domestic Price Obligation_ (DPO) bagi minyak sawit dan Harga Eceran Tertinggi (HET) bagi migor. Berikut rincian [Permendag](http://jdih.kemendag.go.id/peraturan?page=1) yang sudah dikeluarkan oleh Kemendag sampai tulisan ini dibuat.
 
+###### Tabel 1 timeline peraturan Kemendag terkait CPO dan minyak goreng.
 | no | tanggal | aturan | isu |
 | -- | ------- | ------ | --- |
 | 1 | 11 Januari 2022 | Permendag 1/2022 | Subsidi BPD PKS utk migor kemasan sederhana, dengan HET 14 ribu rupiah per liter. |
@@ -48,7 +49,7 @@ Perkembangan terakhir, pemerintah akan [melepas HET](https://katadata.co.id/happ
 
 Instrumen DMO yang digunakan tentunya berangkat dari asumsi bahwa penyebab migor mahal adalah karena bahan baku yang mahal. Memang pada sekitar bulan juli, harga minyak kepala sawit di pasar sepertinya mulai naik. Menurut data dari [tradingeconomics.com](https://tradingeconomics.com/commodity/palm-oil) (gambar 1), harga komoditas _Crude Palm Oil_ (CPO) mulai terkerek naik sekitar Juli 2021, dan naik lagi September 2021.
 
-![wew](plo_com.svg "gambar 1. harga CPO")
+![wew](plo_com.svg "Gambar 1. harga CPO")
 
 BTW lihat deh harga setelah Januari. haha. Harga makin tinggi setelah Indonesia menerapkan DMO dan DPO.
 
@@ -95,7 +96,7 @@ Dua masalah di atas menyentuh fundamental _supply_ dan _demand_ yang menunjukkan
 
 Ongkos distribusi bisa jadi berbeda-beda di berbagai daerah dapat mengancam kesuksesan HET. Pabrik migor sepertinya lebih banyak berada di wilayah Indonesia Barat seperti Sumatera dan Jawa. Pengapalan ke daerah lain tentunya diperlukan. Jika hal ini benar, maka harga migor di Indonesia akan bervariasi di berbagai wilayah yang berbeda di hari-hari normal. Mengambil data [harga bulanan minyak goreng](https://hargapangan.id/tabel-harga/pasar-tradisional/komoditas) dari PIHPS, saya bikin grafik di bawah ini. Berisi harga bulanan migor di pasar tradisional sejak Januari 2018 di semua provinsi di Indonesia. Saya highlight beberapa provinsi.
 
-![wew](migor.png "harga migor")
+![wew](migor.png "Gambar 2. harga migor")
 
 Jika memang ada variasi harga meskipun pada hari biasa, maka HET mengancam kelangkaan di daerah-daerah yang distribusinya sulit. Apalagi di zaman gini ketika harga-harga energi dan kapal lagi mahal-mahalnya.
 
@@ -107,9 +108,13 @@ Sebenarnya HET Minyak goreng kemasan sudah lama mau diatur oleh pemerintah, seja
 
 Banyak juga yang mengatakan bahwa ada mafia yang bermain, atau minyak goreng adalah industri kartel. Saya rasa tuduhan-tuduhan tersebut cukup beralasan, mengingat reputasi Indonesia yang kurang baik perihal [korupsi dan inefisiensi birokrasi](https://www3.weforum.org/docs/GCR2017-2018/03CountryProfiles/Standalone2-pagerprofiles/WEF_GCI_2017_2018_Profile_Indonesia.pdf) dalam memulai usaha, dengan [ekonomi kapitalis kroni](https://www.economist.com/finance-and-economics/2022/03/12/our-crony-capitalism-index-offers-a-window-into-russias-billionaire-wealth) nomor 8 dunia menurut majalah The Economist. Di samping itu, hampir 50% penjualan migor dikuasai oleh [4 perusahaan](https://bisnis.tempo.co/read/1556268/4-jawara-produsen-minyak-goreng-di-indonesia/full&view=ok) saja.
 
-Kalo soal mafia si susah ya. mungkin bukan cuma masalah di migor aja. Apalagi kalau integrasi kebun-produk turunannya ini malah lebih efisien dilakukan oleh perusahaan besar. Pemerintah mungkin memilih mengintervensi industrinya karena tidak punya cukup _tools_ untuk menindak yang besar-besar (karena satu dan lain hal). Namun, intervensi di migor justru berpotensi berefek buruk ke yang kecil-kecil, karena yang besar-besar pasti bisa bermanuver.
+Kalo soal mafia si susah ya. mungkin bukan cuma masalah di migor aja. Apalagi kalau integrasi kebun-produk turunannya ini malah lebih efisien dilakukan oleh perusahaan besar. Kalau para "mafia" ini jadi besar karena efisien, ngutik-ngutik industri ini sembarangan malah bisa jadi nurunin efisiensi. Pemerintah mungkin memilih mengintervensi industrinya karena tidak punya cukup _tools_ untuk menindak yang besar-besar (karena satu dan lain hal). Namun, intervensi di migor justru berpotensi berefek buruk ke yang kecil-kecil, karena yang besar-besar pasti bisa bermanuver. Jangan lupa, menurut data Kementan, sekitar 40% kebun sawit ini adalah perkebunan rakyat, yang mungkin dapat manfaat dari menyuplai ke pabrik yang lebih besar.
 
 <iframe style="height:550px; width:100%; border: none;" src="https://databoks.katadata.co.id/datapublishembed/113928/luas-perkebunan-sawit-rakyat-406-dari-total-perkebunan-sawit-indonesia"></iframe>
+
+Di samping itu, gambar 2 menunjukkan penukikan tajam di bulan November 2021. Kalau memang mafia memiliki peran yang signifikan, seharusnya mahalnya dari dulu. Kenapa baru November? Apa mafianya baru terbentuk bulan ini? Apa mereka baru-baru aja bikin pertemuan ngeset harga? Kayaknya nggak ya. Kenaikan tajam ini malah berkorelasi dengan konsumsi CPO oleh produsen biodiesel yang jumlahnya melewati CPO untuk pangan.
+
+Jadi, argumen mafia saya rasa sangat mungkin. Malah mungkin bisa ada mafia baru gara-gara HET bikin insentif nimbun dan nyelundupin naik signifikan karena ada disparitas harga. Tapi rasanya bukan penjelasan utama kenaikan tajam harga migor. Kalaupun benar mafia perannya sangat besar, HET dan DMO rasanya bukan solusi yang tepat.
 
 ## Penutup
 
@@ -121,7 +126,7 @@ Bisakah kita menyalahkan Kemendag (saja)? Tentu saja jawabannya tidak juga. Seba
 
 Jika yang kamu punya adalah palu, maka semua masalah akan terlihat seperti paku. wkwkwk.
 
-Sekarang kemendag sudah bersedia menghentikan HET meskipun bea keluar CPO sepertinya belum berubah (CMIIW). Saya rasa ini adalah langkah yang cukup tepat. Sekarang migor mulai ada, bahkan lumayan cepat pasokannya (dari penimbun?). Menurut saya mendingan harga naik tapi barangnya ada. Setidaknya, kita bisa biarkan masyarakat mengoptimalkan sendiri alokasi belanja mereka. Setidaknya jika barangnya ada, kita semua bisa tetap beli dan mengonsumsinya dengan hemat.
+Sekarang kemendag sudah bersedia menghentikan HET disertai kenaikan bea keluar sampai 80%. Saya rasa ini adalah langkah yang cukup tepat. Sekarang migor mulai ada, bahkan lumayan cepat pasokannya (dari penimbun?). Menurut saya mendingan harga naik tapi barangnya ada. Setidaknya, kita bisa biarkan masyarakat mengoptimalkan sendiri alokasi belanja mereka. Setidaknya jika barangnya ada, kita semua bisa tetap beli dan mengonsumsinya dengan hemat.
 
 Harga yang pertama kali lepas mungkin saja naik pesat. Namun seiring pasokan bertambah dan produksi dimulai lagi karena harga yang lebih cocok bagi produsen,  Saya cukup yakin bahwa kita akan mulai melihat harga migor yang turun pelan-pelan meski masih di atas 14 ribu (inget ada banyak masalah lain yang cukup fundamental). Meskipun lebaran udah mau mulai bentar lagi ya sehingga mengerek permintaan. _We'll see_.
 
