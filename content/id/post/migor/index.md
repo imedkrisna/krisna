@@ -53,9 +53,9 @@ Instrumen DMO yang digunakan tentunya berangkat dari asumsi bahwa penyebab migor
 
 BTW lihat deh harga setelah Januari. haha. Harga makin tinggi setelah Indonesia menerapkan DMO dan DPO.
 
-Sementara itu, data yang ditunjukkan oleh Mendag pada [Konferensi Pers](https://www.youtube.com/watch?v=FTS9TGx_scM) (menit 5) pada 9 Maret 2022 lalu menunjukkan kenaikan tipis pada bulan Juli 2021, dan pada sekitar bulan November 2021 barulah terjadi kenaikan yang cukup tajam. Sepertinya kenaikan di November ini yang memicu reaksi dari Pemerintah. Beliau juga menunjukkan ada penurunan terhadap harga minyak goreng pada bulan Februari 2022.
+Sementara itu, data yang ditunjukkan oleh Mendag pada [Konferensi Pers](https://www.youtube.com/watch?v=FTS9TGx_scM) (menit 5) pada 9 Maret 2022 lalu menunjukkan kenaikan tipis pada bulan Juli 2021, dan pada sekitar bulan November 2021 barulah terjadi kenaikan yang cukup tajam. Sepertinya kenaikan di November ini yang memicu reaksi dari Pemerintah. Beliau juga menunjukkan ada penurunan terhadap harga minyak goreng pada bulan Februari 2022, bukti bahwa kebijakan HET berhasil menurunkan harga migor.
 
-Berbekal informasi ini, rasanya wajar jika Kemendag kemudian mendeduksi bahwa kenaikan harga CPO inilah yang menjadi biang naiknya harga migor. Jika demikian, maka cara penyelesaiannya adalah dengan mengurangi kemudahan ekspor (dalam hal ini dengan menggunakan DMO) sehingga kenaikan harga CPO di dalam negeri dapat ditekan. 
+Berbekal informasi ini, rasanya wajar jika Kemendag kemudian mendeduksi bahwa kenaikan harga CPO inilah yang menjadi biang naiknya harga migor. Jika demikian, wajar jika Kemendag berpikir bahwa penyelesaiannya adalah dengan mengurangi kemudahan ekspor (dalam hal ini dengan menggunakan DMO) sehingga kenaikan harga CPO di dalam negeri dapat ditekan. 
 
 Dengan kata lain, karena Mendag merasa bahwa permasalahannya ada di kompetisi pembeli, maka Mendag membantu pembeli CPO lokal dengan memaksa eksportir mengalihkan 20% (kemdian 30%) dari produknya untuk pasar dalam negeri.
 
@@ -77,11 +77,13 @@ Beliau mengatakan bahwa saat ini telah terjadi pergeseran yang cukup signifikan 
 
 > konsumsi CPO untuk biodiesel naik tajam dari 5,83 juta ton tahun 2019 menjadi 7,23 juta ton tahun 2020 atau kenaikan sebesar 24 persen. Sebaliknya, konsumsi CPO untuk industri pangan turun dari 9,86 juta ton tahun 2019 menjadi 8,42 juta ton tahun 2020.
 
-Hal ini diakibatkan program B20 oleh Pemerintah yang disubsidi oleh BPDPKS. Program ini bahkan meningkan ke B30 dan diproyeksikan untuk terus ditingkatkan sampai B100. artinya, kebutuhan CPO untuk biodiesel diproyeksikan akan terus meningkat.
+Hal ini diakibatkan program B20 oleh Pemerintah yang disubsidi oleh [BPDPKS](https://www.bpdp.or.id/) (btw websitenya BPDPKS jelek banget). B20 adalah campuran 80% solar dan 20% minyak nabati. Program ini bahkan meningkat ke [B30](https://solarindustri.com/blog/apa-itu-biosolar/) dan diproyeksikan untuk terus ditingkatkan sampai B100. artinya, kebutuhan CPO untuk biodiesel diproyeksikan akan terus meningkat.
 
-Tentu saja produsen migor tidak bisa bersaing dengan Bahan Bakar Nabati (BBN) karena program B20 dan B30 selama ini disubsidi oleh BPDPKS. Hal ini juga menyulitkan BPDPKS untuk menyulitkan migor juga karena jika subsidi program BBN ini dipotong maka hampir pasti program ini harus berhenti karena BBN sama sekali tidak kompetitif dibandingkan bahan bakar lain.
+Tentu saja produsen migor tidak bisa bersaing dengan Bahan Bakar Nabati (BBN) dalam hal membeli CPO murah karena program B20 dan B30 selama ini disubsidi oleh BPDPKS, sementara migor ga ada subsidinya. Jika subsidi program BBN ini dihentikan, maka hampir pasti program ini harus berhenti karena BBN sama sekali tidak kompetitif dibandingkan bahan bakar lain. Namun jika tidak dihentikan, maka migor harus disubsidi. Duitnya cukup ga?
 
 Hal yang sama dikatakan oleh [Nisrina](https://mediaindonesia.com/ekonomi/469771/cips-produksi-biofuel-ganggu-kestabilan-pasokan-minyak-goreng) dari CIPS.
+
+Ngomong-ngomong, sepertinya ada juga yang berargumen bahwa program B20 sebenernya dibuat pemerintah untuk menolong produsen CPO yang harga internasionalnya jatuh di tahun 2018-an. Kalau iya, yah sekarang harga udah tinggi lagi. saatnya programnya distop sementara?
 
 #### Produksi yang terbatas
 Kebutuhan yang akan terus meningkat tersebut tentunya harus diimbangi dengan peningkatan produksi. Masalahnya, produksi CPO Indonesia juga memiliki tren yang terus menurun sejak 2019.
@@ -126,8 +128,8 @@ Bisakah kita menyalahkan Kemendag (saja)? Tentu saja jawabannya tidak juga. Seba
 
 Jika yang kamu punya adalah palu, maka semua masalah akan terlihat seperti paku. wkwkwk.
 
-Sekarang kemendag sudah bersedia menghentikan HET disertai kenaikan bea keluar sampai 80%. Saya rasa ini adalah langkah yang cukup tepat. Sekarang migor mulai ada, bahkan lumayan cepat pasokannya (dari penimbun?). Menurut saya mendingan harga naik tapi barangnya ada. Setidaknya, kita bisa biarkan masyarakat mengoptimalkan sendiri alokasi belanja mereka. Setidaknya jika barangnya ada, kita semua bisa tetap beli dan mengonsumsinya dengan hemat.
+Sekarang kemendag sudah bersedia menghentikan HET disertai kenaikan bea keluar sampai 80%. Saya rasa ini adalah langkah yang cukup tepat. Pemerintah jadi punya dana untuk subsidi migor, setidaknya yang curah (sambil subsidi BBN tetap jalan). Sekarang migor mulai ada, bahkan lumayan cepat pasokannya (dari penimbun?). Menurut saya mendingan harga naik tapi barangnya ada. Setidaknya, kita bisa biarkan masyarakat mengoptimalkan sendiri alokasi belanja mereka. Setidaknya jika barangnya ada, kita semua bisa tetap beli dan mengonsumsinya dengan hemat.
 
-Harga yang pertama kali lepas mungkin saja naik pesat. Namun seiring pasokan bertambah dan produksi dimulai lagi karena harga yang lebih cocok bagi produsen,  Saya cukup yakin bahwa kita akan mulai melihat harga migor yang turun pelan-pelan meski masih di atas 14 ribu (inget ada banyak masalah lain yang cukup fundamental). Meskipun lebaran udah mau mulai bentar lagi ya sehingga mengerek permintaan. _We'll see_.
+Harga yang pertama kali lepas mungkin saja naik pesat. Namun seiring pasokan bertambah dan produksi dimulai lagi karena harga yang lebih cocok bagi produsen,  Saya cukup yakin bahwa kita akan mulai melihat harga migor yang turun pelan-pelan meski masih di atas 14 ribu (inget ada banyak masalah lain yang cukup fundamental). Mungkin yang bisa jaga harga tetap tinggi adalah naiknya permintaan karena lebaran udah mau mulai bentar lagi ya sehingga mengerek permintaan. _We'll see_.
 
 Untuk saat ini, saya sangat apresiasi langkah Kemendag yang akhirnya melepas harga ke pasar. Saatnya membela Pak Lutfi dan teman-teman di Kemendag 🙂
