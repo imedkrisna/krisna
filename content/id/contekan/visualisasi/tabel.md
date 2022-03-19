@@ -21,6 +21,8 @@ gimana cara terbaik ngesave tabelnya ke berbagai format?
 
 {{< icon name="bullhorn" pack="fas" >}} Work in progress {{< icon name="bullhorn" pack="fas" >}}
 
+<iframe src="https://onedrive.live.com/embed?cid=ACC929CA35B3A537&resid=acc929ca35b3a537%2179262&authkey=AGlfBF3b996wF10&em=2" width="476" height="288" frameborder="0" scrolling="no"></iframe>
+
 ## KableExtra
 
 {{< icon name="bullhorn" pack="fas" >}} Work in progress {{< icon name="bullhorn" pack="fas" >}}
