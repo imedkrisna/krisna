@@ -96,7 +96,7 @@ Dua masalah di atas menyentuh fundamental _supply_ dan _demand_ yang menunjukkan
 
 #### Ongkos distribusi
 
-Ongkos distribusi bisa jadi berbeda-beda di berbagai daerah dapat mengancam kesuksesan HET. Pabrik migor sepertinya lebih banyak berada di wilayah Indonesia Barat seperti Sumatera dan Jawa. Pengapalan ke daerah lain tentunya diperlukan. Jika hal ini benar, maka harga migor di Indonesia akan bervariasi di berbagai wilayah yang berbeda di hari-hari normal. Mengambil data [harga bulanan minyak goreng](https://hargapangan.id/tabel-harga/pasar-tradisional/komoditas) dari PIHPS, saya bikin grafik di bawah ini. Berisi harga bulanan migor di pasar tradisional sejak Januari 2018 di semua provinsi di Indonesia. Saya highlight beberapa provinsi.
+Ongkos distribusi bisa jadi berbeda-beda di berbagai daerah dapat mengancam kesuksesan HET. Pabrik migor sepertinya lebih banyak berada di wilayah Indonesia Barat seperti Sumatera dan Jawa[^1]. Pengapalan ke daerah lain tentunya diperlukan. Jika hal ini benar, maka harga migor di Indonesia akan bervariasi di berbagai wilayah yang berbeda di hari-hari normal. Mengambil data [harga bulanan minyak goreng](https://hargapangan.id/tabel-harga/pasar-tradisional/komoditas) dari PIHPS, saya bikin grafik di bawah ini. Berisi harga bulanan migor di pasar tradisional sejak Januari 2018 di semua provinsi di Indonesia. Saya highlight beberapa provinsi.
 
 ![wew](migor.png "Gambar 2. harga migor")
 
@@ -133,3 +133,5 @@ Sekarang kemendag sudah bersedia menghentikan HET disertai kenaikan bea keluar s
 Harga yang pertama kali lepas mungkin saja naik pesat. Namun seiring pasokan bertambah dan produksi dimulai lagi karena harga yang lebih cocok bagi produsen,  Saya cukup yakin bahwa kita akan mulai melihat harga migor yang turun pelan-pelan meski masih di atas 14 ribu (inget ada banyak masalah lain yang cukup fundamental). Mungkin yang bisa jaga harga tetap tinggi adalah naiknya permintaan karena lebaran udah mau mulai bentar lagi ya sehingga mengerek permintaan. _We'll see_.
 
 Untuk saat ini, saya sangat apresiasi langkah Kemendag yang akhirnya melepas harga ke pasar. Saatnya membela Pak Lutfi dan teman-teman di Kemendag 🙂
+
+[^1]: Kementerian Perdagangan. *Profil Komoditas Minyak Goreng*. [link (download)](https://ews.kemendag.go.id/sp2kp-landing/assets/pdf/120116_ANK_PKM_DSK_Minyak.pdf)
