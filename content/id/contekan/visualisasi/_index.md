@@ -7,6 +7,6 @@ type: book
 weight: 10
 ---
 
-Tentang visualisasi grafik, terutama garis.
+Tentang visualisasi.
 
 {{< list_children>}}
