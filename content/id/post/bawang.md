@@ -51,7 +51,7 @@ Yang kedua, teteup pake kuota, tapi proses pemberian lisensi atau ijin impor leb
 
 Intermezzo: Kementan sekarang masang keharusan calon importir untuk menanam sendiri bawang sebanyak 5% dari total impor. Jadi lumayan ada syaratnya. Saya sendiri nggak begitu ngerti kenapa harus begitu.
 
-Tapi argumen membela petani bawang sebenarnya agak gimana gitu ya. Saya pernah diceritain teman saya bahwa petani bawang itu sebenernya dikit banget, nyaris nggak ada. Hal ini senada dengan isi beritagar di atas, yang menyatakan bahwa kata Kemendag, 95% kebutuhan bawang putih kita diimpor. Artinya, bahkan dengan harga 30,000, petani kita cuma nyumbang 5% saja. Jadi, sebenarnya kuota ini melindungi siapa? Dari perspektif kebijakan publik, kuota bawang putih agak sulit saya pahami.
+Tapi argumen membela petani bawang sebenarnya agak gimana gitu ya. Saya pernah diceritain teman saya bahwa petani bawang itu sebenernya dikit banget, nyaris nggak ada. Hal ini senada dengan isi beritagar di atas, yang menyatakan bahwa kata Kemendag, 95% kebutuhan bawang putih kita diimpor. Artinya, bahkan dengan harga 30,000, petani kita cuma nyumbang 5% saja. Bahkan kalo lihat aturan wajib tanam 5%, ya angka 5% itu exactly dari kewajiban tanam, bukan murni organik petani. Jadi, sebenarnya kuota ini melindungi siapa? Dari perspektif kebijakan publik, kuota bawang putih agak sulit saya pahami.
 
 Tapi yaaa namanya bawang putih. Gurih cuy!
 
