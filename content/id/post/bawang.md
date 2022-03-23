@@ -21,9 +21,6 @@ INTERMEZZO: harga 30,000 per kg mungkin agak lebay. Kalo liat di PIHPS, tahun 20
 
 Kita boleh debat sih pas nggak harga 30,000 itu kita pake buat ngitung harga domestik. Intinya, cuma ngasih 3,6 milyar mah geli-geli. Dan impor bawang kayaknya bukannya berkurang tapi bakal naik terus.
 
-![alt text](/images/bawang1.png)
-sumber: UNCOMTRADE
-
 UPDATE: tempo udah kasi kalkulasi sesuai kesaksian di link ini. Ternyata untungnya mencapai 19T. Angka 30rebu/kg kekecilan ternyata.
 
 Setelah melihat betapa ngeri-nya suap impor bawang, tentu kita jadi bertanya-tanya: Kenapa sih negara ini memberlakukan kuota impor?
@@ -53,27 +50,25 @@ Tapi yaaa namanya bawang putih. Gurih cuy!
 **APPENDIX**
 di bagian ini saya akan mencoba mengilustrasikan dampak pemberlakuan kuota. Kalo jele jangan dibuli yaaa. moga-moga bermanfaat.
 
-![alt2](/images/bawang2.jpeg)
-Grafik tanpa impor
-Seandainya kita tidak melakukan impor sama sekali (impor bawang putih, misalnya, DILARANG!!), mungkin bawang akan diproduksi sebanyak QD, dan harganya, anggap saja 40 ribu per kg. Pada tahapan ini, petani bawang akan berbahagia karena harga bawang per kg sangat tinggi. Tapi konsumen kecele. dan industri yang menggunakan bawang putih akan jadi gak kompetitif. harga indomie akan jadi mahal!!
+![alt2](bawang2.jpg "Pasar domestik bawang tanpa impor")
+
+Seandainya kita tidak melakukan impor sama sekali (impor bawang putih, misalnya, DILARANG!!), mungkin bawang akan diproduksi sebanyak $Q^D$, dan harganya, anggap saja 40 ribu per kg. Pada tahapan ini, petani bawang akan berbahagia karena harga bawang per kg sangat tinggi. Tapi konsumen kecele. dan industri yang menggunakan bawang putih akan jadi gak kompetitif. harga indomie akan jadi mahal!!
 Nah, Apa yang terjadi seandainya kita impor bebas?
 
-![alt3](/images/bawang3.jpeg)
-Impor sebebas bebasnya
+![alt3](bawang3.jpg "impor sebebas-bebasnya tanpa hambatan kuota")
 
-Kita tau kalo pengimpor itu beli dari luar negeri dengan harga 12,000 per kg. Kalo impor bebas bas bas, maka harga bawang akan turun jadi 12,000. total bawang di NKRI akan naik dari, tadinya QD, jadi QT (karena murah). Pada harga 12,000, petani jadi males supply banyak-banyak. Mereka akan supply sebesar QDD, dan sebanyak QM akan diimpor dari luar negeri. Di sini, importir ndak untung karena harga domestik=harga dunia.
+Kita tau kalo pengimpor itu beli dari luar negeri dengan harga 12,000 per kg. Kalo impor bebas bas bas, maka harga bawang akan turun jadi 12,000. total bawang di NKRI akan naik dari, tadinya $Q^D$, jadi $Q^T$ (karena murah). Pada harga 12,000, petani jadi males supply banyak-banyak. Mereka akan supply sebesar $Q^{DD}$, dan sebanyak $Q^M$ akan diimpor dari luar negeri. Di sini, importir ndak untung karena harga domestik=harga dunia.
 
-Tapi tentu saja kita gak impor bebas. kita kan bukan liberal, ya gak? Kemendag gak mau kita impor sebanyak QM. kebanyakan. Impor dibatasi sebanyak QMK. Apa yang terjadi?
+Tapi tentu saja kita gak impor bebas. kita kan bukan liberal, ya gak? Kemendag gak mau kita impor sebanyak $Q^M$. kebanyakan. Impor dibatasi sebanyak $Q^{M}_K<Q^M$. Apa yang terjadi?
 
-![alt4](/images/bawang4.jpeg)
-Kuota Impor
+![alt4](bawang4.jpg "pembatasan impor dengan kuota")
 
-karena gak bole impor banyak-banyak, maka supply berkurang. Harga pun terkerek naik ke 30,000. Total bawang putih beredar jadi sebesar QTK, lebih rendah dari QT tapi lebih tinggi dari QD. Suplai domestik meningkat jadi QDK, dan impor terbatas di QMK. Di sini, harga domestik jadi 30,000 dan harga internasional tetep 12,000.
-Nah, dalam settingan kuota, maka importir akan untung sebanyak jumlah total impor QMK, dikali dengan selisih harga domestik dengan internasional, 30,000–12,000. Atau, untung importir=QMK*(30,000–12,000)=QMK*12,000. Di gambar di bawah ini, untung importir adalah yang diarsir.
+karena gak bole impor banyak-banyak, maka supply berkurang. Harga pun terkerek naik ke 30,000. Total bawang putih beredar jadi sebesar $Q^T_K$, lebih rendah dari $Q^T$ tapi lebih tinggi dari $Q^D$. Suplai domestik meningkat jadi $Q^D_K$, dan impor terbatas di $Q^M_K$. Di sini, harga domestik jadi 30,000 dan harga internasional tetep 12,000.
+Nah, dalam settingan kuota, maka importir akan untung sebanyak jumlah total impor $Q^M_K$, dikali dengan selisih harga domestik dengan internasional, 30,000–12,000. Atau, untung importir$=Q^M_K\times(30,000–12,000)=Q^M_K\times12,000$. Di gambar di bawah ini, untung importir adalah yang diarsir.
 
-![alt5](/images/bawang5.jpeg)
+![alt5](bawang5.jpg "untung buat importir")
 Untung Importir
 
-Di sini, petani bawang untung dibandingkan perdagangan bebas, karena kalo impor bebas, mereka cuma suplai QDD, sementara di kuota mereka suplai QDK dengan harga 30,000.
+Di sini, petani bawang untung dibandingkan perdagangan bebas, karena kalo impor bebas, mereka cuma suplai $Q^{DD}$, sementara di kuota mereka suplai $Q^D_K} dengan harga 30,000.
 
-Nah, kalo kuota kita ganti dengan bea impor sebesar 18,000 misalnya, arsirannya jadi ke pemerintah. Importir bole impor sebanyak mungkin, tapi karena harganya jadi mahal karena kena bea, mereka ga akan impor banyak2. Impornya akan sebesar QMK itu. Dan QMK*18,000 akan jadi tax revenue pemerintah, sementara untung importir akan kecil banget, sekecil kalo free trade.
+Nah, kalo kuota kita ganti dengan bea impor sebesar 18,000 misalnya, arsirannya jadi ke pemerintah. Importir boleh impor sebanyak mungkin, tapi karena harganya jadi mahal karena kena bea masuk, mereka ga akan impor banyak2. Impornya akan sebesar $Q^M_K$ itu. Dan $Q^M_K\times\text{18,000}$ akan jadi tax revenue pemerintah, sementara untung importir akan kecil banget, sekecil kalo free trade.
