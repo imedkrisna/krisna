@@ -29,7 +29,7 @@ INTERMEZZO: harga 30,000 per kg mungkin agak lebay. Kalo liat di PIHPS, tahun 20
 
 Kita boleh debat sih pas nggak harga 30,000 itu kita pake buat ngitung harga domestik. Intinya, cuma ngasih 3,6 milyar mah geli-geli. Dan impor bawang kayaknya bukannya berkurang tapi bakal naik terus.
 
-UPDATE: tempo udah kasi kalkulasi sesuai kesaksian di link ini. Ternyata untungnya mencapai 19T. Angka 30rebu/kg kekecilan ternyata.
+UPDATE: tempo udah kasi kalkulasi sesuai kesaksian di [link ini](https://bisnis.tempo.co/read/1094542/mafia-bawang-putih-impor-dari-cina-raup-untung-rp-19-t-per-tahun/full&view=ok). Ternyata untungnya mencapai 19T. Angka 30rebu/kg kekecilan ternyata. Ini ada investigasinya dari [Tempo](https://majalah.tempo.co/read/investigasi/159659/gurita-kuota-impor-bawang).
 
 Setelah melihat betapa ngeri-nya suap impor bawang, tentu kita jadi bertanya-tanya: Kenapa sih negara ini memberlakukan kuota impor?
 
