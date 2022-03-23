@@ -17,7 +17,7 @@ Karena ada hambatan tersebut, jadinya terdapat gap antara harga internasional de
 
 Tentunya itung-itungan ini harus dikritisi karena ini pakai angka tahunan, yang mana bisa saja terjadi fluktuasi bulanan atau harian. tapi kalau untuk ancer-ancer rasanya angka ini cukup, apalagi mengingat bahwa pasar global umumnya cukup fluid. Masalah kesulitan transaksi biasanya datang di proses pengajuan ijin impor di dalam negerinya, yang rantainya cukup panjang dan suka gak pasti ketepatan waktunya. Tabel di bawah ini ngasih perhitungan sederhana yg sedikit lbh lengkap utk tahun 2018,2019 dan 2020. USD dan kg dapat dari [UN Comtrade Database]((https://comtrade.un.org/data/)) sementara nilai tukar dapat dari [World Bank](https://data.worldbank.org/indicator/PA.NUS.FCRF?end=2020&locations=ID&start=2015).
 
-| Tahun | USD | kg | USD/kg | Rp/USD | IDR/Kg |
+| Tahun | USD | Kg | $\frac{USD}{Kg}$ | $\frac{IDR}{USD}$ | $\frac{IDR}{Kg}$ |
 | --- | --- | --- | --- | --- | --- |
 | 2018 | 497.259.293 | 582.994.508 | 0,853 | 14.239,939 | 12.146,668 |
 | 2019 | 529.965.497 | 465.344.332 | 1,139 | 14.147,671 | 16.114,197 |
