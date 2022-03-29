@@ -150,7 +150,7 @@ f'Govt revenues are {Tax0}, {Tax1}, {Tax2}, and {Tax3}'
 
 
 
-    'government revenue in each scenarios are 50.0, 47.6, 45.2, and 42.8'
+    'Govt revenues are 50.0, 47.6, 45.2, and 42.8'
 
 
 
