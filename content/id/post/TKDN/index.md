@@ -28,10 +28,10 @@ image:
 projects: []
 ---
 
-# Intro
-Perbincangan tentang peningkatan penggunaan produk dalam negeri dan anti impor sudah sering bergaung di kalangan pejabat publik. Bahkan, belakangan ini rasanya perbincangan ini terdengar semakin sering. Tentu saja menggunakan barang-barang produksi dalam negeri adalah sesuatu yang tidak jelek. Salah satu instrumen yang sedang marak digunakan oleh Indonesia adalah TKDN.
+Perbincangan tentang peningkatan penggunaan produk dalam negeri dan anti impor sudah sering bergaung di kalangan pejabat publik. Bahkan, belakangan ini rasanya perbincangan ini terdengar semakin sering. Tentu saja menggunakan barang-barang produksi dalam negeri adalah sesuatu yang tidak jelek. Yang jadi masalah adalah kalau dipaksa. Cinta produuk dalam negeri, seperti halnya cinta pada yang lain, sangat ga asik jika dipaksa. Nah, salah satu instrumen yang sedang marak digunakan oleh Indonesia adalah TKDN.
 
-[TKDN](http://tkdn.kemenperin.go.id/), atau Tingkat Kandungan Dalam Negeri, mulai marak digunakan oleh Indonesia[^1]. TKDN, jika diwajibnkan untuk suatu industri, mengamanatkan batas minimal dari suatu produk akhir memiliki kandungan dalam negeri. Kandungan ini bisa berupa tenaga kerja, permesinan, sampai ke penggunaan bahan baku. Contohnya, [perangkat 5G](https://inet.detik.com/consumer/d-5782359/kata-samsung-tentang-ketentuan-tkdn-4g-dan-5g-jadi-35), pada April 2022, diwajibkan memenuhi TKDN 35%, yang artinya semua perangkat 5G yang beredar harus memiliki kandungan lokal minimal 35% (atau maksimal komponen impor maksimal 65%).
+# Apa itu TKDN?
+[TKDN](http://tkdn.kemenperin.go.id/), atau Tingkat Kandungan Dalam Negeri, mulai marak digunakan oleh Indonesia[^1]. TKDN, jika diwajibkan untuk suatu industri, mengamanatkan batas minimal dari suatu produk akhir memiliki kandungan dalam negeri. Kandungan ini bisa berupa tenaga kerja, permesinan, sampai ke penggunaan bahan baku. Contohnya, [perangkat 5G](https://inet.detik.com/consumer/d-5782359/kata-samsung-tentang-ketentuan-tkdn-4g-dan-5g-jadi-35), pada April 2022, diwajibkan memenuhi TKDN 35%, yang artinya semua perangkat 5G yang beredar harus memiliki kandungan lokal minimal 35% (atau maksimal komponen impor maksimal 65%).
 
 TKDN mengakibatkan perusahaan tidak boleh lagi menjual barang impor. Barang tersebut harus diproduksi di dalam negeri. Komponennya boleh impor tapi tidak boleh banyak-banyak. Dengan TKDN, maka produsen diharapkan mendatangkan pabriknya ke Indonesia. Saya pernah menulis sedikit tentang efek ini di postingan saya [yang lain]({{< relref "/post/hitektrade" >}}).
 
@@ -100,6 +100,7 @@ def TKDN(Pm=1,Pn=3,α=1.5,δ=1,k=0,P=9,Q=30):
 
 Angka default di atas tidak perlu diartikan secara harfiah bahwa harga impor adalah 1. Si $P_M=1$ disebut juga _numeraire_, atau harga dasar. Karena problemnya linear yang berarti bebas _affine transformation_. Harga domestik $P_N=3$ bisa kita artikan bahwa harga bahan baku domestik lebih mahal tiga kali lipat daripada harga bahan baku impor.
 
+# Siapa yang untung siapa yang buntung
 Sekarang mari kita gunakan fungsi yang barusan kita bikin. Jangan lupa ada dependency `linprog` dari `scipy`. Untuk kasus tanpa TKDN, berarti kita set $k=0$:
 
 ```python
@@ -170,7 +171,19 @@ Semakin tinggi TKDN, semakin rendah total _income tax_ dari 2 perusahaan tersebu
 
 Hal ini tentunya di luar APBN yang digunakan untuk menegakkan aturan TKDN. Misalnya, untuk memastikan sebuah perusahaan mengikuti aturan TKDN, perusahaan tersebut harus disurvey dulu untuk dapat sertifikat lolos TKDN. Sertifikat 2 barang pertama dibayarin oleh Pemerintah, yang tentunya pakai APBN. Ini belum termasuk pembangunan sistem dan sumberdaya yang harus dialokasikan untuk penegakan TKDN oleh pemerintah. Di samping itu, untuk barang ke-3 yang perlu TKDN, maka perusahaan harus menanggung biaya sertifikat, yang akan mengurangi lebih jauh profit mereka, dan otomatis pajak penghasilan yang dibayarkan.
 
-Beberapa hal di atas merupakan kemungkinan problem yang ditimbulkan oleh TKDN. Nanti saya bahas lagi kapan-kapan wkwk. Mention saya di [twitter](https://www.twitter.com/imedkrisna) jika ada komen, kritik, atau saran. Thanks.
+# Jadi TKDN baik atau buruk?
+
+Beberapa hal di atas merupakan kemungkinan problem yang ditimbulkan oleh TKDN. Model linear ini, meskipun agak _arbitrary_, cukup mampu menjelaskan dampak jangka pendek TKDN. Model yang lebih representatif (tapi lebih ribet) bisa dicek di footnote.
+
+TKDN bisa jadi bagus kalau ternyata terdapat pembelajaran bagi produsen bahan baku dalam negeri. Misalnya, karena sekarang ada klien, industri mereka tumbuh dan makin efisien sehingga menekan cost sehingga bisa semurah produk impor (alias $P_N \leq P_M$), atau meningkatkan kualitas sehingga bisa lebih baik dari produk impor (alias $\alpha \in (0,1)$). Jika ini yang terjadi, maka $k$ tidak lagi binding dan TKDN bisa dikatakan berhasil, tergantung seberapa besar dan seberapa cepat _improvement_ industri dalam negeri terjadi.
+
+Kita juga tidak bisa mentah-mentah terima bahwa $Q$ dan $P,P_M,P_N$ sama sekali tidak bergerak ketika ada TKDN. Bisa saja alih-alih semangat menjadi efisien, produsen bahan baku dalam negeri malah keenakan diproteksi dan ga ada _improvement_ sama sekali. Bukannya improve, mereka malah naikin harga karena produsen barang jadi ga punya opsi lain selama TKDN _binds_.
+
+Disamping itu, TKDN membuat produsen barang jadi di dalam negeri jadi sulit berkompetisi dengan produsen barang jadi di negara lain. Kenapa? Karena produsen luar negeri bisa akses bahan baku murah dan bagus tanpa kena TKDN. Akibatnya, produsen barang jadi dalam negeri tidak bisa bersaing di pasar global dan terpaksa memanfaatkan pasar domestik. Produsen barang jadi di dalam negeri jadi tidak bisa bersaing dengan impor barang jadi, sehingga akan minta proteksi juga. 
+
+Inilah kenapa ada blokir IMEI. Produsen ponsel dalam negeri ga mau saingan dengan ponsel impor karena ponsel impor ga harus mengikuti TKDN.
+
+Nanti saya bahas lagi kapan-kapan wkwk. Mention saya di [twitter](https://www.twitter.com/imedkrisna) jika ada komen, kritik, atau saran. Thanks.
 
 [^1]: Fernando, O., & Ing, L. Y. (2022). Indonesia's Local Content Requirements: An Assessment on Consistency with Free Trade Agreement Commitments. *ERIA Discussion Paper Series*, 420. https://www.eria.org/publications/indonesias-local-content-requirements-an-assessment-on-consistency-with-free-trade-agreement-commitments/ 
 [^2]: Grossman, G. M. (1981). The Theory of Domestic Content Protection and Content Preference. *The Quarterly Journal of Economics*, 96(4), 583-603. https://doi.org/10.2307/1880742 
