@@ -28,7 +28,7 @@ image:
 projects: []
 ---
 
-Perbincangan tentang peningkatan penggunaan produk dalam negeri dan anti impor sudah sering bergaung di kalangan pejabat publik. Bahkan, belakangan ini rasanya perbincangan ini terdengar semakin sering. Tentu saja menggunakan barang-barang produksi dalam negeri adalah sesuatu yang tidak jelek. Yang jadi masalah adalah kalau dipaksa. Cinta produuk dalam negeri, seperti halnya cinta pada yang lain, sangat ga asik jika dipaksa. Nah, salah satu instrumen yang sedang marak digunakan oleh Indonesia adalah TKDN.
+Perbincangan tentang peningkatan penggunaan produk dalam negeri dan anti impor sudah sering bergaung di kalangan pejabat publik. Bahkan, belakangan ini rasanya perbincangan ini terdengar semakin sering. Tentu saja menggunakan barang-barang produksi dalam negeri adalah sesuatu yang tidak jelek. Yang jadi masalah adalah kalau dipaksa. Cinta produk dalam negeri, seperti halnya cinta pada yang lain, sangat ga asik jika dipaksa. Nah, salah satu instrumen yang sedang marak digunakan oleh Indonesia adalah TKDN.
 
 # Apa itu TKDN?
 [TKDN](http://tkdn.kemenperin.go.id/), atau Tingkat Kandungan Dalam Negeri, mulai marak digunakan oleh Indonesia[^1]. TKDN, jika diwajibkan untuk suatu industri, mengamanatkan batas minimal dari suatu produk akhir memiliki kandungan dalam negeri. Kandungan ini bisa berupa tenaga kerja, permesinan, sampai ke penggunaan bahan baku. Contohnya, [perangkat 5G](https://inet.detik.com/consumer/d-5782359/kata-samsung-tentang-ketentuan-tkdn-4g-dan-5g-jadi-35), pada April 2022, diwajibkan memenuhi TKDN 35%, yang artinya semua perangkat 5G yang beredar harus memiliki kandungan lokal minimal 35% (atau maksimal komponen impor maksimal 65%).
@@ -50,32 +50,32 @@ Jika kita cuma lihat keputusan produk input saja, maka si perusahaan punya fungs
 
 $$F(M,N) = \alpha M + N$$
 
-di mana $M$ adalah jumlah input yang diimpor dan $N$ adalah jumlah input yang dibeli di pasar domestik. Sementara itu, $\alpha$ adalah kualitas bahan baku impor relatif terhadap bahan baku domestik. Jika $\alpha > 1$ berarti barang impor punya kualitas lebih bagis. Kita juga akan mengasumsikan bahwa harga barang impor lebih murah daripada domestik ($P_M<P_N$). 
+di mana $M$ adalah jumlah input yang diimpor dan $N$ adalah jumlah input yang dibeli di pasar domestik. Sementara itu, $\alpha$ adalah kualitas bahan baku impor relatif terhadap bahan baku domestik. Jika $\alpha > 1$ berarti barang impor punya kualitas lebih bagus. Kita juga akan mengasumsikan bahwa harga barang impor lebih murah daripada domestik ($P_M<P_N$). 
 
 Si perusahaan ini diwajibkan untuk membeli barang mentah dari dalam negeri sebesar $k$:
 
 $$
-P_NN \geq kP(\alpha M + N) \\
+P_NN \geq kP(\alpha M + N) \\\\\\
 \text{di mana } k \in (0,1)
 $$
 
 Si perusahaan bermaksud memenuhi permintaan sebesar $F(M,N)=Q$ dengan biaya serendah mungkin. Artinya, si perusahaan memiliki problem:
 
 $$
-\min P_MM+P_NN \\
-s.t. \ \alpha M+ N \geq Q \\
-\ \ \ \ P_NN \geq kP(\alpha M + N) \\
+\min P_MM+P_NN \\\\\\
+s.t. \ \alpha M+ N \geq Q \\\\\\
+\ \ \ \ P_NN \geq kP(\alpha M + N) \\\\\\
 k \in (0,1)
 $$
 
 Berhubung masalahnya linear, kita bisa pake `linprog`. Saya akan menggunakan parameter sebagai berikut:
 
 $$
-P_M=1 \\
-P_N=3 \\
-α=1.5 \\ 
-k=0 \\
-P=9 \\
+P_M=1 \\\\\\
+P_N=3 \\\\\\
+α=1.5 \\\\\\
+k=0 \\\\\\
+P=9 \\\\\\
 Q=30
 $$
 
@@ -140,11 +140,11 @@ Jika kita tabelkan, maka TKDN mulai dari 0 sampai 30$ (untuk setiap tambahan 10%
 
 Bagaimana dengan nilai tambah dalam negeri secara total? Walaupun TKDN berhasil menaikkan nilai tambah dari produsen bahan baku, namun nilai tambah dari produsen barang jadi berkurang. Dalam kasus TKDN=0, maka nilai tambah produsen bahan baku adalah 0, sementara profit produsen barang jadi adalah 250. Untuk TKDN 10%, bahan baku dapat nilai tambah 9 tetapi barang jadi kehilangan $250-229=21$. jadi secara total terjadi kekurangan nilai tambah.
 
-Bagaimana dengan pemerintah? Seandainya impor bebas bea, maka pemasukan pemerintah akan datang dari PPh badan atau *Corporate Income Tax*. Tentunya dengan TKDN=0 maka produsen bahan baku ga bayar pajak. Sementara itu, produsen barang jadi akan membayar PPh badan sebesar $t \pi$ di mana $t$ adalah *tax rate*. Kalau kita asumsikan bahwa _cost_ produsen bahan baku domestik adalah 0, maka produsen bahan baku punya income sebesar $$P_N \times N$. Artinya, Total government revenue menjadi:
+Bagaimana dengan pemerintah? Seandainya impor bebas bea, maka pemasukan pemerintah akan datang dari PPh badan atau *Corporate Income Tax*. Tentunya dengan TKDN=0 maka produsen bahan baku ga bayar pajak. Sementara itu, produsen barang jadi akan membayar PPh badan sebesar $t \pi$ di mana $t$ adalah *tax rate*. Kalau kita asumsikan bahwa _cost_ produsen bahan baku domestik adalah 0, maka produsen bahan baku punya income sebesar $P_N \times N$. Artinya, Total government revenue menjadi:
 
 $$GR=t(P_N-c)N+t \pi$$
 
-di mana c adalah marginal cost yang linear terhadap produksi. saya menggunakan c=2 sehingga perusahaan lokal harus ngecharge harga $P_N=3$ supaya punya revenue 1, sama dengan importir. Jika cost domestik rendah, tentunya mereka bisa menjual dengan harga lebih murah supaya dibeli oleh perusahaan produsen barang jadi.
+di mana c adalah marginal cost yang linear terhadap produksi. Saya menggunakan c=2 sehingga perusahaan lokal harus ngecharge harga $P_N=3$ supaya punya revenue 1, sama dengan importir. Jika cost domestik rendah, tentunya mereka bisa menjual dengan harga lebih murah supaya dibeli oleh perusahaan produsen barang jadi.
 
 Coba kita hitung jika tax rate adalah 20%, maka total penghasilan pemerintah adalah:
 
@@ -161,11 +161,21 @@ for x,y in zip(brp,taxs):
     print(f'Ketika TKDN={x}, total GR = {y}')
 ```
 
-    Ketika TKDN=0%, total GR = 50.0
-    Ketika TKDN=10%, total GR = 47.6
-    Ketika TKDN=20%, total GR = 45.2
-    Ketika TKDN=30%, total GR = 42.8
+
+    ---------------------------------------------------------------------------
+
+    NameError                                 Traceback (most recent call last)
+
+    ~\AppData\Local\Temp/ipykernel_47124/509250559.py in <module>
+          3 c=2 # sehingga firms ga bisa jual dgn lebih murah daripada 3
+          4 brp=('0%','10%','20%','30%')
+    ----> 5 taxs=(Pm*0*t+250*t,
+          6 (Pn-c)*9*t+229*t,
+          7 (Pn-c)*18*t+208*t,
     
+
+    NameError: name 'Pm' is not defined
+
 
 Semakin tinggi TKDN, semakin rendah total _income tax_ dari 2 perusahaan tersebut. Meskipun pajak dari perusahaan domestik naik, akan tetapi pajak yang dibayar oleh perusahaan barang jadi berkurang karena profit yang berkurang. Karena itu, meskipun sekilas TKDN tidak memerlukan persiapan fiskal seperti subsidi, tetapi potensi inefisiensi yang dihasilkan memiliki 'ongkos' terhadap APBN juga.
 
