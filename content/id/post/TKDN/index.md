@@ -55,27 +55,45 @@ di mana $M$ adalah jumlah input yang diimpor dan $N$ adalah jumlah input yang di
 Si perusahaan ini diwajibkan untuk membeli barang mentah dari dalam negeri sebesar $k$:
 
 $$
-P_NN \geq kP(\alpha M + N) \\\\\\
+P_NN \geq kP(\alpha M + N)
+$$
+$$
 \text{di mana } k \in (0,1)
 $$
 
 Si perusahaan bermaksud memenuhi permintaan sebesar $F(M,N)=Q$ dengan biaya serendah mungkin. Artinya, si perusahaan memiliki problem:
 
 $$
-\min P_MM+P_NN \\\\\\
-s.t. \ \alpha M+ N \geq Q \\\\\\
-\ \ \ \ P_NN \geq kP(\alpha M + N) \\\\\\
+\min P_MM+P_NN
+$$
+$$
+s.t. \ \alpha M+ N \geq Q
+$$
+$$
+P_NN \geq kP(\alpha M + N)
+$$
+$$
 k \in (0,1)
 $$
 
 Berhubung masalahnya linear, kita bisa pake `linprog`. Saya akan menggunakan parameter sebagai berikut:
 
 $$
-P_M=1 \\\\\\
-P_N=3 \\\\\\
-α=1.5 \\\\\\
-k=0 \\\\\\
-P=9 \\\\\\
+P_M=1
+$$
+$$
+P_N=3
+$$
+$$
+α=1.5
+$$
+$$
+k=0
+$$
+$$
+P=9
+$$
+$$
 Q=30
 $$
 
@@ -129,7 +147,7 @@ Seperti dapat kita lihat di atas, TKDN mengakibatkan perusahaan produk jadi meng
 
 Ketika TKDN diset jadi 40%, modelnya crash alias si produk jadi mendingan ga produksi sama sekali wkwkw.
 
-Jika kita tabelkan, maka TKDN mulai dari 0 sampai 30$ (untuk setiap tambahan 10% TKDN) dapat dilihat di tabel di bawah
+Jika kita tabelkan, maka TKDN mulai dari 0 sampai 30% (untuk setiap tambahan 10% TKDN) dapat dilihat di tabel di bawah
 
 | k | M | N | C | $\pi$ |
 | --- | --- | --- | --- | --- |
@@ -153,7 +171,7 @@ t=0.2 # corporate income tax
 Pn=3 # harga barang domestik
 c=2 # sehingga firms ga bisa jual dgn lebih murah daripada 3
 brp=('0%','10%','20%','30%')
-taxs=(Pm*0*t+250*t,
+taxs=((Pn-c)*0*t+250*t,
 (Pn-c)*9*t+229*t,
 (Pn-c)*18*t+208*t,
 (Pn-c)*27*t+187*t)
@@ -161,21 +179,11 @@ for x,y in zip(brp,taxs):
     print(f'Ketika TKDN={x}, total GR = {y}')
 ```
 
-
-    ---------------------------------------------------------------------------
-
-    NameError                                 Traceback (most recent call last)
-
-    ~\AppData\Local\Temp/ipykernel_47124/509250559.py in <module>
-          3 c=2 # sehingga firms ga bisa jual dgn lebih murah daripada 3
-          4 brp=('0%','10%','20%','30%')
-    ----> 5 taxs=(Pm*0*t+250*t,
-          6 (Pn-c)*9*t+229*t,
-          7 (Pn-c)*18*t+208*t,
+    Ketika TKDN=0%, total GR = 50.0
+    Ketika TKDN=10%, total GR = 47.6
+    Ketika TKDN=20%, total GR = 45.2
+    Ketika TKDN=30%, total GR = 42.8
     
-
-    NameError: name 'Pm' is not defined
-
 
 Semakin tinggi TKDN, semakin rendah total _income tax_ dari 2 perusahaan tersebut. Meskipun pajak dari perusahaan domestik naik, akan tetapi pajak yang dibayar oleh perusahaan barang jadi berkurang karena profit yang berkurang. Karena itu, meskipun sekilas TKDN tidak memerlukan persiapan fiskal seperti subsidi, tetapi potensi inefisiensi yang dihasilkan memiliki 'ongkos' terhadap APBN juga.
 
