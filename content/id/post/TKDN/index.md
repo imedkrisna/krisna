@@ -70,13 +70,14 @@ $$
 
 Berhubung masalahnya linear, kita bisa pake `linprog`. Saya akan menggunakan parameter sebagau berikut:
 
-Pm=1
-Pn=3
-α=1.5
-δ=1
-k=0
-P=9
+$$
+P_M=1 \\
+P_N=3 \\
+α=1.5 \\ 
+k=0 \\
+P=9 \\
 Q=30
+$$
 
 Kita buat dulu fungsinya:
 
@@ -87,25 +88,29 @@ def TKDN(Pm=1,Pn=3,α=1.5,δ=1,k=0,P=9,Q=30):
     A_ex1 = np.array([[-α,-1],[k*P*α, k*P-Pn]])
     b_ex1 = np.array([-δ*Q,0])
     res_ex1 = linprog(c_ex1, A_ub=A_ex1, b_ub=b_ex1, method='revised simplex')
-    M=res_ex1['x'][0]
-    N=res_ex1['x'][1]
-    C=Pm*M+Pn*N
-    π=Q*P-C
-    return f"impor bahan baku {M}, bahan baku domestik {N}. Total Material cost {C} dan profit {π}"
+    names=[f'impor bahan baku = {res_ex1["x"][0]}',
+    f'bahan baku domestik = {res_ex1["x"][1]}',
+    f'biaya produksi = {Pm*res_ex1["x"][0]+Pn*res_ex1["x"][1]}',
+    f'profit perusahaan = {Q*P-Pm*res_ex1["x"][0]-Pn*res_ex1["x"][1]}']
+    for i in names:
+        print(i)
+    
+    
 ```
 
-Untuk kasus tanpa TKDN, berarti kita set $k=0$:
+Angka default di atas tidak perlu diartikan secara harfiah bahwa harga impor adalah 1. Si $P_M=1$ disebut juga _numeraire_, atau harga dasar. Karena problemnya linear yang berarti bebas _affine transformation_. Harga domestik $P_N=3$ bisa kita artikan bahwa harga bahan baku domestik lebih mahal tiga kali lipat daripada harga bahan baku impor.
+
+Sekarang mari kita gunakan fungsi yang barusan kita bikin. Jangan lupa ada dependency `linprog` dari `scipy`. Untuk kasus tanpa TKDN, berarti kita set $k=0$:
 
 ```python
-TKDN(k=0)
+TKDN()
 ```
 
-
-
-
-    'impor bahan baku 20.0, bahan baku domestik 0.0. Total Material cost 20.0 dan profit 250.0'
-
-
+    impor bahan baku = 20.0
+    bahan baku domestik = 0.0
+    biaya produksi = 20.0
+    profit perusahaan = 250.0
+    
 
 Bagaimana dengan TKDN di mana konten domestik harus ada di angka 20% dari total nilai produk jadi?
 
@@ -113,12 +118,11 @@ Bagaimana dengan TKDN di mana konten domestik harus ada di angka 20% dari total 
 TKDN(k=0.2)
 ```
 
-
-
-
-    'impor bahan baku 8.0, bahan baku domestik 18.0. Total Material cost 62.0 dan profit 208.0'
-
-
+    impor bahan baku = 8.0
+    bahan baku domestik = 18.0
+    biaya produksi = 62.0
+    profit perusahaan = 208.0
+    
 
 Seperti dapat kita lihat di atas, TKDN mengakibatkan perusahaan produk jadi mengalami penurunan profit dan kenaikan total cost. Namun demikian, penjual bahan baku domestik mendapatkan tambahan pemasukan sebanyak $18 \times P_N$. Artinya, TKDN berpotensi menyenangkan penjual bahan baku domestik, akan tetapi merugikan penjual barang jadi.
 
@@ -135,24 +139,32 @@ Jika kita tabelkan, maka TKDN mulai dari 0 sampai 30$ (untuk setiap tambahan 10%
 
 Bagaimana dengan nilai tambah dalam negeri secara total? Walaupun TKDN berhasil menaikkan nilai tambah dari produsen bahan baku, namun nilai tambah dari produsen barang jadi berkurang. Dalam kasus TKDN=0, maka nilai tambah produsen bahan baku adalah 0, sementara profit produsen barang jadi adalah 250. Untuk TKDN 10%, bahan baku dapat nilai tambah 9 tetapi barang jadi kehilangan $250-229=21$. jadi secara total terjadi kekurangan nilai tambah.
 
-Bagaimana dengan pemerintah? Seandainya impor bebas bea, maka pemasukan pemerintah akan datang dari PPh badan atau *Corporate Income Tax*. Tentunya dengan TKDN=0 maka produsen bahan baku ga bayar pajak. Sementara itu, produsen barang jadi akan membayar PPh badan sebesar $t \pi$ di mana $t$ adalah *tax rate*. Coba kita hitung jika tax rate adalah 20%, maka total penghasilan pemerintah adalah:
+Bagaimana dengan pemerintah? Seandainya impor bebas bea, maka pemasukan pemerintah akan datang dari PPh badan atau *Corporate Income Tax*. Tentunya dengan TKDN=0 maka produsen bahan baku ga bayar pajak. Sementara itu, produsen barang jadi akan membayar PPh badan sebesar $t \pi$ di mana $t$ adalah *tax rate*. Kalau kita asumsikan bahwa _cost_ produsen bahan baku domestik adalah 0, maka produsen bahan baku punya income sebesar $$P_N \times N$. Artinya, Total government revenue menjadi:
+
+$$GR=t(P_N-c)N+t \pi$$
+
+di mana c adalah marginal cost yang linear terhadap produksi. saya menggunakan c=2 sehingga perusahaan lokal harus ngecharge harga $P_N=3$ supaya punya revenue 1, sama dengan importir. Jika cost domestik rendah, tentunya mereka bisa menjual dengan harga lebih murah supaya dibeli oleh perusahaan produsen barang jadi.
+
+Coba kita hitung jika tax rate adalah 20%, maka total penghasilan pemerintah adalah:
 
 ```python
-t=0.2
-Pm=1
-Tax0=Pm*0*t+250*t
-Tax1=Pm*9*t+229*t
-Tax2=Pm*18*t+208*t
-Tax3=Pm*27*t+187*t
-f'Govt revenues are {Tax0}, {Tax1}, {Tax2}, and {Tax3}'
+t=0.2 # corporate income tax
+Pn=3 # harga barang domestik
+c=2 # sehingga firms ga bisa jual dgn lebih murah daripada 3
+brp=('0%','10%','20%','30%')
+taxs=(Pm*0*t+250*t,
+(Pn-c)*9*t+229*t,
+(Pn-c)*18*t+208*t,
+(Pn-c)*27*t+187*t)
+for x,y in zip(brp,taxs):
+    print(f'Ketika TKDN={x}, total GR = {y}')
 ```
 
-
-
-
-    'Govt revenues are 50.0, 47.6, 45.2, and 42.8'
-
-
+    Ketika TKDN=0%, total GR = 50.0
+    Ketika TKDN=10%, total GR = 47.6
+    Ketika TKDN=20%, total GR = 45.2
+    Ketika TKDN=30%, total GR = 42.8
+    
 
 Semakin tinggi TKDN, semakin rendah total _income tax_ dari 2 perusahaan tersebut. Meskipun pajak dari perusahaan domestik naik, akan tetapi pajak yang dibayar oleh perusahaan barang jadi berkurang karena profit yang berkurang. Karena itu, meskipun sekilas TKDN tidak memerlukan persiapan fiskal seperti subsidi, tetapi potensi inefisiensi yang dihasilkan memiliki 'ongkos' terhadap APBN juga.
 
