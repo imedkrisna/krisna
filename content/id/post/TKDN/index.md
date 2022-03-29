@@ -68,7 +68,7 @@ s.t. \ \alpha M+ N \geq Q \\
 k \in (0,1)
 $$
 
-Berhubung masalahnya linear, kita bisa pake `linprog`. Saya akan menggunakan parameter sebagau berikut:
+Berhubung masalahnya linear, kita bisa pake `linprog`. Saya akan menggunakan parameter sebagai berikut:
 
 $$
 P_M=1 \\
