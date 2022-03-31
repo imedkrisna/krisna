@@ -5,8 +5,8 @@ title: 'Catatan hasil nonton acara "Ngobrol Tempo" dengan judul "Substitusi Impo
 subtitle: ""
 summary: ""
 authors: [admin]
-tags: [perdagangan, industri, kebijakan]
-categories: [perdagangan, industri, kebijakan]
+tags: [TKDN, perdagangan, industri, kebijakan]
+categories: [TKDN, perdagangan, industri, kebijakan]
 date: 2022-03-04T07:17:38+07:00
 lastmod: 2022-03-04T07:17:38+07:00
 featured: false

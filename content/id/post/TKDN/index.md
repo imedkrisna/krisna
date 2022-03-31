@@ -33,13 +33,13 @@ Perbincangan tentang peningkatan penggunaan produk dalam negeri dan anti impor s
 # Apa itu TKDN?
 [TKDN](http://tkdn.kemenperin.go.id/), atau Tingkat Kandungan Dalam Negeri, mulai marak digunakan oleh Indonesia[^1]. TKDN, jika diwajibkan untuk suatu industri, mengamanatkan batas minimal dari suatu produk akhir memiliki kandungan dalam negeri. Kandungan ini bisa berupa tenaga kerja, permesinan, sampai ke penggunaan bahan baku. Contohnya, [perangkat 5G](https://inet.detik.com/consumer/d-5782359/kata-samsung-tentang-ketentuan-tkdn-4g-dan-5g-jadi-35), pada April 2022, diwajibkan memenuhi TKDN 35%, yang artinya semua perangkat 5G yang beredar harus memiliki kandungan lokal minimal 35% (atau maksimal komponen impor maksimal 65%).
 
-TKDN mengakibatkan perusahaan tidak boleh lagi menjual barang impor. Barang tersebut harus diproduksi di dalam negeri. Komponennya boleh impor tapi tidak boleh banyak-banyak. Dengan TKDN, maka produsen diharapkan mendatangkan pabriknya ke Indonesia. Saya pernah menulis sedikit tentang efek ini di postingan saya [yang lain]({{< relref "/post/hitektrade" >}}).
+TKDN mengakibatkan perusahaan tidak boleh lagi menjual barang impor. Barang tersebut harus diproduksi di dalam negeri. Komponennya boleh impor tapi tidak boleh banyak-banyak. Dengan TKDN, maka produsen diharapkan mendatangkan pabriknya ke Indonesia. Saya pernah menulis sedikit tentang efek ini di postingan saya [yang lain]({{< relref "/post/hitektrade" >}}). Dengan adanya investasi, maka lapangan kerja akan bertambah. Di negara yang informalitasnya tinggi seperti di Indonesia, lapangan pekerjaan formal dapat menjadi pilihan yang baik untuk meningkatkan kesejahteraan masyarakat[^2]. TKDN juga diharapkan dapat meningkatkan kapasitas produksi dan teknologi perusahaan domestik yang menjadi _supplier_ industri barang jadi.
 
 Beberapa alasan kenapa TKDN cukup populer terutama bagi pemerintahan adalah karena dia gratis (gak kaya subsidi yang memerlukan APBN). Selain itu, kebijakan anti impor biasanya sangat disukai oleh masyarakat, dan berpotensi meningkatkan popularitas politisi.
 
 Secara sepintas, memang sepertinya meningkatkan TKDN itu baik ya. Jika investasi datang ke Indonesia, maka akan ada value tambahan. Namun perlu dipahami bahwa konsep value itu tidaklah statik dan tidak _eksogen_. Value sebuah barang bisa naik dan bisa turun tergantung dari inputnya juga. Apakah, misalnya, perangkat 5G yang punya kandungan domestik tinggi ini sama bagusnya dengan jika perangkat tersebut diimpor? Apakah perangkat dengan TKDN tinggi bisa bersaing di pasar global? Apakah ada smelter berarti kita dapat value yang lebih tinggi [dari ekspor nikel saja](https://theconversation.com/klaim-sukses-hilirisasi-nikel-berbasis-larangan-ekspor-masih-memiliki-segudang-masalah-177735)?
 
-Jawabannya belum tentu. Beberapa artikel teoritis membedah konsep perubahan value dan produktivitas dari perusahaan intermediate input dan perusahaan final good[^2] [^3] [^4]. Memang ada tarik menarik antara keduanya, dan TKDN tidak otomatis menghasilkan keluaran yang seoptimal kelihatannya, apalagi jika TKDN tidak berhasil meningkatkan produktivitas sektor yang ia coba proteksi.
+Jawabannya belum tentu. Beberapa artikel teoritis membedah konsep perubahan value dan produktivitas dari perusahaan intermediate input dan perusahaan final good[^3] [^4] [^5]. Memang ada tarik menarik antara keduanya, dan TKDN tidak otomatis menghasilkan keluaran yang seoptimal kelihatannya, apalagi jika TKDN tidak berhasil meningkatkan produktivitas sektor yang ia coba proteksi.
 
 Di postingan kali ini, saya mencoba ngasih gambaran dengan model yang sangat simpel tentang tarik-menarik value ini.
 
@@ -199,12 +199,23 @@ Kita juga tidak bisa mentah-mentah terima bahwa $Q$ dan $P,P_M,P_N$ sama sekali 
 
 Disamping itu, TKDN membuat produsen barang jadi di dalam negeri jadi sulit berkompetisi dengan produsen barang jadi di negara lain. Kenapa? Karena produsen luar negeri bisa akses bahan baku murah dan bagus tanpa kena TKDN. Akibatnya, produsen barang jadi dalam negeri tidak bisa bersaing di pasar global dan terpaksa memanfaatkan pasar domestik. Produsen barang jadi di dalam negeri jadi tidak bisa bersaing dengan impor barang jadi, sehingga akan minta proteksi juga. 
 
-Inilah kenapa ada blokir IMEI. Produsen ponsel dalam negeri ga mau saingan dengan ponsel impor karena ponsel impor ga harus mengikuti TKDN.
+Inilah kenapa ada blokir IMEI. Produsen ponsel dalam negeri ga mau saingan dengan ponsel impor karena ponsel impor ga harus mengikuti TKDN. Apakah publik pernah dikasih tau berapa APBN yang dikeluarkan untuk implementasi blokir IMEI?
+
+# Alternatif TKDN
+
+Ada beberapa alternatif dari TKDN[^6] :
+1. Perbaiki iklim bisnis. Ini kayaknya obvious banget ya : lol : . Tapi memang jurus ini ga ada yang ngalahin kebijakan lain. Susah industri mau maju kalau hulu-nya diproteksi, mau beli barang impor maupun ekspor _administrative cost_-nya tinggi. Aparatnya masih suka [korupsi](https://regional.kompas.com/read/2022/03/25/171720578/berkas-perkara-korupsi-dilimpahkan-ke-pengadilan-2-eks-pejabat-bea-cukai).
+1. Manfaatkan CSR. Tanyain apakah pengusaha multi nasional bisa mencoba membantu perusahaan lokal sebagai suppliernya.
+1. Lakuukan pelatihan bagi pegawai maupun perusahaan pemasok komponen. Training merupakan hal yang penting untuk meningkatkan kualitas pengusaha dan karyawan lokal. Pemerintah yang paham industri tentunya akan bisa mengidentifikasi pelatihan apa yang diperlukan, dan menyelenggarakannya. Ini juga makan APBN, tapi jauh lebih baik daripada dipake buat menegakkan TKDN.
+1. Perbaiki proses dan infrastruktur fisik logistik. Ini juga rasanya cukup jelas :lol: .
+1. Jika semua masih gagal juga, menggunakan **tarif dan subsidi**, meski tidak ideal, masih lebih baik daripada TKDN. Tapi balik lagi ya, problem utama dari tariff tentunya adalah perjanjian dagang dan retaliasi. Tariff lebih mudah dihitung daripada TKDN, sehingga lebih munggkin kena masalah di WTO. Sementara itu, subsidi membebani APBN secara langsung, ga seperti TKDN yang membebani APBN dan ekonomi secara tidak langsung. Yah beginilah kalau punya policy makers & politisi yang ga ngerti cara ngitung _hidden cost_.
 
 Nanti saya bahas lagi kapan-kapan wkwk. Mention saya di [twitter](https://www.twitter.com/imedkrisna) jika ada komen, kritik, atau saran. Thanks.
 
 [^1]: Fernando, O., & Ing, L. Y. (2022). Indonesia's Local Content Requirements: An Assessment on Consistency with Free Trade Agreement Commitments. *ERIA Discussion Paper Series*, 420. https://www.eria.org/publications/indonesias-local-content-requirements-an-assessment-on-consistency-with-free-trade-agreement-commitments/ 
-[^2]: Grossman, G. M. (1981). The Theory of Domestic Content Protection and Content Preference. *The Quarterly Journal of Economics*, 96(4), 583-603. https://doi.org/10.2307/1880742 
-[^3]: Veloso, F. M. (2006). Understanding Local Content Decisions: Economic Analysis and an Application to the Automotive Industry. *Journal of Regional Science*, 46(4), 747-772. https://doi.org/https://doi.org/10.1111/j.1467-9787.2006.00476.x 
-[^4]: Lin, S.-H., & Weng, Y. (2020). Can strengthening the local content requirements meet a government’s need to raise industrial productivity and production? *Journal of Applied Economics*, 23(1), 316-328. https://doi.org/10.1080/15140326.2020.1753468
+[^2]: Gupta, K., & Mardjono, E. (2021). Indonesia Emas Berkelanjutan 2045: Kumpulan Pemikiran Pelajar Indonesia Sedunia Seri 01 Ekonomi. LIPI Press. https://doi.org/10.14203/press.357 
+[^3]: Grossman, G. M. (1981). The Theory of Domestic Content Protection and Content Preference. *The Quarterly Journal of Economics*, 96(4), 583-603. https://doi.org/10.2307/1880742 
+[^4]: Veloso, F. M. (2006). Understanding Local Content Decisions: Economic Analysis and an Application to the Automotive Industry. *Journal of Regional Science*, 46(4), 747-772. https://doi.org/https://doi.org/10.1111/j.1467-9787.2006.00476.x 
+[^5]: Lin, S.-H., & Weng, Y. (2020). Can strengthening the local content requirements meet a government’s need to raise industrial productivity and production? *Journal of Applied Economics*, 23(1), 316-328. https://doi.org/10.1080/15140326.2020.1753468
+[^6]: Hufbauer, G., Schott, J. J., Wada, E., Cimino, C., & Vieiroand, M. (2013). Local Content Requirements : A Global Problem. Peterson Institute for International Economics. http://ebookcentral.proquest.com/lib/anu/detail.action?docID=3385696 
 
