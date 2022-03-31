@@ -204,10 +204,10 @@ Inilah kenapa ada blokir IMEI. Produsen ponsel dalam negeri ga mau saingan denga
 # Alternatif TKDN
 
 Ada beberapa alternatif dari TKDN[^6] :
-1. Perbaiki iklim bisnis. Ini kayaknya obvious banget ya : lol : . Tapi memang jurus ini ga ada yang ngalahin kebijakan lain. Susah industri mau maju kalau hulu-nya diproteksi, mau beli barang impor maupun ekspor _administrative cost_-nya tinggi. Aparatnya masih suka [korupsi](https://regional.kompas.com/read/2022/03/25/171720578/berkas-perkara-korupsi-dilimpahkan-ke-pengadilan-2-eks-pejabat-bea-cukai).
-1. Manfaatkan CSR. Tanyain apakah pengusaha multi nasional bisa mencoba membantu perusahaan lokal sebagai suppliernya.
-1. Lakuukan pelatihan bagi pegawai maupun perusahaan pemasok komponen. Training merupakan hal yang penting untuk meningkatkan kualitas pengusaha dan karyawan lokal. Pemerintah yang paham industri tentunya akan bisa mengidentifikasi pelatihan apa yang diperlukan, dan menyelenggarakannya. Ini juga makan APBN, tapi jauh lebih baik daripada dipake buat menegakkan TKDN.
-1. Perbaiki proses dan infrastruktur fisik logistik. Ini juga rasanya cukup jelas :lol: .
+1. **Perbaiki iklim bisnis**. Ini kayaknya obvious banget ya : lol : . Tapi memang jurus ini ga ada yang ngalahin kebijakan lain. Susah industri mau maju kalau hulu-nya diproteksi, mau beli barang impor maupun ekspor _administrative cost_-nya tinggi. Aparatnya masih suka [korupsi](https://regional.kompas.com/read/2022/03/25/171720578/berkas-perkara-korupsi-dilimpahkan-ke-pengadilan-2-eks-pejabat-bea-cukai).
+1. **Manfaatkan CSR**. Tanyain apakah pengusaha multi nasional bisa mencoba membantu perusahaan lokal sebagai suppliernya.
+1. Lakuukan **pelatihan** bagi pegawai maupun perusahaan pemasok komponen. Training merupakan hal yang penting untuk meningkatkan kualitas pengusaha dan karyawan lokal. Pemerintah yang paham industri tentunya akan bisa mengidentifikasi pelatihan apa yang diperlukan, dan menyelenggarakannya. Ini juga makan APBN, tapi jauh lebih baik daripada dipake buat menegakkan TKDN.
+1. Perbaiki **proses dan infrastruktur fisik logistik**. Ini juga rasanya cukup jelas :lol: .
 1. Jika semua masih gagal juga, menggunakan **tarif dan subsidi**, meski tidak ideal, masih lebih baik daripada TKDN. Tapi balik lagi ya, problem utama dari tariff tentunya adalah perjanjian dagang dan retaliasi. Tariff lebih mudah dihitung daripada TKDN, sehingga lebih munggkin kena masalah di WTO. Sementara itu, subsidi membebani APBN secara langsung, ga seperti TKDN yang membebani APBN dan ekonomi secara tidak langsung. Yah beginilah kalau punya policy makers & politisi yang ga ngerti cara ngitung _hidden cost_.
 
 Nanti saya bahas lagi kapan-kapan wkwk. Mention saya di [twitter](https://www.twitter.com/imedkrisna) jika ada komen, kritik, atau saran. Thanks.
