@@ -193,13 +193,17 @@ Hal ini tentunya di luar APBN yang digunakan untuk menegakkan aturan TKDN. Misal
 
 Beberapa hal di atas merupakan kemungkinan problem yang ditimbulkan oleh TKDN. Model linear ini, meskipun agak _arbitrary_, cukup mampu menjelaskan dampak jangka pendek TKDN. Model yang lebih representatif (tapi lebih ribet) bisa dicek di footnote.
 
-TKDN bisa jadi bagus kalau ternyata terdapat pembelajaran bagi produsen bahan baku dalam negeri. Misalnya, karena sekarang ada klien, industri mereka tumbuh dan makin efisien sehingga menekan cost sehingga bisa semurah produk impor (alias $P_N \leq P_M$), atau meningkatkan kualitas sehingga bisa lebih baik dari produk impor (alias $\alpha \in (0,1)$). Jika ini yang terjadi, maka $k$ tidak lagi binding dan TKDN bisa dikatakan berhasil, tergantung seberapa besar dan seberapa cepat _improvement_ industri dalam negeri terjadi.
+Satu hal penting dari model di atas adalah tidak bisa mentah-mentah terima bahwa $Q$ dan $P,P_M,P_N$ sama sekali tidak bergerak ketika ada TKDN. Bisa saja alih-alih semangat menjadi efisien, produsen bahan baku dalam negeri malah keenakan diproteksi dan ga ada _improvement_ sama sekali. Bukannya improve, mereka malah naikin harga karena produsen barang jadi ga punya opsi lain selama TKDN _binds_.
 
-Kita juga tidak bisa mentah-mentah terima bahwa $Q$ dan $P,P_M,P_N$ sama sekali tidak bergerak ketika ada TKDN. Bisa saja alih-alih semangat menjadi efisien, produsen bahan baku dalam negeri malah keenakan diproteksi dan ga ada _improvement_ sama sekali. Bukannya improve, mereka malah naikin harga karena produsen barang jadi ga punya opsi lain selama TKDN _binds_.
-
-Disamping itu, TKDN membuat produsen barang jadi di dalam negeri jadi sulit berkompetisi dengan produsen barang jadi di negara lain. Kenapa? Karena produsen luar negeri bisa akses bahan baku murah dan bagus tanpa kena TKDN. Akibatnya, produsen barang jadi dalam negeri tidak bisa bersaing di pasar global dan terpaksa memanfaatkan pasar domestik. Produsen barang jadi di dalam negeri jadi tidak bisa bersaing dengan impor barang jadi, sehingga akan minta proteksi juga. 
+Disamping itu, TKDN membuat produsen barang jadi di dalam negeri jadi sulit berkompetisi dengan produsen barang jadi di negara lain. Kenapa? Karena produsen luar negeri bisa akses bahan baku murah dan bagus tanpa kena TKDN. Akibatnya, produsen barang jadi dalam negeri tidak bisa bersaing di pasar global dan terpaksa memanfaatkan pasar domestik. Produsen barang jadi di dalam negeri jadi tidak bisa bersaing dengan impor barang jadi, sehingga akan minta proteksi juga.
 
 Inilah kenapa ada blokir IMEI. Produsen ponsel dalam negeri ga mau saingan dengan ponsel impor karena ponsel impor ga harus mengikuti TKDN. Apakah publik pernah dikasih tau berapa APBN yang dikeluarkan untuk implementasi blokir IMEI?
+
+Terakhir, TKDN itu sekalinya digunakan, maka akan sulit untuk dibatalkan. Perusahaan yang sudah terlanjur investasi besar demi memenuhi TKDN akan rugi besar kalau tiba-tiba TKDN dicabut dan perusahaan yang tidak investasi bisa masuk ke pasar yang tadinya diproteksi dengan TKDN. Karena itu, perusahaan yang sudah keburu invest demi memenuhi TKDN akan punya insentif untuk terus meminta pemerintah menjalankan TKDN dan menerapkan aturan-aturan yang diperlukan untuk menegakkan TKDN.
+
+TKDN bisa dianggap berhasil kalau ternyata terdapat pembelajaran bagi produsen bahan baku dalam negeri. Misalnya, karena sekarang ada klien, industri mereka tumbuh dan makin efisien sehingga menekan cost sehingga bisa semurah produk impor (alias $P_N \leq P_M$), atau meningkatkan kualitas sehingga bisa lebih baik dari produk impor (alias $\alpha \in (0,1)$). Jika ini yang terjadi, maka $k$ tidak lagi binding dan TKDN bisa dikatakan berhasil, tergantung seberapa besar dan seberapa cepat _improvement_ industri dalam negeri terjadi.
+
+Karena itu, pembuat kebijakan yang sudah terlanjur menggunakan TKDN seyogyanya terus memantau si $\alpha$ dan si $P_N$ ini (atau tepatnya $\frac{P_N}{P_M}). Jika tidak ada kemajuan, maka sulit mengharapkan industri nasional untuk bisa efisien dan kompetitif, dan akhirnya keunggulan-keunggulan yang diinginkan malah tidak tercapai. Pemaksaan saja akan sulit diharapkan untuk berhasil. Ada kemungkinan pemerintah mesti mengkomplemen aturan ini dengan aturan lain. Jadi makin banyak ya aturannya wkwk.
 
 # Alternatif TKDN
 
