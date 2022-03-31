@@ -203,7 +203,7 @@ Terakhir, TKDN itu sekalinya digunakan, maka akan sulit untuk dibatalkan. Perusa
 
 TKDN bisa dianggap berhasil kalau ternyata terdapat pembelajaran bagi produsen bahan baku dalam negeri. Misalnya, karena sekarang ada klien, industri mereka tumbuh dan makin efisien sehingga menekan cost sehingga bisa semurah produk impor (alias $P_N \leq P_M$), atau meningkatkan kualitas sehingga bisa lebih baik dari produk impor (alias $\alpha \in (0,1)$). Jika ini yang terjadi, maka $k$ tidak lagi binding dan TKDN bisa dikatakan berhasil, tergantung seberapa besar dan seberapa cepat _improvement_ industri dalam negeri terjadi.
 
-Karena itu, pembuat kebijakan yang sudah terlanjur menggunakan TKDN seyogyanya terus memantau si $\alpha$ dan si $P_N$ ini (atau tepatnya $\frac{P_N}{P_M}). Jika tidak ada kemajuan, maka sulit mengharapkan industri nasional untuk bisa efisien dan kompetitif, dan akhirnya keunggulan-keunggulan yang diinginkan malah tidak tercapai. Pemaksaan saja akan sulit diharapkan untuk berhasil. Ada kemungkinan pemerintah mesti mengkomplemen aturan ini dengan aturan lain. Jadi makin banyak ya aturannya wkwk.
+Karena itu, pembuat kebijakan yang sudah terlanjur menggunakan TKDN seyogyanya terus memantau si $\alpha$ dan si $P_N$ ini (atau tepatnya $\frac{P_N}{P_M}). Jika tidak ada kemajuan, maka sulit mengharapkan industri nasional untuk bisa efisien dan kompetitif, dan akhirnya keunggulan-keunggulan yang diinginkan malah tidak tercapai. Pemaksaan saja akan sulit diharapkan untuk berhasil. Ada kemungkinan pemerintah mesti mengkomplemen aturan TKDN dengan aturan lain yang bisa mendorong efisiensi industri. Jadi makin banyak ya aturannya wkwk.
 
 # Alternatif TKDN
 
