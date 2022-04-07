@@ -28,6 +28,8 @@ image:
 projects: []
 ---
 
+(update 7 April 2022: nambah no. 8 di tabel 1)
+
 ## Pendahuluan
 
 Beberapa hari ini pemerintah sedang dihebohkan dengan naiknya harga minyak goreng. Pemerintah berusaha agar harga minyak goreng (migor) bisa ditahan di harga rendah. Presiden [menugaskan Kementerian Perdagangan](https://www.jawapos.com/ekonomi/04/01/2022/jokowi-minta-mendag-stabilkan-harga-minyak-goreng/) untuk menjaga agar harga migor bisa terkendali. Sementara itu, instrumen yang digunakan oleh Kementerian Perdagangan (Kemendag) adalah pengenaan _Domestic Market Obligation_ (DMO) bagi minyak kelapa sawit sebagai bahan baku migor dan penetapan _Domestic Price Obligation_ (DPO) bagi minyak sawit dan Harga Eceran Tertinggi (HET) bagi migor. Berikut rincian [Permendag](http://jdih.kemendag.go.id/peraturan?page=1) yang sudah dikeluarkan oleh Kemendag sampai tulisan ini dibuat.
@@ -42,6 +44,7 @@ Beberapa hari ini pemerintah sedang dihebohkan dengan naiknya harga minyak goren
 | 5 | 8 Februari 2022 | Permendag 8/2022 | Revisi no 2, DMO diperluas ke 60 *tariff lines*. |
 | 6 | 10 Februari 2022 | Kempmendag 129/2022 | DMO ditetapkan sebesar 20%. |
 | 7 | 9 Maret 2022 | Kempmendag 170/2022 | DMO ditetapkan sebesar 30%. |
+| 8 | 20 Maret 2022 | Permendag 12/2022 | DMO dicabut. |
 
 Perkembangan terakhir, pemerintah akan [melepas HET](https://katadata.co.id/happyfajrian/berita/6230c963601c9/pemerintah-lepas-harga-minyak-goreng-kemasan-ke-mekanisme-pasar) untuk minyak goreng kemasan. Sementara itu, migor curah akan mematuhi HET 14 ribu rupiah per liter. Hal ini efektif berlaku pada 16 Maret 2022. Kenapa melepas HET? Karena dengan HET seperti nomor 4 di tabel 1, terjadi kelangkaan pasokan migor sehingga banyak masyarakat tidak kebagian migor, bahkan sampai ada yang [meninggal](https://www.kompas.tv/article/270000/seorang-ibu-meninggal-saat-antre-minyak-goreng-pengamat-memilukan-terpaksa-demi-cukupi-kebutuhan) saat mengantri migor.
 
