@@ -29,9 +29,11 @@ Skills {#skills}
 
 - Trained in economics with heavy use of various types of panel data regressions to evaluate policies
 
-- Have a long exposure with STATA, but recently learning R and Python for econometrics
+- Have a long exposure with Stata, R, and Python for data analytics and econometrics
 
-- Experience in running structural model (e.g. GTAP) using GEMPACK software
+- Experience in running structural model (e.g. GTAP) with GEMPACK software
+
+- Good familiarity with various data & docs processing tools (Microsoft Office, Google Docs, Rstudio & $\LaTeX$)
 
 Disclaimer {#disclaimer}
 --------------------------------------------------------------------------------

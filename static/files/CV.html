@@ -7,10 +7,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <meta name="author" content="Krisna Gupta" />
-    <meta name="date" content="2022-03-14" />
+    <meta name="date" content="2022-04-20" />
     <title>Krisna Gupta’s resume</title>
 
-    
+            <!-- dynamically load mathjax for compatibility with self-contained -->
+    <script>
+    (function() {
+      // Retrieve previous config object if defined
+      window.PagedConfig = window.PagedConfig || {};
+      let beforePaged = PagedConfig.before;
+      window.PagedConfig.before = async () => {
+        if (beforePaged) await beforePaged();
+        return new Promise((resolve, reject) => {
+          var script = document.createElement("script");
+          script.type = "text/javascript";
+          var src = `https://mathjax.rstudio.com/latest/MathJax.js` + "?config=TeX-MML-AM_CHTML";
+          if (location.protocol !== "file:" && /^https?:/.test(src))
+            src = src.replace(/^https?:/, '');
+          script.src = src;
+          window.MathJax = {
+            AuthorInit: () => {
+              MathJax.Hub.Register.StartupHook("Begin", () => {
+                MathJax.Hub.Queue(resolve);
+              });
+            }
+          };
+          document.getElementsByTagName("head")[0].appendChild(script);
+        });
+      };
+    })();
+    </script>
+        
         <script src="CV_files/header-attrs-2.11/header-attrs.js"></script>
         <link href="CV_files/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
         <link href="CV_files/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
@@ -38,14 +65,15 @@
 <h2>Skills</h2>
 <ul>
 <li><p>Trained in economics with heavy use of various types of panel data regressions to evaluate policies</p></li>
-<li><p>Have a long exposure with STATA, but recently learning R and Python for econometrics</p></li>
-<li><p>Experience in running structural model (e.g. GTAP) using GEMPACK software</p></li>
+<li><p>Have a long exposure with Stata, R, and Python for data analytics and econometrics</p></li>
+<li><p>Experience in running structural model (e.g. GTAP) with GEMPACK software</p></li>
+<li><p>Good familiarity with various data &amp; docs processing tools (Microsoft Office, Google Docs, Rstudio &amp; <span class="math inline">\(\LaTeX\)</span>)</p></li>
 </ul>
 </div>
 <div id="disclaimer" class="section level2">
 <h2>Disclaimer</h2>
 <p>This resume was made with the R package <a href="https://github.com/rstudio/pagedown"><strong>pagedown</strong></a>.</p>
-<p>Last updated on 2022-03-14.</p>
+<p>Last updated on 2022-04-20.</p>
 </div>
 </div>
 <div id="main" class="section level1">
