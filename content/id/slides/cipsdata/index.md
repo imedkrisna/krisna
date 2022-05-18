@@ -87,8 +87,8 @@ I try to allocate more for Q&A
 
 ## Some of my fave data source
 
-- For trade, UN Comtrade (https://comtrade.un.org/data/)[https://comtrade.un.org/data/].
-- General economic data, World Bank's World Development Indicators (https://data.worldbank.org/)[https://data.worldbank.org/].
+- For trade, UN Comtrade [https://comtrade.un.org/data/](https://comtrade.un.org/data/).
+- General economic data, World Bank's World Development Indicators [https://data.worldbank.org/](https://data.worldbank.org/).
 - Bank Indonesia (just google ["SEKI Bank Indonesia"](https://www.bi.go.id/id/statistik/ekonomi-keuangan/seki/Default.aspx)).
 - BPS (either hit [https://www.bps.go.id/](https://www.bps.go.id/) or query your keyword in google + 'BPS').
 - ask them researchers.
