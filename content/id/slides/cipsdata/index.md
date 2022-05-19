@@ -170,17 +170,43 @@ I try to allocate more for Q&A
 
 - How to process an information of the income of 1 million people?
 
-- We usually look at one number that can represent those 1 million people's income.
+- When we have data of 1 million people, it's impractical to look at 1 million values.
 
-- We often use average to have a sense of the whole group.
+- We look for one number that represent these 1 million values.
+  - this is usually the average (or mean).
 
-- We use standard deviation to sense the spread.
-  - High standard deviation means a huge spread.
-  - Huge spread = highly unequal.
+- We also need to understand how the value is distributed.
+  - called standard deviation.
 
 ---
 
-## The need to aggregate
+## Normal distribution
+
+- If we group values, take frequency, then sort them, we can make a distribution plot.
+
+- We can make a smooth approximation of the distribution plot with functions.
+
+- The most famous distribution is the **normal distribution**
+
+- Normal distribution's characteristics:
+  - frequency is highest around the mean
+  - the tail is skinny (i.e., frequency is very small in the extremes)
+
+---
+
+## Normal distribution
+
+{{< figure src="fig2.png" height=400 >}}
+
+---
+
+## Normal distribution
+
+{{< figure src="fig1.png" height=400 >}}
+
+---
+
+## When to use median
 
 - Median is the value lying in the middle of the whole group if we sort the value.
 
@@ -188,9 +214,15 @@ I try to allocate more for Q&A
   - Sort their income from lowest to highest.
   - Median is the income of the 500.000th person.
 
-- Median is often use in the presence of extreme values.
+- Median is often use in the presence of non-trivial number of extreme values (i.e., fat tail).
+
+- income is often not distributed normally, so median is better.
 
 - example in excel.
+
+---
+
+<a href="https://www.statista.com/statistics/203183/percentage-distribution-of-household-income-in-the-us/" rel="nofollow"><img src="https://www.statista.com/graphic/1/203183/percentage-distribution-of-household-income-in-the-us.jpg" alt="Statistic: Percentage distribution of household income in the U.S. in 2020 | Statista" style="width: 100%; height: auto !important; max-width:1000px;-ms-interpolation-mode: bicubic;"/></a><br />Find more statistics at  <a href="https://www.statista.com" rel="nofollow">Statista</a>
 
 ---
 
@@ -309,3 +341,5 @@ I try to allocate more for Q&A
 ---
 
 # Q & A
+
+<iframe src="https://giphy.com/embed/3o6MbudLhIoFwrkTQY" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/thesimpsons-3o6MbudLhIoFwrkTQY">via GIPHY</a></p>
