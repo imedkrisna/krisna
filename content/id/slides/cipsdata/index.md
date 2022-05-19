@@ -54,7 +54,8 @@ Krisna Gupta
 
 - Some intro
 - Various ways data is presented
-- Aggregation & value types
+- Some stats
+- Economic data
 - Q&A
 
 I assume y'all have never worked with data before  
@@ -162,7 +163,7 @@ I try to allocate more for Q&A
 
 ---
 
-# Aggregation & arious types of values
+# Some statistics
 
 ---
 
@@ -223,6 +224,10 @@ I try to allocate more for Q&A
 ---
 
 <a href="https://www.statista.com/statistics/203183/percentage-distribution-of-household-income-in-the-us/" rel="nofollow"><img src="https://www.statista.com/graphic/1/203183/percentage-distribution-of-household-income-in-the-us.jpg" alt="Statistic: Percentage distribution of household income in the U.S. in 2020 | Statista" style="width: 100%; height: auto !important; max-width:1000px;-ms-interpolation-mode: bicubic;"/></a><br />Find more statistics at  <a href="https://www.statista.com" rel="nofollow">Statista</a>
+
+---
+
+# Economic data
 
 ---
 
