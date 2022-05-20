@@ -13,6 +13,20 @@ slides:
   # Choose a code highlighting style (if highlighting enabled in `params.toml`)
   #   Light style: github. Dark style: dracula (default).
   highlight_style: monokai
+
+  reveal_options:
+    controls: true
+    progress: true
+    slide_number: c/t  # true | false | h.v | h/v | c | c/t
+    center: true
+    rtl: false
+    mouse_wheel: true
+    transition: convex  # none/fade/slide/convex/concave/zoom
+    transitionSpeed: slow  # default/fast/slow
+    background_transition: slide  # none/fade/slide/convex/concave/zoom
+    touch: true
+    loop: false
+    menu_enabled: true
 ---
 
 # On Data
