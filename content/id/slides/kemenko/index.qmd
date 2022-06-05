@@ -242,18 +242,17 @@ kbl(tab10b,'html') %>%
 
 - Penelitian ini memperkaya bukti bahwa restriksi perdagangan justru mengurangi produktivitas manufaktur.
 
-- Perubahan kebijakan perdagangan berdampak besar ke perusahaan kecil.
-  - Potensi meningkatnya konsentrasi di industri domestik.
-
-- Membatasi impor demi surplus neraca perdagangan malah berakibat sebaliknya:
-  - Perusahaan yang kesulitan akses bahan baku akan kehilangan pasar ekspor.
-
-## Diskusi kebijakan
-
 - GVC memperbesar dampak restriksi perdagangan.
   - Kebijakan perdagangan semakin penting untuk transisi ekonomi menuju _manufacture-based_.
 
-- Pahami selalu _opportunity cost_ dari setiap kebijakan.
+- Perubahan kebijakan perdagangan berdampak besar ke perusahaan kecil.
+  - Potensi meningkatnya konsentrasi di industri domestik.
+
+## Diskusi kebijakan
+
+- Membatasi impor demi surplus neraca perdagangan malah berakibat sebaliknya:
+  - Perusahaan yang kesulitan akses bahan baku akan kehilangan pasar ekspor.
+  - Perusahaan domestik akan mengandalkan pasar domestik $\Rightarrow$ perlu mark-up extra $\Rightarrow$ minta proteksi hilir.
 
 - _tools_ moneter lebih efektif untuk _manage_ neraca pembayaran (Irwin, 2022).
   - Pemerintah harus senantiasa koordinasi dengan BI.
