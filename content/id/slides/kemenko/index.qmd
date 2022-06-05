@@ -1,0 +1,452 @@
+---
+format: 
+  revealjs:
+    theme: [serif,mytheme.scss]
+
+---
+
+## The heterogeneous impact of tariff and NTMs on Total Factor Productivity of Indonesian firms
+
+</br></br>
+
+###### Workshop Penulisan Jurnal Ilmiah di Bidang Perniagaan dan Industri
+
+Depok, 13 Juni 2022
+
+I Made Krisna Gupta
+
+------------------------------------------------------------------------
+
+## Tentang Penulis
+
+-   Master dari UI-VU Amsterdam di bidang ekonomi
+-   [Mahasiswa doktoral](https://crawford.anu.edu.au/people/phd/krisna-gupta) di Australian National University
+-   [*Associate researcher*](https://www.cips-indonesia.org/about) di CIPS Indonesia
+-   Sering menulis tentang kebijakan industri dan perdagangan
+-   Blog di [krisna.or.id](https://www.krisna.or.id/)
+-   twitter di [\@imedkrisna](https://twitter.com/imedkrisna)
+
+## Tentang presentasi hari ini
+
+-   Struktur presentasi:
+    - Pendahuluan
+    - Data, metode dan analisis
+    - Diskusi kebijakan dan kesimpulan
+-   Diterima di [Bulletin of Indonesian Economic Studies](https://doi.org/10.1080/00074918.2021.2016613), versi working paper di [ACDE working paper repository](https://acde.crawford.anu.edu.au/publication/working-papers-trade-and-development/19325/heterogeneous-impact-tariff-and-non-tariff).
+-   Presentasi ini ada di [s.id/kemenko](https://s.id/kemenko)
+
+## Pendahuluan {.smaller}
+
+-   Indonesia sedang mengejar pertumbuhan ekonomi yang terfokus pada pertumbuhan manufaktur.
+
+-   Di era Global Value Chain (GVC), mengimpor nilai tambah melalui *backward linkage* adalah strategi yang baik (World Bank, 2020):
+
+    -   Akses terhadap **bahan baku yang murah dan berkualitas** (Amiti dan Konings, 2007; Bas dan Straus-Kahn, 2014; Castellani dan Fassio, 2019; Ing, Yu dan Zhang, 2019)
+    -   Mempercepat **inovasi** dan meningkatkan **produktivitas** (Fernandez dan Farole, 2018; Pane dan Patunru, 2019)
+    -   Meningkatkan kemampuan ekspor ke **pasar global** yang lebih cuan (An dan Maskus, 2009; Cadot et al., 2013; Fugazza, Olarreaga dan Ugarte, 2017)
+
+## Pendahuluan
+
+::: columns
+::: {.column width="40%"}
+<iframe src="https://data.worldbank.org/share/widget?end=2020&amp;indicators=TM.TAX.MRCH.SM.AR.ZS&amp;locations=ID&amp;start=2000" width="450" height="300" frameBorder="0" scrolling="no">
+
+</iframe>
+
+<iframe src="https://data.worldbank.org/share/widget?end=2020&amp;indicators=TM.TAX.MRCH.SM.FN.ZS&amp;locations=ID&amp;start=2000" width="450" height="300" frameBorder="0" scrolling="no">
+
+</iframe>
+:::
+
+::: {.column width="60%"}
+##### Tren proteksionisme
+
+-   Didorong paham merkantilis dan kekhawatiran akan defisit neraca pembayaran.
+-   Tarif secara umum meningkat, juga dengan hambatan non tarif (Munadi, 2019)
+-   Proteksionisme berantai:
+    -   jagung $\Rightarrow$ ayam
+    -   kain $\Rightarrow$ baju
+:::
+:::
+
+## Pendahuluan
+
+-   Penilitian ini bermaksud mengevaluasi dampak dari berbagai jenis hambatan perdagangan terhadap produktivitas industri.
+
+-   Ditemukan bahwa tarif terhadap barang yang diimpor oleh perusahaan mengurangi produktivitas perusahaan tersebut.
+
+-   Diantara kebijakan non-tarif, *trade licensing* dan kuota memiliki pengaruh yang buruk terhadap produktivitas.
+
+-   Dampak yang heterogen: Perusahaan kecil terdampak lebih serius daripada yang besar.
+
+## Data
+
+-   1.512 perusahaan dari 2008-2012
+-   Survey Industri (SI)
+    -   *output*, jumlah pekerja, asing/domestik
+-   Data bea cukai:
+    -   impor dengan *firm identifier*
+-   Tariff didapat dari berbagai Peraturan Menteri Keuangan dan situs rekan FTA
+-   NTMs dari UNCTAD TRAINS,
+    -   7 kategori umum didominasi SPS dan TBT.
+
+## Permasalahan data SI {.smaller}
+
+::: columns
+::: {.column width="30%"}
+Vial (2006) dan Marquez-Ramos (2020):
+
+-   Datanya banyak yang *missing*
+-   Missing data tidak *random*
+-   *Response rate* semakin rendah
+
+*zero reports* sangat berpengaruh.
+:::
+
+::: {.column width="70%"}
+::: {#fig1 fig-align="center"}
+![lolz](kapenbc.png)
+:::
+:::
+:::
+
+## Metode: regresi TFP
+
+-   Diasumsikan bahwa perusahaan memiliki fungsi produksi cobb-douglass:
+
+$$Y_{it}=AL_{it}^{\beta_l}K_{it}^{\beta_k}M_{it}^{\beta_m}N_{it}^{\beta_n} \ \ \ \ \ (1)$$ - transformasi log:
+
+$$y_{it}= \beta_0 + \beta_l l_{it}+ \beta_k k_{it}+ \beta_m m_{it} + \beta_n n_{it} +\mu_{it} \ \ \ \ \ (2)$$
+
+## Problem endogenitas
+
+-   Ada informasi asimetris di mana kapital dan material bersifat endogen.
+
+    -   $\mu_{it}$ tidak acak, *violate OLS assumption*
+
+-   investasi dan material digunakan sebagai instrumen untuk eror yang tidak random.
+
+    -   *missing data* menambah pelik permasalahan ini
+
+-   Eror yang tidak random mengikuti *first-order Markov process* (Levinsohn dan Petrin, 2003)
+
+-   Di Stata, *command* `levpet` dapat digunakan.
+
+## Regresi TFP
+
+-   Pertama, estimasi parameter dengan algoritma Levinsohn-Petrin$^1$:
+
+::: footer
+$^1\mu^*_{it}$ acak, pola non-acak diserap oleh $\phi (m_{it},k_{it})$
+:::
+
+$$y_{it}= \beta_0 + \beta_l l_{it} + \beta_n n_{it} + \phi (m_{it},k_{it})+\mu^*_{it} \ \ \ \ \ (3)$$
+
+-   kemudian prediksi TFP dengan *estimated parameters* dari *step* sebelumnya:
+
+$$TFP_{it}=y_{it}-\hat{\beta}_l l_{it}+\hat{\beta}_n n_{it}+\hat{\beta}_m m_{it}+\hat{\beta}_k k_{it} \ \ \ \ \ (4)$$
+
+## *Trade policy variable*
+
+-   Tarif diambil secara semi-manual:
+    -   ada 7 PMK yang mengover 2008-2012 meliputi 10 ribu *tariff lines*
+    -   Dengan data asal negara, kita dapat mengasosiasikan setiap transaksi dengan tarif yang cocok.
+    -   semua tarif diagregasi per perusahaan.
+-   NTM juga merupakan agregasi per perusahaan.
+
+$$C_{\theta i t}=\frac{\sum TP_{\theta scit}V_{\theta scit}}{\sum V_{\theta scit}} \ \ \ \ \ (5)$$
+
+## Regresi final
+
+-   Dengan TFP dan variabel kebijakan perdagangan dengan index *firm-year*, digunakan TWFE untuk melihat dampak tarif dan non-tarif ke TFP:
+
+$$tfp_{it}=\gamma_0+\sum_{\theta} \gamma_{\theta}c_{\theta i t}+\sum_{\theta} \delta_{\theta}c_{\theta i t}*l_{it}+FO_{it} \\ +\alpha_i+ISIC_i+ \eta_{it} \ \ \ \ \ (6)$$
+
+-   parameter $\delta$ menunjukan variasi heterogenitas dampak kebijakan perdagangan ke TFP.
+
+## Hasil Regresi
+
+::: columns
+::: {.column width="50%"}
+```{r echo=FALSE,warning=FALSE,message=FALSE}
+library(tidyverse)
+library(kableExtra)
+Variables<-c('tariff','SPS','TBT','Pre-shipment inspection','licensing','price control','competition','export-related','dummy FDI')
+TFP<-c('-0.371***',-0.381,0.074,0.160,'-0.896***','-10,221','-2.204*','-0.291',0.061)
+
+tab9b<-data.frame(Variables,TFP)
+kbl(tab9b,'html',caption='dampak langsung') %>%
+  kable_styling(bootstrap_options = "striped", font_size = 24) %>%
+  collapse_rows() 
+```
+:::
+
+::: {.column width="50%"}
+```{r echo=FALSE,warning=FALSE,message=FALSE}
+Variables<-c('tariff.l','SPS.l','TBT.l','Pre-shipment inspection.l','licensing.l','price control.l','competition.l','export-related.l','foreign ownership')
+TFP<-c('0.068***',0.062,0.013,-0.043,'0.147***','1,666','0.413**',0.075,'0.024*')
+
+tab9b<-data.frame(Variables,TFP)
+kbl(tab9b,'html',caption='dampak heterogen terhadap jumlah pegawai') %>%
+  kable_styling(bootstrap_options = "striped", font_size = 24) %>%
+  collapse_rows()
+```
+:::
+:::
+
+Tarif impor, perijinan impor, dan keistimewaan BUMN:
+
+- berdampak negatif pada produktivitas.
+- Semakin besar firms, dampak semakin kecil.
+
+## Dampak ke tenaga kerja
+
+::: columns
+
+::: {.column width="50%"}
+
+```{r echo=F}
+Variables<-c('tariff','SPS','TBT','Pre-shipment','licensing','Price-control', 'competition','Export-related','foreign dummy')
+OLS<-c('-0.260***',-0.176,0.064,0.066,'-0.818***','14,832***',-0.999,-0.246,0.028)
+TWFE<-c('-1.368***','-1.650***','0.452*','1.997***','-4.455***','6,015','-2.788***','-0.617*','0.091*')
+tab10a<-data.frame(Variables,OLS,TWFE)
+kbl(tab10a,'html') %>%
+  kable_styling(bootstrap_options = "striped", font_size = 20) %>%
+  collapse_rows()
+```
+
+:::
+
+::: {.column width="50%"}
+
+```{r echo=F}
+Variables<-c('tariff*l','SPS*l','TBT*l','Pre-shipment*l','licensing*l','Price-control*l','competition*l','Export-related*l','% foreign')
+OLS<-c('0.043***',0.021,-0.008,-0.008,'0.140***','-2,312***',0.207,0.042,-0.009)
+TWFE<-c('0.251***','0.288***','-0.095**','-0.345***','0.809***','-802','0.360**','0.132**','-0.007')
+tab10b<-data.frame(Variables,OLS,TWFE)
+kbl(tab10b,'html') %>%
+  kable_styling(bootstrap_options = "striped", font_size = 20) %>%
+  collapse_rows()
+```
+:::
+
+:::
+
+- Hasil dari tarif impor dan PI cukup _robust_.
+
+- Secara umum, tarif dan PI berkontribusi mengurangi pertumbuhan penyerapan tenaga kerja.
+    - perusahaan kecil lebih _volatile_.
+
+## Diskusi kebijakan
+
+- Penelitian ini memperkaya bukti bahwa restriksi perdagangan justru mengurangi produktivitas manufaktur.
+
+- Perubahan kebijakan perdagangan berdampak besar ke perusahaan kecil.
+  - Potensi meningkatnya konsentrasi di industri domestik.
+
+- Membatasi impor demi surplus neraca perdagangan malah berakibat sebaliknya:
+  - Perusahaan yang kesulitan akses bahan baku akan kehilangan pasar ekspor.
+
+## Diskusi kebijakan
+
+- GVC memperbesar dampak restriksi perdagangan.
+  - Kebijakan perdagangan semakin penting untuk transisi ekonomi menuju _manufacture-based_.
+
+- Pahami selalu _opportunity cost_ dari setiap kebijakan.
+
+- _tools_ moneter lebih efektif untuk _manage_ neraca pembayaran (Irwin, 2022).
+  - Pemerintah harus senantiasa koordinasi dengan BI.
+  
+## _Caveats_
+
+- TFP mungkin merefleksikan _market power_.
+  - Mungkin dampaknya tidak begitu besar di penelitian ini.
+  
+- Eksportir dan importir sangat berbeda dengan perusahaan lain.
+
+- Data yang tidak sempurna.
+  - banyak masalah di SI.
+  - data bea cukai sangat terbatas.
+
+## References
+
+::: columns
+::: {.column .xs width="47%"}
+-   Márquez-Ramos, L. (2020). A Survey of Papers Using Indonesian Firm-Level Data: Research Questions and Insights for Novel Policy-Relevant Research in Economics. Bulletin of Indonesian Economic Studies, 1-49. https://doi.org/10.1080/00074918.2020.1862410
+
+-   Vial, V. (2006). New estimates of total factor productivity growth in indonesian manufacturing. Bulletin of Indonesian Economic Studies, 42(3), 357-369. https://doi.org/10.1080/00074910601053227
+
+-   Amiti, Mary, and Jozef Konings. 2007. "Trade Liberalization, Intermediate Inputs, and Productivity: Evidence from Indonesia." The American Economic Review 97 (5): 1611-1638. https://doi.org/10.1257/000282807783219733
+
+-   An, Galina, and Keith E. Maskus. 2009. "The Impacts of Alignment with Global Product Standards on Exports of Firms in Developing Countries." World Economy 32 (4): 552-574. https://doi.org/10.1111/j.1467-9701.2008.01150.x
+
+-   Bas, Maria, and Vanessa Strauss-Kahn. 2014. "Does importing more inputs raise exports? Firm level evidence from France." Review of World Economics 150 (2): 35.
+
+-   Cadot, Olivier, Alan Asprilla, Julien Gourdon, Christian Knebel, and Ralf Peters. 2015. Deep Regional Integration and Non-Tariff Measures: A Methodology for Data Analysis. United Nations (New York and Geneva: United Nations)
+
+-   Castellani, Davide, and Claudio Fassio. 2019. "From new imported inputs to new exported products. Firm-level evidence from Sweden." Research Policy 48 (1): 322-338. https://doi.org/10.1016/j.respol.2018.08.021
+:::
+
+::: {.column .xs width="6%"}
+:::
+
+::: {.column .xs width="47%"}
+-   Fugazza, Marco, Marcello Olarreaga, and Christian Ugarte. 2017. "On the heterogeneous effects of non-tariff measures: Panel evidence from Peruvian firms." UNCTAD Blue Series Papers 77. https://ideas.repec.org/p/unc/blupap/77.html
+
+-   Ing, Lili Yan, Miaojie Yu, and Rui Zhang. 2019. "the evoltion of export quality: China and Indonesia." In World Trade Evolution: Growth, Productivity and Employment, edited by Lili Yan Ing and Miaojie Yu. Abingdon, New York: Routledge.
+
+-   Levinsohn, James, and Amil Petrin. 2003. "Estimating Production Functions Using Inputs to Control for Unobservables." The Review of economic studies 70 (2): 317-341. https://doi.org/10.1111/1467-937x.00246
+
+-   Munadi, Ernawati. 2019. Indonesian non-tariff measures: updates and insights. Economic Research Institute for ASEAN and East Asia (Jakarta: Economic Research Institute for ASEAN and East Asia).
+
+-   Pierola, Martha Denisse, Ana Margarida Fernandes, and Thomas Farole. 2018. "The role of imports for exporter performance in Peru." The World Economy 41 (2): 550-572. https://doi.org/10.1111/twec.12524
+
+-   Pane, Deasy, and Arianto Patunru. 2019. "Does export performance improve firm performance? Evidence from Indonesia." Working Papers in Trade and Development 05
+
+-   World Bank. 2020. World Development Report 2020 : Trading for Development in the Age of Global Value Chains. Washington, DC: World Bank.
+
+- Irwin, D. A. (2022). The Trade Reform Wave of 1985-1995. National Bureau of Economic Research Working Paper Series, No. 29973. https://doi.org/10.3386/w29973 
+
+:::
+:::
+
+# Beberapa summary statistics
+
+## Firms' Characteristics {.smaller}
+
+Table 1. Firms' characteristics, 2008-2012
+
+```{r echo=F}
+library(kableExtra)
+Characteristics<-c('foreign ownership (%)','foreign ownership (%)','fraction of output exported (%)','fraction of output exported','fraction of input imported (%)','fraction of input imported (%)','no. of labour employed','no. of labour employed','capital stock (Million IDR)','capital stock (Million IDR)','total intermediate input (Million IDR)','total intermediate input (Million IDR)','total output (Million IDR)','total output (Million IDR)','total value added (Million IDR)','total value added (Million IDR)','value added per labour (IDR)','value added per labour (IDR)','No. of observation')
+All_SI<-c(8.15,'(26.17)',0.23,'(37.52)',0.08,'(0.24)',191.07,'(711.73)',198.00,'(44,800.00)',50.80,'(617.00)',90.30,'(958.00)',38.50,'(455.00)','137,987.10','(2,515,300.00)','117,598')
+Non_customs<-c(5.96,'(22.60)',0.21,'(0.37)',0.07,'(0.21)',162.75,'(602.46)',194,'(46,500)',41,'(515)',73.30,'(861)',31.60,'(414)','126,074','(2,600,177)','108,662')
+Customs_only<-c(34.77,'(45.06)',0.40,'(0.42)',0.31,'(0.38)',535.44,'(1,457.65)',250,'(10,400)',170,'(1,330)',296,'(1,740)',123,'(789)','282,857','(1,012,159)','8,915')
+tab2<-data.frame(Characteristics,All_SI,Non_customs,Customs_only)
+kbl(tab2,'html') %>%
+  kable_styling(bootstrap_options = "striped", font_size = 14) %>%
+  collapse_rows()
+  
+```
+
+------------------------------------------------------------------------
+
+## Non-Tariff Measures {.smaller}
+
+Table 2. Mean (St.Dev) of each NTM for all HS-6-digits
+
+```{r echo=F}
+NTM<-c('Sanitary & Phytosanitary (SPS)','Sanitary & Phytosanitary (SPS)','Technical Barrier to Trade (TBT)','Technical Barrier to Trade (TBT)','Pre-shipment inspections and other formalities','Pre-shipment inspections and other formalities','Non-automatic licensing, quotas, QC, etc','Non-automatic licensing, quotas, QC, etc','Price-control measures, extra taxes, charges','Price-control measures, extra taxes, charges','Measures affecting competition','Measures affecting competition','Export-related measures','Export-related measures','observations')
+Codes<-c('A','A','B','B','C','C','E','E','F','F','H','H','P','P','-')
+Examples<-c('Authorization requirements','Quarantine requirements','Testing requirements','labeling requirements','pre-shipment inspection','only trough specific ports','licensing','quota','customs service fee','consumption tax','Only SOEs','-','export permit','export quota','-')
+N2008<-c(1.715,'(2.644)',0.481,'(0.962)',0.562,'(1.202)',0.623,'(0.809)',0.000,'(0.000)',0.019,'(0.139)',0.901,'(1.172)','1,675')
+N2009<-c(2.337,'(4.018)',0.455,'(0.978)',0.466,'(1.081)',0.560,'(0.818)',0.000,'(0.000)',0.052,'(0.238)',0.704,'(1.132)','2,204')
+N2010<-c(2.222,'(3.950)',0.641,'(1.334)',0.443,'(1.059)',0.605,'(0.873)',0.015,'(0.168)',0.050,'(0.233)',0.708,'(1.109)','2,318')
+N2011<-c(2.255,'(4.054)',0.682,'(1.361)',0.462,'(1.046)',0.618,'(0.861)',0.014,'(0.165)',0.048,'(0.229)',0.683,'(1.098)','2,400')
+N2012<-c(2.774,'(5.128)',0.663,'(1.352)',0.776,'(1.075)',0.594,'(0.853)',0.016,'(0.168)',0.046,'(0.224)',1.172,'(1.465)','2,510')
+tab3<-data.frame(NTM,Codes,N2008,N2009,N2010,N2011,N2012,Examples)
+kbl(tab3,'html') %>%
+  kable_styling(bootstrap_options = "striped", full_width=F, font_size = 15) %>%
+  collapse_rows()
+```
+
+------------------------------------------------------------------------
+
+## Simple average of tariffs from 2008-2012 {.smaller}
+
+Table 3. Tariff from MoF regulations (left) compared to WITS (right)
+
+::: columns
+::: {.column width="50%"}
+```{r echo=F}
+Kind<-c('MFN','MFN','ASEAN','ASEAN','China','China','South Korea','South Korea','India','India','Japan','Japan','ANZ','ANZ')
+T2008<-c(7.049,'(12.213)',2.478,'(11.094)',7.049,'(12.213)',7.049,'(12.213)',7.049,'(12.213)',6.110,'(11.967)',7.049,'(12.213)')
+T2009<-c(7.612,'(12.536)',2.490,'(11.206)',3.819,'(12.673)',2.624,'(12.265)',7.612,'(12.536)',4.639,'(12.356)',6.446,'(11.922)')
+T2010<-c(6.928,'(8.037)',0.150,'(4.559)',2.193,'(7.941)',1.912,'(7.131)',6.394,'(7.809)',3.274,'(7.353)',2.948,'(6.765)')
+T2011<-c(6.975,'(7.231)',0.150,'(4.559)',2.208,'(7.941)',1.912,'(7.131)',5.874,'(7.517)',2.618,'(7.114)',2.278,'(6.318)')
+T2012<-c(6.960,'(7.145)',0.150,'(4.559)',1.941,'(7.927)',1.542,'(7.102)',5.341,'(7.322)',2.230,'(6.487)',1.545,'(6.065)')
+tab4a<-data.frame(Kind,T2008,T2009,T2010,T2011,T2012)
+kbl(tab4a,'html') %>%
+  kable_styling(bootstrap_options = "striped", font_size = 15) %>%
+  collapse_rows()
+```
+:::
+
+::: {.column width="50%"}
+```{r echo=F}
+T2008<-c(7.762,'(12.631)','-','-','-','-','-','-','-','-','-','-','-','-')
+T2009<-c(7.595,'(12.456)',1.840,'(11.079)',3.665,'(12.342)',2.564,'(12.087)','-','-','-','-','-','-')
+T2010<-c(7.564,'(12.412)',1.843,'(11.067)',2.743,'(12.392)',2.560,'(12.084)','-','-','-','-','-','-')
+T2011<-c(7.051,'(7.015)',0.152,'(4.285)',1.850,'(6.853)',1.698,'(6.395)',5.409,'(6.726)','-','-','-','-')
+T2012<-c(7.053,'(7.016)',0.152,'(4.287)',1.579,'(6.823)',1.326,'(6.349)',4.991,'(6.620)','-','-','-','-')
+tab4b<-data.frame(Kind,T2008,T2009,T2010,T2011,T2012)
+kbl(tab4b,'html') %>%
+  kable_styling(bootstrap_options = "striped", font_size = 15) %>%
+  collapse_rows()
+```
+:::
+:::
+
+## Coverage ratio {.smaller}
+
+-   Table 5 shows simple mean (a) and coverage ratios (b)
+-   Import licenses and quotas are more important than SPS and TBT
+-   Coverage ratios vs simple mean:
+    -   no visual difference on tariff
+    -   firms import more goods with NTMs
+
+::: columns
+::: {.column width="50%"}
+Table 5a. Simple average
+
+```{r echo=FALSE}
+library(kableExtra)
+library(formattable)
+Variable<-c('Tariff',
+'SPS (A)',
+'TBT (B)',
+'Pre-shipment inspection (C)',
+'Licensing, quota, etc (E)',
+'Price control etc (F)', 
+'Competition measures (H)',
+'Export-related (P)'
+)
+Obs<-comma(c(407532,407532,407532,407532,407532,407532,407532,407532),format="d")
+Mean<-c(3.503,0.108,0.140,0.028,0.321,0.000,0.007,0.063)
+St.Dev.<-c(4.971,0.718,0.663,0.214,0.550,0.008,0.083,0.376)
+Min<-c(0,0,0,0,0,0,0,0)
+Max<-c(150,29,13,5,6,2,2,7)
+tab5a<-data.frame(Variable,Mean,St.Dev.,Min,Max)
+kbl(tab5a,'html') %>%
+  kable_styling(bootstrap_options = "striped", font_size = 15)
+
+```
+:::
+
+::: {.column width="50%"}
+Table 5b. Coverage Ratio
+
+```{r echo=FALSE}
+library(kableExtra)
+library(formattable)
+Variable<-c(
+'Tariff Coverage Ratio (T)',
+'Coverage ratio A',
+'Coverage ratio B',
+'Coverage ratio C',
+'Coverage ratio E',
+'Coverage ratio F',
+'Coverage ratio H',
+'Coverage ratio P'
+)
+Obs<-comma(c(407532,407532,407532,407532,407532,407532,407532,407532),format="d")
+Mean<-c(3.420,0.246,0.202,0.059,0.337,0.000,0.014,0.110)
+St.Dev.<-c(5.646,0.931,.478,0.237,0.468,0.001,0.083,0.353)
+Min<-c(0,0,0,0,0,0,0,0)
+Max<-c(150,19,9,4,6,0,1,7)
+tab5b<-data.frame(Variable,Mean,St.Dev.,Min,Max)
+kbl(tab5b,'html') %>%
+  kable_styling(bootstrap_options = "striped", font_size = 15) 
+```
+:::
+:::
