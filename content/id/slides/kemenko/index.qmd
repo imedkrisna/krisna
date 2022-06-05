@@ -105,7 +105,7 @@ Vial (2006) dan Marquez-Ramos (2020):
 
 ::: {.column width="70%"}
 ::: {#fig1 fig-align="center"}
-![lolz](kapenbc.png)
+![](kapenbc.png)
 :::
 :::
 :::
