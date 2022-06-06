@@ -460,17 +460,14 @@
 <section id="regresi-tfp" class="slide level2">
 <h2>Regresi TFP</h2>
 <ul>
-<li>Pertama, estimasi parameter dengan algoritma Levinsohn-Petrin<span class="math inline">\(^1\)</span>:</li>
+<li>Pertama, estimasi parameter dengan algoritma Levinsohn-Petrin<sup>1</sup>:</li>
 </ul>
-<div class="footer">
-<p><span class="math inline">\(^1\mu^*_{it}\)</span> acak, pola non-acak diserap oleh <span class="math inline">\(\phi (m_{it},k_{it})\)</span></p>
-</div>
 <p><span class="math display">\[y_{it}= \beta_0 + \beta_l l_{it} + \beta_n n_{it} + \phi (m_{it},k_{it})+\mu^*_{it} \ \ \ \ \ (3)\]</span></p>
 <ul>
 <li>kemudian prediksi TFP dengan <em>estimated parameters</em> dari <em>step</em> sebelumnya:</li>
 </ul>
 <p><span class="math display">\[TFP_{it}=y_{it}-\hat{\beta}_l l_{it}+\hat{\beta}_n n_{it}+\hat{\beta}_m m_{it}+\hat{\beta}_k k_{it} \ \ \ \ \ (4)\]</span></p>
-</section>
+<aside><ol class="aside-footnotes"><li id="fn1" role="doc-endnote"><p><span class="math inline">\(\mu^*_{it}\)</span> acak, pola non-acak diserap oleh <span class="math inline">\(\phi (m_{it},k_{it})\)</span></p></li></ol></aside></section>
 <section id="trade-policy-variable" class="slide level2">
 <h2><em>Trade policy variable</em></h2>
 <ul>
@@ -795,7 +792,7 @@
 </ul></li>
 </ul>
 </section>
-<section id="references" class="slide level2">
+<section id="references" class="slide level2" data-visibility="uncounted">
 <h2>References</h2>
 <div class="columns">
 <div class="column xs" style="width:47%;">
@@ -825,11 +822,11 @@
 </div>
 </section>
 <section>
-<section id="beberapa-summary-statistics" class="title-slide slide level1 center">
+<section id="beberapa-summary-statistics" class="title-slide slide level1 center" data-visibility="uncounted">
 <h1>Beberapa summary statistics</h1>
 
 </section>
-<section id="firms-characteristics" class="slide level2 smaller">
+<section id="firms-characteristics" class="slide level2 smaller" data-visibility="uncounted">
 <h2>Firms’ Characteristics</h2>
 <p>Table 1. Firms’ characteristics, 2008-2012</p>
 <div class="cell">
@@ -965,7 +962,7 @@
 </div>
 </div>
 </section>
-<section id="non-tariff-measures" class="slide level2 smaller">
+<section id="non-tariff-measures" class="slide level2 smaller" data-visibility="uncounted">
 <h2>Non-Tariff Measures</h2>
 <p>Table 2. Mean (St.Dev) of each NTM for all HS-6-digits</p>
 <div class="cell">
@@ -1141,7 +1138,7 @@
 </div>
 </div>
 </section>
-<section id="simple-average-of-tariffs-from-2008-2012" class="slide level2 smaller">
+<section id="simple-average-of-tariffs-from-2008-2012" class="slide level2 smaller" data-visibility="uncounted">
 <h2>Simple average of tariffs from 2008-2012</h2>
 <p>Table 3. Tariff from MoF regulations (left) compared to WITS (right)</p>
 <div class="columns">
@@ -1414,7 +1411,7 @@
 </div>
 </div>
 </section>
-<section id="coverage-ratio" class="slide level2 smaller">
+<section id="coverage-ratio" class="slide level2 smaller" data-visibility="uncounted">
 <h2>Coverage ratio</h2>
 <ul>
 <li>Table 5 shows simple mean (a) and coverage ratios (b)</li>
@@ -1586,6 +1583,7 @@
 
 </div>
 </section></section>
+
     </div>
   </div>
 
@@ -1640,7 +1638,7 @@
         progress: true,
 
         // Display the page number of the current slide
-        slideNumber: false,
+        slideNumber: 'c/t',
 
         // 'all', 'print', or 'speaker'
         showSlideNumber: 'all',
@@ -1745,14 +1743,14 @@
         previewLinks: false,
 
         // Transition style (none/fade/slide/convex/concave/zoom)
-        transition: 'none',
+        transition: 'convex',
 
         // Transition speed (default/fast/slow)
         transitionSpeed: 'default',
 
         // Transition style for full page slide backgrounds
         // (none/fade/slide/convex/concave/zoom)
-        backgroundTransition: 'none',
+        backgroundTransition: 'fade',
 
         // Number of slides away from the current that are visible
         viewDistance: 3,

@@ -3,6 +3,10 @@ format:
   revealjs:
     theme: [serif,mytheme.scss]
     chalkboard: true
+    incremental: false
+    transition: convex
+    background-transition: fade
+    slide-number: true
 
 ---
 
@@ -135,11 +139,7 @@ $$y_{it}= \beta_0 + \beta_l l_{it}+ \beta_k k_{it}+ \beta_m m_{it} + \beta_n n_{
 
 ## Regresi TFP
 
--   Pertama, estimasi parameter dengan algoritma Levinsohn-Petrin$^1$:
-
-::: footer
-$^1\mu^*_{it}$ acak, pola non-acak diserap oleh $\phi (m_{it},k_{it})$
-:::
+-   Pertama, estimasi parameter dengan algoritma Levinsohn-Petrin^[$\mu^*_{it}$ acak, pola non-acak diserap oleh $\phi (m_{it},k_{it})$]:
 
 $$y_{it}= \beta_0 + \beta_l l_{it} + \beta_n n_{it} + \phi (m_{it},k_{it})+\mu^*_{it} \ \ \ \ \ (3)$$
 
@@ -268,7 +268,7 @@ kbl(tab10b,'html') %>%
   - banyak masalah di SI.
   - data bea cukai sangat terbatas.
 
-## References
+## References {visibility="uncounted"}
 
 ::: columns
 ::: {.column .xs width="47%"}
@@ -310,9 +310,9 @@ kbl(tab10b,'html') %>%
 :::
 :::
 
-# Beberapa summary statistics
+# Beberapa summary statistics {visibility="uncounted"}
 
-## Firms' Characteristics {.smaller}
+## Firms' Characteristics {.smaller visibility="uncounted"}
 
 Table 1. Firms' characteristics, 2008-2012
 
@@ -331,7 +331,7 @@ kbl(tab2,'html') %>%
 
 ------------------------------------------------------------------------
 
-## Non-Tariff Measures {.smaller}
+## Non-Tariff Measures {.smaller visibility="uncounted"}
 
 Table 2. Mean (St.Dev) of each NTM for all HS-6-digits
 
@@ -352,7 +352,7 @@ kbl(tab3,'html') %>%
 
 ------------------------------------------------------------------------
 
-## Simple average of tariffs from 2008-2012 {.smaller}
+## Simple average of tariffs from 2008-2012 {.smaller visibility="uncounted"}
 
 Table 3. Tariff from MoF regulations (left) compared to WITS (right)
 
@@ -387,7 +387,7 @@ kbl(tab4b,'html') %>%
 :::
 :::
 
-## Coverage ratio {.smaller}
+## Coverage ratio {.smaller visibility="uncounted"}
 
 -   Table 5 shows simple mean (a) and coverage ratios (b)
 -   Import licenses and quotas are more important than SPS and TBT
