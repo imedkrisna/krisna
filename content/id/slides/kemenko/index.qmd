@@ -31,14 +31,94 @@ I Made Krisna Gupta
 -   Blog di [krisna.or.id](https://www.krisna.or.id/)
 -   twitter di [\@imedkrisna](https://twitter.com/imedkrisna)
 
+
+## Tentang penelitiannya
+
+-   Penilitian ini bermaksud mengevaluasi dampak dari berbagai jenis hambatan perdagangan terhadap produktivitas industri.
+- Ditemukan bahwa hambatan impor mengurangi produktivitas industri secara heterogen.
+  - Dampak lartas impor berlawanan dari tujuannya.
+-   Diterima di [Bulletin of Indonesian Economic Studies](https://doi.org/10.1080/00074918.2021.2016613), versi working paper di [ACDE working paper repository](https://acde.crawford.anu.edu.au/publication/working-papers-trade-and-development/19325/heterogeneous-impact-tariff-and-non-tariff).
+-   Presentasi ini ada di [s.id/kemenko](https://s.id/kemenko).
+
 ## Tentang presentasi hari ini
 
--   Struktur presentasi:
+- Tentang proses penulisan:
+  - menentukan isu
+  - pekinian teori dan isu
+  - proses mencari data
+  - menentukan jurnal
+    
+- Tentang hasil penelitian:
     - Pendahuluan
     - Data, metode dan analisis
     - Diskusi kebijakan dan kesimpulan
--   Diterima di [Bulletin of Indonesian Economic Studies](https://doi.org/10.1080/00074918.2021.2016613), versi working paper di [ACDE working paper repository](https://acde.crawford.anu.edu.au/publication/working-papers-trade-and-development/19325/heterogeneous-impact-tariff-and-non-tariff).
--   Presentasi ini ada di [s.id/kemenko](https://s.id/kemenko)
+
+# Proses penulisan
+
+## Disclaimer
+
+- Saya adalah dosen dan belum pernah jadi analis kebijakan.
+
+- Materi hari ini dari sudut pandang riset akademik.
+  - kuat di teori dan identifikasi.
+  - wajib punya kontribusi ke literatur terkait.
+  - banyak jargon dan sitasi.
+
+- Saya tidak begitu paham seperti apa kewajiban publikasi bagi analis kebijakan.
+
+## Memahami teori dan mekanisme
+
+- Waktu habis paling banyak ke-2 di sini
+
+- Gali literatur terkini
+  - kuliah = _head start_
+  - derivasi jika perlu
+
+- Simpulkan literatur, kenali kontribusi kita, lalu buat hipotesis.
+
+- Siapkan mekanisme identifikasi bukti dan kebijakan.
+
+## Mengolah data
+
+- Waktu paling banyak habis di sini.
+
+- Memahami apakah data yg diperlukan ada semua
+  - ga ada? Ganti approach.
+  
+- Data Indonesia umumnnya tidak _machine friendly_
+  - tapi ada aja udah syukur.
+
+- Mungkin ketersediaan data justru nilai lebih Kemenko?
+  
+- Siapkan [dokumentasi](https://github.com/imedkrisna/tariff-ntm-industry) yang jelas.
+
+## Cari jurnal
+
+- dari step literatur biasanya dapet jurnal yg cocok.
+
+- Umumnya jurnal punya tema masing-masing
+  - Saya sendiri memilih jurnal regional yang fokus ke Indonesia.
+  
+- Bagi dosen yang penting terindeks Scopus <span class="fa fa-grin"></span>
+
+::: {style="text-align: center"}
+
+<a href="https://www.scimagojr.com/journalsearch.php?q=19966&amp;tip=sid&amp;exact=no" title="SCImago Journal &amp; Country Rank"><img border="0" src="https://www.scimagojr.com/journal_img.php?id=19966" alt="SCImago Journal &amp; Country Rank"  /></a>
+
+:::
+
+## Proses publikasi
+
+- Ikut seminar dan konferensi untuk dapat feedback.
+
+- Dari dikirim sampai publikasi cukup lama.
+
+kirim $\Rightarrow$ desk accept $\Rightarrow$ peer-reviewed $\Rightarrow$ accepted for publication, proses editing $\Rightarrow$ publish
+
+- Artikel ini baru di accepted for publication
+  - artikel sebelumnya butuh 2 tahun sampai publikasi.
+
+# Hasil penelitian
 
 ## Pendahuluan {.smaller}
 
