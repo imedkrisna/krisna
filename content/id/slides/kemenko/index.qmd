@@ -66,15 +66,22 @@ I Made Krisna Gupta
 
 - Saya tidak begitu paham seperti apa kewajiban publikasi bagi analis kebijakan.
 
-## Memahami teori dan mekanisme
+---
 
-- Waktu habis paling banyak ke-2 di sini
+## {background-image="timeline.png" background-size="contain" background-color="#fff"}
+
+---
+
+## Memahami teori dan mekanisme
 
 - Gali literatur terkini
   - kuliah = _head start_
-  - derivasi jika perlu
+  - gunakan _keyword_ yang tepat
+  - Kuliah tamu saya di UI tentang [literature review](https://www.krisna.or.id/slides/litrev/)
+  
+- Pahami teori dan mekanisme, derivasi jika perlu
 
-- Simpulkan literatur, kenali kontribusi kita, lalu buat hipotesis.
+- Simpulkan literatur, temukan gap, kenali kontribusi kita, lalu buat hipotesis.
 
 - Siapkan mekanisme identifikasi bukti dan kebijakan.
 
@@ -85,7 +92,7 @@ I Made Krisna Gupta
 - Memahami apakah data yg diperlukan ada semua
   - ga ada? Ganti approach.
   
-- Data Indonesia umumnnya tidak _machine friendly_
+- Data Indonesia umumnya tidak _machine friendly_
   - tapi ada aja udah syukur.
 
 - Mungkin ketersediaan data justru nilai lebih Kemenko?
@@ -112,6 +119,7 @@ I Made Krisna Gupta
 - Ikut seminar dan konferensi untuk dapat feedback.
 
 - Dari dikirim sampai publikasi cukup lama.
+  - apalagi kalau kirim berkali-kali.
 
 kirim $\Rightarrow$ desk accept $\Rightarrow$ peer-reviewed $\Rightarrow$ accepted for publication, proses editing $\Rightarrow$ publish
 
