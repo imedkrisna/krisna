@@ -5,14 +5,14 @@ title: "The heterogeneous impact of tariff and NTMs on Total Factor Productivity
 event: "Workshop Penulisan Jurnal Ilmiah di Bidang Perniagaan dan Industri Kemenko Perekonomian"
 event_url:
 location: Depok
-address:
+address: Hotel Margo City
   street:
   city:
   region:
   postcode:
   country:
-summary:
-abstract:
+summary: Dalam kesempatan ini, saya sharing dengan para analis kebijakan dari Kemenko Perekonomian tentang proses penulisan dan isi dari paper terakhir saya.
+abstract: Dalam kesempatan ini, saya sharing dengan para analis kebijakan dari Kemenko Perekonomian tentang proses penulisan dan isi dari paper terakhir saya.
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
