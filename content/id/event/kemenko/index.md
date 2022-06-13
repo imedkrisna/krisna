@@ -4,8 +4,8 @@
 title: "The heterogeneous impact of tariff and NTMs on Total Factor Productivity of Indonesian firms"
 event: "Workshop Penulisan Jurnal Ilmiah di Bidang Perniagaan dan Industri Kemenko Perekonomian"
 event_url:
-location: Depok
-address: Hotel Margo City
+location: 
+address: 
   street:
   city:
   region:

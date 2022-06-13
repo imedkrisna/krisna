@@ -70,6 +70,10 @@ I Made Krisna Gupta
 
 ---
 
+<iframe src="https://embed.polleverywhere.com/multiple_choice_polls/BuOMSiu0WuHSZvNPcpuyf?controls=none&short_poll=true" width="800px" height="600px"></iframe>
+
+---
+
 ## {background-image="timeline.png" background-size="contain" background-color="#fff"}
 
 ---
