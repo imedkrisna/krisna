@@ -42,6 +42,7 @@ Beberapa link yang sering kupencet:
 - [Simple Graphs for economics teaching](https://r-coder.com/economics-charts-r/)
 - [Graphs for economics teaching with function](https://eric.netlify.app/2017/09/19/plotting-consumer-and-producer-surpluses-in-ggplot2/)
 - [Multiple plots with Patchwork](https://patchwork.data-imaginist.com/articles/guides/annotation.html#styling-the-patchwork-1)
+- [using ggrepel for visualizing pie chart](https://r-charts.com/part-whole/pie-chart-labels-outside-ggplot2/)
 
 #### Xaringan
 - [more efficient use of xaringan](https://www.r-bloggers.com/2019/04/tips-to-reduce-the-complexity-of-slide-making-with-xaringan/)

@@ -4,7 +4,7 @@ linktitle: Tabel
 summary: Bagaimana membuat tabel
 date: '2021-01-01'
 type: book
-weight: 10
+weight: 30
 ---
 
 # R
