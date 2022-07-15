@@ -10,7 +10,7 @@ categories: [kebijakan]
 date: 2022-07-15T08:15:34+07:00
 lastmod: 2022-07-15T08:15:34+07:00
 featured: false
-draft: false
+draft: true
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.
