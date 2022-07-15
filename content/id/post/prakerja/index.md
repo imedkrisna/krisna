@@ -28,6 +28,17 @@ image:
 projects: []
 ---
 
+Sekilas tentang kartu prakerja
+
+Kritik tentang kartu prakerja.
+
+Kenapa kartu pra kerja perlu diteruskan.
+
+Bagaimana mengevaluasi kartu prakerja dengan lebih baik.
+
+
+
+
 sumber:
 - [FORBI](http://forbil.id/wp-content/uploads/2020/05/Kebijakan-Kartu-Pra-Kerja-3.pdf)
 - [the conversation](https://theconversation.com/pakar-menjawab-benarkah-kartu-prakerja-berhasil-menambah-skill-dan-membuka-akses-ke-lapangan-kerja-185958)
