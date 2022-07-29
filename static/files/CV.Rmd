@@ -50,7 +50,7 @@ Krisna Gupta {#title}
 
 ### PhD Candidate in Economics at The Australian National University (ANU)
 
-At Crawford School of Public policy under supervision of [Arianto Patunru](https://crawford.anu.edu.au/people/academic/arianto-patunru). My thesis is about the impact of trade and investment policies to Indonesian firms. I help tutor some courses in The ANU. I am also an associate researcher at [CIPS Indonesia](https://www.cips-indonesia.org/about)
+At Crawford School of Public policy under supervision of [Arianto Patunru](https://crawford.anu.edu.au/people/academic/arianto-patunru). My thesis is about the impact of trade and investment policies to Indonesian firms. I am a full time lecturer at [Politeknik APP Jakarta](https://www.poltekapp.ac.id), part time lecturer at [Universitas Indonesia](https://www.ui.ac.id/), and an associate researcher at [CIPS Indonesia](https://www.cips-indonesia.org/about).
 
 Education {data-icon=graduation-cap data-concise=true}
 --------------------------------------------------------------------------------
@@ -106,11 +106,6 @@ N/A
 
 N/A
 
-### Proceedings
-
-- Gupta, Krisna, Bayu Sutjiatmo and Muhammad Kurniawan. 2019. "How Trump's steel and aluminium tariff shapes future world trade". in Abdullah, Widiaty and Abdullah (eds). [*Global Competitiveness: Business Transformation in the Digital Era*](https://www.taylorfrancis.com/books/e/9780429202629). London: Routledge.
-
-N/A
 
 ### Popular Publications / Oped
 
@@ -139,18 +134,41 @@ N/A
 - [POLS3025](https://programsandcourses.anu.edu.au/2015/course/pols3025) Contemporary Political Analysis, using STATA in political analyses (2017)
 - [ECON3101](https://programsandcourses.anu.edu.au/course/econ3101) Microeconomics 3 (2018-2021)
 - [ECON3102](https://programsandcourses.anu.edu.au/course/econ3102) Macroeconomics 3 (2021)
-- [ECON2102](https://programsandcourses.anu.edu.au/course/econ2102) Macroeconomics 2 (2019)
 - [EMET3008](https://programsandcourses.anu.edu.au/course/emet3008) Applied Macro and Financial Econometrics (2020)
 
 N/A
 
-### Teaching Assistant (graduate) at Universitas Indonesia
 
-- Macroeconomics 2 (2016)
-- Microeconomics 2 (2015)
+Consulting Experience {data-icon=suitcase}
+--------------------------------------------------------------------------------
 
-N/A
+### Economist
 
+Center for Indonesian Policy Studies
+
+Jakarta, Indonesia
+
+2020
+
+::: concise
+- Design a policy evaluation method for Prospera.
+- The policy relates to IACEPA, a deep trade agreement between Indonesia and Australia.
+- Work under Reiner Heufers.
+:::
+
+### Economist
+
+PT. LAPI ITB.
+
+Jakarta, Indonesia
+
+2020
+
+::: concise
+- Run a simulation to assess the impact of Indonesian Sovereign Wealthh Fund.
+- Use Computable General Equilibrium as the main tool.
+- Work under Dr. Barli Suryanta.
+:::
 
 Prizes {data-icon=award data-concise=true}
 --------------------------------------------------------------------------------
