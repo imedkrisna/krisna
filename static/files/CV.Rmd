@@ -131,7 +131,7 @@ N/A
 
 ### Tutor at Australian National University
 
-- [POLS3025](https://programsandcourses.anu.edu.au/2015/course/pols3025) Contemporary Political Analysis, using STATA in political analyses (2017)
+- [POLS3025](https://programsandcourses.anu.edu.au/2015/course/pols3025) Contemporary Political Analysis, using Stata in political analyses (2017)
 - [ECON3101](https://programsandcourses.anu.edu.au/course/econ3101) Microeconomics 3 (2018-2021)
 - [ECON3102](https://programsandcourses.anu.edu.au/course/econ3102) Macroeconomics 3 (2021)
 - [EMET3008](https://programsandcourses.anu.edu.au/course/emet3008) Applied Macro and Financial Econometrics (2020)
@@ -151,8 +151,8 @@ Jakarta, Indonesia
 2020
 
 ::: concise
-- Design a policy evaluation method for Prospera.
-- The policy relates to IACEPA, a deep trade agreement between Indonesia and Australia.
+- Design a policy evaluation method on IACEPA implementation for Prospera.
+- CGE and Stata is used.
 - Work under Reiner Heufers.
 :::
 
@@ -166,7 +166,7 @@ Jakarta, Indonesia
 
 ::: concise
 - Run a simulation to assess the impact of Indonesian Sovereign Wealthh Fund.
-- Use Computable General Equilibrium as the main tool.
+- Mainly use Computable General Equilibrium (CGE).
 - Work under Dr. Barli Suryanta.
 :::
 
