@@ -4,9 +4,9 @@
 title: 'Resensi buku "How the World Become Rich: the Historical Origins of Economic Growth"'
 subtitle: "karya Mark Koyama dan Jared Rubin"
 summary: ""
-authors: []
-tags: []
-categories: []
+authors: [admin]
+tags: [macem-macem]
+categories: [macem-macem]
 date: 2022-08-19T15:10:34+07:00
 lastmod: 2022-08-19T15:10:34+07:00
 featured: false
