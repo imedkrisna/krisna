@@ -36,7 +36,7 @@ has almost disappeared over time.
 
 Ingat bahwa ini adalah studi tentang Denmark. Seperti kita ketahui, Denmark termasuk negara yang sangat *jor-joran* mempromosikan *gender equal pay* dan *gender equal opportunity*. Bahkan soal anak pun, hal-hal kayak cuti dan bantuan pemerintah sudah sangat pro keluarga. Tapi perbedaan tersebut tetap ada, dan sepertinya memang sulit dihilangkan 100%.
 
-Untuk konteks non-Denmark, ada Hupkau dan Leturcq (2017) yang studinya di Inggris. Pernah liat juga yang di negara Balkan tapi agak lupa siapa yang nulis. Tapi Kleven dkk masukin grafik gender pay gap secara internasional, yang lebih kurang memang *stuck* di 20an persen. Ada di papernya silakan dilihat.
+Untuk konteks non-Denmark, ada Hupkau dan Leturcq (2017) yang studinya di Inggris. Pernah liat juga yang di negara Balkan tapi agak lupa siapa yang nulis. Juga ada [laporan](https://www.census.gov/library/stories/2020/06/cost-of-motherhood-on-womens-employment-and-earnings.html) dari biro sensus Amerika Serikat yang berkesimpulan sama. Tapi Kleven dkk masukin grafik gender pay gap secara internasional, yang lebih kurang memang *stuck* di 20an persen. Ada di papernya silakan dilihat.
 
 Memiliki anak memang sepertinya membebani perempuan lebih daripada lelaki. Soal gaji pun demikian, bahkan di negara yang sangat progresif dan pemerintahnya bener-bener aktif di isu *gender pay gap*. Apalagi di negara yang pemerintahnya males yak.
 
