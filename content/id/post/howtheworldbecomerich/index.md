@@ -56,4 +56,10 @@ Oh ya, pas Koyama & Rubin mendeskripsikan pemikiran Mao Zedong tentang pentingny
 
 Intinya, buku ini sangat enjoyable untuk dibaca. Saya sangat sarankan bapak ibu dan teman-teman untuk baca ini karena ini tuh beneran semacem sintesis ekonomi pembangunan banget, dalam 1 paket yang tipis (cuma sekitar 170an halaman) tapi sangat padat dan terkini. Buku ini juga informatif banget dan banyak sitasi menarik yang bisa ditelusuri jika tertarik mendalami. Misalnya mau mendalami soal dampak demografi ke _growth_, baca aja sitasi-sitasi di bab demografi. Bahasanya ga ribet juga, naratifnya mashook. Pokoknya cakep deh. Kalo mau baca 1 buku saja tentang proses peningkatan kesejahteraan umat manusia, ambil buku ini!
 
-[^1]: Dell, Melissa, and Benjamin Olken. “The Development Effects of the Extractive Colonial Economy: The Dutch Cultivation System in Java.” Review of Economic Studies 87, no. 1 (2020): 164-203.
+N.B.: Dell & Olken (2020) ini melengkapi 2 artikel lain tentang Indonesia yang menurut saya juga sangat menarik, yaitu Kuipers (2022) [^2] dan Bazzi, Koehler-Derrick dan Marx (2020) [^3]. Wajib baca kalo suka institutional economics maupun sejarah.
+
+[^1]: Dell, Melissa, and Benjamin Olken. (2020). “The Development Effects of the Extractive Colonial Economy: The Dutch Cultivation System in Java.” Review of Economic Studies 87, no. 1.
+
+[^2]: Kuipers, N. (2022). The Long-Run Consequences of The Opium Concessions for Out-Group Animosity on Java. World Politics, 1-38. https://doi.org/10.1017/S0043887122000041 
+
+[^3]: Bazzi, S., Koehler-Derrick, G., & Marx, B. (2020). The Institutional Foundations of Religious Politics: Evidence from Indonesia. The Quarterly Journal of Economics, 135(2), 845-911. https://doi.org/10.1093/qje/qjz038 
