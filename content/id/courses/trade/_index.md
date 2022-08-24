@@ -1,40 +1,73 @@
 ---
-title: Introduction to Economics
+title: Analisis Ekonomi Perdagangan dan Industri
 linkTitle: Introduction
-summary: An introduction to economics for non-economics programs
+summary: Analisis Ekonomi Perdagangan dan Industri
 date: '2021-01-24'
 type: book
 ---
 
-{{% callout note %}} This page is still under development. Expect weekly changes. {{% /callout %}}
+Mata kuliah ini adalah mata kuliah pilihan di Program Pascasarjana Ilmu Ekonomi Universitas Indonesia semester ganjil 2022/2023.
 
-This is a course I designed and teach for bachelor level students at International Business Engineering (IBE) program at Universitas Kristen Petra, 2$^{nd}$ semester of 2020/2021. I use Essentials of Economics[^1] (Krugman and Wells, 2016) as my guide. The book is chosen because it mainly includes many global business examples and very easy to follow for business students but also for non-economics programs in general. Some examples used in this course may be tailored a bit on Indonesian context.
+## Deskripsi mata kuliah
 
-Some additional resources include Introduction of Economic Analysis by McAfee and Lewis[^2] (2009) and various journal articles and news articles.
+Kenapa negara saling berdagang? Kenapa ada negara yang berdagang secara bebas, namun ada juga yang memilih untuk cenderung tertutup? Institusi apa yang mengatur jalannya perdagangan? Apa hubungan perdagangan internasional dengan pertumbuhan ekonomi dan industri? Bagaimana keterkaitan antara perdagangan, pertumbuhan dan kesejahteraan? Apakah ekspor yang tinggi disertai dengan rendahnya impor adalah sesuatu yang baik? Pada mata kuliah ini, kita akan mendiskusikan pertanyaan-pertanyaan seperti di atas.
 
-## About this course
-This course teaches the basic principle of economics. It is designed to provide non-economics student about how economists make decisions under scarcity. Covered are essential principles such as the consumer and firm problem, market and its failure, and basic strategic thinking. We also explore the macro perspective of economics and see how governments make decisions.
+Di tengah kembali maraknya kebijakan industri, baik di Indonesia maupun di dunia internasional, materi tentang pertumbuhan industri juga diberikan, termasuk bagaimana upaya Indonesia untuk kembali mengejar pertumbuhan manufaktur. Konteks tentang Indonesia, yang biasanya jarang ada di buku-buku teks konvensional, juga ditambahkan di mata kuliah ini.
 
-## Learning outcomes
-1.	To understand the principle of economics: the consumer, the producer, and the market.
-2.	To understand market failure, where perfect market principles may not work.
-3.	To understand the framework of macroeconomics.
-4.	To understand reasoning behind macroeconomic policies.
+Sayangnya, karena dirasa pentingnya menambahkan materi tentang kebijakan industri dan konteks kebijakan publik di Indonesia, mata kuliah ini terpaksa mengorbankan materi tentang transaksi makro-finansial. Namun demikian, materi tentang *international finance* diajarkan pada mata kuliah lain. Di samping itu, materi tentang neraca pembayaran dan pendapatan nasional tetap diajarkan di mata kuliah ini.
 
-## Prior knowledge
-1. Any high school graduates should be able to follow this course easily.
-2. No math is needed, but some ability to read graphs should be useful.
-3. A plus if you understand basic calculus and statistics.
+Mata kuliah ini didesain untuk Program Pascasarjana Ilmu Ekonomi (PPIE) Universitas Indonesia. Mata kuliah ini memberikan prinsip dasar menganalisis peran perdagangan internasional dalam mencapai tujuan sebuah negara dalam meningkatkan kesejahteraan warganya dan membangun industri serta ekonomi negaranya. Mata kuliah ini sangat cocok diambil oleh desainer kebijakan publik terkait perdagangan internasional dan kebijakan industri maupun peneliti lembaga riset dan organisasi nirlaba yang bergerak di bidang kebijakan publik.
 
-## Questions, critics and suggestions
+## Capaian pembelajaran
 
-please let me know thru {{< icon name="envelope" pack="fas" >}}<a href="mailto:krisna.gupta@outlook.com">e-mail</a> or mention me on {{< icon name="twitter" pack="fab" >}}[twitter](https://www.twitter.com/imedkrisna).
+-   Memahami kenapa perdagangan internasional dan industri perlu dipelajari.
 
-## License
+-   Mampu menjelaskan teori perdagangan internasional dengan bahasa yang mudah dipahami.
 
-<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.
+-   Memahami bentuk-bentuk kebijakan terkait perdagangan internasional dan industrial,, dan konsekuensinya terhadap kesejahteraan.
 
+## Buku dan Materi perkuliahan
 
-[^1]: Krugman, P. R., & Wells, R. (2016). [Essentials of economics (Fourth ed.)](](https://www.periplus.com/p/9781464186653/essentials-of-economics?filter_name=essentials%20of%20economics)). New York, NY: Worth Publishers, Macmillan Learning.
+### Main textbook:
 
-[^2]: McAfee, P. & Lewis, T. (2009) [Introduction to Economic Analysis](https://open.umn.edu/opentextbooks/textbooks/47). Saylor Foundation.
+-   Salvatore, D. (2004). International Economics, 8th ed. (8 ed.). John Wiley & Sons, Inc.
+
+### Papers on industrial policies:
+
+-   Aiginger, K., & Rodrik, D. (2020). Rebirth of Industrial Policy and an Agenda for the Twenty-First Century. Journal of Industry, Competition and Trade, 20(2), 189-207. https://doi.org/10.1007/s10842-019-00322-3
+
+-   Chang, H.-J., & Andreoni, A. (2020). Industrial Policy in the 21st Century. Development and Change, 51(2), 324-351. https://doi.org/https://doi.org/10.1111/dech.12570
+
+-   Cherif, R., & Hasanov, F. (2019). The Return of the Policy That Shall Not Be Named: Principles of Industrial Policy. IMF Working Paper, 19(74).
+
+-   Criscuolo, C., Martin, R., Overman, H. G., & Van Reenen, J. (2019). Some Causal Effects of an Industrial Policy. American Economic Review, 109(1), 48-85. https://doi.org/10.1257/aer.20160034
+
+-   Grabowski, R., & Self, S. (2020). Industrialization and deindustrialization in Indonesia. Asia & the Pacific Policy Studies, 7(1), 95-111.
+
+-   Wim, N. (2010). Industrial Policy. In (Vol. 2010). Helsinki, Finland: UNU-WIDER.
+
+### Papers on Indonesian trade policy context:
+
+-   Basri, M. C., & Patunru, A. A. (2012). How to keep trade policy open: the case of Indonesia. Bulletin of Indonesian Economic Studies, 48(2), 191-208. https://doi.org/10.1080/00074918.2012.694154
+
+-   Gupta, K., Pane, D., & Pasaribu, D. (2022). The Advent of A New Trade Governance After The Omnibus Law: Neraca Komoditas (CIPS Policy Paper, Issue. https://www.cips-indonesia.org/neraca-komoditas-policy-paper
+
+-   Pane, D. D., & Patunru, A. A. (2022). The role of imported inputs in firms' productivity and exports: evidence from Indonesia. Review of World Economics. https://doi.org/10.1007/s10290-022-00476-z
+
+-   Pane, D. D., & Patunru, A. A. (2021). Does Export Experience Improve Firms' Productivity? Evidence from Indonesia. The Journal of Development Studies, 57(12), 2156-2176. https://doi.org/10.1080/00220388.2021.1965126
+
+-   Pangestu, M., Rahardja, S., & Ing, L. Y. (2015). Fifty Years of Trade Policy in Indonesia: New World Trade, Old Treatments. Bulletin of Indonesian Economic Studies, 51(2), 239-261. https://doi.org/10.1080/00074918.2015.1061915
+
+## Prasyarat
+
+Mata kuliah ini mensyaratkan pemahaman makroekonomi dan mikroekonomi yang cukup. Dari sisi mikroekonomi, mahasiswa diasumsikan telah memahami *first* dan *second welfare theorem* serta konsekuensi dari kegagalan pasar (*market failure*) dan *imperfect competition* dalam melakukan analisis ekonomi. Dari sisi makroekonomi, mahasiswa dianggap telah memahami *growth theory* dan memahami konsep *interest rate parity*.
+
+## Ujian
+
+Penguasaan materi mata kuliah ini akan diuji dengan:
+
+-   Ujian Tengah Semester, dengan bobot 30%
+
+-   Ujian Akhir Semester, dengan bobot 50%
+
+-   Tugas membuat report/paper, dengan bobot 20%. Tugas akan diberikan melalui platform online google classroom.
