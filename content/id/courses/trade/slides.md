@@ -9,8 +9,8 @@ weight: 20
 
 slides:
 
-- [week 1: Introduction]({{< relref "/courses/trade/meeting1" >}})
-- [week 1: Introduction]({{< relref "/slides/denny" >}})
+# - [week 1: Introduction]({{< relref "/courses/trade/meeting1" >}})
+# - [week 1: Introduction]({{< relref "/slides/denny" >}})
 - [week 1: Introduction]({{< relref "/slides/cipsdata" >}})
 - [week 1: Introduction]({{< relref "/post/cabe" >}})
 
