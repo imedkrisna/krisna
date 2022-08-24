@@ -9,5 +9,5 @@ weight: 20
 
 slides:
 
-- week 1: Introduction
+- [week 1: Introduction]({{< relref "/meeting1" >}})
 
