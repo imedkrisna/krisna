@@ -72,6 +72,8 @@ Penguasaan materi mata kuliah ini akan diuji dengan:
 
 -   Tugas membuat report/paper, dengan bobot 20%. Tugas akan diberikan melalui platform online google classroom.
 
+## Konten pertemuan
+
 | meeting | Topik | Bahan |
 | ------- | ----- | ----- |
 | 1 | pendahuluan | DS bab 1 |
