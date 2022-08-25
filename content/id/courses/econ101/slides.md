@@ -5,8 +5,6 @@ type: book
 weight: 20
 ---
 
-{{% callout note %}} This page is still under development. Expect weekly changes. {{% /callout %}}
-
 slides:
 
 - [week 1: Introduction]({{< relref "/slides/econ101" >}})
