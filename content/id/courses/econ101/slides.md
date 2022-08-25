@@ -25,3 +25,4 @@ slides:
 - [week 14: International trade](https://krisna.netlify.app/slides/econ101/week14)
 - [week 15: Investment, uncertainty, agency problem](https://krisna.netlify.app/slides/econ101/week15)
 - [week 16: Agency problem, uncertainty](https://krisna.netlify.app/slides/econ101/week16)
+- {{% staticref "econ101/week2/index.html" "newtab" %}}Download my CV{{% /staticref %}}
