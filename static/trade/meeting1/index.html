@@ -9,7 +9,7 @@
 <link href="index_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.0.38">
 
-  <title>meeting1</title>
+  <title>ECES905205 Analisis kebijakan dan industri</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -318,33 +318,89 @@
     <div class="slides">
 
 <section id="title-slide" class="center">
-  <h1 class="title">meeting1</h1>
+  <h1 class="title">ECES905205 Analisis kebijakan dan industri</h1>
+  <p class="subtitle">pertemuan 1</p>
+  <p class="date">29 Agustus 2022</p>
 </section>
 
-<section id="quarto" class="slide level2">
-<h2>Quarto</h2>
-<p>Quarto enables you to weave together content and executable code into a finished presentation. To learn more about Quarto presentations see <a href="https://quarto.org/docs/presentations/" class="uri">https://quarto.org/docs/presentations/</a>.</p>
-</section>
-<section id="bullets" class="slide level2">
-<h2>Bullets</h2>
-<p>When you click the <strong>Render</strong> button a document will be generated that includes:</p>
+<section id="dosen-anda" class="slide level2">
+<h2>Dosen anda</h2>
 <ul>
-<li>Content authored with markdown</li>
-<li>Output from executable code</li>
+<li><p>Full-time lecturer di Politeknik APP</p>
+<ul>
+<li>mantan birokrat di Kementerian Perindustrian</li>
+</ul></li>
+<li><p>Master degree in economics UI/VU</p></li>
+<li><p><a href="https://crawford.anu.edu.au/people/phd/krisna-gupta">PhD student</a> di Australian National University</p>
+<ul>
+<li><a href="https://openresearch-repository.anu.edu.au/handle/1885/270149">thesis</a> tentang industri dan perdagangan di Indonesia.</li>
+</ul></li>
+<li><p>Selengkapnya di <a href="https://imedkrisna.github.io/">imedkrisna.github.io</a></p>
+<ul>
+<li>blog di <a href="https://www.krisna.or.id/">krisna.or.id</a></li>
+<li>twitter di <a href="https://www.twitter.com/imedkrisna">@imedkrisna</a></li>
+</ul></li>
 </ul>
 </section>
-<section id="code" class="slide level2">
-<h2>Code</h2>
-<p>When you click the <strong>Render</strong> button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:</p>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 2</code></pre>
-</div>
-</div>
+<section id="agenda-hari-ini" class="slide level2">
+<h2>Agenda hari ini</h2>
+<ul>
+<li>Housekeeping</li>
+<li></li>
+</ul>
+</section>
+<section id="tentang-eces905205" class="slide level2">
+<h2>Tentang ECES905205</h2>
+<ul>
+<li>Menggunakan buku pegangan</li>
+</ul>
+</section>
+<section id="ekspektasi-dari-mahasiswa" class="slide level2">
+<h2>Ekspektasi dari Mahasiswa</h2>
+</section>
+<section id="beberapa-rules" class="slide level2">
+<h2>Beberapa rules</h2>
+</section>
+<section id="struktur" class="slide level2">
+<h2>Struktur</h2>
+</section>
+<section id="nilai" class="slide level2">
+<h2>Nilai</h2>
+</section>
+<section id="tools" class="slide level2">
+<h2>Tools</h2>
+<ul>
+<li>Google classroom</li>
+<li>My website</li>
+</ul>
+</section>
+<section>
+<section id="questions" class="title-slide slide level1 center">
+<h1>Questions?</h1>
+
+</section>
+<section id="knowing-my-class" class="slide level2">
+<h2>Knowing my class</h2>
+<ul>
+<li>Perkenalkan diri dengan menyebutkan:
+<ul>
+<li>nama panggilan</li>
+<li>pekerjaan saat ini</li>
+<li>topik tugas akhir</li>
+</ul></li>
+</ul>
+</section></section>
+<section>
+<section id="introduction-to-trade-industry" class="title-slide slide level1 center">
+<h1>Introduction to trade &amp; industry</h1>
+
+</section>
+<section id="aokwoawkoakw" class="slide level2">
+<h2>Aokwoawkoakw</h2>
 <div class="footer footer-default">
 
 </div>
-</section>
+</section></section>
     </div>
   </div>
 
@@ -556,48 +612,6 @@
         ]
       });
     </script>
-    
-    <script>
-      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-      // slide changes (different for each slide format).
-      (function () {
-        function fireSlideChanged(previousSlide, currentSlide) {
-
-          // dispatch for htmlwidgets
-          const event = window.document.createEvent("Event");
-          event.initEvent("slideenter", true, true);
-          window.document.dispatchEvent(event);
-
-          // dispatch for shiny
-          if (window.jQuery) {
-            if (previousSlide) {
-              window.jQuery(previousSlide).trigger("hidden");
-            }
-            if (currentSlide) {
-              window.jQuery(currentSlide).trigger("shown");
-            }
-          }
-        }
-
-        // hookup for reveal
-        if (window.Reveal) {
-          window.Reveal.addEventListener("slidechanged", function(event) {
-            fireSlideChanged(event.previousSlide, event.currentSlide);
-          });
-        }
-
-        // hookup for slidy
-        if (window.w3c_slidy) {
-          window.w3c_slidy.add_observer(function (slide_num) {
-            // slide_num starts at position 1
-            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-          });
-        }
-
-      })();
-    </script>
-
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {

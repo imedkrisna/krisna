@@ -1,24 +1,60 @@
 ---
-title: "meeting1"
+title: "ECES905205 Analisis kebijakan dan industri"
+subtitle: "pertemuan 1"
+date: "29 Agustus 2022"
+Author: "I Made Krisna Gupta"
 format: revealjs
 editor: visual
 ---
 
-## Quarto
+## Dosen anda
 
-Quarto enables you to weave together content and executable code into a finished presentation. To learn more about Quarto presentations see <https://quarto.org/docs/presentations/>.
+-   Full-time lecturer di Politeknik APP
 
-## Bullets
+    -   mantan birokrat di Kementerian Perindustrian
 
-When you click the **Render** button a document will be generated that includes:
+-   Master degree in economics UI/VU
 
--   Content authored with markdown
--   Output from executable code
+-   [PhD student](https://crawford.anu.edu.au/people/phd/krisna-gupta) di Australian National University
 
-## Code
+    -   [thesis](https://openresearch-repository.anu.edu.au/handle/1885/270149) tentang industri dan perdagangan di Indonesia.
 
-When you click the **Render** button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:
+-   Selengkapnya di [imedkrisna.github.io](https://imedkrisna.github.io/)
 
-```{r}
-1 + 1
-```
+    -   blog di [krisna.or.id](https://www.krisna.or.id/)
+    -   twitter di [\@imedkrisna](https://www.twitter.com/imedkrisna)
+
+## Agenda hari ini
+
+-   Housekeeping
+-   
+
+## Tentang ECES905205
+
+-   Menggunakan buku pegangan
+
+## Ekspektasi dari Mahasiswa
+
+## Beberapa rules
+
+## Struktur
+
+## Nilai
+
+## Tools
+
+-   Google classroom
+-   My website
+
+# Questions?
+
+## Knowing my class
+
+-   Perkenalkan diri dengan menyebutkan:
+    -   nama panggilan
+    -   pekerjaan saat ini
+    -   topik tugas akhir
+
+# Introduction to trade & industry
+
+## Aokwoawkoakw

@@ -28,11 +28,11 @@ Mata kuliah ini didesain untuk Program Pascasarjana Ilmu Ekonomi (PPIE) Universi
 
 ## Buku dan Materi perkuliahan
 
-### Main textbook:
+### Main textbook \[DS\]:
 
 -   Salvatore, D. (2004). International Economics, 8th ed. (8 ed.). John Wiley & Sons, Inc.
 
-### Papers on industrial policies:
+### Papers on industrial policies [P1]:
 
 -   Aiginger, K., & Rodrik, D. (2020). Rebirth of Industrial Policy and an Agenda for the Twenty-First Century. Journal of Industry, Competition and Trade, 20(2), 189-207. https://doi.org/10.1007/s10842-019-00322-3
 
@@ -46,7 +46,7 @@ Mata kuliah ini didesain untuk Program Pascasarjana Ilmu Ekonomi (PPIE) Universi
 
 -   Wim, N. (2010). Industrial Policy. In (Vol. 2010). Helsinki, Finland: UNU-WIDER.
 
-### Papers on Indonesian trade policy context:
+### Papers on Indonesian trade policy context [P2]:
 
 -   Basri, M. C., & Patunru, A. A. (2012). How to keep trade policy open: the case of Indonesia. Bulletin of Indonesian Economic Studies, 48(2), 191-208. https://doi.org/10.1080/00074918.2012.694154
 
