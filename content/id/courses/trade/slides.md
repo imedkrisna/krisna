@@ -10,3 +10,5 @@ weight: 20
 slides:
 
 - <a href="/courses/trade/meeting1/index.html" target="_blank">Pertemuan 1: pendahuluan</a>
+
+- {{% staticref "meeting1/index.html" "newtab" %}}Download my CV{{% /staticref %}}
