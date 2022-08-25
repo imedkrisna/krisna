@@ -9,4 +9,4 @@ weight: 20
 
 slides:
 
-- {{% staticref "meeting1/index.html" "newtab" %}}Pertemuan 1: Pendahuluan{{% /staticref %}}
+- {{% staticref "/trade/meeting1/index.html" "newtab" %}}Pertemuan 1: Pendahuluan{{% /staticref %}}
