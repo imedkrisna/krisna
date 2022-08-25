@@ -71,3 +71,22 @@ Penguasaan materi mata kuliah ini akan diuji dengan:
 -   Ujian Akhir Semester, dengan bobot 50%
 
 -   Tugas membuat report/paper, dengan bobot 20%. Tugas akan diberikan melalui platform online google classroom.
+
+| meeting | Topik | Bahan |
+| ------- | ----- | ----- |
+| 1 | pendahuluan | DS bab 1 |
+| 2 | Ricardian model | DS bab 2,3 |
+| 3 | Standard theory | DS bab 3,4 |
+| 4 | Hecksher-Ohlin model | DS bab 4,5 |
+| 5 | Skala ekonomis dan pasar tidak sempurna | DS bab 6 |
+| 6 | Perdagangan dan pertumbuhan ekonomi | DS bab 7 |
+| 7 | Kebijakan perdagangan: tarif | DS bab 8 |
+| - | UTS | - | 
+| 8 | Kebijakan perdagangan: non-tarif | DS bab 9 |
+| 9 | Free Trade Agreements | DS bab 10 |
+| 10 | Firms & Global Value Chain | DS bab 12 |
+| 11 | Trade & development economies | DS bab 11 |
+| 12 | Kebijakan industrial | P1 |
+| 13 | Pendapatan nasional dan neraca pembayaran | DS bab 13 |
+| 14 | Konteks Indonesia dalam perdagangan internasional | P2 |
+| - | UAS | - |
