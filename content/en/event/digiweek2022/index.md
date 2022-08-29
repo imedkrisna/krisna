@@ -50,7 +50,7 @@ url_slides: "Krisna_Digiweek2022.pdf"
 
 url_code:
 url_pdf:
-url_video:
+url_video: https://www.youtube.com/watch?v=gcbXPJl-L34
 
 # Markdown Slides (optional).
 #   Associate this event with Markdown slides.
@@ -66,3 +66,5 @@ slides: ""
 #   Otherwise, set `projects = []`.
 projects: []
 ---
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/gcbXPJl-L34" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

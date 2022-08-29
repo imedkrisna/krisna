@@ -50,7 +50,7 @@ url_slides: "Krisna_Digiweek2022.pdf"
 
 url_code:
 url_pdf:
-url_video:
+url_video: https://www.youtube.com/watch?v=gcbXPJl-L34
 
 # Markdown Slides (optional).
 #   Associate this event with Markdown slides.
