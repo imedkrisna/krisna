@@ -16,6 +16,9 @@ main:
   - name: Talks
     url: '#events'
     weight: 40
+  - name: Courses
+    url: '/courses'
+    weight: 50
   - name: Contact
     url: '#contact'
     weight: 60

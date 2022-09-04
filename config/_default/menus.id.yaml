@@ -16,6 +16,9 @@ main:
   - name: Presentasi
     url: '#events'
     weight: 40
+  - name: Kuliah
+    url: '/courses'
+    weight: 50
   - name: Kontak
     url: '#contact'
     weight: 60
