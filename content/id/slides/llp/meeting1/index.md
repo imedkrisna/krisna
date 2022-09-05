@@ -163,7 +163,24 @@ Krisna Gupta
 
 ---
 
+## Ekonomi
 
+- Adalah studi tentang pengambilan keputusan di tengah kelangkaan.
+  - Karena sumber daya itu terbatas, harus dimanfaatkan semaksimal mungkin.
+- Tujuan mempelajari ilmu ekonomi adalah bagaimana mencapai kemakmuran dengan usaha sekecil mungkin.
+  - Bagaimana menjadi efisien dalam melakukan kegiatan produksi.
+  - Bagaimana mencegah pemborosan dalam kegiatan konsumsi.
+
+---
+
+## Perddagangan
+
+- Perdagangan adalah salah satu cara meningkatkan kemakmuran dengan cara efisien.
+
+
+## Produk Domestik Bruto
+
+- PDB adalah salah satu cara mengukur 
 
 ### Specialisation and gains from trade
 
