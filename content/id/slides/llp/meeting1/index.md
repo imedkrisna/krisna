@@ -130,9 +130,9 @@ slides:
 
 | evaluation | covers | % |
 | ---------- | ------ | - |
-| quiz & tugas | bertahap | 20 |
-| UTS | 7 minggu pertama | 40 |
-| UAS | 7 minggu terakhir | 40 |  
+| quiz & tugas | bertahap | 40 |
+| UTS | 7 minggu pertama | 30 |
+| UAS | 7 minggu terakhir | 30 |  
 
 
 ---
@@ -169,14 +169,16 @@ slides:
 
 ---
 
-## Perddagangan
+## Perdagangan
 
-- Perdagangan adalah salah satu cara meningkatkan kemakmuran dengan cara efisien.
+- Perdagangan adalah salah satu cara meningkatkan kemakmuran dengan cara yang efisien.
 
-
+---
 ## Produk Domestik Bruto
 
 - PDB adalah salah satu cara mengukur 
+
+---
 
 ### Specialisation and gains from trade
 
