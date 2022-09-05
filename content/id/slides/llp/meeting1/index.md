@@ -44,13 +44,9 @@ slides:
 
 ##### Pertemuan 1
 
-
-Krisna Gupta  
-
-
 ---
 
-## Hari ini ☀
+## Hari ini ☀️
 
 - Administrasi
 - Perdagangan dan transaksi
