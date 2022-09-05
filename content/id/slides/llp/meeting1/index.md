@@ -199,3 +199,11 @@ slides:
 
 - We can easily extend this to a country level:
   - Japan makes car because they cannot plant palm oil.
+
+---
+
+### Comparative advantage drives trade
+
+---
+
+### What drives comparative advantage?
