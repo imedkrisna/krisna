@@ -1,7 +1,7 @@
 ---
-title: Introduction to Economics
+title: Lalu Lintas Pembayaran Dalam dan Luar Negeri
 linkTitle: Introduction
-summary: An introduction to economics for non-economics programs
+summary: Lalu lintas pembayaran dalam dan luar negeri diajarkan di semester 3 di Program Diploma 3 Politeknik APP Jakarta
 date: '2021-01-24'
 type: book
 ---
