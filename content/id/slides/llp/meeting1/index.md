@@ -74,7 +74,7 @@ Krisna Gupta
 | nama | ruangan | email |
 | ---- | ------- | ----- |
 | Dhany Ratana | Kaprodi | - |
-| I Made Krisna | Sebelah bu july | imade.krisna@app.ac.id |
+| I Made Krisna | Sebelah bu july | imade.krisna@poltekapp.ac.id |
 
 ---
 
