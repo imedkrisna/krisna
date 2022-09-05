@@ -3,7 +3,7 @@
 
 title: "Lalu Lintas Pembayaran Dalan dan Luar Negeri"
 summary: ""
-authors: [admin]
+authors: []
 tags: [courses]
 categories: [courses]
 date: 2021-02-04T22:04:07+11:00
