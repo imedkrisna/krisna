@@ -67,10 +67,10 @@ slides:
 
 ## Informasi Pengajar
 
-| nama | ruangan | email |
-| ---- | ------- | ----- |
-| Dhany Ratana | Kaprodi | - |
-| I Made Krisna | Sebelah bu july | imade.krisna@poltekapp.ac.id |
+| nama | ruangan | matkul lain |
+| ---- | ------- | ----------- |
+| Dhany Ratana | B2002 (prodi PIWAR) | - |
+| [I Made Krisna](https://www.krisna.or.id/) | A2004 (Ruang Kerja Sama) | Metodologi Penelitian |
 
 ---
 
