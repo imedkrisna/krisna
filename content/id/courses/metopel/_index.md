@@ -60,7 +60,7 @@ Mata kuliah ini akan dievaluasi dengan 3 cara:
 - UTS
 - Tugas individu
 
-Tugas kelompok akan diberikan setelah UTS dan dikumpulkan di minggu terakhir perkuliahan. Sementara itu, tugas individu akan diberikan di akhir masa kuliah, dan dikumpulkan di minggu terakhir UAS. UTS akan menguji kemampuan analitis yang didapatkan pada bagian pertama, yaitu pengetahuan tentang struktur data serial waktu dan penggunaan berbagai metode regresi serial waktu. Tugas kelompok akan mengetes kemampuan mahasiswa dalam menggunakan software dan tools visualisasi data. Tugas individu akan mengetes keseluruhan materi, di mana mahasiswa diharuskan mencari pertanyaan/permasalahan, menggunakan metode, membuat kesimpulan, dan menuliskannya dalam sebuah dokumen.
+Tugas kelompok akan diberikan setelah UTS dan dikumpulkan di minggu terakhir perkuliahan. Sementara itu, tugas individu akan diberikan di akhir masa kuliah, dan dikumpulkan di minggu terakhir UAS. UTS akan menguji kemampuan analitis yang didapatkan pada bagian pertama, yaitu pengetahuan tentang struktur data serial waktu dan penggunaan berbagai metode regresi serial waktu. Tugas kelompok akan mengetes kemampuan mahasiswa dalam menggunakan software dan tools visualisasi data. Tugas individu akan mengetes keseluruhan materi, di mana mahasiswa diharuskan mencari pertanyaan/permasalahan, menggunakan metode, membuat kesimpulan, dan menuliskannya dalam sebuah dokumen. Tugas individu akan memiliki keluaran yang lebih kurang [seperti contoh ini](https://imedkrisna.github.io/metopel.html). Contoh ini dapat digunakan sebagai gambaran namun tentunya akan lebih dalam untuk tugas individu.
 
 ## Daftar pustaka
 
