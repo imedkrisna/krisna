@@ -1,7 +1,7 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: "Tkdnfarmasi"
+title: "TKDN di farmasi"
 subtitle: ""
 summary: ""
 authors: []
@@ -27,3 +27,17 @@ image:
 #   Otherwise, set `projects = []`.
 projects: []
 ---
+
+## List peraturan terkait industri farmasi
+
+| no | aturan | tentang | note |
+| -- | ------ | ------- | ---- |
+| 1 | UU 13/2016 | Paten | pasal 20 ayat 1 |
+| 2 | UU 19/2003 | BUMN | BUMN boleh collab penelitian. |
+| 3 | PMK 153/2020 | Super Deduction Tax | R&D dipotong dari perhitungan pajak |
+| 4 | Permenkes 1010/2008 | Semua obat beredar wajib diproduksi di dalam negeri |
+| 5 | Permenperin 16/2020 | Penghitungan kandungan lokal untuk produk farmasi |
+
+Produsen dalam negeri menguasai [95% pangsa pasar](https://nasional.sindonews.com/read/227038/18/mampukah-uu-ciptaker-dorong-inovasi-farmasi-1605010262). low-value added, low margin, generic. China's API is too big, even India and EU producers [exit](https://www.thejakartapost.com/academia/2020/06/17/local-content-regulation-for-pharma-not-the-panacea.html).
+
+China's doubling down on supply side policies while neglecting its demand side will ensure high exports. It will be extremely hard to lure them in.
