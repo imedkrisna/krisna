@@ -40,7 +40,7 @@ Beberapa tools yang akan digunakan di mata kuliah ini antara lain adalah [R](htt
 
 Alasan utama tools ini dipilih adalah karena semuanya _open source_ alias gratis. Meski _open source_, software-software ini merupakan software yang juga digunakan oleh para profesional, termasuk oleh pengajar mata kuliah ini. Di samping itu, RStudio dan R (dengan _package_ yang tepat) memiliki bahasa yang cukup mudah dimengerti ketimbang _software_ lain. Tools-tools ini juga dipilih sebagai dasar karena jika sudah bisa memakai tools-tools ini, mempelajari tools lainnya (misalnya [Python](https://www.python.org/) atau [Jupyter Notebook](https://jupyter.org/)) menjadi lebih mudah.
 
-Ada beberapa buku dan dokumentasi yang digunakan. Sebagian besar buku yang akan digunakan sebagai pengantar dapat diakses secara gratis oleh mahasiswa. Untuk buku cetak (Sugiyono (2007) dan Sugiyono (2016)) dapat dibaca/dipinjam di perpustakaan Politeknik APP Jakarta.
+Ada beberapa [buku dan dokumentasi](##daftar-pustaka) yang digunakan. Sebagian besar buku yang akan digunakan sebagai pengantar dapat diakses secara gratis oleh mahasiswa. Untuk buku cetak (Sugiyono (2007) dan Sugiyono (2016)) dapat dibaca/dipinjam di perpustakaan Politeknik APP Jakarta.
 
 ## Hal-hal yang dibutuhkan
 
