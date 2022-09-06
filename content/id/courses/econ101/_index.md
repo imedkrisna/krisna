@@ -4,6 +4,7 @@ linkTitle: Introduction
 summary: An introduction to economics for non-economics programs
 date: '2021-01-24'
 type: book
+commentable: false
 ---
 
 {{% callout note %}} This page is still under development. Expect weekly changes. {{% /callout %}}
