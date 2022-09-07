@@ -43,3 +43,5 @@ Produsen dalam negeri menguasai [95% pangsa pasar](https://nasional.sindonews.co
 China's doubling down on supply side policies while neglecting its demand side will ensure high exports. It will be extremely hard to lure them in.
 
 Cek ICIO utk value added.
+
+domestic market is small. 1% of global drug market.
