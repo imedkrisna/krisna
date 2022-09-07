@@ -41,3 +41,5 @@ projects: []
 Produsen dalam negeri menguasai [95% pangsa pasar](https://nasional.sindonews.com/read/227038/18/mampukah-uu-ciptaker-dorong-inovasi-farmasi-1605010262). low-value added, low margin, generic. China's API is too big, even India and EU producers [exit](https://www.thejakartapost.com/academia/2020/06/17/local-content-regulation-for-pharma-not-the-panacea.html).
 
 China's doubling down on supply side policies while neglecting its demand side will ensure high exports. It will be extremely hard to lure them in.
+
+Cek ICIO utk value added.
