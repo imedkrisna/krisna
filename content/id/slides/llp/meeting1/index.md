@@ -77,9 +77,11 @@ slides:
 ## Ekspektasi dari mahasiswa
 
 - Tidak ada prasyarat mata kuliah.
+- Tidak perlu bisa bahasa inggris, _but a good command of english will certainly be helpful_
 - Memerhatikan dengan baik.
 - Bertanya jika ada yang tidak dimengerti.
 - Membantu mengecek jika ada saltik di slides.
+- Sportif dan dewasa.
 
 ---
 
@@ -102,11 +104,12 @@ slides:
 | :----: | ------ |
 | 1 | intro & ekonomi |
 | 2 | Perdagangan & peran sektor perbankan |
-| 3 | Transaksi pembayaran |
-| 4 | UCP, Incoterms, Sales contract |
-| 5 | Alur documentary credit | 
-| 6 | Skenario |
-| 7 | Fitur |
+| 3 | Sektor perbankan dan Transaksi pembayaran |
+| 4 | Berbagai bentuk transaksi pembayaran |
+| 5 | UCP, Incoterms, Sales contract |
+| 6 | Alur documentary credit | 
+| 7 | Penggunaan documentary credit |
+| 8 | UTS |
 
 ---
 
@@ -116,13 +119,11 @@ slides:
 
 | minggu | konten |
 | :----: | ------ |
-| 8 | intro & ekonomi |
-| 9 | Perdagangan & peran sektor perbankan |
-| 12 | Transaksi pembayaran |
-| 11 | UCP, Incoterms, Sales contract |
-| 12 | Alur documentary credit | 
-| 13 | Skenario |
-| 14 | Fitur |
+| 9 | Bentuk dan karakteristik documentary credit |
+| 10-13 | Documentary credit dan pencairan L/C |
+| 14 | Fitur-fitur L/C dan kapan digunakan |
+| 15 | Kasus-kasus aplikasi L/C |
+| 16 | UAS |
 
 ---
 
@@ -147,13 +148,9 @@ slides:
 
 # Questions?
 
----
-
-## Now let's appoint a class rep!
+<iframe src="https://giphy.com/embed/GYAiZdntWJE1zyNOLp" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/lazy-corgi-GYAiZdntWJE1zyNOLp">via GIPHY</a></p>
 
 ---
-
-
 
 # Tentang Ekonomi dan Perdagangan 💰
 
@@ -161,26 +158,52 @@ slides:
 
 ## Ekonomi
 
-- Adalah studi tentang pengambilan keputusan di tengah kelangkaan.
-  - Karena sumber daya itu terbatas, harus dimanfaatkan semaksimal mungkin.
-- Tujuan mempelajari ilmu ekonomi adalah bagaimana mencapai kemakmuran dengan usaha sekecil mungkin.
-  - Bagaimana menjadi efisien dalam melakukan kegiatan produksi.
-  - Bagaimana mencegah pemborosan dalam kegiatan konsumsi.
+- Ilmu ekonomi pada hakikatnya merupakan ilmu yang mempelajari kesejahteraan (_welfare_) umat manusia.
+- Bagaimana cara mengukur kesejahteraan? Orang atau negara seperti apa yang disebut sejahtera?
+
+{{< fragment >}} banyak uang? {{< /fragment >}}
+{{< fragment >}} banyak teman? {{< /fragment >}}
+{{< fragment >}} banyak amal? {{< /fragment >}}
 
 ---
 
-## Perdagangan
+## Produk Domestik Bruto
+
+- Kata kunci: banyak.
+- Negara yang makmur biasanya diukur dengan **kemampuan menghasilkan/mengonsumsi sebanyak mungkin barang dan jasa**.
+- Agregasi dari barang dan jasa yang dihasilkan oleh suatu negara disebut dengan **Produk Domestik Bruto** (PDB) atau **Gross Domestic Product** (GDP).
+- Bagaimana cara PDB dihitung?
+
+---
+
+## Perhitungan PDB
+
+- Problem perhitungan PDB adalah bagaimana cara agregasi barang dengan ukuran berbeda-beda?
+  - Bagaimana cara menjumlah beras+mobil+listrik+internet?
+  - Membandingkan PDB antar negara/waktu juga jadi susah.
+- Kita ubah semua barang dan jasa tersebut ke dalam satuan **mata uang** / **currency unit**
+- Pada prinsipnya, $PDB=\sum \text{Quantity} \times \text{Price}$
+- Menghitung PDB adalah tugasnya [Badan Pusat Statistik (BPS)](https://www.bps.go.id/indicator/169/1955/1/-seri-2010-1-pdb-triwulanan-atas-dasar-harga-berlaku-menurut-pengeluaran.htmls)
+
+---
+
+## Perhitungan PDB pengeluaran
+
+- Rumus perhitungan PDB yang paling terkenal adalah dengan metode pengeluaran.
+
+$$PDB=C+I+G+(X-M)$$
+
+- Di mana $C=$konsumsi, $I=$investasi/tabungan, $G=$belanja pemerintah, $X-M=$net export.
+- Import menjadi pengurang PDB karena sudah dihitung di konsumsi (C) (_avoid double counting_).
+- Semakin besar PDB, semakin makmur negara tersebut.
+
+## Mengapa Berdagang?
 
 - Perdagangan adalah salah satu cara meningkatkan kemakmuran dengan cara yang efisien.
 
 ---
-## Produk Domestik Bruto
 
-- PDB adalah salah satu cara mengukur 
-
----
-
-### Specialisation and gains from trade
+## Specialisation and gains from trade
 
 - During your daily time, you make decisions on allocating how much time to study and to cook, among other things.
 - Since you will die if you don't eat, you can't allocate 0 hour to cook.
@@ -190,7 +213,7 @@ slides:
 
 ---
 
-### Specialisation and gains from trade
+## Specialisation and gains from trade
 
 - Extending to firm level, many outsource part of their business from a third party.
   - buying {{< icon name="microsoft" pack="fab" >}}office probably better than developing our own softwares.
@@ -202,8 +225,7 @@ slides:
 
 ---
 
-### Comparative advantage drives trade
+## Minggu depan
 
----
-
-### What drives comparative advantage?
+- lanjut lagi soal perdagangan dan transaksi
+- intro ke sektor perbankan
