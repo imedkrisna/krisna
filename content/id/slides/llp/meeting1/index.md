@@ -199,7 +199,9 @@ $$PDB=C+I+G+(X-M)$$
 
 ## Mengapa Berdagang?
 
-- Perdagangan adalah salah satu cara meningkatkan kemakmuran dengan cara yang efisien.
+- Seperti dijelaskan sebelumnya, ilmu ekonomi menitikberatkan pada efisiensi dalam meningkatkan kesejahteraan.
+- Salah satu cara meningkatkan kesejahteraan dengan efisien adalah berdagang.
+- Kenapa? 
 
 ---
 
@@ -224,6 +226,13 @@ $$PDB=C+I+G+(X-M)$$
   - Japan makes car because they cannot plant palm oil.
 
 ---
+
+## Specialisation and gains from trade
+
+- dengan kata lain, berdagang memberi keuntungan bagi kedua belah pihak.
+- Pada akhirnya, tujuan akhir aktivitas ekonomi adalah untuk kesejahteraan.
+  - Saya jualan X supaya bisa beli Y.
+  - Lebih efisien daripada bikin X dan Y.
 
 ## Minggu depan
 
