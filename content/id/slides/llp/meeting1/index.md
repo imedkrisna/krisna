@@ -197,6 +197,8 @@ $$PDB=C+I+G+(X-M)$$
 - Import menjadi pengurang PDB karena sudah dihitung di konsumsi (C) (_avoid double counting_).
 - Semakin besar PDB, semakin makmur negara tersebut.
 
+---
+
 ## Mengapa Berdagang?
 
 - Seperti dijelaskan sebelumnya, ilmu ekonomi menitikberatkan pada efisiensi dalam meningkatkan kesejahteraan.
@@ -233,6 +235,8 @@ $$PDB=C+I+G+(X-M)$$
 - Pada akhirnya, tujuan akhir aktivitas ekonomi adalah untuk kesejahteraan.
   - Saya jualan X supaya bisa beli Y.
   - Lebih efisien daripada bikin X dan Y.
+
+---
 
 ## Minggu depan
 
