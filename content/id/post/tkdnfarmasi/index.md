@@ -32,7 +32,7 @@ projects: []
 
 | no | aturan | tentang | note |
 | -- | ------ | ------- | ---- |
-| 1 | UU 13/2016 | Paten | pasal 20 ayat 1 |
+| 1 | UU 13/2016 | Paten | pasal 20 ayat 1 | 
 | 2 | UU 19/2003 | BUMN | BUMN boleh collab penelitian. |
 | 3 | PMK 153/2020 | Super Deduction Tax | R&D dipotong dari perhitungan pajak |
 | 4 | Permenkes 1010/2008 | Semua obat beredar wajib diproduksi di dalam negeri |
