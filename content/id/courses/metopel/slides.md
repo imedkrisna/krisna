@@ -20,5 +20,4 @@ commentable: false
 
 slides:
 
-- {{% staticref "/trade/meeting1/index.html" "newtab" %}}Pertemuan 1: Pendahuluan{{% /staticref %}}
-- {{% staticref "/trade/meeting2/index.html" "newtab" %}}Pertemuan 2: Ricardian Model{{% /staticref %}}
+- {{% staticref "/metopel/meeting1/index.html" "newtab" %}}Pertemuan 1: Pendahuluan{{% /staticref %}}
