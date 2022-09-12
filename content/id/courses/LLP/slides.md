@@ -7,4 +7,4 @@ weight: 20
 
 slides:
 
-- [week 1: Introduction]({{< relref "/slides/llp/meeting1" >}})
+- {{% staticref "/llp/meeting1/index.html" "newtab" %}}Pertemuan 1: Pendahuluan{{% /staticref %}}
