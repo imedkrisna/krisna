@@ -46,5 +46,8 @@ graph<-ggplot()+
 #### Light
 
 ```r
-theme_classic()
+theme_classic() +
+  theme(panel.background = element_rect(fill = "#f0f1eb",
+                                        colour = "#f0f1eb"),
+        plot.background = element_rect(fill = "#f0f1eb"))
 ```
