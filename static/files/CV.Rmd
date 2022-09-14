@@ -48,12 +48,20 @@ Main
 Krisna Gupta {#title}
 --------------------------------------------------------------------------------
 
-### PhD Candidate in Economics at The Australian National University (ANU)
+### Lecturer at Politeknik APP Jakarta
 
-At Crawford School of Public policy under supervision of [Arianto Patunru](https://crawford.anu.edu.au/people/academic/arianto-patunru). My thesis is about the impact of trade and investment policies to Indonesian firms. I am a full time lecturer at [Politeknik APP Jakarta](https://www.poltekapp.ac.id), part time lecturer at [Universitas Indonesia](https://www.ui.ac.id/), and an associate researcher at [CIPS Indonesia](https://www.cips-indonesia.org/about).
+I am a full time lecturer at [Politeknik APP Jakarta](https://www.poltekapp.ac.id), part time lecturer at [Universitas Indonesia](https://www.ui.ac.id/), and an associate researcher at [CIPS Indonesia](https://www.cips-indonesia.org/about).
 
 Education {data-icon=graduation-cap data-concise=true}
 --------------------------------------------------------------------------------
+
+### Australian National University
+
+P.h.D. in Economics
+
+Canberra, Australia
+
+2022
 
 ### Universitas Indonesia
 
@@ -124,19 +132,29 @@ Teaching Experience {data-icon=chalkboard-teacher}
 
 ### Lecturer
 
-- Politeknik APP (home institution): Business Statistics (2016-2017)
+- Politeknik APP (home institution):
+  - [Research Method](https://www.krisna.or.id/courses/metopel/) (2022)
+  - [Documentary Credit](https://www.krisna.or.id/courses/llp/) (2022)
 - Universitas Petra: [Intro to Economics](https://www.krisna.or.id/courses/econ101/) (2020)
+- Universitas Indonesia: [International Trade and Industrial Policy](https://www.krisna.or.id/courses/trade/) (2022)
+
 
 N/A
 
-### Tutor at Australian National University
 
-- [POLS3025](https://programsandcourses.anu.edu.au/2015/course/pols3025) Contemporary Political Analysis, using Stata in political analyses (2017)
-- [ECON3101](https://programsandcourses.anu.edu.au/course/econ3101) Microeconomics 3 (2018-2021)
-- [ECON3102](https://programsandcourses.anu.edu.au/course/econ3102) Macroeconomics 3 (2021)
-- [EMET3008](https://programsandcourses.anu.edu.au/course/emet3008) Applied Macro and Financial Econometrics (2020)
+
+### Teaching Assistant
+- Macroeconomics 3 at ANU (2021)
+- Microeconomics 3 at ANU (2021)
+
+
+
 
 N/A
+
+
+
+
 
 
 Consulting Experience {data-icon=suitcase}
