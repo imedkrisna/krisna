@@ -10,12 +10,12 @@ authors:
 superuser: true
 
 # Role/position
-role: PhD Student
+role: Lecturer
 
 # Organizations/Affiliations
 organizations:
-- name: Australian National University
-  url: "https://crawford.anu.edu.au/people/phd/krisna-gupta"
+- name: Politeknik APP Jakarta
+  url: "https://poltekapp.ac.id/"
 
 # Short bio (displayed in user profile at end of posts)
 bio: Research mainly on international trade and investment policy and its impact on firms. Indonesia in particular is my main geographical focus.
@@ -27,6 +27,9 @@ interests:
 
 education:
   courses:
+  - course: P.h.D. in Economics
+    institution: Australian National University
+    year: 2022
   - course: M.S.E. in Economics
     institution: Universitas Indonesia
     year: 2014
@@ -73,6 +76,6 @@ user_groups:
 - Visitors
 ---
 
- My name is Krisna. I am a PhD student at Crawford School of Public Policy, the Australian National University (ANU), Canberra. My research is about trade and investment policy and how it affects Indonesian firms. I use some structured equation such as GTAP model, but also do some empirics like gravity models.
+ My name is Krisna. I am a lecturer at Politeknik APP Jakarta, a vocational school under Ministry of Industry. My research is about trade and investment policy and how it affects Indonesian firms. I use some structured equation such as GTAP model, but also do some empirics like gravity models.
 
  I currently assume a lecturer position at Politeknik APP Jakarta and Universitas Indonesia. I also an associate researcher at Center for Indonesian Policy Studies.

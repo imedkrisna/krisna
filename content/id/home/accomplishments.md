@@ -26,7 +26,7 @@ date_format = "Jan 2006"
   certificate_url = ""
   date_start = "2013-08-01"
   date_end = "2014-06-01"
-  description = "Beasiswa master dihadiahkan oleh VU University. Beasiswa ini diberikan oleh beberapa mahasiswa master degree dari berbagai belahan dunia!"
+  description = "Beasiswa master dihadiahkan oleh VU University. Beasiswa ini diberikan untuk beberapa mahasiswa master degree dari berbagai belahan dunia!"
 
 [[item]]
   organization = "Department of Foreign Affairs and Trade, Australian Government"

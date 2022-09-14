@@ -10,15 +10,15 @@ authors:
 superuser: true
 
 # Role/position
-role: Mahasiswa Doktoral
+role: Dosen
 
 # Organizations/Affiliations
 organizations:
-- name: Australian National University
-  url: "https://crawford.anu.edu.au/people/phd/krisna-gupta"
+- name: Politeknik APP Jakarta
+  url: "https://poltekapp.ac.id/"
 
 # Short bio (displayed in user profile at end of posts)
-bio: Mahasiswa doktoral di ANU yang meneliti tentang dampak kebijakan perdagangan dan investasi terhadap ekonomi Indonesia, terutama manufaktur.
+bio: Dosen di Politeknik APP Jakarta. Juga mengajar di Program Pascasarjana Universitas Indonesia. Associate researcher di Center for Indonesian Policy Studies. Fokus penelitian tentang dampak kebijakan perdagangan dan investasi terhadap ekonomi Indonesia, terutama sektor manufaktur.
 
 interests:
 - Perdagangan internasional
@@ -27,6 +27,9 @@ interests:
 
 education:
   courses:
+  - course: P.h.D in Economics
+    institution: Australian National University
+    year: 2022
   - course: M.S.E. in Economics
     institution: Universitas Indonesia
     year: 2014
@@ -73,6 +76,6 @@ user_groups:
 - Visitors
 ---
 
- Nama saya Krisna, sering dipanggil juga Imed. Saya adalah mahasiswa S3 di Crawford School of Public Policy, the Australian National University (ANU), Canberra. Riset saya tentang dampak kebijakan perdagangan dan investasi terhadap pertumbuhan sektor manufaktur di Indonesia. Saya menggunakan metode persamaan linear struktural seperti GTAP, tapi juga menggunakan berbagai teknik ekonometrika seperti *gravity models*.
+ Nama saya Krisna, sering dipanggil juga Imed. Saya adalah Dosen di Politeknik APP Jakarta. Riset saya tentang dampak kebijakan perdagangan dan investasi terhadap pertumbuhan sektor manufaktur di Indonesia. Saya menggunakan metode persamaan linear struktural seperti GTAP, tapi juga menggunakan berbagai teknik ekonometrika seperti *gravity models*.
 
  Saat ini mengajar di program D3 prodi Perdagangan Internasional di Politeknik APP Jakarta dan Program Pascasarjana Ilmu Ekonomi Universitas Indonesia. Saya juga adalah _associate researcher_ di Center for Indonesian Policy Studies.
