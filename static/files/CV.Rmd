@@ -57,7 +57,7 @@ Education {data-icon=graduation-cap data-concise=true}
 
 ### Australian National University
 
-P.h.D. in Economics
+Ph.D. in Economics
 
 Canberra, Australia
 
