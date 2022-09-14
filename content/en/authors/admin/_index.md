@@ -27,7 +27,7 @@ interests:
 
 education:
   courses:
-  - course: P.h.D. in Economics
+  - course: Ph.D. in Economics
     institution: Australian National University
     year: 2022
   - course: M.S.E. in Economics
