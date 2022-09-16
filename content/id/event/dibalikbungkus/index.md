@@ -49,7 +49,7 @@ image:
 url_slides: https://www.krisna.or.id/slides/dibalikbungkus
 
 url_code:
-url_pdf: 
+url_pdf: https://cutt.ly/cips-mk51
 url_video: 
 
 # Markdown Slides (optional).
