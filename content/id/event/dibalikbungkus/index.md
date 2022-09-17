@@ -48,7 +48,7 @@ image:
 # Optional filename of your slides within your event's folder or a URL.
 url_slides: https://www.krisna.or.id/slides/dibalikbungkus
 
-url_code:
+url_code: https://dibalikbungkus.cips-indonesia.org/
 url_pdf: https://cutt.ly/cips-mk51
 url_video: https://youtu.be/--ujjzUgfGk
 
@@ -66,5 +66,9 @@ slides: ""
 #   Otherwise, set `projects = []`.
 projects: []
 ---
+
+Acara yang sangat menarik. Sebagian besar pesertanya adalah mahasiswa, namun ada juga beberapa dari pemerintah dan swasta. Jangan lupa untuk mengunjungi website di balik bungkus [di sini](https://dibalikbungkus.cips-indonesia.org/).
+
+#### Video kuliah umum
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/--ujjzUgfGk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
