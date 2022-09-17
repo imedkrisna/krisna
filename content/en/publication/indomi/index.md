@@ -40,7 +40,7 @@ url_pdf: https://www.cips-indonesia.org/publications/trade-for-economic-recovery
 url_code:
 url_dataset:
 url_poster:
-url_project:
+url_project: https://dibalikbungkus.cips-indonesia.org/
 url_slides: https://www.krisna.or.id/slides/dibalikbungkus
 url_source:
 url_video: https://youtu.be/--ujjzUgfGk
