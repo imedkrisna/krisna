@@ -50,7 +50,7 @@ url_slides: https://www.krisna.or.id/slides/dibalikbungkus
 
 url_code:
 url_pdf: https://cutt.ly/cips-mk51
-url_video: 
+url_video: https://youtu.be/--ujjzUgfGk
 
 # Markdown Slides (optional).
 #   Associate this event with Markdown slides.
@@ -67,4 +67,4 @@ slides: ""
 projects: []
 ---
 
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/--ujjzUgfGk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

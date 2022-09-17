@@ -43,7 +43,7 @@ url_poster:
 url_project:
 url_slides: https://www.krisna.or.id/slides/dibalikbungkus
 url_source:
-url_video: 
+url_video: https://youtu.be/--ujjzUgfGk
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder. 
