@@ -8,3 +8,4 @@ weight: 20
 slides:
 
 - {{% staticref "/llp/meeting1/index.html" "newtab" %}}Pertemuan 1: Pendahuluan{{% /staticref %}}
+- {{% staticref "/llp/meeting2/index.html" "newtab" %}}Pertemuan 2: Comparative advantage, GVC, dan uang{{% /staticref %}}
