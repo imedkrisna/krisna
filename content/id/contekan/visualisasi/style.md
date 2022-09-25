@@ -4,7 +4,7 @@ linktitle: Styling / theming grafik
 summary: Beberapa contekan untuk styling/theming/format grafik.
 date: '2021-01-01'
 type: book
-weight: 10
+weight: 20
 ---
 
 Contekan dasar set styling seaborn [dari sini](http://seaborn.pydata.org/tutorial/aesthetics.html) dan [dari sini](https://seaborn.pydata.org/generated/seaborn.set_style.html)
