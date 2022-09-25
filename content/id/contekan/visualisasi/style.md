@@ -51,3 +51,20 @@ theme_classic() +
                                         colour = "#f0f1eb"),
         plot.background = element_rect(fill = "#f0f1eb"))
 ```
+
+lighht with a twist
+
+```r
+theme_classic()+
+  theme(axis.title.x = element_text(hjust=1),
+        axis.title.y = element_text(angle=0,hjust=1,vjust=1),
+        panel.grid=element_blank(),
+        axis.text.x=element_blank(),
+        axis.text.y=element_blank(),
+        axis.ticks.x=element_blank(),
+        axis.ticks.y=element_blank(),
+        legend.position=c(1,1),
+        legend.justification = c(1,1),
+        legend.spacing=unit(0,"cm"),
+        legend.margin=margin(0,0,0,0))
+```
