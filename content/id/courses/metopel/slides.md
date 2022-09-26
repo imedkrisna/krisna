@@ -22,3 +22,4 @@ slides:
 
 - {{% staticref "/metopel/meeting1/index.html" "newtab" %}}Pertemuan 1: Pendahuluan{{% /staticref %}}
 - {{% staticref "/metopel/meeting2/index.html" "newtab" %}}Pertemuan 2: OLS{{% /staticref %}}
+- {{% staticref "/metopel/meeting3/index.html" "newtab" %}}Pertemuan 3: Multivariate & dummy regression{{% /staticref %}}
