@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="204.51776mm"
+   height="104.32393mm"
+   viewBox="0 0 204.51776 104.32393"
+   version="1.1"
+   id="svg345"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   sodipodi:docname="Apply.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview347"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.46769781"
+     inkscape:cx="-258.71406"
+     inkscape:cy="-36.348257"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs342">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath1-54">
+      <path
+         d="M 0,0 H 36.27213 V 36.27213 H 0 Z"
+         id="path2026" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath1-54-1">
+      <path
+         d="M 0,0 H 36.27213 V 36.27213 H 0 Z"
+         id="path2026-9" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath1-54-1-2">
+      <path
+         d="M 0,0 H 36.27213 V 36.27213 H 0 Z"
+         id="path2026-9-7" />
+    </clipPath>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-6.76066,-49.100892)">
+    <g
+       id="g907"
+       transform="translate(-15.199314,-12.936452)">
+      <path
+         style="fill:#d1d9ec;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.264583"
+         d="m 22.852314,66.048591 c 0,-2.211809 1.799437,-4.011247 4.011246,-4.011247 h 66.073103 c 2.21181,0 3.9925,1.799438 3.9925,4.011247 v 15.988753 c 0,2.211809 -1.78069,3.992503 -3.9925,3.992503 H 26.86356 c -2.211809,0 -4.011246,-1.780694 -4.011246,-3.992503 z"
+         id="path881" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:700;font-size:9.59115px;line-height:125%;font-family:'Century Gothic';text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="31.058552"
+         y="77.472519"
+         id="text889"><tspan
+           sodipodi:role="line"
+           x="31.058552"
+           y="77.472519"
+           id="tspan887"
+           style="stroke-width:0.264583"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:700;font-size:9.59115px;font-family:'Century Gothic';fill:#000000;stroke-width:0.264583"
+             id="tspan885">Issuing Bank</tspan></tspan></text>
+    </g>
+    <g
+       id="g1010"
+       transform="translate(-71.205025,57.212118)">
+      <path
+         style="fill:#d1d9ec;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.264583"
+         d="m 78.858027,75.665734 c 0,-2.211809 1.799438,-4.011247 4.011247,-4.011247 h 66.073106 c 2.2118,0 3.9925,1.799438 3.9925,4.011247 v 15.988753 c 0,2.211809 -1.7807,3.992503 -3.9925,3.992503 H 82.869274 c -2.211809,0 -4.011247,-1.780694 -4.011247,-3.992503 z"
+         id="path984" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:700;font-size:9.59115px;line-height:125%;font-family:'Century Gothic';text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="93.062363"
+         y="87.189629"
+         id="text992"><tspan
+           sodipodi:role="line"
+           x="93.062363"
+           y="87.189629"
+           id="tspan990"
+           style="stroke-width:0.264583"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:700;font-size:9.59115px;font-family:'Century Gothic';fill:#000000;stroke-width:0.264583"
+             id="tspan988">Applicant</tspan></tspan></text>
+    </g>
+    <g
+       id="g1044"
+       transform="translate(24.966404,61.454977)">
+      <path
+         style="fill:#d1d9ec;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.264583"
+         d="m 112.23517,71.988591 c 0,-2.211809 1.79944,-4.011247 4.01125,-4.011247 h 66.0731 c 2.21181,0 3.9925,1.799438 3.9925,4.011247 v 15.988753 c 0,2.211809 -1.78069,3.992503 -3.9925,3.992503 h -66.0731 c -2.21181,0 -4.01125,-1.780694 -4.01125,-3.992503 z"
+         id="path1018" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:700;font-size:9.59115px;line-height:125%;font-family:'Century Gothic';text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="123.14157"
+         y="83.512489"
+         id="text1026"><tspan
+           sodipodi:role="line"
+           x="123.14157"
+           y="83.512489"
+           id="tspan1024"
+           style="stroke-width:0.264583"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:700;font-size:9.59115px;font-family:'Century Gothic';fill:#000000;stroke-width:0.264583"
+             id="tspan1022">Beneficiary</tspan></tspan></text>
+    </g>
+    <g
+       id="g1199"
+       transform="translate(-9.617143,-54.233595)">
+      <path
+         style="fill:#ffffcc;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.264583"
+         d="m 90.179488,162.87088 v 19.194 h 51.583882 v -19.194 z"
+         id="path1173" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:400;font-size:9.59115px;line-height:125%;font-family:'Century Gothic';text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="95.027122"
+         y="176.00677"
+         id="text1181"><tspan
+           sodipodi:role="line"
+           x="95.027122"
+           y="176.00677"
+           id="tspan1179"
+           style="stroke-width:0.264583"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:9.59115px;font-family:'Century Gothic';fill:#000000;stroke-width:0.264583"
+             id="tspan1177">Contract</tspan></tspan></text>
+    </g>
+    <g
+       id="g1165"
+       transform="translate(-18.02788,-10.107881)">
+      <path
+         style="fill:#ffffcc;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.264583"
+         d="m 24.78854,108.56231 v 19.194 h 40.787253 v -19.194 z"
+         id="path1139" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:400;font-size:9.59115px;line-height:125%;font-family:'Century Gothic';text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="31.568264"
+         y="121.6982"
+         id="text1147"><tspan
+           sodipodi:role="line"
+           x="31.568264"
+           y="121.6982"
+           id="tspan1145"
+           style="stroke-width:0.264583"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:9.59115px;font-family:'Century Gothic';fill:#000000;stroke-width:0.264583"
+             id="tspan1143">Apply</tspan></tspan></text>
+    </g>
+    <g
+       id="g2228"
+       transform="matrix(1.0718508,-1.5034769,1.7608061,0.91520743,-311.69977,-24.884569)">
+      <path
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         clip-path="url(#clipEmfPath1-54)"
+         d="M -0.56675202,35.705378 17.569313,-0.56675202 35.705378,35.705378 Z"
+         id="path2032"
+         transform="matrix(0.14323249,0.22246076,-0.22246076,0.14323249,39.011957,179.68219)" />
+      <path
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.264583"
+         d="m 32.28281,188.03772 -10.086406,6.49418 1.298838,2.01729 10.086406,-6.49419 z"
+         id="path2045" />
+    </g>
+    <g
+       id="g928"
+       transform="translate(-14.142857,61.662857)">
+      <path
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         clip-path="url(#clipEmfPath1-54-1)"
+         d="M -0.56675202,35.705378 17.569313,-0.56675202 35.705378,35.705378 Z"
+         id="path2032-4"
+         transform="matrix(-0.00437939,-0.3893546,0.3651194,-0.00529214,99.679653,87.050894)" />
+      <path
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         clip-path="url(#clipEmfPath1-54-1-2)"
+         d="M -0.56675202,35.705378 17.569313,-0.56675202 35.705378,35.705378 Z"
+         id="path2032-4-2"
+         transform="matrix(0.34832338,-0.17403163,0.16426536,0.32612432,126.05462,75.353303)" />
+      <path
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.377073"
+         d="m 113.67339,81.869684 16.55457,-0.23994 -0.0397,-3.53069 -16.55457,0.23995 z"
+         id="path2045-9" />
+    </g>
+  </g>
+</svg>
