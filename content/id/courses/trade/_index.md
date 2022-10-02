@@ -31,6 +31,8 @@ Mata kuliah ini didesain untuk Program Pascasarjana Ilmu Ekonomi (PPIE) Universi
 
 ### Main textbook \[DS\]:
 
+- Krugman, PR., Obstfeld, M., & Melitz, MJ. (2022). International Economics, 12th ed. Pearson Education, ltd.
+
 -   Salvatore, D. (2004). International Economics, 8th ed. (8 ed.). John Wiley & Sons, Inc.
 
 ### Papers on industrial policies [P1]:
