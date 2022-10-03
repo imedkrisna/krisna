@@ -25,13 +25,13 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="0.46769781"
-     inkscape:cx="120.8045"
-     inkscape:cy="319.65084"
-     inkscape:window-width="1350"
-     inkscape:window-height="728"
-     inkscape:window-x="0"
-     inkscape:window-y="0"
-     inkscape:window-maximized="0"
+     inkscape:cx="119.73543"
+     inkscape:cy="318.58178"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
      inkscape:current-layer="layer1" />
   <defs
      id="defs1480">
@@ -77,29 +77,6 @@
              dy="0"
              style="font-style:normal;font-variant:normal;font-weight:700;font-size:9.59115px;font-family:'Century Gothic';fill:#000000;stroke-width:0.264583"
              id="tspan885">Issuing Bank</tspan></tspan></text>
-    </g>
-    <g
-       id="g976"
-       transform="translate(11.351776,17.046404)">
-      <path
-         style="fill:#d1d9ec;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.264583"
-         d="m 113.44157,53.602877 c 0,-2.211809 1.79944,-4.011247 4.01125,-4.011247 h 66.0731 c 2.21181,0 3.9925,1.799438 3.9925,4.011247 V 69.59163 c 0,2.211809 -1.78069,3.992503 -3.9925,3.992503 h -66.0731 c -2.21181,0 -4.01125,-1.780694 -4.01125,-3.992503 z"
-         id="path950" />
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:700;font-size:9.59115px;line-height:125%;font-family:'Century Gothic';text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-         x="117.44913"
-         y="65.026802"
-         id="text958"><tspan
-           sodipodi:role="line"
-           x="117.44913"
-           y="65.026802"
-           id="tspan956"
-           style="stroke-width:0.264583"><tspan
-             dx="0"
-             dy="0"
-             style="font-style:normal;font-variant:normal;font-weight:700;font-size:9.59115px;font-family:'Century Gothic';fill:#000000;stroke-width:0.264583"
-             id="tspan954">Advising Bank</tspan></tspan></text>
     </g>
     <g
        id="g1044"
@@ -176,29 +153,6 @@
              id="tspan1375-1">Payment</tspan></tspan></text>
     </g>
     <g
-       id="g2621"
-       transform="translate(132.57557,-43.623815)">
-      <path
-         style="fill:#ffc000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.264583"
-         d="m 4.1051152,159.8617 c 0,-3.22399 2.6241799,-5.84817 5.8481725,-5.84817 3.2427363,0 5.8481723,2.62418 5.8481723,5.84817 0,3.24274 -2.605436,5.84817 -5.8481723,5.84817 -3.2239926,0 -5.8481725,-2.60543 -5.8481725,-5.84817 z"
-         id="path2524" />
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:400;font-size:8.10286px;line-height:125%;font-family:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-         x="7.9788656"
-         y="162.91002"
-         id="text2530"><tspan
-           sodipodi:role="line"
-           x="7.9788656"
-           y="162.91002"
-           id="tspan2528"
-           style="stroke-width:0.264583"><tspan
-             dx="0"
-             dy="0"
-             style="font-style:normal;font-variant:normal;font-weight:400;font-size:8.10286px;font-family:Arial;fill:#000000;stroke-width:0.264583"
-             id="tspan2526">2</tspan></tspan></text>
-    </g>
-    <g
        id="g1397"
        transform="translate(60.792661,-79.670587)">
       <path
@@ -222,27 +176,88 @@
              id="tspan1375">Payment</tspan></tspan></text>
     </g>
     <g
-       id="g2597"
-       transform="translate(70.298395,-47.321746)">
+       id="g1443"
+       transform="translate(22.399064,-79.462711)">
+      <path
+         style="fill:#d1d9ec;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.264583"
+         d="m 102.61803,149.84928 c 0,-2.21181 1.79944,-4.01125 4.01124,-4.01125 h 66.07311 c 2.2118,0 3.9925,1.79944 3.9925,4.01125 v 15.98875 c 0,2.21181 -1.7807,3.99251 -3.9925,3.99251 h -66.07311 c -2.2118,0 -4.01124,-1.7807 -4.01124,-3.99251 z"
+         id="path1405" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:700;font-size:9.59115px;line-height:125%;font-family:'Century Gothic';text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="113.54272"
+         y="155.60591"
+         id="text1413"><tspan
+           sodipodi:role="line"
+           x="113.54272"
+           y="155.60591"
+           id="tspan1411"
+           style="stroke-width:0.264583"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:700;font-size:9.59115px;font-family:'Century Gothic';fill:#000000;stroke-width:0.264583"
+             id="tspan1409">Nominated </tspan></tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:700;font-size:9.59115px;line-height:125%;font-family:'Century Gothic';text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="127.93822"
+         y="167.30226"
+         id="text1419"><tspan
+           sodipodi:role="line"
+           x="127.93822"
+           y="167.30226"
+           id="tspan1417"
+           style="stroke-width:0.264583"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:700;font-size:9.59115px;font-family:'Century Gothic';fill:#000000;stroke-width:0.264583"
+             id="tspan1415">Bank</tspan></tspan></text>
+    </g>
+    <g
+       id="g2603"
+       transform="translate(64.763685,-65.581929)">
       <path
          style="fill:#ffc000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.264583"
-         d="m 10.103241,140.96761 c 0,-3.224 2.62418,-5.84818 5.848172,-5.84818 3.242737,0 5.848173,2.62418 5.848173,5.84818 0,3.24273 -2.605436,5.84817 -5.848173,5.84817 -3.223992,0 -5.848172,-2.60544 -5.848172,-5.84817 z"
-         id="path2516" />
+         d="m 17.900804,158.66208 c 0,-3.224 2.62418,-5.84818 5.848172,-5.84818 3.242737,0 5.848173,2.62418 5.848173,5.84818 0,3.24273 -2.605436,5.84817 -5.848173,5.84817 -3.223992,0 -5.848172,-2.60544 -5.848172,-5.84817 z"
+         id="path2540" />
       <text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:400;font-size:8.10286px;line-height:125%;font-family:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-         x="13.784767"
-         y="144.01653"
-         id="text2522"><tspan
+         x="21.635071"
+         y="161.81865"
+         id="text2546"><tspan
            sodipodi:role="line"
-           x="13.784767"
-           y="144.01653"
-           id="tspan2520"
+           x="21.635071"
+           y="161.81865"
+           id="tspan2544"
            style="stroke-width:0.264583"><tspan
              dx="0"
              dy="0"
              style="font-style:normal;font-variant:normal;font-weight:400;font-size:8.10286px;font-family:Arial;fill:#000000;stroke-width:0.264583"
-             id="tspan2518">1</tspan></tspan></text>
+             id="tspan2542">4</tspan></tspan></text>
+    </g>
+    <g
+       id="g2609"
+       transform="translate(107.38987,-58.616684)">
+      <path
+         style="fill:#ffc000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.264583"
+         d="m 19.400335,175.45683 c 0,-3.22399 2.62418,-5.84817 5.848173,-5.84817 3.242736,0 5.848173,2.62418 5.848173,5.84817 0,3.24273 -2.605437,5.84817 -5.848173,5.84817 -3.223993,0 -5.848173,-2.60544 -5.848173,-5.84817 z"
+         id="path2548" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:400;font-size:8.10286px;line-height:125%;font-family:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="23.100439"
+         y="178.66324"
+         id="text2554"><tspan
+           sodipodi:role="line"
+           x="23.100439"
+           y="178.66324"
+           id="tspan2552"
+           style="stroke-width:0.264583"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:8.10286px;font-family:Arial;fill:#000000;stroke-width:0.264583"
+             id="tspan2550">5</tspan></tspan></text>
     </g>
   </g>
 </svg>
