@@ -70,10 +70,13 @@ Mata kuliah ini mensyaratkan pemahaman makroekonomi dan mikroekonomi yang cukup.
 Penguasaan materi mata kuliah ini akan diuji dengan:
 
 -   Ujian Tengah Semester, dengan bobot 30%
+    -   Offline & open book.
+    -   5 soal, cover meeting 1-7.
+    -   Akan ada soal yang easy (50%), medium(30%), dan challenging (20%).
 
--   Ujian Akhir Semester, dengan bobot 50%
+-   Ujian Akhir Semester, dengan bobot 40%
 
--   Tugas membuat report/paper, dengan bobot 20%. Tugas akan diberikan melalui platform online google classroom.
+-   Tugas membuat report/paper, dengan bobot 30%. Tugas akan diberikan melalui platform online google classroom.
 
 ## Konten pertemuan
 
