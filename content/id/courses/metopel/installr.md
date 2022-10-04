@@ -20,7 +20,7 @@ Di laman ini, anda akan diantarkan ke step-by-step menginstall r di komputer and
 
 Minimal saya harap anda paham bagaimana cara berselancar di internet. Kami harapkan anda juga memahami struktur folder di komputer anda. Anda tau di mana lokasi file yang anda download, gimana cara bikin new folder, dan bagaimana cara navigasi my computer di Operating System masing-masing.
 
-Jangan lupa restart komputer setelah install dan jangan lupa download data-data latihannya sebelum masuk kelas. Charge laptop anda sampai 100% karena ga ada colokan di kelas.
+Jangan lupa restart komputer setelah install dan jangan lupa download [data-data latihannya](https://drive.google.com/drive/u/1/folders/1exmFFbe7Ons-0nQ_arqtp0N9ZzG1Cozk) sebelum masuk kelas. Charge laptop anda sampai 100% karena ga ada colokan di kelas.
 
 ## Install R
 
