@@ -18,6 +18,10 @@ commentable: false
 
 {{% callout note %}} This page is still under development. Expect weekly changes. {{% /callout %}}
 
+Data untuk latihan:
+
+- [data untuk latihan dan pdf](https://drive.google.com/drive/u/1/folders/1exmFFbe7Ons-0nQ_arqtp0N9ZzG1Cozk)
+
 slides:
 
 - {{% staticref "/metopel/meeting1/index.html" "newtab" %}}Pertemuan 1: Pendahuluan{{% /staticref %}}
