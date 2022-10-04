@@ -97,3 +97,8 @@ Jangan lupa tekan enter.
 Ada 4 packages yang diinstall di atas: `tidyverse` adalah package yang digunakan untuk data cleaning. `WDI` adalah package yang digunakan untuk menarik database-nya World Bank yang namanya World Development Indicators. `readxl` adalah package yang kita perlukan untuk membaca data excel ke r. `kableExtra` adalah package untuk membuat tabel.
 
 Untuk sekarang, cukup kita install dulu. Nanti pakainya pas di kelas.
+
+## Download data latihan
+
+Jangan lupa untuk download file-file excel yang akan kita pakai untuk latihan. File-file tersebut dapat diakses di [sini](https://drive.google.com/drive/u/1/folders/1exmFFbe7Ons-0nQ_arqtp0N9ZzG1Cozk).
+
