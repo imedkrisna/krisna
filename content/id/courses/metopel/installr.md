@@ -16,8 +16,6 @@ editable: false
 commentable: false
 ---
 
-{{% callout note %}} Bentar ya dibikin dulu page-nya {{% /callout %}}
-
 Di laman ini, anda akan diantarkan ke step-by-step menginstall r di komputer anda. Prosesnya mudah kok, apalagi kalau anda sudah pernah install aplikasi di komputer sebelumnya. Hal-hal yang perlu anda install antara lain adalah R, RStudio dan package-package yang diperlukan. Jika anda mengalami masalah dalam melakukan instalasi, silakan datang ke ruangan Pak Imed atau Bu Tere.
 
 Minimal saya harap anda paham bagaimana cara berselancar di internet. Kami harapkan anda juga memahami struktur folder di komputer anda. Anda tau di mana lokasi file yang anda download, gimana cara bikin new folder, dan bagaimana cara navigasi my computer di Operating System masing-masing.
