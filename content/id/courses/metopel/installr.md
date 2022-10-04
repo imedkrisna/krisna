@@ -20,6 +20,8 @@ Di laman ini, anda akan diantarkan ke step-by-step menginstall r di komputer and
 
 Minimal saya harap anda paham bagaimana cara berselancar di internet. Kami harapkan anda juga memahami struktur folder di komputer anda. Anda tau di mana lokasi file yang anda download, gimana cara bikin new folder, dan bagaimana cara navigasi my computer di Operating System masing-masing.
 
+Jangan lupa restart komputer setelah install dan jangan lupa download data-data latihannya sebelum masuk kelas. Charge laptop anda sampai 100% karena ga ada colokan di kelas.
+
 ## Install R
 
 R adalah program yang digunakan untuk menghitung. Dia sendiri bentuknya agak gak jelas. Jika anda cuma punya R, anda harus ngerun R pake console gitu. Sangat tidak intuitif. Nulis scriptnya juga bisa, tapi pake text editor yang juga kurang intuitif. Tapi bagaimanapun juga, programnya harus ada di komputer anda.
