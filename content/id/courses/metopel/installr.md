@@ -92,7 +92,7 @@ Sebelum kita mulai di kelas, ada beberapa packages yang perlu anda install. Cuku
 ```r
 install.packages(c("tidyverse","WDI","readxl","kableExtra"))
 ```
-Jangan lupa tekan enter.
+Jangan lupa tekan enter dan pastikan ada sambungan internet.
 
 Ada 4 packages yang diinstall di atas: `tidyverse` adalah package yang digunakan untuk data cleaning. `WDI` adalah package yang digunakan untuk menarik database-nya World Bank yang namanya World Development Indicators. `readxl` adalah package yang kita perlukan untuk membaca data excel ke r. `kableExtra` adalah package untuk membuat tabel.
 
