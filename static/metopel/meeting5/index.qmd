@@ -1,0 +1,34 @@
+---
+title: "Playing with R and RStudio"
+subtitle: "Pertemuan 5"
+author: "Metodologi penelitian"
+format: 
+  revealjs:
+    theme: [simple,../mytheme.scss]
+    chalkboard: true
+    incremental: false
+    transition: convex
+    background-transition: fade
+    slide-number: true
+---
+
+## So far
+
+- Regresi OLS univariat dan multivariat.
+- Diagnostic error
+- Dummy variable dan log-log regression.
+- 2 hari terakhir akan kita habiskan dengan time series dan panel data
+
+## Hari ini
+
+- Fokus mencoba menggunakan R dan RStudio.
+- Sedikit video tentang penggunaan Microsoft Excel akan ditambahkan juga di website.
+- Goal hari ini adalah anda bisa ngerun contoh-contoh di slides.
+
+## Hari ini
+
+- Struktur folder untuk project.
+- Membuat file RProj.
+- Memindahkan data ke folder project.
+- Run R.
+

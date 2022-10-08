@@ -22,6 +22,22 @@ Minimal saya harap anda paham bagaimana cara berselancar di internet. Kami harap
 
 Jangan lupa restart komputer setelah install dan jangan lupa download [data-data latihannya](https://drive.google.com/drive/u/1/folders/1exmFFbe7Ons-0nQ_arqtp0N9ZzG1Cozk) sebelum masuk kelas. Charge laptop anda sampai 100% karena ga ada colokan di kelas.
 
+## Intinya:
+
+### CARA DOWNLOAD R (80 MB)
+1. Buka website cran.r-project.org/
+2. Pilih "Download R for Windows"
+3. Pilih "install R for the first time" di kolom base
+4. Pilih "Download R-4.2.1 for Windows" di paling atas.
+5. Kalo udah di download, install app nya di laptop okeng.
+
+### CARA DOWNLOAD RSTUDIO (190.50 MB)
+1. Buka website rstudio.com
+2. Pilih "DOWNLOAD" di sebelah SUPORT, DOCS & COMMUNITY (Pojok kanan atas)
+3. Scroll ke bawah, pilih "Rstudio Dekstop Free Download"
+4. Pilih "DOWNLOAD RSTUDIO FOR WINDOWS" (yang ada icon windows nya)
+5. Kalo udah di download, install app nya di laptop yaa.
+
 ## Install R
 
 R adalah program yang digunakan untuk menghitung. Dia sendiri bentuknya agak gak jelas. Jika anda cuma punya R, anda harus ngerun R pake console gitu. Sangat tidak intuitif. Nulis scriptnya juga bisa, tapi pake text editor yang juga kurang intuitif. Tapi bagaimanapun juga, programnya harus ada di komputer anda.

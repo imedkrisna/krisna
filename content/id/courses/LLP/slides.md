@@ -11,3 +11,4 @@ slides:
 - {{% staticref "/llp/meeting2/index.html" "newtab" %}}Pertemuan 2: Comparative advantage, GVC, dan uang{{% /staticref %}}
 - {{% staticref "/llp/meeting3/index.html" "newtab" %}}Pertemuan 3: Uang dan sektor perbankan{{% /staticref %}}
 - {{% staticref "/llp/meeting4/index.html" "newtab" %}}Pertemuan 4: Credits as the third method of payment{{% /staticref %}}
+- {{% staticref "/llp/meeting4/index.html" "newtab" %}}Pertemuan 5: Introduucution to Contract, Incoterms & UCP600{{% /staticref %}}
