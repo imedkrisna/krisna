@@ -26,7 +26,7 @@ ps <- supply(equi)
 
 ## nulis-nulis
 
-Memakai `annotate` bisa liat di [sini](https://ggplot2.tidyverse.org/reference/annotate.html)
+Memakai `annotate` bisa liat di [sini](https://ggplot2.tidyverse.org/reference/annotate.html) dan di [sini](https://ggplot2-book.org/annotations.html)
 
 ```r
 ## Text
@@ -46,5 +46,9 @@ annotate("segment", x = 2.5, y = 15, colour = "blue",size=1.1)
 ## Garis ada titiknya
 annotate("pointrange", x = 3.5, y = 20, ymin = 12, ymax = 28,
   colour = "red", size = 1.5)
+
+## Kurva
+annotate("curve", x = 4, y = 35, xend = 2.65, yend = 27, 
+    curvature = .3, arrow = arrow(length = unit(2, "mm")))
 
 ```
