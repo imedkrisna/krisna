@@ -23,6 +23,70 @@
     div.column{display: inline-block; vertical-align: top; width: 50%;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto.css" id="theme">
   <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -338,6 +402,10 @@
 <section id="hari-ini" class="slide level2">
 <h2>Hari ini</h2>
 <ul>
+<li>Diharapkan R dan RStudio sudah terinstall
+<ul>
+<li>kalau belum, cek caranya di <a href="https://www.krisna.or.id/courses/metopel/installr/">sini</a></li>
+</ul></li>
 <li>Fokus mencoba menggunakan R dan RStudio.</li>
 <li>Sedikit video tentang penggunaan Microsoft Excel akan ditambahkan juga di website.</li>
 <li>Goal hari ini adalah anda bisa ngerun contoh-contoh di slides.</li>
@@ -346,10 +414,221 @@
 <section id="hari-ini-1" class="slide level2">
 <h2>Hari ini</h2>
 <ul>
-<li>Struktur folder untuk project.</li>
-<li>Membuat file RProj.</li>
-<li>Memindahkan data ke folder project.</li>
-<li>Run R.</li>
+<li>Working directory.</li>
+<li>Packages and how to lead them.</li>
+<li>coba-coba command dengan data “latihan1.xlsx”</li>
+</ul>
+</section>
+<section id="working-directory" class="slide level2">
+<h2>Working directory</h2>
+<ul>
+<li>Working directory adalah folder di komputer anda yang akan anda gunakan untuk memulai projejct R.</li>
+<li>Semua file, data, dan gambar harus dibaca dan akan disave di folder ini.</li>
+<li>pilih folder di komputer anda yang akan digunakan sebagai working directory.</li>
+<li>Misalnya, anda mau bikin folder untuk tugas.</li>
+</ul>
+</section>
+<section id="kenali-folder-di-komputer" class="slide level2">
+<h2>Kenali folder di komputer</h2>
+<ul>
+<li>buat folder untuk project/tugas anda.
+<ul>
+<li>Misalnya buat folder “metopel”, lalu di dalamnya buat folder “latihan”.</li>
+</ul></li>
+<li>klik kanan di address bar, lalu pilih “copy as text”.</li>
+<li>di R, ketik <code>setwd('WD')</code> di mana WD adalah paste-an working directory anda.
+<ul>
+<li>jangan lupa pake tanda petik.</li>
+</ul></li>
+</ul>
+</section>
+<section id="workding-directory" class="slide level2">
+<h2>Workding directory</h2>
+
+<img data-src="WD.jpg" class="r-stretch"></section>
+<section id="working-directory-1" class="slide level2">
+<h2>Working directory</h2>
+
+<img data-src="WD2.jpg" class="r-stretch"></section>
+<section id="setwd" class="slide level2">
+<h2>SetWD</h2>
+<ul>
+<li>Setelah ketik setwd(‘working directory anda’), arahkan ke kuadran 4 (kanan bawah), klik “more” lalu pencet “go to working directory”.</li>
+<li>Anda akan lihat bahwa working directory anda di kuadran 4 akan pindah ke folder buatan anda.</li>
+<li>Semua data yang mau di-load harus dikopas ke sini.</li>
+<li>Semua file yg anda simpan (data,, grafik, docx, html) akan tersimpan di sini.</li>
+</ul>
+</section>
+<section id="r-script" class="slide level2">
+<h2>R Script</h2>
+<ul>
+<li>Pastikan data-data latihan sudah anda download dan sudah ada di folder anda.
+<ul>
+<li>Data ini mustinya muncul di kuadran 4</li>
+</ul></li>
+<li>Pilih “File” -&gt; “new file” -&gt; “R Script”
+<ul>
+<li>bisa juga pencet ctrl+shift+N.</li>
+</ul></li>
+<li>akan terbuka file script namanya Untitled.r
+<ul>
+<li>anda bisa save sekarang.</li>
+</ul></li>
+</ul>
+</section>
+<section id="r-script-1" class="slide level2">
+<h2>R Script</h2>
+<ul>
+<li>R script adalah tempat anda nge-save semua kode anda.</li>
+<li>Kode yang ada di slides bisa anda kopas ke sini.</li>
+<li>Selalu awali R Script anda dengan <code>setwd('')</code></li>
+<li>baru abis itu kode yang lain.</li>
+<li>R Script juga dapat dirun untuk setiap baris.</li>
+</ul>
+</section>
+<section id="urutan-r-script" class="slide level2">
+<h2>Urutan R Script</h2>
+<ol type="1">
+<li>set working directory dengan <code>setwd()</code></li>
+<li>load packages dengan <code>library()</code></li>
+<li>load data dengan <code>read_excel()</code> atau <code>read_csv()</code></li>
+<li>plot dengan <code>plot()</code> atau <code>ggplot()</code></li>
+<li>regresi dengan <code>lm()</code></li>
+<li>buat residual dengan ``</li>
+</ol>
+</section>
+<section id="packages" class="slide level2">
+<h2>Packages</h2>
+<ul>
+<li>R itu termasuk enteng karena banyak fungsinya dibuat secara terpisah.</li>
+<li>Ada beberapa fungsi yang R tidak bisa lakukan.</li>
+<li>Akan tetapi, kita bisa download packages yang bisa melakukan fungsi tersebut.</li>
+<li>Download packages cukup 1x dengan command <code>install.packages('nama package')</code></li>
+<li>Package harus diload tiap kali mulai kerja dengan <code>library()</code></li>
+</ul>
+</section>
+<section id="packages-1" class="slide level2">
+<h2>Packages</h2>
+<ul>
+<li>Untuk kali ini, kita load packages <code>readxl</code> dan <code>tidyverse</code></li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">setwd</span>(<span class="st">'C:/github/noodle'</span>)</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">library</span>(<span class="st">'readxl'</span>)</span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="fu">library</span>(<span class="st">'tidyverse'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="membaca-data" class="slide level2">
+<h2>Membaca data</h2>
+<ul>
+<li>R doang tidak cukup untuk baca data excel. Untung ada package <code>readxl</code></li>
+<li>Kalau belum load <code>readxl</code> maka kita gak bisa pake command <code>read_excel()</code>
+<ul>
+<li>jangan lupa diinstall dulu dengan <code>install.packages()</code> sebelum diload dengan <code>library()</code>.</li>
+</ul></li>
+<li>Mari kita coba load data latihan 1.
+<ul>
+<li>cara ngeloadnya adalah dengan <code>dat&lt;-read_excel('latihan1.xlsx')</code></li>
+<li>lihat kuadran di kanan atas. coba klik.</li>
+</ul></li>
+</ul>
+</section>
+<section id="membaca-data-1" class="slide level2">
+<h2>Membaca data</h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">setwd</span>(<span class="st">'C:/github/noodle'</span>)</span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="fu">library</span>(<span class="st">'readxl'</span>)</span>
+<span id="cb2-3"><a href="#cb2-3"></a><span class="fu">library</span>(<span class="st">'tidyverse'</span>)</span>
+<span id="cb2-4"><a href="#cb2-4"></a></span>
+<span id="cb2-5"><a href="#cb2-5"></a>dat<span class="ot">&lt;-</span><span class="fu">read_excel</span>(<span class="st">'latihan1.xlsx'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell">
+
+</div>
+</section>
+<section id="membaca-data-2" class="slide level2">
+<h2>Membaca data</h2>
+
+<img data-src="dat.jpg" class="r-stretch"></section>
+<section id="plot" class="slide level2">
+<h2>Plot</h2>
+<ul>
+<li>Plot bisa diketik di console window (kuadran kiri bawah) maupun menjadi bagian dari R Script.</li>
+<li>Kalau anda langsung run di console window, maka plotnya bisa langsung disave di RStudio.</li>
+<li>Pastikan bahwa data yang diplot sudah nongol di environment (kuadran kanan atas).</li>
+</ul>
+</section>
+<section id="plot-1" class="slide level2">
+<h2>Plot</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">plot</span>(dat<span class="sc">$</span>X,dat<span class="sc">$</span>Y,<span class="at">xlab=</span><span class="st">"jam belajar"</span>,<span class="at">ylab=</span><span class="st">"nilai UAS"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="index_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch"></section>
+<section id="cara-save-plot" class="slide level2">
+<h2>Cara save plot</h2>
+
+<img data-src="save.jpg" class="r-stretch"></section>
+<section id="regresi" class="slide level2">
+<h2>Regresi</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>reg1<span class="ot">&lt;-</span><span class="fu">lm</span>(Y<span class="sc">~</span>X,<span class="at">data=</span>dat)</span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="fu">summary</span>(reg1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = Y ~ X, data = dat)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-9.6739 -5.5463 -0.5193  4.3495 10.6282 
+
+Coefficients:
+            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)  10.6809     1.1665   9.156 8.21e-15 ***
+X             3.8993     0.1019  38.284  &lt; 2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 5.97 on 98 degrees of freedom
+Multiple R-squared:  0.9373,    Adjusted R-squared:  0.9367 
+F-statistic:  1466 on 1 and 98 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
+</div>
+</section>
+<section id="generate-error-plot" class="slide level2">
+<h2>Generate Error + Plot</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>dat<span class="sc">$</span>u<span class="ot">&lt;-</span><span class="fu">resid</span>(reg1) <span class="co"># generate error</span></span>
+<span id="cb6-2"><a href="#cb6-2"></a><span class="fu">plot</span>(dat<span class="sc">$</span>Y,dat<span class="sc">$</span>u,<span class="at">xlab=</span><span class="st">"nilai UAS"</span>,<span class="at">ylab=</span><span class="st">"error"</span>) <span class="co"># plot error vs Y</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="index_files/figure-revealjs/unnamed-chunk-4-1.png" width="960" class="r-stretch"></section>
+<section id="r-script-2" class="slide level2 m">
+<h2>R Script</h2>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">setwd</span>(<span class="st">'C:/github/noodle'</span>) <span class="co"># AWAS SETWD-NYA PERBAIKI DULU</span></span>
+<span id="cb7-2"><a href="#cb7-2"></a><span class="fu">library</span>(<span class="st">'readxl'</span>)</span>
+<span id="cb7-3"><a href="#cb7-3"></a><span class="fu">library</span>(<span class="st">'tidyverse'</span>)</span>
+<span id="cb7-4"><a href="#cb7-4"></a></span>
+<span id="cb7-5"><a href="#cb7-5"></a><span class="co"># Baca data</span></span>
+<span id="cb7-6"><a href="#cb7-6"></a>dat<span class="ot">&lt;-</span><span class="fu">read_excel</span>(<span class="st">'latihan1.xlsx'</span>)</span>
+<span id="cb7-7"><a href="#cb7-7"></a></span>
+<span id="cb7-8"><a href="#cb7-8"></a><span class="co"># Plot X dan Y</span></span>
+<span id="cb7-9"><a href="#cb7-9"></a><span class="fu">plot</span>(dat<span class="sc">$</span>X,dat<span class="sc">$</span>Y,<span class="at">xlab=</span><span class="st">"jam belajar"</span>,<span class="at">ylab=</span><span class="st">"nilai UAS"</span>)</span>
+<span id="cb7-10"><a href="#cb7-10"></a></span>
+<span id="cb7-11"><a href="#cb7-11"></a><span class="co"># regresi</span></span>
+<span id="cb7-12"><a href="#cb7-12"></a>reg1<span class="ot">&lt;-</span><span class="fu">lm</span>(Y<span class="sc">~</span>X,<span class="at">data=</span>dat)</span>
+<span id="cb7-13"><a href="#cb7-13"></a><span class="fu">summary</span>(reg1)</span>
+<span id="cb7-14"><a href="#cb7-14"></a></span>
+<span id="cb7-15"><a href="#cb7-15"></a><span class="co"># Membuat error</span></span>
+<span id="cb7-16"><a href="#cb7-16"></a>dat<span class="sc">$</span>u<span class="ot">&lt;-</span><span class="fu">resid</span>(reg1)</span>
+<span id="cb7-17"><a href="#cb7-17"></a></span>
+<span id="cb7-18"><a href="#cb7-18"></a><span class="co"># plot eror</span></span>
+<span id="cb7-19"><a href="#cb7-19"></a><span class="fu">plot</span>(dat<span class="sc">$</span>Y,dat<span class="sc">$</span>u,<span class="at">xlab=</span><span class="st">"jam belajar"</span>,<span class="at">ylab=</span><span class="st">"nilai UAS"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="kesimpulan" class="slide level2">
+<h2>Kesimpulan</h2>
+<ul>
+<li>Nanti kita akan dedikasi 1 pertemuan hanya untuk plot dan cara menyimpan gambar.</li>
+<li>Anda juga akan punya lebih banyak hal di folder selain R Script.</li>
+<li>Untuk sekarang, gunakan kesempatan ini untuk latihan yang lain.</li>
+<li>Minggu depan kita akan mulai membahas time series.</li>
 </ul>
 <div class="footer footer-default">
 
@@ -568,6 +847,48 @@
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        function fireSlideChanged(previousSlide, currentSlide) {
+
+          // dispatch for htmlwidgets
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for reveal
+        if (window.Reveal) {
+          window.Reveal.addEventListener("slidechanged", function(event) {
+            fireSlideChanged(event.previousSlide, event.currentSlide);
+          });
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
