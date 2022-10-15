@@ -12,4 +12,4 @@ slides:
 - {{% staticref "/llp/meeting3/index.html" "newtab" %}}Pertemuan 3: Uang dan sektor perbankan{{% /staticref %}}
 - {{% staticref "/llp/meeting4/index.html" "newtab" %}}Pertemuan 4: Credits as the third method of payment{{% /staticref %}}
 - {{% staticref "/llp/meeting5/index.html" "newtab" %}}Pertemuan 5: Introduction to Contract, Incoterms & UCP600{{% /staticref %}}
-- {{% staticref "/llp/meeting6/index.html" "newtab" %}}Pertemuan 5: Introduction Various types of L/C %}}
+- {{% staticref "/llp/meeting6/index.html" "newtab" %}}Pertemuan 6: Introduction Various types of L/C %}}
