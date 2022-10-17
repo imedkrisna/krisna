@@ -1,0 +1,269 @@
+---
+title: "Time series regression"
+subtitle: "Pertemuan 6"
+author: "Metodologi penelitian"
+format: 
+  revealjs:
+    theme: [simple,../mytheme.scss]
+    chalkboard: true
+    incremental: false
+    transition: convex
+    background-transition: fade
+    slide-number: true
+---
+
+## So far
+
+- OLS dan asumsinya.
+
+- mengoperasikan R melalui RStudio.
+
+- Berbagai jenis data: cross-section, time series.
+
+## Tentang R lagi
+
+- Mudah-mudahan mahasiswa sudah mulai latihan-latihan dengan R.
+
+- Diharapkan saat ini sudah bisa menggunakan R script.
+  
+    - File yang muncul di folder yang belakangnya ada .R-nya.
+    
+    - Setelah UTS kita akan bahas lebih jauh tentang RStudio.
+
+- Diharapkan mahasiswa sudah memahami konsep working directory dan packages.
+
+## R Packages
+
+- R packages adalah beberapa fungsi ketengan atau fungsi yang bisa didownload untuk melakukan fungsi ekstra di R.
+
+- `install.packages('NAMA PACKAGE')` adalah command yang kita gunakan untuk install pertama kali.
+
+- Kita memanggil packages tersebut dengan `library('NAMA PACKAGE')` setiap memulai sesi R.
+
+    - install.packages perlu internet tapi library tidak perlu.
+    
+    - sejauh ini kita baru install "readxl" dan "tidyverse". Hari ini kita akan perlu package baru namanya "dynlm" dan "urca".
+    
+## Pertanyaan tentang R dan RStudio?
+
+## Time series
+
+- Adalah data yang bentuknya serial waktu.
+  
+    - ada antara data 1 dan data lainnya (untuk individu yang sama) punya urutan kronologis.
+    
+    - Grafik time series sangant powerful.
+  
+- Main feature (or bug) in time series data:
+
+    - Autocorrelation: di mana data kemarin dapat menjelaskan (sebagian) apa yang akan terjadi besok: $Y_t=\beta_0+\beta_1 Y_{t-1}+\mu_t$
+
+    - Moving average: di mana error di masa lalu ada hubungannya dengan Y saat ini.
+    
+## Autocorrelation
+
+- Autocorrelation diberi simbol AR(p) di mana dalam kurung diisi dengan "lag".
+
+    - lag: sejauh mana variabel masa lalu mau ditambahkan di spesifikasi AR-nya
+    
+- Misalnya, AR(2) (atau kita sebut AR dengan p=2) berarti punya spek:
+
+$$
+Y_t=\alpha + \beta_1 Y_{t-1} + \beta_2 Y_{t-2} + \mu_t
+$$
+
+- AR(3) berarti sampai $Y_{t-3}$ dst.
+
+## Moving Average
+
+- Moving average pada intinya adalah kondisi di mana error term di masa lalu berpengaruh di saat ini.
+
+    - disimbolkan dengan MA(q)
+    
+- MA(2) (atau MA dengan q=2) berarti:
+
+$$
+Y_t=\alpha + \beta_1 Y_{t-1}+\mu_t + \gamma_1 \mu_{t-1} + \gamma_2 \mu_{t-2}
+$$
+
+## Digabung
+
+- Kita bisa menggabungkan konsep AR dan MA menjadi ARMA(p,q).
+
+- Misalnya ARMA(2,2) atau ARMA dengan p=2 dan q=2:
+
+$$
+Y_t=\alpha + \beta_1Y_{t-1} + \beta_2Y_{t-2} + \gamma_1 \mu_{t-1} + \gamma_2 \mu_{t-2} + \mu_t
+$$
+
+## Konsep penting
+
+- Autocorrelation pada intinya adalah melihat hubungan variabel dengan dirinya sendiri di masa lalu.
+    
+    - artinya error-nya kebawa-bawa sampai tahun yang terakhir.
+    
+```{=tex}
+\begin{align*}
+Y_{t-1}&=\beta_1 Y_{t-2} + \mu_{t-1} \\
+Y_{t}&=\beta_1 Y_{t-1} + \mu_{t} \\
+Y_{t}&=\beta_1 (\beta_1 Y_{t-2} + \mu_{t-1}) + \mu_{t} \\
+Y_{t}&=\beta_1 (\beta_1 Y_{t-2}) + \beta_1 \mu_{t-1}) + \mu_{t}
+\end{align*}
+```
+
+## Stationarity
+
+- Intinya, untuk menggunakan metode ARMA, kita perlu memastikan bahwa data kita stasioner.
+
+- Stasioner disebut juga dengan mean-reverting:
+  
+  - jika datanya ada gerakan naik, dia akan segera kembali ke nilai rata-rata tidak lama dari situ.
+  
+  - akibatnya data yang stasioner adalah data yang tidak ada tren.
+  
+  - cara membuat stasioner? Apa yang disebut first difference.
+  
+## Loading package
+
+load packages dulu
+
+```{r}
+#| warning: false
+#| echo: true
+library("readxl")
+library("tidyverse") # Kalau tidyverse gagal, load ggplot2 aja.
+library("forecast")
+library("urca")
+```
+
+## Stationarity
+
+```{r}
+#| echo: false
+#| fig-width: 8
+#| fig-height: 4
+library("patchwork")
+dat<-read_excel("latihan6.xlsx")
+dat$DPDB<-c(NA,diff(dat$PDB))
+dat$LPDB<-log(dat$PDB)
+dat$DLPDB<-c(NA,diff(dat$LPDB))
+dat<-na.omit(dat)
+plot<-ggplot()+theme_classic()+
+  theme(panel.background = element_rect(fill = '#f0f1eb'),
+        plot.background = element_rect(fill = '#f0f1eb'))
+a<-plot+geom_line(aes(x=kuartal,y=PDB),data=dat)
+b<-plot+geom_line(aes(x=kuartal,y=DPDB),data=dat)+labs(y="diff PDB")
+c<-plot+geom_line(aes(x=kuartal,y=DLPDB),data=dat)+labs(y="growth (%)")
+a+b+c
+```
+
+## Mengecek stasioneritas
+
+- semua regresi berbasis autoregression perlu cek stasionaritas.
+
+- Meski dengan mata bisa kita cek, tapi kita dapat menggunakan metode Augmented Dickey-Fuller (ADF) untuk lebih pastinya.
+
+- Autoregression perlu melakukan uji stasioneritas dulu dengan metode bernama Augmented Dickey-Fuller (ADF).
+
+    - memerlukan package "urca"
+    
+- Kita akan coba pakai data nilai tukar IDR/USD di [sini](https://1drv.ms/x/s!AjelszXKKcmshrwlmg-vAQT0kSGB5w?e=xtdkp5)
+
+## Mengecek stasioneritas nilai tukar
+
+```{r}
+#| echo: true
+dat<-na.omit(read_excel("latihan5a.xlsx")) # NA omit fungsinya menghilangkan data yg missing/kosong (NA)
+summary(ur.df(dat$xr))
+```
+
+## Mengecek stasioneritas Diff exchange rate
+
+```{r}
+#| echo: true
+summary(ur.df(dat$dxr))
+```
+
+## Hasil stasioneritas
+
+- Dapat dilihat bahwa untuk critical value 1%, difference nilai tukar ternyata stasioner sementara nilai tukarnya tidak.
+
+- Jika data kita stasioner di first difference (atau setelah dilakukan perubahan selisih sebanyak 1x), kita katakan I=1.
+
+- ARIMA(p,I,q) adalah konsem stasioneritas digabung dengan ARMA.
+
+- Sekarang kita akan coba forecast dengan ARIMA untuk data nilai tukar.
+
+## ARIMA
+
+- di package "forecast", kita dapat menggunakan fungsi `auto.arima()` untuk dapat spesifikasi terbaik.
+
+- Sudah dihitung di difference ke berapa stasionernya. Bener-bener tinggal pake.
+
+```{r}
+#| echo: true
+reg1<-auto.arima(dat$xr)
+reg1
+```
+
+## ARIMA
+
+- dapat kita lihat di layar sebelumnya bahwa spesifikasi yang dipilih oleh `auto.arima()` adalah ARIMA(1,1,1)
+
+    - dengan kata lain, AR(1) dan MA(1) dengan first difference.
+    
+- Kita dapat mencoba model kita sendiri dengan fungsi `Arima()` (huruf A yg di depan kapital ya).
+
+- `auto.arima()` memilihkan model dengan AICc paling kecil. Karena itu anda akan melihat AICc yang lebih besar di model selain ARIMA(1,1,1)
+
+## ARIMA
+
+```{r}
+#| echo: true
+reg2<-Arima(dat$xr, order=c(2,1,2))
+reg2
+```
+
+## Residuals
+
+- Untuk cek residual, kita menggunakan fungsi `checkresiduals` yang sudah built-in di dalam paket "forecast"
+
+- Yang perlu diperhatikan adalah plot ACF-nya harus di dalam titik-titik biru (yang artinya dapat dikatakan sebagai random / white noise).
+
+- Juga perlu diperhatikan distribusinya, yang seharusnya berbentuk distribusi normal / student-t / lonceng.
+
+## Residuals
+
+```{r}
+#| echo: true
+checkresiduals(reg1)
+```
+
+## Forecast
+
+```{r}
+#| echo: true
+autoplot(forecast(reg1))
+```
+
+## Forecasting?
+
+- ARIMA dengan lag 1 sepertinya tidak terlalu informatif.
+
+    - Prediksi apa yang akan terjadi besok rasanya masih terlalu pendek.
+
+- Bagaimanapun juga, forecasting sesuatu memang merupakan hal yang sulit.
+
+- Fenomena-fenomena kejut seringkali lebih penting daripada forecasting.
+
+    - ingat waktu kita mencoba menjelaskan berbagai fenomena di data ekspor 2 minggu lalu?
+    
+## More reading
+
+- bagi yang tertarik forecasting dapat membaca lebih jauh di [sini](https://otexts.com/fpp2/arima-r.html)
+
+- rekomended paling tidak bab 1, 2 dan 8.
+
+## Minggu depan
+
+- Panel data
