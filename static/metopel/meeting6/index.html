@@ -422,6 +422,31 @@
 </ul></li>
 </ul>
 </section>
+<section id="error" class="slide level2">
+<h2>Error?</h2>
+<ul>
+<li><p>Baik dengan menggunakan R Script maupun menggunakan Console langsung, anda akan dikasih warning kalau ada masalah / error.</p></li>
+<li><p>Beberapa warnings yang sering terjadi minggu lalu:</p>
+<ul>
+<li><p><code>read_excel()</code> tidak dipahami oleh R karena belum run <code>library("readxl")</code>.</p></li>
+<li><p><code>library()</code> gagal karena belum <code>install_packages()</code>.</p></li>
+<li><p>Garis miring untuk <code>set_wd()</code> belum diganti dari &nbsp;ke /.</p></li>
+<li><p><code>set_wd()</code>-nya masih di folder “metopel” belum di folder “latihan”</p></li>
+</ul></li>
+</ul>
+</section>
+<section id="problem-solving" class="slide level2">
+<h2>Problem solving</h2>
+<ul>
+<li><p>Anda bisa menyelesaikan masalah-masalah tersebut dengan melihat warning-nya.</p></li>
+<li><p>Di sini pentingnya pengetahuan bahasa inggris dan kemampuan problem solving.</p>
+<ul>
+<li><p>Warnings biasanya disampaikan dalam bahasa inggris (tidak hanya R, aplikasi lain juga sama)</p></li>
+<li><p>Banyak hal di R itu bisa digoogle, tapi enakan pakai bahasa inggris.</p></li>
+<li><p>Menemukan cara menyelesaikan suatu masalah membutuhkan kemampuan menganalisis masalahnya ada dan solusinya bagaimana.</p></li>
+</ul></li>
+</ul>
+</section>
 <section id="pertanyaan-tentang-r-dan-rstudio" class="slide level2">
 <h2>Pertanyaan tentang R dan RStudio?</h2>
 </section>
@@ -515,11 +540,12 @@ Y_{t}&amp;=\beta_1 (\beta_1 Y_{t-2}) + \beta_1 \mu_{t-1}) + \mu_{t}
 <span id="cb1-3"><a href="#cb1-3"></a><span class="fu">library</span>(<span class="st">"forecast"</span>)</span>
 <span id="cb1-4"><a href="#cb1-4"></a><span class="fu">library</span>(<span class="st">"urca"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<p>Jangan lupa di-<code>set_wd()</code> dulu ya.</p>
 </section>
 <section id="stationarity-1" class="slide level2">
 <h2>Stationarity</h2>
 
-<img data-src="index_files/figure-revealjs/unnamed-chunk-2-1.png" width="768" class="r-stretch"></section>
+<img data-src="index_files/figure-revealjs/unnamed-chunk-2-1.png" width="576" class="r-stretch"></section>
 <section id="mengecek-stasioneritas" class="slide level2">
 <h2>Mengecek stasioneritas</h2>
 <ul>
