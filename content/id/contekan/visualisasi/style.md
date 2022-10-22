@@ -49,10 +49,12 @@ graph<-ggplot()+
 theme_classic() +
   theme(panel.background = element_rect(fill = "#f0f1eb",
                                         colour = "#f0f1eb"),
-        plot.background = element_rect(fill = "#f0f1eb"))
+        plot.background = element_rect(fill = "#f0f1eb"),
+        legend.key = element_rect(fill = "#f0f1eb",linetype = "blank"),
+        legend.background = element_rect(fill="#f0f1eb"))
 ```
 
-lighht with a twist
+light tapi untuk buat grafik utk ngajar.
 
 ```r
 theme_classic()+
