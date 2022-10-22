@@ -29,4 +29,5 @@ slides:
 - {{% staticref "/metopel/meeting3/index.html" "newtab" %}}Pertemuan 3: Multivariate & dummy regression{{% /staticref %}}
 - {{% staticref "/metopel/meeting4/index.html" "newtab" %}}Pertemuan 4: Gravitty & time series{{% /staticref %}}
 - {{% staticref "/metopel/meeting5/index.html" "newtab" %}}Pertemuan 5: R & RStudio{{% /staticref %}}
-- {{% staticref "/metopel/meeting6/index.html" "newtab" %}}Pertemuan 5: Time series regression{{% /staticref %}}
+- {{% staticref "/metopel/meeting6/index.html" "newtab" %}}Pertemuan 6: Time series regression{{% /staticref %}}
+- {{% staticref "/metopel/meeting7/index.html" "newtab" %}}Pertemuan 7: ARDL dan Panel{{% /staticref %}}
