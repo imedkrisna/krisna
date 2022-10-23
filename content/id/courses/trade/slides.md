@@ -16,3 +16,4 @@ slides:
 - {{% staticref "/trade/meeting5/index.html" "newtab" %}}Pertemuan 5: Standard Trade Model{{% /staticref %}}
 - {{% staticref "/trade/meeting6/index.html" "newtab" %}}Pertemuan 6: Firms in the global trade{{% /staticref %}}
 - {{% staticref "/trade/meeting7/index.html" "newtab" %}}Pertemuan 7: Trade policy{{% /staticref %}}
+- {{% staticref "/trade/meeting8/index.html" "newtab" %}}Pertemuan 8: Political economy of trade policy{{% /staticref %}}

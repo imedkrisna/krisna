@@ -1,0 +1,239 @@
+---
+title: "Political economy of trade policies"
+subtitle: "ECES905205 pertemuan 8"
+date: "10 Oktober 2022"
+author: "I Made Krisna Gupta"
+format: 
+  revealjs:
+    theme: [simple,../mytheme.scss]
+    chalkboard: true
+    incremental: false
+    transition: convex
+    background-transition: fade
+    slide-number: true
+  beamer: default
+---
+
+## UTS: some stats
+
+- Rata-rata=63.1875, max=83.7
+
+- Nomer 3 paling banyak benar (71.4%)
+
+- Nomer 4 paling banyak salah (58.43%)
+
+- Nilai akan di-rekalibrasi. Yang penting belajar dari hasil UTS ini.
+
+## Nilai
+
+![nilaiUTS](nilaiUTS.jpg)
+
+## Frequent misses:
+
+- Penjelasannya kurang fundamental. Contoh: Specific factor disebut short run tidak hanya krn ada immobile factor, tapi krn immobile factor tsb akan jadi mobile di long run.
+
+- Indifference curve di 2f.
+
+- Nulis terlalu banyak / nyalin slides.
+
+- 0 attempts on some questions.
+
+## Hari ini
+
+- Sejauh ini kita sudah diskusi teori-teori di perdagangan internasional/
+
+    - Teori di course ini sangat dasar. Prinsipnya sama tapi sekarang sudah makin berkembang.
+    
+    - Jika anda berniat thesis / PhD di international trade, anda harus ikuti teori yang lebih baru.
+
+- Hari ini, Kita akan eksplorasi argumen-argumen tentang pro dan kontra free trade.
+
+## Argumen pro free trade
+
+- Teori yang telah kita pelajari sejauh ini menunjukkan bahwa tariff memberikan distorsi:
+    
+    - dari sisi produksi, membuat less competitive firms jadi bisa produksi, meski mungkin aslinya lebih cocok memproduksi hal lain.
+    
+    - dari sisi konsumsi, membuat konsumen yang harusnya bisa konsumsi at the margin jadi tidak bisa.
+    
+    - jika konsumennya adalah industri lain, distorsinya jadi menular.
+    
+- Argumen ini menitik-beratkan ke **efisiensi**: selama ada DWL, maka tariff -> tidak efisien.
+
+## Argumen pro free trade
+
+- Kita diskusikan pre-UTS bahwa industri dengan fixed cost besar perlu **economies of scale** agar bisa murah.
+
+    - meski monopolistik = produsen bisa atur harga (to a degree), tapi harga ini masih lebih murah daripada jika firmsnya banyak.
+    
+    - toh jika perusahaan-perusahaan ini ambil mark-up terlalu besar, pasti akan ada pemain baru yang masuk.
+    
+- Pabrik kendaraan bermotor baru efisien jika produksi 80k - 200k mobil setahun. Tapi di Argentina 1964, ada 13 perusahaan untuk market for 166k cars saja!
+
+## Argumen pro free-trade
+
+- **Learning by exporting**: firms akan belajar lebih banyak jika mereka terekspose dengan pasar global.
+
+    - kewajiban untuk ekspor adalah kunci industrial policy-nya Asian Tigers.
+    
+- **Productivity barrier**: hanya firms paling efisien yang akan ekspor. Artinya, free trade juga membuat kita bisa mengakses produk-produk yang lebih baik dari produsen negara lain.
+
+- Beberapa penelitian mencoba melihat dampak trade $\rightarrow$ productivity ini. Generally hasilnya positif meski magnitudenya bermacam-macam.
+
+## Arguments against free trade
+
+- Untuk negara besar, tariff memberikan gain tambahan dari **terms of trade**.
+
+    - seiring naiknya tariff, gain ini bisa jadi lebih besar daripada DWL-nya.
+    
+    - Tapi jika tariff naik terus, maka tariff akan jadi sangat restrictive sehingga DWL mendominasi
+    
+- **tarif optimum** adalah level tarif yang memaksimalkan welfare suatu negara:
+
+    - memaksimalkan ToT gain - DWL.
+    
+- Limited example: export tax untuk OPEC countries.
+
+## Market failure
+
+- Argumen market failure sebenarnya adalah argumen umum di ilmu ekonomi.
+
+    - kegagalan pasar membuat kebijakan intervensionis pemerintah jadi *second best*.
+    
+- Contoh klasik adalah specific factor model di mana faktor produksi tidak bisa dengan mudah pindah industri.
+
+- Jika produk domestik diberi pigouvian tax karena **externalities** (carbon tax, misalnya), maka impor juga perlu dipajaki.
+
+    - tapi ini sebenarnya fine karena pajak diberikan non-discriminately.
+    
+## Infant industry
+
+- Perusahaan dalam negeri butuh waktu dan skala produksi untuk besar,
+
+- meski jangka pendek harga-harga jadi mahal, tapi jangka panjang harga akan turun jauh (**dynamic efficiency**)
+
+- Artinya, proteksi hanya dilakukan di jangka pendek saja.
+
+- Namun perlu dipertanyakan juga: apa yang membuat industri ini tidak efisien dalam jangka pendek?
+
+## Infant industry
+
+- Jika memang butuh modal awal, seharusnya perusahaan tetap bisa cari dana pinjaman.
+
+    - Tech firms tidak perlu bantuan pemerintah untuk dapat utang di jangka pendek.
+    
+- Butuh inovasi / learning by doing.
+
+    - subsidi produksi lebih baik ketimbang kebijakan perdagangan.
+    
+    - kalo ga ada duitnya?
+    
+## Infant industry
+
+- Trade policies memiliki hidden cost: memang lebih hemat APBN, tapi masyarakat/konsumen yang jadi membayar harganya dengan DWL.
+
+- Kalau memang APBN cekak, ada baiknya gunakan bonds atau tax holiday untuk R&D activity.
+
+    - Bagaimana memastikan R&D ini lebih profitable ketimbang pajak yang hilang?
+    
+- Subsidi pupuk & benih vs larangan impor: kenapa sudah disubsidi masih kalah saing juga? Setidakefisien itukah?
+
+    - lebih baik fokus ke kebijakan domestik daripada larangan impor.
+    
+## Infant industry
+
+- Gimana kalau perusahaannya tidak besar-besar?
+
+    - BUMN, industri otomotif, selalu dinurture sampai sekarang, tapi masih tetap kurang kompetitif.
+    
+    - Bagaimana kalau pasar internasional juga semakin efisien?
+    
+    - Bagaimana jika dynamic gain juga dinikmati oleh perusahaan-perusahaan asing?
+    
+- Bahkan jika trade policy works: usually other policies could work even better.
+
+## Why still use trade policies?
+
+- Masyarakat tetap melihat perlunya hambatan perdagangan biasanya karena kurang cermat menghitung cost-benefit dengan baik.
+
+    - Bagaimana melakukan kalkulasi market failure dengan benar?
+    
+    - Khususnya, bagaimana mendapatkan hidden cost dari pembatasan perdagangan?
+    
+    - Bagaimana memastikan bahwa industri yang diproteksi akan jadi besar? Sampai kapan?
+    
+- Bisa jadi topik thesis!
+    
+## Why still use trade policies?
+
+- Masyarakat biasanya kufur nikmat.
+
+    - Masyarakat seringkali tidak merasa berorganisasi demi mendapatkan manfaat dari perdagangan (atau kebijakan lain) worth it.
+    
+    - Dengan kata lain, advokasi untuk perdagangan adalah public goods.
+    
+    - Sebaliknya, pihak yang dapat untuk dari proteksi biasanya sangat rajin berorganisasi.
+    
+    - Pihak yang untung ini biasanya lebih mampu dan mau untuk "mengubah dari dalam"
+    
+## Anti Dumping Duties
+
+- Sebuah negara dikatakan melakukan **dumping** ketika negara tersebut mengekspor produk dengan harga yang jauh lebih murah daripada produk yang dijual di negaranya sendiri.
+
+- Anti-Dumping (AD) adalah upaya mengenakan tarif untuk produk yang dicurigai sebagai hasil dumping.
+
+- Untuk klaim ada dumping, sebuah negara harus membuktikan adanya selisih antara harga jual domestik vs harga jual ekspor dari perusahaan di negara partner dagangnya.
+
+    - pembuktian ini dilakukan oleh [KADI](https://kadi.kemendag.go.id/).
+
+## Kenapa dumping buruk?
+
+- Dumping dianggap merugikan karena **predatory**: tujuannya mematikan produsen lokal sehingga sebuah negara ketergantungan impor.
+
+- ketika sudah ketergantungan impor, maka perusahaan di negara partner akan menaikkan harga mereka.
+
+    - hal ini membuat dynamically inefficient: Short term harga murah, long term harga mahal.
+    
+- Dynamic efficiency ini memberi ruang untuk intervensi berupa tarif.
+
+## Argumen agains AD?
+
+- Anti-dumping harus dilakukan oleh perusahaan yang besar, monopolist/oligopolist, dan kuat modal.
+
+    - Dumping harus sustainable sampai produsennya beneran keluar.
+    
+    - Setelah produsen lokal exit dan harga mulai dinaikkan, produsen lokal harus kesulitan untuk masuk lagi.
+    
+- Kasus AD Indonesia terakhir melibatkan AD duties untuk HRC alloys dari RRT. Lebih dari 16 perusahaan yang kena.
+
+    - Apakah mereka kolusi/oligopolistik?
+    
+## Kenapa Dumping
+
+1. **Price discrimination**, praktik di mana perusahaan menjual dengan 2 harga berbeda di 2 pasar berbeda. Bisa saja di negara asalnya, firms menjual dengan agak mahal karena dia monopolistik, tetapi di pasar internasional kompetisinya lebih kuat sehingga harus menjual murah. Ini justru baik untuk pasar internasional.
+
+1. Pasar sedang lesu dan inventory internasional terlalu banyak. Jika biaya penyimpanan tidak murah, lebih baik cepat-cepat dilepas meski rugi. In short term harusnya tidak terlalu merugikan produsen domestik.
+
+## ToT gain problem
+
+- ToT gain memungkinkan sebuah negara yang besar dapat untung dengan tarif.
+
+- Reaksi terbaik bagi negara partnernya, jika besar juga, adalah dengan retaliasi: memberi tariff untuk barang lain.
+
+- Ini adalah contoh klasik dari **prisoner's dilemma**:
+
+    - jika A free trade, B being protectionist will get ToT gain.
+    
+    - Tapi jika keduanya protectionist, keduanya lose out.
+    
+## Free Trade Agreement
+
+- Bayangkan jika anda ada di posisi ekspor C dan impor F.
+
+- Tiba-tiba negara partner memberi tarif pada F, sehingga relatif price of F naik.
+
+    - Negara anda jadi harus melakukan adjustment (produce F a bit more, C a bit less.)
+    
+    - Jika adjustmentnya tidak smooth, anda rugi. (Bayangkan jadi India yang tiba-tiba tidak bisa beli sawit.)
+
+- Inilah yang menjadi basis perlunya Free Trade Agreement.
