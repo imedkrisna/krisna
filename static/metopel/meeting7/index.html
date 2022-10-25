@@ -829,7 +829,25 @@ Y_{it}=\beta_0 + \beta_1 X_{it} + \mu_{it}
 <div id="tabset-1-2">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a>dat<span class="ot">&lt;-</span><span class="fu">read_excel</span>(<span class="st">"latihan7.xlsx"</span>)</span>
-<span id="cb10-2"><a href="#cb10-2"></a>dat<span class="sc">$</span>year<span class="ot">&lt;-</span><span class="fu">as.Date</span>(dat<span class="sc">$</span>year,<span class="st">"%Y"</span>) <span class="co"># mengubah year dari chr ke tss</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb10-2"><a href="#cb10-2"></a>dat<span class="sc">$</span>year<span class="ot">&lt;-</span><span class="fu">as.Date</span>(dat<span class="sc">$</span>year,<span class="st">"%Y"</span>) <span class="co"># mengubah year dari chr ke tss</span></span>
+<span id="cb10-3"><a href="#cb10-3"></a>dat</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 275 × 8
+   country year            import      export PDBperkapita    LM    LX    LP
+   &lt;chr&gt;   &lt;date&gt;           &lt;dbl&gt;       &lt;dbl&gt;        &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+ 1 China   1967-10-25 2169144528. 2388496222.         96.6  9.34  9.38  1.98
+ 2 China   1968-10-25 2067592818. 2339751401.         91.5  9.32  9.37  1.96
+ 3 China   1969-10-25 1917296287. 2429116906.        100.   9.28  9.39  2.00
+ 4 China   1970-10-25 2278820375. 2307254854.        113.   9.36  9.36  2.05
+ 5 China   1971-10-25 2128523844. 2782516858.        119.   9.33  9.44  2.07
+ 6 China   1972-10-25 2850652532. 3692485858.        132.   9.45  9.57  2.12
+ 7 China   1973-10-25 5207600281. 5876143561.        157.   9.72  9.77  2.20
+ 8 China   1974-10-25 7791148277. 7107893127.        160.   9.89  9.85  2.20
+ 9 China   1975-10-25 7925583396. 7688998817.        178.   9.90  9.89  2.25
+10 China   1976-10-25 6660142165. 6943442876.        165.   9.82  9.84  2.22
+# … with 265 more rows
+# ℹ Use `print(n = ...)` to see more rows</code></pre>
+</div>
 </div>
 </div>
 </div>
@@ -876,8 +894,8 @@ Y_{it}=\alpha_i + \beta_1 X_{1,it} + \mu_{it}
 <section id="regresi-panel-pooled-ols" class="slide level2">
 <h2>Regresi Panel: pooled OLS</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a>reg2<span class="ot">&lt;-</span><span class="fu">lm</span>(LP<span class="sc">~</span>LX<span class="sc">+</span>LM,<span class="at">data=</span>dat)</span>
-<span id="cb11-2"><a href="#cb11-2"></a><span class="fu">summary</span>(reg2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a>reg2<span class="ot">&lt;-</span><span class="fu">lm</span>(LP<span class="sc">~</span>LX<span class="sc">+</span>LM,<span class="at">data=</span>dat)</span>
+<span id="cb12-2"><a href="#cb12-2"></a><span class="fu">summary</span>(reg2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Call:
@@ -904,16 +922,16 @@ F-statistic: 281.8 on 2 and 272 DF,  p-value: &lt; 2.2e-16</code></pre>
 <section id="residuals-pooled" class="slide level2">
 <h2>Residuals pooled</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a>dat<span class="sc">$</span>u<span class="ot">&lt;-</span><span class="fu">resid</span>(reg2)</span>
-<span id="cb13-2"><a href="#cb13-2"></a><span class="fu">plot</span>(dat<span class="sc">$</span>LP,dat<span class="sc">$</span>u)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a>dat<span class="sc">$</span>u<span class="ot">&lt;-</span><span class="fu">resid</span>(reg2)</span>
+<span id="cb14-2"><a href="#cb14-2"></a><span class="fu">plot</span>(dat<span class="sc">$</span>LP,dat<span class="sc">$</span>u)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="index_files/figure-revealjs/unnamed-chunk-14-1.png" width="960" class="r-stretch"></section>
 <section id="regresi-panel-fixed-effect" class="slide level2">
 <h2>Regresi Panel: fixed effect</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a>reg3<span class="ot">&lt;-</span><span class="fu">plm</span>(LP<span class="sc">~</span>LX<span class="sc">+</span>LM,<span class="at">data=</span>dat,<span class="at">index=</span><span class="fu">c</span>(<span class="st">"country"</span>,<span class="st">"year"</span>))</span>
-<span id="cb14-2"><a href="#cb14-2"></a><span class="fu">summary</span>(reg3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a>reg3<span class="ot">&lt;-</span><span class="fu">plm</span>(LP<span class="sc">~</span>LX<span class="sc">+</span>LM,<span class="at">data=</span>dat,<span class="at">index=</span><span class="fu">c</span>(<span class="st">"country"</span>,<span class="st">"year"</span>))</span>
+<span id="cb15-2"><a href="#cb15-2"></a><span class="fu">summary</span>(reg3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Oneway (individual) effect Within Model
 
@@ -945,8 +963,8 @@ F-statistic: 3159.79 on 2 and 268 DF, p-value: &lt; 2.22e-16</code></pre>
 <section id="residuals-fixed-effect" class="slide level2">
 <h2>Residuals fixed effect</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a>dat<span class="sc">$</span>u2<span class="ot">&lt;-</span><span class="fu">residuals</span>(reg3)</span>
-<span id="cb16-2"><a href="#cb16-2"></a><span class="fu">plot</span>(dat<span class="sc">$</span>u2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a>dat<span class="sc">$</span>u2<span class="ot">&lt;-</span><span class="fu">residuals</span>(reg3)</span>
+<span id="cb17-2"><a href="#cb17-2"></a><span class="fu">plot</span>(dat<span class="sc">$</span>u2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="index_files/figure-revealjs/unnamed-chunk-16-1.png" width="960" class="r-stretch"></section>
