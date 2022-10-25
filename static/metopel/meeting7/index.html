@@ -666,6 +666,8 @@ $top_orders
 <section id="ardl-1" class="slide level2">
 <h2>ARDL</h2>
 <div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>reg1<span class="ot">&lt;-</span><span class="fu">ardl</span>(dfx<span class="sc">~</span>dintm<span class="sc">+</span>dfm,<span class="at">data=</span>dat,<span class="at">order =</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">5</span>,<span class="dv">1</span>))</span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="fu">summary</span>(reg1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Time series regression with "ts" data:
@@ -771,13 +773,13 @@ Y_{it}=\beta_0 + \beta_1 X_{it} + \mu_{it}
 </section>
 <section id="mengubah-wide-jadi-long-1" class="slide level2">
 <h2>Mengubah wide jadi long</h2>
-<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">library</span>(<span class="st">"tidyverse"</span>) <span class="co"># untuk command pivot_longer()</span></span>
-<span id="cb5-2"><a href="#cb5-2"></a><span class="fu">library</span>(<span class="st">"readxl"</span>) <span class="co"># untuk command read_excel()</span></span>
-<span id="cb5-3"><a href="#cb5-3"></a><span class="fu">library</span>(<span class="st">"writexl"</span>) <span class="co"># untuk command write_xlsx()</span></span>
-<span id="cb5-4"><a href="#cb5-4"></a>dat<span class="ot">&lt;-</span><span class="fu">read_excel</span>(<span class="st">"wide.xlsx"</span>)</span>
-<span id="cb5-5"><a href="#cb5-5"></a>dat2<span class="ot">&lt;-</span><span class="fu">pivot_longer</span>(<span class="at">data=</span>dat,<span class="at">cols=</span><span class="sc">!</span>country, <span class="at">names_to=</span><span class="st">"year"</span>,<span class="at">values_to=</span><span class="st">"PDBperkapita"</span>)</span>
-<span id="cb5-6"><a href="#cb5-6"></a><span class="co"># tanda seru (!) di depan country maksudnya mau bilang "kecuali country, semua dibuat long"</span></span>
-<span id="cb5-7"><a href="#cb5-7"></a><span class="fu">write_xlsx</span>(dat2,<span class="st">"long.xlsx"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">library</span>(<span class="st">"tidyverse"</span>) <span class="co"># untuk command pivot_longer()</span></span>
+<span id="cb6-2"><a href="#cb6-2"></a><span class="fu">library</span>(<span class="st">"readxl"</span>) <span class="co"># untuk command read_excel()</span></span>
+<span id="cb6-3"><a href="#cb6-3"></a><span class="fu">library</span>(<span class="st">"writexl"</span>) <span class="co"># untuk command write_xlsx()</span></span>
+<span id="cb6-4"><a href="#cb6-4"></a>dat<span class="ot">&lt;-</span><span class="fu">read_excel</span>(<span class="st">"wide.xlsx"</span>)</span>
+<span id="cb6-5"><a href="#cb6-5"></a>dat2<span class="ot">&lt;-</span><span class="fu">pivot_longer</span>(<span class="at">data=</span>dat,<span class="at">cols=</span><span class="sc">!</span>country, <span class="at">names_to=</span><span class="st">"year"</span>,<span class="at">values_to=</span><span class="st">"PDBperkapita"</span>)</span>
+<span id="cb6-6"><a href="#cb6-6"></a><span class="co"># tanda seru (!) di depan country maksudnya mau bilang "kecuali country, semua dibuat long"</span></span>
+<span id="cb6-7"><a href="#cb6-7"></a><span class="fu">write_xlsx</span>(dat2,<span class="st">"long.xlsx"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="data-1" class="slide level2">
 <h2>Data</h2>
@@ -793,8 +795,8 @@ Y_{it}=\beta_0 + \beta_1 X_{it} + \mu_{it}
 <section id="data-2" class="slide level2">
 <h2>Data</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>dat<span class="ot">&lt;-</span><span class="fu">read_excel</span>(<span class="st">"latihan7.xlsx"</span>)</span>
-<span id="cb6-2"><a href="#cb6-2"></a>dat<span class="sc">$</span>year<span class="ot">&lt;-</span><span class="fu">as.Date</span>(dat<span class="sc">$</span>year,<span class="st">"%Y"</span>) <span class="co"># mengubah year dari chr ke tss</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>dat<span class="ot">&lt;-</span><span class="fu">read_excel</span>(<span class="st">"latihan7.xlsx"</span>)</span>
+<span id="cb7-2"><a href="#cb7-2"></a>dat<span class="sc">$</span>year<span class="ot">&lt;-</span><span class="fu">as.Date</span>(dat<span class="sc">$</span>year,<span class="st">"%Y"</span>) <span class="co"># mengubah year dari chr ke tss</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="plot-the-data-pdb-per-capita" class="slide level2">
@@ -838,8 +840,8 @@ Y_{it}=\alpha_i + \beta_1 X_{1,it} + \mu_{it}
 <section id="regresi-panel-pooled-ols" class="slide level2">
 <h2>Regresi Panel: pooled OLS</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>reg2<span class="ot">&lt;-</span><span class="fu">lm</span>(LP<span class="sc">~</span>LX<span class="sc">+</span>LM,<span class="at">data=</span>dat)</span>
-<span id="cb7-2"><a href="#cb7-2"></a><span class="fu">summary</span>(reg2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a>reg2<span class="ot">&lt;-</span><span class="fu">lm</span>(LP<span class="sc">~</span>LX<span class="sc">+</span>LM,<span class="at">data=</span>dat)</span>
+<span id="cb8-2"><a href="#cb8-2"></a><span class="fu">summary</span>(reg2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Call:
@@ -870,8 +872,8 @@ F-statistic: 281.8 on 2 and 272 DF,  p-value: &lt; 2.2e-16</code></pre>
 <section id="regresi-panel-fixed-effect" class="slide level2">
 <h2>Regresi Panel: fixed effect</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>reg3<span class="ot">&lt;-</span><span class="fu">plm</span>(LP<span class="sc">~</span>LX<span class="sc">+</span>LM,<span class="at">data=</span>dat,<span class="at">index=</span><span class="fu">c</span>(<span class="st">"country"</span>,<span class="st">"year"</span>))</span>
-<span id="cb9-2"><a href="#cb9-2"></a><span class="fu">summary</span>(reg3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a>reg3<span class="ot">&lt;-</span><span class="fu">plm</span>(LP<span class="sc">~</span>LX<span class="sc">+</span>LM,<span class="at">data=</span>dat,<span class="at">index=</span><span class="fu">c</span>(<span class="st">"country"</span>,<span class="st">"year"</span>))</span>
+<span id="cb10-2"><a href="#cb10-2"></a><span class="fu">summary</span>(reg3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Oneway (individual) effect Within Model
 
