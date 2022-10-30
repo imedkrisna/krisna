@@ -17,3 +17,4 @@ slides:
 - {{% staticref "/trade/meeting6/index.html" "newtab" %}}Pertemuan 6: Firms in the global trade{{% /staticref %}}
 - {{% staticref "/trade/meeting7/index.html" "newtab" %}}Pertemuan 7: Trade policy{{% /staticref %}}
 - {{% staticref "/trade/meeting8/index.html" "newtab" %}}Pertemuan 8: Political economy of trade policy{{% /staticref %}}
+- {{% staticref "/trade/meeting9/index.html" "newtab" %}}Pertemuan 8: Trade policies, development, and recent issues{{% /staticref %}}
