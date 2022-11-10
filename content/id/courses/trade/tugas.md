@@ -51,16 +51,16 @@ Pada prinsipnya pengajar membebaskan mahasiswa untuk membuat struktur makalahnya
 |	| 2106669102 |  Tentang subsidi biofuel |
 |	| 2106787934 |   |
 |	| 2106787940 |   |
-| 2	| 2106788022 |   |
-|	| 2106669121 |   |
+| 2	| 2106788022 |  Permen ESDM No. 25 Tahun 2018, No. 11 Tahun 2019 |
+|	| 2106669121 |  Tentang Pelarangan Ekspor Bijih Nikel |
 |	| 2106787474 |   |
 |	| 2106787505 |   |
-| 3	| 2106787726 |   |
-|	| 2106788016 |   |
+| 3	| 2106787726 | Permen Keuangan 15 /PMK.010/2022  |
+|	| 2106788016 | Tentang BMAD HRC Alloy |
 |	| 2106787700 |   |
 |	| 2106787676 |   |
-| 4	| 2106787884 |   |
-|	| 2106787966 |   |
+| 4	| 2106787884 | Permenkeu 134 TAHUN 2020 PERMENPERIN NOMOR 31 TAHUN 2020 |
+|	| 2106787966 | BMDTP during COVID-19  |
 |	| 2106787455 |   |
 |	| 2106787612 |   |
 
