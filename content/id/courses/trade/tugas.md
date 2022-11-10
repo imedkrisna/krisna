@@ -47,8 +47,8 @@ Pada prinsipnya pengajar membebaskan mahasiswa untuk membuat struktur makalahnya
 
 | Kelompok | NIM | Topik |
 | --- | --------- | ----------------- |
-| 1	| 2106787581 |   |
-|	| 2106669102 |   |
+| 1	| 2106787581 |  Permen ESDM 12 Tahun 2015 |
+|	| 2106669102 |  Tentang subsidi biofuel |
 |	| 2106787934 |   |
 |	| 2106787940 |   |
 | 2	| 2106788022 |   |
