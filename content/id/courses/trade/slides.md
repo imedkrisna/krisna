@@ -19,3 +19,4 @@ slides:
 - {{% staticref "/trade/meeting8/index.html" "newtab" %}}Pertemuan 8: Political economy of trade policy{{% /staticref %}}
 - {{% staticref "/trade/meeting9/index.html" "newtab" %}}Pertemuan 9: Trade policies, development, and recent issues{{% /staticref %}}
 - {{% staticref "/trade/meeting10/index.html" "newtab" %}}Pertemuan 10: The new industrial policy {{% /staticref %}}
+- {{% staticref "/trade/meeting11/index.html" "newtab" %}}Pertemuan 11: Balance of Payment and National Income {{% /staticref %}}

@@ -1,0 +1,347 @@
+---
+title: "Balance of Payment & National Income"
+subtitle: "ECES905205 pertemuan 11"
+date: "12 September 2022"
+author: "I Made Krisna Gupta"
+format: 
+  revealjs:
+    theme: [simple,../mytheme.scss]
+    chalkboard: true
+    incremental: false
+    transition: convex
+    background-transition: fade
+    slide-number: true
+  beamer: default
+---
+
+
+## Trade process
+
+- Sejauh ini kita menggunakan analisis riil dalam trade:
+
+    - trade dilakukan seperti barter.
+    
+    - $\sum_i P_iQ_i=\sum_i P_iD_i$
+    
+- Kita akan memasukan prinsip _trade imbalance_ dan _monetary_ ke dalam perdagangan internasional.
+
+- National income->measure kebahagiaan penduduk secara umum.
+
+## Produk Nasional Bruto
+
+- Gross National Product (GNP) atau Produk Nasional Bruto (PNB): total nilai produksi oleh penduduk suatu negara di manapun ia berada.
+
+    - sebagai ukuran kebahagiaan karena dapat dihitung dari konsumsi.
+
+    - ukuran pendapatan karena dihasilkan oleh kapital, labor dan faktor lainnya.
+
+- Komponen GNP: konsumsi, investasi, belanja pemerintah, current account.
+
+$$
+Y_t=C_t+I_t+G_t+(X_t-M_t)
+$$
+
+## Produk Domestik Bruto
+
+- Gross Domestic Product (GDP) atau Produk Domestik Bruto (PDB): total nilai produksi oleh suatu negara di wilayahnya, siapapun yang mengerjakan.
+
+- PDB = PNB - payments from foreign countries + payments to foreign countries.
+
+- Gaji eksekutif Toyota Indonesia: masuk ke PDB Indonesia, bukan PDB Jepang, tapi ada di PNB Jepang dan bukan PNB Indonesia.
+
+- Lebih gampang ngitung PDB daripada PNB, not differ significantly anyway.
+
+## Current account
+
+$$
+CA = X - M
+$$
+- Sejauh ini, model kita selalu menganalisis dengan CA=0.
+
+    - Ekspor sebanyak $P_C C$ diikuti impor sebanyak $P_FF$ sehingga $P_CC=P_FF$
+    
+    - Artinya $X=M \rightarrow CA=0$
+    
+- Pada kenyataannya, CA=0 jarang terjadi.
+
+## Current Account
+
+- $X>M=$ current account surplus, $X<M=$ current account deficit.
+
+- CA dunia selalu balance: surplus di 1 negara akan dibarengi dengan defisit di setidaknya 1 negara.
+
+- Negara yang defisit berarti membeli barang tanpa membayar $\rightarrow$ ngutang.
+
+    - Deficit CA $\rightarrow$ net investment position minus.
+
+- Negara yang surplus berarti memberi barang tanpa dibayar $\rightarrow$ piutang.
+
+- CA can't always be surplus nor deficit (in theory): intertemporal trade!
+
+## CA & Saving
+
+- di closed economy, $S=Y-C-G=I$
+
+- di open econ, $S=I+X-M=I+CA$
+
+- Di open economy, saving dapat dilakukan di dalam negeri DAN di luar negeri.
+
+- Demikian pula investment: kekurangan modal domestik? Manfaatkan foreign capital market!
+
+- Saving juga bisa terjadi di govt jika T>G!
+
+## Indonesia's CA & IIP
+
+```{r}
+library(tidyverse)
+library(scales)
+
+data<-tibble(
+  tahun=as.Date(as.character(seq(2004,2021,1)),format="%Y"),
+  CA=c(1563,	278,	10859,	10491,126,10628,5144,	1685,	-24418,	-29109,	-27510,	-17519,	-16952,	-16196,	-30633,	-30279,    -4433,   3459),
+  NIP=c(-116727,	-124854,	-136856,	-169165,	-147757,	-213724, -291062,	-318272,	-361224,	-371433,		-383973,	-376834,	-333782,	-323365,	-317051,	-337919, -279975,-279341)
+) %>% pivot_longer(!tahun,values_to="JutaUSD",names_to="apa")
+  
+wew<-theme_classic() +
+  theme(panel.background = element_rect(fill = "#f0f1eb",
+                                        colour = "#f0f1eb"),
+        plot.background = element_rect(fill = "#f0f1eb"),
+        legend.key = element_rect(fill = "#f0f1eb",linetype = "blank"),
+        legend.background = element_rect(fill="#f0f1eb"))
+data %>%
+  ggplot()+geom_line(aes(x=tahun,y=JutaUSD,color=apa),size=1.1)+wew+ scale_y_continuous(labels = comma)+
+  geom_hline(yintercept=0)+labs(subtitle = "" ,caption = "sumber: SEKI, Bank Indonesia")
+```
+
+## Balance of Payment
+
+- Banyak yang suka salah paham dengan BoP (Neraca Pembayaran)
+
+- Ada yang inget debit dan kredit?
+
+- 4 komposisi neraca pembayaran:
+
+    - Transaksi berjalan (current account)
+    
+    - Transaksi finansial (financial account)
+    
+    - Transaksi modal (capital account) & Cadangan devisa
+
+## Transaksi berjalan
+
+- Transaksi berjalan: trade in goods & services serta net income transfer.
+
+    - Impor -> debit di Indo (karena IDR keluar), ekspor -> kredit.
+    
+    - Jika X=M berarti debit=kredit, CA=0.
+    
+- Termasuk primary income: pembayaran bunga utang, deviden FDI, maupun gaji pegawai asing.
+
+- Termasuk secondary income: transfer lainnya (hadiah, misalnya).
+    
+## Transaksi finansial
+    
+- Transaksi finansial: trade in assets: direct, portfolio, bonds.
+
+    - Ketika Tsing Shan bikin pabrik di morowali -> kredit di IDN, debit di CHN.
+    
+    - Orang IDN beli saham Google dari NYSE-> kredit di AS, debit di IDN.
+    
+    - Jika investasi domestik ke luar negeri > investasi asing ke dalam negeri, disebut _positive financial account_
+    
+## Cadangan devisa
+
+- Cadangan Devisa adalah aset milik BI. Bergerak sesuai intervensi BI di pasar uang / securities.
+
+- Bank sentral seringkali intervensi untuk kepentingan domestik: mengatur uang beredar dan menjaga nilai mata uang domestik relatif terhadap mata uang asing.
+
+- Ketika BI menambah cadev dolarnya, BI mengambil dari market: beli dolar punya eksportir pakai IDR.
+
+- Ada yang menaruh aktivitas bank sentral ke financial account, tapi di IDN berdiri sendiri.
+
+## Transaksi modal
+
+- Transaksi modal: transaksi aset yang tidak ada di finansial:
+
+    - copyright, trademark, debt forgiveness
+    
+    - biasanya angkanya sangat-sangat kecil
+    
+- Setiap transaksi antar negara akan masuk BoP 2x: 1x di kredit, 1x di debit. Dan pasti balance.
+
+## Ilustrasi BoP
+
+a modification from an example from [RBA](https://www.rba.gov.au/education/resources/explainers/the-balance-of-payments.html)
+
+1. Eva sell shoes in bulk to his friend in Australia. Her friend pays with letter of credit credit, transferring money from her bank to Eva's bank. The price is Rp 100,000,000.
+
+1. Desy goes on Holiday to Singapore and spend Rp20,000,000. She pays for the holiday with his saving account in Indonesia.
+
+1. Gita buys Alphabet's stock in NYSE using her Indonesian bank account. The amount is Rp 50,000,000.
+
+---
+
+## Ilustrasi BoP
+
+```{r}
+library(kableExtra)
+bopp <- data.frame(
+  "Component"=c("Trade balance","- Goods","- Services","Current account","Portfolio investment","Other investment","","Financial account","Balance of Payment"),
+  "Export"=c("","100m(E)","","100m","","20m (D)","50m (G)","70m","170m"),
+  "Import"=c("","","-20m (D)","-20m","-50m (G)","-100m (E)","","-150m","-170m"),
+  "Net"=c("","100m","-20m","80m","-50m","-80m","","","0m")
+)
+
+bop2<-kbl(bopp, align = "c", format='html',digits=2, format.args = list(big.mark = ","), col.names = c("Component","Credit","Debit","Net"),caption="Simplified Balance of Payment of E-D-G") %>%
+  kable_styling(font_size=34) %>%
+  column_spec(1, bold = T) %>%
+  row_spec(4, bold = T) %>%
+  row_spec(9, bold = T) %>%
+  row_spec(8, bold = T)
+bop2
+```
+
+## Neraca Pembayaran IDN
+
+```{r}
+data<-tibble(
+  tahun=as.Date(as.character(seq(2004,2021,1)),format="%Y"),
+  CA=c(1563,	278,	10859,	10491,126,10628,5144,	1685,	-24418,	-29109,	-27510,	-17519,	-16952,	-16196,	-30633,	-30279,    -4433,   3459),
+  FA=c(1852,11,2676,3046,-2126,4757,26476,	13603,	24858,	21926,	44916,	16843,	29306,	28686,	25122,36564,7884,12147),
+  CapA=c(0,334,350,547,294,96,50,33,51,45,27,17,41,46,97,39,37,80),
+  Dev=c(-309,	-444,	-14511,	-12715,	1945,	-12506,-30343,	-11857,	-215,	7325,	-15249,	1098,	-12089,-11586,
+        7131,	-4676,-2597,-13461)
+) %>% pivot_longer(!tahun,values_to="JutaUSD",names_to="apa")
+  
+data %>%
+  ggplot()+geom_line(aes(x=tahun,y=JutaUSD,color=apa),size=1.1)+wew+ scale_y_continuous(labels = comma)+
+  geom_hline(yintercept=0)+labs(subtitle = "" ,caption = "sumber: SEKI, Bank Indonesia")
+```
+
+## On CA & IIP
+
+- Hubungan CA dan IIP tidak semulus hubungan secara teori.
+
+    - Bisa saja IIP berasal dari intervensi BI.
+
+- Net investment position akan berubah dan harus diupdate jika terjadi:
+
+    - mark to market evaluation.
+    
+    - changes in exchange rate.
+    
+## Trade and BoP
+
+- Ketika sebuah negara melakukan ekspor (kredit), maka debitnya:
+
+    - Jika uangnya dibelikan barang impor, CA akan balance.
+    
+    - Jika uangnya ditabung, maka CA akan diseimbangkan oleh FA.
+    
+    - Jika uangnya diserap oleh BI, maka CA diseimbangkan oleh cadev.
+    
+- 2 opsi terakhir will be likelier in the presence of import restrictions.
+
+- Intervensi BI mempengaruhi trade!,
+
+## Trade and BoP
+
+- BoP juga menunjukkan dari mana uang untuk beli barang impor (debit):
+
+    - Standard theory: dari devisa ekspor (CA akan balance).
+    
+- Jika CA defisit, berarti kelebihan impor dibiayai oleh akun lain:
+
+    - dibiayai investasi: maka portfolio atau direct investment akan positif.
+    
+    - dibiayai pemerintah via central bank bond purchasing: cadangan devisa akan turun.
+    
+- CAD lumrah di negara yang sedang mengejar investasi asing.
+
+## Investment and BoP
+
+- Alasan utama sebuah negara mengejar investasi asing:
+
+    - domestic saving kurang (shallow).
+
+    - Negara yang baru mulai invest pastinya tidak punya kapasitas ekspor tinggi.
+
+- Hal ini wajar jika potensi pertumbuhannya tinggi (biasanya negara berkembang).
+
+- Mencegah CAD via trade mengakibatkan akumulasi kapital yang tidak efisien:
+
+    - foreign investment -> Demand for capital > Supply -> imports.
+    
+    - modal kerja dari luar -> profit dari luar juga (export).
+
+## CAD IDN
+
+```{r}
+data<-tibble(
+  tahun=as.Date(as.character(seq(2004,2021,1)),format="%Y"),
+  goods=c(19164,	17190,	31580,	33860,	24580,	32267,31003,33825,8680,5833,6983,14049,
+          15318,	18814,	-228,	3508,28301,43806),
+  services=c(-7943,	-8865,	-11868,	-13144,	-14802,	-11183,-9791,-9803,-10564,-12070,-10010,-8697,
+             -7084,	-7379,	-6485,	-7641,-9755,-14651),
+  primary=c(-10797,	-12840,	-13715,	-15329,	-15017,	-15033,-20698,-26547,-26628,-27050,-29703,
+            -28379,	-29647,	-32131,	-30815,	-33775,-28911,-31961),
+  secondary=c(1139,	4793,	4863,	5104,	5364,	4578,4630,4211,4094,4178,5220,5508,4460,
+              4500,	6895,	7629,5932,6264)
+) %>% pivot_longer(!tahun,values_to="JutaUSD",names_to="apa")
+  
+data %>%
+  ggplot()+geom_line(aes(x=tahun,y=JutaUSD,color=apa),size=1.1)+wew+ scale_y_continuous(labels = comma)+
+  geom_hline(yintercept=0)+labs(subtitle = "" ,caption = "sumber: SEKI, Bank Indonesia")
+```
+
+## Trade dan BoP
+
+- CAD Indonesia increasingly is contributed by net primary income.
+
+    - kemungkinan bukan hanya gaji outsource expat, tapi juga income dari FDI.
+    
+    - Inilah kenapa FDI perlu masuk sektor ekspor.
+    
+- Inilah kenapa sangat urgent bagi Indonesia untuk transformasi struktur ekonominya:
+
+    - CAD harus dibayar di depan dengan ekspor.
+    
+    - Bergantung pada komoditas tidak sustainable & volatile.
+    
+- yg jelas, trade dan investment are two sides of the same coin!
+
+## Global CA imbalance
+
+- Jika ada negara yang CA defisit, maka ada negara lain yang CA surplus (nalangin).
+
+- Artinya, CA seluruh dunia jika dijumlah harusnya seimbang.
+
+- Siapa yang surplus siapa yang defisit?
+
+    - alias, siapa net lender, siapa net borrower?
+
+---
+
+<iframe src="https://data.worldbank.org/share/widget?indicators=BN.CAB.XOKA.CD&locations=ID-AU-MY" width='900' height='600' frameBorder='0' scrolling="no" ></iframe>
+
+---
+
+<iframe src="https://data.worldbank.org/share/widget?end=2021&indicators=BN.CAB.XOKA.CD&locations=ID-AU-MY-GB-JP&start=1981" width='900' height='600' frameBorder='0' scrolling="no" ></iframe>
+
+---
+
+<iframe src="https://data.worldbank.org/share/widget?end=2021&indicators=BN.CAB.XOKA.CD&locations=ID-AU-MY-GB-JP-DE-CN-US&start=1981" width='900' height='600' frameBorder='0' scrolling="no" ></iframe>
+
+---
+
+## Global imbalance
+
+![](cab.png)
+
+source: [Chinn & Ito, 2019](https://cepr.org/voxeu/columns/requiem-blame-it-beijing-interpreting-rotating-global-current-account-surpluses)
+
+## Next week
+
+- Why global imbalance exists & what this means for trade
+
+- Exchange rate & Monetary Policy
