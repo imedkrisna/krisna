@@ -45,8 +45,6 @@ Mata kuliah ini didesain untuk Program Pascasarjana Ilmu Ekonomi (PPIE) Universi
 
 -   Criscuolo, C., Martin, R., Overman, H. G., & Van Reenen, J. (2019). Some Causal Effects of an Industrial Policy. American Economic Review, 109(1), 48-85. https://doi.org/10.1257/aer.20160034
 
--   Grabowski, R., & Self, S. (2020). Industrialization and deindustrialization in Indonesia. Asia & the Pacific Policy Studies, 7(1), 95-111.
-
 -   Wim, N. (2010). Industrial Policy. In (Vol. 2010). Helsinki, Finland: UNU-WIDER.
 
 ### Papers on Indonesian trade policy context [P2]:
@@ -54,6 +52,10 @@ Mata kuliah ini didesain untuk Program Pascasarjana Ilmu Ekonomi (PPIE) Universi
 -   Basri, M. C., & Patunru, A. A. (2012). How to keep trade policy open: the case of Indonesia. Bulletin of Indonesian Economic Studies, 48(2), 191-208. https://doi.org/10.1080/00074918.2012.694154
 
 -   Gupta, K., Pane, D., & Pasaribu, D. (2022). The Advent of A New Trade Governance After The Omnibus Law: Neraca Komoditas (CIPS Policy Paper, Issue. https://www.cips-indonesia.org/neraca-komoditas-policy-paper
+
+- Gupta, K., Gretton, P., & Patunru, A. (2022). Projecting the long run impact of an economic reform: the case of the Indonesian Omnibus Law and concurrent changes in trade policy (Presented during the 25th Annual Conference on Global Economic Analysis (Virtual Conference)). Purdue University, West Lafayette, IN: Global Trade Analysis Project (GTAP). Retrieved from https://www.gtap.agecon.purdue.edu/resources/res_display.asp?RecordID=6583 
+
+-   Grabowski, R., & Self, S. (2020). Industrialization and deindustrialization in Indonesia. Asia & the Pacific Policy Studies, 7(1), 95-111.
 
 -   Pane, D. D., & Patunru, A. A. (2022). The role of imported inputs in firms' productivity and exports: evidence from Indonesia. Review of World Economics. https://doi.org/10.1007/s10290-022-00476-z
 
