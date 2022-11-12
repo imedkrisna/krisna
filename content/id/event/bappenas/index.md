@@ -16,8 +16,8 @@ abstract: Saya diundang untuk memberi materi pemantik diskusi pada FGD yang diad
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
-date: 2022-11-14T08:47:06+07:00
-date_end: 2022-11-14T08:47:06+07:00
+date: 2022-11-14T13:00:00+07:00
+date_end: 2022-11-14T16:00:00+07:00
 all_day: false
 
 # Schedule page publish date (NOT event date).
