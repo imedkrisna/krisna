@@ -64,7 +64,7 @@ $$
     
 - Pada kenyataannya, CA=0 jarang terjadi.
 
-## Current Account
+## Current Account {.m}
 
 - $X>M=$ current account surplus, $X<M=$ current account deficit.
 
@@ -125,7 +125,9 @@ data %>%
     
     - Transaksi finansial (financial account)
     
-    - Transaksi modal (capital account) & Cadangan devisa
+    - Transaksi modal (capital account)
+    
+    - Cadangan devisa
 
 ## Transaksi berjalan
 
@@ -242,11 +244,11 @@ data %>%
     
 - 2 opsi terakhir will be likelier in the presence of import restrictions.
 
-- Intervensi BI mempengaruhi trade!,
+- Intervensi BI mempengaruhi trade
 
 ## Trade and BoP
 
-- BoP juga menunjukkan dari mana uang untuk beli barang impor (debit):
+- BoP juga menunjukkan sumber dana impor (debit):
 
     - Standard theory: dari devisa ekspor (CA akan balance).
     
@@ -258,7 +260,7 @@ data %>%
     
 - CAD lumrah di negara yang sedang mengejar investasi asing.
 
-## Investment and BoP
+## Investment and BoP {.m}
 
 - Alasan utama sebuah negara mengejar investasi asing:
 
@@ -294,7 +296,7 @@ data %>%
   geom_hline(yintercept=0)+labs(subtitle = "" ,caption = "sumber: SEKI, Bank Indonesia")
 ```
 
-## Trade dan BoP
+## Trade dan BoP {.m}
 
 - CAD Indonesia increasingly is contributed by net primary income.
 
