@@ -3,6 +3,7 @@ title: "GVC, transformasi struktural, dan implikasi kebijakan"
 subtitle: "untuk industri makanan dan minuman di Indonesia"
 date: "14 November 2022"
 author: "Krisna Gupta"
+institute: "Center for Indonesian Policy Studies"
 format: 
   revealjs:
     theme: [simple,mytheme.scss]
@@ -34,7 +35,7 @@ format:
 
     -   [thesis](https://openresearch-repository.anu.edu.au/handle/1885/270149) tentang industri dan perdagangan di Indonesia.
 
--   Associate researcher di Center for Indonesian Policy Studies.
+-   Associate researcher di [Center for Indonesian Policy Studies](https://www.cips-indonesia.org/about?lang=id).
 
     -   Policy paper terakhir tentang [GVC di industri makanan](https://www.cips-indonesia.org/publications/perdagangan-untuk-pemulihan-ekonomi%3A-kebijakan-impor-untuk-mendukung-sektor-makanan-dan-minuman-indonesia)
 
@@ -53,15 +54,15 @@ format:
 
     - Miss & match hulu dan hilir, ditunjukkan dengan tingginya kebutuhan bahan baku impor.
 
-    - Kurangnya sarana & prasarana IKM $\rightarrow$ produktivitas rendah.    
+    - Kurangnya sarana & prasarana IKM $\rightarrow$ produktivitas rendah.
     
 - Tujuan: peta jalan pertumbuhan industri makanan & transformasi ekonomi.
 
-- Materi hari ini fokus pada penelitian CIPS tentang industri makanan.
+- Saya fokus pada problem statement di TOR tsb.
 
 ---
 
-<div style='position: relative; padding-bottom: 56.25%; padding-top: 35px; height: 0; overflow: hidden;'><iframe sandbox='allow-scripts allow-same-origin allow-presentation' allowfullscreen='true' allowtransparency='true' frameborder='0' height='315' src='https://www.mentimeter.com/app/presentation/aljhzk195d52w158quv1e4rxhsafx7r9/embed' style='position: absolute; top: 0; left: 0; width: 100%; height: 100%;' width='420'></iframe></div>
+<div style='position: relative; padding-bottom: 56.25%; padding-top: 35px; height: 0; overflow: hidden;'><iframe sandbox='allow-scripts allow-same-origin' allowfullscreen='true' allowtransparency='true' frameborder='0' height='315' src='https://www.mentimeter.com/app/presentation/aljhzk195d52w158quv1e4rxhsafx7r9/embed' style='position: absolute; top: 0; left: 0; width: 100%; height: 100%;' width='420'></iframe></div>
 
 
 ![](pic2.png){.absolute top="400" left="1000" width="200" height="200"}
@@ -74,10 +75,7 @@ format:
 
 - Pentingnya memisahkan sawit.
 
-- Tentang transformasi ekonomi.
-
-- Kebijakan dan kesimpulan.
-
+- Tentang transformasi ekonomi dan kebijakan.
 
 ---
 
@@ -99,19 +97,23 @@ format:
 
 ---
 
-## Global Value Chain of Nutella
-
-![GVC of Nutella (Scoppola, 2021)](pic7.jpg)
-
 ## Peran Rantai Pasok Global
 
--   Iklim mengakibatkan tiap negara memiliki keunggulan yang berbeda-beda.
+- GVC punya value extra di F&B ketimbang manufaktur lain.
+
+-   Iklim dan geografi mengakibatkan tiap negara memiliki keunggulan yang berbeda-beda.
 
     -   ada yang cocok tanam sawit, tebu, menggembala sapi, dan lain sebagainya.
     
     -   Garam: nelayan vs penambang?
 
-- Kombinasi rasa: oplos kopi, kakao, dst.
+- Kombinasi gizi dari berbagai jenis pangan dari berbagai belahan dunia.
+
+- Kombinasi rasa: oplos kopi, [kakao](https://dibalikbungkus.cips-indonesia.org/cokelat-kacang), dst.
+
+## Global Value Chain of Nutella
+
+![GVC of Nutella (Scoppola, 2021)](pic7.jpg)
 
 ## Peran Rantai Pasok Global
 
@@ -140,6 +142,16 @@ format:
 ![](pic8.png)
 
 ---
+
+## Elephant in the room
+
+- Industri pengolahan kelapa sawit memiliki peranan yang sangat besar di struktur ekspor Indonesia.
+
+- Buah sawit memang merupakan komoditi perkebunan, harganya berfluktuasi.
+
+- Namun, minyak nabati sendiri masuk kategori manufaktur dgn KBLI heading 10.
+
+- Pertumbuhan industri pangan sendiri sangat dipengaruhi performa minyak sawit.
 
 ## Dominasi vegetable oil
 
@@ -173,15 +185,17 @@ format:
 
 ## Kebijakan RPJMN
 
-- Pemerintah menargetkan pengurangan impor di sektor pangan.
+- Pemerintah menargetkan pengurangan impor di sektor mamintem.
 
-    - counter-intuitive dengan evidence & nature industri pangan.
+    - counter-intuitive dengan evidence & nature industri.
     
     - tidak sesuai dengan semangat RCEP maupun G20.
     
 - Mengurangi impor bahan baku pangan = meningkatkan ketergantungan pada sawit.
 
-    - Sawit tidak butuh impor besar, tapi produk lain (yg lebih hilir) perlu.
+    - Fokus pada sawit: tingkatkan produktivitas & nilai tambah, isu lingkungan membatasi pasar.
+    
+    - Fokus sawit vs diversifikasi dengan GVC.
     
 ## Transformasi struktural
 
@@ -235,11 +249,12 @@ $^1$ Pengalaman CPO dan lainnya: data yg baik itu susah dan tidak cukup
 ## Koordinasi bersama
 
 -   Pemerintah sebaiknya memiliki satu visi jika bermaksud mengembangkan satu industri.
-    -   tidak ada negara yang bisa bikin semuanya.
-    -   prioritize all = prioritize nothing.
+    - tidak ada negara yang bisa bikin semuanya.
+    - prioritize all = prioritize nothing.
 -   Evaluasi dari kebijakan secara berkala harus dilakukan, terutama Neraca Komoditas.
-    -   jangan pelit resource untuk data!
--   Perkuat kebijakan selain perdagangan (subsidi tepat sasaran, *low cost financing*, ketidakpastian hukum)
+    - jangan pelit resource untuk data!
+    - tingkatkan kualitas diseminasi data dan evaluasi.
+    - contoh [productivity comission](https://www.pc.gov.au/) di Australia (mirip UKP4)
 
 ## References {.xs}
 
