@@ -31,3 +31,4 @@ slides:
 - {{% staticref "/metopel/meeting5/index.html" "newtab" %}}Pertemuan 5: R & RStudio{{% /staticref %}}
 - {{% staticref "/metopel/meeting6/index.html" "newtab" %}}Pertemuan 6: Time series regression{{% /staticref %}}
 - {{% staticref "/metopel/meeting7/index.html" "newtab" %}}Pertemuan 7: ARDL dan Panel{{% /staticref %}}
+- {{% staticref "/metopel/meeting8/index.html" "newtab" %}}Pertemuan 8: Logical writing, thinking, and problem solving{{% /staticref %}}
