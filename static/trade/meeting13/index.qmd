@@ -108,7 +108,11 @@ $$
 
 ## Income distribution {.m}
 
-- kebijakan-kebijakan pendorong supply (subsidi, tax cut, relaxed labor restriction) berpotensi mendorong income distribution ke arah producers, ceteris paribus
+- kebijakan-kebijakan pendorong supply (subsidi, tax cut, relaxed labor restriction) berpotensi mendorong income distribution ke arah producers, ceteris paribus.
+
+    - harapan dari supply-side intervention adalah investasi naik, employment naik atau labor share naik. Benarkah?
+
+::: {.fragment}
 
 - Semakin besar share pendapatan firms relative to labor, semakin mungkin sebuah negara jadi net-eksportir.
 
@@ -116,21 +120,65 @@ $$
     
     - jika profitnya dibagi-bagikan ke pegawai, kemungkinan $C\uparrow$ lebih tinggi.
     
-- Ingat, jika tidak ada perubahan fundamental di sisi supply, NX yg naik bisa terjadi karena warga biasa tidak sanggup beli (C turun)!
+---
+
+Ingat, jika tidak ada perubahan fundamental di sisi supply, NX yg naik bisa terjadi karena warga biasa tidak sanggup beli (C turun)!
 
     - ingat kasus minyak goreng.
     
+---
+    
+## Role of large firms? {.m}
+
+- Temuan dari [Dao and Maggi (2018)](https://doi.org/10.5089/9781484385395.001) dari large, non-financial firms:
+
+    - Firms di negara maju berubah dari net-borrowers jadi net-savers, mostly di negara CA surplus.
+    
+    - these firms invest less, profit more, operate in low tax countries (tax havens).
+    
+    - duitnya cukup untuk bikin financial firms sendiri.
+    
+- Bagaimana dengan Indonesia?
+
+    - exporting firms yg tidak butuh invest & labornya murah bisa jadi sama perilakunya.
+    
+    - Bisa jadi judul thesis!
+    
+## Reminder: FA role!
+
+- Ekonom jadul mengajarkan dampak CA $\rightarrow$ XR: CA surplus $\rightarrow$ XR apresiasi.
+
+- Zaman sekarang, flow of funds (FA) jauh lebih cepat dari flow of goods & services (CA)!
+
+    - demand & supply of money karena pasar uang (interest rate) akan duluan ngaruh ke XR!
+    
+    - FA $\rightarrow$ XR $\rightarrow$ CA, bukan CA $\rightarrow$ XR!
+
+- [Irwin (2022)](http://www.nber.org/papers/w29973):
+
+    - Negara menurunkan tarif karena bisa manage CA dari FA (finlib).
+
 ## Competitiveness? {.m}
 
 - Makin sulit mengatakan bahwa ekspor suatu negara menandakan keunggulan kompetitif:
 
     - Negara yang secara konstan undervalue currency-nya akan otomatis tinggi ekspornya.
     
-    - Negara yang mengurangi konsumsi domestik (melalui kebijakan kontra-pekerja) akan tinggi ekspornya.
+    - Negara yang mengurangi konsumsi domestik (melalui kebijakan supply-driven) akan tinggi ekspornya.
     
-- Indonesia adalah investing country. CAD in short term adalah hal yang wajar.
+    - Ekspor ini diserap oleh negara dengan kebijakan demand-driven dan loose monetary supply (UK, Aus, USA).
+    
+- Tidak berarti pemerintah harus berdiam diri, namun analisis trade & industri jadi harus lebih holistik.
+
+## Competitiveness? {.m}
+
+- Seiring Indonesia meningkatkan kebijakan demand-driven (subsidi konsumen, universal healthcare), wajar jika NX $\downarrow$.
+
+- Indonesia adalah investing country. CAD in short term adalah hal yang wajar ([Gupta, Gretton & Patunru 2022](https://www.gtap.agecon.purdue.edu/resources/res_display.asp?RecordID=6583)).
 
     - Konsumsi barang modal tinggi, tidak bisa disupply hanya dari produksi dalam negeri.
     
 - True impact of trade should be reflected from economic growth in general, not only NX!
+
+    - trade's role is not to accumulate wealth, but to improve efficiency & living standards!
 
