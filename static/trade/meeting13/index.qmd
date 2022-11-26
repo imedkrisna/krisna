@@ -157,6 +157,32 @@ Ingat, jika tidak ada perubahan fundamental di sisi supply, NX yg naik bisa terj
 - [Irwin (2022)](http://www.nber.org/papers/w29973):
 
     - Negara menurunkan tarif karena bisa manage CA dari FA (finlib).
+    
+## Financialization
+
+[Chang and Andreoni (2020)](https://doi.org/10.1111/dech.12570):
+
+- Shortermism in corporate control & in investment strategy.
+
+- Increasing share buyback & dividends.
+
+- Increasing importance of the stock market & other external financing.
+
+- Increasing importance of financial activities by non-financial firms, including stock buybacks.
+
+- Increasing size of financial sectors & institutional investors.
+
+## Financialization
+
+- [Chang and Andreoni (2020)](https://doi.org/10.1111/dech.12570) on profit-investment nexus:
+
+    - mid 1800s-1920s: reinvesting profits & restructuring (mergers) to improve scale & pursue more profit by 
+
+    - 1980s: downsizing & distributing: emerged from shortermism from "shareholder value ideology".
+    
+    - leads to less investment on capital & labor, less share for labor, more for shareholders & CEOs!
+
+- The movement of financial market gets more & more important in shaping trade and firm competitiveness!
 
 ## Competitiveness? {.m}
 
