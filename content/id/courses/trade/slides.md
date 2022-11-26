@@ -21,3 +21,4 @@ slides:
 - {{% staticref "/trade/meeting10/index.html" "newtab" %}}Pertemuan 10: The new industrial policy {{% /staticref %}}
 - {{% staticref "/trade/meeting11/index.html" "newtab" %}}Pertemuan 11: Balance of Payment and National Income 1{{% /staticref %}}
 - {{% staticref "/trade/meeting12/index.html" "newtab" %}}Pertemuan 12: Balance of Payment and National Income 2{{% /staticref %}}
+- {{% staticref "/trade/meeting13/index.html" "newtab" %}}Pertemuan 13: Balance of Payment and National Income 3{{% /staticref %}}

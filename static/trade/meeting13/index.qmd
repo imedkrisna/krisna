@@ -1,0 +1,136 @@
+---
+title: "Global Imbalance, exchange rate & Monetary Policy"
+subtitle: "ECES905205 pertemuan 13"
+date: "12 September 2022"
+author: "I Made Krisna Gupta"
+format: 
+  revealjs:
+    theme: [simple,../mytheme.scss]
+    chalkboard: true
+    incremental: false
+    transition: convex
+    background-transition: fade
+    slide-number: true
+  beamer: default
+---
+
+
+## This week
+
+- To understand global imbalance, we need to understand how current account, exchange rate and monetary policy interacts.
+
+- Additionally, we want to note how income distribution and investment-boosting policy affects the global imbalance.
+
+- Later, we can learn that trade surplus may not equals to competitiveness, let alone welfare!
+
+## Miskonsepsi merkantilis
+
+- Ingat persamaan PDB berdasarkan konsumsi:
+
+$$
+Y=C+I+G+NX
+$$
+
+- Menurut kacamata merkantilis, menaikkan NX (dgn cara dorong ekspor, halangi impor) menyebabkan Y naik:
+
+
+$$
+Y \uparrow =C+I+G+NX \uparrow
+$$
+
+## Miskonsepsi merkantilis
+
+- Namun persamaan tersebut aslinya adalah _accounting identity_ / hubungan aritmatika, bukan hubungan fungsional / sebab akibat.
+
+- Benar bahwa setiap variabel punya hubungan fungsional masing-masing dan saling terkait, tapi tidak berarti naikin yg kanan akan **berakibat pada** naiknya yg kiri.
+
+- Ingat bahwa Y=kapasitas ekonomi untuk produksi dan konsumsi. Jika kapasitasnya tidak meningkat, maka kenaikan NX harus diambil dari variabel yg lain.
+
+## Miskonsepsi merkantilis {.m}
+
+- Jika $Y(K,L)$ stagnan karena tidak ada perubahan fundamental pada faktor produksi maupun teknologi, maka naiknya $NX$ tidak akan mengubah $Y$.
+
+$$
+Y=C\downarrow + I \downarrow + G \downarrow= NX \uparrow
+$$
+
+- Naiknya NX tanpa diimbangi peningkatan Y akan mengambil porsi Y yang digunakan untuk:
+    
+    - konsumsi domestik (C dan/atau G), atau;
+    
+    - domestic saving (saving ke luar negeri).
+    
+- Artinya, mendorong NX naik berpotensi mengurangi welfare!
+
+## Miskonsepsi merkantilis
+
+- Sebaliknya, jika kita fokus ke mendorong $Y$ lewat kebijakan pro bisnis, misalnya, maka naiknya $Y$ bisa saja terdistribusi ke naiknya konsumsi domestik, belum tentu ke peningkatan NX!
+
+- Peran trade scr teori untuk menaikkan $Y$ melalui efisiensi sumber daya:
+
+    - Secara teori akan mendorong Y.
+    
+    - NX belum tentu naik: ekspor naik bisa jadi diimbangi impor yang juga naik.
+    
+    - Domestic consumption akan naik juga.
+    
+##  Income distribution
+
+- Di pertemuan sebelum UTS, kita sudah bahas bahwa kebijakan perdagangan sangat mempengaruhi income distribution:
+
+    - di specific factor model, land owner dan capital owner terpengaruh.
+    
+    - di HO model, pemilik factor yg abundant lebih diuntungkan dari trade.
+    
+- Kebijakan makro juga sangat berpengaruh: dalam hal ini XR dan interest rate.
+
+- Reminder: interest rate naik $\rightarrow$ XR terapresiasi, inflasi berkurang.
+
+## Income distribution
+
+- Interest rate tinggi menguntungkan pemilik aset (savers), merugikan pemilik liabilitas (borrowers).
+
+- Siapa savers: pemilik usaha (terutama eksportir), pemilik saham, generally orang kaya (punya banyak disposable income buat ditabung).
+
+- Siapa borrowers: orang yang gajinya kecil, penyicil KPR, tapi juga pemilik usaha yang ekspansi.
+
+- Spekulan can be in both camps tergantung bet.
+
+## Income distribution
+
+- Exchange rate yang tinggi menguntungkan net eksportir dan pemilik utang dollar, merugikan net-importir dan konsumen.
+
+- Siapa net-exportir: firms yang savingnya besar, professional bergaji dolar (generally orang berada), diaspora & TKI.
+
+- siapa borrower dolar: biasanya perusahaan besar, negara, BUMN karya.
+
+- Siapa net-importir: masyarakat pada umumnya, pekerja (bahkan di industri ekspor).
+
+## Income distribution {.m}
+
+- kebijakan-kebijakan pendorong supply (subsidi, tax cut, relaxed labor restriction) berpotensi mendorong income distribution ke arah producers, ceteris paribus
+
+- Semakin besar share pendapatan firms relative to labor, semakin mungkin sebuah negara jadi net-eksportir.
+
+    - firms berprofit besar lebih mungkin saving daripada masyarakat / pegawai.
+    
+    - jika profitnya dibagi-bagikan ke pegawai, kemungkinan $C\uparrow$ lebih tinggi.
+    
+- Ingat, jika tidak ada perubahan fundamental di sisi supply, NX yg naik bisa terjadi karena warga biasa tidak sanggup beli (C turun)!
+
+    - ingat kasus minyak goreng.
+    
+## Competitiveness? {.m}
+
+- Makin sulit mengatakan bahwa ekspor suatu negara menandakan keunggulan kompetitif:
+
+    - Negara yang secara konstan undervalue currency-nya akan otomatis tinggi ekspornya.
+    
+    - Negara yang mengurangi konsumsi domestik (melalui kebijakan kontra-pekerja) akan tinggi ekspornya.
+    
+- Indonesia adalah investing country. CAD in short term adalah hal yang wajar.
+
+    - Konsumsi barang modal tinggi, tidak bisa disupply hanya dari produksi dalam negeri.
+    
+- True impact of trade should be reflected from economic growth in general, not only NX!
+
