@@ -42,7 +42,7 @@ format:
 
 - [World Development Indicators](data.worldbank.org). Memiliki visualisasi yang sangat user friendly dan mudah diakses. Isinya berbagai indikator ekonomi makro dari banyak negara. Dapat diakses dengan package `WDI`.
 
-- [UN COMTRADE database](https://comtradeplus.un.org/) merupakan sumber data ekspor impor yang dikelola oleh PBB. Memiliki data yang sangat luas tentang ekspor impor berbagai negara dalam berbagai kode HS.
+- [UN COMTRADE database](https://comtrade.un.org/) merupakan sumber data ekspor impor yang dikelola oleh PBB. Memiliki data yang sangat luas tentang ekspor impor berbagai negara dalam berbagai kode HS.
 
 - [BPS](https://www.bps.go.id/) adalah sumber data resmi milik pemerintah. BPS memiliki berbagai data tentang Indonesia yang cukup akurat di bidang ekonomi maupun bidang lainnya.
 
@@ -107,6 +107,7 @@ View(dat)
 library(WDI)
 library(tidyverse)
 library(writexl)
+library(kableExtra)
 
 indi<-c(            # membuat dictionary
   "PDB"="NY.GDP.MKTP.CD", ## nama, diikuti indikator di WDI.
@@ -121,7 +122,9 @@ dat<-WDI(           # Menarik data World Bank
 
 dat$LPDB<-log(dat$PDB) # menambahkan transformasi log
 dat$Limport<-log(dat$import)
-write_xlsx(dat,"dat.xlsx") # Ngesave hasilnya dalam excel di WD anda
+dat %>%
+  kbl() %>%
+  kable_minimal()
 ```
 
 ### Excelnya
@@ -136,7 +139,7 @@ write_xlsx(dat,"dat.xlsx") # Ngesave hasilnya dalam excel di WD anda
 
 - Database di UN COMTRADE cukup lengkap jika kita tertarik dengan ekspor impor banyak negara dalam HS tertentu.
 
-- Dapat diakses di [comtradeplus.un.org](https://comtradeplus.un.org/).
+- Dapat diakses di [comtrade.un.org](https://comtrade.un.org/), lalu pilih "take me to old version" (yg sebelah kanan)
 
 - Hasilnya dapat didownload dalam excel.
 
