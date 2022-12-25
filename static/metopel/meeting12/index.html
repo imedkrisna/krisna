@@ -1,0 +1,1681 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="index_files/libs/clipboard/clipboard.min.js"></script>
+<script src="index_files/libs/quarto-html/tabby.min.js"></script>
+<script src="index_files/libs/quarto-html/popper.min.js"></script>
+<script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="index_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.2.269">
+
+  <meta name="author" content="Metodologi penelitian">
+  <title>Beginner Data Viz</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto.css" id="theme">
+  <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+
+  .callout {
+    margin-top: 1em;
+    margin-bottom: 1em;  
+    border-radius: .25rem;
+  }
+
+  .callout.callout-style-simple { 
+    padding: 0em 0.5em;
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+    display: flex;
+  }
+
+  .callout.callout-style-default {
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+  }
+
+  .callout .callout-body-container {
+    flex-grow: 1;
+  }
+
+  .callout.callout-style-simple .callout-body {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-style-default .callout-body {
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-captioned.callout-style-simple .callout-body {
+    margin-top: 0.2em;
+  }
+
+  .callout:not(.callout-captioned) .callout-body {
+      display: flex;
+  }
+
+  .callout:not(.no-icon).callout-captioned.callout-style-simple .callout-content {
+    padding-left: 1.6em;
+  }
+
+  .callout.callout-captioned .callout-header {
+    padding-top: 0.2em;
+    margin-bottom: -0.2em;
+  }
+
+  .callout.callout-captioned .callout-caption  p {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+    
+  .callout.callout-captioned.callout-style-simple .callout-content  p {
+    margin-top: 0;
+  }
+
+  .callout.callout-captioned.callout-style-default .callout-content  p {
+    margin-top: 0.7em;
+  }
+
+  .callout.callout-style-simple div.callout-caption {
+    border-bottom: none;
+    font-size: .9rem;
+    font-weight: 600;
+    opacity: 75%;
+  }
+
+  .callout.callout-style-default  div.callout-caption {
+    border-bottom: none;
+    font-weight: 600;
+    opacity: 85%;
+    font-size: 0.9rem;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-default div.callout-content {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-simple .callout-icon::before {
+    height: 1rem;
+    width: 1rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 1rem 1rem;
+  }
+
+  .callout.callout-style-default .callout-icon::before {
+    height: 0.9rem;
+    width: 0.9rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 0.9rem 0.9rem;
+  }
+
+  .callout-caption {
+    display: flex
+  }
+    
+  .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  .callout.no-icon::before {
+    display: none !important;
+  }
+
+  .callout.callout-captioned .callout-body > .callout-content > :last-child {
+    margin-bottom: 0.5rem;
+  }
+
+  .callout.callout-captioned .callout-icon::before {
+    margin-top: .5rem;
+    padding-right: .5rem;
+  }
+
+  .callout:not(.callout-captioned) .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  /* Callout Types */
+
+  div.callout-note {
+    border-left-color: #4582ec !important;
+  }
+
+  div.callout-note .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEU0lEQVRYCcVXTWhcVRQ+586kSUMMxkyaElstCto2SIhitS5Ek8xUKV2poatCcVHtUlFQk8mbaaziwpWgglJwVaquitBOfhQXFlqlzSJpFSpIYyXNjBNiTCck7x2/8/LeNDOZxDuEkgOXe++553zfefee+/OYLOXFk3+1LLrRdiO81yNqZ6K9cG0P3MeFaMIQjXssE8Z1JzLO9ls20MBZX7oG8w9GxB0goaPrW5aNMp1yOZIa7Wv6o2ykpLtmAPs/vrG14Z+6d4jpbSKuhdcSyq9wGMPXjonwmESXrriLzFGOdDBLB8Y6MNYBu0dRokSygMA/mrun8MGFN3behm6VVAwg4WR3i6FvYK1T7MHo9BK7ydH+1uurECoouk5MPRyVSBrBHMYwVobG2aOXM07sWrn5qgB60rc6mcwIDJtQrnrEr44kmy+UO9r0u9O5/YbkS9juQckLed3DyW2XV/qWBBB3ptvI8EUY3I9p/67OW+g967TNr3Sotn3IuVlfMLVnsBwH4fsnebJvyGm5GeIUA3jljERmrv49SizPYuq+z7c2H/jlGC+Ghhupn/hcapqmcudB9jwJ/3jvnvu6vu5lVzF1fXyZuZZ7U8nRmVzytvT+H3kilYvH09mLWrQdwFSsFEsxFVs5fK7A0g8gMZjbif4ACpKbjv7gNGaD8bUrlk8x+KRflttr22JEMRUbTUwwDQScyzPgedQHZT0xnx7ujw2jfVfExwYHwOsDTjLdJ2ebmeQIlJ7neo41s/DrsL3kl+W2lWvAga0tR3zueGr6GL78M3ifH0rGXrBC2aAR8uYcIA5gwV8zIE8onoh8u0Fca/ciF7j1uOzEnqcIm59sEXoGc0+z6+H45V1CvAvHcD7THztu669cnp+L0okAeIc6zjbM/24LgGM1gZk7jnRu1aQWoU9sfUOuhrmtaPIO3YY1KLLWZaEO5TKUbMY5zx8W9UJ6elpLwKXbsaZ4EFl7B4bMtDv0iRipKoDQT2sNQI9b1utXFdYisi+wzZ/ri/1m7QfDgEuvgUUEIJPq3DhX/5DWNqIXDOweC2wvIR90Oq3lDpdMIgD2r0dXvGdsEW5H6x6HLRJYU7C69VefO1x8Gde1ZFSJLfWS1jbCnhtOPxmpfv2LXOA2Xk2tvnwKKPFuZ/oRmwBwqRQDcKNeVQkYcOjtWVBuM/JuYw5b6isojIkYxyYAFn5K7ZBF10fea52y8QltAg6jnMqNHFBmGkQ1j+U43HMi2xMar1Nv0zGsf1s8nUsmUtPOOrbFIR8bHFDMB5zL13Gmr/kGlCkUzedTzzmzsaJXhYawnA3UmARpiYj5ooJZiUoxFRtK3X6pgNPv+IZVPcnwbOl6f+aBaO1CNvPW9n9LmCp01nuSaTRF2YxHqZ8DYQT6WsXT+RD6eUztwYLZ8rM+rcPxamv1VQzFUkzFXvkiVrySGQgJNvXHJAxiU3/NwiC03rSf05VBaPtu/Z7/B8Yn/w7eguloAAAAAElFTkSuQmCC');
+  }
+
+  div.callout-note.callout-style-default .callout-caption {
+    background-color: #dae6fb
+  }
+
+  div.callout-important {
+    border-left-color: #d9534f !important;
+  }
+
+  div.callout-important .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEKklEQVRYCcVXTWhcVRS+575MJym48A+hSRFr00ySRQhURRfd2HYjk2SSTokuBCkU2o0LoSKKraKIBTcuFCoidGFD08nkBzdREbpQ1EDNIv8qSGMFUboImMSZd4/f9zJv8ibJMC8xJQfO3HPPPef7zrvvvnvviIkpC9nsw0UttFunbUhpFzFtarSd6WJkStVMw5xyVqYTvkwfzuf/5FgtkVoB0729j1rjXwThS7Vio+Mo6DNnvLfahoZ+i/o32lULuJ3NNiz7q6+pyAUkJaFF6JwaM2lUJlV0MlnQn5aTRbEu0SEqHUa0A4AdiGuB1kFXRfVyg5d87+Dg4DL6m2TLAub60ilj7A1Ec4odSAc8X95sHh7+ZRPCFo6Fnp7HfU/fBng/hi10CjCnWnJjsxvDNxWw0NfV6Rv5GgP3I3jGWXumdTD/3cbEOP2ZbOZp69yniG3FQ9z1jD7bnBu9Fc2tKGC2q+uAJOQHBDRiZX1x36o7fWBs7J9ownbtO+n0/qWkvW7UPIfc37WgT6ZGR++EOJyeQDSb9UB+DZ1G6DdLDzyS+b/kBCYGsYgJbSQHuThGKRcw5xdeQf8YdNHsc6ePXrlSYMBuSIAFTGAtQo+VuALo4BX83N190NWZWbynBjhOHsmNfFWLeL6v+ynsA58zDvvAC8j5PkbOcXCMg2PZFk3q8MjI7WAG/Dp9AwP7jdGBOOQkAvlFUB+irtm16I1Zw9YBcpGTGXYmk3kQIC/Cds55l+iMI3jqhjAuaoe+am2Jw5GT3Nbz3CkE12NavmzN5+erJW7046n/CH1RO/RVa8lBLozXk9uqykkGAyRXLWlLv5jyp4RFsG5vGVzpDLnIjTWgnRy2Rr+tDKvRc7Y8AyZq10jj8DqXdnIRNtFZb+t/ZRtXcDiVnzpqx8mPcDWxgARUqx0W1QB9MeUZiNrV4qP+Ehc+BpNgATsTX8ozYKL2NtFYAHc84fG7ndxUPr+AR/iQSns7uSUufAymwDOb2+NjK27lEFocm/EE2WpyIy/Hi66MWuMKJn8RvxIcj87IM5Vh9663ziW36kR0HNenXuxmfaD8JC7tfKbrhFr7LiZCrMjrzTeGx+PmkosrkNzW94ObzwocJ7A1HokLolY+AvkTiD/q1H0cN48c5EL8Crkttsa/AXQVDmutfyku0E7jShx49XqV3MFK8IryDhYVbj7Sj2P2eBxwcXoe8T8idsKKPRcnZw1b+slFTubwUwhktrfnAt7J++jwQtLZcm3sr9LQrjRzz6cfMv9aLvgmnAGvpoaGLxM4mAEaLV7iAzQ3oU0IvD5x9ix3yF2RAAuYAOO2f7PEFWCXZ4C9Pb2UsgDeVnFSpbFK7/IWu7TPTvBqzbGdCHOJQSxiEjt6IyZmxQyEJHv6xyQsYk//moVFsN2zP6fRImjfq7/n/wFDguUQFNEwugAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-important.callout-style-default .callout-caption {
+    background-color: #f7dddc
+  }
+
+  div.callout-warning {
+    border-left-color: #f0ad4e !important;
+  }
+
+  div.callout-warning .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAETklEQVRYCeVWW2gcVRg+58yaTUnizqbipZeX4uWhBEniBaoUX1Ioze52t7sRq6APio9V9MEaoWlVsFasRq0gltaAPuxms8lu0gcviE/FFOstVbSIxgcv6SU7EZqmdc7v9+9mJtNks51NTUH84ed889/PP+cmxP+d5FIbMJmNbpREu4WUkiTtCicKny0l1pIKmBzovF2S+hIJHX8iEu3hZJ5lNZGqyRrGSIQpq15AzF28jgpeY6yk6GVdrfFqdrD6Iw+QlB8g0YS2g7dyQmXM/IDhBhT0UCiRf59lfqmmDvzRt6kByV/m4JjtzuaujMUM2c5Z2d6JdKrRb3K2q6mA+oYVz8JnDdKPmmNthzkAk/lN63sYPgevrguc72aZX/L9C6x09GYyxBgCX4NlvyGUHOKELlm5rXeR1kchuChJt4SSwyddZRXgvwMGvYo4QSlk3/zkHD8UHxwVJA6zjZZqP8v8kK8OWLnIZtLyCAJagYC4rTGW/9Pqj92N/c+LUaAj27movwbi19tk/whRCIE7Q9vyI6yvRpftAKVTdUjOW40X3h5OXsKCdmFcx0xlLJoSuQngnrJe7Kcjm4OMq9FlC7CMmScQANuNvjfP3PjGXDBaUQmbp296S5L4DrpbrHN1T87ZVEZVCzg1FF0Ft+dKrlLukI+/c9ENo+TvlTDbYFvuKPtQ9+l052rXrgKoWkDAFnvh0wTOmYn8R5f4k/jN/fZiCM1tQx9jQQ4ANhqG4hiL0qIFTGViG9DKB7GYzgubnpofgYRwO+DFjh0Zin2m4b/97EDkXkc+f6xYAPX0KK2I/7fUQuwzuwo/L3AkcjugPNixC8cHf0FyPjWlItmLxWw4Ou9YsQCr5fijMGoD/zpdRy95HRysyXA74MWOnscpO4j2y3HAVisw85hX5+AFBRSHt4ShfLFkIMXTqyKFc46xdzQM6XbAi702a7sy04J0+feReMFKp5q9esYLCqAZYw/k14E/xcLLsFElaornTuJB0svMuJINy8xkIYuL+xPAlWRceH6+HX7THJ0djLUom46zREu7tTkxwmf/FdOZ/sh6Q8qvEAiHpm4PJ4a/doJe0gH1t+aHRgCzOvBvJedEK5OFE5jpm4AGP2a8Dxe3gGJ/pAutug9Gp6he92CsSsWBaEcxGx0FHytmIpuqGkOpldqNYQK8cSoXvd+xLxXADw0kf6UkJNFtdo5MOgaLjiQOQHcn+A6h5NuL2s0qsC2LOM75PcF3yr5STuBSAcGG+meA14K/CI21HcS4LBT6tv0QAh8Dr5l93AhZzG5ZJ4VxAqdZUEl9z7WJ4aN+svMvwHHL21UKTd1mqvChH7/Za5xzXBBKrUcB0TQ+Ulgkfbi/H/YT5EptrGzsEK7tR1B7ln9BBwckYfMiuSqklSznIuoIIOM42MQO+QnduCoFCI0bpkzjCjddHPN/F+2Yu+sd9bKNpVwHhbS3LluK/0zgfwD0xYI5dXuzlQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-warning.callout-style-default .callout-caption {
+    background-color: #fcefdc
+  }
+
+  div.callout-tip {
+    border-left-color: #02b875 !important;
+  }
+
+  div.callout-tip .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAADr0lEQVRYCe1XTWgTQRj9ZjZV8a9SPIkKgj8I1bMHsUWrqYLVg4Ue6v9BwZOxSYsIerFao7UiUryIqJcqgtpimhbBXoSCVxUFe9CTiogUrUp2Pt+3aUI2u5vdNh4dmMzOzHvvezuz8xNFM0mjnbXaNu1MvFWRXkXEyE6aYOYJpdW4IXuA4r0fo8qqSMDBU0v1HJUgVieAXxzCsdE/YJTdFcVIZQNMyhruOMJKXYFoLfIfIvVIMWdsrd+Rpd86ZmyzzjJmLStqRn0v8lzkb4rVIXvnpScOJuAn2ACC65FkPzEdEy4TPWRLJ2h7z4cArXzzaOdKlbOvKKX25Wl00jSnrwVxAg3o4dRxhO13RBSdNvH0xSARv3adTXbBdTf64IWO2vH0LT+cv4GR1DJt+DUItaQogeBX/chhbTBxEiZ6gftlDNXTrvT7co4ub5A6gp9HIcHvzTa46OS5fBeP87Qm0fQkr4FsYgVQ7Qg+ZayaDg9jhg1GkWj8RG6lkeSacrrHgDaxdoBiZPg+NXV/KifMuB6//JmYH4CntVEHy/keA6x4h4CU5oFy8GzrBS18cLJMXcljAKB6INjWsRcuZBWVaS3GDrqB7rdapVIeA+isQ57Eev9eCqzqOa81CY05VLd6SamW2wA2H3SiTbnbSxmzfp7WtKZkqy4mdyAlGx7ennghYf8voqp9cLSgKdqNfa6RdRsAAkPwRuJZNbpByn+RrJi1RXTwdi8RQF6ymDwGMAtZ6TVE+4uoKh+MYkcLsT0Hk8eAienbiGdjJHZTpmNjlbFJNKDVAp2fJlYju6IreQxQ08UJDNYdoLSl6AadO+fFuCQqVMB1NJwPm69T04Wv5WhfcWyfXQB+wXRs1pt+nCknRa0LVzSA/2B+a9+zQJadb7IyyV24YAxKp2Jqs3emZTuNnKxsah+uabKbMk7CbTgJx/zIgQYErIeTKRQ9yD9wxVof5YolPHqaWo7TD6tJlh7jQnK5z2n3+fGdggIOx2kaa2YI9QWarc5Ce1ipNWMKeSG4DysFF52KBmTNMmn5HqCFkwy34rDg05gDwgH3bBi+sgFhN/e8QvRn8kbamCOhgrZ9GJhFDgfcMHzFb6BAtjKpFhzTjwv1KCVuxHvCbsSiEz4CANnj84cwHdFXAbAOJ4LTSAawGWFn5tDhLMYz6nWeU2wJfIhmIJBefcd/A5FWQWGgrWzyORZ3Q6HuV+Jf0Bj+BTX69fm1zWgK7By1YTXchFDORywnfQ7GpzOo6S+qECrsx2ifVQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-tip.callout-style-default .callout-caption {
+    background-color: #ccf1e3
+  }
+
+  div.callout-caution {
+    border-left-color: #fd7e14 !important;
+  }
+
+  div.callout-caution .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAACV0lEQVRYCdVWzWoUQRCuqp2ICBLJXgITZL1EfQDBW/bkzUMUD7klD+ATSHBEfAIfQO+iXsWDxJsHL96EHAwhgzlkg8nBg25XWb0zIb0zs9muYYWkoKeru+vn664fBqElyZNuyh167NXJ8Ut8McjbmEraKHkd7uAnAFku+VWdb3reSmRV8PKSLfZ0Gjn3a6Xlcq9YGb6tADjn+lUfTXtVmaZ1KwBIvFI11rRXlWlatwIAAv2asaa9mlB9wwygiDX26qaw1yYPzFXg2N1GgG0FMF8Oj+VIx7E/03lHx8UhvYyNZLN7BwSPgekXXLribw7w5/c8EF+DBK5idvDVYtEEwMeYefjjLAdEyQ3M9nfOkgnPTEkYU+sxMq0BxNR6jExrAI31H1rzvLEfRIdgcv1XEdj6QTQAS2wtstEALLG1yEZ3QhH6oDX7ExBSFEkFINXH98NTrme5IOaaA7kIfiu2L8A3qhH9zRbukdCqdsA98TdElyeMe5BI8Rs2xHRIsoTSSVFfCFCWGPn9XHb4cdobRIWABNf0add9jakDjQJpJ1bTXOJXnnRXHRf+dNL1ZV1MBRCXhMbaHqGI1JkKIL7+i8uffuP6wVQAzO7+qVEbF6NbS0LJureYcWXUUhH66nLR5rYmva+2tjRFtojkM2aD76HEGAD3tPtKM309FJg5j/K682ywcWJ3PASCcycH/22u+Bh7Aa0ehM2Fu4z0SAE81HF9RkB21c5bEn4Dzw+/qNOyXr3DCTQDMBOdhi4nAgiFDGCinIa2owCEChUwD8qzd03PG+qdW/4fDzjUMcE1ZpIAAAAASUVORK5CYII=');
+  }
+
+  div.callout-caution.callout-style-default .callout-caption {
+    background-color: #ffe5d0
+  }
+
+  </style>
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Beginner Data Viz</h1>
+  <p class="subtitle">Pertemuan 12</p>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Metodologi penelitian 
+</div>
+</div>
+</div>
+
+</section>
+<section id="hari-ini" class="slide level2">
+<h2>Hari ini</h2>
+<ul>
+<li><p>Menggambar dengan ggplot</p>
+<ul>
+<li><p>scatter untuk cross section</p></li>
+<li><p>garis untuk time series dan panel</p></li>
+</ul></li>
+</ul>
+</section>
+<section id="kenapa-dataviz" class="slide level2">
+<h2>Kenapa dataviz</h2>
+<ul>
+<li><p>Dataviz (kependekan dari data visualization) merupakan teknik yang digunakan untuk mempresentasikan data dalam bentuk yang lebih <em>user friendly</em> atau lebih enak dilihat oleh manusia.</p></li>
+<li><p>Dataviz ga ada gunanya untuk regresi di R. Fungsinya simply untuk komunikasi dengan manusia.</p></li>
+<li><p>Seringkali, dataviz bahkan lebih penting dari analisis regresi!</p></li>
+</ul>
+</section>
+<section id="step-dataviz" class="slide level2">
+<h2>Step dataviz</h2>
+<ul>
+<li><p>Cari datanya dulu! Apa yang mau di-viz-in kalo datanya gak ada?</p></li>
+<li><p>Tentukan viz yang paling cocok.</p></li>
+<li><p>Koneksikan viz dengan cerita/narasi tulisan anda!</p></li>
+</ul>
+<blockquote>
+<p>A picture worth a thousand words!</p>
+</blockquote>
+</section>
+<section id="fungsi-umum-dataviz" class="slide level2 m">
+<h2>Fungsi umum dataviz</h2>
+<ul>
+<li><p>menunjukkan hubungan dua atau lebih data untuk analisis awal</p>
+<ul>
+<li>hubungan seperti ini ujung-ujungnya harus menggunakan regresi.</li>
+</ul></li>
+<li><p>Menunjukkan tren / growth / perubahan data poin sepanjang waktu.</p>
+<ul>
+<li><p>misalnya nilai tukar dari bulan ke bulan apakah stabil, naik, atau turun.</p></li>
+<li><p>perubahan harga, perubahan PDB, dan lain-lain</p></li>
+</ul></li>
+<li><p>Menunjukkan fraction/berapa besar data 1 observasi dibandingkan total.</p>
+<ul>
+<li>seberapa besar ekspor batubara dibanding keseluruhan ekspor Indonesia?</li>
+</ul></li>
+</ul>
+</section>
+<section id="tools" class="slide level2">
+<h2>Tools</h2>
+<ul>
+<li><p>Tools paling standard adalah microsoft excel!</p></li>
+<li><p>R punya native command <code>plot</code> tapi fungsinya agak terbatas, terutama untuk time series.</p></li>
+<li><p>Di R, penggunaan <code>ggplot</code> sangat disarankan.</p>
+<ul>
+<li><p><code>ggplot</code> merupakan bagian dari package <code>tidyverse</code></p></li>
+<li><p>install dan liberary <code>tidyverse</code> sudah cukup untuk memakai ggplot</p></li>
+</ul></li>
+</ul>
+</section>
+<section id="excel" class="slide level2">
+<h2>Excel</h2>
+
+<img data-src="gambar1.jpg" class="r-stretch quarto-figure-center"><p class="caption">explore di tab “insert”</p></section>
+<section id="ggplot" class="slide level2">
+<h2>ggplot</h2>
+<ul>
+<li><p>Untuk pengguna R, ggplot merupakan pilihan favorit, terutama jika anda menggunakan api call via R seperti <code>WDI</code></p></li>
+<li><p>ggplot jauh lebih versatile daripada <code>plot</code>, dapat langsung diinput di .qmd, tapi juga bisa disave ke .png untuk digunakan di word.</p></li>
+<li><p>Namun sedikit problemnya adalah syntax-nya ggplot agak ribet.</p></li>
+</ul>
+</section>
+<section id="syntax-ggplot" class="slide level2">
+<h2>Syntax ggplot</h2>
+<ul>
+<li><p>Di kuliah ini, anda akan diberikan kode yang bisa tinggal copy-paste.</p></li>
+<li><p>Namun untuk bisa menguasai ggplot dengan penuh, anda perlu kuliah sendiri tentang dataviz, atau bisa juga otodidak (seperti saya)</p></li>
+<li><p>Ada banyak buku untuk belajar ggplot yang gratis, juga course online.</p></li>
+<li><p>Jika anda sudah paham syntaxnya, maka mengandalkan google saja cukup (seperti saya)</p></li>
+</ul>
+</section>
+<section id="syntax-dasar" class="slide level2">
+<h2>Syntax dasar</h2>
+<ul>
+<li><p>syntax dasar ggplot dibuka denga command ggplot(data,aes()) dan diikuti tanda tambah.</p></li>
+<li><p>command <code>ggplot()</code> berfungsi untuk menginformasikan ke R bahwa anda ingin memulai gambar dengan data ini.</p></li>
+<li><p>kita akan coba contoh yang cocok dengan cross section</p></li>
+</ul>
+</section>
+<section id="data" class="slide level2 scrollable">
+<h2>Data</h2>
+<p>Data ini sama dengan di pertemuan 1, yaitu data cross-section.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(WDI)</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-3"><a href="#cb1-3"></a></span>
+<span id="cb1-4"><a href="#cb1-4"></a>indi<span class="ot">&lt;-</span><span class="fu">c</span>(            <span class="co"># membuat dictionary</span></span>
+<span id="cb1-5"><a href="#cb1-5"></a>  <span class="st">"PDB"</span><span class="ot">=</span><span class="st">"NY.GDP.MKTP.CD"</span>,</span>
+<span id="cb1-6"><a href="#cb1-6"></a>  <span class="st">"import"</span><span class="ot">=</span><span class="st">"NE.IMP.GNFS.CD"</span></span>
+<span id="cb1-7"><a href="#cb1-7"></a>)</span>
+<span id="cb1-8"><a href="#cb1-8"></a></span>
+<span id="cb1-9"><a href="#cb1-9"></a>dat<span class="ot">&lt;-</span><span class="fu">WDI</span>(           <span class="co"># Menarik data World Bank</span></span>
+<span id="cb1-10"><a href="#cb1-10"></a>  <span class="at">country=</span><span class="st">"all"</span>,</span>
+<span id="cb1-11"><a href="#cb1-11"></a>  <span class="at">indicator=</span>indi,</span>
+<span id="cb1-12"><a href="#cb1-12"></a>  <span class="at">start=</span><span class="dv">2019</span>,<span class="at">end=</span><span class="dv">2019</span>,</span>
+<span id="cb1-13"><a href="#cb1-13"></a>)</span>
+<span id="cb1-14"><a href="#cb1-14"></a></span>
+<span id="cb1-15"><a href="#cb1-15"></a>dat</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                                                 country iso2c iso3c year
+1                                            Afghanistan    AF   AFG 2019
+2                            Africa Eastern and Southern    ZH   AFE 2019
+3                             Africa Western and Central    ZI   AFW 2019
+4                                                Albania    AL   ALB 2019
+5                                                Algeria    DZ   DZA 2019
+6                                         American Samoa    AS   ASM 2019
+7                                                Andorra    AD   AND 2019
+8                                                 Angola    AO   AGO 2019
+9                                    Antigua and Barbuda    AG   ATG 2019
+10                                            Arab World    1A   ARB 2019
+11                                             Argentina    AR   ARG 2019
+12                                               Armenia    AM   ARM 2019
+13                                                 Aruba    AW   ABW 2019
+14                                             Australia    AU   AUS 2019
+15                                               Austria    AT   AUT 2019
+16                                            Azerbaijan    AZ   AZE 2019
+17                                          Bahamas, The    BS   BHS 2019
+18                                               Bahrain    BH   BHR 2019
+19                                            Bangladesh    BD   BGD 2019
+20                                              Barbados    BB   BRB 2019
+21                                               Belarus    BY   BLR 2019
+22                                               Belgium    BE   BEL 2019
+23                                                Belize    BZ   BLZ 2019
+24                                                 Benin    BJ   BEN 2019
+25                                               Bermuda    BM   BMU 2019
+26                                                Bhutan    BT   BTN 2019
+27                                               Bolivia    BO   BOL 2019
+28                                Bosnia and Herzegovina    BA   BIH 2019
+29                                              Botswana    BW   BWA 2019
+30                                                Brazil    BR   BRA 2019
+31                                British Virgin Islands    VG   VGB 2019
+32                                     Brunei Darussalam    BN   BRN 2019
+33                                              Bulgaria    BG   BGR 2019
+34                                          Burkina Faso    BF   BFA 2019
+35                                               Burundi    BI   BDI 2019
+36                                            Cabo Verde    CV   CPV 2019
+37                                              Cambodia    KH   KHM 2019
+38                                              Cameroon    CM   CMR 2019
+39                                                Canada    CA   CAN 2019
+40                                Caribbean small states    S3   CSS 2019
+41                                        Cayman Islands    KY   CYM 2019
+42                              Central African Republic    CF   CAF 2019
+43                        Central Europe and the Baltics    B8   CEB 2019
+44                                                  Chad    TD   TCD 2019
+45                                       Channel Islands    JG   CHI 2019
+46                                                 Chile    CL   CHL 2019
+47                                                 China    CN   CHN 2019
+48                                              Colombia    CO   COL 2019
+49                                               Comoros    KM   COM 2019
+50                                      Congo, Dem. Rep.    CD   COD 2019
+51                                           Congo, Rep.    CG   COG 2019
+52                                            Costa Rica    CR   CRI 2019
+53                                         Cote d'Ivoire    CI   CIV 2019
+54                                               Croatia    HR   HRV 2019
+55                                                  Cuba    CU   CUB 2019
+56                                               Curacao    CW   CUW 2019
+57                                                Cyprus    CY   CYP 2019
+58                                               Czechia    CZ   CZE 2019
+59                                               Denmark    DK   DNK 2019
+60                                              Djibouti    DJ   DJI 2019
+61                                              Dominica    DM   DMA 2019
+62                                    Dominican Republic    DO   DOM 2019
+63                            Early-demographic dividend    V2   EAR 2019
+64           East Asia &amp; Pacific (excluding high income)    4E   EAP 2019
+65            East Asia &amp; Pacific (IDA &amp; IBRD countries)    T4   TEA 2019
+66                                   East Asia &amp; Pacific    Z4   EAS 2019
+67                                               Ecuador    EC   ECU 2019
+68                                      Egypt, Arab Rep.    EG   EGY 2019
+69                                           El Salvador    SV   SLV 2019
+70                                     Equatorial Guinea    GQ   GNQ 2019
+71                                               Eritrea    ER   ERI 2019
+72                                               Estonia    EE   EST 2019
+73                                              Eswatini    SZ   SWZ 2019
+74                                              Ethiopia    ET   ETH 2019
+75                                             Euro area    XC   EMU 2019
+76         Europe &amp; Central Asia (excluding high income)    7E   ECA 2019
+77          Europe &amp; Central Asia (IDA &amp; IBRD countries)    T7   TEC 2019
+78                                 Europe &amp; Central Asia    Z7   ECS 2019
+79                                        European Union    EU   EUU 2019
+80                                         Faroe Islands    FO   FRO 2019
+81                                                  Fiji    FJ   FJI 2019
+82                                               Finland    FI   FIN 2019
+83              Fragile and conflict affected situations    F1   FCS 2019
+84                                                France    FR   FRA 2019
+85                                      French Polynesia    PF   PYF 2019
+86                                                 Gabon    GA   GAB 2019
+87                                           Gambia, The    GM   GMB 2019
+88                                               Georgia    GE   GEO 2019
+89                                               Germany    DE   DEU 2019
+90                                                 Ghana    GH   GHA 2019
+91                                             Gibraltar    GI   GIB 2019
+92                                                Greece    GR   GRC 2019
+93                                             Greenland    GL   GRL 2019
+94                                               Grenada    GD   GRD 2019
+95                                                  Guam    GU   GUM 2019
+96                                             Guatemala    GT   GTM 2019
+97                                         Guinea-Bissau    GW   GNB 2019
+98                                                Guinea    GN   GIN 2019
+99                                                Guyana    GY   GUY 2019
+100                                                Haiti    HT   HTI 2019
+101               Heavily indebted poor countries (HIPC)    XE   HPC 2019
+102                                          High income    XD       2019
+103                                             Honduras    HN   HND 2019
+104                                 Hong Kong SAR, China    HK   HKG 2019
+105                                              Hungary    HU   HUN 2019
+106                                            IBRD only    XF   IBD 2019
+107                                              Iceland    IS   ISL 2019
+108                                     IDA &amp; IBRD total    ZT   IBT 2019
+109                                            IDA blend    XH   IDB 2019
+110                                             IDA only    XI   IDX 2019
+111                                            IDA total    XG   IDA 2019
+112                                                India    IN   IND 2019
+113                                            Indonesia    ID   IDN 2019
+114                                   Iran, Islamic Rep.    IR   IRN 2019
+115                                                 Iraq    IQ   IRQ 2019
+116                                              Ireland    IE   IRL 2019
+117                                          Isle of Man    IM   IMN 2019
+118                                               Israel    IL   ISR 2019
+119                                                Italy    IT   ITA 2019
+120                                              Jamaica    JM   JAM 2019
+121                                                Japan    JP   JPN 2019
+122                                               Jordan    JO   JOR 2019
+123                                           Kazakhstan    KZ   KAZ 2019
+124                                                Kenya    KE   KEN 2019
+125                                             Kiribati    KI   KIR 2019
+126                            Korea, Dem. People's Rep.    KP   PRK 2019
+127                                          Korea, Rep.    KR   KOR 2019
+128                                               Kosovo    XK   XKX 2019
+129                                               Kuwait    KW   KWT 2019
+130                                      Kyrgyz Republic    KG   KGZ 2019
+131                                              Lao PDR    LA   LAO 2019
+132                            Late-demographic dividend    V3   LTE 2019
+133    Latin America &amp; Caribbean (excluding high income)    XJ   LAC 2019
+134                            Latin America &amp; Caribbean    ZJ   LCN 2019
+135 Latin America &amp; the Caribbean (IDA &amp; IBRD countries)    T2   TLA 2019
+136                                               Latvia    LV   LVA 2019
+137         Least developed countries: UN classification    XL   LDC 2019
+138                                              Lebanon    LB   LBN 2019
+139                                              Lesotho    LS   LSO 2019
+140                                              Liberia    LR   LBR 2019
+141                                                Libya    LY   LBY 2019
+142                                        Liechtenstein    LI   LIE 2019
+143                                            Lithuania    LT   LTU 2019
+144                                  Low &amp; middle income    XO   LMY 2019
+145                                           Low income    XM       2019
+146                                  Lower middle income    XN       2019
+147                                           Luxembourg    LU   LUX 2019
+148                                     Macao SAR, China    MO   MAC 2019
+149                                           Madagascar    MG   MDG 2019
+150                                               Malawi    MW   MWI 2019
+151                                             Malaysia    MY   MYS 2019
+152                                             Maldives    MV   MDV 2019
+153                                                 Mali    ML   MLI 2019
+154                                                Malta    MT   MLT 2019
+155                                     Marshall Islands    MH   MHL 2019
+156                                           Mauritania    MR   MRT 2019
+157                                            Mauritius    MU   MUS 2019
+158                                               Mexico    MX   MEX 2019
+159                                Micronesia, Fed. Sts.    FM   FSM 2019
+160   Middle East &amp; North Africa (excluding high income)    XQ   MNA 2019
+161    Middle East &amp; North Africa (IDA &amp; IBRD countries)    T3   TMN 2019
+162                           Middle East &amp; North Africa    ZQ   MEA 2019
+163                                        Middle income    XP   MIC 2019
+164                                              Moldova    MD   MDA 2019
+165                                               Monaco    MC   MCO 2019
+166                                             Mongolia    MN   MNG 2019
+167                                           Montenegro    ME   MNE 2019
+168                                              Morocco    MA   MAR 2019
+169                                           Mozambique    MZ   MOZ 2019
+170                                              Myanmar    MM   MMR 2019
+171                                              Namibia    NA   NAM 2019
+172                                                Nauru    NR   NRU 2019
+173                                                Nepal    NP   NPL 2019
+174                                          Netherlands    NL   NLD 2019
+175                                        New Caledonia    NC   NCL 2019
+176                                          New Zealand    NZ   NZL 2019
+177                                            Nicaragua    NI   NIC 2019
+178                                                Niger    NE   NER 2019
+179                                              Nigeria    NG   NGA 2019
+180                                        North America    XU   NAC 2019
+181                                      North Macedonia    MK   MKD 2019
+182                             Northern Mariana Islands    MP   MNP 2019
+183                                               Norway    NO   NOR 2019
+184                                       Not classified    XY       2019
+185                                         OECD members    OE   OED 2019
+186                                                 Oman    OM   OMN 2019
+187                                   Other small states    S4   OSS 2019
+188                          Pacific island small states    S2   PSS 2019
+189                                             Pakistan    PK   PAK 2019
+190                                                Palau    PW   PLW 2019
+191                                               Panama    PA   PAN 2019
+192                                     Papua New Guinea    PG   PNG 2019
+193                                             Paraguay    PY   PRY 2019
+194                                                 Peru    PE   PER 2019
+195                                          Philippines    PH   PHL 2019
+196                                               Poland    PL   POL 2019
+197                                             Portugal    PT   PRT 2019
+198                            Post-demographic dividend    V4   PST 2019
+199                             Pre-demographic dividend    V1   PRE 2019
+200                                          Puerto Rico    PR   PRI 2019
+201                                                Qatar    QA   QAT 2019
+202                                              Romania    RO   ROU 2019
+203                                   Russian Federation    RU   RUS 2019
+204                                               Rwanda    RW   RWA 2019
+205                                                Samoa    WS   WSM 2019
+206                                           San Marino    SM   SMR 2019
+207                                Sao Tome and Principe    ST   STP 2019
+208                                         Saudi Arabia    SA   SAU 2019
+209                                              Senegal    SN   SEN 2019
+210                                               Serbia    RS   SRB 2019
+211                                           Seychelles    SC   SYC 2019
+212                                         Sierra Leone    SL   SLE 2019
+213                                            Singapore    SG   SGP 2019
+214                            Sint Maarten (Dutch part)    SX   SXM 2019
+215                                      Slovak Republic    SK   SVK 2019
+216                                             Slovenia    SI   SVN 2019
+217                                         Small states    S1   SST 2019
+218                                      Solomon Islands    SB   SLB 2019
+219                                              Somalia    SO   SOM 2019
+220                                         South Africa    ZA   ZAF 2019
+221                              South Asia (IDA &amp; IBRD)    T5   TSA 2019
+222                                           South Asia    8S   SAS 2019
+223                                          South Sudan    SS   SSD 2019
+224                                                Spain    ES   ESP 2019
+225                                            Sri Lanka    LK   LKA 2019
+226                                  St. Kitts and Nevis    KN   KNA 2019
+227                                            St. Lucia    LC   LCA 2019
+228                             St. Martin (French part)    MF   MAF 2019
+229                       St. Vincent and the Grenadines    VC   VCT 2019
+230           Sub-Saharan Africa (excluding high income)    ZF   SSA 2019
+231            Sub-Saharan Africa (IDA &amp; IBRD countries)    T6   TSS 2019
+232                                   Sub-Saharan Africa    ZG   SSF 2019
+233                                                Sudan    SD   SDN 2019
+234                                             Suriname    SR   SUR 2019
+235                                               Sweden    SE   SWE 2019
+236                                          Switzerland    CH   CHE 2019
+237                                 Syrian Arab Republic    SY   SYR 2019
+238                                           Tajikistan    TJ   TJK 2019
+239                                             Tanzania    TZ   TZA 2019
+240                                             Thailand    TH   THA 2019
+241                                          Timor-Leste    TL   TLS 2019
+242                                                 Togo    TG   TGO 2019
+243                                                Tonga    TO   TON 2019
+244                                  Trinidad and Tobago    TT   TTO 2019
+245                                              Tunisia    TN   TUN 2019
+246                                              Turkiye    TR   TUR 2019
+247                                         Turkmenistan    TM   TKM 2019
+248                             Turks and Caicos Islands    TC   TCA 2019
+249                                               Tuvalu    TV   TUV 2019
+250                                               Uganda    UG   UGA 2019
+251                                              Ukraine    UA   UKR 2019
+252                                 United Arab Emirates    AE   ARE 2019
+253                                       United Kingdom    GB   GBR 2019
+254                                        United States    US   USA 2019
+255                                  Upper middle income    XT       2019
+256                                              Uruguay    UY   URY 2019
+257                                           Uzbekistan    UZ   UZB 2019
+258                                              Vanuatu    VU   VUT 2019
+259                                        Venezuela, RB    VE   VEN 2019
+260                                              Vietnam    VN   VNM 2019
+261                                Virgin Islands (U.S.)    VI   VIR 2019
+262                                   West Bank and Gaza    PS   PSE 2019
+263                                                World    1W   WLD 2019
+264                                          Yemen, Rep.    YE   YEM 2019
+265                                               Zambia    ZM   ZMB 2019
+266                                             Zimbabwe    ZW   ZWE 2019
+             PDB       import
+1   1.890449e+10           NA
+2   1.001017e+12 2.648635e+11
+3   7.947191e+11 2.070626e+11
+4   1.540183e+10 6.926962e+09
+5   1.717674e+11 4.997419e+10
+6   6.470000e+08 6.140000e+08
+7   3.155065e+09           NA
+8   6.930911e+10 1.180943e+10
+9   1.687533e+09 1.156390e+09
+10  2.818502e+12 1.087714e+12
+11  4.477546e+11 6.584561e+10
+12  1.361929e+10 7.458381e+09
+13  3.368970e+09 2.425195e+09
+14  1.392228e+12 3.017680e+11
+15  4.446212e+11 2.317756e+11
+16  4.817424e+10 1.771247e+10
+17  1.319280e+10 4.780000e+09
+18  3.865332e+10 2.520771e+10
+19  3.512385e+11 6.492044e+10
+20  5.324250e+09 2.021650e+09
+21  6.440965e+10 4.235309e+10
+22  5.358309e+11 4.381723e+11
+23  2.416500e+09 1.200500e+09
+24  1.439169e+10 4.900485e+09
+25  7.423465e+09 1.916492e+09
+26  2.535657e+09 1.221922e+09
+27  4.089532e+10 1.285342e+10
+28  2.020248e+10 1.115803e+10
+29  1.669593e+10 7.694758e+09
+30  1.873274e+12 2.766328e+11
+31            NA           NA
+32  1.346942e+10 6.810628e+09
+33  6.891588e+10 4.183585e+10
+34  1.617816e+10 5.023005e+09
+35  2.576519e+09 6.146072e+08
+36  1.981846e+09 1.293310e+09
+37  2.708939e+10 1.692145e+10
+38  3.967098e+10 9.333955e+09
+39  1.742015e+12 5.836417e+11
+40  7.742842e+10           NA
+41  5.943589e+09 2.695788e+09
+42  2.221301e+09 7.621378e+08
+43  1.675084e+12 1.000771e+12
+44  1.131495e+10 4.280251e+09
+45            NA           NA
+46  2.785847e+11 8.272251e+10
+47  1.427994e+13 2.496148e+12
+48  3.231095e+11 7.008406e+10
+49  1.195020e+09 3.524665e+08
+50  5.177583e+10 1.520526e+10
+51  1.275034e+10 6.778504e+09
+52  6.441767e+10 2.024983e+10
+53  5.853942e+10 1.324433e+10
+54  6.232798e+10 3.179099e+10
+55  1.034280e+11 1.097100e+10
+56  2.995185e+09           NA
+57  2.594450e+10 1.957826e+10
+58  2.525482e+11 1.714581e+11
+59  3.464987e+11 1.787159e+11
+60  3.088854e+09 4.763669e+09
+61  6.115370e+08           NA
+62  8.894130e+10 2.485186e+10
+63  1.163787e+13 3.079889e+12
+64  1.720786e+13 3.685714e+12
+65  1.718573e+13 3.678093e+12
+66  2.702830e+13 7.104825e+12
+67  1.081080e+11 2.489560e+10
+68  3.030809e+11 7.801253e+10
+69  2.688114e+10 1.238847e+10
+70  1.136413e+10 4.971586e+09
+71            NA           NA
+72  3.108190e+10 2.171688e+10
+73  4.495264e+09 1.931359e+09
+74  9.591259e+10 2.002206e+10
+75  1.341817e+13 6.002431e+12
+76  3.248640e+12 9.459736e+11
+77  4.158042e+12 1.383897e+12
+78  2.290998e+13 9.595047e+12
+79  1.569340e+13 7.195291e+12
+80  3.275707e+09 1.726437e+09
+81  5.481675e+09 3.209498e+09
+82  2.685149e+11 1.066669e+11
+83  1.794324e+12 5.077103e+11
+84  2.728870e+12 8.882314e+11
+85  6.001385e+09 2.116543e+09
+86  1.687441e+10 3.711866e+09
+87  1.813608e+09 6.243937e+08
+88  1.747044e+10 1.114280e+10
+89  3.888226e+12 1.594826e+12
+90  6.833754e+10 2.690804e+10
+91            NA           NA
+92  2.052570e+11 8.574467e+10
+93  2.994332e+09 1.533061e+09
+94  1.213485e+09           NA
+95  6.366000e+09 3.552000e+09
+96  7.717042e+10 2.153475e+10
+97  1.439638e+09 5.050919e+08
+98  1.344286e+10 5.830608e+09
+99  5.173760e+09           NA
+100 1.478584e+10 5.536983e+09
+101 7.978158e+11 2.527622e+11
+102 5.527293e+13 1.681355e+13
+103 2.508998e+10 1.457955e+10
+104 3.630525e+11 6.393474e+11
+105 1.639886e+11 1.299396e+11
+106 3.125063e+13 7.453361e+12
+107 2.482610e+10 9.892297e+09
+108 3.359040e+13 8.086517e+12
+109 1.042643e+12 2.321061e+11
+110 1.297064e+12 4.012683e+11
+111 2.339707e+12 6.342650e+11
+112 2.831552e+12 6.023149e+11
+113 1.119100e+12 2.130346e+11
+114 2.837467e+11 7.737905e+10
+115 2.336361e+11 7.228250e+10
+116 3.993217e+11 4.966358e+11
+117 7.315388e+09           NA
+118 4.024705e+11 1.088600e+11
+119 2.011302e+12 5.687271e+11
+120 1.583077e+10 8.243798e+09
+121 5.123318e+12 9.085919e+11
+122 4.499399e+10 2.196352e+10
+123 1.816672e+11 5.162914e+10
+124 1.003797e+11 2.040867e+10
+125 1.779353e+08 1.808184e+08
+126           NA           NA
+127 1.651423e+12 6.024602e+11
+128 7.899879e+09 4.458755e+09
+129 1.361968e+11 6.113806e+10
+130 8.871026e+09 5.689781e+09
+131 1.874056e+10           NA
+132 2.304700e+13 5.998089e+12
+133 4.773980e+12 1.144249e+12
+134 5.618711e+12 1.396666e+12
+135 5.367417e+12 1.315744e+12
+136 3.434396e+10 2.076912e+10
+137 1.142534e+12 3.218793e+11
+138 5.195374e+10 2.182063e+10
+139 2.453981e+09 2.230203e+09
+140 3.319597e+09           NA
+141 6.925231e+10 2.449732e+10
+142 6.427249e+09           NA
+143 5.475151e+10 3.942493e+10
+144 3.207007e+13 7.486012e+12
+145 4.790636e+11 1.531637e+11
+146 7.908593e+12 2.165288e+12
+147 6.982564e+10 1.211630e+11
+148 5.520476e+10 1.759358e+10
+149 1.410466e+10 4.820540e+09
+150 1.102537e+10           NA
+151 3.651751e+11 2.108915e+11
+152 5.609401e+09 4.399141e+09
+153 1.728025e+10 6.558445e+09
+154 1.572585e+10 2.031792e+10
+155 2.320923e+08 2.670904e+08
+156 8.066126e+09 4.404481e+09
+157 1.443635e+10 7.538247e+09
+158 1.269012e+12 4.958798e+11
+159 4.120000e+08 3.027000e+08
+160 1.393810e+12 4.544985e+11
+161 1.376677e+12 4.453368e+11
+162 3.472361e+12 1.283901e+12
+163 3.159034e+13 7.331642e+12
+164 1.197135e+10 6.624661e+09
+165 7.383746e+09           NA
+166 1.420636e+10 9.259603e+09
+167 5.542054e+09 3.602221e+09
+168 1.289199e+11 5.402398e+10
+169 1.539004e+10 1.227056e+10
+170 6.869776e+10 2.081490e+10
+171 1.254193e+10 5.832030e+09
+172 1.187241e+08 1.194393e+08
+173 3.418619e+10 1.417687e+10
+174 9.101943e+11 6.620113e+11
+175 9.438131e+09           NA
+176 2.134346e+11 5.767010e+10
+177 1.259664e+10 6.245815e+09
+178 1.291646e+10 3.396076e+09
+179 4.481200e+11 8.874099e+10
+180 2.313041e+13 3.702793e+12
+181 1.260634e+10 9.602018e+09
+182 1.182000e+09 7.330000e+08
+183 4.049414e+11 1.408439e+11
+184           NA           NA
+185 5.387859e+13 1.505121e+13
+186 8.806086e+10 3.256853e+10
+187 4.333633e+11 2.264740e+11
+188 1.073623e+10 6.352239e+09
+189 3.209095e+11 6.262456e+10
+190 2.789000e+08           NA
+191 6.698440e+10 2.932200e+10
+192 2.475134e+10           NA
+193 3.792534e+10 1.332894e+10
+194 2.283235e+11 5.229617e+10
+195 3.768233e+11 1.524586e+11
+196 5.960546e+11 2.950076e+11
+197 2.399869e+11 1.033295e+11
+198 5.087935e+13 1.454793e+13
+199 1.393743e+12 3.635181e+11
+200 1.051264e+11 4.942410e+10
+201 1.758376e+11 6.676978e+10
+202 2.510193e+11 1.112087e+11
+203 1.693114e+12 3.520885e+11
+204 1.035633e+10 3.741294e+09
+205 9.129445e+08 4.409317e+08
+206 1.616189e+09 2.315474e+09
+207 4.274250e+08           NA
+208 8.036163e+11 2.189408e+11
+209 2.339881e+10 9.186798e+09
+210 5.151422e+10 3.139466e+10
+211 1.684373e+09 1.927533e+09
+212 4.076579e+09 1.546805e+09
+213 3.754727e+11 5.501926e+11
+214           NA           NA
+215 1.057204e+11 9.681579e+10
+216 5.433159e+10 4.080292e+10
+217 5.215279e+11 2.766322e+11
+218 1.619155e+09 7.529302e+08
+219 6.485000e+09 5.423000e+09
+220 3.885320e+11 1.039606e+11
+221 3.653951e+12 7.859776e+11
+222 3.653951e+12 7.859776e+11
+223           NA           NA
+224 1.394320e+12 4.457221e+11
+225 8.901499e+10 2.456991e+10
+226 1.107841e+09           NA
+227 2.094202e+09           NA
+228           NA           NA
+229 9.101497e+08           NA
+230 1.794052e+12 4.700084e+11
+231 1.795736e+12 4.719455e+11
+232 1.795736e+12 4.719455e+11
+233 3.233808e+10 1.902356e+08
+234 4.016041e+09           NA
+235 5.338795e+11 2.329029e+11
+236 7.213691e+11 4.123506e+11
+237 2.244330e+10 6.506179e+09
+238 8.300785e+09 3.408724e+09
+239 6.113687e+10 1.036347e+10
+240 5.440811e+11 2.729166e+11
+241 2.028552e+09 1.004126e+09
+242 7.220395e+09 2.260741e+09
+243 5.120577e+08 3.338290e+08
+244 2.384956e+10           NA
+245 4.190611e+10 2.362762e+10
+246 7.599374e+11 2.292087e+11
+247 4.523143e+10           NA
+248 1.197415e+09           NA
+249 5.422315e+07           NA
+250 3.535306e+10 7.866762e+09
+251 1.538830e+11 7.583283e+10
+252 4.179897e+11 2.955998e+11
+253 2.857058e+12 9.391877e+11
+254 2.138098e+13 3.117235e+12
+255 2.368174e+13 5.166816e+12
+256 6.123115e+10 1.338320e+10
+257 5.990767e+10 2.662051e+10
+258 9.365263e+08 4.592509e+08
+259           NA           NA
+260 3.343653e+11 2.659763e+11
+261 4.117000e+09 4.148000e+09
+262 1.713350e+10 9.161700e+09
+263 8.764526e+13 2.434813e+13
+264           NA           NA
+265 2.330867e+10 7.961078e+09
+266 2.183223e+10 5.572484e+09</code></pre>
+</div>
+</div>
+</section>
+<section id="ggplot-1" class="slide level2">
+<h2>ggplot</h2>
+<ul>
+<li>Kita declare dulu dengan ggplot:</li>
+</ul>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>dat,<span class="fu">aes</span>(<span class="at">x=</span>PDB,<span class="at">y=</span>import))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li><p>Ini akan memberi tahu ggplot bahwa kita ingin membuat grafik dari data “dat”, di mana PDB jadi x-nya dan import jadi y-nya.</p></li>
+<li><p>Tapi ini saja tidak cukup. Anda harus secara eksplisit memberi tahu bahwa anda ingin membuat titik (scatterplot). Tambahkan <code>+ geom_point()</code> di belakangnya.</p></li>
+</ul>
+</section>
+<section id="geom_point" class="slide level2">
+<h2>geom_point</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>dat,<span class="fu">aes</span>(<span class="at">x=</span>PDB,<span class="at">y=</span>import)) <span class="sc">+</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="index_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch"></section>
+<section id="memberi-judul" class="slide level2 m">
+<h2>Memberi judul</h2>
+<p>Untuk memberi label di sumbu X, Y dan judul tabel, anda dapat menggunakan <code>labs</code></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>dat,<span class="fu">aes</span>(<span class="at">x=</span>PDB,<span class="at">y=</span>import)) <span class="sc">+</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="co"># setiap nambah command, selalu kasih tanda +</span></span>
+<span id="cb5-3"><a href="#cb5-3"></a>  <span class="fu">labs</span>(<span class="at">title=</span><span class="st">"tabel 1. hubungan antara impor dan PDB"</span>,</span>
+<span id="cb5-4"><a href="#cb5-4"></a>       <span class="at">x=</span><span class="st">"Produk Domestik Bruto, current US$ million"</span>,</span>
+<span id="cb5-5"><a href="#cb5-5"></a>       <span class="at">y=</span><span class="st">"Nilai impor, current US$ million"</span>,</span>
+<span id="cb5-6"><a href="#cb5-6"></a>       <span class="at">caption =</span> <span class="st">"sumber: World Development Indicators, World Bank"</span>) <span class="co"># yang terakhir ga perlu +</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="index_files/figure-revealjs/unnamed-chunk-3-1.png" width="960" class="r-stretch"></section>
+<section id="theme-bw" class="slide level2">
+<h2>Theme BW</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>dat,<span class="fu">aes</span>(<span class="at">x=</span>PDB,<span class="at">y=</span>import)) <span class="sc">+</span></span>
+<span id="cb6-2"><a href="#cb6-2"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="co"># setiap nambah command, selalu kasih tanda +</span></span>
+<span id="cb6-3"><a href="#cb6-3"></a>  <span class="fu">labs</span>(<span class="at">title=</span><span class="st">"tabel 1. hubungan antara impor dan PDB"</span>,</span>
+<span id="cb6-4"><a href="#cb6-4"></a>       <span class="at">x=</span><span class="st">"Produk Domestik Bruto, current US$ million"</span>,</span>
+<span id="cb6-5"><a href="#cb6-5"></a>       <span class="at">y=</span><span class="st">"Nilai impor, current US$ million"</span>,</span>
+<span id="cb6-6"><a href="#cb6-6"></a>       <span class="at">caption =</span> <span class="st">"sumber: World Development Indicators, World Bank"</span>) <span class="sc">+</span></span>
+<span id="cb6-7"><a href="#cb6-7"></a>  <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="index_files/figure-revealjs/unnamed-chunk-4-1.png" width="960" class="r-stretch"></section>
+<section id="theme-classic" class="slide level2">
+<h2>Theme Classic</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>dat,<span class="fu">aes</span>(<span class="at">x=</span>PDB,<span class="at">y=</span>import)) <span class="sc">+</span></span>
+<span id="cb7-2"><a href="#cb7-2"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="co"># setiap nambah command, selalu kasih tanda +</span></span>
+<span id="cb7-3"><a href="#cb7-3"></a>  <span class="fu">labs</span>(<span class="at">title=</span><span class="st">"tabel 1. hubungan antara impor dan PDB"</span>,</span>
+<span id="cb7-4"><a href="#cb7-4"></a>       <span class="at">x=</span><span class="st">"Produk Domestik Bruto, current US$ million"</span>,</span>
+<span id="cb7-5"><a href="#cb7-5"></a>       <span class="at">y=</span><span class="st">"Nilai impor, current US$ million"</span>,</span>
+<span id="cb7-6"><a href="#cb7-6"></a>       <span class="at">caption =</span> <span class="st">"sumber: World Development Indicators, World Bank"</span>) <span class="sc">+</span></span>
+<span id="cb7-7"><a href="#cb7-7"></a>  <span class="fu">theme_classic</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="index_files/figure-revealjs/unnamed-chunk-5-1.png" width="960" class="r-stretch"></section>
+<section id="size-color" class="slide level2">
+<h2>Size &amp; color</h2>
+<ul>
+<li>Anda bisa mewarnai dan ganti size di geom_point</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>dat,<span class="fu">aes</span>(<span class="at">x=</span>PDB,<span class="at">y=</span>import)) <span class="sc">+</span></span>
+<span id="cb8-2"><a href="#cb8-2"></a>  <span class="fu">geom_point</span>(<span class="at">color=</span><span class="st">"red"</span>,<span class="at">size=</span><span class="dv">2</span>) <span class="sc">+</span> <span class="co"># setiap nambah command, selalu kasih tanda +</span></span>
+<span id="cb8-3"><a href="#cb8-3"></a>  <span class="fu">labs</span>(<span class="at">title=</span><span class="st">"tabel 1. hubungan antara impor dan PDB"</span>,</span>
+<span id="cb8-4"><a href="#cb8-4"></a>       <span class="at">x=</span><span class="st">"Produk Domestik Bruto, current US$ million"</span>,</span>
+<span id="cb8-5"><a href="#cb8-5"></a>       <span class="at">y=</span><span class="st">"Nilai impor, current US$ million"</span>,</span>
+<span id="cb8-6"><a href="#cb8-6"></a>       <span class="at">caption =</span> <span class="st">"sumber: World Development Indicators, World Bank"</span>) <span class="sc">+</span></span>
+<span id="cb8-7"><a href="#cb8-7"></a>  <span class="fu">theme_classic</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="index_files/figure-revealjs/unnamed-chunk-6-1.png" width="960" class="r-stretch"></section>
+<section id="time-series" class="slide level2">
+<h2>Time Series</h2>
+<ul>
+<li><p>setelah scatterplot, kita akan coba line graph.</p></li>
+<li><p>Line graph biasanya digunakan untuk data time series atau panel.</p>
+<ul>
+<li><p>pengguna ggplot harus menggunakan format data “long”.</p></li>
+<li><p>kolom waktu harus menggunakan tipe “tss” atau datetime.</p></li>
+</ul></li>
+</ul>
+</section>
+<section id="datetime" class="slide level2">
+<h2>Datetime</h2>
+<ul>
+<li><p>Format long dan wide dibahas di pertemuan 7.</p></li>
+<li><p>Untuk datetime, anda harus memastikan variable waktu (tahun, bulan, dll) harus dalam bentuk tss.</p></li>
+<li><p>Kadang-kadang saat kita pakai <code>read_excel()</code> atau <code>read_csv()</code>, R tidak membaca kolom waktu sebagai “tss”, tapi malah sebagai “chr” (karakter) atau bahkan numerik (dbl, fl64, dst)</p></li>
+<li><p>Jika bentuknya “chr”, harus kita ubah ke “tss” dengan <code>as.Date()</code></p></li>
+</ul>
+</section>
+<section id="datetime-1" class="slide level2">
+<h2>Datetime</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb9-2"><a href="#cb9-2"></a>dat<span class="ot">&lt;-</span><span class="fu">read_excel</span>(<span class="st">"latihan7.xlsx"</span>)</span>
+<span id="cb9-3"><a href="#cb9-3"></a>dat<span class="sc">$</span>year<span class="ot">&lt;-</span><span class="fu">as.Date</span>(dat<span class="sc">$</span>year,<span class="at">format=</span><span class="st">"%Y"</span>) <span class="co"># mengubah year dari chr ke tss</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li><p>Di latihan7.xlsx, kolom “year” bentuknya adalah “chr”. Dengan <code>as.Date()</code>, kita mengubah kolom “year” dari “chr” jadi “tss”.</p></li>
+<li><p>sub-command “format” memberitau kita bahwa year itu merupakan tahun.</p></li>
+</ul>
+</section>
+<section id="intermezzo-chr-vs-ts" class="slide level2">
+<h2>Intermezzo: chr vs ts</h2>
+<div class="panel-tabset">
+<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">Tanpa as.Date</a></li><li><a href="#tabset-1-2">Dengan as.Date</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="fu">read_excel</span>(<span class="st">"latihan7.xlsx"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 275 × 8
+   country year       import      export PDBperkapita    LM    LX    LP
+   &lt;chr&gt;   &lt;chr&gt;       &lt;dbl&gt;       &lt;dbl&gt;        &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+ 1 China   1967  2169144528. 2388496222.         96.6  9.34  9.38  1.98
+ 2 China   1968  2067592818. 2339751401.         91.5  9.32  9.37  1.96
+ 3 China   1969  1917296287. 2429116906.        100.   9.28  9.39  2.00
+ 4 China   1970  2278820375. 2307254854.        113.   9.36  9.36  2.05
+ 5 China   1971  2128523844. 2782516858.        119.   9.33  9.44  2.07
+ 6 China   1972  2850652532. 3692485858.        132.   9.45  9.57  2.12
+ 7 China   1973  5207600281. 5876143561.        157.   9.72  9.77  2.20
+ 8 China   1974  7791148277. 7107893127.        160.   9.89  9.85  2.20
+ 9 China   1975  7925583396. 7688998817.        178.   9.90  9.89  2.25
+10 China   1976  6660142165. 6943442876.        165.   9.82  9.84  2.22
+# … with 265 more rows</code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-1-2">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a>dat<span class="ot">&lt;-</span><span class="fu">read_excel</span>(<span class="st">"latihan7.xlsx"</span>)</span>
+<span id="cb12-2"><a href="#cb12-2"></a>dat<span class="sc">$</span>year<span class="ot">&lt;-</span><span class="fu">as.Date</span>(dat<span class="sc">$</span>year,<span class="st">"%Y"</span>) <span class="co"># mengubah year dari chr ke tss</span></span>
+<span id="cb12-3"><a href="#cb12-3"></a>dat</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 275 × 8
+   country year            import      export PDBperkapita    LM    LX    LP
+   &lt;chr&gt;   &lt;date&gt;           &lt;dbl&gt;       &lt;dbl&gt;        &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+ 1 China   1967-12-25 2169144528. 2388496222.         96.6  9.34  9.38  1.98
+ 2 China   1968-12-25 2067592818. 2339751401.         91.5  9.32  9.37  1.96
+ 3 China   1969-12-25 1917296287. 2429116906.        100.   9.28  9.39  2.00
+ 4 China   1970-12-25 2278820375. 2307254854.        113.   9.36  9.36  2.05
+ 5 China   1971-12-25 2128523844. 2782516858.        119.   9.33  9.44  2.07
+ 6 China   1972-12-25 2850652532. 3692485858.        132.   9.45  9.57  2.12
+ 7 China   1973-12-25 5207600281. 5876143561.        157.   9.72  9.77  2.20
+ 8 China   1974-12-25 7791148277. 7107893127.        160.   9.89  9.85  2.20
+ 9 China   1975-12-25 7925583396. 7688998817.        178.   9.90  9.89  2.25
+10 China   1976-12-25 6660142165. 6943442876.        165.   9.82  9.84  2.22
+# … with 265 more rows</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="format-time-series" class="slide level2">
+<h2>Format time series</h2>
+<table>
+<thead>
+<tr class="header">
+<th>bentuk</th>
+<th>format</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2020</td>
+<td>“%Y”</td>
+</tr>
+<tr class="even">
+<td>2020-01-01</td>
+<td>“%Y-%m-%d”</td>
+</tr>
+<tr class="odd">
+<td>2020/01/01</td>
+<td>“%Y/%m/%d”</td>
+</tr>
+<tr class="even">
+<td>10 Jan 2020</td>
+<td>“%d %b %Y”</td>
+</tr>
+</tbody>
+</table>
+<p>Lengkapnya, cek di <a href="https://www.r-bloggers.com/2013/08/date-formats-in-r/">sini</a> atau di <a href="https://www.stat.berkeley.edu/~s133/dates.html">sini</a></p>
+</section>
+<section id="line-graph" class="slide level2">
+<h2>Line graph</h2>
+<ul>
+<li><p>Sumbu x dari line graph hampir pasti variabel waktu.</p></li>
+<li><p>Sangat tidak disarankan ngeplot multiple indicators in one line.</p></li>
+<li><p>Tapi, 1 indikator dan ngeplot berbagai negara biasanya bisa-bisa aja dilakukan di line graph.</p></li>
+<li><p>syntaxnya mirip dengan scatter, dengan beberapa twist.</p></li>
+</ul>
+</section>
+<section id="line-graph-1" class="slide level2">
+<h2>Line graph</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>dat,<span class="fu">aes</span>(<span class="at">x=</span>year,<span class="at">y=</span>PDBperkapita)) <span class="sc">+</span></span>
+<span id="cb14-2"><a href="#cb14-2"></a>  <span class="fu">geom_line</span>() <span class="co"># Kita tidak pakai geom_point, tapi pakai geom_line</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="index_files/figure-revealjs/unnamed-chunk-10-1.png" width="960" class="r-stretch"><p>hasilnya jelek karena dalam 1 waktu ada lebih dari 1 data point karena ada beberapa negara</p>
+</section>
+<section id="line-graph-2" class="slide level2">
+<h2>Line graph</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>dat,<span class="fu">aes</span>(<span class="at">x=</span>year,<span class="at">y=</span>PDBperkapita,<span class="at">color=</span>country)) <span class="sc">+</span></span>
+<span id="cb15-2"><a href="#cb15-2"></a>  <span class="fu">geom_line</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="index_files/figure-revealjs/unnamed-chunk-11-1.png" width="960" class="r-stretch"></section>
+<section id="line-graph-3" class="slide level2">
+<h2>Line graph</h2>
+<ul>
+<li><p>note bahwa di sub-command <code>aes()</code> ada tambahan argumen namanya “color”. Color ini memberikan masing-masing garis untuk setiap kolom “country”.</p></li>
+<li><p>Dengan argumen “color”, anda akan otomatis mendapatkan legenda di sisi kanan.</p></li>
+<li><p>anda juga dapat menggunakan “linetype” daripada “color” jika gambarnya hitam putih.</p></li>
+<li><p>Note kita menggunakan <code>geom_line()</code> bukan <code>geom_point()</code></p>
+<ul>
+<li>apa yang terjadi kalau kita pakai 2 2 nya?</li>
+</ul></li>
+</ul>
+</section>
+<section id="linetype" class="slide level2">
+<h2>Linetype</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>dat,<span class="fu">aes</span>(<span class="at">x=</span>year,<span class="at">y=</span>PDBperkapita,<span class="at">linetype=</span>country)) <span class="sc">+</span></span>
+<span id="cb16-2"><a href="#cb16-2"></a>  <span class="fu">geom_line</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="index_files/figure-revealjs/unnamed-chunk-12-1.png" width="960" class="r-stretch"><p>Harus selalu diingat nama variabelnya, mana yang jadi x, y, dan color/linetype. Anda juga bisa pakai labs dan theme sama seperti di contoh scatterplot.</p>
+</section>
+<section id="more-on-ggplot" class="slide level2">
+<h2>More on ggplot</h2>
+<ul>
+<li><p>masih ada banyak jurus-jurus di ggplot bahkan bisa buat gambar hal-hal yang bukan data.</p></li>
+<li><p>Tapi untuk saat ini, cukup segini dulu yang dipelajari.</p></li>
+<li><p>Jika anda tertarik lebih lanjut mempelajari ggplot, anda dapat gunakan google.</p></li>
+</ul>
+<div class="footer footer-default">
+
+</div>
+</section>
+    </div>
+  </div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="index_files/libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="index_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="index_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="index_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="index_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="index_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="index_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="index_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="index_files/libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'smaller': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'chalkboard': {"buttons":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'convex',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'fade',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
+    <script id="quarto-html-after-body" type="application/javascript">
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+      const toggleBodyColorMode = (bsSheetEl) => {
+        const mode = bsSheetEl.getAttribute("data-mode");
+        const bodyEl = window.document.querySelector("body");
+        if (mode === "dark") {
+          bodyEl.classList.add("quarto-dark");
+          bodyEl.classList.remove("quarto-light");
+        } else {
+          bodyEl.classList.add("quarto-light");
+          bodyEl.classList.remove("quarto-dark");
+        }
+      }
+      const toggleBodyColorPrimary = () => {
+        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+        if (bsSheetEl) {
+          toggleBodyColorMode(bsSheetEl);
+        }
+      }
+      toggleBodyColorPrimary();  
+      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+      tabsets.forEach(function(tabset) {
+        const tabby = new Tabby('#' + tabset.id);
+      });
+      const clipboard = new window.ClipboardJS('.code-copy-button', {
+        target: function(trigger) {
+          return trigger.previousElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        // button target
+        const button = e.trigger;
+        // don't keep focus
+        button.blur();
+        // flash "checked"
+        button.classList.add('code-copy-button-checked');
+        var currentTitle = button.getAttribute("title");
+        button.setAttribute("title", "Copied!");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copied!");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
+        setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
+          button.setAttribute("title", currentTitle);
+          button.classList.remove('code-copy-button-checked');
+        }, 1000);
+        // clear code selection
+        e.clearSelection();
+      });
+      function tippyHover(el, contentFn) {
+        const config = {
+          allowHTML: true,
+          content: contentFn,
+          maxWidth: 500,
+          delay: 100,
+          arrow: false,
+          appendTo: function(el) {
+              return el.closest('section.slide') || el.parentElement;
+          },
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'quarto-reveal',
+          placement: 'bottom-start'
+        };
+          config['offset'] = [0,0];
+          config['maxWidth'] = 700;
+        window.tippy(el, config); 
+      }
+      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+      for (var i=0; i<noterefs.length; i++) {
+        const ref = noterefs[i];
+        tippyHover(ref, function() {
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+          try { href = new URL(href).hash; } catch {}
+          const id = href.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          return note.innerHTML;
+        });
+      }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
+      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+      for (var i=0; i<bibliorefs.length; i++) {
+        const ref = bibliorefs[i];
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
+          });
+        }
+      }
+    });
+    </script>
+    
+
+</body></html>

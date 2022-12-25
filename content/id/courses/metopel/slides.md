@@ -35,3 +35,4 @@ slides:
 - {{% staticref "/metopel/meeting9/meeting9.pptx" "newtab" %}}Pertemuan 9: Logical writing, thinking, and problem solving{{% /staticref %}}
 - {{% staticref "/metopel/meeting10/index.html" "newtab" %}}Pertemuan 10: Data{{% /staticref %}}
 - {{% staticref "/metopel/meeting11/index.html" "newtab" %}}Pertemuan 11: Menggunakan Zotero{{% /staticref %}}
+- {{% staticref "/metopel/meeting12/index.html" "newtab" %}}Pertemuan 12: Beginner dataviz with ggplot{{% /staticref %}}
