@@ -1,0 +1,205 @@
+---
+title: "Menggunakan Quarto & Github"
+subtitle: "Pertemuan 14"
+author: "Metodologi penelitian"
+format: 
+  revealjs:
+    theme: [simple,../mytheme.scss]
+    chalkboard: true
+    incremental: false
+    transition: convex
+    background-transition: fade
+    slide-number: true
+---
+
+## Hari ini
+
+-   Menggunakan quarto untuk menulis artikel.
+
+-   Menggunakan github untuk hosting tulisan anda.
+
+## Quarto
+
+-   Quarto adalah versi *upgrade* dari rscript.
+
+-   Dengan file quarto (ekstensi .qmd), anda bisa menggabungkan kode R anda dengan tulisan, dan dirender menjadi html, pdf dan word sekaligus.
+
+    -   setelah itu anda dapat edit wordnya.
+
+-   Tapi kekuatan quarto yang sebenarnya (menurut saya) adalah render html-nya.
+
+## Download Quarto
+
+-   Quarto dapat didownload di [sini](https://quarto.org/docs/get-started/).
+
+-   Atau google aja "download quarto"
+
+-   Quarto dapat digunakan dengan VSCode, Jupyter, dan text editor lainnya. Di kuliah ini, kita pakai RStudio.
+
+## Download Quarto
+
+![](gambar1.jpg)
+
+## Memulai Quarto
+
+![Quarto dapat dimulai dengan \`file -\> new file -\> quarto document](gambar2.jpg)
+
+## Memulai Quarto
+
+![silakan pilih html, bisa juga pdf atau word. lainnya cuekin](gambar3.jpg)
+
+## Memulai Quarto
+
+![akan ada file di lokasi kita edit rscript tapi bukan rscript](gambar4.jpg)
+
+## Memulai Quarto
+
+-   Quarto tidak dirun seperti rscript, tapi dirender.
+
+-   Sekali render, quarto akan menghasilkan file html, pdf atau docx tergantung pilihan di "format".
+
+-   Note bahwa ekstensi Quarto adalah `.qmd` bukan `.r`
+
+-   Diantara 3 dash (---) itu disebut metadata/options/header.
+
+-   Jika anda mulai dengan cara ini, options-nya terbatas di title, author dan format.
+
+## Menggunakan format
+
+-   Saya sudah menyiapkan [format Quarto](https://1drv.ms/u/s!AjelszXKKcmsibt_MGYrBYBHznHTIw?e=yyphLf) untuk anda gunakan.
+
+-   Untuk ke depannya, mendingan pake format saya karena options-nya lebih lengkap.
+
+-   Untuk belajar apa aja yang ditaruh di options-nya, bisa ke [dokumentasi quarto](https://quarto.org/docs/reference/formats/html.html) atau [google](https://www.google.com/search?client=firefox-b-d&q=quarto+yaml+options).
+
+## Cara pakai quarto
+
+-   gunakan tanda pagar (#) untuk judul. Perbanyak pagar untuk level heading yang lebih kecil.
+
+-   Selengkapnya dapat dibaca di [markdown basic](https://quarto.org/docs/authoring/markdown-basics.html)
+
+    -   "Markdown syntax" = apa yang kita ketik di file `.qmd`
+
+    -   "output" = hasilnya ketika dirender.
+
+## Gambar
+
+-   Untuk memasang gambar, anda harus meletakkan file gambarnya di folder yang sama dengan file qmd-nya.
+
+-   Misalnya di folder UAS ada file `index.qmd` dan `gambar1.jpg`
+
+-   Anda bisa attach gambar di hasil render qmd-nya.
+
+-   lengkapnya di [figure basic](https://quarto.org/docs/authoring/figures.html)
+
+## Gambar
+
+-   Cara cepat untuk menaruh tabel atau diagram misalnya dapat dengan cara print screen atau pakai snip (tekan 🪟+`shift`+S)
+
+-   Lalu dicrop hanya part yang ingin anda attach di tulisan anda.
+
+-   save hasil cropnya dalam jpg atau png, lalu kopas ke folder anda.
+
+## tabel
+
+-   Untuk tabel yang simpel, anda dapat gunakan markdown tabel seperti [di sini](https://quarto.org/docs/authoring/tables.html)
+
+- Untuk tabel yang lebih ribet, anda dapat menggunakan tabel editor di qmd. Tekan tombol `visual`. lalu pilih `insert` lalu `table`
+
+- Jika tabelnya ribet banget, buat saja di excel, lalu discreenshot dan gunakan gambar.
+
+## Insert table
+
+![insert tabel ribet](gambar4.jpg)
+
+## R Codes
+
+- R codes dapat langsung ditulis di qmd anda, dan akan dirun ketika anda render.
+
+- R codes harus diawali dengan 3 backticks (sebelah angka 1) dan {r}, diakhiri dengan tanda 3 backticks.
+
+![](gambar12.jpg)
+
+## Hasilnya
+
+
+```{r}
+library(tidyverse)
+library(readxl)
+dat<-read_excel("latihan.xlsx")
+ggplot(data=dat,aes(x=X,y=Y))+
+  geom_point()
+```
+
+
+## Template
+
+- Untuk tugas akhir anda, ambil template qmd yang sudah saya siapkan di [sini](https://1drv.ms/u/s!AjelszXKKcmsibt_MGYrBYBHznHTIw?e=yyphLf)
+
+- download juga [gambar logo APP](https://1drv.ms/u/s!AjelszXKKcmsib94P19jDzQxzDKuiw?e=mHoTZd) dan [data latihan](https://1drv.ms/x/s!AjelszXKKcmsib91KU4DqMfl5s0lfQ?e=cZz0OE).
+
+- Simpan semuanya di 1 folder, buka file `index.qmd` dengan R Studio. Pastikan anda sudah install Quarto.
+
+- Pelajari baik-baik file qmd-nya, lalu klik panah kecil di sebelah $\Rightarrow$Render.
+
+- Pilih Render HTML untuk render HTML, atau pilih Render MS Word untuk menjadikannya word.
+
+## Render
+
+![](gambar6.jpg)
+
+## Render
+
+- Jika anda pilih Render HTML, di folder anda akan ada file baru yaitu `index.html` dan sebuah folder baru.
+
+- Jika anda pilih Render MS Word, anda akan lihat file `index.docx`.
+
+- Tentu keunggulan render MS Word adalah anda bisa melanjutkan ngedit di aplikasi word.
+
+- Keunggulan HTML? tentu saja hosting di internet!
+
+    - word juga bisa dikopas ke wordpress sih, tapi kerenan github!
+
+## Github
+
+- Github aslinya adalah sebuah website untuk hosting code projects (disebut juga dengan repository.
+
+- Dia berfungsi sebagai version control dan melakukan kolaborasi terutama untuk project open source.
+
+- Singkatnya, semua programer pasti pernah pake github.
+
+- Namun github bisa menawarkan hosting mini untuk website anda.
+
+## Github
+
+- Buka github dan buat akun baru di [sini](https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home)
+
+- pilih username yang cukup profesional dan mudah diingat.
+
+    - username ini akan jadi bagian dari url website anda.
+    
+- Kode verifikasi akan dikirim ke email anda.
+
+- kalau disuruh pilih paket, pilih yang free.
+    
+## Welcome to github
+
+![](gambar7.jpg)
+
+## Github
+
+![pilih skip personalization](gambar8.jpg)
+
+## Membuat website github
+
+<iframe width="1000" height="600" src="https://www.youtube.com/embed/-NorOid-YQw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## More on Quarto
+
+-   Quarto jauh lebih sakti daripada sekedar buat 1 artikel.
+
+-   Quarto dapat digunakan untuk membuat website dari 0 (dengan mayoritas ekstensi html), membuat presentasi (kuliah ini dibuat dengan Quarto), dan masih banyak lagi.
+
+    -   membuat website dari 0 jauh lebih susah daripada wordpress atau blogpost, tapi jauh lebih customizable.
+
+-   Jika anda tertarik, anda dapat belajar quarto dan RStudio sendiri lebih jauh.
