@@ -36,5 +36,5 @@ slides:
 - {{% staticref "/metopel/meeting10/index.html" "newtab" %}}Pertemuan 10: Data{{% /staticref %}}
 - {{% staticref "/metopel/meeting11/index.html" "newtab" %}}Pertemuan 11: Menggunakan Zotero{{% /staticref %}}
 - {{% staticref "/metopel/meeting12/index.html" "newtab" %}}Pertemuan 12: Beginner dataviz with ggplot{{% /staticref %}}
-- {{% staticref "/metopel/meeting13/index.html" "newtab" %}}Pertemuan 12: Kerangka penelitian{{% /staticref %}}
+- {{% staticref "/metopel/meeting13/index.html" "newtab" %}}Pertemuan 13: Kerangka penelitian{{% /staticref %}}
 - {{% staticref "/metopel/meeting14/index.html" "newtab" %}}Pertemuan 14: Quarto dan Github as hosting{{% /staticref %}}
