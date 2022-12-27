@@ -134,9 +134,9 @@ ggplot(data=dat,aes(x=X,y=Y))+
 
 ## Template
 
-- Untuk tugas akhir anda, ambil template qmd yang sudah saya siapkan di [sini](https://1drv.ms/u/s!AjelszXKKcmsibt_MGYrBYBHznHTIw?e=yyphLf)
+- Untuk tugas akhir anda, ambil template qmd yang sudah saya siapkan di [sini](https://1drv.ms/u/s!AjelszXKKcmsibt_MGYrBYBHznHTIw?e=5wZWyC)
 
-- download juga [gambar logo APP](https://1drv.ms/u/s!AjelszXKKcmsib94P19jDzQxzDKuiw?e=mHoTZd) dan [data latihan](https://1drv.ms/x/s!AjelszXKKcmsib91KU4DqMfl5s0lfQ?e=cZz0OE).
+- download juga [gambar logo APP](https://1drv.ms/u/s!AjelszXKKcmsib94P19jDzQxzDKuiw?e=ZyhAXU) dan [data latihan](https://1drv.ms/x/s!AjelszXKKcmsib91KU4DqMfl5s0lfQ?e=m5n6aN).
 
 - Simpan semuanya di 1 folder, buka file `index.qmd` dengan R Studio. Pastikan anda sudah install Quarto.
 
