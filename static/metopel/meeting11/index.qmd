@@ -108,11 +108,13 @@ Anda juga bisa buat akun Zotero untuk cloud tapi storagenya kecil.
 
 - Coba isi referensi-referensi berikut ini:
 
-    - [Journal article ini](https://www.sciencedirect.com/science/article/abs/pii/S0305750X14000096?via%3Dihub)
+    - [Journal article ini](https://onlinelibrary.wiley.com/doi/10.1111/twec.13231)
     
     - [Book Chapter ini, chapter 10](https://penerbit.brin.go.id/press/catalog/book/537)
 
     - [Berita ini (News Article)](https://www.republika.co.id/berita/rae295349/peneliti-neraca-komoditas-pangan-terganjal-data-akurat)
+    
+    - [Policy paper ini](https://www.cips-indonesia.org/publications/the-advent-of-a-new-trade-governance-after-the-omnibus-law%3A-neraca-komoditas?lang=id)
     
 ## FAQ
 
@@ -172,8 +174,9 @@ Anda juga bisa buat akun Zotero untuk cloud tapi storagenya kecil.
 
 - Output dari Zotero bisa jadi kurang sempurna. Selalu cek hasilnya setelah library dari Zotero di-paste di daftar pustaka anda.
 
-- Dengan qmd, anda juga bisa menggunakan apa yang disebut bibtex, tapi ini agak sedikit lebih ribet.
+- Dengan qmd, anda juga bisa menggunakan apa yang disebut bibtex. agak lebih advance, tapi bisa membantu kalau anda akan sering nulis akademis.
 
 ## Video
 
-<iframe width="1000" height="600" src="https://www.youtube.com/embed/-fiL7ZSONB0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+<iframe width="1000" height="600" src="https://www.youtube.com/embed/IyTZBFNAYBo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
