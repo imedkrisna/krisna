@@ -1079,8 +1079,13 @@ Metodologi penelitian
 
 </div>
 <img data-src="index_files/figure-revealjs/unnamed-chunk-3-1.png" width="960" class="r-stretch"></section>
+<section id="cara-save-ggplot" class="slide level2">
+<h2>Cara save ggplot</h2>
+
+<img data-src="gambar2.jpg" class="r-stretch quarto-figure-center"><p class="caption">pilih export, save as png. filenya akan muncul di folder anda.</p></section>
 <section id="theme-bw" class="slide level2">
 <h2>Theme BW</h2>
+<p>Anda juga bisa nambah theme utk ganti kosmetik grafik.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>dat,<span class="fu">aes</span>(<span class="at">x=</span>PDB,<span class="at">y=</span>import)) <span class="sc">+</span></span>
 <span id="cb6-2"><a href="#cb6-2"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="co"># setiap nambah command, selalu kasih tanda +</span></span>
@@ -1094,6 +1099,7 @@ Metodologi penelitian
 <img data-src="index_files/figure-revealjs/unnamed-chunk-4-1.png" width="960" class="r-stretch"></section>
 <section id="theme-classic" class="slide level2">
 <h2>Theme Classic</h2>
+<p>Theme-theme built in bisa dilihat di <a href="https://r-charts.com/ggplot2/themes/">sini</a></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>dat,<span class="fu">aes</span>(<span class="at">x=</span>PDB,<span class="at">y=</span>import)) <span class="sc">+</span></span>
 <span id="cb7-2"><a href="#cb7-2"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="co"># setiap nambah command, selalu kasih tanda +</span></span>
@@ -1188,16 +1194,16 @@ Metodologi penelitian
 <pre><code># A tibble: 275 × 8
    country year            import      export PDBperkapita    LM    LX    LP
    &lt;chr&gt;   &lt;date&gt;           &lt;dbl&gt;       &lt;dbl&gt;        &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
- 1 China   1967-12-25 2169144528. 2388496222.         96.6  9.34  9.38  1.98
- 2 China   1968-12-25 2067592818. 2339751401.         91.5  9.32  9.37  1.96
- 3 China   1969-12-25 1917296287. 2429116906.        100.   9.28  9.39  2.00
- 4 China   1970-12-25 2278820375. 2307254854.        113.   9.36  9.36  2.05
- 5 China   1971-12-25 2128523844. 2782516858.        119.   9.33  9.44  2.07
- 6 China   1972-12-25 2850652532. 3692485858.        132.   9.45  9.57  2.12
- 7 China   1973-12-25 5207600281. 5876143561.        157.   9.72  9.77  2.20
- 8 China   1974-12-25 7791148277. 7107893127.        160.   9.89  9.85  2.20
- 9 China   1975-12-25 7925583396. 7688998817.        178.   9.90  9.89  2.25
-10 China   1976-12-25 6660142165. 6943442876.        165.   9.82  9.84  2.22
+ 1 China   1967-12-27 2169144528. 2388496222.         96.6  9.34  9.38  1.98
+ 2 China   1968-12-27 2067592818. 2339751401.         91.5  9.32  9.37  1.96
+ 3 China   1969-12-27 1917296287. 2429116906.        100.   9.28  9.39  2.00
+ 4 China   1970-12-27 2278820375. 2307254854.        113.   9.36  9.36  2.05
+ 5 China   1971-12-27 2128523844. 2782516858.        119.   9.33  9.44  2.07
+ 6 China   1972-12-27 2850652532. 3692485858.        132.   9.45  9.57  2.12
+ 7 China   1973-12-27 5207600281. 5876143561.        157.   9.72  9.77  2.20
+ 8 China   1974-12-27 7791148277. 7107893127.        160.   9.89  9.85  2.20
+ 9 China   1975-12-27 7925583396. 7688998817.        178.   9.90  9.89  2.25
+10 China   1976-12-27 6660142165. 6943442876.        165.   9.82  9.84  2.22
 # … with 265 more rows</code></pre>
 </div>
 </div>
@@ -1286,6 +1292,7 @@ Metodologi penelitian
 <h2>More on ggplot</h2>
 <ul>
 <li><p>masih ada banyak jurus-jurus di ggplot bahkan bisa buat gambar hal-hal yang bukan data.</p></li>
+<li><p>Ada banyak built-in theme yang bisa dilihat di <a href="https://r-charts.com/ggplot2/themes/">sini</a></p></li>
 <li><p>Tapi untuk saat ini, cukup segini dulu yang dipelajari.</p></li>
 <li><p>Jika anda tertarik lebih lanjut mempelajari ggplot, anda dapat gunakan google.</p></li>
 </ul>
