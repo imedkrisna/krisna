@@ -36,7 +36,7 @@ featured: true
 #   icon_pack: fab
 #   icon: twitter
 
-url_pdf: https://www.cips-indonesia.org/neraca-komoditas-policy-paper
+url_pdf: https://www.cips-indonesia.org/publications/the-advent-of-a-new-trade-governance-after-the-omnibus-law%3A-neraca-komoditas?lang=id
 url_code:
 url_dataset:
 url_poster:
