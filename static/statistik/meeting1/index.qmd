@@ -1,0 +1,15 @@
+---
+title: "Pendahuluan"
+subtitle: "Pertemuan 1"
+author: "Matematika Statistika"
+format: 
+  revealjs:
+    theme: [simple,../mytheme.scss]
+    chalkboard: true
+    incremental: false
+    transition: convex
+    background-transition: fade
+    slide-number: true
+---
+
+## wkwk
