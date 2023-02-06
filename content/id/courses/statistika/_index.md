@@ -24,6 +24,8 @@ Mata kuliah ini merupakan salah satu mata kuliah wajib di Politeknik APP Jakarta
 
 ## Peta Kompetensi Mata Kuliah Matematika dan Statistika
 
+Mata kuliah ini diharapkan mampu membantu mengisi salah satu [Capaian Pembelajaran Lulusan (CPL) pengetahuan]() di Politeknik APP Jakarta khususnya prodi PIWAR yaitu "Menguasai pengetahuan tentang cara memilih dan menggunakan alat manajemen (management tools) untuk menetapkan suatu keputusan manajerial".
+
 ```mermaid
 flowchart BT
   X[1. Mahasiswa mampu mengidentifikasi berbagai jenis data] --> C[4. Menjelaskan kondisi dari populasi berdasarkan informasi statistik.]
@@ -33,7 +35,6 @@ flowchart BT
   C --> E[7. Melakukan tes hipotesis] --> G[8. Melakukan regresi univariat]
   F[6. Membersihkan data sehingga _machine-readable_.] --> G
 ```
-
 
 ## Capaian Pembelajaran dan Sub-Capaian Pembelajaran
 
