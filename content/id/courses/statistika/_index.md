@@ -28,11 +28,12 @@ Setelah lulus mata kuliah ini, mahasiswa diharapkan akan mampu menggunakan alat-
 
 Beberapa sub-capaian antara lain:
 
-1.	Menjelaskan prinsip dasar sampling dan distribusi.
-2.	Menjelaskan prinsip-prinsip dasar probabilitas.
-3.	Menjelaskan kondisi dari populasi berdasarkan data-data statistik. 
-4.	Menghitung expected value dari probabilitas berbasis frekuensi.
-5.	Menjelaskan prinsip-prinsip regresi linear.
+1. Menjelaskan prinsip dasar sampling dan distribusi.
+2. Menjelaskan prinsip-prinsip dasar probabilitas.
+3. Menjelaskan kondisi dari populasi berdasarkan data-data statistik. 
+4. Menghitung expected value dari probabilitas berbasis frekuensi.
+5. Menjelaskan prinsip-prinsip regresi linear.
+6. Melakukan regresi univariat di _Microsoft Excel_
 
 ## Syarat & Prasayarat
 
