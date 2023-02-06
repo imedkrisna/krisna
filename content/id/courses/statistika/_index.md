@@ -1,7 +1,7 @@
 ---
-date: "2023-02-06T00:00:00Z"
+date: "2023-02-05T00:00:00Z"
 draft: false
-lastmod: "2022-08-10T00:00:00Z"
+lastmod: "2023-02-05T00:00:00Z"
 linktitle: Statistika
 menu:
   example:
