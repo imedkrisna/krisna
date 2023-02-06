@@ -22,23 +22,40 @@ Menurut [World Economic Forum](https://www.weforum.org/agenda/2020/10/top-10-wor
 
 Mata kuliah ini merupakan salah satu mata kuliah wajib di Politeknik APP Jakarta jurusan Perdagangan Internasional. Mata kuliah ini bermaksud memberi pemahaman tentang prinsip dasar ilmu statistika, seperti probabilitas dan sampling. Mahasiswa juga akan belajar bagaimana mendapat gambaran dari populasi dengan melihat angka rata-rata, median, modus, rentang dan distribusi. Mahasiswa akan juga dibekali kemampuan untuk menggunakan alat-alat analisis seperti _hypothesis testing_ dan regresi, dalam pengawasan.
 
+## Peta Kompetensi Mata Kuliah Matematika dan Statistika
+
+```mermaid
+flowchart BT
+  X[1. Mahasiswa mampu mengidentifikasi berbagai jenis data] --> C[4. Menjelaskan kondisi dari populasi berdasarkan informasi statistik.]
+  A[2. Mahasiswa mampu menjelaskan prinsip dasar sampling dan distribusi.] --> C
+  B[3. Menjelaskan prinsip-prinsip dasar probabilitas.] --> D[4. Menghitung expected value dari probabilitas berbasis frekuensi.]
+  D --> C
+  C --> E[7. Melakukan tes hipotesis] --> G[8. Melakukan regresi univariat]
+  F[6. Membersihkan data sehingga _machine-readable_.] --> G
+```
+
+
 ## Capaian Pembelajaran dan Sub-Capaian Pembelajaran
 
 Setelah lulus mata kuliah ini, mahasiswa diharapkan akan mampu menggunakan alat-alat analisis berbasis statistika.
 
 Beberapa sub-capaian antara lain:
 
-1. Menjelaskan prinsip dasar sampling dan distribusi.
-2. Menjelaskan prinsip-prinsip dasar probabilitas.
-3. Menjelaskan kondisi dari populasi berdasarkan informasi statistik. 
-4. Menghitung expected value dari probabilitas berbasis frekuensi.
-5. Menjelaskan prinsip-prinsip regresi linear.
-6. Membersihkan data sehingga _machine-readable_.
-7. Melakukan regresi univariat.
+1.	Mengidentifikasi berbagai jenis data (C1).
+2.	Menerangkan prinsip dasar sampling dan distribusi (C2).
+3.	Menerangkan prinsip-prinsip dasar probabilitas (C2).
+4.	Menjelaskan kondisi dari populasi berdasarkan informasi statistik (C2). 
+5.	Menghitung expected value dari probabilitas berbasis frekuensi (C3).
+6.	Membersihkan data sehingga _machine-readable_ (C3).
+7.	Melakukan tes hipotesis (C3).
+8.	Melakukan regresi univariat (C3).
+
 
 ## Syarat & Prasayarat
 
 Tidak ada prasyarat untuk mata kuliah ini. Mata kuliah ini sendiri merupakan prasyarat untuk mata kuliah [Metodologi Penelitian](https://krisna.or.id/courses/metopel/).
+
+
 
 ## Evaluasi
 
