@@ -28,12 +28,12 @@ Mata kuliah ini diharapkan mampu membantu mengisi salah satu [Capaian Pembelajar
 
 ```mermaid
 flowchart BT
-  X[1. Mahasiswa mampu mengidentifikasi berbagai jenis data] --> C[4. Menjelaskan kondisi dari populasi berdasarkan informasi statistik.]
-  A[2. Mahasiswa mampu menjelaskan prinsip dasar sampling dan distribusi.] --> C
-  B[3. Menjelaskan prinsip-prinsip dasar probabilitas.] --> D[4. Menghitung expected value dari probabilitas berbasis frekuensi.]
+  X[1. Mahasiswa mampu <br>mengidentifikasi berbagai<br> jenis data] --> C[4. Mahasiswa mampu <br>menjelaskan kondisi <br>dari populasi berdasarkan <br>informasi statistik.]
+  A[2. Mahasiswa mampu <br>menjelaskan prinsip dasar<br> sampling dan distribusi.] --> C
+  B[3. Mahasiswa mampu<br>menjelaskan prinsip<br> dasar probabilitas.] --> D[4. Mahasiswa mampu<br>menghitung expected value<br> dari probabilitas <br>berbasis frekuensi.]
   D --> C
-  C --> E[7. Melakukan tes hipotesis] --> G[8. Melakukan regresi univariat]
-  F[6. Membersihkan data sehingga _machine-readable_.] --> G
+  C --> E[7. Mahasiswa mampu<br>melakukan tes hipotesis] --> G[8. Mahasiswa mampu<br>melakukan regresi<br> univariat]
+  F[6. Membersihkan data.] --> G
 ```
 
 ## Capaian Pembelajaran dan Sub-Capaian Pembelajaran
@@ -55,8 +55,6 @@ Beberapa sub-capaian antara lain:
 ## Syarat & Prasayarat
 
 Tidak ada prasyarat untuk mata kuliah ini. Mata kuliah ini sendiri merupakan prasyarat untuk mata kuliah [Metodologi Penelitian](https://krisna.or.id/courses/metopel/).
-
-
 
 ## Evaluasi
 
