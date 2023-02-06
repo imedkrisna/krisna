@@ -24,7 +24,7 @@ Mata kuliah ini merupakan salah satu mata kuliah wajib di Politeknik APP Jakarta
 
 ## Capaian Pembelajaran dan Sub-Capaian Pembelajaran
 
-Setelah lulus mata kuliah ini, mahasiswa diharapkan akan mampu menggunakan alat-alat analisis berbasis statistika. 
+Setelah lulus mata kuliah ini, mahasiswa diharapkan akan mampu menggunakan alat-alat analisis berbasis statistika.
 
 Beberapa sub-capaian antara lain:
 
@@ -34,17 +34,9 @@ Beberapa sub-capaian antara lain:
 4.	Menghitung expected value dari probabilitas berbasis frekuensi.
 5.	Menjelaskan prinsip-prinsip regresi linear.
 
-## Hal-hal yang dibutuhkan
+## Syarat & Prasayarat
 
-- Mahasiswa dianggap memahami dasar-dasar statistik dan memiliki pengetahuan soal regresi sederhana secara _cross section_. Kesemua kemampuan ini akan didapatkan dari mata kuliah Matematika dan Statistika yang sudah didapatkan di semester 1. Jika mahasiswa lupa, sangat disarankan untuk diingat-ingat kembali pelajaran ini, karena materi di mata kuliah Matematika dan Statistika tidak akan diulang lagi di mata kuliah ini.
-
-- Mahasiswa akan dianggap **belum** memiliki pengetahuan apapun soal menggunakan software yang akan diajarkan di mata kuliah ini. Karena itu pengajaran akan dimulai dengan sesuatu yang sangat dasar, yaitu bagaimana mencari data, mencari lokasi mengunduh, dan menginstallnya. Kemampuan membuat _script_ atau _programming_ akan sangat menolong, namun diasumsikan belum diajarkan.
-
-- Mahasiswa dianggap sudah dapat menggunakan _data processing tool_ berbasis jendela seperti Microsoft Excel atau Google Sheet.
-
-- Mahasiswa diharapkan telah memiliki sebuah perangkat komputasi berbasis Windows, Mac atau Linux. Mata kuliah ini akan diajarkan dengan menggunakan Windows, namun selain proses instalasi, cara-cara penggunaan tools di mata kuliah ini akan sama saja apapun _Operating System_ yang dipilih. Perangkat komputasi baru akan digunakan di paruh 2 perkuliahan.
-
-- Mahasiswa diharapkan memiliki akses terhadap internet. Internet sangat diperlukan terutama pada saat proses instalasi baik _software_ maupun _packages_. Mahasiswa dapat menggunakan wifi Politeknik APP Jakarta.
+Tidak ada prasyarat untuk mata kuliah ini. Mata kuliah ini sendiri merupakan prasyarat untuk mata kuliah [Metodologi Penelitian](https://krisna.or.id/courses/metopel/).
 
 ## Evaluasi
 
