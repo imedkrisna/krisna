@@ -20,7 +20,7 @@ commentable: false
 
 Menurut [World Economic Forum](https://www.weforum.org/agenda/2020/10/top-10-work-skills-of-tomorrow-how-long-it-takes-to-learn-them/), kemampuan berpikir analitik dan penggunaan teknologi merupakan 2 dari 10 kemampuan yang paling dicari pada 2025. Hal ini sejalan dengan keinginan Kementerian Perindustrian untuk mengarahkan pengembangan Industri 4.0 yang menitikberatkan pada kemampuan analitis dan penggunaan teknologi komputasi. Seiring meningkatnya akses data, maka pemahaman statistik semakin diperlukan, apalagi di bidang ilmu sosial. Melihat tren ke depan, Politeknik APP Jakarta merasa perlunya membekali mahasiswa dengan kemampuan yang akan tinggi permintaannya di masa depan.
 
-Mata kuliah ini merupakan salah satu mata kuliah wajib di Politeknik APP Jakarta jurusan Perdagangan Internasional. Mata kuliah ini bermaksud memberi pemahaman tentang prinsip dasar ilmu statistika, seperti probabilitas dan sampling. Mahasiswa juga akan belajar bagaimana mendapat gambaran dari populasi dengan melihat angka rata-rata, median, modus, rentang dan distribusi. Mahasiswa akan juga dibekali alat-alat analisis di statistika yang paling dasar, seperti _hypothesis testing_ dan _univariate regression_.
+Mata kuliah ini merupakan salah satu mata kuliah wajib di Politeknik APP Jakarta jurusan Perdagangan Internasional. Mata kuliah ini bermaksud memberi pemahaman tentang prinsip dasar ilmu statistika, seperti probabilitas dan sampling. Mahasiswa juga akan belajar bagaimana mendapat gambaran dari populasi dengan melihat angka rata-rata, median, modus, rentang dan distribusi. Mahasiswa akan juga dibekali kemampuan untuk menggunakan alat-alat analisis seperti _hypothesis testing_ dan regresi, dalam pengawasan.
 
 ## Hal-hal yang dibutuhkan
 
