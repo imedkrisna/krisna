@@ -33,7 +33,7 @@ Beberapa sub-capaian antara lain:
 3. Menjelaskan kondisi dari populasi berdasarkan informasi statistik. 
 4. Menghitung expected value dari probabilitas berbasis frekuensi.
 5. Menjelaskan prinsip-prinsip regresi linear.
-6. Membersihkan data yang _machine readable_.
+6. Membersihkan data sehingga _machine-readable_.
 7. Melakukan regresi univariat.
 
 ## Syarat & Prasayarat
