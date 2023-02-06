@@ -30,10 +30,11 @@ Beberapa sub-capaian antara lain:
 
 1. Menjelaskan prinsip dasar sampling dan distribusi.
 2. Menjelaskan prinsip-prinsip dasar probabilitas.
-3. Menjelaskan kondisi dari populasi berdasarkan data-data statistik. 
+3. Menjelaskan kondisi dari populasi berdasarkan informasi statistik. 
 4. Menghitung expected value dari probabilitas berbasis frekuensi.
 5. Menjelaskan prinsip-prinsip regresi linear.
-6. Melakukan regresi univariat di _Microsoft Excel_
+6. Membersihkan data yang _machine readable_.
+7. Melakukan regresi univariat.
 
 ## Syarat & Prasayarat
 
