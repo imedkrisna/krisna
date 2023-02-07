@@ -56,10 +56,18 @@ Beberapa sub-capaian antara lain:
 
 Tidak ada prasyarat untuk mata kuliah ini. Mata kuliah ini sendiri merupakan prasyarat untuk mata kuliah [Metodologi Penelitian](https://krisna.or.id/courses/metopel/).
 
+## Buku Pegangan
+
+Mata kuliah ini tidak didasari oleh buku tertentu, dan sudah didesain sebagaimana sehingga perkuliahan, latiah dan tugas saja sudah cukup. Namun demikian, ada beberapa buku yang akan berguna bagi mahasiswa untuk dibaca untuk meningkatkan pemahaman. 
+
+Buku yang paling saya rekomendasikan adalah Supranto (2016). Saefuddin dkk (2009) memiliki bahasa yang menurut saya cukup sederhana, sementara Sugiyono (2017) merupakan salah satu buku metode statistika yang paling populer. Semua buku-buku ini tersedia di perpustakaan Politeknik APP Jakarta.
+
 ## Evaluasi
 
-## Daftar pustaka
+## Daftar Pustaka
 
-- Sugiyono. (2007). Metode Penelitian Bisnis. Bandung: Alfabeta, CV.
-- Sugiyono. (2016). Metode Penelitian Kuantitatif, Kualitatif, dan R&D. Bandung: Alfabeta, CV.
+- Saefuddin, A., Notodiputro, K. A., Alamudi, A., & Sadik, K. (2009). Statistika Dasar. BM Adam. 
+- Sugiyono. (2017). Statistika untuk penelitian. Bandung: Alfabeta.
+- Supranto, J. (2016). Statistik: Teori & Aplikasi. Jakarta: Erlangga.
+
 
