@@ -11,7 +11,7 @@ summary: Contoh UAS
 title: Contoh UAS
 toc: true
 type: book
-weight: 10
+weight: 40
 editable: false
 commentable: false
 ---
