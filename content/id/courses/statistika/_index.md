@@ -63,8 +63,7 @@ Tidak ada prasyarat untuk mata kuliah ini. Mata kuliah ini sendiri merupakan pra
 | Mengidentifikasi berbagai jenis data (C1). | ✅ | - | - | - | - | - | - |
 | Menerangkan prinsip dasar sampling dan distribusi (C2). | ✅ | - | - | - | - | - | - |
 | Menerangkan prinsip-prinsip dasar probabilitas (C2). | ✅ | - | - | - | - | - | - |
-| Menjelaskan kondisi dari populasi berdasarkan informasi statistik (C2).  | ✅ | | Menjelaskan kondisi dari populasi berdasarkan informasi statistik (C2).  | ✅ | - | - | ✅ | - | ✅ | - |
- | - | ✅ | - | ✅ | - |
+| Menjelaskan kondisi dari populasi berdasarkan informasi statistik (C2).  | ✅ | | Menjelaskan kondisi dari populasi berdasarkan informasi statistik (C2).  | ✅ | - | - | ✅ | - | ✅ | - | - | - | ✅ | - | ✅ | - |
 | Menghitung expected value dari probabilitas berbasis frekuensi (C3). | ✅ | - | - | ✅ | - | - | - |
 | Membersihkan data sehingga _machine-readable_ (C3). | ✅ | - | - | ✅ | - | ✅ | - |
 | Melakukan tes hipotesis (C3). |  ✅ | - | - | ✅ | - | - | - |
