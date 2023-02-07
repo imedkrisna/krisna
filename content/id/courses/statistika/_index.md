@@ -56,6 +56,19 @@ Beberapa sub-capaian antara lain:
 
 Tidak ada prasyarat untuk mata kuliah ini. Mata kuliah ini sendiri merupakan prasyarat untuk mata kuliah [Metodologi Penelitian](https://krisna.or.id/courses/metopel/).
 
+## Metode pembelajaran
+
+| Rumusan kompetensi | Ceramah | Seminar/ diskusi | praktikum | problem-based learning | project-based learning | collaborate learning | simulasi |
+| ------ | --- | --- | --- | --- | --- | --- | --- |
+| Mengidentifikasi berbagai jenis data (C1). | ✅ | - | - | - | - | - | - |
+| Menerangkan prinsip dasar sampling dan distribusi (C2). | ✅ | - | - | - | - | - | - |
+| Menerangkan prinsip-prinsip dasar probabilitas (C2). | ✅ | - | - | - | - | - | - |
+| Menjelaskan kondisi dari populasi berdasarkan informasi statistik (C2).  | ✅ | - | - | ✅ | - | ✅ | - |
+| Menghitung expected value dari probabilitas berbasis frekuensi (C3). | ✅ | - | - | ✅ | - | - | - |
+| Membersihkan data sehingga _machine-readable_ (C3). | ✅ | - | - | ✅ | - | ✅ | - |
+| Melakukan tes hipotesis (C3). |  ✅ | - | - | ✅ | - | - | - |
+| Melakukan regresi univariat (C3). | ✅ | - | - | ✅ | - | - | - |
+
 ## Buku Pegangan
 
 Mata kuliah ini tidak didasari oleh buku tertentu, dan sudah didesain sebagaimana sehingga perkuliahan, latiah dan tugas saja sudah cukup. Namun demikian, ada beberapa buku yang akan berguna bagi mahasiswa untuk dibaca untuk meningkatkan pemahaman. 
