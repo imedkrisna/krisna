@@ -82,7 +82,7 @@ format:
 
 - Beberapa hal yang akan anda pelajari:
 
-::: .incremental
+::: {.incremental}
     
     - probabilitas dan sampling. 
     
@@ -137,7 +137,6 @@ format:
 | UTS    | semua          | 30        |
 | UAS  | semua          | 30        |
 
--   UTS dan UAS direncanakan tutup buku & _no gadgets_. Diperbolehkan membawa catatan berupa 1 lembar A4 (dapat diisi bolak-balik) dan kalkulator.
 -   Akan ada remedial & tidak ada tugas tambahan apapun.
 -   Materi di slides harusnya cukup untuk dapat A.
 
@@ -145,7 +144,7 @@ format:
 
 -   [e-learn.poltekapp.ac.id](https://e-learn.poltekapp.ac.id/) diperlukan untuk membaca dan mengumpulkan tugas.
 
--   Slides dapat diakses di [krisna.or.id/courses/trade](https://www.krisna.or.id/courses/trade/).
+-   Slides dapat diakses di [krisna.or.id/courses/statistika/slides](https://www.krisna.or.id/courses/statistika/slides).
 
     -   akan diupdate tiap minggu.
     
