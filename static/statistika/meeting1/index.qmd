@@ -12,4 +12,91 @@ format:
     slide-number: true
 ---
 
-## wkwk
+## Dosen anda
+
+::: columns
+::: {.column width="40%"}
+![](https://www.krisna.or.id/files/foto_krisna.jpg)
+:::
+
+::: {.column .s width="60%"}
+-   Full-time lecturer di Politeknik APP
+
+    -   Memulai karir sebagai birokrat di Kementerian Perindustrian
+    -   Pernah tutor/asdos di UI & ANU
+    -   Pernah mengajar [intro to economics](https://www.krisna.or.id/courses/econ101) di Universitas Petra. ([week 13](https://www.krisna.or.id/econ101/week13/index.html#1) may interest you)
+
+- Pendidikan:
+    
+    -   Master in economics dari UI/VU
+    
+    -   Doktor in economics dari ANU
+
+- Akses:
+
+    -   Surel: imade.krisna@poltekapp.ac.id
+    
+    -   Ruangan: A2004 (deket Pudir, Ruangan Kerja Sama)
+    
+:::
+:::
+
+## Agenda hari ini
+
+-   Administrasi dan Struktur mata kuliah
+-   Berbagai jenis data
+
+## Tentang Mata kuliah ini
+
+-   
+
+## Ekspektasi dari Mahasiswa
+
+-   Tidak ada prasyarat untuk mengikuti mata kuliah ini.
+-   Ilmu matematika yang anda dapat di SMA sudah cukup.
+    - Akan ada beberapa review matematika SMA yang akan kita gunakan.
+-   Punya akses internet.
+-   Tidak perlu bisa bahasa inggris, _but a good command of english will certainly be helpful_.
+-   Pernah bermain Microsoft Excel atau Google Sheet akan sangat membantu.
+
+## Beberapa rules
+
+-   Saya tidak mewajibkan kehadiran, telat boleh.
+-   bagi yang hadir dimohon untuk fokus, sopan dan tertib.
+-   Makan dan minum boleh asal jangan berbau tajam. ~~Dosen harus dibagi~~
+-   Tidak perlu ijin kalau mau keluar dengan alasan apapun.
+-   Di tengah perkuliahan akan ada break sekitar 15 menit.
+-   Jika ada pertanyaan, silakan langsung diajukan.
+
+## Evaluasi pembelajaran
+
+| metode | cakupan materi | bobot (%) |
+|--------|----------------|-----------|
+| 7 quiz    | minggu 1-7     | 20        |
+| Tugas kelompok    | minggu 8-13     | 20        |
+| UTS    | semua          | 30        |
+| UAS  | semua          | 30        |
+
+-   UTS dan UAS direncanakan tutup buku & _no gadgets_. Diperbolehkan membawa catatan berupa 1 lembar A4 (dapat diisi bolak-balik) dan kalkulator.
+-   Akan ada remedial & tidak ada tugas tambahan apapun.
+-   Materi di slides harusnya cukup untuk dapat A.
+
+## Tools
+
+-   [e-learn.poltekapp.ac.id](https://e-learn.poltekapp.ac.id/) diperlukan untuk membaca dan mengumpulkan tugas.
+
+-   Slides dapat diakses di [krisna.or.id/courses/trade](https://www.krisna.or.id/courses/trade/).
+
+    -   akan diupdate tiap minggu.
+    
+    -   cara print pdf: pencet `E`, tungguu bentar, lalu `ctrl+P`
+
+# Questions?
+
+<iframe src="https://giphy.com/embed/KUmcYqPW0dIGNHDEoE" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/disneyplus-marvel-studios-marvelstudios-msmarvel-KUmcYqPW0dIGNHDEoE">via GIPHY</a></p>
+
+## Tentang data
+
+## Minggu depan
+
+-   Matematika dalam Statistika
