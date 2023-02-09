@@ -1,0 +1,101 @@
+---
+title: "Konsep Probabilitas"
+subtitle: "Pertemuan 3"
+author: "Matematika & Statistika"
+format: 
+  revealjs:
+    theme: [simple,../mytheme.scss]
+    chalkboard: true
+    incremental: false
+    transition: convex
+    background-transition: fade
+    slide-number: true
+---
+
+## Minggu lalu
+
+- Definisi data dan berbagai jenis data
+
+- Mengapa kita melakukan sampling
+
+- Hukum bilangan besar dan teorema nilai pusat.
+
+## Hari ini
+
+::: {.incremental}
+
+- Definisi dan pendekatan klasik
+- Aturan dasar dalam probabilitas
+- Kejadian independen
+
+- Setelah kuliah hari ini, diharapkan anda dapat menerangkan prinsip-prinsip dasar probabilitas.
+:::
+
+## Apa itu peluang? {.s}
+
+- kejadian berpeluang adalah suatu kejadian atau aksi yang memiliki lebih dari satu kemungkinan hasil (_outcome_) yang didapatkan secara acak (_random_).
+
+```{mermaid}
+flowchart TB
+  A[Saya] -->B[Diem aja] --> C[teman]
+  A-->D[nembak]-->E[kekasih]
+  D-->F[tetap<br>teman]
+  D-->G[menjauh]
+```
+
+jalur kiri (diem aja) adalah kepastian, sementara jalur kanan (nembak) adalah kejadian atau aksi berpeluang.
+
+## Contoh lain
+
+- Cuaca besok bisa saja hujan, bisa mendung, dan bisa cerah.
+
+- Kondisi jalan di Jakarta besok pagi bisa macet atau macet banget.
+
+- Nilai ujian anda bisa saja A, B, C, D atau E.
+
+- Melempar dadu bisa muncul angka 1, 2, 3, 4, 5, atau 6.
+
+Seperti yang anda mungkin paham, hampir semua kejadian di dunia ini adalah kejadian berpeluang.
+
+## Menghitung peluang
+
+- Pendekatan klasik adalah dengan melakukan eksperimen sebanyak $n$, lalu melihat jumlah dari masing-masing hasilnya.
+
+- Lempar koin sebanyak $n=10$, lalu muncul $A=4$ dan $G=6$, saya katakan:
+
+$$
+P(A)=\frac{4}{10}
+$$
+- berapa $P(G)$?
+
+## Pendekatan klasik
+
+::: {.incremental}
+
+- Tahun lalu, dari 40 mahasiswa yang mengambil mata kuliah Statistika, 5 orang dapat nilai A, 10 orang dapat nilai B, 20 orang dapat nilai C, 4 orang dapat nilai D dan 1 orang dapat nilai E. Berapa persen peluang mahasiswa untuk tidak lulus di kelas Statistika?
+
+- $P(\text{tidak lulus})=\frac{4+1}{40}=\frac{5}{40}=\frac{1}{8}$
+:::
+
+## Review
+
+- Kejadian berpeluang adalah suatu kejadian atau aksi yang memiliki lebih dari satu kemungkinan hasil (_outcome_) yang didapatkan secara acak (_random_).
+
+- Hampir semua kejadian di dunia ini adalah kejadian berpeluang.
+
+- Pendekatan klasik adalah cara paling sederhana menghitung peluang: jumlah munculnya _outcome_ $X$ dibagi jumlah experiment $n$.
+
+## Review
+
+<div style='position: relative; padding-bottom: 56.25%; padding-top: 35px; height: 0; overflow: hidden;'><iframe sandbox='allow-scripts allow-same-origin allow-presentation' allowfullscreen='true' allowtransparency='true' frameborder='0' height='315' src='https://www.mentimeter.com/app/presentation/alngqgc7ba954m1catp37693pdqmwjib/embed' style='position: absolute; top: 0; left: 0; width: 100%; height: 100%;' width='420'></iframe></div>
+
+![](qr.png){.absolute top="400" left="1000" width="200" height="200"}
+
+## Minggu depan
+
+- Kejadian bersyarat dan kaidah Bayes
+
+- Menghitung _expected outcome_
+
+- Distribusi Probabilitas
+

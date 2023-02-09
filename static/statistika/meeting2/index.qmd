@@ -1,7 +1,7 @@
 ---
-title: "Konsep Probabilitas"
-subtitle: "Pertemuan 3"
-author: "Matematika & Statistika"
+title: "Pendahuluan"
+subtitle: "Pertemuan 1"
+author: "Matematika Statistika"
 format: 
   revealjs:
     theme: [simple,../mytheme.scss]
@@ -12,45 +12,162 @@ format:
     slide-number: true
 ---
 
-## Minggu lalu
+## Dosen anda
 
-## Hari ini
+::: columns
+::: {.column width="40%"}
+![](https://www.krisna.or.id/files/foto_krisna.jpg)
+:::
+
+::: {.column .s width="60%"}
+-   Full-time lecturer di Politeknik APP
+
+    -   Memulai karir sebagai birokrat di Kementerian Perindustrian
+    -   Pernah tutor/asdos di UI & ANU
+    -   Pernah mengajar [intro to economics](https://www.krisna.or.id/courses/econ101) di Universitas Petra. ([week 13](https://www.krisna.or.id/econ101/week13/index.html#1) may interest you)
+
+- Pendidikan:
+    
+    -   Master in economics dari UI/VU
+    
+    -   Doktor in economics dari ANU
+
+- Akses:
+
+    -   Surel: imade.krisna@poltekapp.ac.id
+    
+    -   Ruangan: A2004 (deket Pudir, Ruangan Kerja Sama)
+    
+:::
+:::
+
+## Agenda hari ini
+
+-   Administrasi dan Struktur mata kuliah
+-   Berbagai jenis data
+
+## Sosial kok belajar statistika?
+
+- Statistika mendapat reputasi sebagai "ilmunya anak IPA".
+
+- Padahal, statistika digunakan sebagai alat analisis oleh banyak bidang sosial!
+
+    - Menghitung risiko untuk keputusan investasi.
+    
+    - Meramalkan berbagai indikator ekonomi.
+    
+- Bahkan, statistika digunakan untuk **berbohong**.
+
+    - Pemahaman statistika yang baik dapat membantu.
+
+## Contoh
+
+<iframe style="height:700px; width:100%; border: none;" src="https://databoks.katadata.co.id/datapublishembed/144007/rata-rata-gaji-karyawan-di-jakarta-tertinggi-se-indonesia"></iframe>
+
+## Sosial kok belajar statistika?
+
+- Zaman sekarang, ilmu statistika dan analisis data menjadi semakin penting lagi.
+
+    - Menurut [World Economic Forum](https://www.weforum.org/agenda/2020/10/top-10-work-skills-of-tomorrow-how-long-it-takes-to-learn-them/), kemampuan berpikir analitik dan penggunaan teknologi merupakan 2 dari 10 kemampuan yang paling dicari pada 2025.
+    
+    - Melalui inisiatif Industri 4.0, Kementerian Perindustrian menitik-beratkan kemampuan analitik dan operasional teknologi komputasi.
+    
+    - Permintaan industri akan individu yang punya kemampuan analitik berdasarkan data semakin tinggi.
+    
+- Data semakin banyak, pengolahnya masih sedikit.
+    
+## Tentang Mata kuliah ini
+
+- Mata kuliah ini wajib dan merupakan prasyarat dari mata kuliah Metodologi Penelitian.
+
+- Beberapa hal yang akan anda pelajari:
 
 ::: {.incremental}
-
-- Pendekatan perhitungan probabilitas
-- Notasi himpunan
-- Aturan dasar dalam probabilitas
-- Kejadian independen
-
-Setelah kuliah hari ini, diharapkan anda dapat menerangkan prinsip-prinsip dasar probabilitas.
+    
+- probabilitas dan sampling. 
+    
+- mendapat gambaran dari populasi: nilai tengah, deviasi, distribusi.
+    
+- berkenalan dengan data.
+    
+- belajar menggunakan alat-alat analisis: hypothesis testing dan regresi.
+    
 :::
 
-## Example
+## Peta Kompetensi {.s}
 
+```{mermaid}
+flowchart BT
+  X[1. Mahasiswa mampu <br>mengidentifikasi berbagai<br> jenis data] --> C[4. Mahasiswa mampu <br>menjelaskan kondisi <br>dari populasi berdasarkan <br>informasi statistik.]
+  A[2. Mahasiswa mampu <br>menjelaskan prinsip dasar<br> sampling dan distribusi.] --> C
+  B[3. Mahasiswa mampu<br>menjelaskan prinsip<br> dasar probabilitas.] --> D[4. Mahasiswa mampu<br>menghitung expected <br>value dari <br>probabilitas <br>berbasis frekuensi.]
+  D --> C
+  C --> E[7. Mahasiswa mampu<br>melakukan tes hipotesis] --> G[8. Mahasiswa mampu<br>melakukan regresi<br> univariat]
+  F[6. Membersihkan data.] --> G
+```
 
+## Tentang mata kuliah ini
 
-## Materi
+- Ilmu di mata kuliah ini merupakan konsep-konsep dasar.
 
+- Mengantarkan anda ke mata kuliah Metodologi Penelitian:
 
+    - Akan membahas data time-series, yang sangat penting di dunia perdagangan internasional.
+    
+    - Membuat laporan analitik yang berguna di industri.
+    
+- Ilmu dari mata kuliah ini tidak akan membuat anda jadi ahlinya data!
 
-## Review
+    - Analisis dapat dilakukan oleh supervisor anda.
+    
+    - Modal yang penting untuk mengejar pendidikan lanjut.
 
-## Review
+## Ekspektasi dari Mahasiswa
 
-::: {style="position: relative; padding-bottom: 56.25%; padding-top: 35px; height: 0; overflow: hidden;"}
-<iframe sandbox="allow-scripts allow-same-origin allow-presentation" allowfullscreen="true" allowtransparency="true" frameborder="0" height="315" src="https://www.mentimeter.com/app/presentation/c8bf0b7e0e43c612b741f63d2b8d972f/a003a4cc62b6/embed" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" width="420">
+-   Tidak ada prasyarat untuk mengikuti mata kuliah ini.
+-   Ilmu matematika yang anda dapat di SMA sudah cukup.
+    - Akan ada beberapa review matematika SMA yang akan kita gunakan.
+-   Punya akses internet.
+-   Tidak perlu bisa bahasa inggris, _but a good command of english will certainly be helpful_.
+-   Pernah bermain Microsoft Excel atau Google Sheet akan sangat membantu.
 
-</iframe>
-:::
+## Beberapa rules
 
-![](pic2.png){.absolute top="400" left="1000" width="200" height="200"}
+-   Saya tidak mewajibkan kehadiran, telat boleh.
+-   bagi yang hadir dimohon untuk fokus, sopan dan tertib.
+-   Makan dan minum boleh asal jangan berbau tajam. ~~Dosen harus dibagi~~
+-   Tidak perlu ijin kalau mau keluar dengan alasan apapun.
+-   Di tengah perkuliahan akan ada break sekitar 15 menit.
+-   Jika ada pertanyaan, silakan langsung diajukan.
+
+## Evaluasi pembelajaran
+
+| metode | cakupan materi | bobot (%) |
+|--------|----------------|-----------|
+| 7 quiz    | minggu 1-7     | 20        |
+| Tugas kelompok    | minggu 8-13     | 20        |
+| UTS    | semua          | 30        |
+| UAS  | semua          | 30        |
+
+-   Akan ada remedial & tidak ada tugas tambahan apapun.
+-   Materi di slides harusnya cukup untuk dapat A.
+
+## Tools
+
+-   [e-learn.poltekapp.ac.id](https://e-learn.poltekapp.ac.id/) diperlukan untuk membaca dan mengumpulkan tugas.
+
+-   Slides dapat diakses di [krisna.or.id/courses/statistika/slides](https://www.krisna.or.id/courses/statistika/slides).
+
+    -   akan diupdate tiap minggu.
+    
+    -   cara print pdf: pencet `E`, tungguu bentar, lalu `ctrl+P`
+
+# Questions?
+
+<iframe src="https://giphy.com/embed/KUmcYqPW0dIGNHDEoE" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/disneyplus-marvel-studios-marvelstudios-msmarvel-KUmcYqPW0dIGNHDEoE">via GIPHY</a></p>
+
+## Tentang data
 
 ## Minggu depan
 
-- Kejadian bersyarat dan kaidah Bayes
-
-- Menghitung _expected outcome_
-
-- Distribusi Probabilitas
-
+-   Matematika dalam Statistika
