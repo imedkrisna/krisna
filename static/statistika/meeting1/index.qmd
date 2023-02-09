@@ -46,6 +46,36 @@ format:
 -   Administrasi dan Struktur mata kuliah
 -   Berbagai jenis data
 
+## Sosial kok belajar statistika?
+
+- Statistika mendapat reputasi sebagai "ilmunya anak IPA".
+
+- Padahal, statistika digunakan sebagai alat analisis oleh banyak bidang sosial!
+
+    - Menghitung risiko untuk keputusan investasi.
+    
+    - Meramalkan berbagai indikator ekonomi.
+    
+- Bahkan, statistika digunakan untuk **berbohong**.
+
+    - Pemahaman statistika yang baik dapat membantu.
+
+## Contoh
+
+<iframe style="height:700px; width:100%; border: none;" src="https://databoks.katadata.co.id/datapublishembed/144007/rata-rata-gaji-karyawan-di-jakarta-tertinggi-se-indonesia"></iframe>
+
+## Sosial kok belajar statistika?
+
+- Zaman sekarang, ilmu statistika dan analisis data menjadi semakin penting lagi.
+
+    - Menurut [World Economic Forum](https://www.weforum.org/agenda/2020/10/top-10-work-skills-of-tomorrow-how-long-it-takes-to-learn-them/), kemampuan berpikir analitik dan penggunaan teknologi merupakan 2 dari 10 kemampuan yang paling dicari pada 2025.
+    
+    - Melalui inisiatif Industri 4.0, Kementerian Perindustrian menitik-beratkan kemampuan analitik dan operasional teknologi komputasi.
+    
+    - Permintaan industri akan individu yang punya kemampuan analitik berdasarkan data semakin tinggi.
+    
+- Data semakin banyak, pengolahnya masih sedikit.
+    
 ## Tentang Mata kuliah ini
 
 -   Mata kuliah ini wajib dan merupakan prasyarat dari mata kuliah Metodologi Penelitian.
@@ -64,17 +94,21 @@ format:
     
 :::
 
-## Sosial kok belajar statistika?
+## Tentang mata kuliah ini
 
-- Statistika mendapat reputasi sebagai "ilmunya anak IPA".
+- Ilmu di mata kuliah ini merupakan konsep-konsep dasar.
 
-- Padahal, statistika digunakan sebagai alat analisis oleh banyak bidang sosial!
+- Mengantarkan anda ke mata kuliah Metodologi Penelitian:
 
-    - kesalahan memahami statistika dapat menyebabkan mengambil keputusan yang salah.
+    - Akan membahas data time-series, yang sangat penting di dunia perdagangan internasional.
+    
+    - Membuat laporan analitik yang berguna di industri.
+    
+- Ilmu dari mata kuliah ini tidak akan membuat anda jadi ahlinya data!
 
-## Contoh
-
-<iframe style="height:700px; width:100%; border: none;" src="https://databoks.katadata.co.id/datapublishembed/144007/rata-rata-gaji-karyawan-di-jakarta-tertinggi-se-indonesia"></iframe>
+    - Analisis dapat dilakukan oleh supervisor anda.
+    
+    - Modal yang penting untuk mengejar pendidikan lanjut.
 
 ## Ekspektasi dari Mahasiswa
 
@@ -120,36 +154,6 @@ format:
 # Questions?
 
 <iframe src="https://giphy.com/embed/KUmcYqPW0dIGNHDEoE" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/disneyplus-marvel-studios-marvelstudios-msmarvel-KUmcYqPW0dIGNHDEoE">via GIPHY</a></p>
-
-## Sosial kok belajar statistika?
-
-- Statistika mendapat reputasi sebagai "ilmunya anak IPA".
-
-- Padahal, statistika digunakan sebagai alat analisis oleh banyak bidang sosial!
-
-    - Menghitung risiko untuk keputusan investasi.
-    
-    - Meramalkan berbagai indikator ekonomi.
-    
-- Bahkan, statistika digunakan untuk **berbohong**.
-
-    - Pemahaman statistika yang baik dapat membantu.
-
-## Contoh
-
-<iframe style="height:700px; width:100%; border: none;" src="https://databoks.katadata.co.id/datapublishembed/144007/rata-rata-gaji-karyawan-di-jakarta-tertinggi-se-indonesia"></iframe>
-
-## Sosial kok belajar statistika?
-
-- Zaman sekarang, ilmu statistika dan analisis data menjadi semakin penting lagi.
-
-    - Menurut [World Economic Forum](https://www.weforum.org/agenda/2020/10/top-10-work-skills-of-tomorrow-how-long-it-takes-to-learn-them/), kemampuan berpikir analitik dan penggunaan teknologi merupakan 2 dari 10 kemampuan yang paling dicari pada 2025.
-    
-    - Melalui inisiatif Industri 4.0, Kementerian Perindustrian menitik-beratkan kemampuan analitik dan operasional teknologi komputasi.
-    
-    - Permintaan industri akan individu yang punya kemampuan analitik berdasarkan data semakin tinggi.
-    
-- Data semakin banyak dan mudah diperoleh!
 
 ## Tentang data
 
