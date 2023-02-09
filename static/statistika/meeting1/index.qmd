@@ -84,13 +84,13 @@ format:
 
 ::: {.incremental}
     
-    - probabilitas dan sampling. 
+- probabilitas dan sampling. 
     
-    - mendapat gambaran dari populasi: nilai tengah, deviasi, distribusi.
+- mendapat gambaran dari populasi: nilai tengah, deviasi, distribusi.
     
-    - berkenalan dengan data.
+- berkenalan dengan data.
     
-    - belajar menggunakan alat-alat analisis: hypothesis testing dan regresi.
+- belajar menggunakan alat-alat analisis: hypothesis testing dan regresi.
     
 :::
 
