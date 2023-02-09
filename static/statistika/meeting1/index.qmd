@@ -94,9 +94,17 @@ format:
     
 :::
 
-## Peta Kompetensi
+## Peta Kompetensi {.s}
 
-
+```{mermaid}
+flowchart BT
+  X[1. Mahasiswa mampu <br>mengidentifikasi berbagai<br> jenis data] --> C[4. Mahasiswa mampu <br>menjelaskan kondisi <br>dari populasi berdasarkan <br>informasi statistik.]
+  A[2. Mahasiswa mampu <br>menjelaskan prinsip dasar<br> sampling dan distribusi.] --> C
+  B[3. Mahasiswa mampu<br>menjelaskan prinsip<br> dasar probabilitas.] --> D[4. Mahasiswa mampu<br>menghitung expected <br>value dari <br>probabilitas <br>berbasis frekuensi.]
+  D --> C
+  C --> E[7. Mahasiswa mampu<br>melakukan tes hipotesis] --> G[8. Mahasiswa mampu<br>melakukan regresi<br> univariat]
+  F[6. Membersihkan data.] --> G
+```
 
 ## Tentang mata kuliah ini
 
