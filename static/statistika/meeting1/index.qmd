@@ -78,7 +78,7 @@ format:
     
 ## Tentang Mata kuliah ini
 
--   Mata kuliah ini wajib dan merupakan prasyarat dari mata kuliah Metodologi Penelitian.
+- Mata kuliah ini wajib dan merupakan prasyarat dari mata kuliah Metodologi Penelitian.
 
 - Beberapa hal yang akan anda pelajari:
 
@@ -93,6 +93,10 @@ format:
 - belajar menggunakan alat-alat analisis: hypothesis testing dan regresi.
     
 :::
+
+## Peta Kompetensi
+
+
 
 ## Tentang mata kuliah ini
 
