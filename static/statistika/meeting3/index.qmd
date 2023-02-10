@@ -24,6 +24,7 @@ format:
 
 ::: {.incremental}
 
+- Jawaban quiz
 - Definisi dan pendekatan klasik
 - Aturan dasar dalam probabilitas
 - Kejadian independen
@@ -35,15 +36,9 @@ format:
 
 - kejadian berpeluang adalah suatu kejadian atau aksi yang memiliki lebih dari satu kemungkinan hasil (_outcome_) yang didapatkan secara acak (_random_).
 
-```{mermaid}
-flowchart TB
-  A[Saya] -->B[Diem aja] --> C[teman]
-  A-->D[nembak]-->E[kekasih]
-  D-->F[tetap<br>teman]
-  D-->G[menjauh]
-```
+![](ea.svg)
 
-jalur kiri (diem aja) adalah kepastian, sementara jalur kanan (nembak) adalah kejadian atau aksi berpeluang.
+jalur kiri (not confess) adalah kepastian, sementara jalur kanan (confess) adalah kejadian atau aksi berpeluang.
 
 ## Contoh lain
 
@@ -66,6 +61,7 @@ Seperti yang anda mungkin paham, hampir semua kejadian di dunia ini adalah kejad
 $$
 P(A)=\frac{4}{10}
 $$
+
 - berapa $P(G)$?
 
 ## Pendekatan klasik
@@ -93,9 +89,11 @@ $$
 
 ## Minggu depan
 
-- Kejadian bersyarat dan kaidah Bayes
+- Kejadian bersyarat dan kaidah Bayes.
 
 - Menghitung _expected outcome_
 
-- Distribusi Probabilitas
+- Distribusi Probabilitas.
+
+- Jangan lupa mengerjakan kuis di e-learn masing-masing.
 
