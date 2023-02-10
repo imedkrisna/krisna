@@ -14,9 +14,9 @@ format:
 
 ## Minggu lalu
 
-- Definisi data dan berbagai jenis data
+- Definisi data dan berbagai jenis data.
 
-- Mengapa kita melakukan sampling
+- Alasan kita melakukan sampling.
 
 - Hukum bilangan besar dan teorema nilai pusat.
 
@@ -36,7 +36,11 @@ format:
 
 - kejadian berpeluang adalah suatu kejadian atau aksi yang memiliki lebih dari satu kemungkinan hasil (_outcome_) yang didapatkan secara acak (_random_).
 
+. . .
+
 ![](ea.svg)
+
+. . .
 
 jalur kiri (not confess) adalah kepastian, sementara jalur kanan (confess) adalah kejadian atau aksi berpeluang.
 
@@ -49,6 +53,8 @@ jalur kiri (not confess) adalah kepastian, sementara jalur kanan (confess) adala
 - Nilai ujian anda bisa saja A, B, C, D atau E.
 
 - Melempar dadu bisa muncul angka 1, 2, 3, 4, 5, atau 6.
+
+. . .
 
 Seperti yang anda mungkin paham, hampir semua kejadian di dunia ini adalah kejadian berpeluang.
 
@@ -73,7 +79,7 @@ $$
 - $P(\text{tidak lulus})=\frac{4+1}{40}=\frac{5}{40}=\frac{1}{8}$
 :::
 
-## Review
+## Review {.incremental}
 
 - Kejadian berpeluang adalah suatu kejadian atau aksi yang memiliki lebih dari satu kemungkinan hasil (_outcome_) yang didapatkan secara acak (_random_).
 
@@ -91,7 +97,7 @@ $$
 
 - Kejadian bersyarat dan kaidah Bayes.
 
-- Menghitung _expected outcome_
+- Menghitung _expected outcome_.
 
 - Distribusi Probabilitas.
 
