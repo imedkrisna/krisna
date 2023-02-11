@@ -7,7 +7,7 @@ type: book
 commentable: false
 ---
 
-Mata kuliah ini adalah mata kuliah pilihan di Program Pascasarjana Ilmu Ekonomi Universitas Indonesia semester ganjil 2022/2023.
+
 
 ## Deskripsi mata kuliah
 
