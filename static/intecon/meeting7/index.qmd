@@ -1,0 +1,357 @@
+---
+title: "Trade policies"
+subtitle: "ECES905205 pertemuan 7"
+date: "10 Oktober 2022"
+author: "I Made Krisna Gupta"
+format: 
+  revealjs:
+    theme: [simple,../mytheme.scss]
+    chalkboard: true
+    incremental: false
+    transition: convex
+    background-transition: fade
+    slide-number: true
+  beamer: default
+---
+
+## Sejauh ini
+
+- Secara teori, gains from trade datang dari:
+  - Perbedaan teknologi dan spesialisasi -> more overall production.
+  - Pillihan basket of goods, karena apa yang dikonsumsi tidak harus sama dengan apa yang diproduksi.
+  - Pilihan merk.
+
+- Namun, gains from trade tidak merata:
+  - Pemilik faktor produksi yang kompetisi dengan impor lebih rugi.
+  - Perusahaan yang kalah produktif akan exit.
+  
+## Trade policy
+
+- Voices are not created equal: beberapa segmen masyarakat lebih penting bagi pemerintah.
+  - Namanya juga politik.
+- Segmen-segmen ini akan meminta pemerintah untuk menghalangi perdagangan
+- Bagaimana cara pemerintah melakukannya, dan siapa yang untuk dan rugi dari kebijakan-kebijakan perdagangan?
+
+## Tarif
+
+- Tarif adalah cara paling mendasar untuk membatasi perdagangan.
+  - Awalnya digunakan untuk meningkatkan pendapatan negara.
+  - Namun tujuan terselubungnya adalah proteksi domestic supplier.
+- Jaman dulu, banyak negara maju menggunakan tariff untuk tujuan yang ke-2.
+  - Negara-negara di eropa maupun Amerika Utara dulu pasang tarif untuk proteksi industri dalam negeri.
+  
+## Non-tarif
+
+- Seiring dengan penggunaan pajak pendapatan (income tax), tarif menjadi kurang penting bagi pendapatan negara.
+- Berbagai analisis sejak Ricardo juga menunjukkan pentingnya menurunkan tarif $\Rightarrow$ Free Trade Agreements (FTA)
+- Namun keinginan proteksi yang masih ada membuat banyak negara memanfaatkan kebijakan non-tarif atau Non-Tariff Measures (NTM): restriksi quota,
+- Tarif masih digunakan meski tidak seperti dulu.
+
+## Analisis Tarif
+
+- Analisis tarif merupakan analisis paling dasar namun penting.
+  - Analisis non-tariff juga umumnya menggunuakan tariff-equivalent.
+  - Kita akan menggunakan analisis parsial ekuilibrium.
+  
+- Typically there're 2 types of tariffs:
+  - Specific (dalam IDR per satuan unit)
+  - Ad valorem (persen)
+  
+- Effect differes: small vs large country.
+
+## Tariff for small country
+
+- We say a country is small when their policy does not affect world price.
+
+- "small" or "large" here is loosely defined.
+  - the most important thing is it affects world price.
+  - Indonesia is rather small in the import market.
+  - Indonesia is large in vegetable oil and (some) mineral markets.
+
+- For a small country, a tariff directly affects its domestic price.
+  - World price stays the same.
+
+## Tariff for small country
+
+```{r}
+#| label: fig1
+#| warning: false
+library(WDI)
+library(tidyverse)
+library(patchwork)
+
+D<-function(q) 10-q
+S<-function(q) q
+
+a<-ggplot()+
+  scale_x_continuous(expand=c(0,0),limits = c(0,10),breaks=c(3,4,6,7),
+                     labels=c("Sm","St","Dt","Dm"))+
+  scale_y_continuous(expand=c(0,0),limits = c(0,10),breaks=c(3,4),
+                     labels=c("Pw","Pw+t"))+
+  geom_function(fun = S,size=1, color='red') +
+  stat_function(fun = D,size=1, color='blue')+
+  annotate("segment",x=0,xend=6,y=4,yend=4,lty="dashed")+
+  annotate("segment",x=0,xend=7,y=3,yend=3,lty="dashed")+
+  annotate("segment",x=4,xend=4,y=0,yend=4,lty="dashed")+
+  annotate("segment",x=6,xend=6,y=0,yend=4,lty="dashed")+
+  annotate("segment",x=7,xend=7,y=0,yend=3,lty="dashed")+
+  annotate("segment",x=3,xend=3,y=0,yend=3,lty="dashed")+
+  annotate("text",x=2,y=3.5,label="A")+
+  annotate("text",x=3.7,y=3.2,label="B")+
+  annotate("text",x=5,y=3.5,label="C")+
+  annotate("text",x=6.2,y=3.2,label="D")+
+  labs(x="Q",y="P")+
+  theme_classic()+
+  theme(axis.title.x = element_text(hjust=1),
+        panel.background = element_rect(fill = "#f0f1eb", colour = "#f0f1eb"),
+        plot.background = element_rect(fill = "#f0f1eb"),
+        axis.title.y = element_text(angle=0,hjust=1,vjust=1),
+        panel.grid=element_blank(),
+#        axis.text.x=element_blank(),
+#        axis.text.y=element_blank(),
+#        axis.ticks.x=element_blank(),
+#        axis.ticks.y=element_blank(),
+        legend.position=c(1,1),
+        legend.justification = c(1,1),
+        legend.spacing=unit(0,"cm"),
+        legend.margin=margin(0,0,0,0))
+a
+```
+
+## Welfare impact
+
+- Jumlah impor turun dari $D_m - S_m$ jadi $D_t-S_t$
+- A+B+C+D = consumer surplus yang hilang.
+- A = consumer surplus yang pindah ke produsen.
+- C = tax revenue = consumer surplus yang pindah ke government.
+- B+D = Deadweight Loss.
+
+## Importer is a large country
+
+```{r}
+#| label: fig2
+#| warning: false
+
+demand<-function(q) 4-.7*q
+supply<-function(q) .7*q
+demand1<-function(q) 7.5-1.5*q
+supply1<-function(q) 1.5*q
+
+a<-ggplot()+scale_x_continuous(limits = c(1,5))+
+  scale_y_continuous(limits = c(1,5))+theme_classic()+
+  theme(axis.title.x = element_text(hjust=1),
+        axis.title.y = element_text(angle=0,hjust=1,vjust=1),
+        panel.grid=element_blank(),
+        axis.text.x=element_blank(),
+        axis.text.y=element_blank(),
+        axis.ticks.x=element_blank(),
+        axis.ticks.y=element_blank(),
+        legend.position=c(1,1),
+        legend.justification = c(1,1),
+        legend.spacing=unit(0,"cm"),
+        legend.margin=margin(0,0,0,0))
+b<-a+
+  labs(x=expression(Q[H]),y=expression(P[H]),color=NULL,fill=NULL)+
+  geom_function(fun = supply,size=1, color='red') +
+  stat_function(fun = demand,size=1, color='blue')
+c<-a+
+  labs(x=expression(Q[F]),y=expression(P[F]),color=NULL,fill=NULL)+
+  geom_function(fun = supply1,size=1, color='red') +
+  stat_function(fun = demand1,size=1, color='blue')
+c+a+b
+  
+```
+
+## Importer is a large country
+
+- Tariff yang dikeluarkan oleh importir besar menggeser harga dunia.
+  - $P_t - P_{tt}$ adalah tariff rate.
+  - ada **terms of trade** gain karena harga barang impor turun.
+- Dari dulu kalau AS yang bikin tarif, dunia pasti ribut.
+  - Pun ketika RRT yang memberi tarif terutama ke negara yang lebih kecil.
+
+## Importer is a large country
+
+```{r}
+
+a<-ggplot()+
+  scale_x_continuous(expand=c(0,0),limits = c(0,10),breaks=c(3,4,6,7),
+                     labels=c("Sm","St","Dt","Dm"))+
+  scale_y_continuous(expand=c(0,0),limits = c(0,10),breaks=c(2,3,4),
+                     labels=c("Ptt","Pw","Pt"))+
+  geom_function(fun = S,size=1, color='red') +
+  stat_function(fun = D,size=1, color='blue')+
+  annotate("segment",x=0,xend=6,y=4,yend=4,lty="dashed")+
+  annotate("segment",x=0,xend=7,y=3,yend=3,lty="dashed")+
+  annotate("segment",x=4,xend=4,y=0,yend=4,lty="dashed")+
+  annotate("segment",x=6,xend=6,y=0,yend=4,lty="dashed")+
+  annotate("segment",x=7,xend=7,y=0,yend=3,lty="dashed")+
+  annotate("segment",x=3,xend=3,y=0,yend=3,lty="dashed")+
+  annotate("segment",x=0,xend=7,y=2,yend=2,lty="dashed")+
+  annotate("text",x=2,y=3.5,label="A")+
+  annotate("text",x=3.7,y=3.2,label="B")+
+  annotate("text",x=5,y=3.5,label="C")+
+  annotate("text",x=6.2,y=3.2,label="D")+
+  annotate("text",x=5,y=2.5,label="E")+
+  labs(x="Q",y="P")+
+  theme_classic()+
+  theme(axis.title.x = element_text(hjust=1),
+        panel.background = element_rect(fill = "#f0f1eb", colour = "#f0f1eb"),
+        plot.background = element_rect(fill = "#f0f1eb"),
+        axis.title.y = element_text(angle=0,hjust=1,vjust=1),
+        panel.grid=element_blank(),
+        legend.position=c(1,1),
+        legend.justification = c(1,1),
+        legend.spacing=unit(0,"cm"),
+        legend.margin=margin(0,0,0,0))
+a
+```
+
+## Welfare impact of large country's tariff
+
+- Mirip seperti small country.
+- Cuma karena ada penurunan harga dunia dari $P_w \rightarrow P_{tt}$, maka A,B,C dan D jadi lebih kecil dari kalau small country.
+- Government revenue = C+E
+  - C adalah dari consumer surplus
+  - E dari terms of trade gain.
+- Jika B+D < E, maka tariff bisa memberi net positive welfare $\rightarrow$ yg rugi adalah negara lain.
+
+## Tariff and retaliation
+
+- Importir besar masih bisa untung dari impor tarif.
+- Untuk menghilangkan efek terms of trade, cara terbaik adalah retaliasi:
+  - kasih tarif untuk produk ekspor si importir.
+- Tapi kalau si eksportirnya kecil, maka tarif dia tidak akan ngaruh ke harga.
+  - Negara-negara eropa ngakalin ini dengan bergabung.
+- Jika sama-sama besar, berpotensi mengalami trade war, keduanya rugi.
+
+## Export subsidy
+
+- Export subsidy adalah subsidi yang diberikan pada eksportir.
+  - Jual ke luar negeri jadi lebih murah.
+- Export subsidy ini seperti halnya negative taiff.
+- Konsumen domestik dirugikan karena harga domestik jadi naik.
+- Subsidi membuat firms bisa jual.
+
+## Export subsidy
+
+::: columns
+::: {.column width=49%}
+
+```{r}
+#| fig-width: 5
+#| fig-height: 5
+a<-ggplot()+
+  scale_x_continuous(expand=c(0,0),limits = c(0,10),breaks=c(2,3,7,8),
+                     labels=c("Dm","Dt","St","Sm"))+
+  scale_y_continuous(expand=c(0,0),limits = c(0,10),breaks=c(6,7,8),
+                     labels=c("Pss","Pw","Ps"))+
+  geom_function(fun = S,size=1, color='red') +
+  stat_function(fun = D,size=1, color='blue')+
+  annotate("segment",x=0,xend=8,y=6,yend=6,lty="dashed")+
+  annotate("segment",x=0,xend=8,y=7,yend=7,lty="dashed")+
+  annotate("segment",x=8,xend=8,y=0,yend=8,lty="dashed")+
+  annotate("segment",x=2,xend=2,y=0,yend=8,lty="dashed")+
+  annotate("segment",x=0,xend=8,y=8,yend=8,lty="dashed")+
+  annotate("text",x=1,y=7.5,label="A")+
+  annotate("text",x=2.3,y=7.3,label="B")+
+  annotate("text",x=5,y=7.5,label="C")+
+  annotate("text",x=7.5,y=7.3,label="D")+
+  annotate("text",x=2.5,y=6.5,label="E")+
+  annotate("text",x=5,y=6.5,label="F")+
+  annotate("text",x=7.3,y=6.3,label="G")+
+  labs(x="Q",y="P")+
+  theme_classic()+
+  theme(axis.title.x = element_text(hjust=1),
+        panel.background = element_rect(fill = "#f0f1eb", colour = "#f0f1eb"),
+        plot.background = element_rect(fill = "#f0f1eb"),
+        axis.title.y = element_text(angle=0,hjust=1,vjust=1),
+        panel.grid=element_blank(),
+        legend.position=c(1,1),
+        legend.justification = c(1,1),
+        legend.spacing=unit(0,"cm"),
+        legend.margin=margin(0,0,0,0))
+a
+```
+:::
+::: {.column width="49%"}
+- A+B = domestic consumer loss
+- A+B+C = producer gain.
+- B+C+D+E+F+G = Government deficit.
+- D+E+F+G= DWL.
+:::
+:::
+
+## Import quota
+
+- Import quota punya analisis yang sama dengan tariff.
+  - Jika kuota ditegakkan, maka harga domestik akan naik.
+  - Selisih antara harga dunia dan harga ddomestik bisa dianggap tarif.
+  - Disebut juga **Ad Vallorem Equivalent**
+- Bedanya ada di siapa yang dapat revenue (quota rent).
+  - Untuk tariff, qquota rent sudah pasti diambil pemerintah.
+  - Gimana dengan kuota impor?
+  
+## Import quota
+
+- Pemerintah biasanya menunjuk perusahaan tertentu untuk impor.
+  - Berarti quota rent akan pergi ke perusahaan importir.
+- Jika quota dilelang, berarti quota rent jadi punya pemerintah.
+  - Dampaknya akan sama persis dengan tarif.
+- Jika kuota diserahkan ke eksportir, maka rent akan jadi milik eksportir. (VER)
+
+## Voluntary Export Restraint (VER)
+
+- Adalah ketika negara importir meminta negara eksportir untuk membatasi ekspor mereka.
+  - Artinya, eksportir membuat semacam kuota ekspor.
+  - Secara administratif jadi kerjaan Kemendag-nya eksportir.
+- Sekarang VER sudah jarang dipake. Dulu marak 1980an untuk mobil, baja dan tekstil (Multi-Fibre Arrangement MFA).
+
+## Quota vs tariff
+
+- Di Indonesia, kuota tidak dilelang oleh negara.
+  - potensi rent seeking behavior (dilelang oleh pejabat).
+- Jika ada perubahan demand atau supply:
+  - tariff yg tetap akan mengubah jumlah impor.
+  - kuota yang tetap akan mengubah harga.
+- Pemerintah harus [set kuota baru](https://www.krisna.or.id/post/sembako/) tiap ada perubahan supply demand
+  
+## Local Content Requirement (LCR)
+
+- Adalah peraturan yang mensyaratkan adanya kandungan domestik.
+- LCR (TKDN) memberikan proteksi bagi industri hulu seperti halnya proteksi dengan kuota.
+- Bagi industri hilir, hal ini akan berpengaruh ke ongkos produksi.
+  - Ongkos produksi ini akan dibebankan ke konsumen.
+  - lihat [post ini](https://www.krisna.or.id/post/tkdn/) untuk lebih lengkapnya.
+- LCR tidak menambah revenue bagi pemerintah.
+
+## LCR
+
+- LCR sangat umum diberlakukan di free trage agreement.
+  - Rules of Origin: untuk dapat tarif, sekian persen konten HS harus dari area FTA.
+- Juga jamak terjadi di belanja pemerintah.
+  - Korea, Brazil dan Indonesia mensyaratkan TKDN untuk alkes.
+  - EU dan US mensyaratkan TKDN untuk pembelian solar panel.
+- Di US, pemerintah daerah yang membangun proyek dengan TKDN dapat tambahan dana.
+
+## Proteksi berantai
+
+- Proteksi industri dapat berakibat perlunya regulasi tambahan.
+- LCR smartphone membuaut smartphone di Indonesia kalah murah dan variasinya berkurang.
+  - Mendorong jastip dan pasar gelap.
+  - Dibuatlah aturan blokir IMEI $\rightarrow$ ongkos lagi.
+- Proteksi jagung $\rightarrow$ pakan ayam jadi mahal $\rightarrow$ ayam dan telur minta diproteksi.
+
+## Other trade policies
+
+- Export credit subsidies: memberikan pinjaman dengan subsidi pemerintah bagi eksportir.
+- Red-tape barriers: sengaja lambat-lambatin prosedur ekspor, nambah pemeriksaan yang redundan, dst.
+
+## Summary
+
+| Policy | Tariff | Export Subsidy | Import Quota | VER |
+| ----- | --- | --- | ----- | ----- |
+| Producer surplus | $\Uparrow$ | $\Uparrow$ | $\Uparrow$ | $\Uparrow$ |
+| Consumer surplus | 
+| Government revenue | $\Uparrow$ | $\Downarrow$ | unchanged (to license holder) | unchanged (to foreign producer) |
+| Overall welfare | $\Downarrow$ if small | $\Downarrow$ | $\Downarrow$ if small | $\Downarrow$ |

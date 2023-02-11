@@ -1,0 +1,320 @@
+---
+title: "Ujian Tengah Semester"
+subtitle: "ECES905205 \n Analisis Ekonomi Perdagangan dan Industri"
+author: "I Made Krisna Yudhana Wisnu Gupta"
+date: "17 Oktober 2022"
+format:
+  pdf:
+    documentclass: scrartcl
+    papersize: a4paper
+
+---
+
+```{=tex}
+\begin{center}
+\rule{5.9in}{0.5pt}
+\end{center}
+```
+# Instruksi Ujian
+
+1. Waktu ujian adalah **3 jam** (60x3 menit).
+1. close book, no electronics kecuuali kalkulator (**kalkulator diperbolehkan**), boleh bawa max **5 lembar A4** bolak-balik (dikumpulkan bersama kertas jawaban).
+1. Jumlah soal ada 4. Kerjakan yang dianggap paling mudah dahulu.
+1. Angka di sebelah soal yang ada di dalam kurung adalah total available poin untuk soal tersebut. Total bobot adalah 100.
+1. Usahakan menjawab soal dengan jumlah kata seefisien mungkin. Nulis kebanyakan tidak akan menambah angka (ongkos nulis = 0).
+1. 4 soal tersebut dapat dikerjakan acak, tapi mohon per nomor-nya konsisten (misalnya jika kerjakan nomer 4 duluan boleh tapi mohon selesaikan semuua pertanyaan di nomor 4 dulu sebelum pindah ke nomor lain.)
+1. Jika ada soal yang memerlukan analisis dengan grafik, tidak perlu terlalu presisi tidak apa-apa.
+1. Jika sudah bingung tidak tahu mau pakai tools mana, silakan mencoba kasih penjelasan verbal yang logis daripada dikosongin.
+1. Selamat mengerjakan dan semoga sukses.
+
+# Soal
+
+## Pertanyaan 1: Trade Models (20)
+
+a. Sebutkan dengan singkat darimana gains from trade dari:
+
+    a.1. Ricardian (2)
+    
+    a.2. Specific factor (2)
+    
+    a.3. Heckscher-Ohlin (2)
+    
+    a.4. Monopolistic competition/model with fixed cost (4)
+
+b. Specific factor:
+
+    b.1. Specific factor model seringkali dikatakan sebagai model jangka pendek. Jelaskan alasannya! (3)
+    
+    b.2. Jika ada 2 barang C dan F, di mana C dibuat oleh buruh dan mesin, sementara F dibuat oleh buruh dan lahan. Ketika harga C naik 10% sementara harga F naik 10%, apa yang terjadi dengan distribusi pendapatan pemilik lahan, mesin dan buruh? (4)
+    
+    b.3. Seperti halnya b.2, tetapi kali ini harga C naik 10% sementara harga F naik 20%. Apa yang terjadi dengan distribusi pendapatan pemilik lahan, mesin dan buruh? (6)
+    
+## Pertanyaan 2: Standard Trade Model (30)
+
+Ada negara bernama Wakandaraya yang memproduksi dan mengonsumsi 2 jenis barang yaitu F dan C. Ekonomi Wakandaraya mengikuti asumsi di Standard Trade Model. Gambar di bawah ini menggambarkan situasi ekonomi di negara Wakandaraya:
+
+```{r}
+#| label: fig1
+#| warning: false
+#| echo: false
+#| fig-width: 7
+#| fig-height: 5
+#| fig-cap: "gambar 1. Ekonomi negara Wakandaraya"
+library(tidyverse)
+
+fppf <- function(q) (16-q^2)^(0.5)
+
+ppf<-ggplot() +
+  stat_function(fun = fppf,size=1.1, color='red') +
+  labs(x=expression(Q[C]), y=expression(Q[F]),color=NULL,fill=NULL)+
+  annotate("text",x=2,y=60,label=expression(Q[C]==Q[c](K,L[C])))+
+  scale_x_continuous(expand=c(0,0),limits = c(1,5))+
+  scale_y_continuous(expand=c(0,0),limits = c(1,5))+
+  theme_classic()+
+  theme(axis.title.x = element_text(hjust=1),
+        axis.title.y = element_text(angle=0,hjust=1,vjust=1),
+        panel.grid=element_blank(),
+        axis.text.x=element_blank(),
+        axis.text.y=element_blank(),
+        axis.ticks.x=element_blank(),
+        axis.ticks.y=element_blank(),
+        legend.position=c(1,1),
+        legend.justification = c(1,1),
+        legend.spacing=unit(0,"cm"),
+        legend.margin=margin(0,0,0,0))
+ppf2<-ppf+
+  annotate("segment",x = 1.2, y = 3.9,xend = 2.7, yend = 3.1,size=1.1)+
+  annotate("point", x=1.9,y=3.5,size=4)+
+  annotate("point", x=3.05,y=2.6,size=4)+
+  annotate("text", x=2,y=3.6,label="QT")+
+  annotate("text", x=3.15,y=2.8,label="QA=DA")+
+  annotate("text", x=4.1,y=1.5,label="(PC/PF)1")+
+  annotate("text", x=1.225,y=4.1,label="(PC/PF)2")+
+  annotate("text", x=4.0,y=1.1,label="PPF")+
+  annotate("text", x=4.15,y=2.2,label="IA")+
+  annotate("segment",x = 2.37, y = 3.5,xend = 3.92, yend = 1.5,size=1.1)+
+  annotate("curve", x = 2.47, y = 4,xend = 4.02, yend = 2,curvature = .3,size=1.1,col='blue')
+ppf2
+```
+
+Wakandaraya adalah negara yang tertutup dari dunia luar. Titik QA adalah alokasi produksi autarky (tanpa trade). Di posisi autarky, rasio harga adalah (PC/PF)1 sementara IA adalah indifference curve warga negaranya. Untuk saat ini, abaikan dulu QT dan (PC/PF)2.
+
+a. Di autarky, faktor apakah yang membetuk rasio harga (PC/PF)1? (3)
+b. Katakanlah $Q_F^A$ adalah jumlah produksi barang F di posisi autarky, sementara $Q_C^A$ adalah jumlah produksi barang C di posisi autarky. Dengan kata lain, $QA=\{Q_C^A,Q_F^A\}$. Sementara itu $DA=\{D_C^A,D_F^A\}$ adalah permintaan domestik. Di manakah alokasi DA pada gambar di atas? (3)
+c. Bisakah warga Wakandaraya meningkatkan konsumsi mereka? Kalau ya, gimana caranya? (3)
+
+Suatu hari ada pelantikan raja baru bernama Raja Cala. Raja Cala ingin membuka ekonomi Wakandaraya sehingga dimulailah rezim perdagangan bebas di Wakandaraya. Kebijakan ini membuat rasio harga pindah jadi (PC/PF)2 dan membuat produksi warga Wakandaraya geser ke QT.
+
+d. Di alokasi produksi baru $QT=\{Q_C^T,Q_F^T\}$, apa bedanya dengan alokasi lama $QA$? Manakah produksi yang berkurang dan manakah produksi yang bertambah? (3)
+e. Bagaimana kondisi rasio harga di rezim perdagangan bebas? harga barang mana yang jadi relatif lebih mahal? (3)
+
+Salin gambar di atas! (Bikin gambar yang agak besar).
+
+f. Katakanlah warga wakandaraya mengonsumsi di alokasi yang sama dengan QT. Di manakah lokasi indifference curve-nya? Namakan Indifference curve ini sebagai IB lalu tunjukkan di gambar! Lebih besar mana IA vs IB? (4)
+
+g. Warga Wakandaraya bisa lebih bahagia jika mereka trade. Gambar letak alokasi barunya (namakan alokasi ini sebagaiDT) dan lokasi indifference curve barunya (namakan IT). Barang apa yang diekspor dan barang apa yang diimpor? (7)
+
+Tiba-tiba Raja Cala lengser karena dikudeta Raja Caka. Raja Caka adalah merkantilis, dia anti impor dan pro ekspor. Si Raja Caka bikin aturan baru yang melarang impor sama sekali. Ekspor tetap boleh.
+
+h. Apa yang terjadi dengan produksi dan konsumsi? Di mana Indifference Curve ketika dilarang impor sama sekali? Jelaskan perjalanan dari QT dan DT sampai ke ekuilibrium baru jika impor dilarang sama sekali! (4)
+
+
+## Pertanyaan 3: Trade Policy & economies of scale(20)
+
+Gunakan analisis yang sudah kita pelajari sampai minggu ke-7 untuk menjawab soal berikut.
+
+a. Sebutkan perbedaan dari penggunaan tarif dan restriksi kuota! (4)
+b. Jelaskan alasan kenapa negara kecil biasanya lebih rajin mengejar Free Trade Agreement (4)
+c. Dari segi welfare, kenapa umuumnya pembatasan impor secara total lebih buruk? Kenapa tetap dilakukan? (4)
+d. Jelaskan mekanisme kenapa adanya fixed cost mengakibatkan kompetisi yang monopolistik (tidak sempurna)? Apa yang terjadi dengan jumlah total perusahaan di industri jika fixed cost makin tinggi? (4)
+e. Kenapa sebuah negara bisa jadi makin untung jika ekspornya banyak? (4)
+
+## Pertanyaan 4: Hecksher-Ohlin Economy (30)
+
+Negara Sokovia dengan karakteristik Hecksher-Ohlin economy memiliki 2 industri F dan C dengan teknologi sebagai berikut:
+```{=tex}
+\begin{align*}
+F=K^{\alpha}L^{\beta} \\
+C=K^{\gamma}L^{\delta}
+\end{align*}
+```
+
+di mana $\alpha+\beta=1$ dan $\gamma+\delta=1$. $K$ (kapital) dan $L$ (pekerja) adalah faktor produksi yang bergerak bebas antar industri. Total $K$ yang dapat digunakan oleh F dan C adalah $\bar{K}$, dan total $L$ yang dapat digunakan oleh kedua industri adalah $\bar{L}$. Dengan kata lain:
+```{=tex}
+\begin{align*}
+K_F+K_C&=\bar{K} \\
+L_F+L_C&=\bar{L}
+\end{align*}
+```
+harga yang harus dibayar oleh pengguna $K$ adalah, $r$, dan harga yang harus dibayar pengguna $L$ adalah $w$
+
+a. Agar F dapat disebut capital-intensive relative to C, apa restriksi yang harus diberikan kepada parameter $\alpha, \beta, \gamma \ \text{dan} \ \delta$? (3)
+
+b. Kenapa kita bisa mendapatkan nilai optimal dari factor demand dengan cara melakukan $MRS=\frac{w}{r}$? (4)
+
+Gunakan angka-angka berikut ini sebagai parameter di negara Sokovia untuk menjawab (c) dan (d):
+
+$$
+\alpha = \frac{1}{2}, \ 
+\beta = \frac{1}{2}, \
+\gamma = \frac{2}{3},\
+\delta = \frac{1}{3}
+$$
+
+c. Cari factor input demand untuk kedua industri tersebut sebagai fungsi dari $w,r,\bar{K} \ \text{dan} \ \bar{L}$ ! (15)
+
+d. Tiba-tiba negara Sokovia menerbitkan sebuah peraturan baru yaitu Omnibus Law yang mengakibatkan investasi asing berbondong-bondong masuk ke Sokovia. Akibatnya $\bar{K}$ naik jadi $\hat{K}$ di mana $\hat{K}>\bar{K}$. Omnibus Law ini tidak mengatur pekerja sehingga $L$ tidak berubah. Apa yang terjadi pada demand kapital dan tenaga kerja di kedua industri tersebut? Gunakan jawaban anda di (c) untuk menganalisis dampak Omnibus Law di Sokovia! (8)
+
+
+# Jawaban
+
+## Pertanyaan 1
+
+a.1. Ricardian: Spesialisasi, atau dari perbedaan teknologi, Jelasnya, 2 negara yang saling spesialisasi ke produksi barang yang relatively punya comparative advantage (yang datang dari perbedaan teknologi).
+
+a.2. Specific factor: sama dengan ricardian. Perfect specialization tidak terjadi karena ada diminishing return, tapi intinya gains datang dari perbedaan teknologi.
+
+a.3. H-O: sama dengan sebelumnya, tapi perbedaan / comparative advantage datang dari perbedaan resource endowment, bukan dari teknologi.
+
+a.4. Ada 3 layer untuk monopolistik competition. (1) dari memanfaatkan pasar yang besar / economies of scale; (2) lebih banyak pilihan / merk untuk kedua negara (3) menyingkirkan produsen yang paling inefisien.
+
+b.1. Karena di jangka pendek, ada faktor produksi yang tidak bisa pindah industri dengan cepat. Namun perpindahan ini dimungkinkan di jangka panjang.
+
+b.2. Tidak berubah karena naiknya sama besarnya sehingga tidak mengubah rasio $\frac{P_C}{P_F}$. Bisa gunakan analisis dengan grafik maupun dengan derivative.
+
+b.3. Artinya $\frac{P_C}{P_F}$ turun. Pemilik fixed factor untuk C (kapital) berkurang pendapatan riilnya, sementara pemilik fixed factor untuk F (lahan) meningkat pendapatan riilnya. Ambigu untuk faktor yang berpindah dengan cepat (buruh). Bisa gunakan analisis dengan grafik maupun dengan derivative.
+
+## Pertanyaan 2
+
+a. Intinya, di autarky, harga dibentuk oleh supply (production possibility frontier) dan demand (indifference curve nasional). Harga adalah kemiringan/garis di mana slope MRS = slope dari IC. Titik ini adalah alokasi produksi dan konsumsi yang memaksimalkan utility given production constraint.
+
+b. Alokasi DA adalah persis sama dengan alokasi QA. ALias, yang dikonsumsi adalah = yang diproduksi. Ini sebenernya pertanyaan bonus karena di gambar aja udah ditulis QA=DA.
+
+c. Ada 3 jawaban yang akan dapat nilai full:
+
+    - tidak ada cara lain meningkatkan konsumsi karena sudah alokasi QA=DA sudah memaksimalkan utility given production constraint.
+    
+    - Satu-satunya cara adalah dengan meningkatkan produktivitas supaya PPF bertambah.
+    
+    - Mereka bisa coba cari compatible trading partner.
+    
+d. Di Alokasi QT, Wakandaraya produksi lebih banyak F dan lebih sedikit C (alias $Q_F^T>Q_F^A$ dan $Q_C^T<Q_C^A$). 
+
+e. Harga internasional mendikte harga domestik, di mana harga F relatively lebih mahal daripada harga C dibandingkan autarky.
+
+f. Jika Wakandaraya memutuskan memilih konsumsi di QT (atau konsumsi = produksi), maka indifference curve mereka akan lebih kecil daripada indifference curve sebelumnya di QA (IB<IA). Ini sebabnya mereka tidak produksi di QT waktu autarky. Satu-satunya alasan kenapa mereka produksi di QT adalah karena bisa trade.
+
+g. Lokasi konsumsi baru sudah pasti akan berbeda dari lokasi produksinya (titik DT tidak sama dengan QT). Tapi di manapun DT, anda harus meletakkannya di sepanjang garis (Pc/Pf)2 dan harus ada di atas IA. Full point jika IT anda letakkan bersinggungan dengan (Pc/Pf)2. Barang yang diekspor adalah F dan barang yang diimpor adalah C.
+
+h. Pertanyaan ini agak tricky. Di model ini, melarang impor membuat C harus diproduksi di dalam negeri. Tentunya hal ini membuat produksi F secara berlebih menjadi percuma, karena mau diapain ekspornya? Percuma naikin income dari ekspor jika duitnya tidak dibelanjakan. Akhirnya larangan impor C hanya akan menyebabkan situasi kembali ke autarky, bahkan jika hanya salah satu barang yang kita larang ekspor/impornya. Dengan kata lain, produksi dan konsumsi akan kembali ke QA=DA.
+
+![penjelasan f dan g](utstrade.jpg)
+
+## Pertanyaan 3
+
+a. Tarif: surplus pasti lari ke pemerintah, Jika tarif fixed dan ada perubahan supply/demand, maka yang berubah adalah jumlah barang yang diimpor sementara harga domestik tetap; Quota: surplus bisa saja lari ke pemegang ijin impor atau ke foreign producer untuk voluntary export restriction, jika quota fixed sementara ada perubahan supply/demand, maka yang berubah adalah harga domestik sementara impor tetap.
+
+b. In general, trade is good. Tapi negara kecil dapat keuntungan ekstra ketika ada fixed cost besar di industri. Karena negara kecil tidak punya pasar yang cukup besar untuk memanfaatkan economies of scale. Negara kecil memerlukan pasar negara lain agar bisa memanfaatkan economies of scale, menekan cost, dan lebih competitive.
+
+c. Kenapa umumnya pembatasan impor buruk adalah karena ada deadweight loss, atau surplus yang hilang dan tidak berpindah ke siapapun. Kenapa tetap dilakukan, karena ada pihak yang lebih untung (penerima surplus) meskipun secara agregat negara dan masyarakatnya rugi. In case of large countries, yg rugi adalah negara lain.
+
+d. Fixed cost mengakibatkan perusahaan yang lebih besar punya keunggulan cost yang lebih murah. Akibatnya, perusahaan yang lebih kecil akan keluar atau diakuisisi oleh perusahaan lain. Hal ini akan mengakibatkan jumlah perusahaan yang terbatas di industri tersebut. Karena jumlah perusahaannya terbatas, pasarnya jadi monopolistik atau ada sedikit kekuatan untuk menentukan harga bagi produsen. Makin tinggi fixed costnya, makin rendah jumlah perusahaannya. Anda bisa menggunakan penjelasan grafik atau dengan equation seperti di pertemuan 6.
+
+e. Karena dia akan punya makin banyak income untuk mengimpor lebih banyak pula. Melarang impor akan menghilangkan keuntungan ini. Suatu negara juga bisa untung karena dia akan memiliki cadangan devisa yang bisa digunakan sewaktu-waktu. Tapi keunggulan ini belum kita pelajari untuk saat ini. Namun logicnya juga sama: memaksa saving = memaksa untuk tidak konsumsi yang artinya bisa jadi mengurangi utility.
+
+## Pertanyaan 4
+
+a. Agar F disebut capital-intensive, maka harus hold: $\frac{\alpha}{\beta} > \frac{\gamma}{\delta}$
+
+b. Couple of ways to answer this, more or less mirip, dan yg manapun cara anda jawab, akan dapat full score: 
+
+    - Karena $\alpha+\beta = \gamma+\delta = 1$ yang artinya F dan C adalah fungsi yang convex dan monotonic. Resource constraint untuk $K$ dan $L$ juga convex, sehingga kita dapat menggunakan metode lagrange untuk mendapatkan titik maksimal untuk F dan C. 
+
+    - Karena ketika MRS $=\frac{w}{r}$ adalah titik persinggungan alokasi kapital dan labour yang memaksimalkan jumlah F dan C yang dihasilkan given resource constraint.
+    
+c. Dengan parameter yang didapat dari soal, kita akan punya:
+
+```{=tex}
+\begin{align*}
+F&=K^{1/2}L^{1/2} \\
+C&=K^{2/3}L^{1/3} \\
+subject \ to: \ &K_F+K_C = \bar{K} \\
+&L_F+L_C=\bar{L}
+\end{align*}
+```
+
+
+Kita set MRS=$\frac{w}{r}$ untuk F dan C, kita akan dapat:
+
+$$
+\frac{L_F}{K_F}=\frac{r}{w}
+$$
+
+$$
+2 \frac{L_C}{K_C}=\frac{r}{w}
+$$
+
+ada banyak cara untuk approach ini. Ini hanya salah satunya. Ubah 2 persamaan di atas jadi:
+
+$$
+L_F=\frac{r}{w}K_F
+$$
+
+$$
+L_C=\frac{r}{w} \frac{1}{2}K_C
+$$
+
+Substitusi ke constraint labour $L_F+L_C=\bar{L}$
+
+$$
+\frac{r}{w}K_F+\frac{r}{w}\frac{1}{2}K_C=\bar{L}
+$$
+
+kali dua sisi dengan $\frac{w}{r}$
+
+$$
+K_F+\frac{1}{2}K_C=\frac{w}{r}\bar{L}
+$$
+
+Substitusi atau eliminasi dengan constraint kapital $K_F+K_C=\bar{K}$ akan didapat dua K:
+
+$$
+K_C^*=2\bar{K}-2\frac{w}{r}\bar{L}
+$$
+
+$$
+K_F^*=2\frac{w}{r}\bar{L}-\bar{K}
+$$
+
+Substitusi lagi either ke MRS=w/r atau ke labour constraint:
+
+$$
+L^*_C=\frac{r}{w}\bar{K}-\bar{L}
+$$
+
+$$
+L_F^*=2\bar{L}-\frac{r}{w}\bar{K}
+$$
+
+Tentu saja di jawaban anda, anda harus sampaikan step-by-stepnya mulai dari MRS=w/r sampai ketemu labour and capital demand.
+
+d. Dari empat persamaan di atas, kita bisa analisis apa yang terjadi ketika ada economic reform yang membuat kapital meningkat. Dari lihat tandanya saja, kita bisa tau bahwa jika kapital naik, maka $K_C^*$ dan $L_C^*$ akan naik, sementara $K_F^*$ dan $L_F^*$ akan turun. Kita bisa lihat bahwa naiknya kapital akan meningkatkan kapital dan labour demand (dan otomatis produksi) bagi sektor C yang dalam hal ini  relatively more capital-intensive. 
+
+Dengan kata lain, naiknya investasi menyebabkan bias growth ke industri yang relatively capital-intensive.
+
+Tentunya anda juga bisa lakukan partial derivative:
+
+$$
+\frac{\partial K_C}{\partial \bar{K}}= 2 > 0
+$$
+$$
+\frac{\partial K_F}{\partial \bar{K}}= -1 < 0
+$$
+$$
+\frac{\partial L_C}{\partial \bar{K}}= \frac{r}{w} > 0
+$$
+$$
+\frac{\partial L_F}{\partial \bar{K}}= -\frac{r}{w} < 0
+$$
+
+Tapi ga partial derivative gpp asalkan jawabannya bener dan reasoningnya masuk.

@@ -1,0 +1,250 @@
+---
+title: "Analisis ekonomi perdagangan dan industri"
+subtitle: "ECES905205 pertemuan 1"
+date: "29 Agustus 2022"
+author: "I Made Krisna Gupta"
+format: 
+  revealjs:
+    theme: [simple,../mytheme.scss]
+    chalkboard: true
+    incremental: false
+    transition: convex
+    background-transition: fade
+    slide-number: true
+---
+
+## Dosen anda
+
+::: columns
+::: {.column width="40%"}
+![](https://www.krisna.or.id/files/foto_krisna.jpg)
+:::
+
+::: {.column .s width="60%"}
+-   Full-time lecturer di Politeknik APP
+
+    -   Memulai karir sebagai birokrat di Kementerian Perindustrian
+    -   Pernah tutor/asdos di UI & ANU
+    -   Pernah mengajar [intro to economics](https://www.krisna.or.id/courses/econ101) di Universitas Petra. ([week 13](https://www.krisna.or.id/econ101/week13/index.html#1) may interest you)
+
+-   Master degree in economics UI/VU
+
+-   [PhD student](https://crawford.anu.edu.au/people/phd/krisna-gupta) di Australian National University
+
+    -   [thesis](https://openresearch-repository.anu.edu.au/handle/1885/270149) tentang industri dan perdagangan di Indonesia.
+
+-   Associate researcher di Center for Indonesian Policy Studies.
+
+    -   Policy paper terakhir tentang [Neraca Komoditas](https://www.cips-indonesia.org/publications/the-advent-of-a-new-trade-governance-after-the-omnibus-law%3A-neraca-komoditas)
+
+-   Selengkapnya di [imedkrisna.github.io](https://imedkrisna.github.io/)
+
+    -   blog di [krisna.or.id](https://www.krisna.or.id/)
+    -   twitter di [\@imedkrisna](https://www.twitter.com/imedkrisna)
+:::
+:::
+
+## Agenda hari ini
+
+-   Housekeeping
+-   intro on trade & industry
+
+## Tentang ECES905205
+
+-   Menggunakan buku pegangan International Economics karya Dominick Salvatore.
+-   Cover teori perdagangan dan kebijakan perdagangan.
+-   Tentang kebijakan industrial.
+-   Sedikit tentang balance of payment dan national income.
+-   Memanfaatkan beberapa paper terbaru.
+-   International Economics-nya Krugman & Obstfeld juga bisa digunakan.
+
+## Ekspektasi dari Mahasiswa
+
+-   Sudah lulus micro dan macro
+    -   familiar dengan *first* & *second welfare theorem*
+    -   *market failure & imperfect competition*
+    -   growth theory di open economy
+-   Terlibat aktif (nanya, bantu jelasin, dst)
+-   Tidak perlu bisa *coding*
+-   email saya kapanpun di [krisna.gupta\@outlook.com](mailto:krisna.gupta@outlook.com) atau [imade.krisna\@ui.ac.id](mailto:imade.krisna@ui.ac.id)
+
+## Beberapa rules
+
+-   Saya tidak mewajibkan kehadiran, telat boleh.
+-   bagi yang hadir dimohon untuk merhatiin, sopan dan tertib.
+-   Makan dan minum boleh asal jangan berbau tajam. ~~Dosen harus dibagi~~
+-   Ga perlu ijin kalau mau keluar.
+-   Di tengah bakal ada break sekitar 15 menit.
+-   Please interrupt me at anytime for questions.
+
+## Evaluasi pembelajaran
+
+| metode | cakupan materi | bobot (%) |
+|--------|----------------|-----------|
+| UTS    | minggu 1-7     | 30        |
+| UAS    | semua          | 50        |
+| Tugas  | semua          | 20        |
+
+-   UTS dan UAS direncanakan tutup buku & tanpa kalkulator.
+-   Materi di slides harusnya cukup untuk dapat A.
+-   Tugas berupa *policy paper* dan dikerjakan berkelompok.
+    -   Detil menyusul.
+
+## Tools
+
+-   Google classroom digunakan untuk mengumpulkan tugas.
+
+    -   Gunakan class code d4s4t5p atau pencet link [ini](https://classroom.google.com/c/MzE3MDk1MTQ0NTA0?cjc=d4s4t5p)
+    -   Slides akan diupload di sini juga dalam bentuk pdf.
+
+-   Slides dapat diakses di [krisna.or.id/courses/trade](https://www.krisna.or.id/courses/trade/).
+
+    -   akan diupdate tiap minggu.
+    -   cara print pdf: pencet `E`, tungguu bentar, lalu `ctrl+P`
+
+# Questions?
+
+## Knowing my class
+
+-   Perkenalkan diri dengan menyebutkan:
+    -   nama panggilan
+    -   pekerjaan saat ini / cita-cita setelah lulus
+    -   topik tugas akhir
+
+# Introduction to trade & industry
+
+## Kenapa dagang?
+
+-   Tidak semua negara bisa membuat semua hal.
+
+-   bahkan untuk negara paling jago sekalipun, dagang lebih baik daripada tidak dagang.
+
+-   hal ini karena *opportunity cost* dan keterbatasan sumber daya.
+
+-   *Gains from trade* adalah insight utama dari ekonomi perdagangan.
+
+-   Perdagangan internasional merupakan cara tercepat bagi ekonomi berkembang untuk menyusul ekonomi maju.
+
+## Kenapa negara menerapkan kebijakan perdagangan?
+
+-   Trade gain does not shared equally
+
+    -   Transisi ekonomi menguntungkan 1 pihak dan merugikan pihak lain.
+    -   Umumnya kebijakan perdagangan didesain dengan target subset of population/sector.
+
+-   Ada *policy goal* lain yang terpaksa mengorbankan efisiensi.
+
+-   Kebijakan domestik gagal (*blaming foreigners always easier*)
+
+-   Pembuat kebijakannya kurang paham ilmu ekonomi.
+
+## Tren global perdagangan
+
+<iframe src="https://data.worldbank.org/share/widget?indicators=NE.TRD.GNFS.ZS" width="900" height="550" frameBorder="0" scrolling="no">
+
+</iframe>
+
+## Tren global perdagangan
+
+<iframe src="https://data.worldbank.org/share/widget?end=2021&amp;indicators=NE.TRD.GNFS.ZS&amp;locations=ID-CN-MY-TH-US-DE-FR-AT-IN&amp;start=2011" width="900" height="550" frameBorder="2" scrolling="no">
+
+</iframe>
+
+------------------------------------------------------------------------
+
+<iframe width="1000" height="600" src="https://oec.world/en/visualize/embed/tree_map/hs92/export/idn/all/show/2020/?controls=false" frameborder="1">
+
+</iframe>
+
+------------------------------------------------------------------------
+
+<iframe width="1000" height="600" src="https://oec.world/en/visualize/embed/tree_map/hs92/import/idn/all/show/2020/?controls=false" frameborder="1">
+
+</iframe>
+
+## Beberapa miskonsepsi perdagangan internasional
+
+-   Trade surplus is "good" and "competitive".
+
+    -   BILATERAL trade surplus is "good".
+    -   SECTORAL trade surplus is "good".
+
+-   Deficit in current account must be counteracted with trade restriction.
+
+-   Trade is easy to manage.
+
+-   Weak exchange rate is "bad".
+
+## Kebijakan perdagangan di Indonesia
+
+::: columns
+::: {.column width="40%"}
+![](Picture1.png)
+:::
+
+::: {.column width="60%"}
+-   Indonesia cukup sejalan dengan tren kebijakan perdagangan dunia.
+
+-   Tarif di Indonesia turun berkat FTAs.
+
+-   Sebaliknya, Non-tariff measures naik terus.
+
+-   Bagus apa jelek?
+:::
+:::
+
+## Tren & isu saat ini
+
+-   Green energy & Climate change
+
+-   Food security
+
+-   Global power struggle
+
+-   Global current account imbalance
+
+-   Di Indonesia:
+
+    -   Hilirisasi industri / nilai tambah dalam negeri
+    -   RCEP
+
+## Struktur mata kuliah ini
+
+-   Teori perdagangan
+
+    -   the classics & imperfect market extensions
+
+-   Kebijakan perdagangan
+
+    -   Tariff, non-tariff & Agreements
+    -   Global Value Chain & FIrm heterogeneity
+
+-   Kebijakan industrial
+
+-   Current account & national income.
+
+## Thinking forward
+
+-   Gunakan teori (dan empirics) untuk mendebat kebijakan.
+
+    -   Jgn lupa market failure.
+    -   analogi is powerful.
+
+-   Selalu pertanyakan *policy objectives* dari sebuah kebijakan perdagangan.
+
+    -   Apakah objective tersebut bisa dicapai dengan kebijakan lain?
+
+-   *Kebijakan perdagangan* adalah proses politik dan administrasi.
+
+## Some interesting read
+
+Beberapa postingan di blog saya yang bisa jadi pengantar:
+
+-   [Kenapa kebijakan perdagangan CPO gagal?](https://www.krisna.or.id/post/ngobroltempo/)
+-   [Substitusi impor produk elektronika](https://www.krisna.or.id/post/ngobroltempo/)
+-   [Model simpel TKDN](https://www.krisna.or.id/post/tkdn/)
+-   [early analysis on nickel export ban](https://www.thejakartapost.com/opinion/2022/04/03/indonesias-claim-that-banning-nickel-exports-spurs-downstreaming-isquestionable.html)
+
+## Minggu depan
+
+-   Comparative advantage & Ricardian moddel
