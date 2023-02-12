@@ -23,10 +23,7 @@ format:
 ::: {.column .s width="60%"}
 -   Full-time lecturer di Politeknik APP
 
-    -   Memulai karir sebagai birokrat di Kementerian Perindustrian
-    -   Pernah tutor/asdos di UI & ANU
-
--   Master degree in economics UI/VU, PhD in economics ANU.
+-   Master degree in economics at UI/VU, PhD in economics at ANU.
 
     -   [thesis](https://openresearch-repository.anu.edu.au/handle/1885/270149) tentang industri dan perdagangan di Indonesia.
 
@@ -34,10 +31,10 @@ format:
 
     -   Policy paper terakhir tentang [Neraca Komoditas](https://www.cips-indonesia.org/publications/the-advent-of-a-new-trade-governance-after-the-omnibus-law%3A-neraca-komoditas)
 
--   Selengkapnya di [imedkrisna.github.io](https://imedkrisna.github.io/)
+-   Selengkapnya di [krisna.or.id](https://www.krisna.or.id/)
 
-    -   blog di [krisna.or.id](https://www.krisna.or.id/)
-    -   twitter di [\@imedkrisna](https://www.twitter.com/imedkrisna)
+    -   [imade.krisna@ui.ac.id](mailto:imade.krisna@ui.ac.id)
+    -   [\@imedkrisna](https://www.twitter.com/imedkrisna)
 :::
 :::
 
@@ -46,24 +43,21 @@ format:
 -   Housekeeping
 -   intro on trade & industry
 
-## Tentang ECES905205
+## Tentang Ekonomi Internasional {.incremental .m}
 
--   Menggunakan buku pegangan International Economics karya Dominick Salvatore.
--   Cover teori perdagangan dan kebijakan perdagangan.
--   Tentang kebijakan industrial.
--   Sedikit tentang balance of payment dan national income.
--   Memanfaatkan beberapa paper terbaru.
--   International Economics-nya Krugman & Obstfeld juga bisa digunakan.
+- Buku pegangan menggunakan Krugman, Obstfeld & Melitz (2022)
+- Ekonomi internasional: trade & money
+- Jurisdiction of policy & currency
+- Lengkapnya di [krisna.or.id/courses/intecon](https://krisna.or.id/courses/intecon)
 
 ## Ekspektasi dari Mahasiswa
 
 -   Sudah lulus micro dan macro
     -   familiar dengan *first* & *second welfare theorem*
     -   *market failure & imperfect competition*
-    -   growth theory di open economy
+    -   macro theory di open economy
 -   Terlibat aktif (nanya, bantu jelasin, dst)
 -   Tidak perlu bisa *coding*
--   email saya kapanpun di [krisna.gupta\@outlook.com](mailto:krisna.gupta@outlook.com) atau [imade.krisna\@ui.ac.id](mailto:imade.krisna@ui.ac.id)
 
 ## Beberapa rules
 
@@ -71,54 +65,28 @@ format:
 -   bagi yang hadir dimohon untuk merhatiin, sopan dan tertib.
 -   Makan dan minum boleh asal jangan berbau tajam. ~~Dosen harus dibagi~~
 -   Ga perlu ijin kalau mau keluar.
--   Di tengah bakal ada break sekitar 15 menit.
+-   Di tengah bakal ada break sekitar 20 menit.
 -   Please interrupt me at anytime for questions.
-
-## Evaluasi pembelajaran
-
-| metode | cakupan materi | bobot (%) |
-|--------|----------------|-----------|
-| UTS    | minggu 1-7     | 30        |
-| UAS    | semua          | 50        |
-| Tugas  | semua          | 20        |
-
--   UTS dan UAS direncanakan tutup buku & tanpa kalkulator.
--   Materi di slides harusnya cukup untuk dapat A.
--   Tugas berupa *policy paper* dan dikerjakan berkelompok.
-    -   Detil menyusul.
-
-## Tools
-
--   Google classroom digunakan untuk mengumpulkan tugas.
-
-    -   Gunakan class code d4s4t5p atau pencet link [ini](https://classroom.google.com/c/MzE3MDk1MTQ0NTA0?cjc=d4s4t5p)
-    -   Slides akan diupload di sini juga dalam bentuk pdf.
-
--   Slides dapat diakses di [krisna.or.id/courses/trade](https://www.krisna.or.id/courses/trade/).
-
-    -   akan diupdate tiap minggu.
-    -   cara print pdf: pencet `E`, tungguu bentar, lalu `ctrl+P`
 
 # Questions?
 
-## Knowing my class
+## Knowing my class {.incremental}
 
--   Perkenalkan diri dengan menyebutkan:
-    -   nama panggilan
-    -   pekerjaan saat ini / cita-cita setelah lulus
-    -   topik tugas akhir
+- let's assign class rep!
+
+- please tell me WHY you take this course?
 
 # Introduction to trade & industry
 
 ## Kenapa dagang?
 
--   Tidak semua negara bisa membuat semua hal.
+-   *Gains from trade* adalah insight utama dari ekonomi perdagangan.
+
+-   Tidak semua negara ** perlu** membuat semua hal.
 
 -   bahkan untuk negara paling jago sekalipun, dagang lebih baik daripada tidak dagang.
 
 -   hal ini karena *opportunity cost* dan keterbatasan sumber daya.
-
--   *Gains from trade* adalah insight utama dari ekonomi perdagangan.
 
 -   Perdagangan internasional merupakan cara tercepat bagi ekonomi berkembang untuk menyusul ekonomi maju.
 
@@ -133,7 +101,15 @@ format:
 
 -   Kebijakan domestik gagal (*blaming foreigners always easier*)
 
--   Pembuat kebijakannya kurang paham ilmu ekonomi.
+## International macro
+
+- Balance of Payment (BoP) / neraca pembayaran seringkali kurang dipahami dengan baik.
+
+    - it must balance: current account can be balanced by financial account.
+    
+- Pergerakan kapital internasional memiliki dampak yang signifikan terhadap perdagangan barang & industri.
+
+    - currency & exchange rate channel
 
 ## Tren global perdagangan
 
@@ -216,9 +192,7 @@ format:
     -   Tariff, non-tariff & Agreements
     -   Global Value Chain & FIrm heterogeneity
 
--   Kebijakan industrial
-
--   Current account & national income.
+-   UAS TBD
 
 ## Thinking forward
 
@@ -227,7 +201,7 @@ format:
     -   Jgn lupa market failure.
     -   analogi is powerful.
 
--   Selalu pertanyakan *policy objectives* dari sebuah kebijakan perdagangan.
+-   Selalu pertanyakan *policy objectives* dan konsekuensi dari sebuah kebijakan perdagangan.
 
     -   Apakah objective tersebut bisa dicapai dengan kebijakan lain?
 
@@ -244,4 +218,4 @@ Beberapa postingan di blog saya yang bisa jadi pengantar:
 
 ## Minggu depan
 
--   Comparative advantage & Ricardian moddel
+-   Comparative advantage & Ricardian model
