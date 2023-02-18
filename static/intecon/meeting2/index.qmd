@@ -12,9 +12,29 @@ format:
     background-transition: fade
     slide-number: true
   beamer: default
-
-editor: visual
 ---
+
+## More housekeeping
+
+-   Pengajar anda pasca-UTS most likely adalah [Kiki Verico, PhD](https://staff.ui.ac.id/kiki.verico).
+
+-   Tugas pre-UTS (20% dari total nilai) adalah 6 quiz:
+
+    -   Diadakan setiap minggu, dimulai dari hari Senin, berakhir hari Minggu jam 18.00 WIB.
+
+    - Nilai total quiz adalah 100. untuk nilai akhir hanya akan diambil 5 terbaik.
+
+    - Quiz akan dilakukan dengan google form.
+    
+    - Anda akan perlu e-mail. please gunakan e-mail yang sama untuk 6 quiz tersebut.
+
+## Quiz 1
+
+-   dapat diakses di [forms.gle/TECS6Q58aV3S1MVZA](https://forms.gle/TECS6Q58aV3S1MVZA)
+
+- link akan diforward ke Zulfan sang Class Rep juga.
+
+- Jawaban dan nilai akan dibahas minggu depan.
 
 ## Today
 
@@ -180,7 +200,6 @@ Suppose the two countries do not trade. Indonesia's production is {T,S}={100,25}
 #| label: fig2
 
 library(patchwork)
-library(hrbrthemes)
 library(kableExtra)
 USA <- function(x) 100-x
 IDN <- function(x) 50-.25*x
