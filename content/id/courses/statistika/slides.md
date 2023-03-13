@@ -18,6 +18,8 @@ commentable: false
 
 {{% callout note %}} This page is still under development. Expect weekly changes. {{% /callout %}}
 
+Google Drive: [di sini](https://drive.google.com/drive/folders/1s8YHrlTFrp-Iu0ip6FesyKahNHLo5had?usp=share_link)
+
 slides:
 
 - {{% staticref "/statistika/meeting1/index.html" "newtab" %}}Pertemuan 1: Pendahuluan{{% /staticref %}}
