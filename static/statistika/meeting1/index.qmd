@@ -178,6 +178,14 @@ Diturunkan menjadi capaian mata kuliah:
 -   Akan ada remedial & tidak ada tugas tambahan apapun.
 -   Materi di slides harusnya cukup untuk dapat A.
 
+## Evaluasi pembelajaran
+
+- 7 quiz: Weekly, 10 soal, diambil 5 terbaik. Pre-UTS
+
+- Tugas kelompok: ngerjain soal kasus. Post-UTS.
+
+- UTS & UAS: 4 soal, essay semua, tutup buku kecuali catatan selembar A4. No tech kecuali kalkulator.
+
 ## Tools
 
 -   [e-learn.poltekapp.ac.id](https://e-learn.poltekapp.ac.id/) diperlukan untuk membaca dan mengumpulkan tugas.
