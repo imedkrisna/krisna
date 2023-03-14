@@ -186,6 +186,8 @@ Diturunkan menjadi capaian mata kuliah:
 
 - UTS & UAS: 4 soal, essay semua, tutup buku kecuali catatan selembar A4. No tech kecuali kalkulator.
 
+- Masih tentatif. Jika ada perubahan akan dikabari lebih lanjut.
+
 ## Tools
 
 -   [e-learn.poltekapp.ac.id](https://e-learn.poltekapp.ac.id/) diperlukan untuk membaca dan mengumpulkan tugas.
