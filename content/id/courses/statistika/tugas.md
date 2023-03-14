@@ -2,10 +2,10 @@
 date: "2022-08-10T00:00:00Z"
 draft: false
 lastmod: "2022-08-10T00:00:00Z"
-linktitle: slides
+linktitle: tugas
 menu:
   example:
-    name: slides
+    name: tugas
     weight: 10
 summary: slides
 title: slides
@@ -18,6 +18,18 @@ commentable: false
 
 {{% callout note %}} This page is still under development. Expect weekly changes. {{% /callout %}}
 
-slides:
+## 7 Quiz
 
-- [Quiz 1]()
+#### Rules:
+
+- 7 quiz dilakukan setiap minggu, mulai hari Selasa, berakhir hari Senin pukul 18:00 WIB.
+- Isi e-mail, nama, NIM, dan kelas anda (A/B/C/D)
+- Sebaiknya anda menggunakan e-mail yang konsisten untuk 7x quiz ini. Jangan ganti-ganti e-mail.
+- 1 orang hanya boleh mengirimkan jawaban sebanyak 1 kali.
+- Jika anda mengirim lebih dari 1 kali, kiriman pertama yang akan dinilai.
+- Dari total 7 quiz, yang akan dihitung ke dalam nilai akhir adalah top 5.
+- Bobot 7quiz di nilai akhir adalah 20%.
+
+#### Links:
+
+- [Quiz 1](https://forms.gle/xn3gXZEaRryjS2gf8)
