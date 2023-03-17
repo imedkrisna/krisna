@@ -33,3 +33,7 @@ commentable: false
 #### Links:
 
 - [Quiz 1](https://forms.gle/xn3gXZEaRryjS2gf8)
+
+## Tugas kelompok
+
+- to be continued.
