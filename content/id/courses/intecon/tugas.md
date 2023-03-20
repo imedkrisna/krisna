@@ -9,3 +9,4 @@ draft: False
 {{% callout note %}} This page is still under development. Expect weekly changes. {{% /callout %}}
 
 - [Quiz 1](https://forms.gle/TECS6Q58aV3S1MVZA)
+- [Quiz 2](https://forms.gle/kdwGPaMhXvbZCdgV7)
