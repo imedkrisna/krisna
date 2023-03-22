@@ -7,7 +7,7 @@
 <link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="index_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="index_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.0.38">
+  <meta name="generator" content="quarto-1.2.269">
 
   <meta name="author" content="I Made Krisna Gupta">
   <title>Firms in international trade</title>
@@ -19,10 +19,15 @@
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
   </style>
   <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto.css" id="theme">
   <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -320,13 +325,20 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" class="center">
+<section id="title-slide" class="quarto-title-block center">
   <h1 class="title">Firms in international trade</h1>
   <p class="subtitle">ECES905205 pertemuan 6</p>
-  <p class="author">I Made Krisna Gupta</p>
-  <p class="date">3 Oktober 2022</p>
-</section>
 
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+I Made Krisna Gupta 
+</div>
+</div>
+</div>
+
+  <p class="date">Invalid Date</p>
+</section>
 <section id="internal-economies-of-scale" class="slide level2 m">
 <h2>Internal economies of scale</h2>
 <ul>
@@ -353,16 +365,8 @@
 </section>
 <section id="example-mobile-phone" class="slide level2">
 <h2>example: mobile phone</h2>
-<div id="mobile_vendor-ww-yearly-2021-2021" width="600" height="400" style="width:600px; height: 400px;">
 
-</div>
-<!-- You may change the values of width and height above to resize the chart -->
-<p>
-Source: <a href="https://gs.statcounter.com/vendor-market-share/mobile/worldwide/#yearly-2021-2021-bar">StatCounter Global Stats - Device Vendor Market Share</a>
-</p>
-<script type="text/javascript" src="https://www.statcounter.com/js/fusioncharts.js"></script>
-<script type="text/javascript" src="https://gs.statcounter.com/chart.php?mobile_vendor-ww-yearly-2021-2021&amp;chartWidth=600"></script>
-</section>
+<img data-src="phone.png" class="r-stretch quarto-figure-center"><p class="caption">Sumber: https://gs.statcounter.com/vendor-market-share/mobile/worldwide/#yearly-2021-2021-bar</p></section>
 <section id="monopolistic-competition" class="slide level2">
 <h2>Monopolistic competition</h2>
 <ul>
@@ -442,15 +446,7 @@ Source: <a href="https://gs.statcounter.com/vendor-market-share/mobile/worldwide
 <h2>Karakteristik monopolistic</h2>
 <p><span class="math display">\[
 Q=S\times\left[1/n-b(P-\bar{P})\right]
-\]</span></p>
-<ul>
-<li>Q = total sales of individual firm</li>
-<li>S = total sales of the industry</li>
-<li>n = number of firms</li>
-<li>b = elasticity of supply</li>
-<li>P = firms’ price</li>
-<li><span class="math inline">\(\bar{P}\)</span> = rival’s price index</li>
-</ul>
+\]</span> - Q = total sales of individual firm - S = total sales of the industry - n = number of firms - b = elasticity of supply - P = firms’ price - <span class="math inline">\(\bar{P}\)</span> = rival’s price index</p>
 </section>
 <section id="karakteristik-monopolistic-1" class="slide level2">
 <h2>Karakteristik monopolistic</h2>
@@ -916,12 +912,15 @@ AC=750000000/Q+5000
       // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
       // slide changes (different for each slide format).
       (function () {
-        function fireSlideChanged(previousSlide, currentSlide) {
-
-          // dispatch for htmlwidgets
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
           const event = window.document.createEvent("Event");
           event.initEvent("slideenter", true, true);
           window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
 
           // dispatch for shiny
           if (window.jQuery) {
@@ -932,13 +931,6 @@ AC=750000000/Q+5000
               window.jQuery(currentSlide).trigger("shown");
             }
           }
-        }
-
-        // hookup for reveal
-        if (window.Reveal) {
-          window.Reveal.addEventListener("slidechanged", function(event) {
-            fireSlideChanged(event.previousSlide, event.currentSlide);
-          });
         }
 
         // hookup for slidy
@@ -990,7 +982,24 @@ AC=750000000/Q+5000
         button.classList.add('code-copy-button-checked');
         var currentTitle = button.getAttribute("title");
         button.setAttribute("title", "Copied!");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copied!");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
         setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
           button.setAttribute("title", currentTitle);
           button.classList.remove('code-copy-button-checked');
         }, 1000);
@@ -1020,31 +1029,50 @@ AC=750000000/Q+5000
       for (var i=0; i<noterefs.length; i++) {
         const ref = noterefs[i];
         tippyHover(ref, function() {
-          let href = ref.getAttribute('href');
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
           return note.innerHTML;
         });
       }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
       var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
       for (var i=0; i<bibliorefs.length; i++) {
         const ref = bibliorefs[i];
-        const cites = ref.parentNode.getAttribute('data-cites').split(' ');
-        tippyHover(ref, function() {
-          var popup = window.document.createElement('div');
-          cites.forEach(function(cite) {
-            var citeDiv = window.document.createElement('div');
-            citeDiv.classList.add('hanging-indent');
-            citeDiv.classList.add('csl-entry');
-            var biblioDiv = window.document.getElementById('ref-' + cite);
-            if (biblioDiv) {
-              citeDiv.innerHTML = biblioDiv.innerHTML;
-            }
-            popup.appendChild(citeDiv);
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
           });
-          return popup.innerHTML;
-        });
+        }
       }
     });
     </script>
