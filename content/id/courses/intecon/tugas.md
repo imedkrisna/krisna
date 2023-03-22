@@ -10,3 +10,4 @@ draft: False
 
 - [Quiz 1](https://forms.gle/TECS6Q58aV3S1MVZA)
 - [Quiz 2](https://forms.gle/kdwGPaMhXvbZCdgV7)
+- [Quiz 3](https://forms.gle/SJ1sNLn16JVv19Sq5)
