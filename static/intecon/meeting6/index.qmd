@@ -1,7 +1,7 @@
 ---
 title: "Firms in international trade"
 subtitle: "ECES905205 pertemuan 6"
-date: "3 Oktober 2022"
+date: ""
 author: "I Made Krisna Gupta"
 format: 
   revealjs:
@@ -164,11 +164,17 @@ plot+
 $$
 Q=S\times\left[1/n-b(P-\bar{P})\right]
 $$
+
 - Q = total sales of individual firm
+    
 - S = total sales of the industry
+
 - n = number of firms
+
 - b = elasticity of supply
+
 - P = firms' price
+
 - $\bar{P}$ = rival's price index
 
 ## Karakteristik monopolistic 
@@ -189,7 +195,7 @@ $AC=n\frac{F}{S}+c$
 - Average cost akan naik seiring jumlah perusahaan yang bertambah, hal ini karena jumlah market share yang berkurang.
 - Seiring naiknya ukuran pasar, average cost dapat dikurangi karena tiap firm dapat produksi lebih banyak.
 - jika demand linear $Q=a-bP$, maka firms akan produksi di MR=MC
-- $P-\frac{Q}{Sb}=c \rightarrow \frac{Q}{Sb}=P-c \rightarrow P-c=\frac{1}{nb}$
+- $P-\frac{Q}{b}=c \rightarrow \frac{Q}{b}=P-c \rightarrow P-c=\frac{S}{nb}$
 
 ## Karakteristik monopolistik
 
