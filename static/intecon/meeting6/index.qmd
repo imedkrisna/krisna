@@ -282,7 +282,7 @@ plot+
   
 ```
 :::
-::: {.column width="47%"}
+::: {.column width="47%" .m}
 - Trade akan menambah jumlah market
   - AC berkurang, tetapi kurva penentu harga tidak pengaruh karena semua dapat market share yang sama.
   - jumlah firms naik dan harga turun.
