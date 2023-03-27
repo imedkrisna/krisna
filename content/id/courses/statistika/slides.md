@@ -23,7 +23,7 @@ Google Drive: [di sini](https://drive.google.com/drive/folders/1s8YHrlTFrp-Iu0ip
 slides:
 
 - {{% staticref "/statistika/meeting1/index.html" "newtab" %}}Pertemuan 1: Pendahuluan{{% /staticref %}}
-- {{% staticref "/statistika/meeting2/index.html" "newtab" %}}Pertemuan 2: {{% /staticref %}}
+- {{% staticref "/statistika/meeting2/index.html" "newtab" %}}Pertemuan 2: Statistika Deskriptif {{% /staticref %}}
 - {{% staticref "/statistika/meeting3/index.html" "newtab" %}}Pertemuan 3: {{% /staticref %}}
 - {{% staticref "/statistika/meeting4/index.html" "newtab" %}}Pertemuan 4: {{% /staticref %}}
 - {{% staticref "/statistika/meeting5/index.html" "newtab" %}}Pertemuan 5: {{% /staticref %}}
