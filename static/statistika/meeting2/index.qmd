@@ -1,6 +1,6 @@
 ---
-title: "Pendahuluan"
-subtitle: "Pertemuan 1"
+title: "Statistik deskriptif"
+subtitle: "Pertemuan 2"
 author: "Matematika Statistika"
 format: 
   revealjs:
@@ -12,162 +12,202 @@ format:
     slide-number: true
 ---
 
-## Dosen anda
+## Minggu lalu
 
-::: columns
-::: {.column width="40%"}
-![](https://www.krisna.or.id/files/foto_krisna.jpg)
-:::
+- Berbagai jenis data: kategorikal, ordinal, diskrit dan kontinyu.
 
-::: {.column .s width="60%"}
--   Full-time lecturer di Politeknik APP
+- survey: random dan non-random
 
-    -   Memulai karir sebagai birokrat di Kementerian Perindustrian
-    -   Pernah tutor/asdos di UI & ANU
-    -   Pernah mengajar [intro to economics](https://www.krisna.or.id/courses/econ101) di Universitas Petra. ([week 13](https://www.krisna.or.id/econ101/week13/index.html#1) may interest you)
+#### Minggu ini
 
-- Pendidikan:
-    
-    -   Master in economics dari UI/VU
-    
-    -   Doktor in economics dari ANU
+- Distribusi frekuensi dan statistik deskriptif
 
-- Akses:
+## Distribusi frekuensi
 
-    -   Surel: imade.krisna@poltekapp.ac.id
-    
-    -   Ruangan: A2004 (deket Pudir, Ruangan Kerja Sama)
-    
-:::
-:::
+- Distribusi frekuensi adalah cara yang paling awal dilakukan untuk mendapatkan gambaran dari suatu sampel / populasi.
 
-## Agenda hari ini
+- Kita membutuhkan distribusi frekuensi karena sebagai manusia biasa kita ga akan sanggup membaca semua data poin 1 1.
 
--   Administrasi dan Struktur mata kuliah
--   Berbagai jenis data
+- Perlu semacam alat ukur yang menggambarkan semua data yang kita punya.
 
-## Sosial kok belajar statistika?
+## Distribusi kualitatif {.scrollable}
 
-- Statistika mendapat reputasi sebagai "ilmunya anak IPA".
+- Misalnya anda melakukan survey merk handphone yang dimiliki saat ini dengan sample 50 orang.
 
-- Padahal, statistika digunakan sebagai alat analisis oleh banyak bidang sosial!
-
-    - Menghitung risiko untuk keputusan investasi.
-    
-    - Meramalkan berbagai indikator ekonomi.
-    
-- Bahkan, statistika digunakan untuk **berbohong**.
-
-    - Pemahaman statistika yang baik dapat membantu.
-
-## Contoh
-
-<iframe style="height:700px; width:100%; border: none;" src="https://databoks.katadata.co.id/datapublishembed/144007/rata-rata-gaji-karyawan-di-jakarta-tertinggi-se-indonesia"></iframe>
-
-## Sosial kok belajar statistika?
-
-- Zaman sekarang, ilmu statistika dan analisis data menjadi semakin penting lagi.
-
-    - Menurut [World Economic Forum](https://www.weforum.org/agenda/2020/10/top-10-work-skills-of-tomorrow-how-long-it-takes-to-learn-them/), kemampuan berpikir analitik dan penggunaan teknologi merupakan 2 dari 10 kemampuan yang paling dicari pada 2025.
-    
-    - Melalui inisiatif Industri 4.0, Kementerian Perindustrian menitik-beratkan kemampuan analitik dan operasional teknologi komputasi.
-    
-    - Permintaan industri akan individu yang punya kemampuan analitik berdasarkan data semakin tinggi.
-    
-- Data semakin banyak, pengolahnya masih sedikit.
-    
-## Tentang Mata kuliah ini
-
-- Mata kuliah ini wajib dan merupakan prasyarat dari mata kuliah Metodologi Penelitian.
-
-- Beberapa hal yang akan anda pelajari:
-
-::: {.incremental}
-    
-- probabilitas dan sampling. 
-    
-- mendapat gambaran dari populasi: nilai tengah, deviasi, distribusi.
-    
-- berkenalan dengan data.
-    
-- belajar menggunakan alat-alat analisis: hypothesis testing dan regresi.
-    
-:::
-
-## Peta Kompetensi {.s}
-
-```{mermaid}
-flowchart BT
-  X[1. Mahasiswa mampu <br>mengidentifikasi berbagai<br> jenis data] --> C[4. Mahasiswa mampu <br>menjelaskan kondisi <br>dari populasi berdasarkan <br>informasi statistik.]
-  A[2. Mahasiswa mampu <br>menjelaskan prinsip dasar<br> sampling dan distribusi.] --> C
-  B[3. Mahasiswa mampu<br>menjelaskan prinsip<br> dasar probabilitas.] --> D[4. Mahasiswa mampu<br>menghitung expected <br>value dari <br>probabilitas <br>berbasis frekuensi.]
-  D --> C
-  C --> E[7. Mahasiswa mampu<br>melakukan tes hipotesis] --> G[8. Mahasiswa mampu<br>melakukan regresi<br> univariat]
-  F[6. Membersihkan data.] --> G
+```{r}
+library(tidyverse)
+library(kableExtra)
+sample(x=c("Apple","Samsung","Oppo","Vivo","Xiaomi","Lainnya"),
+                      prob=c(0.1,0.3,0.15,0.13,0.17,0.15),
+                      size=50,
+                      replace = TRUE)
 ```
 
-## Tentang mata kuliah ini
+- Cara mengolahnya secara manual adalah dengan menggunakan **Tally**
 
-- Ilmu di mata kuliah ini merupakan konsep-konsep dasar.
+- Informasi apa yang menarik dari tabel ini?
 
-- Mengantarkan anda ke mata kuliah Metodologi Penelitian:
+## Distribusi kualitatif {.scrollable .s}
 
-    - Akan membahas data time-series, yang sangat penting di dunia perdagangan internasional.
-    
-    - Membuat laporan analitik yang berguna di industri.
-    
-- Ilmu dari mata kuliah ini tidak akan membuat anda jadi ahlinya data!
+- Gimana kalau datanya ada 1000?
 
-    - Analisis dapat dilakukan oleh supervisor anda.
-    
-    - Modal yang penting untuk mengejar pendidikan lanjut.
+```{r}
+library(tidyverse)
+library(kableExtra)
+dat<-as.tibble(sample(x=c("Apple","Samsung","Oppo","Vivo","Xiaomi","Lainnya"),
+                      prob=c(0.1,0.3,0.15,0.13,0.17,0.15),
+                      size=1000,
+                      replace = TRUE))
+kbl(dat) %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"))
+```
 
-## Ekspektasi dari Mahasiswa
+## Google sheet
 
--   Tidak ada prasyarat untuk mengikuti mata kuliah ini.
--   Ilmu matematika yang anda dapat di SMA sudah cukup.
-    - Akan ada beberapa review matematika SMA yang akan kita gunakan.
--   Punya akses internet.
--   Tidak perlu bisa bahasa inggris, _but a good command of english will certainly be helpful_.
--   Pernah bermain Microsoft Excel atau Google Sheet akan sangat membantu.
+Step-by-step kalau pakai google sheet:
 
-## Beberapa rules
+1. Block data dengan `ctrl+panah`
+2. Pilih `instert` -> `pivot table`
+3. Pastikan data range benar dan pilih "new sheet". klik `create`
+4. Pilih `rows` lalu klik `brand`
+5. Pilih `values` lalu klik `brand`
 
--   Saya tidak mewajibkan kehadiran, telat boleh.
--   bagi yang hadir dimohon untuk fokus, sopan dan tertib.
--   Makan dan minum boleh asal jangan berbau tajam. ~~Dosen harus dibagi~~
--   Tidak perlu ijin kalau mau keluar dengan alasan apapun.
--   Di tengah perkuliahan akan ada break sekitar 15 menit.
--   Jika ada pertanyaan, silakan langsung diajukan.
+## Frekuensi relatif
 
-## Evaluasi pembelajaran
+- Apa yang kita lakukan di atas adalah menghitung **frekuensi absolut**
 
-| metode | cakupan materi | bobot (%) |
-|--------|----------------|-----------|
-| 7 quiz    | minggu 1-7     | 20        |
-| Tugas kelompok    | minggu 8-13     | 20        |
-| UTS    | semua          | 30        |
-| UAS  | semua          | 30        |
+- Terkadang kita memerlukan informasi tentang frekuensi relatif.
 
--   Akan ada remedial & tidak ada tugas tambahan apapun.
--   Materi di slides harusnya cukup untuk dapat A.
+- Frekuensi relatif sebuah kelas adalah frekuensi absolut si kelas tersebut dibagi dengan total observasi.
 
-## Tools
+## Google sheet
 
--   [e-learn.poltekapp.ac.id](https://e-learn.poltekapp.ac.id/) diperlukan untuk membaca dan mengumpulkan tugas.
+| Brand | freq absolut | freq relatif |
+| ----- | ----- | ----- |
+| Apple | 100 | 10% |
+| Lainnya | 153 | 15.3% |
+| Oppo | 129 | 12.9% |
+| Samsung | 310 | 31% |
+| Vivo | 136 | 13.6% |
+| Xiaomi | 172 | 17.2% |
+| Total | 1000 | 100% |
 
--   Slides dapat diakses di [krisna.or.id/courses/statistika/slides](https://www.krisna.or.id/courses/statistika/slides).
+- data ini dapat divisualisasikan dengan **histogram**.
 
-    -   akan diupdate tiap minggu.
-    
-    -   cara print pdf: pencet `E`, tungguu bentar, lalu `ctrl+P`
+## Distribusi frekuensi
 
-# Questions?
+- Anda akan lebih sering bertemu data numerik.
 
-<iframe src="https://giphy.com/embed/KUmcYqPW0dIGNHDEoE" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/disneyplus-marvel-studios-marvelstudios-msmarvel-KUmcYqPW0dIGNHDEoE">via GIPHY</a></p>
+- Data numerik lebih mudah diolah dan biasanya memiliki lebih banyak *insight*.
 
-## Tentang data
+- Data numerik juga memiliki berbagai jenis indikator.
 
-## Minggu depan
+## Contoh data
 
--   Matematika dalam Statistika
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSdLsm-5nIFgcspOncjaLwwKX1vmGbTOvhkYVOFWdHS3h15EWmHcXDSm562eyR4MiftmPJiPom7X2RM/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+
+Data tersebut adalah nilai UTS semester sebelumnya. Dapat didownload di [sini](https://docs.google.com/spreadsheets/d/e/2PACX-1vSdLsm-5nIFgcspOncjaLwwKX1vmGbTOvhkYVOFWdHS3h15EWmHcXDSm562eyR4MiftmPJiPom7X2RM/pubhtml)
+
+## Distribusi frekueksi 
+
+- Untuk data numerik, menghitung frekuensi dengan pivot tidak praktis.
+
+- Anda perlu membuat kelas dengan interval.
+
+- Baik penentuan kelas maupun penentuan interval membutuhkan pemikiran yang cukup matang.
+
+- Slide berikutnya akan membuat tabel distribusi frekuensi dengan kelas yang arbitrari.
+
+## Google sheet
+
+1. ketik rumus `=FREQUENCY(data,class)`
+1. Isi `data` dengan data yang ingin anda buat tabel frekuensinya.
+1. Isi `class` dengan batas atas dari kelas anda.
+
+## Banyaknya kelas yang ideal
+
+- Jumlah kelas dan interval yang baik sebenarnya cukup fluid.
+
+- Secara umum, kita menginginkan pembagian distribusi yang cukup merata dan tidak ekstrim.
+
+- Interval kelas tidak harus seragam, namun biasanya anda akan sering ketemu interval kelas yang seragam.
+
+- Membuat umlah kelas dan interval kelas membutuhkan pengalaman.
+
+## Rumus jumlah kelas
+
+- Jumlah kelas dapat dibuat dengan rumus
+
+$$k=1+3.322\log(n)$$
+
+di mana:
+
+- k = jumlah kelas
+- n = jumlah observasi/sample.
+- gunakan log base 10.
+
+## Rumus interval kelas
+
+- Interval kelas dapat juga menggunakan rumus:
+
+$$c=\frac{X_n-X_1}{k}$$
+
+- $k$ didapat dari rumus sebelumnya.
+
+- $X_n$ adalah nilai observasi terbesar, $X_1$ adalah nilai observasi terkecil.
+
+- $c$ adalah lebarnya interval.
+
+## Exercise
+
+Membuat tabel distribusi frekuensi absolut dan frekuensi relatif.
+
+## Normal distribution
+
+```{r}
+ N <- 10000
+ x <- rnorm(N, 10, 5)
+ hist(x, 
+ xlim=c(min(x),max(x)), probability=T, nclass=max(x)-min(x)+1, 
+   col='lightblue', xlab=' ', ylab=' ', axes=F,
+   main='Normal distribution')
+lines(density(x,bw=1), col='red', lwd=3)
+```
+
+## Normal distribution
+
+- Sebagian besar distribusi umumnya akan mengikuti distribusi normal.
+
+- Kurva distribusi normal seringkali disebut juga dengan kurva lonceng atau _bell curve_.
+
+- Distribusi normal adalah sebuah distribusi populasi di mana observasi terbanyak akan dapat anda temui di rata-rata. Semakian jauh dari rata-rata, makin sedikit observasi yang anda temui.
+
+## Pengukuran gejala pusat
+
+- Untuk setiap data, kita umumnya perlu sebuah indikator yang menunjukkan representasi dari keseluruhan populasi.
+
+- Indikator ini kita sebut juga dengan **ukuran gejala pusat** atau *central tendency*.
+
+- Pengukuran gejala pusat dilakukan dengan melihat *Modus*, *Median*, dan *Mean*
+
+- Modus = angka yang paling sering muncul, Median = nilai tengah
+
+- Mean = rata-rata atau $\mu=\frac{\sum_iX_i}{n}$
+
+## Ukuran sebaran
+
+- Di samping ukuran gejala pusat, kita juga menggunakan beberapa indikator untuk mengukur seberapa jauh rentang data kita dari gejala pusat tersebut.
+
+- Kita menggunakan max (nilai paling tinggi), min (nilai paling kecil), dan kuartil.
+
+- Kuartil 1 adalah data paling tinggi dari 25% data terkecil, kuartil 2 = median, dan kuartil 3 adalah data paling tinggi dari 75% data terkecil.
+
+## Exercise
+
+- mendapatkan ukuran central tendency dan ukuran sebaran dengan google sheet.
+
+- Semua ukuran-ukuran ini kita sebut dengan **statistik deskriptif**.
+
+## Mingdep
+
+- probability atau more on central tendency
