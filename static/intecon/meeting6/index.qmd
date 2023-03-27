@@ -194,12 +194,27 @@ $AC=n\frac{F}{S}+c$
 
 - Average cost akan naik seiring jumlah perusahaan yang bertambah, hal ini karena jumlah market share yang berkurang.
 - Seiring naiknya ukuran pasar, average cost dapat dikurangi karena tiap firm dapat produksi lebih banyak.
-- jika demand linear $Q=a-bP$, maka firms akan produksi di MR=MC
-- $P-\frac{Q}{b}=c \rightarrow \frac{Q}{b}=P-c \rightarrow P-c=\frac{S}{nb}$
+- Average cost akan menentukan besarnya per-unit profit, namun produksi tetap dilakukan di MR=MC seperti halnya monopoli.
 
 ## Karakteristik monopolistik
 
-$P-c=\frac{S}{nb}$
+- Perusahaan produksi di MR=MC, namun MR-nya tidak $Q=a-bP$ seperti monopoli.
+
+$$
+Q=S\times\left[1/n-b(P-\bar{P})\right]
+$$
+
+$$
+Q=\left[S/n-Sb\bar{P}\right]-SbP
+$$
+
+- Karena $\bar{P}$ adalah price set by other firms, dianggap exogenous. MR=MC-nya menjadi:
+
+- $P-\frac{Q}{Sb}=c \rightarrow P-c=\frac{Q}{Sb} \rightarrow P-c=\frac{1}{nb}$
+
+## Karakteristik monopolistik
+
+$P-c=\frac{1}{nb}$
 
 - seiring meningkatnya jumlah perusahaan di industri, $P-c$ (mark-up) turun.
   - karena c exogen, turunnya $P-c$ disebabkan oleh turunnya $P$
