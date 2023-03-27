@@ -32,7 +32,7 @@ format:
 
 ## example: mobile phone
 
-<div id="mobile_vendor-ww-yearly-2021-2021" width="600" height="400" style="width:600px; height: 400px;"></div><!-- You may change the values of width and height above to resize the chart --><p>Source: <a href="https://gs.statcounter.com/vendor-market-share/mobile/worldwide/#yearly-2021-2021-bar">StatCounter Global Stats - Device Vendor Market Share</a></p><script type="text/javascript" src="https://www.statcounter.com/js/fusioncharts.js"></script><script type="text/javascript" src="https://gs.statcounter.com/chart.php?mobile_vendor-ww-yearly-2021-2021&chartWidth=600"></script>
+![Sumber: https://gs.statcounter.com/chart.php?mobile_vendor-ww-yearly-2021-2021](phone.png)
 
 ## Monopolistic competition
 
