@@ -7,7 +7,7 @@
 <link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="index_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="index_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.2.269">
+  <meta name="generator" content="quarto-1.2.335">
 
   <meta name="author" content="Matematika &amp; Statistika">
   <title>Konsep Probabilitas</title>
@@ -341,17 +341,20 @@ Matematika &amp; Statistika
 <section id="minggu-lalu" class="slide level2">
 <h2>Minggu lalu</h2>
 <ul>
-<li><p>Definisi data dan berbagai jenis data.</p></li>
-<li><p>Alasan kita melakukan sampling.</p></li>
-<li><p>Hukum bilangan besar dan teorema nilai pusat.</p></li>
+<li>Distribusi frekuensi dan statistik deskriptif.</li>
+</ul>
+<h4 id="next">Next</h4>
+<ul>
+<li>peluang independen dan gabungan, bayesian.</li>
+<li>uji normalitas dan probabilitas sampel</li>
 </ul>
 </section>
 <section id="hari-ini" class="slide level2">
 <h2>Hari ini</h2>
 <div>
 <ul>
-<li class="fragment"><p>Jawaban quiz</p></li>
 <li class="fragment"><p>Definisi dan pendekatan klasik</p></li>
+<li class="fragment"><p>Aplikasi probabilitas dalam asuransi</p></li>
 <li class="fragment"><p>Aturan dasar dalam probabilitas</p></li>
 <li class="fragment"><p>Kejadian independen</p></li>
 <li class="fragment"><p>Setelah kuliah hari ini, diharapkan anda dapat menerangkan prinsip-prinsip dasar probabilitas.</p></li>
@@ -382,10 +385,55 @@ Matematika &amp; Statistika
 <p>Seperti yang anda mungkin paham, hampir semua kejadian di dunia ini adalah kejadian berpeluang.</p>
 </div>
 </section>
+<section id="notasi" class="slide level2 m">
+<h2>Notasi</h2>
+<div>
+<ul>
+<li class="fragment"><p><span class="math inline">\(S\)</span> (<em>State</em>) melambangkan himpunan kemungkinan kejadian.</p>
+<ul>
+<li class="fragment"><p>Lempar koin punya <span class="math inline">\(S=\{A,G\}\)</span></p></li>
+<li class="fragment"><p>Lempar dadu punya <span class="math inline">\(S=\{1,2,3,4,5,6\}\)</span></p></li>
+</ul></li>
+<li class="fragment"><p><span class="math inline">\(P(X)\)</span> melambangkan peluang munculnya kejadian <span class="math inline">\(X\)</span>.</p>
+<ul>
+<li class="fragment"><p><span class="math inline">\(P(X=A)\)</span> atau <span class="math inline">\(P(A)\)</span> artinya peluang munculnya A.</p></li>
+<li class="fragment"><p><span class="math inline">\(P(X&gt;3)=\frac{1}{2}\)</span> peluang munculnya angka lebih dari 3 adalah <span class="math inline">\(\frac{1}{2}\)</span>.</p></li>
+<li class="fragment"><p><span class="math inline">\(P(1\leq X \leq 5)=\)</span> berapa?</p></li>
+</ul></li>
+<li class="fragment"><p><span class="math inline">\(P(\bar{A})\)</span> atau <span class="math inline">\(P(X=\bar{A})\)</span> artinya peluang munculnya kejadian selain A.</p>
+<ul>
+<li class="fragment">Di koin, <span class="math inline">\(P(\bar{A})=P(G)\)</span></li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="beberapa-istilah" class="slide level2">
+<h2>Beberapa istilah</h2>
+<ul>
+<li><p>Sebuah himpunan kejadian dikatakan <strong>adil</strong> (<em>fair</em>) jika semua anggota <span class="math inline">\(S\)</span> punya kemungkinan yang sama untuk muncul.</p>
+<ul>
+<li>Dadu yang adil: <span class="math inline">\(P(1)=P(2)=P(3)=P(4)=P(5)=P(6)=\frac{1}{6}\)</span></li>
+</ul></li>
+<li><p>Sebuah kejadian dikatakan <strong>independen</strong> jika kejadian tersebut tidak tergantung dari kejadian sebelumnya, dan tidak mempengaruhi kejadian sesudahnya.</p>
+<ul>
+<li>Jika lemparan pertama keluar 3, lemparan ke-2 tetap punya <span class="math inline">\(P(3)=\frac{1}{6}\)</span>, begitupun lemparan ke-3.</li>
+</ul></li>
+</ul>
+</section>
 <section id="menghitung-peluang" class="slide level2">
 <h2>Menghitung peluang</h2>
 <ul>
 <li><p>Pendekatan klasik adalah dengan melakukan eksperimen sebanyak <span class="math inline">\(n\)</span>, lalu melihat jumlah dari masing-masing hasilnya.</p></li>
+<li><p>Jika ada sebuah koin 2 sisi dengan <span class="math inline">\(S=\{A,G\}\)</span>, maka:</p></li>
+</ul>
+<p><span class="math display">\[
+P(A)=\frac{n(A)}{n(S)}
+\]</span></p>
+</section>
+<section id="menghitung-peluang-1" class="slide level2">
+<h2>Menghitung peluang</h2>
+<ul>
+<li><p>Sebuah koin yang adil dengan dua sisi <span class="math inline">\(S=\{A,G\}\)</span> dan independen.</p></li>
 <li><p>Lempar koin sebanyak <span class="math inline">\(n=10\)</span>, lalu muncul <span class="math inline">\(A=4\)</span> dan <span class="math inline">\(G=6\)</span>, saya katakan:</p></li>
 </ul>
 <p><span class="math display">\[
@@ -395,11 +443,43 @@ P(A)=\frac{4}{10}
 <li>berapa <span class="math inline">\(P(G)\)</span>?</li>
 </ul>
 </section>
+<section id="rules-dasar" class="slide level2">
+<h2>Rules dasar</h2>
+<ul>
+<li><p><span class="math inline">\(0 \leq P(X) \leq 1\)</span>, 0 = gak mungkin, 1 = pasti.</p></li>
+<li><p>nilai peluang bermakna limit tak hingga. <span class="math inline">\(P(X=A)=0,5\)</span> artinya jika <span class="math inline">\(X\)</span> dilakukan berulang kali, frekuensi relatif dari <span class="math inline">\(X=A\)</span> adalah 0,5.</p></li>
+<li><p><span class="math inline">\(P(A \ \text{atau} \ B) = P(A \cup B)=P(A)+P(B)\)</span></p></li>
+</ul>
+<p>Berapa peluang munculnya 1 atau 2 pada lemparan sebuah dadu yang adil?</p>
+<div>
+<ul>
+<li class="fragment"><span class="math inline">\(P(X=1 \cup X=2)=P(X=1)+P(X=2)=\frac{1}{6}+\frac{1}{6}\)</span></li>
+</ul>
+</div>
+</section>
+<section id="rules-dasar-1" class="slide level2">
+<h2>Rules dasar</h2>
+<div>
+<ul>
+<li class="fragment"><p><span class="math inline">\(P(S_1 \cup S_2 \cup .... S_S)=\sum_{i=1}^S S_i=1\)</span></p>
+<ul>
+<li class="fragment"><p>koin: <span class="math inline">\(P(A)+P(G)=1\)</span></p></li>
+<li class="fragment"><p>dadu: <span class="math inline">\(P(1)+P(2)+P(3)+P(4)+P(5)+P(6)=1\)</span></p></li>
+</ul></li>
+<li class="fragment"><p><span class="math inline">\(P(\bar{A})=1-P(A)\)</span></p>
+<ul>
+<li class="fragment"><p><span class="math inline">\(P(\bar{X}&lt;3)=P(3)+P(4)+P(5)+P(6)\)</span></p></li>
+<li class="fragment"><p><span class="math inline">\(P(\bar{X}&lt;3)=1-\left(P(1)+P(2) \right)\)</span></p></li>
+</ul></li>
+</ul>
+</div>
+</section>
 <section id="pendekatan-klasik" class="slide level2">
 <h2>Pendekatan klasik</h2>
 <div>
 <ul>
 <li class="fragment"><p>Tahun lalu, dari 40 mahasiswa yang mengambil mata kuliah Statistika, 5 orang dapat nilai A, 10 orang dapat nilai B, 20 orang dapat nilai C, 4 orang dapat nilai D dan 1 orang dapat nilai E. Berapa persen peluang mahasiswa untuk tidak lulus di kelas Statistika?</p></li>
+<li class="fragment"><p><span class="math inline">\(P(\text{tidak lulus})=P(D)+P(E)=1-P(A \cup B \cup C)\)</span></p></li>
 <li class="fragment"><p><span class="math inline">\(P(\text{tidak lulus})=\frac{4+1}{40}=\frac{5}{40}=\frac{1}{8}\)</span></p></li>
 </ul>
 </div>
@@ -412,21 +492,188 @@ P(A)=\frac{4}{10}
 <li><p>Pendekatan klasik adalah cara paling sederhana menghitung peluang: jumlah munculnya <em>outcome</em> <span class="math inline">\(X\)</span> dibagi jumlah experiment <span class="math inline">\(n\)</span>.</p></li>
 </ul>
 </section>
+<section id="expected-value" class="slide level2">
+<h2>Expected Value</h2>
+<ul>
+<li><p>Nilai ekspektasi adalah sebuah nilai yang disematkan pada probabilitas.</p></li>
+<li><p>Merupakan rata-rata nilai yang diantisipasi atas berbagai kemungkinan nilai yang muncul dari suatu kejadian berpeluang.</p></li>
+</ul>
+<p><span class="math display">\[
+EV=\sum P(X_i) \times X_i
+\]</span> ## EV Judi {.incremental}</p>
+<ul>
+<li><p>Sebuah koin yang adil digunakan sebagai dasar sebuah perjudian. Jika keluar A, anda akan mendapatkan Rp 10.000. Jika keluar G, anda harus membayar Rp 12.000. Berapa nilai ekspektasi dari perjudian tersebut?</p></li>
+<li><p><span class="math inline">\(EV=P(A) \times V(A) + P(G) \times V(G)\)</span></p></li>
+<li><p><span class="math inline">\(EV=\frac{1}{2} \times 10000 + \frac{1}{2} \times -12000=-1000\)</span></p></li>
+</ul>
+</section>
+<section id="ev-judi" class="slide level2 incremental">
+<h2>EV judi</h2>
+<ul>
+<li><p>Sebuah dadu yang adil digunakan sebagai dasar sebuah perjudian. Jika keluar 1, anda membayar Rp. 20.000. Jika keluar 6, anda mendapatkan Rp 50.000. Jika keluar ganjil selain 1 anda membayar Rp. 5.000, jika keluar genap selain 6, anda mendapatkan Rp.1.000. Hitung nilai ekspektasi perjudian tersebut.</p></li>
+<li><p><span class="math inline">\(EV=\frac{1}{6} \times -20000 + \frac{1}{6} \times 50000 + \frac{2}{6} \times -5000 + \frac{2}{6}\times 1000\)</span></p></li>
+<li><p><span class="math inline">\(EV=3666,67\)</span></p></li>
+</ul>
+</section>
+<section id="memaknai-ev" class="slide level2">
+<h2>Memaknai EV</h2>
+<div>
+<ul>
+<li class="fragment"><p>EV judi koin di atas artinya anda mungkin aja menang 10000 ketika sekali ikut. Mungkin juga kalah 12000.</p></li>
+<li class="fragment"><p>namun, jika judi tersebut diulang berkali-kali sebanyak mungkin, anda akan secara total mendapatkan -1000.</p></li>
+<li class="fragment"><p>Logikanya sama jika judi dilakukan 1 kali, tetapi yang ikut judi ada banyak orang:</p>
+<ul>
+<li class="fragment">Jika judi diikuti 1000 orang, akan ada 500 orang menang 10000, tapi 500 orang lainnya kalah 12000.</li>
+</ul></li>
+<li class="fragment"><p>Jika anda bandar, judi mana yang lebih baik?</p></li>
+</ul>
+</div>
+</section>
+<section id="bandar-judi" class="slide level2">
+<h2>Bandar judi</h2>
+<ul>
+<li><p>Bandar judi sudah pasti akan membuat judi yang memiliki nilai ekspektasi yang negatif bagi peserta judi.</p></li>
+<li><p>Di kasus judi koin, jika ada bandar punya 1000 pelanggan:</p>
+<ul>
+<li><p>Dia harus membayar <span class="math inline">\(10000 \times 500=\)</span> 5 juta.</p></li>
+<li><p>Tapi dapat <span class="math inline">\(12000 \times 500=\)</span> 6 juta.</p></li>
+</ul></li>
+<li><p>Bandar yang baik tidak akan menjual judi dadu di atas.</p>
+<ul>
+<li>Apa yang akan dilakukan bandar yang baik?</li>
+</ul></li>
+</ul>
+</section>
+<section id="pengambilan-keputusan" class="slide level2">
+<h2>Pengambilan keputusan</h2>
+<div>
+<ul>
+<li class="fragment"><p>EV dapat digunakan sebagai basis pengambilan keputusan.</p></li>
+<li class="fragment"><p>Kita dapat membandingkan dua kejadian dan memilih sebuah keputusan yang memiliki nilai EV lebih besar.</p>
+<ul>
+<li class="fragment">jika ada keputusan A dan keputusan B, kita memilih keputusan A jika <span class="math inline">\(EV(A) &gt; EV(B)\)</span></li>
+</ul></li>
+<li class="fragment"><p>Namun Ketika kita melibatkan kejadian berpeluang, pengambilan keputusan ini tergantung dari <strong>profil risiko</strong>.</p></li>
+</ul>
+</div>
+</section>
+<section id="profil-risiko" class="slide level2">
+<h2>Profil risiko</h2>
+<ul>
+<li><p>Seseorang dihadapkan dengan sebuah keputusan A dan B. keputusan A merupakan sebuah kepastian sementara keputusan B merupakan kejadian berpeluang:</p>
+<ul>
+<li><p>Risk neutral ketika orang tsb memilih A ketika <span class="math inline">\(V(A)&gt;EV(B)\)</span> dan memilih B ketika <span class="math inline">\(V(A)&lt;EV(B)\)</span></p></li>
+<li><p>Risk averse ketika orang tsb memilih A bahkan ketika <span class="math inline">\(V(A)&lt;EV(B)\)</span>.</p></li>
+<li><p>Risk loving ketika orang tsb memilih B bahkan ketika <span class="math inline">\(V(A)&gt;EV(B)\)</span>.</p></li>
+</ul></li>
+</ul>
+</section>
+<section id="profil-risiko-1" class="slide level2 m">
+<h2>Profil risiko</h2>
+<div>
+<ul>
+<li class="fragment"><p>Lihat kembali judi koin dengan EV=-1.000:</p>
+<ul>
+<li class="fragment"><p>tidak ikut: V=0, ikut: EV=-1.000.</p></li>
+<li class="fragment"><p>orang risk neutral dan risk averse tidak akan ikut judi, sementara risk loving akan ikut.</p></li>
+</ul></li>
+<li class="fragment"><p>Lihat kembali judi dadu dengan EV=3.666,67:</p>
+<ul>
+<li class="fragment"><p>tidak ikut: V=0, ikut: EV=3.666,67.</p></li>
+<li class="fragment"><p>orang risk neutral dan risk loving akan ikut, sementara orang risk averse tidak akan ikut.</p></li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="asuransi" class="slide level2">
+<h2>Asuransi</h2>
+<div>
+<ul>
+<li class="fragment"><p>Daerah Jigikirsi merupakan daerah yang cukup rawan dalan kejahatan curanmor. Dalam setahun ada setidaknya 1000 kejadian curanmor. Asumsikan di jigikirsi ada 10.000 pemilik kendaraan bermotor, dan semuanya memiliki harga yang sama yaitu 15 juta rupiah. berapa nilai ekspektasi sebuah motor di jigikirsi?</p></li>
+<li class="fragment"><p>Hitung probability motor hilang, baru hitung EV.</p></li>
+</ul>
+</div>
+</section>
+<section id="asuransi-1" class="slide level2 m">
+<h2>Asuransi</h2>
+<div>
+<ul>
+<li class="fragment"><p>Anda menawarkan sebuah produk asuransi yang menjanjikan pergantian motor baru jika ada motor hilang di jigikirsi. Berapa premi yang akan anda tawarkan ke pemilik motor di jigikirsi?</p></li>
+<li class="fragment"><p>Seorang risk neutral akan bayar selama preminya di bawah 1,5 juta.</p>
+<ul>
+<li class="fragment">premi 1,5 juta disebut juga premi yang adil (fair premium)</li>
+</ul></li>
+<li class="fragment"><p>Seorang risk averse akan bayar bahkan ketika premi di atas 1,5 juta.</p></li>
+<li class="fragment"><p>Makin besar dia rela bayar, makin besar derajat risk aversenya.</p></li>
+<li class="fragment"><p>Risk lovers sebaliknya: baru rela bayar kalo preminya semurah mungkin.</p></li>
+</ul>
+</div>
+</section>
+<section id="asuransi-2" class="slide level2">
+<h2>Asuransi</h2>
+<div>
+<ul>
+<li class="fragment"><p>Sebuah kapal mengirimkan 10.000 kontainer dalam sehari. Dari 10.000 kontainer tersebut, ada 100 diantaranya rusak saat handling, 50 diantaranya hilang, dan 65 diantaranya tertahan di pabean, dan 85 diantaranya salah kirim. Semua kejadian di atas mengakibatkan nilai barang anda menjadi 0.</p></li>
+<li class="fragment"><p>Berapa premi asuransi yang adil dari kapal tersebut?</p></li>
+<li class="fragment"><p>Pebisnis umumnya risk averse. Makanya perusahaan asuransi untung.</p></li>
+<li class="fragment"><p>Pejudi biasanya risk loving. Makanya bandar untung.</p></li>
+</ul>
+</div>
+</section>
+<section id="odds" class="slide level2">
+<h2>Odds</h2>
+<ul>
+<li><p>Odds merupakan sebuah imbal judi yang dibuat sedemikian sehingga penjudi memasang taruhan yang seimbang.</p></li>
+<li><p>Pada perjudian tebak pemenang / tebak skor, seringkali peserta yang bertanding memiliki kemampuan yang berbeda-beda.</p></li>
+<li><p>Akibatnya, kemungkinan menangnya juga beda-beda.</p></li>
+<li><p>Sering terjadi di judi bole, e-sports, pacuan kuda, dan lain sebagainya.</p></li>
+</ul>
+</section>
+<section id="odds-1" class="slide level2">
+<h2>Odds</h2>
+<ul>
+<li><p>Misalnya pertandingan Manchester City vs Arema. Jika tim yang anda pasang menang, anda dapat uang 2x lipat. Ke mana sebagian besar orang akan pasang?</p></li>
+<li><p>Karena itu ada yang disebut odds: tim yang kemungkinan menang lebih besar akan dapat multiplier / hadiah yang lebih kecil ketimbang tim yang kemungkinan menangnya lebih kecil.</p></li>
+<li><p>Odds diset sedemikian sehingga jumlah nilai taruhannya akan seimbang.</p></li>
+</ul>
+</section>
+<section id="odds-2" class="slide level2">
+<h2>Odds</h2>
+
+<img data-src="bet.jpg" class="r-stretch"><ul>
+<li><p>Jika anda bet 1 juta ke RBL dan RBL menang, anda akan dapat 5 juta. Bet ONIC dan menang, dapat 1 juta 110 ribu.</p></li>
+<li><p>Tim mana yang diunggulkan?</p></li>
+</ul>
+</section>
+<section id="odds-3" class="slide level2">
+<h2>Odds</h2>
+<div>
+<ul>
+<li class="fragment">Jika ikut judi dan bayar 1 juta, maka anda akan indifferent jika:</li>
+</ul>
+<p><span class="math display">\[
+P(\text{RBL menang}) \times \text{Odds RBL menang} = \\ P(\text{RBL kalah}) \times \text{Odds RBL kalah}
+\]</span></p>
+<ul>
+<li class="fragment">Bagi bandar, kemungkinan menang RBL adalah sekitar 18,17%. ONIC berapa?</li>
+</ul>
+</div>
+</section>
 <section id="review-1" class="slide level2">
 <h2>Review</h2>
-<div style="position: relative; padding-bottom: 56.25%; padding-top: 35px; height: 0; overflow: hidden;">
-<iframe sandbox="allow-scripts allow-same-origin allow-presentation" allowfullscreen="true" allowtransparency="true" frameborder="0" height="315" src="https://www.mentimeter.com/app/presentation/alngqgc7ba954m1catp37693pdqmwjib/embed" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" width="420">
-</iframe>
+<div>
+<ul>
+<li class="fragment"><p>Peluang digunakan untuk menghitung expected value.</p></li>
+<li class="fragment"><p>Expected value memiliki banyak aplikasi seperti di perjudian dan asuransi.</p></li>
+<li class="fragment"><p>Odds digunakan untuk menyeimbangkan pasang taruhan. Tapi perlu diingat kemungkinan <em>fraud</em>.</p></li>
+</ul>
 </div>
-<p><img data-src="qr.png" class="absolute" style="top: 400px; left: 1000px; width: 200px; height: 200px; "></p>
 </section>
 <section id="minggu-depan" class="slide level2">
 <h2>Minggu depan</h2>
 <ul>
-<li><p>Kejadian bersyarat dan kaidah Bayes.</p></li>
-<li><p>Menghitung <em>expected outcome</em>.</p></li>
-<li><p>Distribusi Probabilitas.</p></li>
-<li><p>Jangan lupa mengerjakan kuis di e-learn masing-masing.</p></li>
+<li><p>Kejadian berulang, kejadian bersyarat, dan kaidah Bayes.</p></li>
+<li><p>Distribusi probabilitas.</p></li>
 </ul>
 <div class="footer footer-default">
 
