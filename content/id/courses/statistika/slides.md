@@ -24,7 +24,7 @@ slides:
 
 - {{% staticref "/statistika/meeting1/index.html" "newtab" %}}Pertemuan 1: Pendahuluan{{% /staticref %}}
 - {{% staticref "/statistika/meeting2/index.html" "newtab" %}}Pertemuan 2: Statistika Deskriptif {{% /staticref %}}
-- {{% staticref "/statistika/meeting3/index.html" "newtab" %}}Pertemuan 3: {{% /staticref %}}
+- {{% staticref "/statistika/meeting3/index.html" "newtab" %}}Pertemuan 3: Konsep probabilitas {{% /staticref %}}
 - {{% staticref "/statistika/meeting4/index.html" "newtab" %}}Pertemuan 4: {{% /staticref %}}
 - {{% staticref "/statistika/meeting5/index.html" "newtab" %}}Pertemuan 5: {{% /staticref %}}
 - {{% staticref "/statistika/meeting6/index.html" "newtab" %}}Pertemuan 6: {{% /staticref %}}
