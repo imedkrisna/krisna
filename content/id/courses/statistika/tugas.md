@@ -33,8 +33,8 @@ commentable: false
 #### Links:
 
 - [Quiz 1](https://forms.gle/xn3gXZEaRryjS2gf8)
-- [Quiz 2](https://forms.gle/qDiFASLrhJQUeVBh9) Deadline 10 April 2023 Jam 9 WIB
-- [Quiz 3](https://forms.gle/nMtbYf9gSPDiuAiM7) Deadline 10 April 2023 Jam 9 WIB
+- [Quiz 2](https://forms.gle/qDiFASLrhJQUeVBh9) Deadline 16 April 2023 Jam 21.00 WIB
+- [Quiz 3](https://forms.gle/nMtbYf9gSPDiuAiM7) Deadline 16 April 2023 Jam 21.00 WIB
 
 ## Tugas kelompok
 
