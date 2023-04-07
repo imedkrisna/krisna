@@ -1,6 +1,6 @@
 ---
-title: "Konsep Probabilitas"
-subtitle: "Pertemuan 3"
+title: "Konsep Probabilitas 2"
+subtitle: "Pertemuan 4"
 author: "Matematika & Statistika"
 format: 
   revealjs:

@@ -171,13 +171,18 @@ Berapa peluang munculnya 1 atau 2 pada lemparan sebuah dadu yang adil?
 $$
 EV=\sum P(X_i) \times X_i
 $$
-## EV Judi {.incremental}
+
+## EV Judi
+
+::: {.incremental}
 
 - Sebuah koin yang adil digunakan sebagai dasar sebuah perjudian. Jika keluar A, anda akan mendapatkan Rp 10.000. Jika keluar G, anda harus membayar Rp 12.000. Berapa nilai ekspektasi dari perjudian tersebut?
 
 - $EV=P(A) \times V(A) + P(G) \times V(G)$
 
 - $EV=\frac{1}{2} \times 10000 + \frac{1}{2} \times -12000=-1000$
+
+:::
 
 ## EV judi {.incremental}
 
