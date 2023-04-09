@@ -55,4 +55,253 @@ format:
 
 :::
 
-## 
+## Rules baru
+
+::: {.incremental}
+
+- Peluang kejadian bersyarat: peluang munculnya A jika B terjadi.
+
+- Perhitungan munculnya outcome A dan B jadi beda rumus seandainya kejadian B dipengaruhi oleh kejadian A.
+
+- $P(A \cap B)=P(A) \times P(B|A)$
+
+- Jika kejadian independen, maka $P(B|A)= P(B)$ 
+
+:::
+
+## Lotre
+
+::: {.incremental}
+
+- Sebuah kotak undian berisi 100 tiket. 50 diantaranya tiket zonk, 30 diantaranya tiket uang tunai 100 ribu rupiah, 10 diantaranya tiket 200 ribu rupiah, 8 diantaranya tiket 300 ribu dan 2 tiket 500 ribu rupiah. Berapa peluang seseorang bisa ambil tiket 500 ribu 2x berturut-turut? (1) jika tiket dikembalikan, (2) jika tiket tidak dikembalikan.
+
+- (1) $P(A \cap B)=P(A) \times P(B)= \frac{2}{100} \times \frac{2}{100} = \frac{4}{10000}$
+
+- (2) $P(A \cap B)=P(A) \times P(B|A)= \frac{2}{100} \times \frac{1}{99} = \frac{2}{9900}$
+
+- Jika narik lotre ini bayar 90 ribu rupiah, orang risk neutral ikut ga?
+
+:::
+
+## Kejadian beririsan
+
+::: {.incremental}
+
+- Sebuah deck terdiri dari 52 kartu standar. Berapa kemungkinan tarikan pertama anda dapat lambang hati atau as?
+
+- $P(💗 \cup A)=P(💗)+P(A)-P(💗 \cap A)=\frac{13}{52}+\frac{4}{52}-\frac{1}{52}$
+
+- $P(💗 \cap A) \neq 0$ karena ada 1 kartu yang adalah As dan juga berlambang hati.
+
+:::
+
+## Kejadian beririsan
+
+::: {.incremental}
+
+- Ada 140 anak yang saat ini mengambil kelas statistik. 100 diantaranya anak-anak yang rupawan. 50 diantaranya anak-anak yang pinter. Berapa probabilitas jika saya ambil 1 anak, saya dapat anak yang rupawan atau pinter?
+
+- $P(R \cup P)=P(R)+P(P)=\frac{150}{140}$?
+
+- Apakah ga mungkin? Masalahnya, ada anak yang pinter DAN rupawan. Misalnya yg rupawan & pinter = 40 orang.
+
+- $P(R \cup P)=P(R)+P(P)-P(R\cap P)=\frac{100+50-40}{140}=\frac{110}{140}$
+
+:::
+
+## Kejadian beririsan
+
+- kejadian beririsan dapat diilustrasikan dengan **diagram venn**.
+
+```{r}
+#| warning: false
+#| prompt: false
+#| error: false
+#| echo: false
+library(VennDiagram)
+wew<-draw.pairwise.venn(area1 = 100,area2 = 50,cross.area = 40,
+                        category = c("Rupawan","Pinter"), fill=c("lightgreen","lightblue"))
+```
+
+```{r}
+wew
+```
+
+## Kejadian beririsan
+
+::: {.incremental}
+
+- Sebuah acara sosialisasi mengundang 120 orang. Dari data, diketahui 100 diantaranya beragama islam. Berbekal pengetahuan tersebut, panitia mempersiapkan 20 kotak makan siang. Pas break siang, panitia mengumumkan "bagi yang tidak puasa bisa ambil makan siang di meja panitia". Ternyata ada 15 orang yang tidak kebagian. Berapa banyak yang tidak puasa? Apa kesalahan dari panitia?
+
+- $P(Maksi)=1-P(Muslim)+P(Muslim \ \cap \ Maksi)$
+
+- Panitia mengasumsikan bahwa $P(Muslim \ \cap \ Maksi) = 0$.
+
+:::
+
+## Permutasi dan Kombinasi {.m}
+
+- Jika kita perlu menghitung ada berapa cara untuk mendapatkan $r$ keluaran dari total kemungkinan $n$ keluaran, kita dapat menggunakan permutasi dan kombinasi.
+
+- Permutasi jika urutan ngaruh. $ABC \neq BCA$
+
+$$
+P^n_r=\frac{n!}{(n-r)!}
+$$
+    
+- Kombinasi jika urutan ga ngaruh. $ABC=BCA$
+
+$$
+C^n_r=\frac{n!}{r!(n-r)!}
+$$
+
+## Faktorial
+
+- Tanda seru setelah angka disebut juga dengan faktorial.
+
+- Faktorial mirip dengan pangkat, tapi dikali berkurang terus hingga 1.
+
+- $3!=3\times 2\times 1$
+
+- $6!=6\times 5\times 4 \times 3 \times 2 \times 1=6 \times 5 \times 4 \times 3!$
+
+- $\frac{6!}{3!}=\frac{6 \times 5 \times 4 \times 3!}{3!}=6 \times 5 \times 4$
+
+## Permutasi
+
+::: {.incremental}
+
+- Sebuah ujian terdiri dari total 10 soal. Namun, setiap mahasiswa hanya akan mengerjakan 4 soal saja yang muncul secara acak dari 10 soal tersebut. Ada berapa tipe soal yang mungkin muncul di ujian tersebut?
+
+- Jika beda urutan diitung 1 tipe soal, maka 
+
+- $$P^{10}_4=\frac{10!}{(10-4)!}=\frac{10!}{6!}=5040$$
+
+:::
+
+## Kombinasi
+
+::: {.incremental}
+
+- Sebuah ujian terdiri dari total 10 soal. Namun, setiap mahasiswa hanya akan mengerjakan 4 soal saja yang muncul secara acak dari 10 soal tersebut. Ada berapa tipe soal yang mungkin muncul di ujian tersebut?
+
+- Jika beda urutan soal diitung tipe yang sama, maka
+
+- $$C^{10}_4=\frac{10!}{4!(10-4)!}=\frac{10!}{4!6!}=\frac{10\times9\times 8\times 7}{4 \times 3\times 2\times 1}=210$$
+
+:::
+
+## Permutasi
+
+::: {.incremental}
+
+- Sebuah kotak berisi 12 bola merah, 13 bola biru dan 15 bola hijau. Pengambilan bola tidak dikembalikan. Hitung kemungkinan pengambilan pertama bola merah, bola ke-2 hijau, dan bola ke-3 biru.
+
+- Pertanyaan ini dapat dijawab dengan 2 cara. Pertama, cara klasik:
+
+- $P(R_1G_2B_3)=P(R) \times P(G|R) \times P(B|R_1G_2)=\frac{12}{40} \times \frac{15}{39} \times \frac{13}{38}$
+
+- $P(R_1G_2B_3) \approx 0,04$
+
+:::
+
+## Permutasi
+
+- Cara ke-2 dengan menggunakan permutasi:
+
+
+$$
+P(R_1G_2B_3)=\frac{P^{12}_1P^{15}_1P^{13}_1}{P^{40}_3}=\frac{\frac{12!}{11!}\times\frac{15!}{14!}\times\frac{13!}{12!}}{\frac{40!}{37!}}=\frac{2340}{59280} \approx 0,04
+$$
+
+## Kombinasi
+
+- Sebuah kotak berisi 12 bola merah, 13 bola biru dan 15 bola hijau. Pengambilan bola tidak dikembalikan. Hitung kemungkinan 3 kali pengambilan akan dapat warna yang berbeda-beda.
+
+- Dengan cara klasik dapat dilakukan, namun perlu dipertimbangkan ada berapa kemungkinan 3 warna berbeda-beda.
+
+- $P(RGB)=3! \times P(R_1G_2B_3)\approx6\times0,04\approx0,24$
+
+## Kombinasi
+
+- Cara ke-2 dengan menggunakan kombinasi:
+
+
+$$
+P(RGB)=\frac{C^{12}_1C^{15}_1C^{13}_1}{C^{40}_3}=\frac{\frac{12!}{11!}\times\frac{15!}{14!}\times\frac{13!}{12!}}{\frac{40!}{3!37!}}=\frac{2340}{9880}\approx0,24.
+$$
+
+## Diagram pohon
+
+```{mermaid}
+flowchart TB
+  A[Mulai] --> B[R]
+  A --> C[G]
+  A --> D[B]
+  B-->E[R] & F[G] & G[B]
+  C-->H[R] & I[G] & J[B]
+  D-->K[R] & L[G] & M[B]
+  E-->E1[R] & F1[G] & G1[B]
+  F-->H1[R] & I1[G] & J1[B]
+  G-->K1[R] & L1[G] & M1[B]
+  H-->E2[R] & F2[G] & G2[B]
+  I-->H2[R] & I2[G] & J2[B]
+  J-->K2[R] & L2[G] & M2[B]
+  K-->E3[R] & F3[G] & G3[B]
+  L-->H3[R] & I3[G] & J3[B]
+  M-->K3[R] & L3[G] & M3[B]
+```
+
+## Probabilitas marjinal
+
+- Sebuah perusahaan handphone memesan layar dari 3 perusahaan yang berbeda, yaitu A,B dan C. Perusahaan A menyuplai 270 layar, B menyuplai 320 layar, C menyuplai 110 layar. Si perusahaan mengantisipasi kemungkinan _defect_ dari A sebesar 0,015, B sebesar 0,02, C sebesar 0,03. Berapa probabilitas layar di perusahaan ini _defect_?
+
+- $P(D)=\sum_S P(X) \times P(D|X)$
+
+- $P(D)=\frac{270}{700} \times 0,015 + \frac{320}{700} \times 0,02 \frac{110}{700} \times 0,03$
+
+- $P(D)=0,0196 \approx 0,02$
+
+## Bayesian Probability
+
+- Seorang peneliti bernama Bayes menemukan sebuah rumus yang menunjukkan hubungan antara peluang kondisional:
+
+$$
+P(A|B)=\frac{P(B|A) \times P(A)}{P(B)}
+$$
+
+- Kemungkinan munculnya A jika B terjadi tidak sama dengan kemungkinan mmunculnya B jika A terjadi.
+
+## Bayesian
+
+::: {.incremental}
+
+- Lihat soal sebelumnya. ditemukan bahwa ada 1 produk cacat / _defect_, berapa kemungkinannya produk tersebut datang dari supplier A?
+
+- $A=$ produk berasal dari supplier A, $D=$ produk cacat.
+
+- $P(A|D)=\frac{P(D|A) \times P(A)}{P(D)}=\frac{0,015 \times \frac{270}{700}}{0,0216}$
+
+- $P(A|D)=0,295 \approx 0,3$
+
+- Produk cacat tersebut paling mungkin datang dari supplier mana?
+
+:::
+
+## Bayesian
+
+- $P(B|D)=\frac{P(D|B) \times P(B)}{P(D)}=\frac{0,02 \times \frac{320}{700}}{0,0216}=0,465$
+
+- $P(C|D)=\frac{P(D|C) \times P(C)}{P(D)}=\frac{0,03 \times \frac{110}{700}}{0,0216}=0,24$
+
+- $P(D|C)$ paling besar, tapi order datang paling banyak dari perusahaan B. Karena itu, kemungkinan barang rusak itu datang dari B juga jadi lebih besar.
+
+## Bayesian {.m}
+
+- Tesle, sebuah perusahaan mobil listrik, tertarik investasi di negara Wikindi karena ada program insentif. Namun Wikindi mau pilpres dengan 3 calon. Calon A punya kans 90% akan melanjutkan program insentif. Calon B sekitar 50%, dan Calon C sangat anti program tsb dan hanya akan lanjutkan sekitar 10% kans. Berdasarkan survey, Kemungkinan menang calon A,B dan C adalah 25%,35% dan 40%.
+
+- Jika Tesle tidak peduli siapa presidennya nanti, berapa % kans program insentif akan diteruskan?
+
+- Jika akhirnya program tidak diteruskan, tentukan berapa % kemungkinan akhirnya yang menang calon A, calon B dan calon C.
+
+
