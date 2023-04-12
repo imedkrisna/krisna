@@ -33,6 +33,7 @@ Beberapa link yang sering kupencet:
 - [World Bank API](https://blogs.worldbank.org/opendata/accessing-world-bank-data-apis-python-r-ruby-stata)
 - [UNCOMTRADE API aca comtrader](https://cran.r-project.org/web/packages/comtradr/vignettes/comtradr-vignette.html)
 - [Econometrics with r](http://www.urfie.net/)
+- [the dot-dot-dot trick for function](https://twitter.com/rappa753/status/1604506800048377858?s=20)
 
 
 #### ggplot

@@ -43,6 +43,23 @@ graph<-ggplot()+
         axis.line = element_line(colour = "#e0e0e0"))
 ```
 
+##### With function
+
+```r
+library('ggplot2')
+library('ggdark')
+graph<-function(dataset, ...) {
+  dataset |>
+    ggplot(aes(...))+
+    dark_theme_bw(base_size=18)+
+    theme(text = element_text(color='#e0e0e0'),
+          panel.border = element_blank(),
+          panel.grid.major = element_blank(),
+          panel.grid.minor = element_blank(),
+          axis.line = element_line(colour = "#e0e0e0"))
+}
+```
+
 #### Light
 
 ```r
