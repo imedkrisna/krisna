@@ -34,6 +34,7 @@ Beberapa link yang sering kupencet:
 - [UNCOMTRADE API aca comtrader](https://cran.r-project.org/web/packages/comtradr/vignettes/comtradr-vignette.html)
 - [Econometrics with r](http://www.urfie.net/)
 
+
 #### ggplot
 - [Complete ggplot2 by zevross](http://zevross.com/blog/2014/08/04/beautiful-plotting-in-r-a-ggplot2-cheatsheet-3/)
 - [Complete ggplot2 by sthda](http://www.sthda.com/english/articles/32-r-graphics-essentials/125-ggplot-cheat-sheet-for-great-customization/)
@@ -44,7 +45,8 @@ Beberapa link yang sering kupencet:
 - [Graphs for economics teaching with function](https://eric.netlify.app/2017/09/19/plotting-consumer-and-producer-surpluses-in-ggplot2/)
 - [Multiple plots with Patchwork](https://patchwork.data-imaginist.com/articles/guides/annotation.html#styling-the-patchwork-1)
 - [using ggrepel for visualizing pie chart](https://r-charts.com/part-whole/pie-chart-labels-outside-ggplot2/)
-
+- [Membuat kurva normal dengan ggplot](https://t-redactyl.io/blog/2016/03/creating-plots-in-r-using-ggplot2-part-9-function-plots.html)
+  
 #### Xaringan
 - [more efficient use of xaringan](https://www.r-bloggers.com/2019/04/tips-to-reduce-the-complexity-of-slide-making-with-xaringan/)
 - [using proper mermaid in xaringan](https://github.com/yihui/xaringan/issues/144)
