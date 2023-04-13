@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.2.280">
 
   <meta name="author" content="Matematika &amp; Statistika">
-  <title>Konsep Probabilitas Part 2</title>
+  <title>Probability Density Function</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -326,7 +326,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Konsep Probabilitas Part 2</h1>
+  <h1 class="title">Probability Density Function</h1>
   <p class="subtitle">Pertemuan 5</p>
 
 <div class="quarto-title-authors">
@@ -361,24 +361,24 @@ Matematika &amp; Statistika
 </div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  dadu2 Freq
-1     1    6
-2     2   10
-3     3   10
-4     4   10
-5     5    9
-6     6    5</code></pre>
+1     1    9
+2     2    5
+3     3   13
+4     4    6
+5     5    8
+6     6    9</code></pre>
 </div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Frekuensi absolut dari simulasi 1juta lemparan dadu"</code></pre>
 </div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  dadu1   Freq
-1     1 166916
-2     2 166650
-3     3 166582
-4     4 166894
-5     5 166495
-6     6 166463</code></pre>
+1     1 166547
+2     2 166179
+3     3 166813
+4     4 166667
+5     5 166779
+6     6 167015</code></pre>
 </div>
 </div>
 </div><div class="column" style="width:47%;">
@@ -388,24 +388,24 @@ Matematika &amp; Statistika
 </div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  dadu2 Freq
-1     1 0.12
-2     2 0.20
-3     3 0.20
-4     4 0.20
-5     5 0.18
-6     6 0.10</code></pre>
+1     1 0.18
+2     2 0.10
+3     3 0.26
+4     4 0.12
+5     5 0.16
+6     6 0.18</code></pre>
 </div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Frekuensi relatif dari simulasi 1juta lemparan dadu"</code></pre>
 </div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  dadu1     Freq
-1     1 0.166916
-2     2 0.166650
-3     3 0.166582
-4     4 0.166894
-5     5 0.166495
-6     6 0.166463</code></pre>
+1     1 0.166547
+2     2 0.166179
+3     3 0.166813
+4     4 0.166667
+5     5 0.166779
+6     6 0.167015</code></pre>
 </div>
 </div>
 </div>
@@ -450,25 +450,25 @@ Matematika &amp; Statistika
 <pre><code>[1] "nilai 150 mahasiswa"</code></pre>
 </div>
 <div class="cell-output cell-output-stdout">
-<pre><code>  [1] 70.23621 64.73741 80.31605 72.96197 57.11204 76.92369 58.62147 46.73967
-  [9] 68.47410 62.98836 59.94842 80.11016 70.89263 72.60550 65.68863 64.95514
- [17] 76.00415 70.12895 69.92970 64.81327 73.96011 61.38427 77.76880 59.56894
- [25] 66.09011 49.74404 53.82187 56.74370 52.65664 82.59883 47.64725 72.44954
- [33] 83.33353 76.89630 71.73400 70.06507 72.56202 62.68568 81.86355 57.99203
- [41] 61.97444 68.72801 71.23634 75.60245 80.11844 72.77665 68.73033 55.44291
- [49] 55.49266 69.56614 75.70607 73.90179 68.91364 75.88195 69.08507 78.89324
- [57] 86.17333 48.07987 66.15374 67.57630 75.08567 65.70302 74.81758 56.15058
- [65] 49.64045 80.87457 88.11501 84.48120 88.15182 64.33321 72.27024 71.57709
- [73] 52.10678 48.83364 60.07162 58.89092 90.64518 76.07165 71.01849 77.53085
- [81] 56.81544 67.16921 72.95862 83.41833 70.02339 61.40893 59.49726 89.40027
- [89] 63.19471 77.18454 71.76324 65.89677 84.90853 48.46836 81.23667 57.10424
- [97] 61.85984 79.86630 46.60937 78.61307 61.21071 69.16490 58.91459 59.54995
-[105] 68.76589 83.16732 82.10003 66.47286 65.21444 45.46116 79.60497 56.34451
-[113] 60.42474 43.69558 81.95082 66.19485 69.66236 62.37700 72.59539 76.30432
-[121] 51.12992 82.65627 65.32128 74.15468 70.20915 72.53421 75.13795 75.48822
-[129] 74.98267 81.73601 80.25335 86.86174 83.05200 59.96715 78.99224 57.58326
-[137] 76.47426 61.68586 64.91818 77.59973 58.09819 60.82839 71.81558 70.38627
-[145] 70.09810 70.89676 69.46364 69.95639 81.47648 87.74247</code></pre>
+<pre><code>  [1] 57.36512 49.25870 66.55460 79.37344 80.63757 69.23304 77.91189 73.57822
+  [9] 65.40484 73.28284 65.97965 61.15419 71.25865 77.68781 76.08456 74.34577
+ [17] 81.93337 77.69357 65.79802 80.21186 62.83749 59.61401 77.21349 69.90544
+ [25] 90.72481 79.93726 57.13780 80.21192 71.07749 86.13325 75.62767 64.24613
+ [33] 65.76318 63.81887 83.11170 72.19222 71.13891 38.52193 55.62136 89.47831
+ [41] 77.36672 63.16802 76.42835 65.69739 72.71450 64.37225 68.84502 67.30048
+ [49] 63.22592 74.94527 66.72506 78.73836 65.83438 65.90773 88.37895 80.12983
+ [57] 61.79191 56.18659 71.43236 63.81847 87.95073 55.07504 61.11577 60.18268
+ [65] 83.45788 61.78814 70.90803 65.42717 62.83458 71.65776 72.29123 75.54275
+ [73] 80.91569 82.16692 62.55655 53.49376 51.84523 76.09341 64.52925 51.67621
+ [81] 66.60120 83.09684 81.57276 72.69761 72.12470 74.16835 78.11252 66.61174
+ [89] 77.05089 70.27048 90.24037 69.52917 58.99564 78.00598 68.62155 73.76676
+ [97] 67.97687 65.50505 70.02382 60.33206 71.86023 50.82256 83.91896 72.64432
+[105] 81.62580 61.19415 62.85643 65.23683 75.37258 60.68766 44.51551 72.30652
+[113] 62.90785 57.88548 57.85215 61.92061 84.54842 81.42197 65.67968 56.17417
+[121] 78.15681 55.67360 87.51805 49.26619 54.25898 73.84930 61.62028 70.75105
+[129] 60.63971 81.23872 70.72919 66.79289 78.64358 84.71401 52.53018 56.19013
+[137] 71.01823 84.41037 75.40230 69.34658 67.67361 71.93606 63.38978 73.16413
+[145] 76.04731 60.23165 64.67442 69.38734 71.04068 62.22713</code></pre>
 </div>
 </div>
 </section>
@@ -478,18 +478,18 @@ Matematika &amp; Statistika
 <div class="cell-output cell-output-stdout">
 <pre><code>       dat2 Freq         Rel
 1   (30,35]    0 0.000000000
-2   (35,40]    0 0.000000000
+2   (35,40]    1 0.006666667
 3   (40,45]    1 0.006666667
-4   (45,50]    9 0.060000000
-5   (50,55]    4 0.026666667
-6   (55,60]   19 0.126666667
-7   (60,65]   18 0.120000000
-8   (65,70]   23 0.153333333
+4   (45,50]    2 0.013333333
+5   (50,55]    6 0.040000000
+6   (55,60]   12 0.080000000
+7   (60,65]   27 0.180000000
+8   (65,70]   26 0.173333333
 9   (70,75]   29 0.193333333
 10  (75,80]   21 0.140000000
-11  (80,85]   19 0.126666667
-12  (85,90]    6 0.040000000
-13  (90,95]    1 0.006666667
+11  (80,85]   18 0.120000000
+12  (85,90]    5 0.033333333
+13  (90,95]    2 0.013333333
 14 (95,100]    0 0.000000000</code></pre>
 </div>
 <div class="cell-output cell-output-stdout">
@@ -618,7 +618,7 @@ f(x)=\frac{1}{\sigma \sqrt{2\pi}}e^{-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right
 </div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
-  43.70   61.39   70.04   69.00   76.43   90.65 </code></pre>
+  38.52   62.84   69.96   69.49   76.90   90.72 </code></pre>
 </div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "deskriptif statistik dengan menggunakan package Hmisc"</code></pre>
@@ -626,12 +626,12 @@ f(x)=\frac{1}{\sigma \sqrt{2\pi}}e^{-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right
 <div class="cell-output cell-output-stdout">
 <pre><code>dat 
        n  missing distinct     Info     Mean      Gmd      .05      .10 
-     150        0      150        1       69    12.06    49.20    55.49 
+     150        0      150        1    69.49    11.31    52.96    56.19 
      .25      .50      .75      .90      .95 
-   61.39    70.04    76.43    82.15    84.72 
+   62.84    69.96    76.90    81.96    84.64 
 
-lowest : 43.69558 45.46116 46.60937 46.73967 47.64725
-highest: 87.74247 88.11501 88.15182 89.40027 90.64518</code></pre>
+lowest : 38.52193 44.51551 49.25870 49.26619 50.82256
+highest: 87.95073 88.37895 89.47831 90.24037 90.72481</code></pre>
 </div>
 </div>
 </section>
@@ -643,11 +643,11 @@ highest: 87.74247 88.11501 88.15182 89.40027 90.64518</code></pre>
 </ul>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] 75.48822 68.91364 75.70607 72.95862 61.68586 73.90179 75.60245 78.61307
- [9] 57.99203 87.74247</code></pre>
+<pre><code> [1] 63.81887 73.57822 57.13780 77.68781 70.27048 74.94527 64.37225 61.79191
+ [9] 52.53018 49.25870</code></pre>
 </div>
 <div class="cell-output cell-output-stdout">
-<pre><code>rata-rata sampel ini adalah 72.86042</code></pre>
+<pre><code>rata-rata sampel ini adalah 64.53915</code></pre>
 </div>
 </div>
 </section>
@@ -658,21 +658,21 @@ highest: 87.74247 88.11501 88.15182 89.40027 90.64518</code></pre>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 10 × 3
-   value   value2    value3
-   &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;
- 1  75.5   2.63     6.91   
- 2  68.9  -3.95    15.6    
- 3  75.7   2.85     8.10   
- 4  73.0   0.0982   0.00964
- 5  61.7 -11.2    125.     
- 6  73.9   1.04     1.08   
- 7  75.6   2.74     7.52   
- 8  78.6   5.75    33.1    
- 9  58.0 -14.9    221.     
-10  87.7  14.9    221.     </code></pre>
+   value  value2   value3
+   &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;
+ 1  63.8  -0.720   0.519 
+ 2  73.6   9.04   81.7   
+ 3  57.1  -7.40   54.8   
+ 4  77.7  13.1   173.    
+ 5  70.3   5.73   32.8   
+ 6  74.9  10.4   108.    
+ 7  64.4  -0.167   0.0279
+ 8  61.8  -2.75    7.55  
+ 9  52.5 -12.0   144.    
+10  49.3 -15.3   233.    </code></pre>
 </div>
 <div class="cell-output cell-output-stdout">
-<pre><code>bagian atas dari rumus variance adalah 639.7012</code></pre>
+<pre><code>bagian atas dari rumus variance adalah 836.3089</code></pre>
 </div>
 </div>
 </div><div class="column" data-wudth="58%">
@@ -682,22 +682,22 @@ highest: 87.74247 88.11501 88.15182 89.40027 90.64518</code></pre>
 </ul>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
-<pre><code>mean sampel adalah 72.86042</code></pre>
+<pre><code>mean sampel adalah 64.53915</code></pre>
 </div>
 <div class="cell-output cell-output-stdout">
-<pre><code>variance sampel adalah 71.07791</code></pre>
+<pre><code>variance sampel adalah 92.92321</code></pre>
 </div>
 <div class="cell-output cell-output-stdout">
-<pre><code>simpangan baku sampel adalah 8.430772</code></pre>
+<pre><code>simpangan baku sampel adalah 9.639669</code></pre>
 </div>
 <div class="cell-output cell-output-stdout">
-<pre><code>mean populasi adalah 69.00154</code></pre>
+<pre><code>mean populasi adalah 69.48557</code></pre>
 </div>
 <div class="cell-output cell-output-stdout">
-<pre><code>variance populasi adalah 111.6178</code></pre>
+<pre><code>variance populasi adalah 99.12067</code></pre>
 </div>
 <div class="cell-output cell-output-stdout">
-<pre><code>simpangan baku populasi adalah 10.56493</code></pre>
+<pre><code>simpangan baku populasi adalah 9.955937</code></pre>
 </div>
 </div>
 </div>

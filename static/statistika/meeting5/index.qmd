@@ -1,5 +1,5 @@
 ---
-title: "Konsep Probabilitas Part 2"
+title: "Probability Density Function"
 subtitle: "Pertemuan 5"
 author: "Matematika & Statistika"
 format: 
