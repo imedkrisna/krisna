@@ -76,10 +76,11 @@ b,c=results.params
 plt.scatter(a.GR,a.GINI)
 
 # Plot regression line
+xseq = np.linspace(8, 50, num=500)
 plt.plot(xseq, b + c * xseq, color="red", lw=2.5)
 
 plt.xlabel("Government's Revenue")
 plt.ylabel('GINI Ratio')
 plt.title("GINI Ratio vs Government Ratio")
-
+plt.show()
 ```
