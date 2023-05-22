@@ -207,6 +207,14 @@ Bisa [Google](https://www.google.com/search?client=firefox-b-d&q=z+score+table) 
 
 - Tapi ingat selalu bahwa Statistika = tebak-tebakan!
 
+## Penutup
+
+- Untuk latihan, anda dapat mencoba dengan variasi P(X), bisa lebih kecil, lebih besar, antara, silakan dicoba-coba. ada banyak kemungkinannya.
+
+- Anda juga bisa mencoba dengan menggunakan nilai $\mu$ dan $\sigma$ yang berbeda-beda. 
+
+- Misalnya, dengan rata-rata yang sama, bagaimanakah bedanya P(Z) antara data dengan $\sigma$ kecil vs $\sigma$ besar?
+
 ## DISCLAIMER
 
 - jangan lupa bahwa teknik ini kita gunakan dengan sebuah **ASUMSI** bahwa populasi yang ingin kita tebak memiliki distribusi normal.
