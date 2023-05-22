@@ -1,0 +1,220 @@
+---
+title: "Z-Score dan menebak probabilitas"
+subtitle: "Pertemuan 6"
+author: "Matematika & Statistika"
+format: 
+  revealjs:
+    theme: [simple,../mytheme.scss]
+    chalkboard: true
+    incremental: false
+    transition: convex
+    background-transition: fade
+    slide-number: true
+---
+
+## Jawaban UTS
+
+<iframe src="https://onedrive.live.com/embed?cid=ACC929CA35B3A537&resid=acc929ca35b3a537%21162500&authkey=AILqgDvBADGNbho&em=2" width="900" height="600" frameborder="0" scrolling="no"></iframe>
+
+## Minggu ini
+
+- Review PDF dan distribusi normal
+
+- Z-score
+
+- Menebak probabilitas
+
+## PDF normal distribution
+
+$$
+f(x)=\frac{1}{\sigma \sqrt{2\pi}}e^{-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^2}
+$$
+
+- $\mu$ adalah nilai rata-rata dari total populasi.
+
+- $\sigma$ adalah simpangan baku.
+
+- Keduanya adalah nilai dari _central tendency_ / ukuran gejala pusat dan sebaran.
+
+## Kurva dan parameter
+
+![sumber:wikipedia](normal.svg)
+
+## Probabilitas
+
+```{r}
+library(tidyverse)
+grafik<-function(dataset,...) {
+  dataset |>
+    ggplot(aes(...))+
+    scale_x_continuous(expand = c(0, 0)) + scale_y_continuous(expand = c(0, 0))+
+    theme_classic()+
+    theme(axis.title.x = element_text(hjust=1),
+        axis.title.y = element_text(angle=0,hjust=1,vjust=1),
+        panel.grid=element_blank(),
+#        axis.text.x=element_blank(),
+        axis.text.y=element_blank(),
+        axis.ticks.x=element_blank(),
+        axis.ticks.y=element_blank(),
+        legend.position=c(1,1),
+        legend.justification = c(1,1),
+        legend.spacing=unit(0,"cm"),
+        legend.margin=margin(0,0,0,0),
+        panel.background = element_rect(fill = "#f0f1eb",
+                                        colour = "#f0f1eb"),
+        plot.background = element_rect(fill = "#f0f1eb"),
+        legend.key = element_rect(fill = "#f0f1eb",linetype = "blank"),
+        legend.background = element_rect(fill="#f0f1eb"))
+}  
+det<-data.frame(x=c(0,1))
+
+wew<-seq(0,1,0.01)
+
+sd1 <- function(x) {
+    y <- dnorm(wew, mean = 0.5, sd = 0.1)
+    y[x < 0.4 | x > .6] <- NA
+    return(y)
+}
+sd2 <- function(x) {
+    y <- dnorm(wew, mean = 0.5, sd = 0.1)
+    y[x < 0.3 | x > .701] <- NA
+    y[x > 0.4 & x < .6] <- NA
+    return(y)
+}
+sd3 <- function(x) {
+    y <- dnorm(wew, mean = 0.5, sd = 0.1)
+    y[x < 0.2 | x > .8] <- NA
+    y[x > 0.3 & x < .7] <- NA
+    return(y)
+}
+
+det |>
+  grafik(x=x)+
+  stat_function(fun=dnorm,args=list(0.5,0.1),size=1.1)+
+  stat_function(fun=sd1,geom="area",fill="lightgreen",alpha=.3)+
+  stat_function(fun=sd2,geom="area",fill="lightpink",alpha=.3)+
+  stat_function(fun=sd3,geom="area",fill="lightblue",alpha=.3)+
+  geom_vline(xintercept=.5)+
+  annotate("text",label="34,1%",y=.2,x=.55)+
+  annotate("text",label="34,1%",y=.2,x=.45)+
+  annotate("text",label="13,6%",y=.15,x=.65)+
+  annotate("text",label="13,6%",y=.15,x=.35)+
+  annotate("text",label="2,1%",y=.1,x=.75)+
+  annotate("text",label="2,1%",y=.1,x=.25)+
+  scale_x_continuous(breaks = c(0.2,.3,.4,.5,.6,.7,.8),labels = c(paste0('-3\U03C3'),paste0('-2\U03C3'),paste0('-\U03C3'),expression(mu),paste0('\U03C3'),paste0('2\U03C3'),paste0('3\U03C3')))+
+  labs(x="X",y="f")
+
+```
+
+## Z-score
+
+- Z-score disebut juga dengan standardized values / scores.
+
+- Z-score adalah transformasi yang kita lakukan untuk mengubah angka pada data kita menjadi sebuah nilai standar dalam menggunakan PDF distribusi normal.
+
+- PDF distribusi normal yang standar adalah di mana:
+
+    - $\mu=0$
+    
+    - $\sigma=1$
+    
+## Z-score
+
+$$
+z=\frac{x-\mu}{\sigma}
+$$
+
+Di mana x adalah data point yang mau kita transformasi.
+
+| Jajan | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| BPP	| 500	|	450	|	350	|	600	|	550	|	550	|	600	|	450	|	500	|	450	|
+
+$\mu=500 \ ; \ \sigma=74,16$
+
+## Z-score
+
+| Jajan | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| BPP	| 500	|	450	|	350	|	600	|	550	|	550	|	600	|	450	|	500	|	450	|
+| $z_b$ | 0 |	-0.67 |	-2.02 |	1.35 |	0.67 |	0.674 |	1.35 |	-0.67 |	0 |	-0.67 |
+
+## Z-score
+
+- Posisi angka-angka pada data tentunya tidak sama: semua bergeser jika rata-rata dan standar deviasinya berbeda.
+
+- Kita menjadikan data biasa ke dalam Z-score karena Z-score membuat angkanya menjadi standar.
+
+- Dengan angka yang standar, kita jadi dapat menggunakan tabel yang standar
+
+- Dengan tabel yang standar kita jadi tidak harus membuat tabel baru untuk setiap data poin.
+
+## Tabel PDF Distribusi normal
+
+<iframe src="https://onedrive.live.com/embed?cid=ACC929CA35B3A537&resid=acc929ca35b3a537%21162501&authkey=AIx-FChNmjZ8zzQ&em=2" width="900" height="600" frameborder="0" scrolling="no"></iframe>
+
+Bisa [Google](https://www.google.com/search?client=firefox-b-d&q=z+score+table) atau download di [sini](https://drive.google.com/file/d/1ywI58hnM8p0ZyFV7B9rCOosk72iCGguq/view?usp=sharing)
+
+## Contoh 1
+
+- Berapa banyak kira-kira  di BPP dengan uang jajan di bawah 700 ribu?
+
+- Cari Z-score dulu $Z_{700}=\frac{700-500}{74,16}=2,7$
+
+- $P(X<700) \approx P(Z_X<2,7)$
+
+- Lihat di tabel, $P(Z<2,7)=0,9965$
+
+## Contoh 2
+
+- Berapa banyak mahasiswa di BPP dengan uang jajan di atas 400 ribu?
+
+- $Z_{700}=\frac{400-500}{74,16}=-1,348$
+
+- $P(X<600) \approx P(Z_X<-1,348) \approx 0,0885$
+
+- $P(Z_X>-1,348)=1-0,0885=0.9115$
+
+## Contoh 3
+
+- Negara Wokondo memiliki pendapatan bulanan bersih per kapita rata-rata 6 juta rupiah, dengan standar deviasi 8 juta rupiah. Di Wokondo, orang berpendapatan di bawah 2 juta rupiah sudah dianggap miskin. Jika penduduk Wokondo ada 200 juta orang, berapa jumlah penduduk miskin di Wokondo?
+
+- Intinya ini pertanyaan $P(X<2)$. Bisa jawabnya?
+
+## Contoh 4
+
+- Di Wokondo, anda dianggap kelas menengah jika pendapatannya ada di kisaran 5 juta sampai 8 juta rupiah. Berapakah jumlah penduduk Wokondo yang dianggap sebagai kelas menengah?
+
+- Intinya ini pertanyaan $P(5<X<8)$. Bisa jawabnya?
+
+## Contoh 5
+
+- Di Wokondo ada sekitar 2 juta orang yang dianggap sebagai orang ultra kaya. Bisakah anda menebak berapa pendapatan paling minimal untuk masuk golongan ultra kaya?
+
+- $P(Z_X > Y) = \frac{2}{200}=0,01$
+
+- $P(Z_X < Y) = 1-0,01=0,99 \rightarrow Y=2,33$
+
+- $2,33=\frac{X-6}{8} \rightarrow X=(2,33 \times 8 ) + 6 = 24,64$ Juta
+
+## Penutup
+
+- Teknik ini dapat kita lakukan karena PDF = probabilitas!
+
+- Penggunaan distribusi normal seperti ini sangat praktis bagi kita yang tidak mungkin melakukan survey karena keterbatasan dana.
+
+- Dengan mengasumsikan distribusi normal, anda dapat melihat satu angka saja, lalu cari rata-rata dan standar deviasi dari lembaga yang kredibel, lalu bisa menebak posisi seseorang dalam distribusi keseluruhan.
+
+- Tapi ingat selalu bahwa Statistika = tebak-tebakan!
+
+## DISCLAIMER
+
+- jangan lupa bahwa teknik ini kita gunakan dengan sebuah **ASUMSI** bahwa populasi yang ingin kita tebak memiliki distribusi normal.
+
+- Distribusi normal belum tentu benar untuk beberapa karakteristik.
+
+- Meski demikian, distribusi normal dianggap paling mungkin menjelaskan suatu populasi.
+
+- Pada kenyataannya, tidak ada manusia yang tau dan yakin 100% bahwa distribusi normal pasti benar.
+
+- Pastikan anda paham hal ini.
