@@ -106,12 +106,12 @@ format:
 
 :::: {.columns}
 
-::: {.col-width="48%"}
+::: {.column width="48%"}
 
 <iframe src="https://data.worldbank.org/share/widget?end=2021&indicators=NY.GDP.MKTP.CD&locations=ID-TH-MY-SG-CN&start=1971" width='500' height='450' frameBorder='0' scrolling="no" ></iframe>
 
 :::
-::: {.col-width="48%"}
+::: {.column width="48%"}
 
 <iframe src="https://data.worldbank.org/share/widget?end=2021&indicators=NY.GDP.MKTP.KD.ZG&locations=ID-TH-MY-SG-CN&start=1971" width='500' height='450' frameBorder='0' scrolling="no" ></iframe>
 
