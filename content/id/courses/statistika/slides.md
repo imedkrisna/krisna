@@ -28,7 +28,7 @@ slides:
 - {{% staticref "/statistika/meeting4/index.html" "newtab" %}}Pertemuan 4: Konsep probabilitas 2{{% /staticref %}}
 - {{% staticref "/statistika/meeting5/index.html" "newtab" %}}Pertemuan 5: Probability Density Function{{% /staticref %}}
 - {{% staticref "/statistika/meeting6/index.html" "newtab" %}}Pertemuan 6: Z-score dan menebak proporsi{{% /staticref %}}
-- {{% staticref "/statistika/meeting7/index.html" "newtab" %}}Pertemuan 7: {{% /staticref %}}
+- {{% staticref "/statistika/meeting7/index.html" "newtab" %}}Pertemuan 7: Level, growth, dan angka indeks {{% /staticref %}}
 - {{% staticref "/statistika/meeting8/index.html" "newtab" %}}Pertemuan 8: {{% /staticref %}}
 - {{% staticref "/statistika/meeting9/index.html" "newtab" %}}Pertemuan 9: {{% /staticref %}}
 - {{% staticref "/statistika/meeting10/index.html" "newtab" %}}Pertemuan 10: {{% /staticref %}}
