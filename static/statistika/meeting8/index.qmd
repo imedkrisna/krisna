@@ -1,0 +1,59 @@
+---
+title: "Menebak populasi dengan sampel"
+subtitle: "Pertemuan 8"
+author: "Matematika & Statistika"
+format: 
+  revealjs:
+    theme: [simple,../mytheme.scss]
+    chalkboard: true
+    incremental: false
+    transition: convex
+    background-transition: fade
+    slide-number: true
+---
+
+## Hari ini
+
+- Konsep student distribution (distribusi t)
+
+- Konsep rentang kepercayaan
+
+- Menebak rata-rata populasi dari sampel
+
+## distrubusi t
+
+- Distribusi normal (atau distribusi z) merupakan sebaran kontinyu dari $-\infty$ sampai $infty$
+
+- Meski demikian, hanya dari 3 standar deviasi kiri dan kanan aja udah lebih dari 99,99%.
+
+- Distribusi normal berlaku bagi populasi
+
+- Sampel dari populasi tersebut belum tentu terdistribusi normal, meski mirip:
+
+    = sampel cenderung lebih mungkin dapat di sekitar rata-rata.
+
+## distribusi t
+
+- Semakin banyak sampel yang kita ambil, semakin mirip distribusinya dengan distribusi normal
+
+- Karena itu kita butuh distribusi baru di mana:
+
+    - karakteristiknya mirip distribusi normal
+    
+    - Seiring sampel meningkat, bentuknya semakin mendekati distribusi normal
+    
+- Distribusi tersebut adalah distribusi t.
+
+## t-table
+
+Download [t-table di sini](https://1drv.ms/b/s!AjelszXKKcmsifhDr8cYIgeuMVSIDw?e=ioiSHv)
+
+<iframe src="https://onedrive.live.com/embed?cid=ACC929CA35B3A537&resid=acc929ca35b3a537%21162883&authkey=ACByMk8EqPx1N3s&em=2" width="800" height="400" frameborder="0" scrolling="no"></iframe>
+
+## Konsep rentang kepercayaan
+
+- Sampling bisa jadi memberikan kita nilai rata-rata yang tidak sama dengan populasi.
+
+- $\mu \neq \bar{X}$
+
+- Tapi kita bisa menebak rata-rata populasi $\mu$ dengan menggunakan rentang 
