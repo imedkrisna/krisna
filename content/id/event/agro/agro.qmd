@@ -1,9 +1,9 @@
 ---
-title: "GVC, transformasi struktural, dan implikasi kebijakan"
-subtitle: "untuk industri makanan dan minuman di Indonesia"
-date: "14 November 2022"
+title: "Kompleksitas Kinerja Industri Agro"
+subtitle: ""
+date: ""
 author: "Krisna Gupta"
-institute: "Center for Indonesian Policy Studies"
+institute: "14 November 2022"
 format: 
   revealjs:
     theme: [simple,mytheme.scss]
@@ -15,7 +15,7 @@ format:
   beamer: default
 ---
 
-## Krisna Gupta
+## I Made Krisna
 
 ::: columns
 ::: {.column width="40%"}
@@ -48,33 +48,129 @@ format:
 
 ---
 
-## Hari ini
+:::: columns
+::: {.column width="40%"}
+![](frame.png)
+akses slide ini, scan QR di atas atau pergi ke [s.id/djiagro](s.id/djiagro)
+:::
+::: {.column width="50%"}
 
-- GVC dalam industri pangan.
+### Topik diskusi
 
-- Pentingnya memisahkan sawit.
+- Anggaran vs "Kinerja".
 
-- Tentang transformasi ekonomi dan kebijakan.
+- Rethinking trade: GVC in Food.
+
+- Rethinking trade: asset market dominance.
+:::
+::::
 
 ---
 
-![](pic3.png){.cen height="400" fig-align="center"}
+## Anggaran & Kinerja
 
-::: columns
-::: {.column .m width="48%"}
--   38.4% of the non-oil and gas manufacturing industry
--   6.7% of Indonesia's Gross Domestic Product (GDP)
--   \$ 45.4 billion total export
-:::
+| Case | Dependent var | Independent var |
+| --- | ---------- | --------- |
+| 1 | PDB Mamin (Milyar IDR) | Pagu Ditjen IA (Milyar IDR) |
+| 2 | PDB Mamin (Milyar IDR) | Realisasi Ditjen IA (Milyar IDR) |
+| 3 | PDB Mamin (Milyar IDR) | Case 1 + PDB Perkebunan (Milyar IDR) |
+| 4 | PDB Mamin (Milyar IDR) | Case 2 + PDB Perkebunan (Milyar IDR) |
 
-::: {.column .m width="48%"}
--   20% share of Indonesia's total export
--   29% of the labor force in the industrial sector
--   4.6 million jobs
-:::
-:::
+## Metode
+
+|   | OLS | Log-log OLS | ARDL |
+| ----- | ----- | ----- | ----- |
+| Spec | $Y=X\beta$ | OLS tapi log | ARDL(1) |
+| Heteroskedasticity | v | - | - |
+| Spurious correlation | v | v | - |
+| (Probably) No causality | v | v | kinda |
+
+See [Woolridge (2009)](https://books.google.co.id/books/about/Introductory_Econometrics.html?id=LjeGPgAACAAJ&redir_esc=y), [Pesaran & Smith (1995)](https://www.sciencedirect.com/science/article/abs/pii/030440769401644F) for method.
+
+## OLS
+
+![](reg_a.png)
+
+## log-log OLS
+
+![](reg_b.png)
+
+## ARDL(1)
+
+![](reg_c.png)
 
 ---
+
+![](pica.png)
+
+---
+
+![](picb.png)
+
+---
+
+![](picc.png)
+
+## Diskusi
+
+- Dengan OLS, anggaran DJIA $\uparrow$ $\Rightarrow$ PDB Agro $\downarrow$
+
+    - Korelasi hilang ketika PDB sektor perkebunan masuk
+    
+    - Bisa jadi spurious (problem standar data time series)
+    
+- ARDL dapat mengatasi spurious, tapi:
+
+    - Tetap tidak menemukan korelasi & kointegrasi antar-keduanya.
+    
+    - Seriesnya kurang panjang.
+    
+## Kemungkinan
+
+- Anggaran agro terlalu kecil untuk berdampak, apalagi dibandingkan:
+
+    - PDB global, produktivitas hulu, kebijakan perdagangan, investasi, climate change, dst.
+    
+```{mermaid}
+flowchart LR
+  A(Anggaran) --> B(Kebijakan) --> C(industry performance)
+```
+
+- Mengukur dampak kebijakan mungkin lebih penting; baru setelah itu bicarakan berapa anggaran untuk menjalankan kebijakan tsb.
+
+- e.g., berapa anggaran yang diperlukan untuk mengurangi waktu perizinan dari 2 minggu jadi 3 hari.
+
+## Definisi performance
+
+- PDB sebuah industri sangat dipengaruhi oleh berbagai hal $\rightarrow$ possible cherrypicking.
+
+- Pilih indikator yang berdampak langsung, baru kaitkan indikator tersebut dengan PDB.
+
+- Share PDB generally not the best: direct competition with other institution?
+
+- Consider looking at welfare: nutrisi, aksesibilitas, iklim, etc.
+
+## Beberapa contoh
+
+- Pentingnya GVC dan Lead-firm model ([Neilson, Dwiartama, Fold & Permadi 2020](https://t.co/2czv6JbhIS); [Vicol, Neilson, Hartatri & Cooper 2018](https://doi.org/10.1016/j.worlddev.2018.05.020)).
+
+- Structural break dari trade policy & sudden investment ([Langford, Zhang, Walrdron, Julianto, Sirajuddin, Neish, & Nuryantono 2022](https://doi.org/10.1016/j.aquaculture.2021.737828))
+
+- Unsustainable export ban in the plywood manufacturing ([Thee 2012](https://remote-lib.ui.ac.id:2345/core/books/indonesias-economy-since-independence/indonesian-wood-products-industry/A27287852868A07F40CAF91E63D41703))
+
+## Ke depan
+
+- Fokus. Good to build a specialization.
+
+    - sub-sektor tertentu bisa jadi punya kasus unik.
+    
+    - Sesuaikan dengan tujuan program.
+
+- Manfaatkan tugas belajar.
+
+- Data.
+
+# Rethinking trade: Palm oil & GVC
 
 ## Peran Rantai Pasok Global
 
@@ -186,54 +282,117 @@ format:
 
     - expect relative reduction in agriculture production.
     
-    - manufaktur butuh input: gap-nya harus diisi impor.
+    - manufaktur butuh input: gap-nya akan diisi impor.
 
-- Memerangi impor bukan strategi yang bijak jika goalnya transformasi struktural.
+# Rethinking trade: Global Asset Market
 
-## Transformasi struktural
+## Short reminder
 
-- Banyak instrumen yang lebih baik daripada trade (Alta, Fauzi, Setiawan, 2022).
+- Aritmatika neraca pembayaran: Jika neraca berjalan surplus, maka harus diimbangi dengan neraca modal/finansial.
 
-- Untuk memastikan transformasi struktural yang baik, perlu kebijakan yang relevan untuk agrikultur.
+- Artinya, trade surplus harus diimbangi dengan defisit perdagangan jasa & transfer, atau oleh foreign asset.
 
-    - dorong produktivitas melalui berbagai instrumen seperti keterlibatan swasta, kredit, subsidi tepat sasaran, struktur pasar yang baik, asuransi, dan instrumen lainnya.
+- [Model ekonomi terbuka](https://www.krisna.or.id/post/dedolarisasi/): $Y=C+I+G+(X-M)$
+
+- Jika Y-C-G adalah saving, maka: 
+
+$$S-I=X-M$$
+
+## Short reminder
+
+- Trade surplus = uangnya disimpan dalam klaim internasional. Terjadi bila:
+
+    - eksportir menyimpan uang di luar negeri.
     
-- Petani masih mendominasi program bantuan sosial. Perlu diperkuat dan bantu transisi jika diperlukan.
+    - Bank sentral sibuk menyerap reserves
     
-## Kebijakan perdagangan
+- China: hoarding klaim USD (mostly dalam bentuk T-bill). Why?
 
--   Perdagangan gandum dan kedelai cenderung lebih sederhana, dan produk turunannya cenderung lebih populer dan terjangkau.
+    - Profit flows to firms / rich people who invest abroad.
+    
+    - Central bank hoarding reserves + currency manipulation.
+    
+## Global imbalance
 
--   Aturan produk lain cenderung lebih ketat:
+- Teori mengatakan bahwa negara yang surplus terus akan mengalami apresiasi mata uang $\rightarrow$ ekspor jadi mahal, impor jadi murah $\rightarrow$ surplus berkurang.
 
-    -   restriksi kuota.
-    -   Surat rekomendasi teknis.
-    -   Laporan surveyor.
-    -   Performance requirement.
+- Tapi (1) dominasi USD di global finance (2) bubarnya perjanjian bretton woods berdampak besar:
 
--   Beberapa aturan ini makan waktu dan membebani secara biaya.
+    - Negara surplus tinggal menukar dolar kembali ke aset AS seperti T-bill.
+    
+    - tanpa terbelenggu ketersediaan emas, dolar bisa dicetak terus -> T-bill bisa dicetak terus.
+    
+- Jepang & China -> 2 negara dengan USD reserves terbesar, adalah juga 2 negara paling "kompetitif"
 
-## Neraca Komoditas
+---
 
--   Neraca Komoditas diundangkan untuk mempercepat proses penerbitan izin impor.
-    -   dengan data yang baik$^1$, surat rekomendasi teknis tidak lagi diperlukan.
--   Sejauh ini, tampaknya penerapan untuk 5 komoditas (beras, daging, gula, garam dan perikanan) berjalan lancar.
-    -   Akan tetapi, sistem ini perlu diuji apabila diperlukan revisi mendadak.
--   Masih sering terdengar inkonsistensi di lapangan sejak Permendag 20/2021.
+<iframe src="https://data.worldbank.org/share/widget?indicators=BN.CAB.XOKA.GD.ZS&locations=ID-CN" width='800' height='533' frameBorder='0' scrolling="no" ></iframe>
 
-::: {.footer .s}
-$^1$ Pengalaman CPO dan lainnya: data yg baik itu susah dan tidak cukup
-:::
+---
 
-## Koordinasi bersama
+<iframe src="https://data.worldbank.org/share/widget?indicators=BN.CAB.XOKA.CD&locations=ID-CN" width='800' height='533' frameBorder='0' scrolling="no" ></iframe>
 
--   Pemerintah sebaiknya memiliki satu visi jika bermaksud mengembangkan satu industri.
-    - tidak ada negara yang bisa bikin semuanya.
-    - prioritize all = prioritize nothing.
--   Evaluasi dari kebijakan secara berkala harus dilakukan, terutama Neraca Komoditas.
-    - jangan pelit resource untuk data!
-    - tingkatkan kualitas diseminasi data dan evaluasi.
-    - contoh [productivity comission](https://www.pc.gov.au/) di Australia (mirip UKP4)
+---
+
+<iframe src="https://data.worldbank.org/share/widget?indicators=BN.RES.INCL.CD&locations=ID-CN" width='800' height='533' frameBorder='0' scrolling="no" ></iframe>
+
+---
+
+![BigMac Index, The Economist](https://www.krisna.or.id/post/dedolarisasi/output_2_1_hu4da3c5e13d62445da806db56eaa345a6_109761_1200x1200_fit_lanczos_3.png)
+
+## Comparative advantage
+
+- Comparative advantage: lebih efisien jika kita ekspor sesuatu yang kita pintar bikin, dan beli sesuatu yang kita tidak pintar bikin.
+
+- Trade surplus = kita jual aja tapi tidak beli apa-apa.
+
+    - Baik bila kita nabung, seperti SWF-nya Saudi dan Norway.
+    
+    - Buruk bila yang nabung elites, tapi penduduknya kekurangan nutrisi.
+    
+- Ekspor = warganya sendiri tidak sanggup beli.
+
+## Ekspor sebagai performa?
+
+- Global imbalance membuat ekspor menjadi sulit digunakan sebagai performa.
+
+    - asset market is more influential in driving trade.
+    
+    - Goods needs to be produced, investment in capital & education takes time.
+    
+    - Debt, especially in USD & Euro, can be generated easily.
+    
+    - Capital market is very fluid: you can trade in literally every seconds.
+    
+## Ke depan
+
+- Pertumbuhan China mulai goyah, apalagi yang didorong dengan investasi.
+
+    - Beberapa investasi tersebut mulai goyah dan flop (BRI, property, infrastruktur, dst)
+    
+    - Bisa jadi masa depannya mirip Jepang sekarang
+    
+- Banyak pengamat saat ini makin bearish terhadap China, apalagi kondisi geopolitik makin tidak menentu.
+
+- Tapi sepertinya dedolarisasi masih belum akan terjadi, kecuali mungkin China ingin membuka capital account mereka dengan bebas seperti AS.
+
+## Kesimpulan
+
+- Hal-hal yang mempengaruhi pertumbuhan PDB dan ekspor industri agro sangat banyak dan kompleks.
+
+- Kondisi-kondisi di atas membuat melihat performa industri agro sulit dilacak, apalagi dikaitkan dengan anggaran dan kewenangan DJIA.
+
+- Indikator-indikator tersebut perlu diperhatikan, namun hati-hati mengaitkannya dengan DJIA.
+
+- Sebaiknya memiliki indikator yang lebih _direct_, baru kaitkan indikator tersebut ke Agro.
+
+---
+
+Thank you & looking forward to discussions
+
+<iframe src="https://giphy.com/embed/fWfowxJtHySJ0SGCgN" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/SkyTV-thank-you-love-youre-the-best-fWfowxJtHySJ0SGCgN">via GIPHY</a></p>
+
+---
 
 ## References {.xs}
 

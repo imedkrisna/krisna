@@ -11,8 +11,7 @@
   <meta name="generator" content="quarto-1.3.340">
 
   <meta name="author" content="Krisna Gupta">
-  <meta name="dcterms.date" content="2022-11-14">
-  <title>GVC, transformasi struktural, dan implikasi kebijakan</title>
+  <title>Kompleksitas Kinerja Industri Agro</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -322,14 +321,16 @@
       margin-right: 0; 
     }
   </style>
+  <script src="agro_files/libs/quarto-diagram/mermaid.min.js"></script>
+  <script src="agro_files/libs/quarto-diagram/mermaid-init.js"></script>
+  <link href="agro_files/libs/quarto-diagram/mermaid.css" rel="stylesheet">
 </head>
 <body class="quarto-light">
   <div class="reveal">
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">GVC, transformasi struktural, dan implikasi kebijakan</h1>
-  <p class="subtitle">untuk industri makanan dan minuman di Indonesia</p>
+  <h1 class="title">Kompleksitas Kinerja Industri Agro</h1>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -337,15 +338,14 @@
 Krisna Gupta 
 </div>
         <p class="quarto-title-affiliation">
-            Center for Indonesian Policy Studies
+            14 November 2022
           </p>
     </div>
 </div>
 
-  <p class="date">2022-11-14</p>
 </section>
-<section id="krisna-gupta" class="slide level2">
-<h2>Krisna Gupta</h2>
+<section id="i-made-krisna" class="slide level2">
+<h2>I Made Krisna</h2>
 <div class="columns">
 <div class="column" style="width:40%;">
 <p><img data-src="https://www.krisna.or.id/files/foto_krisna.jpg"></p>
@@ -372,36 +372,191 @@ Krisna Gupta
 </div>
 </div>
 </section>
-<section id="hari-ini" class="slide level2">
-<h2>Hari ini</h2>
-<ul>
-<li><p>GVC dalam industri pangan.</p></li>
-<li><p>Pentingnya memisahkan sawit.</p></li>
-<li><p>Tentang transformasi ekonomi dan kebijakan.</p></li>
-</ul>
-</section>
 <section class="slide level2">
 
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="pic3.png" class="cen" height="400"></p>
-</figure>
-</div>
 <div class="columns">
-<div class="column m" style="width:48%;">
+<div class="column" style="width:40%;">
+<p><img data-src="frame.png"> akses slide ini, scan QR di atas atau pergi ke <a href="s.id/djiagro">s.id/djiagro</a></p>
+</div><div class="column" style="width:50%;">
+<h3 id="topik-diskusi">Topik diskusi</h3>
 <ul>
-<li>38.4% of the non-oil and gas manufacturing industry</li>
-<li>6.7% of Indonesia’s Gross Domestic Product (GDP)</li>
-<li>$ 45.4 billion total export</li>
-</ul>
-</div><div class="column m" style="width:48%;">
-<ul>
-<li>20% share of Indonesia’s total export</li>
-<li>29% of the labor force in the industrial sector</li>
-<li>4.6 million jobs</li>
+<li><p>Anggaran vs “Kinerja”.</p></li>
+<li><p>Rethinking trade: GVC in Food.</p></li>
+<li><p>Rethinking trade: asset market dominance.</p></li>
 </ul>
 </div>
 </div>
+</section>
+<section id="anggaran-kinerja" class="slide level2">
+<h2>Anggaran &amp; Kinerja</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Case</th>
+<th>Dependent var</th>
+<th>Independent var</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>PDB Mamin (Milyar IDR)</td>
+<td>Pagu Ditjen IA (Milyar IDR)</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>PDB Mamin (Milyar IDR)</td>
+<td>Realisasi Ditjen IA (Milyar IDR)</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>PDB Mamin (Milyar IDR)</td>
+<td>Case 1 + PDB Perkebunan (Milyar IDR)</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>PDB Mamin (Milyar IDR)</td>
+<td>Case 2 + PDB Perkebunan (Milyar IDR)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="metode" class="slide level2">
+<h2>Metode</h2>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th>OLS</th>
+<th>Log-log OLS</th>
+<th>ARDL</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Spec</td>
+<td><span class="math inline">\(Y=X\beta\)</span></td>
+<td>OLS tapi log</td>
+<td>ARDL(1)</td>
+</tr>
+<tr class="even">
+<td>Heteroskedasticity</td>
+<td>v</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr class="odd">
+<td>Spurious correlation</td>
+<td>v</td>
+<td>v</td>
+<td>-</td>
+</tr>
+<tr class="even">
+<td>(Probably) No causality</td>
+<td>v</td>
+<td>v</td>
+<td>kinda</td>
+</tr>
+</tbody>
+</table>
+<p>See <a href="https://books.google.co.id/books/about/Introductory_Econometrics.html?id=LjeGPgAACAAJ&amp;redir_esc=y">Woolridge (2009)</a>, <a href="https://www.sciencedirect.com/science/article/abs/pii/030440769401644F">Pesaran &amp; Smith (1995)</a> for method.</p>
+</section>
+<section id="ols" class="slide level2">
+<h2>OLS</h2>
+
+<img data-src="reg_a.png" class="r-stretch"></section>
+<section id="log-log-ols" class="slide level2">
+<h2>log-log OLS</h2>
+
+<img data-src="reg_b.png" class="r-stretch"></section>
+<section id="ardl1" class="slide level2">
+<h2>ARDL(1)</h2>
+
+<img data-src="reg_c.png" class="r-stretch"></section>
+<section class="slide level2">
+
+
+<img data-src="pica.png" class="r-stretch"></section>
+<section class="slide level2">
+
+
+<img data-src="picb.png" class="r-stretch"></section>
+<section class="slide level2">
+
+
+<img data-src="picc.png" class="r-stretch"></section>
+<section id="diskusi" class="slide level2">
+<h2>Diskusi</h2>
+<ul>
+<li><p>Dengan OLS, anggaran DJIA <span class="math inline">\(\uparrow\)</span> <span class="math inline">\(\Rightarrow\)</span> PDB Agro <span class="math inline">\(\downarrow\)</span></p>
+<ul>
+<li><p>Korelasi hilang ketika PDB sektor perkebunan masuk</p></li>
+<li><p>Bisa jadi spurious (problem standar data time series)</p></li>
+</ul></li>
+<li><p>ARDL dapat mengatasi spurious, tapi:</p>
+<ul>
+<li><p>Tetap tidak menemukan korelasi &amp; kointegrasi antar-keduanya.</p></li>
+<li><p>Seriesnya kurang panjang.</p></li>
+</ul></li>
+</ul>
+</section>
+<section id="kemungkinan" class="slide level2">
+<h2>Kemungkinan</h2>
+<ul>
+<li><p>Anggaran agro terlalu kecil untuk berdampak, apalagi dibandingkan:</p>
+<ul>
+<li>PDB global, produktivitas hulu, kebijakan perdagangan, investasi, climate change, dst.</li>
+</ul></li>
+</ul>
+<div class="cell" data-reveal="true">
+<div class="cell-output-display">
+<div>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+  A(Anggaran) --&gt; B(Kebijakan) --&gt; C(industry performance)
+</pre>
+</div>
+</div>
+</div>
+</div>
+<ul>
+<li><p>Mengukur dampak kebijakan mungkin lebih penting; baru setelah itu bicarakan berapa anggaran untuk menjalankan kebijakan tsb.</p></li>
+<li><p>e.g., berapa anggaran yang diperlukan untuk mengurangi waktu perizinan dari 2 minggu jadi 3 hari.</p></li>
+</ul>
+</section>
+<section id="definisi-performance" class="slide level2">
+<h2>Definisi performance</h2>
+<ul>
+<li><p>PDB sebuah industri sangat dipengaruhi oleh berbagai hal <span class="math inline">\(\rightarrow\)</span> possible cherrypicking.</p></li>
+<li><p>Pilih indikator yang berdampak langsung, baru kaitkan indikator tersebut dengan PDB.</p></li>
+<li><p>Share PDB generally not the best: direct competition with other institution?</p></li>
+<li><p>Consider looking at welfare: nutrisi, aksesibilitas, iklim, etc.</p></li>
+</ul>
+</section>
+<section id="beberapa-contoh" class="slide level2">
+<h2>Beberapa contoh</h2>
+<ul>
+<li><p>Pentingnya GVC dan Lead-firm model (<a href="https://t.co/2czv6JbhIS">Neilson, Dwiartama, Fold &amp; Permadi 2020</a>; <a href="https://doi.org/10.1016/j.worlddev.2018.05.020">Vicol, Neilson, Hartatri &amp; Cooper 2018</a>).</p></li>
+<li><p>Structural break dari trade policy &amp; sudden investment (<a href="https://doi.org/10.1016/j.aquaculture.2021.737828">Langford, Zhang, Walrdron, Julianto, Sirajuddin, Neish, &amp; Nuryantono 2022</a>)</p></li>
+<li><p>Unsustainable export ban in the plywood manufacturing (<a href="https://remote-lib.ui.ac.id:2345/core/books/indonesias-economy-since-independence/indonesian-wood-products-industry/A27287852868A07F40CAF91E63D41703">Thee 2012</a>)</p></li>
+</ul>
+</section>
+<section id="ke-depan" class="slide level2">
+<h2>Ke depan</h2>
+<ul>
+<li><p>Fokus. Good to build a specialization.</p>
+<ul>
+<li><p>sub-sektor tertentu bisa jadi punya kasus unik.</p></li>
+<li><p>Sesuaikan dengan tujuan program.</p></li>
+</ul></li>
+<li><p>Manfaatkan tugas belajar.</p></li>
+<li><p>Data.</p></li>
+</ul>
+</section>
+<section>
+<section id="rethinking-trade-palm-oil-gvc" class="title-slide slide level1 center">
+<h1>Rethinking trade: Palm oil &amp; GVC</h1>
+
 </section>
 <section id="peran-rantai-pasok-global" class="slide level2">
 <h2>Peran Rantai Pasok Global</h2>
@@ -511,68 +666,124 @@ Krisna Gupta
 <li><p>Faktor produksi akan pindah ke manufaktur: tenaga kerja, tanah, modal.</p>
 <ul>
 <li><p>expect relative reduction in agriculture production.</p></li>
-<li><p>manufaktur butuh input: gap-nya harus diisi impor.</p></li>
+<li><p>manufaktur butuh input: gap-nya akan diisi impor.</p></li>
 </ul></li>
-<li><p>Memerangi impor bukan strategi yang bijak jika goalnya transformasi struktural.</p></li>
+</ul>
+</section></section>
+<section>
+<section id="rethinking-trade-global-asset-market" class="title-slide slide level1 center">
+<h1>Rethinking trade: Global Asset Market</h1>
+
+</section>
+<section id="short-reminder" class="slide level2">
+<h2>Short reminder</h2>
+<ul>
+<li><p>Aritmatika neraca pembayaran: Jika neraca berjalan surplus, maka harus diimbangi dengan neraca modal/finansial.</p></li>
+<li><p>Artinya, trade surplus harus diimbangi dengan defisit perdagangan jasa &amp; transfer, atau oleh foreign asset.</p></li>
+<li><p><a href="https://www.krisna.or.id/post/dedolarisasi/">Model ekonomi terbuka</a>: <span class="math inline">\(Y=C+I+G+(X-M)\)</span></p></li>
+<li><p>Jika Y-C-G adalah saving, maka:</p></li>
+</ul>
+<p><span class="math display">\[S-I=X-M\]</span></p>
+</section>
+<section id="short-reminder-1" class="slide level2">
+<h2>Short reminder</h2>
+<ul>
+<li><p>Trade surplus = uangnya disimpan dalam klaim internasional. Terjadi bila:</p>
+<ul>
+<li><p>eksportir menyimpan uang di luar negeri.</p></li>
+<li><p>Bank sentral sibuk menyerap reserves</p></li>
+</ul></li>
+<li><p>China: hoarding klaim USD (mostly dalam bentuk T-bill). Why?</p>
+<ul>
+<li><p>Profit flows to firms / rich people who invest abroad.</p></li>
+<li><p>Central bank hoarding reserves + currency manipulation.</p></li>
+</ul></li>
 </ul>
 </section>
-<section id="transformasi-struktural-1" class="slide level2">
-<h2>Transformasi struktural</h2>
+<section id="global-imbalance" class="slide level2">
+<h2>Global imbalance</h2>
 <ul>
-<li><p>Banyak instrumen yang lebih baik daripada trade (Alta, Fauzi, Setiawan, 2022).</p></li>
-<li><p>Untuk memastikan transformasi struktural yang baik, perlu kebijakan yang relevan untuk agrikultur.</p>
+<li><p>Teori mengatakan bahwa negara yang surplus terus akan mengalami apresiasi mata uang <span class="math inline">\(\rightarrow\)</span> ekspor jadi mahal, impor jadi murah <span class="math inline">\(\rightarrow\)</span> surplus berkurang.</p></li>
+<li><p>Tapi (1) dominasi USD di global finance (2) bubarnya perjanjian bretton woods berdampak besar:</p>
 <ul>
-<li>dorong produktivitas melalui berbagai instrumen seperti keterlibatan swasta, kredit, subsidi tepat sasaran, struktur pasar yang baik, asuransi, dan instrumen lainnya.</li>
+<li><p>Negara surplus tinggal menukar dolar kembali ke aset AS seperti T-bill.</p></li>
+<li><p>tanpa terbelenggu ketersediaan emas, dolar bisa dicetak terus -&gt; T-bill bisa dicetak terus.</p></li>
 </ul></li>
-<li><p>Petani masih mendominasi program bantuan sosial. Perlu diperkuat dan bantu transisi jika diperlukan.</p></li>
+<li><p>Jepang &amp; China -&gt; 2 negara dengan USD reserves terbesar, adalah juga 2 negara paling “kompetitif”</p></li>
 </ul>
 </section>
-<section id="kebijakan-perdagangan" class="slide level2">
-<h2>Kebijakan perdagangan</h2>
+<section class="slide level2">
+
+<iframe src="https://data.worldbank.org/share/widget?indicators=BN.CAB.XOKA.GD.ZS&amp;locations=ID-CN" width="800" height="533" frameborder="0" scrolling="no">
+</iframe>
+</section>
+<section class="slide level2">
+
+<iframe src="https://data.worldbank.org/share/widget?indicators=BN.CAB.XOKA.CD&amp;locations=ID-CN" width="800" height="533" frameborder="0" scrolling="no">
+</iframe>
+</section>
+<section class="slide level2">
+
+<iframe src="https://data.worldbank.org/share/widget?indicators=BN.RES.INCL.CD&amp;locations=ID-CN" width="800" height="533" frameborder="0" scrolling="no">
+</iframe>
+</section>
+<section class="slide level2">
+
+
+<img data-src="https://www.krisna.or.id/post/dedolarisasi/output_2_1_hu4da3c5e13d62445da806db56eaa345a6_109761_1200x1200_fit_lanczos_3.png" class="r-stretch quarto-figure-center"><p class="caption">BigMac Index, The Economist</p></section>
+<section id="comparative-advantage" class="slide level2">
+<h2>Comparative advantage</h2>
 <ul>
-<li><p>Perdagangan gandum dan kedelai cenderung lebih sederhana, dan produk turunannya cenderung lebih populer dan terjangkau.</p></li>
-<li><p>Aturan produk lain cenderung lebih ketat:</p>
+<li><p>Comparative advantage: lebih efisien jika kita ekspor sesuatu yang kita pintar bikin, dan beli sesuatu yang kita tidak pintar bikin.</p></li>
+<li><p>Trade surplus = kita jual aja tapi tidak beli apa-apa.</p>
 <ul>
-<li>restriksi kuota.</li>
-<li>Surat rekomendasi teknis.</li>
-<li>Laporan surveyor.</li>
-<li>Performance requirement.</li>
+<li><p>Baik bila kita nabung, seperti SWF-nya Saudi dan Norway.</p></li>
+<li><p>Buruk bila yang nabung elites, tapi penduduknya kekurangan nutrisi.</p></li>
 </ul></li>
-<li><p>Beberapa aturan ini makan waktu dan membebani secara biaya.</p></li>
+<li><p>Ekspor = warganya sendiri tidak sanggup beli.</p></li>
 </ul>
 </section>
-<section id="neraca-komoditas" class="slide level2">
-<h2>Neraca Komoditas</h2>
+<section id="ekspor-sebagai-performa" class="slide level2">
+<h2>Ekspor sebagai performa?</h2>
 <ul>
-<li>Neraca Komoditas diundangkan untuk mempercepat proses penerbitan izin impor.
+<li><p>Global imbalance membuat ekspor menjadi sulit digunakan sebagai performa.</p>
 <ul>
-<li>dengan data yang baik<span class="math inline">\(^1\)</span>, surat rekomendasi teknis tidak lagi diperlukan.</li>
+<li><p>asset market is more influential in driving trade.</p></li>
+<li><p>Goods needs to be produced, investment in capital &amp; education takes time.</p></li>
+<li><p>Debt, especially in USD &amp; Euro, can be generated easily.</p></li>
+<li><p>Capital market is very fluid: you can trade in literally every seconds.</p></li>
 </ul></li>
-<li>Sejauh ini, tampaknya penerapan untuk 5 komoditas (beras, daging, gula, garam dan perikanan) berjalan lancar.
-<ul>
-<li>Akan tetapi, sistem ini perlu diuji apabila diperlukan revisi mendadak.</li>
-</ul></li>
-<li>Masih sering terdengar inkonsistensi di lapangan sejak Permendag 20/2021.</li>
 </ul>
-<div class="footer s">
-<p><span class="math inline">\(^1\)</span> Pengalaman CPO dan lainnya: data yg baik itu susah dan tidak cukup</p>
-</div>
 </section>
-<section id="koordinasi-bersama" class="slide level2">
-<h2>Koordinasi bersama</h2>
+<section id="ke-depan-1" class="slide level2">
+<h2>Ke depan</h2>
 <ul>
-<li>Pemerintah sebaiknya memiliki satu visi jika bermaksud mengembangkan satu industri.
+<li><p>Pertumbuhan China mulai goyah, apalagi yang didorong dengan investasi.</p>
 <ul>
-<li>tidak ada negara yang bisa bikin semuanya.</li>
-<li>prioritize all = prioritize nothing.</li>
+<li><p>Beberapa investasi tersebut mulai goyah dan flop (BRI, property, infrastruktur, dst)</p></li>
+<li><p>Bisa jadi masa depannya mirip Jepang sekarang</p></li>
 </ul></li>
-<li>Evaluasi dari kebijakan secara berkala harus dilakukan, terutama Neraca Komoditas.
-<ul>
-<li>jangan pelit resource untuk data!</li>
-<li>tingkatkan kualitas diseminasi data dan evaluasi.</li>
-<li>contoh <a href="https://www.pc.gov.au/">productivity comission</a> di Australia (mirip UKP4)</li>
-</ul></li>
+<li><p>Banyak pengamat saat ini makin bearish terhadap China, apalagi kondisi geopolitik makin tidak menentu.</p></li>
+<li><p>Tapi sepertinya dedolarisasi masih belum akan terjadi, kecuali mungkin China ingin membuka capital account mereka dengan bebas seperti AS.</p></li>
 </ul>
+</section>
+<section id="kesimpulan" class="slide level2">
+<h2>Kesimpulan</h2>
+<ul>
+<li><p>Hal-hal yang mempengaruhi pertumbuhan PDB dan ekspor industri agro sangat banyak dan kompleks.</p></li>
+<li><p>Kondisi-kondisi di atas membuat melihat performa industri agro sulit dilacak, apalagi dikaitkan dengan anggaran dan kewenangan DJIA.</p></li>
+<li><p>Indikator-indikator tersebut perlu diperhatikan, namun hati-hati mengaitkannya dengan DJIA.</p></li>
+<li><p>Sebaiknya memiliki indikator yang lebih <em>direct</em>, baru kaitkan indikator tersebut ke Agro.</p></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<p>Thank you &amp; looking forward to discussions</p>
+<iframe src="https://giphy.com/embed/fWfowxJtHySJ0SGCgN" width="480" height="480" frameborder="0" class="giphy-embed" allowfullscreen="">
+</iframe>
+<p>
+<a href="https://giphy.com/gifs/SkyTV-thank-you-love-youre-the-best-fWfowxJtHySJ0SGCgN">via GIPHY</a>
+</p>
 </section>
 <section id="references" class="slide level2 xs">
 <h2>References</h2>
@@ -600,7 +811,7 @@ Krisna Gupta
 <div class="footer footer-default">
 
 </div>
-</section>
+</section></section>
     </div>
   </div>
 
