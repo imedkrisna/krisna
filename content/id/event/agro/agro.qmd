@@ -1,0 +1,272 @@
+---
+title: "GVC, transformasi struktural, dan implikasi kebijakan"
+subtitle: "untuk industri makanan dan minuman di Indonesia"
+date: "14 November 2022"
+author: "Krisna Gupta"
+institute: "Center for Indonesian Policy Studies"
+format: 
+  revealjs:
+    theme: [simple,mytheme.scss]
+    chalkboard: true
+    incremental: false
+    transition: convex
+    background-transition: fade
+    slide-number: true
+  beamer: default
+---
+
+## Krisna Gupta
+
+::: columns
+::: {.column width="40%"}
+![](https://www.krisna.or.id/files/foto_krisna.jpg)
+:::
+
+::: {.column .s width="60%"}
+-   Sering dipanggil Imed
+
+-   Full-time lecturer di Politeknik APP
+
+-   Part-time lecturer di Universitas Indonesia
+
+-   Master degree in economics UI/VU
+
+-   [PhD in economics](https://crawford.anu.edu.au/people/phd/krisna-gupta) di Australian National University
+
+    -   [thesis](https://openresearch-repository.anu.edu.au/handle/1885/270149) tentang industri dan perdagangan di Indonesia.
+
+-   Associate researcher di [Center for Indonesian Policy Studies](https://www.cips-indonesia.org/about?lang=id).
+
+    -   Policy paper terakhir tentang [GVC di industri makanan](https://www.cips-indonesia.org/publications/perdagangan-untuk-pemulihan-ekonomi%3A-kebijakan-impor-untuk-mendukung-sektor-makanan-dan-minuman-indonesia)
+
+-   Selengkapnya di [imedkrisna.github.io](https://imedkrisna.github.io/)
+
+    -   blog di [krisna.or.id](https://www.krisna.or.id/)
+    -   twitter di [\@imedkrisna](https://www.twitter.com/imedkrisna)
+:::
+:::
+
+---
+
+## Hari ini
+
+- GVC dalam industri pangan.
+
+- Pentingnya memisahkan sawit.
+
+- Tentang transformasi ekonomi dan kebijakan.
+
+---
+
+![](pic3.png){.cen height="400" fig-align="center"}
+
+::: columns
+::: {.column .m width="48%"}
+-   38.4% of the non-oil and gas manufacturing industry
+-   6.7% of Indonesia's Gross Domestic Product (GDP)
+-   \$ 45.4 billion total export
+:::
+
+::: {.column .m width="48%"}
+-   20% share of Indonesia's total export
+-   29% of the labor force in the industrial sector
+-   4.6 million jobs
+:::
+:::
+
+---
+
+## Peran Rantai Pasok Global
+
+- GVC punya value extra di F&B ketimbang manufaktur lain.
+
+-   Iklim dan geografi mengakibatkan tiap negara memiliki keunggulan yang berbeda-beda.
+
+    -   ada yang cocok tanam sawit, tebu, menggembala sapi, dan lain sebagainya.
+    
+    -   Garam: nelayan vs penambang?
+
+- Kombinasi gizi dari berbagai jenis pangan dari berbagai belahan dunia.
+
+- Kombinasi rasa: oplos kopi, [kakao](https://dibalikbungkus.cips-indonesia.org/cokelat-kacang), dst.
+
+## Global Value Chain of Nutella
+
+![GVC of Nutella (Scoppola, 2021)](pic7.jpg)
+
+## Peran Rantai Pasok Global
+
+-   Perusahaan yang mampu *manage* rantai pasok yang kompleks akan lebih kompetitif.
+
+-   Negara yang memiliki kebijakan perdagangan yang pasti punya *advantage*
+
+-   Perjanjian perdagangan adalah modal penting:input & market.
+
+    -   Negara yang mengandalkan GVC akan mengejar perjanjian dagang secara agresif.
+    
+    -   RCEP akan memihak negara yang dapat memanfaatkan rantai pasok global.
+
+## Some evidence {.m}
+
+- GVC memberikan peningkatan produksi, lapangan pekerjaan, dan meningkatkan investasi di banyak negara (World Bank, 2020).
+
+- Di Indonesia, keterlibatan GVC memberi dampak yang baik terhadap produktivitas, employment dan ekspor 
+
+(Amiti & Davis, 2012; Amiti & Konings, 2007; Gupta, 2021; Kis-katos, Janneke & Sparrow, 2018; Kis-katos & Sparrow, 2015; Pane & Patunru, 2022; Rahardja & Varela, 2015)
+
+- Di Industri pangan Indonesia, backward GVC participation melalui impor produk hulu meningkatkan ekspor produk hilir (Amanta & Gupta, 2022)
+
+---
+
+![](pic8.png)
+
+---
+
+## Elephant in the room
+
+- Industri pengolahan kelapa sawit memiliki peranan yang sangat besar di struktur ekspor Indonesia.
+
+- Buah sawit memang merupakan komoditi perkebunan, harganya berfluktuasi.
+
+- Namun, minyak nabati sendiri masuk kategori manufaktur dgn KBLI heading 10.
+
+- Pertumbuhan industri pangan sendiri sangat dipengaruhi performa minyak sawit.
+
+## Dominasi vegetable oil
+
+![](pic4.png)
+
+---
+
+## CPO vs no CPO {.s}
+
+::: panel-tabset
+#### CPO
+
+![](pic5.png){width="85%"}
+
+#### no CPO
+
+![](pic6.png){width="85%"}
+:::
+
+## Industri sawit?
+
+-   Ketergantungan sawit dapat memberi bias analisis pada industri makanan.
+    
+    - Sebagai eksportir sawit, nilai tambah asing memiliki peran yang tidak besar.
+    
+    - Akibatnya kita akan mengira impor di F&B tidak penting.
+    
+- Industri makanan jadi dengan nilai tambah lebih besar sangat mengandalkan rantai pasok global.
+
+- Analisis untuk turunan sawit dan industri pangan secara umum harus dilakukan secara terpisah.
+
+## Kebijakan RPJMN
+
+- Pemerintah menargetkan pengurangan impor di sektor mamintem.
+
+    - counter-intuitive dengan evidence & nature industri.
+    
+    - tidak sesuai dengan semangat RCEP maupun G20.
+    
+- Mengurangi impor bahan baku pangan = meningkatkan ketergantungan pada sawit.
+
+    - Fokus pada sawit: tingkatkan produktivitas & nilai tambah, isu lingkungan membatasi pasar.
+    
+    - Fokus sawit vs diversifikasi dengan GVC.
+    
+## Transformasi struktural
+
+- Pemerintah ingin meningkatkan proses transformasi ekonomi ke arah manufaktur.
+
+    - secara proporsi, artinya agrikultur dan low value added services akan turun.
+    
+- Faktor produksi akan pindah ke manufaktur: tenaga kerja, tanah, modal.
+
+    - expect relative reduction in agriculture production.
+    
+    - manufaktur butuh input: gap-nya harus diisi impor.
+
+- Memerangi impor bukan strategi yang bijak jika goalnya transformasi struktural.
+
+## Transformasi struktural
+
+- Banyak instrumen yang lebih baik daripada trade (Alta, Fauzi, Setiawan, 2022).
+
+- Untuk memastikan transformasi struktural yang baik, perlu kebijakan yang relevan untuk agrikultur.
+
+    - dorong produktivitas melalui berbagai instrumen seperti keterlibatan swasta, kredit, subsidi tepat sasaran, struktur pasar yang baik, asuransi, dan instrumen lainnya.
+    
+- Petani masih mendominasi program bantuan sosial. Perlu diperkuat dan bantu transisi jika diperlukan.
+    
+## Kebijakan perdagangan
+
+-   Perdagangan gandum dan kedelai cenderung lebih sederhana, dan produk turunannya cenderung lebih populer dan terjangkau.
+
+-   Aturan produk lain cenderung lebih ketat:
+
+    -   restriksi kuota.
+    -   Surat rekomendasi teknis.
+    -   Laporan surveyor.
+    -   Performance requirement.
+
+-   Beberapa aturan ini makan waktu dan membebani secara biaya.
+
+## Neraca Komoditas
+
+-   Neraca Komoditas diundangkan untuk mempercepat proses penerbitan izin impor.
+    -   dengan data yang baik$^1$, surat rekomendasi teknis tidak lagi diperlukan.
+-   Sejauh ini, tampaknya penerapan untuk 5 komoditas (beras, daging, gula, garam dan perikanan) berjalan lancar.
+    -   Akan tetapi, sistem ini perlu diuji apabila diperlukan revisi mendadak.
+-   Masih sering terdengar inkonsistensi di lapangan sejak Permendag 20/2021.
+
+::: {.footer .s}
+$^1$ Pengalaman CPO dan lainnya: data yg baik itu susah dan tidak cukup
+:::
+
+## Koordinasi bersama
+
+-   Pemerintah sebaiknya memiliki satu visi jika bermaksud mengembangkan satu industri.
+    - tidak ada negara yang bisa bikin semuanya.
+    - prioritize all = prioritize nothing.
+-   Evaluasi dari kebijakan secara berkala harus dilakukan, terutama Neraca Komoditas.
+    - jangan pelit resource untuk data!
+    - tingkatkan kualitas diseminasi data dan evaluasi.
+    - contoh [productivity comission](https://www.pc.gov.au/) di Australia (mirip UKP4)
+
+## References {.xs}
+
+::: columns
+
+::: {.column width=48%}
+
+- Alta, A., Setiawan, I., & Fauzi, A. N. (2021). Beralih dari subsidi pupuk dan benih: mengkaji ulang bantuan untuk mendorong produktivitas dan persaingan di pasar input pertanian. CIPS Policy Paper, 43. cutt.ly/cips-mk43
+
+- Amanta, F., & Gupta, K. (2022). Perdagangan untuk pemulihan ekonomi: kebijakan impor untuk mendukung sektor makanan dan minuman Indonesia. CIPS Policy Paper. cutt.ly/cips-mk51 
+
+- Amiti, M., & Konings, J. (2007). Trade Liberalization, Intermediate Inputs, and Productivity: Evidence from Indonesia. The American Economic Review, 97(5), 1611-1638. https://doi.org/10.1257/000282807783219733 
+- Amiti, M., & Davis, D. R. (2012). Trade, Firms, and Wages: Theory and Evidence. The Review of Economic Studies, 79(1), 1-36. http://www.jstor.org.virtual.anu.edu.au/stable/41407043 
+
+- Gupta, K. (2022). The Heterogenous Impact of Tariff and NTM on Total Factor Productivity of Indonesian Firms. Bulletin of Indonesian Economic Studies, 1-29. https://doi.org/10.1080/00074918.2021.2016613 
+
+- Ing, L. Y., Yu, M., & Zhang, R. (2019). The evolution of export quality: China and Indonesia. In L. Y. Ing & M. Yu (Eds.), World Trade Evolution: Growth, Productivity, and Employment. (pp. 261-302). Routledge.
+
+:::
+
+::: {.column width=48%}
+
+- Kis-Katos, K., Pieters, J., & Sparrow, R. (2018). Globalization and Social Change: Gender-Specific Effects of Trade Liberalization in Indonesia. IMF Economic Review, 66(4), 763-793. https://doi.org/http://dx.doi.org/10.1057/s41308-018-0065-5 
+
+- Kis-Katos, K., & Sparrow, R. (2015). Poverty, labor markets and trade liberalization in Indonesia. Journal of Development Economics, 117, 94-106. https://doi.org/https://doi.org/10.1016/j.jdeveco.2015.07.005 
+
+-   Pane, D. D., & Patunru, A. A. (2022). The role of imported inputs in firms' productivity and exports: evidence from Indonesia. Review of World Economics. https://doi.org/10.1007/s10290-022-00476-z
+
+-   Rahardja, S. & Varela, G.J. (2015). The Role of Imported Intermediate Inputs in the Indonesian Economy. [World Bank Policy Note 3](https://openknowledge.worldbank.org/bitstream/handle/10986/23509/%20The0Role0of0im0my00Policy0note0III0.pdf;sequence=1)
+
+-   Scoppola, M. (2021). Globalisation in agriculture and food: the role of multinational enterprises. European Review of Agricultural Economics, 48(4), 741-784. https://doi.org/10.1093/erae/jbab032
+
+-   World Bank. (2020). World Development Report 2020 : Trading for Development in the Age of Global Value Chains. Washington, DC: World Bank.
+
+:::
+:::
