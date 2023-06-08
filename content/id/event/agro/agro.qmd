@@ -152,9 +152,9 @@ flowchart LR
 
 ## Beberapa contoh
 
-- Pentingnya GVC dan Lead-firm model ([Neilson, Dwiartama, Fold & Permadi 2020](https://t.co/2czv6JbhIS); [Vicol, Neilson, Hartatri & Cooper 2018](https://doi.org/10.1016/j.worlddev.2018.05.020)).
+- Pentingnya GVC dan Lead-firm model on coffee & cacao ([Neilson, Dwiartama, Fold & Permadi 2020](https://t.co/2czv6JbhIS); [Vicol, Neilson, Hartatri & Cooper 2018](https://doi.org/10.1016/j.worlddev.2018.05.020)).
 
-- Structural break dari trade policy & sudden investment ([Langford, Zhang, Walrdron, Julianto, Sirajuddin, Neish, & Nuryantono 2022](https://doi.org/10.1016/j.aquaculture.2021.737828))
+- Structural break dari trade policy & sudden investment in seaweed ([Langford, Zhang, Walrdron, Julianto, Sirajuddin, Neish, & Nuryantono 2022](https://doi.org/10.1016/j.aquaculture.2021.737828))
 
 - Unsustainable export ban in the plywood manufacturing ([Thee 2012](https://remote-lib.ui.ac.id:2345/core/books/indonesias-economy-since-independence/indonesian-wood-products-industry/A27287852868A07F40CAF91E63D41703))
 
@@ -362,7 +362,7 @@ $$S-I=X-M$$
     
     - Debt, especially in USD & Euro, can be generated easily.
     
-    - Capital market is very fluid: you can trade in literally every seconds.
+    - Capital market is very fluid: you can trade in literal seconds.
     
 ## Ke depan
 
@@ -388,7 +388,7 @@ $$S-I=X-M$$
 
 ---
 
-Thank you & looking forward to discussions
+Thank you & looking forward to discussions, untuk industri agro yang semakin maju.
 
 <iframe src="https://giphy.com/embed/fWfowxJtHySJ0SGCgN" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/SkyTV-thank-you-love-youre-the-best-fWfowxJtHySJ0SGCgN">via GIPHY</a></p>
 
