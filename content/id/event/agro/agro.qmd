@@ -158,6 +158,8 @@ flowchart LR
 
 - Unsustainable export ban in the plywood manufacturing ([Thee 2012](https://remote-lib.ui.ac.id:2345/core/books/indonesias-economy-since-independence/indonesian-wood-products-industry/A27287852868A07F40CAF91E63D41703))
 
+- Multi-sector Competition ([Setiawan 1999](https://doi.org/10.1080/13571516.2019.1592996), [Wihardja et al. 2023](https://www.iseas.edu.sg/wp-content/uploads/2023/01/ISEAS_Perspective_2023_15.pdf ))
+
 ## Ke depan
 
 - Fokus. Good to build a specialization.
@@ -168,7 +170,7 @@ flowchart LR
 
 - Manfaatkan tugas belajar.
 
-- Data.
+- Gunakan firm level data (IBS, SIINAS) atau data lainnya.
 
 # Rethinking trade: Palm oil & GVC
 
