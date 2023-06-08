@@ -2,28 +2,28 @@
 # Documentation: https://wowchemy.com/docs/managing-content/
 
 title: "Agro"
-event:
+event: "Evaluasi Kinerja Direktorat Jenderal Industri Agro Triwulan I Tahun 2023"
 event_url:
-location:
+location: "Swiss-Bell Inn Bogor"
 address:
   street:
   city:
   region:
   postcode:
   country:
-summary:
+summary: ""
 abstract:
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
-date: 2023-06-08T14:56:44+07:00
-date_end: 2023-06-08T14:56:44+07:00
-all_day: false
+date: 2023-06-09T09:00:00+07:00
+# date_end: 2023-06-08T14:56:44+07:00
+all_day: True
 
 # Schedule page publish date (NOT event date).
 publishDate: 2023-06-08T14:56:44+07:00
 
-authors: []
+authors: [admin]
 tags: []
 
 # Is this a featured event? (true/false)
