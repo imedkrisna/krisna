@@ -1,12 +1,12 @@
 ---
-title: "Menebak populasi dengan sampel"
-subtitle: "Pertemuan 8"
+title: "Uji Hopotesis"
+subtitle: "Pertemuan 9"
 author: "Matematika & Statistika"
 format: 
   revealjs:
     theme: [simple,../mytheme.scss]
     chalkboard: true
-    incremental: false
+    incremental: true
     transition: convex
     background-transition: fade
     slide-number: true
@@ -14,207 +14,222 @@ format:
 
 ## Hari ini
 
-- Menebak rata-rata populasi dari sampel
+- Uji hipotesis
 
-- Konsep rentang kepercayaan
+## Langkah Uji Hipotesis
 
-- Konsep student distribution (distribusi t)
+- Membuat hipotesis dulu.
 
-- Pendahuluan uji hipotesis
+    - Outcome: ada statement $H_0$ dan $H_1$
+    
+- Melakukan uji hipotesis.
 
-## Konsep rentang kepercayaan
+    - Hitung t, tentukan daerah penolakan, cek apakah t ada di daerah penolakan.
+    
+    - Outcome: ada keputusan apakah terima atau tolak $H_0$
+    
+- Membuat kesimpulan.
 
-- Sampling bisa jadi memberikan kita nilai rata-rata yang tidak sama dengan populasi.
+    - Jelaskan secara verbal apa kesimpulan dari uji tersebut.
 
-- $\mu \neq \bar{X}$
+## Uji deskriptif
 
-- Tapi kita bisa menebak rata-rata populasi $\mu$ dengan menggunakan rentang kepercayaan.
+- Uji hipotesis deskriptif seringkali juga disebut dengan uji 1 sampel.
 
-- Rentang kepercayaan adalah rentang di mana kita yakin dengan tingkat keyakinan $1-\alpha$
+- Umumnya uji ini digunakan untuk pernyataan misalnya "lampu X tahan 10.000 jam", atau "best before 6 bulan".
 
-## Rentang kepercayaan
+$$
+H_0: \mu = \mu_0
+$$
+$$
+H_1: \mu \neq \mu_0
+$$
+
+## Uji deskriptif
 
 :::: columns
-::: {.column width="47%"}
-![Two-tailed](pvalue1.gif)
+::: {.column width="45%"}
+
+- Kita cek apakah $t_{hitung}$ ada di daerah penolakan. Hitung dengan rumus:
+
+$$
+t=\frac{\bar{X}-\mu_0}{\frac{S}{\sqrt{n}}}
+$$
 :::
-::: {.column width="47%"}
-![One-tailed](pvalue2.gif)
+::: {.column width="45%"}
+
+![alpha (arsir biru tua) disebut juga daerah penolakan](pvalue1.gif)
+
 :::
 ::::
 
-Gambar biru = $\alpha$
+- bandingkan $t_{hitung}$ dengan $t_{tabel}$. Jika $t_{hitung}$ ada di daerah penolakan, maka tolak $H_0$.
 
-Gambar diambil dari [UCLA](https://stats.oarc.ucla.edu/other/mult-pkg/faq/general/faq-what-are-the-differences-between-one-tailed-and-two-tailed-tests/)
+## Soal 1
 
-## Tingkat kepercayaan
+- Seorang dosen bahasa inggris memiliki materi ajar yang cocok untuk kelas dengan nilai TOEFL sekitar 500. Dosen ini memutuskan melakukan tes TOEFL ke 20 orang mahasiswa sebagai sampel. Jika rata-rata hasilnya adalah 500, maka materi tidak perlu diganti. Gunakan derajat kepercayaan 5% untuk menentukan apakah rata-rata mahasiswa memiliki nilai TOEFL 500.
 
-- Kita menentukan dulu level kepercayaan.
+- $H_0: \mu = 500$
 
-    - Standardnya adalah 95%, atau $\alpha=5%$
+- $H_1: \mu \neq 500$
+
+## Data {.scrollable}
+
+Bisa didownload di [sini](https://docs.google.com/spreadsheets/d/1aE74llk9RkTuL2nLsp6WfvK0faz3DGKv/edit?usp=drive_link&ouid=117760147588370390523&rtpof=true&sd=true)
+
+```{r}
+library(readxl)
+library(tidyverse)
+library(kableExtra)
+dat<-read_excel("data91.xlsx")
+dat %>% kableExtra::kbl(digits = 0)
+```
+
+## Soal 1
+
+- Didapat $\bar{X}=501,93$ dan $S=49.22$ lalu hitung t:
+
+$$
+t_0=\frac{482,62-500}{28,62/\sqrt{20}}=-2,72
+$$
+
+- Dengan $\alpha=5\%$ dan $df=19$, didapat $t_{0,025}=\pm2,093$
+
+- $|t_0| > |t_{0,025}|$ maka kita tolak $H_0$
+
+- Dengan derajat kepercayaan 95%, Disimpulkan bahwa rata-rata populasi tidak sama dengan 500. Mungkin kurikulum perlu diubah.
+
+## Soal 2
+
+- Anto memulai bisnis pecel lele. PT.A menawarkan menjadi pemasok lele untuk Anto. Tapi anto hanya menerima bila PT.A mampu dengan konsisten mengirimkan lele dengan berat minimal rata-rata lebih dari 100 gram. Anto pergi ke kolam PT.A dan mengambil sampel 10 ekor lele dengan data seperti berikut:
+
+```{r}
+data<-c(104.8712518,	109.9144173,	95.45148765,	91.17421667,	104.7746066,	101.859766,	89.45831416,	102.2185982,	85.21047661,	94.92018572)
+data
+```
+
+- Dengan $\alpha=5\%$, tentukan apakah Anto jadi mengambil dari PT.A atau tidak.
+
+## One-tail kiri
+
+$$
+H_0: \mu \geq 100
+$$
+$$
+H_1: \mu < 100
+$$
+
+- Kita gunakan uji 1 tail dengan rumus yang sama.
+
+- Didapat $\bar{X}=97,99$ dan $S=7,94$, dengan $n=10$ didapat t-hitung:
+
+- $t_{hitung}=-0.8$ sementara $t_{0,025}=-1,833$, terima $H_0$
+
+- Artinya anto akan mengambil lele PT.A.
+
+## Soal 3
+
+- Sebuah bank mengevaluasi kecepatan customer servicenya dalam melayani pelanggan. Diambil data sampel dari 40 layanan, didapatkan rata-rata 16,23 menit dengan standar deviasi 3,13 menit. Bank tersebut ingin mendeteksi apakah layanan secara keseluruhan lebih cepat dari 15 menit. Gunakan $\alpha=5\%$.
+
+$$
+H_0: \mu\leq15
+$$
+$$
+H_1: \mu>15
+$$
+
+## One-tail
+
+- $t_{hitung}=2,485$ sementara $Z_{0.05}=1,645$
+
+- Berarti $t$ ada di daerah penolakan, sehingga kita tolak $H_0$ dan dapat disimpulkan bahwa kinerja customer service masih lebih dari 15 menit secara keseluruhan.
+
+- Two-tail digunakan jika kita ingin menguji apakah sebuah rata-rata sama dengan sebuah parameter.
+
+- One-tail: Jika ingin menguji lebih besar sama dengan, maka gunakan yang daerah penolakannya di kiri(negatif).
+
+    - Sebaliknya jika menguji lebih kecil sama dengan.
     
-    - kalau two-tailed, berarti kiri kanan masing-masing $\frac{5}{2}\%$
+## Uji hipotesis 2 populasi
+
+Prinsipnya sama dengan sebelumnya, tapi:
+
+$$
+df=n_1+n_2-2
+$$
+
+$$
+t=\frac{(\bar{X_1}-\bar{X_2})}{S_{gab}\sqrt{\frac{1}{n_1}+\frac{1}{n_2}}}
+$$
+
+$$
+S_{gab}=\sqrt{\frac{(n_1-1)S_1^2+(n_2-1)S_2^2}{n_1+n_2-2}}
+$$
+
+$$
+H_0: \mu_1=\mu_2
+$$
+
+## soal 3
+
+- Ada 2 buah populasi dengan karakteristik sebagai berikut:
+
+    - populasi 1: n=10, $\bar{X}=15$, S=6
     
-- Makin tinggi tingkat kepercayaan, makin besar rentangnya. 
-
-- Makin besar rentangnya, makin ga guna tebakannya (inefisien),
-
-## Rentang kepercayaan
-
-- Rumus menghitung rentang kepercayaan:
-
-$$
-\bar{X} \pm Z_{\frac{\alpha}{2}} \frac{S}{\sqrt{n}}
-$$
-
-atau
-
-$$
-\mu=\left[ \bar{X}-Z_{\frac{\alpha}{2}} \frac{S}{\sqrt{n}}, \bar{X}+Z_{\frac{\alpha}{2}}\frac{S}{\sqrt{n}}\right]
-$$
-
-- Z adalah nilai baku / standardized score yang memberikan kita rentang kepercayaan $1-\alpha$
-
-## Contoh soal 1
-
-::: {.incremental}
-
-- Diambil sebuah sampel berisikan 100 mahasiswa, didapatkan memiliki rata-rata nilai tes TOEFL sebesar 500 dengan simbangan baku 50. Dengan rentang kepercayaan 95%, tentukan rentang nilai TOEFL keseluruhan mahasiswa tersebut!
-
-- Gunakan tabel Z untuk mendapatkan $Z_{0.025}$
-
-- Rentang rata-rata = $500 \pm 1,96\times\frac{50}{\sqrt{100}}$
-
-- Rentang rata-rata = $\left[490,2;509,8\right]$
-
-:::
-
-## Tabel Z
-
-<iframe src="https://onedrive.live.com/embed?cid=ACC929CA35B3A537&resid=acc929ca35b3a537%21162501&authkey=AIx-FChNmjZ8zzQ&em=2" width="900" height="600" frameborder="0" scrolling="no"></iframe>
-
-Bisa [Google](https://www.google.com/search?client=firefox-b-d&q=z+score+table) atau download di [sini](https://drive.google.com/file/d/1ywI58hnM8p0ZyFV7B9rCOosk72iCGguq/view?usp=sharing)
-
-## distrubusi t
-
-- Distribusi normal (atau distribusi z) merupakan sebaran kontinyu dari $-\infty$ sampai $\infty$
-
-- Meski demikian, hanya dari 3 standar deviasi kiri dan kanan aja udah lebih dari 99,99%.
-
-- Sampel dari populasi tersebut belum tentu terdistribusi normal, meski mirip:
-
-    = sampel cenderung lebih mungkin dapat di sekitar rata-rata.
-
-## distribusi t
-
-- Semakin banyak sampel yang kita ambil, semakin mirip distribusinya dengan distribusi normal
-
-- Karena itu kita butuh distribusi baru di mana:
-
-    - karakteristiknya mirip distribusi normal
+    - populasi 2: n=12, $\bar{X}=10$, S=5
     
-    - Seiring sampel meningkat, bentuknya semakin mendekati distribusi normal
-    
-- Distribusi tersebut adalah distribusi t.
+- dengan $\alpha=5\%$, cek apakah kedua populasi adalah populasi yang sama atau tidak.
 
-## t-table
+- $H_0: \mu_1 = \mu_2$
 
-Download [t-table di sini](https://1drv.ms/b/s!AjelszXKKcmsifhDr8cYIgeuMVSIDw?e=ioiSHv)
+- $H_1: \mu_1 \neq \mu_2$
 
-$df=n-1$
-
-<iframe src="https://onedrive.live.com/embed?cid=ACC929CA35B3A537&resid=acc929ca35b3a537%21162883&authkey=ACByMk8EqPx1N3s&em=2" width="800" height="400" frameborder="0" scrolling="no"></iframe>
-
-## Contoh 2
-
-- Diambil sebuah sampel berisikan 10 mahasiswa, didapatkan memiliki rata-rata nilai tes TOEFL sebesar 500 dengan simbangan baku 50. Dengan rentang kepercayaan 90%, tentukan rentang nilai TOEFL keseluruhan mahasiswa tersebut!
-
-- Gunakan tabel Z untuk mendapatkan $t_{0.05}$
-
-- Rentang rata-rata = $500 \pm 1,833\times\frac{50}{\sqrt{10}}$
-
-- Rentang rata-rata = $\left[471,02;528,98\right]$
-
-## Student t
-
-- Student distribution umumnya digunakan untuk sampel yang sedikit.
-
-- Beberapa buku menyarankan menggunakan distribusi t selama sampel anda di bawah 30.
-
-- Saya akan menyarankan hal yang sama di sini.
-
-- Di dunia nyata, sampling adalah hal yang ribet, terutama jika anda memiliki banyak karakteristik yang harus diseimbangkan.
-
-- Secara umum, semakin banyak semakin baik. Batasnya? Budget. Yang penting **Representatif**.
-
-## Uji Hipotesis
-
-- Kita telah belajar menebak nilai pusat (dengan rata-rata) dan menghitung standar deviasi / simpangan baku.
-
-- Berikutnya kita akan belajar uji hipotesis dengan jumlah data yang lebih dari 1 jenis.
-
-- Kita masih menggunakan asumsi distribusi normal.
-
-## Hipotesis
-
-- Hipotesis adalah pernyataan tentatif mengenai parameter acak.
-
-- Parameter acak dimaksud adalah parameter yang menunjukkan karakteristik data yang sedang kita uji.
-
-- Misalnya kelas A punya rata-rata nilai 80 dan simpangan baku 10, kelas B 76 dan 8. Manakah yang lebih tinggi?
-
-- Supplier A dan supplier B, manakah yang produknya lebih baik?
-
-## Uji hipotesis
-
-- Uji hipotesis umumnya dilakukan dengan membandingkan nilai rata-rata dengan suatu parameter.
-
--Misalnya, rata-rata kelas A lebih tinggi daripada rata-rata kelas B, kita tuliskan sebagai:
+## Soal 3
 
 $$
-H_0: \mu_A > \mu_B
+S_{gab}=\sqrt{\frac{(10-1)6^2+(12-1)5^2}{10+12-2}}= 5,63
 $$
 
 $$
-H_1: \mu_A \leq \mu_B
+t=\frac{(15-10)}{5.63\sqrt{\frac{1}{10}+\frac{1}{12}}}=2,07
 $$
-- $H_0$ disebut juga hipotesis nol, sementara $H_1$ disebut juga hipotesis alternatif.
 
-## Uji Hipotesis
+- $t_{0,025}=1.725 < t$ sehingga tolak $H_0$
 
-- Pada prosedur uji hipotesis, kita gunakan prinsip bahwa $H_0$ dianggap benar, kecuali kita  punya cukup bukti statistik untuk menolak $H_0$.
+- Karena $\bar{X_1}>\bar{X_2}$ maka kita boleh menyimpulkan $\mu_1>\mu_2$
 
-- Mirip prinsip praduga tak bersalah: seseorang dinyatakan tidak bersalah kecuali terbukti sebaliknya.
+## Uji Hipotesis berpasangan
 
-- Kita menggunakan nilai tengah ($\mu$) untuk menguji $H_0$.
+- Uji ini dilakukan apabila populasi 1 dan populasi 2 kita hitung secara berpasangan.
 
-## Arah uji
+- Umumnya dilakukan jika ada suatu intervensi di individu yang sama, lalu dicek sebelum dan sesudahnya.
 
-- Uji hipotesis dapat dibagi dua: uji hipotesis 2 arah (two-tailed) dan uji hipotesis 1 arah (1-tailed).
+- Kita hitung perbedaan tiap sampelnya (dibuat kolom baru yaitu $B=X_1-X_2$) lalu hitung dengan rumus:
 
-- Uji hipotesis 2 arah kita gunakan bila $H_0: \mu=\mu_0$ dan $H_1: \mu\neq\mu_0$
+- $t=\frac{\bar{B}}{S_B\sqrt{n}}$
 
-    - artinya, kita tolah $H_0$ jika mendapati bahwa nilai rata-rata lebih besar ATAU lebih kecil dari nilai referensi.
+- gunakan $H_0: \mu_1=\mu_2$ atau $H_0: \bar{B}=0$
 
-- Uji hipotesis 1 arah kita ginakan bila yang kita uji adalah lebih besar atau lebih kecil.
+## Soal 4
 
-    - misalnya kita uji lebih besar dari, maka selama nilai rata-rata lebih kecil atau sama dengan, maka kita tolah $H_0$
+Sebuah kelas barusan pasang AC, lalu menghitung nilai UTS (sebelum AC) dan UAS (sesudah AC). Didapat:
 
-## Dua jenis eror
+| Mahasiswa | 1 | 2 | 3 | 4 | 5 |
+| --- | --- | --- | --- | --- | --- |
+| Pre-AC | 40 | 70 | 63 | 56 | 65 |
+| Post-AC | 45 | 64 | 59 | 51 | 67 |
+| B | -5 | 6 | 4 | 5 | 2 |
 
-| Kenyataan | Menerima $H_0$ | Menolak $H_0$
-| --- | --- | --- |
-| Benar | tidak salah | Type I error |
-| Salah | Type II error | tidak salah |
+Apakah setelah pasang AC hasilnya lebih baik? gunakan $\alpha=5\%$
 
-- Type I error ($\alpha$): aslinya benar tapi kita tolak.
+## Soal 4
 
-- Type II error ($\beta$): aslinya salah tapi kita terima.
+- $\bar{B}=\frac{-5+6+4+5+2}{5}=1,6$
 
-## Prosedur Uji hipotesis
+- $S_B=4,83$ (lihat lagi cara hitung simpangan baku di materi sebelumnya)
 
-1. Menetapkan hipotesis: Tulis apa $H_0$ dan $H_1$ nya
-1. Menetapkan $\alpha$, atau level kepercayaan untuk menolak $h_0$
-1. Menghitung parameter uji
-1. Memutuskan penolakan atau penerimaan $H_0$
-1. Membuat kesimpulan.
+- $t=\frac{1,6}{4,83\sqrt{5}}=0,74$
+
+- $t_{tabel}=2,776$ dan hasilnya $t$ ada di daerah penerimaan.
+
+- Tidak menolak $H_0 \rightarrow$ Sebelum dan setelah pasang AC hasil belajar tidak berubah.
