@@ -73,4 +73,100 @@ format:
 
 ## Why Economics
 
--
+- Economics is NOT about (just) money!
+
+- Economics is a study of optimization: how to get the best under constraints.
+
+    - The same with engineers!
+    
+    - We use very similar tools!
+    
+- Increasingly, economics also do empirics!
+
+## Theory vs Empirics
+
+- Theory: If X leads to Y while Z does not lead to Y, then lets do X.
+
+- Does X really lead to Y while Z does not?
+
+- The first is the optimization part, the second is the empirical part.
+
+- But stil, relationship between Xs & Ys is what interests all economists.
+
+## Some questions
+
+- How to best tackle climate change?
+
+- Is minimum wage good?
+
+- Should we ban trade to industrialize?
+
+- How to best feed our people?
+
+- Should we invest in school or road?
+
+## About economics
+
+- Some of my blogpost to get a glympse of what economists do:
+
+    - [Consumption-saving decision](https://www.krisna.or.id/post/surga/)
+    
+    - [how to set the price on toll road](https://www.krisna.or.id/post/jorr/)
+    
+    - [FDI, trade and industry policy](https://www.krisna.or.id/post/hitektrade/)
+
+
+- Naturally, economists often specialize more on issues.
+
+    - I'm more on trade, industry, investment. Knows next to nothing about education & welfare program issues.
+    
+## Why people make choices
+
+- The main reason is resources' scarcity.
+
+- resource = anything you use to get what you want.
+
+- mainstream resources are money; Given 4k trilyun APBN, what program should we finance?
+
+- But other resources are important too: time, people/institutions, inflation.
+
+## Opportunity cost
+
+- The true cost of something is its possible other uses. Money is the least of our concern.
+
+- The cost of having holiday, for example, is the money & time you could otherwise use to join a short course.
+
+- The cost of doing an S1:
+    
+    - Go straight to work, get experiences & money
+    
+    - Do other degree
+    
+    - enjoy life
+    
+- I daresay opportunity cost is the core concept of economics!
+
+## Thinking at the margin
+
+- The principle of opportunity cost leads to a marginal thinking
+
+- understand the status quo, then think if it can be (marginally) improved.
+
+- e.g., say you have 2 hours to spent on work or play. how to divide?
+
+    - depends: when's the work deadline?
+    
+    - if you work for another 30 minutes, would that help with work?
+    
+## Specialisation & trade
+
+- During your daily time, you make decisions on allocating how much time to study and to cook, among other things.
+
+- Since you will die if you don’t eat, you can’t allocate 0 hour to cook.
+
+- On the other hand, there are those who are very good cook and will cook for you for a little money.
+
+- In this case, it may be better if you spend 0 hour to cook, and order food from these chefs.
+  
+- Trade is the reason why I can study economics: I don’t have to study how to be a doctor. I will just go to the hospital if I need a medical service.
+
