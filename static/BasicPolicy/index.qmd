@@ -158,7 +158,7 @@ format:
     
     - if you work for another 30 minutes, would that help with work?
     
-## Specialisation & trade
+## Specialization & trade
 
 - During your daily time, you make decisions on allocating how much time to study and to cook, among other things.
 
@@ -169,4 +169,54 @@ format:
 - In this case, it may be better if you spend 0 hour to cook, and order food from these chefs.
   
 - Trade is the reason why I can study economics: I don’t have to study how to be a doctor. I will just go to the hospital if I need a medical service.
+
+## SPecialization & trade
+
+- Extending to firm level:
+
+    - Why build our own office suit if we can buy microsoft office?
+    
+    - Why build our own server if there's AWS, Biznet, others?
+    
+- Easily extending this to country level:
+
+    - Japan's capital & labor are mobilized to make cars cuz they get less if they plant palm oil.
+    
+## Typical problem
+
+- Most policy makers & policy analysts are stumble in the trade argument because they often forgot about **resource constraints** and **opportunity cost**.
+
+    - leads to a macro-policy which aims at increasing **everything**.
+    
+- our land, workforce, APBN, etc are limited.
+
+- Even if you have a lot of resources, for example, the extra money could be better spent to grow one thing.
+
+## Equilibrium
+
+- When there is an incentive to do something, there will be more and more people exploit it.
+
+- As more people do it, the incentive decreases to a point where it is not worth it anymore.
+
+- examples:
+  
+    - City becomes more crowded (and costly to live in).
+  
+    - Stock price stops growing few moments after its IPO.
+  
+    - Countries' economic growth reduced after they get rich.
+
+- Movement towards equilibrium, however, varies.
+
+    - short run vs long run.
+    
+    - individual vs aggregate.
+
+## Conclusion
+
+- Main principles: scarcity, opportunity cost, marginal thinking, & equilibrium.
+
+- Economics gets much more complicated that this.
+
+- The principle, however, remains the same (more or less)
 
