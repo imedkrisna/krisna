@@ -1,0 +1,76 @@
+---
+title: "Public Policy Analysis"
+subtitle: "A Discussion"
+date: "21 Juni 2023"
+author: "Krisna Gupta"
+institute: "Center for Indonesian Policy Studies"
+date-format: "long"
+format: 
+  revealjs:
+    theme: [simple,mytheme.scss]
+    chalkboard: true
+    incremental: false
+    transition: convex
+    background-transition: fade
+    slide-number: true
+  beamer: default
+---
+
+## I Made Krisna
+
+::: columns
+::: {.column width="40%"}
+![](https://www.krisna.or.id/files/foto_krisna.jpg)
+:::
+
+::: {.column .s width="60%"}
+-   Sering dipanggil Imed
+
+-   Full-time lecturer di Politeknik APP
+
+-   Part-time lecturer di Universitas Indonesia
+
+-   Master degree in economics UI/VU
+
+-   [PhD in economics](https://crawford.anu.edu.au/people/phd/krisna-gupta) di Australian National University
+
+    -   [thesis](https://openresearch-repository.anu.edu.au/handle/1885/270149) tentang industri dan perdagangan di Indonesia.
+
+-   Associate researcher di [Center for Indonesian Policy Studies](https://www.cips-indonesia.org/about?lang=id).
+
+    -   Policy paper terakhir tentang [GVC di industri makanan](https://www.cips-indonesia.org/publications/perdagangan-untuk-pemulihan-ekonomi%3A-kebijakan-impor-untuk-mendukung-sektor-makanan-dan-minuman-indonesia)
+
+-   Selengkapnya di [imedkrisna.github.io](https://imedkrisna.github.io/)
+
+    -   blog di [krisna.or.id](https://www.krisna.or.id/)
+    -   twitter di [\@imedkrisna](https://www.twitter.com/imedkrisna)
+:::
+:::
+
+---
+
+## Content
+
+- Why economics?
+
+- Principle of Public Policy
+
+- 
+
+## Your expectation?
+
+<div style='position: relative; padding-bottom: 56.25%; padding-top: 35px; height: 0; overflow: hidden;'><iframe sandbox='allow-scripts allow-same-origin allow-presentation' allowfullscreen='true' allowtransparency='true' frameborder='0' height='315' src='https://www.mentimeter.com/app/presentation/alz9ybr3awdvf1djvf924hiq1r4xu4we/embed' style='position: absolute; top: 0; left: 0; width: 100%; height: 100%;' width='420'></iframe></div>
+
+![](qr.png){.absolute top=200 left=1000 width="200" height="200"}
+
+## Basic assumption
+
+- No economics and/or mathematics background.
+
+- Some experience in CIPS' work.
+
+- chance is, I can learn from you. So don't be shy.
+
+## Why Economics
+
+-
