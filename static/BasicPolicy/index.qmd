@@ -220,6 +220,52 @@ format:
 
 - The principle, however, remains the same (more or less)
 
-## Welfare
+## Writing a policy paper
+
+- This is not a writing drill. Everybody has their own style.
+
+- However, there are some things that you may want to have in your writing.
+
+- Don't forget to keep the principle in our previous learning in your mind while doing this.
 
 ## Public Policy Principle
+
+- We often write something theoretical [(like this for example)](https://www.cips-indonesia.org/publications/the-advent-of-a-new-trade-governance-after-the-omnibus-law%3A-neraca-komoditas) but also something more empirics [(like this for example)](https://www.cips-indonesia.org/publications/technology-and-knowledge-transfers-to-dairy-farms%3A-private-sector-contribution-to-improve-milk-production)
+
+- Well, in reality, it is not so useful differentiating the two. We often just mix them.
+
+- However, you can see the pattern of these works are somewhat similar.
+
+## What to look for?
+
+When we write about policy, aim for these things:
+
+1. Problem definition
+
+1. Policy targets
+
+1. Policy assessments
+
+1. Assess alternative options
+
+## Problem definition
+
+- Why the regulation is needed? The reason often boils down to the presence of market failure, inefficient prior regulations, or new targets.
+
+- Find this in a "menimbang" part, sometimes at "pasal 2", but sometimes in the media. 
+
+- Some regulations try to tackle more than one problem, so list them accordingly. 
+
+- Your paper may or may not contain regulation, but the problem definition is a must-have.
+
+## Policy targets
+
+- If you write on a particular policy, first you must tell readers what it is and how does it work.
+
+- You must state boldly what it tries to achieve, then you must focus these targets.
+
+## Exercise
+
+- Can you identify those points in [this piece](https://c95e5d29-0df6-4d6f-8801-1d6926c32107.usrfiles.com/ugd/c95e5d_7735b11428c94102a3ff186b55058b2a.pdf)?
+
+<div style="width:480px"><iframe allow="fullscreen" frameBorder="0" height="480" src="https://giphy.com/embed/y48NCmNho57e12ALdR/video" width="480"></iframe></div>
