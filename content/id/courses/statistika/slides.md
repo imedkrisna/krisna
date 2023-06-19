@@ -30,8 +30,8 @@ slides:
 - {{% staticref "/statistika/meeting6/index.html" "newtab" %}}Pertemuan 6: Z-score dan menebak proporsi{{% /staticref %}}
 - {{% staticref "/statistika/meeting7/index.html" "newtab" %}}Pertemuan 7: Level, growth, dan angka indeks {{% /staticref %}}
 - {{% staticref "/statistika/meeting8/index.html" "newtab" %}}Pertemuan 8: Menebak rata-rata populasi  {{% /staticref %}}
-- {{% staticref "/statistika/meeting9/index.html" "newtab" %}}Pertemuan 9: {{% /staticref %}}
-- {{% staticref "/statistika/meeting10/index.html" "newtab" %}}Pertemuan 10: {{% /staticref %}}
+- {{% staticref "/statistika/meeting9/index.html" "newtab" %}}Pertemuan 9: Uji Hipotesis{{% /staticref %}}
+- {{% staticref "/statistika/meeting10/index.html" "newtab" %}}Pertemuan 10: Korelasi{{% /staticref %}}
 - {{% staticref "/statistika/meeting11/index.html" "newtab" %}}Pertemuan 11: {{% /staticref %}}
 - {{% staticref "/statistika/meeting12/index.html" "newtab" %}}Pertemuan 12: {{% /staticref %}}
 - {{% staticref "/statistika/meeting13/index.html" "newtab" %}}Pertemuan 13: {{% /staticref %}}
