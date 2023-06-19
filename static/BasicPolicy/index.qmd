@@ -395,3 +395,11 @@ When we write about policy, aim for these things:
 - Can you identify those points in the policy analysis must-haves? Use whatever policy paper/brief you're familiar with or use [this piece](https://c95e5d29-0df6-4d6f-8801-1d6926c32107.usrfiles.com/ugd/c95e5d_7735b11428c94102a3ff186b55058b2a.pdf)
 
 <div style="width:480px"><iframe allow="fullscreen" frameBorder="0" height="400" src="https://giphy.com/embed/y48NCmNho57e12ALdR/video" width="400"></iframe></div>
+
+## Last slide
+
+- Thanks for your participations!
+
+- If you're interested learning more on basic economics, check out my course for Universitas Petra's undergrad program [here](https://www.krisna.or.id/courses/econ101/)
+
+- My policy part is taken mostly from World Bank's RIA analysis which can be [downloaded here](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwid5qjEvs7_AhUTXGwGHW2cAuwQFnoECA0QAQ&url=https%3A%2F%2Fdocuments1.worldbank.org%2Fcurated%2Fen%2F905611520284525814%2FGlobal-Indicators-of-Regulatory-Governance-Worldwide-Practices-of-Regulatory-Impact-Assessments.pdf&usg=AOvVaw1iey7-rf-LV1TDlVYpYWe7&opi=89978449)
