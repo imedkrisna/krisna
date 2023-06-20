@@ -16,12 +16,12 @@ abstract: "I share my experience in policy brief & paper writing with participan
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
-date: 2023-06-09T09:00:00+07:00
-# date_end: 2023-06-08T14:56:44+07:00
+date: 2023-06-21T14:00:00+07:00
+date_end: 2023-06-21T17:00:00+07:00
 all_day: True
 
 # Schedule page publish date (NOT event date).
-publishDate: 2023-06-08T14:56:44+07:00
+publishDate: 2023-06-20T14:56:44+07:00
 
 authors: [admin]
 tags: []
