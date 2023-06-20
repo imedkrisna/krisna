@@ -91,7 +91,7 @@ $$
 \chi^2=45,54
 $$
 
-Next, hitung $C_c=\sqrt{\frac{\chi^2}{\chi^2|n}}$
+Next, hitung $C_c=\sqrt{\frac{\chi^2}{\chi^2+n}}$
 
 $$
 C_c+\sqrt{\frac{45,54}{45,54+527}}=0,28
