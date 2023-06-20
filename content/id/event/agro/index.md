@@ -1,7 +1,7 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: "Agro"
+title: "Compleksitas mengevaluasi kinerja Direktorat Jenderal Agro"
 event: "Evaluasi Kinerja Direktorat Jenderal Industri Agro Triwulan I Tahun 2023"
 event_url:
 location: "Swiss-Bell Inn Bogor"
@@ -11,8 +11,8 @@ address:
   region:
   postcode:
   country:
-summary: ""
-abstract:
+summary: "Pada kesempatan kali ini saya diundang oleh Direktorat Jenderal Agro Kementerian Perindustrian untuk menyampaikan apa yang saya ketahui tentang evaluasi dan tentang hal-hal yang penting untuk diketahui di bidang industri khususnya industri agro"
+abstract: "Pada kesempatan kali ini saya diundang oleh Direktorat Jenderal Agro Kementerian Perindustrian untuk menyampaikan apa yang saya ketahui tentang evaluasi dan tentang hal-hal yang penting untuk diketahui di bidang industri khususnya industri agro"
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
