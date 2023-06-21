@@ -13,7 +13,6 @@ format:
     transition: convex
     background-transition: fade
     slide-number: true
-  beamer: default
 ---
 
 ## I Made Krisna
@@ -401,6 +400,20 @@ When we write about policy, aim for these things:
 - We often needs to be creative because we face different constraints compared to other countries.
 
     - liberalization dominates policy advice in a country with a bad government.
+
+## Some more tips
+
+- Be aware of your own biases
+
+    - If all you have is a hammer, everything looks like a nail.
+    
+    - Try your best to keep your mind open, listen to as many vantage points as you can.
+    
+- ["adding things"](https://www.sciencealert.com/here-s-why-our-brains-always-want-to-solve-problems-by-adding-not-taking-away) problem.
+
+    - more budget! More words/pages! More regulations!
+    
+- Again, always keep power balance & political games in mind.
 
 ## Bottom line
 
