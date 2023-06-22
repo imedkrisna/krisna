@@ -1,0 +1,74 @@
+---
+title: "Public Policy Analysis"
+subtitle: "A Discussion"
+date: "21 Juni 2023"
+author: "Krisna Gupta"
+institute: "Center for Indonesian Policy Studies"
+date-format: "long"
+format: 
+  revealjs:
+    theme: [simple,mytheme.scss]
+    chalkboard: true
+    incremental: false
+    transition: convex
+    background-transition: fade
+    slide-number: true
+---
+
+## I Made Krisna
+
+::: columns
+::: {.column width="40%"}
+![](https://www.krisna.or.id/files/foto_krisna.jpg)
+:::
+
+::: {.column .s width="60%"}
+-   Sering dipanggil Imed
+
+-   Full-time lecturer di Politeknik APP
+
+-   Part-time lecturer di Universitas Indonesia
+
+-   Master degree in economics UI/VU
+
+-   [PhD in economics](https://crawford.anu.edu.au/people/phd/krisna-gupta) di Australian National University
+
+    -   [thesis](https://openresearch-repository.anu.edu.au/handle/1885/270149) tentang industri dan perdagangan di Indonesia.
+
+-   Associate researcher di [Center for Indonesian Policy Studies](https://www.cips-indonesia.org/about?lang=id).
+
+    -   Policy paper terakhir tentang [GVC di industri makanan](https://www.cips-indonesia.org/publications/perdagangan-untuk-pemulihan-ekonomi%3A-kebijakan-impor-untuk-mendukung-sektor-makanan-dan-minuman-indonesia)
+
+-   Selengkapnya di [imedkrisna.github.io](https://imedkrisna.github.io/)
+
+    -   blog di [krisna.or.id](https://www.krisna.or.id/)
+    -   twitter di [\@imedkrisna](https://www.twitter.com/imedkrisna)
+:::
+:::
+
+---
+
+:::: columns
+::: {.column width="40%"}
+![](frame.png)
+akses slide ini, scan QR di atas atau pergi ke [s.id/djiagro](s.id/djiagro)
+:::
+::: {.column width="50%"}
+
+### Topic
+
+- ASEAN's economy
+
+- RCEP
+
+- EV in ASEAN
+:::
+::::
+
+## ASEAB EV
+
+- ASEAN [declaration](https://asean.org/wp-content/uploads/2023/05/07-ASEAN-Leaders-Declaration-on-Developing-Regional-EV-Ecosystem_adopted.pdf).
+
+- [ISEAS](https://www.iseas.edu.sg/articles-commentaries/iseas-perspective/2022-112-mapping-the-surge-in-ev-production-in-southeast-asia-by-tham-siew-yean/) Study on EV in ASEAN.
+
+- [ASEAN Food Security Framework](https://asean.org/wp-content/uploads/2020/11/42-AIFS-Framework-SPAFS-Final-13-July-2020.pdf)
