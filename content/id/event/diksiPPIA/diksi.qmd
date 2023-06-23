@@ -15,36 +15,36 @@ format:
     slide-number: true
 ---
 
-## I Made Krisna
+## Krisna Gupta
 
-::: columns
+:::: columns
 ::: {.column width="40%"}
 ![](https://www.krisna.or.id/files/foto_krisna.jpg)
 :::
 
 ::: {.column .s width="60%"}
--   Sering dipanggil Imed
 
--   Full-time lecturer di Politeknik APP
+-   Full-time lecturer at Politeknik APP
 
--   Part-time lecturer di Universitas Indonesia
+-   Part-time lecturer at Universitas Indonesia
 
--   Master degree in economics UI/VU
+-   [PhD in economics](https://crawford.anu.edu.au/people/phd/krisna-gupta) at The Australian National University
 
--   [PhD in economics](https://crawford.anu.edu.au/people/phd/krisna-gupta) di Australian National University
+    -   [thesis](https://openresearch-repository.anu.edu.au/handle/1885/270149) about trade and industry in Indonesia.
 
-    -   [thesis](https://openresearch-repository.anu.edu.au/handle/1885/270149) tentang industri dan perdagangan di Indonesia.
+-   Associate researcher at [Center for Indonesian Policy Studies](https://www.cips-indonesia.org/about?lang=id).
 
--   Associate researcher di [Center for Indonesian Policy Studies](https://www.cips-indonesia.org/about?lang=id).
+    -   My latest policy paper is on [GVC in the food industry](https://www.cips-indonesia.org/publications/perdagangan-untuk-pemulihan-ekonomi%3A-kebijakan-impor-untuk-mendukung-sektor-makanan-dan-minuman-indonesia)
+    
+    - Our latest project with Prospera was to advice The Indonesian government on RCEP Action Plan.
 
-    -   Policy paper terakhir tentang [GVC di industri makanan](https://www.cips-indonesia.org/publications/perdagangan-untuk-pemulihan-ekonomi%3A-kebijakan-impor-untuk-mendukung-sektor-makanan-dan-minuman-indonesia)
+-   More about me at [imedkrisna.github.io](https://imedkrisna.github.io/)
 
--   Selengkapnya di [imedkrisna.github.io](https://imedkrisna.github.io/)
-
-    -   blog di [krisna.or.id](https://www.krisna.or.id/)
-    -   twitter di [\@imedkrisna](https://www.twitter.com/imedkrisna)
+    -   Blog: [krisna.or.id](https://www.krisna.or.id/en/)
+    -   twitter: [\@imedkrisna](https://www.twitter.com/imedkrisna)
+    -   linkedin: [linkedin.com/in/imedkrisna](https://www.linkedin.com/in/imedkrisna)
 :::
-:::
+::::
 
 ---
 
@@ -55,7 +55,7 @@ akses slide ini, scan QR di atas atau pergi ke [s.id/djiagro](s.id/djiagro)
 :::
 ::: {.column width="50%"}
 
-### Topic
+### Today's topic
 
 - ASEAN's economy
 
@@ -71,7 +71,38 @@ akses slide ini, scan QR di atas atau pergi ke [s.id/djiagro](s.id/djiagro)
 :::
 ::::
 
-## ASEAB EV
+## RCEP
+
+:::: columns
+::: {.column width="47%"}
+
+- ASEAN+5 FTA (sort of)
+
+- Enacted in 2020. [The Philippines ratified RCEP](https://www.economist.com/finance-and-economics/2023/06/15/america-is-losing-ground-in-asian-trade) in June 2$^{nd}$ 2023.
+
+- Covers trade in goods, services, investment and movement of natural persons.
+
+- Also covers development cooperation.
+
+:::
+::: {.column width="47%"}
+![](picture1.png)
+:::
+::::
+
+## About RCEP
+
+- The impact from tariff is negligible: about [0.07% higher real income](https://www.economist.com/finance-and-economics/2023/06/15/america-is-losing-ground-in-asian-trade) from World Bank's estimate.
+
+- The gain will come from the new Rules of Origin (RoO): The one region RoO rules.
+
+- This new RoO will improve the region's ability to produce, as supply chain will be much more streamlined.
+
+- Many countries in the region are preparing an action plan to shape each government's strategy to utilise RCEP.
+
+- Other parts of the agreement seems watered down, however.
+
+## ASEAN EV
 
 - ASEAN [declaration](https://asean.org/wp-content/uploads/2023/05/07-ASEAN-Leaders-Declaration-on-Developing-Regional-EV-Ecosystem_adopted.pdf).
 
