@@ -1,6 +1,6 @@
 ---
 title: "Does ASEAN Matter?"
-subtitle: "How the summit tackle current challenges"
+subtitle: "How the summit tackles current challenges"
 date: "24 Juni 2023"
 author: "Krisna Gupta"
 institute: ""
@@ -51,7 +51,7 @@ format:
 :::: columns
 ::: {.column width="40%"}
 ![](frame.png)
-akses slide ini, scan QR di atas atau pergi ke [s.id/djiagro](s.id/djiagro)
+Access this slide with above QR or [s.id/diksiPPIA](s.id/diksippia)
 :::
 ::: {.column width="50%"}
 
@@ -199,6 +199,8 @@ f
 
     - in ASEAN, [NTMs has risen](https://www.eastasiaforum.org/2022/06/08/can-rcep-overcome-obstacles-to-trade-reform/) from 1,634 to 5,975 between 2000 to 2015.
     
+    - domestic policies
+    
 - Geopolitically, RCEP may push ASEAN [more towards China](https://www.economist.com/finance-and-economics/2023/06/15/america-is-losing-ground-in-asian-trade). Can the region still be independent?
 
     - We'll see how IPEF change the equation.
@@ -269,6 +271,7 @@ ggplot(dot2, aes(x=country, y=value, fill=variable)) +
 | Country | SGP | MYS | VNM | IDN | THA | PHL | MMR | KHM | LAO |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | Rank | 28 | 41 | 46 | 63 | 64 | 67 | 72 | 78 | 81 |
+| Score | 73.1 | 69.1 | 67.9 | 60.2 | 60.1 | 59.3 | 57.6 | 55.7 | 53.1 |
     
 ## Food security
 
@@ -279,3 +282,15 @@ ggplot(dot2, aes(x=country, y=value, fill=variable)) +
 - There is no way around increasing productivity: rice & palm oil yield are reducing amid climate change and limited land.
 
 - Thankfully, commitment in food security is strong.
+
+## Closing
+
+- Economy-wise, ASEAN remains relatively small, but an important region nonetheless in the midst of global rivalry.
+
+- The summit remains committed to multilateralism, seems like.
+
+- RCEP, commitment to regional EV development and food security will determine whether ASEAN really does matter: to become the epicentrum of growth!
+
+## Thank you
+
+<iframe src="https://giphy.com/embed/QAsBwSjx9zVKoGp9nr" width="480" height="345" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/thank-you-keanu-reeves-QAsBwSjx9zVKoGp9nr">via GIPHY</a></p>
