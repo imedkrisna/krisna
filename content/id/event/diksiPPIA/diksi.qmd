@@ -1,9 +1,9 @@
 ---
-title: "Public Policy Analysis"
-subtitle: "A Discussion"
-date: "21 Juni 2023"
+title: "Does ASEAN Matter?"
+subtitle: "How the summit tackle current challenges"
+date: "24 Juni 2023"
 author: "Krisna Gupta"
-institute: "Center for Indonesian Policy Studies"
+institute: ""
 date-format: "long"
 format: 
   revealjs:
@@ -55,21 +55,102 @@ akses slide ini, scan QR di atas atau pergi ke [s.id/djiagro](s.id/djiagro)
 :::
 ::: {.column width="50%"}
 
-### Today's topic
+### Today
 
-- ASEAN's economy
+- Does ASEAN Matter?
 
 - RCEP
 
-- Some ASEAN Commitments: 
-    
-    - Food security
-    
-    - Blue economy
-    
-    - Electric vehicle
+- EV
+
+- Food security
+
 :::
 ::::
+
+## The ASEAN Summit
+
+- The ASEAN 42nd Summit produces [several declarations](https://asean.org/42nd-asean-summit/) like the AEC post-2025, regional development of electric vehicle (EV) ecosystem, and regional payment connectivity.
+
+- The theme is "ASEAN Matters: Epicentrum of Growth"
+
+    - ASEAN is aspired to be a stable region in the midst of global uncertainty
+    
+    - Remains committed to regionalism & multilateralism
+    
+    - but does ASEAN really matter?
+
+## ASEAN: some facts in 2021
+
+```{r}
+library(tidyverse)
+library(patchwork)
+dat<-tibble(
+  region=c('ASEAN','EU','USA','China','India','Japan'),
+  gdp=c(3.348,17.18,23.32,17.73,3.18,4.94),
+  growth=c(3.4,5.4,5.9,8.1,8.7,1.7),
+  fdi=c(179.2,337.48,448.32,333.98,44.73,33.09),
+  exports=c(1.713,6.31,1.76,3.22,0.402,0.749)
+)
+z<-theme_classic() +
+  theme(panel.background = element_rect(fill = "#f0f1eb",
+                                        colour = "#f0f1eb"),
+        plot.background = element_rect(fill = "#f0f1eb"),
+        strip.background = element_rect(fill = "#f0f1eb"),
+        legend.key = element_rect(fill = "#f0f1eb",linetype = "blank"),
+        legend.background = element_rect(fill="#f0f1eb"))
+
+a<-ggplot(dat, aes(x=region,y=gdp)) + geom_bar(stat = "identity")+z+labs(title="GDP (in Trillion Current USD)")+ylab('')+xlab('')
+b<-ggplot(dat, aes(x=region,y=growth)) + geom_bar(stat = "identity")+z+labs(title="GDP Growth (%)")+ylab('')+xlab('')
+c<-ggplot(dat, aes(x=region,y=fdi)) + geom_bar(stat = "identity")+z+labs(title="Foreign Direct Investment (in Billion Current USD")+ylab('')+xlab('')
+d<-ggplot(dat, aes(x=region,y=gdp)) + geom_bar(stat = "identity")+z+labs(title="Merchandise Exports (in Trillion Current USD")+ylab('')+xlab('')
+(a+b)/(c+d)+plot_annotation(caption = 'source: WDI & ASEAN Stats')
+```
+
+## ASEAN: some Facts in 2021
+
+:::: columns
+::: {.column width="47%"}
+
+- ASEAN's trade and investment with itself remain strong.
+
+- China still dominates trade, while USA in FDI inflow.
+
+:::
+::: {.column width="47%"}
+```{r}
+#| layout-nrow: 2
+library(reshape2)
+dut<-tibble(
+  region=c('Intra-ASEAN','EU','USA','China','India','Japan'),
+  export=c(370.92,152.25,255.16,280.76,53.81,113.87),
+  import=c(339.86,116.57,109.3,388.44,37.74,126.52)
+)
+dut2<-melt(dut, id.vars='region')
+dit<-tibble(
+  region=c('Intra-ASEAN','EU','USA','China','India','Japan'),
+  fdi=c(23.53,26.53,40.25,13.83,1.98,11.88)
+)
+e<-ggplot(dut2, aes(x=region, y=value, fill=variable)) +
+    geom_bar(stat='identity', position='dodge')+z+labs(title="Trade (in Billion Current USD)")+ylab('')+xlab('')+ theme(text = element_text(size = 20))
+f<-ggplot(dit, aes(x=region,y=fdi)) + geom_bar(stat = "identity")+z+labs(title="FDI Inflow (in Billion Current USD)")+ylab('')+xlab('')+ theme(text = element_text(size = 20))
+e
+f
+```
+:::
+::::
+
+## ASEAN matters?
+
+- Challenges going forward remains: 
+
+    - a weaker global growth, with growth estimated to be [just 2.3% in 2023](https://asean2023.id/en/page/asean-2023/epicentrum-of-growth)
+    
+    - inward-lookingness & geopolitical rivalry, with EU, China, and the US are trying to reduce their interdependence.
+    
+    - Climate change devastate food security & requires resources to tackle
+
+- Opportunities are there: RCEP & the region's commitment to multilateralism.
 
 ## RCEP
 
@@ -94,18 +175,107 @@ akses slide ini, scan QR di atas atau pergi ke [s.id/djiagro](s.id/djiagro)
 
 - The impact from tariff is negligible: about [0.07% higher real income](https://www.economist.com/finance-and-economics/2023/06/15/america-is-losing-ground-in-asian-trade) from World Bank's estimate.
 
+- Outside tariff, the agreement seems watered down:
+
+    - not enough immediate commitment in the agreement on issues such as non-tariff measures, investment, government procurement, and competition.
+    
+    - many of the issues will be depending on the future RCEP secretariat & each countries' commitment.
+    
+## Rules of Origin
+
 - The gain will come from the new Rules of Origin (RoO): The one region RoO rules.
 
-- This new RoO will improve the region's ability to produce, as supply chain will be much more streamlined.
+- Single region RoO means a good that uses components from various RCEP countries will be counted as originated from RCEP.
 
-- Many countries in the region are preparing an action plan to shape each government's strategy to utilise RCEP.
+- This rules streamlined previous "spaghetti bowl" created by ASEAN+1 FTAs.
 
-- Other parts of the agreement seems watered down, however.
+- This is a perfect environment for Regional Value Chain (RVC) industries.
 
-## ASEAN EV
+## Can RCEP works?
 
-- ASEAN [declaration](https://asean.org/wp-content/uploads/2023/05/07-ASEAN-Leaders-Declaration-on-Developing-Regional-EV-Ecosystem_adopted.pdf).
+- The RoO can only be utilised by also [streamlining](https://www.eastasiaforum.org/2022/06/08/can-rcep-overcome-obstacles-to-trade-reform/) various non-tariff measures (NTMs) like standards & import/export control.
 
-- [ISEAS](https://www.iseas.edu.sg/articles-commentaries/iseas-perspective/2022-112-mapping-the-surge-in-ev-production-in-southeast-asia-by-tham-siew-yean/) Study on EV in ASEAN.
+- However, the region is increasingly more protective:
 
-- [ASEAN Food Security Framework](https://asean.org/wp-content/uploads/2020/11/42-AIFS-Framework-SPAFS-Final-13-July-2020.pdf)
+    - in ASEAN, [NTMs has risen](https://www.eastasiaforum.org/2022/06/08/can-rcep-overcome-obstacles-to-trade-reform/) from 1,634 to 5,975 between 2000 to 2015.
+    
+- Geopolitically, RCEP may push ASEAN [more towards China](https://www.economist.com/finance-and-economics/2023/06/15/america-is-losing-ground-in-asian-trade). Can the region still be independent?
+
+    - We'll see how IPEF change the equation.
+
+## Climate change
+
+- Climate change is real, and EV adoption has been dubbed as one of the most efficient way to deal with it.
+
+- The region hops the EV train: [ASEAN Leader's Declaration on Developing Regional Electric Vehicle Ecosystem.](https://asean.org/asean-leaders-declaration-on-developing-regional-electric-vehicle-ecosystem/).
+
+- Not only good for the climate, EV is so different compared to conventional car, the advantage of the incumbent matter less.
+
+## Vehicle trade
+
+:::: columns
+::: {.column width="47%"}
+
+- ASEAN's vehicles are quite competitive ([7th largest](https://www.iseas.edu.sg/wp-content/uploads/2022/10/ISEAS_Perspective_2022_112.pdf)).
+
+- BYD, Wuling, Hyundai already has presence, VinFast is promising.
+
+- Indonesia, Malaysia and Thailand's incentives rolled in: USD 465, 560, 2032 per vehicle respectively.
+
+:::
+::: {.column width="47%"}
+```{r}
+#| fig-height: 6
+#| fig-width: 5
+dot<-tibble(
+  country=c('THA','IDN','VNM','SGP','MYS','PHL'),
+  export=c(32.258,8.636,4.028,3.445,2.228,1.075),
+  import=c(10.266,6.702,7.444,4.575,5.924,7.592)
+)
+dot2<-melt(dot, id.vars='country')
+
+ggplot(dot2, aes(x=country, y=value, fill=variable)) +
+    geom_bar(stat='identity', position='dodge')+z+labs(title="Trade (in Million Current USD)")+ylab('')+xlab('')
+```
+:::
+::::
+
+## Challenges
+
+- EV, despite subsidies, are still [relatively expensive](https://www.iseas.edu.sg/articles-commentaries/iseas-perspective/2022-112-mapping-the-surge-in-ev-production-in-southeast-asia-by-tham-siew-yean/) in the region.
+
+- production may require the global market to benefit from economies of scale
+
+    - turning inward & global rivalry, again.
+    
+    - regional rivalry vs multilateralism. Case in point: Latin America in the 80s.
+    
+- Don't forget about infrastructure!
+
+---
+
+#### Greening the grid?
+
+<iframe src="https://ourworldindata.org/grapher/share-electricity-fossil-fuels?tab=chart&time=2002..latest&country=IDN~THA~MYS~SGP~VNM~PHL" loading="lazy" style="width: 100%; height: 600px; border: 0px none;"></iframe>
+
+---
+
+## Food Security {.m}
+
+- Climate change reduces the productivity of the agriculture sector, while Russia's aggresion leads to a wheat and fertilizer crisis.
+
+- The region remains relatively in the [middle](https://asean2023.id/en/news/food-security-an-aseans-priority) according to The Economist's [Global Food Security Index (GFSI)](https://impact.economist.com/sustainability/project/food-security-index/):
+
+| Country | SGP | MYS | VNM | IDN | THA | PHL | MMR | KHM | LAO |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Rank | 28 | 41 | 46 | 63 | 64 | 67 | 72 | 78 | 81 |
+    
+## Food security
+
+- The ASEAN Integrated Food Security ([AIFS](https://asean.org/wp-content/uploads/2020/11/42-AIFS-Framework-SPAFS-Final-13-July-2020.pdf)) Framework was crucial in helping to solve food crisis during the Global Financial Crisis (GFC) and COVID Crisis.
+
+- The framework helps with monitoring, reacting to crisis, and keeping trade open.
+
+- There is no way around increasing productivity: rice & palm oil yield are reducing amid climate change and limited land.
+
+- Thankfully, commitment in food security is strong.

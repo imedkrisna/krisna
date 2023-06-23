@@ -1,7 +1,7 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: "ASEAN"
+title: "Does ASEAN matter? How the summit tackles current challenges"
 event: "DIKSI (Diskusi Kekinian Seputar Indonesia) Jilid 2"
 event_url:
 location: "Zoom"
@@ -46,7 +46,7 @@ image:
 #   icon: twitter
 
 # Optional filename of your slides within your event's folder or a URL.
-url_slides: "cips.html"
+url_slides: "diksi.html"
 
 url_code:
 url_pdf:
