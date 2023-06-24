@@ -103,7 +103,7 @@ z<-theme_classic() +
 a<-ggplot(dat, aes(x=region,y=gdp)) + geom_bar(stat = "identity")+z+labs(title="GDP (in Trillion Current USD)")+ylab('')+xlab('')
 b<-ggplot(dat, aes(x=region,y=growth)) + geom_bar(stat = "identity")+z+labs(title="GDP Growth (%)")+ylab('')+xlab('')
 c<-ggplot(dat, aes(x=region,y=fdi)) + geom_bar(stat = "identity")+z+labs(title="Foreign Direct Investment (in Billion Current USD")+ylab('')+xlab('')
-d<-ggplot(dat, aes(x=region,y=gdp)) + geom_bar(stat = "identity")+z+labs(title="Merchandise Exports (in Trillion Current USD")+ylab('')+xlab('')
+d<-ggplot(dat, aes(x=region,y=exports)) + geom_bar(stat = "identity")+z+labs(title="Merchandise Exports (in Trillion Current USD")+ylab('')+xlab('')
 (a+b)/(c+d)+plot_annotation(caption = 'source: WDI & ASEAN Stats')
 ```
 
