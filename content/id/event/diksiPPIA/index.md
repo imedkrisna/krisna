@@ -50,7 +50,7 @@ url_slides: "diksi.html"
 
 url_code:
 url_pdf:
-url_video:
+url_video: https://www.youtube.com/watch?v=co70_3gqekQ
 
 # Markdown Slides (optional).
 #   Associate this event with Markdown slides.
@@ -66,3 +66,7 @@ slides: ""
 #   Otherwise, set `projects = []`.
 projects: []
 ---
+
+The audio isn't the best, but the two speakers are audible.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/co70_3gqekQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
