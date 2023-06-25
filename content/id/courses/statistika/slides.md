@@ -32,7 +32,7 @@ slides:
 - {{% staticref "/statistika/meeting8/index.html" "newtab" %}}Pertemuan 8: Menebak rata-rata populasi  {{% /staticref %}}
 - {{% staticref "/statistika/meeting9/index.html" "newtab" %}}Pertemuan 9: Uji Hipotesis{{% /staticref %}}
 - {{% staticref "/statistika/meeting10/index.html" "newtab" %}}Pertemuan 10: Korelasi{{% /staticref %}}
-- {{% staticref "/statistika/meeting11/index.html" "newtab" %}}Pertemuan 11: {{% /staticref %}}
-- {{% staticref "/statistika/meeting12/index.html" "newtab" %}}Pertemuan 12: {{% /staticref %}}
+- {{% staticref "/statistika/meeting11/index.html" "newtab" %}}Pertemuan 11: Regresi univariat: how to{{% /staticref %}}
+- {{% staticref "/statistika/meeting12/index.html" "newtab" %}}Pertemuan 12: Regresi univariat: asumsi dan keterbatasan{{% /staticref %}}
 - {{% staticref "/statistika/meeting13/index.html" "newtab" %}}Pertemuan 13: {{% /staticref %}}
 - {{% staticref "/statistika/meeting14/index.html" "newtab" %}}Pertemuan 14: {{% /staticref %}}
