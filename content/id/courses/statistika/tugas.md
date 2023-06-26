@@ -51,5 +51,5 @@ Lihat folder tugas di drive kelas, atau [klik ini](https://drive.google.com/driv
 - Tugas ini bernilai 20% total (20% lagi dari quiz, lalu UTS UAS masing2 30%)
 - Tugas ini fungsinya buat praktik. Please coba kerjain dulu lalu kumpulkan apa adanya aja jika anda kesulitan. Lebih baik daripada 0. Saya menghargai usaha anda.
 - Anda bebas menambahkan sheet baru jika diperlukan.
-- Gunakan sheet "jawaban (narasi) untuk menjawab dengan kata-kata. Jangan lupa dikasih referensi ke sheet mana jika perlu. Misalnya, "merujuk sheet xx cell A24, kita dapat melihat bahwa indexnya naik...."
+- Gunakan sheet "jawaban (narasi)" untuk menjawab dengan kata-kata. Jangan lupa dikasih referensi ke sheet mana jika perlu. Misalnya, "merujuk sheet xx cell A24, kita dapat melihat bahwa indexnya naik...."
 - Jika ada pertanyaan lagi silakan tanya BPK atau datang langsung ke ruangan saya aja (WA langsung boleh dicoba tapi suka ga bales maaf)
