@@ -97,7 +97,9 @@ Mungkin ga salah yah. Saya juga kalau ditanya apa resepnya memperbaiki kualitas 
 
 Kartu pra-kerja juga bisa kita kritisi. Jika pendidikan bermasalah, maka kemampuan lulusannya untuk belajar konsep/hal baru juga bisa jadi bermasalah.
 
-Tentu juga tidak boleh lupa bahwa manusia yang berkualitas datang dari ibu yang sehat dan anak yang tidak stunting. Gizi ibu dan anak sangat penting, dan akses kepada makanan bergizi sangat diperlukan, dengan harga yang terjangkau. [Hambatan impor sangat-sangat tidak menolong](https://theconversation.com/jangan-dibatasi-impor-bahan-makanan-bisa-perkuat-perekonomian-dan-ketahanan-pangan-192625) dalam hal ini.
+Tentu juga tidak boleh lupa bahwa manusia yang berkualitas datang dari ibu yang sehat dan anak yang tidak stunting. Kebijakan Indonesia [terlalu bias terhadap beras](https://youtu.be/YrNi3r1bYW8) (baik kebijakan sisi supply maupun sisi demand) yang malah berpotensi mendorong diabetes tapi kekurangan nutrisi makro dan mikro dari bahan pangan lain. Gizi ibu dan anak sangat penting, dan akses kepada makanan bergizi sangat diperlukan, dengan harga yang terjangkau. [Hambatan impor sangat-sangat tidak menolong](https://theconversation.com/jangan-dibatasi-impor-bahan-makanan-bisa-perkuat-perekonomian-dan-ketahanan-pangan-192625) dalam hal ini.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/YrNi3r1bYW8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 Lastly, tentunya lapangan kerja juga memiliki masalah karena investasi yang bisa jadi kurang. Kalo ini sih udah masalah klasik ya. Sebenarnya Indonesia ini cukup kompetitif, tapi ada banyak hal yang men-discourage seseorang untuk memulai investasi. Ada banyak masalahnya, misalnya kepastian hukum yang jelek, birokrasi yang berbelit-belit, dan [kapital yang mahal](https://www.krisna.or.id/post/ngobroltempo/).
 
