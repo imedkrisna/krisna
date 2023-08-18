@@ -1,0 +1,363 @@
+---
+title: "Konsep Probabilitas"
+subtitle: "Pertemuan 3"
+author: "Matematika & Statistika"
+format: 
+  revealjs:
+    theme: [simple,../mytheme.scss]
+    chalkboard: true
+    incremental: false
+    transition: convex
+    background-transition: fade
+    slide-number: true
+---
+
+## Minggu lalu
+
+- Distribusi frekuensi dan statistik deskriptif.
+
+#### Next
+
+- peluang independen dan gabungan, bayesian.
+- uji normalitas dan probabilitas sampel
+
+## Hari ini
+
+::: {.incremental}
+
+- Definisi dan pendekatan klasik
+- Aplikasi probabilitas dalam asuransi
+- Aturan dasar dalam probabilitas
+- Kejadian independen
+
+- Setelah kuliah hari ini, diharapkan anda dapat menerangkan prinsip-prinsip dasar probabilitas.
+:::
+
+## Apa itu peluang? {.s}
+
+- kejadian berpeluang adalah suatu kejadian atau aksi yang memiliki lebih dari satu kemungkinan hasil (_outcome_) yang didapatkan secara acak (_random_).
+
+. . .
+
+![](ea.svg)
+
+. . .
+
+jalur kiri (not confess) adalah kepastian, sementara jalur kanan (confess) adalah kejadian atau aksi berpeluang.
+
+## Contoh lain
+
+- Cuaca besok bisa saja hujan, bisa mendung, dan bisa cerah.
+
+- Kondisi jalan di Jakarta besok pagi bisa macet atau macet banget.
+
+- Nilai ujian anda bisa saja A, B, C, D atau E.
+
+- Melempar dadu bisa muncul angka 1, 2, 3, 4, 5, atau 6.
+
+. . .
+
+Seperti yang anda mungkin paham, hampir semua kejadian di dunia ini adalah kejadian berpeluang.
+
+## Notasi {.m}
+
+::: {.incremental}
+- $S$ (*State*) melambangkan himpunan kemungkinan kejadian.
+
+    - Lempar koin punya $S=\{A,G\}$
+    
+    - Lempar dadu punya $S=\{1,2,3,4,5,6\}$
+    
+- $P(X)$ melambangkan peluang munculnya kejadian $X$.
+
+    - $P(X=A)$ atau $P(A)$ artinya peluang munculnya A.
+    
+    - $P(X>3)=\frac{1}{2}$ peluang munculnya angka lebih dari 3 adalah $\frac{1}{2}$.
+    
+    - $P(1\leq X \leq 5)=$ berapa?
+    
+- $P(\bar{A})$ atau $P(X=\bar{A})$ artinya peluang munculnya kejadian selain A.
+    
+    - Di koin, $P(\bar{A})=P(G)$
+:::
+
+## Beberapa istilah
+
+- Sebuah himpunan kejadian dikatakan **adil** (*fair*) jika semua anggota $S$ punya kemungkinan yang sama untuk muncul.
+
+    - Dadu yang adil: $P(1)=P(2)=P(3)=P(4)=P(5)=P(6)=\frac{1}{6}$
+
+- Sebuah kejadian dikatakan **independen** jika kejadian tersebut tidak tergantung dari kejadian sebelumnya, dan tidak mempengaruhi kejadian sesudahnya.
+
+    - Jika lemparan pertama keluar 3, lemparan ke-2 tetap punya $P(3)=\frac{1}{6}$, begitupun lemparan ke-3.
+
+## Menghitung peluang
+
+- Pendekatan klasik adalah dengan melakukan eksperimen sebanyak $n$, lalu melihat jumlah dari masing-masing hasilnya.
+
+- Jika ada sebuah koin 2 sisi dengan $S=\{A,G\}$, maka:
+
+$$
+P(A)=\frac{n(A)}{n(S)}
+$$
+
+## Menghitung peluang
+
+- Sebuah koin yang adil dengan dua sisi $S=\{A,G\}$ dan independen.
+
+- Lempar koin sebanyak $n=10$, lalu muncul $A=4$ dan $G=6$, saya katakan:
+
+$$
+P(A)=\frac{4}{10}
+$$
+
+- berapa $P(G)$?
+
+## Rules dasar
+
+- $0 \leq P(X) \leq 1$, 0 = gak mungkin, 1 = pasti.
+
+- nilai peluang bermakna limit tak hingga. $P(X=A)=0,5$ artinya jika $X$ dilakukan berulang kali, frekuensi relatif dari $X=A$ adalah 0,5.
+
+- $P(A \ \text{atau} \ B) = P(A \cup B)=P(A)+P(B)$
+
+Berapa peluang munculnya 1 atau 2 pada lemparan sebuah dadu yang adil?
+
+::: {.incremental}
+- $P(X=1 \cup X=2)=P(X=1)+P(X=2)=\frac{1}{6}+\frac{1}{6}$
+:::
+
+## Rules dasar
+
+::: {.incremental}
+- $P(S_1 \cup S_2 \cup .... S_S)=\sum_{i=1}^S S_i=1$
+
+    - koin: $P(A)+P(G)=1$
+    
+    - dadu: $P(1)+P(2)+P(3)+P(4)+P(5)+P(6)=1$
+    
+- $P(\bar{A})=1-P(A)$
+
+    - $P(\bar{X}<3)=P(3)+P(4)+P(5)+P(6)$
+    
+    - $P(\bar{X}<3)=1-\left(P(1)+P(2) \right)$
+:::
+
+## Pendekatan klasik
+
+::: {.incremental}
+
+- Tahun lalu, dari 40 mahasiswa yang mengambil mata kuliah Statistika, 5 orang dapat nilai A, 10 orang dapat nilai B, 20 orang dapat nilai C, 4 orang dapat nilai D dan 1 orang dapat nilai E. Berapa persen peluang mahasiswa untuk tidak lulus di kelas Statistika?
+
+- $P(\text{tidak lulus})=P(D)+P(E)=1-P(A \cup B \cup C)$
+
+- $P(\text{tidak lulus})=\frac{4+1}{40}=\frac{5}{40}=\frac{1}{8}$
+:::
+
+## Review {.incremental}
+
+- Kejadian berpeluang adalah suatu kejadian atau aksi yang memiliki lebih dari satu kemungkinan hasil (_outcome_) yang didapatkan secara acak (_random_).
+
+- Hampir semua kejadian di dunia ini adalah kejadian berpeluang.
+
+- Pendekatan klasik adalah cara paling sederhana menghitung peluang: jumlah munculnya _outcome_ $X$ dibagi jumlah experiment $n$.
+
+## Expected Value
+
+- Nilai ekspektasi adalah sebuah nilai yang disematkan pada probabilitas.
+
+- Merupakan rata-rata nilai yang diantisipasi atas berbagai kemungkinan nilai yang muncul dari suatu kejadian berpeluang.
+
+$$
+EV=\sum P(X_i) \times X_i
+$$
+
+## EV Judi
+
+::: {.incremental}
+
+- Sebuah koin yang adil digunakan sebagai dasar sebuah perjudian. Jika keluar A, anda akan mendapatkan Rp 10.000. Jika keluar G, anda harus membayar Rp 12.000. Berapa nilai ekspektasi dari perjudian tersebut?
+
+- $EV=P(A) \times V(A) + P(G) \times V(G)$
+
+- $EV=\frac{1}{2} \times 10000 + \frac{1}{2} \times -12000=-1000$
+
+:::
+
+## EV judi {.incremental}
+
+- Sebuah dadu yang adil digunakan sebagai dasar sebuah perjudian. Jika keluar 1, anda membayar Rp. 20.000. Jika keluar 6, anda mendapatkan Rp 50.000. Jika keluar ganjil selain 1 anda membayar Rp. 5.000, jika keluar genap selain 6, anda mendapatkan Rp.1.000. Hitung nilai ekspektasi perjudian tersebut.
+
+- $EV=\frac{1}{6} \times -20000 + \frac{1}{6} \times 50000 + \frac{2}{6} \times -5000 + \frac{2}{6}\times 1000$
+
+- $EV=3666,67$
+
+## Memaknai EV
+
+::: {.incremental}
+
+- EV judi koin di atas artinya anda mungkin aja menang 10000 ketika sekali ikut. Mungkin juga kalah 12000.
+
+- namun, jika judi tersebut diulang berkali-kali sebanyak mungkin, anda akan secara total mendapatkan -1000.
+
+- Logikanya sama jika judi dilakukan 1 kali, tetapi yang ikut judi ada banyak orang:
+
+    - Jika judi diikuti 1000 orang, akan ada 500 orang menang 10000, tapi 500 orang lainnya kalah 12000.
+    
+- Jika anda bandar, judi mana yang lebih baik?
+
+:::
+    
+## Bandar judi
+
+- Bandar judi sudah pasti akan membuat judi yang memiliki nilai ekspektasi yang negatif bagi peserta judi.
+
+- Di kasus judi koin, jika ada bandar punya 1000 pelanggan:
+
+    - Dia harus membayar $10000 \times 500=$ 5 juta.
+    
+    - Tapi dapat $12000 \times 500=$ 6 juta.
+    
+- Bandar yang baik tidak akan menjual judi dadu di atas.
+
+    - Apa yang akan dilakukan bandar yang baik?
+    
+## Pengambilan keputusan
+
+::: {.incremental}
+
+- EV dapat digunakan sebagai basis pengambilan keputusan.
+
+- Kita dapat membandingkan dua kejadian dan memilih sebuah keputusan yang memiliki nilai EV lebih besar.
+
+    - jika ada keputusan A dan keputusan B, kita memilih keputusan A jika $EV(A) > EV(B)$
+
+- Namun Ketika kita melibatkan kejadian berpeluang, pengambilan keputusan ini tergantung dari **profil risiko**.
+
+:::
+
+## Profil risiko
+
+- Seseorang dihadapkan dengan sebuah keputusan A dan B. keputusan A merupakan sebuah kepastian sementara keputusan B merupakan kejadian berpeluang:
+
+    - Risk neutral ketika orang tsb memilih A ketika $V(A)>EV(B)$ dan memilih B ketika $V(A)<EV(B)$
+    
+    - Risk averse ketika orang tsb memilih A bahkan ketika $V(A)<EV(B)$.
+    
+    - Risk loving ketika orang tsb memilih B bahkan ketika $V(A)>EV(B)$.
+    
+## Profil risiko {.m}
+
+::: {.incremental}
+- Lihat kembali judi koin dengan EV=-1.000:
+
+    - tidak ikut: V=0, ikut: EV=-1.000.
+
+    - orang risk neutral dan risk averse tidak akan ikut judi, sementara risk loving akan ikut.
+    
+- Lihat kembali judi dadu dengan EV=3.666,67:
+
+    - tidak ikut: V=0, ikut: EV=3.666,67.
+    
+    - orang risk neutral dan risk loving akan ikut, sementara orang risk averse tidak akan ikut.
+
+:::
+
+## Asuransi
+
+::: {.incremental}
+
+- Daerah Jigikirsi merupakan daerah yang cukup rawan dalan kejahatan curanmor. Dalam setahun ada setidaknya 1000 kejadian curanmor. Asumsikan di jigikirsi ada 10.000 pemilik kendaraan bermotor, dan semuanya memiliki harga yang sama yaitu 15 juta rupiah. berapa nilai ekspektasi sebuah motor di jigikirsi?
+
+- Hitung probability motor hilang, baru hitung EV.
+
+:::
+
+## Asuransi {.m}
+
+::: {.incremental}
+- Anda menawarkan sebuah produk asuransi yang menjanjikan pergantian motor baru jika ada motor hilang di jigikirsi. Berapa premi yang akan anda tawarkan ke pemilik motor di jigikirsi?
+
+- Seorang risk neutral akan bayar selama preminya di bawah 1,5 juta.
+
+    - premi 1,5 juta disebut juga premi yang adil (fair premium)
+
+- Seorang risk averse akan bayar bahkan ketika premi di atas 1,5 juta.
+
+- Makin besar dia rela bayar, makin besar derajat risk aversenya.
+
+- Risk lovers sebaliknya: baru rela bayar kalo preminya semurah mungkin.
+
+:::
+
+## Asuransi
+
+::: {.incremental}
+
+- Sebuah kapal mengirimkan 10.000 kontainer dalam sehari. Dari 10.000 kontainer tersebut, ada 100 diantaranya rusak saat handling, 50 diantaranya hilang, dan 65 diantaranya tertahan di pabean, dan 85 diantaranya salah kirim. Semua kejadian di atas mengakibatkan nilai barang anda menjadi 0.
+
+- Berapa premi asuransi yang adil dari kapal tersebut?
+
+- Pebisnis umumnya risk averse. Makanya perusahaan asuransi untung.
+
+- Pejudi biasanya risk loving. Makanya bandar untung.
+
+:::
+
+## Odds
+
+- Odds merupakan sebuah imbal judi yang dibuat sedemikian sehingga penjudi memasang taruhan yang seimbang.
+
+- Pada perjudian tebak pemenang / tebak skor, seringkali peserta yang bertanding memiliki kemampuan yang berbeda-beda.
+
+- Akibatnya, kemungkinan menangnya juga beda-beda.
+
+- Sering terjadi di judi bole, e-sports, pacuan kuda, dan lain sebagainya.
+
+## Odds
+
+- Misalnya pertandingan Manchester City vs Arema. Jika tim yang anda pasang menang, anda dapat uang 2x lipat. Ke mana sebagian besar orang akan pasang?
+
+- Karena itu ada yang disebut odds: tim yang kemungkinan menang lebih besar akan dapat multiplier / hadiah yang lebih kecil ketimbang tim yang kemungkinan menangnya lebih kecil.
+
+- Odds diset sedemikian sehingga jumlah nilai taruhannya akan seimbang.
+
+## Odds
+
+![](bet.jpg)
+
+- Jika anda bet 1 juta ke RBL dan RBL menang, anda akan dapat 5 juta. Bet ONIC dan menang, dapat 1 juta 110 ribu.
+
+- Tim mana yang diunggulkan?
+
+## Odds
+
+::: {.incremental}
+
+- Jika ikut judi dan bayar 1 juta, maka anda akan indifferent jika:
+
+$$
+P(\text{RBL menang}) \times \text{Odds RBL menang} = \\ P(\text{RBL kalah}) \times \text{Odds RBL kalah}
+$$
+
+- Bagi bandar, kemungkinan menang RBL adalah sekitar 18,17%. ONIC berapa?
+
+:::
+
+## Review
+
+::: {.incremental}
+
+- Peluang digunakan untuk menghitung expected value.
+
+- Expected value memiliki banyak aplikasi seperti di perjudian dan asuransi.
+
+- Odds digunakan untuk menyeimbangkan pasang taruhan. Tapi perlu diingat kemungkinan *fraud*.
+
+:::
+
+## Minggu depan
+
+- Kejadian berulang, kejadian bersyarat, dan kaidah Bayes.
+
+- Distribusi probabilitas.
