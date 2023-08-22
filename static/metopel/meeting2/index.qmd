@@ -1,0 +1,203 @@
+---
+title: "Playing with R and RStudio"
+subtitle: "Pertemuan 5"
+author: "Metodologi penelitian"
+format: 
+  revealjs:
+    theme: [simple,../mytheme.scss]
+    chalkboard: true
+    incremental: false
+    transition: convex
+    background-transition: fade
+    slide-number: true
+---
+
+## So far
+
+- Regresi OLS univariat dan multivariat.
+- Diagnostic error
+- Dummy variable dan log-log regression.
+- 2 hari terakhir akan kita habiskan dengan time series dan panel data
+
+## Hari ini
+
+- Diharapkan R dan RStudio sudah terinstall
+  - kalau belum, cek caranya di [sini](https://www.krisna.or.id/courses/metopel/installr/)
+- Fokus mencoba menggunakan R dan RStudio.
+- Sedikit video tentang penggunaan Microsoft Excel akan ditambahkan juga di website.
+- Goal hari ini adalah anda bisa ngerun contoh-contoh di slides.
+
+## Hari ini
+
+- Working directory.
+- Packages and how to lead them.
+- coba-coba command dengan data "latihan1.xlsx"
+
+## Working directory
+
+- Working directory adalah folder di komputer anda yang akan anda gunakan untuk memulai projejct R.
+- Semua file, data, dan gambar harus dibaca dan akan disave di folder ini.
+- pilih folder di komputer anda yang akan digunakan sebagai working directory.
+- Misalnya, anda mau bikin folder untuk tugas.
+
+## Kenali folder di komputer
+
+- buat folder untuk project/tugas anda.
+  - Misalnya buat folder "metopel", lalu di dalamnya buat folder "latihan".
+- klik kanan di address bar, lalu pilih "copy as text".
+- di R, ketik `setwd('WD')` di mana WD adalah paste-an working directory anda.
+  - jangan lupa pake tanda petik.
+
+## Workding directory
+
+![](WD.jpg)
+
+## Working directory
+
+![](WD2.jpg)
+
+## SetWD
+
+- Setelah ketik setwd('working directory anda'), arahkan ke kuadran 4 (kanan bawah), klik "more" lalu pencet "go to working directory".
+- Anda akan lihat bahwa working directory anda di kuadran 4 akan pindah ke folder buatan anda.
+- Semua data yang mau di-load harus dikopas ke sini.
+- Semua file yg anda simpan (data,, grafik, docx, html) akan tersimpan di sini.
+
+## R Script
+
+- Pastikan data-data latihan sudah anda download dan sudah ada di folder anda.
+  - Data ini mustinya muncul di kuadran 4
+- Pilih "File" -> "new file" -> "R Script"
+  - bisa juga pencet ctrl+shift+N.
+- akan terbuka file script namanya Untitled.r
+  - anda bisa save sekarang.
+  
+## R Script
+
+- R script adalah tempat anda nge-save semua kode anda.
+- Kode yang ada di slides bisa anda kopas ke sini.
+- Selalu awali R Script anda dengan `setwd('')`
+- baru abis itu kode yang lain.
+- R Script juga dapat dirun untuk setiap baris.
+
+## Urutan R Script
+
+1. set working directory dengan `setwd()`
+1. load packages dengan `library()`
+1. load data dengan `read_excel()` atau `read_csv()`
+1. plot dengan `plot()` atau `ggplot()`
+1. regresi dengan `lm()`
+1. buat residual dengan ``
+
+## Packages
+
+- R itu termasuk enteng karena banyak fungsinya dibuat secara terpisah.
+- Ada beberapa fungsi yang R tidak bisa lakukan.
+- Akan tetapi, kita bisa download packages yang bisa melakukan fungsi tersebut.
+- Download packages cukup 1x dengan command `install.packages('nama package')`
+- Package harus diload tiap kali mulai kerja dengan `library()`
+
+## Packages
+
+- Untuk kali ini, kita load packages `readxl` dan `tidyverse`
+
+```r
+setwd('C:/github/noodle')
+library('readxl')
+library('tidyverse')
+```
+
+## Membaca data
+
+- R doang tidak cukup untuk baca data excel. Untung ada package `readxl`
+- Kalau belum load `readxl` maka kita gak bisa pake command `read_excel()`
+  - jangan lupa diinstall dulu dengan `install.packages()` sebelum diload dengan `library()`.
+- Mari kita coba load data latihan 1.
+  - cara ngeloadnya adalah dengan `dat<-read_excel('latihan1.xlsx')`
+  - lihat kuadran di kanan atas. coba klik.
+
+## Membaca data
+
+```r
+setwd('C:/github/noodle')
+library('readxl')
+library('tidyverse')
+
+dat<-read_excel('latihan1.xlsx')
+```
+
+```{r}
+#| echo: false
+#| output: false
+library('readxl')
+dat<-read_excel('latihan1.xlsx')
+View(dat)
+```
+
+## Membaca data
+
+![](dat.jpg)
+
+## Plot
+
+- Plot bisa diketik di console window (kuadran kiri bawah) maupun menjadi bagian dari R Script.
+- Kalau anda langsung run di console window, maka plotnya bisa langsung disave di RStudio.
+- Pastikan bahwa data yang diplot sudah nongol di environment (kuadran kanan atas).
+
+## Plot
+
+```{r}
+#| echo: true
+plot(dat$X,dat$Y,xlab="jam belajar",ylab="nilai UAS")
+```
+
+## Cara save plot
+
+![](save.jpg)
+
+## Regresi
+
+```{r}
+#| echo: true
+reg1<-lm(Y~X,data=dat)
+summary(reg1)
+```
+
+## Generate Error + Plot
+
+```{r}
+#| echo: true
+dat$u<-resid(reg1) # generate error
+plot(dat$Y,dat$u,xlab="nilai UAS",ylab="error") # plot error vs Y
+```
+
+## R Script {.m}
+
+```r
+setwd('C:/github/noodle') # AWAS SETWD-NYA PERBAIKI DULU
+library('readxl')
+library('tidyverse')
+
+# Baca data
+dat<-read_excel('latihan1.xlsx')
+
+# Plot X dan Y
+plot(dat$X,dat$Y,xlab="jam belajar",ylab="nilai UAS")
+
+# regresi
+reg1<-lm(Y~X,data=dat)
+summary(reg1)
+
+# Membuat error
+dat$u<-resid(reg1)
+
+# plot eror
+plot(dat$Y,dat$u,xlab="jam belajar",ylab="nilai UAS")
+```
+
+## Kesimpulan
+
+- Nanti kita akan dedikasi 1 pertemuan hanya untuk plot dan cara menyimpan gambar.
+- Anda juga akan punya lebih banyak hal di folder selain R Script.
+- Untuk sekarang, gunakan kesempatan ini untuk latihan yang lain.
+- Minggu depan kita akan mulai membahas time series.

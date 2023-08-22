@@ -1,0 +1,265 @@
+---
+title: "Metodologi penelitian"
+subtitle: "Pertemuan 1"
+author: "Prodi PIWAR Politeknik APP Jakarta"
+format: 
+  revealjs:
+    theme: [simple,../mytheme.scss]
+    chalkboard: true
+    incremental: false
+    transition: convex
+    background-transition: fade
+    slide-number: true
+
+editor: visual
+---
+
+## Hari ini ☀️
+
+-   Administrasi
+-   Refresh OLS
+
+------------------------------------------------------------------------
+
+## Tentang Metodoologi penelitian
+
+-   Part 1 Melanjutkan math&stats.
+    -   time series regression.
+-   Part 2 fokus ke metode penulisan laporan penelitian.
+    -   Pola berpikir,struktur laporan & cara mengisinya.
+    -   mencari data perdagangan dan visualisasinya.
+    -   Membuat dokumennya.
+-   Sebagian besar materi merupakan pengenalan minimal.
+-   Pendalaman bisa dilakukan di luar kelas.
+
+## Kenapa metodologi penelitian
+
+-   Meneliti pada hakikatnya adalah *skill* dasar:
+    -   memahami bagaimana formulasikan pertanyaan.
+    -   mencari cara menjawabnya.
+-   menggunakan tools data analytics & visualization menjadi semakin mainstream.
+    -   skill bermain dengan data menjadi nilai penting.
+-   Diharapkan mahasiswa minimal ter-*ekspose* dengan data analytics & visualization yang bisa dikembangkan sendiri ke depan.
+
+------------------------------------------------------------------------
+
+## Informasi Pengajar
+
+| nama                                       | ruangan                  | matkul lain |
+|-------------------|----------------------|--------------------------------|
+| Theresia Anindita                          | Ruang Pudir II           | \-          |
+| [I Made Krisna](https://www.krisna.or.id/) | A2004 (Ruang Kerja Sama) | LLP         |
+
+------------------------------------------------------------------------
+
+## Ekspektasi dari mahasiswa
+
+-   Sudah mahir probabilitas dan regresi sederhana.
+    -   harusnya aman kalau lulus stats&math.
+-   Tidak perlu bisa bahasa inggris, *but a good command of english will certainly be helpful*
+-   Lumayan membantu jika bisa *spreadsheet*.
+-   Punya akses terhadap internet dan alat komputasi seperti laptop.
+
+------------------------------------------------------------------------
+
+## Beberapa aturan
+
+-   kuliah efektif antara 90 - 100 menit.
+-   Kehadiran tidak diwajibkan.
+    -   Yang hadir wajib untuk tertib dan tidak boleh berisik.
+-   Mahasiswa dipersilakan meninggalkan kelas untuk alasan apapun.
+    -   Tidak perlu ijin dulu.
+-   Wajib menggunakan masker selama perkuliahan.
+-   Silakan tanya kapan saja jika bingung.
+
+------------------------------------------------------------------------
+
+## Tools
+
+-   Kuliah ini dapat diakses di [krisna.or.id/courses/metopel/slides](https://www.krisna.or.id/courses/metopel/slides/)
+    -   pencet `E`, tunggu, lalu `ctrl+P` (PDF)
+    -   klik kanan, save page as. (html).
+-   pra-UTS *mostly* teoretis dan belum perlu install apa-apa.
+-   pasca-UTS akan diperlukan [R](https://www.r-project.org/), [RStudio](https://www.rstudio.com/products/rstudio/download/), [Zotero](https://www.zotero.org/download/) dan [Quarto](https://quarto.org/docs/get-started/).
+    -   downloadnya nanti aja siapa tau ada update.
+
+## Struktur kuliah
+
+| minggu | konten                                      |
+|:------:|---------------------------------------------|
+|   1    | intro & regresi multivariat                 |
+|   2    | Prinsip dasar OLS                           |
+|   3    | Karakteristik umum data                     |
+|   4    | Data serial waktu                           |
+|   5    | Regresi time series                         |
+|   6    | Teknik lanjutan time series                 |
+|   7    | Lanjut time series + intro to R and RStudio |
+|   8    | UTS                                         |
+
+## Struktur kuliah
+
+| minggu | konten                                 |
+|:------:|----------------------------------------|
+|   9    | mencari dan melakukan visualisasi data |
+|   10   | Visualisasi di R dengan ggplot         |
+|   11   | Regresi di R                           |
+|   12   | Menulis dokumen di RStudio             |
+|   13   | Menggunakan Zotero                     |
+|   14   | Proses membuat laporan yang baik       |
+|   15   | Pedoman TA Politeknik APP Jakarta      |
+
+------------------------------------------------------------------------
+
+## Nilai ✍🏾 {.m}
+
+| evaluation     | covers           | \%  |
+|----------------|------------------|-----|
+| Tugas kelompok | semua            | 30  |
+| UTS            | 7 minggu pertama | 30  |
+| Tugas individu | semua            | 40  |
+
+-   Slides saja mestinya cukup untuk dapat 100 di UTS.
+-   Tugas kelompok akan berupa replikasi sebuah laporan penelitian.
+    -   detil setelah UTS
+-   Tugas individu berupa membuat laporan dalam 3 format: pdf, html dan docx.
+    -   contohnya [begini](https://imedkrisna.github.io/metopel.html).
+    -   webpage ini dapat jadi portofolio anda.
+
+# Questions? {.cen}
+
+<iframe src="https://giphy.com/embed/GYAiZdntWJE1zyNOLp" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen>
+
+</iframe>
+
+<p><a href="https://giphy.com/gifs/lazy-corgi-GYAiZdntWJE1zyNOLp">via GIPHY</a></p>
+
+# Question!
+
+Ada yang bisa menjelaskan apa materi regresi di Math&Stats?
+
+. . .
+
+Apakah seperti ini?
+
+$$
+Y_i=\beta_0+\beta_1 X_i+\mu_i
+$$
+
+## Regresi
+
+-   Disebut juga dengan Ordinary Least Square (OLS).
+-   Digunakan untuk mencari parameter yang menghubungkan dua variabel.
+-   Metode OLS sangat sering digunakan untuk penelitian karena dia simpel namun *powerful*.
+-   Namun, bisa regresi saja tidak cukup!
+    -   kita tau cara menyampaikan hasilnya dengan tepat.
+
+## Regresi univariat
+
+$$
+Y_i=\beta_0+\beta_1 X_i+\mu_i
+$$
+- Y disebut juga variabel dependen 
+- X disebut juga variabel independen 
+- nilai Y dan X kita dapatkan dari data 
+- $\beta_0$ dan $\beta_1$ disebut parameter. Nilainya kita dapat dari hasil estimasi komputer. 
+- $\mu$ disebut juga error term / residual. Dia bersifat **independen**
+
+## Regresi dengan R
+
+-   Melakukan itu semua dengan R dan RStudio, termasuk visualisasi data dan membuat laporan penelitiannya.
+-   Kelas ini akan fokus menggunakan data-data perdagangan dari berbagai sumber.
+-   Kenapa R dan RStudio?
+    -   Gratis.
+    -   Mature, intuitive dan mudah kalau mau pindah bahasa.
+    -   Digunakan banyak profesional juga.
+    -   Gratis!!
+
+## Contoh regresi dengan R {.m .scrollable}
+
+Menarik data [World Development Indicators](https://databank.worldbank.org/source/world-development-indicators) punya World Bank:
+
+::: panel-tabset
+### Kode
+
+``` r
+#| echo: true
+library(WDI)
+library(tidyverse)
+
+indi<-c(            # membuat dictionary
+  "PDB"="NY.GDP.MKTP.CD",
+  "import"="NE.IMP.GNFS.CD"
+)
+
+dat<-WDI(           # Menarik data World Bank
+  country="all",
+  indicator=indi,
+  start=2019,end=2019,
+)
+
+dat$LPDB<-log(dat$PDB) # menambahkan transformasi log
+dat$Limport<-log(dat$import)
+```
+
+### Data {.s}
+
+```{r}
+library(WDI)
+library(tidyverse)
+
+indi<-c(            # membuat dictionary
+  "PDB"="NY.GDP.MKTP.CD",
+  "import"="NE.IMP.GNFS.CD"
+)
+
+dat<-WDI(           # Menarik data World Bank
+  country="all",
+  indicator=indi,
+  start=2019,end=2019,
+)
+
+dat$LPDB<-log(dat$PDB) # menambahkan transformasi log
+dat$Limport<-log(dat$import)
+library(kableExtra)
+kbl(dat) %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"))
+```
+:::
+
+## Menggambar grafik {.m}
+
+```{r}
+#| label: fig-gdp-import
+#| fig-cap: Hubungan impor dan PDB, 2019
+#| warning: false
+#| echo: true
+library(ggrepel)
+weleh<-subset(dat,iso2c%in%c("ID","KR","CN","US","GB","EU","SG",
+                             "TL","BN","KH","MY","TH","JP"))
+www<-dat %>% ggplot(aes(x=Limport,y=LPDB)) + geom_point() + geom_smooth(method="lm")
+www+geom_label_repel(data=weleh,box.padding   = 0.35, point.padding = 0.5, segment.color = 'grey50',label=weleh$country,min.segment.length = 0,nudge_y = -4) + theme_classic()
+```
+
+## Melakukan regresi
+
+```{r}
+#| echo: true
+model<-lm(data=dat,formula=LPDB~Limport)
+summary(model)
+```
+
+## Sebelum menyentuh R
+
+-   Kita perkuat landasan teori dulu
+    -   Kita belajar karakteristik dan asumsi OLS
+-   Kita juga akan melakukan teknik-teknik regresi yang lebih maju:
+    -   Regresi multivariat: $Y_i=\beta_0+\sum_j^N \beta_j X_{i,j}+\mu_i$.
+    -   Regresi dengan variabel kategori / Dummy.
+    -   Regresi serial waktu.
+-   Anda akan menulis penelitian dengan regresi yang lebih kompleks.
+
+## Minggu depan
+
+-   Karakteristik dan asumsi OLS.
+-   Regresi multivariat.
+-   Regresi Biner / kategori.

@@ -1,0 +1,415 @@
+---
+title: "Multivariat & Dummy regression"
+subtitle: "Pertemuan 3"
+author: "Metodologi penelitian"
+format: 
+  revealjs:
+    theme: [simple,../mytheme.scss]
+    chalkboard: true
+    incremental: false
+    transition: convex
+    background-transition: fade
+    slide-number: true
+---
+
+## Omitted variable bias
+
+- Omitted variable bias: ketika ada variabel yang harusnya signifikan tapi kita tidak include di regresi (diomit).
+- Hal ini akan mengakibatkan $\beta$ yang bias untuk variabel yang kita include.
+- Anda akan lihat error yang berpola.
+- Kita atasi dengan regresi multivariat.
+
+## Hari ini
+
+- Regresi multivariat
+- Regresi dummy
+
+## Regresi multivariat
+
+$$
+Y=\beta_0+\beta_1 X_1+\beta_2 X_2 +...+\beta_jX_j+\mu
+$$
+- pada intinya, kita regresikan lebih dari 1 X untuk 1 Y.
+- Banyak hal di dunia ini tidak tergantung pada 1 hal.
+
+## Belajar dan nilai
+
+- Nilai UAS Metopel tidak hanya tergantung dari jam belajar per minggu, tapi juga tergantung seberapa paham mahasiswa akan statistik dan matematika.
+- Pemahaman math & stats diukur dengan nilai UAS math & stats.
+
+$$
+Y = \beta_0 + \beta_1 X + \beta_2 S + \mu
+$$
+Y = UAS Metopel ; X = jam belajar seminggu ; S = UAS Statistik.
+
+## Omitted variable bias
+
+- Jika saya tidak tau bahwa nilai UAS Statistik dapat menjadi ukuran "modal awal" mengikuti kelas metopel, maka saya akan omit variabel tersebut.
+- Jika ternyata variabel tersebut penting, maka meninggalkan variabel tersebut akan mengakibatkan omitted variable bias.
+- Kita akan bermain dengan data generated: by design, X dan S berpengaruh terhadap Y (saya tau karena saya yang bikin).
+
+## Tanpa S {.scrollable}
+
+```{r}
+#| echo: true
+library(readxl) # buat baca excel
+library(tidyverse) # buat data wrangling
+library(kableExtra) # buat tabel
+dat <- read_excel("latihan2.xlsx")
+kbl(dat) %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"))
+```
+
+## Plot tanpa S
+
+```{r}
+#| echo: true
+#| fig-width: 8
+#| fig-height: 6
+plot(dat$X,dat$Y,xlab = "jam belajar",ylab="nilai metopel")
+abline(lm(dat$Y~dat$X))
+```
+
+## Regresi tanpa S
+
+```{r}
+#| echo: true
+reg1<-lm(data=dat,Y~X)
+summary(reg1)
+```
+
+## Plot residual tanpa S
+
+::: columns
+::: {.column width="47%"}
+
+```{r}
+#| echo: true
+#| fig-width: 5
+#| fig-height: 4
+dat$u<-resid(reg1)
+plot(dat$Y,dat$u,xlab="nilai metopel",ylab="error")
+abline(h=0) # membuat garis horizontal di y=0
+```
+:::
+
+::: {.column width="47%"}
+```{r}
+#| echo: true
+#| fig-width: 5
+#| fig-height: 4
+dat$u<-resid(reg1)
+plot(dat$X,dat$u,xlab="jam belajar",ylab="error")
+abline(h=0)
+```
+
+:::
+:::
+
+## Error diagnostic
+
+- Dapat kita lihat bahwa OLS (Ordinary Least Square) menghasilkan rata-rata yang 0
+
+```{r}
+#| echo: false
+mean(dat$u)
+```
+- Akan tetapi, $\mu$ tidak terdistribusi secara random terhadap $Y$.
+- Artinya, ada variasi di error yang bisa dijelaskan oleh variabel lain.
+- Kabar baiknya, variabel lain ini masih independen terhadap $X$
+  - Terlihat dari $\mu$ yang kelihatan independen terhadap $X$
+
+
+## Regresi dengan S
+
+Sekarang kita tambahkan S ke regresi kita
+
+```{r}
+#| echo: true
+reg2<-lm(data=dat,Y~X+S)
+summary(reg2)
+```
+
+## Bandingkan 2 model {.m .scrollable}
+
+::: columns
+::: {.column width="50%"}
+
+```{r}
+library(modelsummary)
+mod<-list("Tanpa S"=reg1,"Dengan S"=reg2)
+modelsummary(mod,output="kableExtra")
+```
+:::
+::: {.column width="48%"}
+- Tanpa S:
+
+$$
+\hat{Y}=38.355+2.049X
+$$
+
+- Dengan S:
+
+$$
+\hat{Y}=11.137+1.924X+0.489S
+$$
+:::
+:::
+
+## Plot dengan S
+
+::: columns
+::: {.column width="47%"}
+
+```{r}
+#| echo: true
+#| fig-width: 5
+#| fig-height: 4
+dat$m<-resid(reg2)
+plot(dat$Y,dat$m,xlab="nilai metopel",ylab="error")
+abline(h=0) # membuat garis horizontal di y=0
+```
+:::
+
+::: {.column width="47%"}
+```{r}
+#| echo: true
+#| fig-width: 5
+#| fig-height: 4
+plot(dat$X,dat$m,xlab="jam belajar",ylab="error")
+abline(h=0)
+```
+
+:::
+:::
+
+$\mu$ dan $X$ jadi independen, dan rentang mengecil.
+
+## Kesimpulan
+
+- Selama $\mu$ masih ada polanya terhadap $Y$, maka dapat kita katakan ada sesuatu di error yang masih bisa menjelaskan $Y$.
+- Rentang lebih besar, tetapi koefisien $X_1$ masih cukup dekat dengan aslinya -> tidak bias.
+  - hal ini karena $X_1$ dan $X_2$ independen.
+- Jika $\mu$ berkorelasi dengan $X_1$, masalahnya lebih besar. Tapi menyelesaikan masalah ini ada di luar materi kita.
+
+## Menerjemahkan koefisien {.m}
+
+$$
+\hat{Y}=38.355+2.049X
+$$
+- Jika waktu belajar $\uparrow$ 1 jam, maka nilai UAS metopel $\uparrow$ 2.049
+- misalnya satuan diukur dalam menit, $\beta$ pasti akan $=\frac{2.049}{60}=0.03415$
+- terjemahannya: jika waktu belajar $\uparrow$ 1 menit, nilai UAS $\uparrow$ 0.03415.
+
+$$
+\hat{Y}=11.137+1.924X+0.489S
+$$
+- Jika waktu belajar $\uparrow$ 1 jam, maka nilai UAS metopel $\uparrow$ 1.924 *untuk S yang sama*
+
+## No perfect multicollinearity
+
+- Dengan regresi multivariat, ada tambahan asumsi untuk OLS bisa BLUE
+- Multicol: di mana $X_1$ ada hubungan linear yang sempurna dengan $X_2$
+- Contoh: pendidikan dan income orang tua.
+- Di dunia nyata, mungkin saja rajin belajar metopel ada korelasi positif dengan nilai UAS matematika & statistika.
+  
+## No perfect multicollinearity
+  
+- Hubungan yang diperbolehkan:
+  - hubungan yang lemah
+  - hubungan yang tidak linear
+
+- $X_1 = \sqrt{X2} \rightarrow$ contoh hubungan tidak linear -> boleh
+
+- $X_1=\beta_1+\beta_2 X_2+\mu \rightarrow$ contoh hubungan linear.
+
+  - $\beta_1$ kecil dan signifikansinya lemah -> boleh
+  
+## Dummy variable
+
+- Bagaimana jika data kita kualitatif?
+
+| jenis data | definisi | contoh |
+| --- | -------- | -------- |
+| Kategorikal | kualitatif, ga ada urutan | nama, jenis kelamin, suku | 
+| Ordinal | kualitatif, ada urutan | ukuran baju, ukuran sepatu, medali | 
+| Hitung | kuantitatif, integer | nomor telepon, jumlah anak |
+| Riil | kuantitatif, riil | PDB, ekspor impor | 
+
+## Dummy variable {.m .scrollable}
+
+- Seandainya $S$ bukan lagi nilai UAS statistika, tapi kondisi kesehatan mahasiswa ketika sedang UAS metopel
+
+- Hipotesisnya, meskipun belajarnya banyak, tapi kalau lagi sakit, pasti ngerjain ujian kurang konsen.
+
+```{r}
+#| echo: true
+dat2 <- read_excel("latihan3.xlsx") # Baca data
+kbl(dat2) %>% # bikin tabel
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"))
+```
+
+## Dummy variable
+
+- Kita buat variabel dummy, di mana $S=0$ jika kondisi mahasiswa tersebut sakit, dan $S=1$ jika mahasiswa tersebut sehat pas ujian.
+- Beda dari sebelumnya, S di sini cuma punya 2 nilai: 1 atau 0.
+- Untuk observasi sakit: $Y=\beta_0+\beta_1X+\mu$
+- Untuk observasi sehat: $Y=\beta_0+\beta_2+\beta_1X+\mu$
+- $\beta_2$ adalah beda nilai UAS antara yang sehat dan sakit untuk jam belajar yang sama.
+
+## Regresi tanpa S
+
+```{r}
+#| echo: true
+reg3<-lm(Y~X, data=dat2)
+summary(reg3)
+```
+
+## Plot residual tanpa S
+
+::: columns
+::: {.column width="47%"}
+
+```{r}
+#| echo: true
+#| fig-width: 5
+#| fig-height: 4
+dat2$u<-resid(reg3)
+plot(dat2$Y,dat2$u,xlab="nilai metopel",ylab="error")
+abline(h=0) # membuat garis horizontal di y=0
+```
+:::
+
+::: {.column width="47%"}
+```{r}
+#| echo: true
+#| fig-width: 5
+#| fig-height: 4
+plot(dat2$X,dat2$u,xlab="jam belajar",ylab="error")
+abline(h=0)
+```
+
+:::
+:::
+
+## Plot residual tanpa S by group
+
+::: columns
+::: {.column width="47%"}
+
+```{r}
+#| fig-width: 5
+#| fig-height: 4
+#| echo: true
+ggplot(data=dat2,aes(y=u,x=Y,color=S,shape=S))+geom_point(size=2)+
+geom_hline(yintercept=0)+theme_minimal()
+```
+:::
+
+::: {.column width="47%"}
+```{r}
+#| echo: true
+#| fig-width: 5
+#| fig-height: 4
+ggplot(data=dat2,aes(y=u,x=X,color=S,shape=S))+geom_point(size=2)+
+geom_hline(yintercept=0)+theme_minimal()
+```
+
+:::
+:::
+
+## Regresi dengan S
+
+```{r}
+#| echo: true
+reg4<-lm(Y~X+S, data=dat2)
+summary(reg4)
+```
+
+## Plot residual dengan S
+
+::: columns
+::: {.column width="47%"}
+
+```{r}
+#| fig-width: 5
+#| fig-height: 4
+#| echo: true
+dat2$u<-resid(reg4)
+ggplot(data=dat2,aes(y=u,x=Y,color=S,shape=S))+geom_point(size=2)+
+geom_hline(yintercept=0)+theme_minimal()
+```
+:::
+
+::: {.column width="47%"}
+```{r}
+#| echo: true
+#| fig-width: 5
+#| fig-height: 4
+ggplot(data=dat2,aes(y=u,x=X,color=S,shape=S))+geom_point(size=2)+
+geom_hline(yintercept=0)+theme_minimal()
+```
+
+:::
+:::
+
+## intepretasi
+
+$$
+\hat{Y}=9.78226+3.42632X+21.47210S
+$$
+- Jam belajar $\uparrow$ 1 jam, nilai $\uparrow$ 3.42632, jika kondisi kesehatan sama.
+- Jika jam belajar sama, kondisi sehat memiliki nilai 21.4721 poin lebih tinggi daripada yang sakit.
+- Sebaliknya juga bisa: kondisi sakit dapat nilai lebih rendah 21.4721 poin daripada yang sehat.
+
+## Plot
+
+```{r}
+library(patchwork)
+j<-ggplot(dat2, aes(x = X, y = Y)) +geom_abline(intercept = 21.0726, slope = 3.2391,color="black")+geom_point(size = 2)+theme_minimal()+
+  labs(x="jam belajar", y="UAS metopel",title="tanpa S")
+k<-ggplot(dat2, aes(x = X, y = Y, color = S,shape = S)) +geom_point(size = 2)+
+  geom_abline(intercept = 9.78226, slope = 3.42632,color="red")+
+  geom_abline(intercept = 9.78226+21.47210, slope = 3.42632,color="blue")+
+  theme_minimal()+labs(x="jam belajar", y="",title="dengan S",col="kondisi",shape="kondisi")
+j+k
+```
+
+## Reference group
+
+- Sangat penting untuk tau yang mana reference groupnya.
+- Karena kita intepretasi $\beta_2$ sebagai beda antara yg $S=1$ dengan reference group.
+- Dalam kasus kita, R memilihkan untuk kita mana yang jadi reference group
+- Ssehat -> berarti reference groupnya=sakit.
+
+## Regresi Sehat=0
+
+```{r}
+#| echo: true
+## buat variabel baru namanya SS di mana SS=1 kalau S="sakit"
+dat2$SS<-ifelse(dat2$S=="sakit",1 , 0) 
+reg5<-lm(Y~X+SS, data=dat2)
+summary(reg5)
+```
+
+$\beta_1$ dan $\beta_2$ sama persis, $\beta_2$ negatif.
+
+## Group dengan anggota lebih dari 2? {.m}
+
+- Sangat mungkin kita punya variabel kategorikal lebih dari 2.
+  - Kelas (Piwar 3A,3B,3C,3D), nilai akhir statistika (A,B,C,D,E).
+  - industri (agrikultur, manufaktur, jasa), provinsi, regional.
+- Jika itu yang terjadi, kita harus tambahkan variabel dependen:
+
+$$
+Y=\beta_0+\beta_1X+\beta_23A+\beta_23B+\beta_23C+\mu
+$$
+
+- jika mahasiswa ada di kelas 3A, berarti 3A=1, 3B=0, 3C=0
+- $\beta_2$ adalah bedanya mahasiswa 3A dengan reference group.
+- $\beta_3$ apa? Reference groupnya siapa?
+
+## Mingdep
+
+- Reading regression table
+- Various data characteristics: level, log, difference and time series

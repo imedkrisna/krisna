@@ -239,6 +239,18 @@ contoh deduktif:
 :::
 
 
+## Deduktif? Induktif? {.m}
+
+- Dalam penelitian, kita tidak perlu mempermasalahkan apakah kita berpikir secara induktif atau deduktif.
+
+- Mungkin anda mulai dari membuat hipotesis, mungkin anda mulai dari mengamati rangkaian kejadian tidak berhubungan.
+
+    - lebih mungkin anda akan melakukan keduanya
+    
+- Karena itu biasanya apakah induktif atau deduktif, tidak perlu ditulis di laporan penelitian / skripsi.
+
+- Deduktif induktif biasanya lebih diperlukan dalam penulisan paragraf atau pembicaraan.
+
 ## Logical fallacy {.m}
 
 Kesalahan logika menyimpulkan yang sering terjadi

@@ -50,8 +50,10 @@ format:
 
 - Bagian Akhir:
 
-    - Daftar Pustaka dan lampiran
+    - Daftar Pustaka
 
+    - Lampiran
+    
 - Outline ini bentuk standar dalam penyusunan tulisan ilmiah (laporan penelitian, jurnal ilmiah). Dalam penyusunan tugas pengganti UAS dalam matkul ini akan menggunakan versi ringkas yaitu bagian inti ditambah dengan daftar Pustaka/referensi saja.
 
 ## Bab 1 Pendahuluan

@@ -44,6 +44,32 @@ format:
     
     - sejauh ini kita baru install "readxl" dan "tidyverse". Hari ini kita akan perlu package baru namanya "dynlm" dan "urca".
     
+## Error?
+
+- Baik dengan menggunakan R Script maupun menggunakan Console langsung, anda akan dikasih warning kalau ada masalah / error.
+
+- Beberapa warnings yang sering terjadi minggu lalu:
+
+    - `read_excel()` tidak dipahami oleh R karena belum run `library("readxl")`.
+    
+    - `library()` gagal karena belum `install_packages()`.
+    
+    - Garis miring untuk `set_wd()` belum diganti dari \ ke /.
+    
+    - `set_wd()`-nya masih di folder "metopel" belum di folder "latihan"
+
+## Problem solving
+
+- Anda bisa menyelesaikan masalah-masalah tersebut dengan melihat warning-nya.
+
+- Di sini pentingnya pengetahuan bahasa inggris dan kemampuan problem solving.
+
+    - Warnings biasanya disampaikan dalam bahasa inggris (tidak hanya R, aplikasi lain juga sama)
+    
+    - Banyak hal di R itu bisa digoogle, tapi enakan pakai bahasa inggris.
+    
+    - Menemukan cara menyelesaikan suatu masalah membutuhkan kemampuan menganalisis masalahnya ada dan solusinya bagaimana. 
+
 ## Pertanyaan tentang R dan RStudio?
 
 ## Time series
@@ -136,11 +162,13 @@ library("forecast")
 library("urca")
 ```
 
+Jangan lupa di-`set_wd()` dulu ya.
+
 ## Stationarity
 
 ```{r}
 #| echo: false
-#| fig-width: 8
+#| fig-width: 6
 #| fig-height: 4
 library("patchwork")
 dat<-read_excel("latihan6.xlsx")
@@ -154,7 +182,7 @@ plot<-ggplot()+theme_classic()+
 a<-plot+geom_line(aes(x=kuartal,y=PDB),data=dat)
 b<-plot+geom_line(aes(x=kuartal,y=DPDB),data=dat)+labs(y="diff PDB")
 c<-plot+geom_line(aes(x=kuartal,y=DLPDB),data=dat)+labs(y="growth (%)")
-a+b+c
+a/b/c
 ```
 
 ## Mengecek stasioneritas
