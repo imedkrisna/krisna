@@ -21,4 +21,3 @@ slides:
 - {{% staticref "ekon/week12/index.html" "newtab" %}}week 12: Monetary policy{{% /staticref %}}
 - {{% staticref "ekon/week13/index.html" "newtab" %}}week 13: International finance{{% /staticref %}}
 - {{% staticref "ekon/week14/index.html" "newtab" %}}week 14: Investment, uncertainty, agency problem{{% /staticref %}}
-- {{% staticref "ekon/week15/index.html" "newtab" %}}week 15: Agency problem, uncertainty{{% /staticref %}}
