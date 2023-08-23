@@ -5,7 +5,11 @@ type: book
 weight: 20
 ---
 
-slides:
+## Files
+
+- {{% staticref "ekon/RPS.pdf" "newtab" %}}RPS{{% /staticref %}}
+
+## Slides
 
 - {{% staticref "ekon/week1/index.html" "newtab" %}}Week 1: Introduction{{% /staticref %}}
 - {{% staticref "ekon/week2/index.html" "newtab" %}}Week 2: Supply and demand{{% /staticref %}}
