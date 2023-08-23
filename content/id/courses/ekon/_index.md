@@ -7,12 +7,6 @@ type: book
 commentable: false
 ---
 
-Ilmu ekonomi adalah 
-
-This is a course I designed and teach for bachelor level students at International Business Engineering (IBE) program at Universitas Kristen Petra, 2$^{nd}$ semester of 2020/2021. I use Essentials of Economics[^1] (Krugman and Wells, 2016) as my guide. The book is chosen because it mainly includes many global business examples and very easy to follow for business students but also for non-economics programs in general. Some examples used in this course may be tailored a bit on Indonesian context.
-
-Some additional resources include Introduction of Economic Analysis by McAfee and Lewis[^2] (2009) and various journal articles and news articles.
-
 ## Tentang mata kuliah ini
 Ilmu ekonomi pada dasarnya adalah ilmu yang mempelajari bagaimana manusia membuat keputusan di tengah keterbatasan (_scarcity_). Memahami bahwa kita selalu memiliki sumber daya yang terbatas adalah salah satu prinsip utama ilmu ekonomi. Mata kuliah ini mencakup prinspi-prinsip dasar ilmu ekonomi baik dari sisi mikro maupun makro. Sisi mikro mempelajari prinsip dasar seperti biaya peluang (_opportunity cost_), hukum pasar dan kegagalan pasar serta dampak dari intervensi pemerintah. Di sisi makro kita belajar beberapa indikator-indikator seperti PDB, inflasi, dan nilai tukar.
 
