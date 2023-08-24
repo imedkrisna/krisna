@@ -142,57 +142,30 @@ format:
 - Slides should be enough to get a good grade.
 - However, to get an A, you should master the principle.
 
----
+## Assignment
+
+- You're divided into 7 groups! (you should already have a group by next week!)
+- each group writes a paper (makalah) & a presentation slide.
+- During a group's presentation, others ask questions (at least 1 per group)
+- Presentation will begin in week 4.
+- I will randomize which groups do what.
+
+## Assignments
+
+| group | Topic | coverage | meeting |
+| --- | ------ | ------ | --- |
+| 1 | Elasticity & tax | demand of cigarettes & the effectiveness of excise | 4 |
+| 2 | Oligopoly | Analyzing the market dynamics of matic scooter | 7 |
+| 3 | Inflation |   | 9 |
+| 4 | Economic growth | Compare Indonesia vs China vs South Korea growth from 1960-recent  | 10 |
+| 5 | Financial system  | Describe what is money, what is digital money, and difference between conventional system vs syaria  | 11 |
+| 6 | International trade  | Analyze beef import quota, the good, the bad  | 13 |
+| 7 | International finance  |  1998 financial crisis in Indonesia: how it started, how it fixed | 14 |
 
 
 ## Some tools
 
-- All course materials are accessible through lentera and [google classroom](https://classroom.google.com/u/1/c/MjY5NTUzNzc0NTg5) in pdf.
-- All announcement will be posted on lentera and google classroom.
-  - I believe it will patch through your Petra e-mail as well.
-  - Feel free to let me know what's best for your learning.
-- The course is also available at my website, [s.id/econ101]({{< relref "/courses/econ101" >}}).
-  - It is in html format so you don't have to download.
-  - Also can be viewed on your phone.
-- I will update the course on a weekly basis.
-
----
-
-## Some tools
-
-- The mid-lecture pop quiz (ungraded) will be conducted via poll everywhere.
-  - Please prepare a tab in your browser to [pollev.com/imedkrisna007](https://pollev.com/imedkrisna007/)
-  - You can also use your smartphone's browser.
-
-- The tool for the end-lecture quiz (graded) is still being explored.
-  - we will test [quizizz](https://joinmyquiz.com/) by the end of today's lecture.
-  - We can also use google form.
-  - You are free to let me know your preference.
-
----
-
-# Questions?
-
----
-
-## A bit about you
-
-<iframe src="https://embed.polleverywhere.com/multiple_choice_polls/ZSvuqLVH3kXDtyC0q1VL0?controls=none&short_poll=true" width="800px" height="600px"></iframe>
-
----
-
-## A bit about you
-
-<iframe src="https://embed.polleverywhere.com/free_text_polls/8I0gGEvVFCiSryr6tM8Fh?controls=none&short_poll=true" width="800px" height="600px"></iframe>
-
----
-
-## Now let's appoint a class rep!
-
-- for now, class rep's responsibility is to just administering attendance.
-- any student is allowed to contact me directly.
-
----
+- 
 
 # About economics
 
