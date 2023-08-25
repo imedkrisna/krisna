@@ -47,11 +47,7 @@ format:
 - Feel free to interrupt my class with questions.
 - email me at imade.krisna@poltekapp.ac.id  
 
----
-
-{{< slide class="table" >}}
-
-## Structure of this course
+## Structure of this course {.s}
 
 - week 1: introduction
   - housekeeping
@@ -70,11 +66,7 @@ format:
   - marginal cost and average cost
   - perfect competition
 
----
-
-{{< slide class="table" >}}
-
-## Structure of this course
+## Structure of this course {.s}
 
 - week 5: Monopoly & oligopoly
   - price discrimination
@@ -90,11 +82,7 @@ format:
 
 *** MIDTERM EXAM ***
 
----
-
-{{< slide class="table" >}}
-
-## Structure of this course
+## Structure of this course {.s}
 
 - week 8: Macro basics
   - accounting and growth
@@ -112,11 +100,7 @@ format:
   - demand shock
   - the state budget
   
----
-
-{{< slide class="table" >}}
-
-## Structure of this course
+## Structure of this course {.s}
 
 - week 12: Financial system
   - Banks and money
@@ -129,9 +113,7 @@ format:
   - trade policy
   - international capital and exchange rate
 
----
-
-## Exams etc ✍🏾
+## Evaluation ✍🏾
 
 | evaluation | covers | % |
 | ---------- | ------ | - |
@@ -150,26 +132,26 @@ format:
 - Presentation will begin in week 4.
 - I will randomize which groups do what.
 
-## Assignments
+## Assignments {.s}
 
 | group | Topic | coverage | meeting |
 | --- | ------ | ------ | --- |
 | 1 | Elasticity & tax | demand of cigarettes & the effectiveness of excise | 4 |
 | 2 | Oligopoly | Analyzing the market dynamics of matic scooter | 7 |
-| 3 | Inflation |   | 9 |
+| 3 | Inflation | what is inflation, how's it measured, and its dynamics  | 9 |
 | 4 | Economic growth | Compare Indonesia vs China vs South Korea growth from 1960-recent  | 10 |
-| 5 | Financial system  | Describe what is money, what is digital money, and difference between conventional system vs syaria  | 11 |
+| 5 | Financial system  | Describe what is money, what is digital money, and difference between conventional system vs sharia  | 11 |
 | 6 | International trade  | Analyze beef import quota, the good, the bad  | 13 |
-| 7 | International finance  |  1998 financial crisis in Indonesia: how it started, how it fixed | 14 |
+| 7 | International finance  |  1998 financial crisis: how it started & ended | 14 |
 
 
-## Some tools
+## Lastly
 
-- 
+- The course conveners are I Made Krisna (Imed) & Mas Rangga Cili.
+
+- Contact us anytime but we may have delayed responses. Alternatively just show up to our offices.
 
 # About economics
-
----
 
 ## Why economics?
 
@@ -179,16 +161,11 @@ format:
 - This course is not going to dig too deep into the world of economic principles.
 - This course does not provide answers to your question: It teach how to use economic framework to shape your question.
 
----
-
 ## Some questions asked by economists
 
-- How to best tackle climate change?
 - Is minimum wage good?
 - Should we introduce tax holiday to firms?
 - Should the government increase expenditure by more tax or more debt?
-- Should we introduce Universal Basic Income?
-- How to evaluate government program?
 - Should we ban mineral export?
 - can we sustain economic growth?
 - what to do during economic crisis?
@@ -203,28 +180,9 @@ format:
 - Should we trust BUMN, or private sector?
 - essentially, it's about tradeoffs, cost and benefit.
 
----
-
-### About your learning
-
-- To get a glimpse of what economists usually do, you can take a look at my blog. examples:
-  - [Consumption-saving decision]({{< relref "post/surga" >}})
-  - [how to set the price on toll road]({{< relref "post/jorr" >}})
-  - [FDI, trade and industry policy (in Indonesian)]({{< relref "post/hitektrade" >}})
-
--  Questions you might be interested in:
-   - should I expand to other market or continue serving my niche?
-   - Should I outsource or make our own?
-   - Recruit fresh grads or train high school graduates?
-   - Update current system or adapt new system?
-
----
-
 # Principles of Economics 💰
 
----
-
-### People make choices
+## People make choices
 
 ##### because resources are scarce
 
@@ -238,9 +196,7 @@ format:
   - There's only one holiday season in a year.
   - Two nasi gorengs would be too much for my stomach.
 
----
-
-### The true cost of something is its opportunity cost
+## The true cost of something is its opportunity cost {.m}
 
 - money is just one type of cost.
 - The true cost of taking a holiday to Hong Kong is going somewhere else.
@@ -251,15 +207,7 @@ format:
   - enjoy life.
 - essentially, opportunity cost of something is something else you gave up to get it.
 
----
-
-### Pop quiz
-
-<iframe src="https://embed.polleverywhere.com/multiple_choice_polls/27Z726hL5mMDWeaKsBbDQ?controls=none&short_poll=true" width="800px" height="600px"></iframe>
-
----
-
-### Thinking at the margin
+## Thinking at the margin
 
 - The principle of opportunity cost leads to a marginal thinking.
 - Understand your status quo, and think what action you can do to add a little improvement from it.
@@ -267,9 +215,7 @@ format:
   - what if there's an exam tommorow?
   - If you are tired of studying, would you study more?
 
----
-
-### Specialisation and gains from trade
+## Specialisation and gains from trade {.m}
 
 - During your daily time, you make decisions on allocating how much time to study and to cook, among other things.
 - Since you will die if you don't eat, you can't allocate 0 hour to cook.
@@ -277,9 +223,7 @@ format:
 - In this case, it may be better if you spend 0 hour to cook, and order food from these chefs.
 - Trade is the reason why I can study economics: I don't have to study how to be a doctor. I will just go to the hospital if I need a medical service.
 
----
-
-### Specialisation and gains from trade
+## Specialisation and gains from trade {.m}
 
 - Extending to firm level, many outsource part of their business from a third party.
   - buying {{< icon name="microsoft" pack="fab" >}}office probably better than developing our own softwares.
@@ -289,9 +233,7 @@ format:
 - We can easily extend this to a country level:
   - Japan makes car because they cannot plant palm oil.
 
----
-
-### Incentives matter
+## Incentives matter
 
 - People move to cities because there are more opportunities there.
 - People will buy cheaper products given the same price.
@@ -300,9 +242,7 @@ format:
     
 > *"ada gula ada semut"*
 
----
-
-### Market and intervention
+## Market and intervention
 
 - often times, market incentives are enough.
 - However, intervention is often used.
@@ -312,9 +252,7 @@ format:
   - The COVID-19 relieve bill (PEN) will likely stop after the pandemic.
   - Gojek's subsidy is removed once they reach economies of scale.
 
----
-
-### Things tend to move to equilibrium
+## Things tend to move to equilibrium {.m}
 
 - When there is an incentive to do something, there will be more and more people exploit it.
 - As more people do it, the incentive decreases to a point where it is not worth it anymore.
@@ -326,27 +264,10 @@ format:
   - short run vs long run.
   - individual vs aggregate.
   
----
-
-### Conclusion
+## Conclusion
 
 - We will see how these principles come up again and again as we delve deeper into the course.
 - The principle will be carried over to your overall degree, and life in general.
 - I am not trying to make you an economist, but the principles are very useful.
-
----
-
-## Testing Graded quiz
-
----
-
-## Housekeeping!
-
-- Joy is the class rep.
-- We'll use Zoom over Google Meet.
-- Quizizz is used for everyday lecture.
-- what else?
-
----
 
 ## Next week: Supply and demand
