@@ -1,0 +1,234 @@
+---
+title: "Trade and Industrial EDA"
+subtitle: "ECES905205 meeting 1"
+date: "29 Agustus 2023"
+author: "Krisna Gupta"
+format: 
+  revealjs:
+    theme: [simple,../mytheme.scss]
+    chalkboard: true
+    incremental: false
+    transition: convex
+    background-transition: fade
+    slide-number: true
+---
+
+## Your lecturer
+
+[Krisna Gupta](https://imedkrisna.github,io) of Politeknik APP Jakarta & [Deasy Pane](https://id.linkedin.com/in/deasy-pane-a618a68) of Bappenas (The Indonesian Planning Agency)
+
+- PhDs from Crawford School, the ANU.
+
+- Senior fellows at Ceneter for Indonesian Policy Studies.
+
+- KG do first 7 meetings, DP do last 7s.
+
+- Reach us thru email (see Syllabus).
+
+## Today's agenda
+
+-   Housekeeping
+-   intro on trade & industry
+
+## About ECES905205
+
+- 2 parts: theoretical & practical.
+
+- The theoretical use some papers & Krugman, Obstfeld & Melits (2023):
+
+    - trade theory & policy
+    
+    - The new industrial policy
+    
+- The practical uses various handbook & papers:
+
+    - analytical tool like TCI, RCA, etc.
+    
+    - Real form of policies & empirics.
+
+## Priors
+
+-   Micro & macro are assumed:
+    -   familiar with first & second welfare theorem
+    -   market failure & imperfect competition
+    -   growth theory in open economy
+-   Be active
+-   No coding practice.
+-   good if you took international economics.
+
+## Learning outcome
+
+-   Understand the principle behind the gains from trade and industrial development.
+
+-   Able to explain various tools for the government to achieve trade and industrial policy goals.
+
+-   Understand tools for trade and industry analytics.
+
+- Check out [the syllabus](https://1drv.ms/b/s!AjelszXKKcmsioVKZRsXoQFn29ibWA?e=gR7WFW) for more info.
+
+## Rules
+
+- Be active
+
+- Be quiet
+
+- No presence is required
+
+- Food & drink is fine
+
+- Please interrupt me at anytime for questions
+
+## Evaluations
+
+| metode | coverage | (%) |
+|--------|----------------|-----------|
+| midterm    | meeting 1-7     | 35        |
+| final    | meeting 8-14          | 35        |
+| assignment  | all (kinda)          | 30        |
+
+- Midterm and final are going to be a close book, no gadgets.
+
+- Slides will be enough to get an A, but optional reading is encouraged.
+
+- We'll say more on the assignment later on.
+
+## Tools
+
+-   Courses info can be found in [krisna.or.id/en/courses/tradin](https://www.krisna.or.id/en/courses/tradin/).
+
+    - we'll update regularly
+
+# Questions?
+
+## Knowing my class
+
+-   Perkenalkan diri dengan menyebutkan:
+    -   nama panggilan
+    -   pekerjaan saat ini / cita-cita setelah lulus
+    -   topik tugas akhir
+
+# Introduction to trade & industry
+
+## Why trade
+
+- There's gain from trade from specialization (aka comparative advantage)
+
+- Even if a country knows how to make everything, it's still better for them if they trade.
+
+-   Why? opportunity cost and resource constraints.
+
+- Trade is also the fastest way for developing countries to catch up. Leapfrogging even!
+
+## Why not trade?
+
+-   Trade gain does not shared equally
+
+    -   Economic transition often beneficial for 1 group at the expense of other group.
+    -   Trade & industrial policy often created with a specific sectors in mind (may leave other sectors in the dust.)
+
+-   There are other goals more important than economic efficiency.
+
+-   Blaming foreigners is always easier (they don't affect your election)
+
+-   Policy makers don't understand economics.
+
+## The global trade
+
+<iframe src="https://data.worldbank.org/share/widget?indicators=NE.TRD.GNFS.ZS" width="900" height="550" frameBorder="0" scrolling="no">
+
+</iframe>
+
+## Global trade trend
+
+<iframe src="https://data.worldbank.org/share/widget?end=2021&amp;indicators=NE.TRD.GNFS.ZS&amp;locations=ID-CN-MY-TH-US-DE-FR-AT-IN&amp;start=2011" width="900" height="550" frameBorder="2" scrolling="no">
+
+</iframe>
+
+------------------------------------------------------------------------
+
+<iframe width="1000" height="600" src="https://oec.world/en/visualize/embed/tree_map/hs92/export/idn/all/show/2020/?controls=false" frameborder="1">
+
+</iframe>
+
+------------------------------------------------------------------------
+
+<iframe width="1000" height="600" src="https://oec.world/en/visualize/embed/tree_map/hs92/import/idn/all/show/2020/?controls=false" frameborder="1">
+
+</iframe>
+
+## Some misconceptions
+
+-   Trade surplus is "good" and "competitive".
+
+    -   BILATERAL trade surplus is "good".
+    -   SECTORAL trade surplus is "good".
+
+-   Deficit in current account must be counteracted with trade restriction.
+
+-   Trade is easy to manage.
+
+-   Weak exchange rate is "bad".
+
+## Trend in Indonesia
+
+::: columns
+::: {.column width="40%"}
+![](Picture1.png)
+:::
+
+::: {.column width="60%"}
+-   Indonesia follows the global trend.
+
+-   Tariff reductions mostly come from FTAs.
+
+-   On the contrary, non-tariff measures rise.
+
+-   Good thing or a bad thing?
+:::
+:::
+
+## Trends in trade & industry
+
+-   Green energy & Climate change
+
+- Localization/downstreaming & friendshoring
+
+-   Food security
+
+-   Global current account imbalance
+
+## Course structure
+
+-   Trade theory: the classic, the latest.
+
+- Industrial policy
+
+- Trade & industry policy tools
+
+- Analytics
+
+## Thinking forward
+
+-   Use (dan empirics) untuk mendebat kebijakan.
+
+    -   Remember, most policy's justifications are market failure.
+    -   analogy is powerful.
+
+-   Keep policy objectives in mind.
+
+    -   Does it interfere with other objectives? Any better ways to get them?
+
+-   Policies are politics & administrative processes.
+
+## Some interesting read
+
+Beberapa postingan di blog saya yang bisa jadi pengantar:
+
+-   [Kenapa kebijakan perdagangan CPO gagal?](https://www.krisna.or.id/post/ngobroltempo/)
+-   [Substitusi impor produk elektronika](https://www.krisna.or.id/post/ngobroltempo/)
+-   [Model simpel TKDN](https://www.krisna.or.id/post/tkdn/)
+-   [early analysis on nickel export ban](https://www.thejakartapost.com/opinion/2022/04/03/indonesias-claim-that-banning-nickel-exports-spurs-downstreaming-isquestionable.html)
+
+## Next week
+
+-   Comparative advantage & Ricardian moddel

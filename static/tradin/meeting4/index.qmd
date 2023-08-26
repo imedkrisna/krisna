@@ -1,0 +1,479 @@
+---
+title: "Hecksher-Ohlin and the Standard Model"
+subtitle: "ECES905205 pertemuan 4"
+date: "12 September 2022"
+author: "I Made Krisna Gupta"
+format: 
+  revealjs:
+    theme: [simple,../mytheme.scss]
+    chalkboard: true
+    incremental: false
+    transition: convex
+    background-transition: fade
+    slide-number: true
+  beamer: default
+editor: visual
+---
+
+## Last time
+
+-   Ricardian: comparative advantage & specialization, everybody happy.
+
+-   Specific factor: comparative advantage, better in aggregate amid open possibilities / choices.
+
+    -   the gain are not shared equally.
+    -   this is the basis of political struggle among different factor owners.
+
+# Hecksher-Ohlin Model
+
+## Intro H-O Model
+
+-   Both Ricardian maupun Specific Factor model relies on difference in technologies in explaining why two countries trade.
+
+-   tapi tidak menjelaskan kenapa negara yang teknologinya sama tetap trade.
+
+-   In addition to difference in technologies, difference in **relative abundance of resources** can also drive trade.
+
+-   Here, we also show how different **relative factor intensity** drives trade.
+
+## Two Factor H-O model
+
+-   2 countries: Home and foreign
+-   2 mobile factor $i$: kapital (K) and labor (L)
+-   2 sectors $j$: cloth (C) dan Food (F)
+-   Jumlah total K dan L berbeda di home dan foreign.
+-   long run model: kapital bisa pindah sektor.
+    -   semua labor dapat gaji $w$, dan semua kapital sewa/nyicil $r$.
+
+## Teknologi {.m}
+
+-   $a_{i,j}$ adalah jumlah faktor $i$ yang digunakan oleh industri $j$ untuk membuat 1 unit barang $j$.
+    -   e.g.: $a_{KC}=$ barang modal yang digunakan untuk membuat 1 meter cloth.
+-   Teknologi tetap menganut **diminishing return**.
+    -   ada efek substitusi.
+-   Asumsi: $F$ adalah sektor yang kapital intensif, $C$ labor intensive.
+    -   di $F$, untuk substitusi 1 $K$ butuh banyak $L$. $C$ sebaliknya.
+-   Karena kapital bisa pindah sektor dan substitusi dengan buruh, maka keputusan berproduksi juga tergantung harga kapital.
+
+## Factor intensity
+
+-   Karena $C$ relatively labor intensive, maka:
+
+$$
+\frac{a_{LC}}{a_{KC}} > \frac{a_{LF}}{a_{KF}} \\
+\frac{L_C}{K_C} > \frac{L_F}{K_F} 
+$$
+
+## H-O model
+
+::: columns
+::: {.column width="47%"}
+```{r}
+#| fig-width: 4
+#| fig-height: 4
+#| label: fig1
+#| warning: false
+library(WDI)
+library(tidyverse)
+library(patchwork)
+fppf <- function(q) (16-q^2)^(0.5) 
+
+
+ppf<-ggplot() +
+  stat_function(fun = fppf,size=1.1, color='black') +
+  labs(x=expression(Q[C]), y=expression(Q[F]),color=NULL,fill=NULL)+
+  annotate("text",x=2,y=60,label=expression(Q[C]==Q[c](K,L[C])))+
+  scale_x_continuous(expand=c(0,0),limits = c(0,5))+
+  scale_y_continuous(expand=c(0,0),limits = c(0,5))+
+  theme_classic()+
+  theme(panel.grid=element_blank(),
+        axis.text.x=element_blank(),
+        axis.text.y=element_blank(),
+        axis.ticks.x=element_blank(),
+        axis.ticks.y=element_blank(),
+        legend.position=c(1,1),
+        legend.justification = c(1,1),
+        legend.spacing=unit(0,"cm"),
+        legend.margin=margin(0,0,0,0))
+ppf2<-ppf+
+  annotate("segment",x = 1.2, y = 3.9,xend = 2.7, yend = 3.1,size=1.1)+
+  annotate("segment",x = 0, y = 3.5,xend = 1.9, yend = 3.5,size=1.1,lty="dotted")+
+  annotate("segment",x = 1.9, y = 0,xend = 1.9, yend = 3.5,size=1.1,lty="dotted")+
+  annotate("point", x=1.9,y=3.5,size=4)+
+  annotate("text", x=2,y=3.6,label="1")+
+  annotate("text", x=0.1,y=2.27,label=expression(Q[F]^1))+
+  annotate("text", x=3.55,y=0.2,label=expression(Q[C]^1))+
+  annotate("text", x=1.4,y=3.2,label=expression(paste("slope =", - bgroup("(",frac(P[C], P[F]),")")^1)))
+ppf2
+```
+:::
+
+::: {.column width="47%"}
+-   Alokasi produksinya persis sama dengan specific factor model
+-   Alias, produksi akan dilakukan di persinggungan antara PPF dengan $-\frac{P_C}{P_F}$
+-   Bedanya ada di pasar tenaga kerja dan pasar modal.
+:::
+:::
+
+## Factor allocation
+
+-   Tidak seperti specific factor, di sini ada efek substitusi antar faktor.
+    -   Tiap industri dapat mengurangi buruh dan menggantinya dengan mesin.
+-   Karena itu, harga input relatif juga penting.
+-   Jika harga kapital mahal sementara harga buruh murah, maka industri akan menggunakan banyak buruh dan sedikit kapital.
+
+## Reminder micro
+
+- produksi dilakukan di titik persinggungan antara PPF dan rasio harga.
+  - sama dengan specific factor model.
+- Karena ada substitusi faktor produksi, maka:
+
+$$
+\frac{\frac{\partial Q}{\partial K}}{\frac{\partial Q}{\partial L}}=\frac{r}{w} \rightarrow \frac{L}{K}=\omega \left(\frac{w}{r}\right)
+$$
+$\frac{MP_L}{MP_K} \propto \frac{L}{K} \propto \frac{w}{r} \propto \frac{P_C}{P_F}$
+
+## Reminder micro
+
+-   Industri $j$ memiliki unit cost:
+
+$$
+c_j=wa_{Lj}+ra_{Kj}
+$$
+
+-   Karena itu, kombinasi input yang costnya sama (isocost):
+
+$$
+a_{Kj}=\left(\frac{c}{r}\right)-\left(\frac{w}{r}\right)a_{Lj}
+$$ - Pilihan input akan berdasarkan isocost ini, di mana industri akan memilih kombinasi cost termurah.
+
+## Factor and good prices
+
+-   Jika pasarnya kompetitif, maka harga barang = costnya (ga ada mark-up)
+
+-   F\>0 artinya: $$
+    P_F=a_{LF}(.)w+ a_{KF}(.)r \\
+    P_C=a_{LC}(.)w+ a_{KC}(.)r
+    $$
+
+-   Di mana $a_{ij}(.)$ merupakan jumlah kapital dan buruh per unit yang dipilih berdasarkan optimasi.
+
+## Factor and good prices
+
+-   full employment berarti semua kapital dan buruh dipakai dalam produksi (ga ada yg nganggur)
+
+-   artinya:
+
+$$
+L=a_{LF}(.)F+a_{LC}(.)C \\
+K=a_{KF}(.)F+a_{KC}(.)C
+$$
+
+## Stolper-Samuelson Theorem
+
+> if the relative price of a good increases, then the real factor price used intensively in the production of that good increases, while the real price of the other factor decreases.
+
+Perubahan harga akan mempengaruhi distribusi pendapatan antara buruh dan pemilik kapital.
+
+## Factor and good prices
+
+Misalnya $\frac{P_C}{P_F} \uparrow$ (labor intensive):
+
+-   pendapatan buruh akan naik relatif terhadap pendapatan kapital ($\frac{w}{r} \uparrow$)
+-   Rasio $\frac{K}{L} \uparrow$ di kedua industri.
+-   Pendapatan riil buruh naik, sementara pendapatan riil kapitalis turun.
+
+## Factor and good prices
+
+$$
+P_F=a_{LF}(.)w+ a_{KF}(.)r \\
+P_C=a_{LC}(.)w+ a_{KC}(.)r
+$$
+
+Lakukan total differentiation. karena $a_{ij}(.)$ dipilih secara optimal, maka perubahan kecil di harga tidak akan berpengaruh.
+
+$$
+dP_F=a_{LF}(.)dw+ a_{KF}(.)dr \\
+dP_C=a_{LC}(.)dw+ a_{KC}(.)dr
+$$
+
+## Factor and good prices {.m}
+
+-   Bagi dengan $P_j$
+
+$$
+\frac{dP_F}{P_F}=\frac{a_{LF}(.)}{P_F}dw+ \frac{a_{KF}(.)}{P_F}dr \\
+\frac{dP_C}{P_C}=\frac{a_{LC}(.)}{{P_C}}dw+ \frac{a_{KC}(.)}{P_C}dr
+$$ - kali dengan $\frac{w}{w}$ dan $\frac{r}{r}$
+
+$$
+\frac{dP_F}{P_F}=\frac{a_{LF}(.)w}{P_F}\frac{dw}{w}+ \frac{a_{KF}(.)r}{P_F}\frac{dr}{r} \\
+\frac{dP_C}{P_C}=\frac{a_{LC}(.)w}{{P_C}}\frac{dw}{w}+ \frac{a_{KC}(.)r}{P_C}\frac{dr}{r}
+$$
+
+## Factor and good prices
+
+-   \$\frac{dx}{x} = \$percentage change $=\hat{x}$
+-   let $\theta=$ cost share di mana: $\theta_Lj=\frac{a_{Lj}(.)w}{P_j},\theta_Kj=\frac{a_{Kj}(.)r}{P_j}, \theta_{Lj}+\theta_{Kj}=1$
+
+maka:
+
+$$
+\hat{P_F}=\theta_{LF}\hat{w}+\theta_{KF}\hat{r} \\
+\hat{P_C}=\theta_{LC}\hat{w}+\theta_{KC}\hat{r}
+$$
+
+## Perubahan harga
+
+Misalnya harga cloth naik ($\hat{P_C}>0$) tapi harga food tetap ($\hat{P_F}=0$)
+
+$$
+0=\theta_{LF}\hat{w}+\theta_{KF}\hat{r} \\
+\hat{P_C}=\theta_{LC}\hat{w}+\theta_{KC}\hat{r}
+$$
+
+dapat dipastikan bahwa salah satu factor price harus naik dan satunya lagi pasti turun.
+
+## Perubahan harga
+
+Ingat bahwa C itu cenderung labor intensif. artinya:
+
+$$
+\frac{\theta_{LF}}{\theta_{KF}}<\frac{\theta_{LC}}{\theta_{KC}}
+$$
+
+Artinya, "bobot" yang diberikan untuk $\hat{w}$ lebih tinggi di $C$ daripada di $F$. Krn $\hat{P_C}>0$, maka dapat dipastikan $\hat{w}>0$ dan $\hat{r}<0$.
+
+$$
+\hat{w} > \hat{P_C} > 0 > \hat{r}
+$$
+
+## Rybczynski Theorem
+
+> Jika harga output tidak berubah dan salah satu faktor produksi bertambah jumlahnya, maka produksi dari barang yang intensif diproduksi oleh faktor tersebut akan meningkat, dan produksi barang yang intensif faktor lainnya akan berkurang.
+
+Dengan kata lain, jumlah faktor yang melimpah akan mempengaruhi produksi dan distribusi pendapatan.
+
+## Resources and output
+
+-   Bayangkan tiba-tiba ada tambahan tenaga kerja (bonus demografi), sehingga $\frac{L}{K} \uparrow$
+-   PPF akan bergerak naik, tapi cenderung bias ke arah $C$
+-   jika $\frac{P_C}{P_F}$ tidak berubah, rasio penggunaan buruh dan kapital tidak akan berubah.
+-   Untuk ekspansi, maka cloth akan mengambil kapital dari food.
+
+## PPF
+
+::: columns
+::: {.column width="57%"}
+```{r}
+#| fig-width: 5
+#| fig-height: 5
+#| label: fig2
+#| warning: false
+library(WDI)
+library(tidyverse)
+library(patchwork)
+fppf <- function(q) (16-q^2)^(0.5) 
+fppf2<- function(q) (18-0.7*q^2)^(0.5)
+
+
+ppf<-ggplot() +
+  stat_function(fun = fppf,size=1.1, color='black') +
+  labs(x=expression(Q[C]), y=expression(Q[F]),color=NULL,fill=NULL)+
+  annotate("text",x=2,y=60,label=expression(Q[C]==Q[c](K,L[C])))+
+  scale_x_continuous(expand=c(0,0),limits = c(0,5))+
+  scale_y_continuous(expand=c(0,0),limits = c(0,5))+
+  theme_classic()+
+  theme(panel.grid=element_blank(),
+        axis.text.x=element_blank(),
+        axis.text.y=element_blank(),
+        axis.ticks.x=element_blank(),
+        axis.ticks.y=element_blank(),
+        legend.position=c(1,1),
+        legend.justification = c(1,1),
+        legend.spacing=unit(0,"cm"),
+        legend.margin=margin(0,0,0,0))
+ppf2<-ppf+
+  annotate("segment",x = 2.37, y = 3.5,xend = 3.92, yend = 1.5,size=1.1)+
+  annotate("segment",x = 0, y = 2.45,xend = 3.2, yend = 2.45,size=1.1,lty="dotted")+
+  annotate("segment",x = 0, y = 2.22,xend = 4.3, yend = 2.22,size=1.1,lty="dotted")+
+  annotate("segment",x = 3.2, y = 0,xend = 3.2, yend = 2.45,size=1.1,lty="dotted")+
+  annotate("segment",x = 4.3, y = 0,xend = 4.3, yend = 2.22,size=1.1,lty="dotted")
+##  annotate("segment",x = 1.9, y = 0,xend = 1.9, yend = 3.5,size=1.1,lty="dotted")+
+#  annotate("point", x=3.1,y=2.5,size=4)+
+#  annotate("text", x=2,y=3.6,label="1")+
+#  annotate("text", x=0.1,y=2.27,label=expression(Q[F]^1))+
+#  annotate("text", x=3.55,y=0.2,label=expression(Q[C]^1))+
+#  annotate("text", x=1.4,y=3.2,label=expression(paste("slope =", - bgroup("(",frac(P[C], P[F]),")")^1)))
+ppf2+
+  stat_function(fun = fppf2,size=1.1, color='red')+
+  annotate("segment",x = 3.36, y = 3.5,xend = 4.91, yend = 1.5,size=1.1)
+```
+:::
+
+::: {.column width="37%"}
+-   PPF melebar bias cloth
+-   titik antara alokasi sebelum dan alokasi sesudah dapat dihubungkan dengan garis "Rybczynski line" for labor.
+:::
+:::
+
+## Resources and output
+
+-   Ekonomi yang memiliki rasio $\frac{L}{K}$ tinggi akan memiliki output yang tinggi ke produk labor-intensif.
+-   Jika $\frac{L}{K}>\frac{L^*}{K^*}$ maka home akan lebih efisien membuat C.
+
+$$
+\hat{L}=\lambda_{LF}\hat{F}+\lambda_{LC}\hat{C} \\
+\hat{K}=\lambda_{KF}\hat{F}+\lambda_{KC}\hat{C}
+$$
+
+-   di mana $\lambda_{ij}=$ factor share. Misal, $\lambda_{LF}=a_{LF}\frac{L}{F}$ adalah $\frac{L_F}{L}$
+
+## Perubahan faktor
+
+-   misalnya $\hat{L}>0$ dan $\hat{K}=0$
+
+$$
+\hat{L}=\lambda_{LF}\hat{F}+\lambda_{LC}\hat{C} \\
+0=\lambda_{KF}\hat{F}+\lambda_{KC}\hat{C}
+$$ - Karena C labor intensif, maka $\frac{\lambda_{LC}}{\lambda_{KC}}>\frac{\lambda_{LF}}{\lambda_{KF}}$
+
+$$
+\hat{C}>\hat{L}>0>\hat{F}
+$$
+
+## H-O and trade
+
+-   seperti halnya ricardian model, H-O memprediksi konvergensi harga relatif antar negara.
+-   Negara yang labornya banyak akan cenderung menghasilkan C.
+-   Ketika trade dengan negara yang labornya relatif sedikit, negara ini akan jual C dan impor F.
+-   $P_C \uparrow$ sementara $P_C^* \downarrow$
+
+## Hecksher-Ohlin Theorem
+
+> The country that is abundant in a factor exports the good whose production is intensive in that factor
+
+secara umum:
+
+> Countries tend to export goods whose production is intensive in factors with which the countries are abundantly endowed.
+
+::: footer
+see Alan Deardorff "the general validity of the Hecksher-Ohlin theorem."
+:::
+
+## Distribusi pendapatan
+
+-   Di home, perdagangan sangat menguntungkan bagi buruh karena mereka bisa ekspor ($P_C>P_C^*$) dan bisa konsumsi makanan dengan harga lebih murah ($P_F>P_F^*$)
+
+-   Sebaliknya, di foreign, trade menguntungkan pemilik kapital.
+
+> Owners of a country's abundant factors gain from trade, but owners of a country's scarce factors lose
+
+## Perubahan faktor matters
+
+- Perubahan dari jumlah faktor produksi juga ngaruh.
+- Andaikan ada negara yang tiba-tiba kebanjiran pekerja, maka struktur ekonomi negara ini akan geser ke labor-intensif goods.
+- harga relatif goods ini akan drop, dan ekspornya makin naik regardless teknologi.
+
+## Distribusi
+
+-   hasil ini serupa dengan specific factor model: pemilik faktor yang mengalami kompetisi impor merugi.
+
+-   insight dari H-O mengatakan bahwa winner-loser ini akan ada bahkan di long-run.
+
+-   Bagaimana dengan Indonesia?
+
+------------------------------------------------------------------------
+
+![factor intensity in Indonesia (Amiti and Konings 2007 "Trade Liberalization, Intermediate Inputs, and Productivity: Evidence from Indonesia")](indo.jpg)
+
+------------------------------------------------------------------------
+
+## Faktor?
+
+-   pada kenyataannya, faktor tidak hanya dua.
+
+-   Kapital, labor skilled dan unskilled, land, natural resources, dan lain sebagainya.
+
+-   H-O memberi gambaran bahwa bahkan jika dua negara memiliki teknologi yang sama persis, perbedaan resources akan membuat mereka trade.
+
+## Political economy of trade {.m}
+
+-   perdagangan internasional dapat merugikan *immobile factor owners*.
+    -   Di dunia nyata ga harus T atau K, tapi juga labor!
+-   2 alasan kenapa ekonom jarang mempermasalahkan distribus income ini:
+
+1.  perubahan distribusi pendapatan dapat terjadi akibat fenomena non-trade.
+
+-   pandemi menguntungkan yang bisa WFH, data dan teknologi menguntungkan coders, etc.
+
+2.  kompensasi selalu lebih baik daripada pembatasan perdagangan.
+
+-   bagaimana mengoptimalkan pendapatan negara dari trade dan mengalokasikannya untuk bantuan sosial.
+
+## Political economy of trade
+
+-   Di negara demokrasi, kemampuan mobilisasi gerakan itu penting.
+-   Intervensi banyak terjadi di industri yang terkonsentrasi:
+    -   pemainnya dikit tapi ukuran ekonominya banyak.
+    -   BUMN
+-   Biasanya kalau udah kepepet, pelaku industri jadi punya 1 tujuan dan better organized.
+-   yang untung dari trade biasanya konsumen yang bodo amatan.
+
+## Political economy of trade
+
+-   Political economy of trade akan dibahas lebih banyak lagi di pasca-UTS.
+-   note bahwa specific factor model bisa dibilang short-run model:
+    -   in long run, L,K,T dan bahkan MPL (teknologi) bisa berubah.
+    -   perubahan inilah argumen utama mendukung industrial policies.
+    -   dibahas lagi pasca UTS.
+
+## Evidence of H-O
+
+- Teori H-O agak sulit dibuktikan. Evidencenya ga banyak.
+
+- In terms of US: harga skilled labor di mexico naik lebih cepat dari unskilled labor.
+  - padahal mestinya unskilled labor mexico relatif banyak dibanding US dan Kanada.
+- penjelasan: ada perubahan teknologi yang lebih ngaruh daripada trade.
+  - Firms di Mexico makin kaya $\rightarrow$ demand high-skill work domestik naik.
+  - Trade mempercepat teknologi spillover.
+  
+  
+## Factor price equalization
+
+- Karena $\frac{w}{r} \propto \frac{P_C}{P_F}$, maka Trade goods = trade factor of production.
+  - Jika $P_C=P_C^*$, maka $w=w^*$ dan $r=r^*$
+
+- karena itu trade akan membuat harga faktor produksi sama di semua negara.
+  - gaji unskilled labor di US akan drop sampai di level gaji unskilled labor negara asal barang labor intensif.
+  - Also little evidence to support this.
+
+## Factor price equalization?
+
+- asumsi model H-O adalah kedua negara berdagang barang yang sama dan perfect substitute.
+  - Food impor sama rasanya dengan food domestik.
+- H-O juga mengasumsikan dua negara punya teknologi yang sama untuk masing-masing industri. Also: countries' tech changes!
+- Di model ini juga tidak ada **trade barriers** dan ongkos transportasi.
+- Model ini menganggap free movement of factors.
+
+## Leontief Paradox
+
+- Data perdagangan Amerika menunjukkan bahwa US mengekspor less capital intensive goods dibanding impornya.
+- Bowen, Leamer, and Sveikauskas menemukan bahwa hal ini terjadi di berbagai belahan dunia.
+- Missing trade: dengan proporsi naker RRT relatif terhadap US, harusnya US impor labor intensif 4x lipat dari seharusnya (Treffler 1995)
+
+## Tech difference
+
+- Relaksasi same-tech lumayan menyelesaikan problem ini.
+  - unskilled labor US lebih produktif dari RRT.
+- Romalis (2004) menemukan meski H-O dapat dibuktikan di _extreme case_ .
+  - US impor relatively capital-intensive products dari Jerman dan mengimpor relatively labor-intensive products dari Bangladesh.
+  
+## Improving trade models
+
+- Primarily, trade happens amid difference of technologies.
+  - iklim, SDA, produktivitas pekerja, intelectual property.
+- Jika kita samakan teknologinya, perbedaan *factor abundance*-pun ngaruh.
+  - bahkan di long-run pun, distribusi pendapatan tetap problematik.
+- Mingdep kita bahas **Standard trade model**.
+
