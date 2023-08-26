@@ -13,11 +13,11 @@ slides:
 - {{% staticref "/tradin/meeting2/index.html" "newtab" %}}Pertemuan 2: Ricardian Model{{% /staticref %}}
 - {{% staticref "/tradin/meeting3/index.html" "newtab" %}}Pertemuan 3: Specific factor model dan distribusi pendapatan{{% /staticref %}}
 - {{% staticref "/tradin/meeting4/index.html" "newtab" %}}Pertemuan 4: Hecksher-Ohlin Model{{% /staticref %}}
-- {{% staticref "/tradin/meeting5/index.html" "newtab" %}}Pertemuan 5: Standard tradin Model{{% /staticref %}}
-- {{% staticref "/tradin/meeting6/index.html" "newtab" %}}Pertemuan 6: Firms in the global tradin{{% /staticref %}}
-- {{% staticref "/tradin/meeting7/index.html" "newtab" %}}Pertemuan 7: trade policy{{% /staticref %}}
+- {{% staticref "/tradin/meeting5/index.html" "newtab" %}}Pertemuan 5: Standard Trade Model{{% /staticref %}}
+- {{% staticref "/tradin/meeting6/index.html" "newtab" %}}Pertemuan 6: Firms in the global trade{{% /staticref %}}
+- {{% staticref "/tradin/meeting7/index.html" "newtab" %}}Pertemuan 7: Trade policy{{% /staticref %}}
 - {{% staticref "/tradin/meeting8/index.html" "newtab" %}}Pertemuan 8: Political economy of trade policy{{% /staticref %}}
-- {{% staticref "/tradin/meeting9/index.html" "newtab" %}}Pertemuan 9: trade policies, development, and recent issues{{% /staticref %}}
+- {{% staticref "/tradin/meeting9/index.html" "newtab" %}}Pertemuan 9: Trade policies, development, and recent issues{{% /staticref %}}
 - {{% staticref "/tradin/meeting10/index.html" "newtab" %}}Pertemuan 10: The new industrial policy {{% /staticref %}}
 - {{% staticref "/tradin/meeting11/index.html" "newtab" %}}Pertemuan 11: Balance of Payment and National Income 1{{% /staticref %}}
 - {{% staticref "/tradin/meeting12/index.html" "newtab" %}}Pertemuan 12: Balance of Payment and National Income 2{{% /staticref %}}
