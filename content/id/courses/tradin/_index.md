@@ -8,53 +8,27 @@ commentable: false
 draft: false
 ---
 
+For the complete syllabus, [click here](https://1drv.ms/b/s!AjelszXKKcmsioVKZRsXoQFn29ibWA?e=gR7WFW)
+
 ## Description
 
 The course of Trade and Industrial Economic Development Analysis aims to understand how trade and industrial activities contribute to overall economic growth and development. This course also discusses the dynamics of trade and industrial development, as well as the challenges and opportunities they present for firms, policymakers, and overall economies. Students are expected to understand theories and be able to analyse various aspects, such as trade and industrial patterns, composition and implementation, and their relation to employment and labor, innovation and technology, investment and capital flow, productivity and efficiency, supply chains, policy impacts, global market integration, as well as sustainability and environment impacts.
 
 ## Learning outcomes
 
--   Memahami kenapa perdagangan internasional dan industri perlu dipelajari.
+-   Understand the principle behind the gains from trade and industrial development.
 
--   Mampu menjelaskan teori perdagangan internasional dengan bahasa yang mudah dipahami.
+-   Able to explain various tools for the government to achieve trade and industrial policy goals.
 
--   Memahami bentuk-bentuk kebijakan terkait perdagangan internasional dan industrial,, dan konsekuensinya terhadap kesejahteraan.
+-   Understand tools for trade and industry analytics.
 
 ## Reading list
 
-### Main textbook \[DS\]:
+The course of Trade and Industrial Economic Development Analysis aims to understand how trade and industrial activities contribute to overall economic growth and development. This course also discusses the dynamics of trade and industrial development, as well as the challenges and opportunities they present for firms, policymakers, and overall economies. Students are expected to understand theories and be able to analyse various aspects, such as trade and industrial patterns, composition and implementation, and their relation to employment and labor, innovation and technology, investment and capital flow, productivity and efficiency, supply chains, policy impacts, global market integration, as well as sustainability and environment impacts.
 
-- Krugman, PR., Obstfeld, M., & Melitz, MJ. (2022). International Economics, 12th ed. Pearson Education, ltd.
+The structure of the course is straightforward: the first 7 meetings will cover more theoretical part of the course. That is, the gains from trade, market failure in industrial development, and the development of the new industrial policies. A wee bit of microfinance will be covered too.
 
--   Salvatore, D. (2004). International Economics, 8th ed. (8 ed.). John Wiley & Sons, Inc.
-
-### Papers on industrial policies [P1]:
-
--   Aiginger, K., & Rodrik, D. (2020). Rebirth of Industrial Policy and an Agenda for the Twenty-First Century. Journal of Industry, Competition and Trade, 20(2), 189-207. https://doi.org/10.1007/s10842-019-00322-3
-
--   Chang, H.-J., & Andreoni, A. (2020). Industrial Policy in the 21st Century. Development and Change, 51(2), 324-351. https://doi.org/https://doi.org/10.1111/dech.12570
-
--   Cherif, R., & Hasanov, F. (2019). The Return of the Policy That Shall Not Be Named: Principles of Industrial Policy. IMF Working Paper, 19(74).
-
--   Criscuolo, C., Martin, R., Overman, H. G., & Van Reenen, J. (2019). Some Causal Effects of an Industrial Policy. American Economic Review, 109(1), 48-85. https://doi.org/10.1257/aer.20160034
-
--   Wim, N. (2010). Industrial Policy. In (Vol. 2010). Helsinki, Finland: UNU-WIDER.
-
-### Papers on Indonesian trade policy context [P2]:
-
--   Basri, M. C., & Patunru, A. A. (2012). How to keep trade policy open: the case of Indonesia. Bulletin of Indonesian Economic Studies, 48(2), 191-208. https://doi.org/10.1080/00074918.2012.694154
-
--   Gupta, K., Pane, D., & Pasaribu, D. (2022). The Advent of A New Trade Governance After The Omnibus Law: Neraca Komoditas (CIPS Policy Paper, Issue. https://www.cips-indonesia.org/neraca-komoditas-policy-paper
-
-- Gupta, K., Gretton, P., & Patunru, A. (2022). Projecting the long run impact of an economic reform: the case of the Indonesian Omnibus Law and concurrent changes in trade policy (Presented during the 25th Annual Conference on Global Economic Analysis (Virtual Conference)). Purdue University, West Lafayette, IN: Global Trade Analysis Project (GTAP). Retrieved from https://www.gtap.agecon.purdue.edu/resources/res_display.asp?RecordID=6583 
-
--   Grabowski, R., & Self, S. (2020). Industrialization and deindustrialization in Indonesia. Asia & the Pacific Policy Studies, 7(1), 95-111.
-
--   Pane, D. D., & Patunru, A. A. (2022). The role of imported inputs in firms' productivity and exports: evidence from Indonesia. Review of World Economics. https://doi.org/10.1007/s10290-022-00476-z
-
--   Pane, D. D., & Patunru, A. A. (2021). Does Export Experience Improve Firms' Productivity? Evidence from Indonesia. The Journal of Development Studies, 57(12), 2156-2176. https://doi.org/10.1080/00220388.2021.1965126
-
--   Pangestu, M., Rahardja, S., & Ing, L. Y. (2015). Fifty Years of Trade Policy in Indonesia: New World Trade, Old Treatments. Bulletin of Indonesian Economic Studies, 51(2), 239-261. https://doi.org/10.1080/00074918.2015.1061915
+The remaining 7 meetings covers the more practical side of the course. A more practical tool for industrial and trade analyses currently used in the industry will be covered, along with various trade and industry policies currently in place. Lastly, we cover empirical evidence and strategies on issues covered in the theoretical part.
 
 ## Prior
 
@@ -64,32 +38,21 @@ We expect students are comfortable with entry level math like simple linear alge
 
 It will be extremely helpful if you’re already taken international economics. We will cover a bit comparative advantage and new growth theory at the beginning but will not revisit too many international finance.
 
+## Reading list
 
-## Evaluations
-
-- Midterm exam, covering meeting 1 - 7 (35%)
-
-- Final exam, covering meeting 8 - 14 (35%)
-
-- Paper assignment, to be disclosed later. (30%)
-
-## Weekly content
-
-| meeting | Topik | Bahan |
-| ------- | ----- | ----- |
-| 1 | Introduction | DS bab 1 |
-| 2 | Ricardian model | DS bab 2,3 |
-| 3 | Standard theory | DS bab 3,4 |
-| 4 | Hecksher-Ohlin model | DS bab 4,5 |
-| 5 | Skala ekonomis dan pasar tidak sempurna | DS bab 6 |
-| 6 | Perdagangan dan pertumbuhan ekonomi | DS bab 7 |
-| 7 | Kebijakan perdagangan: tarif | DS bab 8 |
-| - | UTS | - | 
-| 8 | Kebijakan perdagangan: non-tarif | DS bab 9 |
-| 9 | Free Trade Agreements | DS bab 10 |
-| 10 | Firms & Global Value Chain | DS bab 12 |
-| 11 | Trade & development economies | DS bab 11 |
-| 12 | Kebijakan industrial | P1 |
-| 13 | Pendapatan nasional dan neraca pembayaran | DS bab 13 |
-| 14 | Konteks Indonesia dalam perdagangan internasional | P2 |
-| - | UAS | - |
+•	[AR] Aiginger, K., & Rodrik, D. (2020). Rebirth of Industrial Policy and an Agenda for the Twenty-First Century. Journal of Industry, Competition and Trade, 20(2), 189-207. https://doi.org/10.1007/s10842-019-00322-3
+•	[AC] Antràs, P., & Chor, D. (2022). Global value chains. Handbook of international economics, 5, 297-376.
+•	[CA] Chang, H.-J., & Andreoni, A. (2020). Industrial Policy in the 21st Century. Development and Change, 51(2), 324-351. https://doi.org/https://doi.org/10.1111/dech.12570
+•	[CH] Cherif, R., & Hasanov, F. (2019). The Return of the Policy That Shall Not Be Named: principles of Industrial Policy. IMF Working Paper, 19(74).
+•	[CGP] Costa, F., Garred, J., & Pessoa, J. P. (2016). Winners and losers from a commodities-for-manufactures trade boom. Journal of International Economics, 102, 50-69.
+•	[EL] Erten, B., & Leight, J. (2021). Exporting out of agriculture: The impact of WTO accession on structural transformation in China. Review of Economics and Statistics, 103(2), 364-380.
+•	[GPP] Gupta, K., Pane, D., & Pasaribu, D. (2022). The Advent of A New Trade Governance After The Omnibus Law: Neraca Komoditas (CIPS Policy Paper, Issue. https://www.cips-indonesia.org/neraca-komoditas-policy-paper
+•	[KSY] Kinzius, L., Sandkamp, A., & Yalcin, E. (2019). Trade protection and the role of non-tariff barriers. Review of World Economics, 155, 603-643.
+•	[JLR] Juhasz, Reka, Nathan Lane, and Dani Rodrik. 2023. "The New Economics of Industrial Policy." Unpublished. https://drodrik.scholar.harvard.edu/sites/scholar.harvard.edu/files/dani-rodrik/files/the_new_economics_of_ip_080123.pdf.
+•	[KMM] Krugman, Paul R., Maurice Obstfeld, and Marc J. Melitz. 2023. International Economics: Theory & Policy. Essex: Pearson.
+•	[L] Lane, Nathan. 2022. "Manufacturing revolutions: industrial policy and industralization in South Korea." Unpublished. https://osf.io/preprints/socarxiv/6tqax/.
+•	[MB] McCaig, B. (2011). Exporting out of poverty: Provincial poverty in Vietnam and US market access. Journal of International Economics, 85(1), 102-113.	
+•	[PP1] Pane, D. D., & Patunru, A. A. (2022). The role of imported inputs in firms’ productivity and exports: evidence from Indonesia. Review of World Economics. https://doi.org/10.1007/s10290-022-00476-z
+•	[PP2] Pane, D. D., & Patunru, A. A. (2021). Does Export Experience Improve Firms’ Productivity? Evidence from Indonesia. The Journal of Development Studies, 57(12), 2156-2176. https://doi.org/10.1080/00220388.2021.1965126
+•	[PD] Pasaribu, Donny. (2020). Testing the Dutch disease: the impact of natural resources extraction on the manufacturing sector. 10.13140/RG.2.2.34089.01128.
+•	[PCH] Plummer, M. G., Cheong, D., & Hamanaka, S. (2010). Methodology for impact assessment of free trade agreements. In. Manila, Philippines: Asian Development Bank.
