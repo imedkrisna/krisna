@@ -32,6 +32,16 @@ format:
 
 ## About ECES905205
 
+- Trade has been conducted since before states even a thing.
+
+- similarly, trade & industrial policy has been used since the state itself created.
+
+- We will learn why & how these policies work.
+
+- This course however offer a bit more practical things.
+
+## About ECES905205
+
 - 2 parts: theoretical & practical.
 
 - The theoretical use some papers & Krugman, Obstfeld & Melits (2023):
@@ -102,10 +112,10 @@ format:
 
 ## Knowing my class
 
--   Perkenalkan diri dengan menyebutkan:
-    -   nama panggilan
-    -   pekerjaan saat ini / cita-cita setelah lulus
-    -   topik tugas akhir
+- Let's talk about your:
+    - name
+    - work / future work
+    - what is your expectation from this course
 
 # Introduction to trade & industry
 
