@@ -35,7 +35,7 @@ format:
 
 -   2 goods: Apple (A) and Banana (B).
 
--   Technology is represented by *unit labor requirement* $a_i,/ i \in {A,B}$
+-   Technology is represented by *unit labor requirement* $a_i,\ i \in {A,B}$
 
     -   How many man-hour required to produce a good.
     -   Lower number is better.
