@@ -1,8 +1,8 @@
 ---
 title: "Ricardian Model"
-subtitle: "ECES905205 pertemuan 2"
+subtitle: "ECES905205 meeting 2"
 date: "5 September 2022"
-author: "I Made Krisna Gupta"
+author: "Krisna Gupta"
 format: 
   revealjs:
     theme: [simple,../mytheme.scss]
@@ -39,7 +39,7 @@ format:
 
     -   How many man-hour required to produce a good.
     -   Lower number is better.
-    -   $a_{A}$ for apel, $a_{B}$ for beras.
+    -   $a_{A}$ for apel, $a_{B}$ for banana.
 
 ## Ekonomi dengan 1 faktor produksi
 
