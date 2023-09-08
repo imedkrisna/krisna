@@ -7,10 +7,14 @@ weight: 20
 
 {{% callout note %}} This page is still under development. Expect weekly changes. {{% /callout %}}
 
+Drives:
+
+- [Materials & syllabus](https://1drv.ms/f/s!AjelszXKKcmsiokzhAA6ULP_rP-cRg?e=LXdObn)
+
 slides:
 
 - {{% staticref "/tradin/meeting1/index.html" "newtab" %}}meeting 1: Introduction{{% /staticref %}}
-- {{% staticref "/tradin/meeting2/index.html" "newtab" %}}meeting 2: {{% /staticref %}}
+- {{% staticref "/tradin/meeting2/index.html" "newtab" %}}meeting 2: Ricardian model and comparative advantage {{% /staticref %}}
 - {{% staticref "/tradin/meeting3/index.html" "newtab" %}}meeting 3: {{% /staticref %}}
 - {{% staticref "/tradin/meeting4/index.html" "newtab" %}}meeting 4: {{% /staticref %}}
 - {{% staticref "/tradin/meeting5/index.html" "newtab" %}}meeting 5: {{% /staticref %}}

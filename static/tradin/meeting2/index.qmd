@@ -1,8 +1,8 @@
 ---
 title: "Ricardian Model"
-subtitle: "ECES905205 pertemuan 2"
+subtitle: "ECES905205 meeting 2"
 date: "5 September 2022"
-author: "I Made Krisna Gupta"
+author: "Krisna Gupta"
 format: 
   revealjs:
     theme: [simple,../mytheme.scss]
@@ -12,66 +12,60 @@ format:
     background-transition: fade
     slide-number: true
   beamer: default
-
-editor: visual
 ---
 
 ## Today
 
 -   Comparative advantage
--   Ricardian model sebagai pondasi *trade theory*
+-   Ricardian model as the foundation of *trade theory*
 
-## Konsep Comparative Advantage {.m}
+## Comparative advantage concept {.m}
 
--   Indonesia adalah negara agraris. Kenapa impor kedelai?
+- If Indonesia is an agrarian country, why import soybeans?
 
-    -   "... (profit menanam kedelai) jauh di bawah keuntungan yang didapat dari menanam padi dan jagung." ([kompas](https://money.kompas.com/read/2021/01/14/050900426/menurut-kementan-ini-penyebab-petani-enggan-menanam-kedelai-?page=all))
+    -   "... (profit from planting soybean) far below planting corn and rice padi dan jagung." ([kompas](https://money.kompas.com/read/2021/01/14/050900426/menurut-kementan-ini-penyebab-petani-enggan-menanam-kedelai-?page=all))
 
--   Sementara itu, "Indonesian consumers have developed a preference for U.S. soybeans due in part to their uniform size, color and suitability for tempeh and tofu manufacturing." ([ussoy.org](https://ussoy.org/growth-in-tempeh-market-offers-global-opportunities/))
+-   Meanwhile, "Indonesian consumers have developed a preference for U.S. soybeans due in part to their uniform size, color and suitability for tempeh and tofu manufacturing." ([ussoy.org](https://ussoy.org/growth-in-tempeh-market-offers-global-opportunities/))
 
--   tempe menjadi produk ekspor andalan di [Jepang](https://en.tempo.co/read/1512185/13-tons-tempeh-chips-exported-to-japan) dan [Amerika Serikat](https://ussoy.org/growth-in-tempeh-market-offers-global-opportunities/)
+-   tempe exports to [Jepang](https://en.tempo.co/read/1512185/13-tons-tempeh-chips-exported-to-japan) and [Amerika Serikat](https://ussoy.org/growth-in-tempeh-market-offers-global-opportunities/)
 
--   what does it tell you about the structure of the Indonesian economy?
+## Ricardian model
 
--   what does it tell you about *comparative advantage*?
+-   1 factor: labour.
 
-## Ekonomi dengan 1 faktor produksi
+-   2 goods: Apple (A) and Banana (B).
 
--   1 faktor produksi: buruh.
+-   Technology is represented by *unit labor requirement* $a_i,\ i \in {A,B}$
 
--   2 barang: Apel dan Beras.
-
--   Teknologi direpresentasikan dengan *unit labor requirement*
-
-    -   berapa jumlah jam kerja yang diperlukan untuk menghasilkan 1 unit barang.
-    -   cara ini kebalikan dari tipikal produktivitas: angka besar berarti inefisien.
-    -   $a_{A}$ untuk apel, $a_{B}$ untuk beras.
+    -   How many man-hour required to produce a good.
+    -   Lower number is better.
+    -   $a_{A}$ for apel, $a_{B}$ for banana.
 
 ## Ekonomi dengan 1 faktor produksi
 
 -   Total *labour supply* $= L$
 
--   $a_{A}Q_A =$ total jam kerja yang diperlukan untuk menghasilkan apel sebanyak $Q_A$
+-   $a_{A}Q_A =$ total man-hour required to produce $Q_A$ amount of apples.
 
--   $a_{B}Q_B =$ total jam kerja yang diperlukan untuk menghasilkan beras sebanyak $Q_B$
+-   $a_{B}Q_B =$ total man-hour required to produce $Q_B$ amount of bananas.
 
--   Production constraint:
+-   Budget constraint:
 
 $$
 a_{A}Q_A + a_{B}Q_B \leq L
 $$
 
-## PPF
+## Production Possibility Frontier
 
 ::: {.s layout-ncol="2"}
--   Bayangkan sebuah negara (sebut saja H):
-    -   Butuh 1 OJ untuk membuat apel, 2 OJ untuk membuat beras.
-    -   Total OJ di negara H adalah 1.000 OJ $(L=1000)$
-    -   Jika semua OJ digunakan untuk apel, maka $A,B=\{1000,0\}$
-    -   Jika semua OJ digunakan untuk beras, maka $A,B=\{0,500\}$
--   Linear PPF $\Rightarrow$ opportunity cost konstan.
-    -   Memutuskan bikin beras 1kg = memutuskan gak bikin apel 2kg.
-    -   Memutuskan bikin apel 1kg = memutuskan gak bikin beras $\frac{1}{2}$kg.
+-   Let there be a country H where:
+    -   $a_A=$ 1 and $a_B=$ 2.
+    -   Country H has 1000 man-hour in total, i.e., $(L=1000)$
+    -   If all L is dedicated to make A, then $Q_A,Q_B=\{1000,0\}$
+    -   If it's the opposite, then $Q_A,Q_B=\{0,500\}$
+-   We have a case of linear PPF $\Rightarrow$ constant opportunity cost.
+    -   Producing 1 A = not producing $\frac{1}{2}$ B
+    -   Producing 1 B = not producing 2 As.
 
 ```{r}
 #| fig-width: 5
@@ -130,11 +124,13 @@ graph+
 :::
 :::
 
-## PPF and Trade
+## Introducing trade
 
--   To understand this term better, we will use some simplified hypothetical examples.
+-   Suppose there are two economies, IDN and USA, and two goods, textiles (T) and soybean (S). Still 1 factor of production maxed 200.
 
--   Suppose there are two economies, IDN and USA, and two goods, textiles (T) and soybean (S).
+- Tech is the same but since now we have countries, we have $a^i_j=$ the number of man-hour required to make 1 good $i$ in country $j$.
+
+- say we have $a^S_{IDN}=1$, $a^T_{IDN}=4$. $a^S_{USA}=a^T_{USA}=2$
 
 ```{=tex}
 \begin{equation} \label{eq1}
@@ -145,6 +141,7 @@ USA: \ 2T+2S & = 200
 \end{equation}
 ```
 ::: s
+
 ## 2 countries in autarky
 
 ```{=tex}
@@ -158,21 +155,33 @@ USA: \ 2T+2S & = 200
 | Produce           | US opportunity cost | IDN opportunity cost |
 |-------------------|---------------------|----------------------|
 | 1 ton of textiles | 1 ton of soybean    | 250 kg of soybean    |
-| 1 ton of soybean  | 1 ton of textiles   | 4 ton of soybean     |
+| 1 ton of soybean  | 1 ton of textiles   | 4 ton of textiles     |
 
 -   IDN is comparatively better at making textiles, while US is better at producing soybean:
-    -   To make 1 ton of textiles, US needs to gave up resources which can be used to make 1 ton soybean, while Indonesians need only to give up 250 kg soybean.
-    -   To make 1 ton of soybean, US needs to gave up resources which can be used to make 1 ton textiles, while Indonesians need only to give up 4 ton of textiles.
+    -   To make 1 ton of textiles, US needs to gave up resources which can be used to make 1 ton soybean, while IDN need only to give up 250 kg soybean.
+    -   To make 1 ton of soybean, US needs to gave up resources which can be used to make 1 ton textiles, while IDN need only to give up 4 ton of textiles.
 -   Note:
 
 $$
-\frac{a_{it}}{a_{is}}=\frac{1}{4} \geq \frac{1}{1}=\frac{a_{ut}}{a_{us}}
+\frac{a^T_{IDN}}{a^T_{US}}=\frac{1}{2} \leq \frac{4}{2}=\frac{a^S_{IDN}}{a^S_{US}}
 $$
 :::
 
-------------------------------------------------------------------------
+## Some notes
 
-Suppose the two countries do not trade. Indonesia's production is {T,S}={100,25}, While in the US, it's {50,50}.
+- before we go, to get a complete set of best production, we needs either preferences or prices of both countries.
+
+- To simplify things, we chose arbitrary number of initial allocations, and see if trade would improve those initials.
+
+  - i.e., the marginal thinking. Economists' favorite.
+
+  - we can argue that these numbers of initial allocations were derived from a set of preferences.
+  
+  - ergo, this simplification is still robust.
+
+---
+
+Suppose the two countries do not trade. IDN produces {T,S}={100,25}, While in US, it's {50,50}.
 
 ```{r grafik1,echo=FALSE, message=FALSE, warning=FALSE}
 #| fig-width: 7
@@ -352,7 +361,17 @@ graph+
 
 ```
 
-------------------------------------------------------------------------
+## Gains from trade
+
+- In the autarky, we consume what we produce.
+
+- In trade, it is possible to produce more AND less than we consume
+
+- That is, the reason why IDN produce textiles much more than it can wear is because it also serves the US.
+
+- Then how it feed itself? By buying from the US.
+
+- In this model, the only reason to export is to import!
 
 ## Comparative advantage
 
@@ -380,17 +399,13 @@ graph+
 
 ## Comparative VS Absolute advantage {.m}
 
--   It's possible that a country is good at producing many things.
-    -   This is called absolute advantage.
--   There's no reason why US can't be better at making clothes than Indonesia.
-    -   Hence, it's possible that in fact, US still better at making clothes
--   But what matters is *relative* opportunity cost:
-    -   as long as its better for US capital and labour to produce soybean, they will still buy clothes from Indonesia.
-    -   It may take lots of labor to produce textiles in Indonesia, but it'll take even more to produce soybean.
--   Makin specialised, makin besar opportunity cost.
-    -   S2 UI vs SMEA.
+- A country is said to have a comparative advantage of good i over another country if said country have lower opportunity cost of making good i compared to the other country.
 
-------------------------------------------------------------------------
+- This is different than absolute advantage: a country is said to have an absolute advantage of good i if that country is more efficient at making good i than other countries.
+
+- In our example, IDN has absolute advantage on T, while US on S.
+
+- What if US has absolute advantage on both? Would trade still better for US?
 
 ## Absolute advantage
 
@@ -410,21 +425,21 @@ USA: \ 2T+2S & = 200
 
 -   Total: $Q_{autarky}=\{90,75\}, Q_{trade}=\{90,90\}$
 
+- Since trade produces more global goods, both can improve their consumption bundles.
+
 ------------------------------------------------------------------------
 
 ## A note on absolute advantage
 
--   Mungkin anda menyadari bahwa absolute advantage hanyalah versi alternatif dari Walras Law.
+-   You may notice that absolute advantage is just a version of Walras' Law.
 
--   Dengan kata lain, meski ada keunggulan absolut, *contract curve* & *better allocation* tetap ada (hence pareto improvement).
+-   that is, even if one party has more on both goods, *contract curve* & *better allocation* still exist (hence pareto improvement).
 
-    -   Meski demikian, negara yang punya keunggulan absolut tetap memiliki posisi tawar yang lebih baik.
+    - Absolute advantage is basically the same as a country having more allocation on both goods.
 
 -   *trade is pareto improving* in the sense that we compare country A before trade with country A after trade.
 
     -   we do not compare country A with country B.
-
-------------------------------------------------------------------------
 
 ## Taking from the poor?
 
@@ -441,94 +456,23 @@ USA: \ 2T+2S & = 200
 
 ------------------------------------------------------------------------
 
-## What determines comparative advantage? {.m}
+## What determines a? {.m}
 
-1.  **Differences in climate** is the reason why we're so good at producing CPO and rubber, but sucks at producing soybean and wheat.
+1.  **Differences in climate** is the reason why Indonesians are so good at producing CPO and rubber, but sucks at producing soybean and wheat.
 
 2.  **Differences in Factor Endowment**. Some countries are endowed with natural resource, some with cheap labour. Countries which has no both has to find something else, such as:
 
-3.  **Differences in technology**. Japan, South Korea and Taiwan are one good example. While technology can be transferred, opportunity cost of investing in high-tech things is more production of CPOs.
-
-------------------------------------------------------------------------
+3.  **Differences in technology**. Japan, South Korea and Taiwan are good examples. While technology can be transferred, opportunity cost of investing in high-tech products are more production of CPOs.
 
 ## Trade is Good {.m}
 
--   Barusan kita mempelajari bahwa ada gains dari trade bahkan ketika trading partner punya absolute advantage atas semua produksi.
+- So, absolute advantage does not prevent trade.
 
--   Jika tidak ada pun, *autarky* akan terjadi tanpa dipasang penghalang / *barier*
+- Even if it does prevent trade, autarky will happen anyway.
 
-    -   ini gak papa jika *autarky* terjadi tanpa pemaksaan.
-
--   Untuk analisis yang menyeluruh, kita perlu memperhitungkan *preference*
-
-    -   *preference* dapat direfleksikan dengan harga.
-    -   namun intuisinya tidak berbeda jauh.
-    -   kita bahas di pertemuan-pertemuan berikutnya.
-
-## Multi-goods comparative advantage
-
--   Misalnya ada N goods.
-
--   unit labor cost di home jadi $a_i$ di mana $i \in (1,N), N>2$
-
-    -   correspondingly, $a_i^*$ adalah untuk foreign
-
--   untuk setiap good $i$, kita buat $\frac{a_i}{a_i^*}$
-
--   lalu urutkan sehingga $\frac{a_1}{a_1^*} < \frac{a_2}{a_2^*} < ... < \frac{a_N}{a_N^*}$
-
-    -   alias diurutkan berdasarkan comparative advantage.
-
-## Multi-goods comparative advantage
-
--   Let $w$ be home wage per OJ, while $w^*$ be foreign wage.
-    -   artinya, biaya membuat 1 apel di home $= wa_{apel}$
-    -   biaya membuat 1 apel di foreign $= w^*a_{apel}^*$
--   Goods are produced in the cheapest place.
-    -   Apel dibikin di home jika: $wa_{apel}<w^*a_{apel}^*$
-    -   atau jika: $\frac{a_{apel}^*}{a_{apel}}>\frac{w}{w^*}$
-
-## Multi-goods comparative advantage {.m}
-
--   Let 2 economies with this characteristics:
-
-| Good $(i)$ | $a_i$ | $a_i^*$ | $\frac{a_i^*}{a_i}$ |
-|------------|:-----:|:-------:|:-------------------:|
-| Apel       |   1   |   10    |         10          |
-| Beras      |   5   |   40    |          8          |
-| CPO        |   3   |   12    |          4          |
-| Durian     |   6   |   12    |          2          |
-| Emas       |  12   |    9    |        0.75         |
-
--   Note that table above is sorted decendingly by $\frac{a^*_i}{a_i}$
-
--   or: $\frac{a_1}{a_1^*} < \frac{a_2}{a_2^*} < ... < \frac{a_5}{a_5^*}$
-
-## Multi-goods comparative advantage {.m}
-
-| Good $(i)$ | $a_i$ | $a_i^*$ | $\frac{a_i^*}{a_i}$ |
-|------------|:-----:|:-------:|:-------------------:|
-| Apel       |   1   |   10    |         10          |
-| Beras      |   5   |   40    |          8          |
-| CPO        |   3   |   12    |          4          |
-| Durian     |   6   |   12    |          2          |
-| Emas       |  12   |    9    |        0.75         |
-
--   Ingat: dibikin di home jika: $\frac{a_{i}^*}{a_{i}}>\frac{w}{w^*}$
-
--   say $\frac{w}{w^*}=\frac{12}{4}=3$
-
--   Maka apel, beras dan CPO akan dibuat domestik.
-
--   Durian dan Emas diimpor.
-
-## How useful?
-
--   Relative productivity dan relative wage merupakan poin analisis yang sangat intuitif.
-    -   gets complicated very soon as we add countries and factors.
-    -   tastes, economic structures, etc
-    -   but the intuition is very similar.
--   Namun jika analisis ini benar, berarti negara-negara akan auto-spesialisasi? Apakah ini yang kita observe di dunia nyata?
+    - autarky isn't bad per se. It's forced autarky that's the problem.
+    
+- Is this true though? If trade and specialisation is so good, why we don't always observe this?
 
 ## What prevents specialisation?
 
