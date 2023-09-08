@@ -27,10 +27,10 @@ Data untuk latihan:
 slides:
 
 - {{% staticref "/metopel/meeting1/index.html" "newtab" %}}Pertemuan 1: Pendahuluan{{% /staticref %}}
-- {{% staticref "/metopel/meeting2/index.html" "newtab" %}}Pertemuan 5: R & RStudio{{% /staticref %}}
-- {{% staticref "/metopel/meeting3/index.html" "newtab" %}}Pertemuan 2: OLS{{% /staticref %}}
-- {{% staticref "/metopel/meeting4/index.html" "newtab" %}}Pertemuan 3: Multivariate & dummy regression{{% /staticref %}}
-- {{% staticref "/metopel/meeting5/index.html" "newtab" %}}Pertemuan 4: Gravitty & time series{{% /staticref %}}
+- {{% staticref "/metopel/meeting2/index.html" "newtab" %}}Pertemuan 2: R & RStudio{{% /staticref %}}
+- {{% staticref "/metopel/meeting3/index.html" "newtab" %}}Pertemuan 3: OLS{{% /staticref %}}
+- {{% staticref "/metopel/meeting4/index.html" "newtab" %}}Pertemuan 4: Multivariate & dummy regression{{% /staticref %}}
+- {{% staticref "/metopel/meeting5/index.html" "newtab" %}}Pertemuan 5: Gravitty & time series{{% /staticref %}}
 - {{% staticref "/metopel/meeting6/index.html" "newtab" %}}Pertemuan 6: Time series regression{{% /staticref %}}
 - {{% staticref "/metopel/meeting7/index.html" "newtab" %}}Pertemuan 7: ARDL dan Panel{{% /staticref %}}
 - {{% staticref "/metopel/meeting8/index.html" "newtab" %}}Pertemuan 8: Logical writing, thinking, and problem solving{{% /staticref %}}
