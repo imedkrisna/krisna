@@ -32,11 +32,16 @@ format:
   - What does it mean for business
 - books can be useful but are not required.
 
----
+## Your convenors
+
+- The course conveners are I Made Krisna (Imed) & Mas Rangga Cili.
+
+- Contact us anytime but we may have delayed responses. Alternatively just show up to our offices.
 
 ## Some expectations from student
 
 - No prior knowledge is required.
+    - We do expect you to understand Cartesian Plane.
 - Please be active and ask questions.
 - Do your assignments & be active.
 - No cheating! Especially during exams.
@@ -45,7 +50,6 @@ format:
 
 - The lectures will be about 1.5 - 2 hours length.
 - I expect all students to pay attention.
-  - I would greatly appreciate you turning on your cams.
 - Feel free to interrupt my class with questions.
 - email me at imade.krisna@poltekapp.ac.id  
 
@@ -125,6 +129,7 @@ format:
 
 - Slides should be enough to get a good grade.
 - However, to get an A, you should master the principle.
+    - The more logic you use, the less memory you're going to need.
 
 ## Assignment
 
@@ -145,13 +150,6 @@ format:
 | 5 | Financial system  | Describe what is money, what is digital money, and difference between conventional system vs sharia  | 11 |
 | 6 | International trade  | Analyze beef import quota, the good, the bad  | 13 |
 | 7 | International finance  |  1998 financial crisis: how it started & ended | 14 |
-
-
-## Lastly
-
-- The course conveners are I Made Krisna (Imed) & Mas Rangga Cili.
-
-- Contact us anytime but we may have delayed responses. Alternatively just show up to our offices.
 
 # About economics
 
