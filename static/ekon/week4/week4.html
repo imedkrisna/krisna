@@ -4,7 +4,7 @@
     <title>Elasticity and tax</title>
     <meta charset="utf-8" />
     <meta name="author" content="Krisna Gupta" />
-    <script src="libs/header-attrs-2.6/header-attrs.js"></script>
+    <script src="libs/header-attrs-2.21/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link rel="stylesheet" href="dark.css" type="text/css" />
     <link rel="stylesheet" href="dark-fonts.css" type="text/css" />
@@ -13,10 +13,18 @@
     <textarea id="source">
 class: center, middle, inverse, title-slide
 
+.title[
 # Elasticity and tax
+]
+.subtitle[
 ## Week 4
+]
+.author[
 ### Krisna Gupta
-### 1 March 2021 (updated: 2021-03-01)
+]
+.date[
+### 1 March 2021 (updated: 2023-09-10)
+]
 
 ---
 
@@ -196,10 +204,6 @@ class: middle, center
 
 ---
 
-&lt;iframe src="https://embed.polleverywhere.com/multiple_choice_polls/TZKSFQSoTy9c3aEnRAq2N?controls=none&amp;short_poll=true" width="800px" height="600px"&gt;&lt;/iframe&gt;
-
----
-
 class: center, middle
 
 ## A market is elastic. So what?
@@ -346,10 +350,6 @@ $$
 
 - Increasing the price is not so clever if the market's demand is highly elastic.
 ]
-
----
-
-&lt;iframe src="https://embed.polleverywhere.com/multiple_choice_polls/qLnFtZvFnbb5LL6PGKaeB?controls=none&amp;short_poll=true" width="800px" height="600px"&gt;&lt;/iframe&gt;
 
 ---
 
@@ -705,6 +705,19 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     deleted = true;
   });
 })();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
 (function() {
   "use strict"
   // Replace <script> tags in slides area to make them executable
