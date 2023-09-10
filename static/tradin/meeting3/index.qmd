@@ -12,20 +12,17 @@ format:
     background-transition: fade
     slide-number: true
   beamer: default
-
-editor: visual
 ---
 
 ## The Repeal of the Corn Law {.m}
 
 ::: columns
 ::: {.column width="40%"}
--   An effort to reduce food price
-    -   tarif grains sampe 80%
+-   An effort to reduce food price (up to 80% tariff)
 -   Repealed under Robert Peel ruling in 1846.
 -   pivotal for UK manufacturing transformation.
 -   Birth of [the economist magazine](https://www.economist.com/finance-and-economics/2021/06/24/an-anniversary-for-free-traders)
--   Our model today explains this phenomenon.
+
 :::
 
 ::: {.column width="60%"}
@@ -33,25 +30,21 @@ editor: visual
 :::
 :::
 
-## Kemarin
+## Last week
 
--   Kita telah mempelajari tentang Ricardian model, model paling primitif di literatur perdagangan internasional.
+- We learned Ricardian model, the earliest of trade model.
 
--   *gains from trade*(in a purely economic sense) datang dari specialisasi dan keunggulan komparatif.
+-   *gains from trade*(in a purely economic sense) comes from specialization and comparative advantage.
 
--   Model ini memiliki asumsi yang sangat kuat, salah satunya adalah faktor produksi yang bebas berpindah antara satu industri ke industri lain.
+- This model has strong assumptions: free movement of factor between industry.
 
-    -   Today we're relaxing this assumption.
-
-## Hari ini
-
--   specific factor model
+    -   Today we're relaxing this assumption a bit.
 
 ## Specific factor model
 
 -   2 Sectors i: Cloth (C) and Food (F)
 
--   3 factor j: Labor (L), Terrain (T), and Capital (K).
+-   3 factors j: Labor (L), Terrain (T), and Capital (K).
 
     -   Labor can move between sectors
     -   T can only used to produce F, K only C.
@@ -63,28 +56,26 @@ Q_C=C(L_C,K)   \\
 L_F+L_C=L
 \end{align}
 ```
+
 ## PPF {.m}
 
--   Karena sekarang ada 2 faktor, kita perlu memikirkan kembali PPF-nya.
+-   Now that we have 2 factors each industry, we need to rethink our PPF.
 
--   Karena hanya ada 1 faktor yang bergerak, tiap sektor hanya bisa meningkatkan produksi dengan cara nambah $L$.
+-   Since L is the only moving factor, the only way to increase industrial production is to increase $L$.
 
-    -   $T$ tidak bisa ditambah karena mau dapat dari mana?
-    -   begitupun $K$
-
--   Bisa kita bilang bahwa ini analisis jangka pendek.
-
-    -   Di jangka panjang, $K$ bisa naik dari investasi.
-    -   Di jangka puannnnjjjaaaangggg, $T$ bisa naik dari reklamasi (ya investasi juga sih...)
-    -   Di jangka panjang, $L$ naik?
+- since total number of labour is fixed, the only way to increase $L$ in one industry is to decrease the other industry's $L$
 
 ## PPF
 
--   Tapi intinya, karena hanya 1 faktor yang bisa naik/turun, efisiensi produksi faktor tersebut mengalami **diminishing returns**
-    -   bayangin di kantor anda nambah pegawai tapi ga nambah komputer?
-    -   nambah petani tapi ga nambah lahan?
--   Artinya, produktivitas pekerja (*marginal product of labor* (MPL)) turun seiring $L_i$ bertambah.
-    -   konsekuensi di sektor satunya, MPL naik seiring $L_{-i}$ turun.
+- However, since other factors ain't moving, we have a **diminishing returns to labour**.
+
+    -   Imagine your office increase no. of employee but not computers.
+
+    -   Increase no. of farmers but not land.
+
+- Meaning, labour productivity (i.e., *marginal product of labour*, MPL) goes down as $L_i$ goes up.
+
+    -   Consequently, MPL goes up in the other sector.
 
 ## PPF dan MPL
 
@@ -137,23 +128,29 @@ q<-ggplot() +
 p+q
 ```
 
-Note: industri F juga identik, cuma dia pake T, not K.
+Note: F industry is identical.
 
 ## PPF
 
--   Tambahan 1 unit of $L_C$ akan meningkatkan $Q_C$ sebanyak $MPL_C$.
-    -   Semakin naik $L_C$, $MPL_C$ semakin turun.
-    -   Artinya, $Q_C$ tetep naik, tapi ga sebanyak pas $L_C$-nya sedikit.
--   Setiap kenaikan $L_C$ by 1 unit, $L_F$ turun by 1 unit.
-    -   artinya, kenaikan $Q_C$ bersamaan dengan penurunan $Q_F$.
+-   Another 1 unit of $L_C$ increases $Q_C$ by $MPL_C$ unit.
+
+    - as $L_C$ goes up, $MPL_C$ goes down.
+    
+    - $Q_C$ will keep increasing albeit in decreasing amount.
+    
+- As $L_C$ up by 1 unit, $L_F$ down by 1 unit.
+
+    - Consequently, an increase in $Q_C$ is accompanied by decrease in $Q_F$.
+    
+    - The rate, however, varies.
 
 $$L_C+L_F=L$$
 
 ## PPF
 
--   dengan kata lain, untuk menaikkan $Q_C$ by 1 unit, $Q_F$ harus turun by $\frac{MPL_F}{MPL_C}$
+-   To increase $Q_C$ by 1 unit, $Q_F$ must decrease by $\frac{MPL_F}{MPL_C}$
 
--   Dari sini, kita dapatkan hubungan antara $Q_C$ dan $Q_F$ yaitu:
+-   From here, we can express $Q_C$ as the function of $Q_F$:
 
 $$
 \text{Slope of PPF}=-\frac{MPL_F}{MPL_C}
@@ -190,19 +187,19 @@ ppf<-ggplot() +
 ppf
 ```
 
-## Berapa harus produksi?
+## Firm problem
 
 -   A profit maximizing firms will want to employ until:
 
 $$ MPL_C \times P_C = w $$
 
--   Jika udah di posisi tersebut lalu firms ambil 1 $L_C$ lagi, maka $MPL_C$ akan turun.
--   Jika $P_C$ ga berubah tapi $MPL_C$ turun, maka $MPL_C \times P_C < w$
-    -   alias ga nutup ongkos produksi.
+- At that place, an increase in $L_C$ decreases $MPL_C$
+-   If $P_C$ does not change, then $MPL_C \times P_C < w$
+    -   That is, cost will be higher than revenue since both prices and wage are fixed.
 
-## Berapa harus produksi?
+## Firm problem
 
--   Industri F punya *employment rule* yang sama. Akibatnya:
+- Since F also has the same *employment rule*, the labour market dynamics become:
 
 ```{=tex}
 \begin{align}
@@ -211,8 +208,8 @@ MPL_C \times P_C = MPL_F \times P_F = w \\
 -\frac{MPL_F}{MPL_C}=-\frac{P_C}{P_F}=w=\text{slope PPF}
 \end{align}
 ```
--   MPL merupakan ukuran teknologi/produktivitas.
--   harga ditentukan oleh preference.
+-   MPL reflects productivity / technology.
+-   Prices is also set by preferences.
     -   Preference (by extension, prices) is given.
 
 ## Production status quo
