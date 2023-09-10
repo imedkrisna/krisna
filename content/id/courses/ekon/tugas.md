@@ -7,7 +7,7 @@ weight: 50
 
 ## Tentang tugas
 
-Tugas yang dibebankan pada mata kuliah ini berbentuk pembuatan makalah dan presentasi makalah. Mahasiswa diminta membentuk 7 kelompok. 
+Tugas yang dibebankan pada mata kuliah ini berbentuk pembuatan makalah dan presentasi makalah. 
 
 ## Tujuan tugas
 
@@ -16,11 +16,18 @@ Tugas yang dibebankan pada mata kuliah ini berbentuk pembuatan makalah dan prese
 3. Melatih kerja kelompok.
 4. Melatih keterampilan presentasi.
 
-## 
+## Format
+
+1. Presentasi menggunakan file powerpoint (microsoft ppt, google slides, dll), format bebas.
+2. Tulisan 
+
+## Detil Tanggal penting
+
+1. Mahasiswa membentuk 7 kelompok, lalu melaporkan kelompoknya kepada 
 
 ## Topik
 
-| grup | topik | cakupan | pertemuan ke- |
+| grup | topik | cakupan | Meet |
 | --- | ------ | ------ | --- | ------ |
 | 1 | pajak dan elastisitas | permintaan dan cukai rokok | 4 |
 | 2 | oligopoli | persaingan pasar motor matic | 7 |
