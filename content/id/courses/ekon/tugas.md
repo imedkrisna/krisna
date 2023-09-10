@@ -1,5 +1,5 @@
 ---
-title: Slides
+title: Tugas
 date: '2021-01-01'
 type: book
 weight: 50
@@ -7,7 +7,7 @@ weight: 50
 
 ## Tentang tugas
 
-Tugas yang dibebankan pada mata kuliah ini berbentuk pembuatan makalah dan presentasi makalah.
+Tugas yang dibebankan pada mata kuliah ini berbentuk pembuatan makalah dan presentasi makalah. Mahasiswa diminta membentuk 7 kelompok. 
 
 ## Tujuan tugas
 
@@ -15,6 +15,8 @@ Tugas yang dibebankan pada mata kuliah ini berbentuk pembuatan makalah dan prese
 2. Melatih riset mandiri.
 3. Melatih kerja kelompok.
 4. Melatih keterampilan presentasi.
+
+## 
 
 ## Topik
 
