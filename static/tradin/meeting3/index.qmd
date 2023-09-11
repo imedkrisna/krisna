@@ -240,20 +240,26 @@ ppf+
 
 ## Production status quo
 
--   Dengan bentuk market yang sama-sama *diminishing return*, PPF akan berbentuk seperti gambar sebelumnya.
--   Produksi terjadi di titik 1, di mana kurva PPF bersinggungan dengan price ratio.
--   beda dari pure ricardian yg rasio produktivitasnya konstan (PPF-nya linear).
--   Grafik 4-kuadran dapat digunakan untuk mengilustrasikan fungsi ppf ini.
+- diminishing return leads to a non-linear ppf.
+
+- production ended-up at dot 1, where PPF tangents price ratio.
+
+- This is a bit different compared to ricardian with a linear PPF and a constant MPL.
+
+- 4-quadrant grafik is an excellent tool to visualize QF/QC relationship.
 
 ## Labor market
 
--   pasar tenaga kerja akan bergerak tergantung MPL dari kedua industri.
--   equilibrium tercipta berdasarkan $MPL_i \times P_i$, di mana employment akan berhenti di sebuah level $w$.
--   Dinamika ini akan berubah jika ada pergeseran di teknologi (MPL) ataupun rasio harga $\left(\frac{P_C}{P_F}\right)$.
+- The labour market movement depends on MPL of the two industries
+
+- An equilibrium exists where $MPL_i \times P_i$, where employment settles at some level $w$.
+- The labour market dynamics changes when MPL or price ratio changes
+
+$\left(\frac{P_C}{P_F}\right)$.
 
 ## Labor market
 
-Note bahwa total L adalah fix. Kiri adalah $L_C$, kanan adalah $L_F$
+Note that L is fixed, $L_C$ is the left one.
 
 ```{r}
 
@@ -298,10 +304,11 @@ labmar
 
 ## Increase in both price
 
--   Katakanlah negara ini trade, dan di pasar internasional, $P_C^*=1.1P_C$ dan $P_F*=1.1P_F$
--   Dengan MPL fix, maka yg kenaikan kurva $MPL_i \times P_i$ adalah selaras dengan kenaikan $P$-nya.
--   Karena harga kedua barang naik dengan proporsi yang sama, alokasi naker jadi tidak berubah
--   hanya terjadi kenaikan gaji 10%, sama dengan tingkat kenaikan kedua jenis barang.
+- Say an inflation leads to both prices increase by 10% $P_C^*=1.1P_C$ and $P_F*=1.1P_F$
+- With a fixed MPL, increase of both curves $MPL_i \times P_i$ is in-line with increase in $P$s.
+- Since both prices go up at the same pace, labour dynamics does not change.
+
+- Prices up by also 10%, negates the impact of the inflation. No welfare changes.
 
 ## Increase in both price
 
@@ -353,13 +360,12 @@ labmar2
 
 ## Change in relative price
 
--   Katakanlah negara ini terekspose international trade.
-    -   Di pasar internasional, $P_C^*=1.1P_C$ tapi $P_F^*=P_F$
--   Katakanlah $P_C$ naik 10%, tapi $P_F$ tetap.
--   Terjadi perubahan rasio harga di mana $\frac{P_C}{P_F} \uparrow$
--   Ada kenaikan $L_C$ dengan mengambil $L_F$
-    -   inget, $L$ secara total tetap.
--   gaji naik, tapi ga sebanyak kenaikan $P_C$.
+- Let this country trades, and in the global market, $P_C$ is 10% more expensive while $P_F$ is the same.
+
+-   Then price ratio changes, i.e., $\frac{P_C}{P_F} \uparrow$
+- Labour market will shift toward C, where $L_C \uparrow$ while $L_F \downarrow$
+    - Remember, total labour is fixed.
+- Wage goes up, but not as much as increase in $P_C$.
 
 ## Change in relative price
 
@@ -410,11 +416,13 @@ labmar3
 
 ## New production allocation
 
--   Karena terjadi perubahan rasio harga, maka alokasi produksi ikut berubah.
--   Ingat bahwa produksi akan terjadi di titik yang slopenya = price ratio.
--   Ketika harga relatif berubah, maka produksi akan pindah ke barang yang harganya naik tersebut.
--   Ingat bahwa total faktor produksi tidak berubah: T,K dan L tetap sama.
-    -   Jika tidak ada perubahan teknologi, maka produksi hanya dapat dilakukan di PPF.
+- CHanges in price ratio leads to changes in production allocation.
+
+- Remember that production will be done such that its slope equals to price ratio.
+
+- When price ratio changes, production allocation follows.
+
+    - It will be biased toward the higher good.
 
 ## New production allocation
 
@@ -444,25 +452,30 @@ ppf+
 
 ## Understanding income distribution {.m}
 
--   Jika ada perubahan relatif prices, maka akan terjadi perbedaan income distribution.
--   Perbedaan ini utamanya datang dari kenaikan yang tidak proporsional: $$
+- new allocation bear consequences: changes in income distribution.
+
+- This is a consequence of disproportional changes:
+$$
     \Delta P_C > \Delta w > \Delta P_F
-    $$
+$$
 
 $$
 \frac{w}{P_C} < \frac{w}{P_F}
 $$
 
--   Produsen C better off karena bikin barang yg lebih mahal dan konsumsi barang yg lbh murah.
-
 ## Income distribution
 
--   Apakah kesejahteraan pekerja naik? Tergantung preference:
-    -   Apakah C lebih penting dari F di utility function mereka?
-    -   Dari sisi gaji, keduanya mendapatkan gaji yang sama
--   Tapi pemilik *specific factor* sudah jelas:
-    -   Pemilik K lebih untung, dan pemilik T lebih rugi.
-    -   hal ini dapat ditunjukan dengan dinamika producer surplus.
+- Does labour better off? Depends on the preference:
+
+    - Both receives the same wage
+    
+    - Workers benefit if C is less important in their basket.
+
+- However, specific factor owner is decisive:
+  
+    -   Capital owners win, Land owners lose.
+    
+    -   We can show this from surplus dynamics.
 
 ## Cloth Sector
 
@@ -546,7 +559,7 @@ ggplot() +
 zzz<-seq(0,.81,0.01)
 ggplot() +
   stat_function(fun = mpl,size=1.1, color='black') +
-  labs(x=expression(L[C]), y=expression(MPL[C]),color=NULL,fill=NULL)+
+  labs(x=expression(L[F]), y=expression(MPL[F]),color=NULL,fill=NULL)+
   annotate("point",x=.81,y=3.3,size=4)+
   annotate("segment",x=0,y=3.3,xend=.81,yend=3.3,lty="dotted")+
   annotate("segment",x=.81,y=2,xend=.81,yend=3.3,lty="dotted")+
@@ -582,7 +595,7 @@ ggplot() +
 zzz<-seq(0,.6,0.01)
 ggplot() +
   stat_function(fun = mpl,size=1.1, color='black') +
-  labs(x=expression(L[C]), y=expression(MPL[C]),color=NULL,fill=NULL)+
+  labs(x=expression(L[F]), y=expression(MPL[F]),color=NULL,fill=NULL)+
   annotate("point",x=.81,y=3.3,size=4)+
   annotate("point",x=.6,y=mpl(.6),size=4)+
   annotate("text",x=.81,y=3.4,size=4,label="1")+
@@ -620,17 +633,19 @@ ggplot() +
 
 > Trade benefits the factor that is specific to the export sector of each country but hurts the factor specific to the import-competing sectors, with ambiguous effect on mobile factors.
 
--   tapi apakah kita bisa tau jika trade ini secara menyeluruh menguntungkan?
-    -   apakah kita tau jika untungnya lebih besar dari ruginya?
-    -   jika ya, maka secara teori kita bisa mengkompensasi *loser*.
+- Results from trade is ambiguous in this case. Can we show that trade ALWAYS better in general?
+
+    - if this is the case, then theoretically, we can compensate the loser.
 
 ## Gains from trade
 
-tanpa trade, maka konsumsi = produksi, atau
+Without trade, consumption = production
 
 $$
 D_C=Q_C \ and \ D_F=Q_F
-$$ dengan trade, konsumsi ga harus = produksi. yang penting:
+$$
+
+with trade, consumption does not need to equal production, as long as:
 
 $$
 P_C \times D_C + P_F \times D_F = P_C \times Q_C + P_F \times Q_F
@@ -638,21 +653,21 @@ $$
 
 ## Gains from trade
 
-Budget constraint tersebut dapat kita atur ulang sehingga:
+We can rearrange the budget constraint as such:
 
 $$
 D_F - Q_F = \left(\frac{P_C}{P_F}\right) \times (Q_C-D_C)
 $$
 
-atau, impor F sama dengan rasio harga dikali ekspor C.
+That is, import of F = price ratio times C export.
 
-Seberapa banyak kita bisa impor tergantung seberapa banyak kita bisa ekspor.
+How much we can import depends on how much we can export.
 
 ## Gains from trade
 
 ```{r}
 #| label: fig7
-#| fig-cap: "semua daerah abu-abu adalah better set"
+#| fig-cap: "Grey area is the better set"
 #| warning: false
 
 ppf+
@@ -678,47 +693,63 @@ ppf+
 
 ## Gains from trade {.m}
 
-1.  Pahami bahwa tanpa trade, konsumsi harus = produksi, alias di PPF persis.
-2.  Pahami bahwa dengan trade, opsi jadi banyak. Tapi tentunya opsi yang masuk akal adalah opsi yang membuat kita bisa konsumsi *more of both goods*. Note: ini tidak tergantung di mana alokasi awal berada.
-3.  Jika kita bisa dapat alokasi yang lebih baik, pada prinsipnya sangat mungkin dilakukan transfer.
+1. Without trade, consumption = production = at the PPF.
+
+2. With trade, we have a bit more option. Of course the option that makes sense is what makes us better off: unambiguously if we can have more of both goods.
+
+3.  As long as the better set is always reachable, compensation is always an option.
 
 ## Gains from trade
 
--   dengan perdagangan internasional, kita bisa mengatur *bundle* konsumsi kita selama ia ada di jalur garis *budget constraint*.
-    -   geser dari titik produksi = ekspor dan impor.
-    -   trade opens up choices!
--   alokasi yang tadinya tidak *feasible* menjadi *feasible*
-    -   artinya, secara teori, manfaat \> mudharat
--   namun, hanya karena semua bisa untung tidak berarti semua AKAN untung.
+- With trade, we have option as long as it's in the budget constraint.
+
+    - obviously this allocation includes the old set.
+    
+    - the option comes from the ability to export and import.
+
+- we can reach allocation even previously unfeasible.
+
+    - theoretically, the result can be unambiguously good.
+
+- That said, just because everyone CAN benefit doesn't mean everyone WILL.
 
 ## Political economy of trade {.m}
 
--   perdagangan internasional dapat merugikan *immobile factor owners*.
-    -   Di dunia nyata ga harus T atau K, tapi juga labor!
--   2 alasan kenapa ekonom jarang mempermasalahkan distribus income ini:
+- International trade can possible make immobile factor owners worse off.
 
-1.  perubahan distribusi pendapatan dapat terjadi akibat fenomena non-trade.
+    - in the real world, even workers can be somewhat immobile!
+    
+- However, this issue isn't the worse to economists:
 
--   pandemi menguntungkan yang bisa WFH, data dan teknologi menguntungkan coders, etc.
-
-2.  kompensasi selalu lebih baik daripada pembatasan perdagangan.
-
--   bagaimana mengoptimalkan pendapatan negara dari trade dan mengalokasikannya untuk bantuan sosial.
+    - income distribution changes happen all the time: tech changes, pandemics, etc.
+    
+    - compensation always better than trade restriction.
 
 ## Political economy of trade
 
--   Di negara demokrasi, kemampuan mobilisasi gerakan itu penting.
--   Intervensi banyak terjadi di industri yang terkonsentrasi:
-    -   pemainnya dikit tapi ukuran ekonominya banyak.
-    -   BUMN
--   Biasanya kalau udah kepepet, pelaku industri jadi punya 1 tujuan dan better organized.
--   yang untung dari trade biasanya konsumen yang bodo amatan.
+- In a democratic country, mobilization of the masses is extremely important.
 
-## Penutup
+- Government intervention happens in concentrated industries.
 
--   Political economy of trade akan dibahas lebih banyak lagi di pasca-UTS.
--   note bahwa ini bisa dibilang short-run model:
-    -   in long run, L,K,T dan bahkan MPL bisa berubah.
--   Minggu depan belajar Hecksher-Ohlin model.
-    -   fokus di perbedaan sumber daya.
-    -   Specific factor bisa mobile (longer run).
+    - Large economy with small numbers of players, SOEs, etc.
+
+- When cornered, industries will have the same interest thus easier to organize.
+
+- Those who benefits from trade usually consumers who are badly organized.
+
+## Short run model
+
+- It's good to note that this model can be seen as a short-run model.
+
+- In the long-run, investment will increase the immobile factors: capital accumulations, land reclamations, deforestation, etc.
+
+- Factor may moves in the long run:
+
+    - if mining is sustainably large, people will pursue degrees in mining.
+    
+    - Sell land, buy factories.
+
+
+## Next week
+
+- The new trade theory.
