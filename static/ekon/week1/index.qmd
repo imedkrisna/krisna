@@ -226,8 +226,8 @@ format:
 ## Specialisation and gains from trade {.m}
 
 - Extending to firm level, many outsource part of their business from a third party.
-  - buying {{< icon name="microsoft" pack="fab" >}}office probably better than developing our own softwares.
-  - why make our own server if we can use {{< icon name="aws" pack="fab" >}}?
+  - buying office probably better than developing our own softwares.
+  - why make our own server if we can use AWS?
   - Use tokopedia instead of making your own e-store.
 
 - We can easily extend this to a country level:
@@ -236,7 +236,7 @@ format:
 ## Incentives matter
 
 - People move to cities because there are more opportunities there.
-- People will buy cheaper products given the same price.
+- People will buy cheaper products given the same quality.
 - incentives are not always about money:
   - You study more on the subjects you like.
     
