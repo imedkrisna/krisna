@@ -46,7 +46,8 @@ editor: visual
 ## Informasi Pengajar
 
 | nama                                       | ruangan                  | matkul lain |
-|-------------------|----------------------|--------------------------------|
+|-------------------|----------------------|-------------------------------|
+| Bayu Prabowo Sutjiatmo | Ruang Kaprodi PIWAR | \- |
 | Theresia Anindita                          | Ruang Pudir II           | \-          |
 | [I Made Krisna](https://www.krisna.or.id/) | A2004 (Ruang Kerja Sama) | LLP         |
 
@@ -69,7 +70,6 @@ editor: visual
     -   Yang hadir wajib untuk tertib dan tidak boleh berisik.
 -   Mahasiswa dipersilakan meninggalkan kelas untuk alasan apapun.
     -   Tidak perlu ijin dulu.
--   Wajib menggunakan masker selama perkuliahan.
 -   Silakan tanya kapan saja jika bingung.
 
 ------------------------------------------------------------------------
@@ -79,8 +79,9 @@ editor: visual
 -   Kuliah ini dapat diakses di [krisna.or.id/courses/metopel/slides](https://www.krisna.or.id/courses/metopel/slides/)
     -   pencet `E`, tunggu, lalu `ctrl+P` (PDF)
     -   klik kanan, save page as. (html).
--   pra-UTS *mostly* teoretis dan belum perlu install apa-apa.
--   pasca-UTS akan diperlukan [R](https://www.r-project.org/), [RStudio](https://www.rstudio.com/products/rstudio/download/), [Zotero](https://www.zotero.org/download/) dan [Quarto](https://quarto.org/docs/get-started/).
+- pra-UTS akan diperlukan [R](https://www.r-project.org/) dan [RStudio](https://www.rstudio.com/products/rstudio/download/).
+
+- pasca-UTS anda butuh [Zotero](https://www.zotero.org/download/) dan [Quarto](https://quarto.org/docs/get-started/).
     -   downloadnya nanti aja siapa tau ada update.
 
 ## Struktur kuliah
@@ -158,10 +159,11 @@ $$
 $$
 Y_i=\beta_0+\beta_1 X_i+\mu_i
 $$
-- Y disebut juga variabel dependen 
-- X disebut juga variabel independen 
-- nilai Y dan X kita dapatkan dari data 
-- $\beta_0$ dan $\beta_1$ disebut parameter. Nilainya kita dapat dari hasil estimasi komputer. 
+
+- Y disebut juga variabel dependen
+- X disebut juga variabel independen
+- nilai Y dan X kita dapatkan dari data
+- $\beta_0$ dan $\beta_1$ disebut parameter. Nilainya kita dapat dari hasil estimasi komputer.
 - $\mu$ disebut juga error term / residual. Dia bersifat **independen**
 
 ## Regresi dengan R
@@ -172,7 +174,7 @@ $$
     -   Gratis.
     -   Mature, intuitive dan mudah kalau mau pindah bahasa.
     -   Digunakan banyak profesional juga.
-    -   Gratis!!
+    -   Gratis!!!!
 
 ## Contoh regresi dengan R {.m .scrollable}
 
@@ -248,7 +250,7 @@ model<-lm(data=dat,formula=LPDB~Limport)
 summary(model)
 ```
 
-## Sebelum menyentuh R
+## R dan Regresi
 
 -   Kita perkuat landasan teori dulu
     -   Kita belajar karakteristik dan asumsi OLS
