@@ -10,6 +10,8 @@ format:
     transition: convex
     background-transition: fade
     slide-number: true
+  pptx:
+    prefer-html: true
 
 ---
 
