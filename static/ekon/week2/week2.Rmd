@@ -2,8 +2,8 @@
 title: "Supply and Demand"
 subtitle: "Week 2"
 author: "Krisna Gupta"
-institute: "IBE Petra"
-date: "15 February 2021 (updated: `r Sys.Date()`)"
+institute: "PIWAR"
+date: "September 2021 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
     lib_dir: libs
