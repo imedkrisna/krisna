@@ -1,8 +1,8 @@
 ---
 title: "Hecksher-Ohlin and the Standard Model"
 subtitle: "ECES905205 pertemuan 4"
-date: "12 September 2022"
-author: "I Made Krisna Gupta"
+date: "September 2023"
+author: "Krisna Gupta"
 format: 
   revealjs:
     theme: [simple,../mytheme.scss]
@@ -11,8 +11,6 @@ format:
     transition: convex
     background-transition: fade
     slide-number: true
-  beamer: default
-editor: visual
 ---
 
 ## Last time
@@ -28,9 +26,9 @@ editor: visual
 
 ## Intro H-O Model
 
--   Both Ricardian maupun Specific Factor model relies on difference in technologies in explaining why two countries trade.
+-   Both Ricardian and Specific Factor model relies on difference in technologies in explaining why two countries trade.
 
--   tapi tidak menjelaskan kenapa negara yang teknologinya sama tetap trade.
+-   However, even some countries with the same tech still trade.
 
 -   In addition to difference in technologies, difference in **relative abundance of resources** can also drive trade.
 
@@ -41,23 +39,24 @@ editor: visual
 -   2 countries: Home and foreign
 -   2 mobile factor $i$: kapital (K) and labor (L)
 -   2 sectors $j$: cloth (C) dan Food (F)
--   Jumlah total K dan L berbeda di home dan foreign.
--   long run model: kapital bisa pindah sektor.
-    -   semua labor dapat gaji $w$, dan semua kapital sewa/nyicil $r$.
+-   Total K and L fixed, but different between countries.
+-   long run model: Capital is mobile.
+    - All L got paid  $w$, all K got rent $r$.
 
-## Teknologi {.m}
+## Technology {.m}
 
--   $a_{i,j}$ adalah jumlah faktor $i$ yang digunakan oleh industri $j$ untuk membuat 1 unit barang $j$.
-    -   e.g.: $a_{KC}=$ barang modal yang digunakan untuk membuat 1 meter cloth.
--   Teknologi tetap menganut **diminishing return**.
-    -   ada efek substitusi.
--   Asumsi: $F$ adalah sektor yang kapital intensif, $C$ labor intensive.
-    -   di $F$, untuk substitusi 1 $K$ butuh banyak $L$. $C$ sebaliknya.
--   Karena kapital bisa pindah sektor dan substitusi dengan buruh, maka keputusan berproduksi juga tergantung harga kapital.
+-   $a_{i,j}$ is the number of factor $i$ used by industry $j$ to make 1 unit of good $j$.
+    -   e.g.: $a_{KC}=$ capital used to make 1 meter of cloth.
+-   Tech still has a **diminishing return**.
+    - There is a labour-capital substitution.
+-   Assumption: $F$ is a capital intensive sector, while $C$ is labour intensive.
+    -   in $F$, to substitute 1 $K$ requires lots of $L$. $C$ is the opposite.
+
 
 ## Factor intensity
 
--   Karena $C$ relatively labor intensive, maka:
+-   Since capital can move freely this time, then the price of capital matter.
+-   Cuz $C$ is relatively labor intensive, then:
 
 $$
 \frac{a_{LC}}{a_{KC}} > \frac{a_{LF}}{a_{KF}} \\
@@ -109,60 +108,63 @@ ppf2
 :::
 
 ::: {.column width="47%"}
--   Alokasi produksinya persis sama dengan specific factor model
--   Alias, produksi akan dilakukan di persinggungan antara PPF dengan $-\frac{P_C}{P_F}$
--   Bedanya ada di pasar tenaga kerja dan pasar modal.
+-   Production allocation is exactly the same as specific factor model.
+-   That is, production exists where the slope of PPF= $-\frac{P_C}{P_F}$
+-   The difference is in capital and labour prices.
 :::
 :::
 
 ## Factor allocation
 
--   Tidak seperti specific factor, di sini ada efek substitusi antar faktor.
-    -   Tiap industri dapat mengurangi buruh dan menggantinya dengan mesin.
--   Karena itu, harga input relatif juga penting.
--   Jika harga kapital mahal sementara harga buruh murah, maka industri akan menggunakan banyak buruh dan sedikit kapital.
+-   Unlike specific factor, we have a substitution effect.
+    - Each industry can replace labour with more capital.
+-   This leads to the importance of relative factor prices.
+-   If labour is relatively much cheaper than capital, then industries will use lots of labour and less capital.
 
 ## Reminder micro
 
-- produksi dilakukan di titik persinggungan antara PPF dan rasio harga.
-  - sama dengan specific factor model.
-- Karena ada substitusi faktor produksi, maka:
+- Remember MRS=price ratio. Meaning, labour-capital demand 
 
 $$
 \frac{\frac{\partial Q}{\partial K}}{\frac{\partial Q}{\partial L}}=\frac{r}{w} \rightarrow \frac{L}{K}=\omega \left(\frac{w}{r}\right)
 $$
+
 $\frac{MP_L}{MP_K} \propto \frac{L}{K} \propto \frac{w}{r} \propto \frac{P_C}{P_F}$
 
 ## Reminder micro
 
--   Industri $j$ memiliki unit cost:
+-   Industry $j$'s unit cost:
 
 $$
 c_j=wa_{Lj}+ra_{Kj}
 $$
 
--   Karena itu, kombinasi input yang costnya sama (isocost):
+-   the isocost function then:
 
 $$
 a_{Kj}=\left(\frac{c}{r}\right)-\left(\frac{w}{r}\right)a_{Lj}
-$$ - Pilihan input akan berdasarkan isocost ini, di mana industri akan memilih kombinasi cost termurah.
+$$
+
+- which, if holds, leads to the optimal allocation.
 
 ## Factor and good prices
 
--   Jika pasarnya kompetitif, maka harga barang = costnya (ga ada mark-up)
+-   In a competitive market, $p=c$
 
--   F\>0 artinya: $$
-    P_F=a_{LF}(.)w+ a_{KF}(.)r \\
-    P_C=a_{LC}(.)w+ a_{KC}(.)r
-    $$
+-   F\>0 which means: 
 
--   Di mana $a_{ij}(.)$ merupakan jumlah kapital dan buruh per unit yang dipilih berdasarkan optimasi.
+$$
+P_F=a_{LF}(.)w+ a_{KF}(.)r \\
+P_C=a_{LC}(.)w+ a_{KC}(.)r
+$$
+
+-   Where $a_{ij}(.)$ is the amount of labour and capital per good which is chosen optimally.
 
 ## Factor and good prices
 
--   full employment berarti semua kapital dan buruh dipakai dalam produksi (ga ada yg nganggur)
+- Full employment means all capital and labour are exhausted to the two industries.
 
--   artinya:
+- meaning:
 
 $$
 L=a_{LF}(.)F+a_{LC}(.)C \\
@@ -173,15 +175,15 @@ $$
 
 > if the relative price of a good increases, then the real factor price used intensively in the production of that good increases, while the real price of the other factor decreases.
 
-Perubahan harga akan mempengaruhi distribusi pendapatan antara buruh dan pemilik kapital.
+Changes in prices change income distribution between labour and capital owners.
 
 ## Factor and good prices
 
-Misalnya $\frac{P_C}{P_F} \uparrow$ (labor intensive):
+Let $\frac{P_C}{P_F} \uparrow$ (labor intensive):
 
--   pendapatan buruh akan naik relatif terhadap pendapatan kapital ($\frac{w}{r} \uparrow$)
--   Rasio $\frac{K}{L} \uparrow$ di kedua industri.
--   Pendapatan riil buruh naik, sementara pendapatan riil kapitalis turun.
+-  Labour's income goes up relative to capital income. ($\frac{w}{r} \uparrow$)
+-   the ratio $\frac{K}{L} \uparrow$ in both industries.
+- labour's real income goes up, while capitalist' real income goes down.
 
 ## Factor and good prices
 
@@ -190,21 +192,22 @@ P_F=a_{LF}(.)w+ a_{KF}(.)r \\
 P_C=a_{LC}(.)w+ a_{KC}(.)r
 $$
 
-Lakukan total differentiation. karena $a_{ij}(.)$ dipilih secara optimal, maka perubahan kecil di harga tidak akan berpengaruh.
+Do a total differentiation. Since $a_{ij}(.)$ is not a function of output prices, a small change in output price does not change them.
 
 $$
 dP_F=a_{LF}(.)dw+ a_{KF}(.)dr \\
 dP_C=a_{LC}(.)dw+ a_{KC}(.)dr
 $$
 
-## Factor and good prices {.m}
+## Factor and good prices {.s}
 
--   Bagi dengan $P_j$
+-   divide with $P_j$
 
 $$
 \frac{dP_F}{P_F}=\frac{a_{LF}(.)}{P_F}dw+ \frac{a_{KF}(.)}{P_F}dr \\
 \frac{dP_C}{P_C}=\frac{a_{LC}(.)}{{P_C}}dw+ \frac{a_{KC}(.)}{P_C}dr
-$$ - kali dengan $\frac{w}{w}$ dan $\frac{r}{r}$
+$$
+- Multiply with $\frac{w}{w}$ and $\frac{r}{r}$
 
 $$
 \frac{dP_F}{P_F}=\frac{a_{LF}(.)w}{P_F}\frac{dw}{w}+ \frac{a_{KF}(.)r}{P_F}\frac{dr}{r} \\
@@ -213,36 +216,36 @@ $$
 
 ## Factor and good prices
 
--   \$\frac{dx}{x} = \$percentage change $=\hat{x}$
--   let $\theta=$ cost share di mana: $\theta_Lj=\frac{a_{Lj}(.)w}{P_j},\theta_Kj=\frac{a_{Kj}(.)r}{P_j}, \theta_{Lj}+\theta_{Kj}=1$
+-   $\frac{dx}{x}=$ percentage change $=\hat{x}$
+-   let $\theta=$ cost share where: $\theta_Lj=\frac{a_{Lj}(.)w}{P_j},\theta_Kj=\frac{a_{Kj}(.)r}{P_j}, \theta_{Lj}+\theta_{Kj}=1$
 
-maka:
+Then:
 
 $$
 \hat{P_F}=\theta_{LF}\hat{w}+\theta_{KF}\hat{r} \\
 \hat{P_C}=\theta_{LC}\hat{w}+\theta_{KC}\hat{r}
 $$
 
-## Perubahan harga
+## Price changes
 
-Misalnya harga cloth naik ($\hat{P_C}>0$) tapi harga food tetap ($\hat{P_F}=0$)
+Let cloth price goes up ($\hat{P_C}>0$) while food price stays ($\hat{P_F}=0$)
 
 $$
 0=\theta_{LF}\hat{w}+\theta_{KF}\hat{r} \\
 \hat{P_C}=\theta_{LC}\hat{w}+\theta_{KC}\hat{r}
 $$
 
-dapat dipastikan bahwa salah satu factor price harus naik dan satunya lagi pasti turun.
+It must be the case that one factor increase price while the other goes down.
 
-## Perubahan harga
+## Price change
 
-Ingat bahwa C itu cenderung labor intensif. artinya:
+Remember, C is labour intensive. Meaning:
 
 $$
 \frac{\theta_{LF}}{\theta_{KF}}<\frac{\theta_{LC}}{\theta_{KC}}
 $$
 
-Artinya, "bobot" yang diberikan untuk $\hat{w}$ lebih tinggi di $C$ daripada di $F$. Krn $\hat{P_C}>0$, maka dapat dipastikan $\hat{w}>0$ dan $\hat{r}<0$.
+Weight for  $\hat{w}$ is higher in $C$ than in $F$. Since $\hat{P_C}>0$, then it must be the case that $\hat{w}>0$ and $\hat{r}<0$.
 
 $$
 \hat{w} > \hat{P_C} > 0 > \hat{r}
@@ -250,16 +253,16 @@ $$
 
 ## Rybczynski Theorem
 
-> Jika harga output tidak berubah dan salah satu faktor produksi bertambah jumlahnya, maka produksi dari barang yang intensif diproduksi oleh faktor tersebut akan meningkat, dan produksi barang yang intensif faktor lainnya akan berkurang.
+> If output prices stay the same and one factor of production increase, then the production of the good that intensive in that factor rises while the production of the good that is not intensive in that factor reduces.
 
-Dengan kata lain, jumlah faktor yang melimpah akan mempengaruhi produksi dan distribusi pendapatan.
+In short, a sudden increase in the abundance of one factor changes income distribution.
 
 ## Resources and output
 
--   Bayangkan tiba-tiba ada tambahan tenaga kerja (bonus demografi), sehingga $\frac{L}{K} \uparrow$
--   PPF akan bergerak naik, tapi cenderung bias ke arah $C$
--   jika $\frac{P_C}{P_F}$ tidak berubah, rasio penggunaan buruh dan kapital tidak akan berubah.
--   Untuk ekspansi, maka cloth akan mengambil kapital dari food.
+-  Imagine a sudden increase in labour (think of something like immigration or demographic bonus) so $\frac{L}{K} \uparrow$
+- PPF will goes up, but biased toward $C$
+- If $\frac{P_C}{P_F}$ does not move, labour-capital ratio won't change.
+- To expand, $C$ will take capital from $F$.
 
 ## PPF
 
@@ -312,31 +315,35 @@ ppf2+
 :::
 
 ::: {.column width="37%"}
--   PPF melebar bias cloth
--   titik antara alokasi sebelum dan alokasi sesudah dapat dihubungkan dengan garis "Rybczynski line" for labor.
+-   PPF goes up but biased toward cloth.
+-   There's a "Rybczynski line" for labor.
 :::
 :::
 
 ## Resources and output
 
--   Ekonomi yang memiliki rasio $\frac{L}{K}$ tinggi akan memiliki output yang tinggi ke produk labor-intensif.
--   Jika $\frac{L}{K}>\frac{L^*}{K^*}$ maka home akan lebih efisien membuat C.
+-   Economy with high $\frac{L}{K}$ ratio will have a large production in labor-intensive goods.
+- If $\frac{L}{K}>\frac{L^*}{K^*}$ then home will be more efficient in making C.
 
 $$
 \hat{L}=\lambda_{LF}\hat{F}+\lambda_{LC}\hat{C} \\
 \hat{K}=\lambda_{KF}\hat{F}+\lambda_{KC}\hat{C}
 $$
 
--   di mana $\lambda_{ij}=$ factor share. Misal, $\lambda_{LF}=a_{LF}\frac{L}{F}$ adalah $\frac{L_F}{L}$
+-   Where $\lambda_{ij}=$ factor share. e.g., $\lambda_{LF}=a_{LF}\frac{L}{F}$ is $\frac{L_F}{L}$
 
-## Perubahan faktor
+## Factor change
 
--   misalnya $\hat{L}>0$ dan $\hat{K}=0$
+- Let $\hat{L}>0$ and $\hat{K}=0$
 
 $$
 \hat{L}=\lambda_{LF}\hat{F}+\lambda_{LC}\hat{C} \\
 0=\lambda_{KF}\hat{F}+\lambda_{KC}\hat{C}
-$$ - Karena C labor intensif, maka $\frac{\lambda_{LC}}{\lambda_{KC}}>\frac{\lambda_{LF}}{\lambda_{KF}}$
+$$
+
+-Since C labor-intensive, then
+
+$\frac{\lambda_{LC}}{\lambda_{KC}}>\frac{\lambda_{LF}}{\lambda_{KF}}$
 
 $$
 \hat{C}>\hat{L}>0>\hat{F}
@@ -344,136 +351,68 @@ $$
 
 ## H-O and trade
 
--   seperti halnya ricardian model, H-O memprediksi konvergensi harga relatif antar negara.
--   Negara yang labornya banyak akan cenderung menghasilkan C.
--   Ketika trade dengan negara yang labornya relatif sedikit, negara ini akan jual C dan impor F.
--   $P_C \uparrow$ sementara $P_C^* \downarrow$
+- Just like ricardian, H-O predict global price convergence.
+- Countries with many labour will make many C.
+- When this country opens to trade, it will sell C and import F
+- $P_C \uparrow$ while $P_C^* \downarrow$ and they will be equal.
 
 ## Hecksher-Ohlin Theorem
 
 > The country that is abundant in a factor exports the good whose production is intensive in that factor
 
-secara umum:
+In general:
 
 > Countries tend to export goods whose production is intensive in factors with which the countries are abundantly endowed.
 
-::: footer
-see Alan Deardorff "the general validity of the Hecksher-Ohlin theorem."
-:::
-
 ## Distribusi pendapatan
 
--   Di home, perdagangan sangat menguntungkan bagi buruh karena mereka bisa ekspor ($P_C>P_C^*$) dan bisa konsumsi makanan dengan harga lebih murah ($P_F>P_F^*$)
+- At home, trade benefits labour cuz what they produce by a lot is expensive in the gloal market ($P_C>P_C^*$) while they get access to cheaper food ($P_F>P_F^*$)
 
--   Sebaliknya, di foreign, trade menguntungkan pemilik kapital.
+- For the other side, On the other hand, trade benefits capital owners.
 
 > Owners of a country's abundant factors gain from trade, but owners of a country's scarce factors lose
 
-## Perubahan faktor matters
+## Factor abundance change matters
 
-- Perubahan dari jumlah faktor produksi juga ngaruh.
-- Andaikan ada negara yang tiba-tiba kebanjiran pekerja, maka struktur ekonomi negara ini akan geser ke labor-intensif goods.
-- harga relatif goods ini akan drop, dan ekspornya makin naik regardless teknologi.
+- If a country suddenly have a lot of labour, then the economic structure of that country will shift to labour-intensive goods.
+- Relative prices of this good will drop, and its export will go up regardless of technology intensity.
 
-## Distribusi
-
--   hasil ini serupa dengan specific factor model: pemilik faktor yang mengalami kompetisi impor merugi.
-
--   insight dari H-O mengatakan bahwa winner-loser ini akan ada bahkan di long-run.
-
--   Bagaimana dengan Indonesia?
-
-------------------------------------------------------------------------
-
-![factor intensity in Indonesia (Amiti and Konings 2007 "Trade Liberalization, Intermediate Inputs, and Productivity: Evidence from Indonesia")](indo.jpg)
-
-------------------------------------------------------------------------
-
-## Faktor?
-
--   pada kenyataannya, faktor tidak hanya dua.
-
--   Kapital, labor skilled dan unskilled, land, natural resources, dan lain sebagainya.
-
--   H-O memberi gambaran bahwa bahkan jika dua negara memiliki teknologi yang sama persis, perbedaan resources akan membuat mereka trade.
-
-## Political economy of trade {.m}
-
--   perdagangan internasional dapat merugikan *immobile factor owners*.
-    -   Di dunia nyata ga harus T atau K, tapi juga labor!
--   2 alasan kenapa ekonom jarang mempermasalahkan distribus income ini:
-
-1.  perubahan distribusi pendapatan dapat terjadi akibat fenomena non-trade.
-
--   pandemi menguntungkan yang bisa WFH, data dan teknologi menguntungkan coders, etc.
-
-2.  kompensasi selalu lebih baik daripada pembatasan perdagangan.
-
--   bagaimana mengoptimalkan pendapatan negara dari trade dan mengalokasikannya untuk bantuan sosial.
-
-## Political economy of trade
-
--   Di negara demokrasi, kemampuan mobilisasi gerakan itu penting.
--   Intervensi banyak terjadi di industri yang terkonsentrasi:
-    -   pemainnya dikit tapi ukuran ekonominya banyak.
-    -   BUMN
--   Biasanya kalau udah kepepet, pelaku industri jadi punya 1 tujuan dan better organized.
--   yang untung dari trade biasanya konsumen yang bodo amatan.
-
-## Political economy of trade
-
--   Political economy of trade akan dibahas lebih banyak lagi di pasca-UTS.
--   note bahwa specific factor model bisa dibilang short-run model:
-    -   in long run, L,K,T dan bahkan MPL (teknologi) bisa berubah.
-    -   perubahan inilah argumen utama mendukung industrial policies.
-    -   dibahas lagi pasca UTS.
-
-## Evidence of H-O
-
-- Teori H-O agak sulit dibuktikan. Evidencenya ga banyak.
-
-- In terms of US: harga skilled labor di mexico naik lebih cepat dari unskilled labor.
-  - padahal mestinya unskilled labor mexico relatif banyak dibanding US dan Kanada.
-- penjelasan: ada perubahan teknologi yang lebih ngaruh daripada trade.
-  - Firms di Mexico makin kaya $\rightarrow$ demand high-skill work domestik naik.
-  - Trade mempercepat teknologi spillover.
-  
-  
 ## Factor price equalization
 
-- Karena $\frac{w}{r} \propto \frac{P_C}{P_F}$, maka Trade goods = trade factor of production.
-  - Jika $P_C=P_C^*$, maka $w=w^*$ dan $r=r^*$
-
-- karena itu trade akan membuat harga faktor produksi sama di semua negara.
-  - gaji unskilled labor di US akan drop sampai di level gaji unskilled labor negara asal barang labor intensif.
-  - Also little evidence to support this.
-
+-   Since $\frac{w}{r} \propto \frac{P_C}{P_F}$, then Trade goods = trade factor of production.
+    - If $P_C=P_C^*$, then $w=w^*$ and $r=r^*$
+- That's why trade leads to factor price equalization in all countries.
+    - wage for unskilled labour in the US will drop to equalize wage in the countries which they import labour-intensive goods from.
+    - This is not the case in the real world.
+    
 ## Factor price equalization?
 
-- asumsi model H-O adalah kedua negara berdagang barang yang sama dan perfect substitute.
-  - Food impor sama rasanya dengan food domestik.
-- H-O juga mengasumsikan dua negara punya teknologi yang sama untuk masing-masing industri. Also: countries' tech changes!
-- Di model ini juga tidak ada **trade barriers** dan ongkos transportasi.
-- Model ini menganggap free movement of factors.
+-   H-O assumes both countries trade a perfect substitute:
+    - Imported food have the same quality as domestic food.
+- H-O also assumes same technology, which isn't the case. Also: countries'tech change!
+- No trade barriers in this model too.
+- Free movement of factors aren't real (in the short term at least).
 
-## Leontief Paradox
+## Wrapping up
 
-- Data perdagangan Amerika menunjukkan bahwa US mengekspor less capital intensive goods dibanding impornya.
-- Bowen, Leamer, and Sveikauskas menemukan bahwa hal ini terjadi di berbagai belahan dunia.
-- Missing trade: dengan proporsi naker RRT relatif terhadap US, harusnya US impor labor intensif 4x lipat dari seharusnya (Treffler 1995)
+- Trade is good thanks to specialization and options to go along the ToT line.
 
-## Tech difference
+- Factor immobility create winners & losers in the short-run.
 
-- Relaksasi same-tech lumayan menyelesaikan problem ini.
-  - unskilled labor US lebih produktif dari RRT.
-- Romalis (2004) menemukan meski H-O dapat dibuktikan di _extreme case_ .
-  - US impor relatively capital-intensive products dari Jerman dan mengimpor relatively labor-intensive products dari Bangladesh.
-  
-## Improving trade models
+- Factor relative abundance & factor-intensity create winners & losers in the long-run.
 
-- Primarily, trade happens amid difference of technologies.
-  - iklim, SDA, produktivitas pekerja, intelectual property.
-- Jika kita samakan teknologinya, perbedaan *factor abundance*-pun ngaruh.
-  - bahkan di long-run pun, distribusi pendapatan tetap problematik.
-- Mingdep kita bahas **Standard trade model**.
+- The last two creates incentive for losers to ban trade, often enough for losers to act.
 
+- But since overall economy still gain, a compensation mechanism makes sense.
+
+## The new trade theory
+
+- However, what if there's a case where trade REDUCES overall gain?
+
+- As usual, a government intervention is desirable under the presence of market failures.
+
+    - Capital market imperfection.
+    
+    - Large fixed cost as a barrier to entry.
+    
+- Next week we will learn these market failures and trade dynamics.
