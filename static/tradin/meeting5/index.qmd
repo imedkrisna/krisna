@@ -12,47 +12,45 @@ format:
     background-transition: fade
     slide-number: true
   beamer: default
-editor: visual
 ---
 
 ## 3 model
 
-- Dari kemarin kita sudah belajar berbagai trade model:
-  - Ricardian model untuk 1 mobile factor.
-  - Specific factors model: perbedaan distribusi pendapatan.
-  - H-O: same tech, different endowment.
-  
-- Semuanya beda-beda dan dapat digunakan sesuai kesesuaian dengan isu kita.
+-   Dari kemarin kita sudah belajar berbagai trade model:
+    -   Ricardian model untuk 1 mobile factor.
+    -   Specific factors model: perbedaan distribusi pendapatan.
+    -   H-O: same tech, different endowment.
+-   Semuanya beda-beda dan dapat digunakan sesuai kesesuaian dengan isu kita.
 
 ## Similarities
 
 Beberapa persamaan:
 
-1. Trade is driven by difference in PPF.
-1. PPF determines relative supply scheduule.
-1. World equilibrium ditentukan oleh demand dunia dan posisi kita sebelum trade.
+1.  Trade is driven by difference in PPF.
+2.  PPF determines relative supply scheduule.
+3.  World equilibrium ditentukan oleh demand dunia dan posisi kita sebelum trade.
 
 ## Mekanisme {.m}
 
-- Tanpa trade, harga akan ditentukan oleh supply & demand domesttik.
-  - Preference vs teknologi
-  - Ada efek substitusi baik untuk produksi maupun konsumsi
-  - Slope indifference curve = slope PPF = slope harga relatif
-- Trade akan mengubah slope harga relatif.
-  - harga relatif domestik akan mendekati harga relatif dunia.
-  - Slope harga relatif geser, dan yang lain juga geser.
-  - Akan diseimbangkan dengan ekspor dan impor.
-  
+-   Tanpa trade, harga akan ditentukan oleh supply & demand domesttik.
+    -   Preference vs teknologi
+    -   Ada efek substitusi baik untuk produksi maupun konsumsi
+    -   Slope indifference curve = slope PPF = slope harga relatif
+-   Trade akan mengubah slope harga relatif.
+    -   harga relatif domestik akan mendekati harga relatif dunia.
+    -   Slope harga relatif geser, dan yang lain juga geser.
+    -   Akan diseimbangkan dengan ekspor dan impor.
+
 ## Welfare change {.m}
 
-- Kita dapat mengilustrasikan perubahan kesejahteraan dari perubahan indifference curve.
-- Negara yang tadinya ekspor C, akan untung jika $\frac{P_C}{P_F}$ naik.
-  - sebaliknya untuk F.
-- _Terms of trade_: harga barang ekspor dibagi harga barang impor.
-- Suatu negara akan untung jika ToT naik, dan rugi jika ToT turun.
-- Namun, perubahan ToT tidak akan lebih buruk daripada autarky.
+-   Kita dapat mengilustrasikan perubahan kesejahteraan dari perubahan indifference curve.
+-   Negara yang tadinya ekspor C, akan untung jika $\frac{P_C}{P_F}$ naik.
+    -   sebaliknya untuk F.
+-   *Terms of trade*: harga barang ekspor dibagi harga barang impor.
+-   Suatu negara akan untung jika ToT naik, dan rugi jika ToT turun.
+-   Namun, perubahan ToT tidak akan lebih buruk daripada autarky.
 
----
+------------------------------------------------------------------------
 
 ```{r}
 #| label: fig1
@@ -145,26 +143,24 @@ b+a+c
   
 ```
 
-
-
 ## Dampak pertumbuhan ekonomi
 
-- Apakah pertumbuhan ekonomi di RRT atau Vietnam baik untuk Indonesia?
-- Apakah pertumbuhan ekonomi di Indonesia lebih baik jika tidak ada internasional trade?
-- Dua-duanya bisa jadi benar, bisa juga salah.
+-   Apakah pertumbuhan ekonomi di RRT atau Vietnam baik untuk Indonesia?
+-   Apakah pertumbuhan ekonomi di Indonesia lebih baik jika tidak ada internasional trade?
+-   Dua-duanya bisa jadi benar, bisa juga salah.
 
 ## Biased growth
 
-- Ricardian: perubahan teknologi akan menyebabkan growth bias ke industri tertentu.
-- H-O: faktor produksi menyebabkan biased growth.
-- Indonesia: Industri makanan dan service tumbuh lebih cepat dari manufaktur.
+-   Ricardian: perubahan teknologi akan menyebabkan growth bias ke industri tertentu.
+-   H-O: faktor produksi menyebabkan biased growth.
+-   Indonesia: Industri makanan dan service tumbuh lebih cepat dari manufaktur.
 
 ## Biased growth
 
-- Biased growth di negara besar dapat menyebabkan perubahan terms of trade
-- Pertumbuhan yang bias cloth: $\frac{P_C}{P_F} \downarrow$, TOT cloth exporter $\downarrow$
-- Pertumbuhan yang bias food: $\frac{P_C}{P_F} \uparrow$, TOT cloth exporter $\uparrow$
-- Pertumbuhan bias cloth bagi eksportir cloth disebut **export-bias growth**, sementara bagi importir cloth disebut **import-bias growth**
+-   Biased growth di negara besar dapat menyebabkan perubahan terms of trade
+-   Pertumbuhan yang bias cloth: $\frac{P_C}{P_F} \downarrow$, TOT cloth exporter $\downarrow$
+-   Pertumbuhan yang bias food: $\frac{P_C}{P_F} \uparrow$, TOT cloth exporter $\uparrow$
+-   Pertumbuhan bias cloth bagi eksportir cloth disebut **export-bias growth**, sementara bagi importir cloth disebut **import-bias growth**
 
 ## Biased growth
 
@@ -172,124 +168,125 @@ b+a+c
 
 ## The evidence?
 
-- China, the exporter of the world, seems to experience lower terms of trade.
-- However,Data on US and EU terms of trade seems to adjust quite marginally.
-  - How important trade is in the economy?
-  - Trade measures may change terms of trade as well
-- What about Indonesia?
+-   China, the exporter of the world, seems to experience lower terms of trade.
+-   However,Data on US and EU terms of trade seems to adjust quite marginally.
+    -   How important trade is in the economy?
+    -   Trade measures may change terms of trade as well
+-   What about Indonesia?
 
----
+------------------------------------------------------------------------
 
-<iframe src="https://data.worldbank.org/share/widget?end=2019&indicators=TT.PRI.MRCH.XD.WD&locations=ID-CN&start=2000" width='900' height='600' frameBorder='0' scrolling="no" ></iframe>
+<iframe src="https://data.worldbank.org/share/widget?end=2019&amp;indicators=TT.PRI.MRCH.XD.WD&amp;locations=ID-CN&amp;start=2000" width="900" height="600" frameBorder="0" scrolling="no">
+
+</iframe>
 
 ## International borrowing and lending
 
-- Autarky: Apa yang dikonsumsi = apa yang diproduksi.
-- Trade: Yang penting $\sum_iQ_iP_i=\sum_iD_iP_i$
-- Intertemporal trade: possibility having a trade surplus dan trade deficit.
-  - at $t=1$, $\sum_iQ_iP_i=\sum_iD_iP_i+B$
-  - at $t=1$, $\sum_iQ_iP_i=\sum_iD_iP_i-(1+r)B$
+-   Autarky: Apa yang dikonsumsi = apa yang diproduksi.
+-   Trade: Yang penting $\sum_iQ_iP_i=\sum_iD_iP_i$
+-   Intertemporal trade: possibility having a trade surplus dan trade deficit.
+    -   at $t=1$, $\sum_iQ_iP_i=\sum_iD_iP_i+B$
+    -   at $t=1$, $\sum_iQ_iP_i=\sum_iD_iP_i-(1+r)B$
 
 ## Borrowing and lending {.m}
 
-- Standar trade model dapat kita modif untuk merefleksikan intertemporal trade:
-  - 2 goods: current consumption and future consumption.
-- PPF-nya adalah possible current consumption dan future consumption.
-- Let Home bias current consumption, Foreign bias future consumption.
-- Home export current consumption, import future consumption.
-- foreign ngutang dulu, bayar di periode berikutnya.
+-   Standar trade model dapat kita modif untuk merefleksikan intertemporal trade:
+    -   2 goods: current consumption and future consumption.
+-   PPF-nya adalah possible current consumption dan future consumption.
+-   Let Home bias current consumption, Foreign bias future consumption.
+-   Home export current consumption, import future consumption.
+-   foreign ngutang dulu, bayar di periode berikutnya.
 
 ## Harga intertemporal
 
-- Pinjem 1 unit of output, harus bayar 1+r di mana r=real interest rate.
-- $\frac{P_{current}}{P_{future}}=\frac{1}{1+r}$
-- lokasi produksi akan ada di slope $=-(1+r)$
-- Gambarnya akan mirip dengan standard model.
+-   Pinjem 1 unit of output, harus bayar 1+r di mana r=real interest rate.
+-   $\frac{P_{current}}{P_{future}}=\frac{1}{1+r}$
+-   lokasi produksi akan ada di slope $=-(1+r)$
+-   Gambarnya akan mirip dengan standard model.
 
 ## Economies of scale
 
-- Kita sudah membahas berbagai model yang menggunakan asumsi perfect competition.
-- Di perfect competition, supernormal profit ngga ada.
-- Meski demikian, seringkali di dunia nyata ada some degree of oligopoly or monopolistic competition.
-- International trade dapat membantu dalam hal ini.
+-   Kita sudah membahas berbagai model yang menggunakan asumsi perfect competition.
+-   Di perfect competition, supernormal profit ngga ada.
+-   Meski demikian, seringkali di dunia nyata ada some degree of oligopoly or monopolistic competition.
+-   International trade dapat membantu dalam hal ini.
 
 ## Economies of scale {.m}
 
-- Bayangkan ada industri yang semakin besar outputnya, per unit cost nya semakin murah.
-- Sebagian besar tech services these days kaya gini:
-  - Google bisa nawarin servis gratis karena kliennya seluruh dunia.
-  - Netflix bisa jor-joran biaya produksi.
-- Tapi banyak usaha yang begini, terutama yang fixed cost-nya mahal.
-  - beli mesin kapasitas besar yang mahal bakal lama balik modalnya kalau produksinya sedikti.
+-   Bayangkan ada industri yang semakin besar outputnya, per unit cost nya semakin murah.
+-   Sebagian besar tech services these days kaya gini:
+    -   Google bisa nawarin servis gratis karena kliennya seluruh dunia.
+    -   Netflix bisa jor-joran biaya produksi.
+-   Tapi banyak usaha yang begini, terutama yang fixed cost-nya mahal.
+    -   beli mesin kapasitas besar yang mahal bakal lama balik modalnya kalau produksinya sedikti.
 
 ## International trade & economies of scale
 
-- Google dan Netflix adalah contoh bagaimana international trade membantu naikin scale firms sehingga bisa menjual produk dengan lebih murah.
-- Automotif di Amerika Latin gagal karena semua negara mencoba membangun industri otomotif.
-- Semakin kecil negaranya, semakin susah mencapai _economies of scale_.
-  - Karena itu negara kecil cenderung lebih aktif berdagang.
+-   Google dan Netflix adalah contoh bagaimana international trade membantu naikin scale firms sehingga bisa menjual produk dengan lebih murah.
+-   Automotif di Amerika Latin gagal karena semua negara mencoba membangun industri otomotif.
+-   Semakin kecil negaranya, semakin susah mencapai *economies of scale*.
+    -   Karena itu negara kecil cenderung lebih aktif berdagang.
 
 ## Eksternal dan internal economies of scale
 
-- Eksternal economies of scale: situasi di mana konsentrasi pasar akan menguntungkan jika terjadi di level industri. Firms-nya sendiri bisa ada banyak.
-- Internal economies of scale: Ketika konsentrasi pasar akan menguntungkan jika terjadi di level perusahaan, bukan industri.
-- Internal economies of scale akan dibahas di pertemuan berikutnya.
+-   Eksternal economies of scale: situasi di mana konsentrasi pasar akan menguntungkan jika terjadi di level industri. Firms-nya sendiri bisa ada banyak.
+-   Internal economies of scale: Ketika konsentrasi pasar akan menguntungkan jika terjadi di level perusahaan, bukan industri.
+-   Internal economies of scale akan dibahas di pertemuan berikutnya.
 
 ## Eksternal economies of scale
 
-- Ada industri yang akan memniliki keunggulan jika memiliki lokasi yang berdekatan.
-- Hal ini disebut juga dengan aglomerasi.
-- Di berbagai belahan dunia, aglomerasi terjadi:
-  - Silicon Valley, Hollywood, Wu han, Bangalore.
-- Enabler aglomerasi: specialized suupplier, labor market pooling, dan knowledge spillovers.
+-   Ada industri yang akan memniliki keunggulan jika memiliki lokasi yang berdekatan.
+-   Hal ini disebut juga dengan aglomerasi.
+-   Di berbagai belahan dunia, aglomerasi terjadi:
+    -   Silicon Valley, Hollywood, Wu han, Bangalore.
+-   Enabler aglomerasi: specialized suupplier, labor market pooling, dan knowledge spillovers.
 
 ## Specialized suppliers
 
-- Di banyak industri, produksi dan produk development seringkali memerlukan peralatan khusus.
-- peralatan khsus ini mungkin tidak memiliki demand yang cukup jika pemainnya sedikit.
-- Seiring berkembangnya Silicon Valley sebagai pusat produksi semikonduktor, mulai bermunculan perusahaan yang membuat barang modal.
-- Perusahaan pembuat barang modal ini semakin mempermudah tumbuhnya perusahaan semikonduktor baru.
+-   Di banyak industri, produksi dan produk development seringkali memerlukan peralatan khusus.
+-   peralatan khsus ini mungkin tidak memiliki demand yang cukup jika pemainnya sedikit.
+-   Seiring berkembangnya Silicon Valley sebagai pusat produksi semikonduktor, mulai bermunculan perusahaan yang membuat barang modal.
+-   Perusahaan pembuat barang modal ini semakin mempermudah tumbuhnya perusahaan semikonduktor baru.
 
 ## Silicon valley
 
-- Kuatnya industri produsen barang modal membuat perusahaan di luar Silicon Valley jadi kurang kompetitif.
-- Dis amping itu, seiring berkembangnya industri semikonduktor, banyak perusahaan malah semakin fokus 'fabless'.
-- Pada akhirnya, karena produsen barang modalnya juga semakin ahli, mereka juga bisa serve market di luar Amerika Serikat.
-- Semikonduktor adalah contoh di mana akses ke supplier yang sangat spesialisasi memberikan keunggulan.
+-   Kuatnya industri produsen barang modal membuat perusahaan di luar Silicon Valley jadi kurang kompetitif.
+-   Dis amping itu, seiring berkembangnya industri semikonduktor, banyak perusahaan malah semakin fokus 'fabless'.
+-   Pada akhirnya, karena produsen barang modalnya juga semakin ahli, mereka juga bisa serve market di luar Amerika Serikat.
+-   Semikonduktor adalah contoh di mana akses ke supplier yang sangat spesialisasi memberikan keunggulan.
 
 ## Labor market pooling
 
-- Industri yang terletak di satu lokasi akan memberi keuntungan dalam hal mengumpulkan pegawai.
-- Jika sebuah industri memiliki banyak perusahaan yang terkonsentrasi di satu tempat, maka akan mudah bagi pekerja mencari pekerjaan di tempat tersebut.
-- Karena tau bahwa pekerja akan datang ke tempat tersebut, sebuah industri makin untung jika berlokasi di tempat tersebut.
-- Kampus seringkali jadi daya tarik aglomerasi bagi satu industri.
+-   Industri yang terletak di satu lokasi akan memberi keuntungan dalam hal mengumpulkan pegawai.
+-   Jika sebuah industri memiliki banyak perusahaan yang terkonsentrasi di satu tempat, maka akan mudah bagi pekerja mencari pekerjaan di tempat tersebut.
+-   Karena tau bahwa pekerja akan datang ke tempat tersebut, sebuah industri makin untung jika berlokasi di tempat tersebut.
+-   Kampus seringkali jadi daya tarik aglomerasi bagi satu industri.
 
 ## Knowledge spillover
 
-- Zaman sekarang, pengetahuan bisa dikatakan sama pentingnya dengan faktor produksi seperti kapital dan buruh.
-- Hal ini semakin penting lagi bagi industri yang mengandalkan inovasi dan kreativitas.
-- Akumulasi pengetahuan ada berbagai cara: reverse engineer, R&D, dst.
-- Namun aglomerasi memberikan kemungkinan akumulasi pengetahuan secara informal.
+-   Zaman sekarang, pengetahuan bisa dikatakan sama pentingnya dengan faktor produksi seperti kapital dan buruh.
+-   Hal ini semakin penting lagi bagi industri yang mengandalkan inovasi dan kreativitas.
+-   Akumulasi pengetahuan ada berbagai cara: reverse engineer, R&D, dst.
+-   Namun aglomerasi memberikan kemungkinan akumulasi pengetahuan secara informal.
 
 ## Silicon valley lagi
 
-- Silicon valley sering menjadi contoh sukses aglomerasi.
-  - Specialized suppliers
-  - Lokasi dekat kampus dan pusat R&D
-  - Bahkan di digital age, lokasi fisik masih penting dalam hal knowledge spillover.
-  
-- Sayangnya seringkali aglomerasi ini terjadi secara natural dan sulit dikopi.
+-   Silicon valley sering menjadi contoh sukses aglomerasi.
+    -   Specialized suppliers
+    -   Lokasi dekat kampus dan pusat R&D
+    -   Bahkan di digital age, lokasi fisik masih penting dalam hal knowledge spillover.
+-   Sayangnya seringkali aglomerasi ini terjadi secara natural dan sulit dikopi.
 
 ## Kenapa sulit?
 
-- Aglomerasi memberikan keunggulan bagi _established region_ yang industrinya sudah keburu matang.
-- Karena Hollywood sudah sangat besar, sulit bagi negara lain untuk mengkopi dari 0, kecuali bisa langsung sama besarnya dalam waktu singkat.
-  - Padahal, murahnya produk hollywood datang dari ukurannya yang besar.
-- Netflix termasuk pendatang awal di streaming, tapi dapat dikejar oleh Disney dan Amazon karena mereka memang sudah besar dari awal.
+-   Aglomerasi memberikan keunggulan bagi *established region* yang industrinya sudah keburu matang.
+-   Karena Hollywood sudah sangat besar, sulit bagi negara lain untuk mengkopi dari 0, kecuali bisa langsung sama besarnya dalam waktu singkat.
+    -   Padahal, murahnya produk hollywood datang dari ukurannya yang besar.
+-   Netflix termasuk pendatang awal di streaming, tapi dapat dikejar oleh Disney dan Amazon karena mereka memang sudah besar dari awal.
 
 ## Natural resources
 
-- Dekat natural resources juga sering menjadi salah satu contoh _specialized suppliers_.
-- Salah satu faktor pendorong revolusi industri di Inggris adalah karena dia punya banyak batubara (ketika itu).
-- Indonesia dengan industri nikelnya sedang mengupayakan aglomerasi: kawasan industri smelter lengkap dengan universitas.
-- Apakah berhasil? Mudah-mudahan yah!
+-   Dekat natural resources juga sering menjadi salah satu contoh *specialized suppliers*.
+-   Salah satu faktor pendorong revolusi industri di Inggris adalah karena dia punya banyak batubara (ketika itu).
+-   Indonesia dengan industri nikelnya sedang mengupayakan aglomerasi: kawasan industri smelter lengkap dengan universitas.
+-   Apakah berhasil? Mudah-mudahan yah!

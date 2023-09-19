@@ -1,6 +1,6 @@
 ---
 title: "Hecksher-Ohlin and the Standard Model"
-subtitle: "ECES905205 pertemuan 4"
+subtitle: "ECES905205 meeting 4"
 date: "September 2023"
 author: "Krisna Gupta"
 format: 
@@ -393,6 +393,28 @@ In general:
 - No trade barriers in this model too.
 - Free movement of factors aren't real (in the short term at least).
 
+## Welfare change {.m}
+
+- Ultimately what we care about is welfare change,
+
+- So far, the ultimate goal of trade is that we can acquire more goods by excessively produce goods we good at, import those we bad at.
+
+- Therefore, relative price of export and import goods matter a great deal:
+
+    - We are better-off if the world market prices of an exported goods go up and/or imported goods go down.
+    
+## Terms of trade {.m}
+
+-   *Terms of trade* $=\frac{P_X}{P_M}$ which are just price indices of exported and imported goods.
+
+- ToT is often used to show welfare changes: Higher number is better, lower number is worse
+    
+- Note that lower ToT still better than autarky. If it's worse, we can always return to autarky.
+
+- Price indices also subject to change. e.g., Indonesia used to be oil exporter, now net oil importer.
+
+
+
 ## Wrapping up
 
 - Trade is good thanks to specialization and options to go along the ToT line.
@@ -405,14 +427,30 @@ In general:
 
 - But since overall economy still gain, a compensation mechanism makes sense.
 
-## The new trade theory
+## Wrapping up
 
-- However, what if there's a case where trade REDUCES overall gain?
+- To appreciate all of these insights, however, you must understand where this gain come from.
+
+- Remember, economic model we uses so far have very specific assumptions:
+
+    - Price takers in the world market (small country assumption)
+    
+    - Static (no intertemporal consumption & saving)
+    
+    - no barriers to entry (fixed cost is very small)
+    
+    - fixed technology (no learning by doing)
+
+## The new trade theory
 
 - As usual, a government intervention is desirable under the presence of market failures.
 
+    - Big countries can set prices.
+    
     - Capital market imperfection.
     
     - Large fixed cost as a barrier to entry.
+    
+- That is, under these setting, an intervention may indeed improve gains over free trade.
     
 - Next week we will learn these market failures and trade dynamics.
