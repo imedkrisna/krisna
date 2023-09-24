@@ -1,7 +1,7 @@
 ---
-title: "Firms in international trade"
-subtitle: "ECES905205 pertemuan 6"
-date: "3 Oktober 2022"
+title: "The Standard Model"
+subtitle: "ECES905205 pertemuan 5"
+date: "12 September 2022"
 author: "I Made Krisna Gupta"
 format: 
   revealjs:
@@ -14,395 +14,279 @@ format:
   beamer: default
 ---
 
-## Internal economies of scale {.m}
+## 3 model
 
-- Muncul ketika average cost dari sebuah perusahaan menjadi semakin kecil seiring besarnya produksi.
-- Industri yang fixed cost-nya besar akan punya barier to entry yang besar.
-- Fixed cost banyak wujudnya: riset, mesin, network, akses ke SDA, nama besar.
-- Akibatnya, jumlah perusahaan yang sanggup masuk jadi terbatas.
-- Perusahaan-perusahaan ini jadi bisa mainin harga.
+-   Dari kemarin kita sudah belajar berbagai trade model:
+    -   Ricardian model untuk 1 mobile factor.
+    -   Specific factors model: perbedaan distribusi pendapatan.
+    -   H-O: same tech, different endowment.
+-   Semuanya beda-beda dan dapat digunakan sesuai kesesuaian dengan isu kita.
 
-## Internal economies of scale
+## Similarities
 
-- Di dunia nyata, ada banyak perusahaan MNC yang menguasai global market share yang tidak kecil.
-  - Industri pesawat terbang, semikonduktor, perangkat lunak, _soft drink_, mi instan.
-- Perdagangan internasional dan international finance (FDI) memberikan gain tambahan:
-  - firms paling efisien akan mendominasi dan mendorong turunnya harga.
-  - firms inefisien akan keluar dari pasar.
+Beberapa persamaan:
 
-## example: mobile phone
+1.  Trade is driven by difference in PPF.
+2.  PPF determines relative supply scheduule.
+3.  World equilibrium ditentukan oleh demand dunia dan posisi kita sebelum trade.
 
-<div id="mobile_vendor-ww-yearly-2021-2021" width="600" height="400" style="width:600px; height: 400px;"></div><!-- You may change the values of width and height above to resize the chart --><p>Source: <a href="https://gs.statcounter.com/vendor-market-share/mobile/worldwide/#yearly-2021-2021-bar">StatCounter Global Stats - Device Vendor Market Share</a></p><script type="text/javascript" src="https://www.statcounter.com/js/fusioncharts.js"></script><script type="text/javascript" src="https://gs.statcounter.com/chart.php?mobile_vendor-ww-yearly-2021-2021&chartWidth=600"></script>
+## Mekanisme {.m}
 
-## Monopolistic competition
+-   Tanpa trade, harga akan ditentukan oleh supply & demand domesttik.
+    -   Preference vs teknologi
+    -   Ada efek substitusi baik untuk produksi maupun konsumsi
+    -   Slope indifference curve = slope PPF = slope harga relatif
+-   Trade akan mengubah slope harga relatif.
+    -   harga relatif domestik akan mendekati harga relatif dunia.
+    -   Slope harga relatif geser, dan yang lain juga geser.
+    -   Akan diseimbangkan dengan ekspor dan impor.
 
-- Kondisi monopolistic competition sangat cocok untuk menganalisis hal ini.
-- Monopolistik competition: firms tau mereka bisa kontrol harga (to some extent)
-- Kondisi ini tercipta ketika salah satu dari dua hal ini terjadi:
-  - hanya sedikit major player in the industry.
-  - product is differentiated enough (hanya ada 1 produsen iOS, misalnya)
+## Welfare change {.m}
 
-## Monopoly: a brief review
+-   Kita dapat mengilustrasikan perubahan kesejahteraan dari perubahan indifference curve.
+-   Negara yang tadinya ekspor C, akan untung jika $\frac{P_C}{P_F}$ naik.
+    -   sebaliknya untuk F.
+-   *Terms of trade*: harga barang ekspor dibagi harga barang impor.
+-   Suatu negara akan untung jika ToT naik, dan rugi jika ToT turun.
+-   Namun, perubahan ToT tidak akan lebih buruk daripada autarky.
 
-- Assume an industry face demand $Q=a-bP$
-- $P$ is not exogen (why?), thus rearrange:
-  - $P=\frac{a}{b}-\frac{Q}{b}$
-- Revenue in the industry $R=Q\times P$, subs $P$:
-  - $R=Q \times \left(\frac{a}{b}-\frac{Q}{b}\right)$
-  - $MR=\frac{a}{b}-2\frac{Q}{b}=P-\frac{Q}{b}$
-
-## Monopoly: a brief review
-
-- Total cost: $C=F+cQ$
-- Marginal cost: $c$
-- Average cost: $\frac{F}{Q}+c$
-- as $Q \rightarrow \infty$, $\frac{F}{Q} \rightarrow 0$
-- The larger F, the larger Q is required.
-
----
-
-## The cost curve
-
-AC2 has a higher fixed cost, thus requires more Q to reach "flat-ish" part of the cost curve.
+------------------------------------------------------------------------
 
 ```{r}
-#| output: false
+#| label: fig1
+#| warning: false
+library(WDI)
 library(tidyverse)
+library(patchwork)
+fppf <- function(q) (16-q^2)^(0.5)
+demand<-function(q) 5-q
+supply<-function(q) q
 
-plot<-ggplot()+theme_classic()+
-  theme(panel.background = element_rect(fill = '#f0f1eb'),
-        plot.background = element_rect(fill = '#f0f1eb'),
-        axis.title.x = element_text(hjust=1),
+
+ppf<-ggplot() +
+  stat_function(fun = fppf,size=1.1, color='black') +
+  labs(x=expression(Q[C]), y=expression(Q[F]),color=NULL,fill=NULL)+
+  annotate("text",x=2,y=60,label=expression(Q[C]==Q[c](K,L[C])))+
+  scale_x_continuous(expand=c(0,0),limits = c(1,5))+
+  scale_y_continuous(expand=c(0,0),limits = c(1,5))+
+  theme_classic()+
+  theme(axis.title.x = element_text(hjust=1),
         axis.title.y = element_text(angle=0,hjust=1,vjust=1),
         panel.grid=element_blank(),
-#        axis.text.x=element_blank(),
-#        axis.text.y=element_blank(),
-#        axis.ticks.x=element_blank(),
-#        axis.ticks.y=element_blank(),
+        axis.text.x=element_blank(),
+        axis.text.y=element_blank(),
+        axis.ticks.x=element_blank(),
+        axis.ticks.y=element_blank(),
+        legend.position=c(1,1),
+        legend.justification = c(1,1),
+        legend.spacing=unit(0,"cm"),
+        legend.margin=margin(0,0,0,0))
+ppf2<-ppf+
+  annotate("segment",x = 1.2, y = 3.9,xend = 2.7, yend = 3.1,size=1.1)+
+  annotate("point", x=1.9,y=3.5,size=4)+
+  annotate("point", x=3.05,y=2.6,size=4)+
+  annotate("text", x=2,y=3.6,label="Q1")+
+  annotate("text", x=3.15,y=2.8,label="Q2")+
+  annotate("segment",x = 2.37, y = 3.5,xend = 3.92, yend = 1.5,size=1.1)
+ppf2+ggplot()+
+  labs(x=expression(frac(Q[C],Q[F])), y=expression(frac(P[C],P[F])),color=NULL,fill=NULL)+
+  theme_classic()+
+  geom_function(fun = supply,size=1, color='red') +
+  stat_function(fun = demand,size=1, color='blue') +
+  scale_x_continuous(limits = c(1,5))+
+  scale_y_continuous(limits = c(1,5))+
+  theme(axis.title.x = element_text(hjust=1),
+        axis.title.y = element_text(angle=0,hjust=1,vjust=1),
+        panel.grid=element_blank(),
+        axis.text.x=element_blank(),
+        axis.text.y=element_blank(),
+        axis.ticks.x=element_blank(),
+        axis.ticks.y=element_blank(),
         legend.position=c(1,1),
         legend.justification = c(1,1),
         legend.spacing=unit(0,"cm"),
         legend.margin=margin(0,0,0,0))
 ```
 
-```{r}
-#| label: fig1
-#| warning: false
-AC1 <- function(q) 1.5/q+1
-AC2 <- function(q) 10/q+1
-plot+
-  stat_function(fun = AC1,size=1.1, color='red') +
-  stat_function(fun = AC2,size=1.1, color='blue') +
-  geom_hline(yintercept=1,size=1.1,color='black')+
-  labs(x="Q", y="C",color=NULL,fill=NULL)+
-  annotate("text",x=10,y=1.3,label="AC1")+
-  annotate("text",x=20,y=2,label="AC2")+
-  annotate("text",x=10,y=0.8,label="MC")+
-  scale_x_continuous(expand=c(0,0),limits = c(0,30))+
-  scale_y_continuous(expand=c(0,0),limits = c(0,5))+
-  theme(      axis.text.x=element_blank(),
-        axis.text.y=element_blank(),
-        axis.ticks.x=element_blank(),
-        axis.ticks.y=element_blank())
-```
-
-## Monopoly Q
-
-::: columns
-::: {.column width="47%"}
+## 2 large countries
 
 ```{r}
 #| label: fig2
 #| warning: false
-#| fig-width: 5
-#| fig-height: 4
+demand<-function(q) 4-.7*q
+supply<-function(q) .7*q
+demand1<-function(q) 7.5-1.5*q
+supply1<-function(q) 1.5*q
 
-demand<- function(q) 5.5-q
-mr<- function(q) 5.5-q-q
-z<-seq(0, 4.5/2, 0.01)
-AC1 <- function(q) 2/q+1
-
-plot+
-  stat_function(fun = AC1,size=1.1, color='red') +
-  stat_function(fun = demand,size=1.1, color='blue') +
-  stat_function(fun = mr,size=1.1, color='#008080') +
-  geom_hline(yintercept=1,size=1.1,color='black')+
-  labs(x="Q", y="C,P",color=NULL,fill=NULL)+
-  geom_ribbon(aes(x = z, ymin = AC1(4.5/2), ymax=demand(4.5/2)), alpha = 0.25) +
-  annotate("point",x=4.5/2,y=1)+
-  annotate("segment",x=4.5/2,y=0,xend=4.5/2,yend=demand(4.5/2),lty="dotted",size=1.1)+
-  annotate("segment",x=0,y=demand(4.5/2),xend=4.5/2,yend=demand(4.5/2),lty="dotted",size=1.1)+
-  annotate("segment",x=0,y=AC1(4.5/2),xend=4.5/2,yend=AC1(4.5/2),lty="dotted",size=1.1)+
-  annotate("text",x=4.5,y=1.8,label="AC")+
-  annotate("text",x=4.9,y=1.1,label="MC")+
-  annotate("text",x=4.8,y=0.5,label="Demand")+
-  annotate("text",x=2.7,y=0.5,label="MR")+
-  scale_x_continuous(expand=c(0,0),limits = c(0,5),breaks = 4.5/2,labels="Qm")+
-  scale_y_continuous(expand=c(0,0),limits = c(0,5),breaks=c(AC1(2.25),demand(2.25)),
-                     labels=c("ACm","Pm"))
+a<-ggplot()+scale_x_continuous(limits = c(1,5))+
+  scale_y_continuous(limits = c(1,5))+theme_classic()+
+  theme(axis.title.x = element_text(hjust=1),
+        axis.title.y = element_text(angle=0,hjust=1,vjust=1),
+        panel.grid=element_blank(),
+        axis.text.x=element_blank(),
+        axis.text.y=element_blank(),
+        axis.ticks.x=element_blank(),
+        axis.ticks.y=element_blank(),
+        legend.position=c(1,1),
+        legend.justification = c(1,1),
+        legend.spacing=unit(0,"cm"),
+        legend.margin=margin(0,0,0,0))
+b<-a+
+  labs(x=expression(Q[H]),y=expression(P[H]),color=NULL,fill=NULL)+
+  geom_function(fun = supply,size=1, color='red') +
+  stat_function(fun = demand,size=1, color='blue')
+c<-a+
+  labs(x=expression(Q[F]),y=expression(P[F]),color=NULL,fill=NULL)+
+  geom_function(fun = supply1,size=1, color='red') +
+  stat_function(fun = demand1,size=1, color='blue')
+b+a+c
   
 ```
-:::
-::: {.column width="47%"}
-- monopolist akan memaksimalkan profit di MR=MC
-- pastinya akan ngecharge P>AC
-- profit $=(P-AC)Q$
-:::
-:::
 
-## Monopolistic competition
+## Dampak pertumbuhan ekonomi
 
-- monopolistic competition industries punya sifat:
-  - firms bisa diferensiasi produk dari kompetitor
-  - harga yang diset rival eksogen.
-  - ada **free entry**
+-   Apakah pertumbuhan ekonomi di RRT atau Vietnam baik untuk Indonesia?
+-   Apakah pertumbuhan ekonomi di Indonesia lebih baik jika tidak ada internasional trade?
+-   Dua-duanya bisa jadi benar, bisa juga salah.
 
-- Industri apa yang seperti ini?
+## Biased growth
 
-## Karakteristik monopolistic
+-   Ricardian: perubahan teknologi akan menyebabkan growth bias ke industri tertentu.
+-   H-O: faktor produksi menyebabkan biased growth.
+-   Indonesia: Industri makanan dan service tumbuh lebih cepat dari manufaktur.
 
-$$
-Q=S\times\left[1/n-b(P-\bar{P})\right]
-$$
-- Q = total sales of individual firm
-- S = total sales of the industry
-- n = number of firms
-- b = elasticity of supply
-- P = firms' price
-- $\bar{P}$ = rival's price index
+## Biased growth
 
-## Karakteristik monopolistic 
+-   Biased growth di negara besar dapat menyebabkan perubahan terms of trade
+-   Pertumbuhan yang bias cloth: $\frac{P_C}{P_F} \downarrow$, TOT cloth exporter $\downarrow$
+-   Pertumbuhan yang bias food: $\frac{P_C}{P_F} \uparrow$, TOT cloth exporter $\uparrow$
+-   Pertumbuhan bias cloth bagi eksportir cloth disebut **export-bias growth**, sementara bagi importir cloth disebut **import-bias growth**
 
-$$
-Q=S\times\left[1/n-b(P-\bar{P})\right]
-$$
+## Biased growth
 
-- sales firm akan naik jika total sales industri naik, harga rival naik.
-- sales firm akan turun jika jumlah industri naik, harga sendiri naik.
-- Jika semua firm identik, maka $P=\bar{P}$, semua akan produksi dengan jumlah yang sama $S/n$
-- $AC=\frac{F}{Q}+c \Rightarrow AC=n\frac{F}{S}+c$
+> export bias growth tends to worsen a growing country's terms of trade to the benefit of the rest of the world; import-biased growth tends to improve a growing country's terms of trade at the rest of the world's expense
 
-## Karakteristik monopolistik
+## The evidence?
 
-$AC=n\frac{F}{S}+c$
+-   China, the exporter of the world, seems to experience lower terms of trade.
+-   However,Data on US and EU terms of trade seems to adjust quite marginally.
+    -   How important trade is in the economy?
+    -   Trade measures may change terms of trade as well
+-   What about Indonesia?
 
-- Average cost akan naik seiring jumlah perusahaan yang bertambah, hal ini karena jumlah market share yang berkurang.
-- Seiring naiknya ukuran pasar, average cost dapat dikurangi karena tiap firm dapat produksi lebih banyak.
-- jika demand linear $Q=a-bP$, maka firms akan produksi di MR=MC
-- $P-\frac{Q}{Sb}=c \rightarrow \frac{Q}{Sb}=P-c \rightarrow P-c=\frac{1}{nb}$
+------------------------------------------------------------------------
 
-## Karakteristik monopolistik
+<iframe src="https://data.worldbank.org/share/widget?end=2019&amp;indicators=TT.PRI.MRCH.XD.WD&amp;locations=ID-CN&amp;start=2000" width="900" height="600" frameBorder="0" scrolling="no">
 
-$P-c=\frac{S}{nb}$
+</iframe>
 
-- seiring meningkatnya jumlah perusahaan di industri, $P-c$ (mark-up) turun.
-  - karena c exogen, turunnya $P-c$ disebabkan oleh turunnya $P$
-  - semakin banyak firms, semakin sedikit market share, semakin tinggi harus charge P.
-- Firms akan masuk terus selama ada profit.
-- di long-run, jumlah firms settle di $P=AC$
+## International borrowing and lending
 
-## Monopolistik
+-   Autarky: Apa yang dikonsumsi = apa yang diproduksi.
+-   Trade: Yang penting $\sum_iQ_iP_i=\sum_iD_iP_i$
+-   Intertemporal trade: possibility having a trade surplus dan trade deficit.
+    -   at $t=1$, $\sum_iQ_iP_i=\sum_iD_iP_i+B$
+    -   at $t=1$, $\sum_iQ_iP_i=\sum_iD_iP_i-(1+r)B$
 
-::: columns
-::: {.column width="47%"}
+## Borrowing and lending {.m}
 
-```{r}
-#| label: fig3
-#| warning: false
-#| fig-width: 5
-#| fig-height: 4
+-   Standar trade model dapat kita modif untuk merefleksikan intertemporal trade:
+    -   2 goods: current consumption and future consumption.
+-   PPF-nya adalah possible current consumption dan future consumption.
+-   Let Home bias current consumption, Foreign bias future consumption.
+-   Home export current consumption, import future consumption.
+-   foreign ngutang dulu, bayar di periode berikutnya.
 
-DD<- function(q) 9/q+1
-CC<- function(q) q+1
+## Harga intertemporal
 
-plot+
-  stat_function(fun = DD,size=1.1, color='blue') +
-  stat_function(fun = CC,size=1.1, color='red') +
-  labs(x="n", y="C,P",color=NULL,fill=NULL)+
-  scale_x_continuous(expand=c(0,0),limits = c(0,10),breaks = 3,labels="n*")+
-  scale_y_continuous(expand=c(0,0),limits = c(0,10),breaks=4,labels="P*,AC*")+
-  annotate("text",x=7,y=7,label="AC(n,.)")+
-  annotate("text",x=7,y=3,label="P(n,.)")
-  
-```
-:::
-::: {.column width="47%"}
-- Any higher than $n^*$, firms cost is too much.
-- Any lower than $n^*$, mark-up will go up, incentives for new entrant to join.
-:::
-:::
+-   Pinjem 1 unit of output, harus bayar 1+r di mana r=real interest rate.
+-   $\frac{P_{current}}{P_{future}}=\frac{1}{1+r}$
+-   lokasi produksi akan ada di slope $=-(1+r)$
+-   Gambarnya akan mirip dengan standard model.
 
-## Trade & monopolistic
+## Economies of scale
 
-::: columns
-::: {.column width="47%"}
+-   Kita sudah membahas berbagai model yang menggunakan asumsi perfect competition.
+-   Di perfect competition, supernormal profit ngga ada.
+-   Meski demikian, seringkali di dunia nyata ada some degree of oligopoly or monopolistic competition.
+-   International trade dapat membantu dalam hal ini.
 
-```{r}
-#| label: fig4
-#| warning: false
-#| fig-width: 5
-#| fig-height: 4
+## Economies of scale {.m}
 
-DD<- function(q) 9/q+1
-DDD<- function(q) 18/q+1
-CC<- function(q) q+1
-CCC<- function(q) q/2+1
+-   Bayangkan ada industri yang semakin besar outputnya, per unit cost nya semakin murah.
+-   Sebagian besar tech services these days kaya gini:
+    -   Google bisa nawarin servis gratis karena kliennya seluruh dunia.
+    -   Netflix bisa jor-joran biaya produksi.
+-   Tapi banyak usaha yang begini, terutama yang fixed cost-nya mahal.
+    -   beli mesin kapasitas besar yang mahal bakal lama balik modalnya kalau produksinya sedikti.
 
-plot+
-  stat_function(fun = DD,size=1.1, color='blue') +
-  stat_function(fun = CC,size=1.1, color='red') +
-  stat_function(fun = CCC,size=1.1, color='red',lty='dashed') +
-  labs(x="n", y="C,P",color=NULL,fill=NULL)+
-  scale_x_continuous(expand=c(0,0),limits = c(0,10),breaks =c(3,sqrt(18)),labels=c("n1","n2"))+
-  scale_y_continuous(expand=c(0,0),limits = c(0,10),breaks=c(4,DD(sqrt(18))),labels=c("P1,AC1","P2,AC2"))+
-  annotate("text",x=7,y=7,label="AC(n,.)")+
-  annotate("text",x=7,y=3,label="P(n,.)")
+## International trade & economies of scale
 
-  
-```
-:::
-::: {.column width="47%"}
-- Trade akan menambah jumlah market
-  - AC berkurang, tetapi kurva penentu harga tidak pengaruh karena semua dapat market share yang sama.
-  - jumlah firms naik dan harga turun.
-- Karena differentiated goods, konsumen lebih senang juga karena ada variasi.
-:::
-:::
+-   Google dan Netflix adalah contoh bagaimana international trade membantu naikin scale firms sehingga bisa menjual produk dengan lebih murah.
+-   Automotif di Amerika Latin gagal karena semua negara mencoba membangun industri otomotif.
+-   Semakin kecil negaranya, semakin susah mencapai *economies of scale*.
+    -   Karena itu negara kecil cenderung lebih aktif berdagang.
 
-## Contoh numerik
+## Eksternal dan internal economies of scale
 
-- Misalnya ada industri otomotif dengan struktur sbb:
+-   Eksternal economies of scale: situasi di mana konsentrasi pasar akan menguntungkan jika terjadi di level industri. Firms-nya sendiri bisa ada banyak.
+-   Internal economies of scale: Ketika konsentrasi pasar akan menguntungkan jika terjadi di level perusahaan, bukan industri.
+-   Internal economies of scale akan dibahas di pertemuan berikutnya.
 
-$$
-Q=S\times[(1/n)-(1/30000)\times(P-\bar{P})] \\
-$$
+## Eksternal economies of scale
 
-- dengan cost sbb:
+-   Ada industri yang akan memniliki keunggulan jika memiliki lokasi yang berdekatan.
+-   Hal ini disebut juga dengan aglomerasi.
+-   Di berbagai belahan dunia, aglomerasi terjadi:
+    -   Silicon Valley, Hollywood, Wu han, Bangalore.
+-   Enabler aglomerasi: specialized suupplier, labor market pooling, dan knowledge spillovers.
 
-$$
-AC=750000000/Q+5000
-$$
+## Specialized suppliers
 
-- Misalnya Home jual 900ribu kendaraan dalam setahun, sementara Foreign 1,6 juta kendaraan.
+-   Di banyak industri, produksi dan produk development seringkali memerlukan peralatan khusus.
+-   peralatan khsus ini mungkin tidak memiliki demand yang cukup jika pemainnya sedikit.
+-   Seiring berkembangnya Silicon Valley sebagai pusat produksi semikonduktor, mulai bermunculan perusahaan yang membuat barang modal.
+-   Perusahaan pembuat barang modal ini semakin mempermudah tumbuhnya perusahaan semikonduktor baru.
 
-## Contoh numerik
+## Silicon valley
 
-```{r}
-#| label: fig5
-#| warning: false
+-   Kuatnya industri produsen barang modal membuat perusahaan di luar Silicon Valley jadi kurang kompetitif.
+-   Dis amping itu, seiring berkembangnya industri semikonduktor, banyak perusahaan malah semakin fokus 'fabless'.
+-   Pada akhirnya, karena produsen barang modalnya juga semakin ahli, mereka juga bisa serve market di luar Amerika Serikat.
+-   Semikonduktor adalah contoh di mana akses ke supplier yang sangat spesialisasi memberikan keunggulan.
 
-library("patchwork")
-DA<- function(q) 5000+1/(1/30000*q)
-CA<- function(q) 750000000*q/900000+5000
-CB<- function(q) 750000000*q/1600000+5000
-C3<- function(q) 750000000*q/2500000+5000
+## Labor market pooling
 
+-   Industri yang terletak di satu lokasi akan memberi keuntungan dalam hal mengumpulkan pegawai.
+-   Jika sebuah industri memiliki banyak perusahaan yang terkonsentrasi di satu tempat, maka akan mudah bagi pekerja mencari pekerjaan di tempat tersebut.
+-   Karena tau bahwa pekerja akan datang ke tempat tersebut, sebuah industri makin untung jika berlokasi di tempat tersebut.
+-   Kampus seringkali jadi daya tarik aglomerasi bagi satu industri.
 
-a<-plot+
-  stat_function(fun = DA,size=1.1, color='blue') +
-  stat_function(fun = CA,size=1.1, color='red') +
-  labs(x="n", y="C,P",color=NULL,fill=NULL)+
-  scale_x_continuous(expand=c(0,0),limits = c(0,12))+
-  scale_y_continuous(expand=c(0,0),limits = c(0,36000))+
-  ggtitle("Home")
+## Knowledge spillover
 
-b<-plot+
-  stat_function(fun = DA,size=1.1, color='blue') +
-  stat_function(fun = CB,size=1.1, color='red') +
-  labs(x="n", y="C,P",color=NULL,fill=NULL)+
-  scale_x_continuous(expand=c(0,0),limits = c(0,12))+
-  scale_y_continuous(expand=c(0,0),limits = c(0,36000))+
-  ggtitle("Foreign")
+-   Zaman sekarang, pengetahuan bisa dikatakan sama pentingnya dengan faktor produksi seperti kapital dan buruh.
+-   Hal ini semakin penting lagi bagi industri yang mengandalkan inovasi dan kreativitas.
+-   Akumulasi pengetahuan ada berbagai cara: reverse engineer, R&D, dst.
+-   Namun aglomerasi memberikan kemungkinan akumulasi pengetahuan secara informal.
 
-c<-plot+
-  stat_function(fun = DA,size=1.1, color='blue') +
-  stat_function(fun = C3,size=1.1, color='red') +
-  labs(x="n", y="C,P",color=NULL,fill=NULL)+
-  scale_x_continuous(expand=c(0,0),limits = c(0,12))+
-  scale_y_continuous(expand=c(0,0),limits = c(0,36000))+
-  ggtitle("Trade")
+## Silicon valley lagi
 
-a+b+c
-```
+-   Silicon valley sering menjadi contoh sukses aglomerasi.
+    -   Specialized suppliers
+    -   Lokasi dekat kampus dan pusat R&D
+    -   Bahkan di digital age, lokasi fisik masih penting dalam hal knowledge spillover.
+-   Sayangnya seringkali aglomerasi ini terjadi secara natural dan sulit dikopi.
 
-## Contoh numerik
+## Kenapa sulit?
 
-|     | Home, no trade | Foreign, no trade | Integrated market |
-| --- | -------------- | ----------------- | ----------------- |
-| Output | 900.000 | 1.600.000 | 2.500.000 |
-| n | 6 | 8 | 10 |
-| Output per firm | 150.000 | 200.000 | 250.000 |
-| AC,P | 10.000 | 8.750 | 8.000 |
+-   Aglomerasi memberikan keunggulan bagi *established region* yang industrinya sudah keburu matang.
+-   Karena Hollywood sudah sangat besar, sulit bagi negara lain untuk mengkopi dari 0, kecuali bisa langsung sama besarnya dalam waktu singkat.
+    -   Padahal, murahnya produk hollywood datang dari ukurannya yang besar.
+-   Netflix termasuk pendatang awal di streaming, tapi dapat dikejar oleh Disney dan Amazon karena mereka memang sudah besar dari awal.
 
-## Highlighted feature
+## Natural resources
 
-- Tidak seperti chapter-chapter sebelumnya, di sini bahkan dua negara yang teknologinya sama (cost structurenya sama) di industri yang sama akan dapat untuk ketika trade.
-- Monopolistic competition akan benefit dengan **intra-industry trade**.
-  - ekspor mobil, tapi juga impor mobil.
-  - Think of Toyota and Ford.
-- more car variety: dari 6 & 8 jadi 10 untuk keduanya.
-
-## Highlighted feature
-
-- Note bahwa intra-industry trade lebih menguntungkan bagi negara Home
-  - harga turun 2000, di foreign turun cuma 750.
-- Hal ini karena negara Home memiliki market yang kecil.
-  - makin kecil market, makin tinggi fixed cost yang harus dibayar.
-  - inilah sebabnya negara kecil seperti Singapura, Malaysia, Thailand dan Vietnam rajin mengejar FTA.
-
-## Firms response to trade
-
-- Dari 14 merk mobil di contoh di atas (6 home, 8 foreign), hanya ada 10 yang bertahan.
-- 10 merk ini dapat market share yang lebih tinggi, sehingga cost lebih rendah.
-- Karena semua firms dianggap identik, kita tidak perlu terlalu peduli siapa yang kelluar dari pasar.
-- Tapi dunia nyata tidak seperti itu: 4 yg exit must be the worst performers.
-
-## Firms response to trade
-
-- Integrasi pasar akan memaksa firms dengan cost terendah untuk keluar.
-- Karena industri ini dianggap memiliki fixed cost yang sama, variasi cost akan datang dari marginal cost.
-- Ketika pasar terintegrasi, akan ada _threshold_ $c^*$ di mana semua firms yang marginal costnya di bawah itu akan terpaksa keluar.
-
-## More gain from trade
-
-- Hal ini akan menambah lagi gains from trade:
-  - worst firms will exit, sehingga yang tersisa hanya firms yang efisien.
-  - hal ini akan meningkatkan produktivitas industri secara umum.
-  - Jika 5 mahasiswa paling kecil nilainya drop out, maka rata-rata kelas akan naik.
-- Salah satu cara "mengussir" kompetitor adalah dengan akuisisi.
-
-## Export cost
-
-- Ada cost untuk export:
-  - establish presence, market research, finding partners.
-  - hanya firms paling produktif yang akan sanggup ekspor.
-- Argumen sebaliknya juga bisa terjadi:
-  - Learning by doing: seiring bertambahnya ekspor, produsen jadi semakin produktif.
-  
-## Multinationals and FDI
-
-- Umumnya, FDI dianggap lebih costly daripada ekspor.
-- Greenfield FDI: investasi di fasilitas produksi baru.
-- Brownfield FDI: beli fasilitas produksi milik perusahaan lain.
-- Horizontal FDI: replikasi.
-- Vertical FDI: global value chain.
-
-## Multinationals and FDI
-
-- Horizontal FDI: akan dipilih apabila ada trade cost yang tinggi.
-  - Tujuannya: akses pasar. Jarang menjadi fasilitass ekspor.
-- Vertical FDI: tujuan utamanya adalah untuk menekan cost.
-  - Negara low-tech bisa menghasilkan barang high-tech.
-  - Butuh trade cost yang kecil.
-  - leads to intrafirm trade.
-  
-## Intrafirm Trade {.m}
-
-- Analyzing between-country trade is getting less relevant as the importance of intrafirm trade improves.
-- Half of total imports of US are intrafirm. However, around 10% of US trade with Indonesia is intrafirm.
-- The difference between exporters and non-exporters is mostly driven by firms that both import and export. This is true also in Indonesia.
-- Amiti and Konings (2007) show that a reduction of import tariff by half improves productivity of an importing firm by 12%, which is larger than the reduction of output tariff by destination countries.
-- Channels: foreign technology embeded in the inputs, variety of inputs, cheaper and higher quality inputs.
-- Others try to find more evidence for Indonesia (e,g., Pane and Patunru 2019, Gupta 2020), but data availability in firm level remains a huge challenge.
-
-## {background-image="wew.jpg"}
+-   Dekat natural resources juga sering menjadi salah satu contoh *specialized suppliers*.
+-   Salah satu faktor pendorong revolusi industri di Inggris adalah karena dia punya banyak batubara (ketika itu).
+-   Indonesia dengan industri nikelnya sedang mengupayakan aglomerasi: kawasan industri smelter lengkap dengan universitas.
+-   Apakah berhasil? Mudah-mudahan yah!
