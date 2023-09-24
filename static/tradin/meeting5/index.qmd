@@ -54,11 +54,19 @@ format:
 
 ## Monopolistic competition
 
-- Kondisi monopolistic competition sangat cocok untuk menganalisis hal ini.
-- Monopolistik competition: firms tau mereka bisa kontrol harga (to some extent)
-- Kondisi ini tercipta ketika salah satu dari dua hal ini terjadi:
-  - hanya sedikit major player in the industry.
-  - product is differentiated enough (hanya ada 1 produsen iOS, misalnya)
+- In monopolistic competition, firms have some ability to control price.
+
+- Condition which enable this:
+
+    - Few number of players.
+    
+    - DIfferentiated products.
+    
+- Product differentiation may come from various aspect:
+
+    - Technology: smartphones, OS, recipe.
+    
+    - Network effect: social media, apps store, Gojek/Grab.
 
 ## Monopoly: a brief review
 
@@ -170,12 +178,16 @@ plot+
 
 ## Monopolistic competition
 
-- monopolistic competition industries punya sifat:
-  - firms bisa diferensiasi produk dari kompetitor
-  - harga yang diset rival eksogen.
-  - ada **free entry**
+- Characteristics of monopolistic competition industries:
+  - Firms can differentiate.
+  - Rival's price is exogenous.
+  - free entry.
 
-- Industri apa yang seperti ini?
+- We also introduce high fixed cost!
+
+    - while entry is free, a firm must pay some fixed cost.
+    
+- Can you mention some examples?
 
 ## Karakteristik monopolistic
 
@@ -195,31 +207,31 @@ $$
 Q=S\times\left[1/n-b(P-\bar{P})\right]
 $$
 
-- sales firm akan naik jika total sales industri naik, harga rival naik.
-- sales firm akan turun jika jumlah industri naik, harga sendiri naik.
-- Jika semua firm identik, maka $P=\bar{P}$, semua akan produksi dengan jumlah yang sama $S/n$
+- A firm's sales go up if total sales of the industry goes up and/or rivals' price go up.
+- A firm's sales goes down if the number of firms go up and its own price go up.
+- All firms are identic: $P=\bar{P}$, all firms share the market equally $S/n$
 - $AC=\frac{F}{Q}+c \Rightarrow AC=n\frac{F}{S}+c$
 
-## Karakteristik monopolistik
+## Monopolistic characteristics
 
 $AC=n\frac{F}{S}+c$
 
-- Average cost akan naik seiring jumlah perusahaan yang bertambah, hal ini karena jumlah market share yang berkurang.
-- Seiring naiknya ukuran pasar, average cost dapat dikurangi karena tiap firm dapat produksi lebih banyak.
-- jika demand linear $Q=a-bP$, maka firms akan produksi di MR=MC
+- Average cost goes up as numbers of firm go up. This is because firms' market share goes down. berkurang.
+- As the overall pie goes up, average cost go down: the fixed cost can be shared among more sales.
+- With a linear demand $Q=a-bP$, firms produce at MR=MC
 - $P-\frac{Q}{Sb}=c \rightarrow \frac{Q}{Sb}=P-c \rightarrow P-c=\frac{1}{nb}$
 
-## Karakteristik monopolistik
+## Monopolistic Characteristics
 
-$P-c=\frac{S}{nb}$
+$P-c=\frac{1}{nb}$
 
-- seiring meningkatnya jumlah perusahaan di industri, $P-c$ (mark-up) turun.
-  - karena c exogen, turunnya $P-c$ disebabkan oleh turunnya $P$
-  - semakin banyak firms, semakin sedikit market share, semakin tinggi harus charge P.
-- Firms akan masuk terus selama ada profit.
-- di long-run, jumlah firms settle di $P=AC$
+- As the number of firms go up, $P-c$ (markups) goes down.
+  - Since c is exogenous, reduction of markups is driven by $P \Downarrow$
+  - More firms, less market share, P must go up to avoid loss.
+- Firms will keep coming in as long as there's profit.
+- In the long-run, number of firms settles at $P=AC$
 
-## Monopolistik
+## Monopolistic
 
 ::: columns
 ::: {.column width="47%"}
@@ -278,32 +290,39 @@ plot+
 
   
 ```
+
+$$
+AC=n\frac{F}{S}+c \\
+P=\frac{1}{nb}+c
+$$
+
 :::
 ::: {.column width="47%"}
-- Trade akan menambah jumlah market
-  - AC berkurang, tetapi kurva penentu harga tidak pengaruh karena semua dapat market share yang sama.
-  - jumlah firms naik dan harga turun.
-- Karena differentiated goods, konsumen lebih senang juga karena ada variasi.
+- Opening to trade increases the market size.
+  - $S \uparrow$ increase AC (less share per firm), but pricing is unaffected.
+  - New equilibrium is lower price and more firms in the market.
+- More firms->more varieties.
+
 :::
 :::
 
-## Contoh numerik
+## Nummeric examples
 
-- Misalnya ada industri otomotif dengan struktur sbb:
+- Let an automotive industries as follows:
 
 $$
 Q=S\times[(1/n)-(1/30000)\times(P-\bar{P})] \\
 $$
 
-- dengan cost sbb:
+- with this cost structures:
 
 $$
 AC=750000000/Q+5000
 $$
 
-- Misalnya Home jual 900ribu kendaraan dalam setahun, sementara Foreign 1,6 juta kendaraan.
+- Let home sells 900k vehicles a year while foreign produces 1,600k.
 
-## Contoh numerik
+## Numeric examples
 
 ```{r}
 #| label: fig5
@@ -347,71 +366,74 @@ a+b+c
 
 |     | Home, no trade | Foreign, no trade | Integrated market |
 | --- | -------------- | ----------------- | ----------------- |
-| Output | 900.000 | 1.600.000 | 2.500.000 |
+| Output | 900,000 | 1,600,000 | 2,500,000 |
 | n | 6 | 8 | 10 |
-| Output per firm | 150.000 | 200.000 | 250.000 |
-| AC,P | 10.000 | 8.750 | 8.000 |
+| Output per firm | 150,000 | 200,000 | 250,000 |
+| AC=P | 10,000 | 8,750 | 8,000 |
 
 ## Highlighted feature
 
-- Tidak seperti chapter-chapter sebelumnya, di sini bahkan dua negara yang teknologinya sama (cost structurenya sama) di industri yang sama akan dapat untuk ketika trade.
-- Monopolistic competition akan benefit dengan **intra-industry trade**.
-  - ekspor mobil, tapi juga impor mobil.
+- Even when both countries have the same technology (identical cost structure), trade brings positive impact.
+- Monopolistic competition is benefited from **intra-industry trade**.
+  - Export car but also import car.
   - Think of Toyota and Ford.
-- more car variety: dari 6 & 8 jadi 10 untuk keduanya.
+- more car variety: from 6 & 8 brands to 10 brands for both countries.
 
 ## Highlighted feature
 
-- Note bahwa intra-industry trade lebih menguntungkan bagi negara Home
-  - harga turun 2000, di foreign turun cuma 750.
-- Hal ini karena negara Home memiliki market yang kecil.
-  - makin kecil market, makin tinggi fixed cost yang harus dibayar.
-  - inilah sebabnya negara kecil seperti Singapura, Malaysia, Thailand dan Vietnam rajin mengejar FTA.
+- Note that intra-industry trade is more beneficial for Home
+  - price reduces by 2k, foreign only by 750.
+- This is because home country have a smaller market.
+  - The smaller the market, the less fixed cost is shared.
+  - This is why small countries like Singapore, Malaysia, Vietnam and Thailand pursue FTAs vigorously.
 
 ## Firms response to trade
 
-- Dari 14 merk mobil di contoh di atas (6 home, 8 foreign), hanya ada 10 yang bertahan.
-- 10 merk ini dapat market share yang lebih tinggi, sehingga cost lebih rendah.
-- Karena semua firms dianggap identik, kita tidak perlu terlalu peduli siapa yang kelluar dari pasar.
-- Tapi dunia nyata tidak seperti itu: 4 yg exit must be the worst performers.
+- From 14 brands of car, only 10 survives.
+- These 10 brands get more market share, hence able to reduce cost.
+- Since all firms are identical in our analysis, we do not care who out and who're staying.
+- However, in the real world, firms are not identical: 4 firms who exit must be the worst performers.
+
 
 ## Firms response to trade
 
-- Integrasi pasar akan memaksa firms dengan cost terendah untuk keluar.
-- Karena industri ini dianggap memiliki fixed cost yang sama, variasi cost akan datang dari marginal cost.
-- Ketika pasar terintegrasi, akan ada _threshold_ $c^*$ di mana semua firms yang marginal costnya di bawah itu akan terpaksa keluar.
+- Market integration forced firms with worse cost structure to exit.
+- If the fixed cost to enter the industry is the same, cost variation will come from variable cost.
+- Then there's a threshold $c^*$ where all firms with $c>c^*$ exit.
 
 ## More gain from trade
 
-- Hal ini akan menambah lagi gains from trade:
-  - worst firms will exit, sehingga yang tersisa hanya firms yang efisien.
-  - hal ini akan meningkatkan produktivitas industri secara umum.
-  - Jika 5 mahasiswa paling kecil nilainya drop out, maka rata-rata kelas akan naik.
-- Salah satu cara "mengussir" kompetitor adalah dengan akuisisi.
+- This, in turn, adds to the gain from trade:
+
+  - worst firms will exit, only firms with $c<c^*$ stays.
+  - meaning, price index further even more from lower average variable cost.
+  - If 5 worst students drop out, average GPA will go up.
+  
+- Firms who exit will be absorbed by the stayers: either naturally or through acquisition/joint-venture.
 
 ## Export cost
 
-- Ada cost untuk export:
+- We can associate a fixed cost with export cost:
   - establish presence, market research, finding partners.
-  - hanya firms paling produktif yang akan sanggup ekspor.
-- Argumen sebaliknya juga bisa terjadi:
-  - Learning by doing: seiring bertambahnya ekspor, produsen jadi semakin produktif.
+  - Only the most productive firms join the global market.
+- Opposite argument is also true:
+  - Learning by doing: As the firm keeps on exporting, they learn from the global market and become much more productive.
   
 ## Multinationals and FDI
 
-- Umumnya, FDI dianggap lebih costly daripada ekspor.
-- Greenfield FDI: investasi di fasilitas produksi baru.
-- Brownfield FDI: beli fasilitas produksi milik perusahaan lain.
-- Horizontal FDI: replikasi.
+- In general, FDI is considered more costly than ekspor.
+- Greenfield FDI: Brand new investment.
+- Brownfield FDI: purchasing someone else's asset.
+- Horizontal FDI: Replicating domestic success.
 - Vertical FDI: global value chain.
 
 ## Multinationals and FDI
 
-- Horizontal FDI: akan dipilih apabila ada trade cost yang tinggi.
-  - Tujuannya: akses pasar. Jarang menjadi fasilitass ekspor.
-- Vertical FDI: tujuan utamanya adalah untuk menekan cost.
-  - Negara low-tech bisa menghasilkan barang high-tech.
-  - Butuh trade cost yang kecil.
+- Horizontal FDI is done under high trade cost.
+  - the goal is market access. Usually will not export to other countries.
+- Vertical FDI: the goal is to supress cost.
+  - Low-tech countries can export high-tech goods.
+  - Requires low trade cost, and possible large intermediate imports.
   - leads to intrafirm trade.
   
 ## Intrafirm Trade {.m}
