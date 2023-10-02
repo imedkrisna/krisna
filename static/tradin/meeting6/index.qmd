@@ -1,7 +1,7 @@
 ---
-title: "The Standard Model"
-subtitle: "ECES905205 pertemuan 5"
-date: "12 September 2022"
+title: "Argument against free trade"
+subtitle: "ECES905205 pertemuan 6"
+date: "3 October 2023"
 author: "I Made Krisna Gupta"
 format: 
   revealjs:
@@ -14,43 +14,67 @@ format:
   beamer: default
 ---
 
-## 3 model
+## Today
 
--   Dari kemarin kita sudah belajar berbagai trade model:
-    -   Ricardian model untuk 1 mobile factor.
-    -   Specific factors model: perbedaan distribusi pendapatan.
-    -   H-O: same tech, different endowment.
--   Semuanya beda-beda dan dapat digunakan sesuai kesesuaian dengan isu kita.
+- We have learned why trade is good.
 
-## Similarities
+- These models however uses various assumptions that may or may not be true.
 
-Beberapa persamaan:
+- When these assumptions are relaxed, some reason to NOT trade may emerges.
 
-1.  Trade is driven by difference in PPF.
-2.  PPF determines relative supply scheduule.
-3.  World equilibrium ditentukan oleh demand dunia dan posisi kita sebelum trade.
+- Today we learn two: small country & dynamic efficiency.
 
-## Mekanisme {.m}
+- Leads to 3 insights: optimal tariff, infant industry, and current account management.
 
--   Tanpa trade, harga akan ditentukan oleh supply & demand domesttik.
-    -   Preference vs teknologi
-    -   Ada efek substitusi baik untuk produksi maupun konsumsi
-    -   Slope indifference curve = slope PPF = slope harga relatif
--   Trade akan mengubah slope harga relatif.
-    -   harga relatif domestik akan mendekati harga relatif dunia.
-    -   Slope harga relatif geser, dan yang lain juga geser.
-    -   Akan diseimbangkan dengan ekspor dan impor.
+## Gains from trade recap
 
-## Welfare change {.m}
+- So far, we have explored gains from trade:
 
--   Kita dapat mengilustrasikan perubahan kesejahteraan dari perubahan indifference curve.
--   Negara yang tadinya ekspor C, akan untung jika $\frac{P_C}{P_F}$ naik.
-    -   sebaliknya untuk F.
--   *Terms of trade*: harga barang ekspor dibagi harga barang impor.
--   Suatu negara akan untung jika ToT naik, dan rugi jika ToT turun.
--   Namun, perubahan ToT tidak akan lebih buruk daripada autarky.
+    - difference in technology $\rightarrow$ specialization (comparative advantage)
+    
+    - less constraint (i.e., as long as trade is balanced)
+    
+    - difference in factor endowment
+    
+- With large [fixed cost & monopolistic]{.underline}, we get loves of variety & internal economies of scale efficiency.
 
-------------------------------------------------------------------------
+- Remember, as long as we can reach higher bundle with trade, then trade is better!
+
+## Argument agains trade
+
+- Gains of trade is not shared equally if [factor movements and ownerships cannot switch fluidly]{.underline}.
+
+    - factor owners that stay in the import-competing industry loses.
+    
+    - violates pareto optimality.
+    
+- We showed that in this case, overall economic size increases, so in theory we can compensate those losers.
+
+- First policy lesson: we can redistribute losers as long as the pie is larger (and the government is efficient)
+
+## Large country assumption
+
+- We use small country assumption so far.
+
+- That is, whatever happens in our country in question, it will not affect the world market.
+
+- In reality, various countries' action affects world prices!
+
+    - OPEC capacity reduction increases oil price. US entered a recession because of this.
+    
+    - Indonesian nickel ban $\rightarrow$ increased nickel ore price.
+    
+## Large country assumption
+
+- Remember, in international trade, we often use ToT (i.e., $\frac{P_X}{P_M}$) to measure welfare.
+
+- Since large countries can affect prices while its small partners cannot, large countries can alter their policy to affect ToT in their favor.
+
+- Basically kinda like a monopolist.
+
+- To see the mechanism, we have to understand the impact of tariff for small country first.
+
+## Tariff for small country
 
 ```{r}
 #| label: fig1
@@ -58,61 +82,59 @@ Beberapa persamaan:
 library(WDI)
 library(tidyverse)
 library(patchwork)
-fppf <- function(q) (16-q^2)^(0.5)
-demand<-function(q) 5-q
-supply<-function(q) q
 
+D<-function(q) 10-q
+S<-function(q) q
 
-ppf<-ggplot() +
-  stat_function(fun = fppf,size=1.1, color='black') +
-  labs(x=expression(Q[C]), y=expression(Q[F]),color=NULL,fill=NULL)+
-  annotate("text",x=2,y=60,label=expression(Q[C]==Q[c](K,L[C])))+
-  scale_x_continuous(expand=c(0,0),limits = c(1,5))+
-  scale_y_continuous(expand=c(0,0),limits = c(1,5))+
+a<-ggplot()+
+  scale_x_continuous(expand=c(0,0),limits = c(0,10),breaks=c(3,4,6,7),
+                     labels=c("Sm","St","Dt","Dm"))+
+  scale_y_continuous(expand=c(0,0),limits = c(0,10),breaks=c(3,4),
+                     labels=c("Pw","Pw+t"))+
+  geom_function(fun = S,size=1, color='red') +
+  stat_function(fun = D,size=1, color='blue')+
+  annotate("segment",x=0,xend=6,y=4,yend=4,lty="dashed")+
+  annotate("segment",x=0,xend=7,y=3,yend=3,lty="dashed")+
+  annotate("segment",x=4,xend=4,y=0,yend=4,lty="dashed")+
+  annotate("segment",x=6,xend=6,y=0,yend=4,lty="dashed")+
+  annotate("segment",x=7,xend=7,y=0,yend=3,lty="dashed")+
+  annotate("segment",x=3,xend=3,y=0,yend=3,lty="dashed")+
+  annotate("text",x=2,y=3.5,label="A")+
+  annotate("text",x=3.7,y=3.2,label="B")+
+  annotate("text",x=5,y=3.5,label="C")+
+  annotate("text",x=6.2,y=3.2,label="D")+
+  labs(x="Q",y="P")+
   theme_classic()+
   theme(axis.title.x = element_text(hjust=1),
+        panel.background = element_rect(fill = "#f0f1eb", colour = "#f0f1eb"),
+        plot.background = element_rect(fill = "#f0f1eb"),
         axis.title.y = element_text(angle=0,hjust=1,vjust=1),
         panel.grid=element_blank(),
-        axis.text.x=element_blank(),
-        axis.text.y=element_blank(),
-        axis.ticks.x=element_blank(),
-        axis.ticks.y=element_blank(),
+#        axis.text.x=element_blank(),
+#        axis.text.y=element_blank(),
+#        axis.ticks.x=element_blank(),
+#        axis.ticks.y=element_blank(),
         legend.position=c(1,1),
         legend.justification = c(1,1),
         legend.spacing=unit(0,"cm"),
         legend.margin=margin(0,0,0,0))
-ppf2<-ppf+
-  annotate("segment",x = 1.2, y = 3.9,xend = 2.7, yend = 3.1,size=1.1)+
-  annotate("point", x=1.9,y=3.5,size=4)+
-  annotate("point", x=3.05,y=2.6,size=4)+
-  annotate("text", x=2,y=3.6,label="Q1")+
-  annotate("text", x=3.15,y=2.8,label="Q2")+
-  annotate("segment",x = 2.37, y = 3.5,xend = 3.92, yend = 1.5,size=1.1)
-ppf2+ggplot()+
-  labs(x=expression(frac(Q[C],Q[F])), y=expression(frac(P[C],P[F])),color=NULL,fill=NULL)+
-  theme_classic()+
-  geom_function(fun = supply,size=1, color='red') +
-  stat_function(fun = demand,size=1, color='blue') +
-  scale_x_continuous(limits = c(1,5))+
-  scale_y_continuous(limits = c(1,5))+
-  theme(axis.title.x = element_text(hjust=1),
-        axis.title.y = element_text(angle=0,hjust=1,vjust=1),
-        panel.grid=element_blank(),
-        axis.text.x=element_blank(),
-        axis.text.y=element_blank(),
-        axis.ticks.x=element_blank(),
-        axis.ticks.y=element_blank(),
-        legend.position=c(1,1),
-        legend.justification = c(1,1),
-        legend.spacing=unit(0,"cm"),
-        legend.margin=margin(0,0,0,0))
+a
 ```
 
-## 2 large countries
+## Welfare impact
+
+- Import lowers from $D_m - S_m$ to $D_t-S_t$
+- A+B+C+D = CS loss.
+- A = CS that transfer to PS.
+- C = tax revenue = CS that transfers to the government.
+- B+D = Deadweight Loss.
+
+## Importer is a large country
 
 ```{r}
 #| label: fig2
 #| warning: false
+
 demand<-function(q) 4-.7*q
 supply<-function(q) .7*q
 demand1<-function(q) 7.5-1.5*q
@@ -139,154 +161,193 @@ c<-a+
   labs(x=expression(Q[F]),y=expression(P[F]),color=NULL,fill=NULL)+
   geom_function(fun = supply1,size=1, color='red') +
   stat_function(fun = demand1,size=1, color='blue')
-b+a+c
+c+a+b
   
 ```
 
-## Dampak pertumbuhan ekonomi
+## Importer is a large country
 
--   Apakah pertumbuhan ekonomi di RRT atau Vietnam baik untuk Indonesia?
--   Apakah pertumbuhan ekonomi di Indonesia lebih baik jika tidak ada internasional trade?
--   Dua-duanya bisa jadi benar, bisa juga salah.
+- Import tariffs shift world price.
+  - $P_t - P_{tt}$ is the tariff rate.
+  - There's ToT gain cuz $P_M$ goes down.
+- US tariffs always shakes the world. Also when China used tariff to punish Australia when Australia endorsed investigation on the origin of SARSCOV2.
 
-## Biased growth
+## Importer is a large country
 
--   Ricardian: perubahan teknologi akan menyebabkan growth bias ke industri tertentu.
--   H-O: faktor produksi menyebabkan biased growth.
--   Indonesia: Industri makanan dan service tumbuh lebih cepat dari manufaktur.
+```{r}
 
-## Biased growth
+a<-ggplot()+
+  scale_x_continuous(expand=c(0,0),limits = c(0,10),breaks=c(3,4,6,7),
+                     labels=c("Sm","St","Dt","Dm"))+
+  scale_y_continuous(expand=c(0,0),limits = c(0,10),breaks=c(2,3,4),
+                     labels=c("Ptt","Pw","Pt"))+
+  geom_function(fun = S,size=1, color='red') +
+  stat_function(fun = D,size=1, color='blue')+
+  annotate("segment",x=0,xend=6,y=4,yend=4,lty="dashed")+
+  annotate("segment",x=0,xend=7,y=3,yend=3,lty="dashed")+
+  annotate("segment",x=4,xend=4,y=0,yend=4,lty="dashed")+
+  annotate("segment",x=6,xend=6,y=0,yend=4,lty="dashed")+
+  annotate("segment",x=7,xend=7,y=0,yend=3,lty="dashed")+
+  annotate("segment",x=3,xend=3,y=0,yend=3,lty="dashed")+
+  annotate("segment",x=0,xend=7,y=2,yend=2,lty="dashed")+
+  annotate("text",x=2,y=3.5,label="A")+
+  annotate("text",x=3.7,y=3.2,label="B")+
+  annotate("text",x=5,y=3.5,label="C")+
+  annotate("text",x=6.2,y=3.2,label="D")+
+  annotate("text",x=5,y=2.5,label="E")+
+  labs(x="Q",y="P")+
+  theme_classic()+
+  theme(axis.title.x = element_text(hjust=1),
+        panel.background = element_rect(fill = "#f0f1eb", colour = "#f0f1eb"),
+        plot.background = element_rect(fill = "#f0f1eb"),
+        axis.title.y = element_text(angle=0,hjust=1,vjust=1),
+        panel.grid=element_blank(),
+        legend.position=c(1,1),
+        legend.justification = c(1,1),
+        legend.spacing=unit(0,"cm"),
+        legend.margin=margin(0,0,0,0))
+a
+```
 
--   Biased growth di negara besar dapat menyebabkan perubahan terms of trade
--   Pertumbuhan yang bias cloth: $\frac{P_C}{P_F} \downarrow$, TOT cloth exporter $\downarrow$
--   Pertumbuhan yang bias food: $\frac{P_C}{P_F} \uparrow$, TOT cloth exporter $\uparrow$
--   Pertumbuhan bias cloth bagi eksportir cloth disebut **export-bias growth**, sementara bagi importir cloth disebut **import-bias growth**
+## Welfare impact of large country's tariff
 
-## Biased growth
+- DifferenceL import price changes $P_w \rightarrow P_{tt}$, hence A,B,C and D gets smaller.
+- Government revenue = C+E
+  - C from CS
+  - E from TOT gain.
+- if B+D < E, then there's a welfare gain from the tariff.
+- This tariff hurts small exporters. Globally, it reduces welfare.
 
-> export bias growth tends to worsen a growing country's terms of trade to the benefit of the rest of the world; import-biased growth tends to improve a growing country's terms of trade at the rest of the world's expense
+## Tariff and retaliation
 
-## The evidence?
+- Bottom line: for a large country, they can gain from import tariff (if big in terms of buyer) or export tariff (if big in terms of exporters)
 
--   China, the exporter of the world, seems to experience lower terms of trade.
--   However,Data on US and EU terms of trade seems to adjust quite marginally.
-    -   How important trade is in the economy?
-    -   Trade measures may change terms of trade as well
--   What about Indonesia?
+- If their partner is small, whatever they do won't affect world price.
 
-------------------------------------------------------------------------
+- However, if their partner is large (or a combination of smaller countries like EU), then they can retaliate with their own tariff.
 
-<iframe src="https://data.worldbank.org/share/widget?end=2019&amp;indicators=TT.PRI.MRCH.XD.WD&amp;locations=ID-CN&amp;start=2000" width="900" height="600" frameBorder="0" scrolling="no">
+- Large partners' retaliation would reduce large country's $P_X$ which led to initial ToT.
 
-</iframe>
+## Free trade agreement
 
-## International borrowing and lending
+- Large countries can only benefit from tariffs if:
+    
+    - they are large enough (ensure B+D < E)
+    
+    - Didn't get retaliated a similarly sized partner(s).
 
--   Autarky: Apa yang dikonsumsi = apa yang diproduksi.
--   Trade: Yang penting $\sum_iQ_iP_i=\sum_iD_iP_i$
--   Intertemporal trade: possibility having a trade surplus dan trade deficit.
-    -   at $t=1$, $\sum_iQ_iP_i=\sum_iD_iP_i+B$
-    -   at $t=1$, $\sum_iQ_iP_i=\sum_iD_iP_i-(1+r)B$
+- The second part leads to a prisoner's dilemma situation.
 
-## Borrowing and lending {.m}
+- WTO and trade agreements exist to tackle this situation.
 
--   Standar trade model dapat kita modif untuk merefleksikan intertemporal trade:
-    -   2 goods: current consumption and future consumption.
--   PPF-nya adalah possible current consumption dan future consumption.
--   Let Home bias current consumption, Foreign bias future consumption.
--   Home export current consumption, import future consumption.
--   foreign ngutang dulu, bayar di periode berikutnya.
+- When a large country slap a unjustified tariff, small country can sue and other small countries can follow, combined creates large country effect.
 
-## Harga intertemporal
+## Dynamic efficiency
 
--   Pinjem 1 unit of output, harus bayar 1+r di mana r=real interest rate.
--   $\frac{P_{current}}{P_{future}}=\frac{1}{1+r}$
--   lokasi produksi akan ada di slope $=-(1+r)$
--   Gambarnya akan mirip dengan standard model.
+- Our model so far is static: cloth producer will always be a cloth producer.
 
-## Economies of scale
+- In reality, a country's industry structure changes: the Asian Tigers started as an agriculture economy.
 
--   Kita sudah membahas berbagai model yang menggunakan asumsi perfect competition.
--   Di perfect competition, supernormal profit ngga ada.
--   Meski demikian, seringkali di dunia nyata ada some degree of oligopoly or monopolistic competition.
--   International trade dapat membantu dalam hal ini.
+- Some firms may ask for a **short-term** tariff protection to build scale and expertise before they are able to compete against foreign producers.
 
-## Economies of scale {.m}
+- That is, protection will lead to a short-term efficiency loss, but the promised long-run gain will make up for it.
 
--   Bayangkan ada industri yang semakin besar outputnya, per unit cost nya semakin murah.
--   Sebagian besar tech services these days kaya gini:
-    -   Google bisa nawarin servis gratis karena kliennya seluruh dunia.
-    -   Netflix bisa jor-joran biaya produksi.
--   Tapi banyak usaha yang begini, terutama yang fixed cost-nya mahal.
-    -   beli mesin kapasitas besar yang mahal bakal lama balik modalnya kalau produksinya sedikti.
+- This is called **infant industry** argument.
 
-## International trade & economies of scale
+## Infant industry
 
--   Google dan Netflix adalah contoh bagaimana international trade membantu naikin scale firms sehingga bisa menjual produk dengan lebih murah.
--   Automotif di Amerika Latin gagal karena semua negara mencoba membangun industri otomotif.
--   Semakin kecil negaranya, semakin susah mencapai *economies of scale*.
-    -   Karena itu negara kecil cenderung lebih aktif berdagang.
+- In the infant industry case, a case for tariff protection isn't to avoid losses from import competition, but to create time for domestic industry.
 
-## Eksternal dan internal economies of scale
+- Protection will lead to markups (which is bad for consumers), which then is used to innovate and grow.
 
--   Eksternal economies of scale: situasi di mana konsentrasi pasar akan menguntungkan jika terjadi di level industri. Firms-nya sendiri bisa ada banyak.
--   Internal economies of scale: Ketika konsentrasi pasar akan menguntungkan jika terjadi di level perusahaan, bukan industri.
--   Internal economies of scale akan dibahas di pertemuan berikutnya.
+- Protection can be in the form of various policies: Tariffs, quota restrictions, Local Content Requirements (LCR), etc.
 
-## Eksternal economies of scale
+- In designing policy with infant industry as its main argument, two things must be made clear:
 
--   Ada industri yang akan memniliki keunggulan jika memiliki lokasi yang berdekatan.
--   Hal ini disebut juga dengan aglomerasi.
--   Di berbagai belahan dunia, aglomerasi terjadi:
-    -   Silicon Valley, Hollywood, Wu han, Bangalore.
--   Enabler aglomerasi: specialized suupplier, labor market pooling, dan knowledge spillovers.
+    - Measurement of the LEARNING of the industry & WHEN the policy will be revoked.
 
-## Specialized suppliers
+## Why not infant industry?
 
--   Di banyak industri, produksi dan produk development seringkali memerlukan peralatan khusus.
--   peralatan khsus ini mungkin tidak memiliki demand yang cukup jika pemainnya sedikit.
--   Seiring berkembangnya Silicon Valley sebagai pusat produksi semikonduktor, mulai bermunculan perusahaan yang membuat barang modal.
--   Perusahaan pembuat barang modal ini semakin mempermudah tumbuhnya perusahaan semikonduktor baru.
+- If an industry has a potency in the future, why capital market won't finance their learning?
 
-## Silicon valley
+    - Tech startups do not need the government: they simple get investors to fund their learning.
+    
+- Instead of trade policy, why not use subsidy or fiscal incentives?
 
--   Kuatnya industri produsen barang modal membuat perusahaan di luar Silicon Valley jadi kurang kompetitif.
--   Dis amping itu, seiring berkembangnya industri semikonduktor, banyak perusahaan malah semakin fokus 'fabless'.
--   Pada akhirnya, karena produsen barang modalnya juga semakin ahli, mereka juga bisa serve market di luar Amerika Serikat.
--   Semikonduktor adalah contoh di mana akses ke supplier yang sangat spesialisasi memberikan keunggulan.
+    - trade policy looks free, but it is paid by the consumers through inefficiency / DWL.
+    
+    - Non-tariff is even worse since its complicated and gains are unclear.
+    
+    - Also, retaliations -> more loss, less scale.
+    
+## Why not infant industry?
 
-## Labor market pooling
+- What if the industry never grow up?
 
--   Industri yang terletak di satu lokasi akan memberi keuntungan dalam hal mengumpulkan pegawai.
--   Jika sebuah industri memiliki banyak perusahaan yang terkonsentrasi di satu tempat, maka akan mudah bagi pekerja mencari pekerjaan di tempat tersebut.
--   Karena tau bahwa pekerja akan datang ke tempat tersebut, sebuah industri makin untung jika berlokasi di tempat tersebut.
--   Kampus seringkali jadi daya tarik aglomerasi bagi satu industri.
+- Instead of growing, more firms actually just consume the markups.
 
-## Knowledge spillover
+    - SOEs, Steel, Automotive in Indonesia still not competitive.
+    
+- What if international firms are also growing?
 
--   Zaman sekarang, pengetahuan bisa dikatakan sama pentingnya dengan faktor produksi seperti kapital dan buruh.
--   Hal ini semakin penting lagi bagi industri yang mengandalkan inovasi dan kreativitas.
--   Akumulasi pengetahuan ada berbagai cara: reverse engineer, R&D, dst.
--   Namun aglomerasi memberikan kemungkinan akumulasi pengetahuan secara informal.
+- How to make sure the protected domestic firms can catch up? When a government should cut its losses?
 
-## Silicon valley lagi
+## Import substitution strategy
 
--   Silicon valley sering menjadi contoh sukses aglomerasi.
-    -   Specialized suppliers
-    -   Lokasi dekat kampus dan pusat R&D
-    -   Bahkan di digital age, lokasi fisik masih penting dalam hal knowledge spillover.
--   Sayangnya seringkali aglomerasi ini terjadi secara natural dan sulit dikopi.
+- Since infant industry mostly argued for import competing industry, it often dubbed **Import Substitution Strategy** (ISS).
 
-## Kenapa sulit?
+- Protection against good that a country is not comparatively good at will result in higher cost.
 
--   Aglomerasi memberikan keunggulan bagi *established region* yang industrinya sudah keburu matang.
--   Karena Hollywood sudah sangat besar, sulit bagi negara lain untuk mengkopi dari 0, kecuali bisa langsung sama besarnya dalam waktu singkat.
-    -   Padahal, murahnya produk hollywood datang dari ukurannya yang besar.
--   Netflix termasuk pendatang awal di streaming, tapi dapat dikejar oleh Disney dan Amazon karena mereka memang sudah besar dari awal.
+    - India & Pakistan protects heavy-manufacturing goods (cars, steel), but their main exports are light-manufacturing goods (textiles)
+    
+- Needs to ensure those industry exports BECAUSE of past protection.
 
-## Natural resources
+## ISI vs Export orientation
 
--   Dekat natural resources juga sering menjadi salah satu contoh *specialized suppliers*.
--   Salah satu faktor pendorong revolusi industri di Inggris adalah karena dia punya banyak batubara (ketika itu).
--   Indonesia dengan industri nikelnya sedang mengupayakan aglomerasi: kawasan industri smelter lengkap dengan universitas.
--   Apakah berhasil? Mudah-mudahan yah!
+- Choosing ISI = choosing not to pursue export orientation growth:
+
+    - protection skews up prices for importing industries relative to exporting industries (e.g., $\frac{P_X}{P_M} \Downarrow$).
+    
+    - Factor of production will move to these industries instead of exporting industries.
+    
+- Again, this is bad for welfare, unless the ISI industries can catch up.
+
+## ISI
+
+- ISI most often ended up accompanied by increased FDI:
+
+    - Incoming FDI seeks market.
+    
+    - This means, the domestic markups can be absorb by foreigners.
+    
+- However, domestic firms can learn from foreigners.
+    
+- Good examples are the rise of local champions: Toyota, Samsung, BYD, Foxconn.
+
+    - What's Indonesia's local champions?
+    
+## ISI failure
+
+- Often bad for welfare amid naturally pursue a comparative disadvantage industry.
+
+- The forever infants: why grow if can reap markups?
+
+- Markups absorbed by foreigners.
+
+- Retaliations can be bad and actually reduce scale.
+
+- Hard to measure and evaluate.
+
+## Industrial policy
+
+- If an industry has the potency to grow, theory says that a good capital market will comes in to finance that industry.
+
+- However, if this is not the case, then ISI may be useful.
+
+- In the presence of market failures, industrial policy that support ISI may be desirable:
+
+    - Imperfect capital market
+    
+    - Coordination problem
+    
+- Next week, we will discuss the new industrial policy from these exact problems.
