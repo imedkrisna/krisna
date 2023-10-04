@@ -36,3 +36,27 @@ Tugas yang dibebankan pada mata kuliah ini berbentuk pembuatan makalah dan prese
 | 5 | sistem keuangan | berbagai macam sistem keuangan | 11 |
 | 6 | perdagangan internasional | Plus minus kuota impor daging | 13 |
 | 7 | keuangan internasional | Krisis keuangan 1998 | 14 |
+
+## Tulisan
+
+1. Awali dengan latar belakang tentang tugas anda. Ga usah panjang-panjang.
+2. Rekap secara singkat minggu yang menjadi pokok bahasan di minggu di mana tugas anda dipresentasikan. Misalnya kelompok 4, rekap secara singkat materi minggu 10. Salah gak papa. Sesuai pengetahuan anda aja.
+3. Isi dari tugas anda sesuai pembahasan (lihat slide minggu 1)
+4. Gunakan font Arial 12 spasi 1.15. Jumlah bab dan subbab tidak perlu terlalu rigid.
+5. Jumlah halaman tidak diatur, tapi kira-kira di range 4-8 halaman sudah cukup oke.
+6. Format boleh pdf atau doc. 
+7. Bahasa boleh Inggris atau Indonesia, tapi jangan dicampur2. (kalau pake bahasa Indonesia, istilah Inggris dicetak miring. Kalau pake bahasa Inggris, istilah Indonesia yang dicetak miring.)
+8. Gunakan 1 halaman judul, isinya cukup nama, nim dan kelas dari masing-masing anggota. Anggota yang tidak ada kontribusinya tidak perlu dicantumkan namanya.
+
+## Presentasi
+
+1. Presentasi dikumpulkan di hari yang sama dengan tulisan, namun dipresentasikan sesuai minggu-nya.
+2. Jumlah slide tidak diatur.
+3. Incar presentasi sekitar 15 menit.
+4. Presenternya terserah, apakah 1 orang aja atau 7-7nya gantian.
+5. yang tidak presentasi bisa dinilai dari cara menjawab pertanyaan.
+6. Format boleh ppt atau pdf.
+
+## Link pengumpulan
+
+Tugas dikumpulkan lewat [link ini](https://forms.gle/Uy4PraiLftEXETez6)
