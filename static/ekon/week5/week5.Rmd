@@ -1,0 +1,946 @@
+---
+title: "Cost curve of the firm"
+subtitle: "Week 5"
+author: "Krisna Gupta"
+date: "8 March 2021 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: monokai
+      highlightLines: true
+      countIncrementalSlides: false
+    css: ["default","dark.css","dark-fonts.css"]
+
+---
+
+## Recap on last week
+
+- Elasticities matter, as they dictate how surpluses are distributed in a market.
+
+- It is important also for the government.
+
+- Demand elasticity varies depending on preference and the state of the good
+  - substitute vs complement, luxury vs normal, etc
+  - usually hard to change market preferences.
+  - preference can be estimated but it is beyond the cover of this course.
+  
+---
+
+## Today's cover
+  
+- Supply curve is a bit different: 
+  
+  - Cost can be easier to guess.
+  - Easier to make framework.
+  - Has an important implication to the market.
+
+- What we will learn today is:
+
+  - The production function.
+  - Types of cost.
+  - Implication to the supply curve and the market.
+  
+---
+
+class: middle, center
+
+# The Production Function
+
+<iframe src="https://giphy.com/embed/dJZi221XtSnHW" width="480" height="273" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/dog-lawnmower-yard-work-dJZi221XtSnHW">via GIPHY</a></p>
+
+---
+
+## The production function
+
+- A firm is an organization that produces goods and services.
+
+- To produce, it uses inputs and transform them into a final product and then sell it to the market.
+
+- This relationship:
+
+$$
+input \xrightarrow{magic!} output
+$$
+
+&nbsp; &nbsp; &nbsp;  &nbsp;  &nbsp;is called **production function**
+
+---
+
+## Reminder: What is a function?
+
+- Function is a mathematical expression to show a relationship between two or more variables.
+
+- Let $X$ be input and $Y$ be output, a production function is:
+
+$$
+Y=f(X)
+$$
+
+- How labor makes rice is sometimes not the main emphasize for economist.
+
+- We care more on how much $X$ is needed to make $Y$.
+
+---
+
+## The production function
+
+- Let there be a hypothetical **rice** farmer named Kensi.
+
+- Kensi own a hectare of **land**. In the short run, Kensi can't increase his number of land.
+
+- However, Kensi can hire a **labour** to work at his farm.
+
+- In this case, the inputs are land and labour, while the output is rice.
+
+---
+
+## Fixed and variable input
+
+- We call land a **fixed input**, an input which can't be changed.
+
+- We call labour a **variable input** because Kensi can hire or fire labour anytime.
+
+- It is important to distinguish the two, because a producer can adjust variable input to adjust demand.
+  - In good times, hire more labour. In bad times, fires.
+  
+---
+
+## Short and long run
+
+- Fixed input won't probably be fixed for long.
+
+  - buying and selling new land may take time, but it is doable.
+  - However, when there's a quick shock to demand, it is not easy to adjust it.
+  
+- For example, the price for surgical mask at one point rose to 150k IDR a box, but it is now settled back to around 30k IDR a box.
+  - In the short run, fixed input can't keep up.
+  
+- TSMC and Samsung need time to build new factories.
+
+---
+
+## Short and long run
+
+- How long is 'long run'? depends on how quickly the fixed input can adjust.
+
+- In the case of masks, it catched up to the demand shock in less than a year. Hand sanitizer is even faster.
+
+- In the case of chip, the new capacity for TSMC will operate somewhere in 2022, while Samsung needs even longer time.
+
+- Knowing how long is the demand shock is also important.
+  - forecasting demand is a useful skill to have.
+  
+---
+
+## The hypothetical farmer
+
+- Kensi can't change his arable land, but can change how much labour he employs.
+
+.pull-left[
+```{r tabel1, echo=FALSE, message=FALSE, warning=FALSE}
+library(kableExtra)
+library(dplyr)
+library(ggplot2)
+library(ggdark)
+
+graph<-ggplot()+
+  dark_theme_bw(base_size=25)+
+  theme(text = element_text(color='#e0e0e0'),
+        panel.border = element_blank(),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        axis.line = element_line(colour = "#e0e0e0"))
+
+prod <- function(q) (20*q)-(q)^(2)
+mpl<- function(q) (21-2*q)
+
+lab<-seq(0,8,1)
+rice<-prod(lab)
+MPL<-c('-',seq(19,5,-2))
+
+data<-data.frame(lab,rice,MPL)
+data %>%
+  kable("html", align="cc", col.names = c('Quantity \n of \n labour L \n (workers) ','Quantity of \n rice Q \n (ton)', 'MPL')) %>%
+  kable_styling(bootstrap_options = "striped", font_size = 20)
+
+```
+]
+
+.pull-right[
+- MPL is short for **Marginal Product of Labour**
+$$MPL=\frac{\Delta Q}{\Delta L}$$
+- MPL shows how much Q increase if we increase L by 1.
+]
+
+---
+
+class: center, middle
+
+## Total product curve
+
+```{r rice1,echo=FALSE, message=FALSE, warning=FALSE}
+rice1<-graph +
+  stat_function(fun = prod,size=1.1, color='green') +
+  scale_x_continuous(breaks = data$lab) +
+  geom_point(aes(x=data$lab,y=data$rice),color='white',size=4)+
+  labs(x="L (workers)", y="Q (ton)")
+
+rice1 +
+  scale_y_continuous(breaks = data$rice) +
+  annotate("segment", x = 1, xend = 2, y = 19, yend = 19,
+           arrow = arrow(length = unit(1, "lines")), size=1, 
+           colour = "gray")+
+  annotate("segment", x = 2, xend = 2, y = 19, yend = 34,
+           arrow = arrow(length = unit(1, "lines")), size=1, 
+           colour = "gray")+
+  annotate("segment", x = 6, xend = 7, y = 84, yend = 84,
+           arrow = arrow(length = unit(1, "lines")), size=1, 
+           colour = "gray")+
+  annotate("segment", x = 7, xend = 7, y = 84, yend = 89,
+           arrow = arrow(length = unit(1, "lines")), size=1, 
+           colour = "gray")+
+  annotate("text", x = 4, y = 20, label = "Adding a 2nd \n worker leads to an \n increase in output \n of 17 ton",
+           size=6.5)+
+  annotate("text", x = 6.5, y = 66, label = "Adding a 7th \n worker leads to an \n increase in output \n of only 7 ton",
+           size=6.5)+
+  annotate("text", x = 5.7, y = 103, label = "Total product,",
+           size=8)+
+  annotate("text", x = 7.6, y = 103, label = "TP",
+           size=8)
+
+  
+```
+
+---
+
+## Marginal product
+
+- In general, **marginal product** of an input is the additional quantity of output produced by using one more additional unit of that input.
+
+- In our case, we have MPL of every one more additional worker. But if that data is not possible, we can just use the formula in general
+
+- for example, if Kensi have only two data points: one where he work alone and one when he hire 7 workers.
+
+---
+
+## Marginal product
+
+| worker | production |
+| ------ | ---------- |
+| 1 | 19 |
+| 8 | 96 |
+
+$$
+MPL=\frac{\Delta Q}{\Delta L}=\frac{96-19}{8-1}=11
+$$
+
+- In our case, MPL decreases as the number of worker increases: 
+  - it is better to have a smooth data point.
+  - We call this a **diminishing return to labour**
+
+---
+
+## Marginal product curve
+
+```{r rice2,echo=FALSE, message=FALSE, warning=FALSE}
+
+data1<-data[-1,]
+data1$mmpl<-mpl(data1$lab)
+rice2 <- graph+
+  geom_point(data=data1, aes(x=lab, y=mmpl),color='white')+
+  geom_line(data=data1, aes(x=lab, y=mmpl),color='green')+
+  scale_x_continuous(breaks = data1$lab) +
+  labs(x='Quantity of labour (workers)',y='Marginal Product of labour (ton/worker)')
+  
+rice2 + annotate("text", x = 6, y = 5.3, label = "Marginal product of \n labour,", size=6.5) +
+  scale_y_continuous(breaks = data1$mmpl)+
+  annotate("text", x = 7, y = 5, label = "MPL", size=6.5)
+
+```
+
+---
+
+## Diminishing return to an input
+
+- When you have 1 hectare of land, 1 worker can only work so much before he gets tired.
+
+- It is sensible to hire one more person to work on a larger area. This will lead to a huge gain in harvest.
+
+- If the land area is fixed, as we introduce more people, each person will have to work in a smaller area.
+
+- Too much people become inefficient.
+
+- In an office setting: imagine if you add workers without adding the number of computers.
+
+---
+
+## Marginal product and the fixed input
+
+- If Kensi would like to scale up production, increasing only labour will be inefficient.
+
+- Kensi can start planning to increase its land to 2 hectare by buying or renting his  neighbour's land, for example.
+
+- Suppose it takes one year for Kensi to buy one more hectare of land, what's his TP and MPL would look like one year later?
+
+---
+
+### TP shifts up with additional land
+
+```{r beras1,echo=FALSE, message=FALSE, warning=FALSE}
+
+prod2 <- function(q) (1.5*((20*q)-(q)^(2)))
+
+rice1 +
+  stat_function(fun = prod2, size=1.1, color='green') +
+  geom_point(aes(x=data$lab,y=prod2(data$lab)),color='white',size=4)+
+  annotate("text", x = 7.6, y = 103, label = expression(TP[1]),
+           size=8)+
+  annotate("text", x = 7.6, y = 133, label = expression(TP[2]),
+           size=8)+
+  annotate("segment", x = 5, xend = 5, y = 85, yend = 105,
+           arrow = arrow(length = unit(0.2, "inches")), size=4, 
+           colour = "gray", lineend="round", linejoin="round")
+  
+```
+
+---
+
+### MPL is still diminishing, but higher
+
+```{r beras2,echo=FALSE, message=FALSE, warning=FALSE}
+
+data1$mmpl2<-data1$mmpl*2
+rice2 + geom_point(data=data1, aes(x=lab, y=mmpl2),color='white')+
+  geom_line(data=data1, aes(x=lab, y=mmpl2),color='green')+
+  annotate("text", x = 7.5, y = 5, label = expression(MPL[1]), size=7)+
+  annotate("text", x = 7.5, y = 10, label = expression(MPL[2]), size=7)+
+  annotate("segment", x = 3, xend = 3, y = 20, yend = 25,
+           arrow = arrow(length = unit(0.2, "inches")), size=4, 
+           colour = "gray", lineend="round", linejoin="round")
+  
+```
+
+---
+
+## Marginal product
+
+- The crucial point of the diminishing marginal product concept is *ceteris paribus*.
+
+  - if you increase labour AND land, then MPL will look like it goes up.
+  
+- Hence, when we measure MP of an input, it must be the case that **everything else is held fixed**.
+
+- Production function can be a bit more complex.
+
+  1 programmer in 12 months $\not\rightarrow$ 12 programmers in 1 month.
+  
+---
+
+class: middle, center
+
+# Cost
+
+<iframe src="https://giphy.com/embed/3ohjV1wV5q38uFVjG0" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/mootvideo-animation-illustration-3ohjV1wV5q38uFVjG0">via GIPHY</a></p>
+
+---
+
+## From production function to profit
+
+- Kensi understand how his farm work. He would like to profit from his farm.
+
+- If Kensi can't control the selling price (rice is competitive), he needs to know how to control his own cost.
+
+- He has to know at least two things:
+  - **fixed cost** (FC), the cost of his land, and
+  - **variable cost** (VC), the cost of labour.
+
+---
+
+## Kensi's hypothetical cost
+
+- Suppose Kensi's land's rent price is 200 k IDR, while the wage rate in his neighbourhood is 100k IDR.
+
+```{r tabel2,echo=FALSE, message=FALSE, warning=FALSE}
+no<-c("A","B","C","D","E","F","G","H","I")
+lab<-seq(0,8,1)
+rice<-prod(lab)
+FC<-rep(200,9)
+VC<-lab*100
+TC<-FC+VC
+
+kensi<-data.frame(no,lab,rice,FC,VC,TC)
+kensi %>%
+  kable("html", align="cc", col.names = c('point',"L \n (workers)",'Q \n (ton)', 'FC','VC','TC=FC+VC')) %>%
+  kable_styling(bootstrap_options = "striped", font_size = 20)
+
+```
+
+---
+
+## Total cost curve for Kensi's farm
+
+```{r kensi1,echo=FALSE, message=FALSE, warning=FALSE}
+kensi1<-graph+
+  geom_line(data=kensi,aes(x=rice,y=TC),color='red')+
+  geom_point(data=kensi,aes(x=rice,y=TC),color='white')+
+  annotate("text",x=kensi$rice,y=kensi$TC-50,label=kensi$no,size=8)
+kensi1
+
+```
+
+---
+
+## Total product curve vs total cost curve
+
+- Both are upward sloping
+
+- however, as production increase, TP is getting flatter, while TC is increasingly steeper.
+
+- Using more labour increases additional TC but decreases additional TP.
+
+---
+
+class: middle, center
+
+# Intermezzo
+
+Since the land is owned by Kensi, does it make sense to put the rent price as his fixed cost?
+
+--
+
+yes because **opportunity cost** is also a cost: Kensi can rent his land to someone else.
+
+---
+
+class: center, middle
+
+# Two key concepts:
+
+### Marginal cost & average cost
+
+---
+
+class: middle, center
+
+### Liv's fancy footwear
+
+.s[Liv is a learning entrepreneur. She start her fancy footwear business in New York with this cost structure:]
+
+```{r liv1,echo=FALSE, message=FALSE, warning=FALSE}
+q<-seq(0,10,1)
+FC<-rep(108,11)
+VC<-12*q*q
+TC<-FC+VC
+
+liv<-data.frame(q,FC,VC,TC)
+liv %>%
+  kable("html", align="cc", col.names = c('Q',"FC",'VC', 'TC')) %>%
+  kable_styling(bootstrap_options = c("bordered","striped","responsive"), font_size = 20,full_width = TRUE)
+
+```
+
+---
+
+## Marginal cost
+
+- **Marginal cost** (MC) is the change in **total cost** generated by producing one additional unit of output.
+
+$$
+MC = \frac{\text{Change in }TC}{\text{change in }Q}=\frac{\Delta TC}{\Delta Q}
+$$
+- Let's add MC on Liv's fancy footwear cost structure
+
+---
+
+### Liv' fancy footwear cost structure
+
+.pull-left[
+```{r grafik1,echo=FALSE, message=FALSE, warning=FALSE, fig.heiht=8}
+liv$MC<-c(0,diff(liv$TC)/diff(liv$q))
+liv %>%
+  kable("html", align="cc", col.names = c('Q',"FC",'VC','TC','MC')) %>%
+  kable_styling(bootstrap_options = c("bordered","striped","responsive"), font_size = 20,full_width = TRUE)
+```
+]
+
+.pull-right[.s[
+- For the first fancy footwear produced, liv's $\Delta$Q is 1, while her $\Delta$TC is 120-108=12
+
+- The second fancy footwear, her $\Delta TC=156-120=36$ and so on.
+
+- In our case, we have complete one fancy footwear incremental. In the real world, you might not have this kind of data.
+
+- But the principle is the same.
+]]
+
+---
+
+## Liv's fancy footwear
+
+.pull-left[
+
+```{r grafikliv1,echo=FALSE, message=FALSE, warning=FALSE,fig.height=9}
+gliv<- graph+
+  geom_point(data=liv,aes(x=q,y=TC),color='white',size=4)+
+  geom_line(data=liv,aes(x=q,y=TC),color='orange',size=2)+
+  scale_x_continuous(breaks=liv$q)+
+  scale_y_continuous(breaks=liv$TC)+
+  labs(x='Q (pair)',y='Cost ($)')
+
+gliv
+```
+]
+
+.pull-right[ .s[
+- The cost is upward sloping, and the incremental is faster.
+
+- An additional pair of fancy footwear from 1 to 2 costs an additional $36
+
+- The additional cost is $180 from 7 pairs to 8 pairs
+]]
+
+---
+
+## Liv's fancy footwear
+
+.pull-left[
+
+```{r grafikliv2,echo=FALSE, message=FALSE, warning=FALSE}
+
+gliv2<- graph+
+  geom_point(data=liv,aes(x=q,y=MC),color='white',size=4)+
+  geom_line(data=liv,aes(x=q,y=MC),color='red',size=2)+
+  scale_x_continuous(breaks=liv$q)+
+  labs(x='Q (pair)',y='Cost ($)')
+
+gliv2
+```
+]
+
+.pull-right[ .s[
+- The marginal cost is also upward sloping.
+  - in this case, the cost structure is designed to be **diminishing in return**
+  
+- It means, the additional bobba needs more input as the fancy footwear increases.
+
+- recall that the TP curve in Kensi's case is flattening because of this.
+
+]]
+
+---
+
+## Average Total Cost (ATC)
+
+- There is also **average total cost**, or simply **Average Cost**
+
+$$
+ATC=\frac{TC}{Q}
+$$
+
+- ATC is important because it tells the cost of each fancy footwear given the current state of production.
+
+- Be careful, $ATC \neq MC$
+
+- Which one would Liv use to set the price?
+
+---
+
+### Liv's fancy footwear cost structure
+
+```{r liv2,echo=FALSE, message=FALSE, warning=FALSE}
+
+liv$AFC<-liv$FC/liv$q
+liv$AVC<-liv$VC/liv$q
+liv$ATC<-liv$TC/liv$q
+
+liv1<-data.frame(liv$q,liv$TC,liv$AFC,liv$AVC,liv$ATC)
+
+liv %>%
+  kable("html", align="cc", col.names = c('Q',"FC",'VC','TC','MC','AFC','AVC','ATC'),digits=2) %>%
+  kable_styling(bootstrap_options = c("bordered","striped","responsive"), font_size = 20,full_width = TRUE)
+
+```
+---
+
+## Liv's cost structure
+
+.pull-left[
+```{r liv3,echo=FALSE, message=FALSE, warning=FALSE}
+
+liv1<-data.frame(liv$q,liv$TC,liv$AFC,liv$AVC,liv$ATC)
+
+liv1 %>%
+  kable("html", align="cc", col.names = c('Q','TC','AFC','AVC','ATC'),digits=2) %>%
+  kable_styling(bootstrap_options = c("bordered","striped","responsive"), font_size = 20,full_width = TRUE)
+
+```
+]
+
+.pull-right[.s[
+- Note that ATC decreases before it increases.
+
+- AFC drives ATC down: Fixed cost doesn't change no matter how much fancy footwear is produced (**spreading effect**).
+
+- AVC increases as Q increases due to **diminishing returns effect**.
+
+- at what Q does ATC at its lowest point?
+]]
+
+---
+
+### Liv's fancy footwear Average Total Cost Curve
+
+```{r liv4,echo=FALSE, message=FALSE, warning=FALSE}
+liv2<-liv[!(liv$q<1),]
+gliv3<- graph+
+  geom_point(data=liv2,aes(x=q,y=ATC),color='white',size=4)+
+  geom_line(data=liv2,aes(x=q,y=ATC),color='red',size=2)+
+  scale_x_continuous(breaks=liv2$q)+
+  ylim(0,130)+
+  labs(title='ATC curve is U-Shaped', x='Q (pair)',y='Cost ($)')+
+  annotate("text", x = 3, y =45, label = "Minimum ATC \n is at \n Q=3 and \n ATC=$72", size=7.5)+
+  annotate("text", x = 9, y =110, label = "ATC", size=8)
+gliv3
+
+```
+
+---
+
+## MC and ATC
+
+- It is probably best to produce at the lowest ATC. Q=3 is the **minimum-cost output**.
+
+- Note that:
+  - at $Q=3$, $ATC=MC$;
+  - at $Q<3$, $ATC<MC$;
+  - at $Q>3$, $ATC>MC$.
+  
+- Works like your GPA: At GPA=3.0, an additional A will increase your GPA, a C will decrease your GPA, while a B doesn't change your GPA.
+
+---
+
+### Cost Curves
+
+```{r liv5,echo=FALSE, message=FALSE, warning=FALSE, fig.width=10}
+gliv4<- graph+
+  geom_line(data=liv2,aes(x=q,y=ATC,color='ATC'),size=2)+
+  geom_line(data=liv2,aes(x=q,y=AFC,color='AFC'),size=2)+
+  geom_line(data=liv2,aes(x=q,y=AVC,color='AVC'),size=2)+
+  geom_line(data=liv2,aes(x=q,y=MC,color='MC'),size=2)+
+  scale_x_continuous(breaks=liv2$q)+
+  labs(x='Q (pair)',y='Cost ($)')
+  
+gliv4
+
+```
+---
+
+## Cost curves
+
+- Note that in our graph, ATC is not exactly equals to MC.
+
+- This is because MC is an incremental cost from Q:
+  - for example, a marginal cost from Q=1 to Q=2 should be plotted somewhere between Q=1 and Q=2, not exactly at Q=2.
+
+- It easier to understand the logic when we use function.
+
+- The logic remains: a Q where cost is lowest is when MC=ATC
+
+---
+
+## Short run and long run
+
+- In the long run, Liv can upgrade (or downgrade) her capacity by changing her fixed cost.
+
+- Higher fixed cost leads to higher overall cost, but typically can reduces variable cost at a higher Q.
+
+- If Liv's client is just 3 people, buying a automated sewing machine might be an overkill.
+
+- If Liv's business is forecasted to grow in the future, she can prepare for an upgrade.
+
+---
+
+## High capacity vs low capacity
+
+```{r liv6,echo=FALSE, message=FALSE, warning=FALSE,fig.width=10}
+
+liv2$ATCC<-c(222,120,90,78,73.2,72,72.86,75,78,81.6)
+
+gliv5<- graph+
+  geom_line(data=liv2,aes(x=q,y=ATC,color="Low capacity ATC"),size=2)+
+  geom_line(data=liv2,aes(x=q,y=ATCC,color="High capacity ATC"),size=2)+
+  scale_x_continuous(breaks=liv2$q)+
+  labs(x='Q (pair)',y='Cost ($)')
+gliv5
+
+```
+
+---
+
+## High capacity vs low capacity
+
+- Upgrading is only worth it if Liv sell at least 5 pairs of shoes.
+
+- If upgraded, the minimum-cost output is $Q=6$
+
+- In the long run, fixed cost can be changed (hence become variable to some extent)
+
+- The most important is to know:
+  - How the different capacity ATC looks like;
+  - How easy each input can be changed;
+  - whether changes in the market is long lasting or not.
+
+---
+
+## High capacity vs low capacity
+
+.pull-left[![fryer](cafe.jpg)]
+.pull-right[![gorengan](gorengan.jpg)]
+
+---
+
+## Long run cost curves
+
+- **Long run average cost** (LRAC) is an average total cost which treat the fixed cost as a variable cost.
+
+- Calculating LRAC requires many curves corresponding with different level of fixed cost.
+
+- In fact, with so many other costs, using graph may no longer be practical.
+
+- We won't cover it in this course, but it is useful to know that LRAC exists and can be useful for you in the future.
+
+---
+
+## Returns to scale
+
+- Upgrading makes sense if the industry is having an **increasing returns to scale**.
+
+- Increasing returns to scale happens when scaing up leads to lower LRAC.
+  - in liv's case, she scaling up leads to lower cost overall, which may lower the price.
+  - this is also the case for many industries, where big firms are able to offer their products at a lower price.
+  
+- When increasing scale leads to higher cost, we say **decreasing returns to scale**. Happens when a firm is too big, coordination gets costly.
+
+---
+
+class: middle, center
+
+# Calculating profit
+
+---
+
+## Perfect competition
+
+- We learned in the perfect competition, producer takes price as given.
+
+- This is called **price-taking producers** (and **price-taking consumers**)
+
+- essentially means nobody can affect prices.
+
+--
+
+- How much should Liv produce? Depends on the **revenue**.
+
+- For now, let's assume that the fancy footwear a highly competitive industry, where P=$100
+
+---
+
+### Liv's cost, revenue and profit (Total)
+
+
+```{r pc1,echo=FALSE, message=FALSE, warning=FALSE}
+
+liv3<-data.frame("q"=liv2$q,"TC"=liv2$TC)
+liv3$TR<-liv3$q*100
+liv3$profit<-liv3$TR-liv3$TC
+
+liv3 %>%
+  kable("html", align="cc", col.names = c('Q','TC','TR','TR-TC'),digits = 2) %>%
+  kable_styling(bootstrap_options = "striped", font_size = 20) %>%
+  row_spec(4,background="blue") %>%
+  add_header_above(c('Quantity sold','Total Cost','Total Revenue','Total Profit'))
+```
+
+---
+
+### Liv's cost, revenue and profit (total)
+
+
+```{r pc2,echo=FALSE, message=FALSE, warning=FALSE}
+
+profit1<- graph+
+  geom_point(data=liv3,aes(x=q,y=TC),color='white',size=2)+
+  geom_line(data=liv3,aes(x=q,y=TC),color='orange',size=1.5)+
+  geom_point(data=liv3,aes(x=q,y=TR),color='white',size=2)+
+  geom_line(data=liv3,aes(x=q,y=TR),color='cyan',size=1.5)+
+  annotate("text", x = 9.5, y = 1000, label = "TR",size=8)+
+  annotate("text", x = 9.5, y = 1300, label = "TC",size=8)+
+  scale_x_continuous(breaks=liv$q)+
+  labs(x='Q (pair)',y='($)')
+
+profit1
+```
+
+---
+
+### Liv's cost, revenue and profit (per unit)
+
+```{r pc3,echo=FALSE, message=FALSE, warning=FALSE}
+
+liv4<-data.frame("q"=liv2$q,"ATC"=liv2$ATC)
+liv4$P<-rep(100,10)
+liv4$pr<-liv4$P-liv4$ATC
+
+liv4 %>%
+  kable("html", align="cc", col.names = c('Q','ATC','P','P-ATC'), digits = 2) %>%
+  kable_styling(bootstrap_options = "striped", font_size = 20) %>%
+  row_spec(3,background="blue") %>%
+  add_header_above(c('Quantity sold','Average Total Cost','Price per pair','margin'))
+```
+
+---
+
+## Profit under perfect market
+
+- The necessary condition for profit maximisation is as close as possible with:
+
+$$ MR = MC $$
+
+- MR is short for **Marginal Revenue**, how much additional revenue you get from selling one more good.
+
+$$
+MR = \frac{\Delta TR}{\Delta Q}
+$$
+- It is like **marginal cost**, but revenue.
+
+- This is why **marginal cost** is important.
+
+---
+
+## Marginal Revenue & Marginal Cost
+
+```{r pc4,echo=FALSE, message=FALSE, warning=FALSE}
+
+
+liv3$MR<-rep(100,10)
+liv3$MC<-liv2$MC
+liv3$nice<-liv3$MR-liv3$MC
+
+liv3 %>%
+  kable("html", align="cc", col.names = c('Q','TC','TR','TR-TC','MR','MC','MR-MC'),digits = 2) %>%
+  kable_styling(bootstrap_options = "striped", font_size = 20) %>%
+  row_spec(4,background="blue") %>%
+  add_header_above(c('Quantity \n sold','Total \n cost','Total \n revenue','Total \n Profit','Marginal \n revenue','Marginal \n cost','condition'))
+```
+
+---
+
+## MR, MC and AC in action
+
+```{r pc5,echo=FALSE, message=FALSE, warning=FALSE}
+
+profit2<- graph+
+  geom_line(data=liv3,aes(x=q,y=MC),color='red',size=1.5)+
+  geom_line(data=liv3,aes(x=q,y=MR),color='cyan',size=1.5)+
+  geom_line(data=liv2,aes(x=q,y=ATC),color='orange',size=1.5)+
+  annotate("text", x = 9.5, y = 90, label = "MR=P",size=8)+
+  annotate("text", x = 9.5, y = 200, label = "MC",size=8)+
+  annotate("text", x = 9.5, y = 135, label = "AC",size=8)+
+  scale_x_continuous(breaks=liv$q)+
+  labs(x='Q (pair)',y='($)')
+
+profit2
+```
+
+---
+
+```{r pc6,echo=FALSE, message=FALSE, warning=FALSE, fig.width=10, fig.height=8}
+ftc <- function(x) 108+12*x*x
+fatc <- function(x) (108/x)+12*x
+fmc <- function(x) 24*x
+fmr <- function(x) 100
+
+qq<-seq(1,8,0.01)
+
+z<-uniroot(function(x) fatc(x) - fmc(x), range(qq))$root
+zz<-fatc(z)
+zzz<-uniroot(function(x) fmc(x) - fmr(x), range(qq))$root
+zzzz<-fatc(zzz)
+
+profit3<- graph+
+  stat_function(aes(color = "ATC"), fun = fatc, size=1.5)+
+  stat_function(aes(color = "MC"), fun = fmc, size=1.5)+
+  stat_function(aes(color = "MR"), fun = fmr, size=1.5)+
+  geom_ribbon(aes(x=seq(1,z,0.1), ymin=zz, ymax=100,
+                  fill='cost-minimizing \n profit'),
+              alpha = 0.4)+
+  annotate("text", x = 9.5, y = 90, label = "MR=P",size=8)+
+  annotate("text", x = 9.5, y = 200, label = "MC",size=8)+
+  annotate("text", x = 9.5, y = 135, label = "AC",size=8)+
+  scale_x_continuous(limits = c(1,8), breaks = z, labels = "Cost minimizing \n output") +
+  scale_y_continuous(breaks = zz, labels = "lowest \n ATC") +
+  labs(x='Q (pair)',y='($)')
+
+profit3
+```
+
+---
+
+```{r pc7,echo=FALSE, message=FALSE, warning=FALSE, fig.width=10, fig.height=8}
+
+profit4<- graph+
+  stat_function(aes(color = "ATC"), fun = fatc, size=1.5)+
+  stat_function(aes(color = "MC"), fun = fmc, size=1.5)+
+  stat_function(aes(color = "MR"), fun = fmr, size=1.5)+
+  geom_ribbon(aes(x=seq(1,zzz,0.1), ymin=zzzz, ymax=100,
+                  fill='largest profit'),
+              alpha = 0.4)+
+  annotate("text", x = 9.5, y = 90, label = "MR=P",size=8)+
+  annotate("text", x = 9.5, y = 200, label = "MC",size=8)+
+  annotate("text", x = 9.5, y = 135, label = "AC",size=8)+
+  scale_x_continuous(limits = c(1,8), breaks = zzz, labels = "profit maximizing \n output (Q*)") +
+  scale_y_continuous(breaks = zzzz, labels = "profit \n maxmizing \n ATC") +
+  labs(x='Q (pair)',y='($)')
+
+profit4
+```
+
+---
+
+## MR & MC
+
+- Profit is equals to margin times quantity sold
+
+$$ \pi=(P-ATC) \times Q$$
+
+- hence the red area on the previous 2 graphs.
+
+- When $MR < MC$, the additional Q that we produce reduces profit.
+
+- When $MR > MC$, the additional Q that we produce increases profit.
+
+- That is why at $MR = MC$, we have **profit-maximizing output**. 
+
+---
+
+## MR & MC
+
+- In Liv's case, she doesn't have any point where $MR=MC$
+
+- In this case, she produce as close as possible with $MR=MC$, but still $MR>MC$
+
+  - profit is starting to go down when $MR<MC$
+  
+- In a bigger firm with more Q and more continuous data point, $MR=MC$ is very useful and approachable.
+
+---
+
+## Perfect market
+
+- In the perfect market, producers are price-taking (_pasrah_).
+
+- That is why $MR=P$
+  - no matter how much (or less) a producer produce, the price will always be the same
+  
+- We will see next week how the market will look like when producer's action can change prices.

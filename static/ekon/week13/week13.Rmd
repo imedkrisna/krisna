@@ -1,0 +1,1002 @@
+---
+title: "International economy"
+subtitle: "Week 13"
+author: "Krisna Gupta"
+date: "17 May 2021 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: monokai
+      highlightLines: true
+      countIncrementalSlides: false
+    css: ["default","dark.css","dark-fonts.css"]
+
+---
+
+## Quick recap
+
+- So far we've learned:
+  - how to measure economic variables:
+      + GDP, inflation, unemployment
+  - How they interact:
+      + AD-AS framework
+      + Long run vs short run
+      + fiscal policy
+  - How financial market matters:
+      + (central) banks and interest rate
+  
+---
+
+## This week
+
+- So far, we assume highly domestic market situation.
+
+- It is highly not realistic especially for Indonesia, a small(-ish) country where international economies matter:
+  + Indonesia relies a lot of international help from escaping 1966 and 1998 crises.
+  + Exchange rate is highly depending on global capital market situation.
+  + Two booms (1970s oil boom and 2000s commodity boom) elevate Indonesian economy hugely
+  
+---
+
+## This week & next week
+
+- Balance of Payment
+  + Current account, capital account and financial account.
+
++ Trade in goods and services:
+  + Comparative advantage theory
+  + Global Value Chain
+
++ International finance:
+  + exchange rate and international capital
+
++ International / External policy
+
+---
+
+## International economics
+
+- Indonesia is largely an open economy:
+  + It buys and sells goods and services to the rest of the world.
+  + Also trade saving and investment abroad (stocks, currencies, debts, direct investment)
+  
+- Being an open economy offers advantage:
+  + help building domestic capital (remember convergence theory?).
+  + Enjoys spillover economic benefits.
+  
+---
+
+- However, anything bad happens to the global market, will affect Indonesia as well.
+  + Indonesian policy tool may be less effective.
+  
+- meanwhile, big economy's policy may be stronger:
+  + When the US' central bank rise interest rate, lots of foreign capital fled Indonesia, tilting IDR valuation.
+  
+- We will learn more about these effect later on.
+
+---
+
+
+class: middle, center
+
+# Trade in goods
+
+---
+
+## 
+
+```{r trade,echo=FALSE, message=FALSE, warning=FALSE, fig.width=10, fig.height=6}
+library(kableExtra)
+library(tidyverse)
+library(ggplot2)
+library(ggdark)
+
+graph<-ggplot()+
+  dark_theme_bw(base_size=18)+
+  theme(text = element_text(color='#e0e0e0'),
+        panel.border = element_blank(),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        axis.line = element_line(colour = "#e0e0e0"))
+
+graph2<-dark_theme_bw(base_size=18)+
+  theme(text = element_text(color='#e0e0e0'),
+        panel.border = element_blank(),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        axis.line = element_line(colour = "#e0e0e0"))
+
+library(WDI)
+library(lubridate)
+ex<-WDI(indicator = 'NE.EXP.GNFS.ZS', country = 'IDN',end=2019)
+ex$type<-'export'
+ex<-rename(ex,value=NE.EXP.GNFS.ZS)
+im<-WDI(indicator = 'NE.IMP.GNFS.ZS', country = 'IDN',end=2019)
+im$type<-'import'
+im<-rename(im,value=NE.IMP.GNFS.ZS)
+trade <- rbind(ex, im)
+ggplot(trade, aes(year, value)) +
+  geom_line(aes(color = type), size=1.5)+
+  labs(y='% GDP',title='Export and Import of Indonesia',caption='source: World Development Indicators')+
+  scale_x_continuous(breaks = c(seq(1960,2019,10),2019))+
+  graph2
+```
+
+
+Indonesia's export jumps since the 1970s thanks to oil boom. Since then, Indonesia is generally running trade surplus.
+
+The importance of trade is generally the same throughout.
+---
+.kiri[
+![ww](export.png)
+source: [OEM](https://oec.world/en/profile/country/idn#yearly-exports)
+]
+
+.kanan[
+
+## Exported commodities
+
+- Indonesia's main exports are natural resources: minerals, coal, palm oil, wood products, rubber.
+
+- Also a bit on manufactures: iron and steel, vehicles, machine and electronics, food products.
+
+]
+
+---
+
+.kiri[
+![ww](import.png)
+source: [OEM](https://oec.world/en/profile/country/idn#yearly-imports)
+]
+
+.kanan[
+
+## Imported commodities
+
+- Indonesia's main imports are manufacturing inputs: capital goods, fuels, iron and steel, plastics and chemicals. Also a bit of food.
+
+]
+
+---
+
+## Why nations trade
+
+- You might have seen the news about what Indonesia trades with the world:
+
+  + We imports many food stuff: beef, rice, wheat, soybeans
+  
+  + We also export many plantation and natural resources such as CPO and coal.
+  
+- But you might also hear that trade is like a competition: export is good, import is bad, and trade deficit means a country is "lost".
+
+- Truthfully, it's much more complex than that.
+  
+- Generally, economists believe that international trade is better for both parties.
+
+---
+
+class: middle, center
+
+# Comparative advantage
+
+---
+
+## Comparative advantage
+
+- **Comparative advantage** is the reason why trade is good for both parties.
+
+- A country has a comparative advantage in producing a good or service if the opportunity cost of producing the good or service is lower for that country than for other countries.
+
+- This concept relies heavily on **opportunity cost**, that is, when a country produce good $x$, it has to forgo resources capable of producing good $y$
+
+- Think of it like this: if you spent 2 hours studying for economics, that means you forgo 2 hours you could have spent studying statistics.
+  + How do you make decision on what to study?
+
+---
+
+## Production possibility frontier
+
+- To understand this term better, we will use some simplified examples.
+
+- Suppose there are two economies, Indonesia and United States (US), and two goods, textiles and soybean.
+
+- Textiles and soybean requires different tech and labour / capital intensity.
+  + Let's say Indonesia can either produce 200 ton of textiles and 0 soybean, 0 textile and 50 ton of soybean, or anything in between.
+  + US can either produce 100 ton of textiles and 0 soybean, 0 textile and 100 ton of soybean, or anything in between.
+
+- What if the two countries do not trade?
+
+---
+
+```{r grafik1,echo=FALSE, message=FALSE, warning=FALSE,fig.width=10,fig.height=8}
+library(patchwork)
+library(hrbrthemes)
+USA <- function(x) 100-x
+IDN<- function(x) 50-.25*x
+
+amrik <- graph +
+  stat_function(fun = USA, color="cyan", size=1.1)+
+  scale_y_continuous(expand=c(0,0),limits=c(0,100), breaks = c(50,100))+
+  scale_x_continuous(expand=c(0,0),limits=c(0,200), breaks =c(50,100))+
+  labs(x="Quantity of textiles (ton)",y="Quantity of soybeans (ton)",
+       title = "USA PPF",size=1)+
+  annotate("label", x = 85, y = 70, label = 'US production \n and consumption \n in autarky' ,size=5)+
+  geom_segment(aes(x = 50, y = 50, xend = 70, yend = 63)
+               ,size=1)+
+  geom_point(aes(x=50,y=50),color='white',size=4)+
+  geom_segment(aes(x = 0, y = 50, xend = 50, yend = 50), lty = "dotted"
+               ,size=1) +
+  geom_segment(aes(x = 50, y = 0, xend = 50, yend = 50), lty = "dotted"
+               ,size=1)
+  
+indon <- graph +
+  stat_function(fun = IDN, color="cyan", size=1.1)+
+  scale_y_continuous(expand=c(0,0),limits=c(0,100), breaks = c(50,25))+
+  scale_x_continuous(expand=c(0,0),limits=c(0,200), breaks =c(100,200))+
+  labs(x="Quantity of textiles (ton)",y="Quantity of soybeans (ton)",
+       title = "IDN PPF",size=1)+
+  annotate("label", x = 85, y = 60, label = 'IDN production \n and consumption \n in autarky' ,size=5)+
+  geom_segment(aes(x = 100, y = 25, xend = 70, yend = 53)
+               ,size=1)+
+  geom_point(aes(x=100,y=25),color='white',size=4)+
+  geom_segment(aes(x = 0, y = 25, xend = 100, yend = 25), lty = "dotted"
+               ,size=2) +
+  geom_segment(aes(x = 100, y = 0, xend = 100, yend = 25), lty = "dotted"
+               ,size=2)
+
+indon+amrik
+```
+---
+
+## 2 countries in autarky
+
+- Suppose the two countries does not trade. Indonesia's production is (200,50), While in the US, it's (50,50).
+
+| Produce | US opportunity cost | IDN opportunity cost |
+| --- | --- | --- |
+| 1 ton of textiles | 1 ton of soybean | 250 kg of soybean |
+| 1 ton of soybean | 1 ton of textiles | 4 ton of soybean |
+
+- Indonesia is comparatively better at making textiles, while US is better at producing soybean:
+  + To make 1 ton of textiles, US needs to gave up resources which can be used to make 1 ton soybean, while Indonesians need only to give up 250 kg soybean.
+  + To make 1 ton of  soybean, US needs to gave up resources which can be used to make 1 ton textiles, while Indonesians need only to give up 4 ton of textiles.
+
+---
+
+```{r grafik2,echo=FALSE, message=FALSE, warning=FALSE,fig.width=10,fig.height=8}
+
+amrik1 <- graph +
+  stat_function(fun = USA, color="cyan", size=1.1)+
+  scale_y_continuous(expand=c(0,0),limits=c(0,100), 
+                     breaks = c(50,62.5,100))+
+  scale_x_continuous(expand=c(0,0),limits=c(0,200), 
+                     breaks =c(50,75,100))+
+  labs(x="Quantity of textiles (ton)",y="Quantity of soybeans (ton)",
+       title = "USA PPF",size=0.5)+
+  annotate("label", x = 130, y = 30, label = 'US production \n and consumption \n in autarky' ,size=5)+
+  annotate("label", x = 65, y = 90, label = 'US production \n with trade' ,size=5)+
+  annotate("label", x = 130, y = 62.5, label = 'US consumption \n with trade' ,size=5)+
+  geom_segment(aes(x = 0, y = 100, xend = 35, yend = 90 )
+               ,size=1)+
+  geom_segment(aes(x = 75, y = 62.50, xend = 95, yend = 63)
+               ,size=1)+
+  geom_segment(aes(x = 50, y = 50, xend = 100, yend = 40)
+               ,size=1)+
+  geom_point(aes(x=50,y=50),color='white',size=4)+
+  geom_point(aes(x=75,y=62.5),color='white',size=4)+
+  geom_point(aes(x=0,y=100),color='white',size=4)+
+  geom_segment(aes(x = 0, y = 50, xend = 50, yend = 50), lty = "dotted"
+               ,size=1) +
+  geom_segment(aes(x = 50, y = 0, xend = 50, yend = 50), lty = "dotted"
+               ,size=1)+
+  geom_segment(aes(x = 0, y = 62.5, xend = 75, yend = 62.5), lty = "dotted"
+               ,size=1) +
+  geom_segment(aes(x = 75, y = 0, xend = 75, yend = 62.5), lty = "dotted"
+               ,size=1)
+
+indon1 <- graph +
+  stat_function(fun = IDN, color="cyan", size=1.1)+
+  scale_y_continuous(expand=c(0,0),limits=c(0,100), breaks = c(50,37.5,25))+
+  scale_x_continuous(expand=c(0,0),limits=c(0,200), breaks =c(100,125,200))+
+  labs(x="Quantity of textiles (ton)",y="Quantity of soybeans (ton)",
+       title = "IDN PPF",size=1)+
+  annotate("label", x = 45, y = 80, 
+           label = 'IDN production \n and consumption \n in autarky' ,
+           size=5)+
+  annotate("label", x = 95, y = 65,
+           label = 'IDN consumption \n with trade' ,size=5)+
+  annotate("label", x = 160, y = 30, 
+           label = 'IDN production \n with trade' ,size=5)+
+  geom_segment(aes(x = 100, y = 25, xend = 35, yend = 73)
+               ,size=1)+
+  geom_segment(aes(x = 125, y = 37.5, xend = 90, yend = 59)
+               ,size=1)+
+  geom_segment(aes(x = 200, y = 0, xend = 160, yend = 25)
+               ,size=1)+
+  geom_point(aes(x=100,y=25),color='white',size=4)+
+  geom_point(aes(x=125,y=37.5),color='white',size=4)+
+  geom_point(aes(x=200,y=0),color='white',size=4)+
+  geom_segment(aes(x = 0, y = 25, xend = 100, yend = 25), lty = "dotted"
+               ,size=1) +
+  geom_segment(aes(x = 100, y = 0, xend = 100, yend = 25), lty = "dotted"
+               ,size=1)+
+  geom_segment(aes(x = 0, y = 37.5, xend = 125, yend = 37.5), lty = "dotted"
+               ,size=1) +
+  geom_segment(aes(x = 125, y = 0, xend = 125, yend = 37.5), lty = "dotted"
+               ,size=1)
+indon1+amrik1
+```
+
+---
+
+## Gains from trade
+
+```{r tab,echo=FALSE, message=FALSE, warning=FALSE}
+game <- data.frame(
+  "country"=c(rep('USA',times=2),rep('IDN',times=2)), "goods"=c("textiles (ton)","soybean (ton)","textiles (ton)","soybean (ton)"),
+  "p1"=c(50,50,100,25), "p2"=c(50,50,100,25),"p3"=c(0,100,200,0),
+  "p4"=c(75,62.5,125,37.5),"gains"=c("+25","+12.5","+25","+12.5")
+)
+
+zzz<-kbl(game, align = "c", format='html',
+    col.names = c(" "," ", "production","consumption",
+                     "production","consumption", "Gains from trade")) %>%
+  kable_styling(font_size=18) %>%
+  column_spec(1, bold = T) %>%
+  collapse_rows(columns = 1) %>%
+  add_header_above(c(" "," ", "in autarky" = 2,"with trade"=3))
+zzz
+```
+
+By concentrating production on one good and then trade, you can see that both ended up better-off:
+
+- with autarky, total production {textiles,soybean} $=\{150,75\}$
+
+- consumption=production, and $C_{USA} = \{50,50\},C_{IDN} = \{100,25\}$
+
+---
+
+## Gains from trade
+
+```{r tab1,echo=FALSE, message=FALSE, warning=FALSE}
+zzz
+```
+
+- with trade, total production {textiles,soybean} $=\{200,100\}$
+
+  + Production $\Rightarrow P_{USA}=\{0,100\}, P_{IDN}=\{200,0\}$
+  + Consumption $\Rightarrow C_{USA}=\{75,62.5\}, C_{IDN}=\{125,37.5\}$
+
+---
+
+## Comparative advantage
+
+- In reality, we will need country's preferences to establish proper equilibrium quantity and prices.
+
+- In this model, we have no price. But from the opportunity cost, we can calculate the relative prices:
+  + In the US, opportunity cost to produce 1 soybean is 1 textile. That means, $P^{soybean}_{USA} = P^{textile}_{USA}$
+  + In Indonesia, opportunity cost to make 1 soybean is 4 textiles. That means, the price of soybean must be four times price of textile.
+  
+- Since in Indonesia, it is comparatively cheaper to produce textile, it's better for US to source its textile from Indonesia.
+
+---
+
+## Comparative VS Absolute advantage
+
+- It's possible that a country is good at producing many things.
+  + This is called absolute advantage.
+
+- There's no reason why US can't be better at making clothes than Indonesia.
+  + Hence, it's possible that in fact, US still better at making clothes
+
+- But what matters is _relative_ opportunity cost:
+  + as long as its better for US capital and labour to produce soybean, they will still buy clothes from Indonesia.
+  + It may take lots of labor to produce textiles in Indonesia, but it'll take even more to produce soybean.
+
+---
+
+## Taking from the poor?
+
+- In short, because Indonesians are less productive compared to the US, it's better to US to buy cheaper goods to Indonesia.
+
+- This is not to say that US take advantage from Indonesians:
+  + Since Indonesian labour is less productive anyway, they will still have low wage even if they sell domestically.
+  + In fact, serving US market may give them higher wage.
+  
+- For example, if you feel ordering go-food is taking advantage from tukang ojeg, the alternative is even worse:
+  + if you ended up stop ordering go-food, they won't have order.
+
+---
+
+## What determines comparative advantage?
+
+1. **Differences in climate** is the reason why we're so good at producing CPO and rubber, but sucks at producing soybean and wheat.
+
+1. **Differences in Factor Endowment**. Some countries are endowed with natural resource, some with cheap labour. Countries which has no both has to find something else, such as:
+
+1. **Differences in technology**. Japan, South Korea and Taiwan are one good example. While technology can be transferred, opportunity cost of investing in high-tech things is more production of CPOs.
+
+---
+
+## Global Value Chain
+
+- These days, trade have been moving to an even more extreme point. Hence **hyperglobalization**: countries rely on each other to produce one particular goods.
+
+- The main enabler is advances in communications:
+  + human-human: the internet.
+  + human-machine: production software, production dashboard.
+  + machine-machine: CAD-CAM.
+
+- Countries able to specialize not only in a production of particular goods, but a particular process of production.
+
+- This is called **Global Value Chain (GVC)**
+
+---
+
+Many products these days do not made by just 1 country
+
+![image](sepeda.jpg)
+
+source: [World Bank](https://twitter.com/BankDunia/status/1222002437411635200?s=20)
+
+---
+
+## Global Value Chain
+
+Many products these days do not made by just 1 country
+
+![image](semicon.png)
+
+source: [Semiconductor Industry Association](https://www.semiconductors.org/strengthening-the-global-semiconductor-supply-chain-in-an-uncertain-era/)
+
+---
+
+## Global Value Chain
+
+- GVC allows for a country that has very low technological prowess become one of the dominant exporter of high-tech goods like smartphone and laptops.
+
+- In GVC situation, trade policy becomes very important: a poorly designed trade policy will leads to zero production in both.
+
+- Imagine if Indonesia has to build its own semiconductor fab in order to produce a smartphone.
+  + With GVC, Indonesia can import semiconductor and assemble a PCB and smartphone domestically.
+  
+- Indonesia also able to export textiles in varying qualities of raw materials.
+
+---
+
+class: middle, center
+
+# Trade policy and economic surplus
+
+---
+
+### Indonesian soybean market in autarky
+
+```{r market1,echo=FALSE, message=FALSE, warning=FALSE}
+supply <- function(x) x
+demand <- function(x) 10-x
+lul<-seq(0,5,0.1)
+graph +
+  scale_y_continuous(limits=c(0,10), breaks = 5,
+                     labels=expression(P[A]))+
+  scale_x_continuous(limits=c(0,10), breaks = 5,
+                     labels=expression(Q[A]))+
+  labs(x="Quantity of soybean",y="Price of soybean", title = "Indonesian domestic soybean market")+
+  annotate("text", x = 9, y = 8, label = 'Domestic \n supply' ,size=5)+
+  annotate("text", x = 9, y = 2, label = 'Domestic \n demand' ,size=5)+
+  annotate("text", x = 5, y = 5.2, label ='A' ,size=5)+
+  geom_point(aes(x=5,y=5),color='white',size=5)+
+  stat_function(fun = supply, color="red", size=1.1)+
+  stat_function(fun = demand, color="cyan", size=1.1)+
+  geom_segment(aes(x = 0, y = 5, xend = 5, yend = 5), lty = "dotted"
+               ,size=2) +
+  geom_segment(aes(x = 5, y = 0, xend = 5, yend = 5), lty = "dotted"
+               ,size=2)+
+  geom_ribbon(aes(x=lul, ymin=supply(lul), ymax=5,
+                  fill = 'Consumer surplus'), alpha = 0.4, show.legend = F)+
+  geom_ribbon(aes(x=seq(0,5,.1), ymin=5, ymax=demand(lul),
+                  fill = 'Producer surplus'), alpha = 0.4, show.legend = F)+
+  annotate("label", x = 1.5, y = 7,
+           label = 'Consumer \n surplus' ,size=5)+
+  annotate("label", x = 1.5, y = 3, 
+           label = 'Producer \n surplus' ,size=5)
+```
+
+---
+
+### Indonesian soybean market with trade
+.kiri[
+```{r market2,echo=FALSE, message=FALSE, warning=FALSE}
+graph +
+  scale_y_continuous(limits=c(0,10), breaks = c(3,5),
+                     labels=c(expression(P[W]),expression(P[A])))+
+  scale_x_continuous(limits=c(0,10), breaks = c(3,5,7),
+                     labels=c(expression(Q[S]),expression(Q[A])
+                                                ,expression(Q[D])))+
+  labs(x="Quantity of soybean",y="Price of soybean", title = "Indonesian domestic soybean market")+
+  annotate("text", x = 9, y = 8, label = 'Domestic \n supply' ,size=5)+
+  annotate("text", x = 9, y = 2, label = 'Domestic \n demand' ,size=5)+
+  annotate("text", x = 5, y = 5.7, label ='A' ,size=8)+
+  annotate("text", x = 9, y = 5.3, label ='Autarky price' ,size=5)+
+  annotate("text", x = 9, y = 3.3, label ='World price' ,size=5)+
+  annotate("text", x = 5, y = 1.5, label ='imports' ,size=5)+
+  geom_point(aes(x=5,y=5),color='white',size=5)+
+  geom_point(aes(x=3,y=3),color='white',size=5)+
+  geom_point(aes(x=7,y=3),color='white',size=5)+
+  stat_function(fun = supply, color="red", size=1.1)+
+  stat_function(fun = demand, color="cyan", size=1.1)+
+  geom_hline(yintercept=3,color="#e0e0e0",size=1.1)+
+  geom_hline(yintercept=5,color="#e0e0e0",size=1.1)+
+  geom_curve(aes(x=3, xend=7, y=3, yend=3),size=1)+
+  geom_segment(aes(x = 0, y = 5, xend = 5, yend = 5), lty = "dotted"
+               ,size=1.1) +
+  geom_segment(aes(x = 5, y = 0, xend = 5, yend = 5), lty = "dotted"
+               ,size=1.1)+
+  geom_segment(aes(x = 3, y = 0, xend = 3, yend = 3), lty = "dotted"
+               ,size=1.1)+
+  geom_segment(aes(x = 7, y = 0, xend = 7, yend = 3), lty = "dotted"
+               ,size=1.1)
+```
+]
+
+.kanan[
+.s[
+- With trade, the soybean market is exposed to a lower world price $P_W$
+
+- at $P_W$, demand increases $Q_A  \rightarrow Q_D$, while supply reduces $Q_A \rightarrow Q_S$
+
+- This imbalance is solved via imports. Domestically produced soybean is $Q_S$, while imported soybean is $Q_D-Q_S$
+
+]
+]
+
+---
+
+### Change in surplus
+
+.kiri[
+```{r market3,echo=FALSE, message=FALSE, warning=FALSE}
+graph +
+  scale_y_continuous(limits=c(0,10), breaks = c(3,5),
+                     labels=c(expression(P[W]),expression(P[A])))+
+  scale_x_continuous(limits=c(0,10), breaks = c(3,5,7),
+                     labels=c(expression(Q[S]),expression(Q[A])
+                                                ,expression(Q[D])))+
+  labs(x="Quantity of soybean",y="Price of soybean", title = "Indonesian domestic soybean market")+
+  annotate("text", x = 9, y = 8, label = 'Domestic \n supply' ,size=5)+
+  annotate("text", x = 9, y = 2, label = 'Domestic \n demand' ,size=5)+
+  annotate("text", x = 5, y = 5.7, label ='A' ,size=8)+
+  annotate("text", x = 2, y = 6.5, label ='W' ,size=8)+
+  annotate("text", x = 2, y = 4, label ='X' ,size=8)+
+  annotate("text", x = 1, y = 1.5, label ='Y' ,size=8)+
+  annotate("text", x = 5.7, y = 3.5, label ='Z' ,size=8)+
+  geom_point(aes(x=5,y=5),color='white',size=5)+
+  geom_point(aes(x=3,y=3),color='white',size=5)+
+  geom_point(aes(x=7,y=3),color='white',size=5)+
+  stat_function(fun = supply, color="red", size=1.1)+
+  stat_function(fun = demand, color="cyan", size=1.1)+
+  geom_segment(aes(x = 0, y = 5, xend = 5, yend = 5), lty = "dotted"
+               ,size=1.1) +
+  geom_segment(aes(x = 5, y = 0, xend = 5, yend = 5), lty = "dotted"
+               ,size=1.1)+
+  geom_segment(aes(x = 3, y = 0, xend = 3, yend = 3), lty = "dotted"
+               ,size=1.1)+
+  geom_segment(aes(x = 7, y = 0, xend = 7, yend = 3), lty = "dotted"
+               ,size=1.1)+
+  geom_segment(aes(x = 0, y = 3, xend = 7, yend = 3), lty = "dotted"
+               ,size=1.1)+
+  geom_ribbon(aes(x=lul, ymin=5, ymax=demand(lul),
+                  fill = 'W'), alpha = 0.4, show.legend = F)+
+  geom_ribbon(aes(x=seq(0,3,.1), ymin=3, ymax=5,
+                  fill = 'X'), alpha = 0.4, show.legend = F)+
+  geom_ribbon(aes(x=seq(3,5,0.1), ymin=supply(seq(3,5,0.1)),ymax=5,
+                  fill = 'X'), alpha = 0.4,show.legend = F)+
+  geom_ribbon(aes(x=seq(3,5,0.1), ymax=supply(seq(3,5,0.1)),ymin=3,
+                  fill = 'Z'), alpha = 0.4,show.legend = F)+
+  geom_ribbon(aes(x=seq(5,7,0.1), ymax=demand(seq(5,7,0.1)),ymin=3,
+                  fill = 'Z'), alpha = 0.4,show.legend = F)+
+  geom_ribbon(aes(x=seq(0,3,.1), ymin=supply(seq(0,3,.1)), ymax=3,
+                  fill = 'Y'), alpha = 0.4, show.legend = F)+
+  scale_fill_manual(values=c('cyan','violet','red','green'), name="fill")
+```
+]
+
+.kanan[
+.s[
+- In autarky:
+  + PS = Y + X
+  + CS = W
+  + TS = Y + X + W
+
+- In trade:
+  + PS = Y
+  + CS = W + X + Z
+  + TS = Y + W + X + Z
+  
+- CS is much higher, and trade gains area Z in total.
+
+- However, domestic soybean producer lose area X.
+]
+]
+
+---
+
+### US soybean market with trade
+.kiri[
+```{r market4,echo=FALSE, message=FALSE, warning=FALSE}
+graph +
+  scale_y_continuous(limits=c(0,10), breaks = c(5,7),
+                     labels=c(expression(P[A]),expression(P[W])))+
+  scale_x_continuous(limits=c(0,10), breaks = c(3,5,7),
+                     labels=c(expression(Q[D]),expression(Q[A])
+                                                ,expression(Q[S])))+
+  labs(x="Quantity of soybean",y="Price of soybean", title = "US domestic soybean market")+
+  annotate("text", x = 9, y = 8, label = 'Domestic \n supply' ,size=5)+
+  annotate("text", x = 9, y = 2, label = 'Domestic \n demand' ,size=5)+
+  annotate("text", x = 5, y = 5.7, label ='A' ,size=8)+
+  annotate("text", x = 9, y = 5.3, label ='Autarky price' ,size=5)+
+  annotate("text", x = 9, y = 7.3, label ='World price' ,size=5)+
+  annotate("text", x = 5, y = 8.5, label ='exports' ,size=5)+
+  geom_point(aes(x=5,y=5),color='white',size=5)+
+  geom_point(aes(x=3,y=7),color='white',size=5)+
+  geom_point(aes(x=7,y=7),color='white',size=5)+
+  stat_function(fun = supply, color="red", size=1.1)+
+  stat_function(fun = demand, color="cyan", size=1.1)+
+  geom_hline(yintercept=7,color="#e0e0e0",size=1.1)+
+  geom_hline(yintercept=5,color="#e0e0e0",size=1.1)+
+  geom_curve(aes(x=7, xend=3, y=7, yend=7),size=1)+
+  geom_segment(aes(x = 0, y = 5, xend = 5, yend = 5), lty = "dotted"
+               ,size=1.1) +
+  geom_segment(aes(x = 5, y = 0, xend = 5, yend = 5), lty = "dotted"
+               ,size=1.1)+
+  geom_segment(aes(x = 3, y = 0, xend = 3, yend = 7), lty = "dotted"
+               ,size=1.1)+
+  geom_segment(aes(x = 7, y = 0, xend = 7, yend = 7), lty = "dotted"
+               ,size=1.1)
+```
+]
+
+.kanan[
+.s[
+- With trade, the soybean market is exposed to a higher world price $P_W$
+
+- at $P_W$, demand reduces $Q_A  \rightarrow Q_D$, while supply increases $Q_A \rightarrow Q_S$
+
+- This imbalance is solved via exports. Domestically consumed soybean is $Q_D$, while imported soybean is $Q_S-Q_D$
+
+]
+]
+
+---
+
+### Change in surplus
+
+.kiri[
+```{r market5,echo=FALSE, message=FALSE, warning=FALSE}
+supply <- function(x) x
+demand <- function(x) 10-x
+lul<-seq(0,5,0.1)
+graph +
+  scale_y_continuous(limits=c(0,10), breaks = c(5,7),
+                     labels=c(expression(P[A]),expression(P[W])))+
+  scale_x_continuous(limits=c(0,10), breaks = c(3,5,7),
+                     labels=c(expression(Q[D]),expression(Q[A])
+                                                ,expression(Q[S])))+
+  labs(x="Quantity of soybean",y="Price of soybean", title = "US domestic soybean market")+
+  annotate("text", x = 9, y = 8, label = 'Domestic \n supply' ,size=5)+
+  annotate("text", x = 9, y = 2, label = 'Domestic \n demand' ,size=5)+
+  annotate("text", x = 5, y = 4.3, label ='A' ,size=8)+
+  annotate("text", x = 1, y = 7.5, label ='W' ,size=8)+
+  annotate("text", x = 2, y = 5.5, label ='X' ,size=8)+
+  annotate("text", x = 1.5, y = 3.5, label ='Y' ,size=8)+
+  annotate("text", x = 5, y = 6.5, label ='Z' ,size=8)+
+  geom_point(aes(x=5,y=5),color='white',size=5)+
+  geom_point(aes(x=3,y=7),color='white',size=5)+
+  geom_point(aes(x=7,y=7),color='white',size=5)+
+  stat_function(fun = supply, color="red", size=1.1)+
+  stat_function(fun = demand, color="cyan", size=1.1)+
+  geom_segment(aes(x = 0, y = 5, xend = 5, yend = 5), lty = "dotted"
+               ,size=1.1) +
+  geom_segment(aes(x = 5, y = 0, xend = 5, yend = 5), lty = "dotted"
+               ,size=1.1)+
+  geom_segment(aes(x = 3, y = 0, xend = 3, yend = 7), lty = "dotted"
+               ,size=1.1)+
+  geom_segment(aes(x = 7, y = 0, xend = 7, yend = 7), lty = "dotted"
+               ,size=1.1)+
+  geom_segment(aes(x = 0, y = 7, xend = 7, yend = 7), lty = "dotted"
+               ,size=1.1)+
+  geom_ribbon(aes(x=seq(0,3,.1), ymin=7, ymax=demand(seq(0,3,.1)),
+                  fill = 'W'), alpha = 0.4, show.legend = F)+
+  geom_ribbon(aes(x=seq(0,3,.1), ymin=5, ymax=7,
+                  fill = 'X'), alpha = 0.4, show.legend = F)+
+  geom_ribbon(aes(x=seq(3,5,0.1), ymax=demand(seq(3,5,0.1)),ymin=5,
+                  fill = 'X'), alpha = 0.4,show.legend = F)+
+  geom_ribbon(aes(x=seq(3,5,0.1), ymin=demand(seq(3,5,0.1)),ymax=7,
+                  fill = 'Z'), alpha = 0.4,show.legend = F)+
+  geom_ribbon(aes(x=seq(5,7,0.1), ymin=supply(seq(5,7,0.1)),ymax=7,
+                  fill = 'Z'), alpha = 0.4,show.legend = F)+
+  geom_ribbon(aes(x=seq(0,5,.1), ymin=supply(seq(0,5,.1)), ymax=5,
+                  fill = 'Y'), alpha = 0.4, show.legend = F)+
+  scale_fill_manual(values=c('cyan','violet','red','green'), name="fill")
+```
+]
+
+.kanan[
+.s[
+- In autarky:
+  + PS = Y
+  + CS = W + X
+  + TS = Y + X + W
+
+- In trade:
+  + PS = Y + X + Z
+  + CS = W
+  + TS = Y + W + X + Z
+  
+- PS is much higher, and trade gains area Z in total which goes to producer.
+
+- However, domestic soybean producer lose area X.
+]
+]
+
+---
+
+## Effect of trade
+
+- Trade benefits **exporting industries** while hurting **import competing industries**.
+
+- Factor of productions used for export sectors will have high demand, and priced highly:
+  + Firms in natural resources exporting countries will compete to gain access to lands
+  + Farmers move to manufacturing because Indonesia export a bit of manufactures, while net importing agricultural goods.
+  
+- If factors can't easily move, it will leads to inequality.
+  
+---
+
+class: middle, center
+
+# Effect of trade policy
+
+---
+
+## Trade policy
+
+- Trade leads to winner and losers:
+  - import benefits consumers while hurt producers
+  - export benefits producers while hurt consumers
+
+- In the case of soybean:
+  + import helps chicken breeders who benefit from cheap soybean, but hurt soybean farmers.
+  
+- If soybean farmers are more politically influencial, they can ask for protection from the government by using import tariff or import quota.
+
+---
+
+### Recall soybean import
+
+```{r tariff1,echo=FALSE, message=FALSE, warning=FALSE}
+graph +
+  scale_y_continuous(limits=c(0,10), breaks = c(3,5),
+                     labels=c(expression(P[W]),expression(P[A])))+
+  scale_x_continuous(limits=c(0,10), breaks = c(3,5,7),
+                     labels=c(expression(Q[S]),expression(Q[A])
+                                                ,expression(Q[D])))+
+  labs(x="Quantity of soybean",y="Price of soybean", title = "Indonesian domestic soybean market")+
+  annotate("text", x = 9, y = 8, label = 'Domestic \n supply' ,size=5)+
+  annotate("text", x = 9, y = 2, label = 'Domestic \n demand' ,size=5)+
+  annotate("text", x = 5, y = 5.7, label ='A' ,size=8)+
+  annotate("text", x = 9, y = 5.3, label ='Autarky price' ,size=5)+
+  annotate("text", x = 9, y = 3.3, label ='World price' ,size=5)+
+  annotate("text", x = 5, y = 1.5, label ='imports' ,size=5)+
+  geom_point(aes(x=5,y=5),color='white',size=5)+
+  geom_point(aes(x=3,y=3),color='white',size=5)+
+  geom_point(aes(x=7,y=3),color='white',size=5)+
+  stat_function(fun = supply, color="red", size=1.1)+
+  stat_function(fun = demand, color="cyan", size=1.1)+
+  geom_hline(yintercept=3,color="#e0e0e0",size=1.1)+
+  geom_hline(yintercept=5,color="#e0e0e0",size=1.1)+
+  geom_curve(aes(x=3, xend=7, y=3, yend=3),size=1)+
+  geom_segment(aes(x = 0, y = 5, xend = 5, yend = 5), lty = "dotted"
+               ,size=1.1) +
+  geom_segment(aes(x = 5, y = 0, xend = 5, yend = 5), lty = "dotted"
+               ,size=1.1)+
+  geom_segment(aes(x = 3, y = 0, xend = 3, yend = 3), lty = "dotted"
+               ,size=1.1)+
+  geom_segment(aes(x = 7, y = 0, xend = 7, yend = 3), lty = "dotted"
+               ,size=1.1)
+```
+
+---
+
+### The effect of import tariff
+.kiri[
+```{r tariff2,echo=FALSE, message=FALSE, warning=FALSE}
+graph +
+  scale_y_continuous(limits=c(0,10), breaks = c(3,4.5),
+                     labels=c(expression(P[W]),expression(P[T])))+
+  scale_x_continuous(limits=c(0,10), breaks = c(3,4.5,5.5,7),
+                     labels=c(expression(Q[S]),expression(Q[ST])
+                              ,expression(Q[DT])
+                              ,expression(Q[D])))+
+  labs(x="Quantity of soybean",y="Price of soybean", title = "Indonesian domestic soybean market")+
+  annotate("text", x = 9, y = 8, label = 'Domestic \n supply' ,size=5)+
+  annotate("text", x = 9, y = 2, label = 'Domestic \n demand' ,size=5)+
+  annotate("text", x = 8.5, y = 4.8, label ='World price + tariff' ,size=5)+
+  annotate("text", x = 9, y = 3.3, label ='World price' ,size=5)+
+  annotate("text", x = 5, y = 2.5, label ='imports' ,size=5)+
+  geom_point(aes(x=4.5,y=4.5),color='white',size=5)+
+  geom_point(aes(x=5.5,y=4.5),color='white',size=5)+
+  geom_point(aes(x=3,y=3),color='white',size=5)+
+  geom_point(aes(x=7,y=3),color='white',size=5)+
+  stat_function(fun = supply, color="red", size=1.1)+
+  stat_function(fun = demand, color="cyan", size=1.1)+
+  geom_hline(yintercept=3,color="#e0e0e0",size=1.1)+
+  geom_hline(yintercept=4.5,color="#e0e0e0",size=1.1)+
+  geom_curve(aes(x=4.5, xend=5.5, y=3, yend=3),size=1)+
+  geom_segment(aes(x = 3, y = 0, xend = 3, yend = 3), lty = "dotted"
+               ,size=1.1)+
+  geom_segment(aes(x = 7, y = 0, xend = 7, yend = 3), lty = "dotted"
+               ,size=1.1)+
+  geom_segment(aes(x = 4.5, y = 0, xend = 4.5, yend = 4.5), lty = "dotted"
+               ,size=1.1)+
+  geom_segment(aes(x = 5.5, y = 0, xend = 5.5, yend = 4.5), lty = "dotted"
+               ,size=1.1)
+```
+]
+
+.kanan[
+.s[
+- When the government impose tariff, the import price become more expensive. Local producer doesn't experience tariff so they become more competitive.
+
+- Domestic parket becomes world price + tariff
+
+- This push demand down to $Q_{DT}$ and increase domestic supply to $Q_{ST}$
+
+- Imports are lower $Q_{DT}-Q_{ST}$
+]
+]
+---
+
+### The effect of import quota
+.kiri[
+```{r tariff4,echo=FALSE, message=FALSE, warning=FALSE}
+graph +
+  scale_y_continuous(limits=c(0,10), breaks = c(3,4.5),
+                     labels=c(expression(P[W]),expression(P[T])))+
+  scale_x_continuous(limits=c(0,10), breaks = c(3,4.5,5.5,7),
+                     labels=c(expression(Q[S]),expression(Q[ST])
+                              ,expression(Q[DT])
+                              ,expression(Q[D])))+
+  labs(x="Quantity of soybean",y="Price of soybean", title = "Indonesian domestic soybean market")+
+  annotate("text", x = 9, y = 8, label = 'Domestic \n supply' ,size=5)+
+  annotate("text", x = 9, y = 2, label = 'Domestic \n demand' ,size=5)+
+  annotate("text", x = 9, y = 3.3, label ='World price' ,size=5)+
+  annotate("text", x = 5, y = 2.5, label ='imports' ,size=5)+
+  geom_point(aes(x=4.5,y=4.5),color='white',size=5)+
+  geom_point(aes(x=5.5,y=4.5),color='white',size=5)+
+  geom_point(aes(x=3,y=3),color='white',size=5)+
+  geom_point(aes(x=7,y=3),color='white',size=5)+
+  stat_function(fun = supply, color="red", size=1.1)+
+  stat_function(fun = demand, color="cyan", size=1.1)+
+  geom_hline(yintercept=3,color="#e0e0e0",size=1.1)+
+  geom_vline(xintercept=5.5,color="#e0e0e0",size=1.1)+
+  geom_curve(aes(x=4.5, xend=5.5, y=3, yend=3),size=1)+
+  geom_segment(aes(x = 3, y = 0, xend = 3, yend = 3), lty = "dotted"
+               ,size=1.1)+
+  geom_segment(aes(x = 7, y = 0, xend = 7, yend = 3), lty = "dotted"
+               ,size=1.1)+
+  geom_segment(aes(x = 4.5, y = 0, xend = 4.5, yend = 4.5), lty = "dotted"
+               ,size=1.1)+
+  geom_segment(aes(x = 0, y = 4.5, xend = 5.5, yend = 4.5), lty = "dotted"
+               ,size=1.1)+
+  geom_segment(aes(x = 5.5, y = 0, xend = 5.5, yend = 4.5), lty = "dotted"
+               ,size=1.1)
+```
+]
+
+.kanan[
+.s[
+- When the government impose quota restriction at $Q_{DT}$, the effect is similar.
+
+- buyers want to buy up to $Q_D$ but cannot.
+
+- This push price up to $P_T$.
+]
+]
+
+---
+
+### Surplus changes from trade policy
+
+.kiri[
+```{r tariff3,echo=FALSE, message=FALSE, warning=FALSE}
+graph +
+  scale_y_continuous(limits=c(0,10), breaks = c(3,4.5),
+                     labels=c(expression(P[W]),expression(P[T])))+
+  scale_x_continuous(limits=c(0,10), breaks = c(3,4.5,5.5,7),
+                     labels=c(expression(Q[S]),expression(Q[ST])
+                              ,expression(Q[DT])
+                              ,expression(Q[D])))+
+  labs(x="Quantity of soybean",y="Price of soybean", title = "Indonesian domestic soybean market")+
+  annotate("text", x = 9, y = 8, label = 'Domestic \n supply' ,size=5)+
+  annotate("text", x = 9, y = 2, label = 'Domestic \n demand' ,size=5)+
+  annotate("text", x = 2, y = 3.5, label ='A' ,size=5)+
+  annotate("text", x = 4, y = 3.5, label ='B' ,size=5)+
+  annotate("text", x = 5, y = 3.5, label ='C' ,size=5)+
+  annotate("text", x = 6, y = 3.5, label ='D' ,size=5)+
+  geom_point(aes(x=4.5,y=4.5),color='white',size=5)+
+  geom_point(aes(x=5.5,y=4.5),color='white',size=5)+
+  geom_point(aes(x=3,y=3),color='white',size=5)+
+  geom_point(aes(x=7,y=3),color='white',size=5)+
+  stat_function(fun = supply, color="red", size=1.1)+
+  stat_function(fun = demand, color="cyan", size=1.1)+
+  geom_hline(yintercept=3,color="#e0e0e0",size=1.1)+
+  geom_hline(yintercept=4.5,color="#e0e0e0",size=1.1)+
+  geom_segment(aes(x = 3, y = 0, xend = 3, yend = 3), lty = "dotted"
+               ,size=1.1)+
+  geom_segment(aes(x = 7, y = 0, xend = 7, yend = 3), lty = "dotted"
+               ,size=1.1)+
+  geom_segment(aes(x = 4.5, y = 0, xend = 4.5, yend = 4.5), lty = "dotted"
+               ,size=1.1)+
+  geom_ribbon(aes(x=seq(0,3,.1), ymin=3, ymax=4.5,
+                  fill = 'A'), alpha = 0.4, show.legend = F)+
+  geom_ribbon(aes(x=seq(3,4.5,.1), ymin=supply(seq(3,4.5,.1)), ymax=4.5,
+                  fill = 'A'), alpha = 0.4, show.legend = F)+
+  geom_ribbon(aes(x=seq(3,4.5,.1), ymin=3, ymax=supply(seq(3,4.5,.1)),
+                  fill = 'B'), alpha = 0.4, show.legend = F)+
+  geom_ribbon(aes(x=seq(4.5,5.5,0.1), ymax=4.5,ymin=3,
+                  fill = 'C'), alpha = 0.4,show.legend = F)+
+  geom_ribbon(aes(x=seq(5.5,7,0.1), ymin=3,ymax=demand(seq(5.5,7,0.1)),
+                  fill = 'B'), alpha = 0.4,show.legend = F)+
+  geom_segment(aes(x = 5.5, y = 0, xend = 5.5, yend = 4.5), lty = "dotted"
+               ,size=1.1)
+```
+]
+
+.kanan[
+.s[
+- Tariff leads to lower imports, and more domestically produced goods.
+
+- In total, CS lost A+B+C+D
+
+- PS gains = A
+
+- Government gets tariff revenue, which is number of imports $\times$ per-unit tariff, which is C
+
+- B+D is DWL.
+]
+]
+
+---
+
+### Effect of trade policy
+
+- in case of quota, B goes to quota rent.
+
+- When quota rent is sold with a competitive auction, the rent can go to government, and thus have the same effect as tariff.
+
+- However, when appointed quota is not transparent this can lead to a corruption.
+  - [Beef](https://www.abc.net.au/news/rural/2013-02-01/beef-import-corruption-rocks-indonesian-political/6133612) and [garlic](https://en.tempo.co/read/1306850/layers-of-the-garlic-corruption-scandal) are the examples of import quota, while [lobster](https://www.abc.net.au/news/2020-11-27/rolex-watches-seized-as-indonesian-minister-arrested-corruption/12922796) was the example of export quota corruption.
+  
+---
+
+## Conclusion
+
+- In conclusion, trade is generally good for everyone
+
+- Unfortunately, the gain from trade is not shared equally, and could potentially lead to higher inequality.
+  + Donald Trump rust belt
+  + Indonesian manufacturing suffer from commodity boom during the 2000s.
+  
+- Trade creates winners and losers, and the battle between winners and losers determine trade policy.
+
+---
+
+## Next up
+
+- Next week we will see how international capital plays out.
+
+- The role of exchange rate
+
+- Balance of Payment.

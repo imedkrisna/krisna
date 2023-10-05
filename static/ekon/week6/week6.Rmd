@@ -1,0 +1,894 @@
+---
+title: "Monopoly"
+subtitle: "Week 6"
+author: "Krisna Gupta"
+date: "15 March 2021 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: monokai
+      highlightLines: true
+      countIncrementalSlides: false
+    css: ["default","dark.css","dark-fonts.css"]
+
+---
+
+## Recap on last week
+
+- We've learned various types of costs
+
+- Two different levels of $Q$:
+  - cost minimizing when $MC=ATC$
+  - profit maximizing when $MC=MR$
+
+- We've learned the condition in perfect market:
+  - $P$ is independent of producer's decision
+  - hence: $MR=P$
+
+---
+
+## Today
+
+- Entry and exit
+
+- What happens when the market is a monopoly
+
+- Price discrimination
+
+---
+
+class: middle, center
+
+# Entry & Exit
+
+---
+
+## Entry & Exit
+
+- To construct the overall supply curve, we need to look at what Liv would do in different price setting.
+
+- We have different level of Q. Time to learn different types of prices for supplier.
+
+- Two types of Prices:
+  - **Break-even price** = minimum ATC
+  - **Shut-down price** = minimum AVC
+
+---
+
+## Break-even and Shut-down
+
+- **Break even price** is the price level where Liv is operating at the lowest profit.
+  - She might not want to produce at a loss.
+
+- If price goes below break-even price, shutting down may not be necessary.
+
+- In the short-run, fixed cost must still be paid regardless of Q produced. It's better to produce to cover some of the fixed cost.
+
+- **Shut-down price** is the price level where Liv can still cover her variable cost, and have something left to cover a fraction of the fix cost.
+
+---
+
+### Liv's Cost Structure Again
+
+```{r tab1,echo=FALSE, message=FALSE, warning=FALSE}
+
+library(kableExtra)
+library(dplyr)
+library(ggplot2)
+library(ggdark)
+
+graph<-ggplot()+
+  dark_theme_bw(base_size=25)+
+  theme(text = element_text(color='#e0e0e0'),
+        panel.border = element_blank(),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        axis.line = element_line(colour = "#e0e0e0"))
+
+q<-seq(0,10,1)
+FC<-rep(108,11)
+VC<-12*q*q
+TC<-FC+VC
+
+liv<-data.frame(q,FC,VC,TC)
+liv$MC<-c(0,diff(liv$TC)/diff(liv$q))
+liv$AFC<-liv$FC/liv$q
+liv$AVC<-liv$VC/liv$q
+liv$ATC<-liv$TC/liv$q
+
+liv %>%
+  kable("html", align="cc", col.names = c('Q',"FC",'VC','TC','MC','AFC','AVC','ATC'),digits=2) %>%
+  kable_styling(bootstrap_options = c("bordered","striped","responsive"), font_size = 20,full_width = TRUE)
+
+```
+
+---
+
+### Break-even & loss
+
+.pull-left[.s[
+```{r tab2,echo=FALSE, message=FALSE, warning=FALSE}
+liv1<-data.frame("Q"=liv$q,"MC"=liv$MC,"AVC"=liv$AVC,"ATC"=liv$ATC)
+kable(liv1,format = "html", align = "cc",digits=2) %>%
+  row_spec(4,background="blue") %>%
+  row_spec(2,background="grey")
+
+```
+]]
+
+.pull-right[
+- Two different prices:
+  - shut-down price = 12
+  - break-even price = 72
+
+- Below $72, Liv is operating at a loss.
+
+- Above $12, Liv still manage to retain some of the fixed cost.
+]
+---
+
+## Up the industrial curve
+
+- Different producer may have different cost structure.
+
+- Marginal cost is important because it determine lowest ATC (the break-even price) and profit.
+  - MC is essentially the supply curve.
+  
+- When price below break-even price, firms only exit in the long run.
+  - still produce while lowering fixed cost.
+
+- When price below shut-down price, firms exit immediately.
+
+---
+
+### Profit max in perfect market
+
+```{r p0,echo=FALSE, message=FALSE, warning=FALSE, fig.width=10, fig.height=8}
+
+ftc <- function(x) 300+0.2*x*x-x
+fatc <- function(x) (300+0.2*x*x-x)/x
+fmc <- function(x) 0.4*x-1
+fmc2 <- function(x) 0.4*x+10
+fmr <- function(x) 20
+fd<- function(x) -.15*x+35
+
+qq<-seq(10,100,1)
+
+z<-uniroot(function(x) fatc(x) - fmc(x), range(qq))$root
+zz<-fatc(z)
+zzz<-uniroot(function(x) fmc(x) - fmr(x), range(qq))$root
+zzzz<-fatc(zzz)
+
+profit2<- graph+
+  stat_function(aes(color = "ATC"), fun = fatc, size=1.5)+
+  stat_function(aes(color = "MC"), fun = fmc, size=1.5)+
+  stat_function(aes(color = "MR"), fun = fmr, size=1.5)+
+  geom_ribbon(aes(x=seq(10,zzz,0.1), ymin=zzzz, ymax=20,
+                  fill='largest profit'),
+              alpha = 0.4)+
+  annotate("text", x = 95, y = 18, label = "MR=P",size=8)+
+  annotate("text", x = 95, y = 35, label = "MC",size=8)+
+  annotate("text", x = 95, y = 23, label = "AC",size=8)+
+  scale_x_continuous(limits = c(10,100), breaks = zzz, labels = "profit maximizing \n output (Q*)") +
+  scale_y_continuous(breaks = zzzz, labels = "profit \n maxmizing \n ATC") +
+  labs(x='Q',y='P')+
+  scale_color_manual(values=c("yellow", "red","cyan"))
+  
+profit2
+```
+
+---
+
+### Long run profit in a perfect market
+
+.pull-left[
+
+```{r p1,echo=FALSE, message=FALSE, warning=FALSE, fig.width=10, fig.height=9}
+
+z<-uniroot(function(x) fd(x) - fmc(x), range(qq))$root
+zz<-fd(z)
+zzz<-uniroot(function(x) fmc2(x) - fd(x), range(qq))$root
+zzzz<-fd(zzz)
+
+profit1<- graph+
+  stat_function(aes(color = 'S1'), fun = fmc, size=1.5
+                , show.legend = FALSE)+
+  stat_function(aes(color = 'S2'), fun = fmc2, size=1.5
+                , show.legend = FALSE)+
+  stat_function(aes(color = "D"), fun = fd, size=1.5
+                , show.legend = FALSE)+
+  geom_segment(aes(x = 10, y = zz, xend = z, yend = zz), lty = "dotted", size=2) +
+  geom_segment(aes(x = z, y = 0, xend = z, yend = zz), lty = "dotted", size=2) +
+  geom_segment(aes(x = 10, y = zzzz, xend = zzz, yend = zzzz), lty = "dotted", size=2) +
+  geom_segment(aes(x = zzz, y = 0, xend = zzz, yend = zzzz), lty = "dotted", size=2) +
+  annotate("text", x = 95, y = 18, label = "D",size=8)+
+  annotate("text", x = 95, y = 50, label = expression(s[2]),size=8)+
+  annotate("text", x = 95, y = 35, label = expression(s[1]),size=8)+
+  annotate("segment", x = 85, xend = 90, y = 41, yend = 37,
+           arrow = arrow(length = unit(1, "lines")), size=2, 
+           colour = "gray")+
+  scale_x_continuous(limits = c(10,100), breaks=c(z,zzz),
+                     labels = c(expression(Q[2]),expression(Q[2])))+
+  scale_y_continuous(breaks=c(zz,zzzz),
+                     labels = c(expression(P[2]),expression(P[2])))+
+  labs(x='Q',y='P',title="Overall market curves")+
+  scale_color_manual(values=c("cyan","red","pink"))
+  
+profit1
+```
+.s[If an Industry is profitable, more firms will enter the market, push supply curve to the right. This push market price down]]
+
+.pull-right[
+
+```{r p2,echo=FALSE, message=FALSE, warning=FALSE, fig.width=10, fig.height=9}
+
+zzz<-uniroot(function(x) fmc(x) - fatc(x), range(qq))$root
+zzzz<-fatc(zzz)
+
+profit2<- graph+
+  stat_function(aes(color = "ATC"), fun = fatc, size=1.5
+                , show.legend=FALSE)+
+  stat_function(aes(color = "MC"), fun = fmc, size=1.5
+                , show.legend=FALSE)+
+  geom_hline(yintercept=zzzz+5, color="cyan", size=2,linetype="dashed")+
+  geom_hline(yintercept=zzzz, color="cyan",size=2)+
+  annotate("segment", x = 90, xend = 90, y = zzzz+4, yend = zzzz+1,
+           arrow = arrow(length = unit(1, "lines")), size=2, 
+           colour = "gray")+
+  annotate("text", x = 95, y = 18, label = expression(MR=P[1]),size=8)+
+  annotate("text", x = 95, y = 15, label = expression(MR=P[2]),size=8)+
+  annotate("text", x = 95, y = 35, label = "MC",size=8)+
+  annotate("text", x = 95, y = 23, label = "AC",size=8)+
+  scale_x_continuous(limits = c(10,100), breaks = NULL) +
+  scale_y_continuous(breaks = NULL) +
+  labs(x='Q',y='P',title="Individual firm's curves")+
+  scale_color_manual(values=c("yellow", "red","cyan"))
+  
+profit2
+```
+.s[The firm now has to operate on a lower MR. In the long run, the number of firms will be just enough to sustain and no more profit left for entrant]]
+
+---
+
+### Long run profit in a perfect market
+
+.pull-left[
+
+```{r p3,echo=FALSE, message=FALSE, warning=FALSE, fig.width=8, fig.height=9}
+
+z<-uniroot(function(x) fd(x) - fmc(x), range(qq))$root
+zz<-fd(z)
+zzz<-uniroot(function(x) fmc2(x) - fd(x), range(qq))$root
+zzzz<-fd(zzz)
+
+profit1<- graph+
+  stat_function(aes(color = "D"), fun = fd, size=1.5
+                , show.legend = FALSE)+
+  geom_hline(yintercept=25, color="red",size=2)+
+  annotate("text", x = 95, y = 20, label = "D",size=8)+
+  annotate("text", x = 95, y = 25.5, label = "MC=ATC",size=8)+
+  scale_x_continuous(limits = c(10,100), 
+                     breaks=70,labels="Q*")+
+  scale_y_continuous(limits = c(20,35),
+                     breaks=25,labels=expression("P*"))+
+  labs(x='Q',y='P',title="Overall market curves")+
+  scale_color_manual(values=c("cyan"))
+  
+profit1
+```
+]
+
+.pull-right[
+- In the long run, only firms who can produce at lowest cost will stay in the market.
+
+- Overall market will have a straight line supply curve, where MC=ATC
+
+- note that PS=0 (zero pure profit for producer)
+]
+
+
+---
+
+## Perfect competition characteristics
+
+- Entry & exit is important for a perfect market characteristics.
+
+- An industry which have low shut-down price and break-even price tend to be more competitive.
+  - When these prices are low, more entrepreneurs can join in.
+  
+- Low cost of entry and exit ensures a smooth adjustment of market.
+
+---
+
+<iframe src="https://embed.polleverywhere.com/multiple_choice_polls/SGwxBnDssSCgZJFtiRArc?controls=none&short_poll=true" width="800px" height="600px"></iframe>
+
+---
+
+## Perfect competition
+
+- The cost of entry and exit is very relative and a little bit hard to judge whether it's "low" or "high".
+
+- Second characteristic is **many producers with small market share**
+
+- **Market share** is a measure on how much a firm gain revenue from a market.
+
+- Even when there are many producers, it is not competitive if the market is dominated by small number of sellers.
+
+---
+
+## Perfect competition
+
+- When a market consists of many sellers, market won't react too much when there is only one or two firms enter and exit.
+
+- When a _warteg_ is closed, nobody cares.
+
+- When a Electric Vehicle (EC) investor come in, it will be a headline.
+
+---
+
+### Smartphone Market share in Indonesia
+
+<div id="mobile_vendor-ID-yearly-2019-2019" width="600" height="400" style="width:600px; height: 400px;"></div><!-- You may change the values of width and height above to resize the chart --><p>Source: <a href="https://gs.statcounter.com/vendor-market-share/mobile/indonesia/#yearly-2019-2019-bar">StatCounter Global Stats - Device Vendor Market Share</a></p><script type="text/javascript" src="https://www.statcounter.com/js/fusioncharts.js"></script><script type="text/javascript" src="https://gs.statcounter.com/chart.php?mobile_vendor-ID-yearly-2019-2019&chartWidth=600"></script>
+
+---
+
+### Global car market
+
+<a href="https://www.statista.com/statistics/316786/global-market-share-of-the-leading-automakers/" rel="nofollow"><img src="https://www.statista.com/graphic/1/316786/global-market-share-of-the-leading-automakers.jpg" alt="Statistic: Global automotive market share in 2019, by brand | Statista" style="width: 100%; height: auto !important; max-width:1000px;-ms-interpolation-mode: bicubic;"/></a><br />Find more statistics at  <a href="https://www.statista.com" rel="nofollow">Statista</a>
+
+---
+
+<a href='https:&#47;&#47;www.gaikindo.or.id&#47;'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;In&#47;IndonesiaAutoMarketByBrand&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a>
+
+---
+
+## High market share
+
+- When a market is dominated by small number of players, we say the market is **concentrated**.
+
+- Market concentration may be caused by a highly efficient firms:
+  - very low cost.
+  - superior quality at similar price.
+
+- It can also be caused by some characteristics special to the product.
+  - compatibility of complement
+  - exclusive content
+  
+???
+
+compatibility of complement: OS, electric charging for electric cars,
+exclusive content: netflix vs prime, console wars, etc
+
+---
+
+## Standardized product
+
+- Market tends to be more competitive when the product from a firm is undistinguished from other firm.
+  - buyers don't care from which firm they purchase their goods.
+  - firm have less control over price.
+  
+- In general, firms who wish to capture more market have two strategies:
+  - **lower cost**.
+  - **product differentiation**.
+
+---
+
+class: middle, center
+
+# Monopoly
+
+---
+
+## Deviation from perfect competition
+
+- So far we have seen the importance of a perfect market:
+  - producer is a price taker.
+
+- We have seen that supply curve is essentially the marginal cost, which derives from the cost function.
+
+- Cost C(Q) is a positive function of Q.
+  - meaning, more Q leads to higher C(Q)
+  
+---
+
+## Deviation from perfect market
+  
+- but price is independent.
+  - $\text{profit}=Q*P$ which is a linear function.
+  - Marginal Revenue (MR) = price.
+  - firms compete by lowering C
+  
+- **Product differentiation** may provide a firm to control their own price to some extent.
+
+- When a firm can control price, price is no longer independent of firms' decision
+
+- $MR=MC$ still hold, but with control over price, a firm can now **choose their MR**
+
+---
+
+## Deviation from perfect market
+
+- To see how this happens, we use **monopoly** as our first deviation from the perfect market.
+
+- Monopoly is the other extreme of a perfect market.
+  - most markets are somewhere in between.
+  
+- As usual, learning how the extreme works often easier and intuitive.
+
+---
+
+## Market structure
+
+From extremely strong market power to no market power:
+
+| type | differentated <br> product? | no. of <br> producers | example |
+| --- | --- | --- | --- |
+| Monopoly &nbsp; | not aplicable | &nbsp; 1 &nbsp; | electricity |
+| Oligopoly &nbsp; | can be both | &nbsp; few &nbsp; | Internet Service|
+| Monopolistic competition &nbsp; | &nbsp; &nbsp; &nbsp; yes | &nbsp; many &nbsp; | Smartphone |
+| Perfect competition &nbsp; | &nbsp;&nbsp;&nbsp; no &nbsp; | &nbsp; many &nbsp; | fried rice |
+
+---
+
+class: middle, center
+
+# Side note: What's a market?
+
+Sometimes it is hard to define market. A Carrefour vs KPPU case is famous for [debate about market definition](https://www.eastasiaforum.org/2009/09/10/is-there-a-carrefour-monopoly-in-indonesian-retailing/): Did Carrefour compete against only wholesale like supermarket and hypermarket retailing, or also mini-markets and traditional markets?
+
+---
+
+class: middle, center
+
+# Side note: What's a market?
+
+How broad the definition of market should be? Smartphone is another excellent example. **Samsung galaxy Note series** can be argued to operate in a **differentiated smartphone market** thanks to its exclusive feature called S-pen. However, in the **low-end smartphone market**, it has little to no difference with other cheap smartphone, hence closer to a **perfect market**.
+
+---
+
+## Monopoly
+
+- A producer is a **monopolist** if it is the **only** supplier of a good that has no **close substitute**.
+
+- An industry is a **monopoly** when it runs by a monopolist.
+
+- Monopoly operates by changing its production output and captures as much **Producer Surplus** as it could.
+
+- Normally, more producer would want to enter the market. Why they could not?
+  
+---
+
+## Why do monopolies exist
+
+Generally, there are 5 reasons why monopolies (or oligopolies) exist
+
+1. Control over scarce resource and input.
+
+1. Increasing returns to scale industry.
+
+1. Technological superiority.
+
+1. Network externality.
+
+1. Government-created barrier.
+
+---
+
+## Control over scarce resource and input
+
+De Beers is famous for having control over diamond. Indofood who controls flour production have a huge advantage in the instant noodle market.
+
+---
+
+## Increasing returns to scale
+
+When an industry have a very big fixed cost, a firm in that industry needs huge market share to maximize **spread effect**. Building internet infrastructure is expensive (tower, cable, etc) and a huge commitment.
+
+A monopoly created and sustained by increasing returns to scale is called a **natural monopoly**.
+
+---
+
+## Technological superiority
+
+- Intel managed to dominate the semi-conductor market thanks to its technological superiority over its competitor.
+  
+- However, technology can be researched and (to some extent) stolen.
+
+- This makes technological superioriy less important compared to other reasons.
+
+- Do not mixed tech superiority with network effect.
+
+---
+
+## Network effect
+
+- An industry has **network effect** when the value of a product and service in that industry depends on how much users it has
+
+- Network effect is very prominent in industries related to tech: Social media, Online games, Ride-sharing etc
+
+- Google's search algorithm might not be superior, but it has much larger data thanks to the amount of users of its service, browser and android phone.
+
+- Some said MacOS is better than Windows. But most developers make windows based apps.
+
+---
+
+## Government-Created Barrier
+
+- The most important legally created monopoly these days maybe come from **patents** and **copyrights**.
+
+- Patents and copyrights are important to provide incentives (at least temporary) for people to create and innovate.
+
+- as soon as the patents and copyrights are over, it moves closer to a perfect market.
+
+- Could lead to a missed opportunity, however.
+
+- We also have Bulog, Pertamina and PLN.
+
+---
+
+## How monopolist maximize profit
+
+- A firm operates in the perfect market face a flat demand curve
+  - this is because price is independent
+  
+- However, monopolist face a market demand curve instead of an individual demand curve.
+
+- Monopolist maximize profit by setting $MR=MC$, but they have control over their $MR$
+
+---
+
+## How monopolist maximize profit
+
+.pull-left[
+```{r grafik1, echo=FALSE, message=FALSE, warning=FALSE}
+
+grafik1 <- graph +
+  geom_hline(yintercept=5, color="cyan",size=2)+
+  scale_y_continuous(limits=c(0,10), breaks = 5, labels="Market \n Price")+
+  scale_x_continuous(limits=c(0,10), breaks = NULL)+
+  labs(x="Quantity",y="Price", title = "Demand Curve of Individual \n firm in perfect competition")+
+  annotate("text", x = 10, y = 4, label = expression(D[C]) ,size=10)
+grafik1
+
+```
+.s[An individual producer face a straight line because its Q has no impact on P]]
+
+.pull-right[
+```{r grafik2,echo=FALSE, message=FALSE, warning=FALSE}
+supply <- function(x) 15-x
+
+grafik2 <- graph +
+  stat_function(fun = supply, color="cyan", size=2)+
+  scale_y_continuous(limits=c(1,14), breaks = NULL)+
+  scale_x_continuous(limits=c(1,14), breaks = NULL)+
+  labs(x="Quantity",y="Price", title = "Demand Curve of Individua \n firm in perfect competition")+
+  labs(x="Quantity",y="Price", title = "Demand Curve of a monopolist")+
+  annotate("text", x = 10, y = 4, label = expression(D[M]) ,size=10)
+grafik2
+```
+.s[A monopolist face the whole market, hence its demand curve is equals to the market demand curve.]]
+
+---
+
+### Profit max in perfect market
+
+```{r pc1,echo=FALSE, message=FALSE, warning=FALSE, fig.width=10, fig.height=8}
+ftc <- function(x) 300+0.2*x*x-x
+fatc <- function(x) (300+0.2*x*x-x)/x
+fmc <- function(x) 0.4*x-1
+fmr <- function(x) 20
+
+qq<-seq(10,100,1)
+
+z<-uniroot(function(x) fatc(x) - fmc(x), range(qq))$root
+zz<-fatc(z)
+zzz<-uniroot(function(x) fmc(x) - fmr(x), range(qq))$root
+zzzz<-fatc(zzz)
+
+profit1<- graph+
+  stat_function(aes(color = "MC"), fun = fmc, size=1.5)+
+  stat_function(aes(color = "MR"), fun = fmr, size=1.5)+
+  annotate("text", x = 95, y = 18, label = "MR=P",size=8)+
+  annotate("text", x = 95, y = 35, label = "MC",size=8)+
+  scale_x_continuous(limits = c(10,100), breaks=NULL)+
+  scale_y_continuous(breaks=NULL)+
+  labs(x='Q',y='P')+
+  scale_color_manual(values=c("red","cyan"))
+  
+profit1
+```
+---
+
+### Profit max in perfect market (short run)
+
+```{r pc2,echo=FALSE, message=FALSE, warning=FALSE, fig.width=10, fig.height=8}
+
+profit2<- graph+
+  stat_function(aes(color = "ATC"), fun = fatc, size=1.5)+
+  stat_function(aes(color = "MC"), fun = fmc, size=1.5)+
+  stat_function(aes(color = "MR"), fun = fmr, size=1.5)+
+  geom_ribbon(aes(x=seq(10,zzz,0.1), ymin=zzzz, ymax=20,
+                  fill='largest profit'),
+              alpha = 0.4)+
+  annotate("text", x = 95, y = 18, label = "MR=P",size=8)+
+  annotate("text", x = 95, y = 35, label = "MC",size=8)+
+  annotate("text", x = 95, y = 23, label = "AC",size=8)+
+  scale_x_continuous(limits = c(10,100), breaks = zzz, labels = "profit maximizing \n output (Q*)") +
+  scale_y_continuous(breaks = zzzz, labels = "profit \n maxmizing \n ATC") +
+  labs(x='Q',y='P')+
+  scale_color_manual(values=c("yellow", "red","cyan"))
+  
+profit2
+```
+---
+
+### Monopolist individual demand curve = the whole market demand curve
+
+```{r pc3,echo=FALSE, message=FALSE, warning=FALSE, fig.width=10, fig.height=7.5}
+
+fd<- function(x) -.15*x+35
+fdmr <- function(x) 35-.3*x
+
+profit4<- graph+
+  stat_function(aes(color = "MC"), fun = fmc, size=1.5)+
+  stat_function(aes(color = "Demand"), fun = fd, size=1.5)+
+  annotate("text", x = 95, y = 20, label = expression(D[M]),size=8)+
+  annotate("text", x = 95, y = 35, label = "MC",size=8)+
+  scale_x_continuous(limits = c(10,100), breaks = NULL) +
+  scale_y_continuous(breaks = NULL) +
+  labs(x='Q',y='P')+
+  scale_color_manual(values=c( "cyan","red"))
+  
+profit4
+```
+
+
+---
+
+### Monopolist decision making
+
+```{r pc5,echo=FALSE, message=FALSE, warning=FALSE, fig.width=10, fig.height=8}
+
+fd<- function(x) -.15*x+35
+fdmr <- function(x) 35-.3*x
+
+qq<-seq(10,100,1)
+
+z<-uniroot(function(x) fatc(x) - fmc(x), range(qq))$root
+zz<-fatc(z)
+zzz<-uniroot(function(x) fmc(x) - fdmr(x), range(qq))$root
+zzzz<-fatc(zzz)
+
+profit5<- graph+
+  stat_function(aes(color = "ATC"), fun = fatc, size=1.5)+
+  stat_function(aes(color = "MC"), fun = fmc, size=1.5)+
+  stat_function(aes(color = "MR"), fun = fdmr, size=1.5)+
+  stat_function(aes(color = "Demand"), fun = fd, size=1.5)+
+  geom_ribbon(aes(x=seq(10,zzz,0.1), ymin=zzzz, ymax=fd(zzz),
+                  fill='largest profit'),
+              alpha = 0.4)+
+  annotate("text", x = 95, y = 10, label = "MR",size=8)+
+  annotate("text", x = 95, y = 35, label = "MC",size=8)+
+  annotate("text", x = 95, y = 25, label = "AC",size=8)+
+  annotate("text", x = 95, y = 19, label = expression(D[M]),size=8)+
+  scale_x_continuous(limits = c(10,100), breaks = zzz, labels = "profit maximizing \n output") +
+  scale_y_continuous(breaks = c(zzzz,fd(zzz)), labels = c("profit \n maxmizing \n ATC","Monopoly \n Price")) +
+  labs(x='Q',y='P')+
+  scale_color_manual(values=c("yellow", "cyan","red","green"))
+  
+profit5
+```
+
+---
+
+## Monopolist decision making
+
+- Last week: Liv's MR = P because no matter how much she sell, price stays $100
+
+- For monopolist, when they produce more, price goes down, while producing less increases price.
+
+- increasing price decreases quantity bought (**Quantity effect**), while increasing margin per item sold (**price effect**)
+  - remember tax revenue?
+  
+---
+
+## Monopolist decision making
+
+- Monopolist finds these the balance btween quantity effect and price effect by setting:
+
+$$ MR = MC $$
+
+- The profit-maximizing price is called **monopoly price**, while the profit-maximizing quantity is called **monopoly quantity**.
+
+- Since there's no firm can join in, cost won't be reduced (very close) to zero at all.
+
+---
+
+## Why monopoly is bad
+
+.pull-left[
+```{r p4,echo=FALSE, message=FALSE, warning=FALSE, fig.width=8, fig.height=8.5}
+
+pp1<- graph+
+  stat_function(aes(color = "D"), fun = fd, size=1.5
+                , show.legend = FALSE)+
+  geom_hline(yintercept=25, color="red",size=2)+
+  geom_ribbon(aes(x=seq(10,69,1), ymax=fd(seq(10,69,1)), ymin=25,
+                  fill='largest profit'), show.legend = FALSE,
+              alpha = 0.4)+
+  annotate("text", x = 95, y = 20, label = "D",size=8)+
+  annotate("text", x = 95, y = 25.5, label = "MC=ATC",size=8)+
+  scale_x_continuous(limits = c(10,100), 
+                     breaks=69,labels="Q*")+
+  scale_y_continuous(limits = c(20,35),
+                     breaks=25,labels=expression("P*"))+
+  labs(x='Q',y='P',title="Surplus under perfect competition")+
+  scale_color_manual(values=c("cyan"))
+  
+pp1
+
+```
+.s[In the perfect market, the whole triangle is CS, where PS=0. Monopoly transfers some of this surplus to]]
+
+.pull-right[
+
+```{r p5,echo=FALSE, message=FALSE, warning=FALSE, fig.width=8, fig.height=8.5}
+
+pp2<- graph+
+  stat_function(aes(color = "D"), fun = fd, size=1.5
+                , show.legend = FALSE)+
+  stat_function(aes(color = "MR"), fun = fdmr, size=1.5
+                , show.legend = FALSE)+
+  geom_hline(yintercept=25, color="red",size=2)+
+  annotate("text", x = 95, y = 20, label = "D",size=8)+
+  annotate("text", x = 40, y = 20, label = "MR",size=8)+
+  annotate("text", x = 95, y = 25.5, label = "MC=ATC",size=8)+
+  annotate("text", x = 20, y = 31, label = "A",size=8)+
+  annotate("text", x = 20, y = 27, label = "B",size=8)+
+  annotate("text", x = 45, y = 26, label = "C",size=8)+
+  geom_ribbon(aes(x=seq(10,34,1), ymax=fd(seq(10,34,1)), ymin=fd(34),
+                  fill='CS'), show.legend = FALSE,
+              alpha = 0.4)+
+  geom_ribbon(aes(x=seq(10,34,1), ymax=fd(34), ymin=25,
+                  fill='PS'), show.legend = FALSE,
+              alpha = 0.4)+
+  geom_segment(aes(x = 10, y = fd(34), xend = 34, yend = fd(34)), lty = "dotted", size=2) +
+  geom_segment(aes(x = 34, y = 20, xend = 34, yend = fd(34)), lty = "dotted", size=2) +
+  scale_x_continuous(limits = c(10,100), 
+                     breaks=c(34,69),labels=c("Qm","Q*"))+
+  scale_y_continuous(limits = c(20,35),
+                     breaks=c(25,fd(34)),labels=c("P*","Pm"))+
+  labs(x='Q',y='P',title="Surplus under monopoly")+
+  scale_color_manual(values=c("cyan","green"))
+  
+pp2
+```
+.s[producer. Monopoly increases P and reduces Q, CS=A, PS=B, and DWL=C (loss transferred to no one)]]
+
+---
+
+## Dealing with monopoly
+
+- Many countries try to reduce monopoly (and oligopoly) by fine and avoiding a merger.
+  - Depends, some natural monopoly is hard to dealt with.
+
+- In Indonesia, the most prominent institution combating monopoly and oligopoly is [KPPU]()(Komisi Pengawas Persaingan Usaha)
+  - Telco, airfare, food industries, among other cases.
+  
+- There are few ways a government generally try to deal with monopoly
+  
+---
+
+## Dealing with monopoly
+
+1. Public ownership, like Pertamina, PLN, Bulog and PT. KAI.
+
+1. Price ceiling / floor. This can be useful when market is not perfect. For example, A minimum wage can be useful when employers are too powerful.
+
+In general, it is really hard to deal with monopoly because there's a trade off.
+
+- Drug patent leads to monopoly, but important to incentivies innovation.
+
+---
+
+class: middle, center
+
+# Price Discrimination
+
+---
+
+## Why price discriminate
+
+- When a monopolist charge one price, it lost a chance to profit from people who can't afford that price.
+
+- If there is a way to charge different price to different types of customer, monopolist can capture more surplus.
+
+- This practice is called **price discrimination**.
+
+---
+
+```{r pd1,echo=FALSE, message=FALSE, warning=FALSE, fig.width=9, fig.height=8}
+pp2
+```
+
+---
+
+```{r pd2,echo=FALSE, message=FALSE, warning=FALSE, fig.width=9, fig.height=8}
+
+pp3<- graph+
+  stat_function(aes(color = "D"), fun = fd, size=1.5
+                , show.legend = FALSE)+
+  stat_function(aes(color = "MR"), fun = fdmr, size=1.5
+                , show.legend = FALSE)+
+  geom_hline(yintercept=25, color="red",size=2)+
+  annotate("text", x = 95, y = 20, label = "D",size=8)+
+  annotate("text", x = 40, y = 20, label = "MR",size=8)+
+  annotate("text", x = 95, y = 25.5, label = "MC=ATC",size=8)+
+  annotate("text", x = 20, y = 31, label = "A",size=8)+
+  annotate("text", x = 20, y = 27, label = "B",size=8)+
+  annotate("text", x = 55, y = 26, label = "C",size=8)+
+  annotate("text", x = 40, y = 28.5, label = "A",size=8)+
+  geom_ribbon(aes(x=seq(10,34,1), ymax=fd(seq(10,34,1)), ymin=fd(34),
+                  fill='CS'), show.legend = FALSE,
+              alpha = 0.4)+
+    geom_ribbon(aes(x=seq(34,50,1), ymax=fd(seq(34,50,1)), ymin=fd(50),
+                  fill='CS'), show.legend = FALSE,
+              alpha = 0.4)+
+  geom_ribbon(aes(x=seq(10,34,1), ymax=fd(34), ymin=25,
+                  fill='PS'), show.legend = FALSE,
+              alpha = 0.4)+
+  geom_ribbon(aes(x=seq(34,50,1), ymax=fd(50), ymin=25,
+                  fill='PS'), show.legend = FALSE,
+              alpha = 0.4)+
+  geom_segment(aes(x = 10, y = fd(34), xend = 34, yend = fd(34)), lty = "dotted", size=1.5) +
+  geom_segment(aes(x = 34, y = 20, xend = 34, yend = fd(34)), lty = "dotted", size=1.5) +
+  geom_segment(aes(x = 10, y = fd(50), xend = 50, yend = fd(50)), lty = "dotted", size=1.5) +
+  geom_segment(aes(x = 50, y = 20, xend = 50, yend = fd(50)), lty = "dotted", size=1.5) +
+  scale_x_continuous(limits = c(10,100), 
+                     breaks=c(34,50,69),labels=c("Qm1","Qm2","Q*"))+
+  scale_y_continuous(limits = c(20,35),
+                     breaks=c(25,fd(34),fd(50)),
+                     labels=c("P*","Pm1","Pm2"))+
+  labs(x='Q',y='P',title="2 different prices")+
+  scale_color_manual(values=c("cyan","green"))
+  
+pp3
+```
+
+---
+
+## Price discriminiation
+
+- Obviously, people won't buy the more expensive ones if the product are the same.
+
+- Some common techniques:
+  - Advance purchase restrictions: early bird airfare tickets
+  - Volume discount: less per unit cost if you buy bulk. eg: [short, tall, grande, venti](https://www.eater.com/2011/1/17/6701687/starbucks-to-launch-a-31-oz-big-gulp-of-coffee-the-trenta).
+  - Two part tariff: you pay a flat rate to enter, but pay per-unit cost to upgrade.
+  - Student price.
+  - Time price: Gojek is expensive when rains, hotelroom rent price during holiday season.
+  
+---
+
+## Price discrimination
+
+- Interestingly, price discrimination is less bad compared to single price monopoly.
+
+- Price discriminiation reduces DWL, adding a little bit of consumer surplus and producer surplus.
+
+- Still less ideal compared to a lower-single-price monopoly, let alone a perfect market
+
+- Price level from best to worst:
+
+$$P^* > P_{m2} > P_{m1} + P_{m2} > P_{m1}$$
+
+---
+
+class: middle, center
+
+# Next week
+
+Next week we are going to learn other deviations from the market.
+
+Oligopoly and externalities are the two most prominent market failure.
