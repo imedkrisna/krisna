@@ -1,6 +1,6 @@
 ---
 title: "Ilmu Ekonomi"
-subtitle: "Pertemuan 4"
+subtitle: "Pertemuan 5"
 author: "Prodi PIWAR Politeknik APP Jakarta"
 format: 
   revealjs:
@@ -17,50 +17,112 @@ format:
 
 ## Recap on last week
 
-- We use consumer and producer surplus to measure the efficiency of the economy. We want the combination of both to be generally bigger.
+- Elasticities matter, as they dictate how surpluses are distributed in a market.
 
-- The two face a constant political battle: consumer wants small prices, producers like high prices.
+- It is important also for the government.
 
-- When market is perfect, intervention often leads to various types of inefficiency
-
-## Today
-
-- We will learn about one more intervention: tax.
-
-- before we go there, it is best to understand elasticity first.
-
-## What's an elasticity?
-
-- If you are a business owner, understanding elasticity is important aspect to get maximized profit.
-
-- **Price elasticity of demand** of a good is a concept of how much the demand of that good change  its price changes.
-  - we usually just say **elasticity** in short.
+- Demand elasticity varies depending on preference and the state of the good
+  - substitute vs complement, luxury vs normal, etc
+  - usually hard to change market preferences.
+  - preference can be estimated but it is beyond the cover of this course.
   
-- Maximizing profit requires this knowledge:
-  - sometimes it is better to sell cheap to gain huge market share, or sell high if niche.
+## Today's cover
   
-## Calculating elasticity
+- Supply curve is a bit different:
+  
+  - Cost can be easier to guess.
+  - Easier to make framework.
+  - Has an important implication to the market.
+
+- What we will learn today is:
+
+  - The production function.
+  - Types of cost.
+  - Implication to the supply curve and the market.
+  
+# The Production Function
+
+## The production function
+
+- A firm is an organization that produces goods and services.
+
+- To produce, it uses inputs and transform them into a final product and then sell it to the market.
+
+- This relationship:
+
+$$
+input \xrightarrow{magic!} output
+$$
+
+&nbsp; &nbsp; &nbsp;  &nbsp;  &nbsp;is called **production function**
+
+## Reminder: What is a function?
+
+- Function is a mathematical expression to show a relationship between two or more variables.
+
+- Let $X$ be input and $Y$ be output, a production function is:
+
+$$
+Y=f(X)
+$$
+
+- How labor makes rice is sometimes not the main emphasize for economist.
+
+- We care more on how much $X$ is needed to make $Y$.
+
+## The production function
+
+- Let there be a hypothetical **rice** farmer named Us.
+
+- Us own a hectare of **land**. In the short run, Us can't increase his number of land.
+
+- However, Us can hire a **labour** to work at his farm.
+
+- In this case, the inputs are land and labour, while the output is rice.
+
+## Fixed and variable input
+
+- We call land a **fixed input**, an input which can't be changed.
+
+- We call labour a **variable input** because Us can hire or fire labour anytime.
+
+- It is important to distinguish the two, because a producer can adjust variable input to adjust demand.
+  - In good times, hire more labour. In bad times, fires.
+  
+## Short and long run
+
+- Fixed input won't probably be fixed for long.
+
+  - buying and selling new land may take time, but it is doable.
+  - However, when there's a quick shock to demand, it is not easy to adjust it.
+  
+- For example, the price for surgical mask at one point rose to 150k IDR a box, but it is now settled back to around 30k IDR a box.
+  - In the short run, fixed input can't keep up.
+  
+- TSMC and Samsung need time to build new factories.
+
+## Short and long run
+
+- How long is 'long run'? depends on how quickly the fixed input can adjust.
+
+- In the case of masks, it catched up to the demand shock in less than a year. Hand sanitizer is even faster.
+
+- In the case of chip, the new capacity for TSMC will operate somewhere in 2022, while Samsung needs even longer time.
+
+- Knowing how long is the demand shock is also important.
+  - forecasting demand is a useful skill to have.
+  
+## The hypothetical farmer
+
+- Us can't change his arable land, but can change how much labour he employs.
 
 :::: columns
 ::: {.column width=47%}
-- Consider the demand curve on the right.
-
-- At $P_1=10$, the daily traffic is $Q_1=140$
-
-- When $P_2=11$, daily traffic drops to $Q_2=127.3$
-:::
-
-::: {.column width=47%}
-```{r grafik1,echo=FALSE, message=FALSE, warning=FALSE}
-#| fig-width: 10
-#| fig-height: 8
+```{r tabel1, echo=FALSE, message=FALSE, warning=FALSE}
+library(kableExtra)
 library(dplyr)
 library(ggplot2)
 library(ggdark)
-
-demand <- function(q) (q/1400)^(-1)
-q<-c(127.3,140)
-p<-c(11,10)
 
 graph<-ggplot()+
   dark_theme_bw(base_size=25)+
@@ -70,891 +132,707 @@ graph<-ggplot()+
         panel.grid.minor = element_blank(),
         axis.line = element_line(colour = "#e0e0e0"))
 
-grafik1 <- graph +
-  stat_function(fun = demand,size=1.1, color='cyan') +
-  scale_x_continuous(limits=c(120,150), 
-                     breaks = q) +
-  scale_y_continuous(limits=c(9,12), 
-                     breaks = p) +
-  geom_segment(data = data_frame(q=127.3,p=11),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=127.3,p=11),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=140,p=10),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=140,p=10),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2)+
-  labs(title="Toll road demand \n for Surabaya-Gempol", x="Q (1000 cars/day)", y="P (1000 IDR)")+
-  geom_text(aes(x = 150, y = 9.7, label = "D"), parse = TRUE, size =8, color = '#e0e0e0')
-grafik1
+prod <- function(q) (20*q)-(q)^(2)
+mpl<- function(q) (21-2*q)
+
+lab<-seq(0,8,1)
+rice<-prod(lab)
+MPL<-c('-',seq(19,5,-2))
+
+data<-data.frame(lab,rice,MPL)
+data %>%
+  kable("html", align="cc", col.names = c('Quantity \n of \n labour L \n (workers) ','Quantity of \n rice Q \n (ton)', 'MPL')) %>%
+  kable_styling(bootstrap_options = "striped", font_size = 20)
 
 ```
+:::
+
+::: {.column width=47%}
+
+- MPL is short for **Marginal Product of Labour**
+$$MPL=\frac{\Delta Q}{\Delta L}$$
+- MPL shows how much Q increase if we increase L by 1.
 :::
 ::::
 
-## Calculating elasticity {.s}
+## Total product curve {.m}
 
-- To calculate elasticity of demand, we first calculate:
-  1. percent change in the quantity demanded
-  1. percent change in the price
+```{r rice1,echo=FALSE, message=FALSE, warning=FALSE}
+rice1<-graph +
+  stat_function(fun = prod,size=1.1, color='green') +
+  scale_x_continuous(breaks = data$lab) +
+  geom_point(aes(x=data$lab,y=data$rice),color='white',size=4)+
+  labs(x="L (workers)", y="Q (ton)")
 
-- Formula for no.1:
+rice1 +
+  scale_y_continuous(breaks = data$rice) +
+  annotate("segment", x = 1, xend = 2, y = 19, yend = 19,
+           arrow = arrow(length = unit(1, "lines")), size=1, 
+           colour = "gray")+
+  annotate("segment", x = 2, xend = 2, y = 19, yend = 34,
+           arrow = arrow(length = unit(1, "lines")), size=1, 
+           colour = "gray")+
+  annotate("segment", x = 6, xend = 7, y = 84, yend = 84,
+           arrow = arrow(length = unit(1, "lines")), size=1, 
+           colour = "gray")+
+  annotate("segment", x = 7, xend = 7, y = 84, yend = 89,
+           arrow = arrow(length = unit(1, "lines")), size=1, 
+           colour = "gray")+
+  annotate("text", x = 4, y = 20, label = "Adding a 2nd \n worker leads to an \n increase in output \n of 17 ton",
+           size=6.5)+
+  annotate("text", x = 6.5, y = 66, label = "Adding a 7th \n worker leads to an \n increase in output \n of only 7 ton",
+           size=6.5)+
+  annotate("text", x = 5.7, y = 103, label = "Total product,",
+           size=8)+
+  annotate("text", x = 7.6, y = 103, label = "TP",
+           size=8)
 
-$$
-\tag{1}
-\text{% change in }Q^D=\frac{Q_2^D-Q_1^D}{Q_1^D}\times 100
-$$
-
-
-- Formula for no.2:
-
-$$
-\tag{2}
-\text{% change in P}=\frac{P_2-P_1}{P_1}\times 100
-$$
-
-
-## Calculating elasticity {.m}
-
-- for our case, we have:
-
-$$
-\begin{align*}
-Q_1^D&=140 & Q_2^D&=127.3 \\ P_1&=10 & P_2&=11
-\end{align*}
-$$
-
-- Thus:
-
-$$
-\begin{align}
-\text{% change in }Q^D &= \frac{127.3-140}{127.3}\times 100 \\ &=-10 \%
-\end{align}
-$$
-
-$$
-\begin{align}
-\text{% change in P} &= \frac{11-10}{10}\times 100 \\ &=10\%
-\end{align}
-$$
-
-## Calculating elasticity {.s}
-
-- After we get the numbers from {1} and {2}, we use this formula:
-
-$$
-\tag{3}
-\text{Price elasticity of demand}=\frac{\text{% change in }Q^D}{\text{% change in P}}
-$$
-
-
-- in our case, we have:
-
-$$
-\begin{align}
-\text{Price elasticity of demand}&=\frac{-10\%}{10\%} \\ &=-1
-\end{align}
-$$
-
-## Calculating elasticity
-
-- Economists are also lazy in writing the minus sign.
-
-- Usually we report demand elasticity in **absolute term**.
-  - i.e., we drop the minus sign.
   
-- However, since most demand curves are downward sloping, it must be negative
-  - hence we automatically knows what it means even when we report in absolute term.
+```
 
-## About percent change
+## Marginal product
 
-Using percent changes is more useful than absolute changes
-- Things are usually move on proportion
-  - A wealthy person will feel casual getting 1 million IDR because it's probably just a small % of her total wealth.
-    
-- Quantity and prices have many metrics
-  - kgs, litres, units, pairs, units/day, etc
-  - IDR, USD, btc, etc.
+- In general, **marginal product** of an input is the additional quantity of output produced by using one more additional unit of that input.
 
-## interpreting elasticity
+- In our case, we have MPL of every one more additional worker. But if that data is not possible, we can just use the formula in general
 
-<iframe src="https://giphy.com/embed/WYEWpk4lRPDq0" width="400" height="400" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/cat-WYEWpk4lRPDq0">via GIPHY</a></p>
+- for example, if Us have only two data points: one where he work alone and one when he hire 7 workers.
 
-## Interpreting elasticity
+## Marginal product
 
-- We have seen the elasticity of our toll road case is around 1, but what does this mean?
+| worker | production |
+| ------ | ---------- |
+| 1 | 19 |
+| 8 | 96 |
 
-- Note that the elasticity formula has % change in Q at the top, and % change in P at the bottom.
+$$
+MPL=\frac{\Delta Q}{\Delta L}=\frac{96-19}{8-1}=11
+$$
 
-- In a sense, the number shows how much quantity change given the price change.
+- In our case, MPL decreases as the number of worker increases: 
+  - it is better to have a smooth data point.
+  - We call this a **diminishing return to labour**
 
-- that means, the bigger the number of the price elasticity, **the more elastic it is**
+## Marginal product curve
 
-## A market is elastic. So what?
+```{r rice2,echo=FALSE, message=FALSE, warning=FALSE}
 
-Let's have a look at different 'kind' of elasticities and what they mean
-
-We'll begin with two extreme cases of elasticity: zero (0) and infinity ( $\infty$ )
-
-## Two extreme cases
-
-- Suppose the toll road is the only way to go to work.
-  - No matter how high the price, people will still need to use it.
-  - Hence, change in the demand of toll road is zero for any change in price.
+data1<-data[-1,]
+data1$mmpl<-mpl(data1$lab)
+rice2 <- graph+
+  geom_point(data=data1, aes(x=lab, y=mmpl),color='white')+
+  geom_line(data=data1, aes(x=lab, y=mmpl),color='green')+
+  scale_x_continuous(breaks = data1$lab) +
+  labs(x='Quantity of labour (workers)',y='Marginal Product of labour (ton/worker)')
   
-- Suppose shuttlecocks are priced 10.000 IDR
-  - If people don't care about the shuttlecocks' color, everyone will buy the pink one if the price drop to 9.900
-  - Everyone won't buy a single one if the price go up only to 10.100 IDR
+rice2 + annotate("text", x = 6, y = 5.3, label = "Marginal product of \n labour,", size=6.5) +
+  scale_y_continuous(breaks = data1$mmpl)+
+  annotate("text", x = 7, y = 5, label = "MPL", size=6.5)
 
-## Two extreme cases of elasticity
+```
+
+## Diminishing return to an input
+
+- When you have 1 hectare of land, 1 worker can only work so much before he gets tired.
+
+- It is sensible to hire one more person to work on a larger area. This will lead to a huge gain in harvest.
+
+- If the land area is fixed, as we introduce more people, each person will have to work in a smaller area.
+
+- Too much people become inefficient.
+
+- In an office setting: imagine if you add workers without adding the number of computers.
+
+## Marginal product and the fixed input
+
+- If Us would like to scale up production, increasing only labour will be inefficient.
+
+- Us can start planning to increase its land to 2 hectare by buying or renting his  neighbour's land, for example.
+
+- Suppose it takes one year for Us to buy one more hectare of land, what's his TP and MPL would look like one year later?
+
+## TP shifts up with land
+
+```{r beras1,echo=FALSE, message=FALSE, warning=FALSE}
+
+prod2 <- function(q) (1.5*((20*q)-(q)^(2)))
+
+rice1 +
+  stat_function(fun = prod2, size=1.1, color='green') +
+  geom_point(aes(x=data$lab,y=prod2(data$lab)),color='white',size=4)+
+  annotate("text", x = 7.6, y = 103, label = expression(TP[1]),
+           size=8)+
+  annotate("text", x = 7.6, y = 133, label = expression(TP[2]),
+           size=8)+
+  annotate("segment", x = 5, xend = 5, y = 85, yend = 105,
+           arrow = arrow(length = unit(0.2, "inches")), size=4, 
+           colour = "gray", lineend="round", linejoin="round")
+  
+```
+
+## MPL is still diminishing, but higher
+
+```{r beras2,echo=FALSE, message=FALSE, warning=FALSE}
+
+data1$mmpl2<-data1$mmpl*2
+rice2 + geom_point(data=data1, aes(x=lab, y=mmpl2),color='white')+
+  geom_line(data=data1, aes(x=lab, y=mmpl2),color='green')+
+  annotate("text", x = 7.5, y = 5, label = expression(MPL[1]), size=7)+
+  annotate("text", x = 7.5, y = 10, label = expression(MPL[2]), size=7)+
+  annotate("segment", x = 3, xend = 3, y = 20, yend = 25,
+           arrow = arrow(length = unit(0.2, "inches")), size=4, 
+           colour = "gray", lineend="round", linejoin="round")
+  
+```
+
+## Marginal product
+
+- The crucial point of the diminishing marginal product concept is *ceteris paribus*.
+
+  - if you increase labour AND land, then MPL will look like it goes up.
+  
+- Hence, when we measure MP of an input, it must be the case that **everything else is held fixed**.
+
+- Production function can be a bit more complex.
+
+  1 programmer in 12 months $\not\rightarrow$ 12 programmers in 1 month.
+  
+## Cost
+
+<iframe src="https://giphy.com/embed/3ohjV1wV5q38uFVjG0" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/mootvideo-animation-illustration-3ohjV1wV5q38uFVjG0">via GIPHY</a></p>
+
+## From production function to profit
+
+- Us understand how his farm work. He would like to profit from his farm.
+
+- If Us can't control the selling price (rice is competitive), he needs to know how to control his own cost.
+
+- He has to know at least two things:
+  - **fixed cost** (FC), the cost of his land, and
+  - **variable cost** (VC), the cost of labour.
+
+## Us's hypothetical cost
+
+- Suppose Us's land's rent price is 200 k IDR, while the wage rate in his neighbourhood is 100k IDR.
+
+```{r tabel2,echo=FALSE, message=FALSE, warning=FALSE}
+no<-c("A","B","C","D","E","F","G","H","I")
+lab<-seq(0,8,1)
+rice<-prod(lab)
+FC<-rep(200,9)
+VC<-lab*100
+TC<-FC+VC
+
+Us<-data.frame(no,lab,rice,FC,VC,TC)
+Us %>%
+  kable("html", align="cc", col.names = c('point',"L \n (workers)",'Q \n (ton)', 'FC','VC','TC=FC+VC')) %>%
+  kable_styling(bootstrap_options = "striped", font_size = 20)
+
+```
+
+## Total cost curve for Us's farm
+
+```{r Us1,echo=FALSE, message=FALSE, warning=FALSE}
+Us1<-graph+
+  geom_line(data=Us,aes(x=rice,y=TC),color='red')+
+  geom_point(data=Us,aes(x=rice,y=TC),color='white')+
+  annotate("text",x=Us$rice,y=Us$TC-50,label=Us$no,size=8)
+Us1
+
+```
+
+## Total product curve vs total cost curve
+
+- Both are upward sloping
+
+- however, as production increase, TP is getting flatter, while TC is increasingly steeper.
+
+- Using more labour increases additional TC but decreases additional TP.
+
+## Two key concepts:
+
+Marginal cost & average cost
+
+## Nea's fancy footwear {.m}
+
+Nea is a learning entrepreneur. She start her fancy footwear business in New York with this cost structure:
+
+```{r Nea1,echo=FALSE, message=FALSE, warning=FALSE}
+q<-seq(0,10,1)
+FC<-rep(108,11)
+VC<-12*q*q
+TC<-FC+VC
+
+Nea<-data.frame(q,FC,VC,TC)
+Nea %>%
+  kable("html", align="cc", col.names = c('Q',"FC",'VC', 'TC')) %>%
+  kable_styling(bootstrap_options = c("bordered","striped","responsive"), font_size = 20,full_width = TRUE)
+
+```
+
+## Marginal cost
+
+- **Marginal cost** (MC) is the change in **total cost** generated by producing one additional unit of output.
+
+$$
+MC = \frac{\text{Change in }TC}{\text{change in }Q}=\frac{\Delta TC}{\Delta Q}
+$$
+
+- Let's add MC on Nea's fancy footwear cost structure
+
+## Nea' fancy footwear cost structure
 
 :::: columns
 ::: {.column width=47%}
-```{r grafik2, message=FALSE, warning=FALSE, echo=FALSE}
-grafik2 <- graph +
-  geom_vline(xintercept=125, color = "cyan",size=2)+
-  scale_x_continuous(limits=c(120,130), 
-                     breaks = 125) +
-  scale_y_continuous(limits=c(9,12), 
-                     breaks = p) +
-  geom_segment(data = data_frame(q=125,p=11),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=125,p=10),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2)+
-  labs(title="Perfectly inelastic demand (0)", x="Q", y="P")+
-  geom_text(aes(x = 125.5, y = 9, label = "D[1]"), parse = TRUE, size =8, color = '#e0e0e0')
-grafik2
-```
-an illustration of **perfectly inelastic demand**
-:::
-
-::: {.column width=47%}
-```{r grafik3, message=FALSE, warning=FALSE, echo=FALSE}
-library(latex2exp)
-grafik3 <- graph +
-  geom_hline(yintercept=10.5, color = "cyan",size=2)+
-  scale_x_continuous(limits=c(120,130), 
-                     breaks = c(123,127)) +
-  scale_y_continuous(limits=c(9,12), 
-                     breaks = 10.5) +
-  geom_segment(data = data_frame(q=123,p=10.5),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=127,p=10.5),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2)+
-  labs(title="Perfectly Elastic Demand (\U221E)", x="Q", y="P")+
-  geom_text(aes(x = 130, y = 10.7, label = "D[2]"), parse = TRUE, size =8, color = '#e0e0e0')
-grafik3
-```
-an illustration of **perfectly elastic demand**
-:::
-::::
-
-## Types of elasticities
-
-- Most goods are somewhere in between.
-
-- We usually use elasticity=1 as another important division point.
-
-- 1 is a useful barrier because when elasticity=1, that means a change in price by 1 % leads to a change in quantity demanded by 1 %
-
-- elasticity < 1 means the quantity response less than a change in prices, while elasticity > 1 means the quantity is highly responsive, more than the change in price.
-
----
-
-:::: columns
-::: {.column width=47%}
-```{r grafik4,echo=FALSE, message=FALSE, warning=FALSE}
-
-demand1 <- function(q) (q/433)^(-1/0.5)
-demand2 <- function(q) (q/7250)^(-1/1.7)
-
-grafik4 <- graph +
-  stat_function(fun = demand1,size=1.1, color='cyan') +
-  scale_x_continuous(limits=c(120,150), 
-                     breaks = c(130.5,137)) +
-  scale_y_continuous(limits=c(9,12), 
-                     breaks = p) +
-  geom_segment(data = data_frame(q=130.5,p=11),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=130.5,p=11),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=137,p=10),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=137,p=10),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2)+
-  labs(title="Inelastic demand (<1)", x="Q (1000 cars/day)", y="P (1000 IDR)")+
-  geom_text(aes(x = 145, y = 9.3, label = "D"), parse = TRUE, size =8, color = '#e0e0e0')
-
-grafik5 <- graph +
-  stat_function(fun = demand2,size=1.1, color='cyan') +
-  scale_x_continuous(limits=c(120,150), 
-                     breaks = c(123,144.6)) +
-  scale_y_continuous(limits=c(9,12), 
-                     breaks = p) +
-  geom_segment(data = data_frame(q=123,p=11),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=123,p=11),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=144.6,p=10),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=144.6,p=10),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2)+
-  labs(title="Elastic demand (>1)", x="Q (1000 cars/day)", y="P (1000 IDR)")+
-  geom_text(aes(x = 150, y = 10, label = "D"), parse = TRUE, size =8, color = '#e0e0e0')
-
-grafik4
-grafik5
-
-```
-:::
-::: {.column width=47%}
-
-```{r grafik5,echo=FALSE, message=FALSE, warning=FALSE}
-grafik1 + labs(title="Unit elastic demand (=1)", x="Q (1000 cars/day)", y="P (1000 IDR)")
-
-```
-</br>
-</br>
-</br>
-
-The flatter the curve, the closer its elasticity to $\infty$
-
-:::
-::::
-
-## Types of demand elasticities {.m}
-
-| Elasticity | meaning |
-| ---- | ------- |
-| 0 | **perfectly inelastic**. Price doesn't matter |
-| < 1 | **inelastic**. Quantity is less responsive to price changes |
-| 1 | **unit elastic**. Quantity change exactly the same as the price change in % terms|
-| >1 | **elastic**. Quantity response heavily to price changes |
-| $\infty$ | **perfectly elastic**. A slight increase of price reduces demand to zero |
-
-## Elasticities vary. So what?
-
-- Suppose you wan't to increase the revenue from the toll road operation, what price will you set?
-
-- It is intuitive to think that the higher the price, the better.
-  - High price $\Rightarrow$ more revenue
-
-- Is there a problem with this logic?
-
-- Remember, demand respond to price. High price $\Rightarrow$ lower demand $\Rightarrow$ less revenue
-
-- The maximum price depends on the demand elasticity
-
----
-
-```{r grafik6,echo=FALSE, message=FALSE, warning=FALSE}
-grafik6 <- graph +
-  stat_function(fun = demand1,size=1.1, color='cyan') +
-  scale_x_continuous(limits=c(120,150), 
-                     breaks = 137) +
-  scale_y_continuous(limits=c(9,12), 
-                     breaks = 10) +
-  geom_segment(data = data_frame(q=137,p=10),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=137,p=10),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2)+
-  geom_ribbon(aes(x=seq(0,137,1), ymin=9, ymax=10),alpha = 0.4,fill='red')+
-  annotate("text", x = 128, y = 9.8, label = "Total revenue=", size=8)+
-  annotate("text", x = 128, y = 9.6, label = "Price x Quantity", size=8)+
-  annotate("text", x = 128, y = 9.4, label = "10 x 137", size=8)+
-  annotate("text", x = 128, y = 9.2, label = "1370 mil IDR/day", size=8)+
-  labs(title="Inelastic demand (<1)", x="Q (1000 cars/day)", y="P (1000 IDR)")+
-  geom_text(aes(x = 145, y = 9.3, label = "D"), parse = TRUE, size =8, color = '#e0e0e0')
-grafik6
-```
-
----
-
-```{r grafik7,echo=FALSE, message=FALSE, warning=FALSE}
-grafik7 <- graph +
-  stat_function(fun = demand1,size=1.1, color='cyan') +
-  scale_x_continuous(limits=c(120,150), 
-                     breaks = 130.5) +
-  scale_y_continuous(limits=c(9,12), 
-                     breaks = 11) +
-  geom_segment(data = data_frame(q=130.5,p=11),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=130.5,p=11),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_ribbon(aes(x=seq(0,130.5,1), ymin=9, ymax=11),alpha = 0.4,fill='red')+
-  annotate("text", x = 125, y = 10.4, label = "Total revenue=", size=7)+
-  annotate("text", x = 125, y = 10.2, label = "P x Q", size=8)+
-  annotate("text", x = 125, y = 10, label = "11 x 130.5", size=8)+
-  annotate("text", x = 125, y = 9.8, label = "1435.5", size=8)+
-  labs(title="Inelastic demand (<1)", x="Q (1000 cars/day)", y="P (1000 IDR)")+
-  geom_text(aes(x = 145, y = 9.3, label = "D"), parse = TRUE, size =8, color = '#e0e0e0')
-grafik7
-```
-
----
-
-## Impact of price increase {.m}
-
-:::: columns
-::: {.column width=47%}
-```{r grafik8,echo=FALSE, message=FALSE, warning=FALSE}
-#| fig-width: 6
-#| fig-height: 7
-grafik4 +
-  geom_ribbon(aes(x=seq(0,130.5,1), ymin=9, ymax=10, fill="B"),alpha = 0.4,show.legend=FALSE)+
-  geom_ribbon(aes(x=seq(130.5,137,1), ymin=9, ymax=10, fill="A"),alpha = 0.4,show.legend=FALSE)+
-  geom_ribbon(aes(x=seq(0,130.5,1), ymin=10, ymax=11, fill="C"),alpha = 0.4,show.legend=FALSE)+
-  annotate("text", x = 125, y = 9.5, label = "B", size=9)+
-  annotate("text", x = 134, y = 9.5, label = "A", size=9)+
-  annotate("text", x = 125, y = 10.5, label = "C", size=9)
-  
-```
-:::
-::: {.column width=47%}
-
-- Segment A is the **Quantity effect of price increase**
-  - Negative effect since fewer units sold
-
-- Segment C is the **Price effect of price increase**
-  - positive effect since higher price for each unit sold
-  
-:::
-::::
-
-## Impact of price increase
-
-:::: columns
-::: {.column width=47%}
-```{r grafik9,echo=FALSE, message=FALSE, warning=FALSE}
-#| fig-width: 6
-#| fig-height: 7
-grafik4 +
-  geom_ribbon(aes(x=seq(0,130.5,1), ymin=9, ymax=10, fill="B"),alpha = 0.4,show.legend=FALSE)+
-  geom_ribbon(aes(x=seq(130.5,137,1), ymin=9, ymax=10, fill="A"),alpha = 0.4,show.legend=FALSE)+
-  geom_ribbon(aes(x=seq(0,130.5,1), ymin=10, ymax=11, fill="C"),alpha = 0.4,show.legend=FALSE)+
-  annotate("text", x = 125, y = 9.5, label = "B", size=9)+
-  annotate("text", x = 134, y = 9.5, label = "A", size=9)+
-  annotate("text", x = 125, y = 10.5, label = "C", size=9)
-  
+```{r grafik1,echo=FALSE, message=FALSE, warning=FALSE, fig.heiht=8}
+Nea$MC<-c(0,diff(Nea$TC)/diff(Nea$q))
+Nea %>%
+  kable("html", align="cc", col.names = c('Q',"FC",'VC','TC','MC')) %>%
+  kable_styling(bootstrap_options = c("bordered","striped","responsive"), font_size = 20,full_width = TRUE)
 ```
 :::
 
-::: {.column width=47%}
-- If you are profit oriented, Increasing the price is a good idea if:
+::: {.m .column width=47%}
 
-$$
-B+C > B+A
-$$
+- For the first fancy footwear produced, Nea's $\Delta$Q is 1, while her $\Delta$TC is 120-108=12
 
-$$
-C>A
-$$
-:::
-::::
+- The second fancy footwear, her $\Delta TC=156-120=36$ and so on.
 
-## Impact of price increase
+- In our case, we have complete one fancy footwear incremental. In the real world, you might not have this kind of data.
 
-:::: columns
-::: {.column width=47%}
-```{r grafik10,echo=FALSE, message=FALSE, warning=FALSE}
-#| fig-width: 6
-#| fig-height: 7
-grafik5 +
-  geom_ribbon(aes(x=seq(0,123,1), ymin=9, ymax=10, fill="B"),alpha = 0.4,show.legend=FALSE)+
-  geom_ribbon(aes(x=seq(123,144.6,1), ymin=9, ymax=10, fill="A"),alpha = 0.4,show.legend=FALSE)+
-  geom_ribbon(aes(x=seq(0,123,1), ymin=10, ymax=11, fill="C"),alpha = 0.4,show.legend=FALSE)+
-  annotate("text", x = 122, y = 9.5, label = "B", size=9)+
-  annotate("text", x = 134, y = 9.5, label = "A", size=9)+
-  annotate("text", x = 122, y = 10.5, label = "C", size=9)
-  
-```
-:::
+- But the principle is the same.
 
-::: {.column width=47%}
-- In a market with high demand elasticity, the quantity effect outweighs the price effect.
-
-- Increasing the price is not so clever if the market's demand is highly elastic.
-:::
-::::
-
-## Last point on demand elasticity
-
-- When elasticity = 1, then $A=C$
-  - hence changing price has no impact on sales revenue.
-
-- Profit oriented in the real life may not very realistic
-  - Governments may want to serve as much people as possible
-  - In the short run, growth and market cap may be more important than profit.
-
-## Last point on demand elasticity
-
-- We usually tied elasticity on a price point.
-  - on our toll road case, our price point is 10.000 IDR
-  
-- Elasticity may differ in different price point.
-  - Changing price from 10 to 11 may have different impact compared to changing price from 20 to 21.
-      - the first one is an increase of 10%.
-      - the second one is an increase of 5%.
-      - in absolute term, both are a 1.000 IDR increase.
-
-## Last point on demand elasticity
-
-- Estimating elasticity is very hard
-
-- There are many things also at play:
-  - different condition in different time
-  - different buyer with different characteristics behave differently
-  - Income, taste, etc matters (remember what **shifts the demand curve?**)
-
-## Factors determine demand elasticity
-
-- A **necessity** good tend to have lower elasticity compared to a **luxury good**.
-
-- The availability of **close substitutes**, like the case with pertamax and shell.
-
-- **Share of income spent** on the good. Rich people may not care with toll road price.
-
-- **Time**. Cigarettes may have low elasticity in the short run because it is so addictive, and adapt later in the long run.
-
-## Other types of demand elasticity {.m}
-
-- **Cross price elasticity of demand** is how the price of good $B$ affects a demand of good $A$.
-
-$$
-\tag{4}
-\text{Cross-Price elasticity}_{A,B}=\frac{\text{% change in }Q_A}{\text{% change in }P_B}
-$$
-
-
-- When good A and good B are subtitutes, then the effect is negative.
-  - e.g., Samsung and Xiaomi
-
-- When good A and good B are complements, the effect is positive.
-  - e.g., Samsung and Telkomsel
-
-## Other types of demand elasticity {.m}
-
-- **Income elasticity of demand** is how the chanage on income affects your demand of good $A$
-
-
-$$
-\tag{5}
-\text{Income elasticity of Demand}_A=\frac{\text{% change in }Q_A}{\text{% change in Income}}
-$$
-
-
-- It is usually positive if good $A$ is a **normal good**.
-
-- It is negative if good $A$ is an **inferior good**.
-  - you buy less instant noodle when you're richer.
-  
-## Other types of demand elasticity {.m}
-
-- **Income elasticity of demand** is how the chanage on income affects your demand of good $A$
-
-$$
-\tag{5}
-\text{Income elasticity of Demand}_A=\frac{\text{% change in }Q_A}{\text{% change in Income}}
-$$
-
-
-- A **necessity** good is usually **income inelastic** because you need to buy it no matter what.
-
-- A **luxury** good can be **income elastic**. You only buy it if your main needs are covered so you can wait for a discount.
-
-# Price elasticity of Supply
-
-## Price elasticity of Supply {.m}
-
-- Supply also have elasticities. As a supplier, you can't afford to sell expensive if there are high competition.
-
-- However, in many cases (such as toll road), entering the market is very hard.
-
-- How easy it is to expand (or for new supplier to enter the market) matters to how responsive can supply react to the change in price.
-
-$$
-\tag{6}
-\text{Price elasticity of supply} = \frac{\text{% change in }Q^s}{\text{% change in }P}
-$$
-
-
-## Two extreme cases of elasticity
-
-:::: columns
-::: {.column width=47%}
-```{r grafik11, message=FALSE, warning=FALSE, echo=FALSE}
-grafik11 <- graph +
-  geom_vline(xintercept=125, color = "red",size=2)+
-  scale_x_continuous(limits=c(120,130), 
-                     breaks = 125) +
-  scale_y_continuous(limits=c(9,12), 
-                     breaks = p) +
-  geom_segment(data = data_frame(q=125,p=11),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=125,p=10),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2)+
-  labs(title="Perfectly inelastic supply (0)", x="Q", y="P")+
-  geom_text(aes(x = 125.5, y = 9, label = "S[1]"), parse = TRUE, size =8, color = '#e0e0e0')
-grafik11
-```
-.s[an illustration of **perfectly inelastic supply**]
-:::
-
-::: {.column width=47%}
-```{r grafik12, message=FALSE, warning=FALSE, echo=FALSE}
-
-grafik12 <- graph +
-  geom_hline(yintercept=10.5, color = "red",size=2)+
-  scale_x_continuous(limits=c(120,130), 
-                     breaks = c(123,127)) +
-  scale_y_continuous(limits=c(9,12), 
-                     breaks = 10.5) +
-  geom_segment(data = data_frame(q=123,p=10.5),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=127,p=10.5),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2)+
-  labs(title="Perfectly Elastic Supply (\U221E)", x="Q", y="P")+
-  geom_text(aes(x = 130, y = 10.7, label = "S[2]"), parse = TRUE, size =8, color = '#e0e0e0')
-grafik12
-```
-an illustration of **perfectly elastic supply**
-:::
-::::
-
-## Two extreme cases of elasticity
-
-- In a **perfectly inelastic supply** case, the market can't supply more even if the price increase. Toll road is like this: Building more toll road is expensive and takes time. Most times this is monopolized by the government.
-
-- In a **perfectly elastic supply**, the market supply exactly zero when the price go up just by a little. A highly competitive market where all firms operate at the margin may behave this way.
-
-- Again, most times, the supply curve is somewhere in between.
-
-## What changes supply elasticity?
-
-- A market tend to have a highly elastic price elasticity of supply when **inputs are abundant** and can be converted in and out of producion at a very low cost.
-
-- Matters, as price elasticity of supply tend to be higher in the long run. Increasing production capacity may takes time since investing in a new land, building or machine requires **time**.
-  - Some goods are even impossible to be increased, hence have zero elasticity. Radio spectrum is one example.
-  
-## European farm surplus
-
-European Union **subsidised** their farmers heavily. They probably knew that subsidies create huge **surplus** (remember last week), but they thought the surplus would not be as big since farming land is **limited**.
-
-However, EU farmers were able to expand production using things like fertilizers and pesticides, which are **readily available inputs**.
-
-# The benefits and costs of taxation
-
-## Excise Tax (_cukai_)
-
-- The government often tax goods in the form of an excise tax.
-
-- In Indonesia, some goods have an excise to its purchase:
-  - Cigarettes & alcohol
-  - Luxury goods (PPnBM)
-
-- You can say that a value-added tax is another form of an excise tax.
-
-## How tax works
-
-- Tax acts like a price ceiling plus plus floor:
-  - The government set a higher price for consumers to pay
-  - At the same time, the producers are forced to produced at a lower price.
-  
-- A reminder: in a **price floor** scenario, surplus from consumer transferred to the producer, while in a **price ceiling**, surplus transferred from producers to consumers.
-
-- in tax case, CS and PS are transferred to the government.
-
-## The impact of tax {.m}
-
-```{r grafiks3, echo=FALSE, message=FALSE, warning=FALSE}
-supply <- function(q) (q/12.75)
-supply1 <- function(q) (q/41.3)^(1/0.5)
-supply2 <- function(q) (q/2.45)^(1/1.7)
-
-x<-120:150
-eqq1 <- uniroot(function(x) demand1(x) - supply(x), range(x))$root
-eqq2 <- uniroot(function(x) demand2(x) - supply(x), range(x))$root
-eqq3 <- uniroot(function(x) demand(x) - supply1(x), range(x))$root
-eqq4 <- uniroot(function(x) demand(x) - supply2(x), range(x))$root
-eqq5 <- uniroot(function(x) demand1(x) - supply1(x), range(x))$root
-
-# Equilibrium price
-eqp1 <- supply(eqq1)
-eqp2 <- supply(eqq2)
-eqp3 <- supply(eqq3)
-eqp4 <- supply(eqq4)
-eqp5 <- supply(eqq5)
-
-grafiks5 <- graph +
-  stat_function(fun = supply1,size=1.1, color='red') +
-  stat_function(fun = demand1,size=1.1, color='cyan') +
-  scale_x_continuous(limits= c(120, 150), 
-                     breaks = c(130,eqq5), labels = c(expression(Q[T]),expression(Q[E]))) +
-  scale_y_continuous(limits = c(9,12),
-                     breaks = c(supply1(130),eqp5,demand1(130)), labels = c(expression(P[P]),expression(P[E]),expression(P[C]))) +
-  geom_point(aes(x=eqq5,y=eqp5),color='white',size=4)+
-  geom_point(aes(x=130,y=supply1(130)),color='white',size=4)+
-  geom_point(aes(x=130,y=demand1(130)),color='white',size=4)+
-  geom_segment(data = data_frame(q=130,p=supply1(130)),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=130,p=supply1(130)),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=130,p=demand1(130)),
-               aes(x = q, y = supply1(130), xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=130,p=demand1(130)),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2)+
-  geom_segment(data = data_frame(q=eqq5,p=eqp5),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2)+
-  geom_segment(data = data_frame(q=eqq5,p=eqp5),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2)+
-  geom_ribbon(aes(x=seq(0,130,1), ymin=supply1(130), ymax=eqp5, fill="C"),alpha = 0.4,show.legend=FALSE)+
-  geom_ribbon(aes(x=seq(0,130,1), ymin=eqp5, ymax=demand1(130), fill="A"),alpha = 0.4,show.legend=FALSE)+
-  geom_ribbon(aes(x=seq(130,eqq5,1), ymin=supply1(seq(130,eqq5,1)), ymax=eqp5, fill="B"),alpha = 0.4,show.legend=FALSE)+
-  geom_ribbon(aes(x=seq(130,eqq5,1), ymin=eqp5, ymax=demand1(seq(130,eqq5,1)), fill="D"),alpha = 0.4,show.legend=FALSE)+
-  labs(x="Q (1000 cars/day)", y="P (1000 IDR)")+
-  geom_text(aes(x = 145, y = 9.3, label = "D"), parse = TRUE, size =8, color = '#e0e0e0')+
-  geom_text(aes(x = 145, y = 11.7, label = "S"), parse = TRUE, size =8, color = '#e0e0e0')+
-  annotate("text", x = 125, y = 10.2, label = "C", size=9)+
-  annotate("text", x = 131.5, y = 10.3, label = "D", size=9)+
-  annotate("text", x = 125, y = 10.7, label = "A", size=9)+
-  annotate("text", x = 131.5, y = 10.7, label = "B", size=9)
-
-grafiks5
-
-```
-
-## The impact of taxation {.m}
-
-:::: columns
-
-::: {.column width=47%}
-```{r grafiks6, echo=FALSE, message=FALSE, warning=FALSE}
-#| fig-width: 7
-#| fig-height: 7
-grafiks5
-```
-:::
-::: {.column width=47%}
-- The market price is $P=P_E$
-
-- The price paid by consumers is $P=P_C$
-
-- Producer receive payment at $P=P_P$
-
-- The tax per purchased good paid to the government is $t=P_C-P_P$
 :::
 ::::
 
 ---
 
-## The impact of taxation {.m}
+## Nea's fancy footwear
 
 :::: columns
 ::: {.column width=47%}
-```{r grafiks7, echo=FALSE, message=FALSE, warning=FALSE}
-#| fig-width: 7
-#| fig-height: 7
-grafiks5
+
+```{r grafikNea1,echo=FALSE, message=FALSE, warning=FALSE,fig.height=9}
+gNea<- graph+
+  geom_point(data=Nea,aes(x=q,y=TC),color='white',size=4)+
+  geom_line(data=Nea,aes(x=q,y=TC),color='orange',size=2)+
+  scale_x_continuous(breaks=Nea$q)+
+  scale_y_continuous(breaks=Nea$TC)+
+  labs(x='Q (pair)',y='Cost ($)')
+
+gNea
 ```
 :::
 
-::: {.column width=47%}
-- Consumer lose $A+B$
+::: {.m .column width=47%}
+- The cost is upward sloping, and the incremental is faster.
 
-- Producer lose $C+D$
+- An additional pair of fancy footwear from 1 to 2 costs an additional $36
 
-- The government collects tax revenue $TR=T \times Q_T$
-
-- This is equals to $TR=A+C$
-
-- $B+D=DWL$
+- The additional cost is $180 from 7 pairs to 8 pairs
 :::
 ::::
 
-## The impact of taxation
+## Nea's fancy footwear
 
-- As we learn, the tax revenue and the size of DWL depends highly in demand elasticity and supply elasticity of the good.
+:::: columns
+::: {.column width=47%}
 
-- The less elastic the demand and supply of a good, the higher revenue gained from taxing the good.
-  - i.e., price effect > quantity effect.
+```{r grafikNea2,echo=FALSE, message=FALSE, warning=FALSE}
+
+gNea2<- graph+
+  geom_point(data=Nea,aes(x=q,y=MC),color='white',size=4)+
+  geom_line(data=Nea,aes(x=q,y=MC),color='red',size=2)+
+  scale_x_continuous(breaks=Nea$q)+
+  labs(x='Q (pair)',y='Cost ($)')
+
+gNea2
+```
+:::
+
+::: {.m .column width=47%}
+- The marginal cost is also upward sloping.
+  - in this case, the cost structure is designed to be **diminishing in return**
   
-- DWL also lower when the demand and/or supply of the good is highly inelastic.
+- It means, the additional bobba needs more input as the fancy footwear increases.
+
+- recall that the TP curve in Us's case is flattening because of this.
+
+:::
+::::
+
+## Average Total Cost (ATC)
+
+- There is also **average total cost**, or simply **Average Cost**
+
+$$
+ATC=\frac{TC}{Q}
+$$
+
+- ATC is important because it tells the cost of each fancy footwear given the current state of production.
+
+- Be careful, $ATC \neq MC$
+
+- Which one would Nea use to set the price?
+
+## Nea's fancy footwear cost structure
+
+```{r Nea2,echo=FALSE, message=FALSE, warning=FALSE}
+
+Nea$AFC<-Nea$FC/Nea$q
+Nea$AVC<-Nea$VC/Nea$q
+Nea$ATC<-Nea$TC/Nea$q
+
+Nea1<-data.frame(Nea$q,Nea$TC,Nea$AFC,Nea$AVC,Nea$ATC)
+
+Nea %>%
+  kable("html", align="cc", col.names = c('Q',"FC",'VC','TC','MC','AFC','AVC','ATC'),digits=2) %>%
+  kable_styling(bootstrap_options = c("bordered","striped","responsive"), font_size = 20,full_width = TRUE)
+
+```
+
+## Nea's cost structure
+
+:::: columns
+::: {.column width=47%}
+```{r Nea3,echo=FALSE, message=FALSE, warning=FALSE}
+
+Nea1<-data.frame(Nea$q,Nea$TC,Nea$AFC,Nea$AVC,Nea$ATC)
+
+Nea1 %>%
+  kable("html", align="cc", col.names = c('Q','TC','AFC','AVC','ATC'),digits=2) %>%
+  kable_styling(bootstrap_options = c("bordered","striped","responsive"), font_size = 20,full_width = TRUE)
+
+```
+:::
+::: {.m .column width=47%}
+
+- Note that ATC decreases before it increases.
+
+- AFC drives ATC down: Fixed cost doesn't change no matter how much fancy footwear is produced (**spreading effect**).
+
+- AVC increases as Q increases due to **diminishing returns effect**.
+
+- at what Q does ATC at its lowest point?
+:::
+::::
+
+## Nea's fancy footwear Average Total Cost Curve
+
+```{r Nea4,echo=FALSE, message=FALSE, warning=FALSE}
+Nea2<-Nea[!(Nea$q<1),]
+gNea3<- graph+
+  geom_point(data=Nea2,aes(x=q,y=ATC),color='white',size=4)+
+  geom_line(data=Nea2,aes(x=q,y=ATC),color='red',size=2)+
+  scale_x_continuous(breaks=Nea2$q)+
+  ylim(0,130)+
+  labs(title='ATC curve is U-Shaped', x='Q (pair)',y='Cost ($)')+
+  annotate("text", x = 3, y =45, label = "Minimum ATC \n is at \n Q=3 and \n ATC=$72", size=7.5)+
+  annotate("text", x = 9, y =110, label = "ATC", size=8)
+gNea3
+
+```
+
+## MC and ATC
+
+- It is probably best to produce at the lowest ATC. Q=3 is the **minimum-cost output**.
+
+- Note that:
+  - at $Q=3$, $ATC=MC$;
+  - at $Q<3$, $ATC<MC$;
+  - at $Q>3$, $ATC>MC$.
+  
+- Works like your GPA: At GPA=3.0, an additional A will increase your GPA, a C will decrease your GPA, while a B doesn't change your GPA.
+
+## Cost Curves
+
+```{r Nea5,echo=FALSE, message=FALSE, warning=FALSE, fig.width=10}
+gNea4<- graph+
+  geom_line(data=Nea2,aes(x=q,y=ATC,color='ATC'),size=2)+
+  geom_line(data=Nea2,aes(x=q,y=AFC,color='AFC'),size=2)+
+  geom_line(data=Nea2,aes(x=q,y=AVC,color='AVC'),size=2)+
+  geom_line(data=Nea2,aes(x=q,y=MC,color='MC'),size=2)+
+  scale_x_continuous(breaks=Nea2$q)+
+  labs(x='Q (pair)',y='Cost ($)')
+  
+gNea4
+
+```
+
+## Cost curves
+
+- Note that in our graph, ATC is not exactly equals to MC.
+
+- This is because MC is an incremental cost from Q:
+  - for example, a marginal cost from Q=1 to Q=2 should be plotted somewhere between Q=1 and Q=2, not exactly at Q=2.
+
+- It easier to understand the logic when we use function.
+
+- The logic remains: a Q where cost is lowest is when MC=ATC
+
+## Short run and long run
+
+- In the long run, Nea can upgrade (or downgrade) her capacity by changing her fixed cost.
+
+- Higher fixed cost leads to higher overall cost, but typically can reduces variable cost at a higher Q.
+
+- If Nea's client is just 3 people, buying a automated sewing machine might be an overkill.
+
+- If Nea's business is forecasted to grow in the future, she can prepare for an upgrade.
+
+## High capacity vs low capacity
+
+```{r Nea6,echo=FALSE, message=FALSE, warning=FALSE,fig.width=10}
+
+Nea2$ATCC<-c(222,120,90,78,73.2,72,72.86,75,78,81.6)
+
+gNea5<- graph+
+  geom_line(data=Nea2,aes(x=q,y=ATC,color="Low capacity ATC"),size=2)+
+  geom_line(data=Nea2,aes(x=q,y=ATCC,color="High capacity ATC"),size=2)+
+  scale_x_continuous(breaks=Nea2$q)+
+  labs(x='Q (pair)',y='Cost ($)')
+gNea5
+
+```
+
+## High capacity vs low capacity
+
+- Upgrading is only worth it if Nea sell at least 5 pairs of shoes.
+
+- If upgraded, the minimum-cost output is $Q=6$
+
+- In the long run, fixed cost can be changed (hence become variable to some extent)
+
+- The most important is to know:
+  - How the different capacity ATC looks like;
+  - How easy each input can be changed;
+  - whether changes in the market is long lasting or not.
+
+
+## High capacity vs low capacity
+
+::: {layout-ncol=2}
+
+![fryer](cafe.jpg){width=400}
+
+![gorengan](gorengan.jpg){width=400}
+
+:::
+
+## Long run cost curves
+
+- **Long run average cost** (LRAC) is an average total cost which treat the fixed cost as a variable cost.
+
+- Calculating LRAC requires many curves corresponding with different level of fixed cost.
+
+- In fact, with so many other costs, using graph may no longer be practical.
+
+- We won't cover it in this course, but it is useful to know that LRAC exists and can be useful for you in the future.
+
+## Returns to scale
+
+- Upgrading makes sense if the industry is having an **increasing returns to scale**.
+
+- Increasing returns to scale happens when scaing up leads to lower LRAC.
+  - in Nea's case, she scaling up leads to lower cost overall, which may lower the price.
+  - this is also the case for many industries, where big firms are able to offer their products at a lower price.
+  
+- When increasing scale leads to higher cost, we say **decreasing returns to scale**. Happens when a firm is too big, coordination gets costly.
+
+## Calculating profit
+
+## Perfect competition
+
+- We learned in the perfect competition, producer takes price as given.
+
+- This is called **price-taking producers** (and **price-taking consumers**)
+
+- essentially means nobody can affect prices.
+
+- How much should Nea produce? Depends on the **revenue**.
+
+- For now, let's assume that the fancy footwear a highly competitive industry, where P=$100
+
+## Nea's cost, revenue and profit (Total)
+
+
+```{r pc1,echo=FALSE, message=FALSE, warning=FALSE}
+
+Nea3<-data.frame("q"=Nea2$q,"TC"=Nea2$TC)
+Nea3$TR<-Nea3$q*100
+Nea3$profit<-Nea3$TR-Nea3$TC
+
+Nea3 %>%
+  kable("html", align="cc", col.names = c('Q','TC','TR','TR-TC'),digits = 2) %>%
+  kable_styling(bootstrap_options = "striped", font_size = 20) %>%
+  row_spec(4,background="yellow") %>%
+  add_header_above(c('Quantity sold','Total Cost','Total Revenue','Total Profit'))
+```
+
+## Nea's cost, revenue and profit (total)
+
+
+```{r pc2,echo=FALSE, message=FALSE, warning=FALSE}
+
+profit1<- graph+
+  geom_point(data=Nea3,aes(x=q,y=TC),color='white',size=2)+
+  geom_line(data=Nea3,aes(x=q,y=TC),color='orange',size=1.5)+
+  geom_point(data=Nea3,aes(x=q,y=TR),color='white',size=2)+
+  geom_line(data=Nea3,aes(x=q,y=TR),color='cyan',size=1.5)+
+  annotate("text", x = 9.5, y = 1000, label = "TR",size=8)+
+  annotate("text", x = 9.5, y = 1300, label = "TC",size=8)+
+  scale_x_continuous(breaks=Nea$q)+
+  labs(x='Q (pair)',y='($)')
+
+profit1
+```
+
+## Nea's cost, revenue and profit (per unit)
+
+```{r pc3,echo=FALSE, message=FALSE, warning=FALSE}
+
+Nea4<-data.frame("q"=Nea2$q,"ATC"=Nea2$ATC)
+Nea4$P<-rep(100,10)
+Nea4$pr<-Nea4$P-Nea4$ATC
+
+Nea4 %>%
+  kable("html", align="cc", col.names = c('Q','ATC','P','P-ATC'), digits = 2) %>%
+  kable_styling(bootstrap_options = "striped", font_size = 20) %>%
+  row_spec(3,background="yellow") %>%
+  add_header_above(c('Quantity sold','Average Total Cost','Price per pair','margin'))
+```
+
+## Profit under perfect market {.m}
+
+- The necessary condition for profit maximisation is as close as possible with:
+
+$$ MR = MC $$
+
+- MR is short for **Marginal Revenue**, how much additional revenue you get from selling one more good.
+
+$$
+MR = \frac{\Delta TR}{\Delta Q}
+$$
+
+- It is like **marginal cost**, but revenue.
+
+- This is why **marginal cost** is important.
+
+## Marginal Revenue & Marginal Cost
+
+```{r pc4,echo=FALSE, message=FALSE, warning=FALSE}
+
+
+Nea3$MR<-rep(100,10)
+Nea3$MC<-Nea2$MC
+Nea3$nice<-Nea3$MR-Nea3$MC
+
+Nea3 %>%
+  kable("html", align="cc", col.names = c('Q','TC','TR','TR-TC','MR','MC','MR-MC'),digits = 2) %>%
+  kable_styling(bootstrap_options = "striped", font_size = 20) %>%
+  row_spec(4,background="yellow") %>%
+  add_header_above(c('Quantity \n sold','Total \n cost','Total \n revenue','Total \n Profit','Marginal \n revenue','Marginal \n cost','condition'))
+```
+
+## MR, MC and AC in action
+
+```{r pc5,echo=FALSE, message=FALSE, warning=FALSE}
+
+profit2<- graph+
+  geom_line(data=Nea3,aes(x=q,y=MC),color='red',size=1.5)+
+  geom_line(data=Nea3,aes(x=q,y=MR),color='cyan',size=1.5)+
+  geom_line(data=Nea2,aes(x=q,y=ATC),color='orange',size=1.5)+
+  annotate("text", x = 9.5, y = 90, label = "MR=P",size=8)+
+  annotate("text", x = 9.5, y = 200, label = "MC",size=8)+
+  annotate("text", x = 9.5, y = 135, label = "AC",size=8)+
+  scale_x_continuous(breaks=Nea$q)+
+  labs(x='Q (pair)',y='($)')
+
+profit2
+```
 
 ---
 
-:::: columns
-::: {.column width=47%}
-```{r grafiks1, echo=FALSE, message=FALSE, warning=FALSE}
+```{r pc6,echo=FALSE, message=FALSE, warning=FALSE, fig.width=10, fig.height=8}
+ftc <- function(x) 108+12*x*x
+fatc <- function(x) (108/x)+12*x
+fmc <- function(x) 24*x
+fmr <- function(x) 100
 
-grafiks1 <- graph +
-  stat_function(fun = supply,size=1.1, color='red') +
-  stat_function(fun = demand1,size=1.1, color='cyan') +
-  scale_x_continuous(limits= c(120, 150), 
-                     breaks = c(130,eqq1), labels = c(expression(Q[T]),expression(Q[E]))) +
-  scale_y_continuous(limits = c(9,12),
-                     breaks = c(supply(130),eqp1,demand1(130)), labels = c(expression(P[P]),expression(P[E]),expression(P[C]))) +
-  geom_point(aes(x=eqq1,y=eqp1),color='white',size=4)+
-  geom_point(aes(x=130,y=supply(130)),color='white',size=4)+
-  geom_point(aes(x=130,y=demand1(130)),color='white',size=4)+
-  geom_segment(data = data_frame(q=130,p=supply(130)),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=130,p=supply(130)),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=130,p=demand1(130)),
-               aes(x = q, y = supply(130), xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=130,p=demand1(130)),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2)+
-  geom_segment(data = data_frame(q=eqq1,p=eqp1),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2)+
-  geom_segment(data = data_frame(q=eqq1,p=eqp1),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2)+
-  geom_ribbon(aes(x=seq(0,130,1), ymin=supply(130), ymax=demand1(130), fill="TR"),alpha = 0.4,show.legend=FALSE)+
-  geom_ribbon(aes(x=seq(130,eqq1,1), ymin=supply(seq(130,eqq1,1)), ymax=demand1(seq(130,eqq1,1)), fill="DWL"),alpha = 0.4,show.legend=FALSE)+
-  annotate("text", x = 125, y = 10.6, label = "Revenue", size=8)+
-  annotate("text", x = 125, y = 10.8, label = "Tax", size=8)+
-  annotate("text", x = 137, y = 11.6, label = "DWL", size=8)+
-  annotate("segment", x = 131.2, xend = 135.2, y = 10.7, yend = 11.3,
-           arrow = arrow(length = unit(2, "lines")), size=1, colour = "gray")+
-  labs(title="(a) Inelastic demand (<1)", x="Q (1000 cars/day)", y="P (1000 IDR)")+
-  geom_text(aes(x = 145, y = 9.3, label = "D"), parse = TRUE, size =8, color = '#e0e0e0')+
-  geom_text(aes(x = 145, y = 11.1, label = "S"), parse = TRUE, size =8, color = '#e0e0e0')
+qq<-seq(1,8,0.01)
 
-###################################################################
+z<-uniroot(function(x) fatc(x) - fmc(x), range(qq))$root
+zz<-fatc(z)
+zzz<-uniroot(function(x) fmc(x) - fmr(x), range(qq))$root
+zzzz<-fatc(zzz)
 
-grafiks2 <- graph +
-  stat_function(fun = supply,size=1.1, color='red') +
-  stat_function(fun = demand2,size=1.1, color='cyan') +
-  scale_x_continuous(limits= c(120, 150), 
-                     breaks = c(130,eqq2), labels = c(expression(Q[T]),expression(Q[E]))) +
-  scale_y_continuous(limits = c(9,12),
-                     breaks = c(supply(130),eqp2,demand2(130)), labels = c(expression(P[P]),expression(P[E]),expression(P[C]))) +
-  geom_point(aes(x=eqq2,y=eqp2),color='white',size=4)+
-  geom_point(aes(x=130,y=supply(130)),color='white',size=4)+
-  geom_point(aes(x=130,y=demand2(130)),color='white',size=4)+
-  geom_segment(data = data_frame(q=130,p=supply(130)),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=130,p=supply(130)),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=130,p=demand2(130)),
-               aes(x = q, y = supply(130), xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=130,p=demand2(130)),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2)+
-  geom_segment(data = data_frame(q=eqq2,p=eqp2),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2)+
-  geom_segment(data = data_frame(q=eqq2,p=eqp2),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2)+
-  geom_ribbon(aes(x=seq(0,130,1), ymin=supply(130), ymax=demand2(130), fill="TR"),alpha = 0.4,show.legend=FALSE)+
-  geom_ribbon(aes(x=seq(130,eqq2,1), ymin=supply(seq(130,eqq2,1)), ymax=demand2(seq(130,eqq2,1)), fill="DWL"),alpha = 0.4,show.legend=FALSE)+
-  labs(title="(b) elastic demand (>1)", x="Q (1000 cars/day)", y="P (1000 IDR)")+
-  geom_text(aes(x = 145, y = 10.3, label = "D"), parse = TRUE, size =8, color = '#e0e0e0')+
-  geom_text(aes(x = 145, y = 11.7, label = "S"), parse = TRUE, size =8, color = '#e0e0e0')
+profit3<- graph+
+  stat_function(aes(color = "ATC"), fun = fatc, size=1.5)+
+  stat_function(aes(color = "MC"), fun = fmc, size=1.5)+
+  stat_function(aes(color = "MR"), fun = fmr, size=1.5)+
+  geom_ribbon(aes(x=seq(1,z,0.1), ymin=zz, ymax=100,
+                  fill='cost-minimizing \n profit'),
+              alpha = 0.4)+
+  annotate("text", x = 9.5, y = 90, label = "MR=P",size=8)+
+  annotate("text", x = 9.5, y = 200, label = "MC",size=8)+
+  annotate("text", x = 9.5, y = 135, label = "AC",size=8)+
+  scale_x_continuous(limits = c(1,8), breaks = z, labels = "Cost minimizing \n output") +
+  scale_y_continuous(breaks = zz, labels = "lowest \n ATC") +
+  labs(x='Q (pair)',y='($)')
 
-########################################################################
-
-grafiks3 <- graph +
-  stat_function(fun = supply1,size=1.1, color='red') +
-  stat_function(fun = demand,size=1.1, color='cyan') +
-  scale_x_continuous(limits= c(120, 150), 
-                     breaks = c(130,eqq3), labels = c(expression(Q[T]),expression(Q[E]))) +
-  scale_y_continuous(limits = c(9,12),
-                     breaks = c(supply1(130),eqp3,demand(130)), labels = c(expression(P[P]),expression(P[E]),expression(P[C]))) +
-  geom_point(aes(x=eqq3,y=eqp3),color='white',size=4)+
-  geom_point(aes(x=130,y=supply1(130)),color='white',size=4)+
-  geom_point(aes(x=130,y=demand(130)),color='white',size=4)+
-  geom_segment(data = data_frame(q=130,p=supply1(130)),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=130,p=supply1(130)),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=130,p=demand(130)),
-               aes(x = q, y = supply1(130), xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=130,p=demand(130)),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2)+
-  geom_segment(data = data_frame(q=eqq3,p=eqp3),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2)+
-  geom_segment(data = data_frame(q=eqq3,p=eqp3),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2)+
-  geom_ribbon(aes(x=seq(0,130,1), ymin=supply1(130), ymax=demand(130), fill="TR"),alpha = 0.4,show.legend=FALSE)+
-  geom_ribbon(aes(x=seq(130,eqq3,1), ymin=supply1(seq(130,eqq3,1)), ymax=demand(seq(130,eqq3,1)), fill="DWL"),alpha = 0.4,show.legend=FALSE)+
-  labs(title="(c) inelastic supply (<1)", x="Q (1000 cars/day)", y="P (1000 IDR)")+
-  geom_text(aes(x = 145, y = 9.3, label = "D"), parse = TRUE, size =8, color = '#e0e0e0')+
-  geom_text(aes(x = 145, y = 11.7, label = "S"), parse = TRUE, size =8, color = '#e0e0e0')
-
-#####################################################################
-
-grafiks4 <- graph +
-  stat_function(fun = supply2,size=1.1, color='red') +
-  stat_function(fun = demand,size=1.1, color='cyan') +
-  scale_x_continuous(limits= c(120, 150), 
-                     breaks = c(130,eqq4), labels = c(expression(Q[T]),expression(Q[E]))) +
-  scale_y_continuous(limits = c(9,12),
-                     breaks = c(supply2(130),eqp4,demand(130)), labels = c(expression(P[P]),expression(P[E]),expression(P[C]))) +
-  geom_point(aes(x=eqq4,y=eqp4),color='white',size=4)+
-  geom_point(aes(x=130,y=supply2(130)),color='white',size=4)+
-  geom_point(aes(x=130,y=demand(130)),color='white',size=4)+
-  geom_segment(data = data_frame(q=130,p=supply2(130)),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=130,p=supply2(130)),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=130,p=demand(130)),
-               aes(x = q, y = supply2(130), xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=130,p=demand(130)),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2)+
-  geom_segment(data = data_frame(q=eqq4,p=eqp4),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2)+
-  geom_segment(data = data_frame(q=eqq4,p=eqp4),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2)+
-  geom_ribbon(aes(x=seq(0,130,1), ymin=supply2(130), ymax=demand(130), fill="TR"),alpha = 0.4,show.legend=FALSE)+
-  geom_ribbon(aes(x=seq(130,eqq4,1), ymin=supply2(seq(130,eqq4,1)), ymax=demand(seq(130,eqq4,1)), fill="DWL"),alpha = 0.4,show.legend=FALSE)+
-  labs(title="(d) elastic supply (>1)", x="Q (1000 cars/day)", y="P (1000 IDR)")+
-  geom_text(aes(x = 145, y = 9.3, label = "D"), parse = TRUE, size =8, color = '#e0e0e0')+
-  geom_text(aes(x = 145, y = 11.3, label = "S"), parse = TRUE, size =8, color = '#e0e0e0')
-
-grafiks1
-grafiks3
-
+profit3
 ```
-:::
 
-::: {.column width=47%}
-```{r grafiks2, echo=FALSE, message=FALSE, warning=FALSE}
-grafiks2
-grafiks4
+---
 
+```{r pc7,echo=FALSE, message=FALSE, warning=FALSE, fig.width=10, fig.height=8}
+
+profit4<- graph+
+  stat_function(aes(color = "ATC"), fun = fatc, size=1.5)+
+  stat_function(aes(color = "MC"), fun = fmc, size=1.5)+
+  stat_function(aes(color = "MR"), fun = fmr, size=1.5)+
+  geom_ribbon(aes(x=seq(1,zzz,0.1), ymin=zzzz, ymax=100,
+                  fill='largest profit'),
+              alpha = 0.4)+
+  annotate("text", x = 9.5, y = 90, label = "MR=P",size=8)+
+  annotate("text", x = 9.5, y = 200, label = "MC",size=8)+
+  annotate("text", x = 9.5, y = 135, label = "AC",size=8)+
+  scale_x_continuous(limits = c(1,8), breaks = zzz, labels = "profit maximizing \n output (Q*)") +
+  scale_y_continuous(breaks = zzzz, labels = "profit \n maxmizing \n ATC") +
+  labs(x='Q (pair)',y='($)')
+
+profit4
 ```
-:::
-::::
 
-## Implication
+## MR & MC
 
-- If the government wants to collect revenue, its best to impose a tax on a good with low elasticities.
+- Profit is equals to margin times quantity sold
 
-- If the government wants to change behaviour, tax a good with high elasticities.
+$$ \pi=(P-ATC) \times Q$$
 
-- Taxing cigarettes to discourage smoking maybe ineffective
-  - however, it can be used to gain revenue.
+- hence the red area on the previous 2 graphs.
+
+- When $MR < MC$, the additional Q that we produce reduces profit.
+
+- When $MR > MC$, the additional Q that we produce increases profit.
+
+- That is why at $MR = MC$, we have **profit-maximizing output**. 
+
+## MR & MC
+
+- In Nea's case, she doesn't have any point where $MR=MC$
+
+- In this case, she produce as close as possible with $MR=MC$, but still $MR>MC$
+
+  - profit is starting to go down when $MR<MC$
   
-- Highly inelastic goods may suggest it's a necessity: people may be unhappy with the tax.
+- In a bigger firm with more Q and more continuous data point, $MR=MC$ is very useful and approachable.
 
-## Implication
+## Perfect market
 
-- Same goes with the business people: be careful in increasing price if your product is highly elastically demanded.
+- In the perfect market, producers are price-taking (_pasrah_).
 
-- Next week, we will have a look a bit more detailed on the supply curve: 
-  - what drives the elasticity of supply.
-  - Different types of cost.
+- That is why $MR=P$
+  - no matter how much (or less) a producer produce, the price will always be the same
   
-## Some recap before da quiz
-
-- Elasticities is very important in determining surpluses: CS, PS, revenues.
-
-- Elasticities can be estimated (albeit hard).
-
-- Elasticities vary: $0 \leq 1 \leq \infty$ .
-
-- Many factors influence elasticities.
-
-- You should be able to use elasticity formula and can draw how tax is calculated and drawn.
-
-## Thank You
-
-<iframe src="https://giphy.com/embed/NIsWtysJUrvTG" width="480" height="320" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/cute-NIsWtysJUrvTG">via GIPHY</a></p>
+- We will see next week how the market will look like when producer's action can change prices.
