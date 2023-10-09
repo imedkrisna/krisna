@@ -28,29 +28,29 @@ format:
     
     - Dynamic efficiency: infant industry.
     
-- For any justified government intervention, domestic policies should perform better than trade policies.
+- Important to differentiate between all those arguments.
 
-## The new industrial policy
+## Industrial policy definition
 
-- Industrial policy yg terbaru muncul seiring dengan meningkatnya isu-isu politik dan distribusi pendapatan pekerja.
+Definition from [Juhasz, Lane & Rodrik (2023)](https://www.nber.org/papers/w31538):
 
-- Meski Amerika Serikat terlihat semakin tertutup semenjak terpilihnya Donald Trump, tapi sebenarnya birokrasinya sudah lama memiliki kekhawatiran terhadap globalisasi sejak Obama.
+> government policies that explicitly target the transformation of the structure of economic activity in pursuit of some public goal
 
-- Argumen terhadap industrial policy baru masih berada di sekitar _market failure_
+- Typical goal is a structural change: from agri to manufacturing, from low-tech to hi-tech, etc.
 
-- Meski demikian, new industrial policy menitik beratkan menghindari _government failure_
+- Also sometimes climate change, good jobs, lagging regions, exports promotion or import substitution.
 
-## What is industrial policy?
+- Any policy that can achieve these is an industrial policy.
 
-- **Industrial policy**: policies which **goal** targets the growth or employment of a certain sectors.
+## Industrial policy rationale
 
-    - key part is actively championing a certain sector/firm over others.
+- We must differentiate these goals with zero-sum-game goal.
 
-- Siglitz, Chang: Any policy is industrial policy, including free market!
+- Economists tend to agreed on an intervention that does not help an industry for the sake of itself:
 
-    - boosting STEM benefits STEM-using industries, free market helps boost financial services, infrastructure projects benefit industry native to that location.
+    - that is, some kind of a market failure must exists to justify an intervention.
     
-    - To them, IP is about the instrument rather than the goal.
+- Therefore, its important to design an industrial policy with a set of goals and timeline in mind.
 
 ## Old vs new industrial policy
 
@@ -60,7 +60,7 @@ format:
     
     - capital market liberalization that leads to more crises.
     
-- The best praactice changes amid GVC, global financialization, and global rules of trade & economic system.
+- The best practice changes amid GVC, global financialization, and global rules of trade & economic system.
 
     - less emphasize on trade policies
     
@@ -100,6 +100,14 @@ format:
 
 ## More market failure
 
+- Other types of **externalities** may be considered as well:
+
+    - A negative externalities if a country relies too much on an adversaries or high risk countries.
+    
+    - Good jobs that's can be useful for society as well e.g., STEM jobs, middle-class jobs.
+    
+## More market failure
+
 - **Imperfect capital market**: Developing countries lack good quality financial institutions, hence more credit constraints.
 
 - However, evidence emerges since the various crises that the market is not as efficient in general.
@@ -108,7 +116,7 @@ format:
     
 - Even in the developed world, finance does not come to the promising future industries.
 
-## Government failure
+## Government failure critique
 
 - State intervention is as old as the state itself.
 
