@@ -1,7 +1,7 @@
 ---
-title: "Trade policies"
+title: "The new industrial policy"
 subtitle: "ECES905205 pertemuan 7"
-date: "10 Oktober 2022"
+date: "10 Oktober 2023"
 author: "I Made Krisna Gupta"
 format: 
   revealjs:
@@ -14,344 +14,242 @@ format:
   beamer: default
 ---
 
-## Sejauh ini
+## Last Week {.m}
 
-- Secara teori, gains from trade datang dari:
-  - Perbedaan teknologi dan spesialisasi -> more overall production.
-  - Pillihan basket of goods, karena apa yang dikonsumsi tidak harus sama dengan apa yang diproduksi.
-  - Pilihan merk.
+- Argument pro-trade
+    
+    - specialisation, economies of scale, productivity selection, varieties.
+    
+- Argument against free trade:
 
-- Namun, gains from trade tidak merata:
-  - Pemilik faktor produksi yang kompetisi dengan impor lebih rugi.
-  - Perusahaan yang kalah produktif akan exit.
-  
-## Trade policy
+    - Zero-sum-game for losers (usually better organized)
+    
+    - Zero-sum-game for large countries (leads to FTAs)
+    
+    - Dynamic efficiency: infant industry.
+    
+- For any justified government intervention, domestic policies should perform better than trade policies.
 
-- Voices are not created equal: beberapa segmen masyarakat lebih penting bagi pemerintah.
-  - Namanya juga politik.
-- Segmen-segmen ini akan meminta pemerintah untuk menghalangi perdagangan
-- Bagaimana cara pemerintah melakukannya, dan siapa yang untuk dan rugi dari kebijakan-kebijakan perdagangan?
+## The new industrial policy
 
-## Tarif
+- Industrial policy yg terbaru muncul seiring dengan meningkatnya isu-isu politik dan distribusi pendapatan pekerja.
 
-- Tarif adalah cara paling mendasar untuk membatasi perdagangan.
-  - Awalnya digunakan untuk meningkatkan pendapatan negara.
-  - Namun tujuan terselubungnya adalah proteksi domestic supplier.
-- Jaman dulu, banyak negara maju menggunakan tariff untuk tujuan yang ke-2.
-  - Negara-negara di eropa maupun Amerika Utara dulu pasang tarif untuk proteksi industri dalam negeri.
-  
-## Non-tarif
+- Meski Amerika Serikat terlihat semakin tertutup semenjak terpilihnya Donald Trump, tapi sebenarnya birokrasinya sudah lama memiliki kekhawatiran terhadap globalisasi sejak Obama.
 
-- Seiring dengan penggunaan pajak pendapatan (income tax), tarif menjadi kurang penting bagi pendapatan negara.
-- Berbagai analisis sejak Ricardo juga menunjukkan pentingnya menurunkan tarif $\Rightarrow$ Free Trade Agreements (FTA)
-- Namun keinginan proteksi yang masih ada membuat banyak negara memanfaatkan kebijakan non-tarif atau Non-Tariff Measures (NTM): restriksi quota,
-- Tarif masih digunakan meski tidak seperti dulu.
+- Argumen terhadap industrial policy baru masih berada di sekitar _market failure_
 
-## Analisis Tarif
+- Meski demikian, new industrial policy menitik beratkan menghindari _government failure_
 
-- Analisis tarif merupakan analisis paling dasar namun penting.
-  - Analisis non-tariff juga umumnya menggunuakan tariff-equivalent.
-  - Kita akan menggunakan analisis parsial ekuilibrium.
-  
-- Typically there're 2 types of tariffs:
-  - Specific (dalam IDR per satuan unit)
-  - Ad valorem (persen)
-  
-- Effect differes: small vs large country.
+## What is industrial policy?
 
-## Tariff for small country
+- **Industrial policy**: policies which **goal** targets the growth or employment of a certain sectors.
 
-- We say a country is small when their policy does not affect world price.
+    - key part is actively championing a certain sector/firm over others.
 
-- "small" or "large" here is loosely defined.
-  - the most important thing is it affects world price.
-  - Indonesia is rather small in the import market.
-  - Indonesia is large in vegetable oil and (some) mineral markets.
+- Siglitz, Chang: Any policy is industrial policy, including free market!
 
-- For a small country, a tariff directly affects its domestic price.
-  - World price stays the same.
+    - boosting STEM benefits STEM-using industries, free market helps boost financial services, infrastructure projects benefit industry native to that location.
+    
+    - To them, IP is about the instrument rather than the goal.
 
-## Tariff for small country
+## Old vs new industrial policy
 
-```{r}
-#| label: fig1
-#| warning: false
-library(WDI)
-library(tidyverse)
-library(patchwork)
+- Debates on industrial policy evolves with economic tools that evaluates them.
 
-D<-function(q) 10-q
-S<-function(q) q
+    - that market is imperfect and has its own failures.
+    
+    - capital market liberalization that leads to more crises.
+    
+- The best praactice changes amid GVC, global financialization, and global rules of trade & economic system.
 
-a<-ggplot()+
-  scale_x_continuous(expand=c(0,0),limits = c(0,10),breaks=c(3,4,6,7),
-                     labels=c("Sm","St","Dt","Dm"))+
-  scale_y_continuous(expand=c(0,0),limits = c(0,10),breaks=c(3,4),
-                     labels=c("Pw","Pw+t"))+
-  geom_function(fun = S,size=1, color='red') +
-  stat_function(fun = D,size=1, color='blue')+
-  annotate("segment",x=0,xend=6,y=4,yend=4,lty="dashed")+
-  annotate("segment",x=0,xend=7,y=3,yend=3,lty="dashed")+
-  annotate("segment",x=4,xend=4,y=0,yend=4,lty="dashed")+
-  annotate("segment",x=6,xend=6,y=0,yend=4,lty="dashed")+
-  annotate("segment",x=7,xend=7,y=0,yend=3,lty="dashed")+
-  annotate("segment",x=3,xend=3,y=0,yend=3,lty="dashed")+
-  annotate("text",x=2,y=3.5,label="A")+
-  annotate("text",x=3.7,y=3.2,label="B")+
-  annotate("text",x=5,y=3.5,label="C")+
-  annotate("text",x=6.2,y=3.2,label="D")+
-  labs(x="Q",y="P")+
-  theme_classic()+
-  theme(axis.title.x = element_text(hjust=1),
-        panel.background = element_rect(fill = "#f0f1eb", colour = "#f0f1eb"),
-        plot.background = element_rect(fill = "#f0f1eb"),
-        axis.title.y = element_text(angle=0,hjust=1,vjust=1),
-        panel.grid=element_blank(),
-#        axis.text.x=element_blank(),
-#        axis.text.y=element_blank(),
-#        axis.ticks.x=element_blank(),
-#        axis.ticks.y=element_blank(),
-        legend.position=c(1,1),
-        legend.justification = c(1,1),
-        legend.spacing=unit(0,"cm"),
-        legend.margin=margin(0,0,0,0))
-a
-```
+    - less emphasize on trade policies
+    
+## Old vs new
 
-## Welfare impact
+| Old paradigm | New paradigm |
+| ---------- | ---------- |
+| Always bad: govt failure > market failure | Both present. addressing market failure is important to be rich |
+| Focuses on why (theoretical) | Focuses on how (empirics & policy evaluation) |
+| Use comparative advantage | build new comparative advantage |
+| Dealing with govt failure by reducing their role | Focus on institutional setting |
+| Domestic oriented | Global oriented |
 
-- Jumlah impor turun dari $D_m - S_m$ jadi $D_t-S_t$
-- A+B+C+D = consumer surplus yang hilang.
-- A = consumer surplus yang pindah ke produsen.
-- C = tax revenue = consumer surplus yang pindah ke government.
-- B+D = Deadweight Loss.
+## More market failure {.m}
 
-## Importer is a large country
+- **Coordination problem**: A new sector needs to reach a critical scale to be viable.
 
-```{r}
-#| label: fig2
-#| warning: false
+    - tool makers won't make tools unless the industry that uses it exists, but the industry won't exist without tool makers.
+    
+    - Why study data science if there are no data collectors & industries that use data science? OTOH, firms won't come if they cannot find talent.
+    
+    - remember external economies of scale & agglomeration?
+    
+- Coordination matters on how much to produce: too much, then not enough profit to upscale.
 
-demand<-function(q) 4-.7*q
-supply<-function(q) .7*q
-demand1<-function(q) 7.5-1.5*q
-supply1<-function(q) 1.5*q
+    - notice this is practically a collusion!
 
-a<-ggplot()+scale_x_continuous(limits = c(1,5))+
-  scale_y_continuous(limits = c(1,5))+theme_classic()+
-  theme(axis.title.x = element_text(hjust=1),
-        axis.title.y = element_text(angle=0,hjust=1,vjust=1),
-        panel.grid=element_blank(),
-        axis.text.x=element_blank(),
-        axis.text.y=element_blank(),
-        axis.ticks.x=element_blank(),
-        axis.ticks.y=element_blank(),
-        legend.position=c(1,1),
-        legend.justification = c(1,1),
-        legend.spacing=unit(0,"cm"),
-        legend.margin=margin(0,0,0,0))
-b<-a+
-  labs(x=expression(Q[H]),y=expression(P[H]),color=NULL,fill=NULL)+
-  geom_function(fun = supply,size=1, color='red') +
-  stat_function(fun = demand,size=1, color='blue')
-c<-a+
-  labs(x=expression(Q[F]),y=expression(P[F]),color=NULL,fill=NULL)+
-  geom_function(fun = supply1,size=1, color='red') +
-  stat_function(fun = demand1,size=1, color='blue')
-c+a+b
-  
-```
+## More market failure
 
-## Importer is a large country
+- **Learning externalities**: sometimes firms do not know what products can succeed in the market, what kind of market they are entering (especially in the export market).
 
-- Tariff yang dikeluarkan oleh importir besar menggeser harga dunia.
-  - $P_t - P_{tt}$ adalah tariff rate.
-  - ada **terms of trade** gain karena harga barang impor turun.
-- Dari dulu kalau AS yang bikin tarif, dunia pasti ribut.
-  - Pun ketika RRT yang memberi tarif terutama ke negara yang lebih kecil.
+- Sometimes market solve this:
 
-## Importer is a large country
+    - Vietnam's destination for electronic industries was discovered by Intel, Samsung entering the foldable market.
+    
+- Sometimes it requires a push from the government, particularly amid spillover effect.
 
-```{r}
+## More market failure
 
-a<-ggplot()+
-  scale_x_continuous(expand=c(0,0),limits = c(0,10),breaks=c(3,4,6,7),
-                     labels=c("Sm","St","Dt","Dm"))+
-  scale_y_continuous(expand=c(0,0),limits = c(0,10),breaks=c(2,3,4),
-                     labels=c("Ptt","Pw","Pt"))+
-  geom_function(fun = S,size=1, color='red') +
-  stat_function(fun = D,size=1, color='blue')+
-  annotate("segment",x=0,xend=6,y=4,yend=4,lty="dashed")+
-  annotate("segment",x=0,xend=7,y=3,yend=3,lty="dashed")+
-  annotate("segment",x=4,xend=4,y=0,yend=4,lty="dashed")+
-  annotate("segment",x=6,xend=6,y=0,yend=4,lty="dashed")+
-  annotate("segment",x=7,xend=7,y=0,yend=3,lty="dashed")+
-  annotate("segment",x=3,xend=3,y=0,yend=3,lty="dashed")+
-  annotate("segment",x=0,xend=7,y=2,yend=2,lty="dashed")+
-  annotate("text",x=2,y=3.5,label="A")+
-  annotate("text",x=3.7,y=3.2,label="B")+
-  annotate("text",x=5,y=3.5,label="C")+
-  annotate("text",x=6.2,y=3.2,label="D")+
-  annotate("text",x=5,y=2.5,label="E")+
-  labs(x="Q",y="P")+
-  theme_classic()+
-  theme(axis.title.x = element_text(hjust=1),
-        panel.background = element_rect(fill = "#f0f1eb", colour = "#f0f1eb"),
-        plot.background = element_rect(fill = "#f0f1eb"),
-        axis.title.y = element_text(angle=0,hjust=1,vjust=1),
-        panel.grid=element_blank(),
-        legend.position=c(1,1),
-        legend.justification = c(1,1),
-        legend.spacing=unit(0,"cm"),
-        legend.margin=margin(0,0,0,0))
-a
-```
+- **Imperfect capital market**: Developing countries lack good quality financial institutions, hence more credit constraints.
 
-## Welfare impact of large country's tariff
+- However, evidence emerges since the various crises that the market is not as efficient in general.
 
-- Mirip seperti small country.
-- Cuma karena ada penurunan harga dunia dari $P_w \rightarrow P_{tt}$, maka A,B,C dan D jadi lebih kecil dari kalau small country.
-- Government revenue = C+E
-  - C adalah dari consumer surplus
-  - E dari terms of trade gain.
-- Jika B+D < E, maka tariff bisa memberi net positive welfare $\rightarrow$ yg rugi adalah negara lain.
+    - More crises since 1980s, the age of financial liberalization.
+    
+- Even in the developed world, finance does not come to the promising future industries.
 
-## Tariff and retaliation
+## Government failure
 
-- Importir besar masih bisa untung dari impor tarif.
-- Untuk menghilangkan efek terms of trade, cara terbaik adalah retaliasi:
-  - kasih tarif untuk produk ekspor si importir.
-- Tapi kalau si eksportirnya kecil, maka tarif dia tidak akan ngaruh ke harga.
-  - Negara-negara eropa ngakalin ini dengan bergabung.
-- Jika sama-sama besar, berpotensi mengalami trade war, keduanya rugi.
+- State intervention is as old as the state itself.
 
-## Export subsidy
+- Justru solusi berbasis pasar baru-baru ini saja digunakan untuk mengatasi government failure.
 
-- Export subsidy adalah subsidi yang diberikan pada eksportir.
-  - Jual ke luar negeri jadi lebih murah.
-- Export subsidy ini seperti halnya negative taiff.
-- Konsumen domestik dirugikan karena harga domestik jadi naik.
-- Subsidi membuat firms bisa jual.
+- Rent-seeking by sectors, corruption, inefficient SOEs, mercantilist pressure, land & real estate grabbing.
 
-## Export subsidy
+- Failed to plan exit strategy: forever infant.
 
-::: columns
-::: {.column width=49%}
+## Design principle
 
-```{r}
-#| fig-width: 5
-#| fig-height: 5
-a<-ggplot()+
-  scale_x_continuous(expand=c(0,0),limits = c(0,10),breaks=c(2,3,7,8),
-                     labels=c("Dm","Dt","St","Sm"))+
-  scale_y_continuous(expand=c(0,0),limits = c(0,10),breaks=c(6,7,8),
-                     labels=c("Pss","Pw","Ps"))+
-  geom_function(fun = S,size=1, color='red') +
-  stat_function(fun = D,size=1, color='blue')+
-  annotate("segment",x=0,xend=8,y=6,yend=6,lty="dashed")+
-  annotate("segment",x=0,xend=8,y=7,yend=7,lty="dashed")+
-  annotate("segment",x=8,xend=8,y=0,yend=8,lty="dashed")+
-  annotate("segment",x=2,xend=2,y=0,yend=8,lty="dashed")+
-  annotate("segment",x=0,xend=8,y=8,yend=8,lty="dashed")+
-  annotate("text",x=1,y=7.5,label="A")+
-  annotate("text",x=2.3,y=7.3,label="B")+
-  annotate("text",x=5,y=7.5,label="C")+
-  annotate("text",x=7.5,y=7.3,label="D")+
-  annotate("text",x=2.5,y=6.5,label="E")+
-  annotate("text",x=5,y=6.5,label="F")+
-  annotate("text",x=7.3,y=6.3,label="G")+
-  labs(x="Q",y="P")+
-  theme_classic()+
-  theme(axis.title.x = element_text(hjust=1),
-        panel.background = element_rect(fill = "#f0f1eb", colour = "#f0f1eb"),
-        plot.background = element_rect(fill = "#f0f1eb"),
-        axis.title.y = element_text(angle=0,hjust=1,vjust=1),
-        panel.grid=element_blank(),
-        legend.position=c(1,1),
-        legend.justification = c(1,1),
-        legend.spacing=unit(0,"cm"),
-        legend.margin=margin(0,0,0,0))
-a
-```
-:::
-::: {.column width="49%"}
-- A+B = domestic consumer loss
-- A+B+C = producer gain.
-- B+C+D+E+F+G = Government deficit.
-- D+E+F+G= DWL.
-:::
-:::
+1. Kejar industri teknologi baru / multiplier besar.
 
-## Import quota
+1. Accountability from the receiver of supports. Misalnya, requires performance targets, ada exit clause: when to grow up, what if forever infant.
 
-- Import quota punya analisis yang sama dengan tariff.
-  - Jika kuota ditegakkan, maka harga domestik akan naik.
-  - Selisih antara harga dunia dan harga ddomestik bisa dianggap tarif.
-  - Disebut juga **Ad Vallorem Equivalent**
-- Bedanya ada di siapa yang dapat revenue (quota rent).
-  - Untuk tariff, qquota rent sudah pasti diambil pemerintah.
-  - Gimana dengan kuota impor?
-  
-## Import quota
+1. Maintain competition both domestic and globally.
 
-- Pemerintah biasanya menunjuk perusahaan tertentu untuk impor.
-  - Berarti quota rent akan pergi ke perusahaan importir.
-- Jika quota dilelang, berarti quota rent jadi punya pemerintah.
-  - Dampaknya akan sama persis dengan tarif.
-- Jika kuota diserahkan ke eksportir, maka rent akan jadi milik eksportir. (VER)
+1. Serahkan evaluasi ke independent experts. (Australia: Productivity Comission, Indonesia: UKP4)
 
-## Voluntary Export Restraint (VER)
+1. Kontrol terhadap korupsi.
 
-- Adalah ketika negara importir meminta negara eksportir untuk membatasi ekspor mereka.
-  - Artinya, eksportir membuat semacam kuota ekspor.
-  - Secara administratif jadi kerjaan Kemendag-nya eksportir.
-- Sekarang VER sudah jarang dipake. Dulu marak 1980an untuk mobil, baja dan tekstil (Multi-Fibre Arrangement MFA).
+## Decision-making framework {.m}
 
-## Quota vs tariff
+1. Targeting: Which sectors & why? What are the market failures? Do we have enough resources to deal with the market failure? What is the goal to impose to this sector? (jobs created, new tech discovered, how much exports, etc) 
 
-- Di Indonesia, kuota tidak dilelang oleh negara.
-  - potensi rent seeking behavior (dilelang oleh pejabat).
-- Jika ada perubahan demand atau supply:
-  - tariff yg tetap akan mengubah jumlah impor.
-  - kuota yang tetap akan mengubah harga.
-- Pemerintah harus [set kuota baru](https://www.krisna.or.id/post/sembako/) tiap ada perubahan supply demand
-  
-## Local Content Requirement (LCR)
+1. Implementation: How to assist? What type of public supports are needed? How long should they last? Can we minimize government failures? How to monev?
 
-- Adalah peraturan yang mensyaratkan adanya kandungan domestik.
-- LCR (TKDN) memberikan proteksi bagi industri hulu seperti halnya proteksi dengan kuota.
-- Bagi industri hilir, hal ini akan berpengaruh ke ongkos produksi.
-  - Ongkos produksi ini akan dibebankan ke konsumen.
-  - lihat [post ini](https://www.krisna.or.id/post/tkdn/) untuk lebih lengkapnya.
-- LCR tidak menambah revenue bagi pemerintah.
+1. Governance: who decides which sectors to target? Who is the PIC of which intervention? Who conducts the monev? Who coordinates the action plan? Who collect market feedbacks?
 
-## LCR
+## Which sectors?
 
-- LCR sangat umum diberlakukan di free trage agreement.
-  - Rules of Origin: untuk dapat tarif, sekian persen konten HS harus dari area FTA.
-- Juga jamak terjadi di belanja pemerintah.
-  - Korea, Brazil dan Indonesia mensyaratkan TKDN untuk alkes.
-  - EU dan US mensyaratkan TKDN untuk pembelian solar panel.
-- Di US, pemerintah daerah yang membangun proyek dengan TKDN dapat tambahan dana.
+- Cherif & Hasanov (2019): Often emerge in a tradable goods & services sectors with high degree of R&D and high-skill labors.
 
-## Proteksi berantai
+- The argument for new industrial policy requires a newly emerged industries, not an old one.
 
-- Proteksi industri dapat berakibat perlunya regulasi tambahan.
-- LCR smartphone membuaut smartphone di Indonesia kalah murah dan variasinya berkurang.
-  - Mendorong jastip dan pasar gelap.
-  - Dibuatlah aturan blokir IMEI $\rightarrow$ ongkos lagi.
-- Proteksi jagung $\rightarrow$ pakan ayam jadi mahal $\rightarrow$ ayam dan telur minta diproteksi.
+- Examples: high-tech manufacturing, transportation, communications, financial intermediaries, business services (Cherif et al. 2022), 
 
-## Other trade policies
+- Other industries? Solve the **government failure** first!
 
-- Export credit subsidies: memberikan pinjaman dengan subsidi pemerintah bagi eksportir.
-- Red-tape barriers: sengaja lambat-lambatin prosedur ekspor, nambah pemeriksaan yang redundan, dst.
+## Cost-benefit test
 
-## Summary
+- Must conducted rigorously: capital & labor's opportunity cost
 
-| Policy | Tariff | Export Subsidy | Import Quota | VER |
-| ----- | --- | --- | ----- | ----- |
-| Producer surplus | $\Uparrow$ | $\Uparrow$ | $\Uparrow$ | $\Uparrow$ |
-| Consumer surplus | 
-| Government revenue | $\Uparrow$ | $\Downarrow$ | unchanged (to license holder) | unchanged (to foreign producer) |
-| Overall welfare | $\Downarrow$ if small | $\Downarrow$ | $\Downarrow$ if small | $\Downarrow$ |
+    - unless labor are taken from unemployment.
+    
+    - demand for capital can be seen in growth of consumer credit relative to production credit.
+    
+- Assessing cost is often easier than benefit amid uncertainty (another market failure).
+
+- The government must be prepared to absorb loss (but this is exactly why industrial policy was scrutinized).
+
+## Tools: goods market {.m}
+
+- Many classic trade tools (tariff and NTMs) are prohibited by trade agreements.
+
+    - Engaging with global market is essential for capital, inputs, and competition.
+
+- Export promotion: lower income tax from export revenue, import subsidies for important inputs, export credit subsidies.
+
+- Attracting FDI (for spillover purposes) with tax incentives often too costly with little benefit.
+
+- Tax incentives to use domestic supplies works better than LCR.
+
+- Provide certainty of demand from government procurement.
+
+## Tools: labor market
+
+- Training for workers with specific skills required by the targeted industry.
+
+    - improve vocational education & training.
+    
+    - work very closely with the industry.
+
+- tax incentives to encourage apprenticeship.
+
+- Avoid rigid labor regulations.
+
+## Tools: capital market
+
+- tax incentives for capital investment.
+
+- Direct lending has mixed results, require general knowledge of credit constraint.
+
+    - interest payment subsidy also mixed, with a fiscal burden on top.
+    
+- Credit guarantee can create moral hazard.
+
+- Indonesia is much more conservative after 1998.
+
+## Other tools
+
+- Special Economic Zones: encourage agglomeration, reduces uncertainty in the land market, and can be subject to special price for land. Additionally, can be controlled by the central government.
+
+- R&D subsidy (or via tax incentives), or direct R&D using the state budget.
+
+    - U.S.' DARPA is a great example of the emerging internet-based industries.
+    
+- Macroeconomic stabilisation may benefit one sector than others (e.g., international borrowings vs exports).
+
+## Financing industrial policy
+
+- New industrial policies emphasize on the use of global market instead of import substitution.
+
+- Mostly use tax incentives or some type of subsidies.
+
+- Rich countries with AAA bond ratings are in better position to finance their industrial policies.
+
+- Using tax incentives may reduces other welfare improving programs, and may reduce evaluation budget.
+
+## Typical problems in evaluation
+
+- Endogeneity of treatment: industrial policy typically assigned non-randomly.
+
+    - researchers usually rely on natural experiments.
+    
+    - Better evaluation design requires a degree of randomness, or at least quasi-experiments.
+
+- Just because policy exists does not mean it will be used.
+
+- Lack of attention given to evaluation process: data procurement and monev.
+
+## Tugas
+
+- Industrial policy is extremely broad, but all policies created must be in harmony.
+
+- Select one regulation on industrial policy, and see if you can use the framework in today's lecture to assess the selected regulation!
+
+- Has government done this? If so, you can try to criticise the government's decision framework!
+
+- Next week: international finance.
+
+## References {.s}
+
+- Aiginger, K., & Rodrik, D. (2020). Rebirth of Industrial Policy and an Agenda for the Twenty-First Century. Journal of Industry, Competition and Trade, 20(2), 189-207. https://doi.org/10.1007/s10842-019-00322-3 
+
+- Chang, H.-J., & Andreoni, A. (2020). Industrial Policy in the 21st Century. Development and Change, 51(2), 324-351. https://doi.org/https://doi.org/10.1111/dech.12570 
+
+- Cherif, R., & Hasanov, F. (2019). The Return of the Policy That Shall Not Be Named: Principles of Industrial Policy. IMF Working Paper, 19(74). 
+
+- International Monetary Fund. (2022). Industrial Policy for Growth and Diversification: A Conceptual Framework. IMF Departmental Paper. 
+
+- Stiglitz, J. E. (2015). Industrial policy, learning, and development. WIDER Working Paper 2015/149. https://www.wider.unu.edu/publication/industrial-policy-learning-and-development 
+
+- Wim, N. (2010). Industrial Policy. In (Vol. 2010). Helsinki, Finland: UNU-WIDER.
