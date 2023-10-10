@@ -64,7 +64,7 @@ Definition from [Juhasz, Lane & Rodrik (2023)](https://www.nber.org/papers/w3153
 
     - less emphasize on trade policies
     
-## Old vs new
+## Old vs new {.m}
 
 | Old paradigm | New paradigm |
 | ---------- | ---------- |
@@ -118,9 +118,9 @@ Definition from [Juhasz, Lane & Rodrik (2023)](https://www.nber.org/papers/w3153
 
 ## Government failure critique
 
-- State intervention is as old as the state itself.
+- **information shortcomings**: government probably knows no better than the market.
 
-- Justru solusi berbasis pasar baru-baru ini saja digunakan untuk mengatasi government failure.
+- even if they do, there's a possibility of **political capture**.
 
 - Rent-seeking by sectors, corruption, inefficient SOEs, mercantilist pressure, land & real estate grabbing.
 
@@ -128,15 +128,15 @@ Definition from [Juhasz, Lane & Rodrik (2023)](https://www.nber.org/papers/w3153
 
 ## Design principle
 
-1. Kejar industri teknologi baru / multiplier besar.
+1. Pursue a new industry, preferably with large multiplier.
 
-1. Accountability from the receiver of supports. Misalnya, requires performance targets, ada exit clause: when to grow up, what if forever infant.
+1. Conditionality and Accountability from the receiver of supports.e.g., performance targets such as export market growth.
+
+1. Exit clause: how long these performance must be met.
 
 1. Maintain competition both domestic and globally.
 
-1. Serahkan evaluasi ke independent experts. (Australia: Productivity Comission, Indonesia: UKP4)
-
-1. Kontrol terhadap korupsi.
+1. Independent evaluation outside the government  (Australia: Productivity Comission, Indonesia: UKP4)
 
 ## Decision-making framework {.m}
 
@@ -237,16 +237,6 @@ Definition from [Juhasz, Lane & Rodrik (2023)](https://www.nber.org/papers/w3153
 - Just because policy exists does not mean it will be used.
 
 - Lack of attention given to evaluation process: data procurement and monev.
-
-## Tugas
-
-- Industrial policy is extremely broad, but all policies created must be in harmony.
-
-- Select one regulation on industrial policy, and see if you can use the framework in today's lecture to assess the selected regulation!
-
-- Has government done this? If so, you can try to criticise the government's decision framework!
-
-- Next week: international finance.
 
 ## References {.s}
 
