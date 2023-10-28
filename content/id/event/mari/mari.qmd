@@ -16,7 +16,7 @@ format:
 
 ###### Seminar Ekonomi Internasional
 
-Depok, 30 Oktober 2022
+Depok, 30 Oktober 2023
 
 I Made Krisna Gupta
 
@@ -28,24 +28,35 @@ I Made Krisna Gupta
 -   [S3](https://crawford.anu.edu.au/people/phd/krisna-gupta) di Australian National University
 -   [*Senior Fellow*](https://www.cips-indonesia.org/about) di CIPS Indonesia
 -   Staff pengajar di Politeknik APP Jakarta
--   Blog di [krisna.or.id](https://www.krisna.or.id/)
--   twitter di [\@imedkrisna](https://twitter.com/imedkrisna)
+- Social links:
+
+    -   resume di [imedkrisna.github.io](https://imedkrisna.github.io/)
+    
+    -   Blog di [krisna.or.id](https://www.krisna.or.id/)
+    
+    -   twitter di [\@imedkrisna](https://twitter.com/imedkrisna)
 
 ## Fokus penelitian
 
-- Prinsip dan evaluasi kebijakan industri, perdagangan dan investasi di Indonesia.
+- larangan ekspor nikel dan industrialisasi EV.
+    
+- Omnibus Law dan Sovereign Wealth Fund.
+    
+- tarif dan NTM terhadap impor, kesejahteraan, dan produktivitas.
+    
+- Kompetisi dan keseimbangan harga di industri makanan.
+    
+- Kebijakan perdagangan, industrialisasi, dan dampak lingkungan.
 
-- Beberapa sub-fokus: 
+## Hari ini
 
-    - larangan ekspor nikel dan industrialisasi EV.
-    
-    - Omnibus Law dan Sovereign Wealth Fund.
-    
-    - tarif dan NTM terhadap impor, kesejahteraan, dan produktivitas.
-    
-    - Kompetisi dan keseimbangan harga di industri makanan.
-    
-    - Kebijakan perdagangan, industrialisasi, dan dampak lingkungan.
+- Tentang paper terbaru saya.
+
+-  research process from problem setting, objectives, novel value, hypothesis, methodology, testing, results and conclusions.
+
+- Some tips
+
+- Q & A about this paper, writing in general, or econ in general is all fine!
 
 ## Tentang penelitian ini
 
@@ -53,101 +64,7 @@ I Made Krisna Gupta
 - Ditemukan bahwa hambatan impor mengurangi produktivitas industri secara heterogen.
   - Dampak lartas impor berlawanan dari tujuannya.
 -   Diterima di [Bulletin of Indonesian Economic Studies](https://doi.org/10.1080/00074918.2021.2016613), versi working paper di [ACDE working paper repository](https://acde.crawford.anu.edu.au/publication/working-papers-trade-and-development/19325/heterogeneous-impact-tariff-and-non-tariff).
--   Presentasi ini ada di [s.id/kemenko](https://s.id/kemenko).
-
-## Tentang presentasi hari ini
-
-- Tentang proses penulisan:
-  - menentukan isu
-  - pekinian teori dan isu
-  - proses mencari data
-  - menentukan jurnal
-    
-- Tentang hasil penelitian:
-    - Pendahuluan
-    - Data, metode dan analisis
-    - Diskusi kebijakan dan kesimpulan
-
-# Proses penulisan
-
-## Disclaimer
-
-- Saya adalah dosen dan belum pernah jadi analis kebijakan.
-
-- Materi hari ini dari sudut pandang riset akademik.
-  - kuat di teori dan identifikasi.
-  - wajib punya kontribusi ke literatur terkait.
-  - banyak jargon dan sitasi.
-
-- Saya tidak begitu paham seperti apa kewajiban publikasi bagi analis kebijakan.
-
-- contoh [policy paper](https://www.cips-indonesia.org/publications/the-advent-of-a-new-trade-governance-after-the-omnibus-law%3A-neraca-komoditas) dan [policy brief](https://www.cips-indonesia.org/publications/changes-to-trade-policy-in-presidential-regulation-32%2F2022-on-neraca-komoditas) tentang Neraca Komoditas $\Rightarrow$ bangun narasi
-
----
-
-<iframe src="https://embed.polleverywhere.com/multiple_choice_polls/BuOMSiu0WuHSZvNPcpuyf?controls=none&short_poll=true" width="800px" height="600px"></iframe>
-
----
-
-## {background-image="timeline.png" background-size="contain" background-color="#fff"}
-
----
-
-## Memahami teori dan mekanisme
-
-- Gali literatur terkini
-  - kuliah = _head start_
-  - gunakan _keyword_ yang tepat
-  - Kuliah tamu saya di UI tentang [literature review](https://www.krisna.or.id/slides/litrev/)
-  
-- Pahami teori dan mekanisme, derivasi jika perlu
-
-- Simpulkan literatur, temukan gap, kenali kontribusi kita, lalu buat hipotesis.
-
-- Siapkan mekanisme identifikasi bukti dan kebijakan.
-
-## Mengolah data
-
-- Waktu paling banyak habis di sini.
-
-- Memahami apakah data yg diperlukan ada semua
-  - ga ada? Ganti approach.
-  
-- Data Indonesia umumnya tidak _machine friendly_
-  - tapi ada aja udah syukur.
-
-- Mungkin ketersediaan data justru nilai lebih Kemenko?
-  
-- Siapkan [dokumentasi](https://github.com/imedkrisna/tariff-ntm-industry) yang jelas.
-
-## Cari jurnal
-
-- dari step literatur biasanya dapet jurnal yg cocok.
-
-- Umumnya jurnal punya tema masing-masing
-  - Saya sendiri memilih jurnal regional yang fokus ke Indonesia, mix qual/quant.
-  
-- Bagi dosen yang penting terindeks Scopus <span class="fa fa-grin"></span>
-
-::: {style="text-align: center"}
-
-<a href="https://www.scimagojr.com/journalsearch.php?q=19966&amp;tip=sid&amp;exact=no" title="SCImago Journal &amp; Country Rank"><img border="0" src="https://www.scimagojr.com/journal_img.php?id=19966" alt="SCImago Journal &amp; Country Rank"  /></a>
-
-:::
-
-## Proses publikasi
-
-- Ikut seminar dan konferensi untuk dapat feedback.
-
-- Dari dikirim sampai publikasi cukup lama.
-  - apalagi kalau kirim berkali-kali.
-
-kirim $\Rightarrow$ desk accept $\Rightarrow$ peer-reviewed $\Rightarrow$ accepted for publication, proses editing $\Rightarrow$ publish
-
-- Artikel ini baru di accepted for publication
-  - artikel sebelumnya butuh 2 tahun sampai publikasi.
-
-# Hasil penelitian
+- Kode replikasi ada di [github](https://github.com/imedkrisna/tariff-ntm-industry) tapi datanya ga ada
 
 ## Pendahuluan {.smaller}
 
@@ -192,6 +109,18 @@ kirim $\Rightarrow$ desk accept $\Rightarrow$ peer-reviewed $\Rightarrow$ accept
 -   Diantara kebijakan non-tarif, *trade licensing* dan kuota memiliki pengaruh yang buruk terhadap produktivitas.
 
 -   Dampak yang heterogen: Perusahaan kecil terdampak lebih serius daripada yang besar.
+
+## Approach
+
+- Indonesia wants to grow its manufacturing capacity using various intervention (a.k.a. the infant industry argument).
+
+    - I am interested in trade barriers e.g., tariff & NTMs
+    
+- Basically, how policy $\rightarrow$ industrial growth.
+
+- Policy definition is straightforward: tariff and non-tariff (this one's a bit harder)
+
+- how to measure industrial performance? In this paper, TFP is used.
 
 ## Data
 
@@ -244,7 +173,7 @@ $$y_{it}= \beta_0 + \beta_l l_{it}+ \beta_k k_{it}+ \beta_m m_{it} + \beta_n n_{
 
 -   Eror yang tidak random mengikuti *first-order Markov process* (Levinsohn dan Petrin, 2003)
 
--   Di Stata, *command* `levpet` dapat digunakan.
+-   Di Stata, *command* `levpet` dapat digunakan. Sekarang ada `prodest`.
 
 ## Regresi TFP
 
@@ -274,7 +203,7 @@ $$tfp_{it}=\gamma_0+\sum_{\theta} \gamma_{\theta}c_{\theta i t}+\sum_{\theta} \d
 
 -   parameter $\delta$ menunjukan variasi heterogenitas dampak kebijakan perdagangan ke TFP.
 
-## Hasil Regresi
+## Hasil Regresi {.s}
 
 ::: columns
 ::: {.column width="50%"}
@@ -366,6 +295,16 @@ kbl(tab10b,'html') %>%
 - _tools_ moneter lebih efektif untuk _manage_ neraca pembayaran (Irwin, 2022).
   - Pemerintah harus senantiasa koordinasi dengan BI.
   
+## Other novelties
+
+- Shows difference between WITS tariff (widely used by researchers) vs scrapped tariff.
+
+- Adds to the compilation of problems with SI data.
+
+- Shows heterogeneous effects & fit in the heterogeneous & superstar firms literature.
+
+- Shows the importance of imported input, fits the new industrial policy literature.
+  
 ## _Caveats_
 
 - TFP mungkin merefleksikan _market power_.
@@ -376,6 +315,41 @@ kbl(tab10b,'html') %>%
 - Data yang tidak sempurna.
   - banyak masalah di SI.
   - data bea cukai sangat terbatas.
+  
+## Research process
+
+- Gali literatur terkini
+  - kuliah = _head start_
+  - gunakan _keyword_ yang tepat
+  - Kuliah tamu saya di UI tentang [literature review](https://www.krisna.or.id/slides/litrev/)
+  
+- Pahami teori dan mekanisme, derivasi jika perlu
+
+- Simpulkan literatur, temukan gap, kenali kontribusi kita, lalu buat hipotesis.
+
+- Siapkan mekanisme identifikasi bukti dan kebijakan.
+
+## Mengolah data
+
+- Waktu paling banyak habis di sini.
+
+- Memahami apakah data yg diperlukan ada semua
+  - ga ada? Ganti approach.
+  
+- Data Indonesia umumnya tidak _machine friendly_
+  - tapi ada aja udah syukur.
+
+- Siapkan [dokumentasi](https://github.com/imedkrisna/tariff-ntm-industry) yang jelas.
+
+## Your supervisor
+
+- sering-sering tanya ke pembimbing anda.
+
+- jangan pasif. pembimbing anda pasti sibuk. Anda yang harus tau mau tanya apa.
+
+- Kalau bimbingan jangan kelamaan. mendingan bimbingan sering tapi progres minim daripada dateng-dateng udah bab 5. Dijamin salah semua.
+
+- gak perlu terlalu takut dengan seminar dan sidang. yang penting menguasai.
 
 ## References {visibility="uncounted"}
 
