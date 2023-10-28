@@ -1,9 +1,17 @@
 # Preface {.unnumbered}
 
-This is a Quarto book.
+Why I make this book 
 
-To learn more about Quarto books visit <https://quarto.org/docs/books>.
+(untuk kuliah Politeknik APP Jakarta)
 
-```{r}
-1 + 1
-```
+(perlu ada intro mathematics)
+
+Structure of this book
+
+What this book is about
+
+What this book isn't about
+
+How to use: student
+
+How to use: lecturer
