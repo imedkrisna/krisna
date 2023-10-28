@@ -21,6 +21,7 @@ Contact Info {#contact}
 --------------------------------------------------------------------------------
 
 - <i class="fa fa-envelope"></i> krisna.gupta@outlook.com
+- <i class="fa fa-globe"></i> [imedkrisna.github.io](https:imedkrisna.github.io/)
 - <i class="fa fa-globe"></i> [krisna.or.id](https://krisna.or.id/)
 - For more information, please contact me via email.
 
@@ -91,7 +92,7 @@ N/A
 
 ### Journal Article
 
-- Gupta, Krisna. (2022). The Heterogenous Impact of Tariff and NTM on Total Factor Productivity of Indonesian Firms. *Bulletin of Indonesian Economic Studies*. [DOI: 10.1080/00074918.2021.2016613](https://www.tandfonline.com/doi/full/10.1080/00074918.2021.2016613)
+- Gupta, Krisna. (2023). The Heterogenous Impact of Tariff and NTM on Total Factor Productivity of Indonesian Firms. *Bulletin of Indonesian Economic Studies*. [DOI: 10.1080/00074918.2021.2016613](https://www.tandfonline.com/doi/full/10.1080/00074918.2021.2016613)
 - Gupta, Krisna. (2021). The Importance of Financial Liberalisation for Economic Growth: The Case of Indonesia. *Bulletin of Indonesian Economic Studies*, 57:2, 175-201, [DOI: 10.1080/00074918.2020.1747596](https://www.tandfonline.com/doi/full/10.1080/00074918.2020.1747596)
 
 N/A
@@ -117,6 +118,7 @@ N/A
 
 ### Popular Publications / Oped
 
+- Gupta, Krisna. 2022. [Indonesia's claim that banning nickel exports spurs downstreaming is questionable](https://theconversation.com/indonesias-claim-that-banning-nickel-exports-spurs-downstreaming-is-questionable-180229). The Conversation.
 - Gupta, Krisna and Deasy Pane. 2021. ["Restrictive regulations on foreign trade may hurt economy"](https://www.thejakartapost.com/paper/2021/03/11/restrictive-regulations-on-foreign-trade-may-hurt-economy.html). *The Jakarta Post*.
 - Pasaribu, Donny and Krisna Gupta. 2020. ["Will IA-CEPA be the boost to Australia-Indonesia relations leaders are banking on?"](https://indonesiaatmelbourne.unimelb.edu.au/will-ia-cepa-be-the-boost-to-the-australia-indonesia-relationship-leaders-are-banking-on/). *Indonesia At Melbourne*.
 
@@ -133,10 +135,9 @@ Teaching Experience {data-icon=chalkboard-teacher}
 ### Lecturer
 
 - Politeknik APP (home institution):
-  - [Research Method](https://www.krisna.or.id/courses/metopel/) (2022)
-  - [Documentary Credit](https://www.krisna.or.id/courses/llp/) (2022)
-- Universitas Petra: [Intro to Economics](https://www.krisna.or.id/courses/econ101/) (2020)
-- Universitas Indonesia: [International Trade and Industrial Policy](https://www.krisna.or.id/courses/trade/) (2022)
+  - [Research Method](https://www.krisna.or.id/courses/metopel/) (2023)
+  - [Mathematics & Statistics](https://www.krisna.or.id/courses/statistika/) (2023)
+- Universitas Indonesia: [Trade and Industri economic development analysis](https://www.krisna.or.id/courses/trade/) (2023)
 
 
 N/A
@@ -159,6 +160,32 @@ N/A
 
 Consulting Experience {data-icon=suitcase}
 --------------------------------------------------------------------------------
+
+### Economist
+
+Prospera
+
+Jakarta, Indonesia
+
+2022-2023
+
+::: concise
+- Act as an adviser for Prospera on various project.
+- tax, customs, excise, industry and trade.
+:::
+
+### Lead Economist
+
+Center for Indonesian Policy Studies
+
+Jakarta, Indonesia
+
+2022
+
+::: concise
+- Lead a project on designing RCEP strategic implementation for the Indonesian government.
+- Collaboration with Prospera
+:::
 
 ### Economist
 
