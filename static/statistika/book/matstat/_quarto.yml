@@ -2,9 +2,11 @@ project:
   type: book
 
 book:
-  title: "matstat"
-  author: "Norah Jones"
+  title: "Matematika dan Statistika untuk Bisnis"
+  author: "Krisna Gupta"
   date: "28/10/2023"
+  downloads: pdf
+  page-navigation: true
   chapters:
     - index.qmd
     - intro.qmd
@@ -18,6 +20,8 @@ format:
     theme: cosmo
   pdf:
     documentclass: scrreprt
+  docx:
+    reference-doc: custom-reference.docx
 
 
 
