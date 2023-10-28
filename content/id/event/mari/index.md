@@ -2,26 +2,26 @@
 # Documentation: https://wowchemy.com/docs/managing-content/
 
 title: "The heterogeneous impact of tariff and NTMs on Total Factor Productivity of Indonesian firms"
-event: "Workshop Penulisan Jurnal Ilmiah di Bidang Perniagaan dan Industri Kemenko Perekonomian"
+event: "Seminar Ekonomi Internasional"
 event_url:
-location: 
+location: Program Sarjana Universitas Indonesia Fakultas Ekonomi dan Bisnis.
 address: 
   street:
   city:
   region:
   postcode:
   country:
-summary: Dalam kesempatan ini, saya sharing dengan para analis kebijakan dari Kemenko Perekonomian tentang proses penulisan dan isi dari paper terakhir saya.
-abstract: Dalam kesempatan ini, saya sharing dengan para analis kebijakan dari Kemenko Perekonomian tentang proses penulisan dan isi dari paper terakhir saya.
+summary: Memenuhi undangan Prof. Mari Pangestu, saya membawakan materi tentang artikel jurnal saya di kelas ekonomi internasional yang diampu oleh beliau.
+abstract: Memenuhi undangan Prof. Mari Pangestu, saya membawakan materi tentang artikel jurnal saya di kelas ekonomi internasional yang diampu oleh beliau.
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
-date: 2022-06-13T09:30:03+07:00
-date_end: 2022-06-13T16:00:00+07:00
+date: 2023-10-30T11:00:00+07:00
+date_end: 2023-10-30T12:30:00+07:00
 all_day: false
 
 # Schedule page publish date (NOT event date).
-publishDate: 2022-06-11T14:47:03+07:00
+publishDate: 2023-10-28T14:00:00+07:00
 
 authors: [admin]
 tags: [ekonomi, kebijakan, akademik]
@@ -48,7 +48,7 @@ image:
 # Optional filename of your slides within your event's folder or a URL.
 url_slides: 'mari.html'
 url_code: 'cite.bib'
-url_pdf: 'https://acde.crawford.anu.edu.au/sites/default/files/publication/acde_crawford_anu_edu_au/2021-09/acde_gupta_2021_21.pdf'
+url_pdf: 'https://www.tandfonline.com/doi/full/10.1080/00074918.2021.2016613'
 url_video:
 
 # Markdown Slides (optional).
