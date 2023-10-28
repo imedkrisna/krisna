@@ -2,7 +2,7 @@
 format: 
   revealjs:
     theme: [serif,mytheme.scss]
-    chalkboard: true
+    chalkboard: false
     incremental: false
     transition: convex
     background-transition: fade
@@ -14,9 +14,9 @@ format:
 
 </br></br>
 
-###### Workshop Penulisan Jurnal Ilmiah di Bidang Perniagaan dan Industri
+###### Seminar Ekonomi Internasional
 
-Depok, 13 Juni 2022
+Depok, 30 Oktober 2022
 
 I Made Krisna Gupta
 
@@ -25,8 +25,9 @@ I Made Krisna Gupta
 ## Tentang Penulis
 
 -   Master dari UI-VU Amsterdam di bidang ekonomi
--   [Mahasiswa doktoral](https://crawford.anu.edu.au/people/phd/krisna-gupta) di Australian National University
--   [*Associate researcher*](https://www.cips-indonesia.org/about) di CIPS Indonesia
+-   [S3](https://crawford.anu.edu.au/people/phd/krisna-gupta) di Australian National University
+-   [*Senior Fellow*](https://www.cips-indonesia.org/about) di CIPS Indonesia
+-   Staff pengajar di Politeknik APP Jakarta
 -   Sering menulis tentang kebijakan industri dan perdagangan
 -   Blog di [krisna.or.id](https://www.krisna.or.id/)
 -   twitter di [\@imedkrisna](https://twitter.com/imedkrisna)
