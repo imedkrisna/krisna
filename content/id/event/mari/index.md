@@ -46,9 +46,8 @@ image:
 #   icon: twitter
 
 # Optional filename of your slides within your event's folder or a URL.
-url_slides: 'https://www.krisna.or.id/slides/kemenko/#/the-heterogeneous-impact-of-tariff-and-ntms-on-total-factor-productivity-of-indonesian-firms'
-
-url_code:
+url_slides: 'mari.html'
+url_code: 'cite.bib'
 url_pdf: 'https://acde.crawford.anu.edu.au/sites/default/files/publication/acde_crawford_anu_edu_au/2021-09/acde_gupta_2021_21.pdf'
 url_video:
 
