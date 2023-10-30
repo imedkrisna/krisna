@@ -78,4 +78,4 @@ user_groups:
 
  Nama saya Krisna, sering dipanggil juga Imed. Saya adalah Dosen di Politeknik APP Jakarta. Riset saya tentang dampak kebijakan perdagangan dan investasi terhadap pertumbuhan sektor manufaktur di Indonesia. Saya menggunakan metode persamaan linear struktural seperti GTAP, tapi juga menggunakan berbagai teknik ekonometrika seperti *gravity models*.
 
- Saat ini mengajar di program D3 prodi Perdagangan Internasional di Politeknik APP Jakarta dan Program Pascasarjana Ilmu Ekonomi Universitas Indonesia. Saya juga adalah _associate researcher_ di Center for Indonesian Policy Studies.
+ Saat ini mengajar di program D3 prodi Perdagangan Internasional di Politeknik APP Jakarta dan Program Pascasarjana Ilmu Ekonomi Universitas Indonesia. Saya juga adalah _senior fellow_ di Center for Indonesian Policy Studies.
