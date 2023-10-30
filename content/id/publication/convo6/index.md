@@ -1,13 +1,13 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: "Jokowi resah tabungan mengendap Rp 690 triliun di bank, betulkah masyarakat yang harus belanja?"
-authors: [admin]
-date: 2023-03-02T00:00:00+11:00
+title: "Evaluasi subsidi kendaraan listrik: bagaimana sepeda motor bersubsidi belum mampu gaet masyarakat miskin"
+authors: [admin,Hasran]
+date: 2023-03-08T00:00:00+11:00
 doi: ""
 
 # Schedule page publish date (NOT publication's date).
-publishDate: 2023-03-02T00:00:00+11:00
+publishDate: 2023-03-08T00:00:00+11:00
 
 # Publication type.
 # Legend: 0 = Uncategorized; 1 = Conference paper; 2 = Journal article;
@@ -42,7 +42,7 @@ url_dataset:
 url_poster:
 url_project:
 url_slides:
-url_source: https://theconversation.com/jokowi-resah-tabungan-mengendap-rp-690-triliun-di-bank-betulkah-masyarakat-yang-harus-belanja-200929
+url_source: https://theconversation.com/evaluasi-subsidi-kendaraan-listrik-bagaimana-sepeda-motor-bersubsidi-belum-mampu-gaet-masyarakat-miskin-207743
 url_video:
 
 # Featured image
