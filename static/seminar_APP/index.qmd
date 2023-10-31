@@ -1,0 +1,18 @@
+---
+title: "Ilmu Ekonomi"
+subtitle: "Pertemuan 1"
+author: "Prodi PIWAR Politeknik APP Jakarta"
+format: 
+  pptx:
+    theme: [simple,../mytheme.scss]
+  revealjs:
+    theme: [simple,../mytheme.scss]
+    chalkboard: true
+    incremental: false
+    transition: convex
+    background-transition: fade
+    slide-number: true
+
+---
+
+## Wkwkwkw
