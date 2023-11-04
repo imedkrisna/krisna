@@ -137,6 +137,10 @@ Pakai `broom::tidy()`
 write_csv(broom::tidy(model1),"model1.csv")
 ```
 
+## Modelsumary
+
+Untuk modelsummary, [Lihat sini](https://modelsummary.com/articles/modelsummary.html#output-print-and-save) dan sangat simpel sekali.
+
 # Python
 
 
