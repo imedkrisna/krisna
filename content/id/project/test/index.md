@@ -39,3 +39,5 @@ url_video: ""
 #   Otherwise, set `slides = ""`.
 slides: ""
 ---
+
+- {{% staticref "/project/excise/excise_doc.html" "newtab" %}}Prospera excise project{{% /staticref %}}
