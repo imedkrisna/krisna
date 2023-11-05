@@ -110,23 +110,35 @@ div.csl-indent {
 
 </header>
 
-<p>kirim ke <a href="https://journal.uii.ac.id/index.php/JEP">sini</a></p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This is a work-in-progress. Be careful when citing. I plan to send it <a href="https://onlinelibrary.wiley.com/journal/14678411">here</a> or <a href="https://journal.uii.ac.id/index.php/JEP">here</a></p>
+</div>
+</div>
 <section id="introduction" class="level2" data-number="1">
 <h2 data-number="1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">1</span> Introduction</h2>
 <p>The importance to ramp up efforts to decarbonize Indonesian energy sector just reached a new height.The Indonesian government joined the global bandwagon of committing to a more emission reduction target. Just before the 27<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi></mi><mi>t</mi></msup><mi>h</mi></mrow><annotation encoding="application/x-tex">^th</annotation></semantics></math> session of the Conference of the PRties (COP27), The Indonesian government comitted to a more aggresive reduction of greenhouse gas (GHG) emission by 31.90% by 2030, or by 43.20% with the help of other countries <span class="citation" data-cites="budy">(<a href="#ref-budy" role="doc-biblioref">Resosudarmo, Rezki, and Effendi 2023</a>)</span>.</p>
 <p>For the energy sector, the Indonesian government pledged to reduce the emission from energy sector by 12.5% or by 15.5% with the global help. Energy sector remains an important emitter of GHG in Indonesia. While the target is not as aggresive as the forestry and land use sector, the energy sector is going to account for 58.17% of the total emission in 2030 under the business as usual (BAU) projection <span class="citation" data-cites="budy">(<a href="#ref-budy" role="doc-biblioref">Resosudarmo, Rezki, and Effendi 2023</a>)</span>.</p>
 <p>In the energy sector, electricity generation will play an even greater role going forward. The latest data suggests the Indonesian electricity sector to provide around 20% of the Indonesian total energy needs <span class="citation" data-cites="wahyuni moef">(<a href="#ref-wahyuni" role="doc-biblioref">Wahyuni 2022</a>; <a href="#ref-moef" role="doc-biblioref">MoEF 2021</a>)</span>. This share, however, will increase as the Indonesia nudge toward electrification of cooking and transportation <span class="citation" data-cites="budy">(<a href="#ref-budy" role="doc-biblioref">Resosudarmo, Rezki, and Effendi 2023</a>)</span>. Greening the Indonesian grid, therefore, become one of the most important challenge the Indonesian government must met to achieve the emission target <span class="citation" data-cites="paul2 budy">(<a href="#ref-paul2" role="doc-biblioref">Burke et al. 2019</a>; <a href="#ref-budy" role="doc-biblioref">Resosudarmo, Rezki, and Effendi 2023</a>)</span>.</p>
-<p>This paper aims to discuss the cost of the Indonesian electricity transition toward renewable under the government’s aggressive emission target. Linear optimization assume perfect substitution with constraints is chosen as the preferred method to project the cost of electricity. Linear optimization is suitable for a perfect substitution grid <span class="citation" data-cites="quant">(<a href="#ref-quant" role="doc-biblioref">Sargent and Stachurski, n.d.</a>)</span>. Moreover, the method is simple enough to replicate and provides a useful to make projection and plans given a proper parameterization and constraints.</p>
+<p>This paper aims to discuss the cost of the Indonesian electricity transition toward renewable under the government’s aggressive emission target. Linear optimization assume perfect substitution with constraints is chosen as the preferred method to project the cost of electricity. Linear optimization is suitable for a perfect substitution grid <span class="citation" data-cites="cowell quant">(<a href="#ref-cowell" role="doc-biblioref">Cowell 2006</a>; <a href="#ref-quant" role="doc-biblioref">Sargent and Stachurski, n.d.</a>)</span>. Moreover, the method is simple enough to replicate and provides a useful to make projection and plans given a proper parameterization and constraints.</p>
 <p>findings and its implications</p>
 <p>The next section discusses the literature around the new emission target and Indonesia’s electricity sector. Section 3 explains the method of choice. Section 4 discusses the results and its implications toward greening the grid, and section 5 concludes.</p>
 </section>
 <section id="indonesia-electricity-outlook" class="level2" data-number="2">
 <h2 data-number="2" class="anchored" data-anchor-id="indonesia-electricity-outlook"><span class="header-section-number">2</span> Indonesia electricity outlook</h2>
 <p>Just prior the COP27, Indonesia submitted an optimistic document describing its updated nationally determined contributions (NDCs) <span class="citation" data-cites="budy">(<a href="#ref-budy" role="doc-biblioref">Resosudarmo, Rezki, and Effendi 2023</a>)</span>. Indonesia pledged to reduce total emission by 31.9% under CM1 and 43.2% under CM2<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. Meanwhile, the energy sector is pledged to reduce emission by 12.5% and 15.5% under CM1 and CM2 respectively.</p>
-<p>Looking at a roadmap by The National Energy Council (DEN) of Indonesia, the strategy to achieve this target relies heavily on electrification of energy. According to the Indonesian government’s roadmap, Indonesia would supply 25% of the total energy from reenwables by 2030 <span class="citation" data-cites="budy">(<a href="#ref-budy" role="doc-biblioref">Resosudarmo, Rezki, and Effendi 2023</a>)</span>. On the demand side, it projects a 5.5 million of electric cars, 8.5 million of electric motorcycles, and 5 million households with induction cookers in in 2030 <span class="citation" data-cites="budy">(<a href="#ref-budy" role="doc-biblioref">Resosudarmo, Rezki, and Effendi 2023</a>)</span>.</p>
-<p>Indonesians are among a relatively smaller consumers of electricity, and its use is concentrated mostly in Java island <span class="citation" data-cites="paul1">(<a href="#ref-paul1" role="doc-biblioref">Burke and Kurniawati 2018</a>)</span>. The market is dominated by the state-owned firm, <em>Perusahaan Listrik Negara</em> (PLN), in both distribution and generation <span class="citation" data-cites="budy">(<a href="#ref-budy" role="doc-biblioref">Resosudarmo, Rezki, and Effendi 2023</a>)</span>. While third-party firms is allowed to generate electricity, they must sell it to PLN as the sole distributor of electricity.</p>
+<p>Looking at a roadmap by The National Energy Council (DEN) of Indonesia, the strategy to achieve this target relies heavily on electrification of energy. According to the Indonesian government’s roadmap, Indonesia would supply 25% of the total energy from renewables by 2030 <span class="citation" data-cites="budy">(<a href="#ref-budy" role="doc-biblioref">Resosudarmo, Rezki, and Effendi 2023</a>)</span>. On the demand side, it projects a 5.5 million of electric cars, 8.5 million of electric motorcycles, and 5 million households with induction cookers in in 2030 <span class="citation" data-cites="budy">(<a href="#ref-budy" role="doc-biblioref">Resosudarmo, Rezki, and Effendi 2023</a>)</span>. Indeed, electrification is an important part of the Indonesian effort to fulfill its NDCs.</p>
+<p>Indonesians are among a relatively smaller consumers of electricity, and its use is concentrated mostly in Java island <span class="citation" data-cites="paul1">(<a href="#ref-paul1" role="doc-biblioref">Burke and Kurniawati 2018</a>)</span>. The electricity market is dominated by the state-owned firm, <em>Perusahaan Listrik Negara</em> (PLN), in both distribution and generation <span class="citation" data-cites="budy">(<a href="#ref-budy" role="doc-biblioref">Resosudarmo, Rezki, and Effendi 2023</a>)</span>. While an Independent Power Producer (IPP) is allowed to generate electricity, they must sell it to PLN as the sole distributor of electricity.</p>
 <p>Electricity pricing is highly regulated by the government <span class="citation" data-cites="paul1">(<a href="#ref-paul1" role="doc-biblioref">Burke and Kurniawati 2018</a>)</span>. The electricity tariff schedule is layered and differentiated between consumers. The tariff schedule is separated by households, business, and industry. For each group, tariff is discriminated further by its maximum volt-ampere. Moreover, households are often the highest receiver of subsidy and consequently pay the lowest on electricity compared to businesses and industries <span class="citation" data-cites="paul1">(<a href="#ref-paul1" role="doc-biblioref">Burke and Kurniawati 2018</a>)</span>.</p>
-<p>The road toward greening the greed seems slow. According to <span class="citation" data-cites="pln">PLN (<a href="#ref-pln" role="doc-biblioref">2021</a>)</span> statistics, the percentage of renewables generated by PLN in 2021 is only 8% (see <a href="#tbl-pln">Table&nbsp;1</a>). A large majority of the renewable electricity is sourced by hydropower and geothermal. Additionally, the growth of renewable electricity since 1998 (31.2%) is dwarfed by PLN’s total capacity growth (144.08%). Indeed, the majority of PLN’s capacity growth is from coal, defying the global trend <span class="citation" data-cites="ember paul1">(<a href="#ref-ember" role="doc-biblioref">Lolla and Yang 2021</a>; <a href="#ref-paul1" role="doc-biblioref">Burke and Kurniawati 2018</a>)</span>.</p>
+<p>PLN is central to Indonesia’s electrification strategy. Renewable is projected to be the source of 52% of PLN’s electricity generation <span class="citation" data-cites="memr2">(<a href="#ref-memr2" role="doc-biblioref">MEMR 2020a</a>)</span>. However, the road toward greening the greed seems slow. According to <span class="citation" data-cites="pln">PLN (<a href="#ref-pln" role="doc-biblioref">2021</a>)</span> statistics, the percentage of renewables generated by PLN in 2021 is only 8% (see <a href="#tbl-pln">Table&nbsp;1</a>). A large majority of the renewable electricity is sourced by hydropower and geothermal. Additionally, the growth of renewable electricity since 1998 (31.2%) is dwarfed by PLN’s total capacity growth (144.08%). Indeed, the majority of PLN’s capacity growth is from coal, defying the global trend <span class="citation" data-cites="ember paul1">(<a href="#ref-ember" role="doc-biblioref">Lolla and Yang 2021</a>; <a href="#ref-paul1" role="doc-biblioref">Burke and Kurniawati 2018</a>)</span>.</p>
 <div id="tbl-pln" class="anchored">
 <table class="table">
 <caption>Table&nbsp;1: The amount of renewable electricity by PLN (GWh)</caption>
@@ -144,9 +156,9 @@ div.csl-indent {
 <td>11,869.30</td>
 </tr>
 <tr class="even">
-<td>Geothermal 2,616.80</td>
+<td>Geothermal</td>
+<td>2,616.80</td>
 <td>4,216.17</td>
-<td></td>
 </tr>
 <tr class="odd">
 <td>Solar</td>
@@ -162,15 +174,19 @@ div.csl-indent {
 </table>
 </div>
 <p>The slow growth of renewables stem from the Indonesian’s reliance on coal <span class="citation" data-cites="budy paul2">(<a href="#ref-budy" role="doc-biblioref">Resosudarmo, Rezki, and Effendi 2023</a>; <a href="#ref-paul2" role="doc-biblioref">Burke et al. 2019</a>)</span>. Coal is cheap, abundant, and reliable, reducing the incentives to look for alternative. Moreover, PLN’s pricing is highly regulated by the government. Meaning, already relatively low, Indonesian electricity price cannot be raised by PLN when it is needed. The Indonesian government also would like to limit subsidy, leading to further reliance on coal <span class="citation" data-cites="budy">(<a href="#ref-budy" role="doc-biblioref">Resosudarmo, Rezki, and Effendi 2023</a>)</span>.</p>
-<p>While the PLN’s renewable accounts for only 8% of total PLN generation, renewable accounts for 17% of total general electricity generation <span class="citation" data-cites="ember">(<a href="#ref-ember" role="doc-biblioref">Lolla and Yang 2021</a>)</span>. This majority of the discrepancy may come from third party generation. In 2021, around 36.79% of the Indonesian electricity is generated by third party, which is only 3.78% in 1998. This shows the importance of third party generators for improving the Indonesian renewable electricity capacity. But the growth of third-party generators is also hindered.</p>
-<p>The rise of third party generator for renewables rises in 2013 when the government announced reverse auction for solar panel <span class="citation" data-cites="paul2">(<a href="#ref-paul2" role="doc-biblioref">Burke et al. 2019</a>)</span>. However, a limitation imposed on foreign involvement in both investment and product components as well as low administrative capacity slow down the growth <span class="citation" data-cites="paul2">(<a href="#ref-paul2" role="doc-biblioref">Burke et al. 2019</a>)</span>. Moreover, some projects are too expensive for PLN. Since it does not control price, it cannot impose a premium pricing for some electricity. Lastly, an overcapacity of coal electricity leads PLN to slow down its third-party purchases of renewables. Direct competition with PLN’s own asset is also a known problem in supporting renewable electricity <span class="citation" data-cites="paul2">(<a href="#ref-paul2" role="doc-biblioref">Burke et al. 2019</a>)</span>.</p>
-<p>In short, financial capacity needs to be improved. PLN’s lack of pricing prower and subsidies limit its capacity to invest and absorb energy invested by third party generators. It may need to early-retire a large number of coal powerplant. The government also need to improve grid infrastructure and general project infrastructure to lower the cost of building new renewable generators and its transmission. According to <span class="citation" data-cites="memr">MEMR (<a href="#ref-memr" role="doc-biblioref">2020</a>)</span>, Indonesia needs Rp 3,500 trillion ($0.23 trillion) to achieve its NDCs targets.</p>
-<p>Some of the money will come from the newly set carbon market.</p>
+<p>Indonesia’s renewables are coming mostly from hydropower and geothermal. Unfortunately, the two sources are growing very slowly, mainly due to a slow land acquisition, especially geothermal <span class="citation" data-cites="paul2">(<a href="#ref-paul2" role="doc-biblioref">Burke et al. 2019</a>)</span>. Indonesia’s wind potential is not promising, leaving solar Photovoltaic (solar PV) as the best soource of renewable growth <span class="citation" data-cites="paul2">(<a href="#ref-paul2" role="doc-biblioref">Burke et al. 2019</a>)</span>. Indonesia has a good potential for solar energy and may utilize floating solar panels above waters <span class="citation" data-cites="blakers">(<a href="#ref-blakers" role="doc-biblioref">Blakers and Silalahi 2023</a>)</span>. The ecological impact of blocking the sun on water may still need studies.</p>
+<p>While the PLN’s renewable accounts for only 8% of total PLN generation, renewable accounts for 17% of total general electricity generation <span class="citation" data-cites="ember">(<a href="#ref-ember" role="doc-biblioref">Lolla and Yang 2021</a>)</span>. This majority of the discrepancy may come from IPPs. In 2021, around 36.79% of the Indonesian electricity is generated by IPPs, which is only accounting for 3.78% of total generation in 1998. Moreover, it is projected that IPP would provide 64$ of electricity in 2030 <span class="citation" data-cites="memr2">(<a href="#ref-memr2" role="doc-biblioref">MEMR 2020a</a>)</span>. This shows the importance of IPPs for improving the Indonesian renewable electricity capacity.</p>
+<p>The popularity of IPP rises in 2013 when the government announced reverse auction for solar panel <span class="citation" data-cites="paul2">(<a href="#ref-paul2" role="doc-biblioref">Burke et al. 2019</a>)</span>. However, a limitation imposed on foreign involvement in both investment and product components as well as low administrative capacity slow down the growth <span class="citation" data-cites="paul2">(<a href="#ref-paul2" role="doc-biblioref">Burke et al. 2019</a>)</span>. Moreover, some projects are too expensive for PLN. Since it does not control price, it cannot impose a premium pricing for some expensive IPP projects. Lastly, an overcapacity of coal electricity leads PLN to slow down its third-party purchases of renewables. Direct competition with PLN’s own asset is also a known problem in supporting renewable electricity <span class="citation" data-cites="paul2">(<a href="#ref-paul2" role="doc-biblioref">Burke et al. 2019</a>)</span>.</p>
+<p>In short, financial capacity needs to be improved. PLN’s lack of pricing prower and subsidies limit its capacity to invest and absorb energy invested by third party generators. It may need to early-retire a large number of coal powerplant. The government also need to improve grid infrastructure and general project infrastructure to lower the cost of building new renewable generators and its transmission. According to <span class="citation" data-cites="memr">MEMR (<a href="#ref-memr" role="doc-biblioref">2020b</a>)</span>, Indonesia needs Rp 3,500 trillion ($0.23 trillion) to achieve its NDCs targets.</p>
+<p>Internal financing is constrained considering the limitation of Indonesia’s domestic saving and fiscal capacity <span class="citation" data-cites="gupta budy">(<a href="#ref-gupta" role="doc-biblioref">Gupta 2021</a>; <a href="#ref-budy" role="doc-biblioref">Resosudarmo, Rezki, and Effendi 2023</a>)</span>. One way to improve this situation is to find alternative source of funds like the carbon tax. The Indonesian government issued a for implementing an emission trading system (ETS) in 2021 <span class="citation" data-cites="budy">(<a href="#ref-budy" role="doc-biblioref">Resosudarmo, Rezki, and Effendi 2023</a>)</span>. A pilot project in 2021 results an average carbon price of $2 per tonne of carbon dioxide and a proposed a 30 IDR/kgCO2 carbon tax [<span class="citation" data-cites="cnbc">Putri (<a href="#ref-cnbc" role="doc-biblioref">2022</a>)</span>.</p>
 </section>
 <section id="simulation" class="level2" data-number="3">
 <h2 data-number="3" class="anchored" data-anchor-id="simulation"><span class="header-section-number">3</span> Simulation</h2>
-<section id="method" class="level3" data-number="3.1">
-<h3 data-number="3.1" class="anchored" data-anchor-id="method"><span class="header-section-number">3.1</span> Method</h3>
+<p>This paper proposes a linear optimization method to simulate the state of Indonesian electricity given a changes in carbon quota and prices. The strength of linear optimization method lies in its simplicity in execution and in explaining the resulting output <span class="citation" data-cites="quant">(<a href="#ref-quant" role="doc-biblioref">Sargent and Stachurski, n.d.</a>)</span>. A fully linear system also warrant a solution, and can be adjusted easily by parameterization or additional equations.</p>
+<p>A fully linear system may not represent well the industry’s electricity supply in general. However, if direct competition among different supplier as in <span class="citation" data-cites="paul2">(<a href="#ref-paul2" role="doc-biblioref">Burke et al. 2019</a>)</span> is indeed holds back renewable adoptions, it is likely the perfect substitution be feasible. In the presence of additional contraints, we can poses a restrictions on the parameters.</p>
+<p>This section focuses on building the system, parameterization, and scenarion descriptions.</p>
+<section id="the-linear-system" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="the-linear-system"><span class="header-section-number">3.1</span> The linear system</h3>
 <p>Let <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Q</mi><annotation encoding="application/x-tex">Q</annotation></semantics></math> be a quantity produced by the Indonesian economy which is nested with a leontief production function with energy. That is, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Q</mi><mo>=</mo><mo>min</mo><mrow><mo stretchy="true" form="prefix">(</mo><mi>F</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>.</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>,</mo><mi>G</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>ω</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">Q=\min (F(.),G(\omega))</annotation></semantics></math>, where <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>F</mi><annotation encoding="application/x-tex">F</annotation></semantics></math> is a combination of factors such as capital and labour. Let <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Ω</mi><annotation encoding="application/x-tex">\Omega</annotation></semantics></math> be the total energy required to produce <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Q</mi><annotation encoding="application/x-tex">Q</annotation></semantics></math> in one period. The economy produces <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ω</mi><annotation encoding="application/x-tex">\omega</annotation></semantics></math> with a fully substitute sources:</p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ω</mi><mo>=</mo><msub><mi>w</mi><mi>a</mi></msub><mo>+</mo><msub><mi>w</mi><mi>b</mi></msub><mo>+</mo><msub><mi>w</mi><mi>g</mi></msub></mrow><annotation encoding="application/x-tex">
 \omega=w_a+w_b+w_g
@@ -182,37 +198,40 @@ div.csl-indent {
 \mbox{subject to } \ &amp; \omega=w_a+w_b+w_g
 \end{aligned}
 </annotation></semantics></math></p>
-<p>In this setting, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ω</mi><annotation encoding="application/x-tex">\omega</annotation></semantics></math> is taken as exogenous as the consequence of the Leontief production nest. That is, factor of production is the driver of <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Q</mi><annotation encoding="application/x-tex">Q</annotation></semantics></math> and consequently <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ω</mi><annotation encoding="application/x-tex">\omega</annotation></semantics></math>. This assumption allows the use of the cost minimization technique and observe the cost impact of idiosyncratic shock to prices.</p>
+<p>In this setting, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ω</mi><annotation encoding="application/x-tex">\omega</annotation></semantics></math> is taken as exogenous as the consequence of the Leontief production nest. That is, factor of production is the driver of <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Q</mi><annotation encoding="application/x-tex">Q</annotation></semantics></math> and consequently <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ω</mi><annotation encoding="application/x-tex">\omega</annotation></semantics></math>. This assumption allows the use of the cost minimization technique and observe the cost impact of idiosyncratic shock to prices or <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ω</mi><annotation encoding="application/x-tex">\omega</annotation></semantics></math> (and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Q</mi><annotation encoding="application/x-tex">Q</annotation></semantics></math> by extension) if one needs to change the total output <span class="citation" data-cites="cowell">(<a href="#ref-cowell" role="doc-biblioref">Cowell 2006</a>)</span>.</p>
 <p>We improve this setting by adding emission constraints. We limit total emission coming from the use of each source of energy. Next, we limit how much the total combination of emissions from these sources is allowed. This variable, then, can be set exogenously to reflect the government’s preference of emission.</p>
 <p>Let <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>g</mi></mrow><annotation encoding="application/x-tex">a,b,g</annotation></semantics></math> be parameters which reflect emission generated per megawatt hour by <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>w</mi><mi>a</mi></msub><mo>,</mo><msub><mi>w</mi><mi>b</mi></msub><mo>,</mo><msub><mi>w</mi><mi>g</mi></msub></mrow><annotation encoding="application/x-tex">w_a, w_b, w_g</annotation></semantics></math> respectively. Let <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ε</mi><annotation encoding="application/x-tex">\varepsilon</annotation></semantics></math> be the total emission generated by the Indonesian electricity sector, Then the total emission generated by these sources is:</p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><msub><mi>w</mi><mi>a</mi></msub><mo>+</mo><mi>b</mi><msub><mi>w</mi><mi>b</mi></msub><mo>+</mo><mi>g</mi><msub><mi>w</mi><mi>g</mi></msub><mo>=</mo><mi>ε</mi></mrow><annotation encoding="application/x-tex">
 aw_a+bw_b+gw_g=\varepsilon
 </annotation></semantics></math></p>
 <p>With the above emission constraint, we have a complete linear system as follows:</p>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right" style="text-align: right"><munder><mo>min</mo><mi>W</mi></munder><mspace width="0.222em"></mspace></mtd><mtd columnalign="left" style="text-align: left"><mi>p</mi><mo>⋅</mo><mi>w</mi></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right"><mrow><mtext mathvariant="normal">subject to </mtext><mspace width="0.333em"></mspace></mrow><mspace width="0.222em"></mspace></mtd><mtd columnalign="left" style="text-align: left"><msub><mi>w</mi><mi>a</mi></msub><mo>+</mo><msub><mi>w</mi><mi>b</mi></msub><mo>+</mo><msub><mi>w</mi><mi>G</mi></msub><mo>≥</mo><mi>ω</mi></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right"></mtd><mtd columnalign="left" style="text-align: left"><mi>a</mi><msub><mi>w</mi><mi>a</mi></msub><mo>+</mo><mi>b</mi><msub><mi>w</mi><mi>b</mi></msub><mo>+</mo><mi>g</mi><msub><mi>w</mi><mi>g</mi></msub><mo>≤</mo><mi>ε</mi></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right"></mtd><mtd columnalign="left" style="text-align: left"><msub><mi>w</mi><mi>a</mi></msub><mo>,</mo><msub><mi>w</mi><mi>b</mi></msub><mo>,</mo><msub><mi>w</mi><mi>g</mi></msub><mo>≥</mo><mn>0</mn></mtd></mtr></mtable><annotation encoding="application/x-tex">
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right" style="text-align: right"><munder><mo>min</mo><mi>W</mi></munder><mspace width="0.222em"></mspace></mtd><mtd columnalign="left" style="text-align: left"><mi>p</mi><mo>⋅</mo><mi>w</mi></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right"><mrow><mtext mathvariant="normal">subject to </mtext><mspace width="0.333em"></mspace></mrow><mspace width="0.222em"></mspace></mtd><mtd columnalign="left" style="text-align: left"><msub><mi>w</mi><mi>a</mi></msub><mo>+</mo><msub><mi>w</mi><mi>b</mi></msub><mo>+</mo><msub><mi>w</mi><mi>g</mi></msub><mo>≥</mo><mi>ω</mi></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right"></mtd><mtd columnalign="left" style="text-align: left"><mi>a</mi><msub><mi>w</mi><mi>a</mi></msub><mo>+</mo><mi>b</mi><msub><mi>w</mi><mi>b</mi></msub><mo>+</mo><mi>g</mi><msub><mi>w</mi><mi>g</mi></msub><mo>≤</mo><mi>ε</mi></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right"></mtd><mtd columnalign="left" style="text-align: left"><msub><mi>w</mi><mi>a</mi></msub><mo>,</mo><msub><mi>w</mi><mi>b</mi></msub><mo>,</mo><msub><mi>w</mi><mi>g</mi></msub><mo>≥</mo><mn>0</mn></mtd></mtr></mtable><annotation encoding="application/x-tex">
 \begin{aligned}
 \min_{W} \ &amp;  p \cdot w \\
-\mbox{subject to } \ &amp; w_a+ w_b+ w_G \ge \omega \\
+\mbox{subject to } \ &amp; w_a+ w_b+ w_g \ge \omega \\
  &amp; aw_a+bw_b+gw_g \le \varepsilon \\
  &amp; w_a,w_b,w_g \ge 0\\
 \end{aligned}
 </annotation></semantics></math></p>
 <p>The shock of the model can come from two exogenous variables <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>p</mi><annotation encoding="application/x-tex">p</annotation></semantics></math> which reflects a carbon tax, or <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ε</mi><annotation encoding="application/x-tex">\varepsilon</annotation></semantics></math> which reflects how much carbon quota is given in the economy as a whole.</p>
-<p>The next step is to find a representative parameter. <span class="citation" data-cites="pln">PLN (<a href="#ref-pln" role="doc-biblioref">2021</a>)</span> is the main source of <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ω</mi><annotation encoding="application/x-tex">\omega</annotation></semantics></math> and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>⋅</mo><mi>w</mi></mrow><annotation encoding="application/x-tex">p \cdot w</annotation></semantics></math>. Perusahaan Listrk Negara (PLN) statistics is reliable since it is the sole distributor of electricity in Indonesia. According to <span class="citation" data-cites="pln">PLN (<a href="#ref-pln" role="doc-biblioref">2021</a>)</span>, Indonesia generates 279,511.24 Gigawatt hour (GWh) in 2021. From those, around 60% are produced using coal as its main source and around 23% by some mixes of fossil fuels. Only 17% is generated by renewables, mostly hydroelectric <span class="citation" data-cites="ember pln">(<a href="#ref-ember" role="doc-biblioref">Lolla and Yang 2021</a>; <a href="#ref-pln" role="doc-biblioref">PLN 2021</a>)</span>.</p>
-<p><span class="citation" data-cites="pln">PLN (<a href="#ref-pln" role="doc-biblioref">2021</a>)</span> also contains data on prices per Kilowatt hour of electricity based on sources. Total emission generated by the electricity sector is calculated based on the emission factor and how much energy source is used by the sector. Lastly, emission factor <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>g</mi></mrow><annotation encoding="application/x-tex">a,b,g</annotation></semantics></math> are calibrated from <span class="citation" data-cites="febijanto10">Febijanto (<a href="#ref-febijanto10" role="doc-biblioref">2010</a>)</span> and <span class="citation" data-cites="jrc">Steen (<a href="#ref-jrc" role="doc-biblioref">2021</a>)</span>. The number of emission factor varies between countries and in different reports, and emission factor in this paper tries to balance those differences<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>.</p>
-<p>Also cekidot https://www.cnbcindonesia.com/news/20220119103739-4-308598/pajak-karbon-pltu-berlaku-april-2022-picu-tarif-listrik-naik</p>
-<p>https://publications.jrc.ec.europa.eu/repository/handle/JRC21207</p>
-<p>https://ebtke.esdm.go.id/post/2023/02/01/3414/rencana.pengembangan.pembangkit.nasional.beri.porsi.ebt.lebih.besar?lang=id</p>
 </section>
-<section id="results" class="level3" data-number="3.2">
-<h3 data-number="3.2" class="anchored" data-anchor-id="results"><span class="header-section-number">3.2</span> Results</h3>
-<p>The linear setting in the previous section is trivial enough to be solved by linear programming method in Scipy <span class="citation" data-cites="quant">(<a href="#ref-quant" role="doc-biblioref">Sargent and Stachurski, n.d.</a>)</span>. Four different cases are considered in this paper.</p>
-<table class="table">
-<colgroup>
-<col style="width: 11%">
-<col style="width: 38%">
-<col style="width: 50%">
-</colgroup>
+<section id="parameterization" class="level3" data-number="3.2">
+<h3 data-number="3.2" class="anchored" data-anchor-id="parameterization"><span class="header-section-number">3.2</span> parameterization</h3>
+<p>The next step is to find a representative parameter. <span class="citation" data-cites="pln">PLN (<a href="#ref-pln" role="doc-biblioref">2021</a>)</span> is the main source of <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ω</mi><annotation encoding="application/x-tex">\omega</annotation></semantics></math> and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>⋅</mo><mi>w</mi></mrow><annotation encoding="application/x-tex">p \cdot w</annotation></semantics></math>. Perusahaan Listrk Negara (PLN) statistics is reliable since it is the sole distributor of electricity in Indonesia. According to <span class="citation" data-cites="pln">PLN (<a href="#ref-pln" role="doc-biblioref">2021</a>)</span>, Indonesia generates 289,470.57 Gigawatt hour (GWh) in 2021. From those, around 60% are produced using coal as its main source and around 23% by some mixes of fossil fuels. Only 17% is generated by renewables, mostly hydroelectric <span class="citation" data-cites="ember pln">(<a href="#ref-ember" role="doc-biblioref">Lolla and Yang 2021</a>; <a href="#ref-pln" role="doc-biblioref">PLN 2021</a>)</span>.</p>
+<p><span class="citation" data-cites="pln">PLN (<a href="#ref-pln" role="doc-biblioref">2021</a>)</span> also contains data on prices per Kilowatt hour (KWh) of electricity based on sources. The prices per KWh of solar is used for <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>p</mi><mi>a</mi></msub><annotation encoding="application/x-tex">p_a</annotation></semantics></math> since solar PV has the most promising renewable growth at the moment. The price for coal-based electricity <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>p</mi><mi>b</mi></msub><annotation encoding="application/x-tex">p_b</annotation></semantics></math> is half as expensive as <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>p</mi><mi>a</mi></msub><annotation encoding="application/x-tex">p_a</annotation></semantics></math> accodring to <span class="citation" data-cites="pln">PLN (<a href="#ref-pln" role="doc-biblioref">2021</a>)</span>. Meanwhile, other fossil fuel is priced exactly in between <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>p</mi><mi>a</mi></msub><annotation encoding="application/x-tex">p_a</annotation></semantics></math> and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>p</mi><mi>b</mi></msub><annotation encoding="application/x-tex">p_b</annotation></semantics></math>.</p>
+<p>Lastly, emission factor <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>g</mi></mrow><annotation encoding="application/x-tex">a,b,g</annotation></semantics></math> are calibrated from <span class="citation" data-cites="febijanto10">Febijanto (<a href="#ref-febijanto10" role="doc-biblioref">2010</a>)</span> and <span class="citation" data-cites="jrc">Steen (<a href="#ref-jrc" role="doc-biblioref">2001</a>)</span>. The number of emission factor varies between countries and in different reports, and emission factor in this paper tries to balance those differences<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>. The emission factor is set to be very low (from procuring the photovoltaic panels). The emission factor for coal is ten times from the renewable, while other fossil fuels is set to be 70% of coal. Total emission generated by the electricity sector is calculated based on the emission factor and how much energy source is used by the sector.</p>
+</section>
+<section id="scenarios" class="level3" data-number="3.3">
+<h3 data-number="3.3" class="anchored" data-anchor-id="scenarios"><span class="header-section-number">3.3</span> Scenarios</h3>
+<p>Various scenarios can be tested on this model, but 7 scenarios stand out. Case 1 is the status quo. That is, the source is restricted to fit the current share of electricity by source according to <span class="citation" data-cites="ember">Lolla and Yang (<a href="#ref-ember" role="doc-biblioref">2021</a>)</span>. That is, 17% renewables, 60% coal and 23% from other fossil fuels. This scenario serves as parameterization for total emission emitted by the electricity sector given emission factor. This exercise also provides a baseline cost of the status quo generation.</p>
+<p>Case 2 is the cost optimization given the same electricity generated and the same total emission from case 1. This scenario shows what the model would tell us how much share of electricity would be if the sector is fully substitute with no switching cost. One can argue the case for long-run generation if there is no emission targeting in place. That is, the country adjust the electricity generation solely for accessibility. Looking at how the coal progresses in Indonesia, this scenario would likely shows us a total coal domination if it is not restricted.</p>
+<p>The carbon tax scenario is the case 3. The 50 IDR/kgCO2 is imposed as a carbon tax. This tax is extremely low, however, which translates to 0.6 IDR/KWh. Since the price of electricity in 2023 is around 1,400 IDR/KWh, the proposed carbon tax is extremely trivial. It may poses no change compared to the case 2.</p>
+<p>Case 4 and 5 poses restrictions on the total emission generated. The goal from CM1 and CM2 in the NDCs is implemented on the model. That is, case 4 and 5 imposes a restriction on total emission to be 12.5% and 15.5% lower than case 2 respectively. The goal of these exercise is to show how much more expensive electricity is under these scenarios, on top of the cost to make the switch in the first place.</p>
+<p>Lastly, we would like to know how much cost and emission generated under the government’s plan for the PLN. 2 plans are tested. Case 6 tests the case where 25% of electricity generation is by renewable source as in <span class="citation" data-cites="budy">Resosudarmo, Rezki, and Effendi (<a href="#ref-budy" role="doc-biblioref">2023</a>)</span>. There is a new plan, however, which pose a more aggressive 52% electricity from renewable resources <span class="citation" data-cites="memr2">(<a href="#ref-memr2" role="doc-biblioref">MEMR 2020a</a>)</span>, which will be the case 7.</p>
+<p>All of these cases are summarized in <a href="#tbl-scenarios">Table&nbsp;2</a>. These 7 cases are exercised as a benchmark for possible emission and cost of the Indonesian electricity generation. Moreover, these 7 cases also show the flexibility of the model in projecting cases by altering different exogenous variables. These exercises provides a good comparative static which will be discussed in the next section.</p>
+<div id="tbl-scenarios" class="anchored">
+<table class="table-hover table-striped table">
+<caption>Table&nbsp;2: scenario descriptions</caption>
 <thead>
 <tr class="header">
 <th>case</th>
@@ -224,30 +243,46 @@ aw_a+bw_b+gw_g=\varepsilon
 <tr class="odd">
 <td>1</td>
 <td>status quo</td>
-<td>current share of energy use</td>
+<td>restricting the current share of generation.</td>
 </tr>
 <tr class="even">
 <td>2</td>
 <td>current emission, optimized</td>
-<td>current total emission, optimized</td>
+<td>case 1 without source restriction.</td>
 </tr>
 <tr class="odd">
 <td>3</td>
 <td>carbon tax</td>
-<td>current share but carbon is taxed</td>
+<td>Same emission limit but with a carbon tax</td>
 </tr>
 <tr class="even">
 <td>4</td>
-<td>long-run with aggresive target</td>
-<td>like case 2 but with emission reduced by 27%</td>
+<td>CM1</td>
+<td>same prices but a 12.5% emission reduction</td>
 </tr>
 <tr class="odd">
 <td>5</td>
-<td>long-run with renewable constraint</td>
-<td>case 4 with renewable contraint</td>
+<td>CM2</td>
+<td>same prices but a 15.5% emission reduction</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>Old RUPTL</td>
+<td>case 2 with 25% renewables</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>New RUPTL</td>
+<td>case 2 with 52% renewables</td>
 </tr>
 </tbody>
 </table>
+</div>
+</section>
+</section>
+<section id="results" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="results"><span class="header-section-number">4</span> Results</h2>
+<p>The 7 cases is shown below.</p>
 <p>Case 1: status quo</p>
 <div class="cell" data-execution_count="2">
 <div class="cell-output cell-output-stdout">
@@ -271,56 +306,84 @@ Total electricity generated from other fossil fuels is 0.00 MWh (0.00 %)</code><
 <p>case 3: carbon tax</p>
 <div class="cell" data-execution_count="4">
 <div class="cell-output cell-output-stdout">
-<pre><code>The total cost of electricity generation is 266.48 trillion IDR or 920.59 IDR/KWh
+<pre><code>The total cost of electricity generation is 237.49 trillion IDR or 820.42 IDR/KWh
 The total emission is 225,208,103,460.00 kgCO2
 Total electricity generated from renewables is 71,402,740.60 MWh (24.67 %)
 Total electricity generated from coal is 218,067,829.40 MWh (75.33 %)
 Total electricity generated from other fossil fuels is 0.00 MWh (0.00 %)</code></pre>
 </div>
 </div>
-<p>case 4: aggresive carbon cap</p>
+<p>case 4: CM1</p>
 <div class="cell" data-execution_count="5">
 <div class="cell-output cell-output-stdout">
-<pre><code>The total cost of electricity generation is 282.89 trillion IDR or 977.26 IDR/KWh
-The total emission is 158,745,613,645.60 kgCO2
-Total electricity generated from renewables is 145,249,951.50 MWh (50.18 %)
-Total electricity generated from coal is 144,220,618.50 MWh (49.82 %)
+<pre><code>The total cost of electricity generation is 261.29 trillion IDR or 902.63 IDR/KWh
+The total emission is 190,277,276,630.00 kgCO2
+Total electricity generated from renewables is 110,214,770.41 MWh (38.07 %)
+Total electricity generated from coal is 179,255,799.59 MWh (61.93 %)
 Total electricity generated from other fossil fuels is 0.00 MWh (0.00 %)</code></pre>
 </div>
 </div>
-<p>case 5: non-aggresive transition</p>
+<p>case 5: CM2</p>
 <div class="cell" data-execution_count="6">
 <div class="cell-output cell-output-stdout">
-<pre><code>The total cost of electricity generation is 351.87 trillion IDR or 1,215.57 IDR/KWh
-The total emission is 158,745,613,645.60 kgCO2
-Total electricity generated from renewables is 83,853,372.00 MWh (28.97 %)
-Total electricity generated from coal is 21,427,459.49 MWh (7.40 %)
-Total electricity generated from other fossil fuels is 184,189,738.51 MWh (63.63 %)</code></pre>
+<pre><code>The total cost of electricity generation is 265.75 trillion IDR or 918.07 IDR/KWh
+The total emission is 183,753,484,288.40 kgCO2
+Total electricity generated from renewables is 117,463,428.57 MWh (40.58 %)
+Total electricity generated from coal is 172,007,141.43 MWh (59.42 %)
+Total electricity generated from other fossil fuels is 0.00 MWh (0.00 %)</code></pre>
+</div>
+</div>
+<p>case 6: old RUPTL</p>
+<div class="cell" data-execution_count="7">
+<div class="cell-output cell-output-stdout">
+<pre><code>The total cost of electricity generation is 237.95 trillion IDR or 822.02 IDR/KWh
+The total emission is 224,339,691,750.00 kgCO2
+Total electricity generated from renewables is 72,367,642.50 MWh (25.00 %)
+Total electricity generated from coal is 217,102,927.50 MWh (75.00 %)
+Total electricity generated from other fossil fuels is 0.00 MWh (0.00 %)</code></pre>
+</div>
+</div>
+<p>case 7: new RUPTL</p>
+<div class="cell" data-execution_count="8">
+<div class="cell-output cell-output-stdout">
+<pre><code>The total cost of electricity generation is 286.14 trillion IDR or 988.49 IDR/KWh
+The total emission is 153,998,343,240.00 kgCO2
+Total electricity generated from renewables is 150,524,696.40 MWh (52.00 %)
+Total electricity generated from coal is 138,945,873.60 MWh (48.00 %)
+Total electricity generated from other fossil fuels is 0.00 MWh (0.00 %)</code></pre>
 </div>
 </div>
 <p>bangke <code>{python} case5.biaya()</code> anjay</p>
 </section>
-</section>
-<section id="challenges" class="level2" data-number="4">
-<h2 data-number="4" class="anchored" data-anchor-id="challenges"><span class="header-section-number">4</span> Challenges</h2>
+<section id="challenges" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="challenges"><span class="header-section-number">5</span> Challenges</h2>
 <p>on PV and wind <span class="citation" data-cites="paul2">Burke et al. (<a href="#ref-paul2" role="doc-biblioref">2019</a>)</span></p>
 <p>cap-n-trade Some shit from <span class="citation" data-cites="SEBK17">Sabzevar et al. (<a href="#ref-SEBK17" role="doc-biblioref">2017</a>)</span> and <span class="citation" data-cites="HDZ17">He, Dou, and Zhang (<a href="#ref-HDZ17" role="doc-biblioref">2017</a>)</span> on calculation of cap n trade.</p>
 </section>
-<section id="conclusion" class="level2" data-number="5">
-<h2 data-number="5" class="anchored" data-anchor-id="conclusion"><span class="header-section-number">5</span> Conclusion</h2>
+<section id="conclusion" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="conclusion"><span class="header-section-number">6</span> Conclusion</h2>
 <p>aowkaowkaowk</p>
 </section>
 <section id="bibliography" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="bibliography">Bibliography</h2>
 <div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-blakers" class="csl-entry" role="listitem">
+Blakers, Andrew, and David Silalahi. 2023. <span>“’Limitless’ Energy: How Floating Solar Panels Near the Equator Could Power Future Population Hotspots.”</span> The Conversation. <a href="https://theconversation.com/limitless-energy-how-floating-solar-panels-near-the-equator-could-power-future-population-hotspots-210557">https://theconversation.com/limitless-energy-how-floating-solar-panels-near-the-equator-could-power-future-population-hotspots-210557</a>.
+</div>
 <div id="ref-paul1" class="csl-entry" role="listitem">
 Burke, Paul J., and Sandra Kurniawati. 2018. <span>“Electricity Subsidy Reform in Indonesia: Demand-Side Effects on Electricity Use.”</span> <em>Energy Policy</em> 116: 410–21. https://doi.org/<a href="https://doi.org/10.1016/j.enpol.2018.02.018">https://doi.org/10.1016/j.enpol.2018.02.018</a>.
 </div>
 <div id="ref-paul2" class="csl-entry" role="listitem">
 Burke, Paul J., Jinnie Widnyana, Zeba Anjum, Emma Aisbett, Budy Resosudarmo, and Kenneth G. H. Baldwin. 2019. <span>“Overcoming Barriers to Solar and Wind Energy Adoption in Two Asian Giants: India and Indonesia.”</span> <em>Energy Policy</em> 132: 1216–28. https://doi.org/<a href="https://doi.org/10.1016/j.enpol.2019.05.055">https://doi.org/10.1016/j.enpol.2019.05.055</a>.
 </div>
+<div id="ref-cowell" class="csl-entry" role="listitem">
+Cowell, Frank A. 2006. <em>Microeconomics: Principles and Analysis</em>. OUP Oxford.
+</div>
 <div id="ref-febijanto10" class="csl-entry" role="listitem">
 Febijanto, Irhan. 2010. <span>“Perhitungan Faktor Emisi Di Sistem Jaringan Ketenagalistrikan Jawa-Madura-Bali.”</span> <em>Jurnal Teknologi Lingkungan BPPT</em> 11 (2): 227–37. <a href="https://doi.org/10.29122/jtl.v11i2.1207">https://doi.org/10.29122/jtl.v11i2.1207</a>.
+</div>
+<div id="ref-gupta" class="csl-entry" role="listitem">
+Gupta, Krisna. 2021. <span>“The Importance of Financial Liberalisation to Economic Growth: The Case of Indonesia.”</span> Journal Article. <em>Bulletin of Indonesian Economic Studies</em> 57 (02): 175–201. <a href="https://doi.org/10.1080/00074918.2020.1747596">https://doi.org/10.1080/00074918.2020.1747596</a>.
 </div>
 <div id="ref-HDZ17" class="csl-entry" role="listitem">
 He, Ping, Guowei Dou, and Wei Zhang. 2017. <span>“Optimal Production Planning and Cap Setting Under Cap-and-Trade Regulation.”</span> <em>The Journal of the Operational Research Society</em> 68 (9): 1094–1105. https://doi.org/<a href="https://doi.org/10.1057/s41274-016-0123-1">https://doi.org/10.1057/s41274-016-0123-1</a>.
@@ -328,14 +391,20 @@ He, Ping, Guowei Dou, and Wei Zhang. 2017. <span>“Optimal Production Planning 
 <div id="ref-ember" class="csl-entry" role="listitem">
 Lolla, Aditya, and Muyi Yang. 2021. <span>“Indonesia: Indonesia Defies Global Trend with More Coal in the Generation-Mix.”</span> ember-climate; Global Electricity Review 2021: G20 profile.
 </div>
+<div id="ref-memr2" class="csl-entry" role="listitem">
+MEMR. 2020a. <span>“Rencana Pengembangan Pembangkit Nasional Beri Porsi EBT Lebih Besar.”</span> Ministry of Energy and Mineral Resources Press Release. <a href="https://ebtke.esdm.go.id/post/2023/02/01/3414/rencana.pengembangan.pembangkit.nasional.beri.porsi.ebt.lebih.besar?lang=id">https://ebtke.esdm.go.id/post/2023/02/01/3414/rencana.pengembangan.pembangkit.nasional.beri.porsi.ebt.lebih.besar?lang=id</a>.
+</div>
 <div id="ref-memr" class="csl-entry" role="listitem">
-MEMR. 2020. <span>“Turunkan Emisi 314 Juta Ton CO2 Tahun 2030,indonesia Perlu Investasi Rp 3.500 Triliun.”</span> Ministry of Energy and Mineral Resources. <a href="https://ebtke.esdm.go.id/post/2020/08/24/2613/turunkan.emisi.314.juta.ton.co2.tahun.2030.indonesia.perlu.investasi.rp.3.500.triliun#:~:text=%22Pemerintah%20telah%20mencanangkan%20target%20penurunan%20emisi%20gas%20rumah,2030%20dengan%20estimasi%20kebutuhan%20investasi%20sebesar%20Rp3.500%20triliun.">https://ebtke.esdm.go.id/post/2020/08/24/2613/turunkan.emisi.314.juta.ton.co2.tahun.2030.indonesia.perlu.investasi.rp.3.500.triliun#:~:text=%22Pemerintah%20telah%20mencanangkan%20target%20penurunan%20emisi%20gas%20rumah,2030%20dengan%20estimasi%20kebutuhan%20investasi%20sebesar%20Rp3.500%20triliun.</a>
+———. 2020b. <span>“Turunkan Emisi 314 Juta Ton CO2 Tahun 2030,indonesia Perlu Investasi Rp 3.500 Triliun.”</span> Ministry of Energy and Mineral Resources. <a href="https://ebtke.esdm.go.id/post/2020/08/24/2613/turunkan.emisi.314.juta.ton.co2.tahun.2030.indonesia.perlu.investasi.rp.3.500.triliun#:~:text=%22Pemerintah%20telah%20mencanangkan%20target%20penurunan%20emisi%20gas%20rumah,2030%20dengan%20estimasi%20kebutuhan%20investasi%20sebesar%20Rp3.500%20triliun.">https://ebtke.esdm.go.id/post/2020/08/24/2613/turunkan.emisi.314.juta.ton.co2.tahun.2030.indonesia.perlu.investasi.rp.3.500.triliun#:~:text=%22Pemerintah%20telah%20mencanangkan%20target%20penurunan%20emisi%20gas%20rumah,2030%20dengan%20estimasi%20kebutuhan%20investasi%20sebesar%20Rp3.500%20triliun.</a>
 </div>
 <div id="ref-moef" class="csl-entry" role="listitem">
 MoEF. 2021. <span>“Indonesia Third Biennial Update Report.”</span> Ministry of Environment and Forestry. <a href="https://unfccc.int/sites/default/files/resource/IndonesiaBUR%203_FINAL%20REPORT_2.pdf">https://unfccc.int/sites/default/files/resource/IndonesiaBUR%203_FINAL%20REPORT_2.pdf</a>.
 </div>
 <div id="ref-pln" class="csl-entry" role="listitem">
 PLN. 2021. <span>“Statistik PLN.”</span> 01001-220630. Perusahaan Listrik Negara.
+</div>
+<div id="ref-cnbc" class="csl-entry" role="listitem">
+Putri, Cantika Adinda. 2022. <span>“Pajak Karbon PLTU Berlaku April 2022 Picu Tarif Listrik Naik?”</span> CNBC Indonesia. <a href="https://www.cnbcindonesia.com/news/20220119103739-4-308598/pajak-karbon-pltu-berlaku-april-2022-picu-tarif-listrik-naik">https://www.cnbcindonesia.com/news/20220119103739-4-308598/pajak-karbon-pltu-berlaku-april-2022-picu-tarif-listrik-naik</a>.
 </div>
 <div id="ref-budy" class="csl-entry" role="listitem">
 Resosudarmo, Budy P., Jahen F. Rezki, and Yuventus Effendi. 2023. <span>“Prospects of Energy Transition in Indonesia.”</span> <em>Bulletin of Indonesian Economic Studies</em> 59 (2): 149–77. <a href="https://doi.org/10.1080/00074918.2023.2238336">https://doi.org/10.1080/00074918.2023.2238336</a>.
@@ -347,7 +416,7 @@ Sabzevar, Nikoo, S. T. Enns, Joule Bergerson, and Janne Kettunen. 2017. <span>�
 Sargent, Thomas J., and John Stachurski. n.d. <span>“Intermediate Quantitative Economics with Python.”</span> quantecon.org.
 </div>
 <div id="ref-jrc" class="csl-entry" role="listitem">
-Steen, M. 2021. <span>“Greenhouse Gas Emissions from Fossil Fuel Fired Power Generation Systems.”</span> JRC21207. JRC Publications Repository. <a href="https://publications.jrc.ec.europa.eu/repository/handle/JRC21207">https://publications.jrc.ec.europa.eu/repository/handle/JRC21207</a>.
+Steen, M. 2001. <span>“Greenhouse Gas Emissions from Fossil Fuel Fired Power Generation Systems.”</span> JRC21207. JRC Publications Repository. <a href="https://publications.jrc.ec.europa.eu/repository/handle/JRC21207">https://publications.jrc.ec.europa.eu/repository/handle/JRC21207</a>.
 </div>
 <div id="ref-wahyuni" class="csl-entry" role="listitem">
 Wahyuni, Elisa. 2022. <span>“Challenges in Facing Indonesia’s Energy Commitment.”</span> In <em>Indonesia Post-Pandemic Outlook: Strategy Towards Net-Zero Emissions by 2060 from the Renewables and Carbon-Neutral Energy Perspectives</em>, edited by H. Ardiansyah and P. Ekadewi, 23–40. BRIN Publishing. <a href="https://doi.org/10.55981/brin.562.c3">https://doi.org/10.55981/brin.562.c3</a>.
@@ -360,7 +429,7 @@ Wahyuni, Elisa. 2022. <span>“Challenges in Facing Indonesia’s Energy Commitm
 
 <ol>
 <li id="fn1"><p>CM1 = Counter Measure 1 (without international support), while CM2 = counter measure 2 (with international support).<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>The Indonesian electricity generation grows by 271,58% between 1998-2021. The largest growth comes from third-party grows from 2,938.76 GWh in 1998 to 106,496.69 GWh in 2021.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>See appendix for a more complete codes and parameterisation used in this paper.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{gupta2023,
   author = {Gupta, Krisna},
