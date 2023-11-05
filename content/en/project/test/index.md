@@ -41,3 +41,4 @@ slides: ""
 ---
 
 - {{% staticref "/project/excise/excise_doc.html" "newtab" %}}Prospera excise project{{% /staticref %}}
+- {{% staticref "/project/carbon/green_paper.html" "newtab" %}}Seminar Poltek APP Jakarta{{% /staticref %}}
