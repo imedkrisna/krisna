@@ -214,6 +214,10 @@ Ada beberapa alternatif dari TKDN[^6] :
 1. Perbaiki **proses dan infrastruktur fisik logistik**. Ini juga rasanya cukup jelas :lol: .
 1. Jika semua masih gagal juga, menggunakan **tarif dan subsidi**, meski tidak ideal, masih lebih baik daripada TKDN. Tapi balik lagi ya, problem utama dari tariff tentunya adalah perjanjian dagang dan retaliasi. Tariff lebih mudah dihitung daripada TKDN, sehingga lebih munggkin kena masalah di WTO. Sementara itu, subsidi membebani APBN secara langsung, ga seperti TKDN yang membebani APBN dan ekonomi secara tidak langsung. Yah beginilah kalau punya policy makers & politisi yang ga ngerti cara ngitung _hidden cost_.
 
+## Update
+
+Barusan ada buku baru lagi tentang TKDN buat yang pengen belajar. Buku ini berupa bunga rampai yang ditulis Lili Yan Ing dan Grossman[^7]. Khususnya, ada chapter di buku tsb yg sangat menarik, ditulis Yessi Vadila[^8].
+
 Nanti saya bahas lagi kapan-kapan wkwk. Mention saya di [twitter](https://www.twitter.com/imedkrisna) jika ada komen, kritik, atau saran. Thanks.
 
 [^1]: Fernando, O., & Ing, L. Y. (2022). Indonesia's Local Content Requirements: An Assessment on Consistency with Free Trade Agreement Commitments. *ERIA Discussion Paper Series*, 420. https://www.eria.org/publications/indonesias-local-content-requirements-an-assessment-on-consistency-with-free-trade-agreement-commitments/ 
@@ -222,4 +226,7 @@ Nanti saya bahas lagi kapan-kapan wkwk. Mention saya di [twitter](https://www.tw
 [^4]: Veloso, F. M. (2006). Understanding Local Content Decisions: Economic Analysis and an Application to the Automotive Industry. *Journal of Regional Science*, 46(4), 747-772. https://doi.org/https://doi.org/10.1111/j.1467-9787.2006.00476.x 
 [^5]: Lin, S.-H., & Weng, Y. (2020). Can strengthening the local content requirements meet a government’s need to raise industrial productivity and production? *Journal of Applied Economics*, 23(1), 316-328. https://doi.org/10.1080/15140326.2020.1753468
 [^6]: Hufbauer, G., Schott, J. J., Wada, E., Cimino, C., & Vieiroand, M. (2013). Local Content Requirements : A Global Problem. Peterson Institute for International Economics. http://ebookcentral.proquest.com/lib/anu/detail.action?docID=3385696 
+[^7]: Ing, L. Y., & Grossman, G. M. (2023). Local content requirements: promises and pitfalls. Routledge. https://doi.org/10.4324/9781003415794 
+[^8]: Vadila, Y., & Christian, D. (2023). Effects of Local Content Requirements on Trade. In B. Hoekman & K. Saggi (Eds.), The Political Economy of Trade Policy: Theory, Evidence and Applications. Routledge. https://doi.org/10.4324/9781003415794-7 
+
 
