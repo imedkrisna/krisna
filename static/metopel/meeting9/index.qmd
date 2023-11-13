@@ -1,6 +1,6 @@
 ---
 title: "Beginner Data Viz"
-subtitle: "Pertemuan 12"
+subtitle: "Pertemuan 9"
 author: "Metodologi penelitian"
 format: 
   revealjs:

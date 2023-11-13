@@ -1,5 +1,5 @@
 ---
-title: "Menggunakan Zotero"
+title: "Menggunakan Quarto & Github"
 subtitle: "Pertemuan 11"
 author: "Metodologi penelitian"
 format: 
@@ -14,169 +14,202 @@ format:
 
 ## Hari ini
 
-- Menggunakan Reference manager untuk menyimpan dan memformat referensi.
+-   Menggunakan quarto untuk menulis artikel.
 
-- Mengisi library Zotero
+-   Menggunakan github untuk hosting tulisan anda.
 
-- Mengatur Style
+## Quarto
 
-## Reference manager
+-   Quarto adalah versi *upgrade* dari rscript.
 
-- adalah _software_ yang biasa digunakan akademisi untuk _manage_ daftar pustaka.
+-   Dengan file quarto (ekstensi .qmd), anda bisa menggabungkan kode R anda dengan tulisan, dan dirender menjadi html, pdf dan word sekaligus.
 
-- Menggunakan reference manager tidak wajib!
+    -   setelah itu anda dapat edit wordnya.
 
-    - tapi kalo udah ahli, akan sangat membantu
+-   Tapi kekuatan quarto yang sebenarnya (menurut saya) adalah render html-nya.
+
+## Download Quarto
+
+-   Quarto dapat didownload di [sini](https://quarto.org/docs/get-started/).
+
+-   Atau google aja "download quarto"
+
+-   Quarto dapat digunakan dengan VSCode, Jupyter, dan text editor lainnya. Di kuliah ini, kita pakai RStudio.
+
+## Download Quarto
+
+![](gambar1.jpg)
+
+## Memulai Quarto
+
+![Quarto dapat dimulai dengan \`file -\> new file -\> quarto document](gambar2.jpg)
+
+## Memulai Quarto
+
+![silakan pilih html, bisa juga pdf atau word. lainnya cuekin](gambar3.jpg)
+
+## Memulai Quarto
+
+![akan ada file di lokasi kita edit rscript tapi bukan rscript](gambar4.jpg)
+
+## Memulai Quarto
+
+-   Quarto tidak dirun seperti rscript, tapi dirender.
+
+-   Sekali render, quarto akan menghasilkan file html, pdf atau docx tergantung pilihan di "format".
+
+-   Note bahwa ekstensi Quarto adalah `.qmd` bukan `.r`
+
+-   Diantara 3 dash (---) itu disebut metadata/options/header.
+
+-   Jika anda mulai dengan cara ini, options-nya terbatas di title, author dan format.
+
+## Menggunakan format
+
+-   Saya sudah menyiapkan [format Quarto](https://1drv.ms/u/s!AjelszXKKcmsibt_MGYrBYBHznHTIw?e=yyphLf) untuk anda gunakan.
+
+-   Untuk ke depannya, mendingan pake format saya karena options-nya lebih lengkap.
+
+-   Untuk belajar apa aja yang ditaruh di options-nya, bisa ke [dokumentasi quarto](https://quarto.org/docs/reference/formats/html.html) atau [google](https://www.google.com/search?client=firefox-b-d&q=quarto+yaml+options).
+
+## Cara pakai quarto
+
+-   gunakan tanda pagar (#) untuk judul. Perbanyak pagar untuk level heading yang lebih kecil.
+
+-   Selengkapnya dapat dibaca di [markdown basic](https://quarto.org/docs/authoring/markdown-basics.html)
+
+    -   "Markdown syntax" = apa yang kita ketik di file `.qmd`
+
+    -   "output" = hasilnya ketika dirender.
+
+## Gambar
+
+-   Untuk memasang gambar, anda harus meletakkan file gambarnya di folder yang sama dengan file qmd-nya.
+
+-   Misalnya di folder UAS ada file `index.qmd` dan `gambar1.jpg`
+
+-   Anda bisa attach gambar di hasil render qmd-nya.
+
+-   lengkapnya di [figure basic](https://quarto.org/docs/authoring/figures.html)
+
+## Gambar
+
+-   Cara cepat untuk menaruh tabel atau diagram misalnya dapat dengan cara print screen atau pakai snip (tekan 🪟+`shift`+S)
+
+-   Lalu dicrop hanya part yang ingin anda attach di tulisan anda.
+
+-   save hasil cropnya dalam jpg atau png, lalu kopas ke folder anda.
+
+## tabel
+
+-   Untuk tabel yang simpel, anda dapat gunakan markdown tabel seperti [di sini](https://quarto.org/docs/authoring/tables.html)
+
+- Untuk tabel yang lebih ribet, anda dapat menggunakan tabel editor di qmd. Tekan tombol `visual`. lalu pilih `insert` lalu `table`
+
+- Jika tabelnya ribet banget, buat saja di excel, lalu discreenshot dan gunakan gambar.
+
+## Insert table
+
+![insert tabel ribet](gambar4.jpg)
+
+## R Codes
+
+- R codes dapat langsung ditulis di qmd anda, dan akan dirun ketika anda render.
+
+- R codes harus diawali dengan 3 backticks (sebelah angka 1) dan {r}, diakhiri dengan tanda 3 backticks.
+
+![](gambar12.jpg)
+
+## Hasilnya
+
+
+```{r}
+library(tidyverse)
+library(readxl)
+dat<-read_excel("latihan.xlsx")
+ggplot(data=dat,aes(x=X,y=Y))+
+  geom_point()
+```
+
+
+## Template
+
+- Untuk tugas akhir anda, ambil template qmd yang sudah saya siapkan di [sini](https://1drv.ms/u/s!AjelszXKKcmsibt_MGYrBYBHznHTIw?e=5wZWyC)
+
+- download juga [gambar logo APP](https://1drv.ms/u/s!AjelszXKKcmsib94P19jDzQxzDKuiw?e=ZyhAXU) dan [data latihan](https://1drv.ms/x/s!AjelszXKKcmsib91KU4DqMfl5s0lfQ?e=m5n6aN).
+
+- Simpan semuanya di 1 folder, buka file `index.qmd` dengan R Studio. Pastikan anda sudah install Quarto.
+
+- Pelajari baik-baik file qmd-nya, lalu klik panah kecil di sebelah $\Rightarrow$Render.
+
+- Pilih Render HTML untuk render HTML, atau pilih Render MS Word untuk menjadikannya word.
+
+## Render
+
+![](gambar6.jpg)
+
+## Render
+
+- Jika anda pilih Render HTML, di folder anda akan ada file baru yaitu `index.html` dan sebuah folder baru.
+
+- Jika anda pilih Render MS Word, anda akan lihat file `index.docx`.
+
+- Tentu keunggulan render MS Word adalah anda bisa melanjutkan ngedit di aplikasi word.
+
+- Keunggulan HTML? tentu saja hosting di internet!
+
+    - word juga bisa dikopas ke wordpress sih, tapi kerenan github!
+
+## Github
+
+- Github aslinya adalah sebuah website untuk hosting code projects (disebut juga dengan repository.
+
+- Dia berfungsi sebagai version control dan melakukan kolaborasi terutama untuk project open source.
+
+- Singkatnya, semua programer pasti pernah pake github.
+
+- Namun github bisa menawarkan hosting mini untuk website anda.
+
+## Github
+
+- Buka github dan buat akun baru di [sini](https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home)
+
+- pilih username yang cukup profesional dan mudah diingat.
+
+    - username ini akan jadi bagian dari url website anda.
     
-- Reference manager berguna untuk menyimpan referensi-referensi.
+- Kode verifikasi akan dikirim ke email anda.
 
-    - dapat juga otomatis format APA7 yg digunakan oleh APP.
+- kalau disuruh pilih paket, pilih yang free.
     
-## Kenapa Zotero
-
-- Depannya G!
-
-::: {.fragment}
-GRATIS!
-:::
-
-::: {.fragment}
-- cukup simpel dan powerful.
-
-- Mendeley juga gratis sih, tapi Zotero karena lebih simpel dan [non-profit](https://www.google.com/search?client=firefox-b-d&q=whos+behind+zotero).
-
-- Dokumentasi Zotero [di sini](https://www.zotero.org/support/quick_start_guide)
-:::
-
-## Install Zotero
-
-Ada setidaknya 2 cara download Zotero:
-
-- Download di [Zotero.org/download](https://www.zotero.org/download/).
-
-- Google "Download Zotero".
-
-Anda dapat download Zotero Connector juga untuk browser. Tapi ini ga wajib.
-
-Anda juga bisa buat akun Zotero untuk cloud tapi storagenya kecil.
-
-## Menggunakan Zotero
-
-- Pertama kali dibuka, library anda pasti kosong.
-
-- Anda harus menambahkan library dengan sitasi baru.
-
-- Anda harus ngeset mau pakai style apa.
-
-- Anda dapat menggunakan Zotero Connector (browser) dan word plugin (microsoft word atau libreoffice).
-
-## Tampilan Zotero
-
-![Kalau baru pertama kali, pasti masih pada kosong](gambar1.jpg)
-
-## Tampilan Zotero
-
-![Gunakan tombol yg dilingkari untuk nambah folder](gambar2.jpg)
-
-## Tambah folder atau library {.m}
-
-- folder atau library digunakan untuk mengelompokkan koleksi referensi anda.
-
-- Misalnya anda punya 1 folder isinya referensi untuk tugas, klik gambar folder lalu tulis "tugas metopel" misalnya.
-
-- nanti tiap nambah koleksi, anda bisa click+drag koleksi tersebut ke folder tugas.
-
-- Pas mau nulis tugas akhir, tambah lagi folder "TA", misalnya. Nanti folder itu tinggal diisi semua refernsi yg dipake untuk bikin TA.
-
-## Mengisi library
-
-![Untuk nambah koleksi, tekan tanda plus hijau, lalu pilih sesuai referensinya](gambar3.jpg)
-
-## Mengisi library
-
-![Misalnya memilih journal article, infonya diisi di panel kanan](gambar4.png)
-
-## Mengisi library
-
-- Meskipun anda pilih book misalnya, pilihan yg paling atas masih bisa diganti jadi journal article atau lainnya.
-
-- yang jelas, anda harus isi semuanya dengan isian yang diperlukan, seperti Judul, Author (penulis), Publication (nama jurnalnya), Volume, Issue, dst.
-
-- Nama penulis harus last name dulu baru first name, bisa ditambah sebanyak mungkin.
-
-## Latihan
-
-- Coba isi referensi-referensi berikut ini:
-
-    - [Journal article ini](https://onlinelibrary.wiley.com/doi/10.1111/twec.13231)
-    
-    - [Book Chapter ini, chapter 10](https://penerbit.brin.go.id/press/catalog/book/537)
-
-    - [Berita ini (News Article)](https://www.republika.co.id/berita/rae295349/peneliti-neraca-komoditas-pangan-terganjal-data-akurat)
-    
-    - [Policy paper ini](https://www.cips-indonesia.org/publications/the-advent-of-a-new-trade-governance-after-the-omnibus-law%3A-neraca-komoditas?lang=id)
-    
-## FAQ
-
-- Kalo ga ada nama penulisnya gimana?
-
-    - kosongin aja, atau isi nama institusinya. Untuk nama institusi, isi aja di last name
-    
-- Kalo ngga ada opsi tipe artikelnya gimana?
-
-    - bisanya policy paper, itu ga ada opsinya. gpp pilih aja journal article. Isi yg bisa diisi aja.
-    
-## Cara setting style
-
-- Politeknik APP menggunakan American Psychological Association 7th Edition, atau APA7.
-
-- Kita harus set Zotero ke APA7 dulu sebelum dipakai.
-
-- Klik `Edit` lalu pilih `preferences`
-
-- di tab "cite", pilih "American Psychological Association 7th Edition"
-
-## Style
-
-![](gambar5.png)
-
-## Style
-
-- Jika di Zotero anda belum ada APA7, maka harus install dulu.
-
-- klik "Get additional styles..." (tulisan biru).
-
-- di kolom search, ketik "APA".
-
-- pilih "American Psychological Association 7th Edition", lalu tunggi dia install.
-
-- step ini perlu internet. Tapi kalau sudah diinstall udah ga perlu internet lagi.
-
-## memunculkan referensi
-
-- Blok referensi yang mau dimasukin ke tulisan dengan ctrl+klik kiri.
-
-- Klik kanan, lalu pilih "create bibliography from item...."
-
-- pilih APA7, centang "bibliography" dan "copy to clipboard".
-
-- paste di word atau di qmd.
-
-## Memunculkan referensi
+## Welcome to github
 
 ![](gambar7.jpg)
 
-## Tips & trick
+## Github
 
-- Gunakan google untuk membantu prolem solving, misalnya ketika ada sumber yang anda nggak tau gimana cara cite nya.
+![pilih skip personalization](gambar8.jpg)
 
-- Selalu gunakan folder untuk mengelompokan referensi project anda, sehingga lebih mudah ketika ctrl+click.
+## Membuat website github
 
-- Output dari Zotero bisa jadi kurang sempurna. Selalu cek hasilnya setelah library dari Zotero di-paste di daftar pustaka anda.
+<iframe width="1000" height="600" src="https://www.youtube.com/embed/-NorOid-YQw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-- Dengan qmd, anda juga bisa menggunakan apa yang disebut bibtex. agak lebih advance, tapi bisa membantu kalau anda akan sering nulis akademis.
+## More on Quarto
 
-## Video
+-   Quarto jauh lebih sakti daripada sekedar buat 1 artikel.
 
-<iframe width="1000" height="600" src="https://www.youtube.com/embed/IyTZBFNAYBo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+-   Quarto dapat digunakan untuk membuat website dari 0 (dengan mayoritas ekstensi html), membuat presentasi (kuliah ini dibuat dengan Quarto), dan masih banyak lagi.
 
+    -   membuat website dari 0 jauh lebih susah daripada wordpress atau blogpost, tapi jauh lebih customizable.
+
+-   Jika anda tertarik, anda dapat belajar quarto dan RStudio sendiri lebih jauh.
+
+## Next 3 meetings
+
+- fokus ke cara menulis dan berbagai alternative methods.
+
+- mostly nggak pakai software lagi.
+
+- Karena anda udah bisa quarto, buat dulu aja templatenya. nanti diedit2 sambil kita belajar cara menulis.
+
+- next up: Kerangka, literature review, methods.

@@ -1,6 +1,6 @@
 ---
 title: "Menggunakan beberapa sumber data"
-subtitle: "Pertemuan 10"
+subtitle: "Pertemuan 8"
 author: "Metodologi penelitian"
 format: 
   revealjs:
@@ -13,6 +13,14 @@ format:
 ---
 
 ## After UTS
+
+- Sumber download data & data visualization.
+
+- cara menggunakan reference managers.
+
+- Publish your writing on a website.
+
+- kerangka tulisan, literature review, dan methods.
 
 ## Mengapa kita menggunakan data?
 
@@ -62,7 +70,7 @@ format:
 
 - Excel akan download semua negara untuk 1 indikator. Jangan lupa difilter.
 
-- Dapat dibuka di [data.worldbank.org](data.worldbank.org)
+- Dapat dibuka di [data.worldbank.org](https://data.worldbank.org)
 
 ## WDI in R
 
@@ -155,6 +163,8 @@ dat %>%
 
 - pilih "unduh tabel" di kanan atas, akan didownload dalam excel.
 
+- Untuk data perdagangan Indonesia bisa langsung ke [bps.go.id/exim](https://bps.go.id/exim)
+
 ## SEKI
 
 - SEKI dimaintain oleh BI, naturally isinya adalah data-data sektor riil dan keuangan makro seperti exchange rate, interest rate, dan lain sebagainya.
@@ -174,3 +184,15 @@ dat %>%
 - Tentu saja ada banyak sumber data lain yg dapat anda gunakan. Tapi kalau bisa 4 ini pun sudah lumayan.
 
 ## Next to install
+
+- Harapan kami, anda sudah cukup lancar ngutak atik RStudio.
+
+- Next, pastikan anda punya package `tidyverse`. kalo belum, install dengan `install.packages("tidyverse")`
+
+- Anda perlu mendownload 2 program baru:
+
+    - [Zotero](https://www.zotero.org/download/) utk pertemuan 10;
+    
+    - [Quarto](https://quarto.org/docs/download/index.html) utk pertemuan 11
+
+- nginstallnya gampang. tinggal download, run, lalu pencet next2 aja.
