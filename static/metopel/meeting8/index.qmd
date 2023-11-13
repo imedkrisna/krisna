@@ -1,6 +1,6 @@
 ---
-title: "Logical writing, thinking, and problem solving"
-subtitle: "Pertemuan 8"
+title: "Menggunakan beberapa sumber data"
+subtitle: "Pertemuan 10"
 author: "Metodologi penelitian"
 format: 
   revealjs:
@@ -12,280 +12,165 @@ format:
     slide-number: true
 ---
 
-## Apa yang anda tau? {.m}
+## After UTS
 
-- Apa saja _soft skills_ yang katanya diperlukan di dunia kerja jaman sekarang? Sebutkan yang anda tau!
+## Mengapa kita menggunakan data?
 
-::: columns
-::: {.column width=48%}
+- Data dapat menyampaikan konteks dengan efisien.
+  
+    - pembaca orang sibuk. makanya harus efisien.
 
-::: {.incremental}
-- komunikasi yang baik
-- leadership
-- berpikir kritis
-- kreatif
-- adaptif
-- kolaboratif
-- kompleks problem solving
-:::
+- Data sangat *powerful* untuk menyampaikan pesan.
 
-:::
+- Data menunjukkan seberapa paham kita dengan isu.
 
-::: {.column width=48%}
+- Data biasanya cukup obyektif.
 
-Apa saja yang menurut anda sudah anda kuasai?
+## Bagaimana menggunakan data? {.m}
 
-Apakah anda pernah belajar hal-hal ini?
-:::
-:::
+- data bukanlah cerita! Ia memperkuat.
+  - Data adalah support, bukan inti tulisan anda.
+  - lebih baik jika sudah ada kerangka berpikir.
 
-## Skills {.m}
+- Data tidak harus yang berupa statistik.
+  - bisa juga referensi seperti pasal atau argumen orang lain.
 
-- Kita juga perlu hard skills:
+- Data harus relevan!
+  - jangan pasang data yang anda ga pake.
 
-    - kemampuan berbahasa: bahasa asing, bahasa Indonesia yang benar, bahkan bahasa pemrograman.
-    
-    - Ijazah / gelar akademik
-    
-    - Sertifikat kompetensi: prosedur ekspor impor, presentasi, dataviz, analisis data, dst.
-    
-- Hard skills lebih mudah diukur dan dipelajari.
+- Hati-hati dengan informasi yang partisan.
 
-- Untuk melakukan penelitian, butuh dua-duanya!
+## Beberapa sumber data {.m}
 
-    - mampu berpikir, menyelesaikan masalah dan menulis dengan baik
-    
-## Mengorganisir {.m}
+- [World Development Indicators](https://data.worldbank.org). Memiliki visualisasi yang sangat user friendly dan mudah diakses. Isinya berbagai indikator ekonomi makro dari banyak negara. Dapat diakses dengan package `WDI`.
 
-- Otak kita cenderung melakukan kategorisasi atau asosiasi:
+- [UN COMTRADE database](https://comtrade.un.org/) merupakan sumber data ekspor impor yang dikelola oleh PBB. Memiliki data yang sangat luas tentang ekspor impor berbagai negara dalam berbagai kode HS.
 
-    - menghubungkan 1 hal dengan hal lain untuk mudah mengingat/memahami.
-    
-- Misalnya, coba ingat-ingat 2 hal yang normalnya tidak terkait:
+- [BPS](https://www.bps.go.id/) adalah sumber data resmi milik pemerintah. BPS memiliki berbagai data tentang Indonesia yang cukup akurat di bidang ekonomi maupun bidang lainnya.
 
-::: columns
-::: {.column width=48%}
-Danau
+- [SEKI](https://www.bi.go.id/id/statistik/ekonomi-keuangan/seki/Default.aspx#headingFour) dimaintain BI, isinya indikator-indikator ekonomi termasuk trade. Di BPS juga ada sih.
 
-Sepatu
+## WDI {.m}
 
-Wanita
+- Sumber data yang paling enak nyarinya dan sering sekali saya pakai untuk bikin artikel blog.
 
-Pensil
+- dapat mulai dengan mencari indikator ataupun mencari negara.
 
-Perpustakaan
+- Saya biasanya memulai dengan mencari indikator.
 
-Rel kereta
+- data dapat didisplay, diembed (jika anda cukup tech savvy), dan didwonload dalam bentuk excel.
 
-Buku
-:::
-::: {.column width=48%}
-Gula
+- Excel akan download semua negara untuk 1 indikator. Jangan lupa difilter.
 
-Piring
+- Dapat dibuka di [data.worldbank.org](data.worldbank.org)
 
-Koala
+## WDI in R
 
-Bensin
+- Bagi pengguna R, lebih enak akses WDI pakai package `WDI`.
 
-Sepeda
+- Kami menggunakan package `WDI` untuk bikin materi Metopel part 1.
 
-Gajah
+- Untuk menggunakannya, jangan lupa `install.packages("WDI")` lalu `library("WDI")`. Jangan lupa anda perlu internet tiap ngerun WDI.
 
-Sabun
-:::
-:::
+- Part paling krusial adalam mengetahui "indicator"
 
-## Mengorganisir
+## WDI in R
 
-- Sekarang coba anda “menghubungkan” kedua hal ini dan menggambarkan situasinya di kepala anda: misal gula dilarutkan di air danau, sepatu diletakan di piring, dst. 
+::: panel-tabset
 
-- tutuplah deretan hal di sisi kanan dengan tangan anda dan coba ingat-ingat apa saja yang tertulis di sisi kanan hanya dengan membaca sisi kiri. Rata-rata kita akan dengan mudah melakukannya.
 
-- Namun ternyata ada batasan dalam kemampuan manusia mengingat dan memahami, bahkan berbeda antar individu.
+### Kodenya
 
-## Magical 7 {.m}
+```r
+library(WDI)
+library(tidyverse)
+library(writexl)
 
-Dalam bukunya, Barbara Pinto memberikan contoh seorang suami yang walaupun mager memutuskan untuk pergi keluar rumah di cuaca yang panas dengan tujuan membeli koran (bukunya tahun 1996, saat itu masih relevan). Sambil bersiap-siap untuk keluar rumah, pak suami bertanya ke istrinya apa ada hal lain yang perlu dibeli, jawaban istrinya seperti ini:
+indi<-c(            # membuat dictionary
+  "PDB"="NY.GDP.MKTP.CD", ## nama, diikuti indikator di WDI.
+  "import"="NE.IMP.GNFS.CD" ## Cek indikator di website.
+)
 
-“oiya, aku kayaknya pengen makan buah anggur gara2 lihat iklan di tv”
+dat<-WDI(           # Menarik data World Bank
+  country="all",
+  indicator=indi,
+  start=2019,end=2019,
+)
 
-“kayaknya perlu beli susu juga”
+dat$LPDB<-log(dat$PDB) # menambahkan transformasi log
+dat$Limport<-log(dat$import)
+write_xlsx(dat,"dat.xlsx") # Ngesave hasilnya dalam excel
+View(dat)
+```
 
-“bentar, coba kulihat isi kulkas apa kita masih punya kentang. Eh, perlu beli telur”
+### WDI di R {.m}
 
-“kentang juga perlu beli”
+```{r}
+library(WDI)
+library(tidyverse)
+library(writexl)
+library(kableExtra)
 
-“wortel dan buah jeruk beli dikit aja”
+indi<-c(            # membuat dictionary
+  "PDB"="NY.GDP.MKTP.CD", ## nama, diikuti indikator di WDI.
+  "import"="NE.IMP.GNFS.CD" ## Cek indikator di website.
+)
 
-## Magical  {.m}
+dat<-WDI(           # Menarik data World Bank
+  country="all",
+  indicator=indi,
+  start=2019,end=2019,
+)
 
-Pak suami sudah membuka pintu dan keluar rumah
+dat$LPDB<-log(dat$PDB) # menambahkan transformasi log
+dat$Limport<-log(dat$import)
+dat %>%
+  kbl() %>%
+  kable_minimal()
+```
 
-“mentega!”
+### Excelnya
 
-Sudah masuk mobil
-
-“apel”
-
-“sama yoghurt”
-
-Pak suami bertanya, “udah itu aja?”
-
-Bu istri menjawab, “iya sayang, makasih ya”
-
-Dalam contoh ini, pak suami tidak berusaha membuat daftar belanjaan. Menurut anda barang apa saja yang akan dibeli pak suami?
-
-## Magical  {.m}
-
-- Dalam percobaan yang dilakukan, rata-rata para suami hanya mengingat membeli koran dan buah anggur saja.
-- Bagaimana dengan anda?
-- Menurut para ahli, berdasarkan penelitian dan percobaan, manusia normalnya hanya dapat memahami/mengingat maksimal 7 hal dalam satu waktu, kalaupun lebih atau kurang hanya 2 hal saja.
-- Dalam contoh ini ada 9 hal yang perlu diingat, akan jauh mudah jika kita mengkategorikan hal-hal tadi
-
----
-
-::: columns
-::: {.column width=40% .m}
-- Setelah mengkategorikan 9 hal tadi, kita sekarang hanya perlu mengingat 4 hal saja (dairy product, buah, sayur, telur), setelah itu masing-masing hal akan lebih mudah diingat.
-- Dalam proses ini mungkin masing-masing orang akan menggunakan metode kategorisasi yang berbeda, mungkin berdasarkan warna atau yang lain
-
-:::
-::: {.column width=58%}
-![](aaa.jpg)
-:::
-:::
-
----
-
-- Seluruh proses mental (berpikir, mengingat, memecahkan masalah) pada dasarnya menggunakan prinsip mengelompokan dan merumuskan
-- Hal ini mungkin secara alami bisa kita lakukan, namun mengkomunikasikannya kepada orang lain baik secara lisan maupun tulisan ternyata tidak mudah
-- Karena masing-masing individu memiliki logika berbeda saat melakukan kategorisasi dan perumusan. Komunikasi berarti kita berusaha membuat orang lain memahami logika berpikir yang kita gunakan.
-
----
-
-## BTS rule! {.center .middle background-image="bts.jpg" background-opacity=0.4}
-
-::: {.fragment}
-Untuk menulis 10 ribu kata, anda harus membaca 100 ribu kata!
-:::
-
-::: {.fragment}
-
-$B>T>S$
+<iframe src="https://onedrive.live.com/embed?cid=ACC929CA35B3A537&resid=ACC929CA35B3A537%21153591&authkey=AM2a0jQRZs_4XIo&em=2" width="800" height="500" frameborder="0" scrolling="no"></iframe>
 
 :::
 
-::: {.fragment}
+## UNCOMTRADE
 
-Baca $\Rightarrow$ Tulis $\Rightarrow$ Speak
+- UN COMTRADE adalah bagian dari PBB yang memiliki fungsi menganalisis perdagangan internasional.
 
-:::
+- Database di UN COMTRADE cukup lengkap jika kita tertarik dengan ekspor impor banyak negara dalam HS tertentu.
 
-::: {.fragment}
+- Dapat diakses di [comtrade.un.org](https://comtrade.un.org/), tapi bikin account dulu, lalu login. Gratis.
 
-JANGAN KEBALIK!
+- Hasilnya dapat didownload dalam excel.
 
-:::
+## BPS
 
-::: {.fragment}
+- Badan Pusat Statistik adalah lembaga resmi milik pemerintah yang bertanggung jawab atas pengumpulan dan diseminasi atas berbagai data.
 
-hehe 😊
+- Dapat diakses di [bps.go.id](https://www.bps.go.id/)
 
-:::
+- Menu yang terpenting ada di kiri, lalu pilih judul tabel yang diinginkan.
 
-::: {.fragment}
+- pilih "unduh tabel" di kanan atas, akan didownload dalam excel.
 
-sumber background: [wallpapers.com](https://wallpapers.com/wallpapers/bts-group-photo-near-ocean-xdwcwrqitr1y234b.html)
+## SEKI
 
-:::
+- SEKI dimaintain oleh BI, naturally isinya adalah data-data sektor riil dan keuangan makro seperti exchange rate, interest rate, dan lain sebagainya.
 
-## Deduktif & Induktif {.m}
+- Data-data trade di SEKI juga lumayan menarik.
 
-- Dalam melakukan penelitian pada dasarnya kita akan mengumpulkan berbagai ide yang kita peroleh dari membaca atau melakukan eksperimen, perlu berhati-hati saat kita harus menyimpulkan berdasarkan ide-ide tersebut. Walaupun nampaknya rumit, namun ini basic skill yang diperlukan di era serbuan informasi lewat berbagai media social saat ini.
+- Akses SEKI di [sini](https://www.bi.go.id/id/statistik/ekonomi-keuangan/seki/Default.aspx#headingFour) atau google "SEKI Bank Indonesia"/
 
-- Deduksi adalah kesimpulan yang dibuat berdasarkan minimal 2 pernyataan yang berhubungan. Contohnya: 
-    
-    - Suatu perusahaan yang memenuhi 3 standar kriteria ini layak untuk dibeli sahamnya
-    
-    - Perusahaan A memenuhi 3 standar kriteria yang ditetapkan
-    
-    - Maka, perusahaan A layak dibeli sahamnya.
+- Problem SEKI&BPS->datanya kotor. ga machine readable. Agak PR bersihinnya.
 
-## {background-image="bbb.jpg"}
+## Penutup
 
-## {background-image="bbbb.jpg"}
+- Anda dapat menggunakan data-data di sini untuk tugas akhir.
 
-## Latihan {.m}
+- Jangan lupa mensitasi data-data ini jika anda gunakan.
 
-- Perusahaan Jepang meningkatkan bisnisnya ke pasar Tiongkok
+- Tentu saja ada banyak sumber data lain yg dapat anda gunakan. Tapi kalau bisa 4 ini pun sudah lumayan.
 
-- Perusahaan Amerika meningkatkan bisnisnya ke pasar Tiongkok
-
-    - Para pelaku bisnis tertarik untuk memasuki pasar Tiongkok
-
-Deduktif atau induktif?
-
-::: {.fragment}
-ini induktif
-:::
-
-::: {.fragment}
-contoh deduktif:
-
-- Perusahaan Jepang meningkatkan bisnisnya ke pasar Tiongkok
-
-- Hal ini didorong juga oleh berita bahwa perusahaan Amerika akan memasuki pasar Tiongkok
-:::
-
-
-## Deduktif? Induktif? {.m}
-
-- Dalam penelitian, kita tidak perlu mempermasalahkan apakah kita berpikir secara induktif atau deduktif.
-
-- Mungkin anda mulai dari membuat hipotesis, mungkin anda mulai dari mengamati rangkaian kejadian tidak berhubungan.
-
-    - lebih mungkin anda akan melakukan keduanya
-    
-- Karena itu biasanya apakah induktif atau deduktif, tidak perlu ditulis di laporan penelitian / skripsi.
-
-- Deduktif induktif biasanya lebih diperlukan dalam penulisan paragraf atau pembicaraan.
-
-## Logical fallacy {.m}
-
-Kesalahan logika menyimpulkan yang sering terjadi
-
-- Semua kelinci bisa berlari cepat
-
-- Beberapa kuda bisa berlari cepat
-
-::: {.incremental}
-- Maka, kuda adalah kelinci
-:::
-
-::: {.fragment}
-
-Bukan hanya terjadi dalam penelitian, logical fallacy juga merupakan salah satu template hoax. Contoh berita yang beredar melalui grup wa:
-
-- Seorang ibu rumah tangga telah mematenkan metoda menurunkan kolesterol dari hasil pengamatan kegiatan sehari-harinya. 
-
-- Dia mendapati kenyataan bahwa lemak-lemak di panci dan piring mudah dibersihkan dengan mengguyurnya dengan air mendidih. 
-
-- Dia menyimpulkan bahwa kolesterol tubuh dapat dihilangkan dengan minum air mendidih dua kali sehari.
-
-:::
-
-## Logika problem solving
-
-- Dalam membuat laporan penelitian, normalnya kita akan mengikuti urutan prosedur sebagai berikut:
-
-Merumuskan masalah $\rightarrow$ membuat struktur/kerangka analisis $\rightarrow$ melakukan analisis/mencari solusi $\rightarrow$ menyampaikan/ mengkomunikasikan hasil
-
-- Langkah kritis dan kompleks yang harus dilakukan dengan benar adalah “merumuskan masalah”
-
-
-## Next week
-
-- Metode-metode identifikasi masalah
-
-- Menyusun kerangka analisis
+## Next to install
