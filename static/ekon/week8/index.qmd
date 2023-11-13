@@ -2,6 +2,9 @@
 title: "Ilmu Ekonomi"
 subtitle: "Pertemuan 4"
 author: "Prodi PIWAR Politeknik APP Jakarta"
+execute: 
+  echo: false
+  warning: false
 format: 
   revealjs:
     theme: [simple,../mytheme.scss]
@@ -15,52 +18,87 @@ format:
 
 ---
 
-## Recap on last week
+## What is a macroeconomics?
 
-- We use consumer and producer surplus to measure the efficiency of the economy. We want the combination of both to be generally bigger.
+- We have discussed how consumer and producer makes decision: this is part of a branch of economics called **microeconomics**.
 
-- The two face a constant political battle: consumer wants small prices, producers like high prices.
+- As a (small) economic agent, we make decisions based on cost and benefit. But as an aggregate, our actions will affect the whole economy.
 
-- When market is perfect, intervention often leads to various types of inefficiency
+- **Macroeonomics** is the study of aggregate actions of economic agent: The economy is more than the sum of its parts.
 
-## Today
+## Paradox of thrift
 
-- We will learn about one more intervention: tax.
+- When a firm and a household worry about the prospect of the future, they save and cut spending and investment.
 
-- before we go there, it is best to understand elasticity first.
+- But when all households and firms do this, there will be slowdown in consumption and capital expenditure:
 
-## What's an elasticity?
+- some firms may even reduce their long run output by lowering capital and employment.
 
-- If you are a business owner, understanding elasticity is important aspect to get maximized profit.
+- And when this all snowball, the 'worry about the prospect of the future' become reality: a self-fulfilling prophecy.
 
-- **Price elasticity of demand** of a good is a concept of how much the demand of that good change  its price changes.
-  - we usually just say **elasticity** in short.
+## The emergence of macroeconomics
+
+- Macroeconomics is relatively new. Many consider [John Maynard Keynes](https://en.wikipedia.org/wiki/John_Maynard_Keynes) as the father of macroeconomics study.
+
+- Many economist before 1930s generally study microeconomics. Economic policy prior to 1930 was relatively **self-regulating**.
+
+- [The Great Depression](https://en.wikipedia.org/wiki/Great_Depression) in 1930 changes this: **Keynesian economics** argue that the government can interfere to avoid economic crisis.
+
+## The emergence of macroeconomics
+
+- Keynesian economics brings the importance of **monetary policy** by the central bank, and **fiscal policy** by the government into economic recovery.
+
+- With the emergence of the importance of government, macroeconomic studies attract huge attention from governments around the world.
+
+- It is also important for firms: by analyzing government's possible move, firms can react accordingly.
+
+## Macroeconomic indicators
+
+- Some of the most important issue for macroeconomists are long run economic growth, business cycle, unemployment, inflation and trade balance.
+
+- All of those issues are important for people's welfare.
+
+- We will go through indicators that we look at to analyze these issues.
+
+## Some indicators
+
+<iframe src="https://giphy.com/embed/JEfkiZHu8Y0bS" width="480" height="268" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/romy-donald-trump-JEfkiZHu8Y0bS">via GIPHY</a></p>
+
+## Long run economic growth
+
+- What is important to people in general is access to goods and services.
+
+- It is impractical to watch all possible goods and services, so we aggregate them into one indicator.
+
+- We measure economic activity with **Gross Domestic Product** (GDP).
+
+  - Calculating GDP in detail is covered in accounting.
   
-- Maximizing profit requires this knowledge:
-  - sometimes it is better to sell cheap to gain huge market share, or sell high if niche.
-  
-## Calculating elasticity
+## Long run economic growth
 
-:::: columns
-::: {.column width=47%}
-- Consider the demand curve on the right.
+- Long run economic growth indicates how rich the general population of a country becomes.
 
-- At $P_1=10$, the daily traffic is $Q_1=140$
+- As economy of a country grows, its people get more access to goods and services.
+  - on the other hand, recession causes misery to everyone.
 
-- When $P_2=11$, daily traffic drops to $Q_2=127.3$
-:::
+- eg, only 50% Indonesians has access to electricity in 1990. Today it's almost 100%.
 
-::: {.column width=47%}
-```{r grafik1,echo=FALSE, message=FALSE, warning=FALSE}
+- Economic growth can also be an indicator for business to investment opportunities. 
+
+## South Korea was as poor as Indonesia in 1950s
+
+```{r}
+#| label: grafik1
+#| echo: false
+#| message: false
+#| warning: false
 #| fig-width: 10
-#| fig-height: 8
+
+
+library(kableExtra)
 library(dplyr)
 library(ggplot2)
 library(ggdark)
-
-demand <- function(q) (q/1400)^(-1)
-q<-c(127.3,140)
-p<-c(11,10)
 
 graph<-ggplot()+
   dark_theme_bw(base_size=25)+
@@ -70,891 +108,407 @@ graph<-ggplot()+
         panel.grid.minor = element_blank(),
         axis.line = element_line(colour = "#e0e0e0"))
 
-grafik1 <- graph +
-  stat_function(fun = demand,size=1.1, color='cyan') +
-  scale_x_continuous(limits=c(120,150), 
-                     breaks = q) +
-  scale_y_continuous(limits=c(9,12), 
-                     breaks = p) +
-  geom_segment(data = data_frame(q=127.3,p=11),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=127.3,p=11),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=140,p=10),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=140,p=10),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2)+
-  labs(title="Toll road demand \n for Surabaya-Gempol", x="Q (1000 cars/day)", y="P (1000 IDR)")+
-  geom_text(aes(x = 150, y = 9.7, label = "D"), parse = TRUE, size =8, color = '#e0e0e0')
-grafik1
-
+library(WDI)
+data<-WDI(indicator = 'NY.GDP.PCAP.KD', country = c('IDN','KOR'))
+gdp<-graph+
+  geom_line(data=data,aes(x=year,y=NY.GDP.PCAP.KD,color=country),size=2)+
+  labs(y='constant 2010 $',title='GDP per Capita, Indonesia and South Korea',caption='source: World Development Indicators')
+gdp
 ```
-:::
-::::
 
-## Calculating elasticity {.s}
+## Business cycle
 
-- To calculate elasticity of demand, we first calculate:
-  1. percent change in the quantity demanded
-  1. percent change in the price
+- While economy in the long run generally grows, it has a small ups and downs in the short run.
 
-- Formula for no.1:
+- This ups and downs give information on how economy in the long run will run.
 
-$$
-\tag{1}
-\text{% change in }Q^D=\frac{Q_2^D-Q_1^D}{Q_1^D}\times 100
-$$
+- This is the feature of economy: Sometimes business reach its peak and slowing down.
 
+- We generally are not worry when it's a **business cycle peak**, but recession is where the government needs to interfere.
 
-- Formula for no.2:
+## Employment
 
-$$
-\tag{2}
-\text{% change in P}=\frac{P_2-P_1}{P_1}\times 100
-$$
+- Since business employs people, business cycle tends to be followed by employment cycle.
 
+- We use **unemployment rate** as an indicator.
 
-## Calculating elasticity {.m}
+- These days, the approach toward employment is rather mixed: some stimulate economy for business, some others provide various benefits to unemployed.
 
-- for our case, we have:
+- But in the end a state's main role is to keep its people have access to various goods and services.
 
-$$
-\begin{align*}
-Q_1^D&=140 & Q_2^D&=127.3 \\ P_1&=10 & P_2&=11
-\end{align*}
-$$
+## Inflation and deflation
 
-- Thus:
+- inflation is the overall rise of price level, deflation is the overall decrease of price level.
 
-$$
-\begin{align}
-\text{% change in }Q^D &= \frac{127.3-140}{127.3}\times 100 \\ &=-10 \%
-\end{align}
-$$
-
-$$
-\begin{align}
-\text{% change in P} &= \frac{11-10}{10}\times 100 \\ &=10\%
-\end{align}
-$$
-
-## Calculating elasticity {.s}
-
-- After we get the numbers from {1} and {2}, we use this formula:
-
-$$
-\tag{3}
-\text{Price elasticity of demand}=\frac{\text{% change in }Q^D}{\text{% change in P}}
-$$
-
-
-- in our case, we have:
-
-$$
-\begin{align}
-\text{Price elasticity of demand}&=\frac{-10\%}{10\%} \\ &=-1
-\end{align}
-$$
-
-## Calculating elasticity
-
-- Economists are also lazy in writing the minus sign.
-
-- Usually we report demand elasticity in **absolute term**.
-  - i.e., we drop the minus sign.
+- In the firm and consumer level, we usually compare price changes **relative to other goods**.
+  - for example, we discussed how iPhone remains competitive even though it is **more expensive** than other phones.
   
-- However, since most demand curves are downward sloping, it must be negative
-  - hence we automatically knows what it means even when we report in absolute term.
+- However, most goods and services tends to have increased level of price.
 
-## About percent change
+- Rise in wage $\rightarrow$ rise in inflation $\rightarrow$ rise in wage.
 
-Using percent changes is more useful than absolute changes
-- Things are usually move on proportion
-  - A wealthy person will feel casual getting 1 million IDR because it's probably just a small % of her total wealth.
-    
-- Quantity and prices have many metrics
-  - kgs, litres, units, pairs, units/day, etc
-  - IDR, USD, btc, etc.
+## Inflation
 
-## interpreting elasticity
+- Inflation tend to happen during the peak business cycle, while deflation happens during the recession
 
-<iframe src="https://giphy.com/embed/WYEWpk4lRPDq0" width="400" height="400" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/cat-WYEWpk4lRPDq0">via GIPHY</a></p>
-
-## Interpreting elasticity
-
-- We have seen the elasticity of our toll road case is around 1, but what does this mean?
-
-- Note that the elasticity formula has % change in Q at the top, and % change in P at the bottom.
-
-- In a sense, the number shows how much quantity change given the price change.
-
-- that means, the bigger the number of the price elasticity, **the more elastic it is**
-
-## A market is elastic. So what?
-
-Let's have a look at different 'kind' of elasticities and what they mean
-
-We'll begin with two extreme cases of elasticity: zero (0) and infinity ( $\infty$ )
-
-## Two extreme cases
-
-- Suppose the toll road is the only way to go to work.
-  - No matter how high the price, people will still need to use it.
-  - Hence, change in the demand of toll road is zero for any change in price.
+    - We often hate inflation but it can be an indicator of thriving economic activity
   
-- Suppose shuttlecocks are priced 10.000 IDR
-  - If people don't care about the shuttlecocks' color, everyone will buy the pink one if the price drop to 9.900
-  - Everyone won't buy a single one if the price go up only to 10.100 IDR
+- Inflation leads to distrust over cash because cash lost its value rather quickly (like 1998)
 
-## Two extreme cases of elasticity
+- Deflation is the opposite: people tends to save because it will be more valuable, which may leads to less economic growth.
 
-:::: columns
-::: {.column width=47%}
-```{r grafik2, message=FALSE, warning=FALSE, echo=FALSE}
-grafik2 <- graph +
-  geom_vline(xintercept=125, color = "cyan",size=2)+
-  scale_x_continuous(limits=c(120,130), 
-                     breaks = 125) +
-  scale_y_continuous(limits=c(9,12), 
-                     breaks = p) +
-  geom_segment(data = data_frame(q=125,p=11),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=125,p=10),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2)+
-  labs(title="Perfectly inelastic demand (0)", x="Q", y="P")+
-  geom_text(aes(x = 125.5, y = 9, label = "D[1]"), parse = TRUE, size =8, color = '#e0e0e0')
-grafik2
+## Trade balance
+
+- Indonesia is a (somewhat) open economy: we trade with other states.
+
+- Indonesia generally runs **trade surplus** where it has more exports than imports.
+
+- You might have heard about how Indonesian government despise **trade deficit** and starting to say bad things about import.
+
+- In reality, trade deficit doesn't mean a bad thing. Trade deficit means a country invests more than it saves.
+
+## Indonesia's trade balace
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| fig-width: 10
+
+trade<-WDI(indicator = 'NE.RSB.GNFS.CD', country = 'IDN',start=2001)
+XR<-WDI(indicator = 'PA.NUS.FCRF', country = 'IDN',start=2001)
+trade$lol<-trade$NE.RSB.GNFS.CD/1000000
+trd<-graph+
+  geom_line(data=trade,aes(x=year,y=lol),size=2, color='cyan')+
+  geom_hline(yintercept=0)+
+  labs(y='current billion $',title='Indonesian trade balance',caption='source: World Development Indicators')
+
+trd
+
 ```
-an illustration of **perfectly inelastic demand**
-:::
 
-::: {.column width=47%}
-```{r grafik3, message=FALSE, warning=FALSE, echo=FALSE}
-library(latex2exp)
-grafik3 <- graph +
-  geom_hline(yintercept=10.5, color = "cyan",size=2)+
-  scale_x_continuous(limits=c(120,130), 
-                     breaks = c(123,127)) +
-  scale_y_continuous(limits=c(9,12), 
-                     breaks = 10.5) +
-  geom_segment(data = data_frame(q=123,p=10.5),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=127,p=10.5),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2)+
-  labs(title="Perfectly Elastic Demand (\U221E)", x="Q", y="P")+
-  geom_text(aes(x = 130, y = 10.7, label = "D[2]"), parse = TRUE, size =8, color = '#e0e0e0')
-grafik3
+## Summary
+
+- Macroeconomics learn the economy as a whole since the government can help with economic cycle using fiscal and monetary policy.
+
+- issues include economic growth, business cycle, unemployment, inflation, and trade balance.
+
+- We will learn more about indicators on these macroeconomic phenomena and what institution govern them, and how.
+
+## Gross Domestic Product (GDP)
+
+- A measure of economic activity is essentially **how much goods and services are produced**.
+
+- But we cannot aggregate something with different units:
+  - What is palm oil+coal+oil+cars?
+  - we can't compare Indonesia's production with other countries'.
+
+- We transform all of those production of goods and services to **currency** and essentially calculates price $\times$ quantity.
+
+## GDP
+
+- GDP is the total **value** of all **final** goods and services produced in an economy during a given **period**, usually a year.
+
+- Understanding how it calculates help you to figure out if GDP is the correct measure for you to use.
+
+- There are 3 general ways to calculate GDP:
+  1. Adding up total value of the **final** products.
+  1. Adding up total **spending** of domestic products.
+  1. Adding up total **factor** payment.
+  
+## GDP Accounting illustration
+
+```{r}
+
+library(formattable)
+gedepe <- data.frame(
+  "P1"=c('Value of sales','Intermediate goods','Wages','Interest payments','Rent','Profit','Total expenditure \n by firm','Value added per firm \n = \n value of sales - cost \n of intermediate goods'),
+  "P2"=c('4,200 \n (ore)','0','2,000','1,000','200','1,000','4,200','4,200'),
+  "P3"=c('9,000 \n (steel)','4,200 \n (ore)','3,700','600','300', '200','9,000','4,800'),
+  "P4"=c('21,500 \n (car)','9,000 \n (steel)','10,000','1,000','500', '1,000','21,500','12,500'),
+  "P5"=c('-','-','15,700','2,600','1,000','2,200','-','-')
+)
+
+tabel<- kbl(gedepe, align = "r", format='html',
+    col.names = c("","Ore miner","Steel maker","Car maker","Total factor \n income"),caption="GDP in this economy is 21,500") %>%
+  kable_styling(font_size = 20) %>%
+  column_spec(1, width = "5cm")
+
+tabel
+  
 ```
-an illustration of **perfectly elastic demand**
-:::
-::::
 
-## Types of elasticities
+## 1. GDP by Final Product
 
-- Most goods are somewhere in between.
+```{r}
+#gedepe[1,"P4"]=cell_spec(gedepe[1,"P4"],color = 'red',bold=T)
+  
+tabel %>%
+  kable_styling(font_size = 15,full_width = F) %>%
+  column_spec(1, width = "5cm") %>%
+  row_spec(8, background = "yellow")
+  
+```
 
-- We usually use elasticity=1 as another important division point.
+We add all value added. In the ore firm, its value add=sales. But in other firms, intermediate inputs need to be subtracted from their final sales to avoid double counting. Steel buy iron ore and car buy steel. $GDP=4,200 + 4,800 + 12,500=21,500$
 
-- 1 is a useful barrier because when elasticity=1, that means a change in price by 1 % leads to a change in quantity demanded by 1 %
+## 2. GDP by total spending on domestic goods
 
-- elasticity < 1 means the quantity response less than a change in prices, while elasticity > 1 means the quantity is highly responsive, more than the change in price.
+```{r}
+#gedepe[1,"P4"]=cell_spec(gedepe[1,"P4"],color = 'red',bold=T)
+  
+tabel %>%
+  kable_styling(font_size = 15,full_width = F) %>%
+  column_spec(1, width = "5cm") %>%
+  column_spec(4, background = "yellow")
+  
+```
+
+We calculate only the final value/sales of the final product. In this case, it's car, because iron ore and steel are used to make car. This is to avoid double counting. GDP=car sales=21,500
 
 ---
 
+## 3. GDP by factor payment / Income
+
+```{r}
+tabel %>%
+  kable_styling(font_size = 15,full_width = F) %>%
+  column_spec(1, width = "5cm") %>%
+  column_spec(5, background = "yellow")
+  
+```
+
+We calculate only income from everyone who owns factor of production: workers, capital owners, savers, and entrepreneurs. $GDP=15,700+2,600+1,000+2,200=21,500$
+
+## Calculating GDP
+
+- Most countries calculate using method 1 and 2.
+
+- In Indonesia, Calculating GDP is BPS' job. Method 1 is called [PDB Lapangan Usaha](https://www.bps.go.id/subject/11/produk-domestik-bruto--lapangan-usaha-.html#subjekViewTab3), while method 2 is called [PDB Pengeluaran](https://www.bps.go.id/subject/169/produk-domestik-bruto--pengeluaran-.html#subjekViewTab3)
+
+- GDP shows us the economic size of a country. However, it's not perfect.
+
+- Main reason is because the economic value is measured by **price**.
+
+## Problem with GDP
+
+1. It discount economic activity that has **no price**. A two stay-at-home-mum A and B produce nothing. But if mum A pays mum B $100 to take care of her child and mum B pays mum A $100 to take care f child B, both generate $200 to the economy.
+
+1. Prices change. You can produce the same number of goods but have increased GDP if the prices increase. Remember, we want to calculate the actual production, not the price.
+
+In short, while price is useful, $price \neq value$ so be careful in using GDP.
+
+## Real GDP
+
+- The second problem can be mitigated by keeping the price constant.
+
+- When we calculate GDP using a certain year's price level, we call it **real GDP**.
+
+- GDP calculated using current year's price level is called **nominal GDP**.
+
+- To show real GDP calculation, we need to have a **base year**.
+
+## Calculating Real GDP {.s}
+
 :::: columns
-::: {.column width=47%}
-```{r grafik4,echo=FALSE, message=FALSE, warning=FALSE}
+::: {.column width="47%"}
+```{r}
 
-demand1 <- function(q) (q/433)^(-1/0.5)
-demand2 <- function(q) (q/7250)^(-1/1.7)
+realgdp <- data.frame(
+  "r1"=c("Q of cars (units)","P of cars (mill. IDR)","Q of rice (ton)","P of rice (mill. IDR)","GDP (mill. IDR)","Real GDP (mill. 2010 IDR)"),
+  "r2"=c(10,200,50,15,2750,2750),
+  "r3"=c(15,220,60,20,4500,3900)
+)
 
-grafik4 <- graph +
-  stat_function(fun = demand1,size=1.1, color='cyan') +
-  scale_x_continuous(limits=c(120,150), 
-                     breaks = c(130.5,137)) +
-  scale_y_continuous(limits=c(9,12), 
-                     breaks = p) +
-  geom_segment(data = data_frame(q=130.5,p=11),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=130.5,p=11),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=137,p=10),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=137,p=10),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2)+
-  labs(title="Inelastic demand (<1)", x="Q (1000 cars/day)", y="P (1000 IDR)")+
-  geom_text(aes(x = 145, y = 9.3, label = "D"), parse = TRUE, size =8, color = '#e0e0e0')
-
-grafik5 <- graph +
-  stat_function(fun = demand2,size=1.1, color='cyan') +
-  scale_x_continuous(limits=c(120,150), 
-                     breaks = c(123,144.6)) +
-  scale_y_continuous(limits=c(9,12), 
-                     breaks = p) +
-  geom_segment(data = data_frame(q=123,p=11),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=123,p=11),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=144.6,p=10),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=144.6,p=10),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2)+
-  labs(title="Elastic demand (>1)", x="Q (1000 cars/day)", y="P (1000 IDR)")+
-  geom_text(aes(x = 150, y = 10, label = "D"), parse = TRUE, size =8, color = '#e0e0e0')
-
-grafik4
-grafik5
-
+rgdp<-kbl(realgdp, align = "r", format='html',
+    col.names = c("","Year 2010","Year 2011"),format.args = list(big.mark = ",")) %>%
+  kable_styling(font_size = 18) %>%
+  column_spec(1, width = "5cm")
+rgdp
 ```
+
+- Nominal GDP is very high in part because there is an inflation in it.
+
 :::
-::: {.column width=47%}
+::: {.column width="47%"}
 
-```{r grafik5,echo=FALSE, message=FALSE, warning=FALSE}
-grafik1 + labs(title="Unit elastic demand (=1)", x="Q (1000 cars/day)", y="P (1000 IDR)")
+- Normal GDP calculation:
+$$GDP = Q_{current} \times P_{current}$$
+- Real GDP calculation:
+$$GDP= Q_{current} \times P_{base}$$
 
-```
-</br>
-</br>
-</br>
+- In our case, the base year is 2010.
 
-The flatter the curve, the closer its elasticity to $\infty$
+- When economists discuss GDP, normally they use Real GDP, not nominal GDP.
+
+- growth also calculated using real GDP.
 
 :::
 ::::
 
-## Types of demand elasticities {.m}
+## Real GDP & Nominal GDP
 
-| Elasticity | meaning |
-| ---- | ------- |
-| 0 | **perfectly inelastic**. Price doesn't matter |
-| < 1 | **inelastic**. Quantity is less responsive to price changes |
-| 1 | **unit elastic**. Quantity change exactly the same as the price change in % terms|
-| >1 | **elastic**. Quantity response heavily to price changes |
-| $\infty$ | **perfectly elastic**. A slight increase of price reduces demand to zero |
+```{r}
+library(lubridate)
+jidipi<-WDI(indicator = 'NY.GDP.MKTP.CN', country = 'IDN',start=2002)
+jidipi$legend<-'Nominal GDP'
+names(jidipi)[names(jidipi)=="NY.GDP.MKTP.CN"]<-"GDP"
+jodopo<-WDI(indicator = 'NY.GDP.MKTP.KN', country = 'IDN',start=2002)
+jodopo$legend<-'Real GDP'
+names(jodopo)[names(jodopo)=="NY.GDP.MKTP.KN"]<-"GDP"
+jdp<-rbind(jidipi,jodopo)
+jdp$year<-as.Date(ISOdate(jdp$year, 1, 1))
+jdp$year<-ymd(jdp$year)
+graph+
+  geom_line(data=jdp,aes(x=year,y=GDP, color=legend),size=2)+
+  labs(y='IDR',title='Indonesian real and nominal GDP',subtitle='note: real=nominal when current year = base year',caption='source: World Development Indicators')
+```
 
-## Elasticities vary. So what?
+## More on Real GDP
 
-- Suppose you wan't to increase the revenue from the toll road operation, what price will you set?
+- Real GDP gives a better measure on the actual economic productivity because it takes out inflation.
 
-- It is intuitive to think that the higher the price, the better.
-  - High price $\Rightarrow$ more revenue
+- One more thing we need to do is to eliminate the impact of population.
 
-- Is there a problem with this logic?
+- As we learned in week 2 and 3, number of producers and buyers shift the whole cuve.
 
-- Remember, demand respond to price. High price $\Rightarrow$ lower demand $\Rightarrow$ less revenue
+- To really capture a sense of welfare or productivity, we need to divide GDP with population to get **GDP per capita**.
 
-- The maximum price depends on the demand elasticity
+- It can be done for both nominal and real GDP.
+
+## When to use which GDP? {.s}
+
+```{r banding,echo=FALSE, message=FALSE, warning=FALSE}
+banding<-WDI(indicator = 'NY.GDP.MKTP.KD', country = c('IDN','SGP'),start=2018,end=2018)
+banding$`GDP (constant mil USD)`<-banding$NY.GDP.MKTP.KD/1000000
+banding2<-WDI(indicator = 'NY.GDP.PCAP.KD', country = c('IDN','SGP'),start=2018,end=2018)
+names(banding2)[names(banding2)=="NY.GDP.PCAP.KD"]<-"GDP per capita (constant USD)"
+banding$`GDP per capita (constant USD)`<-banding2$`GDP per capita (constant USD)`
+banding<-banding[c(2,5,6)]
+banding %>%
+  kbl(format='html', align = "c", caption="Indonesia and Singapore in 2018",format.args = list(big.mark = ","),digits=2)
+```
+
+- Indonesian economy as a whole is much bigger than Singapore, which means when Indonesian government change economic policy, it will apply to much bigger economic size. This is also one reason why China is very important.
+
+- Indonesians are not very rich, however.
+
+## Price Index {.s}
+
+- We've learned how real GDP is calculated: we take out changes in price from the GDP calculation.
+
+- In fact, we can form an index for the price increase. This is called **price index**
+
+- Like GDP, price index give us one number to make sense the overall prices condition.
+
+- price index highly depends on the **market basket** 
+
+
+$$\text{Price index in a given year}=\frac{\text{expenditure in a given year}}{\text{expenditure in a base year}} \times 100$$
+
+
+## Calculating price index {.s}
+
+:::: columns
+::: {.column width="47%"}
+```{r}
+realgdp2 <- data.frame(
+  "r1"=c("Q of cars (units)","P of cars (mill. IDR)","Q of rice (ton)","P of rice (mill. IDR)","2010 market basket (mill. IDR)","price index"),
+  "r2"=c(10,200,50,15,2750,100),
+  "r3"=c(15,220,60,20,3200,116)
+)
+
+kbl(realgdp2, align = "r", format='html',
+    col.names = c("","Year 2010","Year 2011"),format.args = list(big.mark = ",")) %>%
+  kable_styling(font_size = 18) %>%
+  column_spec(1, width = "5cm")
+```
+
+Let 2010 be the **base year**. 
+
+First, we calculate the market basket in 2010 which exactly equals the nominal gdp
+
+:::
+::: {.column width="47%"}
+
+- We then calculate market basket for 2011 using **2011 prices** but **2010 quantity**
+
+- Since the base year is 2010, price index is 100 in the year 2010.
+
+- Price index in year 2011 is the market basket in 2011 divide with the market basket in 2010.
+
+- $Index_{2011} = \frac{3200}{2750} \times 100$
+
+:::
+::::
+
+## Consumer Price Index (CPI)
+
+- BPS calculates the market basket for consumers monthly. It is called Indeks Harga Konsumen (IHK), which is a direct translation of CPI.
+
+- The basket consists of stuff like food, housing, electricity, clothing, healthcare, and education, among others.
+
+- BPS surveys supermarkets and the likes every month in many cities and provinces.
+
+- The content of the basket influences CPI greatly. For example, food, beverage and tobacco is important in driving inflation in Indonesia. In the U.S. it is housing.
+
+## Inflation
+
+- CPI is used to calculate inflation.
+[
+$$\text{Inflation rate}=\frac{\text{Price Index}_t - \text{Price Index}_{t-1}}{\text{Price Index}_{t-1}} \times 100$$
+]{.s}
+
+- In our case:
+
+$$\text{inflation rate}=\frac{116-100}{100} \times 100 = 16 \%$$
+
+- If we have more year, the $t-1$ doesn't have to be the base year.
+
+## Wholesale Price Index (WPI)
+
+- There is also something called **Producer Price Index** or better known as **Wholesale Price Index**.
+
+- The difference is just the basket: it contains important intermediate inputs such as oil, coal, wage rate, steel, office and building rent, etc.
+
+- BPS also collect this information, called **Indeks Harga Perdagangan Besar**.
+
+- WPI generally shows an early warning of economic condition, because WPI often respond much quicker to inflation than CPI.
+
+## GDP deflator
+
+- GDP deflator is another price index, which contains the whole GDP as its basket.
+
+- GDP deflator is high when nominal GDP changes by a huge margin but real GDP only change a little.
+
+- In general, CPI is useful to analyze consumers while WPI is useful for firms.
 
 ---
 
-```{r grafik6,echo=FALSE, message=FALSE, warning=FALSE}
-grafik6 <- graph +
-  stat_function(fun = demand1,size=1.1, color='cyan') +
-  scale_x_continuous(limits=c(120,150), 
-                     breaks = 137) +
-  scale_y_continuous(limits=c(9,12), 
-                     breaks = 10) +
-  geom_segment(data = data_frame(q=137,p=10),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=137,p=10),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2)+
-  geom_ribbon(aes(x=seq(0,137,1), ymin=9, ymax=10),alpha = 0.4,fill='red')+
-  annotate("text", x = 128, y = 9.8, label = "Total revenue=", size=8)+
-  annotate("text", x = 128, y = 9.6, label = "Price x Quantity", size=8)+
-  annotate("text", x = 128, y = 9.4, label = "10 x 137", size=8)+
-  annotate("text", x = 128, y = 9.2, label = "1370 mil IDR/day", size=8)+
-  labs(title="Inelastic demand (<1)", x="Q (1000 cars/day)", y="P (1000 IDR)")+
-  geom_text(aes(x = 145, y = 9.3, label = "D"), parse = TRUE, size =8, color = '#e0e0e0')
-grafik6
+```{r}
+cpi<-WDI(indicator = 'FP.CPI.TOTL', country = 'IDN',start=2002)
+cpi$legend<-'CPI'
+names(cpi)[names(cpi)=="FP.CPI.TOTL"]<-"lul"
+wpi<-WDI(indicator = 'FP.WPI.TOTL', country = 'IDN',start=2002)
+wpi$legend<-'WPI'
+names(wpi)[names(wpi)=="FP.WPI.TOTL"]<-"lul"
+deflator<-WDI(indicator = 'NY.GDP.DEFL.ZS', country = 'IDN',start=2002)
+deflator$legend<-'GDP deflator'
+names(deflator)[names(deflator)=="NY.GDP.DEFL.ZS"]<-"lul"
+
+hah<-rbind(cpi,wpi,deflator)
+hah$year<-as.Date(ISOdate(hah$year, 1, 1))
+#jdp$year<-ymd(jdp$year)
+graph+
+  geom_line(data=hah,aes(x=year,y=lul, color=legend),size=2)+
+  labs(y='index',title='CPI, PPI, deflator in Indonesia(2010=100)',caption='source: World Development Indicators')
 ```
 
----
+WPI is much more volatile and responsive to the global market condition.
 
-```{r grafik7,echo=FALSE, message=FALSE, warning=FALSE}
-grafik7 <- graph +
-  stat_function(fun = demand1,size=1.1, color='cyan') +
-  scale_x_continuous(limits=c(120,150), 
-                     breaks = 130.5) +
-  scale_y_continuous(limits=c(9,12), 
-                     breaks = 11) +
-  geom_segment(data = data_frame(q=130.5,p=11),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=130.5,p=11),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_ribbon(aes(x=seq(0,130.5,1), ymin=9, ymax=11),alpha = 0.4,fill='red')+
-  annotate("text", x = 125, y = 10.4, label = "Total revenue=", size=7)+
-  annotate("text", x = 125, y = 10.2, label = "P x Q", size=8)+
-  annotate("text", x = 125, y = 10, label = "11 x 130.5", size=8)+
-  annotate("text", x = 125, y = 9.8, label = "1435.5", size=8)+
-  labs(title="Inelastic demand (<1)", x="Q (1000 cars/day)", y="P (1000 IDR)")+
-  geom_text(aes(x = 145, y = 9.3, label = "D"), parse = TRUE, size =8, color = '#e0e0e0')
-grafik7
-```
+## Next week
 
----
+- We will discuss about unemployment.
 
-## Impact of price increase {.m}
+- More analysis on inflation and long run economic growth.
 
-:::: columns
-::: {.column width=47%}
-```{r grafik8,echo=FALSE, message=FALSE, warning=FALSE}
-#| fig-width: 6
-#| fig-height: 7
-grafik4 +
-  geom_ribbon(aes(x=seq(0,130.5,1), ymin=9, ymax=10, fill="B"),alpha = 0.4,show.legend=FALSE)+
-  geom_ribbon(aes(x=seq(130.5,137,1), ymin=9, ymax=10, fill="A"),alpha = 0.4,show.legend=FALSE)+
-  geom_ribbon(aes(x=seq(0,130.5,1), ymin=10, ymax=11, fill="C"),alpha = 0.4,show.legend=FALSE)+
-  annotate("text", x = 125, y = 9.5, label = "B", size=9)+
-  annotate("text", x = 134, y = 9.5, label = "A", size=9)+
-  annotate("text", x = 125, y = 10.5, label = "C", size=9)
-  
-```
-:::
-::: {.column width=47%}
-
-- Segment A is the **Quantity effect of price increase**
-  - Negative effect since fewer units sold
-
-- Segment C is the **Price effect of price increase**
-  - positive effect since higher price for each unit sold
-  
-:::
-::::
-
-## Impact of price increase
-
-:::: columns
-::: {.column width=47%}
-```{r grafik9,echo=FALSE, message=FALSE, warning=FALSE}
-#| fig-width: 6
-#| fig-height: 7
-grafik4 +
-  geom_ribbon(aes(x=seq(0,130.5,1), ymin=9, ymax=10, fill="B"),alpha = 0.4,show.legend=FALSE)+
-  geom_ribbon(aes(x=seq(130.5,137,1), ymin=9, ymax=10, fill="A"),alpha = 0.4,show.legend=FALSE)+
-  geom_ribbon(aes(x=seq(0,130.5,1), ymin=10, ymax=11, fill="C"),alpha = 0.4,show.legend=FALSE)+
-  annotate("text", x = 125, y = 9.5, label = "B", size=9)+
-  annotate("text", x = 134, y = 9.5, label = "A", size=9)+
-  annotate("text", x = 125, y = 10.5, label = "C", size=9)
-  
-```
-:::
-
-::: {.column width=47%}
-- If you are profit oriented, Increasing the price is a good idea if:
-
-$$
-B+C > B+A
-$$
-
-$$
-C>A
-$$
-:::
-::::
-
-## Impact of price increase
-
-:::: columns
-::: {.column width=47%}
-```{r grafik10,echo=FALSE, message=FALSE, warning=FALSE}
-#| fig-width: 6
-#| fig-height: 7
-grafik5 +
-  geom_ribbon(aes(x=seq(0,123,1), ymin=9, ymax=10, fill="B"),alpha = 0.4,show.legend=FALSE)+
-  geom_ribbon(aes(x=seq(123,144.6,1), ymin=9, ymax=10, fill="A"),alpha = 0.4,show.legend=FALSE)+
-  geom_ribbon(aes(x=seq(0,123,1), ymin=10, ymax=11, fill="C"),alpha = 0.4,show.legend=FALSE)+
-  annotate("text", x = 122, y = 9.5, label = "B", size=9)+
-  annotate("text", x = 134, y = 9.5, label = "A", size=9)+
-  annotate("text", x = 122, y = 10.5, label = "C", size=9)
-  
-```
-:::
-
-::: {.column width=47%}
-- In a market with high demand elasticity, the quantity effect outweighs the price effect.
-
-- Increasing the price is not so clever if the market's demand is highly elastic.
-:::
-::::
-
-## Last point on demand elasticity
-
-- When elasticity = 1, then $A=C$
-  - hence changing price has no impact on sales revenue.
-
-- Profit oriented in the real life may not very realistic
-  - Governments may want to serve as much people as possible
-  - In the short run, growth and market cap may be more important than profit.
-
-## Last point on demand elasticity
-
-- We usually tied elasticity on a price point.
-  - on our toll road case, our price point is 10.000 IDR
-  
-- Elasticity may differ in different price point.
-  - Changing price from 10 to 11 may have different impact compared to changing price from 20 to 21.
-      - the first one is an increase of 10%.
-      - the second one is an increase of 5%.
-      - in absolute term, both are a 1.000 IDR increase.
-
-## Last point on demand elasticity
-
-- Estimating elasticity is very hard
-
-- There are many things also at play:
-  - different condition in different time
-  - different buyer with different characteristics behave differently
-  - Income, taste, etc matters (remember what **shifts the demand curve?**)
-
-## Factors determine demand elasticity
-
-- A **necessity** good tend to have lower elasticity compared to a **luxury good**.
-
-- The availability of **close substitutes**, like the case with pertamax and shell.
-
-- **Share of income spent** on the good. Rich people may not care with toll road price.
-
-- **Time**. Cigarettes may have low elasticity in the short run because it is so addictive, and adapt later in the long run.
-
-## Other types of demand elasticity {.m}
-
-- **Cross price elasticity of demand** is how the price of good $B$ affects a demand of good $A$.
-
-$$
-\tag{4}
-\text{Cross-Price elasticity}_{A,B}=\frac{\text{% change in }Q_A}{\text{% change in }P_B}
-$$
-
-
-- When good A and good B are subtitutes, then the effect is negative.
-  - e.g., Samsung and Xiaomi
-
-- When good A and good B are complements, the effect is positive.
-  - e.g., Samsung and Telkomsel
-
-## Other types of demand elasticity {.m}
-
-- **Income elasticity of demand** is how the chanage on income affects your demand of good $A$
-
-
-$$
-\tag{5}
-\text{Income elasticity of Demand}_A=\frac{\text{% change in }Q_A}{\text{% change in Income}}
-$$
-
-
-- It is usually positive if good $A$ is a **normal good**.
-
-- It is negative if good $A$ is an **inferior good**.
-  - you buy less instant noodle when you're richer.
-  
-## Other types of demand elasticity {.m}
-
-- **Income elasticity of demand** is how the chanage on income affects your demand of good $A$
-
-$$
-\tag{5}
-\text{Income elasticity of Demand}_A=\frac{\text{% change in }Q_A}{\text{% change in Income}}
-$$
-
-
-- A **necessity** good is usually **income inelastic** because you need to buy it no matter what.
-
-- A **luxury** good can be **income elastic**. You only buy it if your main needs are covered so you can wait for a discount.
-
-# Price elasticity of Supply
-
-## Price elasticity of Supply {.m}
-
-- Supply also have elasticities. As a supplier, you can't afford to sell expensive if there are high competition.
-
-- However, in many cases (such as toll road), entering the market is very hard.
-
-- How easy it is to expand (or for new supplier to enter the market) matters to how responsive can supply react to the change in price.
-
-$$
-\tag{6}
-\text{Price elasticity of supply} = \frac{\text{% change in }Q^s}{\text{% change in }P}
-$$
-
-
-## Two extreme cases of elasticity
-
-:::: columns
-::: {.column width=47%}
-```{r grafik11, message=FALSE, warning=FALSE, echo=FALSE}
-grafik11 <- graph +
-  geom_vline(xintercept=125, color = "red",size=2)+
-  scale_x_continuous(limits=c(120,130), 
-                     breaks = 125) +
-  scale_y_continuous(limits=c(9,12), 
-                     breaks = p) +
-  geom_segment(data = data_frame(q=125,p=11),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=125,p=10),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2)+
-  labs(title="Perfectly inelastic supply (0)", x="Q", y="P")+
-  geom_text(aes(x = 125.5, y = 9, label = "S[1]"), parse = TRUE, size =8, color = '#e0e0e0')
-grafik11
-```
-.s[an illustration of **perfectly inelastic supply**]
-:::
-
-::: {.column width=47%}
-```{r grafik12, message=FALSE, warning=FALSE, echo=FALSE}
-
-grafik12 <- graph +
-  geom_hline(yintercept=10.5, color = "red",size=2)+
-  scale_x_continuous(limits=c(120,130), 
-                     breaks = c(123,127)) +
-  scale_y_continuous(limits=c(9,12), 
-                     breaks = 10.5) +
-  geom_segment(data = data_frame(q=123,p=10.5),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=127,p=10.5),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2)+
-  labs(title="Perfectly Elastic Supply (\U221E)", x="Q", y="P")+
-  geom_text(aes(x = 130, y = 10.7, label = "S[2]"), parse = TRUE, size =8, color = '#e0e0e0')
-grafik12
-```
-an illustration of **perfectly elastic supply**
-:::
-::::
-
-## Two extreme cases of elasticity
-
-- In a **perfectly inelastic supply** case, the market can't supply more even if the price increase. Toll road is like this: Building more toll road is expensive and takes time. Most times this is monopolized by the government.
-
-- In a **perfectly elastic supply**, the market supply exactly zero when the price go up just by a little. A highly competitive market where all firms operate at the margin may behave this way.
-
-- Again, most times, the supply curve is somewhere in between.
-
-## What changes supply elasticity?
-
-- A market tend to have a highly elastic price elasticity of supply when **inputs are abundant** and can be converted in and out of producion at a very low cost.
-
-- Matters, as price elasticity of supply tend to be higher in the long run. Increasing production capacity may takes time since investing in a new land, building or machine requires **time**.
-  - Some goods are even impossible to be increased, hence have zero elasticity. Radio spectrum is one example.
-  
-## European farm surplus
-
-European Union **subsidised** their farmers heavily. They probably knew that subsidies create huge **surplus** (remember last week), but they thought the surplus would not be as big since farming land is **limited**.
-
-However, EU farmers were able to expand production using things like fertilizers and pesticides, which are **readily available inputs**.
-
-# The benefits and costs of taxation
-
-## Excise Tax (_cukai_)
-
-- The government often tax goods in the form of an excise tax.
-
-- In Indonesia, some goods have an excise to its purchase:
-  - Cigarettes & alcohol
-  - Luxury goods (PPnBM)
-
-- You can say that a value-added tax is another form of an excise tax.
-
-## How tax works
-
-- Tax acts like a price ceiling plus plus floor:
-  - The government set a higher price for consumers to pay
-  - At the same time, the producers are forced to produced at a lower price.
-  
-- A reminder: in a **price floor** scenario, surplus from consumer transferred to the producer, while in a **price ceiling**, surplus transferred from producers to consumers.
-
-- in tax case, CS and PS are transferred to the government.
-
-## The impact of tax {.m}
-
-```{r grafiks3, echo=FALSE, message=FALSE, warning=FALSE}
-supply <- function(q) (q/12.75)
-supply1 <- function(q) (q/41.3)^(1/0.5)
-supply2 <- function(q) (q/2.45)^(1/1.7)
-
-x<-120:150
-eqq1 <- uniroot(function(x) demand1(x) - supply(x), range(x))$root
-eqq2 <- uniroot(function(x) demand2(x) - supply(x), range(x))$root
-eqq3 <- uniroot(function(x) demand(x) - supply1(x), range(x))$root
-eqq4 <- uniroot(function(x) demand(x) - supply2(x), range(x))$root
-eqq5 <- uniroot(function(x) demand1(x) - supply1(x), range(x))$root
-
-# Equilibrium price
-eqp1 <- supply(eqq1)
-eqp2 <- supply(eqq2)
-eqp3 <- supply(eqq3)
-eqp4 <- supply(eqq4)
-eqp5 <- supply(eqq5)
-
-grafiks5 <- graph +
-  stat_function(fun = supply1,size=1.1, color='red') +
-  stat_function(fun = demand1,size=1.1, color='cyan') +
-  scale_x_continuous(limits= c(120, 150), 
-                     breaks = c(130,eqq5), labels = c(expression(Q[T]),expression(Q[E]))) +
-  scale_y_continuous(limits = c(9,12),
-                     breaks = c(supply1(130),eqp5,demand1(130)), labels = c(expression(P[P]),expression(P[E]),expression(P[C]))) +
-  geom_point(aes(x=eqq5,y=eqp5),color='white',size=4)+
-  geom_point(aes(x=130,y=supply1(130)),color='white',size=4)+
-  geom_point(aes(x=130,y=demand1(130)),color='white',size=4)+
-  geom_segment(data = data_frame(q=130,p=supply1(130)),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=130,p=supply1(130)),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=130,p=demand1(130)),
-               aes(x = q, y = supply1(130), xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=130,p=demand1(130)),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2)+
-  geom_segment(data = data_frame(q=eqq5,p=eqp5),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2)+
-  geom_segment(data = data_frame(q=eqq5,p=eqp5),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2)+
-  geom_ribbon(aes(x=seq(0,130,1), ymin=supply1(130), ymax=eqp5, fill="C"),alpha = 0.4,show.legend=FALSE)+
-  geom_ribbon(aes(x=seq(0,130,1), ymin=eqp5, ymax=demand1(130), fill="A"),alpha = 0.4,show.legend=FALSE)+
-  geom_ribbon(aes(x=seq(130,eqq5,1), ymin=supply1(seq(130,eqq5,1)), ymax=eqp5, fill="B"),alpha = 0.4,show.legend=FALSE)+
-  geom_ribbon(aes(x=seq(130,eqq5,1), ymin=eqp5, ymax=demand1(seq(130,eqq5,1)), fill="D"),alpha = 0.4,show.legend=FALSE)+
-  labs(x="Q (1000 cars/day)", y="P (1000 IDR)")+
-  geom_text(aes(x = 145, y = 9.3, label = "D"), parse = TRUE, size =8, color = '#e0e0e0')+
-  geom_text(aes(x = 145, y = 11.7, label = "S"), parse = TRUE, size =8, color = '#e0e0e0')+
-  annotate("text", x = 125, y = 10.2, label = "C", size=9)+
-  annotate("text", x = 131.5, y = 10.3, label = "D", size=9)+
-  annotate("text", x = 125, y = 10.7, label = "A", size=9)+
-  annotate("text", x = 131.5, y = 10.7, label = "B", size=9)
-
-grafiks5
-
-```
-
-## The impact of taxation {.m}
-
-:::: columns
-
-::: {.column width=47%}
-```{r grafiks6, echo=FALSE, message=FALSE, warning=FALSE}
-#| fig-width: 7
-#| fig-height: 7
-grafiks5
-```
-:::
-::: {.column width=47%}
-- The market price is $P=P_E$
-
-- The price paid by consumers is $P=P_C$
-
-- Producer receive payment at $P=P_P$
-
-- The tax per purchased good paid to the government is $t=P_C-P_P$
-:::
-::::
-
----
-
-## The impact of taxation {.m}
-
-:::: columns
-::: {.column width=47%}
-```{r grafiks7, echo=FALSE, message=FALSE, warning=FALSE}
-#| fig-width: 7
-#| fig-height: 7
-grafiks5
-```
-:::
-
-::: {.column width=47%}
-- Consumer lose $A+B$
-
-- Producer lose $C+D$
-
-- The government collects tax revenue $TR=T \times Q_T$
-
-- This is equals to $TR=A+C$
-
-- $B+D=DWL$
-:::
-::::
-
-## The impact of taxation
-
-- As we learn, the tax revenue and the size of DWL depends highly in demand elasticity and supply elasticity of the good.
-
-- The less elastic the demand and supply of a good, the higher revenue gained from taxing the good.
-  - i.e., price effect > quantity effect.
-  
-- DWL also lower when the demand and/or supply of the good is highly inelastic.
-
----
-
-:::: columns
-::: {.column width=47%}
-```{r grafiks1, echo=FALSE, message=FALSE, warning=FALSE}
-
-grafiks1 <- graph +
-  stat_function(fun = supply,size=1.1, color='red') +
-  stat_function(fun = demand1,size=1.1, color='cyan') +
-  scale_x_continuous(limits= c(120, 150), 
-                     breaks = c(130,eqq1), labels = c(expression(Q[T]),expression(Q[E]))) +
-  scale_y_continuous(limits = c(9,12),
-                     breaks = c(supply(130),eqp1,demand1(130)), labels = c(expression(P[P]),expression(P[E]),expression(P[C]))) +
-  geom_point(aes(x=eqq1,y=eqp1),color='white',size=4)+
-  geom_point(aes(x=130,y=supply(130)),color='white',size=4)+
-  geom_point(aes(x=130,y=demand1(130)),color='white',size=4)+
-  geom_segment(data = data_frame(q=130,p=supply(130)),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=130,p=supply(130)),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=130,p=demand1(130)),
-               aes(x = q, y = supply(130), xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=130,p=demand1(130)),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2)+
-  geom_segment(data = data_frame(q=eqq1,p=eqp1),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2)+
-  geom_segment(data = data_frame(q=eqq1,p=eqp1),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2)+
-  geom_ribbon(aes(x=seq(0,130,1), ymin=supply(130), ymax=demand1(130), fill="TR"),alpha = 0.4,show.legend=FALSE)+
-  geom_ribbon(aes(x=seq(130,eqq1,1), ymin=supply(seq(130,eqq1,1)), ymax=demand1(seq(130,eqq1,1)), fill="DWL"),alpha = 0.4,show.legend=FALSE)+
-  annotate("text", x = 125, y = 10.6, label = "Revenue", size=8)+
-  annotate("text", x = 125, y = 10.8, label = "Tax", size=8)+
-  annotate("text", x = 137, y = 11.6, label = "DWL", size=8)+
-  annotate("segment", x = 131.2, xend = 135.2, y = 10.7, yend = 11.3,
-           arrow = arrow(length = unit(2, "lines")), size=1, colour = "gray")+
-  labs(title="(a) Inelastic demand (<1)", x="Q (1000 cars/day)", y="P (1000 IDR)")+
-  geom_text(aes(x = 145, y = 9.3, label = "D"), parse = TRUE, size =8, color = '#e0e0e0')+
-  geom_text(aes(x = 145, y = 11.1, label = "S"), parse = TRUE, size =8, color = '#e0e0e0')
-
-###################################################################
-
-grafiks2 <- graph +
-  stat_function(fun = supply,size=1.1, color='red') +
-  stat_function(fun = demand2,size=1.1, color='cyan') +
-  scale_x_continuous(limits= c(120, 150), 
-                     breaks = c(130,eqq2), labels = c(expression(Q[T]),expression(Q[E]))) +
-  scale_y_continuous(limits = c(9,12),
-                     breaks = c(supply(130),eqp2,demand2(130)), labels = c(expression(P[P]),expression(P[E]),expression(P[C]))) +
-  geom_point(aes(x=eqq2,y=eqp2),color='white',size=4)+
-  geom_point(aes(x=130,y=supply(130)),color='white',size=4)+
-  geom_point(aes(x=130,y=demand2(130)),color='white',size=4)+
-  geom_segment(data = data_frame(q=130,p=supply(130)),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=130,p=supply(130)),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=130,p=demand2(130)),
-               aes(x = q, y = supply(130), xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=130,p=demand2(130)),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2)+
-  geom_segment(data = data_frame(q=eqq2,p=eqp2),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2)+
-  geom_segment(data = data_frame(q=eqq2,p=eqp2),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2)+
-  geom_ribbon(aes(x=seq(0,130,1), ymin=supply(130), ymax=demand2(130), fill="TR"),alpha = 0.4,show.legend=FALSE)+
-  geom_ribbon(aes(x=seq(130,eqq2,1), ymin=supply(seq(130,eqq2,1)), ymax=demand2(seq(130,eqq2,1)), fill="DWL"),alpha = 0.4,show.legend=FALSE)+
-  labs(title="(b) elastic demand (>1)", x="Q (1000 cars/day)", y="P (1000 IDR)")+
-  geom_text(aes(x = 145, y = 10.3, label = "D"), parse = TRUE, size =8, color = '#e0e0e0')+
-  geom_text(aes(x = 145, y = 11.7, label = "S"), parse = TRUE, size =8, color = '#e0e0e0')
-
-########################################################################
-
-grafiks3 <- graph +
-  stat_function(fun = supply1,size=1.1, color='red') +
-  stat_function(fun = demand,size=1.1, color='cyan') +
-  scale_x_continuous(limits= c(120, 150), 
-                     breaks = c(130,eqq3), labels = c(expression(Q[T]),expression(Q[E]))) +
-  scale_y_continuous(limits = c(9,12),
-                     breaks = c(supply1(130),eqp3,demand(130)), labels = c(expression(P[P]),expression(P[E]),expression(P[C]))) +
-  geom_point(aes(x=eqq3,y=eqp3),color='white',size=4)+
-  geom_point(aes(x=130,y=supply1(130)),color='white',size=4)+
-  geom_point(aes(x=130,y=demand(130)),color='white',size=4)+
-  geom_segment(data = data_frame(q=130,p=supply1(130)),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=130,p=supply1(130)),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=130,p=demand(130)),
-               aes(x = q, y = supply1(130), xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=130,p=demand(130)),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2)+
-  geom_segment(data = data_frame(q=eqq3,p=eqp3),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2)+
-  geom_segment(data = data_frame(q=eqq3,p=eqp3),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2)+
-  geom_ribbon(aes(x=seq(0,130,1), ymin=supply1(130), ymax=demand(130), fill="TR"),alpha = 0.4,show.legend=FALSE)+
-  geom_ribbon(aes(x=seq(130,eqq3,1), ymin=supply1(seq(130,eqq3,1)), ymax=demand(seq(130,eqq3,1)), fill="DWL"),alpha = 0.4,show.legend=FALSE)+
-  labs(title="(c) inelastic supply (<1)", x="Q (1000 cars/day)", y="P (1000 IDR)")+
-  geom_text(aes(x = 145, y = 9.3, label = "D"), parse = TRUE, size =8, color = '#e0e0e0')+
-  geom_text(aes(x = 145, y = 11.7, label = "S"), parse = TRUE, size =8, color = '#e0e0e0')
-
-#####################################################################
-
-grafiks4 <- graph +
-  stat_function(fun = supply2,size=1.1, color='red') +
-  stat_function(fun = demand,size=1.1, color='cyan') +
-  scale_x_continuous(limits= c(120, 150), 
-                     breaks = c(130,eqq4), labels = c(expression(Q[T]),expression(Q[E]))) +
-  scale_y_continuous(limits = c(9,12),
-                     breaks = c(supply2(130),eqp4,demand(130)), labels = c(expression(P[P]),expression(P[E]),expression(P[C]))) +
-  geom_point(aes(x=eqq4,y=eqp4),color='white',size=4)+
-  geom_point(aes(x=130,y=supply2(130)),color='white',size=4)+
-  geom_point(aes(x=130,y=demand(130)),color='white',size=4)+
-  geom_segment(data = data_frame(q=130,p=supply2(130)),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=130,p=supply2(130)),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=130,p=demand(130)),
-               aes(x = q, y = supply2(130), xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=130,p=demand(130)),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2)+
-  geom_segment(data = data_frame(q=eqq4,p=eqp4),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2)+
-  geom_segment(data = data_frame(q=eqq4,p=eqp4),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2)+
-  geom_ribbon(aes(x=seq(0,130,1), ymin=supply2(130), ymax=demand(130), fill="TR"),alpha = 0.4,show.legend=FALSE)+
-  geom_ribbon(aes(x=seq(130,eqq4,1), ymin=supply2(seq(130,eqq4,1)), ymax=demand(seq(130,eqq4,1)), fill="DWL"),alpha = 0.4,show.legend=FALSE)+
-  labs(title="(d) elastic supply (>1)", x="Q (1000 cars/day)", y="P (1000 IDR)")+
-  geom_text(aes(x = 145, y = 9.3, label = "D"), parse = TRUE, size =8, color = '#e0e0e0')+
-  geom_text(aes(x = 145, y = 11.3, label = "S"), parse = TRUE, size =8, color = '#e0e0e0')
-
-grafiks1
-grafiks3
-
-```
-:::
-
-::: {.column width=47%}
-```{r grafiks2, echo=FALSE, message=FALSE, warning=FALSE}
-grafiks2
-grafiks4
-
-```
-:::
-::::
-
-## Implication
-
-- If the government wants to collect revenue, its best to impose a tax on a good with low elasticities.
-
-- If the government wants to change behaviour, tax a good with high elasticities.
-
-- Taxing cigarettes to discourage smoking maybe ineffective
-  - however, it can be used to gain revenue.
-  
-- Highly inelastic goods may suggest it's a necessity: people may be unhappy with the tax.
-
-## Implication
-
-- Same goes with the business people: be careful in increasing price if your product is highly elastically demanded.
-
-- Next week, we will have a look a bit more detailed on the supply curve: 
-  - what drives the elasticity of supply.
-  - Different types of cost.
-  
-## Some recap before da quiz
-
-- Elasticities is very important in determining surpluses: CS, PS, revenues.
-
-- Elasticities can be estimated (albeit hard).
-
-- Elasticities vary: $0 \leq 1 \leq \infty$ .
-
-- Many factors influence elasticities.
-
-- You should be able to use elasticity formula and can draw how tax is calculated and drawn.
-
-## Thank You
-
-<iframe src="https://giphy.com/embed/NIsWtysJUrvTG" width="480" height="320" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/cute-NIsWtysJUrvTG">via GIPHY</a></p>
