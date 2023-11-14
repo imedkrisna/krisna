@@ -33,10 +33,10 @@ slides:
 - {{% staticref "/metopel/meeting5/index.html" "newtab" %}}Pertemuan 5: Gravitty & time series{{% /staticref %}}
 - {{% staticref "/metopel/meeting6/index.html" "newtab" %}}Pertemuan 6: Time series regression{{% /staticref %}}
 - {{% staticref "/metopel/meeting7/index.html" "newtab" %}}Pertemuan 7: ARDL dan Panel{{% /staticref %}}
-- {{% staticref "/metopel/meeting8/index.html" "newtab" %}}Pertemuan 8: Logical writing, thinking, and problem solving{{% /staticref %}}
-- {{% staticref "/metopel/meeting9/meeting9.pptx" "newtab" %}}Pertemuan 9: Logical writing, thinking, and problem solving{{% /staticref %}}
-- {{% staticref "/metopel/meeting10/index.html" "newtab" %}}Pertemuan 10: Data{{% /staticref %}}
-- {{% staticref "/metopel/meeting11/index.html" "newtab" %}}Pertemuan 11: Menggunakan Zotero{{% /staticref %}}
-- {{% staticref "/metopel/meeting12/index.html" "newtab" %}}Pertemuan 12: Beginner dataviz with ggplot{{% /staticref %}}
-- {{% staticref "/metopel/meeting13/index.html" "newtab" %}}Pertemuan 13: Kerangka penelitian{{% /staticref %}}
-- {{% staticref "/metopel/meeting14/index.html" "newtab" %}}Pertemuan 14: Quarto dan Github as hosting{{% /staticref %}}
+- {{% staticref "/metopel/meeting8/index.html" "newtab" %}}Pertemuan 8: Data ekonomi: cari di mana?{{% /staticref %}}
+- {{% staticref "/metopel/meeting9/meeting9.pptx" "newtab" %}}Pertemuan 9: Visualisasi data untuk pemula{{% /staticref %}}
+- {{% staticref "/metopel/meeting10/index.html" "newtab" %}}Pertemuan 10: Menggunakan Zotero{{% /staticref %}}
+- {{% staticref "/metopel/meeting11/index.html" "newtab" %}}Pertemuan 11: Menggunakan Quarto dan Github{{% /staticref %}}
+- {{% staticref "/metopel/meeting12/index.html" "newtab" %}}Pertemuan 12: Kerangka penelitian{{% /staticref %}}
+- {{% staticref "/metopel/meeting13/index.html" "newtab" %}}Pertemuan 13: Melakukan tinjauan literatur{{% /staticref %}}
+- {{% staticref "/metopel/meeting14/index.html" "newtab" %}}Pertemuan 14: Metode penelitian di Poltek APP Jakarta{{% /staticref %}}
