@@ -34,7 +34,7 @@ slides:
 - {{% staticref "/metopel/meeting6/index.html" "newtab" %}}Pertemuan 6: Time series regression{{% /staticref %}}
 - {{% staticref "/metopel/meeting7/index.html" "newtab" %}}Pertemuan 7: ARDL dan Panel{{% /staticref %}}
 - {{% staticref "/metopel/meeting8/index.html" "newtab" %}}Pertemuan 8: Data ekonomi: cari di mana?{{% /staticref %}}
-- {{% staticref "/metopel/meeting9/meeting9.pptx" "newtab" %}}Pertemuan 9: Visualisasi data untuk pemula{{% /staticref %}}
+- {{% staticref "/metopel/meeting9/index.html" "newtab" %}}Pertemuan 9: Visualisasi data untuk pemula{{% /staticref %}}
 - {{% staticref "/metopel/meeting10/index.html" "newtab" %}}Pertemuan 10: Menggunakan Zotero{{% /staticref %}}
 - {{% staticref "/metopel/meeting11/index.html" "newtab" %}}Pertemuan 11: Menggunakan Quarto dan Github{{% /staticref %}}
 - {{% staticref "/metopel/meeting12/index.html" "newtab" %}}Pertemuan 12: Kerangka penelitian{{% /staticref %}}
