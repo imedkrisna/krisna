@@ -621,7 +621,11 @@ Krisna Gupta
 </tbody>
 </table>
 </section>
-<section id="results" class="slide level2 s">
+<section id="results" class="slide level2">
+<h2>Results</h2>
+
+<img data-src="presentasi_files/figure-revealjs/unnamed-chunk-1-1.png" width="960" class="r-stretch"></section>
+<section id="results-1" class="slide level2 s">
 <h2>Results</h2>
 <table style="width:100%;">
 <colgroup>
@@ -723,7 +727,10 @@ Krisna Gupta
 <section id="discussions-1" class="slide level2 m">
 <h2>Discussions</h2>
 <ul>
-<li><p>Coal is central to cost reduction (and reliability). It may be hard to retire coal.</p></li>
+<li><p>Coal is central to cost reduction (and reliability). It may be hard to retire coal.</p>
+<ul>
+<li>caveat: parameter-sensitive</li>
+</ul></li>
 <li><p>Updated parameter is important: can the price of solar go lower in the future?</p></li>
 <li><p>Since PLN is slow, enabling IPP will be key:</p>
 <ul>
@@ -1002,6 +1009,44 @@ Steen, M. 2001. <span>“Greenhouse Gas Emissions from Fossil Fuel Fired Power G
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
