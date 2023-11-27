@@ -16,8 +16,8 @@ publishDate: 2023-08-18T00:00:00+11:00
 publication_types: ["8"]
 
 # Publication name and optional abbreviated publication name.
-publication: "The Conversation Indonesia"
-publication_short: "TCID"
+publication: "East Asia Forum"
+publication_short: "EAF"
 
 abstract: ""
 
