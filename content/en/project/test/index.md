@@ -28,8 +28,8 @@ image:
 #   icon: twitter
 
 url_code: ""
-url_pdf: ""
-url_slides: ""
+url_pdf: ../excise/excise_doc.html
+url_slides: "../excise/excise_doc.html"
 url_video: ""
 
 # Slides (optional).
