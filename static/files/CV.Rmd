@@ -97,30 +97,19 @@ N/A
 
 N/A
 
-### Book Chapter
-
-- Gupta, Krisna. (2020). "Industri 4.0 Sebagai Solusi Daya Saing Industri Indonesia?". In Denny Irawan, Wasisto Raharjo Jati, Oscar Karnalim, Asrul Sidiq (ed.), *Mewujudkan Indonesia 4.0: Kumpulan Pemikiran Pelajar Indonesia di Australia*. Jakarta: Yayasan Pustaka Obor Indonesia. [ISBN: 978-602-433-918-0](bit.ly/MewujudkanIndonesia40)
-
-N/A
-
 ### Policy Paper
 
 - Gupta, Krisna, Deasy Pane and Donny Pasaribu. (2022). ["The advent of a new trade governance after the Omnibus Law: Neraca Komoditas"](https://www.cips-indonesia.org/neraca-komoditas-policy-paper). *CIPS Policy Paper* no.47.
 
 N/A
 
-### Book Review
-
-- Gupta, Krisna. (2020). "World Trade Evolution: Growth, Productivity and Employment ‐ edited by Lili Yan Ing and Miaojie Yu". *Asian-Pacific Economic Literature*. [https://doi.org/DOI:10.1111/apel.12291](https://doi.org/DOI:10.1111/apel.12291)
-
-N/A
-
-
 ### Popular Publications / Oped
 
+- Gupta, Krisna and Dhany Ratana (2023). [Indonesia’s stubborn logistics dilemma](https://www.eastasiaforum.org/2023/08/18/indonesias-stubborn-logistics-dilemma/). East Asia Forum.
 - Gupta, Krisna. 2022. [Indonesia's claim that banning nickel exports spurs downstreaming is questionable](https://theconversation.com/indonesias-claim-that-banning-nickel-exports-spurs-downstreaming-is-questionable-180229). The Conversation.
 - Gupta, Krisna and Deasy Pane. 2021. ["Restrictive regulations on foreign trade may hurt economy"](https://www.thejakartapost.com/paper/2021/03/11/restrictive-regulations-on-foreign-trade-may-hurt-economy.html). *The Jakarta Post*.
 - Pasaribu, Donny and Krisna Gupta. 2020. ["Will IA-CEPA be the boost to Australia-Indonesia relations leaders are banking on?"](https://indonesiaatmelbourne.unimelb.edu.au/will-ia-cepa-be-the-boost-to-the-australia-indonesia-relationship-leaders-are-banking-on/). *Indonesia At Melbourne*.
+
 
 
 
@@ -132,26 +121,26 @@ N/A
 Teaching Experience {data-icon=chalkboard-teacher}
 --------------------------------------------------------------------------------
 
-### Lecturer
+### Politeknik APP Jakarta
 
-- Politeknik APP (home institution):
-  - [Research Method](https://www.krisna.or.id/courses/metopel/) (2023)
-  - [Mathematics & Statistics](https://www.krisna.or.id/courses/statistika/) (2023)
-- Universitas Indonesia: [Trade and Industri economic development analysis](https://www.krisna.or.id/courses/trade/) (2023)
+- [Research method](https://www.krisna.or.id/courses/metopel/) (2023)
+- [Mathematics & statistics](https://www.krisna.or.id/courses/statistika/) (2023)
 
 
 N/A
 
 
 
-### Teaching Assistant
-- Macroeconomics 3 at ANU (2021)
-- Microeconomics 3 at ANU (2021)
+### Universitas Indonesia
 
-
+- [Trade and Industry economic development analysis](https://www.krisna.or.id/courses/trade/) (2023)
 
 
 N/A
+
+
+
+
 
 
 
@@ -161,7 +150,7 @@ N/A
 Consulting Experience {data-icon=suitcase}
 --------------------------------------------------------------------------------
 
-### Economist
+### Policy Adviser
 
 Prospera
 
@@ -198,7 +187,7 @@ Jakarta, Indonesia
 ::: concise
 - Design a policy evaluation method on IACEPA implementation for Prospera.
 - CGE and Stata is used.
-- Work under Reiner Heufers.
+- Work under Rainer Heufers.
 :::
 
 ### Economist
