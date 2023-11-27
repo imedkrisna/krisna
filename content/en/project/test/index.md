@@ -27,9 +27,9 @@ image:
 #   icon_pack: fab
 #   icon: twitter
 
-url_code: ""
-url_pdf: ../excise/excise_doc.html
-url_slides: "../excise/excise_doc.html"
+url_code: "~/content/en/project/excise/excise_doc.html"
+url_pdf: "/project/excise/excise_doc.html"
+url_slides: "/content/en/project/excise/excise_doc.html"
 url_video: ""
 
 # Slides (optional).
