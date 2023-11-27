@@ -1,8 +1,8 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "Test"
-summary: ""
+title: "Macro Policy Brief: Global Inflation and the Oil Production Glut"
+summary: "A policy brief for Direktoran Jenderal Migas (DJ Migas) on the impact of global uncertainty and inflation on the Indonesian crude oil sector. Written in Bahasa Indonesia"
 authors: []
 tags: []
 categories: []
@@ -27,9 +27,9 @@ image:
 #   icon_pack: fab
 #   icon: twitter
 
-url_code: "~/content/en/project/excise/excise_doc.html"
-url_pdf: "/project/excise/excise_doc.html"
-url_slides: "/content/en/project/excise/excise_doc.html"
+url_code: ""
+url_pdf: ""
+url_slides: "/project/migas/index.html"
 url_video: ""
 
 # Slides (optional).
@@ -40,5 +40,3 @@ url_video: ""
 slides: ""
 ---
 
-- {{% staticref "/project/excise/excise_doc.html" "newtab" %}}Prospera excise project{{% /staticref %}}
-- {{% staticref "/project/carbon/green_paper.html" "newtab" %}}Seminar Poltek APP Jakarta{{% /staticref %}}
