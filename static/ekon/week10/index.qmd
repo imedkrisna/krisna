@@ -15,7 +15,7 @@ format:
 
 ---
 
-# Today
+## Today
 
 - Long-run growth
 
@@ -117,7 +117,7 @@ educ2 %>%
 
 ---
 
-## Diminishing returns
+## Diminishing returns {.m}
 
 - Remember our discussion on firm's cost: capital induce decreasing returns!
   + As we increase capital, the gain is lower.
@@ -325,7 +325,7 @@ $$
 
 ---
 
-## Aggregate Demand
+## Aggregate Demand {.s}
 
 Aggregate demand is still downward sloping. This is because when **aggregate price level increases** $P \uparrow$ :
 
@@ -345,7 +345,7 @@ $$C \downarrow + I \downarrow + G + (X-M) = GDP \downarrow$$
 
 ---
 
-## What shifts AD curve?
+## What shifts AD curve? {.m}
 
 When things other than aggregate price changes, we shift the AD curve. These things are:
 
@@ -357,7 +357,7 @@ all of the above examples leads to movement of AD curve to the left.
 
 ---
 
-## Government Policy
+## Government Policy {.m}
 
 Government policy can also move AD curve.
 
@@ -483,7 +483,7 @@ grafik1
 
 ---
 
-## From SRAS to LRAS
+## From SRAS to LRAS {.s}
 
 - Think of SRAS as the **business cycle**: output cycles between boom and bust.
 
@@ -614,9 +614,9 @@ graph +
 
 ---
 
-## AD-AS model {.m}
+## AD-AS model {.s}
 
-[Negative demand shock gives you the opposite of positive demand shock. Negative supply shock gives you the opposite impact of positive supply shock.
+Negative demand shock gives you the opposite of positive demand shock. Negative supply shock gives you the opposite impact of positive supply shock.
 
 | shock type | shifts | P | Y |
 | --- | --- | --- | --- |
