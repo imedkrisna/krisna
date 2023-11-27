@@ -1,7 +1,7 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: Indonesia doubles down on nickel export bans and downstreaming"
+title: "Indonesia doubles down on nickel export bans and downstreaming"
 authors: [admin]
 date: 2023-11-27T06:09:00+11:00
 doi: ""
@@ -17,7 +17,7 @@ publication_types: ["8"]
 
 # Publication name and optional abbreviated publication name.
 publication: "East Asia Forum Quarterly"
-publication_short: "TCIDEAFQ"
+publication_short: "EAFQ"
 
 abstract: ""
 
