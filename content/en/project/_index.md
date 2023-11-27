@@ -40,8 +40,3 @@ url_video: ""
 slides: ""
 ---
 
-## 2023
-
-- {{% staticref "/project/excise/excise_doc.html" "newtab" %}}Prospera excise project{{% /staticref %}}
-- {{% staticref "/project/carbon/green_paper.html" "newtab" %}}Seminar APP{{% /staticref %}}
-- {{% staticref "/project/migas/index.html" "newtab" %}}Short brief for DJ Migas{{% /staticref %}}

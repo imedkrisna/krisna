@@ -1,7 +1,7 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "Macro Policy Brief: Global Inflation and the Oil Production Glut"
+title: "Short brief for DJ Migas"
 summary: "A policy brief for Direktoran Jenderal Migas (DJ Migas) on the impact of global uncertainty and inflation on the Indonesian crude oil sector. Written in Bahasa Indonesia"
 authors: []
 tags: []
@@ -40,3 +40,6 @@ url_video: ""
 slides: ""
 ---
 
+## Macro Policy Brief: Global Inflation and the Oil Production Glut
+
+Asumsi APBN menunjukkan optimisme pemerintah di mana dolar akan stabil di 15000 Rp/US$, inflasi di 2,8% dan suku bunga di kisaran 6,7%. Akan tetapi, situasi global menunjukkan adanya kemungkinan suku bunga internasional yang tetap tinggi untuk waktu yang lama (higher for longer). Di samping itu, kemungkinan adanya tekanan harga minyak internasional akibat OPEC yang masih menahan produksi juga dapat berdampak pada pasar minyak bumi di dalam negeri. Mengingat Indonesia saat ini net importer, maka akan sangat penting menjaga nilai tukar dari ketidakpastian global.

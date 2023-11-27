@@ -1,12 +1,12 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "A framework to estimate cigarette excise elasticity"
+title: "Cigarette excise project with PROSPERA"
 summary: "PROSPERA was asked to help Directorate General of Customs and Excise (DGCE) with estimating and forecasting demand elasticity of cigarettes. The purpose is to help DGCE forecasting its revenue and planning its excise hikes."
 authors: []
 tags: []
 categories: []
-date: 2020-08-20T11:28:22+10:00
+date: 2023-11-20T11:28:22+10:00
 
 # Optional external URL for project (replaces project detail page).
 external_link: ""
@@ -40,3 +40,6 @@ url_video: ""
 slides: ""
 ---
 
+## A framework to estimate cigarette excise elasticity
+
+This report presents our analysis on mainly estimating elasticity and forecasting future excise and revenue for DGCE. We find that the elasticity of demand to be vary between -0.5 to -1.1. We also find a strong case for tax-price pass-through for SKM and SPM tobacco type. Our findings corroborates most literature on the Indonesian tobacco use. Unfortunately data limits how much and how robust the analysis can get. In particular, we find very little value of analysis on electric cigarettes, which maindly due to only one year datapoint available for study.
