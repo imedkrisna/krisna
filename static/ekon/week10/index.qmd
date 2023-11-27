@@ -1,6 +1,6 @@
 ---
 title: "Ilmu Ekonomi"
-subtitle: "Pertemuan 4"
+subtitle: "Pertemuan 10"
 author: "Prodi PIWAR Politeknik APP Jakarta"
 format: 
   revealjs:
@@ -15,946 +15,766 @@ format:
 
 ---
 
-## Recap on last week
+# Today
 
-- We use consumer and producer surplus to measure the efficiency of the economy. We want the combination of both to be generally bigger.
+- Long-run growth
 
-- The two face a constant political battle: consumer wants small prices, producers like high prices.
+- AD-AS model
 
-- When market is perfect, intervention often leads to various types of inefficiency
+## Measuring economic growth
 
-## Today
+- We've learned that there are many ways to look at GDP:
 
-- We will learn about one more intervention: tax.
-
-- before we go there, it is best to understand elasticity first.
-
-## What's an elasticity?
-
-- If you are a business owner, understanding elasticity is important aspect to get maximized profit.
-
-- **Price elasticity of demand** of a good is a concept of how much the demand of that good change  its price changes.
-  - we usually just say **elasticity** in short.
+  + Nominal GDP is the easiest method but not very useful.
+  + Real GDP eliminates price level.
   
-- Maximizing profit requires this knowledge:
-  - sometimes it is better to sell cheap to gain huge market share, or sell high if niche.
+- We calculate growth using Real GDP.
+
+$$
+\text{growth}=\frac{\text{real GDP}_2-\text{real GDP}_1}{\text{real GDP}_1} \times 100 \%
+$$
+
+
+## Growth determinant
+
+- Advance countries usually grows at around 2% rate.
+
+- Indonesia grows somewhere around 5% these days.
+
+- Economic growth ensure the people in the country gets richer.
+  + Electricity was a luxury back in the 1940s, now we take it for granted.
+  + Only rich people use cellphones back in late 1990s.
   
-## Calculating elasticity
+## Productivity growth
 
-:::: columns
-::: {.column width=47%}
-- Consider the demand curve on the right.
+- Increasing the number of worker can increase GDP, but it won't last long.
 
-- At $P_1=10$, the daily traffic is $Q_1=140$
+- When we have an economic growth that is long lasting, we call it **sustained economic growth**.
 
-- When $P_2=11$, daily traffic drops to $Q_2=127.3$
-:::
+- We can only sustain economic growth by increasing **productivity**.
 
-::: {.column width=47%}
-```{r grafik1,echo=FALSE, message=FALSE, warning=FALSE}
-#| fig-width: 10
-#| fig-height: 8
+- The term productivity usually refer to how much output can a country produce given the same number of labour.
+
+- We often measure them with $\frac{GDP}{labour}$
+
+---
+
+## Determinant of productivity
+
+Three main determinant of productivity:
+
+1. **Increase in physical capital**. A farmer with a tractor can plow more acres of land than with a hoe or a bull. 
+1. **Increase in human capital**. Usually measured by education and training. 
+1. **Technological progress**, such as the invention of combustion engines, internet, etc. While major invention is important, Note that it is also important to consider smaller technological progress such as a simple post-it.
+
+---
+
+### A note on education in Indonesia
+
+```{r educ1,echo=FALSE, message=FALSE, warning=FALSE}
+library(kableExtra)
 library(dplyr)
 library(ggplot2)
 library(ggdark)
 
-demand <- function(q) (q/1400)^(-1)
-q<-c(127.3,140)
-p<-c(11,10)
+educ <- data.frame(
+  "educ"=c('No formal education','Not finished elementary','Elementary','Junior high','General high school','Vocational high school','Diploma','University','Total'),
+  "year1986"=c(12612237,19151150,22005947,5383600, 2523131,2828990,574248,305088,65384391),
+  "feb2008"=c(5670322,12982233,36963023,19396319,13899839,6708513,2660606,3769002,102049857),
+  "feb2020"=c(3396863,15448193,33188745,23827254,24372684,15690637,3732368,13636122,133292866)
+)
+
+educ %>%
+  kbl(align = "r", format='html', caption='Number of workers by educational attainment',
+    col.names = c("Finished education","Year 1986","Feb 2008","Feb 2020"),format.args = list(big.mark = ","),digits = 2) %>%
+  kable_styling(font_size = 18) %>%
+  column_spec(1, width = "5cm") %>%
+  add_footnote("Source: BPS")
+
+```
+
+---
+
+### A note on education in Indonesia
+
+```{r educ2,echo=FALSE, message=FALSE, warning=FALSE}
+
+educ2 <- data.frame(
+  "educ"=c('No formal education','Not finished elementary','Elementary','Junior high','General high school','Vocational high school','Diploma','University','Total'),
+  "year1986"=educ$year1986/65384391*100,
+  "feb2008"=educ$feb2008/102049857*100,
+  "feb2020"=educ$feb2020/133292866*100
+)
+
+educ2 %>%
+  kbl(align = "r", format='html',caption='Fraction of total workers by educational attainment',
+    col.names = c("Finished education","Year 1986","Feb 2008","Feb 2020"),format.args = list(big.mark = ","),digits=2) %>%
+  kable_styling(font_size = 18) %>%
+  column_spec(1, width = "5cm") %>%
+  add_footnote("Source: BPS")
+
+```
+
+---
+
+## Diminishing returns
+
+- Remember our discussion on firm's cost: capital induce decreasing returns!
+  + As we increase capital, the gain is lower.
+
+- Back to our farmer example:
+  + Having one additional tractor from zero tractor will greatly increase productivity.
+  + Adding a second tractor may not be as useful in increasing productivity as the first one.
+  
+- In a micro-perspective, the farmer may invest in something else instead of buying another tractor.
+
+---
+
+## Diminishing returns
+
+- However, in macro perspective, a country will eventually running out place to invest in.
+
+- The returns to additional physical capital is diminishing as a country grows its capital stock.
+
+- Education is the same: the number of educated citizen can only increase so much.
+
+- At the same time, technological advancement can be transferred in some ways.
+  + Being a follower actually helps in this case!
+
+- This leads to the **convergence theorem**
+
+---
+
+## Convergence theorem
+
+- Convergence theorem states that poorer countries will catch-up to advance countries living standard.
+
+  + Countries with lower starting capital theoretically grow faster.
+  
+  + free flow of capital helps advance countries' capital to flow to developing countries looking for growth.
+  
+- Does convergence theorem applies in the real world?
+
+---
+
+### East asian convergence {.m}
+
+Japan caught up in 90s, Singapore in post-GFC
+
+```{r converge1,echo=FALSE, message=FALSE, warning=FALSE, fig.width=10}
+
 
 graph<-ggplot()+
-  dark_theme_bw(base_size=25)+
+  dark_theme_bw(base_size=22)+
   theme(text = element_text(color='#e0e0e0'),
         panel.border = element_blank(),
         panel.grid.major = element_blank(),
         panel.grid.minor = element_blank(),
         axis.line = element_line(colour = "#e0e0e0"))
 
+graph2<-dark_theme_bw(base_size=22)+
+  theme(text = element_text(color='#e0e0e0'),
+        panel.border = element_blank(),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        axis.line = element_line(colour = "#e0e0e0"))
+
+library(WDI)
+library(lubridate)
+data<-WDI(indicator = 'NY.GDP.PCAP.KD', country = c('USA','AUS','JPN','SGP','KOR'),end=2019)
+ggplot(data, aes(year, NY.GDP.PCAP.KD)) +
+  geom_line(aes(color = country), size=1.5)+
+  labs(y='Constant 2010 USD',title='GDP per capita',caption='source: World Development Indicators')+
+  graph2
+
+```
+
+---
+
+### South-east Asia not-so-converging? {.s}
+
+On the contrary, there's **divergence** in ASEAN. Why?
+
+```{r converge2,echo=FALSE, message=FALSE, warning=FALSE, fig.width=10}
+data<-WDI(indicator = 'NY.GDP.PCAP.KD', country = c('USA','AUS','JPN','SGP','KOR','IDN','PHL','MYS','THA'),end=2019)
+ggplot(data, aes(year, NY.GDP.PCAP.KD)) +
+  geom_line(aes(color = country), size=1.5)+labs(y='Constant 2010 USD',title='GDP per capita',caption='source: World Development Indicators')+
+  graph2
+```
+
+---
+
+## Why growth rate differs?
+
+### Saving and investment spending
+
+- Some countries accumulate capital much faster than others. Where's the money come from?
+
+  + **Domestic saving**. Japan, China and Singapore's saving rate was high during their high growth time.
+  + **Foreign saving**. Or in other words, other country's saving.
+  
+- While foreign investment definitely helps, many high-performing investing countries start with high **domesting saving**.
+  
+---
+
+### Saving rate in ASEAN (and China) {.s}
+
+Indonesian save less compared to peers
+
+```{r saving1,echo=FALSE, message=FALSE, warning=FALSE, fig.width=10}
+library(gghighlight)
+data<-WDI(indicator = 'NY.GNS.ICTR.ZS', country = c('CHN','SGP','IDN','PHL','MYS','THA'),start=1975,end=2019)
+saving<-ggplot(data, aes(year, NY.GNS.ICTR.ZS)) +
+  geom_line(aes(color = country), size=1.5)+labs(y='% GDP',title='Gross saving',caption='source: World Development Indicators')+
+  graph2
+saving
+```
+
+---
+
+### Saving rate in ASEAN (and China) {.s}
+
+Indonesian save less compared to peers
+
+```{r saving2,echo=FALSE, message=FALSE, warning=FALSE, fig.height=6.5, fig.width=7.5}
+saving+
+  gghighlight(country == "Indonesia")
+```
+
+---
+
+## Why growth rate differs?
+
+### Education
+
+- Some countries catch up with education very quickly, much more so than others.
+
+### Research and development
+
+- Semiconductor technology won't be available without understanding of quantum mechanics theory in physics.
+
+- some countries are better at implementing these tech compared to others.
+
+---
+
+## Why growth rate differs?
+
+### Government have big role
+
+- Government can speed up **building high fixed cost capital** such as electricity, internet, ports, roads and so on.
+
+- Government can also **subsidize education and R&D** since it has positive externalities.
+
+- Maintaining a well-function financial system.
+
+- Protecting property rights and improve **stability** and good governance.
+
+- Devise environmentally friendly policy
+
+---
+
+## AD-AS Framework
+
+- The AD-AS framework for macroeconomics is very similar with our perfect market framework in the first half.
+
+- We learned that demand curve is **downward sloping** , while supply curve is upward sloping.
+
+- The supply curve is a flat line in the **long run** because firms can adjust to demand in the long run by **changing fixed cost** and **entering and exiting** the market.
+
+- In AD-AS framework, there are a little bit of difference: it is representing **not one market**, but every market in **a country**.
+
+---
+
+## AD-AS Framework
+
+- In the market framework, y-axis is the price level while x-axis is the quantity produced and consumed.
+
+- In AD-AS, y-axis is the aggregate price. We usually use **GDP deflator** but can also use **CPI**.
+
+- We use **real GDP** on the x-axis.
+
+- Note that it is still Quantity and Price, but we use aggregate.
+
+- What is the implication of using aggregate?
+
+---
+
+## AD-AS Framework
+
+- In the perfect market framework, the law of demand dictates that when price increase, quantity demanded goes down: hence the negative slope.
+
+- When a good price increases, consumers tend to lower the quantity because of *ceteris paribus*
+  + if its substitute held constant, the consumer change to buying the substitute.
+  + A consumer can also choose to save if the price gets above their WTP.
+  
+---
+
+## AD-AS Framework
+
+- This does not work in aggregate:
+  + Whether you buy rice or noodle or even car, you do not change your consumption in aggregate.
+  + When you save, it is also counted as GDP.
+  
+- This is because how we calculate GDP:
+
+$$
+GDP = C+I+G+(X-M)
+$$
+
+[where $C$ is consumption, $I$ is investment (which comes from saving), $G$ is government expenditure (which comes mostly from taxes), and $(X-M)$ is export minus import (aka. trade balance)]{.s}
+
+---
+
+## Aggregate Demand
+
+Aggregate demand is still downward sloping. This is because when **aggregate price level increases** $P \uparrow$ :
+
+1. The aggregate number of goods and services you can purchase given your current asset level is reduced. this is called **The wealth effect**. $C \downarrow$
+
+1. You need more money to buy the same goods, which leads to less money in the bank. Less saving leads to **higher interest rate**, which increases borrowing cost and reduces investment. This is called **The interest rate effect**. $I \downarrow$
+
+$$C \downarrow + I \downarrow + G + (X-M) = GDP \downarrow$$
+
+## Side note
+
+- I often use "saving" very liberally: any income you dont's spend is saving, even if you just keep in in your pocket.
+
+- We will learn how saving and changes in interest rate mechanism works later.
+
+- For now, the most important thing is the theoretical relationship between Aggregate Demand (measured by **Real GDP**) and **inflation**.
+
+---
+
+## What shifts AD curve?
+
+When things other than aggregate price changes, we shift the AD curve. These things are:
+
+1. **Change in expectations**. When people prepare for the worst, people stop spending and business stop investing.
+1. **Change in wealth**. When your asset prices go down, your purchasing power also go down so you consume less.
+1. **Size of physical capital**. When there are more physical capital, your current physical capital's worth declines.
+
+all of the above examples leads to movement of AD curve to the left.
+
+---
+
+## Government Policy
+
+Government policy can also move AD curve.
+
+1. Two ways using **fiscal policy**:
+  - Increasing **government spending** leads to AD moves to the right because $G \uparrow$
+  - A **tax cut** leads to more disposable income for people which leads to $C \uparrow$
+  
+1. **Monetary policy** is central bank's tool. They control how much money exists in the market. Adding liquidity by creating more money or lowering base rate leads to higher demand.
+
+---
+
+## Aggregate supply
+
+- Aggregate supply is a bit similar to the market analysis.
+  + There are two different AS curves: short-run and long-run
+  
+- The short-run aggregate supply (SRAS) is **upward sloping**: when aggregate price level goes down, quantity supplied goes down as well.
+
+- Profit = selling price minus production cost. When selling price changes, production cost can be hard to adjust.
+
+- This is caused by **sticky wages** in the short run.
+
+---
+
+## Sticky wage
+
+- nominal wage typically does not move in the short-run:
+  + nominal wage usually written in a contract.
+  + especially if there's minimum wage.
+
+- in the long run, minimum wage can be revised, and contracts can be renewed.
+
+- note that some wage can adjust quickly (think of Gojek's surge pricing).
+
+- However, since most are sticky, in aggregate, nominal wage is still quite sticky.
+
+---
+
+## Sticky wage 
+
+- The sticky wage forces producer to reduce output when price is decreasing.
+
+- On the other hand, when demand is strong, some firms increasing output while increasing their price as well because increasing output cannot be done quickly.
+
+- This leads to positive relationship between aggregate price level and short-run aggregate supply.
+
+---
+
+## What shifts SRAS
+
+1. **Changes in commodity prices**. Commodities (oil, CPO, minerals) are counted as inputs, so their price change are not included in the GDP. When prices of these things go up, the final goods produced is reduced and SRAS shifts to the left.
+
+1. **Changes in nominal wages**. In the long-run, nominal wage will change: when in go up, SRAS shifts to the left.
+
+1. **changes in productivity**. Any improvement to productivity shifts SRAS to the right.
+
+---
+
+## Long Run Aggregate Supply Curve (LRAS) {.m}
+
+- In the short-run, price changes is faster than changes in input prices and wages.
+
+- In the long-run, input prices and wages adjusts:
+
+  + if firms reduce output, they reduce demand for labour and inputs. In turn, prices for these things go down as well.
+  
+- What will happen when both prices of final goods and inputs reduce? The answer is **nothing**.
+
+- In the long-run, adjustment of prices leads to no change in aggregate output / GDP.
+
+---
+
+:::: columns
+::: {.column width="47%"}
+
+```{r grafik2,echo=FALSE, message=FALSE, warning=FALSE}
+supply <- function(x) x
+
+grafik2 <- graph +
+  stat_function(fun = supply, color="red", size=1.1)+
+  scale_y_continuous(limits=c(1,14), breaks = c(5,8), labels=c("P1","P2"))+
+  scale_x_continuous(limits=c(1,14), breaks =c(5,8),labels=c("Y1","Y2"))+
+  labs(x="Real GDP",y="Aggregate price \n (GDP deflator)", title = "Short-run Aggregate Supply Curve")+
+  annotate("text", x = 12, y = 9, label = 'SRAS' ,size=10)+
+  geom_point(aes(x=c(5,8),y=c(5,8)),color='white',size=4)+
+  geom_segment(aes(x = 1, y = 5, xend = 5, yend = 5), lty = "dotted"
+               ,size=2) +
+  geom_segment(aes(x = 5, y = 1, xend = 5, yend = 5), lty = "dotted"
+               ,size=2) +
+  geom_segment(aes(x = 1, y = 8, xend = 8, yend = 8), lty = "dotted"
+               ,size=2) +
+  geom_segment(aes(x = 8, y = 1, xend = 8, yend = 8), lty = "dotted"
+               ,size=2)
+grafik2
+```
+
+
+[In the short-run, changes in price will be followed by changes in supply because input prices are sticky]{.s}
+
+:::
+::: {.column width="47%"}
+
+```{r grafik1, echo=FALSE, message=FALSE, warning=FALSE}
+
 grafik1 <- graph +
-  stat_function(fun = demand,size=1.1, color='cyan') +
-  scale_x_continuous(limits=c(120,150), 
-                     breaks = q) +
-  scale_y_continuous(limits=c(9,12), 
-                     breaks = p) +
-  geom_segment(data = data_frame(q=127.3,p=11),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=127.3,p=11),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=140,p=10),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=140,p=10),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2)+
-  labs(title="Toll road demand \n for Surabaya-Gempol", x="Q (1000 cars/day)", y="P (1000 IDR)")+
-  geom_text(aes(x = 150, y = 9.7, label = "D"), parse = TRUE, size =8, color = '#e0e0e0')
+  geom_vline(xintercept=5, color="red",size=2)+
+  scale_y_continuous(limits=c(0,10), breaks =c(5,8), labels=c("P1","P2"))+
+  scale_x_continuous(limits=c(0,10), breaks = 5, labels = "Yp")+
+  labs(x="Real GDP",y="Aggregate price \n (GDP deflator)", title = "Long-Run Aggregate Supply Curve")+
+  annotate("text", x = 10, y = 4, label = "LRAS" ,size=10)+
+  geom_segment(aes(x = 0, y = 5, xend = 5, yend = 5), lty = "dotted"
+               ,size=2) +
+  geom_segment(aes(x = 0, y = 8, xend = 5, yend = 8), lty = "dotted",
+               size=2)
 grafik1
 
 ```
-:::
-::::
 
-## Calculating elasticity {.s}
+[In the long-run, changes in all prices do not matter to output. Only **technological progress** shifts LRAS.]{.s}
 
-- To calculate elasticity of demand, we first calculate:
-  1. percent change in the quantity demanded
-  1. percent change in the price
-
-- Formula for no.1:
-
-$$
-\tag{1}
-\text{% change in }Q^D=\frac{Q_2^D-Q_1^D}{Q_1^D}\times 100
-$$
-
-
-- Formula for no.2:
-
-$$
-\tag{2}
-\text{% change in P}=\frac{P_2-P_1}{P_1}\times 100
-$$
-
-
-## Calculating elasticity {.m}
-
-- for our case, we have:
-
-$$
-\begin{align*}
-Q_1^D&=140 & Q_2^D&=127.3 \\ P_1&=10 & P_2&=11
-\end{align*}
-$$
-
-- Thus:
-
-$$
-\begin{align}
-\text{% change in }Q^D &= \frac{127.3-140}{127.3}\times 100 \\ &=-10 \%
-\end{align}
-$$
-
-$$
-\begin{align}
-\text{% change in P} &= \frac{11-10}{10}\times 100 \\ &=10\%
-\end{align}
-$$
-
-## Calculating elasticity {.s}
-
-- After we get the numbers from {1} and {2}, we use this formula:
-
-$$
-\tag{3}
-\text{Price elasticity of demand}=\frac{\text{% change in }Q^D}{\text{% change in P}}
-$$
-
-
-- in our case, we have:
-
-$$
-\begin{align}
-\text{Price elasticity of demand}&=\frac{-10\%}{10\%} \\ &=-1
-\end{align}
-$$
-
-## Calculating elasticity
-
-- Economists are also lazy in writing the minus sign.
-
-- Usually we report demand elasticity in **absolute term**.
-  - i.e., we drop the minus sign.
-  
-- However, since most demand curves are downward sloping, it must be negative
-  - hence we automatically knows what it means even when we report in absolute term.
-
-## About percent change
-
-Using percent changes is more useful than absolute changes
-- Things are usually move on proportion
-  - A wealthy person will feel casual getting 1 million IDR because it's probably just a small % of her total wealth.
-    
-- Quantity and prices have many metrics
-  - kgs, litres, units, pairs, units/day, etc
-  - IDR, USD, btc, etc.
-
-## interpreting elasticity
-
-<iframe src="https://giphy.com/embed/WYEWpk4lRPDq0" width="400" height="400" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/cat-WYEWpk4lRPDq0">via GIPHY</a></p>
-
-## Interpreting elasticity
-
-- We have seen the elasticity of our toll road case is around 1, but what does this mean?
-
-- Note that the elasticity formula has % change in Q at the top, and % change in P at the bottom.
-
-- In a sense, the number shows how much quantity change given the price change.
-
-- that means, the bigger the number of the price elasticity, **the more elastic it is**
-
-## A market is elastic. So what?
-
-Let's have a look at different 'kind' of elasticities and what they mean
-
-We'll begin with two extreme cases of elasticity: zero (0) and infinity ( $\infty$ )
-
-## Two extreme cases
-
-- Suppose the toll road is the only way to go to work.
-  - No matter how high the price, people will still need to use it.
-  - Hence, change in the demand of toll road is zero for any change in price.
-  
-- Suppose shuttlecocks are priced 10.000 IDR
-  - If people don't care about the shuttlecocks' color, everyone will buy the pink one if the price drop to 9.900
-  - Everyone won't buy a single one if the price go up only to 10.100 IDR
-
-## Two extreme cases of elasticity
-
-:::: columns
-::: {.column width=47%}
-```{r grafik2, message=FALSE, warning=FALSE, echo=FALSE}
-grafik2 <- graph +
-  geom_vline(xintercept=125, color = "cyan",size=2)+
-  scale_x_continuous(limits=c(120,130), 
-                     breaks = 125) +
-  scale_y_continuous(limits=c(9,12), 
-                     breaks = p) +
-  geom_segment(data = data_frame(q=125,p=11),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=125,p=10),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2)+
-  labs(title="Perfectly inelastic demand (0)", x="Q", y="P")+
-  geom_text(aes(x = 125.5, y = 9, label = "D[1]"), parse = TRUE, size =8, color = '#e0e0e0')
-grafik2
-```
-an illustration of **perfectly inelastic demand**
-:::
-
-::: {.column width=47%}
-```{r grafik3, message=FALSE, warning=FALSE, echo=FALSE}
-library(latex2exp)
-grafik3 <- graph +
-  geom_hline(yintercept=10.5, color = "cyan",size=2)+
-  scale_x_continuous(limits=c(120,130), 
-                     breaks = c(123,127)) +
-  scale_y_continuous(limits=c(9,12), 
-                     breaks = 10.5) +
-  geom_segment(data = data_frame(q=123,p=10.5),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=127,p=10.5),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2)+
-  labs(title="Perfectly Elastic Demand (\U221E)", x="Q", y="P")+
-  geom_text(aes(x = 130, y = 10.7, label = "D[2]"), parse = TRUE, size =8, color = '#e0e0e0')
-grafik3
-```
-an illustration of **perfectly elastic demand**
-:::
-::::
-
-## Types of elasticities
-
-- Most goods are somewhere in between.
-
-- We usually use elasticity=1 as another important division point.
-
-- 1 is a useful barrier because when elasticity=1, that means a change in price by 1 % leads to a change in quantity demanded by 1 %
-
-- elasticity < 1 means the quantity response less than a change in prices, while elasticity > 1 means the quantity is highly responsive, more than the change in price.
-
----
-
-:::: columns
-::: {.column width=47%}
-```{r grafik4,echo=FALSE, message=FALSE, warning=FALSE}
-
-demand1 <- function(q) (q/433)^(-1/0.5)
-demand2 <- function(q) (q/7250)^(-1/1.7)
-
-grafik4 <- graph +
-  stat_function(fun = demand1,size=1.1, color='cyan') +
-  scale_x_continuous(limits=c(120,150), 
-                     breaks = c(130.5,137)) +
-  scale_y_continuous(limits=c(9,12), 
-                     breaks = p) +
-  geom_segment(data = data_frame(q=130.5,p=11),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=130.5,p=11),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=137,p=10),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=137,p=10),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2)+
-  labs(title="Inelastic demand (<1)", x="Q (1000 cars/day)", y="P (1000 IDR)")+
-  geom_text(aes(x = 145, y = 9.3, label = "D"), parse = TRUE, size =8, color = '#e0e0e0')
-
-grafik5 <- graph +
-  stat_function(fun = demand2,size=1.1, color='cyan') +
-  scale_x_continuous(limits=c(120,150), 
-                     breaks = c(123,144.6)) +
-  scale_y_continuous(limits=c(9,12), 
-                     breaks = p) +
-  geom_segment(data = data_frame(q=123,p=11),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=123,p=11),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=144.6,p=10),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=144.6,p=10),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2)+
-  labs(title="Elastic demand (>1)", x="Q (1000 cars/day)", y="P (1000 IDR)")+
-  geom_text(aes(x = 150, y = 10, label = "D"), parse = TRUE, size =8, color = '#e0e0e0')
-
-grafik4
-grafik5
-
-```
-:::
-::: {.column width=47%}
-
-```{r grafik5,echo=FALSE, message=FALSE, warning=FALSE}
-grafik1 + labs(title="Unit elastic demand (=1)", x="Q (1000 cars/day)", y="P (1000 IDR)")
-
-```
-</br>
-</br>
-</br>
-
-The flatter the curve, the closer its elasticity to $\infty$
-
-:::
-::::
-
-## Types of demand elasticities {.m}
-
-| Elasticity | meaning |
-| ---- | ------- |
-| 0 | **perfectly inelastic**. Price doesn't matter |
-| < 1 | **inelastic**. Quantity is less responsive to price changes |
-| 1 | **unit elastic**. Quantity change exactly the same as the price change in % terms|
-| >1 | **elastic**. Quantity response heavily to price changes |
-| $\infty$ | **perfectly elastic**. A slight increase of price reduces demand to zero |
-
-## Elasticities vary. So what?
-
-- Suppose you wan't to increase the revenue from the toll road operation, what price will you set?
-
-- It is intuitive to think that the higher the price, the better.
-  - High price $\Rightarrow$ more revenue
-
-- Is there a problem with this logic?
-
-- Remember, demand respond to price. High price $\Rightarrow$ lower demand $\Rightarrow$ less revenue
-
-- The maximum price depends on the demand elasticity
-
----
-
-```{r grafik6,echo=FALSE, message=FALSE, warning=FALSE}
-grafik6 <- graph +
-  stat_function(fun = demand1,size=1.1, color='cyan') +
-  scale_x_continuous(limits=c(120,150), 
-                     breaks = 137) +
-  scale_y_continuous(limits=c(9,12), 
-                     breaks = 10) +
-  geom_segment(data = data_frame(q=137,p=10),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=137,p=10),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2)+
-  geom_ribbon(aes(x=seq(0,137,1), ymin=9, ymax=10),alpha = 0.4,fill='red')+
-  annotate("text", x = 128, y = 9.8, label = "Total revenue=", size=8)+
-  annotate("text", x = 128, y = 9.6, label = "Price x Quantity", size=8)+
-  annotate("text", x = 128, y = 9.4, label = "10 x 137", size=8)+
-  annotate("text", x = 128, y = 9.2, label = "1370 mil IDR/day", size=8)+
-  labs(title="Inelastic demand (<1)", x="Q (1000 cars/day)", y="P (1000 IDR)")+
-  geom_text(aes(x = 145, y = 9.3, label = "D"), parse = TRUE, size =8, color = '#e0e0e0')
-grafik6
-```
-
----
-
-```{r grafik7,echo=FALSE, message=FALSE, warning=FALSE}
-grafik7 <- graph +
-  stat_function(fun = demand1,size=1.1, color='cyan') +
-  scale_x_continuous(limits=c(120,150), 
-                     breaks = 130.5) +
-  scale_y_continuous(limits=c(9,12), 
-                     breaks = 11) +
-  geom_segment(data = data_frame(q=130.5,p=11),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=130.5,p=11),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_ribbon(aes(x=seq(0,130.5,1), ymin=9, ymax=11),alpha = 0.4,fill='red')+
-  annotate("text", x = 125, y = 10.4, label = "Total revenue=", size=7)+
-  annotate("text", x = 125, y = 10.2, label = "P x Q", size=8)+
-  annotate("text", x = 125, y = 10, label = "11 x 130.5", size=8)+
-  annotate("text", x = 125, y = 9.8, label = "1435.5", size=8)+
-  labs(title="Inelastic demand (<1)", x="Q (1000 cars/day)", y="P (1000 IDR)")+
-  geom_text(aes(x = 145, y = 9.3, label = "D"), parse = TRUE, size =8, color = '#e0e0e0')
-grafik7
-```
-
----
-
-## Impact of price increase {.m}
-
-:::: columns
-::: {.column width=47%}
-```{r grafik8,echo=FALSE, message=FALSE, warning=FALSE}
-#| fig-width: 6
-#| fig-height: 7
-grafik4 +
-  geom_ribbon(aes(x=seq(0,130.5,1), ymin=9, ymax=10, fill="B"),alpha = 0.4,show.legend=FALSE)+
-  geom_ribbon(aes(x=seq(130.5,137,1), ymin=9, ymax=10, fill="A"),alpha = 0.4,show.legend=FALSE)+
-  geom_ribbon(aes(x=seq(0,130.5,1), ymin=10, ymax=11, fill="C"),alpha = 0.4,show.legend=FALSE)+
-  annotate("text", x = 125, y = 9.5, label = "B", size=9)+
-  annotate("text", x = 134, y = 9.5, label = "A", size=9)+
-  annotate("text", x = 125, y = 10.5, label = "C", size=9)
-  
-```
-:::
-::: {.column width=47%}
-
-- Segment A is the **Quantity effect of price increase**
-  - Negative effect since fewer units sold
-
-- Segment C is the **Price effect of price increase**
-  - positive effect since higher price for each unit sold
-  
-:::
-::::
-
-## Impact of price increase
-
-:::: columns
-::: {.column width=47%}
-```{r grafik9,echo=FALSE, message=FALSE, warning=FALSE}
-#| fig-width: 6
-#| fig-height: 7
-grafik4 +
-  geom_ribbon(aes(x=seq(0,130.5,1), ymin=9, ymax=10, fill="B"),alpha = 0.4,show.legend=FALSE)+
-  geom_ribbon(aes(x=seq(130.5,137,1), ymin=9, ymax=10, fill="A"),alpha = 0.4,show.legend=FALSE)+
-  geom_ribbon(aes(x=seq(0,130.5,1), ymin=10, ymax=11, fill="C"),alpha = 0.4,show.legend=FALSE)+
-  annotate("text", x = 125, y = 9.5, label = "B", size=9)+
-  annotate("text", x = 134, y = 9.5, label = "A", size=9)+
-  annotate("text", x = 125, y = 10.5, label = "C", size=9)
-  
-```
-:::
-
-::: {.column width=47%}
-- If you are profit oriented, Increasing the price is a good idea if:
-
-$$
-B+C > B+A
-$$
-
-$$
-C>A
-$$
-:::
-::::
-
-## Impact of price increase
-
-:::: columns
-::: {.column width=47%}
-```{r grafik10,echo=FALSE, message=FALSE, warning=FALSE}
-#| fig-width: 6
-#| fig-height: 7
-grafik5 +
-  geom_ribbon(aes(x=seq(0,123,1), ymin=9, ymax=10, fill="B"),alpha = 0.4,show.legend=FALSE)+
-  geom_ribbon(aes(x=seq(123,144.6,1), ymin=9, ymax=10, fill="A"),alpha = 0.4,show.legend=FALSE)+
-  geom_ribbon(aes(x=seq(0,123,1), ymin=10, ymax=11, fill="C"),alpha = 0.4,show.legend=FALSE)+
-  annotate("text", x = 122, y = 9.5, label = "B", size=9)+
-  annotate("text", x = 134, y = 9.5, label = "A", size=9)+
-  annotate("text", x = 122, y = 10.5, label = "C", size=9)
-  
-```
-:::
-
-::: {.column width=47%}
-- In a market with high demand elasticity, the quantity effect outweighs the price effect.
-
-- Increasing the price is not so clever if the market's demand is highly elastic.
-:::
-::::
-
-## Last point on demand elasticity
-
-- When elasticity = 1, then $A=C$
-  - hence changing price has no impact on sales revenue.
-
-- Profit oriented in the real life may not very realistic
-  - Governments may want to serve as much people as possible
-  - In the short run, growth and market cap may be more important than profit.
-
-## Last point on demand elasticity
-
-- We usually tied elasticity on a price point.
-  - on our toll road case, our price point is 10.000 IDR
-  
-- Elasticity may differ in different price point.
-  - Changing price from 10 to 11 may have different impact compared to changing price from 20 to 21.
-      - the first one is an increase of 10%.
-      - the second one is an increase of 5%.
-      - in absolute term, both are a 1.000 IDR increase.
-
-## Last point on demand elasticity
-
-- Estimating elasticity is very hard
-
-- There are many things also at play:
-  - different condition in different time
-  - different buyer with different characteristics behave differently
-  - Income, taste, etc matters (remember what **shifts the demand curve?**)
-
-## Factors determine demand elasticity
-
-- A **necessity** good tend to have lower elasticity compared to a **luxury good**.
-
-- The availability of **close substitutes**, like the case with pertamax and shell.
-
-- **Share of income spent** on the good. Rich people may not care with toll road price.
-
-- **Time**. Cigarettes may have low elasticity in the short run because it is so addictive, and adapt later in the long run.
-
-## Other types of demand elasticity {.m}
-
-- **Cross price elasticity of demand** is how the price of good $B$ affects a demand of good $A$.
-
-$$
-\tag{4}
-\text{Cross-Price elasticity}_{A,B}=\frac{\text{% change in }Q_A}{\text{% change in }P_B}
-$$
-
-
-- When good A and good B are subtitutes, then the effect is negative.
-  - e.g., Samsung and Xiaomi
-
-- When good A and good B are complements, the effect is positive.
-  - e.g., Samsung and Telkomsel
-
-## Other types of demand elasticity {.m}
-
-- **Income elasticity of demand** is how the chanage on income affects your demand of good $A$
-
-
-$$
-\tag{5}
-\text{Income elasticity of Demand}_A=\frac{\text{% change in }Q_A}{\text{% change in Income}}
-$$
-
-
-- It is usually positive if good $A$ is a **normal good**.
-
-- It is negative if good $A$ is an **inferior good**.
-  - you buy less instant noodle when you're richer.
-  
-## Other types of demand elasticity {.m}
-
-- **Income elasticity of demand** is how the chanage on income affects your demand of good $A$
-
-$$
-\tag{5}
-\text{Income elasticity of Demand}_A=\frac{\text{% change in }Q_A}{\text{% change in Income}}
-$$
-
-
-- A **necessity** good is usually **income inelastic** because you need to buy it no matter what.
-
-- A **luxury** good can be **income elastic**. You only buy it if your main needs are covered so you can wait for a discount.
-
-# Price elasticity of Supply
-
-## Price elasticity of Supply {.m}
-
-- Supply also have elasticities. As a supplier, you can't afford to sell expensive if there are high competition.
-
-- However, in many cases (such as toll road), entering the market is very hard.
-
-- How easy it is to expand (or for new supplier to enter the market) matters to how responsive can supply react to the change in price.
-
-$$
-\tag{6}
-\text{Price elasticity of supply} = \frac{\text{% change in }Q^s}{\text{% change in }P}
-$$
-
-
-## Two extreme cases of elasticity
-
-:::: columns
-::: {.column width=47%}
-```{r grafik11, message=FALSE, warning=FALSE, echo=FALSE}
-grafik11 <- graph +
-  geom_vline(xintercept=125, color = "red",size=2)+
-  scale_x_continuous(limits=c(120,130), 
-                     breaks = 125) +
-  scale_y_continuous(limits=c(9,12), 
-                     breaks = p) +
-  geom_segment(data = data_frame(q=125,p=11),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=125,p=10),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2)+
-  labs(title="Perfectly inelastic supply (0)", x="Q", y="P")+
-  geom_text(aes(x = 125.5, y = 9, label = "S[1]"), parse = TRUE, size =8, color = '#e0e0e0')
-grafik11
-```
-.s[an illustration of **perfectly inelastic supply**]
-:::
-
-::: {.column width=47%}
-```{r grafik12, message=FALSE, warning=FALSE, echo=FALSE}
-
-grafik12 <- graph +
-  geom_hline(yintercept=10.5, color = "red",size=2)+
-  scale_x_continuous(limits=c(120,130), 
-                     breaks = c(123,127)) +
-  scale_y_continuous(limits=c(9,12), 
-                     breaks = 10.5) +
-  geom_segment(data = data_frame(q=123,p=10.5),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=127,p=10.5),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2)+
-  labs(title="Perfectly Elastic Supply (\U221E)", x="Q", y="P")+
-  geom_text(aes(x = 130, y = 10.7, label = "S[2]"), parse = TRUE, size =8, color = '#e0e0e0')
-grafik12
-```
-an illustration of **perfectly elastic supply**
-:::
-::::
-
-## Two extreme cases of elasticity
-
-- In a **perfectly inelastic supply** case, the market can't supply more even if the price increase. Toll road is like this: Building more toll road is expensive and takes time. Most times this is monopolized by the government.
-
-- In a **perfectly elastic supply**, the market supply exactly zero when the price go up just by a little. A highly competitive market where all firms operate at the margin may behave this way.
-
-- Again, most times, the supply curve is somewhere in between.
-
-## What changes supply elasticity?
-
-- A market tend to have a highly elastic price elasticity of supply when **inputs are abundant** and can be converted in and out of producion at a very low cost.
-
-- Matters, as price elasticity of supply tend to be higher in the long run. Increasing production capacity may takes time since investing in a new land, building or machine requires **time**.
-  - Some goods are even impossible to be increased, hence have zero elasticity. Radio spectrum is one example.
-  
-## European farm surplus
-
-European Union **subsidised** their farmers heavily. They probably knew that subsidies create huge **surplus** (remember last week), but they thought the surplus would not be as big since farming land is **limited**.
-
-However, EU farmers were able to expand production using things like fertilizers and pesticides, which are **readily available inputs**.
-
-# The benefits and costs of taxation
-
-## Excise Tax (_cukai_)
-
-- The government often tax goods in the form of an excise tax.
-
-- In Indonesia, some goods have an excise to its purchase:
-  - Cigarettes & alcohol
-  - Luxury goods (PPnBM)
-
-- You can say that a value-added tax is another form of an excise tax.
-
-## How tax works
-
-- Tax acts like a price ceiling plus plus floor:
-  - The government set a higher price for consumers to pay
-  - At the same time, the producers are forced to produced at a lower price.
-  
-- A reminder: in a **price floor** scenario, surplus from consumer transferred to the producer, while in a **price ceiling**, surplus transferred from producers to consumers.
-
-- in tax case, CS and PS are transferred to the government.
-
-## The impact of tax {.m}
-
-```{r grafiks3, echo=FALSE, message=FALSE, warning=FALSE}
-supply <- function(q) (q/12.75)
-supply1 <- function(q) (q/41.3)^(1/0.5)
-supply2 <- function(q) (q/2.45)^(1/1.7)
-
-x<-120:150
-eqq1 <- uniroot(function(x) demand1(x) - supply(x), range(x))$root
-eqq2 <- uniroot(function(x) demand2(x) - supply(x), range(x))$root
-eqq3 <- uniroot(function(x) demand(x) - supply1(x), range(x))$root
-eqq4 <- uniroot(function(x) demand(x) - supply2(x), range(x))$root
-eqq5 <- uniroot(function(x) demand1(x) - supply1(x), range(x))$root
-
-# Equilibrium price
-eqp1 <- supply(eqq1)
-eqp2 <- supply(eqq2)
-eqp3 <- supply(eqq3)
-eqp4 <- supply(eqq4)
-eqp5 <- supply(eqq5)
-
-grafiks5 <- graph +
-  stat_function(fun = supply1,size=1.1, color='red') +
-  stat_function(fun = demand1,size=1.1, color='cyan') +
-  scale_x_continuous(limits= c(120, 150), 
-                     breaks = c(130,eqq5), labels = c(expression(Q[T]),expression(Q[E]))) +
-  scale_y_continuous(limits = c(9,12),
-                     breaks = c(supply1(130),eqp5,demand1(130)), labels = c(expression(P[P]),expression(P[E]),expression(P[C]))) +
-  geom_point(aes(x=eqq5,y=eqp5),color='white',size=4)+
-  geom_point(aes(x=130,y=supply1(130)),color='white',size=4)+
-  geom_point(aes(x=130,y=demand1(130)),color='white',size=4)+
-  geom_segment(data = data_frame(q=130,p=supply1(130)),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=130,p=supply1(130)),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=130,p=demand1(130)),
-               aes(x = q, y = supply1(130), xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=130,p=demand1(130)),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2)+
-  geom_segment(data = data_frame(q=eqq5,p=eqp5),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2)+
-  geom_segment(data = data_frame(q=eqq5,p=eqp5),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2)+
-  geom_ribbon(aes(x=seq(0,130,1), ymin=supply1(130), ymax=eqp5, fill="C"),alpha = 0.4,show.legend=FALSE)+
-  geom_ribbon(aes(x=seq(0,130,1), ymin=eqp5, ymax=demand1(130), fill="A"),alpha = 0.4,show.legend=FALSE)+
-  geom_ribbon(aes(x=seq(130,eqq5,1), ymin=supply1(seq(130,eqq5,1)), ymax=eqp5, fill="B"),alpha = 0.4,show.legend=FALSE)+
-  geom_ribbon(aes(x=seq(130,eqq5,1), ymin=eqp5, ymax=demand1(seq(130,eqq5,1)), fill="D"),alpha = 0.4,show.legend=FALSE)+
-  labs(x="Q (1000 cars/day)", y="P (1000 IDR)")+
-  geom_text(aes(x = 145, y = 9.3, label = "D"), parse = TRUE, size =8, color = '#e0e0e0')+
-  geom_text(aes(x = 145, y = 11.7, label = "S"), parse = TRUE, size =8, color = '#e0e0e0')+
-  annotate("text", x = 125, y = 10.2, label = "C", size=9)+
-  annotate("text", x = 131.5, y = 10.3, label = "D", size=9)+
-  annotate("text", x = 125, y = 10.7, label = "A", size=9)+
-  annotate("text", x = 131.5, y = 10.7, label = "B", size=9)
-
-grafiks5
-
-```
-
-## The impact of taxation {.m}
-
-:::: columns
-
-::: {.column width=47%}
-```{r grafiks6, echo=FALSE, message=FALSE, warning=FALSE}
-#| fig-width: 7
-#| fig-height: 7
-grafiks5
-```
-:::
-::: {.column width=47%}
-- The market price is $P=P_E$
-
-- The price paid by consumers is $P=P_C$
-
-- Producer receive payment at $P=P_P$
-
-- The tax per purchased good paid to the government is $t=P_C-P_P$
 :::
 ::::
 
 ---
 
-## The impact of taxation {.m}
+## From SRAS to LRAS
 
-:::: columns
-::: {.column width=47%}
-```{r grafiks7, echo=FALSE, message=FALSE, warning=FALSE}
-#| fig-width: 7
-#| fig-height: 7
-grafiks5
+- Think of SRAS as the **business cycle**: output cycles between boom and bust.
+
+- In the long-run, **long-run economic growth** tend to stabilize and increases steadily.
+
+- We tend to say the discrepancy between recession / booming period to long-run growth path as deviation to **potential output**.
+
+- Eventually, economist believe that after a recession, the economy will slowly return to its long-run growth path and reach its potential output. This is called **self-correction mechanism**.
+
+---
+
+## Self-correction mechanism
+
+- When an economy in a recession, it produces below its potential output.
+
+- slow production where wage is sticky leads to **high unemployment rate**, or unemployment rate above the **natural unemployment rate**.
+
+- High unemployment rate leads to lower wage level in the long-run.
+
+- lower wage leads to low unemployment, which leads to increase in production and return to its potential output.
+
+---
+
+## AD-AS Model
+
+- This model combines aggregate demand curve and SRAS.
+
+- The point of intersection between AD and SRAS shows the short-run equilibrium price level and GDP.
+
+---
+
+### AD-AS model
+
+```{r grafikzz,echo=FALSE, message=FALSE, warning=FALSE}
+supply <- function(x) x
+demand <- function(x) 10-x
+
+graph +
+  scale_y_continuous(limits=c(0,10), breaks = 5,
+                     labels=expression(P[E]))+
+  scale_x_continuous(limits=c(0,10), breaks = 5,
+                     labels=expression(Y[E]))+
+  labs(x="Real GDP",y="Aggregate price \n (GDP deflator)", title = "Short-run Aggregate Supply Curve")+
+  annotate("text", x = 9, y = 8, label = 'SRAS' ,size=8)+
+  annotate("text", x = 9, y = 2, label = 'AD' ,size=8)+
+  annotate("text", x = 6, y = 5, label =expression(E[SR]) ,size=8)+
+  geom_point(aes(x=5,y=5),color='white',size=5)+
+  stat_function(fun = supply, color="red", size=1.1)+
+  stat_function(fun = demand, color="cyan", size=1.1)+
+  geom_segment(aes(x = 0, y = 5, xend = 5, yend = 5), lty = "dotted"
+               ,size=2) +
+  geom_segment(aes(x = 5, y = 0, xend = 5, yend = 5), lty = "dotted"
+               ,size=2)
 ```
-:::
-
-::: {.column width=47%}
-- Consumer lose $A+B$
-
-- Producer lose $C+D$
-
-- The government collects tax revenue $TR=T \times Q_T$
-
-- This is equals to $TR=A+C$
-
-- $B+D=DWL$
-:::
-::::
-
-## The impact of taxation
-
-- As we learn, the tax revenue and the size of DWL depends highly in demand elasticity and supply elasticity of the good.
-
-- The less elastic the demand and supply of a good, the higher revenue gained from taxing the good.
-  - i.e., price effect > quantity effect.
-  
-- DWL also lower when the demand and/or supply of the good is highly inelastic.
 
 ---
 
 :::: columns
-::: {.column width=47%}
-```{r grafiks1, echo=FALSE, message=FALSE, warning=FALSE}
+::: {.column width="47%"}
 
-grafiks1 <- graph +
-  stat_function(fun = supply,size=1.1, color='red') +
-  stat_function(fun = demand1,size=1.1, color='cyan') +
-  scale_x_continuous(limits= c(120, 150), 
-                     breaks = c(130,eqq1), labels = c(expression(Q[T]),expression(Q[E]))) +
-  scale_y_continuous(limits = c(9,12),
-                     breaks = c(supply(130),eqp1,demand1(130)), labels = c(expression(P[P]),expression(P[E]),expression(P[C]))) +
-  geom_point(aes(x=eqq1,y=eqp1),color='white',size=4)+
-  geom_point(aes(x=130,y=supply(130)),color='white',size=4)+
-  geom_point(aes(x=130,y=demand1(130)),color='white',size=4)+
-  geom_segment(data = data_frame(q=130,p=supply(130)),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=130,p=supply(130)),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=130,p=demand1(130)),
-               aes(x = q, y = supply(130), xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=130,p=demand1(130)),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2)+
-  geom_segment(data = data_frame(q=eqq1,p=eqp1),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2)+
-  geom_segment(data = data_frame(q=eqq1,p=eqp1),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2)+
-  geom_ribbon(aes(x=seq(0,130,1), ymin=supply(130), ymax=demand1(130), fill="TR"),alpha = 0.4,show.legend=FALSE)+
-  geom_ribbon(aes(x=seq(130,eqq1,1), ymin=supply(seq(130,eqq1,1)), ymax=demand1(seq(130,eqq1,1)), fill="DWL"),alpha = 0.4,show.legend=FALSE)+
-  annotate("text", x = 125, y = 10.6, label = "Revenue", size=8)+
-  annotate("text", x = 125, y = 10.8, label = "Tax", size=8)+
-  annotate("text", x = 137, y = 11.6, label = "DWL", size=8)+
-  annotate("segment", x = 131.2, xend = 135.2, y = 10.7, yend = 11.3,
-           arrow = arrow(length = unit(2, "lines")), size=1, colour = "gray")+
-  labs(title="(a) Inelastic demand (<1)", x="Q (1000 cars/day)", y="P (1000 IDR)")+
-  geom_text(aes(x = 145, y = 9.3, label = "D"), parse = TRUE, size =8, color = '#e0e0e0')+
-  geom_text(aes(x = 145, y = 11.1, label = "S"), parse = TRUE, size =8, color = '#e0e0e0')
+```{r demshk1,echo=FALSE, message=FALSE, warning=FALSE}
+demand1 <- function(x) 12-x
 
-###################################################################
-
-grafiks2 <- graph +
-  stat_function(fun = supply,size=1.1, color='red') +
-  stat_function(fun = demand2,size=1.1, color='cyan') +
-  scale_x_continuous(limits= c(120, 150), 
-                     breaks = c(130,eqq2), labels = c(expression(Q[T]),expression(Q[E]))) +
-  scale_y_continuous(limits = c(9,12),
-                     breaks = c(supply(130),eqp2,demand2(130)), labels = c(expression(P[P]),expression(P[E]),expression(P[C]))) +
-  geom_point(aes(x=eqq2,y=eqp2),color='white',size=4)+
-  geom_point(aes(x=130,y=supply(130)),color='white',size=4)+
-  geom_point(aes(x=130,y=demand2(130)),color='white',size=4)+
-  geom_segment(data = data_frame(q=130,p=supply(130)),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=130,p=supply(130)),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=130,p=demand2(130)),
-               aes(x = q, y = supply(130), xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=130,p=demand2(130)),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2)+
-  geom_segment(data = data_frame(q=eqq2,p=eqp2),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2)+
-  geom_segment(data = data_frame(q=eqq2,p=eqp2),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2)+
-  geom_ribbon(aes(x=seq(0,130,1), ymin=supply(130), ymax=demand2(130), fill="TR"),alpha = 0.4,show.legend=FALSE)+
-  geom_ribbon(aes(x=seq(130,eqq2,1), ymin=supply(seq(130,eqq2,1)), ymax=demand2(seq(130,eqq2,1)), fill="DWL"),alpha = 0.4,show.legend=FALSE)+
-  labs(title="(b) elastic demand (>1)", x="Q (1000 cars/day)", y="P (1000 IDR)")+
-  geom_text(aes(x = 145, y = 10.3, label = "D"), parse = TRUE, size =8, color = '#e0e0e0')+
-  geom_text(aes(x = 145, y = 11.7, label = "S"), parse = TRUE, size =8, color = '#e0e0e0')
-
-########################################################################
-
-grafiks3 <- graph +
-  stat_function(fun = supply1,size=1.1, color='red') +
-  stat_function(fun = demand,size=1.1, color='cyan') +
-  scale_x_continuous(limits= c(120, 150), 
-                     breaks = c(130,eqq3), labels = c(expression(Q[T]),expression(Q[E]))) +
-  scale_y_continuous(limits = c(9,12),
-                     breaks = c(supply1(130),eqp3,demand(130)), labels = c(expression(P[P]),expression(P[E]),expression(P[C]))) +
-  geom_point(aes(x=eqq3,y=eqp3),color='white',size=4)+
-  geom_point(aes(x=130,y=supply1(130)),color='white',size=4)+
-  geom_point(aes(x=130,y=demand(130)),color='white',size=4)+
-  geom_segment(data = data_frame(q=130,p=supply1(130)),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=130,p=supply1(130)),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=130,p=demand(130)),
-               aes(x = q, y = supply1(130), xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=130,p=demand(130)),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2)+
-  geom_segment(data = data_frame(q=eqq3,p=eqp3),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2)+
-  geom_segment(data = data_frame(q=eqq3,p=eqp3),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2)+
-  geom_ribbon(aes(x=seq(0,130,1), ymin=supply1(130), ymax=demand(130), fill="TR"),alpha = 0.4,show.legend=FALSE)+
-  geom_ribbon(aes(x=seq(130,eqq3,1), ymin=supply1(seq(130,eqq3,1)), ymax=demand(seq(130,eqq3,1)), fill="DWL"),alpha = 0.4,show.legend=FALSE)+
-  labs(title="(c) inelastic supply (<1)", x="Q (1000 cars/day)", y="P (1000 IDR)")+
-  geom_text(aes(x = 145, y = 9.3, label = "D"), parse = TRUE, size =8, color = '#e0e0e0')+
-  geom_text(aes(x = 145, y = 11.7, label = "S"), parse = TRUE, size =8, color = '#e0e0e0')
-
-#####################################################################
-
-grafiks4 <- graph +
-  stat_function(fun = supply2,size=1.1, color='red') +
-  stat_function(fun = demand,size=1.1, color='cyan') +
-  scale_x_continuous(limits= c(120, 150), 
-                     breaks = c(130,eqq4), labels = c(expression(Q[T]),expression(Q[E]))) +
-  scale_y_continuous(limits = c(9,12),
-                     breaks = c(supply2(130),eqp4,demand(130)), labels = c(expression(P[P]),expression(P[E]),expression(P[C]))) +
-  geom_point(aes(x=eqq4,y=eqp4),color='white',size=4)+
-  geom_point(aes(x=130,y=supply2(130)),color='white',size=4)+
-  geom_point(aes(x=130,y=demand(130)),color='white',size=4)+
-  geom_segment(data = data_frame(q=130,p=supply2(130)),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=130,p=supply2(130)),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=130,p=demand(130)),
-               aes(x = q, y = supply2(130), xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=130,p=demand(130)),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2)+
-  geom_segment(data = data_frame(q=eqq4,p=eqp4),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2)+
-  geom_segment(data = data_frame(q=eqq4,p=eqp4),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2)+
-  geom_ribbon(aes(x=seq(0,130,1), ymin=supply2(130), ymax=demand(130), fill="TR"),alpha = 0.4,show.legend=FALSE)+
-  geom_ribbon(aes(x=seq(130,eqq4,1), ymin=supply2(seq(130,eqq4,1)), ymax=demand(seq(130,eqq4,1)), fill="DWL"),alpha = 0.4,show.legend=FALSE)+
-  labs(title="(d) elastic supply (>1)", x="Q (1000 cars/day)", y="P (1000 IDR)")+
-  geom_text(aes(x = 145, y = 9.3, label = "D"), parse = TRUE, size =8, color = '#e0e0e0')+
-  geom_text(aes(x = 145, y = 11.3, label = "S"), parse = TRUE, size =8, color = '#e0e0e0')
-
-grafiks1
-grafiks3
-
+graph +
+  scale_y_continuous(limits=c(0,10), breaks = c(5,6),
+                     labels=c(expression(P[1]),expression(P[2])))+
+  scale_x_continuous(limits=c(1,11), breaks = c(5,6),
+                     labels=c(expression(Y[1]),expression(Y[2])))+
+  labs(x="Real GDP",y="Aggregate price \n (GDP deflator)", title = "Positive demand shock in SR")+
+  annotate("text", x = 9, y = 8, label = 'SRAS' ,size=8)+
+  annotate("text", x = 9, y = 2, label = expression(AD[1]) ,size=8)+
+  annotate("text", x = 10, y = 3, label = expression(AD[2]) ,size=8)+
+  annotate("text", x = 6, y = 5, label =expression(E[1]) ,size=8)+
+  geom_point(aes(x=5,y=5),color='white',size=5)+
+  annotate("text", x = 7, y = 6, label =expression(E[2]) ,size=8)+
+  geom_point(aes(x=6,y=6),color='white',size=5)+
+  stat_function(fun = supply, color="red", size=1.1)+
+  stat_function(fun = demand, color="cyan", size=1.1, lty=3)+
+  stat_function(fun = demand1, color="cyan", size=1.1)+
+  geom_segment(aes(x = 1, y = 5, xend = 5, yend = 5), lty = "dotted"
+               ,size=2) +
+  geom_segment(aes(x = 5, y = 0, xend = 5, yend = 5), lty = "dotted"
+               ,size=2)+
+  geom_segment(aes(x = 1, y = 6, xend = 6, yend = 6), lty = "dotted"
+               ,size=2) +
+  geom_segment(aes(x = 6, y = 0, xend = 6, yend = 6), lty = "dotted"
+               ,size=2)
 ```
+
+[A **positive demand shock** (e.g. government stimulus) leads to a shifts of AD and movement along the SRAS curve, ended up with **higher output** and an **increase in aggregate prices**.]{.s}
+
 :::
+::: {.column width="47%"}
 
-::: {.column width=47%}
-```{r grafiks2, echo=FALSE, message=FALSE, warning=FALSE}
-grafiks2
-grafiks4
 
+```{r supshk1,echo=FALSE, message=FALSE, warning=FALSE}
+supply1<-function(x) x-2
+
+graph +
+  scale_y_continuous(limits=c(0,10), breaks = c(4,5),
+                     labels=c(expression(P[2]),expression(P[1])))+
+  scale_x_continuous(limits=c(1,11), breaks = c(5,6),
+                     labels=c(expression(Y[1]),expression(Y[2])))+
+  labs(x="Real GDP",y="Aggregate price \n (GDP deflator)", title = "Positive supply shock in SR")+
+  annotate("text", x = 9, y = 8, label = expression(SRAS[1]) ,size=8)+
+  annotate("text", x = 9, y = 2, label = 'AD' ,size=8)+
+  annotate("text", x = 10, y = 6, label = expression(SRAS[2]) ,size=8)+
+  annotate("text", x = 6, y = 5, label =expression(E[1]) ,size=8)+
+  geom_point(aes(x=5,y=5),color='white',size=5)+
+  annotate("text", x = 7, y = 4, label =expression(E[2]) ,size=8)+
+  geom_point(aes(x=6,y=4),color='white',size=5)+
+  stat_function(fun = supply, color="red", size=1.1,lty=3)+
+  stat_function(fun = demand, color="cyan", size=1.1)+
+  stat_function(fun = supply1, color="red", size=1.1)+
+  geom_segment(aes(x = 1, y = 5, xend = 5, yend = 5), lty = "dotted"
+               ,size=2) +
+  geom_segment(aes(x = 5, y = 0, xend = 5, yend = 4), lty = "dotted"
+               ,size=2)+
+  geom_segment(aes(x = 1, y = 4, xend = 6, yend = 4), lty = "dotted"
+               ,size=2) +
+  geom_segment(aes(x = 6, y = 0, xend = 6, yend = 4), lty = "dotted"
+               ,size=2)
 ```
+[A **positive supply shock** (e.g. reduction of oil price) leads to a shifts of AS and movement along the AD curve, ended up with **higher output** and **lower prices**.]{.s}
+
 :::
 ::::
 
-## Implication
+---
 
-- If the government wants to collect revenue, its best to impose a tax on a good with low elasticities.
+## AD-AS model {.m}
 
-- If the government wants to change behaviour, tax a good with high elasticities.
+[Negative demand shock gives you the opposite of positive demand shock. Negative supply shock gives you the opposite impact of positive supply shock.
 
-- Taxing cigarettes to discourage smoking maybe ineffective
-  - however, it can be used to gain revenue.
+| shock type | shifts | P | Y |
+| --- | --- | --- | --- |
+| Positive demand | $\overrightarrow{AD}$ | $\Uparrow$ | $\Uparrow$ |
+| Negative demand | $\overleftarrow{AD}$ | $\Downarrow$ | $\Downarrow$ |
+| Positive supply | $\overrightarrow{SRAS}$ | $\Downarrow$ | $\Uparrow$ |
+| Negative supply | $\overleftarrow{SRAS}$ | $\Uparrow$ | $\Downarrow$ |
+
+The negative supply shock leads to a **stagflation**
+
+---
+
+## Long-run macroeconomic equilibrium
+
+- In the long-run, supply is starting to adjust and the **self-correcting mechanism** works.
+
+- Remember that in the long-run, output will not stay low or stay high: it will eventually return to its potential long-run growth.
+
+- Therefore, in the long-run, output level will return to normal.
+
+---
+
+### Long-run macroeconomic equilibrium
+
+```{r lr,echo=FALSE, message=FALSE, warning=FALSE}
+graph +
+  scale_y_continuous(limits=c(0,10), breaks = 5,
+                     labels=expression(P[E]))+
+  scale_x_continuous(limits=c(0,10), breaks = 5,
+                     labels=expression(Y[P]))+
+  geom_vline(xintercept=5,color='orange',size=1.1)+
+  labs(x="Real GDP",y="Aggregate price \n (GDP deflator)", title = "Long-run Aggregate Supply Curve")+
+  annotate("text", x = 9, y = 8, label = 'SRAS' ,size=8)+
+  annotate("text", x = 9, y = 2, label = 'AD' ,size=8)+
+  annotate("text", x = 6, y = 9, label = 'LRAS' ,size=8)+
+  annotate("text", x = 6, y = 5, label =expression(E[LR]) ,size=8)+
+  geom_point(aes(x=5,y=5),color='white',size=5)+
+  stat_function(fun = supply, color="red", size=1.1)+
+  stat_function(fun = demand, color="cyan", size=1.1)+
+  geom_segment(aes(x = 0, y = 5, xend = 5, yend = 5), lty = "dotted"
+               ,size=2)
+```
+
+---
+
+:::: columns
+::: {.column width="47%"}
+
+```{r demshk5,echo=FALSE, message=FALSE, warning=FALSE}
+graph +
+  geom_vline(xintercept=5,color='orange',size=1.1)+
+  annotate("text", x = 6, y = 9, label = 'LRAS' ,size=8)+
+  scale_y_continuous(limits=c(0,10), breaks = c(5,6),
+                     labels=c(expression(P[1]),expression(P[2])))+
+  scale_x_continuous(limits=c(1,11), breaks = c(5,6),
+                     labels=c(expression(Y[1]),expression(Y[2])))+
+  labs(x="Real GDP",y="Aggregate price \n (GDP deflator)", title = "Positive demand shock in SR")+
+  annotate("text", x = 9, y = 8, label = 'SRAS' ,size=8)+
+  annotate("text", x = 9, y = 2, label = expression(AD[1]) ,size=8)+
+  annotate("text", x = 10, y = 3, label = expression(AD[2]) ,size=8)+
+  annotate("text", x = 6, y = 5, label =expression(E[1]) ,size=8)+
+  geom_point(aes(x=5,y=5),color='white',size=5)+
+  annotate("text", x = 7, y = 6, label =expression(E[2]) ,size=8)+
+  geom_point(aes(x=6,y=6),color='white',size=5)+
+  stat_function(fun = supply, color="red", size=1.1)+
+  stat_function(fun = demand, color="cyan", size=1.1, lty=3)+
+  stat_function(fun = demand1, color="cyan", size=1.1)+
+  geom_segment(aes(x = 1, y = 5, xend = 5, yend = 5), lty = "dotted"
+               ,size=2) +
+  geom_segment(aes(x = 1, y = 6, xend = 6, yend = 6), lty = "dotted"
+               ,size=2) +
+  geom_segment(aes(x = 6, y = 0, xend = 6, yend = 6), lty = "dotted"
+               ,size=2)
+```
+
+[First, **positive demand shock** leads to higher prices and output level. Firms hire more labour to meet the demand and thus **reduces unemployment** in the short run.]{.s}
+
+
+:::
+::: {.column width="47%"}
+
+```{r demshk6,echo=FALSE, message=FALSE, warning=FALSE}
+supply2 <- function(x) x+2
+
+graph +
+  geom_vline(xintercept=5,color='orange',size=1.1)+
+  scale_y_continuous(limits=c(0,10), breaks = c(5,6,7),
+                     labels=c(expression(P[1]),expression(P[2]),
+                              expression(P[3])))+
+  scale_x_continuous(limits=c(1,11), breaks = c(5,6),
+                     labels=c(expression(Y[1]),expression(Y[2])))+
+  labs(x="Real GDP",y="Aggregate price \n (GDP deflator)", title = "...as wage adjust, Y back to normal")+
+  annotate("text", x = 9, y = 8, label = 'SRAS' ,size=8)+
+  annotate("text", x = 9, y = 2, label = expression(AD[1]) ,size=8)+
+  annotate("text", x = 10, y = 3, label = expression(AD[2]) ,size=8)+
+  annotate("text", x = 6, y = 5, label =expression(E[1]) ,size=8)+
+  geom_point(aes(x=5,y=5),color='white',size=5)+
+  annotate("text", x = 7, y = 6, label =expression(E[2]) ,size=8)+
+  geom_point(aes(x=6,y=6),color='white',size=5)+
+  annotate("text", x = 6, y = 7, label =expression(E[3]) ,size=8)+
+  geom_point(aes(x=5,y=7),color='white',size=5)+
+  stat_function(fun = supply, color="red", size=1.1,lty=3)+
+  stat_function(fun = supply2, color="red", size=1.1)+
+  stat_function(fun = demand, color="cyan", size=1.1, lty=3)+
+  stat_function(fun = demand1, color="cyan", size=1.1)+
+  geom_segment(aes(x = 1, y = 5, xend = 5, yend = 5), lty = "dotted"
+               ,size=2) +
+  geom_segment(aes(x = 1, y = 6, xend = 6, yend = 6), lty = "dotted"
+               ,size=2) +
+  geom_segment(aes(x = 1, y = 7, xend = 5, yend = 7), lty = "dotted"
+               ,size=2) +
+  geom_segment(aes(x = 6, y = 0, xend = 6, yend = 6), lty = "dotted"
+               ,size=2)
+```
+[However, as unemployment falls below its natural rate, **wage begin to go up** and it adds up to the cost of production, pushing price further up. employment starts to decrease and Y falls back.]{.s}
+
+:::
+::::
+
+---
+
+## Long-run self-correction mechanism
+
+- You can reach the similar conclusion for a long-run negative demand shock, which leads to even lower prices and the same output.
+
+- To us, price level matter less if everyone can consume the same amount of goods and services:
+  + that is, price changes do not matter if GDP stays the same.
+  + in Australia, everything is more expensive but wage level is far above Indonesia.
   
-- Highly inelastic goods may suggest it's a necessity: people may be unhappy with the tax.
+---
 
-## Implication
+## Long-run self-correction
 
-- Same goes with the business people: be careful in increasing price if your product is highly elastically demanded.
+- If economy is going to return to its normal level eventually, why would we need to do anything at all? 
 
-- Next week, we will have a look a bit more detailed on the supply curve: 
-  - what drives the elasticity of supply.
-  - Different types of cost.
+- The answer is because a "long-run" may take some time to adjust.
+  + The world has not really go back to its potential output level after Global Financial Crisis in 2008.
+  + Indonesian growth rate never return to pre-1998 level.
   
-## Some recap before da quiz
+---
+  
+## In long-run we all dead
+  
+- Since Keynesianism dominates economic thinking, it is believed that government policies are needed to stabilize economy.
 
-- Elasticities is very important in determining surpluses: CS, PS, revenues.
+- We will learn further how government policies try to stabilize economy.
 
-- Elasticities can be estimated (albeit hard).
+- We also will learn the monetary policy and how interest rate interact with the economy.
 
-- Elasticities vary: $0 \leq 1 \leq \infty$ .
+---
 
-- Many factors influence elasticities.
+## Sum-up
 
-- You should be able to use elasticity formula and can draw how tax is calculated and drawn.
+- We have learned how we measure aggregate prices, unemployment and GDP.
 
-## Thank You
+- We also learned how they are interact:
 
-<iframe src="https://giphy.com/embed/NIsWtysJUrvTG" width="480" height="320" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/cute-NIsWtysJUrvTG">via GIPHY</a></p>
+  + economic expansion tends to be followed by inflation and lower unemployment.
+  + There is also a possible **stagflation** where economy stagnate, unemployment is high but also inflation.
+
+- Next-up: government policies and monetary policy.
