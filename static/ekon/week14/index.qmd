@@ -1,6 +1,6 @@
 ---
 title: "Ilmu Ekonomi"
-subtitle: "Pertemuan 4"
+subtitle: "Pertemuan 14"
 author: "Prodi PIWAR Politeknik APP Jakarta"
 format: 
   revealjs:
@@ -15,946 +15,603 @@ format:
 
 ---
 
-## Recap on last week
+## This week
 
-- We use consumer and producer surplus to measure the efficiency of the economy. We want the combination of both to be generally bigger.
+- We will study the last piece of macroeconomics: international finance
 
-- The two face a constant political battle: consumer wants small prices, producers like high prices.
+- We will see how Balance of Payment is measured
 
-- When market is perfect, intervention often leads to various types of inefficiency
+- We also will see the role of exchange rate
 
-## Today
+## Balance of payment {.m}
 
-- We will learn about one more intervention: tax.
+$$GDP=C+I+G+(X-M)$$
 
-- before we go there, it is best to understand elasticity first.
+- $(X-M)$ is export minus import. We measure this part with something called **balance of Payment** (*neraca pembayaran*).
 
-## What's an elasticity?
+- Balance of payment (BoP) is mainly collected by BI, because it uses information on payment system which mainly involve banks.
 
-- If you are a business owner, understanding elasticity is important aspect to get maximized profit.
+- Basically, all things inside $X$ and $M$ are the same as our usual GDP accounting, with the only difference is, its crossing border.
 
-- **Price elasticity of demand** of a good is a concept of how much the demand of that good change  its price changes.
-  - we usually just say **elasticity** in short.
+---
+
+## Balance of Payment {.m}
+
+- BoP consists of three things:
+  - Current account (*transaksi berjalan*)
+  - Financial account (*transaksi finansial*)
+  - Capital account (*transaksi modal*)
   
-- Maximizing profit requires this knowledge:
-  - sometimes it is better to sell cheap to gain huge market share, or sell high if niche.
+- You can read more on definitions on [BI's website](https://www.bi.go.id/id/statistik/ekonomi-keuangan/seki/Default.aspx).
+
+- The important stuff:
+  - Current account is a short-term transaction: goods, transfer payment
+  - Financial account is a longer-term transaction: investments.
+  - Capital account is ownership transfer. Generally very small and less important.
   
-## Calculating elasticity
+---
 
-:::: columns
-::: {.column width=47%}
-- Consider the demand curve on the right.
+## BoP {.m}
 
-- At $P_1=10$, the daily traffic is $Q_1=140$
+**Current account** is the transaction that doesn't create liabilities. Countries which exports more than imports runs positive current account.
 
-- When $P_2=11$, daily traffic drops to $Q_2=127.3$
-:::
+**Financial account** creates liabilities. i.e., you need to pay it back, often with interests. A country which receive a lot of foreign investment (both portfolio and direct investment) runs a positive financial account.
 
-::: {.column width=47%}
-```{r grafik1,echo=FALSE, message=FALSE, warning=FALSE}
-#| fig-width: 10
-#| fig-height: 8
-library(dplyr)
+
+```{r tab,echo=FALSE, message=FALSE, warning=FALSE}
+library(kableExtra)
+library(tidyverse)
 library(ggplot2)
 library(ggdark)
 
-demand <- function(q) (q/1400)^(-1)
-q<-c(127.3,140)
-p<-c(11,10)
-
 graph<-ggplot()+
-  dark_theme_bw(base_size=25)+
+  dark_theme_bw(base_size=18)+
   theme(text = element_text(color='#e0e0e0'),
         panel.border = element_blank(),
         panel.grid.major = element_blank(),
         panel.grid.minor = element_blank(),
         axis.line = element_line(colour = "#e0e0e0"))
 
-grafik1 <- graph +
-  stat_function(fun = demand,size=1.1, color='cyan') +
-  scale_x_continuous(limits=c(120,150), 
-                     breaks = q) +
-  scale_y_continuous(limits=c(9,12), 
-                     breaks = p) +
-  geom_segment(data = data_frame(q=127.3,p=11),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=127.3,p=11),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=140,p=10),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=140,p=10),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2)+
-  labs(title="Toll road demand \n for Surabaya-Gempol", x="Q (1000 cars/day)", y="P (1000 IDR)")+
-  geom_text(aes(x = 150, y = 9.7, label = "D"), parse = TRUE, size =8, color = '#e0e0e0')
-grafik1
+graph2<-dark_theme_bw(base_size=18)+
+  theme(text = element_text(color='#e0e0e0'),
+        panel.border = element_blank(),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        axis.line = element_line(colour = "#e0e0e0"))
 
+library(WDI)
+library(lubridate)
+
+bop <- data.frame(
+  "No"=c(1,2,3,"",4,"",""),
+  "Component"=c("Sales of Goods and Services","Factor income","Transfers","Current account (1+2+3)","Asset sales and purchases","Financial account (4)","Statistical discrepancy"),
+  "Export"=c(200097,7373,12677,"",51903,"",""),
+  "Import"=c(-204230,-41147,-5048,"",-15340-4676,"",""),
+  "Net"=c(-4133,-33774,7629,-4133-33774+7629,31888,31888,-4133-33774+7629+31888)
+)
+
+bop1<-kbl(bop, align = "c", format='html',digits=2, format.args = list(big.mark = ","), col.names = c("","Component","Payment from foreigners","Payment to foreigners","Net"),caption="Simplified Balance of Payment of Indonesia in 2019 in million USD") %>%
+  kable_styling(font_size=18) %>%
+  column_spec(1, bold = T)
+bop1
 ```
+
+[
+source: [Bank Indonesia](https://www.bi.go.id/id/statistik/ekonomi-keuangan/seki/Default.aspx#headingFour)
+]{.s}
+
+---
+
+## Balance of Payment {.m}
+
+General component of a current account:
+
+1. **Balance of Trade**: export and import of goods and services. Balance of trade generally have better data and available much quicker.
+
+2. **Factor income**: payment for using factors owned by foreigners, mostly assets. There are many foreign owned asset in Indonesia, which generate interest payment for them (bonds, equities). For example, when Indonesian government bonds is bought by foreigners this year, they have to pay it back later. Other example is deviden you get from buying US firm's stock.
+
+3. **transfers**: This is often conducted by workers abroad (eg. TKI) who send money to their family in their home country.
+
+---
+
+## Balance of Payment {.m}
+
+General component of Financial Account:
+
+1. **Portfolio investment** is a transaction involving bonds or other types of loan with interest payment attached to it. Buying stock is included in portfolio investment, unless it is a controlling stake.
+
+2. **Direct investment** is a transaction involving controlling stakes of stocks or buying a firm or making new firm abroad.
+
+3. **Other investment** is typically involving payment for goods and services, Such as trade credit and saving account.
+
+---
+
+## Example of Balance of Payment  {.m}
+
+a modification from an example from [RBA](https://www.rba.gov.au/education/resources/explainers/the-balance-of-payments.html))
+
+1. Sela sell shoes in bulk to his friend in Australia. Her friend pays with letter of credit credit (which delays the payment untill the shoes is arrived). The price is Rp 100,000,000.
+
+1. Otter goes on Holiday to Singapore and spend Rp20,000,000. He pays for the holiday with his saving account in Indonesia.
+
+1. Nea buys Alphabet's stock in NYSE using her Indonesian bank account. The amount is Rp 50,000,000.
+
+---
+
+## Example of the BoP {.m}
+
+```{r tab2,echo=FALSE, message=FALSE, warning=FALSE}
+bopp <- data.frame(
+  "Component"=c("Trade balance","- Goods","- Services","Current account","Portfolio investment","Other investment","","Financial account","Balance of Payment"),
+  "Export"=c("","100m(S)","","100m","","20m (O)","50m (N)","70m","170m"),
+  "Import"=c("","","-20m (O)","-20m","-50m (N)","-100m (S)","","-150m","-170m"),
+  "Net"=c("","100m","-20m","80m","-50m","-80m","","","0m")
+)
+
+bop2<-kbl(bopp, align = "c", format='html',digits=2, format.args = list(big.mark = ","), col.names = c("Component","Credit","Debit","Net"),caption="Simplified Balance of Payment of Sela-Pan-Liv") %>%
+  kable_styling(font_size=18) %>%
+  column_spec(1, bold = T) %>%
+  row_spec(4, bold = T) %>%
+  row_spec(9, bold = T) %>%
+  row_spec(8, bold = T)
+bop2
+```
+
+---
+
+## Current Account Balance (CAB)
+
+- International demands for funds reflect underlying differencecs in investment opportunities.
+
+- Generally, demand for funds are higher in countries where opportunities for growth is higher
+  + Countries that attract international funds are running **current account deficit**
+  + on the contrary, countries which have low growth rate usually run **current account surplus**
+  
+---
+
+:::: columns
+::: {.column width=47%}
+<iframe src="https://data.worldbank.org/share/widget?end=2019&indicators=BN.CAB.XOKA.CD&locations=CN-DE-JP-SA-RU-SG&start=2019&view=bar" width='450' height='300' frameBorder='0' scrolling="no" ></iframe>
+
+<iframe src="https://data.worldbank.org/share/widget?end=2019&indicators=BN.CAB.XOKA.CD&locations=ID-US-GB-CA-IN-FR&start=2019&view=bar" width='450' height='300' frameBorder='0' scrolling="no" ></iframe>
+
+:::
+::: {.s .column width=47%}
+
+Many of the world's CA deficit come from the United States. It received a lot of investment mainly due to safe USD.
+
+Many countries register CA surplus to offset US' deficit (global CAB=0). These countries generate income from foreigner, but instead of buying goods and services, they save.
+
+Indonesia received many funds from abroad. Invest in Indonesia is attractive because it often borrow in high interest rate.
+
 :::
 ::::
 
-## Calculating elasticity {.s}
+---
 
-- To calculate elasticity of demand, we first calculate:
-  1. percent change in the quantity demanded
-  1. percent change in the price
+## Two-way capital flow {.m}
 
-- Formula for no.1:
+- It is intuitive to think that investment flow towards countries with higher return / interest rate
+  + For example, US' coupon rate is around 1-2%, while Indonesian bond is 7%.
+  + This makes Indonesian bond much more attractive.
 
-$$
-\tag{1}
-\text{% change in }Q^D=\frac{Q_2^D-Q_1^D}{Q_1^D}\times 100
-$$
+- However, capital flows both ways: firms and consumers in a country both invest and borrow.
 
+- Other reasons to invest in other countries:
+  + Portfolio diversification
+  + Business strategy
+  + International capital market
 
-- Formula for no.2:
+---
 
-$$
-\tag{2}
-\text{% change in P}=\frac{P_2-P_1}{P_1}\times 100
-$$
+## Reasons to invest {.m}
 
+**Portfolio diversification**
 
-## Calculating elasticity {.m}
-
-- for our case, we have:
-
-$$
-\begin{align*}
-Q_1^D&=140 & Q_2^D&=127.3 \\ P_1&=10 & P_2&=11
-\end{align*}
-$$
-
-- Thus:
-
-$$
-\begin{align}
-\text{% change in }Q^D &= \frac{127.3-140}{127.3}\times 100 \\ &=-10 \%
-\end{align}
-$$
-
-$$
-\begin{align}
-\text{% change in P} &= \frac{11-10}{10}\times 100 \\ &=10\%
-\end{align}
-$$
-
-## Calculating elasticity {.s}
-
-- After we get the numbers from {1} and {2}, we use this formula:
-
-$$
-\tag{3}
-\text{Price elasticity of demand}=\frac{\text{% change in }Q^D}{\text{% change in P}}
-$$
-
-
-- in our case, we have:
-
-$$
-\begin{align}
-\text{Price elasticity of demand}&=\frac{-10\%}{10\%} \\ &=-1
-\end{align}
-$$
-
-## Calculating elasticity
-
-- Economists are also lazy in writing the minus sign.
-
-- Usually we report demand elasticity in **absolute term**.
-  - i.e., we drop the minus sign.
+- "don't put all your eggs in one basket". A US investor also invests in EU. If market in US is in bad shape, they have leverage in the EU. EU investors also behave similarly. This leads to US and EU have two-way capital flows.
   
-- However, since most demand curves are downward sloping, it must be negative
-  - hence we automatically knows what it means even when we report in absolute term.
+- While many developing countries have high return, associated risks with investing in developing countries comparatively higher compared to developed countries.
+  
+- This is also true for direct investment, but might be a trade-off with economies of scale.
+  
+- Portfolio diversification is generally an advice echoed by many serious investors.
+  
+---
 
-## About percent change
+## Reasons to invest {.m}
 
-Using percent changes is more useful than absolute changes
-- Things are usually move on proportion
-  - A wealthy person will feel casual getting 1 million IDR because it's probably just a small % of her total wealth.
+**Business strategy**
+
+- firms in country A can serve country B in generally two ways:
+  + Produce in country A and export to country B, or
+  + Invest in country B and produce domestically.
+  
+- The main consideration is often comes down to **cost**:
+  + Export may incur transportation cost and tariff.
+  + Country B may have cheaper factor prices: labour, land, and capital.
+    - Capital generally moves internationally. Labour and land are harder.
+  + Country B may have comparative advantage on certain goods.
     
-- Quantity and prices have many metrics
-  - kgs, litres, units, pairs, units/day, etc
-  - IDR, USD, btc, etc.
+---
 
-## interpreting elasticity
+## Reason to invest {.m}
 
-<iframe src="https://giphy.com/embed/WYEWpk4lRPDq0" width="400" height="400" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/cat-WYEWpk4lRPDq0">via GIPHY</a></p>
+**International capital market**
 
-## Interpreting elasticity
+- There are many countries act as international capital market, such as UK, US, Singapore and Hong Kong.
 
-- We have seen the elasticity of our toll road case is around 1, but what does this mean?
+- A fund coming to Singapore might not be used to invest in Singapore: it most probably used to be invested in other countries.
+  + Indonesian firms who find that domestic financing to be too shallow, looks for funds in Singapore.
+  + For fund owners, these international capital market countries are generally a safer bet.
 
-- Note that the elasticity formula has % change in Q at the top, and % change in P at the bottom.
-
-- In a sense, the number shows how much quantity change given the price change.
-
-- that means, the bigger the number of the price elasticity, **the more elastic it is**
-
-## A market is elastic. So what?
-
-Let's have a look at different 'kind' of elasticities and what they mean
-
-We'll begin with two extreme cases of elasticity: zero (0) and infinity ( $\infty$ )
-
-## Two extreme cases
-
-- Suppose the toll road is the only way to go to work.
-  - No matter how high the price, people will still need to use it.
-  - Hence, change in the demand of toll road is zero for any change in price.
-  
-- Suppose shuttlecocks are priced 10.000 IDR
-  - If people don't care about the shuttlecocks' color, everyone will buy the pink one if the price drop to 9.900
-  - Everyone won't buy a single one if the price go up only to 10.100 IDR
-
-## Two extreme cases of elasticity
-
-:::: columns
-::: {.column width=47%}
-```{r grafik2, message=FALSE, warning=FALSE, echo=FALSE}
-grafik2 <- graph +
-  geom_vline(xintercept=125, color = "cyan",size=2)+
-  scale_x_continuous(limits=c(120,130), 
-                     breaks = 125) +
-  scale_y_continuous(limits=c(9,12), 
-                     breaks = p) +
-  geom_segment(data = data_frame(q=125,p=11),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=125,p=10),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2)+
-  labs(title="Perfectly inelastic demand (0)", x="Q", y="P")+
-  geom_text(aes(x = 125.5, y = 9, label = "D[1]"), parse = TRUE, size =8, color = '#e0e0e0')
-grafik2
-```
-an illustration of **perfectly inelastic demand**
-:::
-
-::: {.column width=47%}
-```{r grafik3, message=FALSE, warning=FALSE, echo=FALSE}
-library(latex2exp)
-grafik3 <- graph +
-  geom_hline(yintercept=10.5, color = "cyan",size=2)+
-  scale_x_continuous(limits=c(120,130), 
-                     breaks = c(123,127)) +
-  scale_y_continuous(limits=c(9,12), 
-                     breaks = 10.5) +
-  geom_segment(data = data_frame(q=123,p=10.5),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=127,p=10.5),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2)+
-  labs(title="Perfectly Elastic Demand (\U221E)", x="Q", y="P")+
-  geom_text(aes(x = 130, y = 10.7, label = "D[2]"), parse = TRUE, size =8, color = '#e0e0e0')
-grafik3
-```
-an illustration of **perfectly elastic demand**
-:::
-::::
-
-## Types of elasticities
-
-- Most goods are somewhere in between.
-
-- We usually use elasticity=1 as another important division point.
-
-- 1 is a useful barrier because when elasticity=1, that means a change in price by 1 % leads to a change in quantity demanded by 1 %
-
-- elasticity < 1 means the quantity response less than a change in prices, while elasticity > 1 means the quantity is highly responsive, more than the change in price.
+- It works essentially like normal banks.
 
 ---
 
-:::: columns
-::: {.column width=47%}
-```{r grafik4,echo=FALSE, message=FALSE, warning=FALSE}
+## Exchange rate {.m}
 
-demand1 <- function(q) (q/433)^(-1/0.5)
-demand2 <- function(q) (q/7250)^(-1/1.7)
+- Basically, current account is very similar with AD-AS, while financial account is very similar with demand for money.
+  + When demand for goods is high but supply is low, price will go up.
+  + When demand for funds is high but supply is low, interest rate will go up.
 
-grafik4 <- graph +
-  stat_function(fun = demand1,size=1.1, color='cyan') +
-  scale_x_continuous(limits=c(120,150), 
-                     breaks = c(130.5,137)) +
-  scale_y_continuous(limits=c(9,12), 
-                     breaks = p) +
-  geom_segment(data = data_frame(q=130.5,p=11),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=130.5,p=11),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=137,p=10),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=137,p=10),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2)+
-  labs(title="Inelastic demand (<1)", x="Q (1000 cars/day)", y="P (1000 IDR)")+
-  geom_text(aes(x = 145, y = 9.3, label = "D"), parse = TRUE, size =8, color = '#e0e0e0')
-
-grafik5 <- graph +
-  stat_function(fun = demand2,size=1.1, color='cyan') +
-  scale_x_continuous(limits=c(120,150), 
-                     breaks = c(123,144.6)) +
-  scale_y_continuous(limits=c(9,12), 
-                     breaks = p) +
-  geom_segment(data = data_frame(q=123,p=11),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=123,p=11),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=144.6,p=10),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=144.6,p=10),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2)+
-  labs(title="Elastic demand (>1)", x="Q (1000 cars/day)", y="P (1000 IDR)")+
-  geom_text(aes(x = 150, y = 10, label = "D"), parse = TRUE, size =8, color = '#e0e0e0')
-
-grafik4
-grafik5
-
-```
-:::
-::: {.column width=47%}
-
-```{r grafik5,echo=FALSE, message=FALSE, warning=FALSE}
-grafik1 + labs(title="Unit elastic demand (=1)", x="Q (1000 cars/day)", y="P (1000 IDR)")
-
-```
-</br>
-</br>
-</br>
-
-The flatter the curve, the closer its elasticity to $\infty$
-
-:::
-::::
-
-## Types of demand elasticities {.m}
-
-| Elasticity | meaning |
-| ---- | ------- |
-| 0 | **perfectly inelastic**. Price doesn't matter |
-| < 1 | **inelastic**. Quantity is less responsive to price changes |
-| 1 | **unit elastic**. Quantity change exactly the same as the price change in % terms|
-| >1 | **elastic**. Quantity response heavily to price changes |
-| $\infty$ | **perfectly elastic**. A slight increase of price reduces demand to zero |
-
-## Elasticities vary. So what?
-
-- Suppose you wan't to increase the revenue from the toll road operation, what price will you set?
-
-- It is intuitive to think that the higher the price, the better.
-  - High price $\Rightarrow$ more revenue
-
-- Is there a problem with this logic?
-
-- Remember, demand respond to price. High price $\Rightarrow$ lower demand $\Rightarrow$ less revenue
-
-- The maximum price depends on the demand elasticity
+- However, in the international market, there are price and interest rate difference.
+  + In our previous framework, there are only one price and one interest rate.
+  + As we saw, Indonesia's interest rate may different with that of the US.
+  + How to make sure it's all balance?
+  
+- There is another price of money, and that is **exchange rate**.
 
 ---
 
-```{r grafik6,echo=FALSE, message=FALSE, warning=FALSE}
-grafik6 <- graph +
-  stat_function(fun = demand1,size=1.1, color='cyan') +
-  scale_x_continuous(limits=c(120,150), 
-                     breaks = 137) +
-  scale_y_continuous(limits=c(9,12), 
-                     breaks = 10) +
-  geom_segment(data = data_frame(q=137,p=10),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=137,p=10),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2)+
-  geom_ribbon(aes(x=seq(0,137,1), ymin=9, ymax=10),alpha = 0.4,fill='red')+
-  annotate("text", x = 128, y = 9.8, label = "Total revenue=", size=8)+
-  annotate("text", x = 128, y = 9.6, label = "Price x Quantity", size=8)+
-  annotate("text", x = 128, y = 9.4, label = "10 x 137", size=8)+
-  annotate("text", x = 128, y = 9.2, label = "1370 mil IDR/day", size=8)+
-  labs(title="Inelastic demand (<1)", x="Q (1000 cars/day)", y="P (1000 IDR)")+
-  geom_text(aes(x = 145, y = 9.3, label = "D"), parse = TRUE, size =8, color = '#e0e0e0')
-grafik6
-```
+## Exchange rate {.m}
+
+- In general, goods and services produced in a country must be paid for using that country's currency.
+  
+- Even when foreign currency is accepted, it often exchanged with their domestic currency.
+
+- International transaction requires a market for currency, and it is called **foreign exchange market**.
+
+- Price for a currency is valued with other currency
 
 ---
 
-```{r grafik7,echo=FALSE, message=FALSE, warning=FALSE}
-grafik7 <- graph +
-  stat_function(fun = demand1,size=1.1, color='cyan') +
-  scale_x_continuous(limits=c(120,150), 
-                     breaks = 130.5) +
-  scale_y_continuous(limits=c(9,12), 
-                     breaks = 11) +
-  geom_segment(data = data_frame(q=130.5,p=11),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=130.5,p=11),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_ribbon(aes(x=seq(0,130.5,1), ymin=9, ymax=11),alpha = 0.4,fill='red')+
-  annotate("text", x = 125, y = 10.4, label = "Total revenue=", size=7)+
-  annotate("text", x = 125, y = 10.2, label = "P x Q", size=8)+
-  annotate("text", x = 125, y = 10, label = "11 x 130.5", size=8)+
-  annotate("text", x = 125, y = 9.8, label = "1435.5", size=8)+
-  labs(title="Inelastic demand (<1)", x="Q (1000 cars/day)", y="P (1000 IDR)")+
-  geom_text(aes(x = 145, y = 9.3, label = "D"), parse = TRUE, size =8, color = '#e0e0e0')
-grafik7
-```
+## Different but the same {.m}
+
+| | Price | | Price |
+| --- | --- | --- | --- |
+| USDIDR | 14,350 | IDRUSD | 0.0000696 |
+| USDIDR | 17,479 | IDREUR | 0.0000572 |
+| GBPIDR | 20,315 | IDRGBP | 0.0000492 |
+| AUDIDR | 11,607 | IDRAUD | 0.0000862 |
+| JPYIDR | 131 | IDRJPY | 0.0076 |
+| CNYIDR | 2,500 | IDRCNY | 0.0004 |
+
+Two prices are essentially the same: left is $\frac{IDR}{USD}$ while the right is $\frac{USD}{IDR}$
+
+and this relationship holds: $\text{left price}=\frac{1}{\text{right price}}$
+
+Indonesian generally use the left one. Important thing is you know which one is which when you see it.
 
 ---
 
-## Impact of price increase {.m}
+## Which way is up? {.m}
+
+
+| | Price | direction | IDR: | USD:
+| --- | --- | --- | --- | --- |
+| USDIDR | 14,350 | $\Uparrow$ | Depreciate | Appreciate |
+| IDRUSD | 0.0000696 | $\Uparrow$ | Appreciate | Deppreciate |
+
+
+In exchange rate, "prices go up" can be a bit confusing.
+
+- When the number 14,350 goes up to 15,000, it means IDR is cheaper relative to USD, because now we need 15,000 IDR to buy 1 USD.
+
+- This is why it is important to know which number you are using.
+
+- Thankfully our currency has lots of digits so it's a bit easier to differentiate.
+
+---
+
+## Exchange rate {.m}
+
+- When IDR is weak, buying US goods and services become more expensive.
+  + This matters even more when we don't produce those products domestically.
+  
+- A [Google Pixel 5](https://store.google.com/au/product/pixel_5?hl=en-GB) phone priced $999 becomes:
+  + Rp14,335,650 when the price of USD is Rp14,350/USD
+  + Rp14,985,000 when the price of USD is Rp15,000/USD
+
+- As you can see, **depreciated** IDR makes **import more expensive**, but at the same time makes **export less expensive** for the global market.
+
+- But what determines exchange rate?
+
+
+---
+
+## Exchange rate {.m}
+
+- For simplicity, let's assume there's only two currencies: IDR and USD.
+
+- Indonesians who want to buy US goods, services or asset needs to purchase it in dollar.
+  + Importing phones? buy USD then buy phone.
+  + Buying Google stock? Buy USD then buy the stock.
+  + This creates demand for USD
+  
+- Retrospectively, US citizen wanted to buy Indonesian stuff needs to buy IDR with their USD, hence creating the supply of USD.
+
+- The higher the price of USD, the less the demand and the higher the supply.
+
+---
+
+## Equilibrium exchange rate {.m}
 
 :::: columns
 ::: {.column width=47%}
-```{r grafik8,echo=FALSE, message=FALSE, warning=FALSE}
-#| fig-width: 6
-#| fig-height: 7
-grafik4 +
-  geom_ribbon(aes(x=seq(0,130.5,1), ymin=9, ymax=10, fill="B"),alpha = 0.4,show.legend=FALSE)+
-  geom_ribbon(aes(x=seq(130.5,137,1), ymin=9, ymax=10, fill="A"),alpha = 0.4,show.legend=FALSE)+
-  geom_ribbon(aes(x=seq(0,130.5,1), ymin=10, ymax=11, fill="C"),alpha = 0.4,show.legend=FALSE)+
-  annotate("text", x = 125, y = 9.5, label = "B", size=9)+
-  annotate("text", x = 134, y = 9.5, label = "A", size=9)+
-  annotate("text", x = 125, y = 10.5, label = "C", size=9)
-  
-```
-:::
-::: {.column width=47%}
 
-- Segment A is the **Quantity effect of price increase**
-  - Negative effect since fewer units sold
-
-- Segment C is the **Price effect of price increase**
-  - positive effect since higher price for each unit sold
-  
-:::
-::::
-
-## Impact of price increase
-
-:::: columns
-::: {.column width=47%}
-```{r grafik9,echo=FALSE, message=FALSE, warning=FALSE}
-#| fig-width: 6
-#| fig-height: 7
-grafik4 +
-  geom_ribbon(aes(x=seq(0,130.5,1), ymin=9, ymax=10, fill="B"),alpha = 0.4,show.legend=FALSE)+
-  geom_ribbon(aes(x=seq(130.5,137,1), ymin=9, ymax=10, fill="A"),alpha = 0.4,show.legend=FALSE)+
-  geom_ribbon(aes(x=seq(0,130.5,1), ymin=10, ymax=11, fill="C"),alpha = 0.4,show.legend=FALSE)+
-  annotate("text", x = 125, y = 9.5, label = "B", size=9)+
-  annotate("text", x = 134, y = 9.5, label = "A", size=9)+
-  annotate("text", x = 125, y = 10.5, label = "C", size=9)
-  
-```
-:::
-
-::: {.column width=47%}
-- If you are profit oriented, Increasing the price is a good idea if:
-
-$$
-B+C > B+A
-$$
-
-$$
-C>A
-$$
-:::
-::::
-
-## Impact of price increase
-
-:::: columns
-::: {.column width=47%}
-```{r grafik10,echo=FALSE, message=FALSE, warning=FALSE}
-#| fig-width: 6
-#| fig-height: 7
-grafik5 +
-  geom_ribbon(aes(x=seq(0,123,1), ymin=9, ymax=10, fill="B"),alpha = 0.4,show.legend=FALSE)+
-  geom_ribbon(aes(x=seq(123,144.6,1), ymin=9, ymax=10, fill="A"),alpha = 0.4,show.legend=FALSE)+
-  geom_ribbon(aes(x=seq(0,123,1), ymin=10, ymax=11, fill="C"),alpha = 0.4,show.legend=FALSE)+
-  annotate("text", x = 122, y = 9.5, label = "B", size=9)+
-  annotate("text", x = 134, y = 9.5, label = "A", size=9)+
-  annotate("text", x = 122, y = 10.5, label = "C", size=9)
-  
-```
-:::
-
-::: {.column width=47%}
-- In a market with high demand elasticity, the quantity effect outweighs the price effect.
-
-- Increasing the price is not so clever if the market's demand is highly elastic.
-:::
-::::
-
-## Last point on demand elasticity
-
-- When elasticity = 1, then $A=C$
-  - hence changing price has no impact on sales revenue.
-
-- Profit oriented in the real life may not very realistic
-  - Governments may want to serve as much people as possible
-  - In the short run, growth and market cap may be more important than profit.
-
-## Last point on demand elasticity
-
-- We usually tied elasticity on a price point.
-  - on our toll road case, our price point is 10.000 IDR
-  
-- Elasticity may differ in different price point.
-  - Changing price from 10 to 11 may have different impact compared to changing price from 20 to 21.
-      - the first one is an increase of 10%.
-      - the second one is an increase of 5%.
-      - in absolute term, both are a 1.000 IDR increase.
-
-## Last point on demand elasticity
-
-- Estimating elasticity is very hard
-
-- There are many things also at play:
-  - different condition in different time
-  - different buyer with different characteristics behave differently
-  - Income, taste, etc matters (remember what **shifts the demand curve?**)
-
-## Factors determine demand elasticity
-
-- A **necessity** good tend to have lower elasticity compared to a **luxury good**.
-
-- The availability of **close substitutes**, like the case with pertamax and shell.
-
-- **Share of income spent** on the good. Rich people may not care with toll road price.
-
-- **Time**. Cigarettes may have low elasticity in the short run because it is so addictive, and adapt later in the long run.
-
-## Other types of demand elasticity {.m}
-
-- **Cross price elasticity of demand** is how the price of good $B$ affects a demand of good $A$.
-
-$$
-\tag{4}
-\text{Cross-Price elasticity}_{A,B}=\frac{\text{% change in }Q_A}{\text{% change in }P_B}
-$$
-
-
-- When good A and good B are subtitutes, then the effect is negative.
-  - e.g., Samsung and Xiaomi
-
-- When good A and good B are complements, the effect is positive.
-  - e.g., Samsung and Telkomsel
-
-## Other types of demand elasticity {.m}
-
-- **Income elasticity of demand** is how the chanage on income affects your demand of good $A$
-
-
-$$
-\tag{5}
-\text{Income elasticity of Demand}_A=\frac{\text{% change in }Q_A}{\text{% change in Income}}
-$$
-
-
-- It is usually positive if good $A$ is a **normal good**.
-
-- It is negative if good $A$ is an **inferior good**.
-  - you buy less instant noodle when you're richer.
-  
-## Other types of demand elasticity {.m}
-
-- **Income elasticity of demand** is how the chanage on income affects your demand of good $A$
-
-$$
-\tag{5}
-\text{Income elasticity of Demand}_A=\frac{\text{% change in }Q_A}{\text{% change in Income}}
-$$
-
-
-- A **necessity** good is usually **income inelastic** because you need to buy it no matter what.
-
-- A **luxury** good can be **income elastic**. You only buy it if your main needs are covered so you can wait for a discount.
-
-# Price elasticity of Supply
-
-## Price elasticity of Supply {.m}
-
-- Supply also have elasticities. As a supplier, you can't afford to sell expensive if there are high competition.
-
-- However, in many cases (such as toll road), entering the market is very hard.
-
-- How easy it is to expand (or for new supplier to enter the market) matters to how responsive can supply react to the change in price.
-
-$$
-\tag{6}
-\text{Price elasticity of supply} = \frac{\text{% change in }Q^s}{\text{% change in }P}
-$$
-
-
-## Two extreme cases of elasticity
-
-:::: columns
-::: {.column width=47%}
-```{r grafik11, message=FALSE, warning=FALSE, echo=FALSE}
-grafik11 <- graph +
-  geom_vline(xintercept=125, color = "red",size=2)+
-  scale_x_continuous(limits=c(120,130), 
-                     breaks = 125) +
-  scale_y_continuous(limits=c(9,12), 
-                     breaks = p) +
-  geom_segment(data = data_frame(q=125,p=11),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=125,p=10),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2)+
-  labs(title="Perfectly inelastic supply (0)", x="Q", y="P")+
-  geom_text(aes(x = 125.5, y = 9, label = "S[1]"), parse = TRUE, size =8, color = '#e0e0e0')
-grafik11
-```
-.s[an illustration of **perfectly inelastic supply**]
-:::
-
-::: {.column width=47%}
-```{r grafik12, message=FALSE, warning=FALSE, echo=FALSE}
-
-grafik12 <- graph +
-  geom_hline(yintercept=10.5, color = "red",size=2)+
-  scale_x_continuous(limits=c(120,130), 
-                     breaks = c(123,127)) +
-  scale_y_continuous(limits=c(9,12), 
-                     breaks = 10.5) +
-  geom_segment(data = data_frame(q=123,p=10.5),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=127,p=10.5),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2)+
-  labs(title="Perfectly Elastic Supply (\U221E)", x="Q", y="P")+
-  geom_text(aes(x = 130, y = 10.7, label = "S[2]"), parse = TRUE, size =8, color = '#e0e0e0')
-grafik12
-```
-an illustration of **perfectly elastic supply**
-:::
-::::
-
-## Two extreme cases of elasticity
-
-- In a **perfectly inelastic supply** case, the market can't supply more even if the price increase. Toll road is like this: Building more toll road is expensive and takes time. Most times this is monopolized by the government.
-
-- In a **perfectly elastic supply**, the market supply exactly zero when the price go up just by a little. A highly competitive market where all firms operate at the margin may behave this way.
-
-- Again, most times, the supply curve is somewhere in between.
-
-## What changes supply elasticity?
-
-- A market tend to have a highly elastic price elasticity of supply when **inputs are abundant** and can be converted in and out of producion at a very low cost.
-
-- Matters, as price elasticity of supply tend to be higher in the long run. Increasing production capacity may takes time since investing in a new land, building or machine requires **time**.
-  - Some goods are even impossible to be increased, hence have zero elasticity. Radio spectrum is one example.
-  
-## European farm surplus
-
-European Union **subsidised** their farmers heavily. They probably knew that subsidies create huge **surplus** (remember last week), but they thought the surplus would not be as big since farming land is **limited**.
-
-However, EU farmers were able to expand production using things like fertilizers and pesticides, which are **readily available inputs**.
-
-# The benefits and costs of taxation
-
-## Excise Tax (_cukai_)
-
-- The government often tax goods in the form of an excise tax.
-
-- In Indonesia, some goods have an excise to its purchase:
-  - Cigarettes & alcohol
-  - Luxury goods (PPnBM)
-
-- You can say that a value-added tax is another form of an excise tax.
-
-## How tax works
-
-- Tax acts like a price ceiling plus plus floor:
-  - The government set a higher price for consumers to pay
-  - At the same time, the producers are forced to produced at a lower price.
-  
-- A reminder: in a **price floor** scenario, surplus from consumer transferred to the producer, while in a **price ceiling**, surplus transferred from producers to consumers.
-
-- in tax case, CS and PS are transferred to the government.
-
-## The impact of tax {.m}
-
-```{r grafiks3, echo=FALSE, message=FALSE, warning=FALSE}
-supply <- function(q) (q/12.75)
-supply1 <- function(q) (q/41.3)^(1/0.5)
-supply2 <- function(q) (q/2.45)^(1/1.7)
-
-x<-120:150
-eqq1 <- uniroot(function(x) demand1(x) - supply(x), range(x))$root
-eqq2 <- uniroot(function(x) demand2(x) - supply(x), range(x))$root
-eqq3 <- uniroot(function(x) demand(x) - supply1(x), range(x))$root
-eqq4 <- uniroot(function(x) demand(x) - supply2(x), range(x))$root
-eqq5 <- uniroot(function(x) demand1(x) - supply1(x), range(x))$root
-
-# Equilibrium price
-eqp1 <- supply(eqq1)
-eqp2 <- supply(eqq2)
-eqp3 <- supply(eqq3)
-eqp4 <- supply(eqq4)
-eqp5 <- supply(eqq5)
-
-grafiks5 <- graph +
-  stat_function(fun = supply1,size=1.1, color='red') +
-  stat_function(fun = demand1,size=1.1, color='cyan') +
-  scale_x_continuous(limits= c(120, 150), 
-                     breaks = c(130,eqq5), labels = c(expression(Q[T]),expression(Q[E]))) +
-  scale_y_continuous(limits = c(9,12),
-                     breaks = c(supply1(130),eqp5,demand1(130)), labels = c(expression(P[P]),expression(P[E]),expression(P[C]))) +
-  geom_point(aes(x=eqq5,y=eqp5),color='white',size=4)+
-  geom_point(aes(x=130,y=supply1(130)),color='white',size=4)+
-  geom_point(aes(x=130,y=demand1(130)),color='white',size=4)+
-  geom_segment(data = data_frame(q=130,p=supply1(130)),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=130,p=supply1(130)),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=130,p=demand1(130)),
-               aes(x = q, y = supply1(130), xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=130,p=demand1(130)),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2)+
-  geom_segment(data = data_frame(q=eqq5,p=eqp5),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2)+
-  geom_segment(data = data_frame(q=eqq5,p=eqp5),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2)+
-  geom_ribbon(aes(x=seq(0,130,1), ymin=supply1(130), ymax=eqp5, fill="C"),alpha = 0.4,show.legend=FALSE)+
-  geom_ribbon(aes(x=seq(0,130,1), ymin=eqp5, ymax=demand1(130), fill="A"),alpha = 0.4,show.legend=FALSE)+
-  geom_ribbon(aes(x=seq(130,eqq5,1), ymin=supply1(seq(130,eqq5,1)), ymax=eqp5, fill="B"),alpha = 0.4,show.legend=FALSE)+
-  geom_ribbon(aes(x=seq(130,eqq5,1), ymin=eqp5, ymax=demand1(seq(130,eqq5,1)), fill="D"),alpha = 0.4,show.legend=FALSE)+
-  labs(x="Q (1000 cars/day)", y="P (1000 IDR)")+
-  geom_text(aes(x = 145, y = 9.3, label = "D"), parse = TRUE, size =8, color = '#e0e0e0')+
-  geom_text(aes(x = 145, y = 11.7, label = "S"), parse = TRUE, size =8, color = '#e0e0e0')+
-  annotate("text", x = 125, y = 10.2, label = "C", size=9)+
-  annotate("text", x = 131.5, y = 10.3, label = "D", size=9)+
-  annotate("text", x = 125, y = 10.7, label = "A", size=9)+
-  annotate("text", x = 131.5, y = 10.7, label = "B", size=9)
-
-grafiks5
-
-```
-
-## The impact of taxation {.m}
-
-:::: columns
-
-::: {.column width=47%}
-```{r grafiks6, echo=FALSE, message=FALSE, warning=FALSE}
+```{r xr,echo=FALSE, message=FALSE, warning=FALSE}
 #| fig-width: 7
-#| fig-height: 7
-grafiks5
+#| fig-height: 5
+supply <- function(x) x
+demand <- function(x) 10-x
+lul<-seq(0,5,0.1)
+graph +
+  scale_y_continuous(limits=c(0,10), breaks = 5,
+                     labels="14,350")+
+  scale_x_continuous(limits=c(0,10), breaks = NULL)+
+  labs(x="Quantity of USD",y="Exchange rate (IDR per USD)", title = "A hypothetical USD exchange market")+
+  annotate("text", x = 9, y = 7, label = 'Supply \n for USD' ,size=5)+
+  annotate("text", x = 9, y = 3, label = 'Demand \n for USD' ,size=5)+
+  annotate("text", x = 5, y = 6, label ='E' ,size=5)+
+  geom_point(aes(x=5,y=5),color='white',size=5)+
+  stat_function(fun = supply, color="red", size=1.1)+
+  stat_function(fun = demand, color="cyan", size=1.1)+
+  geom_segment(aes(x = 0, y = 5, xend = 5, yend = 5), lty = "dotted"
+               ,size=1.2)
 ```
+
 :::
 ::: {.column width=47%}
-- The market price is $P=P_E$
 
-- The price paid by consumers is $P=P_C$
 
-- Producer receive payment at $P=P_P$
+- When IDR is low, it becomes more expensive to buy USD, and in turn, US goods, services and assets.
 
-- The tax per purchased good paid to the government is $t=P_C-P_P$
+- On the contrary, it is cheaper for US to import from Indonesia.
+  - The more US import from Indonesia, the stronger IDR becomes.
+
+- Eventually it settles in an equilibrium point.
+
 :::
 ::::
 
 ---
 
-## The impact of taxation {.m}
+## Equilibrium exchange rate {.m}
 
 :::: columns
 ::: {.column width=47%}
-```{r grafiks7, echo=FALSE, message=FALSE, warning=FALSE}
+
+```{r xr2,echo=FALSE, message=FALSE, warning=FALSE}
 #| fig-width: 7
-#| fig-height: 7
-grafiks5
+#| fig-height: 5
+supply <- function(x) x
+demand <- function(x) 10-x
+demand1 <- function(x) 12-x
+lul<-seq(0,5,0.1)
+graph +
+  scale_y_continuous(limits=c(0,10), breaks = c(5,6),
+                     labels=c("14,350","15,500"))+
+  scale_x_continuous(limits=c(0,10), breaks = NULL)+
+  labs(x="Quantity of USD",y="Exchange rate (IDR per USD)", title = "A hypothetical USD exchange market")+
+  annotate("text", x = 9, y = 7, label = 'Supply \n for USD' ,size=5)+
+  annotate("text", x = 9, y = 1, label = 'D1' ,size=5)+
+  annotate("text", x = 9, y = 3, label = 'D2' ,size=5)+
+  annotate("text", x = 5, y = 4.5, label ='E1' ,size=5)+
+  annotate("text", x = 6, y = 6.5, label ='E2' ,size=5)+
+  geom_point(aes(x=5,y=5),color='white',size=5)+
+  geom_point(aes(x=6,y=6),color='white',size=5)+
+  stat_function(fun = supply, color="red", size=1.1)+
+  stat_function(fun = demand, color="cyan", size=1.1,lty=3)+
+  stat_function(fun = demand1, color="cyan", size=1.1)+
+  geom_segment(aes(x = 0, y = 5, xend = 5, yend = 5), lty = "dotted"
+               ,size=1.2)+
+  geom_segment(aes(x = 0, y = 6, xend = 6, yend = 6), lty = "dotted"
+               ,size=1.2)
 ```
+
 :::
-
 ::: {.column width=47%}
-- Consumer lose $A+B$
 
-- Producer lose $C+D$
 
-- The government collects tax revenue $TR=T \times Q_T$
+- Suddenly demand for US stocks rises, hence demand for USD rises.
+- this leads to an appreciation of USD.
+- but because USD go up, import from US becomes expensive.
+- In IDN's BoP, current account $\Uparrow$, financial account $\Downarrow$
+- In USA's BoP, current account $\Downarrow$, financial account $\Uparrow$
 
-- This is equals to $TR=A+C$
-
-- $B+D=DWL$
 :::
 ::::
-
-## The impact of taxation
-
-- As we learn, the tax revenue and the size of DWL depends highly in demand elasticity and supply elasticity of the good.
-
-- The less elastic the demand and supply of a good, the higher revenue gained from taxing the good.
-  - i.e., price effect > quantity effect.
-  
-- DWL also lower when the demand and/or supply of the good is highly inelastic.
 
 ---
 
-:::: columns
-::: {.column width=47%}
-```{r grafiks1, echo=FALSE, message=FALSE, warning=FALSE}
+## Exchange rate {.m}
 
-grafiks1 <- graph +
-  stat_function(fun = supply,size=1.1, color='red') +
-  stat_function(fun = demand1,size=1.1, color='cyan') +
-  scale_x_continuous(limits= c(120, 150), 
-                     breaks = c(130,eqq1), labels = c(expression(Q[T]),expression(Q[E]))) +
-  scale_y_continuous(limits = c(9,12),
-                     breaks = c(supply(130),eqp1,demand1(130)), labels = c(expression(P[P]),expression(P[E]),expression(P[C]))) +
-  geom_point(aes(x=eqq1,y=eqp1),color='white',size=4)+
-  geom_point(aes(x=130,y=supply(130)),color='white',size=4)+
-  geom_point(aes(x=130,y=demand1(130)),color='white',size=4)+
-  geom_segment(data = data_frame(q=130,p=supply(130)),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=130,p=supply(130)),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=130,p=demand1(130)),
-               aes(x = q, y = supply(130), xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=130,p=demand1(130)),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2)+
-  geom_segment(data = data_frame(q=eqq1,p=eqp1),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2)+
-  geom_segment(data = data_frame(q=eqq1,p=eqp1),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2)+
-  geom_ribbon(aes(x=seq(0,130,1), ymin=supply(130), ymax=demand1(130), fill="TR"),alpha = 0.4,show.legend=FALSE)+
-  geom_ribbon(aes(x=seq(130,eqq1,1), ymin=supply(seq(130,eqq1,1)), ymax=demand1(seq(130,eqq1,1)), fill="DWL"),alpha = 0.4,show.legend=FALSE)+
-  annotate("text", x = 125, y = 10.6, label = "Revenue", size=8)+
-  annotate("text", x = 125, y = 10.8, label = "Tax", size=8)+
-  annotate("text", x = 137, y = 11.6, label = "DWL", size=8)+
-  annotate("segment", x = 131.2, xend = 135.2, y = 10.7, yend = 11.3,
-           arrow = arrow(length = unit(2, "lines")), size=1, colour = "gray")+
-  labs(title="(a) Inelastic demand (<1)", x="Q (1000 cars/day)", y="P (1000 IDR)")+
-  geom_text(aes(x = 145, y = 9.3, label = "D"), parse = TRUE, size =8, color = '#e0e0e0')+
-  geom_text(aes(x = 145, y = 11.1, label = "S"), parse = TRUE, size =8, color = '#e0e0e0')
+- As we saw in BoP, financial account always offsetted by current account and vice-versa.
 
-###################################################################
-
-grafiks2 <- graph +
-  stat_function(fun = supply,size=1.1, color='red') +
-  stat_function(fun = demand2,size=1.1, color='cyan') +
-  scale_x_continuous(limits= c(120, 150), 
-                     breaks = c(130,eqq2), labels = c(expression(Q[T]),expression(Q[E]))) +
-  scale_y_continuous(limits = c(9,12),
-                     breaks = c(supply(130),eqp2,demand2(130)), labels = c(expression(P[P]),expression(P[E]),expression(P[C]))) +
-  geom_point(aes(x=eqq2,y=eqp2),color='white',size=4)+
-  geom_point(aes(x=130,y=supply(130)),color='white',size=4)+
-  geom_point(aes(x=130,y=demand2(130)),color='white',size=4)+
-  geom_segment(data = data_frame(q=130,p=supply(130)),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=130,p=supply(130)),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=130,p=demand2(130)),
-               aes(x = q, y = supply(130), xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=130,p=demand2(130)),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2)+
-  geom_segment(data = data_frame(q=eqq2,p=eqp2),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2)+
-  geom_segment(data = data_frame(q=eqq2,p=eqp2),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2)+
-  geom_ribbon(aes(x=seq(0,130,1), ymin=supply(130), ymax=demand2(130), fill="TR"),alpha = 0.4,show.legend=FALSE)+
-  geom_ribbon(aes(x=seq(130,eqq2,1), ymin=supply(seq(130,eqq2,1)), ymax=demand2(seq(130,eqq2,1)), fill="DWL"),alpha = 0.4,show.legend=FALSE)+
-  labs(title="(b) elastic demand (>1)", x="Q (1000 cars/day)", y="P (1000 IDR)")+
-  geom_text(aes(x = 145, y = 10.3, label = "D"), parse = TRUE, size =8, color = '#e0e0e0')+
-  geom_text(aes(x = 145, y = 11.7, label = "S"), parse = TRUE, size =8, color = '#e0e0e0')
-
-########################################################################
-
-grafiks3 <- graph +
-  stat_function(fun = supply1,size=1.1, color='red') +
-  stat_function(fun = demand,size=1.1, color='cyan') +
-  scale_x_continuous(limits= c(120, 150), 
-                     breaks = c(130,eqq3), labels = c(expression(Q[T]),expression(Q[E]))) +
-  scale_y_continuous(limits = c(9,12),
-                     breaks = c(supply1(130),eqp3,demand(130)), labels = c(expression(P[P]),expression(P[E]),expression(P[C]))) +
-  geom_point(aes(x=eqq3,y=eqp3),color='white',size=4)+
-  geom_point(aes(x=130,y=supply1(130)),color='white',size=4)+
-  geom_point(aes(x=130,y=demand(130)),color='white',size=4)+
-  geom_segment(data = data_frame(q=130,p=supply1(130)),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=130,p=supply1(130)),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=130,p=demand(130)),
-               aes(x = q, y = supply1(130), xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=130,p=demand(130)),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2)+
-  geom_segment(data = data_frame(q=eqq3,p=eqp3),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2)+
-  geom_segment(data = data_frame(q=eqq3,p=eqp3),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2)+
-  geom_ribbon(aes(x=seq(0,130,1), ymin=supply1(130), ymax=demand(130), fill="TR"),alpha = 0.4,show.legend=FALSE)+
-  geom_ribbon(aes(x=seq(130,eqq3,1), ymin=supply1(seq(130,eqq3,1)), ymax=demand(seq(130,eqq3,1)), fill="DWL"),alpha = 0.4,show.legend=FALSE)+
-  labs(title="(c) inelastic supply (<1)", x="Q (1000 cars/day)", y="P (1000 IDR)")+
-  geom_text(aes(x = 145, y = 9.3, label = "D"), parse = TRUE, size =8, color = '#e0e0e0')+
-  geom_text(aes(x = 145, y = 11.7, label = "S"), parse = TRUE, size =8, color = '#e0e0e0')
-
-#####################################################################
-
-grafiks4 <- graph +
-  stat_function(fun = supply2,size=1.1, color='red') +
-  stat_function(fun = demand,size=1.1, color='cyan') +
-  scale_x_continuous(limits= c(120, 150), 
-                     breaks = c(130,eqq4), labels = c(expression(Q[T]),expression(Q[E]))) +
-  scale_y_continuous(limits = c(9,12),
-                     breaks = c(supply2(130),eqp4,demand(130)), labels = c(expression(P[P]),expression(P[E]),expression(P[C]))) +
-  geom_point(aes(x=eqq4,y=eqp4),color='white',size=4)+
-  geom_point(aes(x=130,y=supply2(130)),color='white',size=4)+
-  geom_point(aes(x=130,y=demand(130)),color='white',size=4)+
-  geom_segment(data = data_frame(q=130,p=supply2(130)),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=130,p=supply2(130)),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=130,p=demand(130)),
-               aes(x = q, y = supply2(130), xend = q, yend = p), lty = "dotted", size=2) +
-  geom_segment(data = data_frame(q=130,p=demand(130)),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2)+
-  geom_segment(data = data_frame(q=eqq4,p=eqp4),
-               aes(x = 120, y = p, xend = q, yend = p), lty = "dotted", size=2)+
-  geom_segment(data = data_frame(q=eqq4,p=eqp4),
-               aes(x = q, y = 9, xend = q, yend = p), lty = "dotted", size=2)+
-  geom_ribbon(aes(x=seq(0,130,1), ymin=supply2(130), ymax=demand(130), fill="TR"),alpha = 0.4,show.legend=FALSE)+
-  geom_ribbon(aes(x=seq(130,eqq4,1), ymin=supply2(seq(130,eqq4,1)), ymax=demand(seq(130,eqq4,1)), fill="DWL"),alpha = 0.4,show.legend=FALSE)+
-  labs(title="(d) elastic supply (>1)", x="Q (1000 cars/day)", y="P (1000 IDR)")+
-  geom_text(aes(x = 145, y = 9.3, label = "D"), parse = TRUE, size =8, color = '#e0e0e0')+
-  geom_text(aes(x = 145, y = 11.3, label = "S"), parse = TRUE, size =8, color = '#e0e0e0')
-
-grafiks1
-grafiks3
-
-```
-:::
-
-::: {.column width=47%}
-```{r grafiks2, echo=FALSE, message=FALSE, warning=FALSE}
-grafiks2
-grafiks4
-
-```
-:::
-::::
-
-## Implication
-
-- If the government wants to collect revenue, its best to impose a tax on a good with low elasticities.
-
-- If the government wants to change behaviour, tax a good with high elasticities.
-
-- Taxing cigarettes to discourage smoking maybe ineffective
-  - however, it can be used to gain revenue.
+- The exchange rate will settles the BoP, or you can say the other way around: BoP will determine the new exchange rate.
+  + It is possible that exchange rate doesn't change.
   
-- Highly inelastic goods may suggest it's a necessity: people may be unhappy with the tax.
+- That's why, countries receiving a lot of investments are generally running a current account deficit.
 
-## Implication
+---
 
-- Same goes with the business people: be careful in increasing price if your product is highly elastically demanded.
+## International financing {.m}
 
-- Next week, we will have a look a bit more detailed on the supply curve: 
-  - what drives the elasticity of supply.
-  - Different types of cost.
+- International financing opens up possibility to borrow from abroad:
+  - When loan interest rate in US is low, we can borrow from US.
+  - However, it may expose us to **exchange rate risks**
   
-## Some recap before da quiz
+- Suppose we need Rp100,000,000 to start a production. We could get profit Rp200,000,000 by the end of the year.
 
-- Elasticities is very important in determining surpluses: CS, PS, revenues.
+- Our options:
+  1. Borrow from Indonesian bank with 10% rate.
+  2. Borrow from US bank wit 5% rate.
+  
+- Suppose exchange rate is Rp10,000 per USD.
 
-- Elasticities can be estimated (albeit hard).
+---
 
-- Elasticities vary: $0 \leq 1 \leq \infty$ .
+## International financing {.m}
 
-- Many factors influence elasticities.
+#### Option one
+Borrow Rp100,000,000 and have net profit
+$$
+200m-100m \times (1.07)=93m
+$$
+#### Option two
+- Borrow $10,000. Calculate the amount of money needed to give back which is 10,500
 
-- You should be able to use elasticity formula and can draw how tax is calculated and drawn.
+- Buys IDR Rp100m, use it for production and gets Rp200m
 
-## Thank You
+- Buys $10,500 by using Rp105m Which net profits **Rp95m**
 
-<iframe src="https://giphy.com/embed/NIsWtysJUrvTG" width="480" height="320" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/cute-NIsWtysJUrvTG">via GIPHY</a></p>
+---
+
+## International financing {.m}
+
+- It is clear that we get higher profit by borrowing abroad.
+
+- However, this becomes problematic if by the time we have to return the money, IDR suddenly depreciated.
+
+- Consider our previous example, we need to return $10,500 which we can buy using Rp105m
+
+- But if by the time we finish our production USD becomes Rp11,000, then we need Rp115.5m to buy $10,500
+  + This nets us Rp200m - Rp115.5m = **Rp84.5m** in profit, which is less than option one.
+
+---
+
+## Leveraging / Hedging {.m}
+
+- Borrowing internationally requires long term strategy.
+
+- As we discuss previously, high demand of USD increases the price of USD:
+  + If everyone decided to borrow from US capital market, price of USD will go up
+  + With additional exchange risk, the low interest rate offered by US banks become less attractive.
+  
+- It is important to make sure that we hedge our liabilities, such as:
+  + Borrow in USD but also gets USD as payment.
+  + Secure a forward / option contract.
+
+---
+
+## Real Exchange rate {.m}
+
+- Nominal exchange rate will not have any effect on international trade and investment unless we take into account the difference in price level.
+
+- To do this, we use **Real exchange rate**:
+
+$$\text{Real exchange rate}=\text{IDR per USD} \times \frac{P_{USA}}{P_{IDN}}$$
+---
+
+## Real exchange rate example {.m}
+
+- Say Indonesian rupiah is depreciated from Rp10,000 per USD to Rp11,000 per USD, but at the same time, Indonesian price level is also increase by 10%
+
+Exchange rate before changes:
+
+$$\text{IDR per USD} \times \frac{P_{USD}}{P_{IDN}}=10k \times \frac{100}{100}=10k$$
+
+Exchange rate after changes:
+
+$$\text{IDR per USD} \times \frac{P_{USD}}{P_{IDN}}=11k \times \frac{100}{110}=10k$$
+
+---
+
+## Real exchange rate {.m}
+
+- The example shows us that real exchange rate doesn't change when nominal exchange rate changes at the same rate as inflation.
+
+- When real exchange rate doesn't change, decisions regarding international trade and investment also don't change!
+
+Going back to our smartphone example:
+
+- A $1,000 Smartphone is Rp15,000,000 when USD is Rp15,000
+- This time, suppose a domestically made smartphone is Rp15,000,000
+- Consumers will be indifferent between importing or buying domestics: Some will import, some will buy Indonesian made.
+
+---
+
+## Real exchange rate {.m}
+
+- When IDR depreciated to Rp16,000, the imported smartphone becomes Rp16,000,000
+
+- If there's no inflation, people's decision to buy will shifts a bit: more will buy domestic because its cheaper.
+
+- However, if there's an inflation at the same rate, the local smartphone price becomes Rp16,000,000, exactly the same price as the imported product.
+
+- People becomes indifferent again, and decision to import doesn't change.
+  + It is possible people will buy less smartphone in general, but composition between buying domestic or import doesn't change.
+  
+---
+
+## Purchasing power parity (PPP) {.m}
+
+- This fact makes comparing countries' economic welfare becomes a bit harder.
+
+- We have learned that comparing Real GDP is better to compare countries' production.
+
+- However, due to different price level, it is not useful to compare standard of living.
+
+- Developing countries tend to have lower income but prices are also lower.
+  
+---
+
+## Purchasing power parity (PPP) {.m}
+
+- nasi goreng in Australia generally costs A$12, but maybe Rp12,000 in Indonesia.
+
+- if I have A$12, I can buy 1 portion of nasi goreng.
+
+- AUD is Rp11,607. If I take my A$12 to Indonesia, I can buy IDR and get Rp139,284 and buy 11 portion of nasi goreng.
+
+- In this perspective, the PPP is Rp1,000 per AUD: Rp1,000 in Indonesia buys me the same good as A$1,
+
+- PPP consider all kinds of goods: from food, durable, and services.
+
+---
+
+## Big Mac Index {.m}
+
+- Chance is, Indonesian nasi goreng and Australian nasi goreng differ in taste, quality and maybe hygine.
+
+- This is even more complicated when we consider other types of goods quality and services: healthcare, education, etc.
+
+- If we have one standard good around the world, it will be great isn't it? But does such good exist?
+
+---
+
+## Big Mac Index {.m}
+
+- One such good is Big Mac (I explain more [here](https://www.krisna.or.id/post/bigmacindex/))
+
+- Big mac is arguably the same all over the world, because the recipe is standard.
+  
+- [The Economist](https://www.economist.com/) magazine developed a Big Mac Index, basically using the price of Big Mac to compare exchange rate among countries.
+
+- Here's from their [website](https://www.economist.com/big-mac-index):
+
+> A Big Mac costs 34,000 rupiah in Indonesia and US$5.66 in the United States. The implied exchange rate is 6,007.07. The difference between this and the actual exchange rate, 14,125.00, suggests the Indonesian rupiah is 57.5% undervalued
+
+---
+
+## The role of exchange rate {.m}
+
+- As you can see, exchange rate adds a layer to international trade and finance.
+
+- Buying goods and services from abroad has exchange rate on top of it:
+  + A country may produce something cheaper than domestic products, but if their currency is expensive, then the price we pay is also higher.
+  + This means their exchange rate contributes to our domestic inflation.
+  + Higher prices leads to higher domestic supply as well.
+  
+- Demand for foreign cash appreciate their currency. But when their currency is expensive, our export becomes attractive. This settles in an equilibrium exchange rate.
+
