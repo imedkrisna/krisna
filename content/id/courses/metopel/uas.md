@@ -6,12 +6,12 @@ linktitle: Contoh UAS
 menu:
   example:
     name: Contoh UAS
-    weight: 40
+    weight: 50
 summary: Contoh UAS
 title: Contoh UAS
 toc: true
 type: book
-weight: 40
+weight: 50
 editable: false
 commentable: false
 ---

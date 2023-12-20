@@ -6,12 +6,12 @@ linktitle: excel
 menu:
   example:
     name: excel
-    weight: 20
+    weight: 40
 summary: Regresi di Excel
 title: Excel regression
 toc: true
 type: book
-weight: 30
+weight: 40
 editable: false
 commentable: false
 ---

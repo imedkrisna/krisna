@@ -6,7 +6,7 @@ linktitle: install
 menu:
   example:
     name: install
-    weight: 30
+    weight: 20
 summary: cara menginstall R
 title: install R
 toc: true
