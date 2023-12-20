@@ -23,7 +23,7 @@ Tugas metodologi penelitian kali ini adalah membuat sebuah _policy brief_ singka
 Pada mata kuliah ilmu ekonomi, anda belajar hubungan antara pertumbuhan PDB, inflasi dan tingkat pengangguran. Bagaimana perubahan di salah satu indikator akan mengubah indikator yang lain. Tugas anda adalah membahas perubahan-perubahan ini berdasarkan data tahunan yang tersedia, dan menuliskannya dalam sebuah risalah singkat. Risalah singkat ini diperkirakan akan terdiri dari sekitar 1500-2000 kata (atau sekitar 3 halaman A4 tanpa tabel dan gambar). Format penulisan dapat dibagi ke dalam 4 bagian:
 
 1. Pendahuluan (simple context aja ga usa panjang-panjang)
-2. Data (gunakan grafik untuk melakukan visualisasi 3 indikator makro yang ditugaskan, lalu bahas sedikit masing-masing indikator tersebut)
+2. Data (gunakan grafik untuk melakukan visualisasi 3 indikator makro yang ditugaskan, lalu bahas sedikit masing-masing indikator tersebut. Boleh pake ggplot, boleh pake excel)
 3. Pembahasan (gunakan _framework_ ilmu ekonomi dalam membahas data yang ada)
 4. Kesimpulan (no new info. Inget kerangka penelitian di meeting 12)
 
@@ -33,15 +33,15 @@ Anda dapat menggunakan [World Development Indicators](https://data.worldbank.org
 
 Kelompok anda SAMA dengan kelompok di mata kuliah ILMU EKONOMI. Ada total 7 kelompok, di mana setiap kelompok harus menggunakan data pertumbuhan PDB, inflasi, dan tingkat pengangguran. Negara yang dibahas adalah sebagai berikut:
 
-| kelompok | negara |
-| --- | ------ |
-| 1 | Indonesia |
-| 2 | China |
-| 3 | Singapura |
-| 4 | Jepang |
-| 5 | Amerika Serikat |
-| 6 | Malaysia |
-| 7 | Thailand |
+| kelompok | negara | Country code |
+| --- | ------ | --- |
+| 1 | Indonesia | IDN |
+| 2 | China | CHN |
+| 3 | Singapura | SGP |
+| 4 | Jepang | JPN |
+| 5 | Amerika Serikat | USA |
+| 6 | Malaysia | MYS |
+| 7 | Thailand | THA |
 
 Anda harus membahas 3 indikator tersebut secara tahunan dalam rentang waktu antara 2002-sekarang. Indikator yang anda perlukan adalah:
 
@@ -51,7 +51,28 @@ Anda harus membahas 3 indikator tersebut secara tahunan dalam rentang waktu anta
 | Inflation, consumer prices (annual %) | FP.CPI.TOTL.ZG | [link](https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG) |
 | Unemployment, total (% of total labor force) (national estimate) | SL.UEM.TOTL.NE.ZS | [link](https://data.worldbank.org/indicator/SL.UEM.TOTL.NE.ZS) |
 
-Jika anda menggunakan package WDI, anda bisa pake 
+Jika anda menggunakan package WDI, anda bisa pake kode ini:
+
+```r
+library(WDI)
+library(tidyverse)
+library(writexl)
+
+indi<-c(            
+  "growth"="NY.GDP.MKTP.KD.ZG", 
+  "inflation"="FP.CPI.TOTL.ZG",
+  "unemployment"="SL.UEM.TOTL.NE.ZS"
+)
+
+dat<-WDI(           # Menarik data World Bank
+  country="IDN", # Ganti nama negaranya sesuai kelompok
+  indicator=indi,
+  start=2002,end=2019,
+)
+
+## Mengeksport dat ke excel (jika perlu)
+write_xlsx(dat,"dat.xlsx")
+```
 
 ## Pengumpulan
 
