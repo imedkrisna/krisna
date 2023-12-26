@@ -29,8 +29,8 @@ main:
     url: '#CV'
     weight: 70
 
-  - name: "Hobby"
-    url: "#hobby"
+  - name: "Playlist"
+    url: "#music"
     weight: 90
   
   - name: "🔎"
