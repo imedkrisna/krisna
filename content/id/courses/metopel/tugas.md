@@ -11,7 +11,7 @@ summary: Tugas
 title: Tugas
 toc: true
 type: book
-weight: 30
+weight: 40
 editable: false
 commentable: false
 ---

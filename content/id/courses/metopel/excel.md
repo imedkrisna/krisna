@@ -11,7 +11,7 @@ summary: Regresi di Excel
 title: Excel regression
 toc: true
 type: book
-weight: 40
+weight: 30
 editable: false
 commentable: false
 ---
