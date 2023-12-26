@@ -12,6 +12,9 @@ header:
   caption: ""
   image: ""
 ---
+
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/3PAMt81vvT7HVX9tfizCuo?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
 This part of the website is more of a hobby. I love playing some music either alone or with friends! I also enjoyed singing in Smule. I dedicate this page for those contents! The plan is for this page to store my other hobby but we'll see if I had the time and dedication.
 
 <!--

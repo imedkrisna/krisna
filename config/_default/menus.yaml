@@ -29,7 +29,7 @@ main:
     url: '#CV'
     weight: 70
 
-  - name: "🎵"
+  - name: "Hobby"
     url: "#hobby"
     weight: 90
   
