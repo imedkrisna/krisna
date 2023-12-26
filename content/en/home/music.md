@@ -11,7 +11,7 @@ title = "My music"
 subtitle = ""
 
 # Order that this section will appear in.
-weight = 71
+weight = 72
 
 +++
 
