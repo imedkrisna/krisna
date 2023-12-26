@@ -2,15 +2,27 @@ project:
   type: book
 
 book:
-  title: "Matematika dan Statistika untuk Bisnis"
+  title: "Matematika dan Statistika untuk Ekonomi dan Bisnis"
   author: "Krisna Gupta"
   date: "28/10/2023"
   downloads: pdf
   page-navigation: true
   chapters:
     - index.qmd
-    - intro.qmd
-    - summary.qmd
+    - bab1.qmd
+    - bab2.qmd
+    - bab3.qmd
+    - bab4.qmd
+    - bab5.qmd
+    - bab6.qmd
+    - bab7.qmd
+    - bab8.qmd
+    - bab9.qmd
+    - bab10.qmd
+    - bab11.qmd
+    - bab12.qmd
+    - bab13.qmd
+    - bab14.qmd
     - references.qmd
 
 bibliography: references.bib
