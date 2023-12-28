@@ -24,11 +24,15 @@ commentable: false
 
 - Gunakan [template ini](https://1drv.ms/f/s!AjelszXKKcmsheUiQlirP5wEFu8ZVA?e=EBei3L).
 
+- Silakan bertanya ke dosen kapan saja. Usahakan pertanyaannya sudah dikumpulkan dan datang bersama-sama.
+
+- Jika tidak bisa menggunakan github, silakan menggunakan word/docs.
+
 ## Pengumpulan
 
 - Mahasiswa yang berhasil membuat UAS dengan menggunakan github cukup mengumpulkan linknya saja.
 
-- Sebelum mengumpulkan UAS, pastikan LINK ANDA BISA ANDA BUKA / tidak broken.
+- Sebelum mengumpulkan UAS, pastikan LINK ANDA BISA ANDA BUKA / tidak broken. Kalo bisa dibuka di browser anda, harusnya juga bisa dibuka di browser saya.
 
 - Bagi mahasiswa yang tidak berhasil menggunakan github, dapat mengumpulkan file dalam bentuk word atau pdf.
 
