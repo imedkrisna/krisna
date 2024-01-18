@@ -46,4 +46,4 @@ Menurut pihak swasta, permasalahan yg utama adalah aturan TKDN dan standar SNI. 
 
 Yha intinya acaranya seru banget dan saya belajar banyak. Sangat senang saya tu kalo branch di perdagangan internasional masih menarik dan makin seru perkembangannya. Emang sudah saatnya masalah lingkungan ini masuk ke perdagangan internasional dan ekonomi internasional secara umum.
 
-BTW acara tadi bisa ditonton di [Youtube](https://bit.ly/m/trading-towards-sustainability).
+BTW acara tadi bisa ditonton di [Youtube](https://bit.ly/m/trading-towards-sustainability). Page acaranya ada di [fesbuk.](https://www.facebook.com/events/s/peluncuran-laporan-the-role-of/285033014558527/?mibextid=9l3rBW).
