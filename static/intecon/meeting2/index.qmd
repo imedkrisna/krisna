@@ -26,7 +26,7 @@ format:
 
 - Everything is on EMAS (at least pre-midterm).
 
-## Today
+## Learning outcomes
 
 - Last week you've learned the new challenges in globalization & Indonesia's trade pattern.
 
@@ -35,6 +35,12 @@ Today we learn Ricardian model of trade (aka comparative advantage) so:
 - you can explain how the model works
 
 - show where gains from trade come from
+
+## Today
+
+- Ricardian setting
+
+- Trade and its gais.
 
 ## Concepts
 
@@ -50,54 +56,83 @@ Concepts in trade is straightforward but people always lost idk why
 
 - The opportunity cost of producing something measures the cost of not being able to produce something else with the resources used.
 
-
 - Comparative advantage will be determined by comparing opportunity costs across countries.
 
-## Ekonomi dengan 1 faktor produksi
+> A country $j$ has a comparative advantage in producing good $i$ if the opportunity cost of producing good $i$ is lower in the country $j$ than in other countries.
 
--   1 faktor produksi: buruh.
+## One factor economy {.m}
 
--   2 barang: Apel dan Beras.
+1. Labor is the only factor of production.
+1. Labor productivity varies across countries due to differences in technology, but labor productivity in each country is constant.
+1. The supply of labor in each country is fixed.
+1. Two goods: food and cloth.
+1. Competition allows workers to be paid a wage equal to the value of what they produce, and allows them to work in the industry that pays the higher wage.
+1. Two countries: home and foreign.
 
--   Teknologi direpresentasikan dengan *unit labor requirement*
+## One factor economy
 
-    -   berapa jumlah jam kerja yang diperlukan untuk menghasilkan 1 unit barang.
-    -   cara ini kebalikan dari tipikal produktivitas: angka besar berarti inefisien.
-    -   $a_{A}$ untuk apel, $a_{B}$ untuk beras.
+- Labor supply $L$ is the total labor resources a country has.
 
-## Ekonomi dengan 1 faktor produksi
+- $a_{LF}$ indicates the amount of labor required to produced 1 kg of Food.
 
--   Total *labour supply* $= L$
+- Food production $Q_F$=total food produced by the home country.
 
--   $a_{A}Q_A =$ total jam kerja yang diperlukan untuk menghasilkan apel sebanyak $Q_A$
-
--   $a_{B}Q_B =$ total jam kerja yang diperlukan untuk menghasilkan beras sebanyak $Q_B$
-
--   Production constraint:
+- Production possibility frontier (PPF): the maximum amount of production given resources.
 
 $$
-a_{A}Q_A + a_{B}Q_B \leq L
+a_{LF}Q_F+a_{LC}Q_C\leq L
 $$
 
 ## PPF
 
+$$
+a_{LF}Q_F+a_{LC}Q_C\leq L
+$$
+
+- If $Q_C$=0, maximum food production is $Q_F=\frac{L}{a_{LF}}$
+
+- If $Q_F$=0, maximum cloth production is $Q_C=\frac{L}{a_{LC}}$
+
+## PPF ex.
+
+- Say home country have this spec:
+
+$$
+Q_F+2Q_C \leq 1000
+$$
+
+- How many labor needed to make 1 cloth? How many 1 food?
+
+- Max possible food is 1000 kg, max possible cloth is 500 metre.
+
+## Home PPF
+
 ::: {.s layout-ncol="2"}
--   Bayangkan sebuah negara (sebut saja H):
-    -   Butuh 1 OJ untuk membuat apel, 2 OJ untuk membuat beras.
-    -   Total OJ di negara H adalah 1.000 OJ $(L=1000)$
-    -   Jika semua OJ digunakan untuk apel, maka $A,B=\{1000,0\}$
-    -   Jika semua OJ digunakan untuk beras, maka $A,B=\{0,500\}$
--   Linear PPF $\Rightarrow$ opportunity cost konstan.
-    -   Memutuskan bikin beras 1kg = memutuskan gak bikin apel 2kg.
-    -   Memutuskan bikin apel 1kg = memutuskan gak bikin beras $\frac{1}{2}$kg.
+
+- The production function has a linear PPF.
+
+- Home can produce anywhere on the line.
+
+    - below the line $\rightarrow$ inefficient
+    
+    - above the line $\rightarrow$ unfeasible
+
+- As you move along the line, you increase a production of 1 good while decreasing another.
+
+    - the opportunity cost of making a good is the other good!
 
 ```{r}
 #| fig-width: 5
 #| fig-height: 4
 #| label: fig1
-#| fig-cap: "Production Possibility Frontier (PPF) negara H"
+#| fig-cap: "Production Possibility Frontier (PPF) country H"
 library('ggplot2')
 graph<-ggplot()+
+  theme(panel.background = element_rect(fill = "#f0f1eb",
+                                        colour = "#f0f1eb"),
+        plot.background = element_rect(fill = "#f0f1eb"),
+        legend.key = element_rect(fill = "#f0f1eb",linetype = "blank"),
+        legend.background = element_rect(fill="#f0f1eb"))+
   theme_classic()
 
 home <- function(x) 500-0.5*x
@@ -105,13 +140,238 @@ graph+
   stat_function(fun = home, size=1.1)+
   scale_y_continuous(expand=c(0,0),limits=c(0,1000), breaks = c(0,500,1000))+
   scale_x_continuous(expand=c(0,0),limits=c(0,1000), breaks =c(0,500,1000))+
-  labs(x="Apel (kg)",y="Beras (kg)")
+  labs(x="Food (kg)",y="Cloth (m)")
 ```
 :::
 
+## Opportunity cost
+
+- The opportunity cost of making food is how many meter of cloth Home must stop producing in order to produce 1 kg of food:
+
 $$
-1Q_A + 2Q_B \leq 1000
+\frac{a_{LF}}{a_{LC}}
 $$
+
+- the opportunity cost is constant because the unit labor requirements are both constant.
+
+- the opportunity cost of food appears as the absolute value of the slope of the PPF:
+
+## PPF
+
+$$
+Q_F=\frac{L}{a_{LF}}-\left( \frac{a_{LF}}{a_{LC}} \right) Q_C
+$$
+
+- First difference, you get:
+
+$$
+\frac{dQ_F}{dQ_C}=-\frac{a_{LF}}{a_{LC}}, \text{in our case,}=-\frac{1}{2}
+$$
+
+## opportunity cost
+
+For the case of $Q_F+2Q_C \leq 1000$:
+
+to increase 1 kg of food, we need 1 hour of labor. But 1 hour of labor equals to 0.5 m of cloth (because we need 2 hours of labor to make 1 m of cloth).
+
+Likewise, to have 1m more of cloth, we need 2 hour of labor, which could produce 2 kg of food instead.
+
+| to produce | opportunity cost |
+| --- | --- |
+| 1 kg of food | 1/2 m of cloth |
+| 1 m of cloth | 2 kg of food |
+
+## Relative prices {.s}
+
+- Workers will choose to work in an industry with higher wage.
+
+- If the price of food relative to the price of cloth exceeds the opportunity cost of producing food:
+
+$$
+\frac{P_F}{P_C}>\frac{a_{LF}}{a_{LC}}
+$$
+
+- then the wage paid when making food will exceed the wage in cloth.
+
+$$
+W_F=\frac{P_F}{a_{LF}} > \frac{P_C}{a_{LC}}=W_C
+$$
+
+- so workers will only make food (specialize in food)
+
+## Example
+
+- Say $P_F=\$4$ while $P_C=\$7$.
+
+- Then, $W_F=\frac{P_F}{a_{LF}}=\$4/hr$
+
+- Also, $W_C=\frac{P_C}{a_{LC}}=\$3.5/hr$
+
+- Relative wage of food, 4/7, is smaller than opportunity cost of food,1/2.
+
+- Therefore, all workers will just make Food.
+
+## Relative prices
+
+- If home country wants to produce both, then wage in both industries have to be equal.
+
+$$
+W_F=W_C \Rightarrow \frac{P_F}{a_{LF}}=\frac{P_C}{a_{LC}}
+$$
+
+- Labor Theory of Value (LTV):
+
+$$
+\frac{P_F}{P_C}=\frac{a_{LF}}{a_{LC}}
+$$
+
+## Trade in Ricardian
+
+- Introducing foreign country, notified with "*", with different technology.
+
+> A country $j$ has an absolute advantage in producing good $i$ if that country can produce a unit of $i$ with less resources than another country
+
+- If $a_{LF} < a^*_{LF}, home labor is more efficient in producing food than foreign because it needs less labor to make 1 kg of food.
+
+- Does that guarantee that Home should export cheese?
+
+## Trade in Ricardian
+
+- What determines the pattern of trade is comparative advantage, not absolute advantage.
+
+- Remember, comparative advantage is about the opportunity cost of production of good $i$
+
+- If home country has a comparative advantage of Food:
+
+$$
+\frac{a_{LF}}{a_{LC}} < \frac{a^*_{LF}}{a_{LC}^*}
+$$
+
+## Trade in Ricardian
+
+- Home exports food  if $\frac{a_{LF}}{a_{LC}} < \frac{a^*_{LF}}{a_{LC}^*}$
+
+- Home exports cloth if $\frac{a_{LF}}{a_{LC}} > \frac{a^*_{LF}}{a_{LC}^*}$
+
+- Both countries won't trade if $\frac{a_{LF}}{a_{LC}} = \frac{a^*_{LF}}{a_{LC}^*}$
+
+- If home has absolute advantage in both goods but the ratio are the same with foreign, then home will have more stuff but they still won't trade.
+
+## Foriegn's PPF
+
+::: {.s layout-ncol="2"}
+
+- if $\frac{a_{LF}}{a_{LC}} < \frac{a^*_{LF}}{a_{LC}^*}$, then foreign's ppf is steeper than home.
+
+- That is, home sacrifice smaller number of cloth to make food than the opposite.
+
+- In foreign, the reverse is true: making cloth requires less sacrifice of food than otherwise.
+
+```{r}
+#| fig-width: 5
+#| fig-height: 4
+#| label: fig2
+#| fig-cap: "Production Possibility Frontier (PPF) country F"
+
+foreign <- function(x) 1000-2*x
+graph+
+  stat_function(fun = foreign, size=1.1)+
+  scale_y_continuous(expand=c(0,0),limits=c(0,1000), breaks = c(0,500,1000))+
+  scale_x_continuous(expand=c(0,0),limits=c(0,1000), breaks =c(0,500,1000))+
+  labs(x="Food (kg)",y="Cloth (m)")
+```
+:::
+
+## Trade and prices
+
+- Before trade, each countries' relative price of food reclects the relative price of food in terms of cloth.
+
+- Therefore, relative price of food in Home is lower than relative price of food in Foreign.
+
+- It will be profitable to ship food from Home to foreign (and cloth from foreign to home).
+
+- What happens to price?
+
+## Price after trade {.m}
+
+- Let's work our way from low $\frac{P_F}{P_C}$ and increase it.
+
+- $\frac{P_F}{P_C}<\frac{a_{LF}}{a_{LC}}<\frac{a_{LF}^*}{a_{LC}^*}$ no food is produced.
+
+- $\frac{P_F}{P_C}=\frac{a_{LF}}{a_{LC}}<\frac{a_{LF}^*}{a_{LC}^*}$ Home indifferent, foreign produce only cloth.
+
+- $\frac{a_{LF}}{a_{LC}}<\frac{P_F}{P_C}<\frac{a_{LF}^*}{a_{LC}^*}$ Home produce only food, Foreign produce only cloth.
+
+- $\frac{a_{LF}}{a_{LC}}<\frac{P_F}{P_C}=\frac{a_{LF}^*}{a_{LC}^*}$ Home produce only food, Foreign indifferent
+
+- $\frac{a_{LF}}{a_{LC}}<\frac{a_{LF}^*}{a_{LC}^*}<\frac{P_F}{P_C}$ no cloth is produced.
+
+- Relative demand will help determine final relative price.
+
+## Example
+
+| a | Food | Cloth |
+| --- | --- | --- |
+| Home | $a_{LF}=1$ | $a_{LC}=2$ |
+| Foreign | $a_{LF}=6$ | $a_{LC}=3$ |
+| L | 1000 | 3000 |
+
+::: {.incremental}
+
+- Home has absolute advantages on both goods!
+
+- What about comparative advantage?
+
+- $\frac{1}{2}=\frac{a_{LF}}{a_{LC}}<\frac{a_{LF^*}}{a_{LC}^*}=2$
+
+:::
+
+## Example
+
+| production | Home opportunity cost | Foreign Opportunity cost |
+| --- | ----- | ----- |
+| 1 kg of Food | 1/2 m of cloth | 2 m of cloth |
+| 1 m of cloth | 2 kg of food | 1/2 kg of food |
+
+- Home has a comparative advantage in producing food.
+
+- Foreign has a comparative advantage in producing cloth.
+
+## Prices
+
+- Without trade, we know that $\frac{P_F}{P_C}$ are 1/2 in Home and 2 in Foreign.
+
+- Suppose the global relative price $\frac{P_F}{P_C}=1$, means the world relative price of food is higher for Home, and lower in Foreign.
+
+    - Home used to need to sacrifice 2 kg of food to get 1 m cloth. Now it's just 1.
+    
+    - Foreign used to need to sacrifice 2 m of cloth to get 1 kg of food. Now it's just 1.
+    
+## For Home
+
+$$
+Q_F+2Q_C \leq 1000
+$$
+
+- Say home used to demand 500 food and 250 cloth. Without trade, they achieve this by using L=500 to produce F and L=500 to produce C.
+
+- With trade, they can use L=1000 to produce 1000 Food. Sell 500 Food for 500 cloth (because $\frac{P_F}{P_C}=1$), and ended up with 500 food and 500 cloth.
+
+- Without trade, 500 food + 500 cloth would require them to have L=1500, which is unfeasible!
+
+## Relative wage
+
+- Our setting suggests Home to focus on producing Food while Foreign focuses on Cloth.
+
+- Suppose that $P_F=12$ and $P_C=12$,
+
+- Since Home produces Food, then $w_H=\frac{P_F}{a_{LF}}=\frac{12}{1}=12$
+
+- Since Foreign produces Cloth, then $w_F=\frac{P_C}{a_{LC}}=\frac{12}{3}=4$
+
+- Meaning, Home wage is 3 times Foreign (12/3).
+
+## 
 
 ## PPF and Relative Prices
 
@@ -195,7 +455,7 @@ Suppose the two countries do not trade. Indonesia's production is {T,S}={100,25}
 ```{r grafik1,echo=FALSE, message=FALSE, warning=FALSE}
 #| fig-width: 7
 #| fig-height: 5.5
-#| label: fig2
+#| label: fig4
 
 library(patchwork)
 library(kableExtra)
@@ -344,7 +604,7 @@ indon1+amrik1
 ```{r}
 #| fig-width: 5
 #| fig-height: 4
-#| label: fig4
+#| label: fig5
 
 graph<-ggplot()+
   theme_classic()
