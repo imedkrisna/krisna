@@ -14,46 +14,44 @@ format:
   beamer: default
 ---
 
-## More housekeeping
+## Reminder
 
--   Pengajar anda pasca-UTS most likely adalah [Kiki Verico, PhD](https://staff.ui.ac.id/kiki.verico).
+- Your lecturer pre-midterm is I Made Krisna aka [Imed](https://krisna.or.id).
 
--   Tugas pre-UTS (20% dari total nilai) adalah 6 quiz:
+    - contents are mostly to catch you up with trade theories.
 
-    -   Diadakan setiap minggu, dimulai dari hari Senin, berakhir hari Minggu jam 18.00 WIB.
+- Kiki Verico will handle post-midterm.
 
-    - Nilai total quiz adalah 100. untuk nilai akhir hanya akan diambil 5 terbaik.
+- You'll have biweekly assignments. Please do it as best as you can.
 
-    - Quiz akan dilakukan dengan google form.
-    
-    - Anda akan perlu e-mail. please gunakan e-mail yang sama untuk 6 quiz tersebut.
-
-## Quiz 1
-
--   dapat diakses di [forms.gle/TECS6Q58aV3S1MVZA](https://forms.gle/TECS6Q58aV3S1MVZA)
-
-- link akan diforward ke Zulfan sang Class Rep juga.
-
-- Jawaban dan nilai akan dibahas minggu depan.
+- Everything is on EMAS (at least pre-midterm).
 
 ## Today
 
--   Comparative advantage
--   Ricardian model sebagai pondasi *trade theory*
+- Last week you've learned the new challenges in globalization & Indonesia's trade pattern.
 
-## Konsep Comparative Advantage {.m}
+Today we learn Ricardian model of trade (aka comparative advantage) so:
 
--   Indonesia adalah negara agraris. Kenapa impor kedelai?
+- you can explain how the model works
 
-    -   "... (profit menanam kedelai) jauh di bawah keuntungan yang didapat dari menanam padi dan jagung." ([kompas](https://money.kompas.com/read/2021/01/14/050900426/menurut-kementan-ini-penyebab-petani-enggan-menanam-kedelai-?page=all))
+- show where gains from trade come from
 
--   Sementara itu, "Indonesian consumers have developed a preference for U.S. soybeans due in part to their uniform size, color and suitability for tempeh and tofu manufacturing." ([ussoy.org](https://ussoy.org/growth-in-tempeh-market-offers-global-opportunities/))
+## Concepts
 
--   tempe menjadi produk ekspor andalan di [Jepang](https://en.tempo.co/read/1512185/13-tons-tempeh-chips-exported-to-japan) dan [Amerika Serikat](https://ussoy.org/growth-in-tempeh-market-offers-global-opportunities/)
+Concepts in trade is straightforward but people always lost idk why
 
--   what does it tell you about the structure of the Indonesian economy?
+- Differences across countries are a key reason why trade occurs.
 
--   what does it tell you about *comparative advantage*?
+- Economies of scale can also be a strong reason.
+
+- Opportunity cost is the root of comparative advantage concept which is the core of all trade model.
+
+## Comparative Advantage
+
+- The opportunity cost of producing something measures the cost of not being able to produce something else with the resources used.
+
+
+- Comparative advantage will be determined by comparing opportunity costs across countries.
 
 ## Ekonomi dengan 1 faktor produksi
 
