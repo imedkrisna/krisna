@@ -9,10 +9,10 @@ weight: 20
 
 slides:
 
-- {{% staticref "/intecon/meeting1/index.html" "newtab" %}}Pertemuan 1: Pendahuluan{{% /staticref %}}
-- {{% staticref "/intecon/meeting2/index.html" "newtab" %}}Pertemuan 2: Ricardian model & comparative advantage{{% /staticref %}}
-- {{% staticref "/intecon/meeting3/index.html" "newtab" %}}Pertemuan 3: Specific factor model{{% /staticref %}}
-- {{% staticref "/intecon/meeting4/index.html" "newtab" %}}Pertemuan 4: Hecksher-Ohlin Model{{% /staticref %}}
-- {{% staticref "/intecon/meeting5/index.html" "newtab" %}}Pertemuan 5: Standard Trade Model & Its Deviation{{% /staticref %}}
-- {{% staticref "/intecon/meeting6/index.html" "newtab" %}}Pertemuan 6: Global Firms{{% /staticref %}}
-- {{% staticref "/intecon/meeting7/index.html" "newtab" %}}Pertemuan 7: Trade Policies{{% /staticref %}}
+- {{% staticref "/ekinter/meeting1/index.html" "newtab" %}}Pertemuan 1: Pendahuluan{{% /staticref %}}
+- {{% staticref "/ekinter/meeting2/index.html" "newtab" %}}Pertemuan 2: Ricardian model & comparative advantage{{% /staticref %}}
+- {{% staticref "/ekinter/meeting3/index.html" "newtab" %}}Pertemuan 3: Specific factor model{{% /staticref %}}
+- {{% staticref "/ekinter/meeting4/index.html" "newtab" %}}Pertemuan 4: Hecksher-Ohlin Model{{% /staticref %}}
+- {{% staticref "/ekinter/meeting5/index.html" "newtab" %}}Pertemuan 5: Standard Trade Model & Its Deviation{{% /staticref %}}
+- {{% staticref "/ekinter/meeting6/index.html" "newtab" %}}Pertemuan 6: Global Firms{{% /staticref %}}
+- {{% staticref "/ekinter/meeting7/index.html" "newtab" %}}Pertemuan 7: Trade Policies{{% /staticref %}}

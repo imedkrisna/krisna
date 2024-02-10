@@ -1,62 +1,51 @@
 ---
-title: Ekonomi Internasional
+title: International Economics
 linkTitle: Introduction
-summary: Ekonomi Internasional
-date: '2022-02-13'
+summary: International Economics
+date: '2024-02-12'
 type: book
 commentable: false
 ---
 
 
 
-## Deskripsi mata kuliah
+## Course description
 
-Kenapa negara saling berdagang? Kenapa ada negara yang berdagang secara bebas, namun ada juga yang memilih untuk cenderung tertutup? Institusi apa yang mengatur jalannya perdagangan? Apa hubungan perdagangan internasional dengan pertumbuhan ekonomi dan industri? Bagaimana keterkaitan antara perdagangan, pertumbuhan dan kesejahteraan? Apakah ekspor yang tinggi disertai dengan rendahnya impor adalah sesuatu yang baik? Pada mata kuliah ini, kita akan mendiskusikan pertanyaan-pertanyaan seperti di atas.
+This course is taught in the economics undergraduate program at Universitas Indonesia (UI). This is a 14-week course and I co-deliver it with [Kiki Verico](https://www.linkedin.com/in/kiki-verico-313a8033/?originalSubdomain=id) (the guy needs no introduction. If you don't know him it's on you). I cover the first 7 while KV the last 7. This sites contain my side of the delivery. The first 7 focuses on updating you with trade theory, from the most primitive to currency. Last 7 covers trade policies and movement of capitals (finance stuff).
 
-Mata kuliah ini didesain untuk Program Pendidikan Sarjana Ilmu Ekonomi Universitas Indonesia. Mata kuliah ini memberikan prinsip dasar menganalisis peran perdagangan internasional dalam mencapai tujuan sebuah negara dalam meningkatkan kesejahteraan warganya dan membangun industri serta ekonomi negaranya. Mata kuliah ini sangat cocok diambil oleh desainer kebijakan publik terkait perdagangan internasional dan kebijakan industri maupun peneliti lembaga riset dan organisasi nirlaba yang bergerak di bidang kebijakan publik.
+This course is intended to provide a fundamental understanding of the basics of international economics. Essentially, international economics can be divided into the economics of international trade and the economics of international finance. In both streams, we cover theories and policies in international trade and international finance. In international trade, we study why countries trade with each other, what determine trade patterns, and how 2 countries gain from trade. In international finance, we study the flows of capital between countries, how exchange rate is determined, and how countries gain from movement of capital.
 
-## Capaian pembelajaran
+See the complete syllabus [here](https://1drv.ms/b/s!AjelszXKKcmskKcnbeWv16NB4TY_xQ?e=yUHevC). this page is a short version.
 
--   Memahami kenapa ekonomi internasional dan industri perlu dipelajari.
+## Prerequisites
 
--   Mampu menjelaskan teori perdagangan internasional dengan bahasa yang mudah dipahami.
+- Macroeconomics 1
+- Microeconomics 1
 
--   Memahami bentuk-bentuk kebijakan terkait perdagangan internasional dan industrial,, dan konsekuensinya terhadap kesejahteraan.
+In particular, we expect students to understand basic micro stuff (e.g., preference axioms, welfare theorems) as well as basic macro stuff (e.g., growth theory, interest rate, X-M).
 
-## Buku dan Materi perkuliahan
+## Learning goals
 
-### Buku pegangan:
+-   Understanding the consequences and nuances of international economics in welfare and policy-making.
 
-Buku pegangan utama untuk mata kuliah ini adalah Krugman, Obstfeld dan Melitz (2022) edisi 12 (KOM)[^1], dengan alasan kepraktisan. Latihan dan slides saja sebenarnya akan cukup untuk lulus mata kuliah ini. Tapi membaca buku teks akan tetap membantu meningkatkan pemahaman dan wawasan anda. 
+-   Able to use theories and cite empirics on international economics phenomena and policies.
 
-Anda tidak perlu membaca buku yang sama dengan saya. Sebagian besar buku tentang teori perdagangan internasional umumnya punya konten yang mirip. Buku-buku Krugman edisi sebelumnya juga dapat digunakan. Buku lain yang juga cukup populer adalah Salvatore (2004)[^2]. Buku-buku ini dapat ditemukan di perpus UI.
+## Course materials
 
-- 
+Main textbooks:
 
-## Prasyarat
+- \[KOM\] Krugman, Obstfeld and Melitz, Inetarnational Economics: Theory and Policy.
+- \[FT\] Feenstra and Taylor, International Economics.
 
-Mata kuliah ini mensyaratkan pemahaman makroekonomi dan mikroekonomi yang cukup. Dari sisi mikroekonomi, mahasiswa diasumsikan telah memahami *first* dan *second welfare theorem* serta konsekuensi dari kegagalan pasar (*market failure*) dan *imperfect competition* dalam melakukan analisis ekonomi. Dari sisi makroekonomi, mahasiswa dianggap telah memahami *growth theory* dan memahami konsep *interest rate parity*. Konsep-konsep ini akan kita gunakan di konteks perdagangan internasional dan tidak akan direvisit. 
-
-## Ujian
-
-Penguasaan materi mata kuliah ini akan diuji dengan:
-
--   Ujian Tengah Semester, dengan bobot 30%
-    -   Offline & open book.
-    -   4 soal *essay*, cover meeting 1-7.
-
-## Konten pertemuan
+We also sometimes use other resources.
 
 | meeting | Topik | Bahan |
 | --- | ------------------ | ----- |
-| 1 | Pendahuluan |  KOM bab 1 |
-| 2 | Ricardian model |KOM bab 3 |
-| 3 | Specific factor model | KOM bab 4 |
-| 4 | Hecksher-Ohlin model | KOM bab 5 |
-| 5 | The standard model | KOM bab 6 |
-| 6 | Firms in international trade | KOM bab 8 |
-| 7 | Trade Policy | KOM bab 9 |
+| 1 | Introduction |  KOM1,2 |
+| 2 | Ricardian model |KOM3; FT2 |
+| 3 | Specific factor model | KOM4; FT3 |
+| 4 | Hecksher-Ohlin model | KOM5; FT4 |
+| 5 | The standard model | KOM6 |
+| 6 | Firm internalization | KOM7,8; FT6 |
+| 7 | Offshoring | FT7; KOM7,8; others |
 
-
-[^1]: Krugman, PR., Obstfeld, M., & Melitz, MJ. (2022). International Economics, 12th ed. Pearson Education, ltd.
-[^2]: Salvatore, D. (2004). International Economics, 8th ed. (8 ed.). John Wiley & Sons, Inc.
