@@ -1,0 +1,608 @@
+---
+title: "Ricardian Model"
+subtitle: "ECES905205 pertemuan 2"
+date: "5 September 2022"
+author: "I Made Krisna Gupta"
+format: 
+  revealjs:
+    theme: [simple,../mytheme.scss]
+    chalkboard: true
+    incremental: false
+    transition: convex
+    background-transition: fade
+    slide-number: true
+  beamer: default
+---
+
+## More housekeeping
+
+-   Pengajar anda pasca-UTS most likely adalah [Kiki Verico, PhD](https://staff.ui.ac.id/kiki.verico).
+
+-   Tugas pre-UTS (20% dari total nilai) adalah 6 quiz:
+
+    -   Diadakan setiap minggu, dimulai dari hari Senin, berakhir hari Minggu jam 18.00 WIB.
+
+    - Nilai total quiz adalah 100. untuk nilai akhir hanya akan diambil 5 terbaik.
+
+    - Quiz akan dilakukan dengan google form.
+    
+    - Anda akan perlu e-mail. please gunakan e-mail yang sama untuk 6 quiz tersebut.
+
+## Quiz 1
+
+-   dapat diakses di [forms.gle/TECS6Q58aV3S1MVZA](https://forms.gle/TECS6Q58aV3S1MVZA)
+
+- link akan diforward ke Zulfan sang Class Rep juga.
+
+- Jawaban dan nilai akan dibahas minggu depan.
+
+## Today
+
+-   Comparative advantage
+-   Ricardian model sebagai pondasi *trade theory*
+
+## Konsep Comparative Advantage {.m}
+
+-   Indonesia adalah negara agraris. Kenapa impor kedelai?
+
+    -   "... (profit menanam kedelai) jauh di bawah keuntungan yang didapat dari menanam padi dan jagung." ([kompas](https://money.kompas.com/read/2021/01/14/050900426/menurut-kementan-ini-penyebab-petani-enggan-menanam-kedelai-?page=all))
+
+-   Sementara itu, "Indonesian consumers have developed a preference for U.S. soybeans due in part to their uniform size, color and suitability for tempeh and tofu manufacturing." ([ussoy.org](https://ussoy.org/growth-in-tempeh-market-offers-global-opportunities/))
+
+-   tempe menjadi produk ekspor andalan di [Jepang](https://en.tempo.co/read/1512185/13-tons-tempeh-chips-exported-to-japan) dan [Amerika Serikat](https://ussoy.org/growth-in-tempeh-market-offers-global-opportunities/)
+
+-   what does it tell you about the structure of the Indonesian economy?
+
+-   what does it tell you about *comparative advantage*?
+
+## Ekonomi dengan 1 faktor produksi
+
+-   1 faktor produksi: buruh.
+
+-   2 barang: Apel dan Beras.
+
+-   Teknologi direpresentasikan dengan *unit labor requirement*
+
+    -   berapa jumlah jam kerja yang diperlukan untuk menghasilkan 1 unit barang.
+    -   cara ini kebalikan dari tipikal produktivitas: angka besar berarti inefisien.
+    -   $a_{A}$ untuk apel, $a_{B}$ untuk beras.
+
+## Ekonomi dengan 1 faktor produksi
+
+-   Total *labour supply* $= L$
+
+-   $a_{A}Q_A =$ total jam kerja yang diperlukan untuk menghasilkan apel sebanyak $Q_A$
+
+-   $a_{B}Q_B =$ total jam kerja yang diperlukan untuk menghasilkan beras sebanyak $Q_B$
+
+-   Production constraint:
+
+$$
+a_{A}Q_A + a_{B}Q_B \leq L
+$$
+
+## PPF
+
+::: {.s layout-ncol="2"}
+-   Bayangkan sebuah negara (sebut saja H):
+    -   Butuh 1 OJ untuk membuat apel, 2 OJ untuk membuat beras.
+    -   Total OJ di negara H adalah 1.000 OJ $(L=1000)$
+    -   Jika semua OJ digunakan untuk apel, maka $A,B=\{1000,0\}$
+    -   Jika semua OJ digunakan untuk beras, maka $A,B=\{0,500\}$
+-   Linear PPF $\Rightarrow$ opportunity cost konstan.
+    -   Memutuskan bikin beras 1kg = memutuskan gak bikin apel 2kg.
+    -   Memutuskan bikin apel 1kg = memutuskan gak bikin beras $\frac{1}{2}$kg.
+
+```{r}
+#| fig-width: 5
+#| fig-height: 4
+#| label: fig1
+#| fig-cap: "Production Possibility Frontier (PPF) negara H"
+library('ggplot2')
+graph<-ggplot()+
+  theme_classic()
+
+home <- function(x) 500-0.5*x
+graph+
+  stat_function(fun = home, size=1.1)+
+  scale_y_continuous(expand=c(0,0),limits=c(0,1000), breaks = c(0,500,1000))+
+  scale_x_continuous(expand=c(0,0),limits=c(0,1000), breaks =c(0,500,1000))+
+  labs(x="Apel (kg)",y="Beras (kg)")
+```
+:::
+
+$$
+1Q_A + 2Q_B \leq 1000
+$$
+
+## PPF and Relative Prices
+
+::: {.columns .s}
+::: {.column width="48%"}
+A simple labor theory of value:
+
+> In the absence of international trade, the relative prices of goods are equal to their relative unit labor requirements.
+
+-   if $P_A=P_B$, better concentrate on making A:
+    -   wage $={1000\times P_A} \geq 500 \times P_B$
+-   workers are better off making B only if $P_A < \frac{1}{2}P_B$
+    -   workers only produce both iff $P_A = \frac{1}{2}P_B$
+-   equilibrium is at $\frac{a_A}{a_B}=\frac{P_A}{P_B}$
+:::
+
+::: {.column width="48%"}
+```{r}
+#| fig-width: 5
+#| fig-height: 4
+#| label: fig3
+#| fig-cap: "Production Possibility Frontier (PPF) negara H"
+library('ggplot2')
+graph<-ggplot()+
+  theme_classic()
+
+home <- function(x) 500-0.5*x
+graph+
+  stat_function(fun = home, size=1.1)+
+  scale_y_continuous(expand=c(0,0),limits=c(0,1000), breaks = c(0,500,1000))+
+  scale_x_continuous(expand=c(0,0),limits=c(0,1000), breaks =c(0,500,1000))+
+  labs(x="Apel (kg)",y="Beras (kg)")
+```
+:::
+:::
+
+## PPF and Trade
+
+-   To understand this term better, we will use some simplified hypothetical examples.
+
+-   Suppose there are two economies, IDN and USA, and two goods, textiles (T) and soybean (S).
+
+```{=tex}
+\begin{equation} \label{eq1}
+\begin{split}
+IDN: \ 1T+4S&=200 \\
+USA: \ 2T+2S & = 200 
+\end{split}
+\end{equation}
+```
+::: s
+## 2 countries in autarky
+
+```{=tex}
+\begin{equation} \label{eq2}
+\begin{split}
+IDN: \ 1T+4S&=200 \\
+USA: \ 2T+2S & = 200 
+\end{split}
+\end{equation}
+```
+| Produce           | US opportunity cost | IDN opportunity cost |
+|-------------------|---------------------|----------------------|
+| 1 ton of textiles | 1 ton of soybean    | 250 kg of soybean    |
+| 1 ton of soybean  | 1 ton of textiles   | 4 ton of soybean     |
+
+-   IDN is comparatively better at making textiles, while US is better at producing soybean:
+    -   To make 1 ton of textiles, US needs to gave up resources which can be used to make 1 ton soybean, while Indonesians need only to give up 250 kg soybean.
+    -   To make 1 ton of soybean, US needs to gave up resources which can be used to make 1 ton textiles, while Indonesians need only to give up 4 ton of textiles.
+-   Note:
+
+$$
+\frac{a_{it}}{a_{is}}=\frac{1}{4} \geq \frac{1}{1}=\frac{a_{ut}}{a_{us}}
+$$
+:::
+
+------------------------------------------------------------------------
+
+Suppose the two countries do not trade. Indonesia's production is {T,S}={100,25}, While in the US, it's {50,50}.
+
+```{r grafik1,echo=FALSE, message=FALSE, warning=FALSE}
+#| fig-width: 7
+#| fig-height: 5.5
+#| label: fig2
+
+library(patchwork)
+library(kableExtra)
+USA <- function(x) 100-x
+IDN <- function(x) 50-.25*x
+
+amrik <- graph +
+  stat_function(fun = USA, color="blue", size=1.1)+
+  scale_y_continuous(expand=c(0,0),limits=c(0,100), breaks = c(50,100))+
+  scale_x_continuous(expand=c(0,0),limits=c(0,200), breaks =c(50,100))+
+  labs(x="Quantity of textiles (ton)",y="Quantity of soybeans (ton)",
+       title = "USA PPF",size=1)+
+  annotate("label", x = 85, y = 70, label = 'US production \n and consumption \n in autarky' ,size=5)+
+  geom_segment(aes(x = 50, y = 50, xend = 70, yend = 61)
+               ,size=1)+
+  geom_point(aes(x=50,y=50),color='black',size=4)+
+  geom_segment(aes(x = 0, y = 50, xend = 50, yend = 50), lty = "dotted"
+               ,size=1) +
+  geom_segment(aes(x = 50, y = 0, xend = 50, yend = 50), lty = "dotted"
+               ,size=1)
+  
+indon <- graph +
+  stat_function(fun = IDN, color="red", size=1.1)+
+  scale_y_continuous(expand=c(0,0),limits=c(0,100), breaks = c(50,25))+
+  scale_x_continuous(expand=c(0,0),limits=c(0,200), breaks =c(100,200))+
+  labs(x="Quantity of textiles (ton)",y="Quantity of soybeans (ton)",
+       title = "IDN PPF",size=1)+
+  annotate("label", x = 85, y = 60, label = 'IDN production \n and consumption \n in autarky' ,size=5)+
+  geom_segment(aes(x = 100, y = 25, xend = 70, yend = 51)
+               ,size=1)+
+  geom_point(aes(x=100,y=25),color='black',size=4)+
+  geom_segment(aes(x = 0, y = 25, xend = 100, yend = 25), lty = "dotted"
+               ,size=2) +
+  geom_segment(aes(x = 100, y = 0, xend = 100, yend = 25), lty = "dotted"
+               ,size=2)
+
+indon+amrik
+```
+
+## Gains from trade
+
+```{r tab,echo=FALSE, message=FALSE, warning=FALSE}
+game <- data.frame(
+  "country"=c(rep('USA',times=2),rep('IDN',times=2)), "goods"=c("textiles (ton)","soybean (ton)","textiles (ton)","soybean (ton)"),
+  "p1"=c(50,50,100,25), "p2"=c(50,50,100,25),"p3"=c(0,100,200,0),
+  "p4"=c(75,62.5,125,37.5),"gains"=c("+25","+12.5","+25","+12.5")
+)
+
+zzz<-kbl(game, align = "c", format='html',
+    col.names = c(" "," ", "production","consumption",
+                     "production","consumption", "Gains from trade")) %>%
+  kable_styling(font_size=18) %>%
+  column_spec(1, bold = T) %>%
+  collapse_rows(columns = 1) %>%
+  add_header_above(c(" "," ", "in autarky" = 2,"with trade"=3))
+zzz
+```
+
+By concentrating production on one good and then trade, you can see that both ended up better-off:
+
+-   with autarky, total production {textiles,soybean} $=\{150,75\}$
+
+-   consumption=production, and $C_{USA} = \{50,50\},C_{IDN} = \{100,25\}$
+
+------------------------------------------------------------------------
+
+## Gains from trade
+
+```{r tab1,echo=FALSE, message=FALSE, warning=FALSE}
+zzz
+```
+
+-   with trade, total production {textiles,soybean} $=\{200,100\}$
+
+    -   Production $\Rightarrow Q_{USA}=\{0,100\}, Q_{IDN}=\{200,0\}$
+    -   Consumption $\Rightarrow C_{USA}=\{75,62.5\}, C_{IDN}=\{125,37.5\}$
+
+------------------------------------------------------------------------
+
+```{r grafik2,echo=FALSE, message=FALSE, warning=FALSE,fig.width=10,fig.height=8}
+
+amrik1 <- graph +
+  stat_function(fun = USA, color="blue", size=1.1)+
+  scale_y_continuous(expand=c(0,0),limits=c(0,100), 
+                     breaks = c(50,62.5,100))+
+  scale_x_continuous(expand=c(0,0),limits=c(0,200), 
+                     breaks =c(50,75,100))+
+  labs(x="Quantity of textiles (ton)",y="Quantity of soybeans (ton)",
+       title = "USA PPF",size=0.5)+
+  annotate("label", x = 130, y = 30, label = 'US production \n and consumption \n in autarky' ,size=5)+
+  annotate("label", x = 65, y = 90, label = 'US production \n with trade' ,size=5)+
+  annotate("label", x = 130, y = 62.5, label = 'US consumption \n with trade' ,size=5)+
+  geom_segment(aes(x = 0, y = 100, xend = 35, yend = 90 )
+               ,size=1)+
+  geom_segment(aes(x = 75, y = 62.50, xend = 95, yend = 63)
+               ,size=1)+
+  geom_segment(aes(x = 50, y = 50, xend = 100, yend = 40)
+               ,size=1)+
+  geom_point(aes(x=50,y=50),color='black',size=4)+
+  geom_point(aes(x=75,y=62.5),color='black',size=4)+
+  geom_point(aes(x=0,y=100),color='black',size=4)+
+  geom_segment(aes(x = 0, y = 50, xend = 50, yend = 50), lty = "dotted"
+               ,size=1) +
+  geom_segment(aes(x = 50, y = 0, xend = 50, yend = 50), lty = "dotted"
+               ,size=1)+
+  geom_segment(aes(x = 0, y = 62.5, xend = 75, yend = 62.5), lty = "dotted"
+               ,size=1) +
+  geom_segment(aes(x = 75, y = 0, xend = 75, yend = 62.5), lty = "dotted"
+               ,size=1)
+
+indon1 <- graph +
+  stat_function(fun = IDN, color="red", size=1.1)+
+  scale_y_continuous(expand=c(0,0),limits=c(0,100), breaks = c(50,37.5,25))+
+  scale_x_continuous(expand=c(0,0),limits=c(0,200), breaks =c(100,125,200))+
+  labs(x="Quantity of textiles (ton)",y="Quantity of soybeans (ton)",
+       title = "IDN PPF",size=1)+
+  annotate("label", x = 45, y = 80, 
+           label = 'IDN production \n and consumption \n in autarky' ,
+           size=5)+
+  annotate("label", x = 95, y = 65,
+           label = 'IDN consumption \n with trade' ,size=5)+
+  annotate("label", x = 160, y = 30, 
+           label = 'IDN production \n with trade' ,size=5)+
+  geom_segment(aes(x = 100, y = 25, xend = 35, yend = 73)
+               ,size=1)+
+  geom_segment(aes(x = 125, y = 37.5, xend = 90, yend = 59)
+               ,size=1)+
+  geom_segment(aes(x = 200, y = 0, xend = 160, yend = 25)
+               ,size=1)+
+  geom_point(aes(x=100,y=25),color='black',size=4)+
+  geom_point(aes(x=125,y=37.5),color='black',size=4)+
+  geom_point(aes(x=200,y=0),color='black',size=4)+
+  geom_segment(aes(x = 0, y = 25, xend = 100, yend = 25), lty = "dotted"
+               ,size=1) +
+  geom_segment(aes(x = 100, y = 0, xend = 100, yend = 25), lty = "dotted"
+               ,size=1)+
+  geom_segment(aes(x = 0, y = 37.5, xend = 125, yend = 37.5), lty = "dotted"
+               ,size=1) +
+  geom_segment(aes(x = 125, y = 0, xend = 125, yend = 37.5), lty = "dotted"
+               ,size=1)
+indon1+amrik1
+```
+
+------------------------------------------------------------------------
+
+```{r}
+#| fig-width: 5
+#| fig-height: 4
+#| label: fig4
+
+graph<-ggplot()+
+  theme_classic()
+USA <- function(x) 100-x
+IDN <- function(x) 50-.25*x
+gab <- function(x) 100-.5*x
+graph+
+  stat_function(fun = gab, size=1.1)+
+  stat_function(fun = USA, size=1.1,color="red")+
+  stat_function(fun = IDN, size=1.1,color="blue")+
+  scale_y_continuous(expand=c(0,0),limits=c(0,100), breaks = c(0,50,100))+
+  scale_x_continuous(expand=c(0,0),limits=c(0,200), breaks =c(0,100,200))+
+  labs(x="Quantity of Textiles (ton)",y="Quantity of Soybean (ton)")+
+  geom_point(aes(x=100,y=25),color='black',size=4)+
+  geom_point(aes(x=125,y=37.5),color='black',size=4)+
+  geom_point(aes(x=75,y=62.5),color='black',size=4)+
+  geom_point(aes(x=50,y=50),color='black',size=4)+
+  annotate("label", x = 100, y = 30, label = 'CA[IDN]' ,size=5,parse=TRUE)+
+  annotate("label", x = 125, y = 45, label = 'CT[IDN]' ,size=5,parse=TRUE)+
+  annotate("label", x = 75, y = 70, label = 'CT[USA]' ,size=5,parse=TRUE)+
+  annotate("label", x = 50, y = 55, label = 'CA[USA]' ,size=5,parse=TRUE)
+
+```
+
+------------------------------------------------------------------------
+
+## Comparative advantage
+
+-   In reality, we will need country's preferences to establish proper equilibrium quantity and prices.
+
+-   In this model, we have no price. But from the opportunity cost, we can calculate the relative prices:
+
+    -   In the US, opportunity cost to produce 1 soybean is 1 textile. That means, $P^{soybean}_{USA} = P^{textile}_{USA}$
+    -   In IDN, opportunity cost to make 1 soybean is 4 textiles. That means, the price of soybean must be four times price of textile.
+
+## Comparative advantage
+
+-   Note that in autarky, both countries consume (and produce) with the same proportion as their unit labor cost.
+
+-   With trade, both countries produce with 1:2 proportion
+
+    -   their consumptions are skewed toward 1:2
+
+-   This reflects the change in relative prices:
+
+    -   with trade, textile gets relatively cheaper in US.
+    -   in IDN, soybean gets a bit cheaper (from 1:4 to around 1:3.33)
+
+------------------------------------------------------------------------
+
+## Comparative VS Absolute advantage {.m}
+
+-   It's possible that a country is good at producing many things.
+    -   This is called absolute advantage.
+-   There's no reason why US can't be better at making clothes than Indonesia.
+    -   Hence, it's possible that in fact, US still better at making clothes
+-   But what matters is *relative* opportunity cost:
+    -   as long as its better for US capital and labour to produce soybean, they will still buy clothes from Indonesia.
+    -   It may take lots of labor to produce textiles in Indonesia, but it'll take even more to produce soybean.
+-   Makin specialised, makin besar opportunity cost.
+    -   S2 UI vs SMEA.
+
+------------------------------------------------------------------------
+
+## Absolute advantage
+
+-   Suppose USA dominates IDN in both:
+
+```{=tex}
+\begin{equation} \label{eq3}
+\begin{split}
+IDN: \ 2.5T+4S&=200 \\
+USA: \ 2T+2S & = 200 
+\end{split}
+\end{equation}
+```
+-   Autarky: $Q_{USA}=\{50,50\}, Q_{IDN}=\{40,25\}$
+
+-   Trade: $Q_{USA}=\{10,90\}, Q_{IDN}=\{80,0\}$
+
+-   Total: $Q_{autarky}=\{90,75\}, Q_{trade}=\{90,90\}$
+
+------------------------------------------------------------------------
+
+## A note on absolute advantage
+
+-   Mungkin anda menyadari bahwa absolute advantage hanyalah versi alternatif dari Walras Law.
+
+-   Dengan kata lain, meski ada keunggulan absolut, *contract curve* & *better allocation* tetap ada (hence pareto improvement).
+
+    -   Meski demikian, negara yang punya keunggulan absolut tetap memiliki posisi tawar yang lebih baik.
+
+-   *trade is pareto improving* in the sense that we compare country A before trade with country A after trade.
+
+    -   we do not compare country A with country B.
+
+------------------------------------------------------------------------
+
+## Taking from the poor?
+
+-   In short, because IDNsians are less productive compared to the US, it's better to US to buy cheaper goods to IDN.
+
+-   This is not to say that US take advantage from IDN:
+
+    -   Since IDN labour is less productive anyway, they will still have low wage even if they sell domestically.
+    -   In fact, serving US market may give them higher wage.
+
+-   For example, if you feel ordering go-food is taking advantage from tukang ojeg, the alternative is even worse:
+
+    -   if you ended up stop ordering go-food, their income is gone.
+
+------------------------------------------------------------------------
+
+## What determines comparative advantage? {.m}
+
+1.  **Differences in climate** is the reason why we're so good at producing CPO and rubber, but sucks at producing soybean and wheat.
+
+2.  **Differences in Factor Endowment**. Some countries are endowed with natural resource, some with cheap labour. Countries which has no both has to find something else, such as:
+
+3.  **Differences in technology**. Japan, South Korea and Taiwan are one good example. While technology can be transferred, opportunity cost of investing in high-tech things is more production of CPOs.
+
+------------------------------------------------------------------------
+
+## Trade is Good {.m}
+
+-   Barusan kita mempelajari bahwa ada gains dari trade bahkan ketika trading partner punya absolute advantage atas semua produksi.
+
+-   Jika tidak ada pun, *autarky* akan terjadi tanpa dipasang penghalang / *barier*
+
+    -   ini gak papa jika *autarky* terjadi tanpa pemaksaan.
+
+-   Untuk analisis yang menyeluruh, kita perlu memperhitungkan *preference*
+
+    -   *preference* dapat direfleksikan dengan harga.
+    -   namun intuisinya tidak berbeda jauh.
+    -   kita bahas di pertemuan-pertemuan berikutnya.
+
+## Multi-goods comparative advantage
+
+-   Misalnya ada N goods.
+
+-   unit labor cost di home jadi $a_i$ di mana $i \in (1,N), N>2$
+
+    -   correspondingly, $a_i^*$ adalah untuk foreign
+
+-   untuk setiap good $i$, kita buat $\frac{a_i}{a_i^*}$
+
+-   lalu urutkan sehingga $\frac{a_1}{a_1^*} < \frac{a_2}{a_2^*} < ... < \frac{a_N}{a_N^*}$
+
+    -   alias diurutkan berdasarkan comparative advantage.
+
+## Multi-goods comparative advantage
+
+-   Let $w$ be home wage per OJ, while $w^*$ be foreign wage.
+    -   artinya, biaya membuat 1 apel di home $= wa_{apel}$
+    -   biaya membuat 1 apel di foreign $= w^*a_{apel}^*$
+-   Goods are produced in the cheapest place.
+    -   Apel dibikin di home jika: $wa_{apel}<w^*a_{apel}^*$
+    -   atau jika: $\frac{a_{apel}^*}{a_{apel}}>\frac{w}{w^*}$
+
+## Multi-goods comparative advantage {.m}
+
+-   Let 2 economies with this characteristics:
+
+| Good $(i)$ | $a_i$ | $a_i^*$ | $\frac{a_i^*}{a_i}$ |
+|------------|:-----:|:-------:|:-------------------:|
+| Apel       |   1   |   10    |         10          |
+| Beras      |   5   |   40    |          8          |
+| CPO        |   3   |   12    |          4          |
+| Durian     |   6   |   12    |          2          |
+| Emas       |  12   |    9    |        0.75         |
+
+-   Note that table above is sorted decendingly by $\frac{a^*_i}{a_i}$
+
+-   or: $\frac{a_1}{a_1^*} < \frac{a_2}{a_2^*} < ... < \frac{a_5}{a_5^*}$
+
+## Multi-goods comparative advantage {.m}
+
+| Good $(i)$ | $a_i$ | $a_i^*$ | $\frac{a_i^*}{a_i}$ |
+|------------|:-----:|:-------:|:-------------------:|
+| Apel       |   1   |   10    |         10          |
+| Beras      |   5   |   40    |          8          |
+| CPO        |   3   |   12    |          4          |
+| Durian     |   6   |   12    |          2          |
+| Emas       |  12   |    9    |        0.75         |
+
+-   Ingat: dibikin di home jika: $\frac{a_{i}^*}{a_{i}}>\frac{w}{w^*}$
+
+-   say $\frac{w}{w^*}=\frac{12}{4}=3$
+
+-   Maka apel, beras dan CPO akan dibuat domestik.
+
+-   Durian dan Emas diimpor.
+
+## How useful?
+
+-   Relative productivity dan relative wage merupakan poin analisis yang sangat intuitif.
+    -   gets complicated very soon as we add countries and factors.
+    -   tastes, economic structures, etc
+    -   but the intuition is very similar.
+-   Namun jika analisis ini benar, berarti negara-negara akan auto-spesialisasi? Apakah ini yang kita observe di dunia nyata?
+
+## What prevents specialisation?
+
+-   More than 1 factors
+-   Protectionisms.
+    -   more on this later.
+-   Transportation cost.
+    -   Some places are inherently difficult to reach.
+    -   Some goods are harder to move.
+-   at the extreme, a good can be **nontradable good**.
+    -   most services are like this.
+
+------------------------------------------------------------------------
+
+## What prevents specialisation?
+
+-   Ricardian model: 1 very mobile factor of production.
+
+-   In reality, trade matters in distribution of income.
+
+    -   short-run: moving factors are costly.
+    -   long-run: shift in factor demand.
+
+-   Factor owners (land, labor, capital, etc) receive different gains from trade!
+
+## Japanese rice farmer case:
+
+-   Land scarcity -\> rice is expensive (even compared to US).
+-   Free trade means higher real wage.
+-   Farmers may need to move industries.
+    -   reskilling is costly.
+    -   land value drops.
+    -   machines & infrastructure become useless.
+-   Better spend money to organize politically!
+
+## Specific factors
+
+-   Next, we add one more factor to the model: a specific factor.
+
+-   Labor can move between sectors, but this one other factor is specific to the sector, hence can't move freely.
+
+    -   just like our Japanese farmers!
+
+-   We will also discuss a bit what is this specific factor of production in reality.
+
+------------------------------------------------------------------------
+
+::: r-stack
+<br/>
+
+<br/>
+
+<iframe src="https://giphy.com/embed/3ohs86vZAWiJXWvQI0" width="480" height="353" frameBorder="0" class="giphy-embed" allowFullScreen>
+
+</iframe>
+
+<p><a href="https://giphy.com/gifs/eminem-my-name-is-the-slim-shady-lp-3ohs86vZAWiJXWvQI0">via GIPHY</a></p>
+:::
