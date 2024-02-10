@@ -2,7 +2,7 @@
 title: International Economics
 linkTitle: Introduction
 summary: International Economics
-date: '2024-02-12'
+date: '2023-02-12'
 type: book
 commentable: false
 ---
