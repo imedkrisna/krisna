@@ -12,6 +12,7 @@ format:
     background-transition: fade
     slide-number: true
   beamer: default
+  pptx: default
 ---
 
 ## Reminder
