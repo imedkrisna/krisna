@@ -392,7 +392,7 @@ $$
 ## Relative wage
 
 $$
-H: Q_F+2Q_C \leq 1000 ; F: 6Q_F^*+3Q_C^* \leq 3999
+H: Q_F+2Q_C \leq 1000 ; F: 6Q_F^*+3Q_C^* \leq 3000
 $$
 
 - Relative wage lies between the ratio of productivities in each industry
@@ -415,7 +415,7 @@ $$
 
 1. Free trade is beneficial only if a country is more productive than foreign countries.
 
-    - But even an unproductive country benefits from free trade by avoiding the high costs for goos that it woul otherwise have to prouce domestically
+    - But even an unproductive country benefits from free trade by avoiding the high costs for goods that it would otherwise have to prouce domestically
     
     - Free trade benefits come from comparative advantage, not absolute advantage.
     
