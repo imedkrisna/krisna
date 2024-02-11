@@ -231,7 +231,7 @@ $$
 
 > A country $j$ has an absolute advantage in producing good $i$ if that country can produce a unit of $i$ with less resources than another country
 
-- If $a_{LF} < a^*_{LF}, home labor is more efficient in producing food than foreign because it needs less labor to make 1 kg of food.
+- If $a_{LF} < a^*_{LF}$, home labor is more efficient in producing food than foreign because it needs less labor to make 1 kg of food.
 
 - Does that guarantee that Home should export cheese?
 
