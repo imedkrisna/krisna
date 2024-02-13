@@ -1,0 +1,17 @@
+# Preface {.unnumbered}
+
+Why I make this book 
+
+(untuk kuliah Politeknik APP Jakarta)
+
+(perlu ada intro mathematics)
+
+Structure of this book
+
+What this book is about
+
+What this book isn't about
+
+How to use: student
+
+How to use: lecturer

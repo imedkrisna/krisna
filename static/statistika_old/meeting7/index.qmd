@@ -1,0 +1,281 @@
+---
+title: "Level, Growth, dan Angka Indeks"
+subtitle: "Pertemuan 7"
+author: "Matematika & Statistika"
+format: 
+  revealjs:
+    theme: [simple,../mytheme.scss]
+    chalkboard: true
+    incremental: false
+    transition: convex
+    background-transition: fade
+    slide-number: true
+---
+
+## Hari ini
+
+- Data Kuantitatif:
+
+    - Level, arithmatic mean, misalnya PDB
+    
+    - Growth dan geometric mean, misalnya Pertumbuhan PDB
+    
+    - Angka Indeks, misalnya IHSG atau CPI (buat ngitung inflasi)
+    
+## Level
+
+- Data level adalah data yang biasanya kita lihat selama ini.
+
+- Karakteristik utamanya adalah data ini merupakan deret aritmatika.
+
+    - Disebut juga dengan deret hitung.
+    
+- Deret aritmatika merupakan deret yang selisih antar anggotanya merupakan selisih penjumlahan.
+
+- Data yang dikumpulkan tangan pertama biasanya merupakan level: misalnya PDB, Nilai ekspor, Nilai impor.
+
+## Level
+
+::: {.incremental}
+
+- Anda berhasil menyisihkan uang jajan anda setiap bulan 500 ribu untuk menabung.Jika tabungan awal anda adalah 0, berapa tabungan anda setelah 1 tahun?
+
+- Berapa rata-rata penambahan tabungan bulanan dalam setahun?
+
+- $\mu = \frac{\sum x_i}{n}$
+
+:::
+
+## Pertumbuhan / Growth
+
+- Pertumbuhan atau compounding growth adalah angka yang menunjukkan pertumbuhan suatu data yang bentuknya level.
+
+- Karakteristik utamanya adalah data ini merupakan deret geometrik.
+
+    - Disebut juga dengan deret ukur.
+    
+- Deret geometrik merupakan deret yang selisih antar anggotanya merupakan selisih perkalian.
+
+- Biasanya dihitung dari data level: misalnya pertumbuhan PDB, inflasi, tingkat suku bunga.
+
+## Pertumbuhan
+
+::: {.incremental}
+
+- Anda berhasil mengumpulkan uang 6 juta. Uang tersebut ditabung di bank dengan bunga berbunga (compunding interest), dengan tingkat suku bunga sebesar 10%. Berapakah uang anda setahun kemudian?
+
+- Berapa rata-rata penambahan tabungan bulanan dalam setahun?
+
+- $GM = \sqrt[n]{\prod X_i}=\sqrt[n]{x_1\times x_2 \times ... \times x_n}$
+
+:::
+
+## Level vs Growth
+
+::: {.incremental}
+
+- Level biasanya punya satuan tertentu (metrik ton, USD, rupiah, dst) sementara growth memiliki satuan persen.
+
+- Cara hitung growth: $g_t = \frac{X_t-X_{t-1}}{X_{t-1}}$
+
+    - apapun levelnya, satuan growthnya selalu persen.
+
+- Keduanya memiliki karakteristik berbeda dan perlu diterjemahkan secara berbeda pula.
+
+- Growth Indonesia 5%, Growth AS 2%. manakah yang mendapat tambahan PDB lebih besar?
+
+:::
+
+## GDP dari 1971
+
+:::: {.columns}
+
+::: {.column width="48%"}
+
+<iframe src="https://data.worldbank.org/share/widget?indicators=NY.GDP.MKTP.CD&locations=ID-TH-MY-SG&start=1971" width='500' height='450' frameBorder='0' scrolling="no" ></iframe>
+
+:::
+::: {.column width="48%"}
+
+<iframe src="https://data.worldbank.org/share/widget?end=2021&indicators=NY.GDP.MKTP.KD.ZG&locations=ID-TH-MY-SG-CN&start=1971" width='450' height='450' frameBorder='0' scrolling="no" ></iframe>
+
+:::
+::::
+
+## GDP dari 1971
+
+:::: {.columns}
+
+::: {.column width="48%"}
+
+<iframe src="https://data.worldbank.org/share/widget?end=2021&indicators=NY.GDP.MKTP.CD&locations=ID-TH-MY-SG-CN&start=1971" width='500' height='450' frameBorder='0' scrolling="no" ></iframe>
+
+:::
+::: {.column width="48%"}
+
+<iframe src="https://data.worldbank.org/share/widget?end=2021&indicators=NY.GDP.MKTP.KD.ZG&locations=ID-TH-MY-SG-CN&start=1971" width='500' height='450' frameBorder='0' scrolling="no" ></iframe>
+
+:::
+::::
+
+## Angka Index
+
+- Inflasi pada prinsipnya adalah pertumbuhan harga: Inflasi 5% berarti harga tahun ini lebih tinggi 5% dibanding tahun lalu.
+
+- Gimana ngitungnya? Kan harga barang tuh ada banyak: makanan pokok, snek, listrik, kos-kosan, mobil, sekolah, kesehatan, rokok, dst.
+
+- IHSG juga sama: Kan perusahaan di bursa efek ada banyak. Mau tau harga saham yg mana?
+
+## Angka Indeks
+
+- Angka Indeks adalah sebuah angka representatif dari sekumpulan data yang kita dapatkan dengan menggunakan metode rerata tertimbang.
+
+    - rerata tertimbang pada prinsipnya mirip expected value.
+    
+    - IHSG tertimbang market cap, CPI tertimbang konsumsi, dst.
+
+- Angka indeks biasanya kita gunakan untuk melihat perubahan harga konsumen, perubahan harga saham, dan lain sebagainya.
+
+- Angka Indeks untuk menghitung perubahan umumnya memiliki _base year_ atau tahun dasar, dan _current year_ atau tahun kini.
+
+## Angka Indeks
+
+- Untuk angka indeks yang memiliki _base year_ biasanya dihitung dengan menggunakan 3 metode berbeda:
+
+    - Indeks Laspeyres
+    
+    - Indeks Paasche
+    
+    - Indeks Fisher
+    
+- Kita ambil contoh Consumer Price Index (CPI):
+
+    - merupakan indeks harga yang menimbang keranjang konsumsi masyarakat.
+    
+## Indeks harga tertimbang
+
+| Item | Q | P | QxP | Share |
+| ------ | --- | --- | ------ | --- |
+| Baju | 10 | 100 | 1000 | 0,061 |
+| Nasi | 200 | 10 | 2000 | 0,121 |
+| Ayam | 50 | 30 | 1500 | 0,091 |
+| Kosan | 12 | 1000 | 12000 | 0,727 |
+
+- Harga rata-rata = $\frac{100+10+30+1000}{4}$=285
+
+- Harga rata2 tertimbang=$\sum Share \times P$=739,93
+
+## CPI
+
+- CPI Memperhitungkan **perubahan** harga.
+
+- CPI memberi angka pertumbuhan harga tahun $t$ dibandingkan tahun dasar (tahun 0)
+
+- Misalnya CPI dengan keterangan [(2018=100)](https://www.bps.go.id/indicator/3/1709/1/indeks-harga-konsumen-90-kota-umum-.html) itu berarti tahun 2018 adalah tahun dasar.
+
+- Indeks perubahan seperti CPI biasanya terdiri dari 3 digit.
+
+## Indeks Laspeyres
+
+| Item | $Q_0$ | $P_0$ | $Q_1$ | $P_1$ | $Q_2$ | $P_2$ |
+| ------ | --- | --- | --- | --- | --- | --- |
+| Baju | 10 | 100 | 15 | 110 | 15 | 120 |
+| Nasi | 200 | 10 | 220 | 12 | 200 | 12 |
+| Ayam | 50 | 30 | 50 | 25 | 45 | 30 |
+| Kosan | 12 | 1000 | 12 | 1100 | 12 | 1200 |
+
+$$
+IL_t=\frac{\sum P_t Q_0}{\sum P_0 Q_0} \times 100 \ \ \ ; \ \ IP_t=\frac{\sum P_t Q_t}{\sum P_0 Q_t} \times 100
+$$
+
+## Indeks Laspeyres
+
+| Item | $Q_0$ | $P_0$ | $Q_1$ | $P_1$ | $Q_2$ | $P_2$ |
+| ------ | --- | --- | --- | --- | --- | --- |
+| Baju | 10 | 100 | 15 | 110 | 15 | 120 |
+| Nasi | 200 | 10 | 220 | 12 | 200 | 12 |
+| Ayam | 50 | 30 | 50 | 25 | 45 | 30 |
+| Kosan | 12 | 1000 | 12 | 1100 | 12 | 1200 |
+
+$$
+IL_1=\frac{17950}{16500}=108,79
+$$
+
+## Indeks Laspeyres
+
+| Item | $Q_0$ | $P_0$ | $Q_1$ | $P_1$ | $Q_2$ | $P_2$ |
+| ------ | --- | --- | --- | --- | --- | --- |
+| Baju | 10 | 100 | 15 | 110 | 15 | 120 |
+| Nasi | 200 | 10 | 220 | 12 | 200 | 12 |
+| Ayam | 50 | 30 | 50 | 25 | 45 | 30 |
+| Kosan | 12 | 1000 | 12 | 1100 | 12 | 1200 |
+
+$$
+IP_1=\frac{18740}{16500}=108,95
+$$
+
+## IL vs IP
+
+- Kelebihan IL: lebih murah karena kuantitasnya tetap, hitungnya lebih mudah, perubahan indeks sudah pasti dari harganya.
+
+- Kekurangan IL: akurasi berkurang karena keranjang belanja pasti berubah (substitusi, barang baru) sehingga bias atas, harga naik mungkin karena peningkatan kualitas.
+
+- Kelebihan IP: Lebih akurat dalam mempertimbangkan keranjang belanja, tidak bias atas.
+
+- Kekurangan IP: bias bawah karena pakai keranjang baru, lebih mahal karena survey keranjang juga.
+
+## Indeks Fisher
+
+- Indeks Fisher mengurangi masalah bias atas dan bawah dari IL dan IP.
+
+$$
+IF_t=\sqrt{IL_t \times IP_t}
+$$
+
+$$
+IF_1=\sqrt{108,79\times 108,95}=108,87
+$$
+
+## Tabel Lengkap
+
+| Indeks | 0 | 1 | 2 |
+| ------ | --- | --- | --- |
+| Laspeyres | 100	| 108,79 |	118,18 |
+| Paasche | 100 |	108,95 |	118,40 |
+| Fisher | 100 | 108,87 |	118,29 |
+
+- Rumus inflasi: $\frac{CPI_t-CPI_{t-1}}{CPI_{t-1}} \times 100\%$
+
+- $INF_1=\frac{108,87-100}{100}\times 100\%=8,87\%$
+
+## Mengubah tahun dasar
+
+- Ketika statistisi mengubah tahun dasar, maka perhitungan harus diulangi.
+
+- Namun bagi pengguna, kita dapat menggunakan rumus:
+
+$$
+\text{indeks}=\frac{\text{indeks tahun kiri baru}}{\text{indeks tahun dasar baru}}\times 100
+$$
+
+- misalkan gunakan tabel sebelumnya dgn tahun dasar adalah 2018, lalu tahun berikutnya 2019 dan 2020.
+
+## Mengubah tahun dasar
+
+| Indeks | 2018 | 2019 | 2020 |
+| ------ | --- | --- | --- |
+| Fisher | 100 | 108,87 |	118,29 |
+
+Di mana 2018=100. Jika kita mau ubah ke 2019=100, maka semua angka dibagi 108,87
+
+| Indeks | 2018 | 2019 | 2020 |
+| ------ | --- | --- | --- |
+| Fisher | 91.85 |	100	| 108.65 |
+
+Skrg kita bandingkan semua dengan 2019,
+
+## Latihan di rumah
+
+- Jenis soal angka indeks tidak akan terlalu bervariasi.
+
+- Coba hitung semua indeks di soal ini (IL, IP, IF) jika kita pakai 2019=100 dan 2020=100!
