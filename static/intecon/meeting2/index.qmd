@@ -199,6 +199,8 @@ $$
 
 - so workers will only make food (specialize in food)
 
+
+
 ## Example
 
 - Say $P_F=\$4$ while $P_C=\$7$.
@@ -235,7 +237,7 @@ $$
     
     - $\frac{Q_F}{Q_S} \in (0,\infty)$ for $\frac{P_F}{P_C}=\frac{a_{LF}}{a_{LC}}$
     
-    - $\frac{Q_F}{Q_S} = \infty$ for $\frac{P_F}{P_C}>\frac{a_{LF}}{a_{LC}}$
+    - $\frac{Q_F}{Q_S} = undefined$ for $\frac{P_F}{P_C}>\frac{a_{LF}}{a_{LC}}$
     
 - In an autarky where both goods are desirable, the LTV must hold (hence, the second solution will always be the case).
     
