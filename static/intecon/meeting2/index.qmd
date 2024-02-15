@@ -1,7 +1,7 @@
 ---
 title: "Ricardian Model"
 subtitle: "ECES905205 pertemuan 2"
-date: "5 September 2022"
+date: "12 Februari 2024"
 author: "I Made Krisna Gupta"
 format: 
   revealjs:
@@ -128,13 +128,12 @@ $$
 #| label: fig1
 #| fig-cap: "Production Possibility Frontier (PPF) country H"
 library('ggplot2')
-graph<-ggplot()+
+graph<-ggplot()+theme_classic()+
   theme(panel.background = element_rect(fill = "#f0f1eb",
                                         colour = "#f0f1eb"),
         plot.background = element_rect(fill = "#f0f1eb"),
         legend.key = element_rect(fill = "#f0f1eb",linetype = "blank"),
-        legend.background = element_rect(fill="#f0f1eb"))+
-  theme_classic()
+        legend.background = element_rect(fill="#f0f1eb"))
 
 home <- function(x) 500-0.5*x
 graph+
@@ -208,7 +207,7 @@ $$
 
 - Also, $W_C=\frac{P_C}{a_{LC}}=\$3.5/hr$
 
-- Relative wage of food, 4/7, is smaller than opportunity cost of food,1/2.
+- Relative wage of food, 4/7, is larger than opportunity cost of food,1/2.
 
 - Therefore, all workers will just make Food.
 
@@ -226,6 +225,20 @@ $$
 \frac{P_F}{P_C}=\frac{a_{LF}}{a_{LC}}
 $$
 
+## Relative prices
+
+- Note that prices in closed economy depends on demand as well, which we don't model here.
+
+- But the relative supply curve is a infinitely elastic:
+
+    - $\frac{Q_F}{Q_S} = 0$ for $\frac{P_F}{P_C}<\frac{a_{LF}}{a_{LC}}$
+    
+    - $\frac{Q_F}{Q_S} \in (0,\infty)$ for $\frac{P_F}{P_C}=\frac{a_{LF}}{a_{LC}}$
+    
+    - $\frac{Q_F}{Q_S} = \infty$ for $\frac{P_F}{P_C}>\frac{a_{LF}}{a_{LC}}$
+    
+- In an autarky where both goods are desirable, the LTV must hold (hence, the second solution will always be the case).
+    
 ## Trade in Ricardian
 
 - Introducing foreign country, notified with "*", with different technology.
@@ -234,7 +247,7 @@ $$
 
 - If $a_{LF} < a^*_{LF}$, home labor is more efficient in producing food than foreign because it needs less labor to make 1 kg of food.
 
-- Does that guarantee that Home should export cheese?
+- Does that guarantee that Home should export food?
 
 ## Trade in Ricardian
 
@@ -307,7 +320,7 @@ graph+
 
 - $\frac{a_{LF}}{a_{LC}}<\frac{a_{LF}^*}{a_{LC}^*}<\frac{P_F}{P_C}$ no cloth is produced.
 
-- Relative demand will help determine final relative price.
+- In trade, both countries are price takers and prices are determined globally.
 
 ## Example
 
@@ -372,9 +385,9 @@ $$
 
 ## Gains from trade
 
-- Domestic workers earn a higher income from cheese production because the relative price of cheese increases with trade.
+- Domestic workers earn a higher income from food production because the relative price of food increases with trade.
 
-- Foreign workers earn a higher income from wine production because the relative price of cheese decreases with trade (making cheese cheaper), and the relative price of wine increases with trade.
+- Foreign workers earn a higher income from cloth production because the relative price of food decreases with trade (making food cheaper), and the relative price of cloth increases with trade.
 
 - This is how both countries ended-up able to reach an otherwise unfeasible consumption bundle.
 
