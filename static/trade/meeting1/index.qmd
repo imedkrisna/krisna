@@ -242,7 +242,7 @@ editor: visual
 
 Beberapa postingan di blog saya yang bisa jadi pengantar:
 
--   [Kenapa kebijakan perdagangan CPO gagal?](https://www.krisna.or.id/post/ngobroltempo/)
+-   [Kenapa kebijakan perdagangan CPO gagal?](https://www.krisna.or.id/post/migor/)
 -   [Substitusi impor produk elektronika](https://www.krisna.or.id/post/ngobroltempo/)
 -   [Model simpel TKDN](https://www.krisna.or.id/post/tkdn/)
 -   [early analysis on nickel export ban](https://www.thejakartapost.com/opinion/2022/04/03/indonesias-claim-that-banning-nickel-exports-spurs-downstreaming-isquestionable.html)
