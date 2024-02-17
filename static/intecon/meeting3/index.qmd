@@ -12,8 +12,7 @@ format:
     background-transition: fade
     slide-number: true
   beamer: default
-
-editor: visual
+  pptx: default
 ---
 
 ## The Repeal of the Corn Law {.m}
@@ -33,20 +32,16 @@ editor: visual
 :::
 :::
 
-## Kemarin
+## Lerning outcomes
 
--   Kita telah mempelajari tentang Ricardian model, model paling primitif di literatur perdagangan internasional.
+- We've learned how trade gains both parties
 
--   *gains from trade*(in a purely economic sense) datang dari specialisasi dan keunggulan komparatif.
+- Today we learn why trade is unpopular to some:
 
--   Model ini memiliki asumsi yang sangat kuat, salah satunya adalah faktor produksi yang bebas berpindah antara satu industri ke industri lain.
-
-    -   Today we're relaxing this assumption.
-
-## Hari ini
-
--   specific factor model
-
+    - How trade generate winners and losers in the short run
+    
+    - Why, despite generating losers, trade is still good.
+    
 ## Specific factor model
 
 -   2 Sectors i: Cloth (C) and Food (F)
@@ -63,28 +58,20 @@ Q_C=C(L_C,K)   \\
 L_F+L_C=L
 \end{align}
 ```
+
 ## PPF {.m}
 
--   Karena sekarang ada 2 faktor, kita perlu memikirkan kembali PPF-nya.
+- How does the economy’s mix of output change as labor is shifted from one sector to the other?
 
--   Karena hanya ada 1 faktor yang bergerak, tiap sektor hanya bisa meningkatkan produksi dengan cara nambah $L$.
+- When labor moves from food to cloth, food production falls while output of cloth rises.
 
-    -   $T$ tidak bisa ditambah karena mau dapat dari mana?
-    -   begitupun $K$
+- The shape of the production function reflects the law of diminishing marginal returns.
 
--   Bisa kita bilang bahwa ini analisis jangka pendek.
+- Adding one worker to the production process (without increasing the amount of capital) means that each worker has less capital to work with.
 
-    -   Di jangka panjang, $K$ bisa naik dari investasi.
-    -   Di jangka puannnnjjjaaaangggg, $T$ bisa naik dari reklamasi (ya investasi juga sih...)
-    -   Di jangka panjang, $L$ naik?
+- Therefore, each additional unit of labor adds less output than the last.
 
-## PPF
-
--   Tapi intinya, karena hanya 1 faktor yang bisa naik/turun, efisiensi produksi faktor tersebut mengalami **diminishing returns**
-    -   bayangin di kantor anda nambah pegawai tapi ga nambah komputer?
-    -   nambah petani tapi ga nambah lahan?
--   Artinya, produktivitas pekerja (*marginal product of labor* (MPL)) turun seiring $L_i$ bertambah.
-    -   konsekuensi di sektor satunya, MPL naik seiring $L_{-i}$ turun.
+- This is not like ricardian where production function is linear and MPL is constant. 
 
 ## PPF dan MPL
 
@@ -92,7 +79,7 @@ L_F+L_C=L
 #| fig-width: 10
 #| fig-height: 4
 #| label: fig1
-#| fig-cap: "PPF dan MPL sektor C"
+#| fig-cap: "Production function and MPL"
 #| warning: false
 library(WDI)
 library(tidyverse)
@@ -137,27 +124,31 @@ q<-ggplot() +
 p+q
 ```
 
-Note: industri F juga identik, cuma dia pake T, not K.
-
 ## PPF
 
--   Tambahan 1 unit of $L_C$ akan meningkatkan $Q_C$ sebanyak $MPL_C$.
-    -   Semakin naik $L_C$, $MPL_C$ semakin turun.
-    -   Artinya, $Q_C$ tetep naik, tapi ga sebanyak pas $L_C$-nya sedikit.
--   Setiap kenaikan $L_C$ by 1 unit, $L_F$ turun by 1 unit.
-    -   artinya, kenaikan $Q_C$ bersamaan dengan penurunan $Q_F$.
+- If an autarky wants to increase $Q_C$ by 1 unit, it has no choice but to get labor from industry $F$
 
-$$L_C+L_F=L$$
+    - That is, $L_C$ has to $\uparrow$ and $L_C$ has to $\downarrow$
 
-## PPF
+- However, changes in labor affects production differently in different starting point.
 
--   dengan kata lain, untuk menaikkan $Q_C$ by 1 unit, $Q_F$ harus turun by $\frac{MPL_F}{MPL_C}$
+- If $L_C$ goes up by 1, $Q_C$ goes up by $MPL_C$, which is decreasing as $L_C$ keeps on increasing.
 
--   Dari sini, kita dapatkan hubungan antara $Q_C$ dan $Q_F$ yaitu:
+    - to produce 1 unit of C, need $\frac{1}{MPL_C}$ hours of labor.
+
+## PPF {.m}
+
+- And while $L_F$ goes down by 1, $Q_F$ goes down by $MPL_F$, which is increasing as $L_F$ keeps on decreasing.
+
+    - To get labor to make 1 unit of C, F must down by $MPL_F$
+
+-   In other words, to increase $Q_C$ by 1 unit, $Q_F$ must go down by $\frac{MPL_F}{MPL_C}$
 
 $$
-\text{Slope of PPF}=-\frac{MPL_F}{MPL_C}
+\text{opportunity cost}_C=-\frac{MPL_F}{MPL_C}=\text{Slope of PPF}
 $$
+
+- We can show this using a 4-quadrant graph.
 
 ## PPF
 
@@ -190,19 +181,21 @@ ppf<-ggplot() +
 ppf
 ```
 
-## Berapa harus produksi?
+## Labor allocation
+
+- In each sector, employers will maximize profits by demanding labor up to the point where the value produced by an additional hour equals the marginal cost of employing a worker for that hour.
+
 
 -   A profit maximizing firms will want to employ until:
 
-$$ MPL_C \times P_C = w $$
+$$ MPL_C \times P_C = W $$
 
--   Jika udah di posisi tersebut lalu firms ambil 1 $L_C$ lagi, maka $MPL_C$ akan turun.
--   Jika $P_C$ ga berubah tapi $MPL_C$ turun, maka $MPL_C \times P_C < w$
-    -   alias ga nutup ongkos produksi.
+- The wage equals the value of the marginal product of labor in manufacturing.
 
-## Berapa harus produksi?
 
--   Industri F punya *employment rule* yang sama. Akibatnya:
+## Labor demand
+
+- The two sectors must pay the same wage because labor can move between sectors.
 
 ```{=tex}
 \begin{align}
@@ -211,52 +204,12 @@ MPL_C \times P_C = MPL_F \times P_F = w \\
 -\frac{MPL_F}{MPL_C}=-\frac{P_C}{P_F}=w=\text{slope PPF}
 \end{align}
 ```
--   MPL merupakan ukuran teknologi/produktivitas.
--   harga ditentukan oleh preference.
-    -   Preference (by extension, prices) is given.
 
-## Production status quo
-
-```{r}
-#\ fig-height: 10
-#| fig-width: 10
-#| label: fig3
-#| fig-cap: "Production allocation"
-#| warning: false
-
-ppf+
-#  annotate("segment",x = 2.4, y = 3.7,xend = 4.1, yend = 1,size=1.1)+
-  annotate("segment",x = 1.2, y = 3.9,xend = 2.7, yend = 3.1,size=1.1)+
-#  annotate("segment",x = 0, y = 2.12,xend = 3.4, yend = 2.12,size=1.1,lty="dotted")+
-#  annotate("segment",x = 3.4, y = 0,xend = 3.4, yend = 2.12,size=1.1,lty="dotted")+
-  annotate("segment",x = 0, y = 3.5,xend = 1.9, yend = 3.5,size=1.1,lty="dotted")+
-  annotate("segment",x = 1.9, y = 0,xend = 1.9, yend = 3.5,size=1.1,lty="dotted")+
-#  annotate("point", x=3.4,y=2.12,size=4)+
-  annotate("point", x=1.9,y=3.5,size=4)+
-#  annotate("text", x=3.5,y=2.2,label="1")+
-  annotate("text", x=2,y=3.6,label="1")+
-  annotate("text", x=0.1,y=2.27,label=expression(Q[F]^1))+
-  annotate("text", x=3.55,y=0.2,label=expression(Q[C]^1))+
-  annotate("text", x=1.4,y=3.2,label=expression(paste("slope =", - bgroup("(",frac(P[C], P[F]),")")^1)))
-#  annotate("text", x=3.2,y=3.1,label=expression(paste("slope =", - bgroup("(",frac(P[C], P[F]),")")^1)))
-```
-
-## Production status quo
-
--   Dengan bentuk market yang sama-sama *diminishing return*, PPF akan berbentuk seperti gambar sebelumnya.
--   Produksi terjadi di titik 1, di mana kurva PPF bersinggungan dengan price ratio.
--   beda dari pure ricardian yg rasio produktivitasnya konstan (PPF-nya linear).
--   Grafik 4-kuadran dapat digunakan untuk mengilustrasikan fungsi ppf ini.
+- Equilibrium wage is set by price ratio (which reflects demand) and Opportunity costs.
 
 ## Labor market
 
--   pasar tenaga kerja akan bergerak tergantung MPL dari kedua industri.
--   equilibrium tercipta berdasarkan $MPL_i \times P_i$, di mana employment akan berhenti di sebuah level $w$.
--   Dinamika ini akan berubah jika ada pergeseran di teknologi (MPL) ataupun rasio harga $\left(\frac{P_C}{P_F}\right)$.
-
-## Labor market
-
-Note bahwa total L adalah fix. Kiri adalah $L_C$, kanan adalah $L_F$
+Note that $L$ is fixed. Left is C, right is F.
 
 ```{r}
 
@@ -299,12 +252,50 @@ labmar<-ggplot() +
 labmar
 ```
 
+## Production status quo
+
+```{r}
+#\ fig-height: 10
+#| fig-width: 10
+#| label: fig3
+#| fig-cap: "Production allocation"
+#| warning: false
+
+ppf+
+#  annotate("segment",x = 2.4, y = 3.7,xend = 4.1, yend = 1,size=1.1)+
+  annotate("segment",x = 1.2, y = 3.9,xend = 2.7, yend = 3.1,size=1.1)+
+#  annotate("segment",x = 0, y = 2.12,xend = 3.4, yend = 2.12,size=1.1,lty="dotted")+
+#  annotate("segment",x = 3.4, y = 0,xend = 3.4, yend = 2.12,size=1.1,lty="dotted")+
+  annotate("segment",x = 0, y = 3.5,xend = 1.9, yend = 3.5,size=1.1,lty="dotted")+
+  annotate("segment",x = 1.9, y = 0,xend = 1.9, yend = 3.5,size=1.1,lty="dotted")+
+#  annotate("point", x=3.4,y=2.12,size=4)+
+  annotate("point", x=1.9,y=3.5,size=4)+
+#  annotate("text", x=3.5,y=2.2,label="1")+
+  annotate("text", x=2,y=3.6,label="1")+
+  annotate("text", x=0.1,y=2.27,label=expression(Q[F]^1))+
+  annotate("text", x=3.55,y=0.2,label=expression(Q[C]^1))+
+  annotate("text", x=1.4,y=3.2,label=expression(paste("slope =", - bgroup("(",frac(P[C], P[F]),")")^1)))
+#  annotate("text", x=3.2,y=3.1,label=expression(paste("slope =", - bgroup("(",frac(P[C], P[F]),")")^1)))
+```
+
+## Trade
+
+- Trade leads to changes in relative price: previously set by local demand endogeneously, now is exogenously given by the global market.
+
+- What happens to the allocation of labor and the distribution of income when the prices of food and cloth change?
+
+- Two cases:
+
+    1. An equal proportional change in prices
+    2. A change in relative prices
+
 ## Increase in both price
 
--   Katakanlah negara ini trade, dan di pasar internasional, $P_C^*=1.1P_C$ dan $P_F*=1.1P_F$
--   Dengan MPL fix, maka yg kenaikan kurva $MPL_i \times P_i$ adalah selaras dengan kenaikan $P$-nya.
--   Karena harga kedua barang naik dengan proporsi yang sama, alokasi naker jadi tidak berubah
--   hanya terjadi kenaikan gaji 10%, sama dengan tingkat kenaikan kedua jenis barang.
+-   Let trade leads to changes in price as such $P_C^*=1.1P_C$ and $P_F*=1.1P_F$
+-   The movement of the labor demand curve $MPL_i \times P_i$ will both go up by the same multiplier
+-   no changes in labor allocation.
+-   while prices both increase, wage increase by the exact same proportion.
+-   The real incomes of capital owners and landowners also remain the same.
 
 ## Increase in both price
 
@@ -413,11 +404,11 @@ labmar3
 
 ## New production allocation
 
--   Karena terjadi perubahan rasio harga, maka alokasi produksi ikut berubah.
--   Ingat bahwa produksi akan terjadi di titik yang slopenya = price ratio.
--   Ketika harga relatif berubah, maka produksi akan pindah ke barang yang harganya naik tersebut.
--   Ingat bahwa total faktor produksi tidak berubah: T,K dan L tetap sama.
-    -   Jika tidak ada perubahan teknologi, maka produksi hanya dapat dilakukan di PPF.
+- Now what if the global market price $P_C$ 10% more than the local market while $P_F$ remains the same?
+
+-   When only $P_C$ rises, labor shofts from the food sector to the cloth sector and the output of cloth rises while that of food falls.
+
+- W does not rise as much as $P_C$ since cloth employment increases hence $MPL_C$ falls.
 
 ## New production allocation
 
@@ -447,25 +438,28 @@ ppf+
 
 ## Understanding income distribution {.m}
 
--   Jika ada perubahan relatif prices, maka akan terjadi perbedaan income distribution.
--   Perbedaan ini utamanya datang dari kenaikan yang tidak proporsional: $$
-    \Delta P_C > \Delta w > \Delta P_F
-    $$
+-   Changes in relative prices leads to changes in income distribution.
+-   This comes from disproportion changes:
+    
+$$
+\Delta P_C > \Delta w > \Delta P_F
+$$
 
 $$
 \frac{w}{P_C} < \frac{w}{P_F}
 $$
 
--   Produsen C better off karena bikin barang yg lebih mahal dan konsumsi barang yg lbh murah.
-
 ## Income distribution
 
--   Apakah kesejahteraan pekerja naik? Tergantung preference:
-    -   Apakah C lebih penting dari F di utility function mereka?
-    -   Dari sisi gaji, keduanya mendapatkan gaji yang sama
--   Tapi pemilik *specific factor* sudah jelas:
-    -   Pemilik K lebih untung, dan pemilik T lebih rugi.
-    -   hal ini dapat ditunjukan dengan dinamika producer surplus.
+- Labors gain depends on their preference:
+
+    - if C dominates their expenditure basket, then they lose.
+    
+    - If F dominates their expenditure basket, then they gain.
+    
+- Specific factor owners are conclusive.
+
+    - Capital owners gain, Land owners loses.
 
 ## Cloth Sector
 
@@ -623,17 +617,17 @@ ggplot() +
 
 > Trade benefits the factor that is specific to the export sector of each country but hurts the factor specific to the import-competing sectors, with ambiguous effect on mobile factors.
 
--   tapi apakah kita bisa tau jika trade ini secara menyeluruh menguntungkan?
-    -   apakah kita tau jika untungnya lebih besar dari ruginya?
-    -   jika ya, maka secara teori kita bisa mengkompensasi *loser*.
+- Now, if trade benefit some and hurt some, can we still say gains of trade will always be positive overall?
 
 ## Gains from trade
 
-tanpa trade, maka konsumsi = produksi, atau
+With no trade, then we must produce what we consume. That is:
 
 $$
 D_C=Q_C \ and \ D_F=Q_F
-$$ dengan trade, konsumsi ga harus = produksi. yang penting:
+$$
+
+- With trade, we don't have to! As long as:
 
 $$
 P_C \times D_C + P_F \times D_F = P_C \times Q_C + P_F \times Q_F
@@ -641,15 +635,15 @@ $$
 
 ## Gains from trade
 
-Budget constraint tersebut dapat kita atur ulang sehingga:
+A bit of algebra to get:
 
 $$
 D_F - Q_F = \left(\frac{P_C}{P_F}\right) \times (Q_C-D_C)
 $$
 
-atau, impor F sama dengan rasio harga dikali ekspor C.
+That is, import of F equals relative price times export of C
 
-Seberapa banyak kita bisa impor tergantung seberapa banyak kita bisa ekspor.
+How much we import depends on how much we export.
 
 ## Gains from trade
 
@@ -681,18 +675,13 @@ ppf+
 
 ## Gains from trade {.m}
 
-1.  Pahami bahwa tanpa trade, konsumsi harus = produksi, alias di PPF persis.
-2.  Pahami bahwa dengan trade, opsi jadi banyak. Tapi tentunya opsi yang masuk akal adalah opsi yang membuat kita bisa konsumsi *more of both goods*. Note: ini tidak tergantung di mana alokasi awal berada.
-3.  Jika kita bisa dapat alokasi yang lebih baik, pada prinsipnya sangat mungkin dilakukan transfer.
+1. Understand that trade allows for bundles of options.
 
-## Gains from trade
+2. There's always better allocation with trade.
 
--   dengan perdagangan internasional, kita bisa mengatur *bundle* konsumsi kita selama ia ada di jalur garis *budget constraint*.
-    -   geser dari titik produksi = ekspor dan impor.
-    -   trade opens up choices!
--   alokasi yang tadinya tidak *feasible* menjadi *feasible*
-    -   artinya, secara teori, manfaat \> mudharat
--   namun, hanya karena semua bisa untung tidak berarti semua AKAN untung.
+3. If there's always a better allocation, then the gain for gainers is larger than the loss for losers.
+
+    - Meaning, compensation transfer is possible.
 
 ## Political economy of trade {.m}
 
