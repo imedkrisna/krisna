@@ -56,23 +56,7 @@ format:
 -   long run model: capital and labor can move between sectors.
     -   all labor paid $w$, all capital paid $r$.
 
-## awokoakw
-
-    -   ada efek substitusi.
--   Asumsi: $F$ adalah sektor yang kapital intensif, $C$ labor intensive.
-    -   di $F$, untuk substitusi 1 $K$ butuh banyak $L$. $C$ sebaliknya.
--   Karena kapital bisa pindah sektor dan substitusi dengan buruh, maka keputusan berproduksi juga tergantung harga kapital.
-
-## Factor intensity
-
--   Karena $C$ relatively labor intensive, maka:
-
-$$
-\frac{a_{LC}}{a_{KC}} > \frac{a_{LF}}{a_{KF}} \\
-\frac{L_C}{K_C} > \frac{L_F}{K_F} 
-$$
-
-## H-O model
+## H-O model {.m}
 
 ::: columns
 ::: {.column width="47%"}
@@ -114,14 +98,47 @@ ppf2<-ppf+
   annotate("text", x=1.4,y=3.2,label=expression(paste("slope =", - bgroup("(",frac(P[C], P[F]),")")^1)))
 ppf2
 ```
+
+Without substitution, the production possibilities will be a minimum of 2 straight lines. (see appendix)
 :::
 
 ::: {.column width="47%"}
--   Alokasi produksinya persis sama dengan specific factor model
--   Alias, produksi akan dilakukan di persinggungan antara PPF dengan $-\frac{P_C}{P_F}$
--   Bedanya ada di pasar tenaga kerja dan pasar modal.
+-   Production is conducted at the tangency between PPF and price ratio $-\frac{P_C}{P_F}$, like specific factr model.
+-   Similarly, the price ratio equates **the opportunity cost** for production.
+-   Remember, Opprtunity cost of making $Q_j$ increases as we make more $Q_j$
 :::
 :::
+
+## Mixing inputs
+
+- Producers may choose different amounts of factors of production used to make cloth or food.
+
+- Their choice depends on the wage, w, paid to labor and the rental rate, r, paid when renting capital.
+
+- As the wage w increases relative to the rental rate r, producers use less labor and more capital in the production of both food and cloth.
+
+    - They can do this because substitutability and factor movement.
+    
+## Input mix
+
+:::: columns
+::: {.column width="47%"}
+
+- a farmer can produce a calorie of food with less capital if he or she uses more labor.
+
+- Think of the Indonesian farmers vs western farmers!
+
+
+
+
+## Factor intensity
+
+-   Karena $C$ relatively labor intensive, maka:
+
+$$
+\frac{a_{LC}}{a_{KC}} > \frac{a_{LF}}{a_{KF}} \\
+\frac{L_C}{K_C} > \frac{L_F}{K_F} 
+$$
 
 ## Factor allocation
 
@@ -484,3 +501,81 @@ see Alan Deardorff "the general validity of the Hecksher-Ohlin theorem."
 -   Jika kita samakan teknologinya, perbedaan *factor abundance*-pun ngaruh.
     -   bahkan di long-run pun, distribusi pendapatan tetap problematik.
 -   Mingdep kita bahas **Standard trade model**.
+
+# Appendix
+
+## Production w/o subs
+
+- Production constraint will be similar with Ricardian economy, except this time we have 2 constraints: Labor (L, same as ricardian), and Capital (K).
+
+- let $a_{ij}$ be the amount of factor $i$ used to produce 1 unit of product $j$, while $K$ and $L$ are constant.
+
+$$
+a_{KC}Q_C+a_{KF}Q_F \le K \\
+a_{LC}Q_C+a_{LF}Q_F \le L
+$$
+
+## No subs
+
+Suppose use a fixed mix of capital and labor in each sector.
+
+- $a_{KC}=2$, capital used to produce one yard of cloth
+
+- $a_{LC}=2$, labor used to produce one yard of cloth
+
+- $a_{KF}=3$, capital used to produce one calorie of food
+
+- $a_{LF}=1$, labor used to produce one calorie of food
+
+- $L=2000$ while $K=3000$.
+
+## No subs
+
+Constraint on capital that capital used cannot exceed supply for the numerical example:
+
+$$
+2Q_C+3Q_F \le 3000
+$$
+
+Constraint on labor that labor used cannot exceed labor supply:
+
+$$
+2Q_C+QF\le 2000
+$$
+
+## No subs
+
+:::: columns
+::: {.m .column width=47%}
+
+If capital cannot be substituted for labor or vice versa, the production possibility frontier in the factor-proportions model would be defined by two resource constraints: The economy can’t use more than the available supply of labor (2,000 work-hours) or capital (3,000 machine-hours). So the production possibility frontier is defined by the red line in this figure.
+
+:::
+::: {.column width=47%}
+
+![source; Krugman, Obstfeld & Melitz 2022](Picture1.jpg)
+
+:::
+::::
+
+## No subs {.m}
+
+The opportunity cost of producing one more yard of cloth, in terms of food, is not constant:
+
+- low ($\frac{2}{3}$) when the economy produces low amount of cloth relative to food.
+
+- high (2 in the example) when the economy produces high amount of cloth relative to food.
+
+- Why? Because when the economy devotes more resources towards production of one good, the marginal productivity of those resources tends to be low so that the opportunity cost is high.
+
+## No subs
+
+The above P P F equations do not allow substitution of capital for labor in production.
+
+- Unit factor requirements ($a_{ij}$) are constant along each line segment of the P P F.
+  
+If producers can substitute one input for another in the production process, then the P P F is curved (bowed).
+
+- Opportunity cost of cloth increases as producers make more cloth.
+
+- similar as specific factor model.
