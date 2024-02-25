@@ -32,20 +32,32 @@ format:
 
 -   Here, we also show how different **relative factor intensity** drives trade.
 
+- Also will discuss **factor price equalization** and **income distribution**.
+
 ## Two Factor H-O model
 
 -   2 countries: Home and foreign
 -   2 mobile factor $i$: kapital (K) and labor (L)
 -   2 sectors $j$: cloth (C) dan Food (F)
 -   Countries has different total K and L
--   long run model: kapital bisa pindah sektor.
+-   Industries have different **relative intensity**.
+
+
+## Production {.m}
+
+-   $a_{i,j}$ are the number of factor $i$ used by industry $j$ to make 1 unit of good $j$.
+    -   e.g.: $a_{KC}=$ the amount of K used to make 1 m of cloth.
+-   We still have **diminishing return** like specific factor model.
+    
+    - $MPL$ will decrease as $L$ increase if $K$ is not added.
+    
+- This time though, we can add $K$, unlike specific factor model.
+    
+-   long run model: capital and labor can move between sectors.
     -   all labor paid $w$, all capital paid $r$.
 
-## Teknologi {.m}
+## awokoakw
 
--   $a_{i,j}$ adalah jumlah faktor $i$ yang digunakan oleh industri $j$ untuk membuat 1 unit barang $j$.
-    -   e.g.: $a_{KC}=$ barang modal yang digunakan untuk membuat 1 meter cloth.
--   Teknologi tetap menganut **diminishing return**.
     -   ada efek substitusi.
 -   Asumsi: $F$ adalah sektor yang kapital intensif, $C$ labor intensive.
     -   di $F$, untuk substitusi 1 $K$ butuh banyak $L$. $C$ sebaliknya.
