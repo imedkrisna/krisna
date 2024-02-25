@@ -119,33 +119,46 @@ Without substitution, the production possibilities will be a minimum of 2 straig
 
     - They can do this because substitutability and factor movement.
     
-## Input mix
+## Input mix {.m}
 
 :::: columns
 ::: {.column width="47%"}
 
 - a farmer can produce a calorie of food with less capital if he or she uses more labor.
 
-- Think of the Indonesian farmers vs western farmers!
+- Think of the [Indonesian farmers vs western farmers](https://krisna.or.id/post/hofarmers): Hired labor is around 3.5% of total cost in the US, while it is 47% in Indonesia!
 
+- Their choice depends on the wage, w, paid to labor and the rental rate, r, paid when renting capital.
 
+:::
+::: {.column width="47%"}
 
+![](Picture2.jpg)
 
-## Factor intensity
+:::
+::::
 
--   Karena $C$ relatively labor intensive, maka:
+## Factor intensity {.m}
+
+:::: columns
+::: {.column width="47%"}
+
+-   Say $C$ is a relatively labor intensive industry:
 
 $$
 \frac{a_{LC}}{a_{KC}} > \frac{a_{LF}}{a_{KF}} \\
 \frac{L_C}{K_C} > \frac{L_F}{K_F} 
 $$
 
-## Factor allocation
+- Relative factor demand curve for cloth CC lies outside that for food FF.
 
--   Tidak seperti specific factor, di sini ada efek substitusi antar faktor.
-    -   Tiap industri dapat mengurangi buruh dan menggantinya dengan mesin.
--   Karena itu, harga input relatif juga penting.
--   Jika harga kapital mahal sementara harga buruh murah, maka industri akan menggunakan banyak buruh dan sedikit kapital.
+:::
+::: {.column width="47%"}
+
+![](Picture3.jpg)
+
+:::
+::::
 
 ## Reminder micro
 
@@ -157,47 +170,39 @@ $$
 \frac{\frac{\partial Q}{\partial K}}{\frac{\partial Q}{\partial L}}=\frac{r}{w} \rightarrow \frac{L}{K}=\omega \left(\frac{w}{r}\right)
 $$ $\frac{MP_L}{MP_K} \propto \frac{L}{K} \propto \frac{w}{r} \propto \frac{P_C}{P_F}$
 
-## Reminder micro
+## Prices {.m}
 
--   Industri $j$ memiliki unit cost:
+- In competitive markets, the price of a good should equal its cost of production, which depends on the factor prices.
 
-$$
-c_j=wa_{Lj}+ra_{Kj}
-$$
+- How changes in the wage and rent affect the cost of producing a good depends on the mix of factors used.
 
--   Karena itu, kombinasi input yang costnya sama (isocost):
+    - An increase in the rental rate of capital should affect the price of food more than the price of cloth since food is the capital intensive industry.
+    
+- Changes in $\frac{w}{r}$ are tied to changes in $\frac{P_C}{P_C}$
 
-$$
-a_{Kj}=\left(\frac{c}{r}\right)-\left(\frac{w}{r}\right)a_{Lj}
-$$ - Pilihan input akan berdasarkan isocost ini, di mana industri akan memilih kombinasi cost termurah.
-
-## Factor and good prices
-
--   Jika pasarnya kompetitif, maka harga barang = costnya (ga ada mark-up)
-
--   F\>0 artinya: $$
-    P_F=a_{LF}(.)w+ a_{KF}(.)r \\
-    P_C=a_{LC}(.)w+ a_{KC}(.)r
-    $$
-
--   Di mana $a_{ij}(.)$ merupakan jumlah kapital dan buruh per unit yang dipilih berdasarkan optimasi.
-
-## Factor and good prices
-
--   full employment berarti semua kapital dan buruh dipakai dalam produksi (ga ada yg nganggur)
-
--   artinya:
-
-$$
-L=a_{LF}(.)F+a_{LC}(.)C \\
-K=a_{KF}(.)F+a_{KC}(.)C
-$$
 
 ## Stolper-Samuelson Theorem
 
 > if the relative price of a good increases, then the real factor price used intensively in the production of that good increases, while the real price of the other factor decreases.
 
-Perubahan harga akan mempengaruhi distribusi pendapatan antara buruh dan pemilik kapital.
+- Any change in the relative price of goods alters the distribution of income.
+
+## Stolper-Samuelson Thm
+
+![](Picture4.jpg)
+
+If the relative price of cloth rises, the wage-rental ratio must rise. This will cause the labor-capital ratio used in the production of both goods to drop.
+
+
+## Factor & goods prices
+
+- An increase in the relative price of cloth $\frac{P_C}{P_F}$ is predicted to:
+
+    - raise income of workers relative to the capitalists, $\frac{w}{r}$
+    
+    - raise the ratio of capital to labor services $\frac{K}{L}$ used in both industries.
+    
+    - raise the real income (purchasing power) of workers and lower the real income of capital owners.
 
 ## Factor and good prices
 
@@ -274,16 +279,12 @@ $$
 
 ## Rybczynski Theorem
 
-> Jika harga output tidak berubah dan salah satu faktor produksi bertambah jumlahnya, maka produksi dari barang yang intensif diproduksi oleh faktor tersebut akan meningkat, dan produksi barang yang intensif faktor lainnya akan berkurang.
+> If you hold output prices constant as the amount of a factor of production increases, then the supply of the good that uses this factor intensively increases and the supply of the other good decreases.
 
-Dengan kata lain, jumlah faktor yang melimpah akan mempengaruhi produksi dan distribusi pendapatan.
-
-## Resources and output
-
--   Bayangkan tiba-tiba ada tambahan tenaga kerja (bonus demografi), sehingga $\frac{L}{K} \uparrow$
--   PPF akan bergerak naik, tapi cenderung bias ke arah $C$
--   jika $\frac{P_C}{P_F}$ tidak berubah, rasio penggunaan buruh dan kapital tidak akan berubah.
--   Untuk ekspansi, maka cloth akan mengambil kapital dari food.
+-   Assume an increase of labor (bonus demografi) so that $\frac{L}{K} \uparrow$
+-   PPF will grow but biased toward $C$
+-   If $\frac{P_C}{P_F}$ doesn't change, the ratio f labor to capital used inn bth sectors remains constant.
+-   To expand, cloth sector will absorb labor AND capital from $F$.
 
 ## PPF
 

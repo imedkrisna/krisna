@@ -65,4 +65,6 @@ Penyusutan juga cukup kontras. Penyusutan modal di AS dihitung setara dengan 14.
 
 Artinya, untuk menanam kedelai, anda bisa saja menggunakan banyak petani dengan permesinan yang sedikit (manual), atau sedikit petani tapi dengan mesin yang mahal (semi-otomatisasi). Strategi yang mana yang dilakukan? Hal inin tentu tergantung dari _relative abundance of factor_. Alias, di Indonesia, pegawai yang profilnya cocok jadi petani ada banyak, sementara modal buat beli mesin relatif sedikit (suku bunga produksi di Indonesia mahal banget). Di AS sebaliknya, pegawai yang cocok jadi petani lebih sedikit (makanya gajinya mahal), tapi modal ada banyak (suku bunga di AS pre-COVID itu murah banget). Inilah efek substitusi yang ada di model HO.
 
+Disclaimer lagi deh: permasalahan di pertanian Indonesia itu rumit. Ga sesederhana cuma mekanisasi aja. Bisa diliat juga di tabel di atas bahwa lahan termasuk bagian yang gede di production cost. Artinya, tanah memang gak ada substitusinya baik di AS maupun Indonesia. Problemnya opkors di AS tanahnya luas. Ada juga prooblem pengairan di mana negara-negara sungai mekong (Vietnam, Thailand) punya advantage dibanding Indonesia, meskipun struktur tenaga kerjanya mirip dengan Indonesia. Dan lain-lain.
+
 Demikian sedikit contoh kasus di HO semoga bermanfaat bagi yang lagi belajar ekonomi internasional.
