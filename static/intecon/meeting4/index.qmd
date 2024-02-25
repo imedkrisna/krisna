@@ -162,9 +162,9 @@ $$
 
 ## Reminder micro
 
--   produksi dilakukan di titik persinggungan antara PPF dan rasio harga.
-    -   sama dengan specific factor model.
--   Karena ada substitusi faktor produksi, maka:
+-   Production and price ratio: remember your lagrange approach:
+    -   MRS = price ratio.
+
 
 $$
 \frac{\frac{\partial Q}{\partial K}}{\frac{\partial Q}{\partial L}}=\frac{r}{w} \rightarrow \frac{L}{K}=\omega \left(\frac{w}{r}\right)
@@ -189,7 +189,7 @@ $$ $\frac{MP_L}{MP_K} \propto \frac{L}{K} \propto \frac{w}{r} \propto \frac{P_C}
 
 ## Stolper-Samuelson Thm
 
-![](Picture4.jpg)
+![](Picture6.jpg)
 
 If the relative price of cloth rises, the wage-rental ratio must rise. This will cause the labor-capital ratio used in the production of both goods to drop.
 
@@ -204,86 +204,15 @@ If the relative price of cloth rises, the wage-rental ratio must rise. This will
     
     - raise the real income (purchasing power) of workers and lower the real income of capital owners.
 
-## Factor and good prices
 
-Misalnya $\frac{P_C}{P_F} \uparrow$ (labor intensive):
 
--   pendapatan buruh akan naik relatif terhadap pendapatan kapital ($\frac{w}{r} \uparrow$)
--   Rasio $\frac{K}{L} \uparrow$ di kedua industri.
--   Pendapatan riil buruh naik, sementara pendapatan riil kapitalis turun.
-
-## Factor and good prices
-
-$$
-P_F=a_{LF}(.)w+ a_{KF}(.)r \\
-P_C=a_{LC}(.)w+ a_{KC}(.)r
-$$
-
-Lakukan total differentiation. karena $a_{ij}(.)$ dipilih secara optimal, maka perubahan kecil di harga tidak akan berpengaruh.
-
-$$
-dP_F=a_{LF}(.)dw+ a_{KF}(.)dr \\
-dP_C=a_{LC}(.)dw+ a_{KC}(.)dr
-$$
-
-## Factor and good prices {.m}
-
--   Bagi dengan $P_j$
-
-$$
-\frac{dP_F}{P_F}=\frac{a_{LF}(.)}{P_F}dw+ \frac{a_{KF}(.)}{P_F}dr \\
-\frac{dP_C}{P_C}=\frac{a_{LC}(.)}{{P_C}}dw+ \frac{a_{KC}(.)}{P_C}dr
-$$ - kali dengan $\frac{w}{w}$ dan $\frac{r}{r}$
-
-$$
-\frac{dP_F}{P_F}=\frac{a_{LF}(.)w}{P_F}\frac{dw}{w}+ \frac{a_{KF}(.)r}{P_F}\frac{dr}{r} \\
-\frac{dP_C}{P_C}=\frac{a_{LC}(.)w}{{P_C}}\frac{dw}{w}+ \frac{a_{KC}(.)r}{P_C}\frac{dr}{r}
-$$
-
-## Factor and good prices
-
--   \$\frac{dx}{x} = \$percentage change $=\hat{x}$
--   let $\theta=$ cost share di mana: $\theta_Lj=\frac{a_{Lj}(.)w}{P_j},\theta_Kj=\frac{a_{Kj}(.)r}{P_j}, \theta_{Lj}+\theta_{Kj}=1$
-
-maka:
-
-$$
-\hat{P_F}=\theta_{LF}\hat{w}+\theta_{KF}\hat{r} \\
-\hat{P_C}=\theta_{LC}\hat{w}+\theta_{KC}\hat{r}
-$$
-
-## Perubahan harga
-
-Misalnya harga cloth naik ($\hat{P_C}>0$) tapi harga food tetap ($\hat{P_F}=0$)
-
-$$
-0=\theta_{LF}\hat{w}+\theta_{KF}\hat{r} \\
-\hat{P_C}=\theta_{LC}\hat{w}+\theta_{KC}\hat{r}
-$$
-
-dapat dipastikan bahwa salah satu factor price harus naik dan satunya lagi pasti turun.
-
-## Perubahan harga
-
-Ingat bahwa C itu cenderung labor intensif. artinya:
-
-$$
-\frac{\theta_{LF}}{\theta_{KF}}<\frac{\theta_{LC}}{\theta_{KC}}
-$$
-
-Artinya, "bobot" yang diberikan untuk $\hat{w}$ lebih tinggi di $C$ daripada di $F$. Krn $\hat{P_C}>0$, maka dapat dipastikan $\hat{w}>0$ dan $\hat{r}<0$.
-
-$$
-\hat{w} > \hat{P_C} > 0 > \hat{r}
-$$
-
-## Rybczynski Theorem
+## Rybczynski Theorem {.m}
 
 > If you hold output prices constant as the amount of a factor of production increases, then the supply of the good that uses this factor intensively increases and the supply of the other good decreases.
 
 -   Assume an increase of labor (bonus demografi) so that $\frac{L}{K} \uparrow$
 -   PPF will grow but biased toward $C$
--   If $\frac{P_C}{P_F}$ doesn't change, the ratio f labor to capital used inn bth sectors remains constant.
+-   If $\frac{P_C}{P_F}$ doesn't change, the ratio f labor to capital used in both sectors remains constant.
 -   To expand, cloth sector will absorb labor AND capital from $F$.
 
 ## PPF
@@ -337,54 +266,73 @@ ppf2+
 :::
 
 ::: {.column width="37%"}
--   PPF melebar bias cloth
--   titik antara alokasi sebelum dan alokasi sesudah dapat dihubungkan dengan garis "Rybczynski line" for labor.
+-   cloth-biased growth of PPF.
 :::
 :::
 
 ## Resources and output
 
--   Ekonomi yang memiliki rasio $\frac{L}{K}$ tinggi akan memiliki output yang tinggi ke produk labor-intensif.
--   Jika $\frac{L}{K}>\frac{L^*}{K^*}$ maka home akan lebih efisien membuat C.
+-   An economy with high $\frac{L}{K}$ produces high output of cloth relative to food.
+-   if $\frac{L}{K}>\frac{L^*}{K^*}$ then home will be more efficient in making $C$.
 
-$$
-\hat{L}=\lambda_{LF}\hat{F}+\lambda_{LC}\hat{C} \\
-\hat{K}=\lambda_{KF}\hat{F}+\lambda_{KC}\hat{C}
-$$
+- home will be relatively efficient at producing cloth 
 
--   di mana $\lambda_{ij}=$ factor share. Misal, $\lambda_{LF}=a_{LF}\frac{L}{F}$ adalah $\frac{L_F}{L}$
+## Trade in HO
 
-## Perubahan faktor
+The countries are assumed to have the same technology and the same tastes.
 
--   misalnya $\hat{L}>0$ dan $\hat{K}=0$
+- With the same technology, each economy has a comparative advantage in producing the good that relatively intensively uses the factors of production in which the country is relatively well endowed.
 
-$$
-\hat{L}=\lambda_{LF}\hat{F}+\lambda_{LC}\hat{C} \\
-0=\lambda_{KF}\hat{F}+\lambda_{KC}\hat{C}
-$$ - Karena C labor intensif, maka $\frac{\lambda_{LC}}{\lambda_{KC}}>\frac{\lambda_{LF}}{\lambda_{KF}}$
+- With the same tastes, the two countries will consume cloth to food in the same ratio when faced with the same relative price of cloth under free trade.
 
-$$
-\hat{C}>\hat{L}>0>\hat{F}
-$$
+## Trade in HO
 
-## H-O and trade
+- Since cloth is relatively labor intensive, at each relative price of cloth to food, Home will produce a higher ratio of cloth to food than Foreign.
 
--   seperti halnya ricardian model, H-O memprediksi konvergensi harga relatif antar negara.
--   Negara yang labornya banyak akan cenderung menghasilkan C.
--   Ketika trade dengan negara yang labornya relatif sedikit, negara ini akan jual C dan impor F.
--   $P_C \uparrow$ sementara $P_C^* \downarrow$
+- Home will have a larger relative supply of cloth to food than Foreign.
 
-## Hecksher-Ohlin Theorem
+- Like the Ricardian model, the Heckscher-Ohlin model predicts a convergence of relative prices with trade.
 
-> The country that is abundant in a factor exports the good whose production is intensive in that factor
+- With trade, the relative price of cloth rises in the relatively labor abundant (home) country and falls in the relatively labor scarce (foreign) country.
 
-secara umum:
+
+## Trade in HO
+
+- Relative prices and the pattern of trade: In Home, the rise in the relative price of cloth leads to a rise in the relative production of cloth and a fall in relative consumption of cloth.
+
+    - Home becomes an exporter of cloth and an importer of food.
+
+- The decline in the relative price of cloth in Foreign leads it to become an importer of cloth and an exporter of food.
+
+## HO Theorem
+
+- Heckscher-Ohlin theorem: The country that is abundant in a factor exports the good whose production is intensive in that factor.
+
+- This result generalizes to a correlation:
 
 > Countries tend to export goods whose production is intensive in factors with which the countries are abundantly endowed.
 
 ::: footer
 see Alan Deardorff "the general validity of the Hecksher-Ohlin theorem."
 :::
+
+## Trade and income
+
+- Changes in relative prices can affect the earnings of labor and capital.
+
+    - A rise in the price of cloth raises the purchasing power of labor in terms of both goods while lowering the purchasing power of capital in terms of both goods.
+
+    - A rise in the price of food has the reverse effect.
+    
+## Trade and income
+
+Thus, international trade can affect the distribution of income, even in the long run:
+
+- Owners of a country’s abundant factors gain from trade, but owners of a country’s scarce factors lose.
+
+- Factors of production that are used intensively by the import-competing industry are hurt by the opening of trade—regardless of the industry in which they are employed.
+
+
 
 ## Distribusi pendapatan
 
@@ -394,114 +342,115 @@ see Alan Deardorff "the general validity of the Hecksher-Ohlin theorem."
 
 > Owners of a country's abundant factors gain from trade, but owners of a country's scarce factors lose
 
-## Perubahan faktor matters
-
--   Perubahan dari jumlah faktor produksi juga ngaruh.
--   Andaikan ada negara yang tiba-tiba kebanjiran pekerja, maka struktur ekonomi negara ini akan geser ke labor-intensif goods.
--   harga relatif goods ini akan drop, dan ekspornya makin naik regardless teknologi.
-
-## Distribusi
-
--   hasil ini serupa dengan specific factor model: pemilik faktor yang mengalami kompetisi impor merugi.
-
--   insight dari H-O mengatakan bahwa winner-loser ini akan ada bahkan di long-run.
-
--   Bagaimana dengan Indonesia?
-
 ------------------------------------------------------------------------
 
 ![factor intensity in Indonesia (Amiti and Konings 2007 "Trade Liberalization, Intermediate Inputs, and Productivity: Evidence from Indonesia")](indo.jpg)
 
 ------------------------------------------------------------------------
 
-## Faktor?
+## Trade and income {.m}
 
--   pada kenyataannya, faktor tidak hanya dua.
+- Changes in income distribution occur with every economic change, not only international trade.
+    - Changes in technology, changes in consumer preferences, exhaustion of resources and discovery of new ones all affect income distribution.
+    - Economists put most of the blame on technological change and the resulting premium paid on education as the major cause of increasing income inequality in the United States.
+- It would be better to compensate the losers from trade (or any economic change) than prohibit trade.
+    - The economy as a whole does benefit from trade.
 
--   Kapital, labor skilled dan unskilled, land, natural resources, dan lain sebagainya.
+## North-south inequality {.m}
 
--   H-O memberi gambaran bahwa bahkan jika dua negara memiliki teknologi yang sama persis, perbedaan resources akan membuat mereka trade.
+- The Heckscher-Ohlin model predicts that owners of relatively abundant factors will gain from trade and owners of relatively scarce factors will lose from trade.
 
-## Political economy of trade {.m}
+    - Little evidence supporting this prediction exists.
+    
+- According to the model, a change in the distribution of income occurs through changes in output prices, but there is no evidence of a change in the prices of skill-intensive goods relative to prices of unskilled-intensive goods.
 
--   perdagangan internasional dapat merugikan *immobile factor owners*.
-    -   Di dunia nyata ga harus T atau K, tapi juga labor!
--   2 alasan kenapa ekonom jarang mempermasalahkan distribus income ini:
+## North-south inequality {.m}
 
-1.  perubahan distribusi pendapatan dapat terjadi akibat fenomena non-trade.
+According to the model, wages of unskilled workers should increase in unskilled labor abundant countries relative to wages of skilled labor, but in some cases the reverse has occurred.
 
--   pandemi menguntungkan yang bisa WFH, data dan teknologi menguntungkan coders, etc.
+The majority view of trade economists is that the villain is not trade but rather new production technologies that put a greater emphasis on worker skills (such as the widespread introduction of computers and other advanced technologies in the workplace).
 
-2.  kompensasi selalu lebih baik daripada pembatasan perdagangan.
+## Skill-biased {.m}
 
--   bagaimana mengoptimalkan pendapatan negara dari trade dan mengalokasikannya untuk bantuan sosial.
+- Trade likely has been an indirect contributor to increases in wage inequality, by accelerating the process of technological change.
+    
+    - Firms that begin to export may upgrade to more skill-intensive production technologies.
 
-## Political economy of trade
+    - Trade liberalization can then generate widespread technological change by inducing a large proportion of firms to make such technology-upgrade choices.
 
--   Di negara demokrasi, kemampuan mobilisasi gerakan itu penting.
--   Intervensi banyak terjadi di industri yang terkonsentrasi:
-    -   pemainnya dikit tapi ukuran ekonominya banyak.
-    -   BUMN
--   Biasanya kalau udah kepepet, pelaku industri jadi punya 1 tujuan dan better organized.
--   yang untung dari trade biasanya konsumen yang bodo amatan.
+- Breaking up the production process across countries can increase the relative demand for skilled workers in developed countries similar to skill-biased technological change.
 
-## Political economy of trade
+## Capital-skill complementarity {.m}
 
--   Political economy of trade akan dibahas lebih banyak lagi di pasca-UTS.
--   note bahwa specific factor model bisa dibilang short-run model:
-    -   in long run, L,K,T dan bahkan MPL (teknologi) bisa berubah.
-    -   perubahan inilah argumen utama mendukung industrial policies.
-    -   dibahas lagi pasca UTS.
+- Technological change often takes the form of new and better machines (capital) that displace unskilled workers but still require skilled workers.
 
-## Evidence of H-O
+    - This generates higher returns for both capital and skilled workers while depressing the returns to unskilled workers.
 
--   Teori H-O agak sulit dibuktikan. Evidencenya ga banyak.
+- Increased automation can explain the observed worldwide increases in both wage inequality and the returns to capital, as well as the within-sector increases in the employment share of (relatively skilled) non-production workers.
 
--   In terms of US: harga skilled labor di mexico naik lebih cepat dari unskilled labor.
+## Factor price equalization {.m}
 
-    -   padahal mestinya unskilled labor mexico relatif banyak dibanding US dan Kanada.
+- Unlike the Ricardian model, the Heckscher-Ohlin model predicts that factor prices will be equalized among countries that trade.
 
--   penjelasan: ada perubahan teknologi yang lebih ngaruh daripada trade.
+- Free trade equalizes relative output prices.
 
-    -   Firms di Mexico makin kaya $\rightarrow$ demand high-skill work domestik naik.
-    -   Trade mempercepat teknologi spillover.
+- Due to the connection between output prices and factor prices, factor prices are also equalized.
 
-## Factor price equalization
+- Trade increases the demand of goods produced by relatively abundant factors, indirectly increasing the demand of these factors, raising the prices of the relatively abundant factors.
 
--   Karena $\frac{w}{r} \propto \frac{P_C}{P_F}$, maka Trade goods = trade factor of production.
-    -   Jika $P_C=P_C^*$, maka $w=w^*$ dan $r=r^*$
--   karena itu trade akan membuat harga faktor produksi sama di semua negara.
-    -   gaji unskilled labor di US akan drop sampai di level gaji unskilled labor negara asal barang labor intensif.
-    -   Also little evidence to support this.
+## Factor price equalization {.m}
 
-## Factor price equalization?
+- In the real world, factor prices are not equal across countries.
 
--   asumsi model H-O adalah kedua negara berdagang barang yang sama dan perfect substitute.
-    -   Food impor sama rasanya dengan food domestik.
--   H-O juga mengasumsikan dua negara punya teknologi yang sama untuk masing-masing industri. Also: countries' tech changes!
--   Di model ini juga tidak ada **trade barriers** dan ongkos transportasi.
--   Model ini menganggap free movement of factors.
+- The model assumes that trading countries produce the same goods, but countries may produce different goods if their factor ratios radically differ.
 
-## Leontief Paradox
+- The model also assumes that trading countries have the same technology, but different technologies could affect the productivities of factors and therefore the wages/rates paid to these factors.
 
--   Data perdagangan Amerika menunjukkan bahwa US mengekspor less capital intensive goods dibanding impornya.
--   Bowen, Leamer, and Sveikauskas menemukan bahwa hal ini terjadi di berbagai belahan dunia.
--   Missing trade: dengan proporsi naker RRT relatif terhadap US, harusnya US impor labor intensif 4x lipat dari seharusnya (Treffler 1995)
+## factor price eq
 
-## Tech difference
+- Because the Heckscher-Ohlin model predicts that factor prices will be equalized across trading countries, it also predicts that factors of production will produce and export a certain quantity goods until factor prices are equalized.
 
--   Relaksasi same-tech lumayan menyelesaikan problem ini.
-    -   unskilled labor US lebih produktif dari RRT.
--   Romalis (2004) menemukan meski H-O dapat dibuktikan di *extreme case* .
-    -   US impor relatively capital-intensive products dari Jerman dan mengimpor relatively labor-intensive products dari Bangladesh.
+    - In other words, a predicted value of services from factors of production will be embodied in a predicted volume of trade between countries.
 
-## Improving trade models
+## factor price eq {.m}
 
--   Primarily, trade happens amid difference of technologies.
-    -   iklim, SDA, produktivitas pekerja, intelectual property.
--   Jika kita samakan teknologinya, perbedaan *factor abundance*-pun ngaruh.
-    -   bahkan di long-run pun, distribusi pendapatan tetap problematik.
--   Mingdep kita bahas **Standard trade model**.
+- But because factor prices are not equalized across countries, the predicted volume of trade is much larger than actually occurs.
+
+    - A result of “missing trade” discovered by Daniel Trefler.
+
+- The reason for this “missing trade” appears to be the assumption of identical technology among countries.
+
+    - Technology affects the productivity of workers and therefore the value of labor services.
+
+    - A country with high technology and a high value of labor services would not necessarily import a lot from a country with low technology and a low value of labor services.
+    
+## HO empirics {.m}
+
+- An important study by Donald Davis and David Weinstein showed that if relax the assumption of common technologies, along with assumptions underlying factor price equalization (countries produce the same goods and costless trade equalizes prices of goods):
+
+    - then the predictions for the direction and volume of the factor content of trade line-up well with empirical evidence and ultimately generate a good fit.
+
+- Difficulty finding support for the predictions of the “pure” Heckscher-Ohlin model can be blamed on some of the assumptions made.
+
+
+## HO empirics {.m}
+
+- Contrast the exports of labor-abundant, skill-scarce nations in the developing world with the exports of skill-abundant, labor-scarce (rich) nations.
+
+    - The exports of the three developing countries to the United States are concentrated in sectors with the lowest skill intensity.
+
+    - The exports of the three skill abundant countries to the United States are concentrated in sectors with higher skill intensity.
+
+
+## Summary
+
+- HO assume difference in factr abundance still promotes trade even if the technology is the same.
+
+- changes in relative prices changes distribution of income, benefiting factor which used intensively by industry with increased price.
+
+- Changes in factor abundance also changes production and income distribution.
+
+- Empirical support of the Heckscher-Ohlin model is weak except for cases involving trade between high-income countries and low/middle- income countries or when technology differences are included.
 
 # Appendix
 
