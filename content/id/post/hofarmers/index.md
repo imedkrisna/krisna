@@ -1,8 +1,8 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: 'Kapital atau buruh intensif?'
-subtitle: "Melihat bedanya petani AS dan Indonesia"
+title: 'Substitusi buruh dan mesin di industri pertanian'
+subtitle: "melihat bedanya petani AS dan Indonesia"
 summary: ""
 authors: [admin]
 tags: [ekonomi, perdagangan, model, HecksherOhlin]
