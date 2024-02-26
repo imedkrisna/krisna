@@ -1,12 +1,12 @@
 --
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: ' Is farming Labor or capital intensive?'
-subtitle: "sebuah contoh substitusi di model Hecksher-Ohlinn"
+title: 'Kapital atau buruh intensif?'
+subtitle: "Melihat bedanya petani AS dan Indonesia"
 summary: ""
 authors: [admin]
-tags: [macem-macem]
-categories: [macem-macem]
+tags: [ekonomi, perdagangan, model, HecksherOhlin]
+categories: [ekonomi, perdagangan, model, HecksherOhlin]
 date: 2024-02-25T15:10:34+07:00
 lastmod: 2024-02-25T15:10:34+07:00
 featured: false
@@ -34,7 +34,13 @@ Postingan kali ini ada hubungannya dengan itu, tapi saya mau fokus ke pembahasan
 
 <iframe src="https://data.worldbank.org/share/widget?indicators=SL.AGR.EMPL.ZS&locations=ID-US" width='900' height='600' frameBorder='0' scrolling="no" ></iframe>
 
-Dalam teori perdagangan Hecksher-Ohlin (HO) dianalisis akan adanya substitusi antara tenaga kerja dan modal (mesin). Jumlah petani boleh sedikit asalkan diganti dengan jumlah permesinan yang sesuai. 
+TLDR: ujung2nya ini adalah diskusi tentang intensif buruh vs intensif kapital di industri pertanian, di mana di USA, permesinan berperan jauh lebih besar daripada buruh, sementara Indonesia sebaliknya. Buat anda yang pingin tau gimana ekonom melihat intensitas faktor produksi, lihat appendix di paling bawah.
+
+Oke lanjut ke diskusi factor intensity.
+
+## Hecksher-Ohlin dan factor intensity
+
+Dalam teori perdagangan Hecksher-Ohlin (HO) dianalisis akan adanya substitusi antara tenaga kerja dan modal (mesin). Jumlah petani boleh sedikit asalkan diganti dengan jumlah permesinan yang sesuai.
 
 Andaikan ada 2 pilihan produksi yang outputnya sama:
 
@@ -68,3 +74,35 @@ Artinya, untuk menanam kedelai, anda bisa saja menggunakan banyak petani dengan 
 Disclaimer lagi deh: permasalahan di pertanian Indonesia itu rumit. Ga sesederhana cuma mekanisasi aja. Bisa diliat juga di tabel di atas bahwa lahan termasuk bagian yang gede di production cost. Artinya, tanah memang gak ada substitusinya baik di AS maupun Indonesia. Problemnya opkors di AS tanahnya luas. Ada juga prooblem pengairan di mana negara-negara sungai mekong (Vietnam, Thailand) punya advantage dibanding Indonesia, meskipun struktur tenaga kerjanya mirip dengan Indonesia. Dan lain-lain.
 
 Demikian sedikit contoh kasus di HO semoga bermanfaat bagi yang lagi belajar ekonomi internasional.
+
+## Appendix: Kursus singkat tentang intensitas faktor produksi
+
+Dalam teori produksi standar di pelajaran mikro dan makroekonomi dasar, kita biasanya memulai mempelajari produksi sebuah negara / perusahaan dengan fungsi umum
+
+$$Q=f(K,L)$$
+
+di mana $K$ adalah jumlah kapital yang digunakan dan $L$ adalah jumlah pegawai yang digunakan untuk produksi barang dan jasa sebanyak $Q$. Alias, di mikro/makro dasar tuh faktor produksi digambarkan ada dua: kapital dan tenaga kerja[^1].
+
+Ekonomi yang kompetitif akan memberikan imbalan yang setara dengan produktivitasnya[^2], atau:
+
+$$\frac{df(K,L)}{dL}=w$$
+
+$$\frac{df(K,L)}{dK}=r$$
+
+di mana $w$ adalah upah/gaji dan $r$ adalah sewa/nilai penyusutan.
+
+Jika sebuah aktivitas produksi punya struktur biaya seperti ini:
+
+$$TC=w \times L+r \times K$$
+
+di mana total cost (TC) adalah upah dikali jumlah buruh tambah sewa dikali jumlah kapital, maka sebuah ekonomi dikatakan intensif buruh jika sumbangsih buruh dalam total cost mendominasi sumbangsih kapital. Alias, sebuah ekonomi dikatakan intensif buruh jika:
+
+$$
+\frac{w \times L}{TC} > \frac{r \times K}{TC}
+$$
+
+Mengobservasi produksi marjinal tuh gak praktis, sementara cost masih bisa dihitung. Dengan mengandalkan pegawngan bahwa _cost share_ gak jauh beda dari _productivity share_, maka kita lihat intensitas faktor produksi dari _cost share_-nya.
+
+[^1]: Kepemilikan faktor produksi inilah yang dulu sering diperdebatkan, yaitu antara kapitalis (pemilik K) dan buruh (pemilik L). Strugglenya adalah siapa yang lebih banyak dapat bagian dari Q.
+
+[^2]: Secara teoretis, produktivitas dihitung dengan menggunakan produksi marjinal atau turunan pertama dari Q terhadap faktor. Secara praktik, hal ini sulit banget untuk dilakukan. Perlu kondisi yg sangat ketat.

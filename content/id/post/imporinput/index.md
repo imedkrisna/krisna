@@ -5,7 +5,7 @@ title: "Melihat neraca pembayaran dan neraca perdagangan Indonesia menggunakan d
 subtitle: ""
 summary: ""
 authors: [admin]
-tags: [python, ekonomi. perdagangan]
+tags: [python, ekonomi, perdagangan]
 categories: [python, ekonomi, perdagangan]
 date: 2020-10-21T21:07:25+11:00
 lastmod: 2020-10-21T21:07:25+11:00
