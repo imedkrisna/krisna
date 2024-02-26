@@ -71,9 +71,21 @@ Penyusutan juga cukup kontras. Penyusutan modal di AS dihitung setara dengan 14.
 
 Artinya, untuk menanam kedelai, anda bisa saja menggunakan banyak petani dengan permesinan yang sedikit (manual), atau sedikit petani tapi dengan mesin yang mahal (semi-otomatisasi). Strategi yang mana yang dilakukan? Hal inin tentu tergantung dari _relative abundance of factor_. Alias, di Indonesia, pegawai yang profilnya cocok jadi petani ada banyak, sementara modal buat beli mesin relatif sedikit (suku bunga produksi di Indonesia mahal banget). Di AS sebaliknya, pegawai yang cocok jadi petani lebih sedikit (makanya gajinya mahal), tapi modal ada banyak (suku bunga di AS pre-COVID itu murah banget). Inilah efek substitusi yang ada di model HO.
 
-Disclaimer lagi deh: permasalahan di pertanian Indonesia itu rumit. Ga sesederhana cuma mekanisasi aja. Bisa diliat juga di tabel di atas bahwa lahan termasuk bagian yang gede di production cost. Artinya, tanah memang gak ada substitusinya baik di AS maupun Indonesia. Problemnya opkors di AS tanahnya luas. Ada juga prooblem pengairan di mana negara-negara sungai mekong (Vietnam, Thailand) punya advantage dibanding Indonesia, meskipun struktur tenaga kerjanya mirip dengan Indonesia. Dan lain-lain.
+## Intinya & disclaimer
 
-Demikian sedikit contoh kasus di HO semoga bermanfaat bagi yang lagi belajar ekonomi internasional.
+Oke jadi intinya kesimpulan postingan ini adalah:
+
+1. Untuk menjalankan pertanian yang efisien, penggunaan faktor produksi harus sesuai dengan intensitas faktor produksinya. Bisa jadi ada tanaman yang perlu banyak mesin dan sedikit buruh. Negara yang tetap memakai banyak buruh di industri yang aslinya lebih efisien dengan banyak mesin akan lebih tidak efisien dibandingkan yang pakai banyak mesin.
+
+2. Negara yang buruhnya murah dibandingkan mesin akan kesulitan bersaing harga dengan negara yang mesinnya relatif lebih murah, di industri yang lebih _capital intensive_. Kenapa? Karena negara yang buruhnya murah cenderung akan pakai lebih banyak buruh, bahkan di industri yang sejatinya _capital intensive_. Jadinya gak efisien.
+
+3. Lebih efisien sebenernya adalah ekspor produk-produk yang intensif buruh, lalu duitnya dipake buat impor produk-produk yang intensif kapital.
+
+Disclaimer lagi: permasalahan di pertanian Indonesia itu rumit. Ga sesederhana cuma gara-gara mekanisasi aja. Bisa diliat juga di tabel di atas bahwa lahan termasuk bagian yang gede di production cost untuk kedua negara. Artinya, tanah memang gak ada substitusinya baik di AS maupun Indonesia. Bedanyanya opkors di AS tanahnya luas dibandingkan di Indonesia. Ada juga prooblem pengairan di mana negara-negara sungai mekong (Vietnam, Thailand) punya advantage dibanding Indonesia, meskipun struktur tenaga kerjanya mirip dengan Indonesia. Dan lain-lain.
+
+Ketika kami ekonom menganalisis dunia nyata, tentu saja pertimbangannya banyak, gak cuma ini doang. Cuma kalo diketik diblog ntar ga habis2 wkwk.
+
+Demikian sedikit contoh kasus di HO semoga bermanfaat terutama bagi yang lagi belajar ekonomi internasional.
 
 ## Appendix: Kursus singkat tentang intensitas faktor produksi
 
