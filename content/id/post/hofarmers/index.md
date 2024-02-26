@@ -75,7 +75,7 @@ Artinya, untuk menanam kedelai, anda bisa saja menggunakan banyak petani dengan 
 
 Oke jadi intinya kesimpulan postingan ini adalah:
 
-1. Untuk menjalankan pertanian yang efisien, penggunaan faktor produksi harus sesuai dengan intensitas faktor produksinya. Bisa jadi ada tanaman yang perlu banyak mesin dan sedikit buruh. Negara yang tetap memakai banyak buruh di industri yang aslinya lebih efisien dengan banyak mesin akan lebih tidak efisien dibandingkan yang pakai banyak mesin.
+1. Untuk menjalankan pertanian yang efisien, penggunaan faktor produksi harus sesuai dengan intensitas faktor produksinya. Bisa jadi ada tanaman yang perlu banyak mesin dan sedikit buruh. Negara yang tetap memakai banyak buruh di industri yang aslinya lebih efisien dengan banyak mesin akan lebih mahal produksinya dibandingkan negara yang pakai banyak mesin.
 
 2. Negara yang buruhnya murah dibandingkan mesin akan kesulitan bersaing harga dengan negara yang mesinnya relatif lebih murah, di industri yang lebih _capital intensive_. Kenapa? Karena negara yang buruhnya murah cenderung akan pakai lebih banyak buruh, bahkan di industri yang sejatinya _capital intensive_. Jadinya gak efisien.
 
