@@ -83,7 +83,7 @@ Oke jadi intinya kesimpulan postingan ini adalah:
 
 Disclaimer lagi: permasalahan di pertanian Indonesia itu rumit. Ga sesederhana cuma gara-gara mekanisasi aja. Bisa diliat juga di tabel di atas bahwa lahan termasuk bagian yang gede di production cost untuk kedua negara. Artinya, tanah memang gak ada substitusinya baik di AS maupun Indonesia. Bedanyanya opkors di AS tanahnya luas dibandingkan di Indonesia. Ada juga prooblem pengairan di mana negara-negara sungai mekong (Vietnam, Thailand) punya advantage dibanding Indonesia, meskipun struktur tenaga kerjanya mirip dengan Indonesia. Dan lain-lain.
 
-Ketika kami ekonom menganalisis dunia nyata, tentu saja pertimbangannya banyak, gak cuma ini doang. Cuma kalo diketik diblog ntar ga habis2 wkwk.
+Ketika kami ekonom menganalisis dunia nyata, tentu saja pertimbangannya banyak, gak cuma ini doang. Misalnya bahwa faktor produksi itu gak cuma buruh dan kapital. Bahkan, Indonesia sebenernya ngekspor barang-barang yang intensif lahan seperti tambang dan perkebunan. Buruh pun bisa dibagi jadi low skill high skill. Cuma kalo diketik diblog ntar ga habis2 wkwkwkwk.
 
 Demikian sedikit contoh kasus di HO semoga bermanfaat terutama bagi yang lagi belajar ekonomi internasional.
 
