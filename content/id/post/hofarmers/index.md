@@ -32,7 +32,7 @@ Hari ini tanggal 25 Februari 2024 sedang ramai di jagat maya tentang harga panga
 
 Postingan kali ini ada hubungannya dengan itu, tapi saya mau fokus ke pembahasan soal jumlah dan produktivitas petani. Kenapa? Karena saya lagi ngajar ekonomi internasional dan ini postingan kali ini sangat pas buat menjelaskan substitusi faktor produksi yang dicontohkan di model bernama Hecksher-Ohlin (HO) wwkkwk. Anyway,Di Indonesia, jumlah petaninya banyak tapi lahannya sedikit. Indonesia adalah importir kedelai dari AS, padahal petani di AS lebih dikit lagi daripada di Indonesia.
 
-<iframe src="https://data.worldbank.org/share/widget?indicators=SL.AGR.EMPL.ZS&locations=ID-US" width='900' height='450' frameBorder='0' scrolling="no" ></iframe>
+<iframe src="https://data.worldbank.org/share/widget?indicators=SL.AGR.EMPL.ZS&locations=ID-US" width='900' height='450' frameBorder='0' scrolling="yes" ></iframe>
 
 TLDR: ujung2nya ini adalah diskusi tentang intensif buruh vs intensif kapital di industri pertanian, di mana di USA, permesinan berperan jauh lebih besar daripada buruh, sementara Indonesia sebaliknya. Buat anda yang pingin tau gimana ekonom melihat intensitas faktor produksi, lihat appendix di paling bawah.
 
