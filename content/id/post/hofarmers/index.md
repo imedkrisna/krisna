@@ -1,4 +1,4 @@
---
+---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
 title: 'Kapital atau buruh intensif?'
