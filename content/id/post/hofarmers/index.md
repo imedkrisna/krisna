@@ -67,7 +67,7 @@ Saya coba membandingkan antara _share_ biaya produksi Indonesia vs Amerika Serik
 
 Bisa kita lihat perbedaan yang sangat kontras di labor (belanja pegawai) dan di penyusutan. Untuk petani kedelai Indonesia di 2017, 47% biaya produksi adalah di belanja pegawai. Bagi petani AS, belanja pegawai cuma 3.61% dari total ongkos produksi. Padahal kita tau bahwa level gaji di AS lebih mahal ketimbang di Indonesia. Hal ini berarti di AS, meski gaji pegawai nya mahal, hal ini relatif kecil karena mereka menggunakan sedikit petani ketimbang di Indonesia.
 
-Penyusutan juga cukup kontras. Penyusutan modal di AS dihitung setara dengan 14.5% total produksi, sementara di Indoonesia cuma 2%. Berarti petani Indonesia menggunakan lebih sedikit permesinan ketimbang di AS.
+Penyusutan juga cukup kontras. Penyusutan modal di AS dihitung setara dengan 14.5% total produksi, sementara di Indoonesia cuma 2%. Berarti petani Indonesia menggunakan lebih sedikit permesinan ketimbang di AS. Apalagi ketika kita lihat bahwa biaya untuk sewa/bunga di kedua struktur biaya itu sama, padahal kita tau dari penyusutan bahwa di AS, mesinnya lebih banyak dari di Indonesia. Artinya, bunga di AS tuh murah.
 
 Artinya, untuk menanam kedelai, anda bisa saja menggunakan banyak petani dengan permesinan yang sedikit (manual), atau sedikit petani tapi dengan mesin yang mahal (semi-otomatisasi). Strategi yang mana yang dilakukan? Hal inin tentu tergantung dari _relative abundance of factor_. Alias, di Indonesia, pegawai yang profilnya cocok jadi petani ada banyak, sementara modal buat beli mesin relatif sedikit (suku bunga produksi di Indonesia mahal banget). Di AS sebaliknya, pegawai yang cocok jadi petani lebih sedikit (makanya gajinya mahal), tapi modal ada banyak (suku bunga di AS pre-COVID itu murah banget). Inilah efek substitusi yang ada di model HO.
 
@@ -81,7 +81,7 @@ Oke jadi intinya kesimpulan postingan ini adalah:
 
 3. Lebih efisien sebenernya adalah ekspor produk-produk yang intensif buruh, lalu duitnya dipake buat impor produk-produk yang intensif kapital.
 
-Disclaimer lagi: permasalahan di pertanian Indonesia itu rumit. Ga sesederhana cuma gara-gara mekanisasi aja. Bisa diliat juga di tabel di atas bahwa lahan termasuk bagian yang gede di production cost untuk kedua negara. Artinya, tanah memang gak ada substitusinya baik di AS maupun Indonesia. Bedanyanya opkors di AS tanahnya luas dibandingkan di Indonesia. Ada juga prooblem pengairan di mana negara-negara sungai mekong (Vietnam, Thailand) punya advantage dibanding Indonesia, meskipun struktur tenaga kerjanya mirip dengan Indonesia. Dan lain-lain.
+Disclaimer: permasalahan di pertanian Indonesia itu rumit. Ga sesederhana cuma gara-gara mekanisasi aja. Bisa diliat juga di tabel di atas bahwa lahan termasuk bagian yang gede di production cost untuk kedua negara. Artinya, tanah memang gak ada substitusinya baik di AS maupun Indonesia. Bedanyanya opkors di AS tanahnya luas dibandingkan di Indonesia. Ada juga prooblem pengairan di mana negara-negara sungai mekong (Vietnam, Thailand) punya advantage dibanding Indonesia, meskipun struktur tenaga kerjanya mirip dengan Indonesia. Dan lain-lain.
 
 Ketika kami ekonom menganalisis dunia nyata, tentu saja pertimbangannya banyak, gak cuma ini doang. Misalnya bahwa faktor produksi itu gak cuma buruh dan kapital. Bahkan, Indonesia sebenernya ngekspor barang-barang yang intensif lahan seperti tambang dan perkebunan. Buruh pun bisa dibagi jadi low skill high skill. Cuma kalo diketik diblog ntar ga habis2 wkwkwkwk.
 
