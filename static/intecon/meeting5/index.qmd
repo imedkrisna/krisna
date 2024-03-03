@@ -191,6 +191,24 @@ Growth biased toward cloth shifts the R S curve for the world to the right (a), 
 
 - Import-biased growth increases a country’s terms of trade, increasing its welfare and decreasing the welfare of foreign countries.
 
+- The larger the countries, the larger its growth impacting the global economy.
+
+## 2 large countries
+
+- Has the United States suffered from a deterioration in its terms of trade as some of its main trading partners (such as China) experienced rapid growth?
+
+    - This would represent an aggregate income loss for the United States.
+
+- The standard trade model predicts that if the growth in China is mainly import-biased, the growth in sectors that compete with U.S. exports would reduce the U.S. terms of trade.
+
+## 2 large countries
+
+- But data indicates that changes in the U.S. terms of trade have been small with no clear trend over last few decades.
+
+    - The U.S. terms of trade in 2014 was essentially at the same level as it was in 1980.
+
+- The terms of trade for China have deteriorated over the past decade, suggesting their recent growth may have been export-biased.
+
 ## Terms of trade
 
 ```{r}
@@ -211,5 +229,139 @@ dat<-WDI(           # Menarik data World Bank
 dat |> ggplot(aes(x=year,y=tot,col=country))+geom_line(linewidth=1.1)+theme_classic()+theme(legend.position = "bottom")+labs(y="")
 ```
 
+## US vs China
+
+- But data indicates that changes in the U.S. terms of trade have been small with no clear trend over last few decades.
+
+- The U.S. terms of trade in 2014 was essentially at the same level as it was in 1980.
+
+- The terms of trade for China have deteriorated over the past decade, suggesting their recent growth may have been export-biased.
+
+## Indonesia?
+
+- Like the United States, most developed countries tend to experience mild swings in their terms of trade, around 1 percent or less a year (on average).
+
+- Some developing countries’ exports are heavily concentrated in mineral and agricultural sectors.
+
+    - The prices of those goods on world markets are very volatile, leading to large swings in the terms of trade.
+
+    - These swings in turn translate into substantial changes in welfare.
+
+## Tariff & subsidies
+
+- Import tariffs are taxes levied on imports.
+
+- Export subsidies are payments given to domestic producers that export.
+
+- Both policies influence the terms of trade and therefore national welfare.
+
+- Import tariffs and export subsidies drive a wedge between prices in world markets and prices in domestic markets.
+
+## Tariff effect
+
+- say home govt impose tariff on food import
+
+    - $\frac{P_C}{P_F}$ decrease in domestic market.
+    
+    - $\frac{Q_C}{Q_F}$ and $\frac{D_C}{D_F}$ goes down as well.
+    
+- If the decreased food demand is large enough, this will decrease global price.
+
+- Meaning, tot goes up, which may increase domestic welfare.
+
+## Tariff effect
+
+- The magnitude of this effect depends on the size of the home country relative to the world economy.
+
+- If the country is a small part of the world economy, its tariff (or subsidy) policies will not have much effect on world relative supply and demand, and thus on the terms of trade.
+
+- But for large countries, a tariff may maximize national welfare at the expense of foreign countries.
+
+## Export subsidy effect {.m}
+
+- If the home country imposes a subsidy on cloth exports, the price of cloth relative to the price of food rises for domestic consumers.
+
+    - Domestic producers will receive a higher relative price of cloth when they export, and therefore will be more willing to switch to cloth production: relative supply of cloth will increase.
+    
+    - Domestic consumers must pay a higher relative price of cloth to producers, and therefore will be more willing to switch to food consumption: relative demand for cloth will decrease.
+    
+- When the home country imposes an export subsidy, the terms of trade decrease and the welfare of the country decreases to the benefit of the foreign country.
 
 
+## Tot gain & loss
+
+The standard trade model predicts that
+
+- an import tariff by the home country can increase domestic welfare at the expense of the foreign country. by increasing terms of trade.
+
+- an export subsidy by the home country reduces domestic welfare to the benefit of the foreign country.
+
+## More implications {.m}
+
+- Additional effects of tariffs and subsidies that can occur in a world with many countries and many goods:
+
+- A foreign country may subsidize the export of a good that the United States also exports, which will reduce the price for the United States in world markets and decrease its terms of trade.
+
+- [Chinese industrial subsidies](https://www.wsj.com/articles/SB10001424127887323836504578551474072138676) reduces manufacturing goods' prices, which hurt Indonesian manufacturers.
+
+- A foreign country may put a tariff on an imported good that the Indonesia also imports, which will reduce the price for the Indonesia in world markets and increase its terms of trade.
+
+## More implications {.m}
+
+Export subsidies by foreign countries on goods that
+
+- Indonesian imports reduce the world price of Indonesian imports and increase the terms of trade for Indonesia
+
+- Indonesia also exports reduce the world price of Indonesian exports and decrease the terms of trade for Indonesia.
+
+Import tariffs by foreign countries on goods that
+
+- Indonesia exports reduce the world price of Indonesian exports and decrease the terms of trade for Indonesia.
+
+- the Indonesia also imports reduce the world price of Indonesian imports and increase the terms of trade for Indonesia.
+
+## Implications
+
+- Export subsidies on a good **decrease the relative world price** of that good by increasing relative supply of that good and decreasing relative demand of that good.
+
+- Import tariffs on a good **decrease the relative world price** of that good (and increase the relative world price of other goods) by increasing the relative supply of that good and decreasing the relative demand of that good.
+
+- Results depend on the size of the countries in question.
+
+## International borrowing & lending {.m}
+
+- The standard trade model can be modified to analyze international borrowing and lending.
+
+    - Two goods are current and future consumption (same good at different times), rather than different goods at the same time.
+
+- Countries usually have different opportunities to invest to become able to produce more in the future.
+
+- A special kind of production possibility frontier, an intertemporal production possibility frontier, depicts different possible combinations of current output and future output.
+
+## International borrowing
+
+- If you borrow 1 unit of output, you must repay principal + interest $= 1+ r$ in the future, where $r$ is the **real interest rate**.
+
+- The price of future consumption relative to current consumption is $\frac{1}{1+r}$
+
+- 1 unit of current consumption is worth $1+r$ of future consumption.
+
+- so 1 unit of future consumption is worth $\frac{1}{1+r}$
+
+## International borrowing
+
+- Home exports current consumption and imports future consumption.
+
+- Home lends to Foreign by consuming less than it produces now. Home able to consume more than produces in the future when Foreign pays back the loan.
+
+- Foreign borrows to be able to consume more than produces now, and pays back the loan by consuming less than produces in the future.
+
+## International borrowing
+
+- When international borrowing and lending are allowed, the world real interest rate is determined by the intersection of world relative demand and world relative supply.
+
+- The world real interest rate will be between the real interest rates that existed in the two country’s prior to intertemporal trade.
+
+- The real interest rate rises in the country that lends (home) and falls in the country that borrows (foreign) due to intertemporal trade.
+
+## Intl borrowing & lending {.m}
