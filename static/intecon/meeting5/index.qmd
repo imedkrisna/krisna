@@ -1,7 +1,8 @@
 ---
 title: "The Standard Model"
 subtitle: "ECES905205 pertemuan 5"
-date: "12 September 2022"
+date: "4 March 2024"
+date-format: "DD MMMM YYYY"
 author: "I Made Krisna Gupta"
 format: 
   revealjs:
@@ -12,284 +13,203 @@ format:
     background-transition: fade
     slide-number: true
   beamer: default
-editor: visual
+
 ---
-
-## 3 model
-
-- Dari kemarin kita sudah belajar berbagai trade model:
-  - Ricardian model untuk 1 mobile factor.
-  - Specific factors model: perbedaan distribusi pendapatan.
-  - H-O: same tech, different endowment.
-  
-- Semuanya beda-beda dan dapat digunakan sesuai kesesuaian dengan isu kita.
 
 ## Similarities
 
-Beberapa persamaan:
+So far, our models have certain similarities:
 
-1. Trade is driven by difference in PPF.
-1. PPF determines relative supply scheduule.
-1. World equilibrium ditentukan oleh demand dunia dan posisi kita sebelum trade.
+1.  Trade is driven by difference in PPF.
+2.  PPF determines relative supply scheduule.
+3.  World equilibrium ditentukan oleh demand dunia dan posisi kita sebelum trade.
 
-## Mekanisme {.m}
+Today, we're standardizing 'em
 
-- Tanpa trade, harga akan ditentukan oleh supply & demand domesttik.
-  - Preference vs teknologi
-  - Ada efek substitusi baik untuk produksi maupun konsumsi
-  - Slope indifference curve = slope PPF = slope harga relatif
-- Trade akan mengubah slope harga relatif.
-  - harga relatif domestik akan mendekati harga relatif dunia.
-  - Slope harga relatif geser, dan yang lain juga geser.
-  - Akan diseimbangkan dengan ekspor dan impor.
-  
-## Welfare change {.m}
+We continue the case where home country export $C$ and import $F$.
 
-- Kita dapat mengilustrasikan perubahan kesejahteraan dari perubahan indifference curve.
-- Negara yang tadinya ekspor C, akan untung jika $\frac{P_C}{P_F}$ naik.
-  - sebaliknya untuk F.
-- _Terms of trade_: harga barang ekspor dibagi harga barang impor.
-- Suatu negara akan untung jika ToT naik, dan rugi jika ToT turun.
-- Namun, perubahan ToT tidak akan lebih buruk daripada autarky.
+## The standard model
 
----
+- Relative supply and relative deman
+
+- Terms of trade & welfare
+
+- Effects of economic growth, import tariffs, and export subsidies
+
+- International borrowing and lending
+
+## Principle
+
+1. the relationship between the production possibility frontier and the relative supply curve,
+
+2. the relationship between relative prices and relative demand,
+
+3. the determination of world equilibrium by world relative supply and world relative demand, and 
+
+4. the effect of the terms of trade—the price of a country’s exports divided by the price of its imports—on a nation’s welfare.
+
+## PPF
+
+:::: columns
+::: {.column width="47%"}
+![](Picture1.jpg)
+:::
+::: {.column width="47%"}
+
+- What country produces depensd on the relative price of cloth to food $\frac{P_C}{P_F}$
+
+- An economy chose $Q_C,Q_F$ to maximize $V=P_CQ_C+P_FQ_F$ given $\frac{P_C}{P_F}$.
+
+- V is an isovalue of output with slope = $\frac{P_C}{P_F}$
+
+:::
+::::
+
+## PPF
+
+![](Picture2.jpg)
+
+When $\frac{P_C}{P_F} \uparrow$, slope gets steeper, production decision moves to Q2. This changes reflected in the market as a relative supply of cloth.
+
+## Relative prices & demand
+
+- The value of the economy's consumption must equal the value of the economyu's production
+
+$$
+P_CD_C+P_FD_F=P_CQ_C+P_FQ_F=V
+$$
+
+- let's assume the economy's consumption decision may be represented by a single representative consumer.
+
+- more assumption: this decision follows a certain nicely designed function which can be visualized by an indifference curve.
+
+## Price & welfare
+
+![](Picture3.jpg)
+
+
+When $\frac{P_C}{P_F} \uparrow$, VV's slope steepen. Production & consumption moves from $\{Q^1,D^1\}$ to $\{Q^2,D^2\}$. $D^3=Q^3$ is the autarky equilibrium.
+
+## Case: US & China
+
+- The aggregate gains from trade are in large part driven by consumers’ access to cheaper imported goods.
+
+- On average, US gains from trading with China represented $1,500 per household per year between 2000-2007, mainly from decrease in prices.
+
+- And those price decreases were more pronounced for goods consumed by relatively poorer households.
+
+## Case: Indonesian rice
+
+- Rice import protection is in place to protect farmers' income.
+
+- However, [McCulloch (2008)](https://www.tandfonline.com/doi/full/10.1080/00074910802001579) shows that only 25% of HH plant rice, and 80% of them are net consumers in 2004.
+
+    - In 2012, the number is 88% according to [Patunru](https://medium.com/@acopatunru/beras-dan-mitos-762cf88b7bd9#id_token=eyJhbGciOiJSUzI1NiIsImtpZCI6IjZmOTc3N2E2ODU5MDc3OThlZjc5NDA2MmMwMGI2NWQ2NmMyNDBiMWIiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiIyMTYyOTYwMzU4MzQtazFrNnFlMDYwczJ0cDJhMmphbTRsamRjbXMwMHN0dGcuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiIyMTYyOTYwMzU4MzQtazFrNnFlMDYwczJ0cDJhMmphbTRsamRjbXMwMHN0dGcuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMTc3NjAxNDc1ODgzNzAzOTA1MjMiLCJlbWFpbCI6ImltZWRrcmlzbmFAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsIm5iZiI6MTcwOTQ0NzA5MSwibmFtZSI6ImltZWQga3Jpc25hIiwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0poVldOdEhteTZFUXU0NFFQTEI5bE5vZ29UR3M5ZW5rdVpiVWxWUzcxbzlBPXM5Ni1jIiwiZ2l2ZW5fbmFtZSI6ImltZWQiLCJmYW1pbHlfbmFtZSI6ImtyaXNuYSIsImxvY2FsZSI6ImVuIiwiaWF0IjoxNzA5NDQ3MzkxLCJleHAiOjE3MDk0NTA5OTEsImp0aSI6ImFmNDA4MDY1YjFhZDk3NjAxMDJmOGFiZTdkMTMxMWIxOTllZWIxZWUifQ.C2pudqMajwOvUfR9a807lLxI90lMLjjpEob1WaCjjznC0AlKpxC7u-bmx7QrJASPFd77FejnDLUMmvqUAECdaMym1cwnnIfSfYS8y5ovm6EW9Wc5Z2LIGzVdBr4WLxlCYHuYOWEcow1PyK5T6qnWvvKYD4Hag4Xnho3LTVvdxH1R-QWflfb3oizKDbQqJEQkTTQWlaEqVbcpZEAFxB2kJrvKD0cnEB7Z4hNN-xAsvLzwjmua9cj988XJO-c326opF6Cj4BnGDoRMCWUr07uxJOzBbSs1Y-6M29ru1RQmfsVyxuvl6GRHwt1o56G25CvIRFO-eiL-tohqRn4ZBLM9hA).
+    
+- Those that gain from higher prices tend to be farmers with access to slightly larger plots of land.
+
+- Thus an increase in the rice price constitutes a transfer from the large majority of consumers to a minority of producers at all income levels.
+
+## Terms of trade {.m}
+
+- The terms of trade refers to the price of exports relative to the price of imports.
+When a country exports cloth and the relative
+
+    -price of cloth increases, the terms of trade rise.
+    
+- Because a higher relative price for exports means that the country can afford to buy more imports, an increase in the terms of trade increases a country’ s welfare.
+
+- A decline in the terms of trade decreases a country’s welfare.
+
+## Determining prices {.m}
+
+:::: columns
+::: {.column width="47%"}
+
+![](Picture4.jpg)
+
+:::
+::: {.column width="47%"}
+
+- We need to have world quantities from H & F (assume only these 2 countries exist)
+
+$$
+\frac{Q_C+Q_C^*}{Q_F+Q_F^*} \\ \frac{D_C+D_C^*}{D_F+D_F^*}
+$$
+
+- w/o trade, home has lower $\frac{P_C}{P_F}$ and higher C production relative to F cuz it's good at making $C$.
+
+- trade converges to $RS^{WORLD}$
+
+:::
+
+::::
+
+## Equilibrium prices
+
+![](Picture5.jpg)
+
+Home PPF skews toward $C$ while foreign toward $F$. This differences allow trade to benefit both countries.
+
+## International effects of growth {.m}
+
+- Growth is usually biased: it occurs in one sectore more than others, leads to changes in relative supply & in turn relative prices.
+
+- Rapid growth has occurred in U.S. computer industries but relatively little growth has occurred in U.S. textile industries.
+
+- In the Ricardian model, technological progress in one sector causes biased growth.
+
+- In the Heckscher-Ohlin model, an increase in one factor of production causes biased growth.
+
+## Biased growth
+
+- Biased growth and the resulting change in relative supply causes a change in the terms of trade.
+
+- Biased growth in the cloth industry (in either the home or foreign country) will lower the price of cloth relative to the price of food and lower the terms of trade for cloth exporters.
+
+- Biased growth in the food industry (in either the home or foreign country) will raise the price of cloth relative to the price of food and raise the terms of trade for cloth exporters.
+
+## Biased growth
+
+![](Picture6.jpg)
+
+Growth biased toward cloth shifts the R S curve for the world to the right (a), while growth biased toward food shifts it to the left (b).
+
+## Effects of growth {.m}
+
+- Export-biased growth is growth that expands a country’s production possibilities disproportionately in that country’s export sector.
+
+    - Biased growth in the food industry in the foreign country is export-biased growth for the foreign country.
+
+- Import-biased growth is growth that expands a country’s production possibilities disproportionately in that country’s import sector.
+
+    - Biased growth in cloth production in the foreign country is import-biased growth for the foreign country.
+
+## Terms of trade
+
+- Export-biased growth reduces a country’s terms of trade, reducing its welfare and increasing the welfare of foreign countries.
+
+- Import-biased growth increases a country’s terms of trade, increasing its welfare and decreasing the welfare of foreign countries.
+
+## Terms of trade
 
 ```{r}
-#| label: fig1
-#| warning: false
 library(WDI)
 library(tidyverse)
-library(patchwork)
-fppf <- function(q) (16-q^2)^(0.5)
-demand<-function(q) 5-q
-supply<-function(q) q
 
-
-ppf<-ggplot() +
-  stat_function(fun = fppf,size=1.1, color='black') +
-  labs(x=expression(Q[C]), y=expression(Q[F]),color=NULL,fill=NULL)+
-  annotate("text",x=2,y=60,label=expression(Q[C]==Q[c](K,L[C])))+
-  scale_x_continuous(expand=c(0,0),limits = c(1,5))+
-  scale_y_continuous(expand=c(0,0),limits = c(1,5))+
-  theme_classic()+
-  theme(axis.title.x = element_text(hjust=1),
-        axis.title.y = element_text(angle=0,hjust=1,vjust=1),
-        panel.grid=element_blank(),
-        axis.text.x=element_blank(),
-        axis.text.y=element_blank(),
-        axis.ticks.x=element_blank(),
-        axis.ticks.y=element_blank(),
-        legend.position=c(1,1),
-        legend.justification = c(1,1),
-        legend.spacing=unit(0,"cm"),
-        legend.margin=margin(0,0,0,0))
-ppf2<-ppf+
-  annotate("segment",x = 1.2, y = 3.9,xend = 2.7, yend = 3.1,size=1.1)+
-  annotate("point", x=1.9,y=3.5,size=4)+
-  annotate("point", x=3.05,y=2.6,size=4)+
-  annotate("text", x=2,y=3.6,label="Q1")+
-  annotate("text", x=3.15,y=2.8,label="Q2")+
-  annotate("segment",x = 2.37, y = 3.5,xend = 3.92, yend = 1.5,size=1.1)
-ppf2+ggplot()+
-  labs(x=expression(frac(Q[C],Q[F])), y=expression(frac(P[C],P[F])),color=NULL,fill=NULL)+
-  theme_classic()+
-  geom_function(fun = supply,size=1, color='red') +
-  stat_function(fun = demand,size=1, color='blue') +
-  scale_x_continuous(limits = c(1,5))+
-  scale_y_continuous(limits = c(1,5))+
-  theme(axis.title.x = element_text(hjust=1),
-        axis.title.y = element_text(angle=0,hjust=1,vjust=1),
-        panel.grid=element_blank(),
-        axis.text.x=element_blank(),
-        axis.text.y=element_blank(),
-        axis.ticks.x=element_blank(),
-        axis.ticks.y=element_blank(),
-        legend.position=c(1,1),
-        legend.justification = c(1,1),
-        legend.spacing=unit(0,"cm"),
-        legend.margin=margin(0,0,0,0))
-```
-
-## 2 large countries
-
-```{r}
-#| label: fig2
-#| warning: false
-demand<-function(q) 4-.7*q
-supply<-function(q) .7*q
-demand1<-function(q) 7.5-1.5*q
-supply1<-function(q) 1.5*q
-
-a<-ggplot()+scale_x_continuous(limits = c(1,5))+
-  scale_y_continuous(limits = c(1,5))+theme_classic()+
-  theme(axis.title.x = element_text(hjust=1),
-        axis.title.y = element_text(angle=0,hjust=1,vjust=1),
-        panel.grid=element_blank(),
-        axis.text.x=element_blank(),
-        axis.text.y=element_blank(),
-        axis.ticks.x=element_blank(),
-        axis.ticks.y=element_blank(),
-        legend.position=c(1,1),
-        legend.justification = c(1,1),
-        legend.spacing=unit(0,"cm"),
-        legend.margin=margin(0,0,0,0))
-b<-a+
-  labs(x=expression(Q[H]),y=expression(P[H]),color=NULL,fill=NULL)+
-  geom_function(fun = supply,size=1, color='red') +
-  stat_function(fun = demand,size=1, color='blue')
-c<-a+
-  labs(x=expression(Q[F]),y=expression(P[F]),color=NULL,fill=NULL)+
-  geom_function(fun = supply1,size=1, color='red') +
-  stat_function(fun = demand1,size=1, color='blue')
-b+a+c
+indi<-c(            # membuat dictionary
+  "tot"="TT.PRI.MRCH.XD.WD"
   
+)
+
+dat<-WDI(           # Menarik data World Bank
+  country=c("IDN","USA","CHN"),
+  indicator=indi,
+  start=1980
+)
+
+dat |> ggplot(aes(x=year,y=tot,col=country))+geom_line(linewidth=1.1)+theme_classic()+theme(legend.position = "bottom")+labs(y="")
 ```
 
 
 
-## Dampak pertumbuhan ekonomi
-
-- Apakah pertumbuhan ekonomi di RRT atau Vietnam baik untuk Indonesia?
-- Apakah pertumbuhan ekonomi di Indonesia lebih baik jika tidak ada internasional trade?
-- Dua-duanya bisa jadi benar, bisa juga salah.
-
-## Biased growth
-
-- Ricardian: perubahan teknologi akan menyebabkan growth bias ke industri tertentu.
-- H-O: faktor produksi menyebabkan biased growth.
-- Indonesia: Industri makanan dan service tumbuh lebih cepat dari manufaktur.
-
-## Biased growth
-
-- Biased growth di negara besar dapat menyebabkan perubahan terms of trade
-- Pertumbuhan yang bias cloth: $\frac{P_C}{P_F} \downarrow$, TOT cloth exporter $\downarrow$
-- Pertumbuhan yang bias food: $\frac{P_C}{P_F} \uparrow$, TOT cloth exporter $\uparrow$
-- Pertumbuhan bias cloth bagi eksportir cloth disebut **export-bias growth**, sementara bagi importir cloth disebut **import-bias growth**
-
-## Biased growth
-
-> export bias growth tends to worsen a growing country's terms of trade to the benefit of the rest of the world; import-biased growth tends to improve a growing country's terms of trade at the rest of the world's expense
-
-## The evidence?
-
-- China, the exporter of the world, seems to experience lower terms of trade.
-- However,Data on US and EU terms of trade seems to adjust quite marginally.
-  - How important trade is in the economy?
-  - Trade measures may change terms of trade as well
-- What about Indonesia?
-
----
-
-<iframe src="https://data.worldbank.org/share/widget?end=2019&indicators=TT.PRI.MRCH.XD.WD&locations=ID-CN&start=2000" width='900' height='600' frameBorder='0' scrolling="no" ></iframe>
-
-## International borrowing and lending
-
-- Autarky: Apa yang dikonsumsi = apa yang diproduksi.
-- Trade: Yang penting $\sum_iQ_iP_i=\sum_iD_iP_i$
-- Intertemporal trade: possibility having a trade surplus dan trade deficit.
-  - at $t=1$, $\sum_iQ_iP_i=\sum_iD_iP_i+B$
-  - at $t=1$, $\sum_iQ_iP_i=\sum_iD_iP_i-(1+r)B$
-
-## Borrowing and lending {.m}
-
-- Standar trade model dapat kita modif untuk merefleksikan intertemporal trade:
-  - 2 goods: current consumption and future consumption.
-- PPF-nya adalah possible current consumption dan future consumption.
-- Let Home bias current consumption, Foreign bias future consumption.
-- Home export current consumption, import future consumption.
-- foreign ngutang dulu, bayar di periode berikutnya.
-
-## Harga intertemporal
-
-- Pinjem 1 unit of output, harus bayar 1+r di mana r=real interest rate.
-- $\frac{P_{current}}{P_{future}}=\frac{1}{1+r}$
-- lokasi produksi akan ada di slope $=-(1+r)$
-- Gambarnya akan mirip dengan standard model.
-
-## Economies of scale
-
-- Kita sudah membahas berbagai model yang menggunakan asumsi perfect competition.
-- Di perfect competition, supernormal profit ngga ada.
-- Meski demikian, seringkali di dunia nyata ada some degree of oligopoly or monopolistic competition.
-- International trade dapat membantu dalam hal ini.
-
-## Economies of scale {.m}
-
-- Bayangkan ada industri yang semakin besar outputnya, per unit cost nya semakin murah.
-- Sebagian besar tech services these days kaya gini:
-  - Google bisa nawarin servis gratis karena kliennya seluruh dunia.
-  - Netflix bisa jor-joran biaya produksi.
-- Tapi banyak usaha yang begini, terutama yang fixed cost-nya mahal.
-  - beli mesin kapasitas besar yang mahal bakal lama balik modalnya kalau produksinya sedikti.
-
-## International trade & economies of scale
-
-- Google dan Netflix adalah contoh bagaimana international trade membantu naikin scale firms sehingga bisa menjual produk dengan lebih murah.
-- Automotif di Amerika Latin gagal karena semua negara mencoba membangun industri otomotif.
-- Semakin kecil negaranya, semakin susah mencapai _economies of scale_.
-  - Karena itu negara kecil cenderung lebih aktif berdagang.
-
-## Eksternal dan internal economies of scale
-
-- Eksternal economies of scale: situasi di mana konsentrasi pasar akan menguntungkan jika terjadi di level industri. Firms-nya sendiri bisa ada banyak.
-- Internal economies of scale: Ketika konsentrasi pasar akan menguntungkan jika terjadi di level perusahaan, bukan industri.
-- Internal economies of scale akan dibahas di pertemuan berikutnya.
-
-## Eksternal economies of scale
-
-- Ada industri yang akan memniliki keunggulan jika memiliki lokasi yang berdekatan.
-- Hal ini disebut juga dengan aglomerasi.
-- Di berbagai belahan dunia, aglomerasi terjadi:
-  - Silicon Valley, Hollywood, Wu han, Bangalore.
-- Enabler aglomerasi: specialized suupplier, labor market pooling, dan knowledge spillovers.
-
-## Specialized suppliers
-
-- Di banyak industri, produksi dan produk development seringkali memerlukan peralatan khusus.
-- peralatan khsus ini mungkin tidak memiliki demand yang cukup jika pemainnya sedikit.
-- Seiring berkembangnya Silicon Valley sebagai pusat produksi semikonduktor, mulai bermunculan perusahaan yang membuat barang modal.
-- Perusahaan pembuat barang modal ini semakin mempermudah tumbuhnya perusahaan semikonduktor baru.
-
-## Silicon valley
-
-- Kuatnya industri produsen barang modal membuat perusahaan di luar Silicon Valley jadi kurang kompetitif.
-- Dis amping itu, seiring berkembangnya industri semikonduktor, banyak perusahaan malah semakin fokus 'fabless'.
-- Pada akhirnya, karena produsen barang modalnya juga semakin ahli, mereka juga bisa serve market di luar Amerika Serikat.
-- Semikonduktor adalah contoh di mana akses ke supplier yang sangat spesialisasi memberikan keunggulan.
-
-## Labor market pooling
-
-- Industri yang terletak di satu lokasi akan memberi keuntungan dalam hal mengumpulkan pegawai.
-- Jika sebuah industri memiliki banyak perusahaan yang terkonsentrasi di satu tempat, maka akan mudah bagi pekerja mencari pekerjaan di tempat tersebut.
-- Karena tau bahwa pekerja akan datang ke tempat tersebut, sebuah industri makin untung jika berlokasi di tempat tersebut.
-- Kampus seringkali jadi daya tarik aglomerasi bagi satu industri.
-
-## Knowledge spillover
-
-- Zaman sekarang, pengetahuan bisa dikatakan sama pentingnya dengan faktor produksi seperti kapital dan buruh.
-- Hal ini semakin penting lagi bagi industri yang mengandalkan inovasi dan kreativitas.
-- Akumulasi pengetahuan ada berbagai cara: reverse engineer, R&D, dst.
-- Namun aglomerasi memberikan kemungkinan akumulasi pengetahuan secara informal.
-
-## Silicon valley lagi
-
-- Silicon valley sering menjadi contoh sukses aglomerasi.
-  - Specialized suppliers
-  - Lokasi dekat kampus dan pusat R&D
-  - Bahkan di digital age, lokasi fisik masih penting dalam hal knowledge spillover.
-  
-- Sayangnya seringkali aglomerasi ini terjadi secara natural dan sulit dikopi.
-
-## Kenapa sulit?
-
-- Aglomerasi memberikan keunggulan bagi _established region_ yang industrinya sudah keburu matang.
-- Karena Hollywood sudah sangat besar, sulit bagi negara lain untuk mengkopi dari 0, kecuali bisa langsung sama besarnya dalam waktu singkat.
-  - Padahal, murahnya produk hollywood datang dari ukurannya yang besar.
-- Netflix termasuk pendatang awal di streaming, tapi dapat dikejar oleh Disney dan Amazon karena mereka memang sudah besar dari awal.
-
-## Natural resources
-
-- Dekat natural resources juga sering menjadi salah satu contoh _specialized suppliers_.
-- Salah satu faktor pendorong revolusi industri di Inggris adalah karena dia punya banyak batubara (ketika itu).
-- Indonesia dengan industri nikelnya sedang mengupayakan aglomerasi: kawasan industri smelter lengkap dengan universitas.
-- Apakah berhasil? Mudah-mudahan yah!
