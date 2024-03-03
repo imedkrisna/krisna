@@ -365,3 +365,39 @@ Import tariffs by foreign countries on goods that
 - The real interest rate rises in the country that lends (home) and falls in the country that borrows (foreign) due to intertemporal trade.
 
 ## Intl borrowing & lending {.m}
+
+:::: columns
+::: {.column width="47%"}
+
+![](Picture7.jpg)
+
+:::
+::: {.column width="47%"}
+
+![](Picture8.jpg)
+
+:::
+::::
+
+## Intl trade & borrowing
+
+- In our standard trade, gains come from more access to goods and services: the only reason we export is so we can import.
+
+    - if we can't import then exporting is useless.
+    
+    - therefore, trade will always balance ($PQ =PD$).
+    
+- In intertemporal trade, we can export more than we import.
+
+    - $PQ > PD \rightarrow$ trade surplus, meaning we lend.
+    - $PQ < PD \rightarrow$ trade deficit, meaning we borrow.
+    
+## Intl trade & borrowing
+
+- This is the case of Norway & Saudi. Both countries are huge exporters of oil.
+
+    - Instead of consuming their exports by importing stuff, they lend internationally in the form of sovereign wealth fund.
+    
+- We will learn more in the international finance part of the course after mid-term.
+
+- we will also learn more on the impact of tariffs on a small and large countries after mid-term.
