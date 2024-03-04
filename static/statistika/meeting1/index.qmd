@@ -367,6 +367,49 @@ $$
 
 $a+(-a)=0 \ \ \ \ \ \ \ \ \ \ a \times \frac{1}{a}=1 \ \ \ \ \ \ \ \ \ \ \ \ \ \frac{a}{a}=1$
 
+## Kaidah bilangan {.m}
+
+:::: columns
+::: {.column width=47%}
+
+7. Operasi tambah kurang: nyebrang menjadi minus
+
+$a-b=-b+a$
+
+$\\$
+
+Jika $a-b=c+d$, maka:
+
+$$
+\begin{aligned}
+a &= c+d+b \\
+-b &=c+d-a \\
+a-b-c &= d \\
+a-b-d &= c \\
+a-b-c-d &= 0
+\end{aligned}
+$$
+:::
+::: {.column width=47%}
+
+8. Operasi kali bagi: nyebrang tuker posisi
+
+Jika $ax=\frac{b}{y}$, maka
+
+$$
+\begin{aligned}
+a &= \frac{b}{xy} \\
+axy &= b \\
+\frac{axy}{b} & = 1 \\
+1 &= \frac{b}{axy}
+\end{aligned}
+$$
+
+:::
+::::
+
+
+
 ## Operasi pecahan
 
 - Penjumlahan: $\frac{a}{x} + \frac{b}{y}=\frac{ay+bx}{xy}$
