@@ -391,13 +391,11 @@ Import tariffs by foreign countries on goods that
 
 ## Intl transfers
 
-- If the domestic country generates national income for transfers by 
+- Quite often, international income transfers are used to fund imports. Meaning, demand of imported goods increased, hence lower relative price.
 
-    - increasing the price of imports to reduce their purchases and by decreasing the price of exports to increase their sales, 
+- This means $\frac{P_C}{P_F} \downarrow$ cuz F is the imported goods.
     
-    - the terms of trade would fall and the demand of cloth relative to food would decrease (represented by shifting the relative demand curve left).
-
-
+- the terms of trade would fall and the demand of cloth relative to food would decrease (represented by shifting the relative demand curve left).
 
 ## Intl trade & borrowing
 
