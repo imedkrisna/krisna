@@ -379,6 +379,26 @@ Import tariffs by foreign countries on goods that
 :::
 ::::
 
+## Intl transfers
+
+- Transfers of income sometimes occur from one country to another.
+
+    - War reparations or foreign aid may influence demand of traded goods and therefore relative demand.
+
+    - International loans may also influence relative demand in the short run, before the loan is paid back.
+    
+- How do transfers of income across countries affect relative demand and the terms of trade?
+
+## Intl transfers
+
+- If the domestic country generates national income for transfers by 
+
+    - increasing the price of imports to reduce their purchases and by decreasing the price of exports to increase their sales, 
+    
+    - the terms of trade would fall and the demand of cloth relative to food would decrease (represented by shifting the relative demand curve left).
+
+
+
 ## Intl trade & borrowing
 
 - In our standard trade, gains come from more access to goods and services: the only reason we export is so we can import.
@@ -398,6 +418,32 @@ Import tariffs by foreign countries on goods that
 
     - Instead of consuming their exports by importing stuff, they lend internationally in the form of sovereign wealth fund.
     
+- Also the case why we have plenty of FDI in Indonesia: surplus countries like China, Korea and Japan are investing their surpluses into Indonesia.
+
+- At the same time, Indonesia is also invest in other countries. Remember [Panama Papers](https://offshoreleaks.icij.org/search?c=IDN&cat=1)?
+    
+## Conclusions {.m}
+
+- The standard trade model combines all trade models we learned so far into 1 framework
+
+- It predicts changes in welfare and income in various cases:
+
+    - import tax, export subsidy, international income transfers.
+    
+    - all of these impact are through changes in terms of trade.
+    
+- It is important to understand the assumption behind this model.
+
+    - In the policy part, we will learn what if these assumptions are violated.
+
+## The finance part {.m}
+
+- The standard model is a real model in the sense that it doesn't care about the financial sector.
+
+    - The only reason you export is because you want to import. ie. X-M=0
+
+- The international income transfers and intertemporal trade are cases where we must include the finance part of trade.
+
 - We will learn more in the international finance part of the course after mid-term.
 
 - we will also learn more on the impact of tariffs on a small and large countries after mid-term.
