@@ -46,6 +46,8 @@ format:
     
     -   Lewat BPK masing-masing
     
+- more at [krisna.or.id](https://krisna.or.id) and [imedkrisna.github.io](https://imedkrisna.github.io/)
+    
 :::
 :::
 
@@ -65,7 +67,7 @@ format:
     
     - Meramalkan berbagai indikator ekonomi.
     
-- Bahkan, statistika digunakan untuk **berbohong**.
+- Bahkan, statistika digunakan untuk **"berbohong"**.
 
     - Pemahaman statistika yang baik dapat membantu.
 
@@ -158,7 +160,6 @@ Diturunkan menjadi capaian mata kuliah:
 -   bagi yang hadir dimohon untuk fokus, sopan dan tertib.
 -   Makan dan minum boleh. ~~Dosen harus dibagi~~
 -   Tidak perlu ijin kalau mau keluar dengan alasan apapun.
--   Di tengah perkuliahan akan ada break sekitar 15 menit.
 -   Jika ada pertanyaan, silakan langsung diajukan.
 
 ## Evaluasi pembelajaran
@@ -190,153 +191,62 @@ Diturunkan menjadi capaian mata kuliah:
 
 <iframe src="https://giphy.com/embed/KUmcYqPW0dIGNHDEoE" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/disneyplus-marvel-studios-marvelstudios-msmarvel-KUmcYqPW0dIGNHDEoE">via GIPHY</a></p>
 
-## Data dan Statistika
+## Matematika
 
-- Data adalah **kumpulan informasi yang didapatkan dari melakukan pengamatan (observasi)**.
+::: {.incremental}
+- Apa yang dimaksud dengan matematika?
 
-- Pada hakikatnya, penggunaan data dan statistika berfungsi untuk **menjawab pertanyaan** seperti:
+- Matematika **bukan** (hanya) soal berhitung!
 
-    - Bagaimana kondisi sosial ekonomi penduduk Indonesia? Dibandingkan dengan RRT?
+- Matematika (dari bahasa Yunani Kuno) berarti ilmu pengetahuan, pengkajian, pembelajaran.
+
+- Matematika sendiri merupakan sekumpulan ilmu abstrak dan terapan yang mempelajari bilangan, struktur, ruang, dan perubahan.
+:::
+
+## Matematika
+
+- Di mata kuliah ini, matematika yang anda pelajari hanya akan berisi sedikit tentang hubungan antar-bilangan dan/atau himpunan.
+
+- Kita juga akan belajar dinamika bilangan yang kita sebut dengan deret
+
+- Anda juga akan belajar konsep fungsi dan diagram kartesius, konsep yang sangat penting untuk menganalisis ekonomi.
+
+- Kita juga akan belajar peluang, dan sedikit tentang differensial / turunan.
+
+## Himpunan
+
+- Himpunan adalah suatu kumpulan atau gugusan dari sejumlah obyek.
+
+    - obyek-obyek ini disebut dengan anggota atau elemen atau unsur.
     
-    - Berapa ekspor Indonesia tahun 2020? Apakah meningkat dibandingkan tahun 2019?
+- Misalnya; $A=\{2,4,6,8\}$
+
+    - Himpunan A memiliki 4 anggota, yaitu 2,4,6 dan 8.
     
-- Anda setiap hari juga mengumpulkan data!
+- Misalnya: HIMA={Adit,Carol,Dian,Raja}
 
-## Data yang baik
-
-- Data akan menjadi basis dalam menjawab pertanyaan dan membuat keputusan. Data salah, keputusan juga salah!
-
-- Data yang baik haruslah objektif, representatif, valid, tepat waktu dan relevan.
-
-- Objektif berarti dapat meminimalisir perbedaan persepsi antar-pengamat / individu.
-
-- harus memiliki alat ukur yang konsisten dan disepakati, dengan metode yang dapat diaudit.
-
-- contoh: di kelas saya ada 10 orang yang gendut vs di kelas saya, 10 orang punya berat badan di atas 70 kg.
-
-## Data yang baik
-
-- Representatif berarti harus mewakili obyek yang diamati. Obyek yang representatif biasanya akan didapatkan dengan sampling yang acak.
-
-- valid berarti data tersebut memiliki kesalahan sampling yang kecil dan memiliki tingkat ketelitian yang tinggi. Jika diulang samplingnya, hasilnya akan sama.
-
-- tepat waktu berarti datanya harus sesuai berdasarkan waktu dan selalu terupdate.
-
-- relevan berarti data tersebut benar-benar mengukur hal yang sesuai dengan pertanyaan yang ingin dijawab.
-
-## Jenis-jenis data
-
-| jenis data | definisi |	contoh |
-| ----- | ----- | ------- |
-| Kategorikal / nominal | 	kualitatif, ga ada urutan |	nama, jenis kelamin, suku |
-| Ordinal |	kualitatif, ada urutan | ukuran baju, ukuran sepatu, medali |
-| Hitung | 	kuantitatif, integer |	nomor telepon, jumlah anak |
-| Riil / kontinyu | 	kuantitatif, riil |	PDB, ekspor impor |
-
-## Data Kontinyu {.m}
-
-- data kontinyu dapat dibagi 2: rasio dan interval.
-
-- keduanya memiliki interval yang sama untuk semua angka.
-
-- tapi, interval tidak punya 0 yang berarti.
-
-    - untuk rasio, 0 = tidak ada. contoh: ekspor, impor, kalori. Tidak ada nilai negatif.
+    - HIMA memiliki 4 anggota.
     
-    - interval, 0 = ga penting. contoh: nilai TOEFL, temperatur. Ada nilai negatif.
-    
-- Transformasi di rasio tidak akan mengubah besarnya urutan.
+## Notasi
 
-    -  10 kg = 2x lebih berat dari 5 kg. begitupun 22.04 lbs vs 11.02 lbs
-    
-    - 1$^o$ C to 100$^o$ C = 100x lipat, tapi 274.15$^o$ K to 373.15$^o$ K bukan 100x lipat
-    
-## Dampaknya?
+| Notasi | Artinya |
+| --- | ------- |
+| $\in$ | Anggota / elemen |
+| $\not \in$ | Bukan anggota / bukan elemen |
+| $\subset$ | bagian / subset |
+| $\not \subset$ | bukan bagian / bukan subset |
+| $\cup$ | gabungan / union |
+| $\cap$ | irisan / intersection |
+| $\varnothing$ | himpunan kosong |
 
-- Tipe data yang berbeda menuntut cara analisis yang berbeda pula.
+Contoh: Carol $\in$ HIMA, 4 $\in$ A, Soni $\not \in$ HIMA
 
-- Biasanya, dalam metode statistik, data rasio adalah data yang paling mudah untuk digunakan dalam analisis.
+## Contoh
 
-- Jika tipe data anda bukan rasio, harus sedikit diakalin metodenya. Bisa, tapi lebih ribet dikit.
+$$
+A=\{0,1,2,3,4,5,6,7,8,9\} \\
+B=\{0,1,2,3\} \\
+C=\{1,3,5,7,9\} \\
+D=\{9\}
+$$
 
-- Di mata kuliah ini, kita akan fokus pada data yang sebagian besar berupa data rasio.
-
-## Cara pengambilan data
-
-- **Sensus** adalah metode pengumpulan data yang melibatkan keseluruhan populasi yang ingin diselidiki.
-
-    - misalnya, untuk mendapatkan nilai UAS mata kuliah statistika, saya mencatat semua nilai UAS mahasiswa APP yang mengambil mata kuliah statistika.
-    
-- Sensus memiliki gambaran yang lengkap, tapi anda tidak boleh menyimpulkan sesuatu dari luar populasi.
-
-    - misalnya, hasil sensus penduduk jagakarsa tidak dapat anda gunakan untuk menyimpulkan Jakarta Selatan secara umum.
-    
-- Kelemahan sensus: mahal dan makan banyak waktu.
-
-## Cara pengambilan data
-
-- **sampling** adalah metode pengumpulan data yang melibatkan sebagian dari populasi yang ingin diselidiki.
-
-    - misalnya, untuk menilai apakah kelas A lebih bagus nilainya dari kelas B, saya menguji 10 orang dari kelas A dan 10 orang dari kelas B.
-    
-    - 10 orang ini kita sebut sampel, sementara populasinya adalah keseluruhan anggota kelas A dan kelas B.
-    
-- sampling lebih murah, namun kita harus memastikan bahwa samplenya **representatif**.
-
-## Sampling
-
-- dapat dilakukan secara **acak** dan **non-acak**.
-
-- Acak (_random_) artinya bahwa semua anggota populasi punya kesempatan yang sama untuk menjadi sampel.
-
-    - misalnya saya tunjuk secara acak 10 mahasiswa di tiap kelas.
-    
-- Non-acak berarti kita mendorong satu bagian dari populasi dengan karakteristik tertentu punya kesempatan yang lebih banyak untuk terpilih menjadi sampel.
-
-    - misalnya saya hanya menunjuk 10 anak yang pakai kacamata, atau menunjuk 10 anak yang duduknya paling dekat saya.
-    
-## Sampling acak {.m}
-
-- Simple random sampling berarti mengambil sampel secara acak langsung dari populasinya.
-
-- Stratified random sampling: membagi populasi menjadi sub-populasi atau strata, lalu mengambil secara acak dari tiap-tiap stratum.
-
-- Cluster random sampling: membagi populasi menjadi strata, lalu secara acak mengambil satu stratum dan mengambil semua anggota stratum tersebut menjadi sampel.
-
-- Multistage random sampling: Membagi populasi ke dalam strata, mengambil beberapa strata secara acak, lalu dari strata yang diambil tersebut disampling lagi.
-
-## Pilih yang mana?
-
-- Semua teknik di atas dapat dilakukan dengan kemungkinan mendapatkan sample representatif yang relatif mirip.
-
-- Tapi intinya, harus dilakukan secara acak!
-
-- Semakin besar populasinya, biasanya menggunakan strata bisa lebih membuat percaya diri.
-
-- tapi jika benar dapat melakukannya secara acak, maka seharusnya cara manapun akan memiliki data yang tidak berbeda jauh.
-
-## Statistika
-
-- Statistika adalah ilmu yang mempelajari bagaimana cara mengumpulkan, mengorganisasikan, menerjemahkan dan menarik kesimpulan dari data.
-
-- Meskipun statistika awalnya banyak diajarkan untuk bidang ilmu pasti, namun saat ini ekonomi dan manajemen juga menggunakannya.
-
-- Cara-cara menerjemahkan dan menarik kesimpulan ini juga tergantung dari jenis data yang kita perlukan.
-
-## Pertemuan pertama
-
-- Apa itu data? Mengapa data memiliki peranan yang penting di ilmu sosial?
-
-- Berbagai metode pengumpulan data
-
-- Definisi statistika
-
-- Quiz online minggu ini hari selasa, ditutup hari senin sore.
-
-    - link akan dibagikan oleh ketua kelas.
-
-## Minggu depan
-
-- Konsep probabilitas
-
-- Distribusi populasi dan sampel
