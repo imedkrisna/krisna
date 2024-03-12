@@ -1,5 +1,5 @@
 ---
-title: "Operasional "
+title: "Pangkat, akar, log, persamaan"
 subtitle: "Pertemuan 2"
 author: "Matematika Statistika"
 format: 
@@ -82,7 +82,205 @@ $$
 \text {jika } \sqrt[a]{m}=x, \text{ maka } x^a=m
 $$
 
-- di kalkulator atau program komputer, jika ingin melakukan operasi $\sqrt[a]{m}, maka kita ngetiknya  `m^(1/a)`. Buka kurung tutup kurung jangan lupa.
+- di kalkulator atau program komputer, jika ingin melakukan operasi $\sqrt[a]{m}$, maka kita ngetiknya  `m^(1/a)`. Buka kurung tutup kurung jangan lupa.
 
 ## Kaidah akar
 
+:::: columns
+::: {.column width=47%}
+
+kaidah:
+
+1. $\sqrt[b]{x}=x^{\frac{1}{b}}$
+2. $\sqrt[b]{x^a}=x^{\frac{a}{b}}$
+3. $\sqrt[b]{xy}=\sqrt[b]{x} \cdot \sqrt[b]{y}$
+4. $\sqrt[b]{\frac{x}{y}}=\frac{\sqrt[b]{x}}{\sqrt[b]{y}}$
+
+:::
+::: {.column width=47%}
+
+contoh:
+
+1. $\sqrt[3]{5}=5^{\frac{1}{3}}$
+2. $\sqrt[3]{5^2}=5^{\frac{2}{3}}$
+3. $\sqrt[3]{5 \cdot 4}=\sqrt[3]{5} \cdot \sqrt[3]{4}$
+4. $\sqrt[3]{\frac{2}{5}}=\frac{\sqrt[3]{2}}{\sqrt[3]{5}}$
+
+:::
+::::
+
+## Kaidah perkalian
+
+5. Perkalian hanya dapat dilakukan jika akar-akarnya berpangkat sama.
+
+formal: $\sqrt[b]{x} \cdot \sqrt[b]{y}=\sqrt[b]{xy}$
+
+contoh: $\sqrt[3]{2} \cdot \sqrt[3]{5}=\sqrt[b]{2 \cdot 5}=\sqrt[3]{10}$
+
+6. akar $b$ dari akar $c$ adalah akar dari $bc$.
+
+formal: $\sqrt[b]{\sqrt[c]{x^a}}=\sqrt[bc]{x^a}$
+
+contoh: $\sqrt[3]{\sqrt[2]{7^5}}=\sqrt[3 \cdot 2]{7^5}$
+
+## Kaidah pembagian
+
+8. Hasil bagi bilangan terakar adalah akar dari hasil bagi bilangan-bilangannya. Hanya dapat dilakukan jika akarnya berpangkat sama.
+
+formal: $\frac{\sqrt[b]{x}}{\sqrt[b]{y}}=\sqrt[b]{\frac{x}{y}}$
+
+contoh: $\frac{\sqrt[3]{5}}{\sqrt[3]{7}}=\sqrt[3]{\frac{5}{7}}$
+
+## Logaritma
+
+logaritma pada intinya merupakan kebalikan dari proses pangkat dan/atau akar.
+
+:::: columns
+::: {.column width=33%}
+
+$$
+\begin{aligned}
+x^a &= m \\
+5^3 &= 125
+\end{aligned}
+$$
+
+:::
+::: {.column width=33%}
+
+$$
+\begin{aligned}
+\sqrt[a]{m} &= x \\
+\sqrt[3]{125} &= 5
+\end{aligned}
+$$
+
+:::
+::: {.column width=33%}
+
+$$
+\begin{aligned}
+\log_x {m} &= a \\
+\log_5 {125} &= 3
+\end{aligned}
+$$
+
+:::
+::::
+
+- 5 harus dipangkatkan berapa supaya jadi 125.
+
+- 5 (atau secara umum $x$) disebut dengan **basis**
+
+## Basis logaritma {.m}
+
+$$
+\log_x m=a \\
+^x \log m=a
+$$
+
+- Basis seringkali ditulis di belakang-atas, bisa juga di depan-bawah.
+
+- Basis dapat berupa bilangan positif apapun, tapi ada 2 basis yang paling umum:
+
+- Basis 10. Jika basis tidak ditulis biasanya berarti basis 10.
+
+- Basis $e$, basis e ditulis juga dengan $\ln$, disebut juga _natural logarithm_.
+
+- $e$ sendiri artinya eksponensial. Di kalkulator kamu ditulis $\exp$.
+
+- Di ekonomi, kita lebih sering pake $\ln$ dan $e$ daripada $\log$.
+
+## Kaidah logaritma
+
+:::: columns
+::: {.column width=47%}
+
+1. $^x \log x = 1$
+2. $^x \log 1 = 0$
+3. $^x \log m = \text{undefined} \\ if\ m \le 0$
+4. $^x \log x^a=a$
+5. $\log_x m^a = a \ \log_x m$
+
+:::
+::: {.column width=47%}
+
+6. $x^{log_x m}=m$
+7. $\log_x mn = \log_x m + \log_x n$
+8. $\log_x \frac{m}{n}=\log_x m-\log_x n$
+9. $\log_x m \cdot loog_m x =1$
+10. $\log_x m \cdot \log_m n \cdot \log_n x=1$
+
+:::
+::::
+
+## Contoh
+
+:::: columns
+::: {.column width=47%}
+
+1. $^8\log 8=1$
+2. $\log_8 1=0$
+3, $\log_5 5^7=7$
+4. $^5\log 3^7=7 \times ^5\log 3$
+5. $5^{^5\lg 25}=25$
+
+:::
+::: {.column width=47%}
+
+6. $\log 1000 = ?$
+7. $\log_5 \frac{3}{7}=\log_5 3-\log_5 7$
+8. $\log_3 5 \cdot \log_5 3 =1$
+9. $\log_5 (3\times 7)=\log_5 3 + \log_5 7$
+10. $\log_3 5 \cdot \log_5 2 \cdot \log_2 3=1$
+
+:::
+::::
+
+## Penjumlahan
+
+penjumlahan/pengurangan untuk bilangan menempel/dikali dengan akar, pangkat dan log serta eksponen dapat kita lakukan selama pengalinya sama.
+
+1. $m \sqrt[b]{x^a} \pm n \sqrt[b]{x^a}=(m \pm n)\sqrt[b]{x^a}$
+2. $m \cdot x^a \pm n x^a=(m \pm n)\cdot x^a$
+
+3. $m \log_a x+n \log_a x=(m\pm n) \log_a x$
+3. $m \cdot e^a+n \cdot e^a=(m\pm n) e^a$
+
+## Persamaan
+
+- Ketika kita sedang mencari penyelesaian untuk satu variabel, kita ingin si variabel tersebut ada di kiri $=$ sementara sisanya kita taruh di atas.
+
+- Kita akan memerlukan pemahaman ini untuk semua mata kuliah lain ke depannya.
+
+- Kita dapat menggunakan aturan-aturan di atas untuk menyelesaikan beberapa persamaan.
+
+- Kita juga dapat melakukan transformasi, asal transformasi tersebut dilakukan di kedua sisi $=$
+
+## Contoh soal
+
+Carilah $x$
+
+1. $x^3-15=12$
+
+2. $3-\sqrt[3]{x^2}=30$
+
+3. $4a-5b+3x=20$
+
+4. $2^{4x-6}=64$
+
+5. $\log (5x-50)=2$
+
+## Note
+
+- Di ujian, anda harus coba selesaikan persamaan ini sejauh yang anda bisa, sesederhana mungkin.
+
+- Ada kalanya jawaban yang diharapkan akan tidak akan terlalu jauh.
+
+- Jawaban yang berakhir pecahan, pangkat atau log akan tetap dianggap benar.
+
+## Mingdep
+
+- Fungsi
+
+- Diagram kartesian
