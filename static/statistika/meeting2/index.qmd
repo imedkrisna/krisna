@@ -1,5 +1,5 @@
 ---
-title: "Statistik deskriptif"
+title: "Operasional "
 subtitle: "Pertemuan 2"
 author: "Matematika Statistika"
 format: 
@@ -11,4 +11,78 @@ format:
     background-transition: fade
     slide-number: true
 ---
+
+## Pangkat
+
+- Pangkat merupakan suatu indeks yang menunjukkan banyaknya perkalian bilangan yang sama secara berurutan.
+
+- notasi $x^a$ artinya bahwa sebuah bilangan $x$ harus dikali dengan dirinya sendiri sebanyak $a$ kali.
+
+$5^3=5 \times 5 \times 5$.
+
+- di beberapa program, pangkat menggunakan simbol $\^$, sering disebut topi atau _hat_.
+
+## Kaidah pangkat
+
+:::: columns
+::: {.column width=47%}
+
+1. $x^0=1$
+2. $x^1=x$
+3. $0^a=0$
+4. $x^{-a}=\frac{1}{x^a}$
+5. $x^{\frac{1}{a}}=\sqrt[a]{x}$
+
+:::
+::: {.column width=47%}
+6. $x^{\frac{a}{b}}=\sqrt[b]{x^a}$
+7. ${\left(\frac{x}{y}\right)}^a=\frac{x^a}{y^a}$
+8. $\left(x^a\right)^b=x^{ab}$
+9. $x^{a^b}=x^c,$ di mana $c=a^b$
+
+:::
+::::
+
+## Contoh pangkat
+
+:::: columns
+::: {.column width=47%}
+
+1. $3^0=1$
+2. $3^1=3$
+3. $0^5=0$
+4. $3^{-2}=\frac{1}{3^2}$
+5. $5^{\frac{1}{3}}=\sqrt[3]{5}$
+
+:::
+::: {.column width=47%}
+6. $5^{\frac{2}{3}}=\sqrt[3]{5^2}$
+7. ${\left(\frac{3}{5}\right)}^2=\frac{3^2}{5^2}$
+8. $\left(3^5\right)^2=3^{5\times 2}$
+9. $3^{2^3}=x^8$
+
+:::
+::::
+
+## Kaidah pangkat
+
+10. $x^ax^b=x^{a+b}$
+
+11. $x^ay^a=(xy)^a$
+
+12. $x^a:x^b=x^{a-b}$
+
+13. $x^a:y^a=(\frac{x}{y})^a$
+
+## Akar
+
+- Akar sebenernya adalah bagian dari pangkat.
+
+$$
+\text {jika } \sqrt[a]{m}=x, \text{ maka } x^a=m
+$$
+
+- di kalkulator atau program komputer, jika ingin melakukan operasi $\sqrt[a]{m}, maka kita ngetiknya  `m^(1/a)`. Buka kurung tutup kurung jangan lupa.
+
+## Kaidah akar
 
