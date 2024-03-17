@@ -1,5 +1,5 @@
 ---
-title: "Firms in international trade"
+title: "Internal and External Economies of Scale"
 subtitle: "ECES905205 pertemuan 6"
 date: ""
 author: "I Made Krisna Gupta"
@@ -14,25 +14,227 @@ format:
   beamer: default
 ---
 
-## Internal economies of scale {.m}
+## So far
 
-- Muncul ketika average cost dari sebuah perusahaan menjadi semakin kecil seiring besarnya produksi.
-- Industri yang fixed cost-nya besar akan punya barier to entry yang besar.
-- Fixed cost banyak wujudnya: riset, mesin, network, akses ke SDA, nama besar.
-- Akibatnya, jumlah perusahaan yang sanggup masuk jadi terbatas.
-- Perusahaan-perusahaan ini jadi bisa mainin harga.
+- Under the standard theory, trade improves welfare under our typical assumption. Among them:
+
+- constant (Ricardian) or decreasing returns to scale (SFM, HO, STM).
+
+    - that is, the more Q, factor productivity goes down.
+
+- What if the production function is increasing returns to scale: cost goes down.
+
+    - Trade under the existence of externalities / non-trivial fixed cost.
+    
+## Economies of scale and market structure
+
+- Economies of scale could mean either that larger firms or a larger industry would be more efficient.
+
+- External economies of scale occur when the cost per unit of output depends on the size of the industry.
+
+- Internal economies of scale occur when the cost per unit of output depends on the size of the firm.
+
+## Economies of scale and market
+
+- Both external and internal economies of scale are important causes of international trade.
+
+- They have different implications for the structure of industries:
+
+- An industry where economies of scale are purely external will typically consist of many small firms and be perfectly competitive.
+
+- Internal economies of scale result when large firms have a cost advantage over small firms, causing the industry to become imperfectly competitive.
+
+## External economies theory
+
+- Production becomes efficient when it is concentrated in one of few locations (aka the agglomeration effect)
+
+- In the United States, the semiconductor industry is concentrated in Silicon Valley, investment banking in New York, and the entertainment industry in Hollywood.
+
+- One town in China produces most of the world’s underwear production, another produces nearly all cigarette lighters.
+
+- Indian information services companies are still clustered in Bangalore.
+
+## Why agglomeration?
+
+1. Specialized equipment or services may be needed for the industry, but are only supplied by other firms if the industry is large and concentrated.
+
+- For example, Silicon Valley in California has a large concentration of silicon chip companies, which are serviced by companies that make special machines for manufacturing silicon chips.
+
+- These machines are cheaper and more easily available there than elsewhere.
+
+## Why agglomeration?
+
+2. Labor pooling: a large and concentrated industry may attract a pool of workers, reducing employee search and hiring costs for each firm.
+
+3. Knowledge spillovers: workers from different firms may more easily share ideas that benefit each firm when a large and concentrated industry exists.
+
+## Equilibrium {.m}
+
+:::: columns
+::: {.column width=47%}
+
+![](Picture1.png)
+
+:::
+::: {.column width=47%}
+
+- unlike perfect market, external economies of scale leads to a downward sloping AC.
+
+- However, competition is still fierce -> AC curve become **forward-falling supply curve**.
+
+- The equilibrium is at point 1.
+
+- This point different between countries: depends on initial condition of supply and demand, also depends on comparative advantage.
+
+:::
+::::
+
+## External economies and trade
+
+Suppose US vs China where the $P_CHINA<P_US$ before trade. When they trade, the two countries suddenly joined their demand. For consumers, it is cheaper to source all Button from China.
+
+![](Picture2.png)
+
+## External economies and trade
+
+ - The Chinese button industry will expand, while the U.S. button industry will contract.
+
+- This process feeds on itself: As the Chinese industry’s output rises, its costs will fall further; as the U.S. industry’s output falls, its costs will rise.
+
+- In the end, all button production will be in China.
+
+## External economies and trade
+
+- How does this concentration of production affect prices?
+
+- Chinese button prices were lower than U.S. button prices before trade.
+
+- Because China’s supply curve is forward-falling, increased production as a result of trade leads to a button price that is lower than the price before trade.
+
+- Trade leads to prices that are lower than the prices in either country before trade!
+
+## External economies and trade
+
+- This is very different from the implications of models without increasing returns.
+
+- In the standard trade model, relative prices converge as a result of trade.
+
+- If cloth is relatively cheap in the home country and relatively expensive in the foreign country before trade opens, the effect of trade was to raise cloth prices in Home and reduce them in Foreign.
+
+- With external economies, by contrast, the effect of trade is to reduce prices everywhere.
+
+## External economies and trade
+
+- What might cause one country to have an initial advantage from having a lower price?
+
+- One possibility is comparative advantage due to underlying differences in technology and resources.
+
+- If external economies exist, however, the pattern of trade could be due to historical accidents:
+
+- Countries that start as large producers in certain industries tend to remain large producers even if another country could potentially produce more cheaply.
+
+## External economies and trade
+
+- A tufted blanket, crafted as a wedding gift by a 19th-century teenager, gave rise to the cluster of carpet manufacturers around Dalton, Georgia.
+
+- Silicon Valley may owe its existence to two Stanford graduates named Hewlett and Packard who started a business in a garage there.
+
+- Legend has it, Kudus become [The Kretek City](https://travel.kompas.com/read/2023/11/08/204000527/mengapa-kudus-dijuluki-kota-kretek-ketahui-5-alasannya?page=all#google_vignette) was credited to Haji Djamhari and Nitisemito.
+
+## External economies and trade
+
+- Assume that the Vietnamese cost curve lies below the Chinese curve because Vietnamese wages are lower than Chinese wages.
+
+- At any given level of production, Vietnam could manufacture buttons more cheaply than China.
+
+- One might hope that this would always imply that Vietnam will in fact supply the world market.
+
+- But this need not always be the case if China has enough of a head start.
+
+- No guarantee that the right country will produce a good that is subject to external economies.
+
+## External econ & trade {.m}
+
+:::: columns
+::: {.column width=47%}
+
+![](Picture3.png)
+
+:::
+::: {.column width=47%}
+
+- Suppose Vietnam has even lower $AC$ than China.Producing in Vietnam would placed world Q and P at point 2.
+
+- If the Chinese industry established first (Hence started at 1), while Vietnam hasn't built its button industry, it starts at $C_0$.
+
+- since $C_0 > P_1$, no firms would even starting its company in Vietnam.
+
+:::
+::::
+
+## External econ & trade
+
+- Trade based on external economies has an ambiguous effect on national welfare.
+
+- There will be gains to the world economy by concentrating production of industries with external economies.
+
+- It’s possible that a country is worse off with trade than it would have been without trade: a country may be better off if it produces everything for its domestic market rather than pay for imports.
+
+## Worse with trade
+
+- Imagine that Thailand could make watches more cheaply, but Switzerland got there first.
+
+- The price of watches could be lower in Thailand with no trade.
+
+- Trade could make Thailand worse off, creating an incentive to protect its potential watch industry from foreign competition.
+
+- What if Thailand reverts to autarky?
+
+## Worse with trade {.m}
+
+:::: columns
+::: {.column width=47%}
+
+![](Picture4.png)
+
+:::
+::: {.column width=47%}
+
+- At first, TH import watch from SW at point 1. $P_1$ is low enough to block entry.
+
+- However, if Thailand block import, its industry must produce, and the scale can go to point 2, where $P_2<P_1$.
+
+- This situation provides a reason for a temporary protectionism.
+
+## External economies
+
+- Note that it’s still to the benefit of the world economy to take advantage of the gains from concentrating industries.
+
+- Each country wanting to reap the benefits of housing an industry with economies of scale creates trade conflicts.
+
+- Overall, it’s better for the world that each industry with external economies be concentrated somewhere.
+
+## Dynamic scale {.m}
+
+- So far, we have considered cases where external economies depend on the amount of current output at a point in time.
+
+- But external economies may also depend on the amount of cumulative output over time.
+
+- Dynamic increasing returns to scale exist if average costs fall as cumulative output over time rises.
+
+- Dynamic increasing returns to scale imply dynamic external economies of scale, which provide a case for protectionism.
+
+- Trade based on external economies of scale may increase or decrease national welfare, and countries may benefit from temporary protectionism if their industries exhibit external economies of scale either at a point in time or over time.
 
 ## Internal economies of scale
 
-- Di dunia nyata, ada banyak perusahaan MNC yang menguasai global market share yang tidak kecil.
-  - Industri pesawat terbang, semikonduktor, perangkat lunak, _soft drink_, mi instan.
-- Perdagangan internasional dan international finance (FDI) memberikan gain tambahan:
-  - firms paling efisien akan mendominasi dan mendorong turunnya harga.
-  - firms inefisien akan keluar dari pasar.
+- Internal economies of scale result when large firms have a cost advantage over small firms, causing the industry to become uncompetitive.
 
-## example: mobile phone
+- Internal economies of scale imply that a firm’s average cost of production decreases the more output it produces.
 
-![Sumber: https://gs.statcounter.com/chart.php?mobile_vendor-ww-yearly-2021-2021](phone.png)
+- This can be modeled by a large fixed cost, which can create a **barrier to entry**.
+
+- example of fixed cost: R&D, specialized machine, access to natural resources, brand name, network effect.
 
 ## Monopolistic competition
 
@@ -144,22 +346,21 @@ plot+
 ```
 :::
 ::: {.column width="47%"}
-- monopolist akan memaksimalkan profit di MR=MC
-- pastinya akan ngecharge P>AC
+- monopolist maximized profit at MR=MC
+- Will charge P>AC
 - profit $=(P-AC)Q$
 :::
 :::
 
 ## Monopolistic competition
 
-- monopolistic competition industries punya sifat:
-  - firms bisa diferensiasi produk dari kompetitor
-  - harga yang diset rival eksogen.
-  - ada **free entry**
+- Each firm under monopolistic competition industries:
+  - can differentiate its product from competitors'
+  - takes prices charged by rivals as given
+  - expected to sell more as total sales in the industry increase & as prices charged by rivals increase.
+  - sell less as number of firms decreases and firm's price increases.
 
-- Industri apa yang seperti ini?
-
-## Karakteristik monopolistic
+## monopolistic characteristics
 
 $$
 Q=S\times\left[1/n-b(P-\bar{P})\right]
@@ -177,28 +378,23 @@ $$
 
 - $\bar{P}$ = rival's price index
 
-## Karakteristik monopolistic 
+## Monopolistic characteristics
 
 $$
 Q=S\times\left[1/n-b(P-\bar{P})\right]
 $$
 
-- sales firm akan naik jika total sales industri naik, harga rival naik.
-- sales firm akan turun jika jumlah industri naik, harga sendiri naik.
-- Jika semua firm identik, maka $P=\bar{P}$, semua akan produksi dengan jumlah yang sama $S/n$
-- $AC=\frac{F}{Q}+c \Rightarrow AC=n\frac{F}{S}+c$
+- Suppose all firms are identical, then $P=\bar{P}$
+
+- All firms share equal amount of market share $S/n$
+
+- Average costs should depend on the size of the market and the number of firms.
+
+$AC=\frac{F}{Q}+c \Rightarrow AC=n\frac{F}{S}+c$
 
 ## Karakteristik monopolistik
 
-$AC=n\frac{F}{S}+c$
-
-- Average cost akan naik seiring jumlah perusahaan yang bertambah, hal ini karena jumlah market share yang berkurang.
-- Seiring naiknya ukuran pasar, average cost dapat dikurangi karena tiap firm dapat produksi lebih banyak.
-- Average cost akan menentukan besarnya per-unit profit, namun produksi tetap dilakukan di MR=MC seperti halnya monopoli.
-
-## Karakteristik monopolistik
-
-- Perusahaan produksi di MR=MC, namun MR-nya tidak $Q=a-bP$ seperti monopoli.
+- Firm produces at $MR=MC$, What's the MR?
 
 $$
 Q=S\times\left[1/n-b(P-\bar{P})\right]
@@ -208,21 +404,23 @@ $$
 Q=\left[S/n-Sb\bar{P}\right]-SbP
 $$
 
-- Karena $\bar{P}$ adalah price set by other firms, dianggap exogenous. MR=MC-nya menjadi:
+- Since S, n and $\bar{P}$ is exogeneous, we can skip them to get $Q=A-SbP$.
+
+- $R=QP=AP-SbP^2$ hence $MR=A-SbP-SbP=Q-SbP$
 
 - $P-\frac{Q}{Sb}=c \rightarrow P-c=\frac{Q}{Sb} \rightarrow P-c=\frac{1}{nb}$
 
 ## Karakteristik monopolistik
 
-$P-c=\frac{1}{nb}$
+$P-c=\frac{1}{nb} \rightarrow P=\frac{1}{nb}+c$
 
-- seiring meningkatnya jumlah perusahaan di industri, $P-c$ (mark-up) turun.
-  - karena c exogen, turunnya $P-c$ disebabkan oleh turunnya $P$
-  - semakin banyak firms, semakin sedikit market share, semakin tinggi harus charge P.
-- Firms akan masuk terus selama ada profit.
-- di long-run, jumlah firms settle di $P=AC$
+- As $n \uparrow$, $P-c \downarrow$ 
+  - Since $c$ is exogen, the reduction in markup is driven by $P \downarrow$
+  - The higher $n$, the more pressure to keep $P$ low.
+- Firms will keep coming in as long as $p-c>0$
+- In the long-run, number of firms settles at $P=AC$
 
-## Monopolistik
+## Monopolistic
 
 ::: columns
 ::: {.column width="47%"}
@@ -253,7 +451,7 @@ plot+
 :::
 :::
 
-## Trade & monopolistic
+## Trade & monopolistic {.m}
 
 ::: columns
 ::: {.column width="47%"}
@@ -283,30 +481,33 @@ plot+
 ```
 :::
 ::: {.column width="47%" .m}
-- Trade akan menambah jumlah market
-  - AC berkurang, tetapi kurva penentu harga tidak pengaruh karena semua dapat market share yang sama.
-  - jumlah firms naik dan harga turun.
-- Karena differentiated goods, konsumen lebih senang juga karena ada variasi.
+- Trade will increase market size $S$.
+  - AC goes down, number of firms goes up relative to each market prior.
+  
+- Price decrease benefits consumers from both countries.
+
+- Because trade increases the variety of goods that consumers can buy under monopolistic competition, it increases the welfare of consumers.
+
 :::
 :::
 
-## Contoh numerik
+## Numeric example
 
-- Misalnya ada industri otomotif dengan struktur sbb:
+- Let there be automotive industries as such:
 
 $$
 Q=S\times[(1/n)-(1/30000)\times(P-\bar{P})] \\
 $$
 
-- dengan cost sbb:
+- With cost:
 
 $$
 AC=750000000/Q+5000
 $$
 
-- Misalnya Home jual 900ribu kendaraan dalam setahun, sementara Foreign 1,6 juta kendaraan.
+-Let home market sells 900k cars in a year, while Foreign 1,6 million.
 
-## Contoh numerik
+## Nummeric example
 
 ```{r}
 #| label: fig5
@@ -346,7 +547,7 @@ c<-plot+
 a+b+c
 ```
 
-## Contoh numerik
+## Nummeric example
 
 |     | Home, no trade | Foreign, no trade | Integrated market |
 | --- | -------------- | ----------------- | ----------------- |
@@ -357,73 +558,60 @@ a+b+c
 
 ## Highlighted feature
 
-- Tidak seperti chapter-chapter sebelumnya, di sini bahkan dua negara yang teknologinya sama (cost structurenya sama) di industri yang sama akan dapat untuk ketika trade.
-- Monopolistic competition akan benefit dengan **intra-industry trade**.
-  - ekspor mobil, tapi juga impor mobil.
+- Here, even countries with the same characteristics (same cost structure) in the same industry benefited from trade.
+
+- This is called **intra-industry trade**.
+  - Export car, also import car.
   - Think of Toyota and Ford.
-- more car variety: dari 6 & 8 jadi 10 untuk keduanya.
+- more car variety: from 6 & 8 brands to 10 for both.
 
 ## Highlighted feature
 
-- Note bahwa intra-industry trade lebih menguntungkan bagi negara Home
-  - harga turun 2000, di foreign turun cuma 750.
-- Hal ini karena negara Home memiliki market yang kecil.
-  - makin kecil market, makin tinggi fixed cost yang harus dibayar.
-  - inilah sebabnya negara kecil seperti Singapura, Malaysia, Thailand dan Vietnam rajin mengejar FTA.
+- Note that intra-industry trade benefits home more.
+  - Price down by 2k while foreign downs only 750.
+- This is because Home has smaller market.
+  - the smaller the market, the higher the fixed cost needs to be covered.
+  - This is why small countries like Singapore, Thailand loves FTAs.
 
 ## Firms response to trade
 
-- Dari 14 merk mobil di contoh di atas (6 home, 8 foreign), hanya ada 10 yang bertahan.
-- 10 merk ini dapat market share yang lebih tinggi, sehingga cost lebih rendah.
-- Karena semua firms dianggap identik, kita tidak perlu terlalu peduli siapa yang kelluar dari pasar.
-- Tapi dunia nyata tidak seperti itu: 4 yg exit must be the worst performers.
+- From total 14 brands, only 10 survives.
+
+- these 10 brands get higher market share, hence smaller cost.
+
+- Since all firms are identic, we don't care who exit.
+
+- In the real world where firms are heterogeneous, these 4 firms must be the least productive.
 
 ## Firms response to trade
 
-- Integrasi pasar akan memaksa firms dengan cost terendah untuk keluar.
-- Karena industri ini dianggap memiliki fixed cost yang sama, variasi cost akan datang dari marginal cost.
-- Ketika pasar terintegrasi, akan ada _threshold_ $c^*$ di mana semua firms yang marginal costnya di bawah itu akan terpaksa keluar.
+- Market integration will force lowest cost firms to exit.
+
+- When market integrates, there's a threshold $c^*$ where any firm with higher marginal cost exits.
+
+- The cost threshold is the fifth firm from bottom: lower than that, the firm exit.
 
 ## More gain from trade
 
-- Hal ini akan menambah lagi gains from trade:
-  - worst firms will exit, sehingga yang tersisa hanya firms yang efisien.
-  - hal ini akan meningkatkan produktivitas industri secara umum.
-  - Jika 5 mahasiswa paling kecil nilainya drop out, maka rata-rata kelas akan naik.
-- Salah satu cara "mengussir" kompetitor adalah dengan akuisisi.
+- Meaning, this gives us even more gains from trade:
 
-## Export cost
-
-- Ada cost untuk export:
-  - establish presence, market research, finding partners.
-  - hanya firms paling produktif yang akan sanggup ekspor.
-- Argumen sebaliknya juga bisa terjadi:
-  - Learning by doing: seiring bertambahnya ekspor, produsen jadi semakin produktif.
+  - the average productivity of the 10 remaining firms must be higher than the initial 14.
   
-## Multinationals and FDI
-
-- Umumnya, FDI dianggap lebih costly daripada ekspor.
-- Greenfield FDI: investasi di fasilitas produksi baru.
-- Brownfield FDI: beli fasilitas produksi milik perusahaan lain.
-- Horizontal FDI: replikasi.
-- Vertical FDI: global value chain.
-
-## Multinationals and FDI
-
-- Horizontal FDI: akan dipilih apabila ada trade cost yang tinggi.
-  - Tujuannya: akses pasar. Jarang menjadi fasilitass ekspor.
-- Vertical FDI: tujuan utamanya adalah untuk menekan cost.
-  - Negara low-tech bisa menghasilkan barang high-tech.
-  - Butuh trade cost yang kecil.
-  - leads to intrafirm trade.
+  - Leads to higher productivity overall.
   
-## Intrafirm Trade {.m}
+- Of course by exit doesn't mean the entrepreneur and labor go unemployed.
 
-- Analyzing between-country trade is getting less relevant as the importance of intrafirm trade improves.
-- Half of total imports of US are intrafirm. However, around 10% of US trade with Indonesia is intrafirm.
-- The difference between exporters and non-exporters is mostly driven by firms that both import and export. This is true also in Indonesia.
-- Amiti and Konings (2007) show that a reduction of import tariff by half improves productivity of an importing firm by 12%, which is larger than the reduction of output tariff by destination countries.
-- Channels: foreign technology embeded in the inputs, variety of inputs, cheaper and higher quality inputs.
-- Others try to find more evidence for Indonesia (e,g., Pane and Patunru 2019, Gupta 2020), but data availability in firm level remains a huge challenge.
+    - they are absorbed by the remaining 10, either by acquisition or recruitment.
 
-## {background-image="wew.jpg"}
+## Gains from trade
+
+- So in all, internal economies of scale gains from trade:
+
+    - for countries similar with each other
+    
+    - reduction in price for both countries.
+    
+    - more variety in the market.
+    
+    - Increased average quality/productivity.
+
