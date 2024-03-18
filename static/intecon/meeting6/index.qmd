@@ -392,25 +392,17 @@ $$
 
 $AC=\frac{F}{Q}+c \Rightarrow AC=n\frac{F}{S}+c$
 
-## Karakteristik monopolistik
+## Monopolistic Characteristic
 
-- Firm produces at $MR=MC$, What's the MR?
+- Rearrange $Q=S\times\left[1/n-b(P-\bar{P})\right]$ to get $Q=\left[S/n-Sb\bar{P}\right]-SbP$
 
-$$
-Q=S\times\left[1/n-b(P-\bar{P})\right]
-$$
-
-$$
-Q=\left[S/n-Sb\bar{P}\right]-SbP
-$$
-
-- Since S, n and $\bar{P}$ is exogeneous, we can skip them to get $Q=A-SbP$.
+- Since S, n and $\bar{P}$ are exogeneous, we can skip them to get $Q=A-SbP$.
 
 - $R=QP=AP-SbP^2$ hence $MR=A-SbP-SbP=Q-SbP$
 
 - $P-\frac{Q}{Sb}=c \rightarrow P-c=\frac{Q}{Sb} \rightarrow P-c=\frac{1}{nb}$
 
-## Karakteristik monopolistik
+## Monopolistic Characteristic
 
 $P-c=\frac{1}{nb} \rightarrow P=\frac{1}{nb}+c$
 
