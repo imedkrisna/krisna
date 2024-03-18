@@ -206,6 +206,9 @@ Suppose US vs China where the $P_CHINA<P_US$ before trade. When they trade, the 
 
 - This situation provides a reason for a temporary protectionism.
 
+:::
+::::
+
 ## External economies
 
 - Note that it’s still to the benefit of the world economy to take advantage of the gains from concentrating industries.
