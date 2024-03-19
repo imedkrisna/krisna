@@ -86,7 +86,7 @@ $$
 library(tidyverse)
 library(ggh4x)
 
-data2 <- data_frame(label = c("A","B","C","D","E","F"),
+data1 <- data_frame(label = c("A","B","C","D","E","F"),
                           y = c(4,5,0,-1,-3,5),
                           x = c(5,4,3,0,5,-5),
                           xx= x+0.5)
@@ -98,10 +98,10 @@ graph<-ggplot()+theme_classic() +
         legend.background = element_rect(fill="#f0f1eb"))
 
 grafik1 <- graph +
-  geom_text(data = data2,
+  geom_text(data = data1,
             aes(x = x, y = y+0.4, label = label), parse = TRUE,
             family = "Source Sans Pro", size=4)+
-  geom_point(data=data2,
+  geom_point(data=data1,
              aes(x=x,y=y),color='black',size=3)+
   labs(x='X',y='Y')+
   coord_axes_inside(labels_inside = TRUE)+
@@ -124,3 +124,395 @@ Ada 6 titik di bidang/diagram kartesian ini:
 
 :::
 ::::
+
+## Visualisasi fungsi
+
+- Diagram kartesian cocok digunakan untuk visualisasi fungsi karena punya 2 dimensi.
+
+- Umumnya, fungsi $Y=f(X)$ dipetakan menjadi $(x,y)$
+
+    - alias, variabel endogen di sumbu-Y, variabel eksogen di sumbu-X.
+    
+- Fungsi dipetakan ke diagram kartesian dalam bentuk titik jika X dan Y-nya himpunan bilangan integer.
+
+- Kita akan lebih sering pakai bilangan riil.
+
+## Bilangan
+
+- Kita bisa buat himpunan apa saja dengan huruf apa saja.
+
+- Tapi di matematika ada himpunan yang digunakan secara standar.
+
+| simbol | himpunan | elemen |
+| --- | ----- | --------- |
+| $\mathbb{N}$ | natural / asli | {1,2,3...} |
+| $\mathbb{Z}$ | integer | {...-3,-2,-1,0,1,2,3,...} |
+| $\mathbb{R}$ | riil / real | integral tapi ada pecahan/desimal |
+
+## Visualisasi
+
+- Katakanlah ada 2 himpunan dengan karakteristik seperti ini:
+
+$$
+\begin{aligned}
+X&=\{-2,-3,0,2,4\} \\
+Y&=\{y_i \ |\  y_i=3+2x_i\}
+\end{aligned}
+$$
+
+- dapatkah anda menebak elemen dari $Y$?
+
+- note: subscript $i$ (disebut juga index) menyatakan **anggota ke-**.
+
+- cth: $x_3$ anggota himpunan $X$ yang ke-3, yaitu 3.
+
+## Visualisasi integer
+
+:::: columns
+::: {.column width=47%}
+
+```{r}
+#| fig-width: 5
+#| fig-height: 5
+
+data2 <- data_frame(label = c(1,2,3,4,5),
+                            x = c(-2,-3,0,2,4),
+                            y=3+2*x)
+                          
+grafik2 <- graph +
+  geom_text(data = data2,
+            aes(x = x, y = y+0.4, label = label), parse = TRUE,
+            family = "Source Sans Pro", size=4)+
+  geom_point(data=data2,
+             aes(x=x,y=y),color='black',size=3)+
+  labs(x='X',y='Y')+
+  coord_axes_inside(labels_inside = TRUE)+
+  scale_x_continuous(breaks=seq(-4,5,1))+scale_y_continuous(breaks=seq(-4,12,1))
+
+grafik2
+```
+
+
+:::
+::: {.column width=47%}
+
+| i | x | y |
+| --- | --- | --- |
+| 1 | -2 | -1 |
+| 2 | -3 | -3 |
+| 3 | 0 | 3 |
+| 4 | 2 | 7 |
+| 5 | 4 | 11 |
+
+perhatikan bahwa skala untuk sumbu X dan sumbu Y berbeda. Boleh kok.
+
+:::
+::::
+
+## Visualisasi riil
+
+- Bagaimana untuk himpunan yang anggotanya bilangan riil?
+
+$$
+\begin{aligned}
+X&=\{x_i \ | \ -3 \leq x_i \leq 4, x \in \mathbb{R}\} \\
+Y&=\{y_i \ | \  y_i=3+2x_i\}
+\end{aligned}
+$$
+
+- Tentu saja kita akan punya banyak sekali titik karena ada diantara dua bilangan integer ada bilangan riil sejumlah tak hingga
+
+- ada berapa bilangan riil antara 0 dan 1?
+
+## Visualisasi riil
+
+:::: columns
+::: {.column width=47%}
+
+```{r}
+#| fig-width: 5
+#| fig-height: 5
+
+data3 <- data_frame(x = seq(-3,4,0.1),
+                    y=3+2*x)
+                          
+grafik3 <- graph +
+  geom_point(data=data3,
+             aes(x=x,y=y),color='black',size=3)+
+  labs(x='X',y='Y')+
+  coord_axes_inside(labels_inside = TRUE)+
+  scale_x_continuous(breaks=seq(-4,5,1))+scale_y_continuous(breaks=seq(-4,12,1))
+
+grafik3
+```
+
+
+:::
+::: {.column width=47%}
+
+- Visualisasi jika X kita batasi bilangan riil dengan desimal 1 angka di belakang koma.
+
+- Semakin banyak desimal yang kita ikutkan, maka akan semakin banyak titiknya.
+
+- Kumpulan titik-titik yang banyaknya tak hingga akan menjadi **garis**
+
+:::
+::::
+
+## Fungsi linear
+
+:::: columns
+::: {.column width=47%}
+
+```{r}
+#| fig-width: 5
+#| fig-height: 5
+
+data4 <- data_frame(x = seq(-2,4,0.1),
+                    y=3+2*x)
+                          
+grafik4 <- graph +
+  stat_function(fun=function(x) 3+2*x,size=1.1)+
+  labs(x='X',y='Y')+
+  coord_axes_inside(labels_inside = TRUE)+
+  scale_x_continuous(breaks=seq(-4,4,1),limits=c(-4,4))+scale_y_continuous(breaks=seq(-4,12,1))
+
+grafik4
+```
+
+
+:::
+::: {.column width=47%}
+
+- Fungsi $y=3+2x$ merupakan fungsi linear karena visualnya membentuk garis lurus.
+
+- Kita akan fokus ke fungsi linear.
+
+- Gambarnya gambang: cari 2 ditik, lalu hubungkan dgn garis.
+
+:::
+::::
+
+## Gambar fungsi lain
+
+```{r}
+#| layout-ncol: 3
+#| layout-nrow: 2
+#| fig-cap: 
+#|   - "fungsi kuadratik"
+#|   - "fungsi kubik"
+#|   - "fungsi eksponensial"
+#|   - "fungsi logaritmik"
+#|   - "fungsi resiprokal"
+#|   - "fungsi sinus"
+
+
+fun1<-function(x) x^2
+fun2<-function(x) x^3
+fun3<-function(x) exp(x)
+fun4<-function(x) log(x)
+fun5<-function(x) sin(x)
+fun6<-function(x) x^-1
+
+                          
+graf1 <- graph +
+  stat_function(fun=fun1,size=1.1)+
+  labs(x='X',y='Y')+
+  coord_axes_inside(labels_inside = TRUE)+
+  scale_x_continuous(limits=c(-4,4))
+graf2 <- graph +
+  stat_function(fun=fun2,size=1.1)+
+  labs(x='X',y='Y')+
+  coord_axes_inside(labels_inside = TRUE)+
+  scale_x_continuous(limits=c(-4,4))
+graf3 <- graph +
+  stat_function(fun=fun3,size=1.1)+
+  labs(x='X',y='Y')+
+  coord_axes_inside(labels_inside = TRUE)+
+  scale_x_continuous(limits=c(-4,4))
+graf4 <- graph +
+  stat_function(fun=fun4,size=1.1)+
+  labs(x='X',y='Y')+
+  coord_axes_inside(labels_inside = TRUE)+
+  scale_x_continuous(limits=c(-4,4))
+graf5 <- graph +
+  stat_function(fun=fun5,size=1.1)+
+  labs(x='X',y='Y')+
+  coord_axes_inside(labels_inside = TRUE)+
+  scale_x_continuous(limits=c(-4,4))
+graf6 <- graph +
+  stat_function(fun=fun6,size=1.1)+
+  labs(x='X',y='Y')+
+  coord_axes_inside(labels_inside = TRUE)+
+  scale_x_continuous(limits=c(-4,4))
+graf1
+graf2
+graf3
+graf4
+graf6
+graf5
+```
+
+## fungsi linear
+
+Pada fungsi linear $y=a_0+a_1x$
+
+- konstanta $a_0$ adalah $y$ ketika $x=0$
+
+- koefisien $a_1$ menunjukkan kemiringan garis:
+
+    - semakin tinggi $a_1$, semakin miring garisnya.
+    
+- Hal ini menjadi penting jika kita transformasi fungsinya.
+
+## fungsi linear {.m}
+
+:::: columns
+::: {.column width=47%}
+
+```{r}
+#| fig-width: 5
+#| fig-height: 5
+
+x <- seq(-4,4,0.1)
+
+grafik5 <- graph +
+  geom_abline(intercept = -2, slope = 1,color="red")+
+  geom_abline(intercept = 0, slope = 1,color="blue")+
+  geom_abline(intercept = 2, slope = 1,color="black")+
+  annotate("text", x = 2, y = 0.5, label = "ao=-2")+
+  annotate("text", x = 2, y = 2, label = "ao=0")+
+  annotate("text", x = 2, y = 4, label = "ao=2")+
+  labs(x='X',y='Y')+
+  coord_axes_inside(labels_inside = TRUE)+
+  scale_x_continuous(breaks=seq(-4,4,1),limits=c(-4,4))+scale_y_continuous(limits=c(-4,4),breaks=seq(-4,4,1))
+
+grafik5
+```
+
+perubahan konstanta: grafik naik turun, kemiringan tetap.
+
+:::
+::: {.column width=47%}
+
+```{r}
+#| fig-width: 5
+#| fig-height: 5
+
+x <- seq(-4,4,0.1)
+
+grafik6 <- graph +
+  geom_abline(intercept = 1, slope = -1,color="red")+
+  geom_abline(intercept = 1, slope = 0,color="blue")+
+  geom_abline(intercept = 1, slope = 1,color="black")+
+  geom_abline(intercept = 1, slope = 0.5,color="darkorange")+
+  geom_abline(intercept = 1, slope = -2,color="darkmagenta")+
+  annotate("text", x = 3, y = 2, label = "a1=0,5")+
+  annotate("text", x = 2, y = 1.2, label = "a1=0")+
+  annotate("text", x = 2, y = -2, label = "a1=-2")+
+  annotate("text", x = 3, y = -1, label = "a1=-1")+
+  annotate("text", x = 2, y = 3.5, label = "a1=1")+
+  labs(x='X',y='Y')+
+  coord_axes_inside(labels_inside = TRUE)+
+  scale_x_continuous(breaks=seq(-4,4,1),limits=c(-4,4))+scale_y_continuous(limits=c(-4,4),breaks=seq(-4,4,1))
+
+grafik6
+```
+
+Perubahan koefisien: grafik muter dgn konstanta sebagai porosnya
+
+:::
+::::
+
+## fungsi linear
+
+- Fungsi linear jika ditambah hanya akan mengubah konstanta.
+
+- Jika dikali maka konstanta dan koefisien akan berubah.
+
+- Jika ada fungsi $y=2+3x$:
+
+- jika $z=y+2$, maka $z=4+3x$, grafik naik 2 unit.
+
+- jika $z=y \times 2$, maka $z=4+12x$, grafik naik dan mencuram.
+
+## Contoh soal {.m}
+
+1. Raka bermaksud jualan somay. Untuk itu dia perlu menyewa gerobak somay selama sebulan dan membeli bahan baku somay. Biaya sewa gerobak somay sebulan adalah 1 juta rupiah. Untuk membuat 1 porsi somay, perlu bahan baku senilai 7 ribu rupiah.
+
+a. Jika $C$ adalah biaya produksi, buat fungsi biaya (_cost function_) Raka.
+b. Jika Raka bermaksud bikin 400 somay sebulan, berapa total costnya?
+c. Ternyata harga sewa gerobak naik jadi 2 juta rupiah. jika somay tetap 400, berapa total costnya sekarang?
+d. gambar kurva biaya Raka.
+
+## Contoh soal
+
+2. Raka bermaksud menjual somay buatannya dengan harga 10 ribu rupiah per porsi.
+
+a. $R$ adalah _total revenue_ Raka. Buat fungsi penjualan (_revenue function_) Raka.
+b. Jika Raka akhirnya membuat 400 somay, berapa total revenue Raka? Profit ($\pi$) berapa?
+c. Raka nemu 100 ribu. Jika Raka memutuskan ngambil, bagaimana fungsi penjualan Raka jadinya?
+d. Harus jual berapa somay agar usaha Raka impas (_breakeven_)?  kalo jual 12 ribu?
+
+## Jawaban
+
+:::: columns
+::: {.column width=47%}
+
+```{r}
+#| fig-width: 5
+#| fig-height: 5
+
+x <- seq(-4,4,0.1)
+
+grafik6 <- graph +
+  geom_abline(intercept = 1000, slope = 7 ,color="red",size=1.1)+
+  geom_abline(intercept = 0, slope = 10,color="blue",size=1.1)+
+  geom_abline(intercept = 2000, slope = 7,color="darkorange",size=1.1)+
+  geom_abline(intercept = 500, slope = 10,color="darkcyan",size=1.1)+
+  annotate("text", x = 2000, y = 30000, label = "a1=0,5")+
+  annotate("text", x = 2000, y = 30000, label = "a1=0")+
+  annotate("text", x = 2000, y = 30000, label = "a1=-2")+
+  annotate("text", x = 3000, y = 30000, label = "a1=-1")+
+  labs(x='Q',y='Rp 1.000')+
+  scale_x_continuous(expand=c(0,0),limits=c(0,600))+
+  scale_y_continuous(expand=c(0,0),limits=c(0,5000))
+
+grafik6
+```
+
+:::
+::: {.column width=47%}
+
+1a. $C=1000+7Q$
+
+2a. $R=10Q$
+
+2b. $\pi=R-C$
+
+2d. $R=C$
+
+$$
+\begin{aligned}
+10Q&=1000+7Q \\
+3Q&=1000 \\
+Q&=\frac{1000}{3}
+\end{aligned}
+$$
+
+profit if Jual >334 somay.
+
+
+
+:::
+::::
+
+## Last note
+
+- Anda sudah belajar fungsi linear, sebuah fungsi paling sederhana.
+
+- Di dunia nyata, _cost_ dan _profit_ umumnya lebih ribet daripada fungsi linear seperti ini. Jadi hati-hati bukan berarti anda jadi ahli ngitung profit.
+
+- Tapi fungsi ribet-ribet lainnya prinsipnya mirip, cuma gak linear aja.
+
+- Ketika gambar di ujian, label di diagram X dan Y cukup yang penting-penting aja, ga harus semua ditulis labelnya.

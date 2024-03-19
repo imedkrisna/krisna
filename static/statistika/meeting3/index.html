@@ -450,6 +450,327 @@ Y=a_0+a_1X
 </ul>
 </div>
 </div>
+</section>
+<section id="visualisasi-fungsi" class="slide level2">
+<h2>Visualisasi fungsi</h2>
+<ul>
+<li><p>Diagram kartesian cocok digunakan untuk visualisasi fungsi karena punya 2 dimensi.</p></li>
+<li><p>Umumnya, fungsi <span class="math inline">\(Y=f(X)\)</span> dipetakan menjadi <span class="math inline">\((x,y)\)</span></p>
+<ul>
+<li>alias, variabel endogen di sumbu-Y, variabel eksogen di sumbu-X.</li>
+</ul></li>
+<li><p>Fungsi dipetakan ke diagram kartesian dalam bentuk titik jika X dan Y-nya himpunan bilangan integer.</p></li>
+<li><p>Kita akan lebih sering pakai bilangan riil.</p></li>
+</ul>
+</section>
+<section id="bilangan" class="slide level2">
+<h2>Bilangan</h2>
+<ul>
+<li><p>Kita bisa buat himpunan apa saja dengan huruf apa saja.</p></li>
+<li><p>Tapi di matematika ada himpunan yang digunakan secara standar.</p></li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th>simbol</th>
+<th>himpunan</th>
+<th>elemen</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(\mathbb{N}\)</span></td>
+<td>natural / asli</td>
+<td>{1,2,3…}</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\mathbb{Z}\)</span></td>
+<td>integer</td>
+<td>{…-3,-2,-1,0,1,2,3,…}</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\mathbb{R}\)</span></td>
+<td>riil / real</td>
+<td>integral tapi ada pecahan/desimal</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="visualisasi-2" class="slide level2">
+<h2>Visualisasi</h2>
+<ul>
+<li>Katakanlah ada 2 himpunan dengan karakteristik seperti ini:</li>
+</ul>
+<p><span class="math display">\[
+\begin{aligned}
+X&amp;=\{-2,-3,0,2,4\} \\
+Y&amp;=\{y_i \ |\  y_i=3+2x_i\}
+\end{aligned}
+\]</span></p>
+<ul>
+<li><p>dapatkah anda menebak elemen dari <span class="math inline">\(Y\)</span>?</p></li>
+<li><p>note: subscript <span class="math inline">\(i\)</span> (disebut juga index) menyatakan <strong>anggota ke-</strong>.</p></li>
+<li><p>cth: <span class="math inline">\(x_3\)</span> anggota himpunan <span class="math inline">\(X\)</span> yang ke-3, yaitu 3.</p></li>
+</ul>
+</section>
+<section id="visualisasi-integer" class="slide level2">
+<h2>Visualisasi integer</h2>
+<div class="columns">
+<div class="column" style="width:47%;">
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-2-1.png" width="480"></p>
+</div>
+</div>
+</div><div class="column" style="width:47%;">
+<table>
+<thead>
+<tr class="header">
+<th>i</th>
+<th>x</th>
+<th>y</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>-2</td>
+<td>-1</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>-3</td>
+<td>-3</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>0</td>
+<td>3</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>2</td>
+<td>7</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>4</td>
+<td>11</td>
+</tr>
+</tbody>
+</table>
+<p>perhatikan bahwa skala untuk sumbu X dan sumbu Y berbeda. Boleh kok.</p>
+</div>
+</div>
+</section>
+<section id="visualisasi-riil" class="slide level2">
+<h2>Visualisasi riil</h2>
+<ul>
+<li>Bagaimana untuk himpunan yang anggotanya bilangan riil?</li>
+</ul>
+<p><span class="math display">\[
+\begin{aligned}
+X&amp;=\{x_i \ | \ -3 \leq x_i \leq 4, x \in \mathbb{R}\} \\
+Y&amp;=\{y_i \ | \  y_i=3+2x_i\}
+\end{aligned}
+\]</span></p>
+<ul>
+<li><p>Tentu saja kita akan punya banyak sekali titik karena ada diantara dua bilangan integer ada bilangan riil sejumlah tak hingga</p></li>
+<li><p>ada berapa bilangan riil antara 0 dan 1?</p></li>
+</ul>
+</section>
+<section id="visualisasi-riil-1" class="slide level2">
+<h2>Visualisasi riil</h2>
+<div class="columns">
+<div class="column" style="width:47%;">
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-3-1.png" width="480"></p>
+</div>
+</div>
+</div><div class="column" style="width:47%;">
+<ul>
+<li><p>Visualisasi jika X kita batasi bilangan riil dengan desimal 1 angka di belakang koma.</p></li>
+<li><p>Semakin banyak desimal yang kita ikutkan, maka akan semakin banyak titiknya.</p></li>
+<li><p>Kumpulan titik-titik yang banyaknya tak hingga akan menjadi <strong>garis</strong></p></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="fungsi-linear" class="slide level2">
+<h2>Fungsi linear</h2>
+<div class="columns">
+<div class="column" style="width:47%;">
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-4-1.png" width="480"></p>
+</div>
+</div>
+</div><div class="column" style="width:47%;">
+<ul>
+<li><p>Fungsi <span class="math inline">\(y=3+2x\)</span> merupakan fungsi linear karena visualnya membentuk garis lurus.</p></li>
+<li><p>Kita akan fokus ke fungsi linear.</p></li>
+<li><p>Gambarnya gambang: cari 2 ditik, lalu hubungkan dgn garis.</p></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="gambar-fungsi-lain" class="slide level2">
+<h2>Gambar fungsi lain</h2>
+<div class="cell quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="cell-output-display quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-5-1.png" width="960"></p>
+<figcaption>fungsi kuadratik</figcaption>
+</figure>
+</div>
+</div>
+<div class="cell-output-display quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-5-2.png" width="960"></p>
+<figcaption>fungsi kubik</figcaption>
+</figure>
+</div>
+</div>
+<div class="cell-output-display quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-5-3.png" width="960"></p>
+<figcaption>fungsi eksponensial</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="cell-output-display quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-5-4.png" width="960"></p>
+<figcaption>fungsi logaritmik</figcaption>
+</figure>
+</div>
+</div>
+<div class="cell-output-display quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-5-5.png" width="960"></p>
+<figcaption>fungsi resiprokal</figcaption>
+</figure>
+</div>
+</div>
+<div class="cell-output-display quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-5-6.png" width="960"></p>
+<figcaption>fungsi sinus</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="fungsi-linear-1" class="slide level2">
+<h2>fungsi linear</h2>
+<p>Pada fungsi linear <span class="math inline">\(y=a_0+a_1x\)</span></p>
+<ul>
+<li><p>konstanta <span class="math inline">\(a_0\)</span> adalah <span class="math inline">\(y\)</span> ketika <span class="math inline">\(x=0\)</span></p></li>
+<li><p>koefisien <span class="math inline">\(a_1\)</span> menunjukkan kemiringan garis:</p>
+<ul>
+<li>semakin tinggi <span class="math inline">\(a_1\)</span>, semakin miring garisnya.</li>
+</ul></li>
+<li><p>Hal ini menjadi penting jika kita transformasi fungsinya.</p></li>
+</ul>
+</section>
+<section id="fungsi-linear-2" class="slide level2 m">
+<h2>fungsi linear</h2>
+<div class="columns">
+<div class="column" style="width:47%;">
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-6-1.png" width="480"></p>
+</div>
+</div>
+<p>perubahan konstanta: grafik naik turun, kemiringan tetap.</p>
+</div><div class="column" style="width:47%;">
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-7-1.png" width="480"></p>
+</div>
+</div>
+<p>Perubahan koefisien: grafik muter dgn konstanta sebagai porosnya</p>
+</div>
+</div>
+</section>
+<section id="fungsi-linear-3" class="slide level2">
+<h2>fungsi linear</h2>
+<ul>
+<li><p>Fungsi linear jika ditambah hanya akan mengubah konstanta.</p></li>
+<li><p>Jika dikali maka konstanta dan koefisien akan berubah.</p></li>
+<li><p>Jika ada fungsi <span class="math inline">\(y=2+3x\)</span>:</p></li>
+<li><p>jika <span class="math inline">\(z=y+2\)</span>, maka <span class="math inline">\(z=4+3x\)</span>, grafik naik 2 unit.</p></li>
+<li><p>jika <span class="math inline">\(z=y \times 2\)</span>, maka <span class="math inline">\(z=4+12x\)</span>, grafik naik dan mencuram.</p></li>
+</ul>
+</section>
+<section id="contoh-soal" class="slide level2 m">
+<h2>Contoh soal</h2>
+<ol type="1">
+<li>Raka bermaksud jualan somay. Untuk itu dia perlu menyewa gerobak somay selama sebulan dan membeli bahan baku somay. Biaya sewa gerobak somay sebulan adalah 1 juta rupiah. Untuk membuat 1 porsi somay, perlu bahan baku senilai 7 ribu rupiah.</li>
+</ol>
+<ol type="a">
+<li>Jika <span class="math inline">\(C\)</span> adalah biaya produksi, buat fungsi biaya (<em>cost function</em>) Raka.</li>
+<li>Jika Raka bermaksud bikin 400 somay sebulan, berapa total costnya?</li>
+<li>Ternyata harga sewa gerobak naik jadi 2 juta rupiah. jika somay tetap 400, berapa total costnya sekarang?</li>
+<li>gambar kurva biaya Raka.</li>
+</ol>
+</section>
+<section id="contoh-soal-1" class="slide level2">
+<h2>Contoh soal</h2>
+<ol start="2" type="1">
+<li>Raka bermaksud menjual somay buatannya dengan harga 10 ribu rupiah per porsi.</li>
+</ol>
+<ol type="a">
+<li><span class="math inline">\(R\)</span> adalah <em>total revenue</em> Raka. Buat fungsi penjualan (<em>revenue function</em>) Raka.</li>
+<li>Jika Raka akhirnya membuat 400 somay, berapa total revenue Raka? Profit (<span class="math inline">\(\pi\)</span>) berapa?</li>
+<li>Raka nemu 100 ribu. Jika Raka memutuskan ngambil, bagaimana fungsi penjualan Raka jadinya?</li>
+<li>Harus jual berapa somay agar usaha Raka impas (<em>breakeven</em>)? kalo jual 12 ribu?</li>
+</ol>
+</section>
+<section id="jawaban" class="slide level2">
+<h2>Jawaban</h2>
+<div class="columns">
+<div class="column" style="width:47%;">
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-8-1.png" width="480"></p>
+</div>
+</div>
+</div><div class="column" style="width:47%;">
+<p>1a. <span class="math inline">\(C=1000+7Q\)</span></p>
+<p>2a. <span class="math inline">\(R=10Q\)</span></p>
+<p>2b. <span class="math inline">\(\pi=R-C\)</span></p>
+<p>2d. <span class="math inline">\(R=C\)</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+10Q&amp;=1000+7Q \\
+3Q&amp;=1000 \\
+Q&amp;=\frac{1000}{3}
+\end{aligned}
+\]</span></p>
+<p>profit if Jual &gt;334 somay.</p>
+</div>
+</div>
+</section>
+<section id="last-note" class="slide level2">
+<h2>Last note</h2>
+<ul>
+<li><p>Anda sudah belajar fungsi linear, sebuah fungsi paling sederhana.</p></li>
+<li><p>Di dunia nyata, <em>cost</em> dan <em>profit</em> umumnya lebih ribet daripada fungsi linear seperti ini. Jadi hati-hati bukan berarti anda jadi ahli ngitung profit.</p></li>
+<li><p>Tapi fungsi ribet-ribet lainnya prinsipnya mirip, cuma gak linear aja.</p></li>
+<li><p>Ketika gambar di ujian, label di diagram X dan Y cukup yang penting-penting aja, ga harus semua ditulis labelnya.</p></li>
+</ul>
 <div class="footer footer-default">
 
 </div>
