@@ -1,5 +1,5 @@
 ---
-title: "Konsep Probabilitas"
+title: "Fungsi dan penerapannya"
 subtitle: "Pertemuan 3"
 author: "Matematika & Statistika"
 format: 
@@ -12,352 +12,115 @@ format:
     slide-number: true
 ---
 
-## Minggu lalu
+## Bentuk umum & pengertian
 
-- Distribusi frekuensi dan statistik deskriptif.
+- Fungsi adalah suatu bentuk hubungan matematis yang menyatakan hubungan ketergantungan/dependensi/fungsional antara 2 variabel atau lebih.
 
-#### Next
-
-- peluang independen dan gabungan, bayesian.
-- uji normalitas dan probabilitas sampel
-
-## Hari ini
-
-::: {.incremental}
-
-- Definisi dan pendekatan klasik
-- Aplikasi probabilitas dalam asuransi
-- Aturan dasar dalam probabilitas
-- Kejadian independen
-
-- Setelah kuliah hari ini, diharapkan anda dapat menerangkan prinsip-prinsip dasar probabilitas.
-:::
-
-## Apa itu peluang? {.s}
-
-- kejadian berpeluang adalah suatu kejadian atau aksi yang memiliki lebih dari satu kemungkinan hasil (_outcome_) yang didapatkan secara acak (_random_).
-
-. . .
-
-![](ea.svg)
-
-. . .
-
-jalur kiri (not confess) adalah kepastian, sementara jalur kanan (confess) adalah kejadian atau aksi berpeluang.
-
-## Contoh lain
-
-- Cuaca besok bisa saja hujan, bisa mendung, dan bisa cerah.
-
-- Kondisi jalan di Jakarta besok pagi bisa macet atau macet banget.
-
-- Nilai ujian anda bisa saja A, B, C, D atau E.
-
-- Melempar dadu bisa muncul angka 1, 2, 3, 4, 5, atau 6.
-
-. . .
-
-Seperti yang anda mungkin paham, hampir semua kejadian di dunia ini adalah kejadian berpeluang.
-
-## Notasi {.m}
-
-::: {.incremental}
-- $S$ (*State*) melambangkan himpunan kemungkinan kejadian.
-
-    - Lempar koin punya $S=\{A,G\}$
-    
-    - Lempar dadu punya $S=\{1,2,3,4,5,6\}$
-    
-- $P(X)$ melambangkan peluang munculnya kejadian $X$.
-
-    - $P(X=A)$ atau $P(A)$ artinya peluang munculnya A.
-    
-    - $P(X>3)=\frac{1}{2}$ peluang munculnya angka lebih dari 3 adalah $\frac{1}{2}$.
-    
-    - $P(1\leq X \leq 5)=$ berapa?
-    
-- $P(\bar{A})$ atau $P(X=\bar{A})$ artinya peluang munculnya kejadian selain A.
-    
-    - Di koin, $P(\bar{A})=P(G)$
-:::
-
-## Beberapa istilah
-
-- Sebuah himpunan kejadian dikatakan **adil** (*fair*) jika semua anggota $S$ punya kemungkinan yang sama untuk muncul.
-
-    - Dadu yang adil: $P(1)=P(2)=P(3)=P(4)=P(5)=P(6)=\frac{1}{6}$
-
-- Sebuah kejadian dikatakan **independen** jika kejadian tersebut tidak tergantung dari kejadian sebelumnya, dan tidak mempengaruhi kejadian sesudahnya.
-
-    - Jika lemparan pertama keluar 3, lemparan ke-2 tetap punya $P(3)=\frac{1}{6}$, begitupun lemparan ke-3.
-
-## Menghitung peluang
-
-- Pendekatan klasik adalah dengan melakukan eksperimen sebanyak $n$, lalu melihat jumlah dari masing-masing hasilnya.
-
-- Jika ada sebuah koin 2 sisi dengan $S=\{A,G\}$, maka:
+- Fungsi dibentuk oleh 3 unsur, yaitu variabel, koefisien, dan konstanta.
 
 $$
-P(A)=\frac{n(A)}{n(S)}
+Y=f(X)
 $$
 
-## Menghitung peluang
+artinya, variabel $Y$ adalah fungsi dari variabel $X$. Atau, besarnya variabel $Y$ ditentukan oleh besarnya variabel $X$, tapi tidak sebaliknya.
 
-- Sebuah koin yang adil dengan dua sisi $S=\{A,G\}$ dan independen.
+## Pengertian & unsur
 
-- Lempar koin sebanyak $n=10$, lalu muncul $A=4$ dan $G=6$, saya katakan:
+- Variabel mencerminkan faktor tertentu. Sementara itu, koefisien dan konstanta adalah angka yang membentuk fungsi, mencerminkan bagaimana 2 variabel saling berhubungan.
+
+    - Konstanta hanya berhubungan $\pm$ dengan variabel, sementara koefisien berhubungan selain itu.
+    
+- Variabel, seperti namanya, bisa bervariasi, alias berubah-ubah.Variabel sendiri adalah himpunan, sementara koefisien dan konstanta bukan.
+
+## Bentuk khusus/spesifik
+
+- Sebuah fungsi $Y=f(X)$ bisa memiliki bentuk spesifik tertentu. Umumnya bentuk spesifik inilah yang akan kita selesaikan.
+
+- Misalnya, sebuah fungsi $Y=f(X)$ memiliki bentuk spesifik:
 
 $$
-P(A)=\frac{4}{10}
+Y=a_0+a_1X
 $$
 
-- berapa $P(G)$?
+- $Y$ dan $X$ adalah variabel, $a_0$ adalah konstanta/intersep, dan $a_1$ adalah koefisien/parameter.
 
-## Rules dasar
+## Fungsi
 
-- $0 \leq P(X) \leq 1$, 0 = gak mungkin, 1 = pasti.
-
-- nilai peluang bermakna limit tak hingga. $P(X=A)=0,5$ artinya jika $X$ dilakukan berulang kali, frekuensi relatif dari $X=A$ adalah 0,5.
-
-- $P(A \ \text{atau} \ B) = P(A \cup B)=P(A)+P(B)$
-
-Berapa peluang munculnya 1 atau 2 pada lemparan sebuah dadu yang adil?
-
-::: {.incremental}
-- $P(X=1 \cup X=2)=P(X=1)+P(X=2)=\frac{1}{6}+\frac{1}{6}$
-:::
-
-## Rules dasar
-
-::: {.incremental}
-- $P(S_1 \cup S_2 \cup .... S_S)=\sum_{i=1}^S S_i=1$
-
-    - koin: $P(A)+P(G)=1$
+- $X$ disebut juga dengan variabel eksogen, sementara $Y$ disebut juga variabel endogen.
     
-    - dadu: $P(1)+P(2)+P(3)+P(4)+P(5)+P(6)=1$
+- Eksogen $\rightarrow$ bisa diubah sendiri/independen.
+
+- Endogen tidak bisa. Nilai variabel endogen mengikuti perubahan dari variabel eksogen.
     
-- $P(\bar{A})=1-P(A)$
+- Mengubah $Y$ harus dilakukan dengan mengubah $X$: Kadang $X$ disebut variabel input dan $Y$ variabel output
 
-    - $P(\bar{X}<3)=P(3)+P(4)+P(5)+P(6)$
-    
-    - $P(\bar{X}<3)=1-\left(P(1)+P(2) \right)$
-:::
+## Bentuk fungsi
 
-## Pendekatan klasik
+- Fungsi spesifik dapat berbentuk apa saja, selama memetakan $X$ menjadi $Y$.
 
-::: {.incremental}
+| Fungsi | Nama |
+| --- | --- |
+| $Y=a_o+a_1X$ | Fungsi linear |
+| $Y=a_0+a_1X+a_2X^2$ | Fungsi kuadratik |
+| $Y=a_0+a_1^X$ | Fungsi power/eksponen |
+| $Y=\frac{a_1}{X}$ | Fungsi resiprokal |
+| $Y=a_0+a_1 \ln X$ | Fungsi logaritma |
 
-- Tahun lalu, dari 40 mahasiswa yang mengambil mata kuliah Statistika, 5 orang dapat nilai A, 10 orang dapat nilai B, 20 orang dapat nilai C, 4 orang dapat nilai D dan 1 orang dapat nilai E. Berapa persen peluang mahasiswa untuk tidak lulus di kelas Statistika?
+## Visualisasi
 
-- $P(\text{tidak lulus})=P(D)+P(E)=1-P(A \cup B \cup C)$
+- Fungsi umumnya divisualisasikan dalam 2 dimensi menggunakan koordinat kartesian.
 
-- $P(\text{tidak lulus})=\frac{4+1}{40}=\frac{5}{40}=\frac{1}{8}$
-:::
+- Koordinat kartesian merupakan sistem yang dapat memetakan dua buah variabel ke dalam  sebuah bidang yang terdiri dari 2 sumbu: sumbu horizontal/absis/$x$ dan sumbu vertikal/ordinat/$y$.
+    - bidang ini disebut juga dengan bidang kartesian.
 
-## Review {.incremental}
+- Sebuah titik $A$ di bidang kartesian punya koordinat $A=(x,y)$.
 
-- Kejadian berpeluang adalah suatu kejadian atau aksi yang memiliki lebih dari satu kemungkinan hasil (_outcome_) yang didapatkan secara acak (_random_).
+## Visualisasi
 
-- Hampir semua kejadian di dunia ini adalah kejadian berpeluang.
+:::: columns
+::: {.column width=47%}
 
-- Pendekatan klasik adalah cara paling sederhana menghitung peluang: jumlah munculnya _outcome_ $X$ dibagi jumlah experiment $n$.
+```{r}
+#| fig-width: 5
+#| fig-height: 5
+library(tidyverse)
+library(ggh4x)
 
-## Expected Value
+data2 <- data_frame(label = c("A","B","C","D","E","F"),
+                          y = c(4,5,0,-1,-3,5),
+                          x = c(5,4,3,0,5,-5),
+                          xx= x+0.5)
+graph<-ggplot()+theme_classic() +
+  theme(panel.background = element_rect(fill = "#f0f1eb",
+                                        colour = "#f0f1eb"),
+        plot.background = element_rect(fill = "#f0f1eb"),
+        legend.key = element_rect(fill = "#f0f1eb",linetype = "blank"),
+        legend.background = element_rect(fill="#f0f1eb"))
 
-- Nilai ekspektasi adalah sebuah nilai yang disematkan pada probabilitas.
+grafik1 <- graph +
+  geom_text(data = data2,
+            aes(x = x, y = y+0.4, label = label), parse = TRUE,
+            family = "Source Sans Pro", size=4)+
+  geom_point(data=data2,
+             aes(x=x,y=y),color='black',size=3)+
+  labs(x='X',y='Y')+
+  coord_axes_inside(labels_inside = TRUE)+
+  scale_x_continuous(breaks=seq(-5,5,1))+scale_y_continuous(breaks=seq(-5,5,1))
 
-- Merupakan rata-rata nilai yang diantisipasi atas berbagai kemungkinan nilai yang muncul dari suatu kejadian berpeluang.
-
-$$
-EV=\sum P(X_i) \times X_i
-$$
-
-## EV Judi
-
-::: {.incremental}
-
-- Sebuah koin yang adil digunakan sebagai dasar sebuah perjudian. Jika keluar A, anda akan mendapatkan Rp 10.000. Jika keluar G, anda harus membayar Rp 12.000. Berapa nilai ekspektasi dari perjudian tersebut?
-
-- $EV=P(A) \times V(A) + P(G) \times V(G)$
-
-- $EV=\frac{1}{2} \times 10000 + \frac{1}{2} \times -12000=-1000$
+grafik1
+```
 
 :::
+::: {.column widht=47% .incremental}
 
-## EV judi {.incremental}
+Ada 6 titik di bidang/diagram kartesian ini:
 
-- Sebuah dadu yang adil digunakan sebagai dasar sebuah perjudian. Jika keluar 1, anda membayar Rp. 20.000. Jika keluar 6, anda mendapatkan Rp 50.000. Jika keluar ganjil selain 1 anda membayar Rp. 5.000, jika keluar genap selain 6, anda mendapatkan Rp.1.000. Hitung nilai ekspektasi perjudian tersebut.
-
-- $EV=\frac{1}{6} \times -20000 + \frac{1}{6} \times 50000 + \frac{2}{6} \times -5000 + \frac{2}{6}\times 1000$
-
-- $EV=3666,67$
-
-## Memaknai EV
-
-::: {.incremental}
-
-- EV judi koin di atas artinya anda mungkin aja menang 10000 ketika sekali ikut. Mungkin juga kalah 12000.
-
-- namun, jika judi tersebut diulang berkali-kali sebanyak mungkin, anda akan secara total mendapatkan -1000.
-
-- Logikanya sama jika judi dilakukan 1 kali, tetapi yang ikut judi ada banyak orang:
-
-    - Jika judi diikuti 1000 orang, akan ada 500 orang menang 10000, tapi 500 orang lainnya kalah 12000.
-    
-- Jika anda bandar, judi mana yang lebih baik?
+- A=(5,4)
+- B=(4,5)
+- C=(3,0)
+- D=(0,-1)
+- E=(5,-3)
+- F=(-5,5)
 
 :::
-    
-## Bandar judi
-
-- Bandar judi sudah pasti akan membuat judi yang memiliki nilai ekspektasi yang negatif bagi peserta judi.
-
-- Di kasus judi koin, jika ada bandar punya 1000 pelanggan:
-
-    - Dia harus membayar $10000 \times 500=$ 5 juta.
-    
-    - Tapi dapat $12000 \times 500=$ 6 juta.
-    
-- Bandar yang baik tidak akan menjual judi dadu di atas.
-
-    - Apa yang akan dilakukan bandar yang baik?
-    
-## Pengambilan keputusan
-
-::: {.incremental}
-
-- EV dapat digunakan sebagai basis pengambilan keputusan.
-
-- Kita dapat membandingkan dua kejadian dan memilih sebuah keputusan yang memiliki nilai EV lebih besar.
-
-    - jika ada keputusan A dan keputusan B, kita memilih keputusan A jika $EV(A) > EV(B)$
-
-- Namun Ketika kita melibatkan kejadian berpeluang, pengambilan keputusan ini tergantung dari **profil risiko**.
-
-:::
-
-## Profil risiko
-
-- Seseorang dihadapkan dengan sebuah keputusan A dan B. keputusan A merupakan sebuah kepastian sementara keputusan B merupakan kejadian berpeluang:
-
-    - Risk neutral ketika orang tsb memilih A ketika $V(A)>EV(B)$ dan memilih B ketika $V(A)<EV(B)$
-    
-    - Risk averse ketika orang tsb memilih A bahkan ketika $V(A)<EV(B)$.
-    
-    - Risk loving ketika orang tsb memilih B bahkan ketika $V(A)>EV(B)$.
-    
-## Profil risiko {.m}
-
-::: {.incremental}
-- Lihat kembali judi koin dengan EV=-1.000:
-
-    - tidak ikut: V=0, ikut: EV=-1.000.
-
-    - orang risk neutral dan risk averse tidak akan ikut judi, sementara risk loving akan ikut.
-    
-- Lihat kembali judi dadu dengan EV=3.666,67:
-
-    - tidak ikut: V=0, ikut: EV=3.666,67.
-    
-    - orang risk neutral dan risk loving akan ikut, sementara orang risk averse tidak akan ikut.
-
-:::
-
-## Asuransi
-
-::: {.incremental}
-
-- Daerah Jigikirsi merupakan daerah yang cukup rawan dalan kejahatan curanmor. Dalam setahun ada setidaknya 1000 kejadian curanmor. Asumsikan di jigikirsi ada 10.000 pemilik kendaraan bermotor, dan semuanya memiliki harga yang sama yaitu 15 juta rupiah. berapa nilai ekspektasi sebuah motor di jigikirsi?
-
-- Hitung probability motor hilang, baru hitung EV.
-
-:::
-
-## Asuransi {.m}
-
-::: {.incremental}
-- Anda menawarkan sebuah produk asuransi yang menjanjikan pergantian motor baru jika ada motor hilang di jigikirsi. Berapa premi yang akan anda tawarkan ke pemilik motor di jigikirsi?
-
-- Seorang risk neutral akan bayar selama preminya di bawah 1,5 juta.
-
-    - premi 1,5 juta disebut juga premi yang adil (fair premium)
-
-- Seorang risk averse akan bayar bahkan ketika premi di atas 1,5 juta.
-
-- Makin besar dia rela bayar, makin besar derajat risk aversenya.
-
-- Risk lovers sebaliknya: baru rela bayar kalo preminya semurah mungkin.
-
-:::
-
-## Asuransi
-
-::: {.incremental}
-
-- Sebuah kapal mengirimkan 10.000 kontainer dalam sehari. Dari 10.000 kontainer tersebut, ada 100 diantaranya rusak saat handling, 50 diantaranya hilang, dan 65 diantaranya tertahan di pabean, dan 85 diantaranya salah kirim. Semua kejadian di atas mengakibatkan nilai barang anda menjadi 0.
-
-- Berapa premi asuransi yang adil dari kapal tersebut?
-
-- Pebisnis umumnya risk averse. Makanya perusahaan asuransi untung.
-
-- Pejudi biasanya risk loving. Makanya bandar untung.
-
-:::
-
-## Odds
-
-- Odds merupakan sebuah imbal judi yang dibuat sedemikian sehingga penjudi memasang taruhan yang seimbang.
-
-- Pada perjudian tebak pemenang / tebak skor, seringkali peserta yang bertanding memiliki kemampuan yang berbeda-beda.
-
-- Akibatnya, kemungkinan menangnya juga beda-beda.
-
-- Sering terjadi di judi bole, e-sports, pacuan kuda, dan lain sebagainya.
-
-## Odds
-
-- Misalnya pertandingan Manchester City vs Arema. Jika tim yang anda pasang menang, anda dapat uang 2x lipat. Ke mana sebagian besar orang akan pasang?
-
-- Karena itu ada yang disebut odds: tim yang kemungkinan menang lebih besar akan dapat multiplier / hadiah yang lebih kecil ketimbang tim yang kemungkinan menangnya lebih kecil.
-
-- Odds diset sedemikian sehingga jumlah nilai taruhannya akan seimbang.
-
-## Odds
-
-![](bet.jpg)
-
-- Jika anda bet 1 juta ke RBL dan RBL menang, anda akan dapat 5 juta. Bet ONIC dan menang, dapat 1 juta 110 ribu.
-
-- Tim mana yang diunggulkan?
-
-## Odds
-
-::: {.incremental}
-
-- Jika ikut judi dan bayar 1 juta, maka anda akan indifferent jika:
-
-$$
-P(\text{RBL menang}) \times \text{Odds RBL menang} = \\ P(\text{RBL kalah}) \times \text{Odds RBL kalah}
-$$
-
-- Bagi bandar, kemungkinan menang RBL adalah sekitar 18,17%. ONIC berapa?
-
-:::
-
-## Review
-
-::: {.incremental}
-
-- Peluang digunakan untuk menghitung expected value.
-
-- Expected value memiliki banyak aplikasi seperti di perjudian dan asuransi.
-
-- Odds digunakan untuk menyeimbangkan pasang taruhan. Tapi perlu diingat kemungkinan *fraud*.
-
-:::
-
-## Minggu depan
-
-- Kejadian berulang, kejadian bersyarat, dan kaidah Bayes.
-
-- Distribusi probabilitas.
+::::
