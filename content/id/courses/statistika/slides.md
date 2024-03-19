@@ -23,16 +23,16 @@ Google Drive: [di sini](https://drive.google.com/drive/folders/1s8YHrlTFrp-Iu0ip
 slides:
 
 - {{% staticref "/statistika/meeting1/index.html" "newtab" %}}Pertemuan 1: Pendahuluan{{% /staticref %}}
-- {{% staticref "/statistika/meeting2/index.html" "newtab" %}}Pertemuan 2: Statistika Deskriptif {{% /staticref %}}
-- {{% staticref "/statistika/meeting3/index.html" "newtab" %}}Pertemuan 3: Konsep probabilitas 1{{% /staticref %}}
-- {{% staticref "/statistika/meeting4/index.html" "newtab" %}}Pertemuan 4: Konsep probabilitas 2{{% /staticref %}}
-- {{% staticref "/statistika/meeting5/index.html" "newtab" %}}Pertemuan 5: Probability Density Function{{% /staticref %}}
-- {{% staticref "/statistika/meeting6/index.html" "newtab" %}}Pertemuan 6: Z-score dan menebak proporsi{{% /staticref %}}
-- {{% staticref "/statistika/meeting7/index.html" "newtab" %}}Pertemuan 7: Level, growth, dan angka indeks {{% /staticref %}}
-- {{% staticref "/statistika/meeting8/index.html" "newtab" %}}Pertemuan 8: Menebak rata-rata populasi  {{% /staticref %}}
-- {{% staticref "/statistika/meeting9/index.html" "newtab" %}}Pertemuan 9: Uji Hipotesis{{% /staticref %}}
-- {{% staticref "/statistika/meeting10/index.html" "newtab" %}}Pertemuan 10: Korelasi{{% /staticref %}}
-- {{% staticref "/statistika/meeting11/index.html" "newtab" %}}Pertemuan 11: Regresi univariat: how to{{% /staticref %}}
-- {{% staticref "/statistika/meeting12/index.html" "newtab" %}}Pertemuan 12: Regresi univariat: asumsi dan keterbatasan{{% /staticref %}}
+- {{% staticref "/statistika/meeting2/index.html" "newtab" %}}Pertemuan 2: akar, pangkat, logaritma {{% /staticref %}}
+- {{% staticref "/statistika/meeting3/index.html" "newtab" %}}Pertemuan 3: Fungsi{{% /staticref %}}
+- {{% staticref "/statistika/meeting4/index.html" "newtab" %}}Pertemuan 4: {{% /staticref %}}
+- {{% staticref "/statistika/meeting5/index.html" "newtab" %}}Pertemuan 5: {{% /staticref %}}
+- {{% staticref "/statistika/meeting6/index.html" "newtab" %}}Pertemuan 6: {{% /staticref %}}
+- {{% staticref "/statistika/meeting7/index.html" "newtab" %}}Pertemuan 7: {{% /staticref %}}
+- {{% staticref "/statistika/meeting8/index.html" "newtab" %}}Pertemuan 8: {{% /staticref %}}
+- {{% staticref "/statistika/meeting9/index.html" "newtab" %}}Pertemuan 9: {{% /staticref %}}
+- {{% staticref "/statistika/meeting10/index.html" "newtab" %}}Pertemuan 10: {{% /staticref %}}
+- {{% staticref "/statistika/meeting11/index.html" "newtab" %}}Pertemuan 11: {{% /staticref %}}
+- {{% staticref "/statistika/meeting12/index.html" "newtab" %}}Pertemuan 12: {{% /staticref %}}
 - {{% staticref "/statistika/meeting13/index.html" "newtab" %}}Pertemuan 13: {{% /staticref %}}
 - {{% staticref "/statistika/meeting14/index.html" "newtab" %}}Pertemuan 14: {{% /staticref %}}
