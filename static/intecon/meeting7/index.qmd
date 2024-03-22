@@ -46,6 +46,16 @@ format:
 
 ## Offshoring
 
-- offshoring is driven by a significant drop in trade cost.
+- At its core, offshoring has the same reasoning as our standard trade model:
+
+    - A firm in a country is better of sourcing part of their production in countries with comparative advantage in that good.
+    
+- In essence, offshoring breaks down a final good into several intermediate goods (and services).
+
+    - these goods embed different factor intensities.
+    
+## Unbundling
+
+- To understand offshoring better, we utilise the theory of product unbundling, coined by Richard Baldwin.
 
 - 
