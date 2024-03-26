@@ -25,7 +25,7 @@ slides:
 - {{% staticref "/statistika/meeting1/index.html" "newtab" %}}Pertemuan 1: Pendahuluan{{% /staticref %}}
 - {{% staticref "/statistika/meeting2/index.html" "newtab" %}}Pertemuan 2: akar, pangkat, logaritma {{% /staticref %}}
 - {{% staticref "/statistika/meeting3/index.html" "newtab" %}}Pertemuan 3: Fungsi{{% /staticref %}}
-- {{% staticref "/statistika/meeting4/index.html" "newtab" %}}Pertemuan 4: {{% /staticref %}}
+- {{% staticref "/statistika/meeting4/index.html" "newtab" %}}Pertemuan 4: Deret dan angka index{{% /staticref %}}
 - {{% staticref "/statistika/meeting5/index.html" "newtab" %}}Pertemuan 5: {{% /staticref %}}
 - {{% staticref "/statistika/meeting6/index.html" "newtab" %}}Pertemuan 6: {{% /staticref %}}
 - {{% staticref "/statistika/meeting7/index.html" "newtab" %}}Pertemuan 7: {{% /staticref %}}
