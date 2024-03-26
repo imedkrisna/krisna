@@ -1,5 +1,5 @@
 ---
-title: "Konsep Probabilitas Part 2"
+title: "Deret dan Angka Indeks"
 subtitle: "Pertemuan 4"
 author: "Matematika & Statistika"
 format: 
@@ -12,296 +12,291 @@ format:
     slide-number: true
 ---
 
-## Minggu lalu
+## Deret
 
-- Peluang independen & pendekatan klasik.
+- Deret adalah himpunan yang anggotanya berupa rangkaian bilangan yang tersusun secara teratur dan memenuhi kaidah-kaidah tertentu.
 
-#### Next
+- Berdasarkan pola perubahannya, deret bisa dibagi jadi 3, yaitu **deret hitung**, **deret ukur** dan **deret harmonik**
 
-- Peluang gabungan dan bayesian.
-- uji normalitas dan probabilitas sampel
+- harmonik jarang digunakan di ekonomi dan bisnis jadi tidak kita bahas.
 
-## Tindakan Ganda
+## Deret hitung
 
-::: {.incremental}
+- Deret hitung ialah deret yang perubahan suku-sukunya berdasarkan penjumlahan terhadap sebuah suku sebelumnya.
 
-- Lemparan 2 koin secara bersamaan memiliki kemungkinan hasil:
+- Bilangan yang membedakan suku-suku dari deret disebut dengan pembeda.
 
-- $S=\{AA,AG,GA,GG\}$
+contoh: $7,12,17,22,32$ pembeda $=5$
 
-- Kejadian berganda memiliki rumus: 
+contoh: $93, 83, 73,63,53,43$ pembeda $=-10$
 
-- $n_k=n_1 \times n_2 \times n_3 \times ... \times n_k$
+## Deret hitung
 
-- di mana $k$ adalah jumlah kejadian individu.
+- Deret hitung disebut juga dengan deret aritmatika (arithmetic progression)
 
-- Berapa $S$ kalau kita melempar 2 buah dadu?
-
-:::
-
-## Rules baru
-
-::: {.incremental}
-
-- Peluang independen gabungan/beririsan: peluang munculnya A DAN B.
-
-- $P(A \ \text{dan} \ B)=P(A\&B) = P(A \cap B) = P(A) \times P(B)$
-
-- Berapa peluang munculnya A dan A dalam lemparan 2 koin adil?
-
-- Berapa peluang munculnya King Hati dalam tarikan 1 deck kartu?
-
-- Berapa peluang munculnya 1 dan ganjil dalam lemparan 2 dadu adil?
-
-:::
-
-## Rules baru
-
-::: {.incremental}
-
-- Peluang kejadian bersyarat: peluang munculnya A jika B terjadi.
-
-- Perhitungan munculnya outcome A dan B jadi beda rumus seandainya kejadian B dipengaruhi oleh kejadian A.
-
-- $P(A \cap B)=P(A) \times P(B|A)$
-
-- Jika kejadian independen, maka $P(B|A)= P(B)$ 
-
-:::
-
-## Lotre
-
-::: {.incremental}
-
-- Sebuah kotak undian berisi 100 tiket. 50 diantaranya tiket zonk, 30 diantaranya tiket uang tunai 100 ribu rupiah, 10 diantaranya tiket 200 ribu rupiah, 8 diantaranya tiket 300 ribu dan 2 tiket 500 ribu rupiah. Berapa peluang seseorang bisa ambil tiket 500 ribu 2x berturut-turut? (1) jika tiket dikembalikan, (2) jika tiket tidak dikembalikan.
-
-- (1) $P(A \cap B)=P(A) \times P(B)= \frac{2}{100} \times \frac{2}{100} = \frac{4}{10000}$
-
-- (2) $P(A \cap B)=P(A) \times P(B|A)= \frac{2}{100} \times \frac{1}{99} = \frac{2}{9900}$
-
-- Jika narik lotre ini bayar 90 ribu rupiah, orang risk neutral ikut ga?
-
-:::
-
-## Kejadian beririsan
-
-::: {.incremental}
-
-- Sebuah deck terdiri dari 52 kartu standar. Berapa kemungkinan tarikan pertama anda dapat lambang hati atau as?
-
-- $P(💗 \cup A)=P(💗)+P(A)-P(💗 \cap A)=\frac{13}{52}+\frac{4}{52}-\frac{1}{52}$
-
-- $P(💗 \cap A) \neq 0$ karena ada 1 kartu yang adalah As dan juga berlambang hati.
-
-:::
-
-## Kejadian beririsan
-
-::: {.incremental}
-
-- Ada 140 anak yang saat ini mengambil kelas statistik. 100 diantaranya anak-anak yang rupawan. 50 diantaranya anak-anak yang pinter. Berapa probabilitas jika saya ambil 1 anak, saya dapat anak yang rupawan atau pinter?
-
-- $P(R \cup P)=P(R)+P(P)=\frac{150}{140}$?
-
-- Apakah ga mungkin? Masalahnya, ada anak yang pinter DAN rupawan. Misalnya yg rupawan & pinter = 40 orang.
-
-- $P(R \cup P)=P(R)+P(P)-P(R\cap P)=\frac{100+50-40}{140}=\frac{110}{140}$
-
-:::
-
-## Kejadian beririsan
-
-- kejadian beririsan dapat diilustrasikan dengan **diagram venn**.
-
-```{r}
-#| warning: false
-#| prompt: false
-#| error: false
-#| echo: false
-library(VennDiagram)
-wew<-draw.pairwise.venn(area1 = 100,area2 = 50,cross.area = 40,
-                        category = c("Rupawan","Pinter"), fill=c("lightgreen","lightblue"))
-```
-
-```{r}
-wew
-```
-
-## Kejadian beririsan
-
-::: {.incremental}
-
-- Sebuah acara sosialisasi mengundang 120 orang. Dari data, diketahui 100 diantaranya beragama islam. Berbekal pengetahuan tersebut, panitia mempersiapkan 20 kotak makan siang. Pas break siang, panitia mengumumkan "bagi yang tidak puasa bisa ambil makan siang di meja panitia". Ternyata ada 15 orang yang tidak kebagian. Berapa banyak yang tidak puasa? Apa kesalahan dari panitia?
-
-- $P(Maksi)=1-P(Muslim)+P(Muslim \ \cap \ Maksi)$
-
-- Panitia mengasumsikan bahwa $P(Muslim \ \cap \ Maksi) = 0$.
-
-:::
-
-## Permutasi dan Kombinasi {.m}
-
-- Jika kita perlu menghitung ada berapa cara untuk mendapatkan $r$ keluaran dari total kemungkinan $n$ keluaran, kita dapat menggunakan permutasi dan kombinasi.
-
-- Permutasi jika urutan ngaruh. $ABC \neq BCA$
+- Bentuk umum deret:
 
 $$
-P^n_r=\frac{n!}{(n-r)!}
+a_i=a_1+(i-1)d
 $$
+
+- $a$ adalah anggota / suku, $i$ adalah index atau suku ke-$i$, dan $d$ adalah pembeda.
+
+## Deret hitung
+
+Misalnya kita punya deret seperti ini 
+
+7, 12, 17, 22, 27, 32
+
+Dapat kita ketahui bahwa $a_1=7$ dan $d=5$.
+
+::: {.incremental}
+
+- jika ditanya suku ke 21, maka:
+
+- $a_21=a_1+(i-1)d=107$
+
+:::
+
+## Contoh
+
+::: {.incremental}
+
+- Anda berhasil menyisihkan uang jajan anda setiap bulan 500 ribu rupiah untuk menabung.Jika tabungan awal anda adalah 1 juta rupiah, berapa tabungan anda setelah 1 tahun?
+
+- diketahui $a_1=1000$ ribu rupiah, $d=500$ ribu rupiah, $n=12$
+
+- $a_12=a_1+(n-1)d=1000+12\times 500=1600$ ribu rupiah.
+
+:::
+
+## Note
+
+- Soal seperti di atas (berapa tabungan 12 bulan kemudian) lebih sering ditanyakan.
+
+- Di soal seperti itu, tabungan awal (si 1 juta rupiah) biasanya tidak dihitung sebagai anggota ke-1.
+
+- "12 bulan kemudian" mengacu ke deret ke-2 sampai ke-13. Karena itu $n=13$.
+
+- Ada juga yg anggap 1 juta bukan termasuk deret, disebut $a_0$, dan n tetap 12.
+
+$$
+a_i=a_0+id
+$$
+
+## Deret ukur
+
+- ialah deret yang perubahan suku-sukunya berdasarkan perkalian. bilangan yang membedakan suku-suku dari sebuah deret ukur adalah **pengali**.
+
+- Disebut juga dengan deret geometrik (geometric progression) atau growth/pertumbuhan.
+
+- $5,10,20,40,80$ (pengganda =2)
+
+- $512, 256, 128,64,32$ (pengganda=$\frac{1}{2}$)
+
+## Deret ukur
+
+- Bentuk umum deret ukur:
+
+$$
+a_i=a_1\times p^{n-1}, \text{atau } a_i=a_0\times p^n
+$$
+
+- Misalnya, sebuah deret dengan suku $5,10,20,40,...$, berapakah $a_6$?
+
+::: {.incremental}
+
+- $a_6=5 \times 2^5=5 \times 32=160$
+
+## Pertumbuhan
+
+- Pengali dalam persen $(r)$ disebut juga **pertumbuhan** (_growth rate_)
+
+- Misalnya, pertumbuhan PDB, pertumbuhan aset, dan lain-lain.
+
+- Jika anda melihat persoalan deret ukur yang diekspresikan dalam persen, rumusnya:
+
+$$
+a_i=a_1\times (1+r)^{n-1}, \text{atau } a_i=a_0 \times (1+r)^{n}
+$$
+
+- Pertumbuhan 100% = pertumbuhan 2x lipat.
+
+## Contoh
+
+- Negara Wakwaw mengalami pertumbuhan ekonomi sebesar 7% setiap tahunnya. Jika saat ini PDB negara Wakwaw adalah 1000 triliun rupiah, berapa PDB negara Wakwaw 5 tahun lagi?
+
+## Jawaban
+
+$$a_6=1000 \times (1+0.07)^5=1402,55$$
+
+| a | PDB |
+| --- | -------- |
+| 0 | 1000 |
+| 1 | 1070 |
+| 2 | 1.144,9 |
+| 3 | 1.225,043 |
+| 4 | 1.310,8 |
+| 5 | 1.402,55 |
+
+## Angka Index
+
+- Inflasi pada prinsipnya adalah pertumbuhan harga: Inflasi 5% berarti harga tahun ini lebih tinggi 5% dibanding tahun lalu.
+
+- Gimana ngitungnya? Kan harga barang tuh ada banyak: makanan pokok, snek, listrik, kos-kosan, mobil, sekolah, kesehatan, rokok, dst.
+
+- IHSG juga sama: Kan perusahaan di bursa efek ada banyak. Mau tau harga saham yg mana?
+
+## Angka Indeks {.m}
+
+- Angka Indeks adalah sebuah angka representatif dari sekumpulan data yang kita dapatkan dengan menggunakan metode rerata tertimbang.
+
+    - rerata tertimbang pada prinsipnya mirip expected value.
     
-- Kombinasi jika urutan ga ngaruh. $ABC=BCA$
+    - IHSG tertimbang market cap, CPI tertimbang konsumsi, dst.
+
+- Angka indeks biasanya kita gunakan untuk melihat perubahan harga konsumen, perubahan harga saham, dan lain sebagainya.
+
+- Angka Indeks untuk menghitung perubahan umumnya memiliki _base year_ atau **tahun dasar**, dan _current year_ atau tahun kini/**tahun berjalan**.
+
+## Angka Indeks
+
+- Untuk angka indeks yang memiliki _base year_ biasanya dihitung dengan menggunakan 3 metode berbeda:
+
+    - Indeks Laspeyres
+    
+    - Indeks Paasche
+    
+    - Indeks Fisher
+    
+- Kita ambil contoh [Consumer Price Index](https://www.bps.go.id/id/statistics-table/2/MTcwOSMy/indeks-harga-konsumen-90-kota--umum-.html) (CPI):
+
+    - merupakan indeks harga yang menimbang keranjang konsumsi masyarakat.
+    
+## Indeks harga tertimbang
+
+| Item | Q | P | QxP | Share |
+| ------ | --- | --- | ------ | --- |
+| Baju | 10 | 100 | 1000 | 0,061 |
+| Nasi | 200 | 10 | 2000 | 0,121 |
+| Ayam | 50 | 30 | 1500 | 0,091 |
+| Kosan | 12 | 1000 | 12000 | 0,727 |
+
+- Harga rata-rata = $\frac{100+10+30+1000}{4}$=285
+
+- Harga rata2 tertimbang=$\sum Share \times P$=739,93
+
+## CPI
+
+- CPI Memperhitungkan **perubahan** harga.
+
+- CPI memberi angka pertumbuhan harga tahun $t$ dibandingkan tahun dasar (tahun 0)
+
+- Misalnya CPI dengan keterangan [(2018=100)](https://www.bps.go.id/id/statistics-table/2/MTcwOSMy/indeks-harga-konsumen-90-kota--umum-.html) itu berarti tahun 2018 adalah tahun dasar.
+
+- Indeks perubahan seperti CPI biasanya terdiri dari 3 digit.
+
+## Indeks Laspeyres
+
+| Item | $Q_0$ | $P_0$ | $Q_1$ | $P_1$ | $Q_2$ | $P_2$ |
+| ------ | --- | --- | --- | --- | --- | --- |
+| Baju | 10 | 100 | 15 | 110 | 15 | 120 |
+| Nasi | 200 | 10 | 220 | 12 | 200 | 12 |
+| Ayam | 50 | 30 | 50 | 25 | 45 | 30 |
+| Kosan | 12 | 1000 | 12 | 1100 | 12 | 1200 |
 
 $$
-C^n_r=\frac{n!}{r!(n-r)!}
+IL_t=\frac{\sum P_t Q_0}{\sum P_0 Q_0} \times 100 \ \ \ ; \ \ IP_t=\frac{\sum P_t Q_t}{\sum P_0 Q_t} \times 100
 $$
 
-## Faktorial
+## Indeks Laspeyres
 
-- Tanda seru setelah angka disebut juga dengan faktorial.
-
-- Faktorial mirip dengan pangkat, tapi dikali berkurang terus hingga 1.
-
-- $3!=3\times 2\times 1$
-
-- $6!=6\times 5\times 4 \times 3 \times 2 \times 1=6 \times 5 \times 4 \times 3!$
-
-- $\frac{6!}{3!}=\frac{6 \times 5 \times 4 \times 3!}{3!}=6 \times 5 \times 4$
-
-## Permutasi
-
-::: {.incremental}
-
-- Sebuah ujian terdiri dari total 10 soal. Namun, setiap mahasiswa hanya akan mengerjakan 4 soal saja yang muncul secara acak dari 10 soal tersebut. Ada berapa tipe soal yang mungkin muncul di ujian tersebut?
-
-- Jika beda urutan diitung 1 tipe soal, maka 
-
-- $$P^{10}_4=\frac{10!}{(10-4)!}=\frac{10!}{6!}=5040$$
-
-:::
-
-## Kombinasi
-
-::: {.incremental}
-
-- Sebuah ujian terdiri dari total 10 soal. Namun, setiap mahasiswa hanya akan mengerjakan 4 soal saja yang muncul secara acak dari 10 soal tersebut. Ada berapa tipe soal yang mungkin muncul di ujian tersebut?
-
-- Jika beda urutan soal diitung tipe yang sama, maka
-
-- $$C^{10}_4=\frac{10!}{4!(10-4)!}=\frac{10!}{4!6!}=\frac{10\times9\times 8\times 7}{4 \times 3\times 2\times 1}=210$$
-
-:::
-
-## Permutasi
-
-::: {.incremental}
-
-- Sebuah kotak berisi 12 bola merah, 13 bola biru dan 15 bola hijau. Pengambilan bola tidak dikembalikan. Hitung kemungkinan pengambilan pertama bola merah, bola ke-2 hijau, dan bola ke-3 biru.
-
-- Pertanyaan ini dapat dijawab dengan 2 cara. Pertama, cara klasik:
-
-- $P(R_1G_2B_3)=P(R) \times P(G|R) \times P(B|R_1G_2)=\frac{12}{40} \times \frac{15}{39} \times \frac{13}{38}$
-
-- $P(R_1G_2B_3) \approx 0,04$
-
-:::
-
-## Permutasi
-
-- Cara ke-2 dengan menggunakan permutasi:
-
+| Item | $Q_0$ | $P_0$ | $Q_1$ | $P_1$ | $Q_2$ | $P_2$ |
+| ------ | --- | --- | --- | --- | --- | --- |
+| Baju | 10 | 100 | 15 | 110 | 15 | 120 |
+| Nasi | 200 | 10 | 220 | 12 | 200 | 12 |
+| Ayam | 50 | 30 | 50 | 25 | 45 | 30 |
+| Kosan | 12 | 1000 | 12 | 1100 | 12 | 1200 |
 
 $$
-P(R_1G_2B_3)=\frac{P^{12}_1P^{15}_1P^{13}_1}{P^{40}_3}=\frac{\frac{12!}{11!}\times\frac{15!}{14!}\times\frac{13!}{12!}}{\frac{40!}{37!}}=\frac{2340}{59280} \approx 0,04
+IL_1=\frac{17950}{16500}=108,79
 $$
 
-## Kombinasi
+## Indeks Laspeyres
 
-- Sebuah kotak berisi 12 bola merah, 13 bola biru dan 15 bola hijau. Pengambilan bola tidak dikembalikan. Hitung kemungkinan 3 kali pengambilan akan dapat warna yang berbeda-beda.
-
-- Dengan cara klasik dapat dilakukan, namun perlu dipertimbangkan ada berapa kemungkinan 3 warna berbeda-beda.
-
-- $P(RGB)=3! \times P(R_1G_2B_3)\approx6\times0,04\approx0,24$
-
-## Kombinasi
-
-- Cara ke-2 dengan menggunakan kombinasi:
-
+| Item | $Q_0$ | $P_0$ | $Q_1$ | $P_1$ | $Q_2$ | $P_2$ |
+| ------ | --- | --- | --- | --- | --- | --- |
+| Baju | 10 | 100 | 15 | 110 | 15 | 120 |
+| Nasi | 200 | 10 | 220 | 12 | 200 | 12 |
+| Ayam | 50 | 30 | 50 | 25 | 45 | 30 |
+| Kosan | 12 | 1000 | 12 | 1100 | 12 | 1200 |
 
 $$
-P(RGB)=\frac{C^{12}_1C^{15}_1C^{13}_1}{C^{40}_3}=\frac{\frac{12!}{11!}\times\frac{15!}{14!}\times\frac{13!}{12!}}{\frac{40!}{3!37!}}=\frac{2340}{9880}\approx0,24.
+IP_1=\frac{18740}{16500}=108,95
 $$
 
-## Diagram pohon
+## IL vs IP
 
-```{mermaid}
-flowchart TB
-  A[Mulai] --> B[R]
-  A --> C[G]
-  A --> D[B]
-  B-->E[R] & F[G] & G[B]
-  C-->H[R] & I[G] & J[B]
-  D-->K[R] & L[G] & M[B]
-  E-->E1[R] & F1[G] & G1[B]
-  F-->H1[R] & I1[G] & J1[B]
-  G-->K1[R] & L1[G] & M1[B]
-  H-->E2[R] & F2[G] & G2[B]
-  I-->H2[R] & I2[G] & J2[B]
-  J-->K2[R] & L2[G] & M2[B]
-  K-->E3[R] & F3[G] & G3[B]
-  L-->H3[R] & I3[G] & J3[B]
-  M-->K3[R] & L3[G] & M3[B]
-```
+- Kelebihan IL: lebih murah/praktis karena kuantitasnya tetap sehingga tidak perlu survey keranjang belanja.
 
-## Probabilitas marjinal
+- Kekurangan IL: karena keranjang belanja pasti berubah (substitusi, barang baru) sehingga bias atas, harga naik mungkin karena peningkatan kualitas.
 
-- Sebuah perusahaan handphone memesan layar dari 3 perusahaan yang berbeda, yaitu A,B dan C. Perusahaan A menyuplai 270 layar, B menyuplai 320 layar, C menyuplai 110 layar. Si perusahaan mengantisipasi kemungkinan _defect_ dari A sebesar 0,015, B sebesar 0,02, C sebesar 0,03. Berapa probabilitas layar di perusahaan ini _defect_?
+- Kelebihan IP: Lebih akurat dalam mempertimbangkan keranjang belanja, tidak bias atas.
 
-- $P(D)=\sum_S P(X) \times P(D|X)$
+- Kekurangan IP: bias bawah karena pakai keranjang baru, lebih mahal karena survey keranjang dilakukan tiap saat.
 
-- $P(D)=\frac{270}{700} \times 0,015 + \frac{320}{700} \times 0,02 \frac{110}{700} \times 0,03$
+## Indeks Fisher
 
-- $P(D)=0,0196 \approx 0,02$
-
-## Bayesian Probability
-
-- Seorang peneliti bernama Bayes menemukan sebuah rumus yang menunjukkan hubungan antara peluang kondisional:
+- Indeks Fisher mengurangi masalah bias atas dan bawah dari IL dan IP.
 
 $$
-P(A|B)=\frac{P(B|A) \times P(A)}{P(B)}
+IF_t=\sqrt{IL_t \times IP_t}
 $$
 
-- Kemungkinan munculnya A jika B terjadi tidak sama dengan kemungkinan mmunculnya B jika A terjadi.
+$$
+IF_1=\sqrt{108,79\times 108,95}=108,87
+$$
 
-## Bayesian
+## Tabel Lengkap
 
-::: {.incremental}
+| Indeks | 0 | 1 | 2 |
+| ------ | --- | --- | --- |
+| Laspeyres | 100	| 108,79 |	118,18 |
+| Paasche | 100 |	108,95 |	118,40 |
+| Fisher | 100 | 108,87 |	118,29 |
 
-- Lihat soal sebelumnya. ditemukan bahwa ada 1 produk cacat / _defect_, berapa kemungkinannya produk tersebut datang dari supplier A?
+- Rumus inflasi: $\frac{CPI_t-CPI_{t-1}}{CPI_{t-1}} \times 100\%$
 
-- $A=$ produk berasal dari supplier A, $D=$ produk cacat.
+- $INF_1=\frac{108,87-100}{100}\times 100\%=8,87\%$
 
-- $P(A|D)=\frac{P(D|A) \times P(A)}{P(D)}=\frac{0,015 \times \frac{270}{700}}{0,0216}$
+## Mengubah tahun dasar
 
-- $P(A|D)=0,295 \approx 0,3$
+- Ketika statistisi mengubah tahun dasar, maka perhitungan harus diulangi.
 
-- Produk cacat tersebut paling mungkin datang dari supplier mana?
+- Namun bagi pengguna, kita dapat menggunakan rumus:
 
-:::
+$$
+\text{indeks}=\frac{\text{indeks tahun kiri baru}}{\text{indeks tahun dasar baru}}\times 100
+$$
 
-## Bayesian
+- misalkan gunakan tabel sebelumnya dgn tahun dasar adalah 2018, lalu tahun berikutnya 2019 dan 2020.
 
-- $P(B|D)=\frac{P(D|B) \times P(B)}{P(D)}=\frac{0,02 \times \frac{320}{700}}{0,0216}=0,465$
+## Mengubah tahun dasar
 
-- $P(C|D)=\frac{P(D|C) \times P(C)}{P(D)}=\frac{0,03 \times \frac{110}{700}}{0,0216}=0,24$
+| Indeks | 2018 | 2019 | 2020 |
+| ------ | --- | --- | --- |
+| Fisher | 100 | 108,87 |	118,29 |
 
-- $P(D|C)$ paling besar, tapi order datang paling banyak dari perusahaan B. Karena itu, kemungkinan barang rusak itu datang dari B juga jadi lebih besar.
+Di mana 2018=100. Jika kita mau ubah ke 2019=100, maka semua angka dibagi 108,87
 
-## Bayesian {.m}
+| Indeks | 2018 | 2019 | 2020 |
+| ------ | --- | --- | --- |
+| Fisher | 91.85 |	100	| 108.65 |
 
-- Tesle, sebuah perusahaan mobil listrik, tertarik investasi di negara Wikindi karena ada program insentif. Namun Wikindi mau pilpres dengan 3 calon. Calon A punya kans 90% akan melanjutkan program insentif. Calon B sekitar 50%, dan Calon C sangat anti program tsb dan hanya akan lanjutkan sekitar 10% kans. Berdasarkan survey, Kemungkinan menang calon A,B dan C adalah 25%,35% dan 40%.
+Skrg kita bandingkan semua dengan 2019,
 
-- Jika Tesle tidak peduli siapa presidennya nanti, berapa % kans program insentif akan diteruskan?
+## Latihan di rumah
 
-- Jika akhirnya program tidak diteruskan, tentukan berapa % kemungkinan akhirnya yang menang calon A, calon B dan calon C.
+- Jenis soal angka indeks tidak akan terlalu bervariasi.
 
-
+- Coba hitung semua indeks di soal ini (IL, IP, IF) jika kita pakai 2019=100 dan 2020=100!
