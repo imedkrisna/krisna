@@ -1,5 +1,5 @@
 ---
-title: "Probability Density Function"
+title: "Differensial / Turunan"
 subtitle: "Pertemuan 5"
 author: "Matematika & Statistika"
 format: 
@@ -12,336 +12,308 @@ format:
     slide-number: true
 ---
 
-## Minggu ini
+## Diferensial
 
-- Deskriptif statistik lagi, uji normalitas, probabilitas sampel.
+- Diferensial / _differential_ adalah pemahaman berikutnya dari sebuah fungsi.
 
-## Distribusi frekuensi
+- Diferensial adalah sebuah metode perkiraan linear yang mencoba memperkirakan seberapa besar perubahan sebuah fungsi jika sebuah variabel eksogen berubah.
 
-- Pertemuan sebelumnya kita sudah membuat distribusi frekuensi.
+- Diferensial biasanya digunakan untuk menentukan titik maksimum atau titik minimum, tapi juga digunakan untuk mencari elastisitas (dibahas lebih lanjut di ilmu ekonomi).
 
-- Distribusi frekuensi relatif pada dasarnya adalah distribusi probabilitas.
+## Perubahan
 
-## Distribusi frekuensi dadu
+- Jika anda punya fungsi $y=f(x)$ dan $\Delta y$ adalah perubahan kecil variabel y, sementara $\Delta x$ adalah perubahan kecil variabel x.
 
-::: {.columns}
+- Anda mau tau seberapa besar $y$ berubah jika $x$ berubah. Dengan kata lain, seberapa besar $\Delta y$ given $\Delta x$.
 
-::: {.column width="47%"}
+$$
+\frac{\Delta y}{\Delta x}=\frac{f(x+\Delta x)-f(x)}{\Delta x}
+$$
+
+## Contoh
+
+Ada fungsi $y=3x^2-x$. Tentukan perubahan dari y jika x naik dari 2 jadi 3.
+
+::: {.incremental}
+
+- jika $x=2$, $y=3(2)^2-(2)=10$
+
+- Jika $x=3$, $y=3(3)^2-(3)=24$
+
+- Artinya, $\Delta y=24-10=14$
+
+:::
+
+## Turunan
+
+- pertanyaan di atas bisa kita aproksimasi dengan menggunakan turunan / diferensial.
+
+- Turunan adalah cara cepat melakukan aproksimasi jika perubahan pada $x$ itu sangat kecil. Saking kecilnya sampe mendekati 0.
+
+- Jika anda berhadapan dengan fungsi yang rumit, maka diferensial akan sangat menguntungkan.
+
+- Kita akan kembali ke soal di atas, tapi kita pelajari dulu kaidah-kaidah diferensial.
+
+## Kaidah turunan
+
+**Diferensiasi konstanta**: Jika sebuah fungsi adalah sebuah konstanta, maka diferensialnya 0.
+
+$$
+\text{if }y=3, \ \text{then } \frac{dy}{dx}=0
+$$
+
+**Diferensiasi umum**: Jika $y=ax^n$, maka $\frac{dy}{dx}=nax^{n-1}$. Note bahwa a boleh =1.
+
+$$
+\text{if }y=4x^3, \ \text{then } \frac{dy}{dx}=3\cdot 4x^{3-1}=\frac{dy}{dx}=12x^2
+$$
+
+## Kaidah turunan
+
+**diferensiasi eksponen**: jika $y=ae^n$, maka $\frac{dy}{dx}=yae^n$
+
+$$
+\text{if } y=4e^x, \text{then } \ \frac{dy}{dx}=4e^x
+$$
+
+**diferensiasi logaritmik natural**: jika $y=a \ln x$, maka $\frac{dy}{dx}=\frac{a}{x}$
+
+$$
+\text{if }y= \ln x, \text{ then } \frac{dy}{dx}=\frac{1}{x}
+$$
+
+## Kaidah lain
+
+- ada banyak kaidah turunan, tapi cukup 4 itu aja yang kita perlukan di level ini.
+
+- Mari kita kembali ke contoh sebelumnya dan selesaikan dengan diferensial.
+
+## Contoh
+
+Ada fungsi $y=3x^2-x$. Tentukan perubahan dari y jika x naik dari 2 jadi 3.
+
+::: {.incremental}
+
+- $\frac{dy}{dx}=6x-1$
+
+- $dy=(6x-1)(dx)$
+
+- $dy=(6(2)-1)(1)=11$
+
+:::
+
+## Diferensial
+
+- Kalo pake cara delta, dapet 14. pake turunan, dapet 11. Kok beda?
+
+- Ini karena turunan adalah aproksimasi linear: jika fungsi aslinya nggak linear, maka aproksimasinya akan kurang akurat.
+
+- semakin besar $\Delta X$, semakin kurang akurasinya.
+
+- Tapi perkiraannya lebih baik daripada ga punya informasi apa-apa.
+
+## Fungsi linear
+
+Ada fungsi $y=3x-2$. Tentukan perubahan dari y jika x naik dari 2 jadi 3.
+
+::: {.incremental}
+
+- $\frac{dy}{dx}=3$
+
+- Karena fungsinya linear, jadinya: jika x naik 1, maka y akan naik 3.
+
+- Coba hitung ulang jika x naik dari 2 jadi 5
+
+:::
+
+## Somay
+
+- Inget contoh Raka, di mana dia punya fungsi biaya dan fungsi pendapatan:
+
+$$
+\begin{aligned}
+C&=1000+7Q \\
+
+R&=10Q
+
+\end{aligned}
+$$
+
+- Apa yang terjadi kalo kita aplikasikan turunan?
+
+## Somay
+
+$$
+\frac{dC}{dQ}=7 \\
+\frac{dR}{dQ}=10
+$$
+
+- artinya, jika somay bertambah 1, maka:
+
+    - cost bertambah 7
+    
+    - revenue bertambah 10
+    
+- Ini disebut juga dengan dampak marjinal / _marginal effect_
+
+## Marginal effect
+
+- Di persamaan linear, **koefisien** menjadi hasil dari turunannya.
+
+- Inilah kenapa **koefisien** dalam fungsi linear disebut juga dengan dampak marjinal.
+
+    - dan inilah juga kenapa **koefisien** biasanya lebih penting buat kita daripada konstanta.
+    
+- Koefisien fungsi linear bisa dianggap sebagai nilai perubahan $y$ jika $x$ berubah sebesar 1 unit.
+
+## Marginal effect
+
+- Dalam ekonomi, marginal effect ini sering sekali muncul, misalnya:
+
+    - _marginal cost_ (MC) dan _marginal revenue_ (MR).
+    
+    - elastisitas: seberapa besar permintaan/penawaran berubah jika harga berubah
+    
+- Semua ini akan kita bahas lebih lanjut di ilmu ekonomi.
+
+## Fungsi kuadratik
+
+- Jika anda menemukan permasalahan yang mengikuti fungsi kuadratik, turunan dapat memberikan anda titik maksimum dan titik minimum.
+
+-Sebuah fungsi kuadratik akan memiliki titik maksimum jika **turunan pertama=0** dan **turunan ke-2 bernilai negatif**
+
+-Sebuah fungsi kuadratik akan memiliki titik minimum jika **turunan pertama=0** dan **turunan ke-2 bernilai positif**
+
+## Contoh
+
+Seandainya fungsi pendapatan dan fungsi biaya somay Raka adalah seperti berikut:
+
+$$
+\begin{aligned}
+R&=100Q \\
+C&=2Q^2-200Q+10000
+\end{aligned}
+$$
+
+Carilah $Q$ di mana: (a) biayanya optimal, (b) apakah Q di (a) itu maksimal atau minimal?, (c) profitnya minimal/maksimal
+
+## Contoh
+
+a. $Q$ di mana $C$ ada di titik optimal:
+
+$$
+\begin{aligned}
+C&=2Q^2-200Q+10000 \\
+C'&=4Q-200 \ \text{, buat C'=0 untuk dapat titik optimal} \\
+4Q-200&=0\\
+Q&=50
+
+\end{aligned}
+$$
+
+## Contoh
+
+b. Apakah $Q=50$ titik maksimum atau minimum?
+
+$$
+\begin{aligned}
+C&=\frac{1}{2}Q^2-200Q+10000 \\
+C'&=Q-200 \\
+C''&=1 >0
+
+\end{aligned}
+$$
+
+Karena turunan ke-2 positif, maka 50 adalah jumlah somay yang meminimalisir biaya.
+
+## Contoh
+
+c. mencari $Q$ yang memaksimalkan profit:
+
+$$
+\begin{aligned}
+\pi&=R-C \\
+\pi&=100Q-2Q^2+200Q-10000 \\
+\pi&=-2Q^2+300Q-10000 \\
+\pi'&=-4Q+300,\text{buat =0 untuk optimum} \\
+Q&=75
+\end{aligned}
+$$
+
+## Contoh
+
+Apakah Q=75 itu titik maksimum atau minimum?
+
+$$
+\begin{aligned}
+\pi&=-2Q^2+300Q-10000 \\
+\pi'&=-4Q+300 \\
+\pi''&=-4<0
+\end{aligned}
+$$
+
+Karena turunan ke-2 nya negatif, berarti Q=300 adalah titik maksimal.
+
+## Cost dan profit
+
+Cost akan minimal jika $Q=50$. Berapa costnya?
+
+$$
+\begin{aligned}
+C&=2(50)^2-200(50)+10000 \\
+C&=5000
+\end{aligned}
+$$
+
+Profit akan maksimal jika $Q=75$. berapa profitnya?
+
+$$
+\begin{aligned}
+\pi&=-2(75)^2+300(75)-10000 \\
+\pi&=1250
+\end{aligned}
+$$
+
+## Kurva cost dan revenue
 
 ```{r}
+
 library(tidyverse)
-library(lattice)
-dadu1<-sample(1:6,1e6,TRUE)
-dadu2<-sample(1:6,50,TRUE)
-print("Frekuensi absolut dari simulasi 100x lemparan dadu")
-transform(table(dadu2))
-print("Frekuensi absolut dari simulasi 1juta lemparan dadu")
-transform(table(dadu1))
-```
-
-:::
-::: {.column width="47%"}
-
-```{r}
-print("Frekuensi relatif dari simulasi 100x lemparan dadu")
-transform(table(dadu2)/50)
-print("Frekuensi relatif dari simulasi 1juta lemparan dadu")
-transform(table(dadu1)/1e6)
-```
-
-:::
-:::
-
-## Distribusi frekuensi
-
-```{r}
-histogram(dadu2,breaks=seq(0,6,1),main="probability distribution of 100 dice throw")
-```
-
-## Distribusi frekuensi
-
-```{r}
-histogram(dadu1,breaks=seq(0,6,1),main="probability distribution of 1juta dice throw")
-```
-
-## Distribusi frekuensi dadu
-
-- Dapat dilihat bahwa melempar dadu 100x memiliki distribusi frekuensi yang sedikit berbeda dari melempar dadu 1 juta kali.
-
-    - Lemparan 1 juta kali lebih mendekati $\frac{1}{6}$ dibandingkan 100 kali.
-    
-    - Inilah yang kita bahas kemarin bahwa probability memiliki makna limit mendekati tak hingga.
-    
-- Dadu yang adil disebut memiliki _uniform distribution_ atau distribusi seragam.
-
-- Distribusi seragam bentuknya garis lurus, totalnya 1.
-
-## Populasi dan sample
-
-- Distribusi frekuensi pada umumnya juga dapat kita pikirkan sebagai kemungkinan.
-
-- Distribusi normal berarti jika kita mengambil sampel secara random dari sebuah populasi, maka:
-
-    - Kemungkinan dapat sampel bernilai sekitar _central tendency_ adalah besar.
-    
-    - Kemungkinan dapat sampel bernilai ekstrim akan kecil.
-    
-- Tidak seperti distribusi uniform.
-
-## Data terdistribusi normal
-
-```{r}
-dat<-rnorm(150,70,10)
-print("nilai 150 mahasiswa")
-dat
-```
-
-## Frequency distribution
-
-```{r}
-bins<-seq(30,100,by=5)
-dat2<-cut(dat,bins)
-dat3<-transform(table(dat2))
-dat3$Rel<-dat3$Freq/150
-dat3
-sum(dat3$Freq)
-```
-
-## Data terdistribusi normal
-
-```{r}
-hist(dat)
-```
-
-## Data
-
-```{r}
-plot(density(dat))
-```
-
-## Smooth function
-
-- Histogram yang dibuat semakin mulus lama-lama jadi garis.
-
-    - Seperti halnya pixel di layar anda.
-    
-- Tidak seperti dadu yang hanya ada 6 kemungkinan outcome, sampling bisa menghasilkan banyak sekali outcome.
-
-    - Semakin banyak kemungkinan, semakin mulus histogramnya -> sampe jadi garis kontinyu.
-    
-- Ketika jadi garis, kita bisa buat sebagai fungsi -> disebut juga probability distribution function (PDF).
-
-## Fungsi
-
-- grafik kartesian dapat kita buat sebagai $y=f(x)$
-
-- Coba inget-inget lagi bentuk dari grafik fungsi-fungsi berikut ini:
-
-    - $y=\frac{1}{6}$
-    
-    - $y=2x+5$
-    
-    - $y=x^2$
-    
-- Kita tau bentuk kurva lonceng. Bagaimana bentuk fungsi/PDF-nya?
-
-## PDF normal distribution
-
-$$
-f(x)=\frac{1}{\sigma \sqrt{2\pi}}e^{-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^2}
-$$
-
-- $f(x)$ adalah PDF dari $x$ jika datanya terdistribusi normal.
-
-- Jika $x=70$, maka $f(x)$ menunjukkan probabilitas kemunculan nilai 70.
-
-- Jangan khawatir, kita tidak perlu menggunakan rumus ini kok!
-
-## PDF normal distribution
-
-$$
-f(x)=\frac{1}{\sigma \sqrt{2\pi}}e^{-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^2}
-$$
-
-- $\mu$ adalah nilai rata-rata dari total populasi.
-
-- $\sigma$ adalah simpangan baku.
-
-- Keduanya adalah nilai dari _central tendency_ / ukuran gejala pusat dan sebaran.
-
-## Kurva dan parameter
-
-![sumber:wikipedia](normal.svg)
-
-## Central tendency / gejala pusat
-
-- Mean = $\sum_i \frac{x_i}{n}$
-    
-    - $\mu$ untuk mean populasi, $\bar{X}$ untuk mean sampel.
-    
-- Modus = nilai dengan frekuensi paling banyak.
-
-- Median: Data diurutkan (_sort_) dari kecil ke besar, lalu ambil nilai di tengah-tengah.
-
-    - Misal jika $n=150$, $x_1=$min, $x_n=x_150=$max, maka median=$\frac{x_{75}+x_{76}}{2}$
-    
-    - bayangkan garis bayangan yg membagi kiri dan kanan jadi 75.
-    
-## Sebaran / Spread
-
-- Range $=x_n - x_1$ atau nilai max dikurangi nilai min.
-
-- kuartal: kuartal 1 = nilai tertinggi dari 25% terendah, kuartal 2 = median, kuartal 3 = nilai terendah dari 25% tertinggi, kuartal 4 = nilai max.
-
-|   | populasi | sampel |
-| ----- | ----- | ----- |
-| Variance | $\sigma^2=\frac{\sum_i (x_i-\mu)^2}{N}$ | $S=\frac{\sum_i (x_i-\bar{X})^2}{n-1}$ |
-| simpangan baku | $\sigma=\sqrt{\frac{\sum_i (x_i-\mu)^2}{N}}$ | $S=\sqrt{\frac{\sum_i (x_i-\mu)^2}{N}}$ |
-
-## Deskriptif statistik
-
-- Ukuran gejala pusat dan sebaran perlu dilaporkan, terutama mean dan simpangan baku karena keduanya kita gunakan untuk mendapat gambaran dari PDF.
-
-- deskriptif statistik di r dari data 150 nilai kita:
-
-```{r}
-print("deskriptif statistik dengan menggunakan base r")
-summary(dat)
-print("deskriptif statistik dengan menggunakan package Hmisc")
-Hmisc::describe(dat)
-```
-
-## Sample & hitung
-
-- Kita coba menghitung dengan data yang lebih kecil.
-
-- Kita sampel data nilai kita 10 aja:
-
-```{r}
-data<-(sample(dat,10))
-mmm<-mean(data)
-data
-cat("rata-rata sampel ini adalah",mmm)
-```
-
-## Hitung
-
-::: columns
-::: {.column width=40%}
-```{r}
-data2<-as_tibble(data)
-data2$value2<-data2$value-mmm
-data2$value3<-data2$value2^2
-data2
-cat("bagian atas dari rumus variance adalah",sum(data2$value3))
-```
-:::
-::: {.column wudth=58%}
-
-- kolom `value2` adalah $x_i-\bar{x}$
-
-- kolom `value3` adalah $(x_i-\bar{x})^2$
-
-```{r}
-cat("mean sampel adalah",mean(data))
-cat("variance sampel adalah",sum(data2$value3)/9)
-cat("simpangan baku sampel adalah",sqrt(sum(data2$value3)/9) )
-cat("mean populasi adalah",mean(dat))
-cat("variance populasi adalah",var(dat))
-cat("simpangan baku populasi adalah",sqrt(var(dat)))
-```
-
-
-:::
-:::
-
-## Simpangan baku
-
-- Probability Density Function (PDF) pada dasarnya memiliki nilai total 1.
-
-- Luas area yang ada di bawah kurva lonceng = 1
-
-    - sama dengan luas area di bawah garis distribusi uniform.
-    
-- 68% populasi/sampel berada di jarak 1 simpangan baku di kiri dan di kanan dari mean.
-
-- 95% populasi/sampel berada di jarak 2 simpangan baku di kiri dan di kanan dari mean.
-
-- 99% populasi/sampel berada di jarak 3 simpangan baku di kiri dan di kanan dari mean.
-
-## waaa
-
-```{r}
-
-grafik<-function(dataset,...) {
-  dataset |>
-    ggplot(aes(...))+
-    scale_x_continuous(expand = c(0, 0)) + scale_y_continuous(expand = c(0, 0))+
-    theme_classic()+
-    theme(axis.title.x = element_text(hjust=1),
-        axis.title.y = element_text(angle=0,hjust=1,vjust=1),
-        panel.grid=element_blank(),
-#        axis.text.x=element_blank(),
-        axis.text.y=element_blank(),
-        axis.ticks.x=element_blank(),
-        axis.ticks.y=element_blank(),
-        legend.position=c(1,1),
-        legend.justification = c(1,1),
-        legend.spacing=unit(0,"cm"),
-        legend.margin=margin(0,0,0,0),
-        panel.background = element_rect(fill = "#f0f1eb",
+library(ggh4x)
+cost<-function(x) 2*x^2-200*x+10000
+profit<-function(x) -2*x^2+300*x-10000
+reve<-function(x) 100*x
+
+x <- seq(0,100,.1)
+
+graph<-ggplot()+theme_classic() +
+  theme(panel.background = element_rect(fill = "#f0f1eb",
                                         colour = "#f0f1eb"),
         plot.background = element_rect(fill = "#f0f1eb"),
         legend.key = element_rect(fill = "#f0f1eb",linetype = "blank"),
         legend.background = element_rect(fill="#f0f1eb"))
-}  
-det<-data.frame(x=c(0,1))
 
-wew<-seq(0,1,0.01)
 
-sd1 <- function(x) {
-    y <- dnorm(wew, mean = 0.5, sd = 0.1)
-    y[x < 0.4 | x > .6] <- NA
-    return(y)
-}
-sd2 <- function(x) {
-    y <- dnorm(wew, mean = 0.5, sd = 0.1)
-    y[x < 0.3 | x > .701] <- NA
-    y[x > 0.4 & x < .6] <- NA
-    return(y)
-}
-sd3 <- function(x) {
-    y <- dnorm(wew, mean = 0.5, sd = 0.1)
-    y[x < 0.2 | x > .8] <- NA
-    y[x > 0.3 & x < .7] <- NA
-    return(y)
-}
+grafik6 <- graph +
+  stat_function(fun=cost,size=1.1,color='red')+
+  stat_function(fun=reve,size=1.1,color='blue')+
+  labs(x='Q',y='1000 Rp')+
+  scale_x_continuous(expand=c(0,0),limits=c(0,100))+
+  scale_y_continuous(expand=c(0,0))
 
-det |>
-  grafik(x=x)+
-  stat_function(fun=dnorm,args=list(0.5,0.1),size=1.1)+
-  stat_function(fun=sd1,geom="area",fill="lightgreen",alpha=.3)+
-  stat_function(fun=sd2,geom="area",fill="lightpink",alpha=.3)+
-  stat_function(fun=sd3,geom="area",fill="lightblue",alpha=.3)+
-  geom_vline(xintercept=.5)+
-  annotate("text",label="34,1%",y=.2,x=.55)+
-  annotate("text",label="34,1%",y=.2,x=.45)+
-  annotate("text",label="13,6%",y=.15,x=.65)+
-  annotate("text",label="13,6%",y=.15,x=.35)+
-  annotate("text",label="2,1%",y=.1,x=.75)+
-  annotate("text",label="2,1%",y=.1,x=.25)+
-  scale_x_continuous(breaks = c(0.2,.3,.4,.5,.6,.7,.8),labels = c(paste0('-3\U03C3'),paste0('-2\U03C3'),paste0('-\U03C3'),expression(mu),paste0('\U03C3'),paste0('2\U03C3'),paste0('3\U03C3')))+
-  labs(x="X",y="f")
+grafik5 <- graph +
+  stat_function(fun=profit,size=1.1)+
+  labs(x='Q',y='1000 Rp')+
+  coord_axes_inside(labels_inside = TRUE)+
+  scale_x_continuous(expand=c(0,0),limits=c(0,100))+
+  scale_y_continuous(expand=c(0,0),limits=c(-10000,1500))
+
+grafik6
 
 ```
-## Next
 
-- Sangat penting untuk memahami bahwa kurva distribusi normal = probability density.
+## Kurva profit
 
-- Dengan mengetahui nilai gejala pusat dan sebaran, kita bisa menebak karakteristik populasi kita, dan sampel yang bisa kita dapatkan.
-
-- Next kita akan kembali mencoba hitung deskriptif statistik, lalu uji normalitas, z-score dan distribusi populasi lain.
-
-- Hari senin, kuis 1-3 akan ditutup. Kuis 4 dan 5 akan online online.
-
-
+```{r}
+grafik5
+```
