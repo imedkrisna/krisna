@@ -42,7 +42,9 @@ We focuses today with industrial policy.
 
 - Why Ricardian, Specific factor model and Hecksher-Ohlin suggests trade is efficient?
 
-- What's a terms of trade?
+- What's a terms of trade? 
+
+- What is the impact of tariff and export subsidy?
 
 - Remember external and internal economies of scale? What market failure underlies them?
 
@@ -58,45 +60,25 @@ We focuses today with industrial policy.
     
     - To them, IP is about the instrument rather than the goal.
 
-## Justification
+## Justifications
 
-- Prebisch-Singer Theory: developing countries will experience declining terms of trade if they rely on primary goods export.
+- Prebisch-Singer theory: Primary goods exporters (which are also manufactures importers) faces decreasing terms of trade (TOT).
 
-- 
-
-## Recent development
-
-## Global value chain
-
-## Climate crisis
-
-## Old vs new {.m}
-
-| Old paradigm | New paradigm |
-| ---------- | ---------- |
-| Always bad: govt failure > market failure | Both present. addressing market failure is important to be rich |
-| Focuses on why (theoretical) | Focuses on how (empirics & policy evaluation) |
-| Use comparative advantage | build new comparative advantage |
-| Dealing with govt failure by reducing their role | Focus on institutional setting |
-| Domestic oriented | Global oriented |
-
-
-
-## Old vs new industrial policy
-
-- Debates on industrial policy evolves with economic tools that evaluates them.
-
-    - that market is imperfect and has its own failures.
+    - These countries must find a way to escape its current comparative advantages.
     
-    - capital market liberalization that leads to more crises.
+- Without some way to leapfrog, a country will enter a middle-income trap if not worse.
+
+## Justifications
+
+- Infant industry argument: Developing a sector in its infant stage which can sustain itself without any policy in maturity stage (ready to compete with foreign products).
+
+- A country's comparative advantage is not static. Following comparative advantage in HO sense may even backfire:
+
+    - Korea and Taiwan's comparative advantage in 1970s was vegetables, clothings/apparels and plywood.
     
-- The best praactice changes amid GVC, global financialization, and global rules of trade & economic system.
+- Developing non-comparative advantage industries may require government's assistant since there exists market failures.
 
-    - less emphasize on trade policies
-    
-
-
-## More market failure {.m}
+## Market failure {.m}
 
 - **Coordination problem**: A new sector needs to reach a critical scale to be viable.
 
@@ -134,23 +116,79 @@ We focuses today with industrial policy.
 
 - State intervention is as old as the state itself.
 
-- Justru solusi berbasis pasar baru-baru ini saja digunakan untuk mengatasi government failure.
+- Free trade (and deregulations in general) were mainstream due to dominance of government failure.
 
 - Rent-seeking by sectors, corruption, inefficient SOEs, mercantilist pressure, land & real estate grabbing.
 
 - Failed to plan exit strategy: forever infant.
 
+## Its the how
+
+- The argument goes, market reform helps with eliminating government's failure.
+
+- However, the existence of market failure means deregulation will not leapfrog/moonshot an certain industries.
+
+- Debates are shifting from "should we do industrial policy" to "how should we do industrial policy"
+
+## Recent development {.m}
+
+More issues emerge that stand beyond economic growth & economic efficiency:
+
+- Pandemic shows how **fragile** countries' value chains are. Even though Global Value Chain (GVC) can be considered efficient, the needs for resilience emerges in critical sectors even if one should sacrifice efficiency.
+
+- **Climate change** forces regions to conduct **innovations** needed for green transitions.
+
+- Some industries have important **societal implications**. The goal is to provide **good jobs** because redistribution policy is either inadequate or non-existent.
+
+- Rising **geopolitical tensions** changes priorities and global institutional structures.
+
+## Targets & Rationales {.m}
+
+| Target | Rationale |
+| --- | -------- |
+| Green innovations | Acceleration in green technologies |
+| Labor market effects | Discourage labor saving technologies that disrupts labor markets |
+| Spillovers to other sectors | Support sectors that generate innovations crucial for other sectors | 
+| Defense/self-sufficiency | Develop innovations in strategic technologies |
+| International competitiveness | Develop domestic technologies to capture global market share or improve ToT |
+| Local spillovers | Promotes agglomerations / external economies of scale |
+
+: Taken from [IMF](https://www.imf.org/en/Blogs/Articles/2024/04/10/industrial-policy-is-not-a-magic-cure-for-slow-growth)
+
+## Old vs new industrial policy
+
+- Debates on industrial policy evolves with economic tools that evaluates them.
+
+    - that market is imperfect and has its own failures.
+    
+    - capital market liberalization that leads to more crises.
+    
+- The best praactice changes amid GVC, global financialization, and global rules of trade & economic system.
+
+    - less emphasize on trade policies
+    
+## Old vs new {.m}
+
+| Old paradigm | New paradigm |
+| ---------- | ---------- |
+| Always bad: govt failure > market failure | Both present. addressing market failure is important to be rich |
+| Focuses on why (theoretical) | Focuses on how (empirics & policy evaluation) |
+| Use comparative advantage | build new comparative advantage |
+| Dealing with govt failure by reducing their role | Focus on institutional setting |
+| Domestic oriented | Global oriented |
+
+
 ## Design principle
 
-1. Kejar industri teknologi baru / multiplier besar.
+1. Pursue industries with unlearned technologies (either pursuion frontiers or breaking it).
 
-1. Accountability from the receiver of supports. Misalnya, requires performance targets, ada exit clause: when to grow up, what if forever infant.
+1. Accountability from the receiver of supports (eg performance targets & exit clause)
 
 1. Maintain competition both domestic and globally.
 
-1. Serahkan evaluasi ke independent experts. (Australia: Productivity Comission, Indonesia: UKP4)
+1. Independent experts for evaluations. (Australia: Productivity Comission, Indonesia: UKP4)
 
-1. Kontrol terhadap korupsi.
+1. Corruption control (ethics, strong anti-corruption bodies).
 
 ## Decision-making framework {.m}
 
@@ -182,6 +220,14 @@ We focuses today with industrial policy.
 
 - The government must be prepared to absorb loss (but this is exactly why industrial policy was scrutinized).
 
+## Recipes
+
+1. Create new capabilities in sophisticated industries (kinda like scholarships).
+
+2. Test this capabilities by exporting. Surviving or even thriving international competitions are good signs of successful products & services.
+
+3. Competitive and strict accountabilities with conditionalities.
+
 ## Tools: goods market {.m}
 
 - Many classic trade tools (tariff and NTMs) are prohibited by trade agreements.
@@ -195,6 +241,16 @@ We focuses today with industrial policy.
 - Tax incentives to use domestic supplies works better than LCR.
 
 - Provide certainty of demand from government procurement.
+
+## Import-limiting policies
+
+- Indonesia's LCR/TKDN and other import-limiting approach has been widely criticised.
+
+- Not without warrant: empirically, import-substitution results aren't good:
+
+    - limiting import creates incentives to exploit local market, reducing incentives to compete globally.
+    
+    - imported inputs embed advantages for good output and learnings.
 
 ## Tools: labor market
 
@@ -260,8 +316,15 @@ We focuses today with industrial policy.
 
 - Cherif, R., & Hasanov, F. (2019). The Return of the Policy That Shall Not Be Named: Principles of Industrial Policy. IMF Working Paper, 19(74). 
 
+- Ing, L. Y., & Grossman, G. M. (2023). Local content requirements: promises and pitfalls. Routledge. https://doi.org/10.4324/9781003415794 
+
 - International Monetary Fund. (2022). Industrial Policy for Growth and Diversification: A Conceptual Framework. IMF Departmental Paper. 
+
+- Juhasz, R., Lane, N., & Rodrik, D. (2023). The New Economics of Industrial Policy. Unpublished. https://drodrik.scholar.harvard.edu/sites/scholar.harvard.edu/files/dani-rodrik/files/the_new_economics_of_ip_080123.pdf 
+
+- Mazzucato, M., & Rodrik, D. (2023). Industrial Policy with Conditionalities: A Taxonomy and Sample Cases. UCL Institute for Innovation and Public Purpose, Working Paper Series, IIPP WP 2023-07. https://www.ucl.ac.uk/bartlett/public-purpose/wp2023-07 
 
 - Stiglitz, J. E. (2015). Industrial policy, learning, and development. WIDER Working Paper 2015/149. https://www.wider.unu.edu/publication/industrial-policy-learning-and-development 
 
-- Wim, N. (2010). Industrial Policy. In (Vol. 2010). Helsinki, Finland: UNU-WIDER.
+
+
