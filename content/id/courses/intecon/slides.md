@@ -15,3 +15,4 @@ slides:
 - {{% staticref "/intecon/meeting5/index.html" "newtab" %}}Pertemuan 5: Standard Trade Model & Its Deviation{{% /staticref %}}
 - {{% staticref "/intecon/meeting6/index.html" "newtab" %}}Pertemuan 6: Global Firms{{% /staticref %}}
 - {{% staticref "/intecon/meeting7/index.html" "newtab" %}}Pertemuan 7: Trade Policies{{% /staticref %}}
+- {{% staticref "/intecon/industrial/index.html" "newtab" %}}Advance: Industrial policy{{% /staticref %}}
