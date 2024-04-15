@@ -1,7 +1,7 @@
 ---
 title: "The new industrial policy"
-subtitle: "ECES905205 pertemuan 10"
-date: "7 September 2022"
+subtitle: "Advanced International Economics"
+date: "16 April 2024"
 author: "I Made Krisna Gupta"
 format: 
   revealjs:
@@ -14,33 +14,37 @@ format:
   beamer: default
 ---
 
-## Last Week {.m}
+## Today
 
-- Argument pro-trade
+We focuses today with industrial policy.
+
+- Justification for industrial policy (flashback a bit).
+
+- Recent development in industrial policy (GVC, national security, climate change).
+
+- Tools, requirement, moving forward.
+
+## Some notes
+
+- Popularity is growing among governments and even among economists.
+
+- This field is going really fast. It's trending at the moment and still up for debates.
+
+    - Papers I use here may be outdated next year.
     
-    - Static efficiency: specialisation, economies of scale, productivity selection.
-    
-    - Dynamic efficiency: learning-by-exporting.
-    
-- Argument against free trade:
+- Principles, however, kinda similar. Pay close attention to the principles of industrial policy.
 
-    - Zero-sum-game for large countries (leads to FTAs)
-    
-    - Zero-sum-game for losers (usually better organized)
-    
-    - Market failures: externalities, infant industry.
-    
-- For any justified government intervention, domestic policies should perform better than trade policies.
+- Efficiency isn't always the goal. Deviate a bit from your typical ecoonomist stuff.
 
-## The new industrial policy
+## Flashback
 
-- Industrial policy yg terbaru muncul seiring dengan meningkatnya isu-isu politik dan distribusi pendapatan pekerja.
+- What's a comparative advantage? What's a revealed comparative advantage?
 
-- Meski Amerika Serikat terlihat semakin tertutup semenjak terpilihnya Donald Trump, tapi sebenarnya birokrasinya sudah lama memiliki kekhawatiran terhadap globalisasi sejak Obama.
+- Why Ricardian, Specific factor model and Hecksher-Ohlin suggests trade is efficient?
 
-- Argumen terhadap industrial policy baru masih berada di sekitar _market failure_
+- What's a terms of trade?
 
-- Meski demikian, new industrial policy menitik beratkan menghindari _government failure_
+- Remember external and internal economies of scale? What market failure underlies them?
 
 ## What is industrial policy?
 
@@ -54,6 +58,30 @@ format:
     
     - To them, IP is about the instrument rather than the goal.
 
+## Justification
+
+- Prebisch-Singer Theory: developing countries will experience declining terms of trade if they rely on primary goods export.
+
+- 
+
+## Recent development
+
+## Global value chain
+
+## Climate crisis
+
+## Old vs new {.m}
+
+| Old paradigm | New paradigm |
+| ---------- | ---------- |
+| Always bad: govt failure > market failure | Both present. addressing market failure is important to be rich |
+| Focuses on why (theoretical) | Focuses on how (empirics & policy evaluation) |
+| Use comparative advantage | build new comparative advantage |
+| Dealing with govt failure by reducing their role | Focus on institutional setting |
+| Domestic oriented | Global oriented |
+
+
+
 ## Old vs new industrial policy
 
 - Debates on industrial policy evolves with economic tools that evaluates them.
@@ -66,15 +94,7 @@ format:
 
     - less emphasize on trade policies
     
-## Old vs new
 
-| Old paradigm | New paradigm |
-| ---------- | ---------- |
-| Always bad: govt failure > market failure | Both present. addressing market failure is important to be rich |
-| Focuses on why (theoretical) | Focuses on how (empirics & policy evaluation) |
-| Use comparative advantage | build new comparative advantage |
-| Dealing with govt failure by reducing their role | Focus on institutional setting |
-| Domestic oriented | Global oriented |
 
 ## More market failure {.m}
 
@@ -231,16 +251,6 @@ format:
 - Just because policy exists does not mean it will be used.
 
 - Lack of attention given to evaluation process: data procurement and monev.
-
-## Tugas
-
-- Industrial policy is extremely broad, but all policies created must be in harmony.
-
-- Select one regulation on industrial policy, and see if you can use the framework in today's lecture to assess the selected regulation!
-
-- Has government done this? If so, you can try to criticise the government's decision framework!
-
-- Next week: international finance.
 
 ## References {.s}
 
