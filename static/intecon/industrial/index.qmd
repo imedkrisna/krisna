@@ -80,6 +80,25 @@ We focuses today with industrial policy.
 
 ## Market failure {.m}
 
+:::: columns
+::: {.column width=47%}
+
+![](Picture3.png)
+
+:::
+::: {.column width=47%}
+
+- External **economies of scale** leads to a downward-sloping supply curve: quality-adjusted cost goes down as production increases.
+
+- Incumbent has cost advantage, and new entrant needs help to build scale.
+
+- Why? **positive externalities** and **learning-by-doing**, 
+
+:::
+::::
+
+## Market failure {.m}
+
 - **Coordination problem**: A new sector needs to reach a critical scale to be viable.
 
     - tool makers won't make tools unless the industry that uses it exists, but the industry won't exist without tool makers.
@@ -130,6 +149,8 @@ We focuses today with industrial policy.
 
 - Debates are shifting from "should we do industrial policy" to "how should we do industrial policy"
 
+- Reducing government failure is a critical step for any industrial policy.
+
 ## Recent development {.m}
 
 More issues emerge that stand beyond economic growth & economic efficiency:
@@ -141,6 +162,26 @@ More issues emerge that stand beyond economic growth & economic efficiency:
 - Some industries have important **societal implications**. The goal is to provide **good jobs** because redistribution policy is either inadequate or non-existent.
 
 - Rising **geopolitical tensions** changes priorities and global institutional structures.
+
+## Global Value Chain
+
+![Typical Global Value Chain (GVC) of an airplane industry](feenstra.png)
+
+## GVC {.m}
+
+- large reduction of trade cost mean firms can engage in trades in intermediate inputs.
+
+- Activities of a production process can be separated and move into countries with comparative advantage in those sectors.
+
+- This changes the calculation of industrial policy: free flow of goods is actually important for firms to marginally exploit its advantage
+
+- Labor-abundant countries like Vietnam can participate in the value chain of high-tech products by doing the assembly while import tech-heavy components from abroad.
+
+- Backward participation like this is [crucial](https://doi.org/10.1007/s10290-022-00476-z) for an industry to learn and upgrade.
+
+## GVC
+
+![Illustration of a high-tech country's participation in the GVC](feenstra1.png)
 
 ## Targets & Rationales {.m}
 
@@ -180,7 +221,7 @@ More issues emerge that stand beyond economic growth & economic efficiency:
 
 ## Design principle
 
-1. Pursue industries with unlearned technologies (either pursuion frontiers or breaking it).
+1. Pursue industries with unlearned technologies (either pursuing frontiers or breaking it).
 
 1. Accountability from the receiver of supports (eg performance targets & exit clause)
 
@@ -307,6 +348,16 @@ More issues emerge that stand beyond economic growth & economic efficiency:
 - Just because policy exists does not mean it will be used.
 
 - Lack of attention given to evaluation process: data procurement and monev.
+
+## Wrapping up
+
+1. Industrial policy in trending thanks to admission of market failure and emerging global challenges.
+
+2. Innovation / pursuing new technologies, NOT protecting existing industries is the ultimate goal of a well-designed industrial policy.
+
+3. Trade is important: export for performance evaluation, import for intermediate inputs & learning.
+
+4. Limiting the impact of government failure is critical.
 
 ## References {.s}
 
