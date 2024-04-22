@@ -1,0 +1,156 @@
+---
+title: "Kajian Perekonomian Asia Tenggara"
+subtitle: "ASEAN in the global economy"
+date: "22 April 2024"
+author: "I Made Krisna Gupta"
+format: 
+  revealjs:
+    theme: [simple,../mytheme.scss]
+    chalkboard: true
+    incremental: false
+    transition: convex
+    background-transition: fade
+    slide-number: true
+  beamer: default
+---
+
+## Intro
+
+- My name is I Made Krisna, you can call me Imed.
+
+- Master at UI/VU, Doctor at ANU.
+
+- Interested in anything trade: manufacturing growth, trade & industrial policy impact, macro impact, climate impact, and labor (in that order).
+
+- Lectures at Politeknik APP Jakarta, a researcher at Center for Indonesian Policy Studies.
+
+- Rants at @imedkrisna
+
+## Today++
+
+- Discussing ASEAN and its economy
+
+- Challenges in the Indonesian chairmanship
+
+- Ch 13 of Sonobe et al.[^1] (2024) by Ing and Markus.
+
+- Will use this book going forward: digitalization, green, industry.
+
+## Quick stat in 2023
+
+- 9% of World's population.
+
+- 3.6% of the world's GDP
+
+- 4.6% of growth, more than twice of the world's average of 2%.
+
+- Hence "the epicenter of growth".
+
+## ASEAN then
+
+- ASEAN came into force on 15 December 2008.
+
+- Since then, various agreements in the ASEAN framework was established:
+
+![](pic1.png)
+
+[^1]:Sonobe, T., Buchoud, N. J. A., Akbar, R., & Altansukh, B. (2024). Transforming ASEAN: Strategies for Achieving Inclusive and Sustainable Growth. Asian Development Bank Institute.
+
+## ASEAN
+
+- the main goal of ASEAN is to integrate the economy of South East Asia nation.
+
+- First economically but also technical, educational, social, and cultural cooperation.
+
+- in the spirit of European Union, but "the ASEAN way".
+
+    - that is, not being a customs union means each country retain its sovereignty hence more flexible.
+    
+---
+
+![](pic2.png)
+
+---
+
+![](pic3.png)
+
+## Slow integration
+
+- Intra-ASEAN trade relative to the world is stagnant at around 22-23%.
+
+    - "shallow integration"
+
+- Since extra-ASEAN trade is growing fast, intra-ASEAN trade is growing too, but point remains.
+
+- Contrary with EU which has >60% intra-EU trade.
+
+- There are at least 3 key reasons why.
+
+## Slow integration: why
+
+1. ASEAN countries' trade are mostly substitutes rather than complements. This is also the reason why Indonesia and Australia are "further" than gravity equation would suggests.
+
+2. Complicated rules of origins and various  trade measures (the so-called NTM). These measures are often justified by consumer protections, but can also hinder trade and investment.
+
+3. High reliance on China, Japan and South Korea for mainly technologies and scale (both input and output).
+
+EU doesn't have all these problems.
+
+## RCEP
+
+- The RCEP is the latest, basically integrating various ASEAN+1s except India.
+
+- RCEP also discusses not just tariff, but also investment and trade in services in one framework.
+
+- This has high implication on the ROO rules, because the RCEP treat all members as "one source region".
+
+- Tariff-wise not important but hopefully allows for NTM harmonizations.
+
+- Integrating GVC may allow RCEP to improve its "powerhouse" manufacturing capacity.
+
+## Revisit
+
+::: {.incremental}
+
+- Do you know why countries' join into a regional trade framework (be it FTAs or customs union)?
+
+- To avoid the worst outcome in the prisoner's dilemma situation.
+
+- Do you know why ROO matters for trade agreements? What is it anyway?
+
+- to avoid an arbitrage, basically.
+
+:::
+
+## Between 2 (or 3) giants
+
+- ACFTA is arguably has the largest gain amid large initial tariffs.
+
+- The US and the EU are traditionally ASEAN's main trading partners.
+
+- As US and EU are trying to decouple with China, impacts are felt in ASEAN.
+
+## Between 2 giants {.m}
+
+- The growing trend of ASEAN’s trade and FDI at the global level also reflects the growing focus on ASEAN, along with the growing influence of Asia, particularly the PRC’s economic rise. 
+
+- Despite the rising geopolitical tension in recent years, ASEAN’s trade relations with its key partners keep growing.
+
+- The tension could also serve as an opportunity for emerging markets, including ASEAN, to enhance their affluence in the global world.
+
+- The growing trade and investment flows in the ASEAN region
+reflects the shift in economic power toward Asia, including ASEAN countries, that emerge as emerging major players.
+
+## Economic strategy
+
+- It is important for ASEAN to keep enhancing its participation in global value chains by maximizing its:
+
+    - strategic location
+
+    - large consumer market 
+    
+    - tapping into growing East Asia.
+    
+    - High barrier in the EU & US as benchmarks.
+    
+
