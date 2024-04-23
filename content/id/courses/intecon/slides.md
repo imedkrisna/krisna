@@ -16,3 +16,6 @@ slides:
 - {{% staticref "/intecon/meeting6/index.html" "newtab" %}}Pertemuan 6: Global Firms{{% /staticref %}}
 - {{% staticref "/intecon/meeting7/index.html" "newtab" %}}Pertemuan 7: Trade Policies{{% /staticref %}}
 - {{% staticref "/intecon/industrial/index.html" "newtab" %}}Advance: Industrial policy{{% /staticref %}}
+- {{% staticref "/intecon/hilir.pdf" "newtab" %}}Advance: Industrial policy{{% /staticref %}}
+- {{% staticref "/intecon/lcr.pdf" "newtab" %}}Advance: Industrial policy{{% /staticref %}}
+
