@@ -26,8 +26,8 @@ slides:
 - {{% staticref "/statistika/meeting2/index.html" "newtab" %}}Pertemuan 2: akar, pangkat, logaritma {{% /staticref %}}
 - {{% staticref "/statistika/meeting3/index.html" "newtab" %}}Pertemuan 3: Fungsi{{% /staticref %}}
 - {{% staticref "/statistika/meeting4/index.html" "newtab" %}}Pertemuan 4: Deret dan angka index{{% /staticref %}}
-- {{% staticref "/statistika/meeting5/index.html" "newtab" %}}Pertemuan 5: {{% /staticref %}}
-- {{% staticref "/statistika/meeting6/index.html" "newtab" %}}Pertemuan 6: {{% /staticref %}}
+- {{% staticref "/statistika/meeting5/index.html" "newtab" %}}Pertemuan 5: Diferensial/turunan{{% /staticref %}}
+- {{% staticref "/statistika/meeting6/index.html" "newtab" %}}Pertemuan 6: Konsep peluang dan penerapannya{{% /staticref %}}
 - {{% staticref "/statistika/meeting7/index.html" "newtab" %}}Pertemuan 7: {{% /staticref %}}
 - {{% staticref "/statistika/meeting8/index.html" "newtab" %}}Pertemuan 8: {{% /staticref %}}
 - {{% staticref "/statistika/meeting9/index.html" "newtab" %}}Pertemuan 9: {{% /staticref %}}
