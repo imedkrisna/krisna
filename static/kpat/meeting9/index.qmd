@@ -22,6 +22,66 @@ format:
 
 - Increasing importance of China in the region.
 
+## Some stats
+
+- East Asian non-oil exports recorded 3-fold increase between 69/70 - 90/07: from 11% of global non-oil exports to 33%.
+
+- Japan dominated the 60s and 70s (60% of total east asian exports). This figure drops significantly to 20% in the late 00s.
+
+- China has been the main story, but also other regions.
+
+- Asian exports are 92% manufacturing goods.
+
+## Some stats
+
+![Source: Athukorala 2011](prema1.png)
+
+## Some stats
+
+![Source: Athukorala 2011](prema2.png)
+
+## Some stats
+
+![Source: Athukorala 2011](prema3.png)
+
+## The flying geese
+
+- Flying geese model coined by Akamatsu (1961, maybe earlier): Production moves from the lead to rearguard countries, starting with labor-intensive industries.
+
+- The Lead geese is Japan
+
+- Second tier are South Korea, Singapore, Tainwan and Hong Kong.
+
+- Third tier is Thailand, Malaysia, Indonesia
+
+- Rearguard: China, Vietnam, etc.
+
+## The flying geese
+
+- At the beginning, Japan grew faster in Asia (somewhere in the early 1900s to the 1960s)
+
+- At some point, Japan wage level became too expensive, and it sources labor-intensive industries to the second tier of the flock.
+
+- The second tier grew, then outsource its labor-intensive to the third tier. The second tier then develop its own innovation as well.
+
+- At it keeps on happening untul the rearguard.
+
+- GVC changed this model slightly in the 80s
+
+## Framework
+
+- In East Asia, the second unbundling concept has been central to their development strategy.
+
+- Kimura (2017) identifies 4 concepts:
+
+    - Fragmentation theory (aka. the global value chain)
+    
+    - Two-dimensional fragmentation
+    
+    - New economic geography
+    
+    - Trade in value added (TiVA)
+
 ## Global Value Chain
 
 ![Typical Global Value Chain (GVC) of an airplane industry](feenstra.png)
@@ -42,25 +102,85 @@ format:
 
 ![Illustration of a high-tech country's participation in the GVC](feenstra1.png)
 
-## The flying geese
+## GVC
 
-- Flying geese model coined by Akamatsu (1961, maybe earlier): Production moves from the lead to rearguard countries, starting with labor-intensive industries.
+![Source: Kimura 2021](kimura2.png)
 
-- The Lead geese is Japan
+## GVC
 
-- Second tier are South Korea, Singapore, Tainwan and Hong Kong.
+- The prototype of such model in ASEAN was the Penang export processing zone (EPZ) in the 70s to early 80s.
 
-- Thir tier is Thailand, Malaysia, Indonesia
+- The EPZ manufactured semiconductors with 100% imported components for 100% foreign market (i.e., 100% import and 100% export)
 
-- Rearguard: China, Vietnam, etc.
+- Hong Kong and China relationship on garment and light industries, where HK firms operates in China, utilizing the rules of origins and wage difference.
 
-## The flying geese
+- The important piece (tech owner) is still the head of the geese.
 
-- 
+## 2D Fragmentation
 
-## Chinese role
+- in the firm's perspective, there are 2 important considerations:
 
-- Trade with China is [massive](https://data.aseanstats.org/dashboard/imts.hs2)
+    - Geograpihcal distance: the farther, the costlier fragmentation becomes.
+    
+    - Control: how much tasks actually gets outsourced
+    
+- Longer-distance transaction tends to be intra-firm, while closer tasks are usually outsourced.
+
+- The close-distance transactions is the backbone of agglomeration in developing countries.
+
+## 2D Fragmentation
+
+![Source: Kimura 2021](kimura3.png)
+
+## Agglomeration
+
+- If developing countries want to move up the value-chain, local firms must be able to participate in the value chain.
+
+- It often comes through supplying lead firms (typically MNC FDI).
+
+- The lead firm often provides schematics and know-how for the SMEs. Out of numbers of them, some may learn and upgrade.
+
+- China largely succeed in utilizing this strategy (Chor, Manova, Yu 2021)
+
+## Core-periphery
+
+- external economies of scale suggests that concentrating a large industry in one place benefit the world by reducing the cost for all.
+
+    - This is called concentration forces e.g., scale, matching, market access.
+    
+- However, comparative advantage of certain tasks create an incentives to move some tasks to a periphery economy
+
+    - Dispersion forces e.g., less congestion, low trade cost, wage differences.
+    
+- nickel is a great example for this model.
+
+## Core-periphery
+
+![Source: Kimura 2021](kimura4.png)
+
+## TiVA
+
+- Using [international input–output tables](https://www.oecd.org/sti/ind/measuring-trade-in-value-added.htm), allows us to measure the domestic/foreign value-added ratios embodied in each country’s
+production and exports.
+
+- This allows us to calculate the upstream–downstream position of each country’s
+industries. 
+
+- Although the input–output analysis itself is an old quantitative technique, the TiVA framework enables us to visualise the overall picture of GVCs.
+
+## Some stats
+
+![Source: Kimura 2017](kimura1.png)
+
+## East Asia network
+
+- East Asia's production network relies mostly on electrical machinery, particularly semi-conductor devices.
+
+- This is true for both components and final products.
+
+- Automotive is quite the opposite: only 4.7% in East Asia but around 33% in the Americas.
+
+- 2 posible reasons: protectionism and low value-to-weight ratio.
 
 ## Chinese role
 
@@ -74,6 +194,17 @@ According to the [ASEAN Statistical yearbook 2021](https://asean.org/wp-content/
 
 - More than 22% of total visitors in 2019, the largest.
 
+## Chinese role
+
+- Trade with China is [massive](https://data.aseanstats.org/dashboard/imts.hs2)
+
+- China-East Asia trade flow accounts for nearly 90% of exports and imports in total manufacturing.
+
+- Increased imports of components from East Asia from 18% to 44% of total component imports from 94/95 to 06/07.
+
+- Chinese exports to East Asia drop from 55.8% to 33.7%.
+
+- "component bias": China's component import is increasing, while exporting final goods more to the world.
 
 ## Chinese diplomacy
 
@@ -85,17 +216,46 @@ According to the [ASEAN Statistical yearbook 2021](https://asean.org/wp-content/
 
 ## Against the US
 
-- 
+- Decoupling thesis: after the Asian Financial Crisis in 97/98, Asia will decouple with the west.
 
-## References
+- IMF and western conditional debt irks many political figures in East Asia.
+
+- This "Chinese appeal" was deemed crucial for China to propose the CAFTA.
+
+## Conclusion {.m}
+
+- Manufacturing in ASEAN is closely related to the giants in the region.
+
+- GVC and core-periphery models create a unique network where big firms in the region leads.
+
+- ASEAN was supposed to be the next-layer Geese, but China increasingly become important as a production base for the lead to supply the world.
+
+- Innovative Local firms are important, which ASEAN lack.
+
+- Remains to be seen how US-China would affect.
+
+## Further study
+
+- Earlier studies were focusing on machinery, automotive and electronics.
+
+    - Green goods and services are increasingly important.
+    
+- IO table has been improved and certainly can be useful for your thesis.
+
+- You can certainly update figures in this lecture, especially amid various global challenges.
+
+## References {.s}
 
 - Athukorala, P. (2011). Production Networks and Trade Patterns in East Asia: Regionalization or Globalization? Asian Economic Papers, 10(1). 
+
+- Chor, D., Manova, K., & Yu, Z. (2021). Growing like China: Firm performance and global production line position. Journal of International Economics, 130, 103445. https://doi.org/https://doi.org/10.1016/j.jinteco.2021.103445 
 
 - George, A., Li, C., Lim, J. Z., & Xie, T. (2021). From SARS to COVID-19: The evolving role of China-ASEAN production network. Economic Modelling, 101, 105510. https://doi.org/https://doi.org/10.1016/j.econmod.2021.105510 
 
 - Kimura, F., & Narjoko, D. (2021). Reorganisation of production. In F. Kimura, S. Thangavelu, C. Findlay, & M. Pangestu (Eds.), Global Value Chain, Cities, and Urban Amenities: Implications for Trade and Investment Liberalization in East Asia and ASEAN (pp. 366-389). Edward Elgar. 
 
 - Men, J. (2007). The Construction of the China–ASEAN Free Trade Area: A Study of China's Active Involvement. Global Society, 21(2), 249-268. https://doi.org/10.1080/13600820701201954 
+
 - Obashi, A., & Kimura, F. (2017). Deepening and Widening of Production Networks in ASEAN. Asian Economic Papers, 16(1). 
 
 
