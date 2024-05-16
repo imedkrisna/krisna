@@ -18,4 +18,5 @@ slides:
 - {{% staticref "/intecon/industrial/index.html" "newtab" %}}Advance: Industrial policy{{% /staticref %}}
 - {{% staticref "/intecon/hilir.pdf" "newtab" %}}Advance: Industrial policy{{% /staticref %}}
 - {{% staticref "/intecon/lcr.pdf" "newtab" %}}Advance: Industrial policy{{% /staticref %}}
+- {{% staticref "/intecon/gravity" "newtab" %}}Estimating the gravity equations{{% /staticref %}}
 
