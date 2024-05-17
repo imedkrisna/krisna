@@ -17,17 +17,80 @@ format:
 
 ## Introduction {#sec-introduction}
 
-Very important for trade economist.
+The gravity model is probably the most popular model in international trade. Many uses them. It is very intuitive, great predictive power, and most importantly, tweakable [@yotov]. But the even most important is that UI students love them. If you're doing trade for your thesis, then you probably going to use the gravity model as your backbone.
 
-Using @yotov and @cgz but obviously many other papers you can use.
+This guide is my attempt to help you learn gravity model much easier. The most important part is probably the data and the model itself. What is the minimum things you need in the gravity model, how to arrange the database, run them, and interpret them. You must familiarize yourself with the data and its wrangling (80% of your coding) as well as the main gravity specification to date. I encourage students to pay careful attention to @yotov as it hosts the recent development in the gravity model, a must read if you're planning to utilize gravity model.
 
-Most important is familiarize yourself with the data and its wrangling (80% of your coding) as well as the main gravity specification to date. I encourage students to pay careful attention to @yotov as it hosts the recent development in the gravity model, a must read if you're planning to utilize gravity model.
+I use R here because I use R much more than Stata these days. However, the two language aren't very different. You can do the same thing on both, but you may need to google a bit. It's okay to use google a lot. I did as well even right now. Oh yeah I also informed you guys know R already so I won't go into too much basic stuff.
 
 ## Preparation
+
+This workshop is conducted with the R statistical software, RStudio IDE, and penppml [@cgz] package. Of course you're going to need tidyverse as well, or specifically dplyr package. You want to procure data beforehand too, and I will use CEPII data. let's discuss one by one.
+
+### Software
+
+You'd want to use R and RStudio for this. The main reason I use R is because it's free. Stata is not. I think Stata is faster and a bit easier (R people will kill me if they see this) but not cheap. If you have Stata it's fine too. The command you'd want in stata is `ppmlhdfe`.
+
+Now onto R. You can procure R and RStudio from Posit's website. Get it [here](https://posit.co/download/rstudio-desktop/). I wrote the guide to install R and RStudio [here](https://www.krisna.or.id/courses/metopel/installr/), so you better check it out. It's written in Indonesian.
+
+After that, you are going to need to install some packages. Follow my step until I told you to do type this on the console `install.packages(c("tidyverse","WDI","readxl","kableExtra"))`. You are going to do the same but you're going to need an extra stuff. Specifically, you need to add "penppml" in the list. That is, you need to type
+
+```r
+`install.packages(c("tidyverse","WDI","readxl","kableExtra","penppml"))`
+```
+
+This step requires internet connection, but you'll need to do this only once.
+
+### Data
+
+I procure data for this workshop from [CEPII]. From their website, CEPII is:
+
+> he CEPII is the leading French center for research and expertise on the world economy. It contributes to the policy making process trough its independent in-depth analyses on international trade, migrations, macroeconomics and finance. The CEPII also produces databases and provides a platform for debate among academics, experts, practitioners, decision makers and other private and public stakeholders.
+Founded in 1978, the CEPII is part of the network coordinated by France Strategy, within the Prime Minister's services.
+
+I use their BACI dataset [@baci] and gravity dataset [@gravity]. You can get those from this [link](http://www.cepii.fr/CEPII/en/bdd_modele/bdd_modele.asp). BACI is under "international trade" banner while gravity is under "Gravity" banner. Specifically, I downloaded the 2017-2022 version of BACI and for the gravity dataset I downloaded the R version. You can of course download whichever version you like but for the purpose of this workshop maybe its best to stick with the same dataset as I.
+
+You can also download from [my drive](https://1drv.ms/f/s!AjelszXKKcmskMsKLZRRwRJq1a2MnA?e=xsdpxL).
+
+In the CEPII website you can use various other dataset that may be useful for you. At the same time, there are various other source you can utilise for your actual project that's not necessarily from CEPII.
+
+### working directory
+
+If you finished downloading data and installing softwares, you then need to set up a working directory. A working directory is basically a folder where you have all the data and your R script (R version of do file). For now what you want is to have a **folder filled with your downloaded data**. Make sure you know the path to this folder. I tend to use easy path for my projects and move it somewhere else when i finished. If you use github or the likes, it'll be even nicer because you can actually wipe out your local repo if you finish.
+
+All in all, you should have a folder with these stuff in it:
+
+![](pic1.png)
 
 ## Theory
 
 ## Setting data
+
+first we load all the necessary data:
+
+```{r}
+#| warning: false
+#| echo: true
+#| code-fold: true
+#| code-line-numbers: true
+
+library(tidyverse)
+library(penppml)
+
+gravity <- readRDS("Gravity_V202211.rds")
+t2017<-read_csv("BACI_HS17_Y2017_V202401b.csv")
+t2018<-read_csv("BACI_HS17_Y2018_V202401b.csv")
+t2019<-read_csv("BACI_HS17_Y2019_V202401b.csv")
+t2020<-read_csv("BACI_HS17_Y2020_V202401b.csv")
+t2021<-read_csv("BACI_HS17_Y2021_V202401b.csv")
+t2022<-read_csv("BACI_HS17_Y2022_V202401b.csv")
+
+trade<-rbind(t2017,t2018,t2019,t2020,t2021,t2022)
+
+remove(t2017,t2018,t2019,t2020,t2021,t2022)
+
+```
+
 
 ## Running and interpretaion
 

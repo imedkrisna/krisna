@@ -8,6 +8,13 @@ public/
 jsconfig.json
 node_modules/
 
+# datas
+*.dta
+*.csv
+*.xls
+*.xlsx
+*.rds
+
 *.txt
 
 /.luarc.json
