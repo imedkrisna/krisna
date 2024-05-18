@@ -152,13 +152,13 @@ div.csl-indent {
 </section>
 <section id="req" class="level2">
 <h2 class="anchored" data-anchor-id="req">Preparation</h2>
-<p>This workshop is conducted with the R statistical software, RStudio IDE, and penppml <span class="citation" data-cites="cgz">(<a href="#ref-cgz" role="doc-biblioref">Correia, Guimarães, and Zylkin 2020</a>)</span> package. Of course you’re going to need tidyverse as well, or specifically dplyr package. You want to procure data beforehand too, and I will use CEPII data. let’s discuss one by one.</p>
+<p>This workshop is conducted with the R statistical software, RStudio IDE, and gravity <span class="citation" data-cites="grav">(<a href="#ref-grav" role="doc-biblioref">Woelwer et al. 2023</a>)</span> package. Of course you’re going to need tidyverse as well, or specifically dplyr package. You want to procure data beforehand too, and I will use CEPII data. let’s discuss one by one.</p>
 <section id="software" class="level3">
 <h3 class="anchored" data-anchor-id="software">Software</h3>
 <p>You’d want to use R and RStudio for this. The main reason I use R is because it’s free. Stata is not. I think Stata is faster and a bit easier (R people will kill me if they see this) but not cheap. If you have Stata it’s fine too. The command you’d want in stata is <code>ppmlhdfe</code>.</p>
 <p>Now onto R. You can procure R and RStudio from Posit’s website. Get it <a href="https://posit.co/download/rstudio-desktop/">here</a>. I wrote the guide to install R and RStudio <a href="https://www.krisna.or.id/courses/metopel/installr/">here</a>, so you better check it out. It’s written in Indonesian.</p>
-<p>After that, you are going to need to install some packages. Follow my step until I told you to do type this on the console <code>install.packages(c("tidyverse","WDI","readxl","kableExtra"))</code>. You are going to do the same but you’re going to need an extra stuff. Specifically, you need to add “penppml” in the list. That is, you need to type</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(<span class="st">"tidyverse"</span>,<span class="st">"WDI"</span>,<span class="st">"readxl"</span>,<span class="st">"kableExtra"</span>,<span class="st">"penppml"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>After that, you are going to need to install some packages. Follow my step until I told you to do type this on the console <code>install.packages(c("tidyverse","WDI","readxl","kableExtra"))</code>. You are going to do the same but you’re going to few different stuff. Specifically, you need to add “gravity” and “writexl” on the list. That is, you need to type</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(<span class="st">"tidyverse"</span>,<span class="st">"WDI"</span>,<span class="st">"readxl"</span>,<span class="st">"writexl"</span>,<span class="st">"gravity"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>This step requires internet connection, but you’ll need to do this only once.</p>
 </section>
 <section id="data" class="level3">
@@ -179,6 +179,20 @@ div.csl-indent {
 <p><img src="pic1.png" class="img-fluid"></p>
 <p>Notes about the data country_codes, product_codes and Readme are all for reading BACI.</p>
 </section>
+<section id="packages" class="level3">
+<h3 class="anchored" data-anchor-id="packages">Packages</h3>
+<p>for this page I use these packages but you may not need all of them</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="fu">library</span>(penppml) <span class="do">## no need</span></span>
+<span id="cb2-3"><a href="#cb2-3"></a><span class="fu">library</span>(writexl)</span>
+<span id="cb2-4"><a href="#cb2-4"></a><span class="fu">library</span>(modelsummary) <span class="do">## no need</span></span>
+<span id="cb2-5"><a href="#cb2-5"></a><span class="fu">library</span>(gravity)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
 </section>
 <section id="simple-gravity-specification" class="level2">
 <h2 class="anchored" data-anchor-id="simple-gravity-specification">Simple gravity specification</h2>
@@ -189,12 +203,13 @@ div.csl-indent {
 X_{ij}=\tilde{G}\frac{Y_iE_j}{T_{ij}^\theta}
 \tag{1}\]</span></span></p>
 <p>where <span class="math inline">\(X_{it}\)</span> is the value of trade flow from country <span class="math inline">\(i\)</span> to country <span class="math inline">\(j\)</span>, <span class="math inline">\(\tilde{G}\)</span> is the gravitational constant (aka our usual constant), <span class="math inline">\(Y_i\)</span> is the output in country <span class="math inline">\(i\)</span> <span class="math inline">\(E_j\)</span> is the value of expenditure in country <span class="math inline">\(j\)</span> and <span class="math inline">\(T_{ij}\)</span> is the total bilateral trade frictions / trade cost between country <span class="math inline">\(i\)</span> and country <span class="math inline">\(j\)</span>.</p>
-<p>There are various other types of gravity equations, but let’s start with a relatively simple one. One of my favorite simple gravity specification is a budget version of <span class="citation" data-cites="st">Silva and Tenreyro (<a href="#ref-st" role="doc-biblioref">2006</a>)</span> which is taken from <span class="citation" data-cites="avn">(<a href="#ref-avn" role="doc-biblioref"><strong>avn?</strong></a>)</span> which looks like this:</p>
+<p>There are various other types of gravity equations, but let’s start with a relatively simple one. One of my favorite simple gravity specification is a budget version of <span class="citation" data-cites="st">Silva and Tenreyro (<a href="#ref-st" role="doc-biblioref">2006</a>)</span> which is taken from <span class="citation" data-cites="avw">Anderson and Wincoop (<a href="#ref-avw" role="doc-biblioref">2003</a>)</span> which looks like this:</p>
 <p><span id="eq-2"><span class="math display">\[
 X_{ij}=\alpha_0 Y_i^{\alpha_1}Y_j^{\alpha_2}D_{ij}^{\alpha_3}e^{\theta_id_i+\theta_jd_j}
 \tag{2}\]</span></span></p>
 <p>where <span class="math inline">\(\alpha_0\)</span> is your <span class="math inline">\(\tilde{G}\)</span>, while <span class="math inline">\(Y\)</span> is the output and expenditure which is proxied with GDP. <span class="math inline">\(D_{ij}\)</span> is the distance between the two countries, which can be generalized as a vector of trade cost measures. Typically we use physical distance but also other types of bilateral trade cost. Lastly, the <span class="math inline">\(d_i\)</span> and <span class="math inline">\(d_j\)</span> is country-specific characteristics.</p>
-<p>There are various variables used in <span class="citation" data-cites="st">Silva and Tenreyro (<a href="#ref-st" role="doc-biblioref">2006</a>)</span>. log of exporter’s and importer’s GDP and GDP per capita. Various “distance” variables is used as well e.g., physical distance and various contiguity, common-language dummy</p>
+<p>There are various variables used in <span class="citation" data-cites="st">Silva and Tenreyro (<a href="#ref-st" role="doc-biblioref">2006</a>)</span>. log of exporter’s and importer’s GDP and GDP per capita. Various “distance” variables is used as well e.g., physical distance and variables like contiguity, common-language dummy, colonial-tie dummy and free trade agreement dummy.</p>
+<p>Note that our regression consists only of two indices: exporter <span class="math inline">\(i\)</span> and importer <span class="math inline">\(j\)</span>. We are going to use the gravity data I mentioned earlier, slice the dataset to cover only one year chosen arbitrarily (which is 2019), and run <a href="#eq-2">Equation&nbsp;2</a>.</p>
 </section>
 <section id="setting-data" class="level3">
 <h3 class="anchored" data-anchor-id="setting-data">Setting data</h3>
@@ -202,16 +217,16 @@ X_{ij}=\alpha_0 Y_i^{\alpha_1}Y_j^{\alpha_2}D_{ij}^{\alpha_3}e^{\theta_id_i+\the
 <div class="cell">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb2-2"><a href="#cb2-2"></a><span class="fu">library</span>(penppml)</span>
-<span id="cb2-3"><a href="#cb2-3"></a><span class="fu">library</span>(writexl)</span>
-<span id="cb2-4"><a href="#cb2-4"></a></span>
-<span id="cb2-5"><a href="#cb2-5"></a><span class="do">## Readubg data</span></span>
-<span id="cb2-6"><a href="#cb2-6"></a>gravity <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="st">"Gravity_V202211.rds"</span>)</span>
-<span id="cb2-7"><a href="#cb2-7"></a>key<span class="ot">&lt;-</span><span class="fu">read_csv</span>(<span class="st">"country_codes_V202401b.csv"</span>)</span>
-<span id="cb2-8"><a href="#cb2-8"></a></span>
-<span id="cb2-9"><a href="#cb2-9"></a><span class="do">## read column names</span></span>
-<span id="cb2-10"><a href="#cb2-10"></a><span class="fu">colnames</span>(gravity)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="do">## Readubg data</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a>gravity <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="st">"Gravity_V202211.rds"</span>)</span>
+<span id="cb3-3"><a href="#cb3-3"></a>key<span class="ot">&lt;-</span><span class="fu">read_csv</span>(<span class="st">"country_codes_V202401b.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>The gravity is the data from CEPII while key is storing some country codes. You can see the first 10 rows of the data and its variable names you call their name. Just type <code>gravity</code> or <code>key</code> in the console then hit enter. However, if you just want to look at the variable names, you can use <code>colnames()</code></p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(gravity)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] "year"                   "country_id_o"           "country_id_d"          
@@ -244,51 +259,612 @@ X_{ij}=\alpha_0 Y_i^{\alpha_1}Y_j^{\alpha_2}D_{ij}^{\alpha_3}e^{\theta_id_i+\the
 [82] "tradeflow_comtrade_o"   "tradeflow_comtrade_d"   "tradeflow_baci"        
 [85] "manuf_tradeflow_baci"   "tradeflow_imf_o"        "tradeflow_imf_d"       </code></pre>
 </div>
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">colnames</span>(key)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "country_code" "country_name" "country_iso2" "country_iso3"</code></pre>
 </div>
-</div>
+<p>As you can see, the column names are so plenty. Consult to the CEPII website or <span class="citation" data-cites="gravity">Conte, Cotterlaz, and Mayer (<a href="#ref-gravity" role="doc-biblioref">2022</a>)</span> to learn more. We will only use some of them, so we will filter these data to make it more concise. Specifically, we will (1) remove some countries, (2) remove non-2019, and (3) remove variables we are not using.</p>
+<p>For variables, we will keep iso3_o, iso3_d, distw_harmonic, contig, comcol, comlang_off,gdp_o,gdp_d, gdpcap_o, gdpcap_d,fta_wto. Note that o means origin / exporter and d means destination / importer.</p>
 <div class="cell">
 <details>
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="do">## create a country list</span></span>
 <span id="cb6-2"><a href="#cb6-2"></a>ctr<span class="ot">&lt;-</span><span class="fu">c</span>(<span class="st">"Albania"</span>, <span class="st">"Denmark"</span>, <span class="st">"Kenya"</span>, <span class="st">"Romania"</span>, <span class="st">"Algeria"</span>, <span class="st">"Djibouti"</span>, <span class="st">"Kiribati"</span>, <span class="st">"Russian Federation"</span>, <span class="st">"Angola"</span>, <span class="st">"Dominican Rep."</span>, <span class="st">"Korea, Rep."</span>, <span class="st">"Rwanda"</span>, <span class="st">"Argentina"</span>, <span class="st">"Ecuador"</span>, <span class="st">"Laos"</span>, <span class="st">"P. Dem. Rep."</span>, <span class="st">"Saudi Arabia"</span>, <span class="st">"Australia"</span>, <span class="st">"Egypt"</span>, <span class="st">"Lebanon"</span>, <span class="st">"Senegal"</span>, <span class="st">"Austria"</span>, <span class="st">"El Salvador"</span>, <span class="st">"Madagascar"</span>, <span class="st">"Seychelles"</span>, <span class="st">"Bahamas"</span>, <span class="st">"Eq. Guinea"</span>, <span class="st">"Malawi"</span>, <span class="st">"Sierra Leone"</span>, <span class="st">"Bahrain"</span>, <span class="st">"Ethiopia"</span>, <span class="st">"Malaysia"</span>, <span class="st">"Singapore"</span>, <span class="st">"Bangladesh"</span>, <span class="st">"Fiji"</span>, <span class="st">"Maldives"</span>, <span class="st">"Solomon Islands"</span>, <span class="st">"Barbados"</span>, <span class="st">"Finland"</span>, <span class="st">"Mali"</span>, <span class="st">"South Africa"</span>, <span class="st">"Belgium-Lux."</span>, <span class="st">"France"</span>, <span class="st">"Malta"</span>, <span class="st">"Spain"</span>, <span class="st">"Belize"</span>, <span class="st">"Gabon"</span>, <span class="st">"Mauritania"</span>, <span class="st">"Sri Lanka"</span>, <span class="st">"Benin"</span>, <span class="st">"Gambia"</span>, <span class="st">"Mauritius"</span>, <span class="st">"St. Kitts and Nevis"</span>, <span class="st">"Bhutan"</span>, <span class="st">"Germany"</span>, <span class="st">"Mexico"</span>, <span class="st">"Sudan"</span>, <span class="st">"Bolivia"</span>, <span class="st">"Ghana"</span>, <span class="st">"Mongolia"</span>, <span class="st">"Suriname"</span>, <span class="st">"Brazil"</span>, <span class="st">"Greece"</span>, <span class="st">"Morocco"</span>, <span class="st">"Sweden"</span>, <span class="st">"Brunei"</span>, <span class="st">"Guatemala"</span>, <span class="st">"Mozambique"</span>, <span class="st">"Switzerland"</span>, <span class="st">"Bulgaria"</span>, <span class="st">"Guinea"</span>, <span class="st">"Nepal"</span>, <span class="st">"Syrian Arab Rep."</span>, <span class="st">"Burkina Faso"</span>, <span class="st">"Guinea-Bissau"</span>, <span class="st">"Netherlands"</span>, <span class="st">"Tanzania"</span>, <span class="st">"Burundi"</span>, <span class="st">"Guyana"</span>, <span class="st">"New Caledonia"</span>, <span class="st">"Thailand"</span>, <span class="st">"Cambodia"</span>, <span class="st">"Haiti"</span>, <span class="st">"New Zealand"</span>, <span class="st">"Togo"</span>, <span class="st">"Cameroon"</span>, <span class="st">"Honduras"</span>, <span class="st">"Nicaragua"</span>, <span class="st">"Trinidad and Tobago"</span>, <span class="st">"Canada"</span>, <span class="st">"Hong Kong"</span>, <span class="st">"Niger"</span>, <span class="st">"Tunisia"</span>, <span class="st">"Central African Rep."</span>, <span class="st">"Hungary"</span>, <span class="st">"Nigeria"</span>, <span class="st">"Turkey"</span>, <span class="st">"Chad"</span>, <span class="st">"Iceland"</span>, <span class="st">"Norway"</span>, <span class="st">"Uganda"</span>, <span class="st">"Chile"</span>, <span class="st">"India"</span>, <span class="st">"Oman"</span>, <span class="st">"United Arab Em."</span>, <span class="st">"China"</span>, <span class="st">"Indonesia"</span>, <span class="st">"Pakistan"</span>, <span class="st">"United Kingdom"</span>, <span class="st">"Colombia"</span>, <span class="st">"Iran"</span>, <span class="st">"Panama"</span>, <span class="st">"United States"</span>, <span class="st">"Comoros"</span>, <span class="st">"Ireland"</span>, <span class="st">"Papua New Guinea"</span>, <span class="st">"Uruguay"</span>, <span class="st">"Congo Dem. Rep."</span>, <span class="st">"Israel"</span>, <span class="st">"Paraguay"</span>, <span class="st">"Venezuela"</span>, <span class="st">"Congo Rep."</span>, <span class="st">"Italy"</span>, <span class="st">"Peru"</span>, <span class="st">"Vietnam"</span>, <span class="st">"Costa Rica"</span>, <span class="st">"Jamaica"</span>, <span class="st">"Philippines"</span>, <span class="st">"Yemen"</span>, <span class="st">"Cote D’lvoire"</span>, <span class="st">"Japan"</span>, <span class="st">"Poland"</span>, <span class="st">"Zambia"</span>, <span class="st">"Cyprus"</span>, <span class="st">"Jordan"</span>, <span class="st">"Portugal"</span>, <span class="st">"Zimbabwe"</span>)</span>
 <span id="cb6-3"><a href="#cb6-3"></a></span>
-<span id="cb6-4"><a href="#cb6-4"></a><span class="do">## keep 2019</span></span>
-<span id="cb6-5"><a href="#cb6-5"></a>gravity2<span class="ot">&lt;-</span>gravity<span class="sc">|&gt;</span><span class="fu">filter</span>(year<span class="sc">==</span><span class="dv">2019</span>)</span>
-<span id="cb6-6"><a href="#cb6-6"></a></span>
-<span id="cb6-7"><a href="#cb6-7"></a><span class="do">## Keep countries in the list</span></span>
-<span id="cb6-8"><a href="#cb6-8"></a>key2<span class="ot">&lt;-</span>key <span class="sc">|&gt;</span> <span class="fu">filter</span>(country_name<span class="sc">%in%</span>ctr)</span>
-<span id="cb6-9"><a href="#cb6-9"></a>gravity2<span class="ot">&lt;-</span>gravity2 <span class="sc">|&gt;</span> <span class="fu">filter</span>(country_id_o <span class="sc">%in%</span> key2<span class="sc">$</span>country_iso3 <span class="sc">&amp;</span> country_id_d <span class="sc">%in%</span> key2<span class="sc">$</span>country_iso3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-4"><a href="#cb6-4"></a>vrb<span class="ot">&lt;-</span><span class="fu">c</span>(<span class="st">"iso3num_o"</span>,<span class="st">"iso3num_d"</span>,<span class="st">"year"</span>,<span class="st">"iso3_o"</span>, <span class="st">"iso3_d"</span>, <span class="st">"distw_harmonic"</span>, <span class="st">"contig"</span>, <span class="st">"comcol"</span>, <span class="st">"comlang_off"</span>,<span class="st">"gdp_o"</span>,<span class="st">"gdp_d"</span>, <span class="st">"gdpcap_o"</span>, <span class="st">"gdpcap_d"</span>,<span class="st">"fta_wto"</span>,<span class="st">"tradeflow_baci"</span>)</span>
+<span id="cb6-5"><a href="#cb6-5"></a></span>
+<span id="cb6-6"><a href="#cb6-6"></a><span class="do">## keep 2019</span></span>
+<span id="cb6-7"><a href="#cb6-7"></a>gravity2<span class="ot">&lt;-</span>gravity<span class="sc">|&gt;</span><span class="fu">filter</span>(year<span class="sc">==</span><span class="dv">2019</span>)</span>
+<span id="cb6-8"><a href="#cb6-8"></a></span>
+<span id="cb6-9"><a href="#cb6-9"></a><span class="do">## Keep countries in the list</span></span>
+<span id="cb6-10"><a href="#cb6-10"></a>key2<span class="ot">&lt;-</span>key <span class="sc">|&gt;</span> <span class="fu">filter</span>(country_name<span class="sc">%in%</span>ctr)</span>
+<span id="cb6-11"><a href="#cb6-11"></a>gravity2<span class="ot">&lt;-</span>gravity2 <span class="sc">|&gt;</span> <span class="fu">filter</span>(country_id_o <span class="sc">%in%</span> key2<span class="sc">$</span>country_iso3 <span class="sc">&amp;</span> country_id_d <span class="sc">%in%</span> key2<span class="sc">$</span>country_iso3)</span>
+<span id="cb6-12"><a href="#cb6-12"></a>gravity2<span class="ot">&lt;-</span>gravity2 <span class="sc">|&gt;</span> <span class="fu">select</span>(vrb)</span>
+<span id="cb6-13"><a href="#cb6-13"></a></span>
+<span id="cb6-14"><a href="#cb6-14"></a><span class="do">## Make a log versin</span></span>
+<span id="cb6-15"><a href="#cb6-15"></a>gravity2<span class="ot">&lt;-</span>gravity2 <span class="sc">|&gt;</span></span>
+<span id="cb6-16"><a href="#cb6-16"></a>  <span class="fu">mutate</span>(<span class="at">ldist=</span><span class="fu">log</span>(distw_harmonic),</span>
+<span id="cb6-17"><a href="#cb6-17"></a>         <span class="at">lgdpo=</span><span class="fu">log</span>(gdp_o),</span>
+<span id="cb6-18"><a href="#cb6-18"></a>         <span class="at">lgdpd=</span><span class="fu">log</span>(gdp_d),</span>
+<span id="cb6-19"><a href="#cb6-19"></a>         <span class="at">lgdpco=</span><span class="fu">log</span>(gdpcap_o),</span>
+<span id="cb6-20"><a href="#cb6-20"></a>         <span class="at">lgdpcd=</span><span class="fu">log</span>(gdpcap_d),</span>
+<span id="cb6-21"><a href="#cb6-21"></a>         <span class="at">logtrade=</span><span class="fu">log</span>(<span class="dv">1</span><span class="sc">+</span>tradeflow_baci))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
+<p>You can see in your environment tab the difference between gravity and gravity2 as well as between key and key2 on the number of observations and variables. Note that we also log non-dummy variables for gravity2 to redo <span class="citation" data-cites="st">Silva and Tenreyro (<a href="#ref-st" role="doc-biblioref">2006</a>)</span>.</p>
+<p>We will focus on the gravity2 as it will be the dataset we will run. You can quickly show summary statistics by typing <code>summary(gravity2)</code> on the console tab.</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(gravity2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>   iso3num_o       iso3num_d          year         iso3_o         
+ Min.   :  8.0   Min.   :  8.0   Min.   :2019   Length:12321      
+ 1st Qu.:204.0   1st Qu.:204.0   1st Qu.:2019   Class :character  
+ Median :400.0   Median :400.0   Median :2019   Mode  :character  
+ Mean   :415.5   Mean   :415.5   Mean   :2019                     
+ 3rd Qu.:616.0   3rd Qu.:616.0   3rd Qu.:2019                     
+ Max.   :894.0   Max.   :894.0   Max.   :2019                     
+                                                                  
+    iso3_d          distw_harmonic      contig            comcol       
+ Length:12321       Min.   :    4   Min.   :0.00000   Min.   :0.00000  
+ Class :character   1st Qu.: 4459   1st Qu.:0.00000   1st Qu.:0.00000  
+ Mode  :character   Median : 7587   Median :0.00000   Median :0.00000  
+                    Mean   : 7932   Mean   :0.01753   Mean   :0.09739  
+                    3rd Qu.:11024   3rd Qu.:0.00000   3rd Qu.:0.00000  
+                    Max.   :19676   Max.   :1.00000   Max.   :1.00000  
+                                                                       
+  comlang_off         gdp_o               gdp_d              gdpcap_o     
+ Min.   :0.0000   Min.   :1.779e+05   Min.   :1.779e+05   Min.   : 0.224  
+ 1st Qu.:0.0000   1st Qu.:1.419e+07   1st Qu.:1.419e+07   1st Qu.: 1.909  
+ Median :0.0000   Median :4.805e+07   Median :4.805e+07   Median : 6.321  
+ Mean   :0.1789   Mean   :4.785e+08   Mean   :4.785e+08   Mean   :15.262  
+ 3rd Qu.:0.0000   3rd Qu.:3.512e+08   3rd Qu.:3.512e+08   3rd Qu.:18.480  
+ Max.   :1.0000   Max.   :1.428e+10   Max.   :1.428e+10   Max.   :85.335  
+                  NA's   :111         NA's   :111         NA's   :111     
+    gdpcap_d         fta_wto       tradeflow_baci          ldist      
+ Min.   : 0.224   Min.   :0.0000   Min.   :        0   Min.   :1.386  
+ 1st Qu.: 1.909   1st Qu.:0.0000   1st Qu.:      273   1st Qu.:8.403  
+ Median : 6.321   Median :0.0000   Median :     6343   Median :8.934  
+ Mean   :15.262   Mean   :0.2023   Mean   :   611172   Mean   :8.721  
+ 3rd Qu.:18.480   3rd Qu.:0.0000   3rd Qu.:    87003   3rd Qu.:9.308  
+ Max.   :85.335   Max.   :1.0000   Max.   :149568313   Max.   :9.887  
+ NA's   :111                       NA's   :2185                       
+     lgdpo           lgdpd           lgdpco            lgdpcd       
+ Min.   :12.09   Min.   :12.09   Min.   :-1.4961   Min.   :-1.4961  
+ 1st Qu.:16.47   1st Qu.:16.47   1st Qu.: 0.6466   1st Qu.: 0.6466  
+ Median :17.69   Median :17.69   Median : 1.8438   Median : 1.8438  
+ Mean   :17.93   Mean   :17.93   Mean   : 1.8087   Mean   : 1.8087  
+ 3rd Qu.:19.68   3rd Qu.:19.68   3rd Qu.: 2.9167   3rd Qu.: 2.9167  
+ Max.   :23.38   Max.   :23.38   Max.   : 4.4466   Max.   : 4.4466  
+ NA's   :111     NA's   :111     NA's   :111       NA's   :111      
+    logtrade     
+ Min.   : 0.001  
+ 1st Qu.: 5.613  
+ Median : 8.755  
+ Mean   : 8.438  
+ 3rd Qu.:11.374  
+ Max.   :18.823  
+ NA's   :2185    </code></pre>
+</div>
+</div>
+</section>
+<section id="regression" class="level3">
+<h3 class="anchored" data-anchor-id="regression">Regression</h3>
+<p>Let’s do 2 types of regression. First we do a regression using a normal ols, and secondly we do ppml.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>reg1<span class="ot">&lt;-</span><span class="fu">lm</span>(logtrade<span class="sc">~</span>lgdpo<span class="sc">+</span>lgdpd<span class="sc">+</span>lgdpco<span class="sc">+</span>lgdpcd<span class="sc">+</span>ldist<span class="sc">+</span>contig<span class="sc">+</span>comcol<span class="sc">+</span>comlang_off<span class="sc">+</span>fta_wto)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>reg2<span class="ot">&lt;-</span><span class="fu">lm</span>(logtrade<span class="sc">~</span>lgdpo<span class="sc">+</span>lgdpd<span class="sc">+</span>lgdpco<span class="sc">+</span>lgdpcd<span class="sc">+</span>ldist<span class="sc">+</span>contig<span class="sc">+</span>comcol<span class="sc">+</span>comlang_off<span class="sc">+</span>fta_wto<span class="sc">+</span>iso3_o<span class="sc">+</span>iso3_d)</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>reg3<span class="ot">&lt;-</span><span class="fu">ppml</span>(<span class="at">data=</span>gravity2,<span class="at">dependent_variable=</span><span class="st">"tradeflow_baci"</span>,<span class="at">distance=</span><span class="st">"distw_harmonic"</span>,<span class="at">additional_regressors=</span><span class="fu">c</span>(<span class="st">"lgdpo"</span>,<span class="st">"lgdpd"</span>,<span class="st">"lgdpco"</span>,<span class="st">"lgdpcd"</span>,<span class="st">"contig"</span>,<span class="st">"comcol"</span>,<span class="st">"comlang_off"</span>,<span class="st">"fta_wto"</span>))</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>reg4<span class="ot">&lt;-</span><span class="fu">ppml</span>(<span class="at">data=</span>gravity2,<span class="at">dependent_variable=</span><span class="st">"tradeflow_baci"</span>,<span class="at">distance=</span><span class="st">"distw_harmonic"</span>,<span class="at">additional_regressors=</span><span class="fu">c</span>(<span class="st">"lgdpo"</span>,<span class="st">"lgdpd"</span>,<span class="st">"lgdpco"</span>,<span class="st">"lgdpcd"</span>,<span class="st">"contig"</span>,<span class="st">"comcol"</span>,<span class="st">"comlang_off"</span>,<span class="st">"fta_wto"</span>,<span class="st">"iso3_o"</span>,<span class="st">"iso3_d"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>You can call each reg’s table with <code>summary(reg1)</code>.</p>
+<div class="cell">
+<div class="cell-output-display">
+
+ 
+
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tinytable_fvxbk56ob1yjhg1qtjbq</title>
+    <style>
+.table td.tinytable_css_l9yei4myvxlp8qys0tu9, .table th.tinytable_css_l9yei4myvxlp8qys0tu9 {    border-bottom: solid 0.1em #d3d8dc; }
+.table td.tinytable_css_29w0jrdrywdlm8d0c8mm, .table th.tinytable_css_29w0jrdrywdlm8d0c8mm {    text-align: left; }
+.table td.tinytable_css_n6w3ydq7gt5wz1r2bmru, .table th.tinytable_css_n6w3ydq7gt5wz1r2bmru {    text-align: center; }
+.table td.tinytable_css_4kredun27sdqg43aulqg, .table th.tinytable_css_4kredun27sdqg43aulqg {    text-align: center; }
+.table td.tinytable_css_m73280o78wtr0buyde1a, .table th.tinytable_css_m73280o78wtr0buyde1a {    text-align: center; }
+.table td.tinytable_css_zxakbke1dhycstwb4ekt, .table th.tinytable_css_zxakbke1dhycstwb4ekt {    text-align: center; }
+.table td.tinytable_css_8dyjgb2vpzdj8hkvlb59, .table th.tinytable_css_8dyjgb2vpzdj8hkvlb59 {    border-bottom: solid 0.05em black; }
+    </style>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+    </script>
+  
+
+  
+    <div class="container">
+      <table class="table table-borderless" id="tinytable_fvxbk56ob1yjhg1qtjbq" style="width: auto; margin-left: auto; margin-right: auto;" data-quarto-disable-processing="true"><caption><p>Simple regression results</p></caption>
+        <thead>
+        
+              <tr>
+                <th scope="col"> </th>
+                <th scope="col">OLS no ctr</th>
+                <th scope="col">OLS with ctr</th>
+                <th scope="col">PPML no ctr</th>
+                <th scope="col">PPML with ctr</th>
+              </tr>
+        </thead>
+        <tfoot><tr><td colspan="5">+ p &lt; 0.1, * p &lt; 0.05, ** p &lt; 0.01, *** p &lt; 0.001</td></tr></tfoot>
+        <tbody>
+                <tr>
+                  <td>(Intercept)</td>
+                  <td>-21.866***</td>
+                  <td>-81.921** </td>
+                  <td>-15.380***</td>
+                  <td>-118.218* </td>
+                </tr>
+                <tr>
+                  <td>           </td>
+                  <td>(0.414)   </td>
+                  <td>(30.733)  </td>
+                  <td>(0.255)   </td>
+                  <td>(49.820)  </td>
+                </tr>
+                <tr>
+                  <td>lgdpo      </td>
+                  <td>1.239***  </td>
+                  <td>1.739     </td>
+                  <td>0.895***  </td>
+                  <td>6.704**   </td>
+                </tr>
+                <tr>
+                  <td>           </td>
+                  <td>(0.013)   </td>
+                  <td>(1.367)   </td>
+                  <td>(0.008)   </td>
+                  <td>(2.374)   </td>
+                </tr>
+                <tr>
+                  <td>lgdpd      </td>
+                  <td>0.947***  </td>
+                  <td>4.220**   </td>
+                  <td>0.814***  </td>
+                  <td>1.349     </td>
+                </tr>
+                <tr>
+                  <td>           </td>
+                  <td>(0.013)   </td>
+                  <td>(1.285)   </td>
+                  <td>(0.008)   </td>
+                  <td>(1.884)   </td>
+                </tr>
+                <tr>
+                  <td>lgdpco     </td>
+                  <td>0.251***  </td>
+                  <td>-2.090    </td>
+                  <td>-0.041*** </td>
+                  <td>-10.947*  </td>
+                </tr>
+                <tr>
+                  <td>           </td>
+                  <td>(0.018)   </td>
+                  <td>(3.196)   </td>
+                  <td>(0.012)   </td>
+                  <td>(5.283)   </td>
+                </tr>
+                <tr>
+                  <td>lgdpcd     </td>
+                  <td>0.066***  </td>
+                  <td>-6.527*   </td>
+                  <td>-0.037**  </td>
+                  <td>-1.280    </td>
+                </tr>
+                <tr>
+                  <td>           </td>
+                  <td>(0.018)   </td>
+                  <td>(2.996)   </td>
+                  <td>(0.011)   </td>
+                  <td>(4.393)   </td>
+                </tr>
+                <tr>
+                  <td>contig     </td>
+                  <td>0.899***  </td>
+                  <td>0.594***  </td>
+                  <td>0.185***  </td>
+                  <td>0.334***  </td>
+                </tr>
+                <tr>
+                  <td>           </td>
+                  <td>(0.165)   </td>
+                  <td>(0.147)   </td>
+                  <td>(0.037)   </td>
+                  <td>(0.031)   </td>
+                </tr>
+                <tr>
+                  <td>comcol     </td>
+                  <td>0.489***  </td>
+                  <td>0.317***  </td>
+                  <td>0.110     </td>
+                  <td>0.519***  </td>
+                </tr>
+                <tr>
+                  <td>           </td>
+                  <td>(0.082)   </td>
+                  <td>(0.082)   </td>
+                  <td>(0.090)   </td>
+                  <td>(0.074)   </td>
+                </tr>
+                <tr>
+                  <td>comlang_off</td>
+                  <td>0.781***  </td>
+                  <td>0.778***  </td>
+                  <td>0.238***  </td>
+                  <td>0.162***  </td>
+                </tr>
+                <tr>
+                  <td>           </td>
+                  <td>(0.061)   </td>
+                  <td>(0.061)   </td>
+                  <td>(0.035)   </td>
+                  <td>(0.031)   </td>
+                </tr>
+                <tr>
+                  <td>fta_wto    </td>
+                  <td>0.702***  </td>
+                  <td>0.559***  </td>
+                  <td>0.383***  </td>
+                  <td>0.380***  </td>
+                </tr>
+                <tr>
+                  <td>           </td>
+                  <td>(0.057)   </td>
+                  <td>(0.057)   </td>
+                  <td>(0.028)   </td>
+                  <td>(0.025)   </td>
+                </tr>
+                <tr>
+                  <td>ldist      </td>
+                  <td>-1.215*** </td>
+                  <td>-1.466*** </td>
+                  <td>          </td>
+                  <td>          </td>
+                </tr>
+                <tr>
+                  <td>           </td>
+                  <td>(0.032)   </td>
+                  <td>(0.032)   </td>
+                  <td>          </td>
+                  <td>          </td>
+                </tr>
+                <tr>
+                  <td>dist_log   </td>
+                  <td>          </td>
+                  <td>          </td>
+                  <td>-0.606*** </td>
+                  <td>-0.711*** </td>
+                </tr>
+                <tr>
+                  <td>           </td>
+                  <td>          </td>
+                  <td>          </td>
+                  <td>(0.013)   </td>
+                  <td>(0.012)   </td>
+                </tr>
+                <tr>
+                  <td>Num.Obs.   </td>
+                  <td>9990      </td>
+                  <td>9990      </td>
+                  <td>9990      </td>
+                  <td>9990      </td>
+                </tr>
+                <tr>
+                  <td>R2         </td>
+                  <td>0.720     </td>
+                  <td>0.798     </td>
+                  <td>          </td>
+                  <td>          </td>
+                </tr>
+                <tr>
+                  <td>R2 Adj.    </td>
+                  <td>0.720     </td>
+                  <td>0.793     </td>
+                  <td>          </td>
+                  <td>          </td>
+                </tr>
+                <tr>
+                  <td>AIC        </td>
+                  <td>43230.2   </td>
+                  <td>40397.2   </td>
+                  <td>          </td>
+                  <td>          </td>
+                </tr>
+                <tr>
+                  <td>BIC        </td>
+                  <td>43309.5   </td>
+                  <td>42019.3   </td>
+                  <td>          </td>
+                  <td>          </td>
+                </tr>
+                <tr>
+                  <td>Log.Lik.   </td>
+                  <td>-21604.098</td>
+                  <td>-19973.582</td>
+                  <td>          </td>
+                  <td>          </td>
+                </tr>
+                <tr>
+                  <td>RMSE       </td>
+                  <td>2.10      </td>
+                  <td>1.79      </td>
+                  <td>2097486.21</td>
+                  <td>1585545.74</td>
+                </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <script>
+      function styleCell_tinytable_34gti2eitybt2sn9hp3d(i, j, css_id) {
+        var table = document.getElementById("tinytable_fvxbk56ob1yjhg1qtjbq");
+        table.rows[i].cells[j].classList.add(css_id);
+      }
+      function insertSpanRow(i, colspan, content) {
+        var table = document.getElementById('tinytable_fvxbk56ob1yjhg1qtjbq');
+        var newRow = table.insertRow(i);
+        var newCell = newRow.insertCell(0);
+        newCell.setAttribute("colspan", colspan);
+        // newCell.innerText = content;
+        // this may be unsafe, but innerText does not interpret <br>
+        newCell.innerHTML = content;
+      }
+      function spanCell_tinytable_34gti2eitybt2sn9hp3d(i, j, rowspan, colspan) {
+        var table = document.getElementById("tinytable_fvxbk56ob1yjhg1qtjbq");
+        const targetRow = table.rows[i];
+        const targetCell = targetRow.cells[j];
+        for (let r = 0; r < rowspan; r++) {
+          // Only start deleting cells to the right for the first row (r == 0)
+          if (r === 0) {
+            // Delete cells to the right of the target cell in the first row
+            for (let c = colspan - 1; c > 0; c--) {
+              if (table.rows[i + r].cells[j + c]) {
+                table.rows[i + r].deleteCell(j + c);
+              }
+            }
+          }
+          // For rows below the first, delete starting from the target column
+          if (r > 0) {
+            for (let c = colspan - 1; c >= 0; c--) {
+              if (table.rows[i + r] && table.rows[i + r].cells[j]) {
+                table.rows[i + r].deleteCell(j);
+              }
+            }
+          }
+        }
+        // Set rowspan and colspan of the target cell
+        targetCell.rowSpan = rowspan;
+        targetCell.colSpan = colspan;
+      }
+
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(0, 0, 'tinytable_css_l9yei4myvxlp8qys0tu9') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(0, 1, 'tinytable_css_l9yei4myvxlp8qys0tu9') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(0, 2, 'tinytable_css_l9yei4myvxlp8qys0tu9') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(0, 3, 'tinytable_css_l9yei4myvxlp8qys0tu9') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(0, 4, 'tinytable_css_l9yei4myvxlp8qys0tu9') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(0, 0, 'tinytable_css_29w0jrdrywdlm8d0c8mm') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(1, 0, 'tinytable_css_29w0jrdrywdlm8d0c8mm') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(2, 0, 'tinytable_css_29w0jrdrywdlm8d0c8mm') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(3, 0, 'tinytable_css_29w0jrdrywdlm8d0c8mm') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(4, 0, 'tinytable_css_29w0jrdrywdlm8d0c8mm') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(5, 0, 'tinytable_css_29w0jrdrywdlm8d0c8mm') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(6, 0, 'tinytable_css_29w0jrdrywdlm8d0c8mm') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(7, 0, 'tinytable_css_29w0jrdrywdlm8d0c8mm') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(8, 0, 'tinytable_css_29w0jrdrywdlm8d0c8mm') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(9, 0, 'tinytable_css_29w0jrdrywdlm8d0c8mm') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(10, 0, 'tinytable_css_29w0jrdrywdlm8d0c8mm') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(11, 0, 'tinytable_css_29w0jrdrywdlm8d0c8mm') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(12, 0, 'tinytable_css_29w0jrdrywdlm8d0c8mm') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(13, 0, 'tinytable_css_29w0jrdrywdlm8d0c8mm') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(14, 0, 'tinytable_css_29w0jrdrywdlm8d0c8mm') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(15, 0, 'tinytable_css_29w0jrdrywdlm8d0c8mm') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(16, 0, 'tinytable_css_29w0jrdrywdlm8d0c8mm') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(17, 0, 'tinytable_css_29w0jrdrywdlm8d0c8mm') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(18, 0, 'tinytable_css_29w0jrdrywdlm8d0c8mm') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(19, 0, 'tinytable_css_29w0jrdrywdlm8d0c8mm') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(20, 0, 'tinytable_css_29w0jrdrywdlm8d0c8mm') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(21, 0, 'tinytable_css_29w0jrdrywdlm8d0c8mm') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(22, 0, 'tinytable_css_29w0jrdrywdlm8d0c8mm') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(23, 0, 'tinytable_css_29w0jrdrywdlm8d0c8mm') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(24, 0, 'tinytable_css_29w0jrdrywdlm8d0c8mm') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(25, 0, 'tinytable_css_29w0jrdrywdlm8d0c8mm') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(26, 0, 'tinytable_css_29w0jrdrywdlm8d0c8mm') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(27, 0, 'tinytable_css_29w0jrdrywdlm8d0c8mm') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(28, 0, 'tinytable_css_29w0jrdrywdlm8d0c8mm') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(29, 0, 'tinytable_css_29w0jrdrywdlm8d0c8mm') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(0, 1, 'tinytable_css_n6w3ydq7gt5wz1r2bmru') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(1, 1, 'tinytable_css_n6w3ydq7gt5wz1r2bmru') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(2, 1, 'tinytable_css_n6w3ydq7gt5wz1r2bmru') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(3, 1, 'tinytable_css_n6w3ydq7gt5wz1r2bmru') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(4, 1, 'tinytable_css_n6w3ydq7gt5wz1r2bmru') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(5, 1, 'tinytable_css_n6w3ydq7gt5wz1r2bmru') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(6, 1, 'tinytable_css_n6w3ydq7gt5wz1r2bmru') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(7, 1, 'tinytable_css_n6w3ydq7gt5wz1r2bmru') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(8, 1, 'tinytable_css_n6w3ydq7gt5wz1r2bmru') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(9, 1, 'tinytable_css_n6w3ydq7gt5wz1r2bmru') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(10, 1, 'tinytable_css_n6w3ydq7gt5wz1r2bmru') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(11, 1, 'tinytable_css_n6w3ydq7gt5wz1r2bmru') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(12, 1, 'tinytable_css_n6w3ydq7gt5wz1r2bmru') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(13, 1, 'tinytable_css_n6w3ydq7gt5wz1r2bmru') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(14, 1, 'tinytable_css_n6w3ydq7gt5wz1r2bmru') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(15, 1, 'tinytable_css_n6w3ydq7gt5wz1r2bmru') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(16, 1, 'tinytable_css_n6w3ydq7gt5wz1r2bmru') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(17, 1, 'tinytable_css_n6w3ydq7gt5wz1r2bmru') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(18, 1, 'tinytable_css_n6w3ydq7gt5wz1r2bmru') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(19, 1, 'tinytable_css_n6w3ydq7gt5wz1r2bmru') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(20, 1, 'tinytable_css_n6w3ydq7gt5wz1r2bmru') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(21, 1, 'tinytable_css_n6w3ydq7gt5wz1r2bmru') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(22, 1, 'tinytable_css_n6w3ydq7gt5wz1r2bmru') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(23, 1, 'tinytable_css_n6w3ydq7gt5wz1r2bmru') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(24, 1, 'tinytable_css_n6w3ydq7gt5wz1r2bmru') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(25, 1, 'tinytable_css_n6w3ydq7gt5wz1r2bmru') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(26, 1, 'tinytable_css_n6w3ydq7gt5wz1r2bmru') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(27, 1, 'tinytable_css_n6w3ydq7gt5wz1r2bmru') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(28, 1, 'tinytable_css_n6w3ydq7gt5wz1r2bmru') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(29, 1, 'tinytable_css_n6w3ydq7gt5wz1r2bmru') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(0, 2, 'tinytable_css_4kredun27sdqg43aulqg') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(1, 2, 'tinytable_css_4kredun27sdqg43aulqg') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(2, 2, 'tinytable_css_4kredun27sdqg43aulqg') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(3, 2, 'tinytable_css_4kredun27sdqg43aulqg') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(4, 2, 'tinytable_css_4kredun27sdqg43aulqg') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(5, 2, 'tinytable_css_4kredun27sdqg43aulqg') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(6, 2, 'tinytable_css_4kredun27sdqg43aulqg') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(7, 2, 'tinytable_css_4kredun27sdqg43aulqg') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(8, 2, 'tinytable_css_4kredun27sdqg43aulqg') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(9, 2, 'tinytable_css_4kredun27sdqg43aulqg') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(10, 2, 'tinytable_css_4kredun27sdqg43aulqg') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(11, 2, 'tinytable_css_4kredun27sdqg43aulqg') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(12, 2, 'tinytable_css_4kredun27sdqg43aulqg') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(13, 2, 'tinytable_css_4kredun27sdqg43aulqg') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(14, 2, 'tinytable_css_4kredun27sdqg43aulqg') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(15, 2, 'tinytable_css_4kredun27sdqg43aulqg') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(16, 2, 'tinytable_css_4kredun27sdqg43aulqg') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(17, 2, 'tinytable_css_4kredun27sdqg43aulqg') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(18, 2, 'tinytable_css_4kredun27sdqg43aulqg') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(19, 2, 'tinytable_css_4kredun27sdqg43aulqg') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(20, 2, 'tinytable_css_4kredun27sdqg43aulqg') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(21, 2, 'tinytable_css_4kredun27sdqg43aulqg') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(22, 2, 'tinytable_css_4kredun27sdqg43aulqg') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(23, 2, 'tinytable_css_4kredun27sdqg43aulqg') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(24, 2, 'tinytable_css_4kredun27sdqg43aulqg') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(25, 2, 'tinytable_css_4kredun27sdqg43aulqg') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(26, 2, 'tinytable_css_4kredun27sdqg43aulqg') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(27, 2, 'tinytable_css_4kredun27sdqg43aulqg') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(28, 2, 'tinytable_css_4kredun27sdqg43aulqg') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(29, 2, 'tinytable_css_4kredun27sdqg43aulqg') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(0, 3, 'tinytable_css_m73280o78wtr0buyde1a') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(1, 3, 'tinytable_css_m73280o78wtr0buyde1a') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(2, 3, 'tinytable_css_m73280o78wtr0buyde1a') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(3, 3, 'tinytable_css_m73280o78wtr0buyde1a') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(4, 3, 'tinytable_css_m73280o78wtr0buyde1a') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(5, 3, 'tinytable_css_m73280o78wtr0buyde1a') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(6, 3, 'tinytable_css_m73280o78wtr0buyde1a') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(7, 3, 'tinytable_css_m73280o78wtr0buyde1a') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(8, 3, 'tinytable_css_m73280o78wtr0buyde1a') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(9, 3, 'tinytable_css_m73280o78wtr0buyde1a') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(10, 3, 'tinytable_css_m73280o78wtr0buyde1a') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(11, 3, 'tinytable_css_m73280o78wtr0buyde1a') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(12, 3, 'tinytable_css_m73280o78wtr0buyde1a') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(13, 3, 'tinytable_css_m73280o78wtr0buyde1a') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(14, 3, 'tinytable_css_m73280o78wtr0buyde1a') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(15, 3, 'tinytable_css_m73280o78wtr0buyde1a') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(16, 3, 'tinytable_css_m73280o78wtr0buyde1a') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(17, 3, 'tinytable_css_m73280o78wtr0buyde1a') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(18, 3, 'tinytable_css_m73280o78wtr0buyde1a') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(19, 3, 'tinytable_css_m73280o78wtr0buyde1a') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(20, 3, 'tinytable_css_m73280o78wtr0buyde1a') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(21, 3, 'tinytable_css_m73280o78wtr0buyde1a') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(22, 3, 'tinytable_css_m73280o78wtr0buyde1a') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(23, 3, 'tinytable_css_m73280o78wtr0buyde1a') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(24, 3, 'tinytable_css_m73280o78wtr0buyde1a') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(25, 3, 'tinytable_css_m73280o78wtr0buyde1a') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(26, 3, 'tinytable_css_m73280o78wtr0buyde1a') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(27, 3, 'tinytable_css_m73280o78wtr0buyde1a') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(28, 3, 'tinytable_css_m73280o78wtr0buyde1a') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(29, 3, 'tinytable_css_m73280o78wtr0buyde1a') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(0, 4, 'tinytable_css_zxakbke1dhycstwb4ekt') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(1, 4, 'tinytable_css_zxakbke1dhycstwb4ekt') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(2, 4, 'tinytable_css_zxakbke1dhycstwb4ekt') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(3, 4, 'tinytable_css_zxakbke1dhycstwb4ekt') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(4, 4, 'tinytable_css_zxakbke1dhycstwb4ekt') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(5, 4, 'tinytable_css_zxakbke1dhycstwb4ekt') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(6, 4, 'tinytable_css_zxakbke1dhycstwb4ekt') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(7, 4, 'tinytable_css_zxakbke1dhycstwb4ekt') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(8, 4, 'tinytable_css_zxakbke1dhycstwb4ekt') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(9, 4, 'tinytable_css_zxakbke1dhycstwb4ekt') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(10, 4, 'tinytable_css_zxakbke1dhycstwb4ekt') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(11, 4, 'tinytable_css_zxakbke1dhycstwb4ekt') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(12, 4, 'tinytable_css_zxakbke1dhycstwb4ekt') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(13, 4, 'tinytable_css_zxakbke1dhycstwb4ekt') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(14, 4, 'tinytable_css_zxakbke1dhycstwb4ekt') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(15, 4, 'tinytable_css_zxakbke1dhycstwb4ekt') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(16, 4, 'tinytable_css_zxakbke1dhycstwb4ekt') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(17, 4, 'tinytable_css_zxakbke1dhycstwb4ekt') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(18, 4, 'tinytable_css_zxakbke1dhycstwb4ekt') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(19, 4, 'tinytable_css_zxakbke1dhycstwb4ekt') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(20, 4, 'tinytable_css_zxakbke1dhycstwb4ekt') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(21, 4, 'tinytable_css_zxakbke1dhycstwb4ekt') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(22, 4, 'tinytable_css_zxakbke1dhycstwb4ekt') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(23, 4, 'tinytable_css_zxakbke1dhycstwb4ekt') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(24, 4, 'tinytable_css_zxakbke1dhycstwb4ekt') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(25, 4, 'tinytable_css_zxakbke1dhycstwb4ekt') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(26, 4, 'tinytable_css_zxakbke1dhycstwb4ekt') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(27, 4, 'tinytable_css_zxakbke1dhycstwb4ekt') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(28, 4, 'tinytable_css_zxakbke1dhycstwb4ekt') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(29, 4, 'tinytable_css_zxakbke1dhycstwb4ekt') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(22, 0, 'tinytable_css_8dyjgb2vpzdj8hkvlb59') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(22, 1, 'tinytable_css_8dyjgb2vpzdj8hkvlb59') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(22, 2, 'tinytable_css_8dyjgb2vpzdj8hkvlb59') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(22, 3, 'tinytable_css_8dyjgb2vpzdj8hkvlb59') })
+window.addEventListener('load', function () { styleCell_tinytable_34gti2eitybt2sn9hp3d(22, 4, 'tinytable_css_8dyjgb2vpzdj8hkvlb59') })
+    </script>
+
+  
+
+
+</div>
+</div>
+<p>You can compare results with <span class="citation" data-cites="st">Silva and Tenreyro (<a href="#ref-st" role="doc-biblioref">2006</a>)</span>. Note that they don’t use fixed effects.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pic2.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">source: <span class="citation" data-cites="st">Silva and Tenreyro (<a href="#ref-st" role="doc-biblioref">2006</a>)</span></figcaption>
+</figure>
+</div>
+<p>By the way, you can save the regression table using <code>modelsummary()</code>. don’t forget to run <code>library(modelsummary)</code> first. You can use xls extension, but also doc. I personally like .html more.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>regtab<span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"OLS no ctr"</span> <span class="ot">=</span> reg1,</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"OLS with ctr"</span>  <span class="ot">=</span> reg2,</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">"PPML no ctr"</span><span class="ot">=</span>reg3,</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">"PPML with ctr"</span><span class="ot">=</span>reg4</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="fu">modelsummary</span>(regtab,<span class="at">output=</span><span class="st">"regtab.xls"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 </section>
 <section id="product-level-gravity" class="level2">
 <h2 class="anchored" data-anchor-id="product-level-gravity">Product level gravity</h2>
 <section id="theory-1" class="level3">
 <h3 class="anchored" data-anchor-id="theory-1">Theory</h3>
+<p>We then proceed to a higher-dimension trade data which you may be interested in. In the field, UI students often interested largely in Indonesian affairs. That is, we are not interested so much in the bilateral flow of all countries, but only on Indonesia. However, we often use more granular dimension than just exporter/importer. Often times we use indices like time, commodities or industries, or even firms (shamelessly inserting my paper here <span class="citation" data-cites="gupta">Gupta (<a href="#ref-gupta" role="doc-biblioref">2023</a>)</span>).</p>
+<p>Now, if you are planning to do these kinds of studies, then you are going to need to tackle higher degree dataset and merging the gravity variables. Most often you can get these variables from <a href="https://databank.worldbank.org/source/world-development-indicators">World Development Indicators</a> but CEPII is ok for now (note the main problem of CEPII is its timeliness).</p>
+<p>The theory isn’t so different compared to our previous gravity model. What we want is an additional indices. We are going to estimate something similar as <a href="#eq-2">Equation&nbsp;2</a> but with more indices. We need to care about multilateral resistance (MR) and we can use dummies since we now have more variations from indices like time and HS code.</p>
+<p>According to <span class="citation" data-cites="yotov">Yotov (<a href="#ref-yotov" role="doc-biblioref">2022</a>)</span>, we need at least 3 dummies to run a multi-country, multi-time and multi-goods/sectors<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. We need to have exporter-time dummy, importer-time dummy and country-pair dummy. We need to construct this first. Note that these dummies will likely absorb some of your variables like distance (consistant between pair across time, typically).</p>
+<p>So we will do the HS,time varying version of <a href="#eq-2">Equation&nbsp;2</a>:</p>
+<p><span id="eq-3"><span class="math display">\[
+X_{ijpt}=\alpha_0 Y_{it}^{\alpha_1}Y_{jt}^{\alpha_2}D_{ijpt}^{\alpha_3}e^{\theta_1o_{it}+\theta_2d_{jt}+\theta_3p_{ij}}
+\tag{3}\]</span></span></p>
 </section>
 <section id="setting-data-1" class="level3">
 <h3 class="anchored" data-anchor-id="setting-data-1">Setting data</h3>
+<p>This time we need BACI data. Brace yourself because this dataset is HUGE. We read 5 different years.</p>
 <div class="cell">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>t2017<span class="ot">&lt;-</span><span class="fu">read_csv</span>(<span class="st">"BACI_HS17_Y2017_V202401b.csv"</span>)</span>
-<span id="cb7-2"><a href="#cb7-2"></a>t2018<span class="ot">&lt;-</span><span class="fu">read_csv</span>(<span class="st">"BACI_HS17_Y2018_V202401b.csv"</span>)</span>
-<span id="cb7-3"><a href="#cb7-3"></a>t2019<span class="ot">&lt;-</span><span class="fu">read_csv</span>(<span class="st">"BACI_HS17_Y2019_V202401b.csv"</span>)</span>
-<span id="cb7-4"><a href="#cb7-4"></a>t2020<span class="ot">&lt;-</span><span class="fu">read_csv</span>(<span class="st">"BACI_HS17_Y2020_V202401b.csv"</span>)</span>
-<span id="cb7-5"><a href="#cb7-5"></a>t2021<span class="ot">&lt;-</span><span class="fu">read_csv</span>(<span class="st">"BACI_HS17_Y2021_V202401b.csv"</span>)</span>
-<span id="cb7-6"><a href="#cb7-6"></a>t2022<span class="ot">&lt;-</span><span class="fu">read_csv</span>(<span class="st">"BACI_HS17_Y2022_V202401b.csv"</span>)</span>
-<span id="cb7-7"><a href="#cb7-7"></a></span>
-<span id="cb7-8"><a href="#cb7-8"></a><span class="do">## Combining all </span></span>
-<span id="cb7-9"><a href="#cb7-9"></a>trade<span class="ot">&lt;-</span><span class="fu">rbind</span>(t2017,t2018,t2019,t2020,t2021,t2022)</span>
-<span id="cb7-10"><a href="#cb7-10"></a></span>
-<span id="cb7-11"><a href="#cb7-11"></a><span class="fu">remove</span>(t2017,t2018,t2019,t2020,t2021,t2022)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a>t2017<span class="ot">&lt;-</span><span class="fu">read_csv</span>(<span class="st">"BACI_HS17_Y2017_V202401b.csv"</span>)</span>
+<span id="cb11-2"><a href="#cb11-2"></a>t2018<span class="ot">&lt;-</span><span class="fu">read_csv</span>(<span class="st">"BACI_HS17_Y2018_V202401b.csv"</span>)</span>
+<span id="cb11-3"><a href="#cb11-3"></a>t2019<span class="ot">&lt;-</span><span class="fu">read_csv</span>(<span class="st">"BACI_HS17_Y2019_V202401b.csv"</span>)</span>
+<span id="cb11-4"><a href="#cb11-4"></a>t2020<span class="ot">&lt;-</span><span class="fu">read_csv</span>(<span class="st">"BACI_HS17_Y2020_V202401b.csv"</span>)</span>
+<span id="cb11-5"><a href="#cb11-5"></a>t2021<span class="ot">&lt;-</span><span class="fu">read_csv</span>(<span class="st">"BACI_HS17_Y2021_V202401b.csv"</span>)</span>
+<span id="cb11-6"><a href="#cb11-6"></a></span>
+<span id="cb11-7"><a href="#cb11-7"></a></span>
+<span id="cb11-8"><a href="#cb11-8"></a><span class="do">## Combining all </span></span>
+<span id="cb11-9"><a href="#cb11-9"></a>trade<span class="ot">&lt;-</span><span class="fu">rbind</span>(t2017,t2018,t2019,t2020,t2021)</span>
+<span id="cb11-10"><a href="#cb11-10"></a></span>
+<span id="cb11-11"><a href="#cb11-11"></a><span class="fu">remove</span>(t2017,t2018,t2019,t2020,t2021)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p>I used <code>read_csv</code> from the tydiverse package for reading .csv. rbind is to stack all BACI data (it was separated per year), then I remove the individual BACI to save environment space.</p>
@@ -296,7 +872,7 @@ X_{ij}=\alpha_0 Y_i^{\alpha_1}Y_j^{\alpha_2}D_{ij}^{\alpha_3}e^{\theta_id_i+\the
 <div class="cell">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(trade)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(trade)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "t" "i" "j" "k" "v" "q"</code></pre>
@@ -338,64 +914,542 @@ X_{ij}=\alpha_0 Y_i^{\alpha_1}Y_j^{\alpha_2}D_{ij}^{\alpha_3}e^{\theta_id_i+\the
 </tbody>
 </table>
 <p>Products in Harmonized System 6-digit nomenclature. Values in thousand USD and quantities in metric tons. Exporter and importer is codified using CEPII codes. the codes and it means can be found in the “key” dataset. To have country identities into the BACI dataset, we need to join the two.</p>
-<p>To join the two datasets, we need a key variable. A key variable is the variable connecting the two variables. Both needs the same name. So first we need to</p>
+<p>To join the two datasets, we need a key variable. A key variable is the variable connecting the two variables. Both needs the same name. So first we need to assign the same name for exporter and importer codes between BACI and gravity.</p>
+<p>We know that <span class="math inline">\(i\)</span> in BACI is iso3num_o in gravity, while <span class="math inline">\(j\)</span> in BACI is iso3num_d in gravity. So we rename the one in BACI so both have the same name:</p>
 <div class="cell">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>trade <span class="ot">&lt;-</span> trade <span class="sc">|&gt;</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(i,j,k) <span class="sc">|&gt;</span></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">id=</span><span class="fu">row_number</span>())</span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>trade</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a><span class="do">## Rename variable</span></span>
+<span id="cb14-2"><a href="#cb14-2"></a>trade2<span class="ot">&lt;-</span>trade<span class="sc">|&gt;</span><span class="fu">rename</span>(<span class="at">iso3num_o=</span>i,<span class="at">iso3num_d=</span>j,<span class="at">year=</span>t)</span>
+<span id="cb14-3"><a href="#cb14-3"></a></span>
+<span id="cb14-4"><a href="#cb14-4"></a><span class="do">## Change ctr to reduce computation problem</span></span>
+<span id="cb14-5"><a href="#cb14-5"></a>ctr<span class="ot">&lt;-</span><span class="fu">c</span>(<span class="st">"IDN"</span>,<span class="st">"SGP"</span>,<span class="st">"VNM"</span>,<span class="st">"MYS"</span>,<span class="st">"THA"</span>,<span class="st">"PHL"</span>,<span class="st">"USA"</span>,<span class="st">"CHN"</span>)</span>
+<span id="cb14-6"><a href="#cb14-6"></a></span>
+<span id="cb14-7"><a href="#cb14-7"></a><span class="do">## Kita ulangi gravity2 karena sekarang perlu tahun 2017-2021</span></span>
+<span id="cb14-8"><a href="#cb14-8"></a>gravity2<span class="ot">&lt;-</span>gravity<span class="sc">|&gt;</span><span class="fu">filter</span>(year<span class="sc">&gt;</span><span class="dv">2016</span> <span class="sc">&amp;</span> year<span class="sc">&lt;</span><span class="dv">2022</span>)</span>
+<span id="cb14-9"><a href="#cb14-9"></a>gravity2<span class="ot">&lt;-</span>gravity2 <span class="sc">|&gt;</span> <span class="fu">filter</span>(iso3_o <span class="sc">%in%</span>ctr <span class="sc">&amp;</span> iso3_d <span class="sc">%in%</span> ctr) <span class="do">## notice the change</span></span>
+<span id="cb14-10"><a href="#cb14-10"></a>gravity2<span class="ot">&lt;-</span>gravity2 <span class="sc">|&gt;</span> <span class="fu">select</span>(vrb)</span>
+<span id="cb14-11"><a href="#cb14-11"></a></span>
+<span id="cb14-12"><a href="#cb14-12"></a><span class="do">## gabung dengan trade2</span></span>
+<span id="cb14-13"><a href="#cb14-13"></a></span>
+<span id="cb14-14"><a href="#cb14-14"></a>gabung<span class="ot">&lt;-</span><span class="fu">left_join</span>(gravity2,trade2,<span class="at">by=</span><span class="fu">c</span>(<span class="st">"year"</span>,<span class="st">"iso3num_o"</span>,<span class="st">"iso3num_d"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 65,646,558 × 7
-# Groups:   i, j, k [19,304,073]
-       t     i     j k           v      q    id
-   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;   &lt;dbl&gt;  &lt;dbl&gt; &lt;int&gt;
- 1  2017     4    12 130120  5.95   1.4       1
- 2  2017     4    12 130190  5.12   2.32      1
- 3  2017     4    12 401031  0.087  0.002     1
- 4  2017     4    12 853890  0.303  0.019     1
- 5  2017     4    36 071320  3.23   2.45      1
- 6  2017     4    36 080212  8.27   2.19      1
- 7  2017     4    36 080290  4.71   1.06      1
- 8  2017     4    36 080420  1.21   1.55      1
- 9  2017     4    36 080620 47.7   34.3       1
-10  2017     4    36 081310 13.6   14.2       1
-# ℹ 65,646,548 more rows</code></pre>
+</div>
+<p>Check the results with gabung or <code>View(gabung)</code>. The most important thing here is that you have to make sure you understand the changes in variations! Now that we have time and HS (<span class="math inline">\(k\)</span>), a pair of countries can have multiple observations in different year and different goods. tradeflow_baci will be repeated because this is the total trade, while now we focus on <span class="math inline">\(v\)</span> and <span class="math inline">\(q\)</span> as the <span class="math inline">\(X_{ijpt}\)</span>.</p>
+<p>Before we go, however, we need to generate our dummies! Remember, we need to make three dummies, <span class="math inline">\(o_{it}\)</span>,<span class="math inline">\(d_{jt}\)</span> and <span class="math inline">\(p_{ij}\)</span> (see <a href="#eq-3">Equation&nbsp;3</a>). To do that, we do this:</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a>gabung <span class="ot">&lt;-</span> gabung <span class="sc">|&gt;</span></span>
+<span id="cb15-2"><a href="#cb15-2"></a>  <span class="fu">mutate</span>(<span class="at">ooo=</span><span class="fu">interaction</span>(iso3num_o,year),</span>
+<span id="cb15-3"><a href="#cb15-3"></a>         <span class="at">ddd=</span><span class="fu">interaction</span>(iso3num_d,year),</span>
+<span id="cb15-4"><a href="#cb15-4"></a>         <span class="at">ppp=</span><span class="fu">interaction</span>(iso3num_o,iso3num_d))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>You can check again whether it’s made. if you do <code>tibble(gabung)</code> you will see that we have created our factor variables. Oh yes, do not forget to log non-factors.</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a>gabung<span class="ot">&lt;-</span>gabung <span class="sc">|&gt;</span></span>
+<span id="cb16-2"><a href="#cb16-2"></a>  <span class="fu">mutate</span>(<span class="at">ldist=</span><span class="fu">log</span>(distw_harmonic),</span>
+<span id="cb16-3"><a href="#cb16-3"></a>         <span class="at">lgdpo=</span><span class="fu">log</span>(gdp_o),</span>
+<span id="cb16-4"><a href="#cb16-4"></a>         <span class="at">lgdpd=</span><span class="fu">log</span>(gdp_d),</span>
+<span id="cb16-5"><a href="#cb16-5"></a>         <span class="at">lgdpco=</span><span class="fu">log</span>(gdpcap_o),</span>
+<span id="cb16-6"><a href="#cb16-6"></a>         <span class="at">lgdpcd=</span><span class="fu">log</span>(gdpcap_d),</span>
+<span id="cb16-7"><a href="#cb16-7"></a>         <span class="at">logtrade=</span><span class="fu">log</span>(<span class="dv">1</span><span class="sc">+</span>v)) <span class="do">## note the difference with before</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="regression-1" class="level3">
+<h3 class="anchored" data-anchor-id="regression-1">Regression</h3>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>ger1<span class="ot">&lt;-</span><span class="fu">lm</span>(logtrade<span class="sc">~</span>lgdpo<span class="sc">+</span>lgdpd<span class="sc">+</span>lgdpco<span class="sc">+</span>lgdpcd<span class="sc">+</span>ldist<span class="sc">+</span>contig<span class="sc">+</span>comcol<span class="sc">+</span>comlang_off<span class="sc">+</span>fta_wto)</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>ger2<span class="ot">&lt;-</span><span class="fu">lm</span>(logtrade<span class="sc">~</span>lgdpo<span class="sc">+</span>lgdpd<span class="sc">+</span>lgdpco<span class="sc">+</span>lgdpcd<span class="sc">+</span>ldist<span class="sc">+</span>contig<span class="sc">+</span>comcol<span class="sc">+</span>comlang_off<span class="sc">+</span>fta_wto<span class="sc">+</span>iso3_o<span class="sc">+</span>iso3_d)</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>ger3<span class="ot">&lt;-</span><span class="fu">ppml</span>(<span class="at">data=</span>gravity2,<span class="at">dependent_variable=</span><span class="st">"tradeflow_baci"</span>,<span class="at">distance=</span><span class="st">"distw_harmonic"</span>,<span class="at">additional_regressors=</span><span class="fu">c</span>(<span class="st">"lgdpo"</span>,<span class="st">"lgdpd"</span>,<span class="st">"lgdpco"</span>,<span class="st">"lgdpcd"</span>,<span class="st">"contig"</span>,<span class="st">"comcol"</span>,<span class="st">"comlang_off"</span>,<span class="st">"fta_wto"</span>))</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>ger4<span class="ot">&lt;-</span><span class="fu">ppml</span>(<span class="at">data=</span>gravity2,<span class="at">dependent_variable=</span><span class="st">"tradeflow_baci"</span>,<span class="at">distance=</span><span class="st">"distw_harmonic"</span>,<span class="at">additional_regressors=</span><span class="fu">c</span>(<span class="st">"lgdpo"</span>,<span class="st">"lgdpd"</span>,<span class="st">"lgdpco"</span>,<span class="st">"lgdpcd"</span>,<span class="st">"contig"</span>,<span class="st">"comcol"</span>,<span class="st">"comlang_off"</span>,<span class="st">"fta_wto"</span>,<span class="st">"iso3_o"</span>,<span class="st">"iso3_d"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell">
+<div class="cell-output-display">
+
+ 
+
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tinytable_icy06ibf18oia766wzpi</title>
+    <style>
+.table td.tinytable_css_1htrm1khv5652j2hcj6f, .table th.tinytable_css_1htrm1khv5652j2hcj6f {    border-bottom: solid 0.1em #d3d8dc; }
+.table td.tinytable_css_nxdp13ce8z5acd07oti3, .table th.tinytable_css_nxdp13ce8z5acd07oti3 {    text-align: left; }
+.table td.tinytable_css_anb75dtzbsoh7cwu58cf, .table th.tinytable_css_anb75dtzbsoh7cwu58cf {    text-align: center; }
+.table td.tinytable_css_2hrwwjlwdh9t3d7ck12a, .table th.tinytable_css_2hrwwjlwdh9t3d7ck12a {    text-align: center; }
+.table td.tinytable_css_5jmhap4pi62wwyfcye46, .table th.tinytable_css_5jmhap4pi62wwyfcye46 {    text-align: center; }
+.table td.tinytable_css_wrh3mnhhl9e6ltt3s9qi, .table th.tinytable_css_wrh3mnhhl9e6ltt3s9qi {    text-align: center; }
+.table td.tinytable_css_rn7uvjacs4suhphfuv5t, .table th.tinytable_css_rn7uvjacs4suhphfuv5t {    border-bottom: solid 0.05em black; }
+    </style>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+    </script>
+  
+
+  
+    <div class="container">
+      <table class="table table-borderless" id="tinytable_icy06ibf18oia766wzpi" style="width: auto; margin-left: auto; margin-right: auto;" data-quarto-disable-processing="true"><caption><p>Simple regression results</p></caption>
+        <thead>
+        
+              <tr>
+                <th scope="col"> </th>
+                <th scope="col">OLS no dum</th>
+                <th scope="col">OLS with dum</th>
+                <th scope="col">PPML no dum</th>
+                <th scope="col">PPML with dum</th>
+              </tr>
+        </thead>
+        <tfoot><tr><td colspan="5">+ p &lt; 0.1, * p &lt; 0.05, ** p &lt; 0.01, *** p &lt; 0.001</td></tr></tfoot>
+        <tbody>
+                <tr>
+                  <td>(Intercept)</td>
+                  <td>-12.184***  </td>
+                  <td>-13.625***  </td>
+                  <td>-9.350***</td>
+                  <td>1.137236e+10  </td>
+                </tr>
+                <tr>
+                  <td>           </td>
+                  <td>(0.097)     </td>
+                  <td>(1.701)     </td>
+                  <td>(0.480)  </td>
+                  <td>(1.101188e+11)</td>
+                </tr>
+                <tr>
+                  <td>lgdpo      </td>
+                  <td>0.752***    </td>
+                  <td>2.247***    </td>
+                  <td>0.480*** </td>
+                  <td>3.683411e+08  </td>
+                </tr>
+                <tr>
+                  <td>           </td>
+                  <td>(0.003)     </td>
+                  <td>(0.359)     </td>
+                  <td>(0.017)  </td>
+                  <td>(9.301997e+08)</td>
+                </tr>
+                <tr>
+                  <td>lgdpd      </td>
+                  <td>0.165***    </td>
+                  <td>-1.062***   </td>
+                  <td>0.490*** </td>
+                  <td>5.209835e+08  </td>
+                </tr>
+                <tr>
+                  <td>           </td>
+                  <td>(0.003)     </td>
+                  <td>(0.153)     </td>
+                  <td>(0.017)  </td>
+                  <td>(3.745272e+09)</td>
+                </tr>
+                <tr>
+                  <td>lgdpco     </td>
+                  <td>-0.022***   </td>
+                  <td>-0.754***   </td>
+                  <td>-0.024   </td>
+                  <td>-5.386022e+09 </td>
+                </tr>
+                <tr>
+                  <td>           </td>
+                  <td>(0.005)     </td>
+                  <td>(0.176)     </td>
+                  <td>(0.027)  </td>
+                  <td>(1.351051e+10)</td>
+                </tr>
+                <tr>
+                  <td>lgdpcd     </td>
+                  <td>-0.228***   </td>
+                  <td>-0.173+     </td>
+                  <td>-0.006   </td>
+                  <td>-9.331184e+09 </td>
+                </tr>
+                <tr>
+                  <td>           </td>
+                  <td>(0.005)     </td>
+                  <td>(0.094)     </td>
+                  <td>(0.025)  </td>
+                  <td>(9.762501e+09)</td>
+                </tr>
+                <tr>
+                  <td>contig     </td>
+                  <td>0.517***    </td>
+                  <td>0.151*      </td>
+                  <td>0.588*** </td>
+                  <td>1.841283e+09  </td>
+                </tr>
+                <tr>
+                  <td>           </td>
+                  <td>(0.010)     </td>
+                  <td>(0.065)     </td>
+                  <td>(0.043)  </td>
+                  <td>(1.312649e+10)</td>
+                </tr>
+                <tr>
+                  <td>comcol     </td>
+                  <td>0.587***    </td>
+                  <td>-0.565      </td>
+                  <td>0.396**  </td>
+                  <td>1.994991e+08  </td>
+                </tr>
+                <tr>
+                  <td>           </td>
+                  <td>(0.029)     </td>
+                  <td>(0.999)     </td>
+                  <td>(0.139)  </td>
+                  <td>(2.047906e+10)</td>
+                </tr>
+                <tr>
+                  <td>comlang_off</td>
+                  <td>0.415***    </td>
+                  <td>0.310       </td>
+                  <td>0.466*** </td>
+                  <td>-2.140102e+09 </td>
+                </tr>
+                <tr>
+                  <td>           </td>
+                  <td>(0.014)     </td>
+                  <td>(0.226)     </td>
+                  <td>(0.064)  </td>
+                  <td>(1.651348e+10)</td>
+                </tr>
+                <tr>
+                  <td>ldist      </td>
+                  <td>-0.232***   </td>
+                  <td>-0.604      </td>
+                  <td>         </td>
+                  <td>              </td>
+                </tr>
+                <tr>
+                  <td>           </td>
+                  <td>(0.010)     </td>
+                  <td>(0.478)     </td>
+                  <td>         </td>
+                  <td>              </td>
+                </tr>
+                <tr>
+                  <td>dist_log   </td>
+                  <td>            </td>
+                  <td>            </td>
+                  <td>-0.310***</td>
+                  <td>2.561000e+00  </td>
+                </tr>
+                <tr>
+                  <td>           </td>
+                  <td>            </td>
+                  <td>            </td>
+                  <td>(0.056)  </td>
+                  <td>(2.410000e+00)</td>
+                </tr>
+                <tr>
+                  <td>Num.Obs.   </td>
+                  <td>613361      </td>
+                  <td>613361      </td>
+                  <td>613361   </td>
+                  <td>613361        </td>
+                </tr>
+                <tr>
+                  <td>R2         </td>
+                  <td>0.123       </td>
+                  <td>0.146       </td>
+                  <td>         </td>
+                  <td>              </td>
+                </tr>
+                <tr>
+                  <td>R2 Adj.    </td>
+                  <td>0.123       </td>
+                  <td>0.146       </td>
+                  <td>         </td>
+                  <td>              </td>
+                </tr>
+                <tr>
+                  <td>AIC        </td>
+                  <td>2999982.1   </td>
+                  <td>2984226.8   </td>
+                  <td>         </td>
+                  <td>              </td>
+                </tr>
+                <tr>
+                  <td>BIC        </td>
+                  <td>3000095.3   </td>
+                  <td>2985314.2   </td>
+                  <td>         </td>
+                  <td>              </td>
+                </tr>
+                <tr>
+                  <td>Log.Lik.   </td>
+                  <td>-1499981.039</td>
+                  <td>-1492017.404</td>
+                  <td>         </td>
+                  <td>              </td>
+                </tr>
+                <tr>
+                  <td>RMSE       </td>
+                  <td>2.79        </td>
+                  <td>2.76        </td>
+                  <td>90746.47 </td>
+                  <td>90727.88      </td>
+                </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <script>
+      function styleCell_tinytable_1rn0ucpkaqpsgi224u8w(i, j, css_id) {
+        var table = document.getElementById("tinytable_icy06ibf18oia766wzpi");
+        table.rows[i].cells[j].classList.add(css_id);
+      }
+      function insertSpanRow(i, colspan, content) {
+        var table = document.getElementById('tinytable_icy06ibf18oia766wzpi');
+        var newRow = table.insertRow(i);
+        var newCell = newRow.insertCell(0);
+        newCell.setAttribute("colspan", colspan);
+        // newCell.innerText = content;
+        // this may be unsafe, but innerText does not interpret <br>
+        newCell.innerHTML = content;
+      }
+      function spanCell_tinytable_1rn0ucpkaqpsgi224u8w(i, j, rowspan, colspan) {
+        var table = document.getElementById("tinytable_icy06ibf18oia766wzpi");
+        const targetRow = table.rows[i];
+        const targetCell = targetRow.cells[j];
+        for (let r = 0; r < rowspan; r++) {
+          // Only start deleting cells to the right for the first row (r == 0)
+          if (r === 0) {
+            // Delete cells to the right of the target cell in the first row
+            for (let c = colspan - 1; c > 0; c--) {
+              if (table.rows[i + r].cells[j + c]) {
+                table.rows[i + r].deleteCell(j + c);
+              }
+            }
+          }
+          // For rows below the first, delete starting from the target column
+          if (r > 0) {
+            for (let c = colspan - 1; c >= 0; c--) {
+              if (table.rows[i + r] && table.rows[i + r].cells[j]) {
+                table.rows[i + r].deleteCell(j);
+              }
+            }
+          }
+        }
+        // Set rowspan and colspan of the target cell
+        targetCell.rowSpan = rowspan;
+        targetCell.colSpan = colspan;
+      }
+
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(0, 0, 'tinytable_css_1htrm1khv5652j2hcj6f') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(0, 1, 'tinytable_css_1htrm1khv5652j2hcj6f') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(0, 2, 'tinytable_css_1htrm1khv5652j2hcj6f') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(0, 3, 'tinytable_css_1htrm1khv5652j2hcj6f') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(0, 4, 'tinytable_css_1htrm1khv5652j2hcj6f') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(0, 0, 'tinytable_css_nxdp13ce8z5acd07oti3') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(1, 0, 'tinytable_css_nxdp13ce8z5acd07oti3') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(2, 0, 'tinytable_css_nxdp13ce8z5acd07oti3') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(3, 0, 'tinytable_css_nxdp13ce8z5acd07oti3') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(4, 0, 'tinytable_css_nxdp13ce8z5acd07oti3') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(5, 0, 'tinytable_css_nxdp13ce8z5acd07oti3') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(6, 0, 'tinytable_css_nxdp13ce8z5acd07oti3') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(7, 0, 'tinytable_css_nxdp13ce8z5acd07oti3') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(8, 0, 'tinytable_css_nxdp13ce8z5acd07oti3') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(9, 0, 'tinytable_css_nxdp13ce8z5acd07oti3') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(10, 0, 'tinytable_css_nxdp13ce8z5acd07oti3') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(11, 0, 'tinytable_css_nxdp13ce8z5acd07oti3') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(12, 0, 'tinytable_css_nxdp13ce8z5acd07oti3') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(13, 0, 'tinytable_css_nxdp13ce8z5acd07oti3') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(14, 0, 'tinytable_css_nxdp13ce8z5acd07oti3') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(15, 0, 'tinytable_css_nxdp13ce8z5acd07oti3') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(16, 0, 'tinytable_css_nxdp13ce8z5acd07oti3') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(17, 0, 'tinytable_css_nxdp13ce8z5acd07oti3') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(18, 0, 'tinytable_css_nxdp13ce8z5acd07oti3') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(19, 0, 'tinytable_css_nxdp13ce8z5acd07oti3') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(20, 0, 'tinytable_css_nxdp13ce8z5acd07oti3') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(21, 0, 'tinytable_css_nxdp13ce8z5acd07oti3') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(22, 0, 'tinytable_css_nxdp13ce8z5acd07oti3') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(23, 0, 'tinytable_css_nxdp13ce8z5acd07oti3') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(24, 0, 'tinytable_css_nxdp13ce8z5acd07oti3') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(25, 0, 'tinytable_css_nxdp13ce8z5acd07oti3') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(26, 0, 'tinytable_css_nxdp13ce8z5acd07oti3') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(27, 0, 'tinytable_css_nxdp13ce8z5acd07oti3') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(0, 1, 'tinytable_css_anb75dtzbsoh7cwu58cf') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(1, 1, 'tinytable_css_anb75dtzbsoh7cwu58cf') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(2, 1, 'tinytable_css_anb75dtzbsoh7cwu58cf') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(3, 1, 'tinytable_css_anb75dtzbsoh7cwu58cf') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(4, 1, 'tinytable_css_anb75dtzbsoh7cwu58cf') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(5, 1, 'tinytable_css_anb75dtzbsoh7cwu58cf') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(6, 1, 'tinytable_css_anb75dtzbsoh7cwu58cf') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(7, 1, 'tinytable_css_anb75dtzbsoh7cwu58cf') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(8, 1, 'tinytable_css_anb75dtzbsoh7cwu58cf') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(9, 1, 'tinytable_css_anb75dtzbsoh7cwu58cf') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(10, 1, 'tinytable_css_anb75dtzbsoh7cwu58cf') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(11, 1, 'tinytable_css_anb75dtzbsoh7cwu58cf') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(12, 1, 'tinytable_css_anb75dtzbsoh7cwu58cf') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(13, 1, 'tinytable_css_anb75dtzbsoh7cwu58cf') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(14, 1, 'tinytable_css_anb75dtzbsoh7cwu58cf') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(15, 1, 'tinytable_css_anb75dtzbsoh7cwu58cf') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(16, 1, 'tinytable_css_anb75dtzbsoh7cwu58cf') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(17, 1, 'tinytable_css_anb75dtzbsoh7cwu58cf') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(18, 1, 'tinytable_css_anb75dtzbsoh7cwu58cf') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(19, 1, 'tinytable_css_anb75dtzbsoh7cwu58cf') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(20, 1, 'tinytable_css_anb75dtzbsoh7cwu58cf') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(21, 1, 'tinytable_css_anb75dtzbsoh7cwu58cf') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(22, 1, 'tinytable_css_anb75dtzbsoh7cwu58cf') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(23, 1, 'tinytable_css_anb75dtzbsoh7cwu58cf') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(24, 1, 'tinytable_css_anb75dtzbsoh7cwu58cf') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(25, 1, 'tinytable_css_anb75dtzbsoh7cwu58cf') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(26, 1, 'tinytable_css_anb75dtzbsoh7cwu58cf') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(27, 1, 'tinytable_css_anb75dtzbsoh7cwu58cf') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(0, 2, 'tinytable_css_2hrwwjlwdh9t3d7ck12a') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(1, 2, 'tinytable_css_2hrwwjlwdh9t3d7ck12a') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(2, 2, 'tinytable_css_2hrwwjlwdh9t3d7ck12a') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(3, 2, 'tinytable_css_2hrwwjlwdh9t3d7ck12a') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(4, 2, 'tinytable_css_2hrwwjlwdh9t3d7ck12a') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(5, 2, 'tinytable_css_2hrwwjlwdh9t3d7ck12a') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(6, 2, 'tinytable_css_2hrwwjlwdh9t3d7ck12a') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(7, 2, 'tinytable_css_2hrwwjlwdh9t3d7ck12a') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(8, 2, 'tinytable_css_2hrwwjlwdh9t3d7ck12a') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(9, 2, 'tinytable_css_2hrwwjlwdh9t3d7ck12a') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(10, 2, 'tinytable_css_2hrwwjlwdh9t3d7ck12a') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(11, 2, 'tinytable_css_2hrwwjlwdh9t3d7ck12a') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(12, 2, 'tinytable_css_2hrwwjlwdh9t3d7ck12a') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(13, 2, 'tinytable_css_2hrwwjlwdh9t3d7ck12a') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(14, 2, 'tinytable_css_2hrwwjlwdh9t3d7ck12a') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(15, 2, 'tinytable_css_2hrwwjlwdh9t3d7ck12a') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(16, 2, 'tinytable_css_2hrwwjlwdh9t3d7ck12a') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(17, 2, 'tinytable_css_2hrwwjlwdh9t3d7ck12a') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(18, 2, 'tinytable_css_2hrwwjlwdh9t3d7ck12a') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(19, 2, 'tinytable_css_2hrwwjlwdh9t3d7ck12a') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(20, 2, 'tinytable_css_2hrwwjlwdh9t3d7ck12a') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(21, 2, 'tinytable_css_2hrwwjlwdh9t3d7ck12a') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(22, 2, 'tinytable_css_2hrwwjlwdh9t3d7ck12a') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(23, 2, 'tinytable_css_2hrwwjlwdh9t3d7ck12a') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(24, 2, 'tinytable_css_2hrwwjlwdh9t3d7ck12a') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(25, 2, 'tinytable_css_2hrwwjlwdh9t3d7ck12a') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(26, 2, 'tinytable_css_2hrwwjlwdh9t3d7ck12a') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(27, 2, 'tinytable_css_2hrwwjlwdh9t3d7ck12a') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(0, 3, 'tinytable_css_5jmhap4pi62wwyfcye46') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(1, 3, 'tinytable_css_5jmhap4pi62wwyfcye46') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(2, 3, 'tinytable_css_5jmhap4pi62wwyfcye46') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(3, 3, 'tinytable_css_5jmhap4pi62wwyfcye46') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(4, 3, 'tinytable_css_5jmhap4pi62wwyfcye46') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(5, 3, 'tinytable_css_5jmhap4pi62wwyfcye46') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(6, 3, 'tinytable_css_5jmhap4pi62wwyfcye46') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(7, 3, 'tinytable_css_5jmhap4pi62wwyfcye46') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(8, 3, 'tinytable_css_5jmhap4pi62wwyfcye46') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(9, 3, 'tinytable_css_5jmhap4pi62wwyfcye46') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(10, 3, 'tinytable_css_5jmhap4pi62wwyfcye46') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(11, 3, 'tinytable_css_5jmhap4pi62wwyfcye46') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(12, 3, 'tinytable_css_5jmhap4pi62wwyfcye46') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(13, 3, 'tinytable_css_5jmhap4pi62wwyfcye46') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(14, 3, 'tinytable_css_5jmhap4pi62wwyfcye46') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(15, 3, 'tinytable_css_5jmhap4pi62wwyfcye46') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(16, 3, 'tinytable_css_5jmhap4pi62wwyfcye46') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(17, 3, 'tinytable_css_5jmhap4pi62wwyfcye46') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(18, 3, 'tinytable_css_5jmhap4pi62wwyfcye46') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(19, 3, 'tinytable_css_5jmhap4pi62wwyfcye46') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(20, 3, 'tinytable_css_5jmhap4pi62wwyfcye46') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(21, 3, 'tinytable_css_5jmhap4pi62wwyfcye46') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(22, 3, 'tinytable_css_5jmhap4pi62wwyfcye46') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(23, 3, 'tinytable_css_5jmhap4pi62wwyfcye46') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(24, 3, 'tinytable_css_5jmhap4pi62wwyfcye46') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(25, 3, 'tinytable_css_5jmhap4pi62wwyfcye46') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(26, 3, 'tinytable_css_5jmhap4pi62wwyfcye46') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(27, 3, 'tinytable_css_5jmhap4pi62wwyfcye46') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(0, 4, 'tinytable_css_wrh3mnhhl9e6ltt3s9qi') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(1, 4, 'tinytable_css_wrh3mnhhl9e6ltt3s9qi') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(2, 4, 'tinytable_css_wrh3mnhhl9e6ltt3s9qi') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(3, 4, 'tinytable_css_wrh3mnhhl9e6ltt3s9qi') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(4, 4, 'tinytable_css_wrh3mnhhl9e6ltt3s9qi') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(5, 4, 'tinytable_css_wrh3mnhhl9e6ltt3s9qi') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(6, 4, 'tinytable_css_wrh3mnhhl9e6ltt3s9qi') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(7, 4, 'tinytable_css_wrh3mnhhl9e6ltt3s9qi') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(8, 4, 'tinytable_css_wrh3mnhhl9e6ltt3s9qi') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(9, 4, 'tinytable_css_wrh3mnhhl9e6ltt3s9qi') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(10, 4, 'tinytable_css_wrh3mnhhl9e6ltt3s9qi') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(11, 4, 'tinytable_css_wrh3mnhhl9e6ltt3s9qi') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(12, 4, 'tinytable_css_wrh3mnhhl9e6ltt3s9qi') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(13, 4, 'tinytable_css_wrh3mnhhl9e6ltt3s9qi') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(14, 4, 'tinytable_css_wrh3mnhhl9e6ltt3s9qi') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(15, 4, 'tinytable_css_wrh3mnhhl9e6ltt3s9qi') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(16, 4, 'tinytable_css_wrh3mnhhl9e6ltt3s9qi') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(17, 4, 'tinytable_css_wrh3mnhhl9e6ltt3s9qi') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(18, 4, 'tinytable_css_wrh3mnhhl9e6ltt3s9qi') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(19, 4, 'tinytable_css_wrh3mnhhl9e6ltt3s9qi') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(20, 4, 'tinytable_css_wrh3mnhhl9e6ltt3s9qi') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(21, 4, 'tinytable_css_wrh3mnhhl9e6ltt3s9qi') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(22, 4, 'tinytable_css_wrh3mnhhl9e6ltt3s9qi') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(23, 4, 'tinytable_css_wrh3mnhhl9e6ltt3s9qi') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(24, 4, 'tinytable_css_wrh3mnhhl9e6ltt3s9qi') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(25, 4, 'tinytable_css_wrh3mnhhl9e6ltt3s9qi') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(26, 4, 'tinytable_css_wrh3mnhhl9e6ltt3s9qi') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(27, 4, 'tinytable_css_wrh3mnhhl9e6ltt3s9qi') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(20, 0, 'tinytable_css_rn7uvjacs4suhphfuv5t') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(20, 1, 'tinytable_css_rn7uvjacs4suhphfuv5t') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(20, 2, 'tinytable_css_rn7uvjacs4suhphfuv5t') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(20, 3, 'tinytable_css_rn7uvjacs4suhphfuv5t') })
+window.addEventListener('load', function () { styleCell_tinytable_1rn0ucpkaqpsgi224u8w(20, 4, 'tinytable_css_rn7uvjacs4suhphfuv5t') })
+    </script>
+
+  
+
+
 </div>
 </div>
-<p>Next we look at the gravity dataset. Gravity filled with various important</p>
+<p>As you can see, the difference is apparent when we use HS-6-digit instead of total trade. This is of course the case since now we have wild, uncontrolled variability in the goods characteristics. Indeed, the gravity equation is much better suited predicting total trade where country and year characteristics dominates and industry/goods heterogeneity is absorbed by the total trade. Remember, I use only small number of countries with tons of HS 6 digit<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>. Moreover, PPML sometimes act funny where zeroes are abundant combined with many dummies. Convergence sometimes unachieved / converge to a very strange parameters.</p>
+<p>UI students typically only interested in Indonesia, so country pair dummy and indonesia-time dummy often not needed.</p>
 </section>
-</section>
-<section id="running-and-interpretaion" class="level2">
-<h2 class="anchored" data-anchor-id="running-and-interpretaion">Running and interpretaion</h2>
 </section>
 <section id="closing" class="level2">
 <h2 class="anchored" data-anchor-id="closing">Closing</h2>
+<p>OKay now you are ready to run regression yourself. Try to replicate what I do here and you prolly finished 50% of your thesis. You then can work to update this with your own hypothesis, adding more variable and more concentrated.</p>
+<p>Running this on Stata is also excellent. I must confess that R is also speedy (these guys making the package is extremely good), but Stata is a bit more intuitive and compute you with important stats as well such as pseudo-R. Nevertheless, now you should be able to do both!</p>
+<p>I cannot emphasize enough references in <span class="citation" data-cites="yotov">Yotov (<a href="#ref-yotov" role="doc-biblioref">2022</a>)</span>. Whatever you want to do, a paper prolly covered it already. Learn from them and look for an insight to add. Work with your spv and you’ll be fine.</p>
 </section>
 <section id="references" class="level2 unnumbered">
 
 
 </section>
 
+
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-avw" class="csl-entry" role="listitem">
+Anderson, James E., and Eric van Wincoop. 2003. <span>“Gravity with Gravitas: A Solution to the Border Puzzle.”</span> Journal Article. <em>The American Economic Review</em> 93 (1): 24.
+</div>
 <div id="ref-gravity" class="csl-entry" role="listitem">
 Conte, Madallena, Pierre Cotterlaz, and Thierry Mayer. 2022. <span>“The CEPII Gravity Database.”</span> Working Papers 2022-05. CEPII. <a href="http://www.cepii.fr/CEPII/fr/publications/wp/abstract.asp?NoDoc=2726">http://www.cepii.fr/CEPII/fr/publications/wp/abstract.asp?NoDoc=2726</a>.
-</div>
-<div id="ref-cgz" class="csl-entry" role="listitem">
-Correia, Sergio, Paulo Guimarães, and Tom Zylkin. 2020. <span>“Fast Poisson Estimation with High-Dimensional Fixed Effects.”</span> Journal Article. <em>The Stata Journal</em> 20 (1): 95–115. <a href="https://doi.org/10.1177/1536867x20909691">https://doi.org/10.1177/1536867x20909691</a>.
 </div>
 <div id="ref-baci" class="csl-entry" role="listitem">
 Gaulier, Guillaume, and Soledad Zignago. 2010. <span>“BACI: International Trade Database at the Product-Level. The 1994-2007 Version.”</span> Working Papers 2010-23. CEPII. <a href="http://www.cepii.fr/CEPII/fr/publications/wp/abstract.asp?NoDoc=2726">http://www.cepii.fr/CEPII/fr/publications/wp/abstract.asp?NoDoc=2726</a>.
 </div>
+<div id="ref-gupta" class="csl-entry" role="listitem">
+Gupta, Krisna. 2023. <span>“The Heterogeneous Impact of Tariffs and Ntms on Total Factor Productivity for Indonesian Firms.”</span> Journal Article. <em>Bulletin of Indonesian Economic Studies</em> 59 (2): 269–300. <a href="https://doi.org/10.1080/00074918.2021.2016613">https://doi.org/10.1080/00074918.2021.2016613</a>.
+</div>
 <div id="ref-st" class="csl-entry" role="listitem">
 Silva, Santos, and Silvana Tenreyro. 2006. <span>“The Log of Gravity.”</span> Journal Article. <em>The Review of Economics and Statistics</em> 88 (4): 19.
+</div>
+<div id="ref-grav" class="csl-entry" role="listitem">
+Woelwer, Anna-Lena, Jan Pablo Burgard, Joshua Kunst, and Mauricio Vargas. 2023. <em>Gravity: Estimation Methods for Gravity Models</em>. <a href="http://pacha.dev/gravity/">http://pacha.dev/gravity/</a>.
 </div>
 <div id="ref-yotov" class="csl-entry" role="listitem">
 Yotov, Yoto. 2022. <span>“Gravity at Sixty: The Workhorse Model of Trade.”</span> Journal Article. <em>CESifo Working Papers</em> 9584. <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4037001">https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4037001</a>.
 </div>
-</div></section></div></main>
+</div></section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>unless you have domestic trade data which we typically don’t. If you do, then there’s borders dummy. More on <span class="citation" data-cites="yotov">Yotov (<a href="#ref-yotov" role="doc-biblioref">2022</a>)</span>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>I added CHN and USA in this version. Previously it was only ASEAN6 and results were pretty funny.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main>
 <!-- /main column -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
