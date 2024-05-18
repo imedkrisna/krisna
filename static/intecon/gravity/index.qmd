@@ -1,5 +1,5 @@
 ---
-title: "PPML HDFE in R: a short workshop "
+title: "Gravity in R: a short workshop "
 author: "Krisna Gupta"
 institute: "Universitas Indonesia"
 date: last-modified
@@ -314,7 +314,7 @@ We know that $i$ in BACI is iso3num_o in gravity, while $j$ in BACI is iso3num_d
 trade2<-trade|>rename(iso3num_o=i,iso3num_d=j,year=t)
 
 ## Change ctr to reduce computation problem
-ctr<-c("IDN","SGP","VNM","MYS","THA","PHL","USA","CHN")
+ctr<-c("IDN","SGP","VNM","MYS","THA","PHL","USA","CHN","JPN","KOR")
 
 ## Kita ulangi gravity2 karena sekarang perlu tahun 2017-2021
 gravity2<-gravity|>filter(year>2016 & year<2022)
@@ -359,6 +359,12 @@ gabung<-gabung |>
          lgdpcd=log(gdpcap_d),
          logtrade=log(1+v)) ## note the difference with before
          
+```
+
+Why don't we show the quick summary statistics?
+
+```{r}
+summary(gabung)
 ```
 
 ### Regression
@@ -407,7 +413,7 @@ As you can see, the difference is apparent when we use HS-6-digit instead of tot
 
 UI students typically only interested in Indonesia, so country pair dummy and indonesia-time dummy often not needed.
 
-[^2]: I added CHN and USA in this version. Previously it was only ASEAN6 and results were pretty funny.
+[^2]: I added JPN, KOR, CHN and USA in this version. Previously it was only ASEAN6 and results were pretty funny since within-ASEAN trade isn't so large.
 
 
 ## Closing
