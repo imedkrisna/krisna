@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Krisna Gupta">
-<meta name="dcterms.date" content="2024-05-17">
+<meta name="dcterms.date" content="2024-05-18">
 
 <title>PPML HDFE in R: a short workshop</title>
 <style>
@@ -127,7 +127,7 @@ div.csl-indent {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">May 17, 2024</p>
+      <p class="date">May 18, 2024</p>
     </div>
   </div>
   
@@ -180,15 +180,24 @@ div.csl-indent {
 <p>Notes about the data country_codes, product_codes and Readme are all for reading BACI.</p>
 </section>
 </section>
-<section id="theory" class="level2">
-<h2 class="anchored" data-anchor-id="theory">Theory</h2>
+<section id="simple-gravity-specification" class="level2">
+<h2 class="anchored" data-anchor-id="simple-gravity-specification">Simple gravity specification</h2>
+<section id="theory" class="level3">
+<h3 class="anchored" data-anchor-id="theory">Theory</h3>
 <p>The earliest (e.g., naive) gravity model taking directly from Newtonian gravity theory looks something like this:</p>
-<p><span class="math display">\[
-X_ij=\~{G}
-\]</span></p>
+<p><span id="eq-1"><span class="math display">\[
+X_{ij}=\tilde{G}\frac{Y_iE_j}{T_{ij}^\theta}
+\tag{1}\]</span></span></p>
+<p>where <span class="math inline">\(X_{it}\)</span> is the value of trade flow from country <span class="math inline">\(i\)</span> to country <span class="math inline">\(j\)</span>, <span class="math inline">\(\tilde{G}\)</span> is the gravitational constant (aka our usual constant), <span class="math inline">\(Y_i\)</span> is the output in country <span class="math inline">\(i\)</span> <span class="math inline">\(E_j\)</span> is the value of expenditure in country <span class="math inline">\(j\)</span> and <span class="math inline">\(T_{ij}\)</span> is the total bilateral trade frictions / trade cost between country <span class="math inline">\(i\)</span> and country <span class="math inline">\(j\)</span>.</p>
+<p>There are various other types of gravity equations, but let’s start with a relatively simple one. One of my favorite simple gravity specification is a budget version of <span class="citation" data-cites="st">Silva and Tenreyro (<a href="#ref-st" role="doc-biblioref">2006</a>)</span> which is taken from <span class="citation" data-cites="avn">(<a href="#ref-avn" role="doc-biblioref"><strong>avn?</strong></a>)</span> which looks like this:</p>
+<p><span id="eq-2"><span class="math display">\[
+X_{ij}=\alpha_0 Y_i^{\alpha_1}Y_j^{\alpha_2}D_{ij}^{\alpha_3}e^{\theta_id_i+\theta_jd_j}
+\tag{2}\]</span></span></p>
+<p>where <span class="math inline">\(\alpha_0\)</span> is your <span class="math inline">\(\tilde{G}\)</span>, while <span class="math inline">\(Y\)</span> is the output and expenditure which is proxied with GDP. <span class="math inline">\(D_{ij}\)</span> is the distance between the two countries, which can be generalized as a vector of trade cost measures. Typically we use physical distance but also other types of bilateral trade cost. Lastly, the <span class="math inline">\(d_i\)</span> and <span class="math inline">\(d_j\)</span> is country-specific characteristics.</p>
+<p>There are various variables used in <span class="citation" data-cites="st">Silva and Tenreyro (<a href="#ref-st" role="doc-biblioref">2006</a>)</span>. log of exporter’s and importer’s GDP and GDP per capita. Various “distance” variables is used as well e.g., physical distance and various contiguity, common-language dummy</p>
 </section>
-<section id="setting-data" class="level2">
-<h2 class="anchored" data-anchor-id="setting-data">Setting data</h2>
+<section id="setting-data" class="level3">
+<h3 class="anchored" data-anchor-id="setting-data">Setting data</h3>
 <p>first we load all the necessary data:</p>
 <div class="cell">
 <details>
@@ -199,22 +208,165 @@ X_ij=\~{G}
 <span id="cb2-4"><a href="#cb2-4"></a></span>
 <span id="cb2-5"><a href="#cb2-5"></a><span class="do">## Readubg data</span></span>
 <span id="cb2-6"><a href="#cb2-6"></a>gravity <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="st">"Gravity_V202211.rds"</span>)</span>
-<span id="cb2-7"><a href="#cb2-7"></a>t2017<span class="ot">&lt;-</span><span class="fu">read_csv</span>(<span class="st">"BACI_HS17_Y2017_V202401b.csv"</span>)</span>
-<span id="cb2-8"><a href="#cb2-8"></a>t2018<span class="ot">&lt;-</span><span class="fu">read_csv</span>(<span class="st">"BACI_HS17_Y2018_V202401b.csv"</span>)</span>
-<span id="cb2-9"><a href="#cb2-9"></a>t2019<span class="ot">&lt;-</span><span class="fu">read_csv</span>(<span class="st">"BACI_HS17_Y2019_V202401b.csv"</span>)</span>
-<span id="cb2-10"><a href="#cb2-10"></a>t2020<span class="ot">&lt;-</span><span class="fu">read_csv</span>(<span class="st">"BACI_HS17_Y2020_V202401b.csv"</span>)</span>
-<span id="cb2-11"><a href="#cb2-11"></a>t2021<span class="ot">&lt;-</span><span class="fu">read_csv</span>(<span class="st">"BACI_HS17_Y2021_V202401b.csv"</span>)</span>
-<span id="cb2-12"><a href="#cb2-12"></a>t2022<span class="ot">&lt;-</span><span class="fu">read_csv</span>(<span class="st">"BACI_HS17_Y2022_V202401b.csv"</span>)</span>
-<span id="cb2-13"><a href="#cb2-13"></a></span>
-<span id="cb2-14"><a href="#cb2-14"></a><span class="do">## Combining all </span></span>
-<span id="cb2-15"><a href="#cb2-15"></a>trade<span class="ot">&lt;-</span><span class="fu">rbind</span>(t2017,t2018,t2019,t2020,t2021,t2022)</span>
-<span id="cb2-16"><a href="#cb2-16"></a></span>
-<span id="cb2-17"><a href="#cb2-17"></a><span class="fu">remove</span>(t2017,t2018,t2019,t2020,t2021,t2022)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-7"><a href="#cb2-7"></a>key<span class="ot">&lt;-</span><span class="fu">read_csv</span>(<span class="st">"country_codes_V202401b.csv"</span>)</span>
+<span id="cb2-8"><a href="#cb2-8"></a></span>
+<span id="cb2-9"><a href="#cb2-9"></a><span class="do">## read column names</span></span>
+<span id="cb2-10"><a href="#cb2-10"></a><span class="fu">colnames</span>(gravity)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] "year"                   "country_id_o"           "country_id_d"          
+ [4] "iso3_o"                 "iso3_d"                 "iso3num_o"             
+ [7] "iso3num_d"              "country_exists_o"       "country_exists_d"      
+[10] "gmt_offset_2020_o"      "gmt_offset_2020_d"      "distw_harmonic"        
+[13] "distw_arithmetic"       "distw_harmonic_jh"      "distw_arithmetic_jh"   
+[16] "dist"                   "main_city_source_o"     "main_city_source_d"    
+[19] "distcap"                "contig"                 "diplo_disagreement"    
+[22] "scaled_sci_2021"        "comlang_off"            "comlang_ethno"         
+[25] "comcol"                 "col45"                  "legal_old_o"           
+[28] "legal_old_d"            "legal_new_o"            "legal_new_d"           
+[31] "comleg_pretrans"        "comleg_posttrans"       "transition_legalchange"
+[34] "comrelig"               "heg_o"                  "heg_d"                 
+[37] "col_dep_ever"           "col_dep"                "col_dep_end_year"      
+[40] "col_dep_end_conflict"   "empire"                 "sibling_ever"          
+[43] "sibling"                "sever_year"             "sib_conflict"          
+[46] "pop_o"                  "pop_d"                  "gdp_o"                 
+[49] "gdp_d"                  "gdpcap_o"               "gdpcap_d"              
+[52] "pop_source_o"           "pop_source_d"           "gdp_source_o"          
+[55] "gdp_source_d"           "gdp_ppp_o"              "gdp_ppp_d"             
+[58] "gdpcap_ppp_o"           "gdpcap_ppp_d"           "pop_pwt_o"             
+[61] "pop_pwt_d"              "gdp_ppp_pwt_o"          "gdp_ppp_pwt_d"         
+[64] "gatt_o"                 "gatt_d"                 "wto_o"                 
+[67] "wto_d"                  "eu_o"                   "eu_d"                  
+[70] "fta_wto"                "fta_wto_raw"            "rta_coverage"          
+[73] "rta_type"               "entry_cost_o"           "entry_cost_d"          
+[76] "entry_proc_o"           "entry_proc_d"           "entry_time_o"          
+[79] "entry_time_d"           "entry_tp_o"             "entry_tp_d"            
+[82] "tradeflow_comtrade_o"   "tradeflow_comtrade_d"   "tradeflow_baci"        
+[85] "manuf_tradeflow_baci"   "tradeflow_imf_o"        "tradeflow_imf_d"       </code></pre>
+</div>
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">colnames</span>(key)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "country_code" "country_name" "country_iso2" "country_iso3"</code></pre>
+</div>
+</div>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="do">## create a country list</span></span>
+<span id="cb6-2"><a href="#cb6-2"></a>ctr<span class="ot">&lt;-</span><span class="fu">c</span>(<span class="st">"Albania"</span>, <span class="st">"Denmark"</span>, <span class="st">"Kenya"</span>, <span class="st">"Romania"</span>, <span class="st">"Algeria"</span>, <span class="st">"Djibouti"</span>, <span class="st">"Kiribati"</span>, <span class="st">"Russian Federation"</span>, <span class="st">"Angola"</span>, <span class="st">"Dominican Rep."</span>, <span class="st">"Korea, Rep."</span>, <span class="st">"Rwanda"</span>, <span class="st">"Argentina"</span>, <span class="st">"Ecuador"</span>, <span class="st">"Laos"</span>, <span class="st">"P. Dem. Rep."</span>, <span class="st">"Saudi Arabia"</span>, <span class="st">"Australia"</span>, <span class="st">"Egypt"</span>, <span class="st">"Lebanon"</span>, <span class="st">"Senegal"</span>, <span class="st">"Austria"</span>, <span class="st">"El Salvador"</span>, <span class="st">"Madagascar"</span>, <span class="st">"Seychelles"</span>, <span class="st">"Bahamas"</span>, <span class="st">"Eq. Guinea"</span>, <span class="st">"Malawi"</span>, <span class="st">"Sierra Leone"</span>, <span class="st">"Bahrain"</span>, <span class="st">"Ethiopia"</span>, <span class="st">"Malaysia"</span>, <span class="st">"Singapore"</span>, <span class="st">"Bangladesh"</span>, <span class="st">"Fiji"</span>, <span class="st">"Maldives"</span>, <span class="st">"Solomon Islands"</span>, <span class="st">"Barbados"</span>, <span class="st">"Finland"</span>, <span class="st">"Mali"</span>, <span class="st">"South Africa"</span>, <span class="st">"Belgium-Lux."</span>, <span class="st">"France"</span>, <span class="st">"Malta"</span>, <span class="st">"Spain"</span>, <span class="st">"Belize"</span>, <span class="st">"Gabon"</span>, <span class="st">"Mauritania"</span>, <span class="st">"Sri Lanka"</span>, <span class="st">"Benin"</span>, <span class="st">"Gambia"</span>, <span class="st">"Mauritius"</span>, <span class="st">"St. Kitts and Nevis"</span>, <span class="st">"Bhutan"</span>, <span class="st">"Germany"</span>, <span class="st">"Mexico"</span>, <span class="st">"Sudan"</span>, <span class="st">"Bolivia"</span>, <span class="st">"Ghana"</span>, <span class="st">"Mongolia"</span>, <span class="st">"Suriname"</span>, <span class="st">"Brazil"</span>, <span class="st">"Greece"</span>, <span class="st">"Morocco"</span>, <span class="st">"Sweden"</span>, <span class="st">"Brunei"</span>, <span class="st">"Guatemala"</span>, <span class="st">"Mozambique"</span>, <span class="st">"Switzerland"</span>, <span class="st">"Bulgaria"</span>, <span class="st">"Guinea"</span>, <span class="st">"Nepal"</span>, <span class="st">"Syrian Arab Rep."</span>, <span class="st">"Burkina Faso"</span>, <span class="st">"Guinea-Bissau"</span>, <span class="st">"Netherlands"</span>, <span class="st">"Tanzania"</span>, <span class="st">"Burundi"</span>, <span class="st">"Guyana"</span>, <span class="st">"New Caledonia"</span>, <span class="st">"Thailand"</span>, <span class="st">"Cambodia"</span>, <span class="st">"Haiti"</span>, <span class="st">"New Zealand"</span>, <span class="st">"Togo"</span>, <span class="st">"Cameroon"</span>, <span class="st">"Honduras"</span>, <span class="st">"Nicaragua"</span>, <span class="st">"Trinidad and Tobago"</span>, <span class="st">"Canada"</span>, <span class="st">"Hong Kong"</span>, <span class="st">"Niger"</span>, <span class="st">"Tunisia"</span>, <span class="st">"Central African Rep."</span>, <span class="st">"Hungary"</span>, <span class="st">"Nigeria"</span>, <span class="st">"Turkey"</span>, <span class="st">"Chad"</span>, <span class="st">"Iceland"</span>, <span class="st">"Norway"</span>, <span class="st">"Uganda"</span>, <span class="st">"Chile"</span>, <span class="st">"India"</span>, <span class="st">"Oman"</span>, <span class="st">"United Arab Em."</span>, <span class="st">"China"</span>, <span class="st">"Indonesia"</span>, <span class="st">"Pakistan"</span>, <span class="st">"United Kingdom"</span>, <span class="st">"Colombia"</span>, <span class="st">"Iran"</span>, <span class="st">"Panama"</span>, <span class="st">"United States"</span>, <span class="st">"Comoros"</span>, <span class="st">"Ireland"</span>, <span class="st">"Papua New Guinea"</span>, <span class="st">"Uruguay"</span>, <span class="st">"Congo Dem. Rep."</span>, <span class="st">"Israel"</span>, <span class="st">"Paraguay"</span>, <span class="st">"Venezuela"</span>, <span class="st">"Congo Rep."</span>, <span class="st">"Italy"</span>, <span class="st">"Peru"</span>, <span class="st">"Vietnam"</span>, <span class="st">"Costa Rica"</span>, <span class="st">"Jamaica"</span>, <span class="st">"Philippines"</span>, <span class="st">"Yemen"</span>, <span class="st">"Cote D’lvoire"</span>, <span class="st">"Japan"</span>, <span class="st">"Poland"</span>, <span class="st">"Zambia"</span>, <span class="st">"Cyprus"</span>, <span class="st">"Jordan"</span>, <span class="st">"Portugal"</span>, <span class="st">"Zimbabwe"</span>)</span>
+<span id="cb6-3"><a href="#cb6-3"></a></span>
+<span id="cb6-4"><a href="#cb6-4"></a><span class="do">## keep 2019</span></span>
+<span id="cb6-5"><a href="#cb6-5"></a>gravity2<span class="ot">&lt;-</span>gravity<span class="sc">|&gt;</span><span class="fu">filter</span>(year<span class="sc">==</span><span class="dv">2019</span>)</span>
+<span id="cb6-6"><a href="#cb6-6"></a></span>
+<span id="cb6-7"><a href="#cb6-7"></a><span class="do">## Keep countries in the list</span></span>
+<span id="cb6-8"><a href="#cb6-8"></a>key2<span class="ot">&lt;-</span>key <span class="sc">|&gt;</span> <span class="fu">filter</span>(country_name<span class="sc">%in%</span>ctr)</span>
+<span id="cb6-9"><a href="#cb6-9"></a>gravity2<span class="ot">&lt;-</span>gravity2 <span class="sc">|&gt;</span> <span class="fu">filter</span>(country_id_o <span class="sc">%in%</span> key2<span class="sc">$</span>country_iso3 <span class="sc">&amp;</span> country_id_d <span class="sc">%in%</span> key2<span class="sc">$</span>country_iso3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+</section>
+<section id="product-level-gravity" class="level2">
+<h2 class="anchored" data-anchor-id="product-level-gravity">Product level gravity</h2>
+<section id="theory-1" class="level3">
+<h3 class="anchored" data-anchor-id="theory-1">Theory</h3>
+</section>
+<section id="setting-data-1" class="level3">
+<h3 class="anchored" data-anchor-id="setting-data-1">Setting data</h3>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>t2017<span class="ot">&lt;-</span><span class="fu">read_csv</span>(<span class="st">"BACI_HS17_Y2017_V202401b.csv"</span>)</span>
+<span id="cb7-2"><a href="#cb7-2"></a>t2018<span class="ot">&lt;-</span><span class="fu">read_csv</span>(<span class="st">"BACI_HS17_Y2018_V202401b.csv"</span>)</span>
+<span id="cb7-3"><a href="#cb7-3"></a>t2019<span class="ot">&lt;-</span><span class="fu">read_csv</span>(<span class="st">"BACI_HS17_Y2019_V202401b.csv"</span>)</span>
+<span id="cb7-4"><a href="#cb7-4"></a>t2020<span class="ot">&lt;-</span><span class="fu">read_csv</span>(<span class="st">"BACI_HS17_Y2020_V202401b.csv"</span>)</span>
+<span id="cb7-5"><a href="#cb7-5"></a>t2021<span class="ot">&lt;-</span><span class="fu">read_csv</span>(<span class="st">"BACI_HS17_Y2021_V202401b.csv"</span>)</span>
+<span id="cb7-6"><a href="#cb7-6"></a>t2022<span class="ot">&lt;-</span><span class="fu">read_csv</span>(<span class="st">"BACI_HS17_Y2022_V202401b.csv"</span>)</span>
+<span id="cb7-7"><a href="#cb7-7"></a></span>
+<span id="cb7-8"><a href="#cb7-8"></a><span class="do">## Combining all </span></span>
+<span id="cb7-9"><a href="#cb7-9"></a>trade<span class="ot">&lt;-</span><span class="fu">rbind</span>(t2017,t2018,t2019,t2020,t2021,t2022)</span>
+<span id="cb7-10"><a href="#cb7-10"></a></span>
+<span id="cb7-11"><a href="#cb7-11"></a><span class="fu">remove</span>(t2017,t2018,t2019,t2020,t2021,t2022)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p>I used <code>read_csv</code> from the tydiverse package for reading .csv. rbind is to stack all BACI data (it was separated per year), then I remove the individual BACI to save environment space.</p>
-<p>At this point, you can try checking out the two datasets. Let’s take a look at BACI first.</p>
+<p>At this point, you can try checking out the two datasets. You can try looking at both data by calling their names. Alternatively, just look at the column names with <code>colnames()</code>. Let’s try the BACI frist.</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(trade)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "t" "i" "j" "k" "v" "q"</code></pre>
+</div>
+</div>
+<p>There are only 6 columns / variables. Here’s some information on what thos means</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>var</th>
+<th>meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>t</td>
+<td>year</td>
+</tr>
+<tr class="even">
+<td>i</td>
+<td>exporter</td>
+</tr>
+<tr class="odd">
+<td>j</td>
+<td>importer</td>
+</tr>
+<tr class="even">
+<td>k</td>
+<td>product</td>
+</tr>
+<tr class="odd">
+<td>v</td>
+<td>value</td>
+</tr>
+<tr class="even">
+<td>q</td>
+<td>quantity</td>
+</tr>
+</tbody>
+</table>
+<p>Products in Harmonized System 6-digit nomenclature. Values in thousand USD and quantities in metric tons. Exporter and importer is codified using CEPII codes. the codes and it means can be found in the “key” dataset. To have country identities into the BACI dataset, we need to join the two.</p>
+<p>To join the two datasets, we need a key variable. A key variable is the variable connecting the two variables. Both needs the same name. So first we need to</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>trade <span class="ot">&lt;-</span> trade <span class="sc">|&gt;</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(i,j,k) <span class="sc">|&gt;</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">id=</span><span class="fu">row_number</span>())</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>trade</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 65,646,558 × 7
+# Groups:   i, j, k [19,304,073]
+       t     i     j k           v      q    id
+   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;   &lt;dbl&gt;  &lt;dbl&gt; &lt;int&gt;
+ 1  2017     4    12 130120  5.95   1.4       1
+ 2  2017     4    12 130190  5.12   2.32      1
+ 3  2017     4    12 401031  0.087  0.002     1
+ 4  2017     4    12 853890  0.303  0.019     1
+ 5  2017     4    36 071320  3.23   2.45      1
+ 6  2017     4    36 080212  8.27   2.19      1
+ 7  2017     4    36 080290  4.71   1.06      1
+ 8  2017     4    36 080420  1.21   1.55      1
+ 9  2017     4    36 080620 47.7   34.3       1
+10  2017     4    36 081310 13.6   14.2       1
+# ℹ 65,646,548 more rows</code></pre>
+</div>
+</div>
 <p>Next we look at the gravity dataset. Gravity filled with various important</p>
+</section>
 </section>
 <section id="running-and-interpretaion" class="level2">
 <h2 class="anchored" data-anchor-id="running-and-interpretaion">Running and interpretaion</h2>
@@ -236,6 +388,9 @@ Correia, Sergio, Paulo Guimarães, and Tom Zylkin. 2020. <span>“Fast Poisson E
 </div>
 <div id="ref-baci" class="csl-entry" role="listitem">
 Gaulier, Guillaume, and Soledad Zignago. 2010. <span>“BACI: International Trade Database at the Product-Level. The 1994-2007 Version.”</span> Working Papers 2010-23. CEPII. <a href="http://www.cepii.fr/CEPII/fr/publications/wp/abstract.asp?NoDoc=2726">http://www.cepii.fr/CEPII/fr/publications/wp/abstract.asp?NoDoc=2726</a>.
+</div>
+<div id="ref-st" class="csl-entry" role="listitem">
+Silva, Santos, and Silvana Tenreyro. 2006. <span>“The Log of Gravity.”</span> Journal Article. <em>The Review of Economics and Statistics</em> 88 (4): 19.
 </div>
 <div id="ref-yotov" class="csl-entry" role="listitem">
 Yotov, Yoto. 2022. <span>“Gravity at Sixty: The Workhorse Model of Trade.”</span> Journal Article. <em>CESifo Working Papers</em> 9584. <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4037001">https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4037001</a>.
