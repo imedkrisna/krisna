@@ -5,7 +5,7 @@ institute: "Universitas Indonesia"
 date: last-modified
 date-format: long
 bibliography: ref.bib
-abstract: "This page is dedicated to teach students on running the gravity model in R. We uses dataset from CEPII, specifically BACI and the gravity dataset. We run in R and RStudio IDE, and we rely on ppml from the gravity package when demonstrating PPML."
+abstract: "This page is dedicated to teach students on running the gravity model in R. We uses dataset from CEPII, specifically BACI and the gravity dataset. We run in R and RStudio IDE, and we rely on ppml from the gravity package when demonstrating PPML. We try to replicate Silva and Tenreyro (2006), an excellent paper for an introduction to the log gravity model and PPML."
 abstract-title: "abstract"
 format:
   html:
