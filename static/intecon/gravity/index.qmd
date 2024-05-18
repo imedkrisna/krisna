@@ -23,7 +23,9 @@ This guide is my attempt to help you learn gravity model much easier. The most i
 
 I use R here because I use R much more than Stata these days. However, the two language aren't very different. You can do the same thing on both, but you may need to google a bit. It's okay to use google a lot. I did as well even right now. Oh yeah I also informed you guys know R already so I won't go into too much basic stuff.
 
-## Preparation
+Next is the preparation you'll need. Make sure you read it carefully and install & download everything in advance!
+
+## Preparation {#req}
 
 This workshop is conducted with the R statistical software, RStudio IDE, and penppml [@cgz] package. Of course you're going to need tidyverse as well, or specifically dplyr package. You want to procure data beforehand too, and I will use CEPII data. let's discuss one by one.
 
@@ -36,7 +38,7 @@ Now onto R. You can procure R and RStudio from Posit's website. Get it [here](ht
 After that, you are going to need to install some packages. Follow my step until I told you to do type this on the console `install.packages(c("tidyverse","WDI","readxl","kableExtra"))`. You are going to do the same but you're going to need an extra stuff. Specifically, you need to add "penppml" in the list. That is, you need to type
 
 ```r
-`install.packages(c("tidyverse","WDI","readxl","kableExtra","penppml"))`
+install.packages(c("tidyverse","WDI","readxl","kableExtra","penppml"))
 ```
 
 This step requires internet connection, but you'll need to do this only once.
@@ -52,6 +54,8 @@ I use their BACI dataset [@baci] and gravity dataset [@gravity]. You can get tho
 
 You can also download from [my drive](https://1drv.ms/f/s!AjelszXKKcmskMsKLZRRwRJq1a2MnA?e=xsdpxL).
 
+Note that the data here is **extremely large** in size so be mindful. You need hefty internet quota and reasonable speed. Also, you can try opening it with spreadsheet software but unless you have a strong computer, i'd advice against it. Use R instead.
+
 In the CEPII website you can use various other dataset that may be useful for you. At the same time, there are various other source you can utilise for your actual project that's not necessarily from CEPII.
 
 ### working directory
@@ -62,7 +66,17 @@ All in all, you should have a folder with these stuff in it:
 
 ![](pic1.png)
 
+Notes about the data country_codes, product_codes and Readme are all for reading BACI.
+
 ## Theory
+
+The earliest (e.g., naive) gravity model taking directly from Newtonian gravity theory looks something like this:
+
+$$
+X_{ij}=\tilde{G}\frac{Y_iE_j}{T_{ij}^\theta}
+$$
+
+where $X_{it}$ is the value of trade flow from country $i$ to country $j$, $\tilde{G}$ is the gravitational constant (aka our usual constant), $Y_i$ is the output in country $i$ $E_j$ is the value of expenditure in country $j$ and $T_{ij}$ is the total bilateral trade frictions / trade cost between country $i$ and country $j$. 
 
 ## Setting data
 
@@ -76,8 +90,11 @@ first we load all the necessary data:
 
 library(tidyverse)
 library(penppml)
+library(writexl)
 
+## Readubg data
 gravity <- readRDS("Gravity_V202211.rds")
+key<-read_csv("country_codes_V202401b.csv")
 t2017<-read_csv("BACI_HS17_Y2017_V202401b.csv")
 t2018<-read_csv("BACI_HS17_Y2018_V202401b.csv")
 t2019<-read_csv("BACI_HS17_Y2019_V202401b.csv")
@@ -85,11 +102,46 @@ t2020<-read_csv("BACI_HS17_Y2020_V202401b.csv")
 t2021<-read_csv("BACI_HS17_Y2021_V202401b.csv")
 t2022<-read_csv("BACI_HS17_Y2022_V202401b.csv")
 
+## Combining all 
 trade<-rbind(t2017,t2018,t2019,t2020,t2021,t2022)
 
 remove(t2017,t2018,t2019,t2020,t2021,t2022)
 
 ```
+
+I used `read_csv` from the tydiverse package for reading .csv. rbind is to stack all BACI data (it was separated per year), then I remove the individual BACI to save environment space.
+
+At this point, you can try checking out the two datasets. You can try looking at both data by calling their names. Alternatively, just look at the column names with `colnames()`. Let's try the BACI frist.
+
+```{r}
+colnames(trade)
+```
+
+There are only 6 columns / variables. Here's some information on what thos means
+
+| var | meaning |
+| --- | --------- |
+| t | year |
+| i | exporter |
+| j | importer |
+| k | product |
+| v | value |
+| q | quantity |
+
+Products in Harmonized System 6-digit nomenclature. Values in thousand USD and quantities in metric tons. Exporter and importer is codified using CEPII codes. the codes and it means can be found in the "key" dataset. To have country identities into the BACI dataset, we need to join the two.
+
+To join the two datasets, we need a key variable. A key variable is the variable connecting the two variables. Both needs the same name. So first we need to 
+
+```{r}
+library(dplyr)
+df <- df |>
+  mutate(ID = group_indices(., var1, var2))
+
+```
+
+
+
+Next we look at the gravity dataset. Gravity filled with various important 
 
 
 ## Running and interpretaion

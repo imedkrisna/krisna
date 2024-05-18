@@ -89,6 +89,8 @@ div.csl-indent {
 <link href="index_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="index_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -146,16 +148,17 @@ div.csl-indent {
 <p>The gravity model is probably the most popular model in international trade. Many uses them. It is very intuitive, great predictive power, and most importantly, tweakable <span class="citation" data-cites="yotov">(<a href="#ref-yotov" role="doc-biblioref">Yotov 2022</a>)</span>. But the even most important is that UI students love them. If you’re doing trade for your thesis, then you probably going to use the gravity model as your backbone.</p>
 <p>This guide is my attempt to help you learn gravity model much easier. The most important part is probably the data and the model itself. What is the minimum things you need in the gravity model, how to arrange the database, run them, and interpret them. You must familiarize yourself with the data and its wrangling (80% of your coding) as well as the main gravity specification to date. I encourage students to pay careful attention to <span class="citation" data-cites="yotov">Yotov (<a href="#ref-yotov" role="doc-biblioref">2022</a>)</span> as it hosts the recent development in the gravity model, a must read if you’re planning to utilize gravity model.</p>
 <p>I use R here because I use R much more than Stata these days. However, the two language aren’t very different. You can do the same thing on both, but you may need to google a bit. It’s okay to use google a lot. I did as well even right now. Oh yeah I also informed you guys know R already so I won’t go into too much basic stuff.</p>
+<p>Next is the preparation you’ll need. Make sure you read it carefully and install &amp; download everything in advance!</p>
 </section>
-<section id="preparation" class="level2">
-<h2 class="anchored" data-anchor-id="preparation">Preparation</h2>
+<section id="req" class="level2">
+<h2 class="anchored" data-anchor-id="req">Preparation</h2>
 <p>This workshop is conducted with the R statistical software, RStudio IDE, and penppml <span class="citation" data-cites="cgz">(<a href="#ref-cgz" role="doc-biblioref">Correia, Guimarães, and Zylkin 2020</a>)</span> package. Of course you’re going to need tidyverse as well, or specifically dplyr package. You want to procure data beforehand too, and I will use CEPII data. let’s discuss one by one.</p>
 <section id="software" class="level3">
 <h3 class="anchored" data-anchor-id="software">Software</h3>
 <p>You’d want to use R and RStudio for this. The main reason I use R is because it’s free. Stata is not. I think Stata is faster and a bit easier (R people will kill me if they see this) but not cheap. If you have Stata it’s fine too. The command you’d want in stata is <code>ppmlhdfe</code>.</p>
 <p>Now onto R. You can procure R and RStudio from Posit’s website. Get it <a href="https://posit.co/download/rstudio-desktop/">here</a>. I wrote the guide to install R and RStudio <a href="https://www.krisna.or.id/courses/metopel/installr/">here</a>, so you better check it out. It’s written in Indonesian.</p>
 <p>After that, you are going to need to install some packages. Follow my step until I told you to do type this on the console <code>install.packages(c("tidyverse","WDI","readxl","kableExtra"))</code>. You are going to do the same but you’re going to need an extra stuff. Specifically, you need to add “penppml” in the list. That is, you need to type</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="st">`</span><span class="at">install.packages(c("tidyverse","WDI","readxl","kableExtra","penppml"))</span><span class="st">`</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(<span class="st">"tidyverse"</span>,<span class="st">"WDI"</span>,<span class="st">"readxl"</span>,<span class="st">"kableExtra"</span>,<span class="st">"penppml"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>This step requires internet connection, but you’ll need to do this only once.</p>
 </section>
 <section id="data" class="level3">
@@ -166,6 +169,7 @@ div.csl-indent {
 </blockquote>
 <p>I use their BACI dataset <span class="citation" data-cites="baci">(<a href="#ref-baci" role="doc-biblioref">Gaulier and Zignago 2010</a>)</span> and gravity dataset <span class="citation" data-cites="gravity">(<a href="#ref-gravity" role="doc-biblioref">Conte, Cotterlaz, and Mayer 2022</a>)</span>. You can get those from this <a href="http://www.cepii.fr/CEPII/en/bdd_modele/bdd_modele.asp">link</a>. BACI is under “international trade” banner while gravity is under “Gravity” banner. Specifically, I downloaded the 2017-2022 version of BACI and for the gravity dataset I downloaded the R version. You can of course download whichever version you like but for the purpose of this workshop maybe its best to stick with the same dataset as I.</p>
 <p>You can also download from <a href="https://1drv.ms/f/s!AjelszXKKcmskMsKLZRRwRJq1a2MnA?e=xsdpxL">my drive</a>.</p>
+<p>Note that the data here is <strong>extremely large</strong> in size so be mindful. You need hefty internet quota and reasonable speed. Also, you can try opening it with spreadsheet software but unless you have a strong computer, i’d advice against it. Use R instead.</p>
 <p>In the CEPII website you can use various other dataset that may be useful for you. At the same time, there are various other source you can utilise for your actual project that’s not necessarily from CEPII.</p>
 </section>
 <section id="working-directory" class="level3">
@@ -173,10 +177,15 @@ div.csl-indent {
 <p>If you finished downloading data and installing softwares, you then need to set up a working directory. A working directory is basically a folder where you have all the data and your R script (R version of do file). For now what you want is to have a <strong>folder filled with your downloaded data</strong>. Make sure you know the path to this folder. I tend to use easy path for my projects and move it somewhere else when i finished. If you use github or the likes, it’ll be even nicer because you can actually wipe out your local repo if you finish.</p>
 <p>All in all, you should have a folder with these stuff in it:</p>
 <p><img src="pic1.png" class="img-fluid"></p>
+<p>Notes about the data country_codes, product_codes and Readme are all for reading BACI.</p>
 </section>
 </section>
 <section id="theory" class="level2">
 <h2 class="anchored" data-anchor-id="theory">Theory</h2>
+<p>The earliest (e.g., naive) gravity model taking directly from Newtonian gravity theory looks something like this:</p>
+<p><span class="math display">\[
+X_ij=\~{G}
+\]</span></p>
 </section>
 <section id="setting-data" class="level2">
 <h2 class="anchored" data-anchor-id="setting-data">Setting data</h2>
@@ -186,18 +195,26 @@ div.csl-indent {
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb2-2"><a href="#cb2-2"></a><span class="fu">library</span>(penppml)</span>
-<span id="cb2-3"><a href="#cb2-3"></a></span>
-<span id="cb2-4"><a href="#cb2-4"></a>gravity <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="st">"Gravity_V202211.rds"</span>)</span>
-<span id="cb2-5"><a href="#cb2-5"></a>t2017<span class="ot">&lt;-</span><span class="fu">read_csv</span>(<span class="st">"BACI_HS17_Y2017_V202401b.csv"</span>)</span>
-<span id="cb2-6"><a href="#cb2-6"></a>t2018<span class="ot">&lt;-</span><span class="fu">read_csv</span>(<span class="st">"BACI_HS17_Y2018_V202401b.csv"</span>)</span>
-<span id="cb2-7"><a href="#cb2-7"></a>t2019<span class="ot">&lt;-</span><span class="fu">read_csv</span>(<span class="st">"BACI_HS17_Y2019_V202401b.csv"</span>)</span>
-<span id="cb2-8"><a href="#cb2-8"></a>t2020<span class="ot">&lt;-</span><span class="fu">read_csv</span>(<span class="st">"BACI_HS17_Y2020_V202401b.csv"</span>)</span>
-<span id="cb2-9"><a href="#cb2-9"></a>t2021<span class="ot">&lt;-</span><span class="fu">read_csv</span>(<span class="st">"BACI_HS17_Y2021_V202401b.csv"</span>)</span>
-<span id="cb2-10"><a href="#cb2-10"></a>t2022<span class="ot">&lt;-</span><span class="fu">read_csv</span>(<span class="st">"BACI_HS17_Y2022_V202401b.csv"</span>)</span>
-<span id="cb2-11"><a href="#cb2-11"></a></span>
-<span id="cb2-12"><a href="#cb2-12"></a>trade<span class="ot">&lt;-</span><span class="fu">rbind</span>(t2017,t2018,t2019,t2020,t2021,t2022)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-3"><a href="#cb2-3"></a><span class="fu">library</span>(writexl)</span>
+<span id="cb2-4"><a href="#cb2-4"></a></span>
+<span id="cb2-5"><a href="#cb2-5"></a><span class="do">## Readubg data</span></span>
+<span id="cb2-6"><a href="#cb2-6"></a>gravity <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="st">"Gravity_V202211.rds"</span>)</span>
+<span id="cb2-7"><a href="#cb2-7"></a>t2017<span class="ot">&lt;-</span><span class="fu">read_csv</span>(<span class="st">"BACI_HS17_Y2017_V202401b.csv"</span>)</span>
+<span id="cb2-8"><a href="#cb2-8"></a>t2018<span class="ot">&lt;-</span><span class="fu">read_csv</span>(<span class="st">"BACI_HS17_Y2018_V202401b.csv"</span>)</span>
+<span id="cb2-9"><a href="#cb2-9"></a>t2019<span class="ot">&lt;-</span><span class="fu">read_csv</span>(<span class="st">"BACI_HS17_Y2019_V202401b.csv"</span>)</span>
+<span id="cb2-10"><a href="#cb2-10"></a>t2020<span class="ot">&lt;-</span><span class="fu">read_csv</span>(<span class="st">"BACI_HS17_Y2020_V202401b.csv"</span>)</span>
+<span id="cb2-11"><a href="#cb2-11"></a>t2021<span class="ot">&lt;-</span><span class="fu">read_csv</span>(<span class="st">"BACI_HS17_Y2021_V202401b.csv"</span>)</span>
+<span id="cb2-12"><a href="#cb2-12"></a>t2022<span class="ot">&lt;-</span><span class="fu">read_csv</span>(<span class="st">"BACI_HS17_Y2022_V202401b.csv"</span>)</span>
+<span id="cb2-13"><a href="#cb2-13"></a></span>
+<span id="cb2-14"><a href="#cb2-14"></a><span class="do">## Combining all </span></span>
+<span id="cb2-15"><a href="#cb2-15"></a>trade<span class="ot">&lt;-</span><span class="fu">rbind</span>(t2017,t2018,t2019,t2020,t2021,t2022)</span>
+<span id="cb2-16"><a href="#cb2-16"></a></span>
+<span id="cb2-17"><a href="#cb2-17"></a><span class="fu">remove</span>(t2017,t2018,t2019,t2020,t2021,t2022)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
+<p>I used <code>read_csv</code> from the tydiverse package for reading .csv. rbind is to stack all BACI data (it was separated per year), then I remove the individual BACI to save environment space.</p>
+<p>At this point, you can try checking out the two datasets. Let’s take a look at BACI first.</p>
+<p>Next we look at the gravity dataset. Gravity filled with various important</p>
 </section>
 <section id="running-and-interpretaion" class="level2">
 <h2 class="anchored" data-anchor-id="running-and-interpretaion">Running and interpretaion</h2>
