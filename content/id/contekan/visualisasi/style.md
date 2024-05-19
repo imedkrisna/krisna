@@ -63,15 +63,19 @@ graph<-function(dataset, ...) {
 #### Light
 
 ```r
-theme_classic() +
+graph<-function(dataset, ...) {
+  dataset |>
+  ggplot(aes(...))+
+  theme_classic() +
   theme(panel.background = element_rect(fill = "#f0f1eb",
                                         colour = "#f0f1eb"),
         plot.background = element_rect(fill = "#f0f1eb"),
         legend.key = element_rect(fill = "#f0f1eb",linetype = "blank"),
         legend.background = element_rect(fill="#f0f1eb"))
+}
 ```
 
-light tapi untuk buat grafik utk ngajar.
+#### No info
 
 ```r
 theme_classic()+
