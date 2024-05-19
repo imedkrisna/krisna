@@ -48,3 +48,5 @@ graph<-function(dataset, ...) {
         legend.background = element_rect(fill="#f0f1eb"))
 }
 ```
+
+## Saving
