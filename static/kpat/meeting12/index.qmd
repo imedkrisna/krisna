@@ -1,7 +1,8 @@
 ---
-title: "Global Imbalance, exchange rate & Monetary Policy"
-subtitle: "ECES905205 pertemuan 12"
-date: "12 September 2022"
+title: "FDI in ASEAN and EV case study"
+subtitle: "Meeting 12"
+date: "27 May 2024"
+date-format: long
 author: "I Made Krisna Gupta"
 format: 
   revealjs:
@@ -14,306 +15,257 @@ format:
   beamer: default
 ---
 
+## Today
 
-## This week
+- 
 
-- To understand global imbalance, we need to understand how current account, exchange rate and monetary policy interacts.
+- Taken from ASEAN Investment Report 2023 which can be accessed [here](https://asean.org/book/asean-investment-report-2023/)
 
-- Additionally, we want to note how income distribution and investment-boosting policy affects the global imbalance.
+## Global trends {.m}
 
-- Later, we can learn that trade surplus may not equals to competitiveness, let alone welfare!
+- Global FDI flows in 2022 declined by 12 per cent to \$1.3 trillion, after nosediving in 2020 and 
+rebounding in 2021. 
 
-## Mercantilism
+- Why: The multitude of crises and challenges on the global stage – the war in 
+Ukraine, high food and energy prices, risks of recession and debt pressures in many countries.
 
-- Mercantilism adalah [paham](https://www.econlib.org/library/Enc/Mercantilism.html) yang mendorong ekspor dan menghalang-halangi impor.
+-  FDI project activity in the first quarter of 2023 shows that investors are uncertain and risk averse:
 
-- Pemeluk paham merkantilis percaya bahwa expor > impor (CA surplus) merupakan hal yang baik.
+    - 2023Q1:The number of international project finance deals in the first quarter of 2023 was down significantly
+    - greenfield project announcements and cross-border M&A activity also slowed. 
 
-- Paham ini besar di sekitar abad 16 sampai abad 18 setelah Smith dan Ricardo mempopulerkan comparative advantage.
+## FDI {.m}
 
-- Ketika itu, alat tukar adalah emas dan perak. Merkantilis percaya bahwa membatasi impor memperkaya suatu negara dengan memiliki banyak emas dan perak.
+- FDI flows to developing Asia remained flat at $662 billion (figure 1). This region remained the  largest recipient of FDI, accounting for half of global inflows. 
 
-## Mercantilist no more {.m}
+- In East Asia, FDI decreased by 3 per cent to $324 billion in 2022. Flows to China rose by 5 per cent, to a record $189 billion.
 
-- Selain argumen comparative advantage, satu konsep penting yang membuat surplus CA tidak sustainable adalah inflasi / nilai tukar.
+- The  increase was concentrated in manufacturing and high-tech industries (mainly electronics and  communication equipment) and came mostly from European MNEs. 
 
-- Jumlah emas di dalam negeri jadi tinggi relatif terhadap emas di pasar internasional.
+- Flows to South-East Asia increased by 5.5 per cent to $224 billion – also the highest level ever recorded. 
 
-- Harga emas jadi murah relatif terhadap barang $\rightarrow$ inflasi.
+- In South Asia, FDI flows rose by 9 per cent to $57 billion
 
-- menahan impor jadi semakin sulit & mahal. 
+## FDI flow
 
-    - tambah argumen comparative advantage, mercantilisme makin tidak populer dalam memningkatkan kesejahteraan.
-    
-## Exchange rate
+![](pic1.png)
 
-- Mercantilism $\rightarrow$ mempertahankan CA surplus.
+## FDI inflow
 
-- Namun CA (secara teori) tidak bisa surplus terus menerus.
+- ASEAN registered higher numbers of greenfield project announcements, international project finance deals and cross-border M&As. 
 
-- Unified currency: $ P_X Q_X = P_M QM $ 
+- ASEAN FDI inflows in 2022 exceeded flows to China for the second consecutive year
 
-    - remember ToT: $\frac{P_X}{P_M}=\frac{Q_M}{Q_X}$
-    
-    - If $\frac{P_X}{P_M} \uparrow$ then $\frac{Q_M}{Q_X}$
+## FDI Inflow
 
-## Exchange rate
+![](pic2.png)
 
-- Exchange rate: how much foreign money we can buy with domestic money.
+## ASEAN FDI {.m}
 
-- Misalnya nilai tukar=14.000 rupiah per USD:
+- Six Member States recorded higher inflows in 2022 than in 2021.
 
-    - perubahan jadi 14.500 = depresiasi rupiah terhadap dolar = apresiasi dolar terhadap rupiah.
-    
-    - sama dengan 0,0000714 USD ke 0,000069 USD.
+- Singapore witnessed the highest absolute increase in value, accounting for more than 60 per cent of FDI in the region.
 
-## Exchange rate
+- Malaysia and Myanmar recorded the highest percentage growth.
 
-![](picture1.png)
+- FDI hit record levels in three Member States (Malaysia, Singapore and Viet Nam)
 
-## XR & Trade
+- Cambodia's and Indonesia's growth was flat but levels of investment remained high
 
-- Misalnya harga CPO di  = 12.000 IDR/Kg:
+## FDI in ASEAN
 
-    - Dengan 14.000, harga jual = 0,857 USD/Kg
-    
-    - Dengan 14.500, harga jual = 0,827 USD/Kg
-    
-- Harga berubah meski tidak ada perubahan struktur pasar.
+![](pic3.png)
 
-- Sesuai hukum pasar, harga jual yang rendah akan meningkatkan demand global.
+## Reasons {.m}
 
-- Eksportir untung karena secara rupiah untungnya sama tapi sales meningkat.
+1. Rising investment across different modalities (project types), showing increasingly favourable investor sentiment for the region.
 
-- Sebaliknya, nilai tukar yang lemah merugikan importir.
+2. Record FDI in manufacturing, attesting to the region’s strong rebound from the pandemic and its industrial vibrance.
 
-## XR & CA
+3. Corporate investment strategies focusing on capacity expansion to build supply chain facilities, to bolster supply chain networks and to establish a stronger regional foothold.
 
-- Seperti hal-nya perdagangan barang biasa, uang juga tunduk pada permintaan dan penawaran.
+4. Increased investment in the energy transition, infrastructure and the digital economy.
 
-- Jika permintaan akan IDR meningkat relatif terhadap permintaan akan USD, maka IDR akan terapresiasi.
+5. Significant investor interest from several source countries.
 
-- CA surplus $\rightarrow$ demand for IDR > USD $\rightarrow$ IDR appreciates.
+## FDI in ASEAN
 
-- Setelah $\frac{IDR}{USD} \downarrow$, ekspor relatif lebih mahal dari impor $\rightarrow$ CA $\downarrow$.
+- Industries that received significant investment in 2021 (e.g. EVs, electronics, data centres, the digital economy) continued to receive new, expanded and upgraded investment in 2022. 
 
-- Pada akhirnya CA akan diseimbangkan oleh ekuilibrium baru nilai tukar.
+- Geopolitical tensions and supply chain challenges remained an important influencing factor for diversification and relocation activities, with ASEAN a major beneficiary.
 
-## XR & CA {.m}
+## FDI in ASEAN
 
-- Jika ekspor dipermudah dan impor dipersulit seperti paham merkantilis, maka dolar akan tersimpan di sistem keuangan.
+![](pic4.png)
 
-- jika ditukar dengan rupiah, maka rupiah akan berkurang di pasar uang dan membanjiri pasar barang:
+## FDI by source
 
-    - rupiah menguat di pasar uang, tapi melemah di pasar barang (inflasi)
-    
-    - jika tidak ditukar, dolar akan bertahan di pasar uang dan lama-lama jadi banyak (artinya rupiah tetap menguat)
-    
-- Artinya, surplus CA tidak sustainable. Lagipula, uang nganggur = penggunaan tidak efisien.
+- FDI from the top 10 sources accounted for 71 per cent of investment in ASEAN, up from 63 per cent in 2021
 
-## XR & FA
+- US remained the largest investor in the region, mainly in chips and finance.
 
-- Demand mata uang tidak hanya didorong oleh pasar barang, tapi juga pasar modal!
+- Japan is second, particularly in automotive and storage (88% of this industry is from JPN).
 
-- Ingat IS - LM? Apa yang terjadi ketika $r \uparrow$ ?
+- Chinese companies remained active in infrastructure projects, EV-related activities and the digital economy, and were the largest investors in Cambodia, the Laos & Myanmar.
 
-::: {.incremental}
-- naiknya r menyerap uang ke sistem perbankan.
+## FDI by Source
 
-- uang beredar berkurang, harga uang naik relatif terhadap harga barang.
+![](pic5.png)
 
-- CB response to inflation: $r \uparrow$, $P \downarrow$.
-:::
+## Intra-ASEAN
 
-## XR & FA
+![](pic6.png)
 
-- Di pasar uang, nilai tukar juga digunakan untuk mengendalikan nilai tukar.
+## Intra-ASEAN FDI {.m}
 
-- naiknya interest rate domestik akan menaikkan daya tawar aset di Indonesia.
+- The three major destinations for intra-ASEAN investment (Indonesia, Singapore and Viet 
+Nam, in that order) accounted for more than 66 per cent of intraregional investment in 2022.
 
-    - orang akan mencari rupiah untuk ditukar dengan surat berharga Indonesia.
-    
-    - demand rupiah naik relatif terhadap mata uang asing.
-    
-    - rupiah apresiasi -> demand ekspor berkurang, demand impor naik.
-    
-## XR, CA, FA {.m}
+- Singapore, Thailand and Malaysia were the three largest regional investors; together 
+they accounted for more than 90 per cent of intraregional flows.
 
-- Kebijakan meningkatnya aktivitas pasar modal juga didorong kebijakan pemerintah.
+- This indicates a high concentration in the source of intraregional investment and the limited capacity of firms from other Member States to regionalize. 
 
-- aset yang masuk ke Indonesia mendorong FA positive $\rightarrow$ CAD!
+- Key challenges to internationalization include limited access to finance; knowledge, information and know-how gaps; and difficulties in identifying investment opportunities. 
 
-- CA dan XR memiliki dinamika di mana keduanya dapat saling mempengaruhi:
+## Intra-ASEAN FDI
 
-    - lewat perdagangan barang, CA surplus $\rightarrow$, XR $\uparrow$, surplus CA berkurang.
-    
-    - lewat perdagangan aset: demand local asset $\rightarrow$ XR $\uparrow$, surplus CA berkurang.
-    
-- Merkantilis dan investasi asing ke dalam negeri negates each other!
+- Measuring intra-ASEAN investment by value can be misleading. SMEs can provide a 
+potential source of intraregional investment as these enterprises tend to internationalize to neighbouring countries to grow, rather than venture further afield. 
 
-## Global imbalance: why?
+- It is important to distinguish intraregional investment by ASEAN companies from investment by MNE subsidiaries based in ASEAN. 
 
-- baik CAS maupun CAD secara teori tidak akan sustainable.
+- Investment conducted by MNEs in the region often flows through holding companies or special-purpose vehicles.
 
-    - ceteris paribus, akan ada correction mechanism melalui exchange rate.
-    
-- Namun kenapa global imbalance bisa terjadi secara persistent?
+## Policy options {.m}
 
-    - Aus, NZ, US, UK vs Jerman, Jepang, China, Taiwan.
-    
-. . .
+- Strengthen institutional connectivity. Establish a regular forum for cooperation between inward-outward FDI agencies, including between investment promotion agencies
 
-- Hal ini karena aktivitas Central Bank (CB)
+- Promote regional cooperation on regionalization of SMEs. Issues include measures and mechanisms to facilitate access to finance and access to information, establish dedicated institutional support, facilitate investment, establish SME regionalization alliances 
 
-## Central Bank
+- Establish a task force of alliances of stakeholders. 
+ 
+- Leverage the ASEAN Working Group on Statistics.Task the group with compiling and reporting detailed statistics on intraregional investment. 
 
-- Meski dibilang bahwa uang tunduk pada supply demand seperti halnya barang, uang adalah produk monopoli,
+## Greenfield
 
-    - produksi mata uang diatur oleh CB.
-    
-- CB memiliki aktivitas yang cukup besar di pasar uang maupun ekonomi domestik.
+![](pic7.png)
 
-    - mengendalikan inflasi.
-    
-    - menjaga nilai tukar mata uang.
-    
-- Kemampuan intervensi CB dapat kita observe dari balance sheetnya.
+## International project finance
 
-## Balance sheet BI
+![](pic8.png)
 
-![Monetary indicator billion IDR](picture2.jpg)
+## Merger & Acquisition
 
-sumber: [indikator moneter BI](https://www.bi.go.id/en/statistik/indikator/indikator-moneter.aspx)
-    
-## Intervention mechanism
+![](pic9.png)
 
-- Balance sheet CB sangat mempengaruhi perekonomian domestik (in case of the Fed, PBoC, ECB & BoJ, the world)
+## Challenges
 
-- pelepasan aset oleh CB $\rightarrow$ penyerapan uang beredar $\rightarrow$ mengurangi inflasi.
+1. Global FDI flows in 2023 are expected to fall further. This declining trend could affect the investment momentum to the region.
 
-- aset purchase oleh CB $\rightarrow$ uang beredar naik $\rightarrow$ mendorong PDB & inflasi.
+2. Rising interest rates could lead to higher costs of finance. This could slow down investment and international project finance activities. 
 
-- aset asing yang dimiliki CB inilah yang kita sebut cadev.
+3. The forthcoming international tax reform will have significant implications for FDI policies, including SEZ development. It will affect the use of tax incentives to promote FDI 
 
-## controlling XR
+## Opportunities
 
-- say BI ingin apresiasi IDR terhadap USD, gimana caranya?
+1. RCEP single market is attractive for GVC & market.
 
-::: {.incremental}
+2. Energy transition tech, semiconductors and e-commerce is still very strong in the region.
 
-- untuk apresiasi IDR, BI perlu mengurangi sirkulasi IDR di pasar uang.
+3. International supply chain can only move to SEA.
 
-- BI menjual aset asing (denominasi USD), lalu lepas USD nya, tukar dengan IDR.
+## SDGs investment
 
-- sebaliknya juga bisa, depresiasi IDR dilakukan dengan membeli aset asing dengan IDR.
+![](pic10.png)
 
-:::
+## SDGs investment
 
+![](pic11.png)
 
+## FDI favorable policies {.m}
 
-## Kenapa BI intervensi?
+- From 2013 to 2022, more than one third of the FDI-favourable measures related to opening 
+new sectors or activities to foreign investment. In 2021–2022, for instance:
 
-- ketika BI mengumpulkan cadev, BI menarik dolar dari pasar $\rightarrow$ dolar yang dapat digunakan untuk impor jadi berkurang!
+- Vietnam allowed complete foreign investment in insurance and set implementation guidelines for the 2020 Law on Investment, which includes a restrictive list for market access for foreign investors.
 
-- Pengumpulan cadev oleh BI = menyeimbangkan CA yang surplus!
+- The Philippines permitted full foreign investment in renewables and revised its negative list by removing manufacture, repair, storage and distribution of products requiring clearance from the Department of National Defence.
 
-- Cadev yang sudah dikumpulakn dapat digunakan di masa depan sewaktu IDN membutuhkan dollar untuk menahan nilai IDR dari terdepresiasi.
+- Foreign ownership restrictions in SMEs and trading enterprises were also relaxed. Wholly foreign ownership of public services, such as telecommunication, airlines, shipping and railways was allowed
 
-## Rezim XR
+## Incentives
 
-- gambaran XR sebelumnya adalah "clean float", di mana nilai tukar mata uang benar-benar bebas intervensi sentralistik.
+- Cambodia enacted a Law on Investment that provides incentives for investment in 19 sectors, including high-tech industries and projects targeting innovation, research and development, digital infrastructure and high value added manufacturing. 
 
-- tapi sangat sedikit negara yang clean float. Mostly "dirty float": pasar tetap bekerja tapi CB intervensi from time to time.
+- Thailand reduced import tariffs for four major investment projects and introduced a personal income tax waiver for specific foreign taxpayers, including high-income earners, retirees and foreigners working remotely from Thailand.
 
-- masih lebih float daripada "fixed exchange rate".
+## Institutional reform {.m}
 
-- Tapi kenapa CB ingin manage nilai tukar?
+- Cambodia updated its Law on Investment to streamline administrative processes and introduced the “Cambodia My 2nd Home” visa programme targeting foreign investors with investment capital of at least $100,000 who own real estate in the country.
 
-## Kenapa intervensi XR? {.m}
+- Indonesia established a Ministry of Investment to facilitate the ease of doing business in the country. Through Presidential Regulation No. 49 of 2021, the government also reduced the
+number of business sectors that are subject to certain investment requirements.
 
-1. memiliki cadev dulu dengan merelakan tidak impor. Cadev berguna untuk intervensi ketika ada krisis. Ada rule of thumb CB memiliki cadev yang cukup untuk 3-6 bulan impor.
+- Myanmar offered currency conversion exemptions for some FDI projects.
 
-1. Mendukung merkantilis: dengan menyerap dolar tiap kali CA surplus, CB bisa menjaga nilai tukar tetap rendah dan ekspor tetap tinggi!
+- Thailand set criteria for high-income earners: those who invest at least $500,000 in 
+government bonds or assets in the form of FDI are considered investors eligible for long-term residence visas.
 
-1. Mendukung investasi: dengan menjaga rupiah tetap stabil, pengutang dolar dapat memastikan nilai utangnya tidak membengkak akibat dampak nilai tukar.
+## Restrictions
 
-1. Stabilitas nilai tukar overall lebih disukai pasar -> prudence!
+- Myanmar established a committee to monitor foreign currency transactions.
 
-## Aktivitas CB
+- The Philippines created an FDI review mechanism for strategic industries such as those related to the military, cyberinfrastructure and pipeline transportation, and for activities that might jeopardize national security or public safety
 
-<iframe src="https://data.worldbank.org/share/widget?indicators=BN.RES.INCL.CD&locations=MY-ID-TH-VN" width='900' height='600' frameBorder='0' scrolling="no" ></iframe>
+## UAS
 
-## AKtivitas CB
+- You are tasked to work on an article with ASEAN member countries as a focus.
 
-<iframe src="https://data.worldbank.org/share/widget?indicators=BN.RES.INCL.CD&locations=MY-ID-TH-VN-US" width='900' height='600' frameBorder='0' scrolling="no" ></iframe>
+- You can choose to write an issue with ASEAN Member States/Institutions or a variety of issues within a single ASEAN Member State except Indonesia.
 
-## Aktivitas CB
+- Issues include but are not limited to economic/social development, climate change and green transition, industrial policy, digitalization, sovereignty, aerospace, etc.
 
-<iframe src="https://data.worldbank.org/share/widget?indicators=BN.RES.INCL.CD&locations=MY-ID-TH-VN-US-CN" width='900' height='600' frameBorder='0' scrolling="no" ></iframe>
+## Rules {.m}
 
+- Write a docx or pdf document.
+- Use English.
+- Write around 2000-3000 words (10% tolerance), not including references and tables/figures.
+- Use APA7 for reference if you can, but you can certainly use other reference rules.
+- You need a good intro, body, and conclusion sections at the very least.
+- I need to see backups for every statement you say, either someone else's articles, or data. Your own data exploration is preferred.
+- Don't forget to cite papers and data. If I cannot find your source, I will penalize them heavily.
+Of course you can use articles we used during our meetings.
 
-## Global imbalance: why?
+## Rubrik
 
-- CB tidak mungkin intervensi terus menerus. Kenapa?
+| No | Point | weigth |
+| --- | ----- |  --- |
+| 1 | Introduction | 30% |
+| 2 | Main ideas / arguments | 20% |
+| 3 | Backups| 40% |
+| 4 | English | 10% |
 
-- Bretton woods: ketika mata uang masih di-peg ke emas, US sampai kehabisan emas karena demand dolar begitu tinggi.
+## Rubrik
 
-- Dengan kata lain, mata uang asing di pasar bakal habis kalau dikumpulin terus:
+- Good context setup/building, Why the issue is important, a glance of what readers can expect from the article, your main points should be here. Good conclusion complement good intro
 
-    - yang surplus terus akan kehabisan aset utk dibeli
-    
-    - yang defisit kehabisan aset utk dijual.
-    
-## Exorbitant privilege
+- Your originality, your main stance / thesis given situations you set in the intro. How it ties the issue together.
 
-- tapi aset US sampai saat ini masih considered safe:
+- How good / relevant your backups are to arguments you provide. I will weight data a bit more than articles, but try to mix the two. Even better if you use both.
 
-    - seberapapun aset US dilepas, pasti bakal dibeli.
-    
-- Sejarahnya panjang, sejak bretton woods, trade dilakukan dalam USD karena USD dipeg ke emas.
+- Your typical TOEFL stuff. This isn't TOEFL writing test so i will weight it very low.
 
-- Tentunya juga karena US jaman dulu ekonominya sangat besar. Baik ekspor maupun impornya besar.
 
-    - aman pegang USD karena ketika negara lain berkurang tradenya, kita akan selalu bisa dagang dengan US.
+## Submission
 
-## Exorbitant privilege
+- Check your EMAS
 
-![Global CB reserves](picture3.jpg)
+- Deadline is 8 June 2024 23:59
 
-sumber: [IMF](https://data.imf.org/?sk=E6A5F467-C14B-4AA8-9F6D-5A09EC4E62A4)
+- Feel free to work together or contact me if you have questions. I usually can be quite flexible on some stuff.
 
-## Exorbitant privilege
+- If I like your article I might ask you to co-write it into a 800words article at EAF, Conversation or newspaper. Of course if you're confident you can do it yourself.
 
-![](picture4.jpg)
+# Till later
 
-from [CFR](https://www.cfr.org/backgrounder/dollar-worlds-currency)
-
-## Competitiveness or currency manipulation? {.m}
-
-- Unsurprisingly, China dan Jepang, 2 negara paling surplus, pegang aset denominasi dolar paling banyak.
-
-    - untuk tetap surplus, mereka terus beli bonds US tanpa harus impor.
-    
-- Unsurprisingly, 2 negara tersebut mengalami boom aset, terutama konstruksi.
-
-    - Jepang melambat ekonominya sejak 90-an, setelah aset-asetnya ternyata ga ada returnnya.
-    
-    - China sedang mengalami perlambatan tsb. We'll see seperti apa landingnya.
-    
-## Big Mac Index
-
-- Fenomena ini mendorong studi tentang undervaluation / overvaluation of currency di literatur ekonomi internasional.
-
-- Bahwa nilai mata uang yang ada saat ini tidak mencerminkan nilai aslinya sebagai alat tukar.
-
-    - nilai asli sebuah ekonomi tetaplah what the economy produce and consume.
-    
-- Salah satu study yang menarik adalah [BigMac Index](https://www.krisna.or.id/en/post/bigmacindex/) dari majalah the economist.
-
-## Next week
-
-- Konsekuensi global imbalance pada distribusi pendapatan.
-
-    - What mercantilist got wrong
-
-- Mulai konteks Indonesia.
