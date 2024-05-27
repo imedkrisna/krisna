@@ -1,5 +1,5 @@
 ---
-title: "FDI in ASEAN and EV case study"
+title: "FDI in ASEAN and emerging issues in FDI"
 subtitle: "Meeting 12"
 date: "27 May 2024"
 date-format: long
@@ -17,7 +17,7 @@ format:
 
 ## Today
 
-- 
+- FDI in the ASEAN is in a the microscope amid China v USA trade 'cold war'.
 
 - Taken from ASEAN Investment Report 2023 which can be accessed [here](https://asean.org/book/asean-investment-report-2023/)
 
@@ -192,7 +192,7 @@ new sectors or activities to foreign investment. In 2021–2022, for instance:
 
 - The Philippines permitted full foreign investment in renewables and revised its negative list by removing manufacture, repair, storage and distribution of products requiring clearance from the Department of National Defence.
 
-- Foreign ownership restrictions in SMEs and trading enterprises were also relaxed. Wholly foreign ownership of public services, such as telecommunication, airlines, shipping and railways was allowed
+- Foreign ownership restrictions in SMEs and trading enterprises were also relaxed. Wholly foreign ownership of public services, such as telecommunication, airlines, shipping and railways was allowed.
 
 ## Incentives
 
@@ -204,13 +204,74 @@ new sectors or activities to foreign investment. In 2021–2022, for instance:
 
 - Cambodia updated its Law on Investment to streamline administrative processes and introduced the “Cambodia My 2nd Home” visa programme targeting foreign investors with investment capital of at least $100,000 who own real estate in the country.
 
-- Indonesia established a Ministry of Investment to facilitate the ease of doing business in the country. Through Presidential Regulation No. 49 of 2021, the government also reduced the
-number of business sectors that are subject to certain investment requirements.
+- Indonesia established a Ministry of Investment to facilitate the ease of doing business in the country. Through Presidential Regulation No. 49 of 2021, the government also reduced the number of business sectors that are subject to certain investment requirements.
 
 - Myanmar offered currency conversion exemptions for some FDI projects.
 
 - Thailand set criteria for high-income earners: those who invest at least $500,000 in 
 government bonds or assets in the form of FDI are considered investors eligible for long-term residence visas.
+
+## Issue 1: global tax reform
+
+- the G20-OECD BEPS projects proposed a global minimum tax of 15 per cent on the profits of the largest MNEs.
+
+- They also proposed taxing foreign-made profits to avoid profit-shifting.
+
+- The implimentation will:
+  
+    - be complicated, prolly beyond the capacity of most ASEAN government.
+    
+    - limit the use of Special Economic Zones and tax expenditure in general.
+    
+## SEZ
+
+- ASEAN has more than 1,600 zones of different categories and sizes from small ones to megazones encompassing a few contiguous provinces or states.
+
+- Most have been developed to attract FDI by granting tax incentives. 
+
+- SEZs could still be developed by using non-tax measures, including offering competitive electricity charges from renewable energy sources, promoting green SEZs and providing efficient and connected physical and digital infrastructure.
+
+## Issue 2: GVC restructuring
+
+- Geopolitical tensions and pandemic-induced supply chain disruptions are key drivers of the recent wave of international supply chain restructuring, as are rising costs. 
+
+- Investors are diversifying production locations to mitigate future risks, and the ASEAN region is a major beneficiary of this relocation trend.
+
+## Away from China
+
+- Apple (US) in 2019 urged key suppliers such as Foxconn, Pegatron and Wistron (all Taiwan) to explore shifting some production to countries in ASEAN for reasons of supply chain
+diversification.
+
+- These suppliers, along with others such as Goertek (China), established facilities in ASEAN as part of their international supply chain restructuring.
+
+## Away from China
+
+- Pegatron increased its presence in Viet Nam since 2020 for computer, communication equipment and electronic component manufacturing. 
+
+- Foxconn expanded in the same host country and other countries in the region. It partially moved the IPAD production to Viet Nam and started construction of a factory in 2020.
+
+## Away from China
+
+- BOE Technology is building two additional plants in Vietnam. 
+
+- Apple, along with suppliers Luxshare Precision Industry (China) and Foxconn, started producing Apple watches in Vietnam in 2021. 
+
+- Foxconn also set up an Apple MacBook production line and Quanta Computer (Taiwan Province of China) is constructing a factory in northern Viet Nam for notebook components in 2022.
+
+- Samsung and Intel also large in Vietnam. Recently Intel increase its FDI to Malaysia.
+
+## Apple goes ASEAN
+
+![](pic12.png)
+
+## Policy options {m}
+
+- The role of lead firms and their anchor suppliers complements ASEAN Member States
+efforts to attract FDI.
+
+- Lead firms and anchor firms play an active role in helping to build the region’s supporting industries and in further improving the investment environment as they develop their supply chain ecosystems and strengthen regional production network systems.
+
+- Active FDI promotion is warranted for the next few years, with efforts to engage with investors and to promote targeted investment opportunities as more MNEs plan their restructuring of international supply chains.
 
 ## Restrictions
 
@@ -255,7 +316,6 @@ Of course you can use articles we used during our meetings.
 - How good / relevant your backups are to arguments you provide. I will weight data a bit more than articles, but try to mix the two. Even better if you use both.
 
 - Your typical TOEFL stuff. This isn't TOEFL writing test so i will weight it very low.
-
 
 ## Submission
 
