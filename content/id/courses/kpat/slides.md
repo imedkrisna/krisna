@@ -12,6 +12,6 @@ slides:
 - {{% staticref "/kpat/meeting8/index.html" "newtab" %}}Meeting 8: ASEAN in the global economy{{% /staticref %}}
 - {{% staticref "/kpat/meeting9/index.html" "newtab" %}}Meeting 9: ASEAN production network{{% /staticref %}}
 - {{% staticref "/kpat/meeting10/index.html" "newtab" %}}Meeting 10: ASEAN digital economy{{% /staticref %}}
-- {{% staticref "/kpat/meeting11/index.html" "newtab" %}}Meeting 11: {{% /staticref %}}
-- {{% staticref "/kpat/meeting12/index.html" "newtab" %}}Meeting 12: {{% /staticref %}}
+- {{% staticref "/kpat/meeting11/index.html" "newtab" %}}Meeting 11: ASEAN and the climate change{{% /staticref %}}
+- {{% staticref "/kpat/meeting12/index.html" "newtab" %}}Meeting 12: FDI in ASEAN: issues and opportunities{{% /staticref %}}
 - {{% staticref "/kpat/meeting13/index.html" "newtab" %}}Meeting 13: {{% /staticref %}}
