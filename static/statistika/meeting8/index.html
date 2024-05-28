@@ -8,7 +8,7 @@
 <link href="index_files/libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="index_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="index_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.3.340">
+  <meta name="generator" content="quarto-1.4.554">
 
   <meta name="author" content="Matematika &amp; Statistika">
   <title>Menebak populasi dengan sampel</title>
@@ -30,7 +30,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto.css" id="theme">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto.css">
   <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -158,7 +158,8 @@
   }
 
   .callout.callout-titled .callout-body > .callout-content > :last-child {
-    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
   }
 
   .callout.callout-titled .callout-icon::before {
@@ -339,229 +340,203 @@ Matematika &amp; Statistika
 </div>
 
 </section>
-<section id="hari-ini" class="slide level2">
-<h2>Hari ini</h2>
+<section id="data-dan-statistika" class="slide level2">
+<h2>Data dan Statistika</h2>
 <ul>
-<li><p>Menebak rata-rata populasi dari sampel</p></li>
-<li><p>Konsep rentang kepercayaan</p></li>
-<li><p>Konsep student distribution (distribusi t)</p></li>
-<li><p>Pendahuluan uji hipotesis</p></li>
-</ul>
-</section>
-<section id="konsep-rentang-kepercayaan" class="slide level2">
-<h2>Konsep rentang kepercayaan</h2>
+<li><p>Data adalah <strong>kumpulan informasi yang didapatkan dari melakukan pengamatan (observasi)</strong>.</p></li>
+<li><p>Pada hakikatnya, penggunaan data dan statistika berfungsi untuk <strong>menjawab pertanyaan</strong> seperti:</p>
 <ul>
-<li><p>Sampling bisa jadi memberikan kita nilai rata-rata yang tidak sama dengan populasi.</p></li>
-<li><p><span class="math inline">\(\mu \neq \bar{X}\)</span></p></li>
-<li><p>Tapi kita bisa menebak rata-rata populasi <span class="math inline">\(\mu\)</span> dengan menggunakan rentang kepercayaan.</p></li>
-<li><p>Rentang kepercayaan adalah rentang di mana kita yakin dengan tingkat keyakinan <span class="math inline">\(1-\alpha\)</span></p></li>
-</ul>
-</section>
-<section id="rentang-kepercayaan" class="slide level2">
-<h2>Rentang kepercayaan</h2>
-<div class="columns">
-<div class="column" style="width:47%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="pvalue1.gif"></p>
-<figcaption>Two-tailed</figcaption>
-</figure>
-</div>
-</div><div class="column" style="width:47%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="pvalue2.gif"></p>
-<figcaption>One-tailed</figcaption>
-</figure>
-</div>
-</div>
-</div>
-<p>Gambar biru = <span class="math inline">\(\alpha\)</span></p>
-<p>Gambar diambil dari <a href="https://stats.oarc.ucla.edu/other/mult-pkg/faq/general/faq-what-are-the-differences-between-one-tailed-and-two-tailed-tests/">UCLA</a></p>
-</section>
-<section id="tingkat-kepercayaan" class="slide level2">
-<h2>Tingkat kepercayaan</h2>
-<ul>
-<li><p>Kita menentukan dulu level kepercayaan.</p>
-<ul>
-<li><p>Standardnya adalah 95%, atau <span class="math inline">\(\alpha=5%\)</span></p></li>
-<li><p>kalau two-tailed, berarti kiri kanan masing-masing <span class="math inline">\(\frac{5}{2}\%\)</span></p></li>
+<li><p>Bagaimana kondisi sosial ekonomi penduduk Indonesia? Dibandingkan dengan RRT?</p></li>
+<li><p>Berapa ekspor Indonesia tahun 2020? Apakah meningkat dibandingkan tahun 2019?</p></li>
 </ul></li>
-<li><p>Makin tinggi tingkat kepercayaan, makin besar rentangnya.</p></li>
-<li><p>Makin besar rentangnya, makin ga guna tebakannya (inefisien),</p></li>
+<li><p>Anda setiap hari juga mengumpulkan data!</p></li>
 </ul>
 </section>
-<section id="rentang-kepercayaan-1" class="slide level2">
-<h2>Rentang kepercayaan</h2>
+<section id="data-yang-baik" class="slide level2">
+<h2>Data yang baik</h2>
 <ul>
-<li>Rumus menghitung rentang kepercayaan:</li>
-</ul>
-<p><span class="math display">\[
-\bar{X} \pm Z_{\frac{\alpha}{2}} \frac{S}{\sqrt{n}}
-\]</span></p>
-<p>atau</p>
-<p><span class="math display">\[
-\mu=\left[ \bar{X}-Z_{\frac{\alpha}{2}} \frac{S}{\sqrt{n}}, \bar{X}+Z_{\frac{\alpha}{2}}\frac{S}{\sqrt{n}}\right]
-\]</span></p>
-<ul>
-<li>Z adalah nilai baku / standardized score yang memberikan kita rentang kepercayaan <span class="math inline">\(1-\alpha\)</span></li>
+<li><p>Data akan menjadi basis dalam menjawab pertanyaan dan membuat keputusan. Data salah, keputusan juga salah!</p></li>
+<li><p>Data yang baik haruslah objektif, representatif, valid, tepat waktu dan relevan.</p></li>
+<li><p>Objektif berarti dapat meminimalisir perbedaan persepsi antar-pengamat / individu.</p></li>
+<li><p>harus memiliki alat ukur yang konsisten dan disepakati, dengan metode yang dapat diaudit.</p></li>
+<li><p>contoh: di kelas saya ada 10 orang yang gendut vs di kelas saya, 10 orang punya berat badan di atas 70 kg.</p></li>
 </ul>
 </section>
-<section id="contoh-soal-1" class="slide level2">
-<h2>Contoh soal 1</h2>
-<div>
+<section id="data-yang-baik-1" class="slide level2">
+<h2>Data yang baik</h2>
 <ul>
-<li class="fragment"><p>Diambil sebuah sampel berisikan 100 mahasiswa, didapatkan memiliki rata-rata nilai tes TOEFL sebesar 500 dengan simbangan baku 50. Dengan rentang kepercayaan 95%, tentukan rentang nilai TOEFL keseluruhan mahasiswa tersebut!</p></li>
-<li class="fragment"><p>Gunakan tabel Z untuk mendapatkan <span class="math inline">\(Z_{0.025}\)</span></p></li>
-<li class="fragment"><p>Rentang rata-rata = <span class="math inline">\(500 \pm 1,96\times\frac{50}{\sqrt{100}}\)</span></p></li>
-<li class="fragment"><p>Rentang rata-rata = <span class="math inline">\(\left[490,2;509,8\right]\)</span></p></li>
-</ul>
-</div>
-</section>
-<section id="tabel-z" class="slide level2">
-<h2>Tabel Z</h2>
-<iframe src="https://onedrive.live.com/embed?cid=ACC929CA35B3A537&amp;resid=acc929ca35b3a537%21162501&amp;authkey=AIx-FChNmjZ8zzQ&amp;em=2" width="900" height="600" frameborder="0" scrolling="no">
-</iframe>
-<p>Bisa <a href="https://www.google.com/search?client=firefox-b-d&amp;q=z+score+table">Google</a> atau download di <a href="https://drive.google.com/file/d/1ywI58hnM8p0ZyFV7B9rCOosk72iCGguq/view?usp=sharing">sini</a></p>
-</section>
-<section id="distrubusi-t" class="slide level2">
-<h2>distrubusi t</h2>
-<ul>
-<li><p>Distribusi normal (atau distribusi z) merupakan sebaran kontinyu dari <span class="math inline">\(-\infty\)</span> sampai <span class="math inline">\(\infty\)</span></p></li>
-<li><p>Meski demikian, hanya dari 3 standar deviasi kiri dan kanan aja udah lebih dari 99,99%.</p></li>
-<li><p>Sampel dari populasi tersebut belum tentu terdistribusi normal, meski mirip:</p>
-<p>= sampel cenderung lebih mungkin dapat di sekitar rata-rata.</p></li>
+<li><p>Representatif berarti harus mewakili obyek yang diamati. Obyek yang representatif biasanya akan didapatkan dengan sampling yang acak.</p></li>
+<li><p>valid berarti data tersebut memiliki kesalahan sampling yang kecil dan memiliki tingkat ketelitian yang tinggi. Jika diulang samplingnya, hasilnya akan sama.</p></li>
+<li><p>tepat waktu berarti datanya harus sesuai berdasarkan waktu dan selalu terupdate.</p></li>
+<li><p>relevan berarti data tersebut benar-benar mengukur hal yang sesuai dengan pertanyaan yang ingin dijawab.</p></li>
 </ul>
 </section>
-<section id="distribusi-t" class="slide level2">
-<h2>distribusi t</h2>
-<ul>
-<li><p>Semakin banyak sampel yang kita ambil, semakin mirip distribusinya dengan distribusi normal</p></li>
-<li><p>Karena itu kita butuh distribusi baru di mana:</p>
-<ul>
-<li><p>karakteristiknya mirip distribusi normal</p></li>
-<li><p>Seiring sampel meningkat, bentuknya semakin mendekati distribusi normal</p></li>
-</ul></li>
-<li><p>Distribusi tersebut adalah distribusi t.</p></li>
-</ul>
-</section>
-<section id="t-table" class="slide level2">
-<h2>t-table</h2>
-<p>Download <a href="https://1drv.ms/b/s!AjelszXKKcmsifhDr8cYIgeuMVSIDw?e=ioiSHv">t-table di sini</a></p>
-<p><span class="math inline">\(df=n-1\)</span></p>
-<iframe src="https://onedrive.live.com/embed?cid=ACC929CA35B3A537&amp;resid=acc929ca35b3a537%21162883&amp;authkey=ACByMk8EqPx1N3s&amp;em=2" width="800" height="400" frameborder="0" scrolling="no">
-</iframe>
-</section>
-<section id="contoh-2" class="slide level2">
-<h2>Contoh 2</h2>
-<ul>
-<li><p>Diambil sebuah sampel berisikan 10 mahasiswa, didapatkan memiliki rata-rata nilai tes TOEFL sebesar 500 dengan simbangan baku 50. Dengan rentang kepercayaan 90%, tentukan rentang nilai TOEFL keseluruhan mahasiswa tersebut!</p></li>
-<li><p>Gunakan tabel Z untuk mendapatkan <span class="math inline">\(t_{0.05}\)</span></p></li>
-<li><p>Rentang rata-rata = <span class="math inline">\(500 \pm 1,833\times\frac{50}{\sqrt{10}}\)</span></p></li>
-<li><p>Rentang rata-rata = <span class="math inline">\(\left[471,02;528,98\right]\)</span></p></li>
-</ul>
-</section>
-<section id="student-t" class="slide level2">
-<h2>Student t</h2>
-<ul>
-<li><p>Student distribution umumnya digunakan untuk sampel yang sedikit.</p></li>
-<li><p>Beberapa buku menyarankan menggunakan distribusi t selama sampel anda di bawah 30.</p></li>
-<li><p>Saya akan menyarankan hal yang sama di sini.</p></li>
-<li><p>Di dunia nyata, sampling adalah hal yang ribet, terutama jika anda memiliki banyak karakteristik yang harus diseimbangkan.</p></li>
-<li><p>Secara umum, semakin banyak semakin baik. Batasnya? Budget. Yang penting <strong>Representatif</strong>.</p></li>
-</ul>
-</section>
-<section id="uji-hipotesis" class="slide level2">
-<h2>Uji Hipotesis</h2>
-<ul>
-<li><p>Kita telah belajar menebak nilai pusat (dengan rata-rata) dan menghitung standar deviasi / simpangan baku.</p></li>
-<li><p>Berikutnya kita akan belajar uji hipotesis dengan jumlah data yang lebih dari 1 jenis.</p></li>
-<li><p>Kita masih menggunakan asumsi distribusi normal.</p></li>
-</ul>
-</section>
-<section id="hipotesis" class="slide level2">
-<h2>Hipotesis</h2>
-<ul>
-<li><p>Hipotesis adalah pernyataan tentatif mengenai parameter acak.</p></li>
-<li><p>Parameter acak dimaksud adalah parameter yang menunjukkan karakteristik data yang sedang kita uji.</p></li>
-<li><p>Misalnya kelas A punya rata-rata nilai 80 dan simpangan baku 10, kelas B 76 dan 8. Manakah yang lebih tinggi?</p></li>
-<li><p>Supplier A dan supplier B, manakah yang produknya lebih baik?</p></li>
-</ul>
-</section>
-<section id="uji-hipotesis-1" class="slide level2">
-<h2>Uji hipotesis</h2>
-<ul>
-<li>Uji hipotesis umumnya dilakukan dengan membandingkan nilai rata-rata dengan suatu parameter.</li>
-</ul>
-<p>-Misalnya, rata-rata kelas A lebih tinggi daripada rata-rata kelas B, kita tuliskan sebagai:</p>
-<p><span class="math display">\[
-H_0: \mu_A &gt; \mu_B
-\]</span></p>
-<p><span class="math display">\[
-H_1: \mu_A \leq \mu_B
-\]</span> - <span class="math inline">\(H_0\)</span> disebut juga hipotesis nol, sementara <span class="math inline">\(H_1\)</span> disebut juga hipotesis alternatif.</p>
-</section>
-<section id="uji-hipotesis-2" class="slide level2">
-<h2>Uji Hipotesis</h2>
-<ul>
-<li><p>Pada prosedur uji hipotesis, kita gunakan prinsip bahwa <span class="math inline">\(H_0\)</span> dianggap benar, kecuali kita punya cukup bukti statistik untuk menolak <span class="math inline">\(H_0\)</span>.</p></li>
-<li><p>Mirip prinsip praduga tak bersalah: seseorang dinyatakan tidak bersalah kecuali terbukti sebaliknya.</p></li>
-<li><p>Kita menggunakan nilai tengah (<span class="math inline">\(\mu\)</span>) untuk menguji <span class="math inline">\(H_0\)</span>.</p></li>
-</ul>
-</section>
-<section id="arah-uji" class="slide level2">
-<h2>Arah uji</h2>
-<ul>
-<li><p>Uji hipotesis dapat dibagi dua: uji hipotesis 2 arah (two-tailed) dan uji hipotesis 1 arah (1-tailed).</p></li>
-<li><p>Uji hipotesis 2 arah kita gunakan bila <span class="math inline">\(H_0: \mu=\mu_0\)</span> dan <span class="math inline">\(H_1: \mu\neq\mu_0\)</span></p>
-<ul>
-<li>artinya, kita tolah <span class="math inline">\(H_0\)</span> jika mendapati bahwa nilai rata-rata lebih besar ATAU lebih kecil dari nilai referensi.</li>
-</ul></li>
-<li><p>Uji hipotesis 1 arah kita ginakan bila yang kita uji adalah lebih besar atau lebih kecil.</p>
-<ul>
-<li>misalnya kita uji lebih besar dari, maka selama nilai rata-rata lebih kecil atau sama dengan, maka kita tolah <span class="math inline">\(H_0\)</span></li>
-</ul></li>
-</ul>
-</section>
-<section id="dua-jenis-eror" class="slide level2">
-<h2>Dua jenis eror</h2>
+<section id="jenis-jenis-data" class="slide level2">
+<h2>Jenis-jenis data</h2>
 <table>
+<colgroup>
+<col style="width: 29%">
+<col style="width: 29%">
+<col style="width: 41%">
+</colgroup>
 <thead>
 <tr class="header">
-<th>Kenyataan</th>
-<th>Menerima <span class="math inline">\(H_0\)</span></th>
-<th>Menolak <span class="math inline">\(H_0\)</span></th>
+<th>jenis data</th>
+<th>definisi</th>
+<th>contoh</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Benar</td>
-<td>tidak salah</td>
-<td>Type I error</td>
+<td>Kategorikal / nominal</td>
+<td>kualitatif, ga ada urutan</td>
+<td>nama, jenis kelamin, suku</td>
 </tr>
 <tr class="even">
-<td>Salah</td>
-<td>Type II error</td>
-<td>tidak salah</td>
+<td>Ordinal</td>
+<td>kualitatif, ada urutan</td>
+<td>ukuran baju, ukuran sepatu, medali</td>
+</tr>
+<tr class="odd">
+<td>Hitung</td>
+<td>kuantitatif, integer</td>
+<td>nomor telepon, jumlah anak</td>
+</tr>
+<tr class="even">
+<td>Riil / kontinyu</td>
+<td>kuantitatif, riil</td>
+<td>PDB, ekspor impor</td>
 </tr>
 </tbody>
 </table>
+</section>
+<section id="data-kontinyu" class="slide level2 m">
+<h2>Data Kontinyu</h2>
 <ul>
-<li><p>Type I error (<span class="math inline">\(\alpha\)</span>): aslinya benar tapi kita tolak.</p></li>
-<li><p>Type II error (<span class="math inline">\(\beta\)</span>): aslinya salah tapi kita terima.</p></li>
+<li><p>data kontinyu dapat dibagi 2: rasio dan interval.</p></li>
+<li><p>keduanya memiliki interval yang sama untuk semua angka.</p></li>
+<li><p>tapi, interval tidak punya 0 yang berarti.</p>
+<ul>
+<li><p>untuk rasio, 0 = tidak ada. contoh: ekspor, impor, kalori. Tidak ada nilai negatif.</p></li>
+<li><p>interval, 0 = ga penting. contoh: nilai TOEFL, temperatur. Ada nilai negatif.</p></li>
+</ul></li>
+<li><p>Transformasi di rasio tidak akan mengubah besarnya urutan.</p>
+<ul>
+<li><p>10 kg = 2x lebih berat dari 5 kg. begitupun 22.04 lbs vs 11.02 lbs</p></li>
+<li><p>1<span class="math inline">\(^o\)</span> C to 100<span class="math inline">\(^o\)</span> C = 100x lipat, tapi 274.15<span class="math inline">\(^o\)</span> K to 373.15<span class="math inline">\(^o\)</span> K bukan 100x lipat</p></li>
+</ul></li>
 </ul>
 </section>
-<section id="prosedur-uji-hipotesis" class="slide level2">
-<h2>Prosedur Uji hipotesis</h2>
-<ol type="1">
-<li>Menetapkan hipotesis: Tulis apa <span class="math inline">\(H_0\)</span> dan <span class="math inline">\(H_1\)</span> nya</li>
-<li>Menetapkan <span class="math inline">\(\alpha\)</span>, atau level kepercayaan untuk menolak <span class="math inline">\(h_0\)</span></li>
-<li>Menghitung parameter uji</li>
-<li>Memutuskan penolakan atau penerimaan <span class="math inline">\(H_0\)</span></li>
-<li>Membuat kesimpulan.</li>
-</ol>
+<section id="dampaknya" class="slide level2">
+<h2>Dampaknya?</h2>
+<ul>
+<li><p>Tipe data yang berbeda menuntut cara analisis yang berbeda pula.</p></li>
+<li><p>Biasanya, dalam metode statistik, data rasio adalah data yang paling mudah untuk digunakan dalam analisis.</p></li>
+<li><p>Jika tipe data anda bukan rasio, harus sedikit diakalin metodenya. Bisa, tapi lebih ribet dikit.</p></li>
+<li><p>Di mata kuliah ini, kita akan fokus pada data yang sebagian besar berupa data rasio.</p></li>
+</ul>
+</section>
+<section id="cara-pengambilan-data" class="slide level2">
+<h2>Cara pengambilan data</h2>
+<ul>
+<li><p><strong>Sensus</strong> adalah metode pengumpulan data yang melibatkan keseluruhan populasi yang ingin diselidiki.</p>
+<ul>
+<li>misalnya, untuk mendapatkan nilai UAS mata kuliah statistika, saya mencatat semua nilai UAS mahasiswa APP yang mengambil mata kuliah statistika.</li>
+</ul></li>
+<li><p>Sensus memiliki gambaran yang lengkap, tapi anda tidak boleh menyimpulkan sesuatu dari luar populasi.</p>
+<ul>
+<li>misalnya, hasil sensus penduduk jagakarsa tidak dapat anda gunakan untuk menyimpulkan Jakarta Selatan secara umum.</li>
+</ul></li>
+<li><p>Kelemahan sensus: mahal dan makan banyak waktu.</p></li>
+</ul>
+</section>
+<section id="cara-pengambilan-data-1" class="slide level2">
+<h2>Cara pengambilan data</h2>
+<ul>
+<li><p><strong>sampling</strong> adalah metode pengumpulan data yang melibatkan sebagian dari populasi yang ingin diselidiki.</p>
+<ul>
+<li><p>misalnya, untuk menilai apakah kelas A lebih bagus nilainya dari kelas B, saya menguji 10 orang dari kelas A dan 10 orang dari kelas B.</p></li>
+<li><p>10 orang ini kita sebut sampel, sementara populasinya adalah keseluruhan anggota kelas A dan kelas B.</p></li>
+</ul></li>
+<li><p>sampling lebih murah, namun kita harus memastikan bahwa samplenya <strong>representatif</strong>.</p></li>
+</ul>
+</section>
+<section id="sampling" class="slide level2">
+<h2>Sampling</h2>
+<ul>
+<li><p>dapat dilakukan secara <strong>acak</strong> dan <strong>non-acak</strong>.</p></li>
+<li><p>Acak (<em>random</em>) artinya bahwa semua anggota populasi punya kesempatan yang sama untuk menjadi sampel.</p>
+<ul>
+<li>misalnya saya tunjuk secara acak 10 mahasiswa di tiap kelas.</li>
+</ul></li>
+<li><p>Non-acak berarti kita mendorong satu bagian dari populasi dengan karakteristik tertentu punya kesempatan yang lebih banyak untuk terpilih menjadi sampel.</p>
+<ul>
+<li>misalnya saya hanya menunjuk 10 anak yang pakai kacamata, atau menunjuk 10 anak yang duduknya paling dekat saya.</li>
+</ul></li>
+</ul>
+</section>
+<section id="acak-atau-jangan" class="slide level2">
+<h2>Acak atau jangan?</h2>
+<ul>
+<li><p>Idealnya adalah kita punya data populasi. Tapi biasanya impractical.</p></li>
+<li><p>Jika harus pakai sampel, maka sampel yang terbaik adalah sampel yang <strong>representatif</strong>.</p></li>
+<li><p>Sebuah sampel kita anggap representatif jika sampel tersebut punya karakteristik yang kita yakini mendekati populasi aslinya.</p></li>
+</ul>
+</section>
+<section id="representatif" class="slide level2">
+<h2>Representatif</h2>
+<ul>
+<li><p>Volume darah dalam tubuh manusia biasanya sekitar 5 liter. Untuk ngetes diabetes, diambil 0,5 ml sampel saja, gak diambil semua.</p></li>
+<li><p>Kenapa? Karena 0,5 ml darah ini mewakili kesemua darah di tubuh manusia. Jika 0,5 liter ini terdeteksi diabetes, maka yang di tubuh juga pasti diabetes.</p></li>
+<li><p>Demokrasi juga sama: dari total 270 juta manusia di Indonesia, dianggap ada 550 orang yang bisa mewakili.</p></li>
+</ul>
+</section>
+<section id="representatif-1" class="slide level2">
+<h2>Representatif</h2>
+<ul>
+<li><p>Karakteristik data yang kita lihat umumnya adalah <strong>tendensi sentral</strong>, <strong>sebaran</strong> dan <strong>distribusi</strong>.</p></li>
+<li><p>Sebuah sampel yang representatif harusnya memiliki rata-rata, standar deviasi dan bentuk distribusi yang serupa dengan aslinya.</p></li>
+<li><p>Misalnya seluruh mahasiswa PIWAR 2 sejumlah 150 orang punya rata-rata UTS 70 dengan rentang 15.</p></li>
+<li><p>Jika saya ambil sampel 15 orang lalu saya tes lagi, maka 15 orang itu harus punya rata-rata dan rentang yang sama.</p></li>
+</ul>
+</section>
+<section id="random" class="slide level2">
+<h2>Random</h2>
+<ul>
+<li><p>Sampling yang diambil secara acak akan memiliki kemungkinan representatif yang tinggi dibanding disaring (misalnya, 15 orang ini hanya saya pilih yang nilainya paling tinggi).</p></li>
+<li><p>Tidak hanya nilai, tapi juga karakteristik lain: jika cewe:cowo di PIWAR = 70:30, maka sampelnya juga akan punya perbandingan yang sama. Juga karakteristik-karakteristik lainnya.</p></li>
+<li><p>Next time kita akan belajar tendensi sentral, rentang dan distribusi lebih jauh.</p></li>
+</ul>
+</section>
+<section id="sampling-acak" class="slide level2 m">
+<h2>Sampling acak</h2>
+<ul>
+<li><p>Simple random sampling berarti mengambil sampel secara acak langsung dari populasinya.</p></li>
+<li><p>Stratified random sampling: membagi populasi menjadi sub-populasi atau strata, lalu mengambil secara acak dari tiap-tiap stratum.</p></li>
+<li><p>Cluster random sampling: membagi populasi menjadi strata, lalu secara acak mengambil satu stratum dan mengambil semua anggota stratum tersebut menjadi sampel.</p></li>
+<li><p>Multistage random sampling: Membagi populasi ke dalam strata, mengambil beberapa strata secara acak, lalu dari strata yang diambil tersebut disampling lagi.</p></li>
+</ul>
+</section>
+<section id="pilih-yang-mana" class="slide level2">
+<h2>Pilih yang mana?</h2>
+<ul>
+<li><p>Semua teknik di atas dapat dilakukan dengan kemungkinan mendapatkan sample representatif yang relatif mirip.</p></li>
+<li><p>Tapi intinya, harus dilakukan secara acak!</p></li>
+<li><p>Semakin besar populasinya, biasanya menggunakan strata bisa lebih membuat percaya diri.</p></li>
+<li><p>tapi jika benar dapat melakukannya secara acak, maka seharusnya cara manapun akan memiliki data yang tidak berbeda jauh.</p></li>
+</ul>
+</section>
+<section id="statistika" class="slide level2">
+<h2>Statistika</h2>
+<ul>
+<li><p>Statistika adalah ilmu yang mempelajari bagaimana cara mengumpulkan, mengorganisasikan, menerjemahkan dan menarik kesimpulan dari data.</p></li>
+<li><p>Meskipun statistika awalnya banyak diajarkan untuk bidang ilmu pasti, namun saat ini ekonomi dan manajemen juga menggunakannya.</p></li>
+<li><p>Cara-cara menerjemahkan dan menarik kesimpulan ini juga tergantung dari jenis data yang kita perlukan.</p></li>
+</ul>
+<div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
+</div>
 </div>
 </section>
     </div>
@@ -591,7 +566,6 @@ H_1: \mu_A \leq \mu_B
       Reveal.initialize({
 'controlsAuto': true,
 'previewLinksAuto': false,
-'smaller': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
@@ -853,10 +827,27 @@ H_1: \mu_A \leq \mu_B
         // clear code selection
         e.clearSelection();
       });
-      function tippyHover(el, contentFn) {
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp('/' + window.location.host + '/');
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
-          content: contentFn,
           maxWidth: 500,
           delay: 100,
           arrow: false,
@@ -866,8 +857,17 @@ H_1: \mu_A \leq \mu_B
           interactive: true,
           interactiveBorder: 10,
           theme: 'light-border',
-          placement: 'bottom-start'
+          placement: 'bottom-start',
         };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
           config['offset'] = [0,0];
           config['maxWidth'] = 700;
         window.tippy(el, config); 
@@ -881,7 +881,11 @@ H_1: \mu_A \leq \mu_B
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
-          return note.innerHTML;
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
         });
       }
       const findCites = (el) => {

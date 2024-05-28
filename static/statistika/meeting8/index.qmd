@@ -12,209 +12,169 @@ format:
     slide-number: true
 ---
 
-## Hari ini
+## Data dan Statistika
 
-- Menebak rata-rata populasi dari sampel
+- Data adalah **kumpulan informasi yang didapatkan dari melakukan pengamatan (observasi)**.
 
-- Konsep rentang kepercayaan
+- Pada hakikatnya, penggunaan data dan statistika berfungsi untuk **menjawab pertanyaan** seperti:
 
-- Konsep student distribution (distribusi t)
-
-- Pendahuluan uji hipotesis
-
-## Konsep rentang kepercayaan
-
-- Sampling bisa jadi memberikan kita nilai rata-rata yang tidak sama dengan populasi.
-
-- $\mu \neq \bar{X}$
-
-- Tapi kita bisa menebak rata-rata populasi $\mu$ dengan menggunakan rentang kepercayaan.
-
-- Rentang kepercayaan adalah rentang di mana kita yakin dengan tingkat keyakinan $1-\alpha$
-
-## Rentang kepercayaan
-
-:::: columns
-::: {.column width="47%"}
-![Two-tailed](pvalue1.gif)
-:::
-::: {.column width="47%"}
-![One-tailed](pvalue2.gif)
-:::
-::::
-
-Gambar biru = $\alpha$
-
-Gambar diambil dari [UCLA](https://stats.oarc.ucla.edu/other/mult-pkg/faq/general/faq-what-are-the-differences-between-one-tailed-and-two-tailed-tests/)
-
-## Tingkat kepercayaan
-
-- Kita menentukan dulu level kepercayaan.
-
-    - Standardnya adalah 95%, atau $\alpha=5%$
+    - Bagaimana kondisi sosial ekonomi penduduk Indonesia? Dibandingkan dengan RRT?
     
-    - kalau two-tailed, berarti kiri kanan masing-masing $\frac{5}{2}\%$
+    - Berapa ekspor Indonesia tahun 2020? Apakah meningkat dibandingkan tahun 2019?
     
-- Makin tinggi tingkat kepercayaan, makin besar rentangnya. 
+- Anda setiap hari juga mengumpulkan data!
 
-- Makin besar rentangnya, makin ga guna tebakannya (inefisien),
+## Data yang baik
 
-## Rentang kepercayaan
+- Data akan menjadi basis dalam menjawab pertanyaan dan membuat keputusan. Data salah, keputusan juga salah!
 
-- Rumus menghitung rentang kepercayaan:
+- Data yang baik haruslah objektif, representatif, valid, tepat waktu dan relevan.
 
-$$
-\bar{X} \pm Z_{\frac{\alpha}{2}} \frac{S}{\sqrt{n}}
-$$
+- Objektif berarti dapat meminimalisir perbedaan persepsi antar-pengamat / individu.
 
-atau
+- harus memiliki alat ukur yang konsisten dan disepakati, dengan metode yang dapat diaudit.
 
-$$
-\mu=\left[ \bar{X}-Z_{\frac{\alpha}{2}} \frac{S}{\sqrt{n}}, \bar{X}+Z_{\frac{\alpha}{2}}\frac{S}{\sqrt{n}}\right]
-$$
+- contoh: di kelas saya ada 10 orang yang gendut vs di kelas saya, 10 orang punya berat badan di atas 70 kg.
 
-- Z adalah nilai baku / standardized score yang memberikan kita rentang kepercayaan $1-\alpha$
+## Data yang baik
 
-## Contoh soal 1
+- Representatif berarti harus mewakili obyek yang diamati. Obyek yang representatif biasanya akan didapatkan dengan sampling yang acak.
 
-::: {.incremental}
+- valid berarti data tersebut memiliki kesalahan sampling yang kecil dan memiliki tingkat ketelitian yang tinggi. Jika diulang samplingnya, hasilnya akan sama.
 
-- Diambil sebuah sampel berisikan 100 mahasiswa, didapatkan memiliki rata-rata nilai tes TOEFL sebesar 500 dengan simbangan baku 50. Dengan rentang kepercayaan 95%, tentukan rentang nilai TOEFL keseluruhan mahasiswa tersebut!
+- tepat waktu berarti datanya harus sesuai berdasarkan waktu dan selalu terupdate.
 
-- Gunakan tabel Z untuk mendapatkan $Z_{0.025}$
+- relevan berarti data tersebut benar-benar mengukur hal yang sesuai dengan pertanyaan yang ingin dijawab.
 
-- Rentang rata-rata = $500 \pm 1,96\times\frac{50}{\sqrt{100}}$
+## Jenis-jenis data
 
-- Rentang rata-rata = $\left[490,2;509,8\right]$
+| jenis data | definisi |	contoh |
+| ----- | ----- | ------- |
+| Kategorikal / nominal | 	kualitatif, ga ada urutan |	nama, jenis kelamin, suku |
+| Ordinal |	kualitatif, ada urutan | ukuran baju, ukuran sepatu, medali |
+| Hitung | 	kuantitatif, integer |	nomor telepon, jumlah anak |
+| Riil / kontinyu | 	kuantitatif, riil |	PDB, ekspor impor |
 
-:::
+## Data Kontinyu {.m}
 
-## Tabel Z
+- data kontinyu dapat dibagi 2: rasio dan interval.
 
-<iframe src="https://onedrive.live.com/embed?cid=ACC929CA35B3A537&resid=acc929ca35b3a537%21162501&authkey=AIx-FChNmjZ8zzQ&em=2" width="900" height="600" frameborder="0" scrolling="no"></iframe>
+- keduanya memiliki interval yang sama untuk semua angka.
 
-Bisa [Google](https://www.google.com/search?client=firefox-b-d&q=z+score+table) atau download di [sini](https://drive.google.com/file/d/1ywI58hnM8p0ZyFV7B9rCOosk72iCGguq/view?usp=sharing)
+- tapi, interval tidak punya 0 yang berarti.
 
-## distrubusi t
-
-- Distribusi normal (atau distribusi z) merupakan sebaran kontinyu dari $-\infty$ sampai $\infty$
-
-- Meski demikian, hanya dari 3 standar deviasi kiri dan kanan aja udah lebih dari 99,99%.
-
-- Sampel dari populasi tersebut belum tentu terdistribusi normal, meski mirip:
-
-    = sampel cenderung lebih mungkin dapat di sekitar rata-rata.
-
-## distribusi t
-
-- Semakin banyak sampel yang kita ambil, semakin mirip distribusinya dengan distribusi normal
-
-- Karena itu kita butuh distribusi baru di mana:
-
-    - karakteristiknya mirip distribusi normal
+    - untuk rasio, 0 = tidak ada. contoh: ekspor, impor, kalori. Tidak ada nilai negatif.
     
-    - Seiring sampel meningkat, bentuknya semakin mendekati distribusi normal
+    - interval, 0 = ga penting. contoh: nilai TOEFL, temperatur. Ada nilai negatif.
     
-- Distribusi tersebut adalah distribusi t.
+- Transformasi di rasio tidak akan mengubah besarnya urutan.
 
-## t-table
+    -  10 kg = 2x lebih berat dari 5 kg. begitupun 22.04 lbs vs 11.02 lbs
+    
+    - 1$^o$ C to 100$^o$ C = 100x lipat, tapi 274.15$^o$ K to 373.15$^o$ K bukan 100x lipat
+    
+## Dampaknya?
 
-Download [t-table di sini](https://1drv.ms/b/s!AjelszXKKcmsifhDr8cYIgeuMVSIDw?e=ioiSHv)
+- Tipe data yang berbeda menuntut cara analisis yang berbeda pula.
 
-$df=n-1$
+- Biasanya, dalam metode statistik, data rasio adalah data yang paling mudah untuk digunakan dalam analisis.
 
-<iframe src="https://onedrive.live.com/embed?cid=ACC929CA35B3A537&resid=acc929ca35b3a537%21162883&authkey=ACByMk8EqPx1N3s&em=2" width="800" height="400" frameborder="0" scrolling="no"></iframe>
+- Jika tipe data anda bukan rasio, harus sedikit diakalin metodenya. Bisa, tapi lebih ribet dikit.
 
-## Contoh 2
+- Di mata kuliah ini, kita akan fokus pada data yang sebagian besar berupa data rasio.
 
-- Diambil sebuah sampel berisikan 10 mahasiswa, didapatkan memiliki rata-rata nilai tes TOEFL sebesar 500 dengan simbangan baku 50. Dengan rentang kepercayaan 90%, tentukan rentang nilai TOEFL keseluruhan mahasiswa tersebut!
+## Cara pengambilan data
 
-- Gunakan tabel Z untuk mendapatkan $t_{0.05}$
+- **Sensus** adalah metode pengumpulan data yang melibatkan keseluruhan populasi yang ingin diselidiki.
 
-- Rentang rata-rata = $500 \pm 1,833\times\frac{50}{\sqrt{10}}$
+    - misalnya, untuk mendapatkan nilai UAS mata kuliah statistika, saya mencatat semua nilai UAS mahasiswa APP yang mengambil mata kuliah statistika.
+    
+- Sensus memiliki gambaran yang lengkap, tapi anda tidak boleh menyimpulkan sesuatu dari luar populasi.
 
-- Rentang rata-rata = $\left[471,02;528,98\right]$
+    - misalnya, hasil sensus penduduk jagakarsa tidak dapat anda gunakan untuk menyimpulkan Jakarta Selatan secara umum.
+    
+- Kelemahan sensus: mahal dan makan banyak waktu.
 
-## Student t
+## Cara pengambilan data
 
-- Student distribution umumnya digunakan untuk sampel yang sedikit.
+- **sampling** adalah metode pengumpulan data yang melibatkan sebagian dari populasi yang ingin diselidiki.
 
-- Beberapa buku menyarankan menggunakan distribusi t selama sampel anda di bawah 30.
+    - misalnya, untuk menilai apakah kelas A lebih bagus nilainya dari kelas B, saya menguji 10 orang dari kelas A dan 10 orang dari kelas B.
+    
+    - 10 orang ini kita sebut sampel, sementara populasinya adalah keseluruhan anggota kelas A dan kelas B.
+    
+- sampling lebih murah, namun kita harus memastikan bahwa samplenya **representatif**.
 
-- Saya akan menyarankan hal yang sama di sini.
+## Sampling
 
-- Di dunia nyata, sampling adalah hal yang ribet, terutama jika anda memiliki banyak karakteristik yang harus diseimbangkan.
+- dapat dilakukan secara **acak** dan **non-acak**.
 
-- Secara umum, semakin banyak semakin baik. Batasnya? Budget. Yang penting **Representatif**.
+- Acak (_random_) artinya bahwa semua anggota populasi punya kesempatan yang sama untuk menjadi sampel.
 
-## Uji Hipotesis
+    - misalnya saya tunjuk secara acak 10 mahasiswa di tiap kelas.
+    
+- Non-acak berarti kita mendorong satu bagian dari populasi dengan karakteristik tertentu punya kesempatan yang lebih banyak untuk terpilih menjadi sampel.
 
-- Kita telah belajar menebak nilai pusat (dengan rata-rata) dan menghitung standar deviasi / simpangan baku.
+    - misalnya saya hanya menunjuk 10 anak yang pakai kacamata, atau menunjuk 10 anak yang duduknya paling dekat saya.
+    
+## Acak atau jangan?
 
-- Berikutnya kita akan belajar uji hipotesis dengan jumlah data yang lebih dari 1 jenis.
+- Idealnya adalah kita punya data populasi. Tapi biasanya impractical.
 
-- Kita masih menggunakan asumsi distribusi normal.
+- Jika harus pakai sampel, maka sampel yang terbaik adalah sampel yang **representatif**.
 
-## Hipotesis
+- Sebuah sampel kita anggap representatif jika sampel tersebut punya karakteristik yang kita yakini mendekati populasi aslinya.
 
-- Hipotesis adalah pernyataan tentatif mengenai parameter acak.
+## Representatif
 
-- Parameter acak dimaksud adalah parameter yang menunjukkan karakteristik data yang sedang kita uji.
+- Volume darah dalam tubuh manusia biasanya sekitar 5 liter. Untuk ngetes diabetes, diambil 0,5 ml sampel saja, gak diambil semua.
 
-- Misalnya kelas A punya rata-rata nilai 80 dan simpangan baku 10, kelas B 76 dan 8. Manakah yang lebih tinggi?
+- Kenapa? Karena 0,5 ml darah ini mewakili kesemua darah di tubuh manusia. Jika 0,5 liter ini terdeteksi diabetes, maka yang di tubuh juga pasti diabetes.
 
-- Supplier A dan supplier B, manakah yang produknya lebih baik?
+- Demokrasi juga sama: dari total 270 juta manusia di Indonesia, dianggap ada 550 orang yang bisa mewakili.
 
-## Uji hipotesis
+## Representatif
 
-- Uji hipotesis umumnya dilakukan dengan membandingkan nilai rata-rata dengan suatu parameter.
+- Karakteristik data yang kita lihat umumnya adalah **tendensi sentral**, **sebaran** dan **distribusi**.
 
--Misalnya, rata-rata kelas A lebih tinggi daripada rata-rata kelas B, kita tuliskan sebagai:
+- Sebuah sampel yang representatif harusnya memiliki rata-rata, standar deviasi dan bentuk distribusi yang serupa dengan aslinya.
 
-$$
-H_0: \mu_A > \mu_B
-$$
+- Misalnya seluruh mahasiswa PIWAR 2 sejumlah 150 orang punya rata-rata UTS 70 dengan rentang 15.
 
-$$
-H_1: \mu_A \leq \mu_B
-$$
-- $H_0$ disebut juga hipotesis nol, sementara $H_1$ disebut juga hipotesis alternatif.
+- Jika saya ambil sampel 15 orang lalu saya tes lagi, maka 15 orang itu harus punya rata-rata dan rentang yang sama.
 
-## Uji Hipotesis
+## Random
 
-- Pada prosedur uji hipotesis, kita gunakan prinsip bahwa $H_0$ dianggap benar, kecuali kita  punya cukup bukti statistik untuk menolak $H_0$.
+- Sampling yang diambil secara acak akan memiliki kemungkinan representatif yang tinggi dibanding disaring (misalnya, 15 orang ini hanya saya pilih yang nilainya paling tinggi).
 
-- Mirip prinsip praduga tak bersalah: seseorang dinyatakan tidak bersalah kecuali terbukti sebaliknya.
+- Tidak hanya nilai, tapi juga karakteristik lain: jika cewe:cowo di PIWAR = 70:30, maka sampelnya juga akan punya perbandingan yang sama. Juga karakteristik-karakteristik lainnya.
 
-- Kita menggunakan nilai tengah ($\mu$) untuk menguji $H_0$.
+- Next time kita akan belajar tendensi sentral, rentang dan distribusi lebih jauh.
+    
+## Sampling acak {.m}
 
-## Arah uji
+- Simple random sampling berarti mengambil sampel secara acak langsung dari populasinya.
 
-- Uji hipotesis dapat dibagi dua: uji hipotesis 2 arah (two-tailed) dan uji hipotesis 1 arah (1-tailed).
+- Stratified random sampling: membagi populasi menjadi sub-populasi atau strata, lalu mengambil secara acak dari tiap-tiap stratum.
 
-- Uji hipotesis 2 arah kita gunakan bila $H_0: \mu=\mu_0$ dan $H_1: \mu\neq\mu_0$
+- Cluster random sampling: membagi populasi menjadi strata, lalu secara acak mengambil satu stratum dan mengambil semua anggota stratum tersebut menjadi sampel.
 
-    - artinya, kita tolah $H_0$ jika mendapati bahwa nilai rata-rata lebih besar ATAU lebih kecil dari nilai referensi.
+- Multistage random sampling: Membagi populasi ke dalam strata, mengambil beberapa strata secara acak, lalu dari strata yang diambil tersebut disampling lagi.
 
-- Uji hipotesis 1 arah kita ginakan bila yang kita uji adalah lebih besar atau lebih kecil.
+## Pilih yang mana?
 
-    - misalnya kita uji lebih besar dari, maka selama nilai rata-rata lebih kecil atau sama dengan, maka kita tolah $H_0$
+- Semua teknik di atas dapat dilakukan dengan kemungkinan mendapatkan sample representatif yang relatif mirip.
 
-## Dua jenis eror
+- Tapi intinya, harus dilakukan secara acak!
 
-| Kenyataan | Menerima $H_0$ | Menolak $H_0$
-| --- | --- | --- |
-| Benar | tidak salah | Type I error |
-| Salah | Type II error | tidak salah |
+- Semakin besar populasinya, biasanya menggunakan strata bisa lebih membuat percaya diri.
 
-- Type I error ($\alpha$): aslinya benar tapi kita tolak.
+- tapi jika benar dapat melakukannya secara acak, maka seharusnya cara manapun akan memiliki data yang tidak berbeda jauh.
 
-- Type II error ($\beta$): aslinya salah tapi kita terima.
+## Statistika
 
-## Prosedur Uji hipotesis
+- Statistika adalah ilmu yang mempelajari bagaimana cara mengumpulkan, mengorganisasikan, menerjemahkan dan menarik kesimpulan dari data.
 
-1. Menetapkan hipotesis: Tulis apa $H_0$ dan $H_1$ nya
-1. Menetapkan $\alpha$, atau level kepercayaan untuk menolak $h_0$
-1. Menghitung parameter uji
-1. Memutuskan penolakan atau penerimaan $H_0$
-1. Membuat kesimpulan.
+- Meskipun statistika awalnya banyak diajarkan untuk bidang ilmu pasti, namun saat ini ekonomi dan manajemen juga menggunakannya.
+
+- Cara-cara menerjemahkan dan menarik kesimpulan ini juga tergantung dari jenis data yang kita perlukan.
