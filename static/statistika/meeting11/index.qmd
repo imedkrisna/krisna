@@ -1,6 +1,6 @@
 ---
 title: "Menebak populasi dengan sampel"
-subtitle: "Pertemuan 8"
+subtitle: "Pertemuan 11"
 author: "Matematika & Statistika"
 format: 
   revealjs:

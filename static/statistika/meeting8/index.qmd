@@ -1,5 +1,5 @@
 ---
-title: "Menebak populasi dengan sampel"
+title: "Data & Statistika"
 subtitle: "Pertemuan 8"
 author: "Matematika & Statistika"
 format: 

@@ -1,6 +1,6 @@
 ---
 title: "Z-Score dan menebak probabilitas"
-subtitle: "Pertemuan 6"
+subtitle: "Pertemuan 10"
 author: "Matematika & Statistika"
 format: 
   revealjs:
