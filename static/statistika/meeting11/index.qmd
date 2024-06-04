@@ -1,6 +1,6 @@
 ---
-title: "Regresi Univariat: how to"
-subtitle: "Pertemuan 11"
+title: "Menebak populasi dengan sampel"
+subtitle: "Pertemuan 8"
 author: "Matematika & Statistika"
 format: 
   revealjs:
@@ -14,203 +14,207 @@ format:
 
 ## Hari ini
 
-- Regresi univariat
+- Menebak rata-rata populasi dari sampel
 
-## Korelasi
+- Konsep rentang kepercayaan
 
-- Pada uji hipotesis, kita mencoba menebak apakah sampel yang kita miliki telah sesuai dengan pembandingnya:
+- Konsep student distribution (distribusi t)
 
-    - dibandingkan dengan sebuah angka -> uji hipotesis 1 populasi.
-    
-    - dibandingkan dengan sampel lain -> uji hipotesis 2 populasi.
-    
-- Pada perhitungan korelasi, kita mendapatkan informasi tentang hubungan 2 variabel, Y dan X.
+- Pendahuluan uji hipotesis
 
-- Regresi menggunakan 2 prinsip di atas untuk mencari perubahan marjinal dari Y dan X.
+## Konsep rentang kepercayaan
 
-## Regresi {.m}
+- Sampling bisa jadi memberikan kita nilai rata-rata yang tidak sama dengan populasi.
 
-:::: columns
-::: {.column width="47%"}
-```{r}
-#| fig-height: 5
-#| fig-width: 5
-library(tidyverse)
-library(readxl)
-dat<-read_excel("jambelajarfull.xlsx")
-z<-theme_classic() +
-  theme(panel.background = element_rect(fill = "#f0f1eb",
-                                        colour = "#f0f1eb"),
-        plot.background = element_rect(fill = "#f0f1eb"),
-        legend.key = element_rect(fill = "#f0f1eb",linetype = "blank"),
-        legend.background = element_rect(fill="#f0f1eb"))
-dat |> ggplot(aes(x=X,y=Y))+
-  geom_point() +
-  labs(x= "Jam belajar (jam/minggu)", y="Nilai UTS")+
-  geom_smooth(method=lm,se=FALSE)+z+theme(text = element_text(size=20))+
-  scale_x_continuous(expand = c(0, 0)) + scale_y_continuous(expand = c(0, 0))
-```
-:::
-::: {.column width="47%"}
-- Kali ini kita coba plot data jam belajar vs nilai UTS, tapi datanya ada 70 observasi (n=70).
+- $\mu \neq \bar{X}$
 
-- Dapat dilihat ada pattern di data tersebut, di mana X dan Y memiliki korelasi positif.
+- Tapi kita bisa menebak rata-rata populasi $\mu$ dengan menggunakan rentang kepercayaan.
 
-- Jika terdapat korelasi linear, kita dapat membuat garis lurus yang mewakili kurang lebih korelasi tersebut. (lihat garis biru)
+- Rentang kepercayaan adalah rentang di mana kita yakin dengan tingkat keyakinan $1-\alpha$
 
-- Bagaimana cara membuatnya?
-:::
-::::
-
-## Regresi {.m}
+## Rentang kepercayaan
 
 :::: columns
 ::: {.column width="47%"}
-```{r}
-#| fig-height: 5
-#| fig-width: 5
-library(tidyverse)
-library(readxl)
-dat<-read_excel("jambelajarfull.xlsx")
-z<-theme_classic() +
-  theme(panel.background = element_rect(fill = "#f0f1eb",
-                                        colour = "#f0f1eb"),
-        plot.background = element_rect(fill = "#f0f1eb"),
-        legend.key = element_rect(fill = "#f0f1eb",linetype = "blank"),
-        legend.background = element_rect(fill="#f0f1eb"))
-dat |> ggplot(aes(x=X,y=Y))+
-  geom_point() +
-  labs(x= "Jam belajar (jam/minggu)", y="Nilai UTS")+
-  geom_smooth(method=lm,se=FALSE)+z+theme(text = element_text(size=20))+geom_vline(xintercept=15,color="red",alpha=0.3)+
-  geom_segment(x=0,xend=15,y=64,yend=64,linetype=2,alpha=.4)+
-  geom_segment(x=0,xend=15,y=65,yend=65,linetype=2,alpha=.4)+
-  geom_segment(x=0,xend=15,y=68,yend=68,linetype=2,alpha=.4)+
-  geom_segment(x=0,xend=15,y=69,yend=69,linetype=2,alpha=.4)+
-  scale_x_continuous(expand = c(0, 0)) + scale_y_continuous(expand = c(0, 0))
-```
+![Two-tailed](pvalue1.gif)
 :::
 ::: {.column width="47%"}
-- Garis biru tersebut dibuat sedemikian sehingga ia **meminimalisir jarak vertikal** antara setiap titik observasi dengan si garis biru.
-- misalnya, lihat X=15, ada 4 titik berbeda, yaitu 64,65,68, dan 69.
-- garis biru bertemu X=15 di Y=69.
-- Jarak setiap titik terhadap Y=69 adalah [-5,-4,-1,0]
-- Lakukan untuk semua titik, maka garis biru akan memberikan jumlah perbedaan terkecil dibanding posisi lain.
+![One-tailed](pvalue2.gif)
 :::
 ::::
 
-## Ordinary Least Square
+Gambar biru = $\alpha$
 
-- Ada yang ingat rumus untuk membuat sebuah garis linear di diagram kartesian?
+Gambar diambil dari [UCLA](https://stats.oarc.ucla.edu/other/mult-pkg/faq/general/faq-what-are-the-differences-between-one-tailed-and-two-tailed-tests/)
 
-$$
-\hat{Y}=\beta_0+\beta_1 X
-$$
+## Tingkat kepercayaan
 
-- $\hat{Y}$ adalah $Y$ yang didapatkan dari persamaan tersebut.
+- Kita menentukan dulu level kepercayaan.
 
-- $\beta_0$ adalah titik awal, atau $Y$ ketika $X=0$, disebut juga konstanta.
+    - Standardnya adalah 95%, atau $\alpha=5%$
+    
+    - kalau two-tailed, berarti kiri kanan masing-masing $\frac{5}{2}\%$
+    
+- Makin tinggi tingkat kepercayaan, makin besar rentangnya. 
 
-- $\beta_1$ menunjukkan kemiringan garis. Disebut juga dengan gradien.
+- Makin besar rentangnya, makin ga guna tebakannya (inefisien),
 
-## OLS
+## Rentang kepercayaan
 
-- Perbedaan vertikal antara garis biru dengan setiap observasi adalah:
-
-$$
-\varepsilon=Y-\hat{Y}
-$$
-
-di mana $Y$ adalah $Y$ yang kita dapat dari data. si $\varepsilon$ inilah yang diminimalisir.
-
-- Untuk melakukan minimalisasi, kita memanfaatkan _First Order Condition_ di mana untuk beberapa fungsi $f(x)$, kita dapat menemukan titik optimal di mana $f'(x)=0$
-
-## OLS
-
-- karena $\varepsilon$ bisa jadi negatif, kita kuadratkan dulu lalu ditambahkan, sehingga:
+- Rumus menghitung rentang kepercayaan:
 
 $$
-\min_{\beta_0,\beta_1} \sum_i \left(Y_i-\beta_0-\beta_1 X_i \right)^2
+\bar{X} \pm Z_{\frac{\alpha}{2}} \frac{S}{\sqrt{n}}
 $$
 
-- kita mencari $\beta_0$ dan $\beta_1$ di mana $\frac{\partial}{\partial \beta_0}=0$ dan $\frac{\partial}{\partial \beta_1}=0$
-
-- Dengan kata lain, kita buat dulu persamaannya baru kita cari parameter garisnya dulu.
-
-- Metode ini disebut Ordinary Least Square (OLS) / metode kuadrat terkecil.
-
-## OLS
-
-- Kita tidak perlu melakukan penurunan rumus dari slide sebelumnya.
-
-- Sudah ada rumus yg siap pakai, yaitu:
+atau
 
 $$
-\beta_0=\frac{\sum Y \sum X^2-\sum X \sum XY}{n\sum X^2-(\sum X)^2}
-$$
-dan
-$$
-\beta_1=\frac{n\sum XY - \sum X \sum Y}{n \sum X^2-(\sum X)^2}
+\mu=\left[ \bar{X}-Z_{\frac{\alpha}{2}} \frac{S}{\sqrt{n}}, \bar{X}+Z_{\frac{\alpha}{2}}\frac{S}{\sqrt{n}}\right]
 $$
 
-## Rumus lain
+- Z adalah nilai baku / standardized score yang memberikan kita rentang kepercayaan $1-\alpha$
 
-- setelah mendapatkan kedua parameter kita, kita dapat menggambar garis kita:
+## Contoh soal 1
+
+::: {.incremental}
+
+- Diambil sebuah sampel berisikan 100 mahasiswa, didapatkan memiliki rata-rata nilai tes TOEFL sebesar 500 dengan simbangan baku 50. Dengan rentang kepercayaan 95%, tentukan rentang nilai TOEFL keseluruhan mahasiswa tersebut!
+
+- Gunakan tabel Z untuk mendapatkan $Z_{0.025}$
+
+- Rentang rata-rata = $500 \pm 1,96\times\frac{50}{\sqrt{100}}$
+
+- Rentang rata-rata = $\left[490,2;509,8\right]$
+
+:::
+
+## Tabel Z
+
+<iframe src="https://onedrive.live.com/embed?cid=ACC929CA35B3A537&resid=acc929ca35b3a537%21162501&authkey=AIx-FChNmjZ8zzQ&em=2" width="900" height="600" frameborder="0" scrolling="no"></iframe>
+
+Bisa [Google](https://www.google.com/search?client=firefox-b-d&q=z+score+table) atau download di [sini](https://drive.google.com/file/d/1ywI58hnM8p0ZyFV7B9rCOosk72iCGguq/view?usp=sharing)
+
+## distrubusi t
+
+- Distribusi normal (atau distribusi z) merupakan sebaran kontinyu dari $-\infty$ sampai $\infty$
+
+- Meski demikian, hanya dari 3 standar deviasi kiri dan kanan aja udah lebih dari 99,99%.
+
+- Sampel dari populasi tersebut belum tentu terdistribusi normal, meski mirip:
+
+    = sampel cenderung lebih mungkin dapat di sekitar rata-rata.
+
+## distribusi t
+
+- Semakin banyak sampel yang kita ambil, semakin mirip distribusinya dengan distribusi normal
+
+- Karena itu kita butuh distribusi baru di mana:
+
+    - karakteristiknya mirip distribusi normal
+    
+    - Seiring sampel meningkat, bentuknya semakin mendekati distribusi normal
+    
+- Distribusi tersebut adalah distribusi t.
+
+## t-table
+
+Download [t-table di sini](https://1drv.ms/b/s!AjelszXKKcmsifhDr8cYIgeuMVSIDw?e=ioiSHv)
+
+$df=n-1$
+
+<iframe src="https://onedrive.live.com/embed?cid=ACC929CA35B3A537&resid=acc929ca35b3a537%21162883&authkey=ACByMk8EqPx1N3s&em=2" width="800" height="400" frameborder="0" scrolling="no"></iframe>
+
+## Contoh 2
+
+- Diambil sebuah sampel berisikan 10 mahasiswa, didapatkan memiliki rata-rata nilai tes TOEFL sebesar 500 dengan simbangan baku 50. Dengan rentang kepercayaan 90%, tentukan rentang nilai TOEFL keseluruhan mahasiswa tersebut!
+
+- Gunakan tabel Z untuk mendapatkan $t_{0.05}$
+
+- Rentang rata-rata = $500 \pm 1,833\times\frac{50}{\sqrt{10}}$
+
+- Rentang rata-rata = $\left[471,02;528,98\right]$
+
+## Student t
+
+- Student distribution umumnya digunakan untuk sampel yang sedikit.
+
+- Beberapa buku menyarankan menggunakan distribusi t selama sampel anda di bawah 30.
+
+- Saya akan menyarankan hal yang sama di sini.
+
+- Di dunia nyata, sampling adalah hal yang ribet, terutama jika anda memiliki banyak karakteristik yang harus diseimbangkan.
+
+- Secara umum, semakin banyak semakin baik. Batasnya? Budget. Yang penting **Representatif**.
+
+## Uji Hipotesis
+
+- Kita telah belajar menebak nilai pusat (dengan rata-rata) dan menghitung standar deviasi / simpangan baku.
+
+- Berikutnya kita akan belajar uji hipotesis dengan jumlah data yang lebih dari 1 jenis.
+
+- Kita masih menggunakan asumsi distribusi normal.
+
+## Hipotesis
+
+- Hipotesis adalah pernyataan tentatif mengenai parameter acak.
+
+- Parameter acak dimaksud adalah parameter yang menunjukkan karakteristik data yang sedang kita uji.
+
+- Misalnya kelas A punya rata-rata nilai 80 dan simpangan baku 10, kelas B 76 dan 8. Manakah yang lebih tinggi?
+
+- Supplier A dan supplier B, manakah yang produknya lebih baik?
+
+## Uji hipotesis
+
+- Uji hipotesis umumnya dilakukan dengan membandingkan nilai rata-rata dengan suatu parameter.
+
+-Misalnya, rata-rata kelas A lebih tinggi daripada rata-rata kelas B, kita tuliskan sebagai:
 
 $$
-\hat{Y}=\beta_0+\beta_1 X
+H_0: \mu_A > \mu_B
 $$
 
-- Dan dapat menghitung error $\varepsilon=Y-\hat{Y}$
-
-- Sehingga rumus regresi utuhnya adalah:
-
 $$
-Y=\beta_0+\beta_1 X + \varepsilon
+H_1: \mu_A \leq \mu_B
 $$
+- $H_0$ disebut juga hipotesis nol, sementara $H_1$ disebut juga hipotesis alternatif.
 
-## Regresi univariat
+## Uji Hipotesis
 
-$$
-Y_i=\beta_0+\beta_1 X_i+\varepsilon_i
-$$
+- Pada prosedur uji hipotesis, kita gunakan prinsip bahwa $H_0$ dianggap benar, kecuali kita  punya cukup bukti statistik untuk menolak $H_0$.
 
-- Y disebut juga variabel dependen
+- Mirip prinsip praduga tak bersalah: seseorang dinyatakan tidak bersalah kecuali terbukti sebaliknya.
 
-- X disebut juga variabel independen
+- Kita menggunakan nilai tengah ($\mu$) untuk menguji $H_0$.
 
-- nilai Y dan X kita dapatkan dari data
+## Arah uji
 
-- $\varepsilon$ disebut juga error term / residual. Dia bersifat **independen**
+- Uji hipotesis dapat dibagi dua: uji hipotesis 2 arah (two-tailed) dan uji hipotesis 1 arah (1-tailed).
 
-- $\beta_1$ disebut juga dengan marginal effect. Ada yang ingat turunan?
+- Uji hipotesis 2 arah kita gunakan bila $H_0: \mu=\mu_0$ dan $H_1: \mu\neq\mu_0$
 
-## Marginal effect {.incremental}
+    - artinya, kita tolah $H_0$ jika mendapati bahwa nilai rata-rata lebih besar ATAU lebih kecil dari nilai referensi.
 
-- pada dasarnya, $\beta_1=\frac{dY}{dX}$. Apa artinya?
+- Uji hipotesis 1 arah kita ginakan bila yang kita uji adalah lebih besar atau lebih kecil.
 
-- Untuk kenaikan $X$ sebesar 1 satuan, Y naik sebesar $\beta_1$
+    - misalnya kita uji lebih besar dari, maka selama nilai rata-rata lebih kecil atau sama dengan, maka kita tolah $H_0$
 
-- Jika kita gunakan konteks kita, bagaimana menerjemahkan $\beta_1$ ?
+## Dua jenis eror
 
-- Jika jam belajar bertambah 1 jam/minggu, nilai UTS naik sebesar $\beta_1$
+| Kenyataan | Menerima $H_0$ | Menolak $H_0$
+| --- | --- | --- |
+| Benar | tidak salah | Type I error |
+| Salah | Type II error | tidak salah |
 
-## Ramalan
+- Type I error ($\alpha$): aslinya benar tapi kita tolak.
 
-- Disamping itu, kita dapat meramal $Y$ jika tau $X$. Jika saya belajar 13 jam, berapa ekspektasi nilai UTS saya?
+- Type II error ($\beta$): aslinya salah tapi kita terima.
 
-- $\hat{Y}=\beta_0+\beta_1 \times 13$
+## Prosedur Uji hipotesis
 
-- $Y$ aslinya belum tentu sama dengan $\hat{Y}$, tapi walaupun beda, harusnya tidak terlalu jauh.
-
-- Semakin besar korelasinya, semakin bagus ramalannya.
-
-
-## Video regresi excel
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/QbReMOBVzOY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-## Minggu depan
-
-- Syarat menggunakan regresi
-
-- analisis pola error
+1. Menetapkan hipotesis: Tulis apa $H_0$ dan $H_1$ nya
+1. Menetapkan $\alpha$, atau level kepercayaan untuk menolak $h_0$
+1. Menghitung parameter uji
+1. Memutuskan penolakan atau penerimaan $H_0$
+1. Membuat kesimpulan.

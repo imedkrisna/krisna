@@ -11,7 +11,7 @@
   <meta name="generator" content="quarto-1.3.340">
 
   <meta name="author" content="Matematika &amp; Statistika">
-  <title>Korelasi dan regresi</title>
+  <title>Z-Score dan menebak probabilitas</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -327,8 +327,8 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Korelasi dan regresi</h1>
-  <p class="subtitle">Pertemuan 10</p>
+  <h1 class="title">Z-Score dan menebak probabilitas</h1>
+  <p class="subtitle">Pertemuan 6</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -339,245 +339,245 @@ Matematika &amp; Statistika
 </div>
 
 </section>
-<section id="hari-ini" class="slide level2">
-<h2>Hari ini</h2>
+<section id="jawaban-uts" class="slide level2">
+<h2>Jawaban UTS</h2>
+<iframe src="https://onedrive.live.com/embed?cid=ACC929CA35B3A537&amp;resid=acc929ca35b3a537%21162500&amp;authkey=AILqgDvBADGNbho&amp;em=2" width="900" height="600" frameborder="0" scrolling="no">
+</iframe>
+</section>
+<section id="minggu-ini" class="slide level2">
+<h2>Minggu ini</h2>
 <ul>
-<li class="fragment"><p>Korelasi</p></li>
-<li class="fragment"><p>Pengantar regresi</p></li>
+<li><p>Review PDF dan distribusi normal</p></li>
+<li><p>Z-score</p></li>
+<li><p>Menebak probabilitas</p></li>
 </ul>
 </section>
-<section id="korelasi" class="slide level2">
-<h2>Korelasi</h2>
+<section id="pdf-normal-distribution" class="slide level2">
+<h2>PDF normal distribution</h2>
+<p><span class="math display">\[
+f(x)=\frac{1}{\sigma \sqrt{2\pi}}e^{-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^2}
+\]</span></p>
 <ul>
-<li class="fragment"><p>Pada uji hipotesis, kita mencoba menebak apakah sampel yang kita miliki telah sesuai dengan pembandingnya:</p>
-<ul>
-<li class="fragment"><p>dibandingkan dengan sebuah angka -&gt; uji hipotesis 1 populasi.</p></li>
-<li class="fragment"><p>dibandingkan dengan sampel lain -&gt; uji hipotesis 2 populasi.</p></li>
-</ul></li>
-<li class="fragment"><p>Kadang-kadang pertanyaan yang kita punya adalah seberapa kuat hubungan antar 2 variabel.</p></li>
+<li><p><span class="math inline">\(\mu\)</span> adalah nilai rata-rata dari total populasi.</p></li>
+<li><p><span class="math inline">\(\sigma\)</span> adalah simpangan baku.</p></li>
+<li><p>Keduanya adalah nilai dari <em>central tendency</em> / ukuran gejala pusat dan sebaran.</p></li>
 </ul>
 </section>
-<section id="korelasi-1" class="slide level2">
-<h2>Korelasi</h2>
-<ul>
-<li class="fragment"><p>Misalnya, apakah PDB terkait dengan tingkat harga? Apakah PDB China beriringan dengan ekspor Indonesia? Apakah jam belajar berpotensi menyebabkan nilai yang tinggi?</p></li>
-<li class="fragment"><p>Pertanyaan-pertanyaan seperti ini intinya mencoba menjawab seberapa kuat hubungan <span class="math inline">\(Y\)</span> dan <span class="math inline">\(X\)</span>.</p></li>
-<li class="fragment"><p>Korelasi memiliki nilai 0-1: 0=tidak ada hubungan, 1=hubungan sempurna.</p></li>
-<li class="fragment"><p>Hari ini kita menghitung korelasi variabel kuantitatif dan korelasi variabel kualitatif.</p></li>
-</ul>
-</section>
-<section id="korelasi-kualitatif" class="slide level2">
-<h2>Korelasi kualitatif</h2>
-<p>Misalnya kita ingin tau apakah kemampuan bahasa inggris seorang pegawai punya korelasi dengan asal kampusnya. Kita memiliki data seperti berikut.</p>
-<table>
-<thead>
-<tr class="header">
-<th></th>
-<th>Kurang</th>
-<th>Cukup</th>
-<th>Lancar</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Kampus A</td>
-<td>82</td>
-<td>65</td>
-<td>12</td>
-</tr>
-<tr class="even">
-<td>Kampus B</td>
-<td>59</td>
-<td>112</td>
-<td>24</td>
-</tr>
-<tr class="odd">
-<td>Kampus C</td>
-<td>37</td>
-<td>94</td>
-<td>42</td>
-</tr>
-</tbody>
-</table>
-<p>Kedua variabel (asal kampus dan kemampuan bahasa inggris) berisi data kualitatif. Angka tersebut adalah jumlah pegawai.</p>
-</section>
-<section id="korelasi-kualitatif-1" class="slide level2 m">
-<h2>Korelasi kualitatif</h2>
-<table>
-<thead>
-<tr class="header">
-<th><span class="math inline">\(f_{ij}\)</span></th>
-<th>Kurang</th>
-<th>Cukup</th>
-<th>Lancar</th>
-<th>Total</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Kampus A</td>
-<td>82</td>
-<td>65</td>
-<td>12</td>
-<td><span class="math inline">\(n_{1.}=159\)</span></td>
-</tr>
-<tr class="even">
-<td>Kampus B</td>
-<td>59</td>
-<td>112</td>
-<td>24</td>
-<td><span class="math inline">\(n_{2.}=195\)</span></td>
-</tr>
-<tr class="odd">
-<td>Kampus C</td>
-<td>37</td>
-<td>94</td>
-<td>42</td>
-<td><span class="math inline">\(n_{3.}=173\)</span></td>
-</tr>
-<tr class="even">
-<td>Total</td>
-<td><span class="math inline">\(n_{.1}=178\)</span></td>
-<td><span class="math inline">\(n_{.2}=271\)</span></td>
-<td><span class="math inline">\(n_{.1}=78\)</span></td>
-<td><span class="math inline">\(n=527\)</span></td>
-</tr>
-</tbody>
-</table>
-<p><span class="math display">\[
-\chi^2=\sum_{i=1}^{p} \sum_{j=1}^{q} \frac{(f_{ij}-e_{ij})^2}{e_{ij}}
-\]</span> <span class="math inline">\(i=\)</span> variabel baris, <span class="math inline">\(j=\)</span> variabel kolom. <span class="math inline">\(f_{ij}\)</span> adalah angka di baris <span class="math inline">\(i\)</span> &amp; kolom <span class="math inline">\(j\)</span></p>
-<p><span class="math inline">\(e_{ij}=\frac{n_{i.}\times n_{.j}}{n}=\)</span> expected frequency.</p>
-</section>
-<section id="korelasi-kualitatif-2" class="slide level2 m">
-<h2>Korelasi kualitatif</h2>
-<table>
-<thead>
-<tr class="header">
-<th><span class="math inline">\(e_{ij}\)</span></th>
-<th>Kurang</th>
-<th>Cukup</th>
-<th>Lancar</th>
-<th>Total</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Kampus A</td>
-<td>53,70</td>
-<td>81,76</td>
-<td>23,53</td>
-<td><span class="math inline">\(n_{1.}=159\)</span></td>
-</tr>
-<tr class="even">
-<td>Kampus B</td>
-<td>65,86</td>
-<td>100,28</td>
-<td>28,86</td>
-<td><span class="math inline">\(n_{2.}=195\)</span></td>
-</tr>
-<tr class="odd">
-<td>Kampus C</td>
-<td>58,43</td>
-<td>88,96</td>
-<td>25,61</td>
-<td><span class="math inline">\(n_{3.}=173\)</span></td>
-</tr>
-<tr class="even">
-<td>Total</td>
-<td><span class="math inline">\(n_{.1}=178\)</span></td>
-<td><span class="math inline">\(n_{.2}=271\)</span></td>
-<td><span class="math inline">\(n_{.1}=78\)</span></td>
-<td><span class="math inline">\(n=527\)</span></td>
-</tr>
-</tbody>
-</table>
-<p><span class="math display">\[
-e_{11}=\frac{159 \times 178}{527} \ ; \ e_{12}=\frac{159 \times 271}{527} \ ; \ e_{12}=\frac{159 \times 78}{527} \\ e_{21}=\frac{195 \times 178}{527} \ ; \ e_{22}=\frac{195 \times 271}{527} \ ; \ e_{23}=\frac{195 \times 78}{527} \\ e_{31}=\frac{173 \times 178}{527} \ ; \ e_{32}=\frac{173 \times 271}{527} \ ; \ e_{33}=\frac{173 \times 78}{527}
-\]</span></p>
-</section>
-<section id="korelasi-kualitatif-3" class="slide level2">
-<h2>Korelasi kualitatif</h2>
-<p><span class="math display">\[
-\chi^2=\sum_{i=1}^{p} \sum_{j=1}^{q} \frac{(f_{ij}-e_{ij})^2}{e_{ij}} \\ \chi^2=\frac{28,30^2}{53,70}+\frac{(-16,76)^2}{81,76}+\frac{(-11.53)^2}{23,53} \\ +\frac{(-6,86)^2}{65,86}+\frac{11,72^2}{100,28}+\frac{(-4,86)^2}{28,86} \\ +\frac{(-21,43)^2}{58,43}+\frac{5,04^2}{88,96}+\frac{16,39^2}{25,61}
-\]</span></p>
-</section>
-<section id="korelasi-kualitatif-4" class="slide level2">
-<h2>Korelasi kualitatif</h2>
-<p><span class="math display">\[
-\chi^2=45,54
-\]</span></p>
-<p>Next, hitung <span class="math inline">\(C_c=\sqrt{\frac{\chi^2}{\chi^2+n}}\)</span></p>
-<p><span class="math display">\[
-C_c+\sqrt{\frac{45,54}{45,54+527}}=0,28
-\]</span></p>
-<p>Kemudian, hitung <span class="math inline">\(C_{max}=\sqrt{\frac{v-1}{v}}\)</span> di mana <span class="math inline">\(v=\)</span>jumlah kolom/baris, mana yang paling kecil.</p>
-</section>
-<section id="korelasi-kualitatif-5" class="slide level2">
-<h2>Korelasi Kualitatif</h2>
-<p><span class="math display">\[
-C_{max}=\sqrt{\frac{3-1}{3}}=0,82
-\]</span></p>
-<p>Terakhir, korelasi <span class="math inline">\(C=\frac{C_C}{C_{max}}\)</span></p>
-<p><span class="math display">\[
-C=\frac{0,28}{0,82}=0,34
-\]</span></p>
-<p>Kita dapat katakan bahwa korelasi antara asal kampus dan kemampuan bahasa inggris = 0,34. Artinya korelasinya sangat kecil.</p>
-</section>
-<section id="korelasi-kuantitatif" class="slide level2">
-<h2>Korelasi kuantitatif</h2>
-<ul>
-<li class="fragment"><p>Biasanya kalau kita sebut “korelasi”, kita langsung berpikir ke korelasi kuantitatif.</p></li>
-<li class="fragment"><p>Untuk korelasi kuantitatif, kita memiliki dua variabel <span class="math inline">\(X\)</span> dan <span class="math inline">\(Y\)</span> yang bernilai kuantitatif.</p></li>
-</ul>
-<p><span class="math display">\[
-r=\frac{n\sum_{i=1}^{n}X_iY_i-\sum_{i=1}^{n}X_i\sum_{i=1}^{n}Y_i}{\sqrt{n\sum_{i=1}^{n}X_i^2-\left(\sum_{i=1}^{n}X_i\right)^2} \sqrt{n\sum_{i=1}^{n}Y_i^2-\left(\sum_{i=1}^{n}Y_i\right)^2}}
-\]</span></p>
-<ul>
-<li class="fragment">Rumus ini disebut juga Pearson Correlation.</li>
-</ul>
-</section>
-<section id="korelasi-kuantitatif-1" class="slide level2">
-<h2>Korelasi kuantitatif</h2>
-<ul>
-<li class="fragment"><p>Anda membutuhkan beberapa kolom tambahan, antara lain <span class="math inline">\(X^2\)</span>, <span class="math inline">\(Y^2\)</span> dan <span class="math inline">\(XY\)</span></p></li>
-<li class="fragment"><p>Katakanlah seorang mahasiswa ingin tau apakah nilai UTS berhubungan dengan jumlah jam belajar dalam seminggu.</p></li>
-<li class="fragment"><p>Datanya dapat didownload di <a href="https://docs.google.com/spreadsheets/d/16ZuQPD1sk76pv6sRpvjiiZcSP68CNPRq/edit?usp=drive_link&amp;ouid=117760147588370390523&amp;rtpof=true&amp;sd=true">sini</a></p></li>
-</ul>
-</section>
-<section id="korelasi-kuantitatif-2" class="slide level2">
-<h2>Korelasi kuantitatif</h2>
-<ul>
-<li class="fragment"><p>Data yang ingin kita cari korelasinya dapat kita coba analisis sederhana dengan menggunakan <em>scatterplot</em></p></li>
-<li class="fragment"><p>scatterplot adalah grafik yang menunjukkan dua data kita di dua sumbu berbeda.</p></li>
-<li class="fragment"><p>Jika <span class="math inline">\(X=\)</span>jam belajar dan <span class="math inline">\(Y=\)</span>nilai UTS, maka kita pasang X di sumbu X dan Y di sumbu Y dari grafik kita.</p></li>
-<li class="fragment"><p>Coba gunakan excel untuk menggambarkan grafik kita sebelumnya.</p></li>
-</ul>
-</section>
-<section id="korelasi-kuantitatif-3" class="slide level2">
-<h2>Korelasi kuantitatif</h2>
+<section id="kurva-dan-parameter" class="slide level2">
+<h2>Kurva dan parameter</h2>
+
+<img data-src="normal.svg" class="r-stretch quarto-figure-center"><p class="caption">sumber:wikipedia</p></section>
+<section id="probabilitas" class="slide level2">
+<h2>Probabilitas</h2>
 
 <img data-src="index_files/figure-revealjs/unnamed-chunk-1-1.png" width="960" class="r-stretch"></section>
-<section id="korelasi-kuantitatif-4" class="slide level2">
-<h2>Korelasi kuantitatif</h2>
+<section id="z-score" class="slide level2">
+<h2>Z-score</h2>
 <ul>
-<li class="fragment"><p>Jika melihat gambarnya, kita dapat lihat seperti ada pola.</p></li>
-<li class="fragment"><p>Tidak hanya keduanya berkorelasi, namun juga terlihat bahwa korelasinya positif: semakin tinggi jam belajar, semakin tinggi juga nilai UTS.</p></li>
-<li class="fragment"><p>Korelasi positif adalah korelasi di mana <span class="math inline">\(X\)</span> dan <span class="math inline">\(Y\)</span> terlihat bergerak searah.</p></li>
-<li class="fragment"><p>Korelasi negatif adalah korelasi di mana <span class="math inline">\(X\)</span> dan <span class="math inline">\(Y\)</span> terlihat bergerak berlawanan arah.</p></li>
-<li class="fragment"><p>Dapatkah anda memberi contoh korelasi positif dan korelasi negatif?</p></li>
+<li><p>Z-score disebut juga dengan standardized values / scores.</p></li>
+<li><p>Z-score adalah transformasi yang kita lakukan untuk mengubah angka pada data kita menjadi sebuah nilai standar dalam menggunakan PDF distribusi normal.</p></li>
+<li><p>PDF distribusi normal yang standar adalah di mana:</p>
+<ul>
+<li><p><span class="math inline">\(\mu=0\)</span></p></li>
+<li><p><span class="math inline">\(\sigma=1\)</span></p></li>
+</ul></li>
 </ul>
 </section>
-<section id="regresi" class="slide level2">
-<h2>Regresi</h2>
+<section id="z-score-1" class="slide level2">
+<h2>Z-score</h2>
+<p><span class="math display">\[
+z=\frac{x-\mu}{\sigma}
+\]</span></p>
+<p>Di mana x adalah data point yang mau kita transformasi.</p>
+<table>
+<colgroup>
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Jajan</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+<th>8</th>
+<th>9</th>
+<th>10</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>BPP</td>
+<td>500</td>
+<td>450</td>
+<td>350</td>
+<td>600</td>
+<td>550</td>
+<td>550</td>
+<td>600</td>
+<td>450</td>
+<td>500</td>
+<td>450</td>
+</tr>
+</tbody>
+</table>
+<p><span class="math inline">\(\mu=500 \ ; \ \sigma=74,16\)</span></p>
+</section>
+<section id="z-score-2" class="slide level2">
+<h2>Z-score</h2>
+<table>
+<colgroup>
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Jajan</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+<th>8</th>
+<th>9</th>
+<th>10</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>BPP</td>
+<td>500</td>
+<td>450</td>
+<td>350</td>
+<td>600</td>
+<td>550</td>
+<td>550</td>
+<td>600</td>
+<td>450</td>
+<td>500</td>
+<td>450</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(z_b\)</span></td>
+<td>0</td>
+<td>-0.67</td>
+<td>-2.02</td>
+<td>1.35</td>
+<td>0.67</td>
+<td>0.674</td>
+<td>1.35</td>
+<td>-0.67</td>
+<td>0</td>
+<td>-0.67</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="z-score-3" class="slide level2">
+<h2>Z-score</h2>
 <ul>
-<li class="fragment"><p>Jika kita berhasil membuat sebuah fungsi dari pola tersebut, kita bisa menebak dengan lebih akurat <span class="math inline">\(Y\)</span> jika kita mengetahui <span class="math inline">\(X\)</span>, atau sebaliknya:</p>
+<li><p>Posisi angka-angka pada data tentunya tidak sama: semua bergeser jika rata-rata dan standar deviasinya berbeda.</p></li>
+<li><p>Kita menjadikan data biasa ke dalam Z-score karena Z-score membuat angkanya menjadi standar.</p></li>
+<li><p>Dengan angka yang standar, kita jadi dapat menggunakan tabel yang standar</p></li>
+<li><p>Dengan tabel yang standar kita jadi tidak harus membuat tabel baru untuk setiap data poin.</p></li>
+</ul>
+</section>
+<section id="tabel-pdf-distribusi-normal" class="slide level2">
+<h2>Tabel PDF Distribusi normal</h2>
+<iframe src="https://onedrive.live.com/embed?cid=ACC929CA35B3A537&amp;resid=acc929ca35b3a537%21162501&amp;authkey=AIx-FChNmjZ8zzQ&amp;em=2" width="900" height="600" frameborder="0" scrolling="no">
+</iframe>
+<p>Bisa <a href="https://www.google.com/search?client=firefox-b-d&amp;q=z+score+table">Google</a> atau download di <a href="https://drive.google.com/file/d/1ywI58hnM8p0ZyFV7B9rCOosk72iCGguq/view?usp=sharing">sini</a></p>
+</section>
+<section id="contoh-1" class="slide level2">
+<h2>Contoh 1</h2>
 <ul>
-<li class="fragment"><p>Jika anda belajar <span class="math inline">\(X\)</span> jam, anda bisa tebak akan dapat UTS berapa</p></li>
-<li class="fragment"><p>Sebaliknya: Jika anda ingin dapat UTS sebesar <span class="math inline">\(Y\)</span>, anda bisa kira-kira harus belajar berapa jam.</p></li>
-</ul></li>
-<li class="fragment"><p>Teknik ini disebut dengan regresi, dan akan kita pelajari minggu depan.</p></li>
-<li class="fragment"></li>
+<li><p>Berapa banyak kira-kira di BPP dengan uang jajan di bawah 700 ribu?</p></li>
+<li><p>Cari Z-score dulu <span class="math inline">\(Z_{700}=\frac{700-500}{74,16}=2,7\)</span></p></li>
+<li><p><span class="math inline">\(P(X&lt;700) \approx P(Z_X&lt;2,7)\)</span></p></li>
+<li><p>Lihat di tabel, <span class="math inline">\(P(Z&lt;2,7)=0,9965\)</span></p></li>
+</ul>
+</section>
+<section id="contoh-2" class="slide level2">
+<h2>Contoh 2</h2>
+<ul>
+<li><p>Berapa banyak mahasiswa di BPP dengan uang jajan di atas 400 ribu?</p></li>
+<li><p><span class="math inline">\(Z_{700}=\frac{400-500}{74,16}=-1,348\)</span></p></li>
+<li><p><span class="math inline">\(P(X&lt;600) \approx P(Z_X&lt;-1,348) \approx 0,0885\)</span></p></li>
+<li><p><span class="math inline">\(P(Z_X&gt;-1,348)=1-0,0885=0.9115\)</span></p></li>
+</ul>
+</section>
+<section id="contoh-3" class="slide level2">
+<h2>Contoh 3</h2>
+<ul>
+<li><p>Negara Wokondo memiliki pendapatan bulanan bersih per kapita rata-rata 6 juta rupiah, dengan standar deviasi 8 juta rupiah. Di Wokondo, orang berpendapatan di bawah 2 juta rupiah sudah dianggap miskin. Jika penduduk Wokondo ada 200 juta orang, berapa jumlah penduduk miskin di Wokondo?</p></li>
+<li><p>Intinya ini pertanyaan <span class="math inline">\(P(X&lt;2)\)</span>. Bisa jawabnya?</p></li>
+</ul>
+</section>
+<section id="contoh-4" class="slide level2">
+<h2>Contoh 4</h2>
+<ul>
+<li><p>Di Wokondo, anda dianggap kelas menengah jika pendapatannya ada di kisaran 5 juta sampai 8 juta rupiah. Berapakah jumlah penduduk Wokondo yang dianggap sebagai kelas menengah?</p></li>
+<li><p>Intinya ini pertanyaan <span class="math inline">\(P(5&lt;X&lt;8)\)</span>. Bisa jawabnya?</p></li>
+</ul>
+</section>
+<section id="contoh-5" class="slide level2">
+<h2>Contoh 5</h2>
+<ul>
+<li><p>Di Wokondo ada sekitar 2 juta orang yang dianggap sebagai orang ultra kaya. Bisakah anda menebak berapa pendapatan paling minimal untuk masuk golongan ultra kaya?</p></li>
+<li><p><span class="math inline">\(P(Z_X &gt; Y) = \frac{2}{200}=0,01\)</span></p></li>
+<li><p><span class="math inline">\(P(Z_X &lt; Y) = 1-0,01=0,99 \rightarrow Y=2,33\)</span></p></li>
+<li><p><span class="math inline">\(2,33=\frac{X-6}{8} \rightarrow X=(2,33 \times 8 ) + 6 = 24,64\)</span> Juta</p></li>
+</ul>
+</section>
+<section id="penutup" class="slide level2">
+<h2>Penutup</h2>
+<ul>
+<li><p>Teknik ini dapat kita lakukan karena PDF = probabilitas!</p></li>
+<li><p>Penggunaan distribusi normal seperti ini sangat praktis bagi kita yang tidak mungkin melakukan survey karena keterbatasan dana.</p></li>
+<li><p>Dengan mengasumsikan distribusi normal, anda dapat melihat satu angka saja, lalu cari rata-rata dan standar deviasi dari lembaga yang kredibel, lalu bisa menebak posisi seseorang dalam distribusi keseluruhan.</p></li>
+<li><p>Tapi ingat selalu bahwa Statistika = tebak-tebakan!</p></li>
+</ul>
+</section>
+<section id="penutup-1" class="slide level2">
+<h2>Penutup</h2>
+<ul>
+<li><p>Untuk latihan, anda dapat mencoba dengan variasi P(X), bisa lebih kecil, lebih besar, antara, silakan dicoba-coba. ada banyak kemungkinannya.</p></li>
+<li><p>Anda juga bisa mencoba dengan menggunakan nilai <span class="math inline">\(\mu\)</span> dan <span class="math inline">\(\sigma\)</span> yang berbeda-beda.</p></li>
+<li><p>Misalnya, dengan rata-rata yang sama, bagaimanakah bedanya P(Z) antara data dengan <span class="math inline">\(\sigma\)</span> kecil vs <span class="math inline">\(\sigma\)</span> besar?</p></li>
+</ul>
+</section>
+<section id="disclaimer" class="slide level2">
+<h2>DISCLAIMER</h2>
+<ul>
+<li><p>jangan lupa bahwa teknik ini kita gunakan dengan sebuah <strong>ASUMSI</strong> bahwa populasi yang ingin kita tebak memiliki distribusi normal.</p></li>
+<li><p>Distribusi normal belum tentu benar untuk beberapa karakteristik.</p></li>
+<li><p>Meski demikian, distribusi normal dianggap paling mungkin menjelaskan suatu populasi.</p></li>
+<li><p>Pada kenyataannya, tidak ada manusia yang tau dan yakin 100% bahwa distribusi normal pasti benar.</p></li>
+<li><p>Pastikan anda paham hal ini.</p></li>
 </ul>
 <div class="footer footer-default">
 

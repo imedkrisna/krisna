@@ -1,0 +1,3855 @@
+---
+title: "Matematika & Statistika"
+subtitle: "Pertemuan 1-14"
+author: "I Made Krisna Gupta"
+date: "2024-03-04"
+date-format: "DD MMMM YYYY"
+format: 
+  revealjs:
+    theme: [simple,../mytheme.scss]
+    chalkboard: true
+    incremental: false
+    transition: convex
+    background-transition: fade
+    slide-number: true
+  beamer: default
+---
+
+## Dosen anda
+
+::: columns
+::: {.column width="40%"}
+![](https://www.krisna.or.id/files/foto_krisna.jpg)
+:::
+
+::: {.column .s width="60%"}
+-   Timeline:
+
+    - 2010-2012: Kementerian Perindustrian
+    
+    - 2012-2014: S2 in economics dari UI/VU
+    
+    - 2015-2017: Dosen di Poltek APP Jakarta
+    
+    - 2017-2022: S3 ekonomi di ANU
+    
+    - 2022-    : Dosen di Poltek APP Jakarta
+    
+-   Perkuliahan semester ini:
+    
+    -   Matematika & Statistika di Poltek APP
+    
+    - International Economics & ASEAN economies di UI.
+
+- Akses:
+
+    -   Surel: imade.krisna@poltekapp.ac.id
+    
+    -   Lewat BPK masing-masing
+    
+- more at [krisna.or.id](https://krisna.or.id) and [imedkrisna.github.io](https://imedkrisna.github.io/)
+    
+:::
+:::
+
+## Agenda hari ini
+
+-   Administrasi dan Struktur mata kuliah
+
+-   Notasi dan dasar-dasar matematika
+
+## Sosial kok belajar statistika?
+
+- Matematika dan statistika mendapat reputasi sebagai "ilmunya anak IPA".
+
+- Padahal, keduanya digunakan sebagai alat analisis oleh banyak bidang sosial!
+
+    - Menghitung risiko untuk keputusan investasi.
+    
+    - Meramalkan berbagai indikator ekonomi.
+    
+- Bahkan, statistika digunakan untuk **"berbohong"**.
+
+    - Pemahaman statistika yang baik dapat membantu.
+
+## Contoh
+
+<iframe style="height:700px; width:100%; border: none;" src="https://databoks.katadata.co.id/datapublishembed/144007/rata-rata-gaji-karyawan-di-jakarta-tertinggi-se-indonesia"></iframe>
+
+## Sosial kok belajar statistika?
+
+- Zaman sekarang, ilmu statistika dan analisis data menjadi semakin penting lagi.
+
+    - Menurut [World Economic Forum](https://www.weforum.org/agenda/2020/10/top-10-work-skills-of-tomorrow-how-long-it-takes-to-learn-them/), kemampuan berpikir analitik dan penggunaan teknologi merupakan 2 dari 10 kemampuan yang paling dicari pada 2025.
+    
+    - Melalui inisiatif Industri 4.0, Kementerian Perindustrian menitik-beratkan kemampuan analitik dan operasional teknologi komputasi.
+    
+    - Permintaan industri akan individu yang punya kemampuan analitik berdasarkan data semakin tinggi.
+    
+- Data semakin banyak, pengolahnya masih sedikit.
+    
+## Tentang mata kuliah ini
+
+Profil lulusan yang diincar:
+
+> Menguasai pengetahuan tentang cara memilih dan menggunakan alat manajemen (management tools) untuk menetapkan suatu keputusan manajerial
+
+Diturunkan menjadi capaian mata kuliah:
+
+> Mahasiswa mampu Menggunakan alat analisis berbasis statistika.
+
+## Tentang Mata kuliah ini
+
+- Mata kuliah ini wajib dan merupakan prasyarat dari mata kuliah Metodologi Penelitian.
+
+- Beberapa hal yang akan anda pelajari:
+
+::: {.incremental}
+    
+- present & future value
+
+- probabilitas dan sampling.
+    
+- mendapat gambaran dari populasi: nilai tengah, deviasi, distribusi.
+    
+- belajar menggunakan alat-alat analisis: hypothesis testing dan regresi.
+    
+:::
+
+## Tentang mata kuliah ini {.m}
+
+- Ilmu di mata kuliah ini merupakan konsep-konsep dasar.
+
+- Mengantarkan anda ke mata kuliah lain, terutama Metodologi Penelitian:
+
+    - menghitung risiko dan _hedging_ di keuangan internasional.
+    
+    - Akan membahas data time-series, yang sangat penting di dunia perdagangan internasional.
+    
+    - Membuat laporan analitik yang berguna di industri (dan TA).
+    
+- Ilmu dari mata kuliah ini tidak akan membuat anda jadi ahlinya data!
+
+    - Analisis dapat dilakukan oleh supervisor anda.
+    
+    - Modal yang penting untuk mengejar pendidikan lanjut.
+
+## Buku pegangan
+
+- 3 pegangan utama:
+    
+    1. Dumairy. 2003. Matematika Terapan untuk Bisnis dan Ekonomi Yogyakarta: BPFE-Yogyakarta.
+
+    2.  Heumann, C., Schomaker, M., Shalabh. 2016. Introduction to Statistics and Data Analysis. Cham: Springer.
+
+    3. Irianto, Agus. 2004. Statistik: Konsep Dasar, Aplikasi, dan Pengembangannya. Jakarta: Kencana Prenadamedia Group.
+
+    
+- No 1 dan 3 Tersedia di perpustakaan
+    
+## Ekspektasi dari Mahasiswa
+
+-   Tidak ada prasyarat untuk mengikuti mata kuliah ini.
+-   Ilmu matematika yang anda dapat di SMA sudah cukup.
+-   Punya akses internet.
+-   Tidak perlu bisa bahasa inggris, _but a good command of english will certainly be helpful_.
+-   Pernah bermain Microsoft Excel atau Google Sheet akan sangat membantu.
+
+## Beberapa rules
+
+-   Saya tidak mewajibkan kehadiran, telat boleh.
+-   bagi yang hadir dimohon untuk fokus, sopan dan tertib.
+-   Makan dan minum boleh. ~~Dosen harus dibagi~~
+-   Tidak perlu ijin kalau mau keluar dengan alasan apapun.
+-   Jika ada pertanyaan, silakan langsung diajukan.
+
+## Evaluasi pembelajaran
+
+| metode | cakupan materi | bobot (%) |
+|--------|----------------|-----------|
+| Tugas kelompok    | minggu 8-13     | 30        |
+| UTS    | minggu 1-7          | 30        |
+| UAS  | semua          | 40        |
+
+-   Akan ada remedial & tidak ada tugas tambahan apapun.
+-   Materi di slides harusnya cukup untuk dapat A.
+
+## Evaluasi pembelajaran
+
+- Tugas kelompok: ngerjain soal kasus. Post-UTS.
+
+- UTS & UAS: 4 soal, essay semua, tutup buku kecuali catatan selembar A4. No tech kecuali kalkulator.
+
+- Masih tentatif. Jika ada perubahan akan dikabari lebih lanjut.
+
+## Tools
+
+-   Slides dapat diakses di [krisna.or.id/courses/statistika/slides](https://www.krisna.or.id/courses/statistika/slides).
+
+-   [Google Drive](https://drive.google.com/drive/folders/1s8YHrlTFrp-Iu0ip6FesyKahNHLo5had?usp=sharing)
+
+## Questions?
+
+<iframe src="https://giphy.com/embed/KUmcYqPW0dIGNHDEoE" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/disneyplus-marvel-studios-marvelstudios-msmarvel-KUmcYqPW0dIGNHDEoE">via GIPHY</a></p>
+
+## Matematika
+
+::: {.incremental}
+- Apa yang dimaksud dengan matematika?
+
+- Matematika **bukan** (hanya) soal berhitung!
+
+- Matematika (dari bahasa Yunani Kuno) berarti ilmu pengetahuan, pengkajian, pembelajaran.
+
+- Matematika sendiri merupakan sekumpulan ilmu abstrak dan terapan yang mempelajari bilangan, struktur, ruang, dan perubahan.
+:::
+
+## Matematika
+
+- Di mata kuliah ini, matematika yang anda pelajari hanya akan berisi sedikit tentang hubungan antar-bilangan dan/atau himpunan.
+
+- Kita juga akan belajar dinamika bilangan yang kita sebut dengan deret
+
+- Anda juga akan belajar konsep fungsi dan diagram kartesius, konsep yang sangat penting untuk menganalisis ekonomi.
+
+- Kita juga akan belajar peluang, dan sedikit tentang differensial / turunan.
+
+## Himpunan
+
+- Himpunan adalah suatu kumpulan atau gugusan dari sejumlah obyek.
+
+    - obyek-obyek ini disebut dengan anggota atau elemen atau unsur.
+    
+- Misalnya; $A=\{2,4,6,8\}$
+
+    - Himpunan A memiliki 4 anggota, yaitu 2,4,6 dan 8.
+    
+- Misalnya: HIMA={Adit,Carol,Dian,Raja}
+
+    - HIMA memiliki 4 anggota.
+    
+## Notasi
+
+| Notasi | Artinya |
+| --- | ------- |
+| $\in$ | Anggota / elemen |
+| $\not \in$ | Bukan anggota / bukan elemen |
+| $\subset$ | bagian / subset |
+| $\not \subset$ | bukan bagian / bukan subset |
+| $\cup$ | gabungan / union |
+| $\cap$ | irisan / intersection |
+| $\varnothing$ | himpunan kosong |
+
+Contoh: Carol $\in$ HIMA, 4 $\in$ A, Soni $\not \in$ HIMA
+
+## Contoh
+
+$$
+\begin{aligned}
+A&=\{0,1,2,3,4,5,6,7,8,9\} \\
+B&=\{0,1,2,3\} \\
+C&=\{1,3,5,7,9\} \\
+D&=\{9\}
+\end{aligned}
+$$
+
+Coba jawab pertanyaan-pertanyaan ini:
+
+:::: columns
+::: {.column width=47%}
+
+1. $A \cap B=$
+2. $D \cup C=$
+
+:::
+::: {.column width=47%}
+3. $B \subset A$, True / False?
+4. $D \cap B=$
+:::
+::::
+
+## Himpunan
+
+Himpunan juga dapat kita batasi dengan aturan verbal. Misalnya:
+
+A adalah sebuah himpunan yang anggotanya adalah bilangan genap antara 1 sampai 9
+
+:::: columns
+::: {.column width=47%}
+
+| nama | nilai matstat |
+| ------- | --- |
+| Adit | 90 |
+| Carol | 92 |
+| Dian | 70 |
+| Raja | 65 |
+
+:::
+::: {.column width=47%}
+B adalah himpunan mahasiswa yang dapet nilai di atas 80.
+:::
+::::
+
+## Perbandingan
+
+- a > b artinya a lebih besar dari b
+- a < b artinya a lebih kecil dari b
+- a $\leq$ b artinya a lebih besar dari atau sama dengan b
+- a $\geq$ b artinya a lebih besar dari atau sama dengan b
+
+## Kaidah perbandingan
+
+- Jika $a \leq b$, maka -a $\geq$ -b dan sebaliknya
+
+- Jika $a \leq b$ dan $x \geq 0$, maka $xa \leq xb$, sedangkan Jika $a \geq b$ dan $x \geq 0$, maka $xa \geq xb$,
+
+- Jika $a \leq b$ dan $x \geq 0$, maka $xa \geq xb$, sedangkan Jika $a \geq b$ dan $x \leq 0$, maka $xa \leq xb$,
+
+- Jika $a \leq b$ dan $c \leq d$, maka $a+c \leq b+d$, sedangkan jika $a \geq b$ dan $c \geq d$, maka $a+c \geq b+d$
+
+- Di matematika, kita selalu bicara prinsip generalisasi.
+
+- puyeng? Coba ganti huruf2 tsb dengan angka.
+
+## Kaidah bilangan
+
+:::: columns
+::: {.column width=47%}
+
+1. kaidah komutatif
+
+$$
+\begin{align}
+a+b&=b+a \\
+a \times b &= b \times a
+\end{align}
+$$
+
+2. kaidah asosiatif
+
+$$
+\begin{align}
+a+b&=b+a \\
+a \times b &= b \times a 
+\end{align}
+$$
+
+:::
+::: {.column width=47%}
+
+3. Kaidah pembatalan
+
+Jika   $\ \ \ a+c = b+c$
+
+maka           $\ \ \ \ \ \ \ a = b$
+
+4. Kaidah distributif
+
+$$
+a(b+c)=ab+ac
+$$
+
+:::
+::::
+
+## Kaidah bilangan
+
+5. Unsur penyama
+
+$$
+\begin{aligned}
+a \pm 0 &= a \\
+a \times 1 &= a \\
+a : 1 &= a
+\end{aligned}
+$$
+
+6. Kebalikan
+
+$a+(-a)=0 \ \ \ \ \ \ \ \ \ \ a \times \frac{1}{a}=1 \ \ \ \ \ \ \ \ \ \ \ \ \ \frac{a}{a}=1$
+
+## Kaidah bilangan {.m}
+
+:::: columns
+::: {.column width=47%}
+
+7. Operasi tambah kurang: nyebrang menjadi minus
+
+$a-b=-b+a$
+
+$\\$
+
+Jika $a-b=c+d$, maka:
+
+$$
+\begin{aligned}
+a &= c+d+b \\
+-b &=c+d-a \\
+a-b-c &= d \\
+a-b-d &= c \\
+a-b-c-d &= 0
+\end{aligned}
+$$
+:::
+::: {.column width=47%}
+
+8. Operasi kali bagi: nyebrang tuker posisi
+
+Jika $ax=\frac{b}{y}$, maka
+
+$$
+\begin{aligned}
+a &= \frac{b}{xy} \\
+axy &= b \\
+\frac{axy}{b} & = 1 \\
+1 &= \frac{b}{axy}
+\end{aligned}
+$$
+
+:::
+::::
+
+
+
+## Operasi pecahan
+
+- Penjumlahan: $\frac{a}{x} + \frac{b}{y}=\frac{ay+bx}{xy}$
+
+- Pengurangan: $\frac{a}{x} - \frac{b}{y}=\frac{ay-bx}{xy}$
+
+- Perkalian: $\frac{a}{x} \times \frac{b}{y} = \frac{ab}{xy}$
+
+- Pembagian: $\frac{a}{x} : \frac{b}{y}=\frac{a}{x} \times \frac{y}{b}$
+
+## Mingdep
+
+akar dan deret
+
+## Latihan perbandingan
+
+1. Nilai Joni lebih besar daripada nilai Tika. Tika protes ke dosen dan minta nilainya ditambah sebesar 10 poin. Jika dosen akhirnya menambah 10 poin ke nilai seluruh mahasiswa, apakah nilai Tika jadi lebih besar daripada nilai Joni?
+
+2. Perusahaan A menawarkan minuman dengan harga 10 ribu rupiah sementara perusahaan B menawarkan minuman dengan harga 8 ribu. Perusahaan A memberi diskon sebesar 10%, dan perusahaan B merespon dengan diskon yang sama, 10%. tanpa menghitung, apakah perusahaan A jadi lebih murah daripada perusahaan B?
+
+## Perhitungan
+
+1. $53 \times 91 = 91 \times X$. Berapakah $X$? Coba tebak tanpa menghitung.
+
+2. $9+X=1$. Berapakah $X$?
+
+3. $10 \times X = 1$. Berapakah X?
+
+4. Hitunglah $\frac{9}{10}+\frac{12}{19}$
+
+5. Hitunglah $\frac{9}{10} \times \frac{12}{19}$
+
+6. Tanpa hitung, tebak $\frac{8}{11} : \frac{13}{13}$
+
+# Pertemuan 2
+
+## Pangkat
+
+- Pangkat merupakan suatu indeks yang menunjukkan banyaknya perkalian bilangan yang sama secara berurutan.
+
+- notasi $x^a$ artinya bahwa sebuah bilangan $x$ harus dikali dengan dirinya sendiri sebanyak $a$ kali.
+
+$5^3=5 \times 5 \times 5$.
+
+- di beberapa program, pangkat menggunakan simbol $\^$, sering disebut topi atau _hat_.
+
+## Kaidah pangkat
+
+:::: columns
+::: {.column width=47%}
+
+1. $x^0=1$
+2. $x^1=x$
+3. $0^a=0$
+4. $x^{-a}=\frac{1}{x^a}$
+5. $x^{\frac{1}{a}}=\sqrt[a]{x}$
+
+:::
+::: {.column width=47%}
+6. $x^{\frac{a}{b}}=\sqrt[b]{x^a}$
+7. ${\left(\frac{x}{y}\right)}^a=\frac{x^a}{y^a}$
+8. $\left(x^a\right)^b=x^{ab}$
+9. $x^{a^b}=x^c,$ di mana $c=a^b$
+
+:::
+::::
+
+## Contoh pangkat
+
+:::: columns
+::: {.column width=47%}
+
+1. $3^0=1$
+2. $3^1=3$
+3. $0^5=0$
+4. $3^{-2}=\frac{1}{3^2}$
+5. $5^{\frac{1}{3}}=\sqrt[3]{5}$
+
+:::
+::: {.column width=47%}
+6. $5^{\frac{2}{3}}=\sqrt[3]{5^2}$
+7. ${\left(\frac{3}{5}\right)}^2=\frac{3^2}{5^2}$
+8. $\left(3^5\right)^2=3^{5\times 2}$
+9. $3^{2^3}=x^8$
+
+:::
+::::
+
+## Kaidah pangkat
+
+10. $x^ax^b=x^{a+b}$
+
+11. $x^ay^a=(xy)^a$
+
+12. $x^a:x^b=x^{a-b}$
+
+13. $x^a:y^a=(\frac{x}{y})^a$
+
+## Akar
+
+- Akar sebenernya adalah bagian dari pangkat.
+
+$$
+\text {jika } \sqrt[a]{m}=x, \text{ maka } x^a=m
+$$
+
+- di kalkulator atau program komputer, jika ingin melakukan operasi $\sqrt[a]{m}$, maka kita ngetiknya  `m^(1/a)`. Buka kurung tutup kurung jangan lupa.
+
+## Kaidah akar
+
+:::: columns
+::: {.column width=47%}
+
+kaidah:
+
+1. $\sqrt[b]{x}=x^{\frac{1}{b}}$
+2. $\sqrt[b]{x^a}=x^{\frac{a}{b}}$
+3. $\sqrt[b]{xy}=\sqrt[b]{x} \cdot \sqrt[b]{y}$
+4. $\sqrt[b]{\frac{x}{y}}=\frac{\sqrt[b]{x}}{\sqrt[b]{y}}$
+
+:::
+::: {.column width=47%}
+
+contoh:
+
+1. $\sqrt[3]{5}=5^{\frac{1}{3}}$
+2. $\sqrt[3]{5^2}=5^{\frac{2}{3}}$
+3. $\sqrt[3]{5 \cdot 4}=\sqrt[3]{5} \cdot \sqrt[3]{4}$
+4. $\sqrt[3]{\frac{2}{5}}=\frac{\sqrt[3]{2}}{\sqrt[3]{5}}$
+
+:::
+::::
+
+## Kaidah perkalian
+
+5. Perkalian hanya dapat dilakukan jika akar-akarnya berpangkat sama.
+
+formal: $\sqrt[b]{x} \cdot \sqrt[b]{y}=\sqrt[b]{xy}$
+
+contoh: $\sqrt[3]{2} \cdot \sqrt[3]{5}=\sqrt[b]{2 \cdot 5}=\sqrt[3]{10}$
+
+6. akar $b$ dari akar $c$ adalah akar dari $bc$.
+
+formal: $\sqrt[b]{\sqrt[c]{x^a}}=\sqrt[bc]{x^a}$
+
+contoh: $\sqrt[3]{\sqrt[2]{7^5}}=\sqrt[3 \cdot 2]{7^5}$
+
+## Kaidah pembagian
+
+8. Hasil bagi bilangan terakar adalah akar dari hasil bagi bilangan-bilangannya. Hanya dapat dilakukan jika akarnya berpangkat sama.
+
+formal: $\frac{\sqrt[b]{x}}{\sqrt[b]{y}}=\sqrt[b]{\frac{x}{y}}$
+
+contoh: $\frac{\sqrt[3]{5}}{\sqrt[3]{7}}=\sqrt[3]{\frac{5}{7}}$
+
+## Logaritma
+
+logaritma pada intinya merupakan kebalikan dari proses pangkat dan/atau akar.
+
+:::: columns
+::: {.column width=33%}
+
+$$
+\begin{aligned}
+x^a &= m \\
+5^3 &= 125
+\end{aligned}
+$$
+
+:::
+::: {.column width=33%}
+
+$$
+\begin{aligned}
+\sqrt[a]{m} &= x \\
+\sqrt[3]{125} &= 5
+\end{aligned}
+$$
+
+:::
+::: {.column width=33%}
+
+$$
+\begin{aligned}
+\log_x {m} &= a \\
+\log_5 {125} &= 3
+\end{aligned}
+$$
+
+:::
+::::
+
+- 5 harus dipangkatkan berapa supaya jadi 125.
+
+- 5 (atau secara umum $x$) disebut dengan **basis**
+
+## Basis logaritma {.m}
+
+$$
+\log_x m=a \\
+^x \log m=a
+$$
+
+- Basis seringkali ditulis di belakang-atas, bisa juga di depan-bawah.
+
+- Basis dapat berupa bilangan positif apapun, tapi ada 2 basis yang paling umum:
+
+- Basis 10. Jika basis tidak ditulis biasanya berarti basis 10.
+
+- Basis $e$, basis e ditulis juga dengan $\ln$, disebut juga _natural logarithm_.
+
+- $e$ sendiri artinya eksponensial. Di kalkulator kamu ditulis $\exp$.
+
+- Di ekonomi, kita lebih sering pake $\ln$ dan $e$ daripada $\log$.
+
+## Kaidah logaritma
+
+:::: columns
+::: {.column width=47%}
+
+1. $^x \log x = 1$
+2. $^x \log 1 = 0$
+3. $^x \log m = \text{undefined} \\ if\ m \le 0$
+4. $^x \log x^a=a$
+5. $\log_x m^a = a \ \log_x m$
+
+:::
+::: {.column width=47%}
+
+6. $x^{log_x m}=m$
+7. $\log_x mn = \log_x m + \log_x n$
+8. $\log_x \frac{m}{n}=\log_x m-\log_x n$
+9. $\log_x m \cdot loog_m x =1$
+10. $\log_x m \cdot \log_m n \cdot \log_n x=1$
+
+:::
+::::
+
+## Contoh
+
+:::: columns
+::: {.column width=47%}
+
+1. $^8\log 8=1$
+2. $\log_8 1=0$
+3, $\log_5 5^7=7$
+4. $^5\log 3^7=7 \times ^5\log 3$
+5. $5^{^5\lg 25}=25$
+
+:::
+::: {.column width=47%}
+
+6. $\log 1000 = ?$
+7. $\log_5 \frac{3}{7}=\log_5 3-\log_5 7$
+8. $\log_3 5 \cdot \log_5 3 =1$
+9. $\log_5 (3\times 7)=\log_5 3 + \log_5 7$
+10. $\log_3 5 \cdot \log_5 2 \cdot \log_2 3=1$
+
+:::
+::::
+
+## Penjumlahan
+
+penjumlahan/pengurangan untuk bilangan menempel/dikali dengan akar, pangkat dan log serta eksponen dapat kita lakukan selama pengalinya sama.
+
+1. $m \sqrt[b]{x^a} \pm n \sqrt[b]{x^a}=(m \pm n)\sqrt[b]{x^a}$
+2. $m \cdot x^a \pm n x^a=(m \pm n)\cdot x^a$
+
+3. $m \log_a x+n \log_a x=(m\pm n) \log_a x$
+3. $m \cdot e^a+n \cdot e^a=(m\pm n) e^a$
+
+## Persamaan
+
+- Ketika kita sedang mencari penyelesaian untuk satu variabel, kita ingin si variabel tersebut ada di kiri $=$ sementara sisanya kita taruh di atas.
+
+- Kita akan memerlukan pemahaman ini untuk semua mata kuliah lain ke depannya.
+
+- Kita dapat menggunakan aturan-aturan di atas untuk menyelesaikan beberapa persamaan.
+
+- Kita juga dapat melakukan transformasi, asal transformasi tersebut dilakukan di kedua sisi $=$
+
+## Contoh soal
+
+Carilah $x$
+
+1. $x^3-15=12$
+
+2. $3-\sqrt[3]{x^2}=30$
+
+3. $4a-5b+3x=20$
+
+4. $2^{4x-6}=64$
+
+5. $\log (5x-50)=2$
+
+## Note
+
+- Di ujian, anda harus coba selesaikan persamaan ini sejauh yang anda bisa, sesederhana mungkin.
+
+- Ada kalanya jawaban yang diharapkan akan tidak akan terlalu jauh.
+
+- Jawaban yang berakhir pecahan, pangkat atau log akan tetap dianggap benar.
+
+## Mingdep
+
+- Fungsi
+
+- Diagram kartesian
+
+# Pertemuan 3
+
+
+## Bentuk umum & pengertian
+
+- Fungsi adalah suatu bentuk hubungan matematis yang menyatakan hubungan ketergantungan/dependensi/fungsional antara 2 variabel atau lebih.
+
+- Fungsi dibentuk oleh 3 unsur, yaitu variabel, koefisien, dan konstanta.
+
+$$
+Y=f(X)
+$$
+
+artinya, variabel $Y$ adalah fungsi dari variabel $X$. Atau, besarnya variabel $Y$ ditentukan oleh besarnya variabel $X$, tapi tidak sebaliknya.
+
+## Pengertian & unsur
+
+- Variabel mencerminkan faktor tertentu. Sementara itu, koefisien dan konstanta adalah angka yang membentuk fungsi, mencerminkan bagaimana 2 variabel saling berhubungan.
+
+    - Konstanta hanya berhubungan $\pm$ dengan variabel, sementara koefisien berhubungan selain itu.
+    
+- Variabel, seperti namanya, bisa bervariasi, alias berubah-ubah.Variabel sendiri adalah himpunan, sementara koefisien dan konstanta bukan.
+
+## Bentuk khusus/spesifik
+
+- Sebuah fungsi $Y=f(X)$ bisa memiliki bentuk spesifik tertentu. Umumnya bentuk spesifik inilah yang akan kita selesaikan.
+
+- Misalnya, sebuah fungsi $Y=f(X)$ memiliki bentuk spesifik:
+
+$$
+Y=a_0+a_1X
+$$
+
+- $Y$ dan $X$ adalah variabel, $a_0$ adalah konstanta/intersep, dan $a_1$ adalah koefisien/parameter.
+
+## Fungsi
+
+- $X$ disebut juga dengan variabel eksogen, sementara $Y$ disebut juga variabel endogen.
+    
+- Eksogen $\rightarrow$ bisa diubah sendiri/independen.
+
+- Endogen tidak bisa. Nilai variabel endogen mengikuti perubahan dari variabel eksogen.
+    
+- Mengubah $Y$ harus dilakukan dengan mengubah $X$: Kadang $X$ disebut variabel input dan $Y$ variabel output
+
+## Bentuk fungsi
+
+- Fungsi spesifik dapat berbentuk apa saja, selama memetakan $X$ menjadi $Y$.
+
+| Fungsi | Nama |
+| --- | --- |
+| $Y=a_o+a_1X$ | Fungsi linear |
+| $Y=a_0+a_1X+a_2X^2$ | Fungsi kuadratik |
+| $Y=a_0+a_1^X$ | Fungsi power/eksponen |
+| $Y=\frac{a_1}{X}$ | Fungsi resiprokal |
+| $Y=a_0+a_1 \ln X$ | Fungsi logaritma |
+
+## Visualisasi
+
+- Fungsi umumnya divisualisasikan dalam 2 dimensi menggunakan koordinat kartesian.
+
+- Koordinat kartesian merupakan sistem yang dapat memetakan dua buah variabel ke dalam  sebuah bidang yang terdiri dari 2 sumbu: sumbu horizontal/absis/$x$ dan sumbu vertikal/ordinat/$y$.
+    - bidang ini disebut juga dengan bidang kartesian.
+
+- Sebuah titik $A$ di bidang kartesian punya koordinat $A=(x,y)$.
+
+## Visualisasi
+
+:::: columns
+::: {.column width=47%}
+
+```{r}
+#| fig-width: 5
+#| fig-height: 5
+library(tidyverse)
+library(ggh4x)
+
+data1 <- data_frame(label = c("A","B","C","D","E","F"),
+                          y = c(4,5,0,-1,-3,5),
+                          x = c(5,4,3,0,5,-5),
+                          xx= x+0.5)
+graph<-ggplot()+theme_classic() +
+  theme(panel.background = element_rect(fill = "#f0f1eb",
+                                        colour = "#f0f1eb"),
+        plot.background = element_rect(fill = "#f0f1eb"),
+        legend.key = element_rect(fill = "#f0f1eb",linetype = "blank"),
+        legend.background = element_rect(fill="#f0f1eb"))
+
+grafik1 <- graph +
+  geom_text(data = data1,
+            aes(x = x, y = y+0.4, label = label), parse = TRUE,
+            size=4)+
+  geom_point(data=data1,
+             aes(x=x,y=y),color='black',size=3)+
+  labs(x='X',y='Y')+
+  coord_axes_inside(labels_inside = TRUE)+
+  scale_x_continuous(breaks=seq(-5,5,1))+scale_y_continuous(breaks=seq(-5,5,1))
+
+grafik1
+```
+
+:::
+::: {.column widht=47% .incremental}
+
+Ada 6 titik di bidang/diagram kartesian ini:
+
+- A=(5,4)
+- B=(4,5)
+- C=(3,0)
+- D=(0,-1)
+- E=(5,-3)
+- F=(-5,5)
+
+:::
+::::
+
+## Visualisasi fungsi
+
+- Diagram kartesian cocok digunakan untuk visualisasi fungsi karena punya 2 dimensi.
+
+- Umumnya, fungsi $Y=f(X)$ dipetakan menjadi $(x,y)$
+
+    - alias, variabel endogen di sumbu-Y, variabel eksogen di sumbu-X.
+    
+- Fungsi dipetakan ke diagram kartesian dalam bentuk titik jika X dan Y-nya himpunan bilangan integer.
+
+- Kita akan lebih sering pakai bilangan riil.
+
+## Bilangan
+
+- Kita bisa buat himpunan apa saja dengan huruf apa saja.
+
+- Tapi di matematika ada himpunan yang digunakan secara standar.
+
+| simbol | himpunan | elemen |
+| --- | ----- | --------- |
+| $\mathbb{N}$ | natural / asli | {1,2,3...} |
+| $\mathbb{Z}$ | integer | {...-3,-2,-1,0,1,2,3,...} |
+| $\mathbb{R}$ | riil / real | integral tapi ada pecahan/desimal |
+
+## Visualisasi
+
+- Katakanlah ada 2 himpunan dengan karakteristik seperti ini:
+
+$$
+\begin{aligned}
+X&=\{-2,-3,0,2,4\} \\
+Y&=\{y_i \ |\  y_i=3+2x_i\}
+\end{aligned}
+$$
+
+- dapatkah anda menebak elemen dari $Y$?
+
+- note: subscript $i$ (disebut juga index) menyatakan **anggota ke-**.
+
+- cth: $x_3$ anggota himpunan $X$ yang ke-3, yaitu 3.
+
+## Visualisasi integer
+
+:::: columns
+::: {.column width=47%}
+
+```{r}
+#| fig-width: 5
+#| fig-height: 5
+
+data2 <- data_frame(label = c(1,2,3,4,5),
+                            x = c(-2,-3,0,2,4),
+                            y=3+2*x)
+                          
+grafik2 <- graph +
+  geom_text(data = data2,
+            aes(x = x, y = y+0.4, label = label), parse = TRUE,
+            size=4)+
+  geom_point(data=data2,
+             aes(x=x,y=y),color='black',size=3)+
+  labs(x='X',y='Y')+
+  coord_axes_inside(labels_inside = TRUE)+
+  scale_x_continuous(breaks=seq(-4,5,1))+scale_y_continuous(breaks=seq(-4,12,1))
+
+grafik2
+```
+
+
+:::
+::: {.column width=47%}
+
+| i | x | y |
+| --- | --- | --- |
+| 1 | -2 | -1 |
+| 2 | -3 | -3 |
+| 3 | 0 | 3 |
+| 4 | 2 | 7 |
+| 5 | 4 | 11 |
+
+perhatikan bahwa skala untuk sumbu X dan sumbu Y berbeda. Boleh kok.
+
+:::
+::::
+
+## Visualisasi riil
+
+- Bagaimana untuk himpunan yang anggotanya bilangan riil?
+
+$$
+\begin{aligned}
+X&=\{x_i \ | \ -3 \leq x_i \leq 4, x \in \mathbb{R}\} \\
+Y&=\{y_i \ | \  y_i=3+2x_i\}
+\end{aligned}
+$$
+
+- Tentu saja kita akan punya banyak sekali titik karena ada diantara dua bilangan integer ada bilangan riil sejumlah tak hingga
+
+- ada berapa bilangan riil antara 0 dan 1?
+
+## Visualisasi riil
+
+:::: columns
+::: {.column width=47%}
+
+```{r}
+#| fig-width: 5
+#| fig-height: 5
+
+data3 <- data_frame(x = seq(-3,4,0.1),
+                    y=3+2*x)
+                          
+grafik3 <- graph +
+  geom_point(data=data3,
+             aes(x=x,y=y),color='black',size=3)+
+  labs(x='X',y='Y')+
+  coord_axes_inside(labels_inside = TRUE)+
+  scale_x_continuous(breaks=seq(-4,5,1))+scale_y_continuous(breaks=seq(-4,12,1))
+
+grafik3
+```
+
+
+:::
+::: {.column width=47%}
+
+- Visualisasi jika X kita batasi bilangan riil dengan desimal 1 angka di belakang koma.
+
+- Semakin banyak desimal yang kita ikutkan, maka akan semakin banyak titiknya.
+
+- Kumpulan titik-titik yang banyaknya tak hingga akan menjadi **garis**
+
+:::
+::::
+
+## Fungsi linear
+
+:::: columns
+::: {.column width=47%}
+
+```{r}
+#| fig-width: 5
+#| fig-height: 5
+
+data4 <- data_frame(x = seq(-2,4,0.1),
+                    y=3+2*x)
+                          
+grafik4 <- graph +
+  stat_function(fun=function(x) 3+2*x,size=1.1)+
+  labs(x='X',y='Y')+
+  coord_axes_inside(labels_inside = TRUE)+
+  scale_x_continuous(breaks=seq(-4,4,1),limits=c(-4,4))+scale_y_continuous(breaks=seq(-4,12,1))
+
+grafik4
+```
+
+
+:::
+::: {.column width=47%}
+
+- Fungsi $y=3+2x$ merupakan fungsi linear karena visualnya membentuk garis lurus.
+
+- Kita akan fokus ke fungsi linear.
+
+- Gambarnya gambang: cari 2 ditik, lalu hubungkan dgn garis.
+
+:::
+::::
+
+## Gambar fungsi lain
+
+```{r}
+#| layout-ncol: 3
+#| layout-nrow: 2
+#| fig-cap: 
+#|   - "fungsi kuadratik"
+#|   - "fungsi kubik"
+#|   - "fungsi eksponensial"
+#|   - "fungsi logaritmik"
+#|   - "fungsi resiprokal"
+#|   - "fungsi sinus"
+
+
+fun1<-function(x) x^2
+fun2<-function(x) x^3
+fun3<-function(x) exp(x)
+fun4<-function(x) log(x)
+fun5<-function(x) sin(x)
+fun6<-function(x) x^-1
+
+                          
+graf1 <- graph +
+  stat_function(fun=fun1,size=1.1)+
+  labs(x='X',y='Y')+
+  coord_axes_inside(labels_inside = TRUE)+
+  scale_x_continuous(limits=c(-4,4))
+graf2 <- graph +
+  stat_function(fun=fun2,size=1.1)+
+  labs(x='X',y='Y')+
+  coord_axes_inside(labels_inside = TRUE)+
+  scale_x_continuous(limits=c(-4,4))
+graf3 <- graph +
+  stat_function(fun=fun3,size=1.1)+
+  labs(x='X',y='Y')+
+  coord_axes_inside(labels_inside = TRUE)+
+  scale_x_continuous(limits=c(-4,4))
+graf4 <- graph +
+  stat_function(fun=fun4,size=1.1)+
+  labs(x='X',y='Y')+
+  coord_axes_inside(labels_inside = TRUE)+
+  scale_x_continuous(limits=c(-4,4))
+graf5 <- graph +
+  stat_function(fun=fun5,size=1.1)+
+  labs(x='X',y='Y')+
+  coord_axes_inside(labels_inside = TRUE)+
+  scale_x_continuous(limits=c(-4,4))
+graf6 <- graph +
+  stat_function(fun=fun6,size=1.1)+
+  labs(x='X',y='Y')+
+  coord_axes_inside(labels_inside = TRUE)+
+  scale_x_continuous(limits=c(-4,4))
+graf1
+graf2
+graf3
+graf4
+graf6
+graf5
+```
+
+## fungsi linear
+
+Pada fungsi linear $y=a_0+a_1x$
+
+- konstanta $a_0$ adalah $y$ ketika $x=0$
+
+- koefisien $a_1$ menunjukkan kemiringan garis:
+
+    - semakin tinggi $a_1$, semakin miring garisnya.
+    
+- Hal ini menjadi penting jika kita transformasi fungsinya.
+
+## fungsi linear {.m}
+
+:::: columns
+::: {.column width=47%}
+
+```{r}
+#| fig-width: 5
+#| fig-height: 5
+
+x <- seq(-4,4,0.1)
+
+grafik5 <- graph +
+  geom_abline(intercept = -2, slope = 1,color="red")+
+  geom_abline(intercept = 0, slope = 1,color="blue")+
+  geom_abline(intercept = 2, slope = 1,color="black")+
+  annotate("text", x = 2, y = 0.5, label = "ao=-2")+
+  annotate("text", x = 2, y = 2, label = "ao=0")+
+  annotate("text", x = 2, y = 4, label = "ao=2")+
+  labs(x='X',y='Y')+
+  coord_axes_inside(labels_inside = TRUE)+
+  scale_x_continuous(breaks=seq(-4,4,1),limits=c(-4,4))+scale_y_continuous(limits=c(-4,4),breaks=seq(-4,4,1))
+
+grafik5
+```
+
+perubahan konstanta: grafik naik turun, kemiringan tetap.
+
+:::
+::: {.column width=47%}
+
+```{r}
+#| fig-width: 5
+#| fig-height: 5
+
+x <- seq(-4,4,0.1)
+
+grafik6 <- graph +
+  geom_abline(intercept = 1, slope = -1,color="red")+
+  geom_abline(intercept = 1, slope = 0,color="blue")+
+  geom_abline(intercept = 1, slope = 1,color="black")+
+  geom_abline(intercept = 1, slope = 0.5,color="darkorange")+
+  geom_abline(intercept = 1, slope = -2,color="darkmagenta")+
+  annotate("text", x = 3, y = 2, label = "a1=0,5")+
+  annotate("text", x = 2, y = 1.2, label = "a1=0")+
+  annotate("text", x = 2, y = -2, label = "a1=-2")+
+  annotate("text", x = 3, y = -1, label = "a1=-1")+
+  annotate("text", x = 2, y = 3.5, label = "a1=1")+
+  labs(x='X',y='Y')+
+  coord_axes_inside(labels_inside = TRUE)+
+  scale_x_continuous(breaks=seq(-4,4,1),limits=c(-4,4))+scale_y_continuous(limits=c(-4,4),breaks=seq(-4,4,1))
+
+grafik6
+```
+
+Perubahan koefisien: grafik muter dgn konstanta sebagai porosnya
+
+:::
+::::
+
+## fungsi linear
+
+- Fungsi linear jika ditambah hanya akan mengubah konstanta.
+
+- Jika dikali maka konstanta dan koefisien akan berubah.
+
+- Jika ada fungsi $y=2+3x$:
+
+- jika $z=y+2$, maka $z=4+3x$, grafik naik 2 unit.
+
+- jika $z=y \times 2$, maka $z=4+12x$, grafik naik dan mencuram.
+
+## Contoh soal {.m}
+
+1. Raka bermaksud jualan somay. Untuk itu dia perlu menyewa gerobak somay selama sebulan dan membeli bahan baku somay. Biaya sewa gerobak somay sebulan adalah 1 juta rupiah. Untuk membuat 1 porsi somay, perlu bahan baku senilai 7 ribu rupiah.
+
+a. Jika $C$ adalah biaya produksi, buat fungsi biaya (_cost function_) Raka.
+b. Jika Raka bermaksud bikin 400 somay sebulan, berapa total costnya?
+c. Ternyata harga sewa gerobak naik jadi 2 juta rupiah. jika somay tetap 400, berapa total costnya sekarang?
+d. gambar kurva biaya Raka.
+
+## Contoh soal
+
+2. Raka bermaksud menjual somay buatannya dengan harga 10 ribu rupiah per porsi.
+
+a. $R$ adalah _total revenue_ Raka. Buat fungsi penjualan (_revenue function_) Raka.
+b. Jika Raka akhirnya membuat 400 somay, berapa total revenue Raka? Profit ($\pi$) berapa?
+c. Raka nemu 100 ribu. Jika Raka memutuskan ngambil, bagaimana fungsi penjualan Raka jadinya?
+d. Harus jual berapa somay agar usaha Raka impas (_breakeven_)?  kalo jual 12 ribu?
+
+## Jawaban
+
+:::: columns
+::: {.column width=47%}
+
+```{r}
+#| fig-width: 5
+#| fig-height: 5
+
+x <- seq(-4,4,0.1)
+
+grafik6 <- graph +
+  geom_abline(intercept = 1000, slope = 7 ,color="red",size=1.1)+
+  geom_abline(intercept = 0, slope = 10,color="blue",size=1.1)+
+  geom_abline(intercept = 2000, slope = 7,color="darkorange",size=1.1)+
+  geom_abline(intercept = 500, slope = 10,color="darkcyan",size=1.1)+
+  annotate("text", x = 2000, y = 30000, label = "a1=0,5")+
+  annotate("text", x = 2000, y = 30000, label = "a1=0")+
+  annotate("text", x = 2000, y = 30000, label = "a1=-2")+
+  annotate("text", x = 3000, y = 30000, label = "a1=-1")+
+  labs(x='Q',y='Rp 1.000')+
+  scale_x_continuous(expand=c(0,0),limits=c(0,600))+
+  scale_y_continuous(expand=c(0,0),limits=c(0,5000))
+
+grafik6
+```
+
+:::
+::: {.column width=47%}
+
+1a. $C=1000+7Q$
+
+2a. $R=10Q$
+
+2b. $\pi=R-C$
+
+2d. $R=C$
+
+$$
+\begin{aligned}
+10Q&=1000+7Q \\
+3Q&=1000 \\
+Q&=\frac{1000}{3}
+\end{aligned}
+$$
+
+profit if Jual >334 somay.
+
+
+
+:::
+::::
+
+## Last note
+
+- Anda sudah belajar fungsi linear, sebuah fungsi paling sederhana.
+
+- Di dunia nyata, _cost_ dan _profit_ umumnya lebih ribet daripada fungsi linear seperti ini. Jadi hati-hati bukan berarti anda jadi ahli ngitung profit.
+
+- Tapi fungsi ribet-ribet lainnya prinsipnya mirip, cuma gak linear aja.
+
+- Ketika gambar di ujian, label di diagram X dan Y cukup yang penting-penting aja, ga harus semua ditulis labelnya.
+
+# Pertemuan 4
+
+
+## Deret
+
+- Deret adalah himpunan yang anggotanya berupa rangkaian bilangan yang tersusun secara teratur dan memenuhi kaidah-kaidah tertentu.
+
+- Berdasarkan pola perubahannya, deret bisa dibagi jadi 3, yaitu **deret hitung**, **deret ukur** dan **deret harmonik**
+
+- harmonik jarang digunakan di ekonomi dan bisnis jadi tidak kita bahas.
+
+## Deret hitung
+
+- Deret hitung ialah deret yang perubahan suku-sukunya berdasarkan penjumlahan terhadap sebuah suku sebelumnya.
+
+- Bilangan yang membedakan suku-suku dari deret disebut dengan pembeda.
+
+contoh: $7,12,17,22,32$ pembeda $=5$
+
+contoh: $93, 83, 73,63,53,43$ pembeda $=-10$
+
+## Deret hitung
+
+- Deret hitung disebut juga dengan deret aritmatika (arithmetic progression)
+
+- Bentuk umum deret:
+
+$$
+a_i=a_1+(i-1)d
+$$
+
+- $a$ adalah anggota / suku, $i$ adalah index atau suku ke-$i$, dan $d$ adalah pembeda.
+
+## Deret hitung
+
+Misalnya kita punya deret seperti ini 
+
+7, 12, 17, 22, 27, 32
+
+Dapat kita ketahui bahwa $a_1=7$ dan $d=5$.
+
+::: {.incremental}
+
+- jika ditanya suku ke 21, maka:
+
+- $a_21=a_1+(i-1)d=107$
+
+:::
+
+## Contoh
+
+::: {.incremental}
+
+- Anda berhasil menyisihkan uang jajan anda setiap bulan 500 ribu rupiah untuk menabung.Jika tabungan awal anda adalah 1 juta rupiah, berapa tabungan anda setelah 1 tahun?
+
+- diketahui $a_1=1000$ ribu rupiah, $d=500$ ribu rupiah, $n=12$
+
+- $a_12=a_1+(n-1)d=1000+12\times 500=1600$ ribu rupiah.
+
+:::
+
+## Note
+
+- Soal seperti di atas (berapa tabungan 12 bulan kemudian) lebih sering ditanyakan.
+
+- Di soal seperti itu, tabungan awal (si 1 juta rupiah) biasanya tidak dihitung sebagai anggota ke-1.
+
+- "12 bulan kemudian" mengacu ke deret ke-2 sampai ke-13. Karena itu $n=13$.
+
+- Ada juga yg anggap 1 juta bukan termasuk deret, disebut $a_0$, dan n tetap 12.
+
+$$
+a_i=a_0+id
+$$
+
+## Deret ukur
+
+- ialah deret yang perubahan suku-sukunya berdasarkan perkalian. bilangan yang membedakan suku-suku dari sebuah deret ukur adalah **pengali**.
+
+- Disebut juga dengan deret geometrik (geometric progression) atau growth/pertumbuhan.
+
+- $5,10,20,40,80$ (pengganda =2)
+
+- $512, 256, 128,64,32$ (pengganda=$\frac{1}{2}$)
+
+## Deret ukur
+
+- Bentuk umum deret ukur:
+
+$$
+a_i=a_1\times p^{n-1}, \text{atau } a_i=a_0\times p^n
+$$
+
+- Misalnya, sebuah deret dengan suku $5,10,20,40,...$, berapakah $a_6$?
+
+::: {.incremental}
+
+- $a_6=5 \times 2^5=5 \times 32=160$
+
+## Pertumbuhan
+
+- Pengali dalam persen $(r)$ disebut juga **pertumbuhan** (_growth rate_)
+
+- Misalnya, pertumbuhan PDB, pertumbuhan aset, dan lain-lain.
+
+- Jika anda melihat persoalan deret ukur yang diekspresikan dalam persen, rumusnya:
+
+$$
+a_i=a_1\times (1+r)^{n-1}, \text{atau } a_i=a_0 \times (1+r)^{n}
+$$
+
+- Pertumbuhan 100% = pertumbuhan 2x lipat.
+
+## Contoh
+
+- Negara Wakwaw mengalami pertumbuhan ekonomi sebesar 7% setiap tahunnya. Jika saat ini PDB negara Wakwaw adalah 1000 triliun rupiah, berapa PDB negara Wakwaw 5 tahun lagi?
+
+## Jawaban
+
+$$a_6=1000 \times (1+0.07)^5=1402,55$$
+
+| a | PDB |
+| --- | -------- |
+| 0 | 1000 |
+| 1 | 1070 |
+| 2 | 1.144,9 |
+| 3 | 1.225,043 |
+| 4 | 1.310,8 |
+| 5 | 1.402,55 |
+
+## Angka Index
+
+- Inflasi pada prinsipnya adalah pertumbuhan harga: Inflasi 5% berarti harga tahun ini lebih tinggi 5% dibanding tahun lalu.
+
+- Gimana ngitungnya? Kan harga barang tuh ada banyak: makanan pokok, snek, listrik, kos-kosan, mobil, sekolah, kesehatan, rokok, dst.
+
+- IHSG juga sama: Kan perusahaan di bursa efek ada banyak. Mau tau harga saham yg mana?
+
+## Angka Indeks {.m}
+
+- Angka Indeks adalah sebuah angka representatif dari sekumpulan data yang kita dapatkan dengan menggunakan metode rerata tertimbang.
+
+    - rerata tertimbang pada prinsipnya mirip expected value.
+    
+    - IHSG tertimbang market cap, CPI tertimbang konsumsi, dst.
+
+- Angka indeks biasanya kita gunakan untuk melihat perubahan harga konsumen, perubahan harga saham, dan lain sebagainya.
+
+- Angka Indeks untuk menghitung perubahan umumnya memiliki _base year_ atau **tahun dasar**, dan _current year_ atau tahun kini/**tahun berjalan**.
+
+## Angka Indeks
+
+- Untuk angka indeks yang memiliki _base year_ biasanya dihitung dengan menggunakan 3 metode berbeda:
+
+    - Indeks Laspeyres
+    
+    - Indeks Paasche
+    
+    - Indeks Fisher
+    
+- Kita ambil contoh [Consumer Price Index](https://www.bps.go.id/id/statistics-table/2/MTcwOSMy/indeks-harga-konsumen-90-kota--umum-.html) (CPI):
+
+    - merupakan indeks harga yang menimbang keranjang konsumsi masyarakat.
+    
+## Indeks harga tertimbang
+
+| Item | Q | P | QxP | Share |
+| ------ | --- | --- | ------ | --- |
+| Baju | 10 | 100 | 1000 | 0,061 |
+| Nasi | 200 | 10 | 2000 | 0,121 |
+| Ayam | 50 | 30 | 1500 | 0,091 |
+| Kosan | 12 | 1000 | 12000 | 0,727 |
+
+- Harga rata-rata = $\frac{100+10+30+1000}{4}$=285
+
+- Harga rata2 tertimbang=$\sum Share \times P$=739,93
+
+## CPI
+
+- CPI Memperhitungkan **perubahan** harga.
+
+- CPI memberi angka pertumbuhan harga tahun $t$ dibandingkan tahun dasar (tahun 0)
+
+- Misalnya CPI dengan keterangan [(2018=100)](https://www.bps.go.id/id/statistics-table/2/MTcwOSMy/indeks-harga-konsumen-90-kota--umum-.html) itu berarti tahun 2018 adalah tahun dasar.
+
+- Indeks perubahan seperti CPI biasanya terdiri dari 3 digit.
+
+## Indeks Laspeyres
+
+| Item | $Q_0$ | $P_0$ | $Q_1$ | $P_1$ | $Q_2$ | $P_2$ |
+| ------ | --- | --- | --- | --- | --- | --- |
+| Baju | 10 | 100 | 15 | 110 | 15 | 120 |
+| Nasi | 200 | 10 | 220 | 12 | 200 | 12 |
+| Ayam | 50 | 30 | 50 | 25 | 45 | 30 |
+| Kosan | 12 | 1000 | 12 | 1100 | 12 | 1200 |
+
+$$
+IL_t=\frac{\sum P_t Q_0}{\sum P_0 Q_0} \times 100 \ \ \ ; \ \ IP_t=\frac{\sum P_t Q_t}{\sum P_0 Q_t} \times 100
+$$
+
+## Indeks Laspeyres
+
+| Item | $Q_0$ | $P_0$ | $Q_1$ | $P_1$ | $Q_2$ | $P_2$ |
+| ------ | --- | --- | --- | --- | --- | --- |
+| Baju | 10 | 100 | 15 | 110 | 15 | 120 |
+| Nasi | 200 | 10 | 220 | 12 | 200 | 12 |
+| Ayam | 50 | 30 | 50 | 25 | 45 | 30 |
+| Kosan | 12 | 1000 | 12 | 1100 | 12 | 1200 |
+
+$$
+IL_1=\frac{17950}{16500}=108,79
+$$
+
+## Indeks Laspeyres
+
+| Item | $Q_0$ | $P_0$ | $Q_1$ | $P_1$ | $Q_2$ | $P_2$ |
+| ------ | --- | --- | --- | --- | --- | --- |
+| Baju | 10 | 100 | 15 | 110 | 15 | 120 |
+| Nasi | 200 | 10 | 220 | 12 | 200 | 12 |
+| Ayam | 50 | 30 | 50 | 25 | 45 | 30 |
+| Kosan | 12 | 1000 | 12 | 1100 | 12 | 1200 |
+
+$$
+IP_1=\frac{18740}{16500}=108,95
+$$
+
+## IL vs IP
+
+- Kelebihan IL: lebih murah/praktis karena kuantitasnya tetap sehingga tidak perlu survey keranjang belanja.
+
+- Kekurangan IL: karena keranjang belanja pasti berubah (substitusi, barang baru) sehingga bias atas, harga naik mungkin karena peningkatan kualitas.
+
+- Kelebihan IP: Lebih akurat dalam mempertimbangkan keranjang belanja, tidak bias atas.
+
+- Kekurangan IP: bias bawah karena pakai keranjang baru, lebih mahal karena survey keranjang dilakukan tiap saat.
+
+## Indeks Fisher
+
+- Indeks Fisher mengurangi masalah bias atas dan bawah dari IL dan IP.
+
+$$
+IF_t=\sqrt{IL_t \times IP_t}
+$$
+
+$$
+IF_1=\sqrt{108,79\times 108,95}=108,87
+$$
+
+## Tabel Lengkap
+
+| Indeks | 0 | 1 | 2 |
+| ------ | --- | --- | --- |
+| Laspeyres | 100	| 108,79 |	118,18 |
+| Paasche | 100 |	108,95 |	118,40 |
+| Fisher | 100 | 108,87 |	118,29 |
+
+- Rumus inflasi: $\frac{CPI_t-CPI_{t-1}}{CPI_{t-1}} \times 100\%$
+
+- $INF_1=\frac{108,87-100}{100}\times 100\%=8,87\%$
+
+## Mengubah tahun dasar
+
+- Ketika statistisi mengubah tahun dasar, maka perhitungan harus diulangi.
+
+- Namun bagi pengguna, kita dapat menggunakan rumus:
+
+$$
+\text{indeks}=\frac{\text{indeks tahun kiri baru}}{\text{indeks tahun dasar baru}}\times 100
+$$
+
+- misalkan gunakan tabel sebelumnya dgn tahun dasar adalah 2018, lalu tahun berikutnya 2019 dan 2020.
+
+## Mengubah tahun dasar
+
+| Indeks | 2018 | 2019 | 2020 |
+| ------ | --- | --- | --- |
+| Fisher | 100 | 108,87 |	118,29 |
+
+Di mana 2018=100. Jika kita mau ubah ke 2019=100, maka semua angka dibagi 108,87
+
+| Indeks | 2018 | 2019 | 2020 |
+| ------ | --- | --- | --- |
+| Fisher | 91.85 |	100	| 108.65 |
+
+Skrg kita bandingkan semua dengan 2019,
+
+## Latihan di rumah
+
+- Jenis soal angka indeks tidak akan terlalu bervariasi.
+
+- Coba hitung semua indeks di soal ini (IL, IP, IF) jika kita pakai 2019=100 dan 2020=100!
+
+# Pertemuan 5
+
+## Diferensial
+
+- Diferensial / _differential_ adalah pemahaman berikutnya dari sebuah fungsi.
+
+- Diferensial adalah sebuah metode perkiraan linear yang mencoba memperkirakan seberapa besar perubahan sebuah fungsi jika sebuah variabel eksogen berubah.
+
+- Diferensial biasanya digunakan untuk menentukan titik maksimum atau titik minimum, tapi juga digunakan untuk mencari elastisitas (dibahas lebih lanjut di ilmu ekonomi).
+
+## Perubahan
+
+- Jika anda punya fungsi $y=f(x)$ dan $\Delta y$ adalah perubahan kecil variabel y, sementara $\Delta x$ adalah perubahan kecil variabel x.
+
+- Anda mau tau seberapa besar $y$ berubah jika $x$ berubah. Dengan kata lain, seberapa besar $\Delta y$ given $\Delta x$.
+
+$$
+\frac{\Delta y}{\Delta x}=\frac{f(x+\Delta x)-f(x)}{\Delta x}
+$$
+
+## Contoh
+
+Ada fungsi $y=3x^2-x$. Tentukan perubahan dari y jika x naik dari 2 jadi 3.
+
+::: {.incremental}
+
+- jika $x=2$, $y=3(2)^2-(2)=10$
+
+- Jika $x=3$, $y=3(3)^2-(3)=24$
+
+- Artinya, $\Delta y=24-10=14$
+
+:::
+
+## Turunan
+
+- pertanyaan di atas bisa kita aproksimasi dengan menggunakan turunan / diferensial.
+
+- Turunan adalah cara cepat melakukan aproksimasi jika perubahan pada $x$ itu sangat kecil. Saking kecilnya sampe mendekati 0.
+
+- Jika anda berhadapan dengan fungsi yang rumit, maka diferensial akan sangat menguntungkan.
+
+- Kita akan kembali ke soal di atas, tapi kita pelajari dulu kaidah-kaidah diferensial.
+
+## Kaidah turunan
+
+**Diferensiasi konstanta**: Jika sebuah fungsi adalah sebuah konstanta, maka diferensialnya 0.
+
+$$
+\text{if }y=3, \ \text{then } \frac{dy}{dx}=0
+$$
+
+**Diferensiasi umum**: Jika $y=ax^n$, maka $\frac{dy}{dx}=nax^{n-1}$. Note bahwa a boleh =1.
+
+$$
+\text{if }y=4x^3, \ \text{then } \frac{dy}{dx}=3\cdot 4x^{3-1}=\frac{dy}{dx}=12x^2
+$$
+
+## Kaidah turunan
+
+**diferensiasi eksponen**: jika $y=ae^n$, maka $\frac{dy}{dx}=yae^n$
+
+$$
+\text{if } y=4e^x, \text{then } \ \frac{dy}{dx}=4e^x
+$$
+
+**diferensiasi logaritmik natural**: jika $y=a \ln x$, maka $\frac{dy}{dx}=\frac{a}{x}$
+
+$$
+\text{if }y= \ln x, \text{ then } \frac{dy}{dx}=\frac{1}{x}
+$$
+
+## Kaidah lain
+
+- ada banyak kaidah turunan, tapi cukup 4 itu aja yang kita perlukan di level ini.
+
+- Mari kita kembali ke contoh sebelumnya dan selesaikan dengan diferensial.
+
+## Contoh
+
+Ada fungsi $y=3x^2-x$. Tentukan perubahan dari y jika x naik dari 2 jadi 3.
+
+::: {.incremental}
+
+- $\frac{dy}{dx}=6x-1$
+
+- $dy=(6x-1)(dx)$
+
+- $dy=(6(2)-1)(1)=11$
+
+:::
+
+## Diferensial
+
+- Kalo pake cara delta, dapet 14. pake turunan, dapet 11. Kok beda?
+
+- Ini karena turunan adalah aproksimasi linear: jika fungsi aslinya nggak linear, maka aproksimasinya akan kurang akurat.
+
+- semakin besar $\Delta X$, semakin kurang akurasinya.
+
+- Tapi perkiraannya lebih baik daripada ga punya informasi apa-apa.
+
+## Fungsi linear
+
+Ada fungsi $y=3x-2$. Tentukan perubahan dari y jika x naik dari 2 jadi 3.
+
+::: {.incremental}
+
+- $\frac{dy}{dx}=3$
+
+- Karena fungsinya linear, jadinya: jika x naik 1, maka y akan naik 3.
+
+- Coba hitung ulang jika x naik dari 2 jadi 5
+
+:::
+
+## Somay
+
+- Inget contoh Raka, di mana dia punya fungsi biaya dan fungsi pendapatan:
+
+$$
+\begin{aligned}
+C&=1000+7Q \\
+
+R&=10Q
+
+\end{aligned}
+$$
+
+- Apa yang terjadi kalo kita aplikasikan turunan?
+
+## Somay
+
+$$
+\frac{dC}{dQ}=7 \\
+\frac{dR}{dQ}=10
+$$
+
+- artinya, jika somay bertambah 1, maka:
+
+    - cost bertambah 7
+    
+    - revenue bertambah 10
+    
+- Ini disebut juga dengan dampak marjinal / _marginal effect_
+
+## Marginal effect
+
+- Di persamaan linear, **koefisien** menjadi hasil dari turunannya.
+
+- Inilah kenapa **koefisien** dalam fungsi linear disebut juga dengan dampak marjinal.
+
+    - dan inilah juga kenapa **koefisien** biasanya lebih penting buat kita daripada konstanta.
+    
+- Koefisien fungsi linear bisa dianggap sebagai nilai perubahan $y$ jika $x$ berubah sebesar 1 unit.
+
+## Marginal effect
+
+- Dalam ekonomi, marginal effect ini sering sekali muncul, misalnya:
+
+    - _marginal cost_ (MC) dan _marginal revenue_ (MR).
+    
+    - elastisitas: seberapa besar permintaan/penawaran berubah jika harga berubah
+    
+- Semua ini akan kita bahas lebih lanjut di ilmu ekonomi.
+
+## Fungsi kuadratik
+
+- Jika anda menemukan permasalahan yang mengikuti fungsi kuadratik, turunan dapat memberikan anda titik maksimum dan titik minimum.
+
+-Sebuah fungsi kuadratik akan memiliki titik maksimum jika **turunan pertama=0** dan **turunan ke-2 bernilai negatif**
+
+-Sebuah fungsi kuadratik akan memiliki titik minimum jika **turunan pertama=0** dan **turunan ke-2 bernilai positif**
+
+## Contoh
+
+Seandainya fungsi pendapatan dan fungsi biaya somay Raka adalah seperti berikut:
+
+$$
+\begin{aligned}
+R&=100Q \\
+C&=2Q^2-200Q+10000
+\end{aligned}
+$$
+
+Carilah $Q$ di mana: (a) biayanya optimal, (b) apakah Q di (a) itu maksimal atau minimal?, (c) profitnya minimal/maksimal
+
+## Contoh
+
+a. $Q$ di mana $C$ ada di titik optimal:
+
+$$
+\begin{aligned}
+C&=2Q^2-200Q+10000 \\
+C'&=4Q-200 \ \text{, buat C'=0 untuk dapat titik optimal} \\
+4Q-200&=0\\
+Q&=50
+
+\end{aligned}
+$$
+
+## Contoh
+
+b. Apakah $Q=50$ titik maksimum atau minimum?
+
+$$
+\begin{aligned}
+C&=\frac{1}{2}Q^2-200Q+10000 \\
+C'&=Q-200 \\
+C''&=1 >0
+
+\end{aligned}
+$$
+
+Karena turunan ke-2 positif, maka 50 adalah jumlah somay yang meminimalisir biaya.
+
+## Contoh
+
+c. mencari $Q$ yang memaksimalkan profit:
+
+$$
+\begin{aligned}
+\pi&=R-C \\
+\pi&=100Q-2Q^2+200Q-10000 \\
+\pi&=-2Q^2+300Q-10000 \\
+\pi'&=-4Q+300,\text{buat =0 untuk optimum} \\
+Q&=75
+\end{aligned}
+$$
+
+## Contoh
+
+Apakah Q=75 itu titik maksimum atau minimum?
+
+$$
+\begin{aligned}
+\pi&=-2Q^2+300Q-10000 \\
+\pi'&=-4Q+300 \\
+\pi''&=-4<0
+\end{aligned}
+$$
+
+Karena turunan ke-2 nya negatif, berarti Q=300 adalah titik maksimal.
+
+## Cost dan profit
+
+Cost akan minimal jika $Q=50$. Berapa costnya?
+
+$$
+\begin{aligned}
+C&=2(50)^2-200(50)+10000 \\
+C&=5000
+\end{aligned}
+$$
+
+Profit akan maksimal jika $Q=75$. berapa profitnya?
+
+$$
+\begin{aligned}
+\pi&=-2(75)^2+300(75)-10000 \\
+\pi&=1250
+\end{aligned}
+$$
+
+## Kurva cost dan revenue
+
+```{r}
+
+library(tidyverse)
+library(ggh4x)
+cost<-function(x) 2*x^2-200*x+10000
+profit<-function(x) -2*x^2+300*x-10000
+reve<-function(x) 100*x
+
+x <- seq(0,100,.1)
+
+graph<-ggplot()+theme_classic() +
+  theme(panel.background = element_rect(fill = "#f0f1eb",
+                                        colour = "#f0f1eb"),
+        plot.background = element_rect(fill = "#f0f1eb"),
+        legend.key = element_rect(fill = "#f0f1eb",linetype = "blank"),
+        legend.background = element_rect(fill="#f0f1eb"))
+
+
+grafik6 <- graph +
+  stat_function(fun=cost,size=1.1,color='red')+
+  stat_function(fun=reve,size=1.1,color='blue')+
+  labs(x='Q',y='1000 Rp')+
+  scale_x_continuous(expand=c(0,0),limits=c(0,100))+
+  scale_y_continuous(expand=c(0,0))
+
+grafik5 <- graph +
+  stat_function(fun=profit,size=1.1)+
+  labs(x='Q',y='1000 Rp')+
+  coord_axes_inside(labels_inside = TRUE)+
+  scale_x_continuous(expand=c(0,0),limits=c(0,100))+
+  scale_y_continuous(expand=c(0,0),limits=c(-10000,1500))
+
+grafik6
+
+```
+
+## Kurva profit
+
+```{r}
+grafik5
+```
+
+# Pertemuan 6
+
+## Minggu lalu
+
+- Distribusi frekuensi dan statistik deskriptif.
+
+#### Next
+
+- peluang independen dan gabungan, bayesian.
+- uji normalitas dan probabilitas sampel
+
+## Hari ini
+
+::: {.incremental}
+
+- Definisi dan pendekatan klasik
+- Aplikasi probabilitas dalam asuransi
+- Aturan dasar dalam probabilitas
+- Kejadian independen
+
+- Setelah kuliah hari ini, diharapkan anda dapat menerangkan prinsip-prinsip dasar probabilitas.
+:::
+
+## Apa itu peluang? {.s}
+
+- kejadian berpeluang adalah suatu kejadian atau aksi yang memiliki lebih dari satu kemungkinan hasil (_outcome_) yang didapatkan secara acak (_random_).
+
+. . .
+
+![](ea.svg)
+
+. . .
+
+jalur kiri (not confess) adalah kepastian, sementara jalur kanan (confess) adalah kejadian atau aksi berpeluang.
+
+## Contoh lain
+
+- Cuaca besok bisa saja hujan, bisa mendung, dan bisa cerah.
+
+- Kondisi jalan di Jakarta besok pagi bisa macet atau macet banget.
+
+- Nilai ujian anda bisa saja A, B, C, D atau E.
+
+- Melempar dadu bisa muncul angka 1, 2, 3, 4, 5, atau 6.
+
+. . .
+
+Seperti yang anda mungkin paham, hampir semua kejadian di dunia ini adalah kejadian berpeluang.
+
+## Notasi {.m}
+
+::: {.incremental}
+- $S$ (*State*) melambangkan himpunan kemungkinan kejadian.
+
+    - Lempar koin punya $S=\{A,G\}$
+    
+    - Lempar dadu punya $S=\{1,2,3,4,5,6\}$
+    
+- $P(X)$ melambangkan peluang munculnya kejadian $X$.
+
+    - $P(X=A)$ atau $P(A)$ artinya peluang munculnya A.
+    
+    - $P(X>3)=\frac{1}{2}$ peluang munculnya angka lebih dari 3 adalah $\frac{1}{2}$.
+    
+    - $P(1\leq X \leq 5)=$ berapa?
+    
+- $P(\bar{A})$ atau $P(X=\bar{A})$ artinya peluang munculnya kejadian selain A.
+    
+    - Di koin, $P(\bar{A})=P(G)$
+:::
+
+## Beberapa istilah
+
+- Sebuah himpunan kejadian dikatakan **adil** (*fair*) jika semua anggota $S$ punya kemungkinan yang sama untuk muncul.
+
+    - Dadu yang adil: $P(1)=P(2)=P(3)=P(4)=P(5)=P(6)=\frac{1}{6}$
+
+- Sebuah kejadian dikatakan **independen** jika kejadian tersebut tidak tergantung dari kejadian sebelumnya, dan tidak mempengaruhi kejadian sesudahnya.
+
+    - Jika lemparan pertama keluar 3, lemparan ke-2 tetap punya $P(3)=\frac{1}{6}$, begitupun lemparan ke-3.
+
+## Menghitung peluang
+
+- Pendekatan klasik adalah dengan melakukan eksperimen sebanyak $n$, lalu melihat jumlah dari masing-masing hasilnya.
+
+- Jika ada sebuah koin 2 sisi dengan $S=\{A,G\}$, maka:
+
+$$
+P(A)=\frac{n(A)}{n(S)}
+$$
+
+## Menghitung peluang
+
+- Sebuah koin yang adil dengan dua sisi $S=\{A,G\}$ dan independen.
+
+- Lempar koin sebanyak $n=10$, lalu muncul $A=4$ dan $G=6$, saya katakan:
+
+$$
+P(A)=\frac{4}{10}
+$$
+
+- berapa $P(G)$?
+
+## Rules dasar
+
+- $0 \leq P(X) \leq 1$, 0 = gak mungkin, 1 = pasti.
+
+- nilai peluang bermakna limit tak hingga. $P(X=A)=0,5$ artinya jika $X$ dilakukan berulang kali, frekuensi relatif dari $X=A$ adalah 0,5.
+
+- $P(A \ \text{atau} \ B) = P(A \cup B)=P(A)+P(B)$
+
+Berapa peluang munculnya 1 atau 2 pada lemparan sebuah dadu yang adil?
+
+::: {.incremental}
+- $P(X=1 \cup X=2)=P(X=1)+P(X=2)=\frac{1}{6}+\frac{1}{6}$
+:::
+
+## Rules dasar
+
+::: {.incremental}
+- $P(S_1 \cup S_2 \cup .... S_S)=\sum_{i=1}^S S_i=1$
+
+    - koin: $P(A)+P(G)=1$
+    
+    - dadu: $P(1)+P(2)+P(3)+P(4)+P(5)+P(6)=1$
+    
+- $P(\bar{A})=1-P(A)$
+
+    - $P(\bar{X}<3)=P(3)+P(4)+P(5)+P(6)$
+    
+    - $P(\bar{X}<3)=1-\left(P(1)+P(2) \right)$
+:::
+
+## Pendekatan klasik
+
+::: {.incremental}
+
+- Tahun lalu, dari 40 mahasiswa yang mengambil mata kuliah Statistika, 5 orang dapat nilai A, 10 orang dapat nilai B, 20 orang dapat nilai C, 4 orang dapat nilai D dan 1 orang dapat nilai E. Berapa persen peluang mahasiswa untuk tidak lulus di kelas Statistika?
+
+- $P(\text{tidak lulus})=P(D)+P(E)=1-P(A \cup B \cup C)$
+
+- $P(\text{tidak lulus})=\frac{4+1}{40}=\frac{5}{40}=\frac{1}{8}$
+:::
+
+## Review {.incremental}
+
+- Kejadian berpeluang adalah suatu kejadian atau aksi yang memiliki lebih dari satu kemungkinan hasil (_outcome_) yang didapatkan secara acak (_random_).
+
+- Hampir semua kejadian di dunia ini adalah kejadian berpeluang.
+
+- Pendekatan klasik adalah cara paling sederhana menghitung peluang: jumlah munculnya _outcome_ $X$ dibagi jumlah experiment $n$.
+
+## Expected Value
+
+- Nilai ekspektasi adalah sebuah nilai yang disematkan pada probabilitas.
+
+- Merupakan rata-rata nilai yang diantisipasi atas berbagai kemungkinan nilai yang muncul dari suatu kejadian berpeluang.
+
+$$
+EV=\sum P(X_i) \times X_i
+$$
+
+## EV Judi
+
+::: {.incremental}
+
+- Sebuah koin yang adil digunakan sebagai dasar sebuah perjudian. Jika keluar A, anda akan mendapatkan Rp 10.000. Jika keluar G, anda harus membayar Rp 12.000. Berapa nilai ekspektasi dari perjudian tersebut?
+
+- $EV=P(A) \times V(A) + P(G) \times V(G)$
+
+- $EV=\frac{1}{2} \times 10000 + \frac{1}{2} \times -12000=-1000$
+
+:::
+
+## EV judi {.incremental}
+
+- Sebuah dadu yang adil digunakan sebagai dasar sebuah perjudian. Jika keluar 1, anda membayar Rp. 20.000. Jika keluar 6, anda mendapatkan Rp 50.000. Jika keluar ganjil selain 1 anda membayar Rp. 5.000, jika keluar genap selain 6, anda mendapatkan Rp.1.000. Hitung nilai ekspektasi perjudian tersebut.
+
+- $EV=\frac{1}{6} \times -20000 + \frac{1}{6} \times 50000 + \frac{2}{6} \times -5000 + \frac{2}{6}\times 1000$
+
+- $EV=3666,67$
+
+## Memaknai EV
+
+::: {.incremental}
+
+- EV judi koin di atas artinya anda mungkin aja menang 10000 ketika sekali ikut. Mungkin juga kalah 12000.
+
+- namun, jika judi tersebut diulang berkali-kali sebanyak mungkin, anda akan secara total mendapatkan -1000.
+
+- Logikanya sama jika judi dilakukan 1 kali, tetapi yang ikut judi ada banyak orang:
+
+    - Jika judi diikuti 1000 orang, akan ada 500 orang menang 10000, tapi 500 orang lainnya kalah 12000.
+    
+- Jika anda bandar, judi mana yang lebih baik?
+
+:::
+    
+## Bandar judi
+
+- Bandar judi sudah pasti akan membuat judi yang memiliki nilai ekspektasi yang negatif bagi peserta judi.
+
+- Di kasus judi koin, jika ada bandar punya 1000 pelanggan:
+
+    - Dia harus membayar $10000 \times 500=$ 5 juta.
+    
+    - Tapi dapat $12000 \times 500=$ 6 juta.
+    
+- Bandar yang baik tidak akan menjual judi dadu di atas.
+
+    - Apa yang akan dilakukan bandar yang baik?
+    
+## Pengambilan keputusan
+
+::: {.incremental}
+
+- EV dapat digunakan sebagai basis pengambilan keputusan.
+
+- Kita dapat membandingkan dua kejadian dan memilih sebuah keputusan yang memiliki nilai EV lebih besar.
+
+    - jika ada keputusan A dan keputusan B, kita memilih keputusan A jika $EV(A) > EV(B)$
+
+- Namun Ketika kita melibatkan kejadian berpeluang, pengambilan keputusan ini tergantung dari **profil risiko**.
+
+:::
+
+## Profil risiko
+
+- Seseorang dihadapkan dengan sebuah keputusan A dan B. keputusan A merupakan sebuah kepastian sementara keputusan B merupakan kejadian berpeluang:
+
+    - Risk neutral ketika orang tsb memilih A ketika $V(A)>EV(B)$ dan memilih B ketika $V(A)<EV(B)$
+    
+    - Risk averse ketika orang tsb memilih A bahkan ketika $V(A)<EV(B)$.
+    
+    - Risk loving ketika orang tsb memilih B bahkan ketika $V(A)>EV(B)$.
+    
+## Profil risiko {.m}
+
+::: {.incremental}
+- Lihat kembali judi koin dengan EV=-1.000:
+
+    - tidak ikut: V=0, ikut: EV=-1.000.
+
+    - orang risk neutral dan risk averse tidak akan ikut judi, sementara risk loving akan ikut.
+    
+- Lihat kembali judi dadu dengan EV=3.666,67:
+
+    - tidak ikut: V=0, ikut: EV=3.666,67.
+    
+    - orang risk neutral dan risk loving akan ikut, sementara orang risk averse tidak akan ikut.
+
+:::
+
+## Asuransi
+
+::: {.incremental}
+
+- Daerah Jigikirsi merupakan daerah yang cukup rawan dalan kejahatan curanmor. Dalam setahun ada setidaknya 1000 kejadian curanmor. Asumsikan di jigikirsi ada 10.000 pemilik kendaraan bermotor, dan semuanya memiliki harga yang sama yaitu 15 juta rupiah. berapa nilai ekspektasi sebuah motor di jigikirsi?
+
+- Hitung probability motor hilang, baru hitung EV.
+
+:::
+
+## Asuransi {.m}
+
+::: {.incremental}
+- Anda menawarkan sebuah produk asuransi yang menjanjikan pergantian motor baru jika ada motor hilang di jigikirsi. Berapa premi yang akan anda tawarkan ke pemilik motor di jigikirsi?
+
+- Seorang risk neutral akan bayar selama preminya di bawah 1,5 juta.
+
+    - premi 1,5 juta disebut juga premi yang adil (fair premium)
+
+- Seorang risk averse akan bayar bahkan ketika premi di atas 1,5 juta.
+
+- Makin besar dia rela bayar, makin besar derajat risk aversenya.
+
+- Risk lovers sebaliknya: baru rela bayar kalo preminya semurah mungkin.
+
+:::
+
+## Asuransi
+
+::: {.incremental}
+
+- Sebuah kapal mengirimkan 10.000 kontainer dalam sehari. Dari 10.000 kontainer tersebut, ada 100 diantaranya rusak saat handling, 50 diantaranya hilang, dan 65 diantaranya tertahan di pabean, dan 85 diantaranya salah kirim. Semua kejadian di atas mengakibatkan nilai barang anda menjadi 0.
+
+- Berapa premi asuransi yang adil dari kapal tersebut?
+
+- Pebisnis umumnya risk averse. Makanya perusahaan asuransi untung.
+
+- Pejudi biasanya risk loving. Makanya bandar untung.
+
+:::
+
+## Odds
+
+- Odds merupakan sebuah imbal judi yang dibuat sedemikian sehingga penjudi memasang taruhan yang seimbang.
+
+- Pada perjudian tebak pemenang / tebak skor, seringkali peserta yang bertanding memiliki kemampuan yang berbeda-beda.
+
+- Akibatnya, kemungkinan menangnya juga beda-beda.
+
+- Sering terjadi di judi bole, e-sports, pacuan kuda, dan lain sebagainya.
+
+## Odds
+
+- Misalnya pertandingan Manchester City vs Arema. Jika tim yang anda pasang menang, anda dapat uang 2x lipat. Ke mana sebagian besar orang akan pasang?
+
+- Karena itu ada yang disebut odds: tim yang kemungkinan menang lebih besar akan dapat multiplier / hadiah yang lebih kecil ketimbang tim yang kemungkinan menangnya lebih kecil.
+
+- Odds diset sedemikian sehingga jumlah nilai taruhannya akan seimbang.
+
+## Odds
+
+![](bet.jpg)
+
+- Jika anda bet 1 juta ke RBL dan RBL menang, anda akan dapat 5 juta. Bet ONIC dan menang, dapat 1 juta 110 ribu.
+
+- Tim mana yang diunggulkan?
+
+## Odds
+
+::: {.incremental}
+
+- Jika ikut judi dan bayar 1 juta, maka anda akan indifferent jika:
+
+$$
+P(\text{RBL menang}) \times \text{Odds RBL menang} = \\ P(\text{RBL kalah}) \times \text{Odds RBL kalah}
+$$
+
+- Bagi bandar, kemungkinan menang RBL adalah sekitar 18,17%. ONIC berapa?
+
+:::
+
+## Review
+
+::: {.incremental}
+
+- Peluang digunakan untuk menghitung expected value.
+
+- Expected value memiliki banyak aplikasi seperti di perjudian dan asuransi.
+
+- Odds digunakan untuk menyeimbangkan pasang taruhan. Tapi perlu diingat kemungkinan *fraud*.
+
+:::
+
+## Minggu depan
+
+- Kejadian berulang, kejadian bersyarat, dan kaidah Bayes.
+
+- Distribusi probabilitas.
+
+# Pertemuan 7
+
+## Minggu lalu
+
+- Peluang independen & pendekatan klasik.
+
+#### Next
+
+- Peluang gabungan dan bayesian.
+- uji normalitas dan probabilitas sampel
+
+## Tindakan Ganda
+
+::: {.incremental}
+
+- Lemparan 2 koin secara bersamaan memiliki kemungkinan hasil:
+
+- $S=\{AA,AG,GA,GG\}$
+
+- Kejadian berganda memiliki rumus: 
+
+- $n_k=n_1 \times n_2 \times n_3 \times ... \times n_k$
+
+- di mana $k$ adalah jumlah kejadian individu.
+
+- Berapa $S$ kalau kita melempar 2 buah dadu?
+
+:::
+
+## Rules baru
+
+::: {.incremental}
+
+- Peluang independen gabungan/beririsan: peluang munculnya A DAN B.
+
+- $P(A \ \text{dan} \ B)=P(A\&B) = P(A \cap B) = P(A) \times P(B)$
+
+- Berapa peluang munculnya A dan A dalam lemparan 2 koin adil?
+
+- Berapa peluang munculnya King Hati dalam tarikan 1 deck kartu?
+
+- Berapa peluang munculnya 1 dan ganjil dalam lemparan 2 dadu adil?
+
+:::
+
+## Rules baru
+
+::: {.incremental}
+
+- Peluang kejadian bersyarat: peluang munculnya A jika B terjadi.
+
+- Perhitungan munculnya outcome A dan B jadi beda rumus seandainya kejadian B dipengaruhi oleh kejadian A.
+
+- $P(A \cap B)=P(A) \times P(B|A)$
+
+- Jika kejadian independen, maka $P(B|A)= P(B)$ 
+
+:::
+
+## Lotre
+
+::: {.incremental}
+
+- Sebuah kotak undian berisi 100 tiket. 50 diantaranya tiket zonk, 30 diantaranya tiket uang tunai 100 ribu rupiah, 10 diantaranya tiket 200 ribu rupiah, 8 diantaranya tiket 300 ribu dan 2 tiket 500 ribu rupiah. Berapa peluang seseorang bisa ambil tiket 500 ribu 2x berturut-turut? (1) jika tiket dikembalikan, (2) jika tiket tidak dikembalikan.
+
+- (1) $P(A \cap B)=P(A) \times P(B)= \frac{2}{100} \times \frac{2}{100} = \frac{4}{10000}$
+
+- (2) $P(A \cap B)=P(A) \times P(B|A)= \frac{2}{100} \times \frac{1}{99} = \frac{2}{9900}$
+
+- Jika narik lotre ini bayar 90 ribu rupiah, orang risk neutral ikut ga?
+
+:::
+
+## Kejadian beririsan
+
+::: {.incremental}
+
+- Sebuah deck terdiri dari 52 kartu standar. Berapa kemungkinan tarikan pertama anda dapat lambang hati atau as?
+
+- $P(💗 \cup A)=P(💗)+P(A)-P(💗 \cap A)=\frac{13}{52}+\frac{4}{52}-\frac{1}{52}$
+
+- $P(💗 \cap A) \neq 0$ karena ada 1 kartu yang adalah As dan juga berlambang hati.
+
+:::
+
+## Kejadian beririsan
+
+::: {.incremental}
+
+- Ada 140 anak yang saat ini mengambil kelas statistik. 100 diantaranya anak-anak yang rupawan. 50 diantaranya anak-anak yang pinter. Berapa probabilitas jika saya ambil 1 anak, saya dapat anak yang rupawan atau pinter?
+
+- $P(R \cup P)=P(R)+P(P)=\frac{150}{140}$?
+
+- Apakah ga mungkin? Masalahnya, ada anak yang pinter DAN rupawan. Misalnya yg rupawan & pinter = 40 orang.
+
+- $P(R \cup P)=P(R)+P(P)-P(R\cap P)=\frac{100+50-40}{140}=\frac{110}{140}$
+
+:::
+
+## Kejadian beririsan
+
+- kejadian beririsan dapat diilustrasikan dengan **diagram venn**.
+
+```{r}
+#| warning: false
+#| prompt: false
+#| error: false
+#| echo: false
+library(VennDiagram)
+wew<-draw.pairwise.venn(area1 = 100,area2 = 50,cross.area = 40,
+                        category = c("Rupawan","Pinter"), fill=c("lightgreen","lightblue"))
+```
+
+```{r}
+wew
+```
+
+## Kejadian beririsan
+
+::: {.incremental}
+
+- Sebuah acara sosialisasi mengundang 120 orang. Dari data, diketahui 100 diantaranya beragama islam. Berbekal pengetahuan tersebut, panitia mempersiapkan 20 kotak makan siang. Pas break siang, panitia mengumumkan "bagi yang tidak puasa bisa ambil makan siang di meja panitia". Ternyata ada 15 orang yang tidak kebagian. Berapa banyak yang tidak puasa? Apa kesalahan dari panitia?
+
+- $P(Maksi)=1-P(Muslim)+P(Muslim \ \cap \ Maksi)$
+
+- Panitia mengasumsikan bahwa $P(Muslim \ \cap \ Maksi) = 0$.
+
+:::
+
+## Permutasi dan Kombinasi {.m}
+
+- Jika kita perlu menghitung ada berapa cara untuk mendapatkan $r$ keluaran dari total kemungkinan $n$ keluaran, kita dapat menggunakan permutasi dan kombinasi.
+
+- Permutasi jika urutan ngaruh. $ABC \neq BCA$
+
+$$
+P^n_r=\frac{n!}{(n-r)!}
+$$
+    
+- Kombinasi jika urutan ga ngaruh. $ABC=BCA$
+
+$$
+C^n_r=\frac{n!}{r!(n-r)!}
+$$
+
+## Faktorial
+
+- Tanda seru setelah angka disebut juga dengan faktorial.
+
+- Faktorial mirip dengan pangkat, tapi dikali berkurang terus hingga 1.
+
+- $3!=3\times 2\times 1$
+
+- $6!=6\times 5\times 4 \times 3 \times 2 \times 1=6 \times 5 \times 4 \times 3!$
+
+- $\frac{6!}{3!}=\frac{6 \times 5 \times 4 \times 3!}{3!}=6 \times 5 \times 4$
+
+## Permutasi
+
+::: {.incremental}
+
+- Sebuah ujian terdiri dari total 10 soal. Namun, setiap mahasiswa hanya akan mengerjakan 4 soal saja yang muncul secara acak dari 10 soal tersebut. Ada berapa tipe soal yang mungkin muncul di ujian tersebut?
+
+- Jika beda urutan diitung 1 tipe soal, maka 
+
+- $$P^{10}_4=\frac{10!}{(10-4)!}=\frac{10!}{6!}=5040$$
+
+:::
+
+## Kombinasi
+
+::: {.incremental}
+
+- Sebuah ujian terdiri dari total 10 soal. Namun, setiap mahasiswa hanya akan mengerjakan 4 soal saja yang muncul secara acak dari 10 soal tersebut. Ada berapa tipe soal yang mungkin muncul di ujian tersebut?
+
+- Jika beda urutan soal diitung tipe yang sama, maka
+
+- $$C^{10}_4=\frac{10!}{4!(10-4)!}=\frac{10!}{4!6!}=\frac{10\times9\times 8\times 7}{4 \times 3\times 2\times 1}=210$$
+
+:::
+
+## Permutasi
+
+::: {.incremental}
+
+- Sebuah kotak berisi 12 bola merah, 13 bola biru dan 15 bola hijau. Pengambilan bola tidak dikembalikan. Hitung kemungkinan pengambilan pertama bola merah, bola ke-2 hijau, dan bola ke-3 biru.
+
+- Pertanyaan ini dapat dijawab dengan 2 cara. Pertama, cara klasik:
+
+- $P(R_1G_2B_3)=P(R) \times P(G|R) \times P(B|R_1G_2)=\frac{12}{40} \times \frac{15}{39} \times \frac{13}{38}$
+
+- $P(R_1G_2B_3) \approx 0,04$
+
+:::
+
+## Permutasi
+
+- Cara ke-2 dengan menggunakan permutasi:
+
+
+$$
+P(R_1G_2B_3)=\frac{P^{12}_1P^{15}_1P^{13}_1}{P^{40}_3}=\frac{\frac{12!}{11!}\times\frac{15!}{14!}\times\frac{13!}{12!}}{\frac{40!}{37!}}=\frac{2340}{59280} \approx 0,04
+$$
+
+## Kombinasi
+
+- Sebuah kotak berisi 12 bola merah, 13 bola biru dan 15 bola hijau. Pengambilan bola tidak dikembalikan. Hitung kemungkinan 3 kali pengambilan akan dapat warna yang berbeda-beda.
+
+- Dengan cara klasik dapat dilakukan, namun perlu dipertimbangkan ada berapa kemungkinan 3 warna berbeda-beda.
+
+- $P(RGB)=3! \times P(R_1G_2B_3)\approx6\times0,04\approx0,24$
+
+## Kombinasi
+
+- Cara ke-2 dengan menggunakan kombinasi:
+
+
+$$
+P(RGB)=\frac{C^{12}_1C^{15}_1C^{13}_1}{C^{40}_3}=\frac{\frac{12!}{11!}\times\frac{15!}{14!}\times\frac{13!}{12!}}{\frac{40!}{3!37!}}=\frac{2340}{9880}\approx0,24.
+$$
+
+## Diagram pohon
+
+```{mermaid}
+flowchart TB
+  A[Mulai] --> B[R]
+  A --> C[G]
+  A --> D[B]
+  B-->E[R] & F[G] & G[B]
+  C-->H[R] & I[G] & J[B]
+  D-->K[R] & L[G] & M[B]
+  E-->E1[R] & F1[G] & G1[B]
+  F-->H1[R] & I1[G] & J1[B]
+  G-->K1[R] & L1[G] & M1[B]
+  H-->E2[R] & F2[G] & G2[B]
+  I-->H2[R] & I2[G] & J2[B]
+  J-->K2[R] & L2[G] & M2[B]
+  K-->E3[R] & F3[G] & G3[B]
+  L-->H3[R] & I3[G] & J3[B]
+  M-->K3[R] & L3[G] & M3[B]
+```
+
+## Probabilitas marjinal
+
+- Sebuah perusahaan handphone memesan layar dari 3 perusahaan yang berbeda, yaitu A,B dan C. Perusahaan A menyuplai 270 layar, B menyuplai 320 layar, C menyuplai 110 layar. Si perusahaan mengantisipasi kemungkinan _defect_ dari A sebesar 0,015, B sebesar 0,02, C sebesar 0,03. Berapa probabilitas layar di perusahaan ini _defect_?
+
+- $P(D)=\sum_S P(X) \times P(D|X)$
+
+- $P(D)=\frac{270}{700} \times 0,015 + \frac{320}{700} \times 0,02 \frac{110}{700} \times 0,03$
+
+- $P(D)=0,0196 \approx 0,02$
+
+## Bayesian Probability
+
+- Seorang peneliti bernama Bayes menemukan sebuah rumus yang menunjukkan hubungan antara peluang kondisional:
+
+$$
+P(A|B)=\frac{P(B|A) \times P(A)}{P(B)}
+$$
+
+- Kemungkinan munculnya A jika B terjadi tidak sama dengan kemungkinan mmunculnya B jika A terjadi.
+
+## Bayesian
+
+::: {.incremental}
+
+- Lihat soal sebelumnya. ditemukan bahwa ada 1 produk cacat / _defect_, berapa kemungkinannya produk tersebut datang dari supplier A?
+
+- $A=$ produk berasal dari supplier A, $D=$ produk cacat.
+
+- $P(A|D)=\frac{P(D|A) \times P(A)}{P(D)}=\frac{0,015 \times \frac{270}{700}}{0,0216}$
+
+- $P(A|D)=0,295 \approx 0,3$
+
+- Produk cacat tersebut paling mungkin datang dari supplier mana?
+
+:::
+
+## Bayesian
+
+- $P(B|D)=\frac{P(D|B) \times P(B)}{P(D)}=\frac{0,02 \times \frac{320}{700}}{0,0216}=0,465$
+
+- $P(C|D)=\frac{P(D|C) \times P(C)}{P(D)}=\frac{0,03 \times \frac{110}{700}}{0,0216}=0,24$
+
+- $P(D|C)$ paling besar, tapi order datang paling banyak dari perusahaan B. Karena itu, kemungkinan barang rusak itu datang dari B juga jadi lebih besar.
+
+## Bayesian {.m}
+
+- Tesle, sebuah perusahaan mobil listrik, tertarik investasi di negara Wikindi karena ada program insentif. Namun Wikindi mau pilpres dengan 3 calon. Calon A punya kans 90% akan melanjutkan program insentif. Calon B sekitar 50%, dan Calon C sangat anti program tsb dan hanya akan lanjutkan sekitar 10% kans. Berdasarkan survey, Kemungkinan menang calon A,B dan C adalah 25%,35% dan 40%.
+
+- Jika Tesle tidak peduli siapa presidennya nanti, berapa % kans program insentif akan diteruskan?
+
+- Jika akhirnya program tidak diteruskan, tentukan berapa % kemungkinan akhirnya yang menang calon A, calon B dan calon C.
+
+
+# Pertemuan 8
+
+## Data dan Statistika
+
+- Data adalah **kumpulan informasi yang didapatkan dari melakukan pengamatan (observasi)**.
+
+- Pada hakikatnya, penggunaan data dan statistika berfungsi untuk **menjawab pertanyaan** seperti:
+
+    - Bagaimana kondisi sosial ekonomi penduduk Indonesia? Dibandingkan dengan RRT?
+    
+    - Berapa ekspor Indonesia tahun 2020? Apakah meningkat dibandingkan tahun 2019?
+    
+- Anda setiap hari juga mengumpulkan data!
+
+## Data yang baik
+
+- Data akan menjadi basis dalam menjawab pertanyaan dan membuat keputusan. Data salah, keputusan juga salah!
+
+- Data yang baik haruslah objektif, representatif, valid, tepat waktu dan relevan.
+
+- Objektif berarti dapat meminimalisir perbedaan persepsi antar-pengamat / individu.
+
+- harus memiliki alat ukur yang konsisten dan disepakati, dengan metode yang dapat diaudit.
+
+- contoh: di kelas saya ada 10 orang yang gendut vs di kelas saya, 10 orang punya berat badan di atas 70 kg.
+
+## Data yang baik
+
+- Representatif berarti harus mewakili obyek yang diamati. Obyek yang representatif biasanya akan didapatkan dengan sampling yang acak.
+
+- valid berarti data tersebut memiliki kesalahan sampling yang kecil dan memiliki tingkat ketelitian yang tinggi. Jika diulang samplingnya, hasilnya akan sama.
+
+- tepat waktu berarti datanya harus sesuai berdasarkan waktu dan selalu terupdate.
+
+- relevan berarti data tersebut benar-benar mengukur hal yang sesuai dengan pertanyaan yang ingin dijawab.
+
+## Jenis-jenis data
+
+| jenis data | definisi |	contoh |
+| ----- | ----- | ------- |
+| Kategorikal / nominal | 	kualitatif, ga ada urutan |	nama, jenis kelamin, suku |
+| Ordinal |	kualitatif, ada urutan | ukuran baju, ukuran sepatu, medali |
+| Hitung | 	kuantitatif, integer |	nomor telepon, jumlah anak |
+| Riil / kontinyu | 	kuantitatif, riil |	PDB, ekspor impor |
+
+## Data Kontinyu {.m}
+
+- data kontinyu dapat dibagi 2: rasio dan interval.
+
+- keduanya memiliki interval yang sama untuk semua angka.
+
+- tapi, interval tidak punya 0 yang berarti.
+
+    - untuk rasio, 0 = tidak ada. contoh: ekspor, impor, kalori. Tidak ada nilai negatif.
+    
+    - interval, 0 = ga penting. contoh: nilai TOEFL, temperatur. Ada nilai negatif.
+    
+- Transformasi di rasio tidak akan mengubah besarnya urutan.
+
+    -  10 kg = 2x lebih berat dari 5 kg. begitupun 22.04 lbs vs 11.02 lbs
+    
+    - 1$^o$ C to 100$^o$ C = 100x lipat, tapi 274.15$^o$ K to 373.15$^o$ K bukan 100x lipat
+    
+## Dampaknya?
+
+- Tipe data yang berbeda menuntut cara analisis yang berbeda pula.
+
+- Biasanya, dalam metode statistik, data rasio adalah data yang paling mudah untuk digunakan dalam analisis.
+
+- Jika tipe data anda bukan rasio, harus sedikit diakalin metodenya. Bisa, tapi lebih ribet dikit.
+
+- Di mata kuliah ini, kita akan fokus pada data yang sebagian besar berupa data rasio.
+
+## Cara pengambilan data
+
+- **Sensus** adalah metode pengumpulan data yang melibatkan keseluruhan populasi yang ingin diselidiki.
+
+    - misalnya, untuk mendapatkan nilai UAS mata kuliah statistika, saya mencatat semua nilai UAS mahasiswa APP yang mengambil mata kuliah statistika.
+    
+- Sensus memiliki gambaran yang lengkap, tapi anda tidak boleh menyimpulkan sesuatu dari luar populasi.
+
+    - misalnya, hasil sensus penduduk jagakarsa tidak dapat anda gunakan untuk menyimpulkan Jakarta Selatan secara umum.
+    
+- Kelemahan sensus: mahal dan makan banyak waktu.
+
+## Cara pengambilan data
+
+- **sampling** adalah metode pengumpulan data yang melibatkan sebagian dari populasi yang ingin diselidiki.
+
+    - misalnya, untuk menilai apakah kelas A lebih bagus nilainya dari kelas B, saya menguji 10 orang dari kelas A dan 10 orang dari kelas B.
+    
+    - 10 orang ini kita sebut sampel, sementara populasinya adalah keseluruhan anggota kelas A dan kelas B.
+    
+- sampling lebih murah, namun kita harus memastikan bahwa samplenya **representatif**.
+
+## Sampling
+
+- dapat dilakukan secara **acak** dan **non-acak**.
+
+- Acak (_random_) artinya bahwa semua anggota populasi punya kesempatan yang sama untuk menjadi sampel.
+
+    - misalnya saya tunjuk secara acak 10 mahasiswa di tiap kelas.
+    
+- Non-acak berarti kita mendorong satu bagian dari populasi dengan karakteristik tertentu punya kesempatan yang lebih banyak untuk terpilih menjadi sampel.
+
+    - misalnya saya hanya menunjuk 10 anak yang pakai kacamata, atau menunjuk 10 anak yang duduknya paling dekat saya.
+    
+## Acak atau jangan?
+
+- Idealnya adalah kita punya data populasi. Tapi biasanya impractical.
+
+- Jika harus pakai sampel, maka sampel yang terbaik adalah sampel yang **representatif**.
+
+- Sebuah sampel kita anggap representatif jika sampel tersebut punya karakteristik yang kita yakini mendekati populasi aslinya.
+
+## Representatif
+
+- Volume darah dalam tubuh manusia biasanya sekitar 5 liter. Untuk ngetes diabetes, diambil 0,5 ml sampel saja, gak diambil semua.
+
+- Kenapa? Karena 0,5 ml darah ini mewakili kesemua darah di tubuh manusia. Jika 0,5 liter ini terdeteksi diabetes, maka yang di tubuh juga pasti diabetes.
+
+- Demokrasi juga sama: dari total 270 juta manusia di Indonesia, dianggap ada 550 orang yang bisa mewakili.
+
+## Representatif
+
+- Karakteristik data yang kita lihat umumnya adalah **tendensi sentral**, **sebaran** dan **distribusi**.
+
+- Sebuah sampel yang representatif harusnya memiliki rata-rata, standar deviasi dan bentuk distribusi yang serupa dengan aslinya.
+
+- Misalnya seluruh mahasiswa PIWAR 2 sejumlah 150 orang punya rata-rata UTS 70 dengan rentang 15.
+
+- Jika saya ambil sampel 15 orang lalu saya tes lagi, maka 15 orang itu harus punya rata-rata dan rentang yang sama.
+
+## Random
+
+- Sampling yang diambil secara acak akan memiliki kemungkinan representatif yang tinggi dibanding disaring (misalnya, 15 orang ini hanya saya pilih yang nilainya paling tinggi).
+
+- Tidak hanya nilai, tapi juga karakteristik lain: jika cewe:cowo di PIWAR = 70:30, maka sampelnya juga akan punya perbandingan yang sama. Juga karakteristik-karakteristik lainnya.
+
+- Next time kita akan belajar tendensi sentral, rentang dan distribusi lebih jauh.
+    
+## Sampling acak {.m}
+
+- Simple random sampling berarti mengambil sampel secara acak langsung dari populasinya.
+
+- Stratified random sampling: membagi populasi menjadi sub-populasi atau strata, lalu mengambil secara acak dari tiap-tiap stratum.
+
+- Cluster random sampling: membagi populasi menjadi strata, lalu secara acak mengambil satu stratum dan mengambil semua anggota stratum tersebut menjadi sampel.
+
+- Multistage random sampling: Membagi populasi ke dalam strata, mengambil beberapa strata secara acak, lalu dari strata yang diambil tersebut disampling lagi.
+
+## Pilih yang mana?
+
+- Semua teknik di atas dapat dilakukan dengan kemungkinan mendapatkan sample representatif yang relatif mirip.
+
+- Tapi intinya, harus dilakukan secara acak!
+
+- Semakin besar populasinya, biasanya menggunakan strata bisa lebih membuat percaya diri.
+
+- tapi jika benar dapat melakukannya secara acak, maka seharusnya cara manapun akan memiliki data yang tidak berbeda jauh.
+
+## Statistika
+
+- Statistika adalah ilmu yang mempelajari bagaimana cara mengumpulkan, mengorganisasikan, menerjemahkan dan menarik kesimpulan dari data.
+
+- Meskipun statistika awalnya banyak diajarkan untuk bidang ilmu pasti, namun saat ini ekonomi dan manajemen juga menggunakannya.
+
+- Cara-cara menerjemahkan dan menarik kesimpulan ini juga tergantung dari jenis data yang kita perlukan.
+
+# Pertemuan 9
+
+## Minggu lalu
+
+- Berbagai jenis data: kategorikal, ordinal, diskrit dan kontinyu.
+
+- survey: random dan non-random
+
+#### Minggu ini
+
+- Distribusi frekuensi dan statistik deskriptif
+
+## Distribusi frekuensi
+
+- Distribusi frekuensi adalah cara yang paling awal dilakukan untuk mendapatkan gambaran dari suatu sampel / populasi.
+
+- Kita membutuhkan distribusi frekuensi karena sebagai manusia biasa kita ga akan sanggup membaca semua data poin 1 1.
+
+- Perlu semacam alat ukur yang menggambarkan semua data yang kita punya.
+
+## Distribusi kualitatif {.scrollable}
+
+- Misalnya anda melakukan survey merk handphone yang dimiliki saat ini dengan sample 50 orang.
+
+```{r}
+library(tidyverse)
+library(kableExtra)
+sample(x=c("Apple","Samsung","Oppo","Vivo","Xiaomi","Lainnya"),
+                      prob=c(0.1,0.3,0.15,0.13,0.17,0.15),
+                      size=50,
+                      replace = TRUE)
+```
+
+- Cara mengolahnya secara manual adalah dengan menggunakan **Tally**
+
+- Informasi apa yang menarik dari tabel ini?
+
+## Distribusi kualitatif {.scrollable .s}
+
+- Gimana kalau datanya ada 1000?
+
+```{r}
+library(tidyverse)
+library(kableExtra)
+dat<-as.tibble(sample(x=c("Apple","Samsung","Oppo","Vivo","Xiaomi","Lainnya"),
+                      prob=c(0.1,0.3,0.15,0.13,0.17,0.15),
+                      size=1000,
+                      replace = TRUE))
+kbl(dat) %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"))
+```
+
+## Google sheet
+
+Step-by-step kalau pakai google sheet:
+
+1. Block data dengan `ctrl+panah`
+2. Pilih `instert` -> `pivot table`
+3. Pastikan data range benar dan pilih "new sheet". klik `create`
+4. Pilih `rows` lalu klik `brand`
+5. Pilih `values` lalu klik `brand`
+
+## Frekuensi relatif
+
+- Apa yang kita lakukan di atas adalah menghitung **frekuensi absolut**
+
+- Terkadang kita memerlukan informasi tentang frekuensi relatif.
+
+- Frekuensi relatif sebuah kelas adalah frekuensi absolut si kelas tersebut dibagi dengan total observasi.
+
+## Google sheet
+
+| Brand | freq absolut | freq relatif |
+| ----- | ----- | ----- |
+| Apple | 100 | 10% |
+| Lainnya | 153 | 15.3% |
+| Oppo | 129 | 12.9% |
+| Samsung | 310 | 31% |
+| Vivo | 136 | 13.6% |
+| Xiaomi | 172 | 17.2% |
+| Total | 1000 | 100% |
+
+- data ini dapat divisualisasikan dengan **histogram**.
+
+## Distribusi frekuensi
+
+- Anda akan lebih sering bertemu data numerik.
+
+- Data numerik lebih mudah diolah dan biasanya memiliki lebih banyak *insight*.
+
+- Data numerik juga memiliki berbagai jenis indikator.
+
+## Contoh data
+
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSdLsm-5nIFgcspOncjaLwwKX1vmGbTOvhkYVOFWdHS3h15EWmHcXDSm562eyR4MiftmPJiPom7X2RM/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+
+Data tersebut adalah nilai UTS semester sebelumnya. Dapat didownload di [sini](https://docs.google.com/spreadsheets/d/e/2PACX-1vSdLsm-5nIFgcspOncjaLwwKX1vmGbTOvhkYVOFWdHS3h15EWmHcXDSm562eyR4MiftmPJiPom7X2RM/pubhtml)
+
+## Distribusi frekueksi 
+
+- Untuk data numerik, menghitung frekuensi dengan pivot tidak praktis.
+
+- Anda perlu membuat kelas dengan interval.
+
+- Baik penentuan kelas maupun penentuan interval membutuhkan pemikiran yang cukup matang.
+
+- Slide berikutnya akan membuat tabel distribusi frekuensi dengan kelas yang arbitrari.
+
+## Google sheet
+
+1. ketik rumus `=FREQUENCY(data,class)`
+1. Isi `data` dengan data yang ingin anda buat tabel frekuensinya.
+1. Isi `class` dengan batas atas dari kelas anda.
+
+## Banyaknya kelas yang ideal
+
+- Jumlah kelas dan interval yang baik sebenarnya cukup fluid.
+
+- Secara umum, kita menginginkan pembagian distribusi yang cukup merata dan tidak ekstrim.
+
+- Interval kelas tidak harus seragam, namun biasanya anda akan sering ketemu interval kelas yang seragam.
+
+- Membuat umlah kelas dan interval kelas membutuhkan pengalaman.
+
+## Rumus jumlah kelas
+
+- Jumlah kelas dapat dibuat dengan rumus
+
+$$k=1+3.322\log(n)$$
+
+di mana:
+
+- k = jumlah kelas
+- n = jumlah observasi/sample.
+- gunakan log base 10.
+
+## Rumus interval kelas
+
+- Interval kelas dapat juga menggunakan rumus:
+
+$$c=\frac{X_n-X_1}{k}$$
+
+- $k$ didapat dari rumus sebelumnya.
+
+- $X_n$ adalah nilai observasi terbesar, $X_1$ adalah nilai observasi terkecil.
+
+- $c$ adalah lebarnya interval.
+
+## Exercise
+
+Membuat tabel distribusi frekuensi absolut dan frekuensi relatif.
+
+## Normal distribution
+
+```{r}
+ N <- 10000
+ x <- rnorm(N, 10, 5)
+ hist(x, 
+ xlim=c(min(x),max(x)), probability=T, nclass=max(x)-min(x)+1, 
+   col='lightblue', xlab=' ', ylab=' ', axes=F,
+   main='Normal distribution')
+lines(density(x,bw=1), col='red', lwd=3)
+```
+
+## Normal distribution
+
+- Sebagian besar distribusi umumnya akan mengikuti distribusi normal.
+
+- Kurva distribusi normal seringkali disebut juga dengan kurva lonceng atau _bell curve_.
+
+- Distribusi normal adalah sebuah distribusi populasi di mana observasi terbanyak akan dapat anda temui di rata-rata. Semakian jauh dari rata-rata, makin sedikit observasi yang anda temui.
+
+## Pengukuran gejala pusat
+
+- Untuk setiap data, kita umumnya perlu sebuah indikator yang menunjukkan representasi dari keseluruhan populasi.
+
+- Indikator ini kita sebut juga dengan **ukuran gejala pusat** atau *central tendency*.
+
+- Pengukuran gejala pusat dilakukan dengan melihat *Modus*, *Median*, dan *Mean*
+
+- Modus = angka yang paling sering muncul, Median = nilai tengah
+
+- Mean = rata-rata atau $\mu=\frac{\sum_iX_i}{n}$
+
+## Ukuran sebaran
+
+- Di samping ukuran gejala pusat, kita juga menggunakan beberapa indikator untuk mengukur seberapa jauh rentang data kita dari gejala pusat tersebut.
+
+- Kita menggunakan max (nilai paling tinggi), min (nilai paling kecil), dan kuartil.
+
+- Kuartil 1 adalah data paling tinggi dari 25% data terkecil, kuartil 2 = median, dan kuartil 3 adalah data paling tinggi dari 75% data terkecil.
+
+## Exercise
+
+- mendapatkan ukuran central tendency dan ukuran sebaran dengan google sheet.
+
+- Semua ukuran-ukuran ini kita sebut dengan **statistik deskriptif**.
+
+## Mingdep
+
+- probability atau more on central tendency
+
+# Pertemuan 10
+
+## Minggu ini
+
+- Review PDF dan distribusi normal
+
+- Z-score
+
+- Menebak probabilitas
+
+## PDF normal distribution
+
+$$
+f(x)=\frac{1}{\sigma \sqrt{2\pi}}e^{-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^2}
+$$
+
+- $\mu$ adalah nilai rata-rata dari total populasi.
+
+- $\sigma$ adalah simpangan baku.
+
+- Keduanya adalah nilai dari _central tendency_ / ukuran gejala pusat dan sebaran.
+
+## Kurva dan parameter
+
+![sumber:wikipedia](normal.svg)
+
+## Probabilitas
+
+```{r}
+library(tidyverse)
+grafik<-function(dataset,...) {
+  dataset |>
+    ggplot(aes(...))+
+    scale_x_continuous(expand = c(0, 0)) + scale_y_continuous(expand = c(0, 0))+
+    theme_classic()+
+    theme(axis.title.x = element_text(hjust=1),
+        axis.title.y = element_text(angle=0,hjust=1,vjust=1),
+        panel.grid=element_blank(),
+#        axis.text.x=element_blank(),
+        axis.text.y=element_blank(),
+        axis.ticks.x=element_blank(),
+        axis.ticks.y=element_blank(),
+        legend.position=c(1,1),
+        legend.justification = c(1,1),
+        legend.spacing=unit(0,"cm"),
+        legend.margin=margin(0,0,0,0),
+        panel.background = element_rect(fill = "#f0f1eb",
+                                        colour = "#f0f1eb"),
+        plot.background = element_rect(fill = "#f0f1eb"),
+        legend.key = element_rect(fill = "#f0f1eb",linetype = "blank"),
+        legend.background = element_rect(fill="#f0f1eb"))
+}  
+det<-data.frame(x=c(0,1))
+
+wew<-seq(0,1,0.01)
+
+sd1 <- function(x) {
+    y <- dnorm(wew, mean = 0.5, sd = 0.1)
+    y[x < 0.4 | x > .6] <- NA
+    return(y)
+}
+sd2 <- function(x) {
+    y <- dnorm(wew, mean = 0.5, sd = 0.1)
+    y[x < 0.3 | x > .701] <- NA
+    y[x > 0.4 & x < .6] <- NA
+    return(y)
+}
+sd3 <- function(x) {
+    y <- dnorm(wew, mean = 0.5, sd = 0.1)
+    y[x < 0.2 | x > .8] <- NA
+    y[x > 0.3 & x < .7] <- NA
+    return(y)
+}
+
+det |>
+  grafik(x=x)+
+  stat_function(fun=dnorm,args=list(0.5,0.1),size=1.1)+
+  stat_function(fun=sd1,geom="area",fill="lightgreen",alpha=.3)+
+  stat_function(fun=sd2,geom="area",fill="lightpink",alpha=.3)+
+  stat_function(fun=sd3,geom="area",fill="lightblue",alpha=.3)+
+  geom_vline(xintercept=.5)+
+  annotate("text",label="34,1%",y=.2,x=.55)+
+  annotate("text",label="34,1%",y=.2,x=.45)+
+  annotate("text",label="13,6%",y=.15,x=.65)+
+  annotate("text",label="13,6%",y=.15,x=.35)+
+  annotate("text",label="2,1%",y=.1,x=.75)+
+  annotate("text",label="2,1%",y=.1,x=.25)+
+  scale_x_continuous(breaks = c(0.2,.3,.4,.5,.6,.7,.8),labels = c(paste0('-3\U03C3'),paste0('-2\U03C3'),paste0('-\U03C3'),expression(mu),paste0('\U03C3'),paste0('2\U03C3'),paste0('3\U03C3')))+
+  labs(x="X",y="f")
+
+```
+
+## Z-score
+
+- Z-score disebut juga dengan standardized values / scores.
+
+- Z-score adalah transformasi yang kita lakukan untuk mengubah angka pada data kita menjadi sebuah nilai standar dalam menggunakan PDF distribusi normal.
+
+- PDF distribusi normal yang standar adalah di mana:
+
+    - $\mu=0$
+    
+    - $\sigma=1$
+    
+## Z-score
+
+$$
+z=\frac{x-\mu}{\sigma}
+$$
+
+Di mana x adalah data point yang mau kita transformasi.
+
+| Jajan | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| BPP	| 500	|	450	|	350	|	600	|	550	|	550	|	600	|	450	|	500	|	450	|
+
+$\mu=500 \ ; \ \sigma=74,16$
+
+## Z-score
+
+| Jajan | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| BPP	| 500	|	450	|	350	|	600	|	550	|	550	|	600	|	450	|	500	|	450	|
+| $z_b$ | 0 |	-0.67 |	-2.02 |	1.35 |	0.67 |	0.674 |	1.35 |	-0.67 |	0 |	-0.67 |
+
+## Z-score
+
+- Posisi angka-angka pada data tentunya tidak sama: semua bergeser jika rata-rata dan standar deviasinya berbeda.
+
+- Kita menjadikan data biasa ke dalam Z-score karena Z-score membuat angkanya menjadi standar.
+
+- Dengan angka yang standar, kita jadi dapat menggunakan tabel yang standar
+
+- Dengan tabel yang standar kita jadi tidak harus membuat tabel baru untuk setiap data poin.
+
+## Tabel PDF Distribusi normal
+
+<iframe src="https://onedrive.live.com/embed?cid=ACC929CA35B3A537&resid=acc929ca35b3a537%21162501&authkey=AIx-FChNmjZ8zzQ&em=2" width="900" height="600" frameborder="0" scrolling="no"></iframe>
+
+Bisa [Google](https://www.google.com/search?client=firefox-b-d&q=z+score+table) atau download di [sini](https://drive.google.com/file/d/1ywI58hnM8p0ZyFV7B9rCOosk72iCGguq/view?usp=sharing)
+
+## Contoh 1
+
+- Berapa banyak kira-kira  di BPP dengan uang jajan di bawah 700 ribu?
+
+- Cari Z-score dulu $Z_{700}=\frac{700-500}{74,16}=2,7$
+
+- $P(X<700) \approx P(Z_X<2,7)$
+
+- Lihat di tabel, $P(Z<2,7)=0,9965$
+
+## Contoh 2
+
+- Berapa banyak mahasiswa di BPP dengan uang jajan di atas 400 ribu?
+
+- $Z_{700}=\frac{400-500}{74,16}=-1,348$
+
+- $P(X<600) \approx P(Z_X<-1,348) \approx 0,0885$
+
+- $P(Z_X>-1,348)=1-0,0885=0.9115$
+
+## Contoh 3
+
+- Negara Wokondo memiliki pendapatan bulanan bersih per kapita rata-rata 6 juta rupiah, dengan standar deviasi 8 juta rupiah. Di Wokondo, orang berpendapatan di bawah 2 juta rupiah sudah dianggap miskin. Jika penduduk Wokondo ada 200 juta orang, berapa jumlah penduduk miskin di Wokondo?
+
+- Intinya ini pertanyaan $P(X<2)$. Bisa jawabnya?
+
+## Contoh 4
+
+- Di Wokondo, anda dianggap kelas menengah jika pendapatannya ada di kisaran 5 juta sampai 8 juta rupiah. Berapakah jumlah penduduk Wokondo yang dianggap sebagai kelas menengah?
+
+- Intinya ini pertanyaan $P(5<X<8)$. Bisa jawabnya?
+
+## Contoh 5
+
+- Di Wokondo ada sekitar 2 juta orang yang dianggap sebagai orang ultra kaya. Bisakah anda menebak berapa pendapatan paling minimal untuk masuk golongan ultra kaya?
+
+- $P(Z_X > Y) = \frac{2}{200}=0,01$
+
+- $P(Z_X < Y) = 1-0,01=0,99 \rightarrow Y=2,33$
+
+- $2,33=\frac{X-6}{8} \rightarrow X=(2,33 \times 8 ) + 6 = 24,64$ Juta
+
+## Penutup
+
+- Teknik ini dapat kita lakukan karena PDF = probabilitas!
+
+- Penggunaan distribusi normal seperti ini sangat praktis bagi kita yang tidak mungkin melakukan survey karena keterbatasan dana.
+
+- Dengan mengasumsikan distribusi normal, anda dapat melihat satu angka saja, lalu cari rata-rata dan standar deviasi dari lembaga yang kredibel, lalu bisa menebak posisi seseorang dalam distribusi keseluruhan.
+
+- Tapi ingat selalu bahwa Statistika = tebak-tebakan!
+
+## Penutup
+
+- Untuk latihan, anda dapat mencoba dengan variasi P(X), bisa lebih kecil, lebih besar, antara, silakan dicoba-coba. ada banyak kemungkinannya.
+
+- Anda juga bisa mencoba dengan menggunakan nilai $\mu$ dan $\sigma$ yang berbeda-beda. 
+
+- Misalnya, dengan rata-rata yang sama, bagaimanakah bedanya P(Z) antara data dengan $\sigma$ kecil vs $\sigma$ besar?
+
+## DISCLAIMER
+
+- jangan lupa bahwa teknik ini kita gunakan dengan sebuah **ASUMSI** bahwa populasi yang ingin kita tebak memiliki distribusi normal.
+
+- Distribusi normal belum tentu benar untuk beberapa karakteristik.
+
+- Meski demikian, distribusi normal dianggap paling mungkin menjelaskan suatu populasi.
+
+- Pada kenyataannya, tidak ada manusia yang tau dan yakin 100% bahwa distribusi normal pasti benar.
+
+- Pastikan anda paham hal ini.
+
+# Pertemuan 11
+
+## Hari ini
+
+- Menebak rata-rata populasi dari sampel
+
+- Konsep rentang kepercayaan
+
+- Konsep student distribution (distribusi t)
+
+- Pendahuluan uji hipotesis
+
+## Konsep rentang kepercayaan
+
+- Sampling bisa jadi memberikan kita nilai rata-rata yang tidak sama dengan populasi.
+
+- $\mu \neq \bar{X}$
+
+- Tapi kita bisa menebak rata-rata populasi $\mu$ dengan menggunakan rentang kepercayaan.
+
+- Rentang kepercayaan adalah rentang di mana kita yakin dengan tingkat keyakinan $1-\alpha$
+
+## Rentang kepercayaan
+
+:::: columns
+::: {.column width="47%"}
+![Two-tailed](pvalue1.gif)
+:::
+::: {.column width="47%"}
+![One-tailed](pvalue2.gif)
+:::
+::::
+
+Gambar biru = $\alpha$
+
+Gambar diambil dari [UCLA](https://stats.oarc.ucla.edu/other/mult-pkg/faq/general/faq-what-are-the-differences-between-one-tailed-and-two-tailed-tests/)
+
+## Tingkat kepercayaan
+
+- Kita menentukan dulu level kepercayaan.
+
+    - Standardnya adalah 95%, atau $\alpha=5%$
+    
+    - kalau two-tailed, berarti kiri kanan masing-masing $\frac{5}{2}\%$
+    
+- Makin tinggi tingkat kepercayaan, makin besar rentangnya. 
+
+- Makin besar rentangnya, makin ga guna tebakannya (inefisien),
+
+## Rentang kepercayaan
+
+- Rumus menghitung rentang kepercayaan:
+
+$$
+\bar{X} \pm Z_{\frac{\alpha}{2}} \frac{S}{\sqrt{n}}
+$$
+
+atau
+
+$$
+\mu=\left[ \bar{X}-Z_{\frac{\alpha}{2}} \frac{S}{\sqrt{n}}, \bar{X}+Z_{\frac{\alpha}{2}}\frac{S}{\sqrt{n}}\right]
+$$
+
+- Z adalah nilai baku / standardized score yang memberikan kita rentang kepercayaan $1-\alpha$
+
+## Contoh soal 1
+
+::: {.incremental}
+
+- Diambil sebuah sampel berisikan 100 mahasiswa, didapatkan memiliki rata-rata nilai tes TOEFL sebesar 500 dengan simbangan baku 50. Dengan rentang kepercayaan 95%, tentukan rentang nilai TOEFL keseluruhan mahasiswa tersebut!
+
+- Gunakan tabel Z untuk mendapatkan $Z_{0.025}$
+
+- Rentang rata-rata = $500 \pm 1,96\times\frac{50}{\sqrt{100}}$
+
+- Rentang rata-rata = $\left[490,2;509,8\right]$
+
+:::
+
+## Tabel Z
+
+<iframe src="https://onedrive.live.com/embed?cid=ACC929CA35B3A537&resid=acc929ca35b3a537%21162501&authkey=AIx-FChNmjZ8zzQ&em=2" width="900" height="600" frameborder="0" scrolling="no"></iframe>
+
+Bisa [Google](https://www.google.com/search?client=firefox-b-d&q=z+score+table) atau download di [sini](https://drive.google.com/file/d/1ywI58hnM8p0ZyFV7B9rCOosk72iCGguq/view?usp=sharing)
+
+## distrubusi t
+
+- Distribusi normal (atau distribusi z) merupakan sebaran kontinyu dari $-\infty$ sampai $\infty$
+
+- Meski demikian, hanya dari 3 standar deviasi kiri dan kanan aja udah lebih dari 99,99%.
+
+- Sampel dari populasi tersebut belum tentu terdistribusi normal, meski mirip:
+
+    = sampel cenderung lebih mungkin dapat di sekitar rata-rata.
+
+## distribusi t
+
+- Semakin banyak sampel yang kita ambil, semakin mirip distribusinya dengan distribusi normal
+
+- Karena itu kita butuh distribusi baru di mana:
+
+    - karakteristiknya mirip distribusi normal
+    
+    - Seiring sampel meningkat, bentuknya semakin mendekati distribusi normal
+    
+- Distribusi tersebut adalah distribusi t.
+
+## t-table
+
+Download [t-table di sini](https://1drv.ms/b/s!AjelszXKKcmsifhDr8cYIgeuMVSIDw?e=ioiSHv)
+
+$df=n-1$
+
+<iframe src="https://onedrive.live.com/embed?cid=ACC929CA35B3A537&resid=acc929ca35b3a537%21162883&authkey=ACByMk8EqPx1N3s&em=2" width="800" height="400" frameborder="0" scrolling="no"></iframe>
+
+## Contoh 2
+
+- Diambil sebuah sampel berisikan 10 mahasiswa, didapatkan memiliki rata-rata nilai tes TOEFL sebesar 500 dengan simbangan baku 50. Dengan rentang kepercayaan 90%, tentukan rentang nilai TOEFL keseluruhan mahasiswa tersebut!
+
+- Gunakan tabel Z untuk mendapatkan $t_{0.05}$
+
+- Rentang rata-rata = $500 \pm 1,833\times\frac{50}{\sqrt{10}}$
+
+- Rentang rata-rata = $\left[471,02;528,98\right]$
+
+## Student t
+
+- Student distribution umumnya digunakan untuk sampel yang sedikit.
+
+- Beberapa buku menyarankan menggunakan distribusi t selama sampel anda di bawah 30.
+
+- Saya akan menyarankan hal yang sama di sini.
+
+- Di dunia nyata, sampling adalah hal yang ribet, terutama jika anda memiliki banyak karakteristik yang harus diseimbangkan.
+
+- Secara umum, semakin banyak semakin baik. Batasnya? Budget. Yang penting **Representatif**.
+
+## Uji Hipotesis
+
+- Kita telah belajar menebak nilai pusat (dengan rata-rata) dan menghitung standar deviasi / simpangan baku.
+
+- Berikutnya kita akan belajar uji hipotesis dengan jumlah data yang lebih dari 1 jenis.
+
+- Kita masih menggunakan asumsi distribusi normal.
+
+## Hipotesis
+
+- Hipotesis adalah pernyataan tentatif mengenai parameter acak.
+
+- Parameter acak dimaksud adalah parameter yang menunjukkan karakteristik data yang sedang kita uji.
+
+- Misalnya kelas A punya rata-rata nilai 80 dan simpangan baku 10, kelas B 76 dan 8. Manakah yang lebih tinggi?
+
+- Supplier A dan supplier B, manakah yang produknya lebih baik?
+
+## Uji hipotesis
+
+- Uji hipotesis umumnya dilakukan dengan membandingkan nilai rata-rata dengan suatu parameter.
+
+-Misalnya, rata-rata kelas A lebih tinggi daripada rata-rata kelas B, kita tuliskan sebagai:
+
+$$
+H_0: \mu_A > \mu_B
+$$
+
+$$
+H_1: \mu_A \leq \mu_B
+$$
+- $H_0$ disebut juga hipotesis nol, sementara $H_1$ disebut juga hipotesis alternatif.
+
+## Uji Hipotesis
+
+- Pada prosedur uji hipotesis, kita gunakan prinsip bahwa $H_0$ dianggap benar, kecuali kita  punya cukup bukti statistik untuk menolak $H_0$.
+
+- Mirip prinsip praduga tak bersalah: seseorang dinyatakan tidak bersalah kecuali terbukti sebaliknya.
+
+- Kita menggunakan nilai tengah ($\mu$) untuk menguji $H_0$.
+
+## Arah uji
+
+- Uji hipotesis dapat dibagi dua: uji hipotesis 2 arah (two-tailed) dan uji hipotesis 1 arah (1-tailed).
+
+- Uji hipotesis 2 arah kita gunakan bila $H_0: \mu=\mu_0$ dan $H_1: \mu\neq\mu_0$
+
+    - artinya, kita tolah $H_0$ jika mendapati bahwa nilai rata-rata lebih besar ATAU lebih kecil dari nilai referensi.
+
+- Uji hipotesis 1 arah kita ginakan bila yang kita uji adalah lebih besar atau lebih kecil.
+
+    - misalnya kita uji lebih besar dari, maka selama nilai rata-rata lebih kecil atau sama dengan, maka kita tolah $H_0$
+
+## Dua jenis eror
+
+| Kenyataan | Menerima $H_0$ | Menolak $H_0$
+| --- | --- | --- |
+| Benar | tidak salah | Type I error |
+| Salah | Type II error | tidak salah |
+
+- Type I error ($\alpha$): aslinya benar tapi kita tolak.
+
+- Type II error ($\beta$): aslinya salah tapi kita terima.
+
+## Prosedur Uji hipotesis
+
+1. Menetapkan hipotesis: Tulis apa $H_0$ dan $H_1$ nya
+1. Menetapkan $\alpha$, atau level kepercayaan untuk menolak $h_0$
+1. Menghitung parameter uji
+1. Memutuskan penolakan atau penerimaan $H_0$
+1. Membuat kesimpulan.
+
+# Pertemuan 12
+
+## Hari ini
+
+- Uji hipotesis
+
+## Langkah Uji Hipotesis
+
+- Membuat hipotesis dulu.
+
+    - Outcome: ada statement $H_0$ dan $H_1$
+    
+- Melakukan uji hipotesis.
+
+    - Hitung t, tentukan daerah penolakan, cek apakah t ada di daerah penolakan.
+    
+    - Outcome: ada keputusan apakah terima atau tolak $H_0$
+    
+- Membuat kesimpulan.
+
+    - Jelaskan secara verbal apa kesimpulan dari uji tersebut.
+
+## Uji deskriptif
+
+- Uji hipotesis deskriptif seringkali juga disebut dengan uji 1 sampel.
+
+- Umumnya uji ini digunakan untuk pernyataan misalnya "lampu X tahan 10.000 jam", atau "best before 6 bulan".
+
+$$
+H_0: \mu = \mu_0
+$$
+$$
+H_1: \mu \neq \mu_0
+$$
+
+## Uji deskriptif
+
+:::: columns
+::: {.column width="45%"}
+
+- Kita cek apakah $t_{hitung}$ ada di daerah penolakan. Hitung dengan rumus:
+
+$$
+t=\frac{\bar{X}-\mu_0}{\frac{S}{\sqrt{n}}}
+$$
+:::
+::: {.column width="45%"}
+
+![alpha (arsir biru tua) disebut juga daerah penolakan](pvalue1.gif)
+
+:::
+::::
+
+- bandingkan $t_{hitung}$ dengan $t_{tabel}$. Jika $t_{hitung}$ ada di daerah penolakan, maka tolak $H_0$.
+
+## Soal 1
+
+- Seorang dosen bahasa inggris memiliki materi ajar yang cocok untuk kelas dengan nilai TOEFL sekitar 500. Dosen ini memutuskan melakukan tes TOEFL ke 20 orang mahasiswa sebagai sampel. Jika rata-rata hasilnya adalah 500, maka materi tidak perlu diganti. Gunakan derajat kepercayaan 5% untuk menentukan apakah rata-rata mahasiswa memiliki nilai TOEFL 500.
+
+- $H_0: \mu = 500$
+
+- $H_1: \mu \neq 500$
+
+## Data {.scrollable}
+
+Bisa didownload di [sini](https://docs.google.com/spreadsheets/d/1aE74llk9RkTuL2nLsp6WfvK0faz3DGKv/edit?usp=drive_link&ouid=117760147588370390523&rtpof=true&sd=true)
+
+```{r}
+library(readxl)
+library(tidyverse)
+library(kableExtra)
+dat<-read_excel("data91.xlsx")
+dat %>% kableExtra::kbl(digits = 0)
+```
+
+## Soal 1
+
+- Didapat $\bar{X}=501,93$ dan $S=49.22$ lalu hitung t:
+
+$$
+t_0=\frac{482,62-500}{28,62/\sqrt{20}}=-2,72
+$$
+
+- Dengan $\alpha=5\%$ dan $df=19$, didapat $t_{0,025}=\pm2,093$
+
+- $|t_0| > |t_{0,025}|$ maka kita tolak $H_0$
+
+- Dengan derajat kepercayaan 95%, Disimpulkan bahwa rata-rata populasi tidak sama dengan 500. Mungkin kurikulum perlu diubah.
+
+## Soal 2
+
+- Anto memulai bisnis pecel lele. PT.A menawarkan menjadi pemasok lele untuk Anto. Tapi anto hanya menerima bila PT.A mampu dengan konsisten mengirimkan lele dengan berat minimal rata-rata lebih dari 100 gram. Anto pergi ke kolam PT.A dan mengambil sampel 10 ekor lele dengan data seperti berikut:
+
+```{r}
+data<-c(104.8712518,	109.9144173,	95.45148765,	91.17421667,	104.7746066,	101.859766,	89.45831416,	102.2185982,	85.21047661,	94.92018572)
+data
+```
+
+- Dengan $\alpha=5\%$, tentukan apakah Anto jadi mengambil dari PT.A atau tidak.
+
+## One-tail kiri
+
+$$
+H_0: \mu \geq 100
+$$
+$$
+H_1: \mu < 100
+$$
+
+- Kita gunakan uji 1 tail dengan rumus yang sama.
+
+- Didapat $\bar{X}=97,99$ dan $S=7,94$, dengan $n=10$ didapat t-hitung:
+
+- $t_{hitung}=-0.8$ sementara $t_{0,025}=-1,833$, terima $H_0$
+
+- Artinya anto akan mengambil lele PT.A.
+
+## Soal 3
+
+- Sebuah bank mengevaluasi kecepatan customer servicenya dalam melayani pelanggan. Diambil data sampel dari 40 layanan, didapatkan rata-rata 16,23 menit dengan standar deviasi 3,13 menit. Bank tersebut ingin mendeteksi apakah layanan secara keseluruhan lebih cepat dari 15 menit. Gunakan $\alpha=5\%$.
+
+$$
+H_0: \mu\leq15
+$$
+$$
+H_1: \mu>15
+$$
+
+## One-tail
+
+- $t_{hitung}=2,485$ sementara $Z_{0.05}=1,645$
+
+- Berarti $t$ ada di daerah penolakan, sehingga kita tolak $H_0$ dan dapat disimpulkan bahwa kinerja customer service masih lebih dari 15 menit secara keseluruhan.
+
+- Two-tail digunakan jika kita ingin menguji apakah sebuah rata-rata sama dengan sebuah parameter.
+
+- One-tail: Jika ingin menguji lebih besar sama dengan, maka gunakan yang daerah penolakannya di kiri(negatif).
+
+    - Sebaliknya jika menguji lebih kecil sama dengan.
+    
+## Uji hipotesis 2 populasi
+
+Prinsipnya sama dengan sebelumnya, tapi:
+
+$$
+df=n_1+n_2-2
+$$
+
+$$
+t=\frac{(\bar{X_1}-\bar{X_2})}{S_{gab}\sqrt{\frac{1}{n_1}+\frac{1}{n_2}}}
+$$
+
+$$
+S_{gab}=\sqrt{\frac{(n_1-1)S_1^2+(n_2-1)S_2^2}{n_1+n_2-2}}
+$$
+
+$$
+H_0: \mu_1=\mu_2
+$$
+
+## soal 3
+
+- Ada 2 buah populasi dengan karakteristik sebagai berikut:
+
+    - populasi 1: n=10, $\bar{X}=15$, S=6
+    
+    - populasi 2: n=12, $\bar{X}=10$, S=5
+    
+- dengan $\alpha=5\%$, cek apakah kedua populasi adalah populasi yang sama atau tidak.
+
+- $H_0: \mu_1 = \mu_2$
+
+- $H_1: \mu_1 \neq \mu_2$
+
+## Soal 3
+
+$$
+S_{gab}=\sqrt{\frac{(10-1)6^2+(12-1)5^2}{10+12-2}}= 5,63
+$$
+
+$$
+t=\frac{(15-10)}{5.63\sqrt{\frac{1}{10}+\frac{1}{12}}}=2,07
+$$
+
+- $t_{0,025}=1.725 < t$ sehingga tolak $H_0$
+
+- Karena $\bar{X_1}>\bar{X_2}$ maka kita boleh menyimpulkan $\mu_1>\mu_2$
+
+## Uji Hipotesis berpasangan
+
+- Uji ini dilakukan apabila populasi 1 dan populasi 2 kita hitung secara berpasangan.
+
+- Umumnya dilakukan jika ada suatu intervensi di individu yang sama, lalu dicek sebelum dan sesudahnya.
+
+- Kita hitung perbedaan tiap sampelnya (dibuat kolom baru yaitu $B=X_1-X_2$) lalu hitung dengan rumus:
+
+- $t=\frac{\bar{B}}{S_B\sqrt{n}}$
+
+- gunakan $H_0: \mu_1=\mu_2$ atau $H_0: \bar{B}=0$
+
+## Soal 4
+
+Sebuah kelas barusan pasang AC, lalu menghitung nilai UTS (sebelum AC) dan UAS (sesudah AC). Didapat:
+
+| Mahasiswa | 1 | 2 | 3 | 4 | 5 |
+| --- | --- | --- | --- | --- | --- |
+| Pre-AC | 40 | 70 | 63 | 56 | 65 |
+| Post-AC | 45 | 64 | 59 | 51 | 67 |
+| B | -5 | 6 | 4 | 5 | 2 |
+
+Apakah setelah pasang AC hasilnya lebih baik? gunakan $\alpha=5\%$
+
+## Soal 4
+
+- $\bar{B}=\frac{-5+6+4+5+2}{5}=1,6$
+
+- $S_B=4,83$ (lihat lagi cara hitung simpangan baku di materi sebelumnya)
+
+- $t=\frac{1,6}{4,83\sqrt{5}}=0,74$
+
+- $t_{tabel}=2,776$ dan hasilnya $t$ ada di daerah penerimaan.
+
+- Tidak menolak $H_0 \rightarrow$ Sebelum dan setelah pasang AC hasil belajar tidak berubah.
+
+# Pertemuan 13
+
+## Hari ini
+
+- Korelasi
+
+- Pengantar regresi
+
+## Korelasi
+
+- Pada uji hipotesis, kita mencoba menebak apakah sampel yang kita miliki telah sesuai dengan pembandingnya:
+
+    - dibandingkan dengan sebuah angka -> uji hipotesis 1 populasi.
+    
+    - dibandingkan dengan sampel lain -> uji hipotesis 2 populasi.
+    
+- Kadang-kadang pertanyaan yang kita punya adalah seberapa kuat hubungan antar 2 variabel.
+
+## Korelasi
+
+- Misalnya, apakah PDB terkait dengan tingkat harga? Apakah PDB China beriringan dengan ekspor Indonesia? Apakah jam belajar berpotensi menyebabkan nilai yang tinggi?
+
+- Pertanyaan-pertanyaan seperti ini intinya mencoba menjawab seberapa kuat hubungan $Y$ dan $X$.
+
+- Korelasi memiliki nilai 0-1: 0=tidak ada hubungan, 1=hubungan sempurna.
+
+- Hari ini kita menghitung korelasi variabel kuantitatif dan korelasi variabel kualitatif.
+
+## Korelasi kualitatif
+
+Misalnya kita ingin tau apakah kemampuan bahasa inggris seorang pegawai punya korelasi dengan asal kampusnya. Kita memiliki data seperti berikut.
+
+|   | Kurang | Cukup | Lancar |
+| --- | --- | --- | --- |
+| Kampus A | 82 | 65 | 12 |
+| Kampus B | 59 | 112 | 24 |
+| Kampus C | 37 | 94 | 42 |
+
+Kedua variabel (asal kampus dan kemampuan bahasa inggris) berisi data kualitatif. Angka tersebut adalah jumlah pegawai.
+
+## Korelasi kualitatif {.m}
+
+| $f_{ij}$ | Kurang | Cukup | Lancar | Total |
+| --- | --- | --- | --- | --- |
+| Kampus A | 82 | 65 | 12 | $n_{1.}=159$ |
+| Kampus B | 59 | 112 | 24 | $n_{2.}=195$ |
+| Kampus C | 37 | 94 | 42 | $n_{3.}=173$ |
+| Total | $n_{.1}=178$ | $n_{.2}=271$ | $n_{.1}=78$ | $n=527$ |
+
+$$
+\chi^2=\sum_{i=1}^{p} \sum_{j=1}^{q} \frac{(f_{ij}-e_{ij})^2}{e_{ij}}
+$$
+$i=$ variabel baris, $j=$ variabel kolom. $f_{ij}$ adalah angka di baris $i$ & kolom $j$
+
+$e_{ij}=\frac{n_{i.}\times n_{.j}}{n}=$ expected frequency.
+
+## Korelasi kualitatif {.m}
+
+| $e_{ij}$  | Kurang | Cukup | Lancar | Total |
+| --- | --- | --- | --- | --- |
+| Kampus A | 53,70 | 81,76 | 23,53 | $n_{1.}=159$ |
+| Kampus B | 65,86 | 100,28 | 28,86 | $n_{2.}=195$ |
+| Kampus C | 58,43 | 88,96 | 25,61 | $n_{3.}=173$ |
+| Total | $n_{.1}=178$ | $n_{.2}=271$ | $n_{.1}=78$ | $n=527$ |
+
+$$
+e_{11}=\frac{159 \times 178}{527} \ ; \ e_{12}=\frac{159 \times 271}{527} \ ; \ e_{12}=\frac{159 \times 78}{527} \\ e_{21}=\frac{195 \times 178}{527} \ ; \ e_{22}=\frac{195 \times 271}{527} \ ; \ e_{23}=\frac{195 \times 78}{527} \\ e_{31}=\frac{173 \times 178}{527} \ ; \ e_{32}=\frac{173 \times 271}{527} \ ; \ e_{33}=\frac{173 \times 78}{527}
+$$
+
+## Korelasi kualitatif
+
+$$
+\chi^2=\sum_{i=1}^{p} \sum_{j=1}^{q} \frac{(f_{ij}-e_{ij})^2}{e_{ij}} \\ \chi^2=\frac{28,30^2}{53,70}+\frac{(-16,76)^2}{81,76}+\frac{(-11.53)^2}{23,53} \\ +\frac{(-6,86)^2}{65,86}+\frac{11,72^2}{100,28}+\frac{(-4,86)^2}{28,86} \\ +\frac{(-21,43)^2}{58,43}+\frac{5,04^2}{88,96}+\frac{16,39^2}{25,61}
+$$
+
+## Korelasi kualitatif
+
+$$
+\chi^2=45,54
+$$
+
+Next, hitung $C_c=\sqrt{\frac{\chi^2}{\chi^2+n}}$
+
+$$
+C_c+\sqrt{\frac{45,54}{45,54+527}}=0,28
+$$
+
+Kemudian, hitung $C_{max}=\sqrt{\frac{v-1}{v}}$ di mana $v=$jumlah kolom/baris, mana yang paling kecil.
+
+## Korelasi Kualitatif
+
+$$
+C_{max}=\sqrt{\frac{3-1}{3}}=0,82
+$$
+
+Terakhir, korelasi $C=\frac{C_C}{C_{max}}$
+
+$$
+C=\frac{0,28}{0,82}=0,34
+$$
+
+Kita dapat katakan bahwa korelasi antara asal kampus dan kemampuan bahasa inggris = 0,34. Artinya korelasinya sangat kecil.
+
+## Korelasi kuantitatif
+
+- Biasanya kalau kita sebut "korelasi", kita langsung berpikir ke korelasi kuantitatif.
+
+- Untuk korelasi kuantitatif, kita memiliki dua variabel $X$ dan $Y$ yang bernilai kuantitatif.
+
+$$
+r=\frac{n\sum_{i=1}^{n}X_iY_i-\sum_{i=1}^{n}X_i\sum_{i=1}^{n}Y_i}{\sqrt{n\sum_{i=1}^{n}X_i^2-\left(\sum_{i=1}^{n}X_i\right)^2} \sqrt{n\sum_{i=1}^{n}Y_i^2-\left(\sum_{i=1}^{n}Y_i\right)^2}}
+$$
+
+- Rumus ini disebut juga Pearson Correlation.
+
+## Korelasi kuantitatif
+
+- Anda membutuhkan beberapa kolom tambahan, antara lain $X^2$, $Y^2$ dan $XY$
+
+- Katakanlah seorang mahasiswa ingin tau apakah nilai UTS berhubungan dengan jumlah jam belajar dalam seminggu.
+
+- Datanya dapat didownload di [sini](https://docs.google.com/spreadsheets/d/16ZuQPD1sk76pv6sRpvjiiZcSP68CNPRq/edit?usp=drive_link&ouid=117760147588370390523&rtpof=true&sd=true)
+
+## Korelasi kuantitatif
+
+- Data yang ingin kita cari korelasinya dapat kita coba analisis sederhana dengan menggunakan _scatterplot_
+
+- scatterplot adalah grafik yang menunjukkan dua data kita di dua sumbu berbeda.
+
+- Jika $X=$jam belajar dan $Y=$nilai UTS, maka kita pasang X di sumbu X dan Y di sumbu Y dari grafik kita.
+
+- Coba gunakan excel untuk menggambarkan grafik kita sebelumnya.
+
+## Korelasi kuantitatif
+
+```{r}
+dat<-readxl::read_excel("jambelajar.xlsx")
+plot(dat$X,dat$Y,xlab="jam belajar",ylab="nilai UTS")
+```
+
+## Korelasi kuantitatif
+
+- Jika melihat gambarnya, kita dapat lihat seperti ada pola.
+
+- Tidak hanya keduanya berkorelasi, namun juga terlihat bahwa korelasinya positif: semakin tinggi jam belajar, semakin tinggi juga nilai UTS.
+
+- Korelasi positif adalah korelasi di mana $X$ dan $Y$ terlihat bergerak searah.
+
+- Korelasi negatif adalah korelasi di mana $X$ dan $Y$ terlihat bergerak berlawanan arah.
+
+- Dapatkah anda memberi contoh korelasi positif dan korelasi negatif?
+
+## Regresi
+
+- Jika kita berhasil membuat sebuah fungsi dari pola tersebut, kita bisa menebak dengan lebih akurat $Y$ jika kita mengetahui $X$, atau sebaliknya:
+
+    - Jika anda belajar $X$ jam, anda bisa tebak akan dapat UTS berapa
+    
+    - Sebaliknya: Jika anda ingin dapat UTS sebesar $Y$, anda bisa kira-kira harus belajar berapa jam.
+    
+- Teknik ini disebut dengan regresi, dan akan kita pelajari minggu depan.
+
+# Pertemuan 14
+
+## Hari ini
+
+- Regresi univariat
+
+## Korelasi
+
+- Pada uji hipotesis, kita mencoba menebak apakah sampel yang kita miliki telah sesuai dengan pembandingnya:
+
+    - dibandingkan dengan sebuah angka -> uji hipotesis 1 populasi.
+    
+    - dibandingkan dengan sampel lain -> uji hipotesis 2 populasi.
+    
+- Pada perhitungan korelasi, kita mendapatkan informasi tentang hubungan 2 variabel, Y dan X.
+
+- Regresi menggunakan 2 prinsip di atas untuk mencari perubahan marjinal dari Y dan X.
+
+## Regresi {.m}
+
+:::: columns
+::: {.column width="47%"}
+```{r}
+#| fig-height: 5
+#| fig-width: 5
+library(tidyverse)
+library(readxl)
+dat<-read_excel("jambelajarfull.xlsx")
+z<-theme_classic() +
+  theme(panel.background = element_rect(fill = "#f0f1eb",
+                                        colour = "#f0f1eb"),
+        plot.background = element_rect(fill = "#f0f1eb"),
+        legend.key = element_rect(fill = "#f0f1eb",linetype = "blank"),
+        legend.background = element_rect(fill="#f0f1eb"))
+dat |> ggplot(aes(x=X,y=Y))+
+  geom_point() +
+  labs(x= "Jam belajar (jam/minggu)", y="Nilai UTS")+
+  geom_smooth(method=lm,se=FALSE)+z+theme(text = element_text(size=20))+
+  scale_x_continuous(expand = c(0, 0)) + scale_y_continuous(expand = c(0, 0))
+```
+:::
+::: {.column width="47%"}
+- Kali ini kita coba plot data jam belajar vs nilai UTS, tapi datanya ada 70 observasi (n=70).
+
+- Dapat dilihat ada pattern di data tersebut, di mana X dan Y memiliki korelasi positif.
+
+- Jika terdapat korelasi linear, kita dapat membuat garis lurus yang mewakili kurang lebih korelasi tersebut. (lihat garis biru)
+
+- Bagaimana cara membuatnya?
+:::
+::::
+
+## Regresi {.m}
+
+:::: columns
+::: {.column width="47%"}
+```{r}
+#| fig-height: 5
+#| fig-width: 5
+library(tidyverse)
+library(readxl)
+dat<-read_excel("jambelajarfull.xlsx")
+z<-theme_classic() +
+  theme(panel.background = element_rect(fill = "#f0f1eb",
+                                        colour = "#f0f1eb"),
+        plot.background = element_rect(fill = "#f0f1eb"),
+        legend.key = element_rect(fill = "#f0f1eb",linetype = "blank"),
+        legend.background = element_rect(fill="#f0f1eb"))
+dat |> ggplot(aes(x=X,y=Y))+
+  geom_point() +
+  labs(x= "Jam belajar (jam/minggu)", y="Nilai UTS")+
+  geom_smooth(method=lm,se=FALSE)+z+theme(text = element_text(size=20))+geom_vline(xintercept=15,color="red",alpha=0.3)+
+  geom_segment(x=0,xend=15,y=64,yend=64,linetype=2,alpha=.4)+
+  geom_segment(x=0,xend=15,y=65,yend=65,linetype=2,alpha=.4)+
+  geom_segment(x=0,xend=15,y=68,yend=68,linetype=2,alpha=.4)+
+  geom_segment(x=0,xend=15,y=69,yend=69,linetype=2,alpha=.4)+
+  scale_x_continuous(expand = c(0, 0)) + scale_y_continuous(expand = c(0, 0))
+```
+:::
+::: {.column width="47%"}
+- Garis biru tersebut dibuat sedemikian sehingga ia **meminimalisir jarak vertikal** antara setiap titik observasi dengan si garis biru.
+- misalnya, lihat X=15, ada 4 titik berbeda, yaitu 64,65,68, dan 69.
+- garis biru bertemu X=15 di Y=69.
+- Jarak setiap titik terhadap Y=69 adalah [-5,-4,-1,0]
+- Lakukan untuk semua titik, maka garis biru akan memberikan jumlah perbedaan terkecil dibanding posisi lain.
+:::
+::::
+
+## Ordinary Least Square
+
+- Ada yang ingat rumus untuk membuat sebuah garis linear di diagram kartesian?
+
+$$
+\hat{Y}=\beta_0+\beta_1 X
+$$
+
+- $\hat{Y}$ adalah $Y$ yang didapatkan dari persamaan tersebut.
+
+- $\beta_0$ adalah titik awal, atau $Y$ ketika $X=0$, disebut juga konstanta.
+
+- $\beta_1$ menunjukkan kemiringan garis. Disebut juga dengan gradien.
+
+## OLS
+
+- Perbedaan vertikal antara garis biru dengan setiap observasi adalah:
+
+$$
+\varepsilon=Y-\hat{Y}
+$$
+
+di mana $Y$ adalah $Y$ yang kita dapat dari data. si $\varepsilon$ inilah yang diminimalisir.
+
+- Untuk melakukan minimalisasi, kita memanfaatkan _First Order Condition_ di mana untuk beberapa fungsi $f(x)$, kita dapat menemukan titik optimal di mana $f'(x)=0$
+
+## OLS
+
+- karena $\varepsilon$ bisa jadi negatif, kita kuadratkan dulu lalu ditambahkan, sehingga:
+
+$$
+\min_{\beta_0,\beta_1} \sum_i \left(Y_i-\beta_0-\beta_1 X_i \right)^2
+$$
+
+- kita mencari $\beta_0$ dan $\beta_1$ di mana $\frac{\partial}{\partial \beta_0}=0$ dan $\frac{\partial}{\partial \beta_1}=0$
+
+- Dengan kata lain, kita buat dulu persamaannya baru kita cari parameter garisnya dulu.
+
+- Metode ini disebut Ordinary Least Square (OLS) / metode kuadrat terkecil.
+
+## OLS
+
+- Kita tidak perlu melakukan penurunan rumus dari slide sebelumnya.
+
+- Sudah ada rumus yg siap pakai, yaitu:
+
+$$
+\beta_0=\frac{\sum Y \sum X^2-\sum X \sum XY}{n\sum X^2-(\sum X)^2}
+$$
+dan
+$$
+\beta_1=\frac{n\sum XY - \sum X \sum Y}{n \sum X^2-(\sum X)^2}
+$$
+
+## Rumus lain
+
+- setelah mendapatkan kedua parameter kita, kita dapat menggambar garis kita:
+
+$$
+\hat{Y}=\beta_0+\beta_1 X
+$$
+
+- Dan dapat menghitung error $\varepsilon=Y-\hat{Y}$
+
+- Sehingga rumus regresi utuhnya adalah:
+
+$$
+Y=\beta_0+\beta_1 X + \varepsilon
+$$
+
+## Regresi univariat
+
+$$
+Y_i=\beta_0+\beta_1 X_i+\varepsilon_i
+$$
+
+- Y disebut juga variabel dependen
+
+- X disebut juga variabel independen
+
+- nilai Y dan X kita dapatkan dari data
+
+- $\varepsilon$ disebut juga error term / residual. Dia bersifat **independen**
+
+- $\beta_1$ disebut juga dengan marginal effect. Ada yang ingat turunan?
+
+## Marginal effect {.incremental}
+
+- pada dasarnya, $\beta_1=\frac{dY}{dX}$. Apa artinya?
+
+- Untuk kenaikan $X$ sebesar 1 satuan, Y naik sebesar $\beta_1$
+
+- Jika kita gunakan konteks kita, bagaimana menerjemahkan $\beta_1$ ?
+
+- Jika jam belajar bertambah 1 jam/minggu, nilai UTS naik sebesar $\beta_1$
+
+## Ramalan
+
+- Disamping itu, kita dapat meramal $Y$ jika tau $X$. Jika saya belajar 13 jam, berapa ekspektasi nilai UTS saya?
+
+- $\hat{Y}=\beta_0+\beta_1 \times 13$
+
+- $Y$ aslinya belum tentu sama dengan $\hat{Y}$, tapi walaupun beda, harusnya tidak terlalu jauh.
+
+- Semakin besar korelasinya, semakin bagus ramalannya.
+
+
+## Video regresi excel
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/QbReMOBVzOY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+

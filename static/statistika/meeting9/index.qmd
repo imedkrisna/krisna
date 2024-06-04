@@ -1,235 +1,213 @@
 ---
-title: "Uji Hopotesis"
-subtitle: "Pertemuan 9"
-author: "Matematika & Statistika"
+title: "Statistik deskriptif"
+subtitle: "Pertemuan 2"
+author: "Matematika Statistika"
 format: 
   revealjs:
     theme: [simple,../mytheme.scss]
     chalkboard: true
-    incremental: true
+    incremental: false
     transition: convex
     background-transition: fade
     slide-number: true
 ---
 
-## Hari ini
+## Minggu lalu
 
-- Uji hipotesis
+- Berbagai jenis data: kategorikal, ordinal, diskrit dan kontinyu.
 
-## Langkah Uji Hipotesis
+- survey: random dan non-random
 
-- Membuat hipotesis dulu.
+#### Minggu ini
 
-    - Outcome: ada statement $H_0$ dan $H_1$
-    
-- Melakukan uji hipotesis.
+- Distribusi frekuensi dan statistik deskriptif
 
-    - Hitung t, tentukan daerah penolakan, cek apakah t ada di daerah penolakan.
-    
-    - Outcome: ada keputusan apakah terima atau tolak $H_0$
-    
-- Membuat kesimpulan.
+## Distribusi frekuensi
 
-    - Jelaskan secara verbal apa kesimpulan dari uji tersebut.
+- Distribusi frekuensi adalah cara yang paling awal dilakukan untuk mendapatkan gambaran dari suatu sampel / populasi.
 
-## Uji deskriptif
+- Kita membutuhkan distribusi frekuensi karena sebagai manusia biasa kita ga akan sanggup membaca semua data poin 1 1.
 
-- Uji hipotesis deskriptif seringkali juga disebut dengan uji 1 sampel.
+- Perlu semacam alat ukur yang menggambarkan semua data yang kita punya.
 
-- Umumnya uji ini digunakan untuk pernyataan misalnya "lampu X tahan 10.000 jam", atau "best before 6 bulan".
+## Distribusi kualitatif {.scrollable}
 
-$$
-H_0: \mu = \mu_0
-$$
-$$
-H_1: \mu \neq \mu_0
-$$
-
-## Uji deskriptif
-
-:::: columns
-::: {.column width="45%"}
-
-- Kita cek apakah $t_{hitung}$ ada di daerah penolakan. Hitung dengan rumus:
-
-$$
-t=\frac{\bar{X}-\mu_0}{\frac{S}{\sqrt{n}}}
-$$
-:::
-::: {.column width="45%"}
-
-![alpha (arsir biru tua) disebut juga daerah penolakan](pvalue1.gif)
-
-:::
-::::
-
-- bandingkan $t_{hitung}$ dengan $t_{tabel}$. Jika $t_{hitung}$ ada di daerah penolakan, maka tolak $H_0$.
-
-## Soal 1
-
-- Seorang dosen bahasa inggris memiliki materi ajar yang cocok untuk kelas dengan nilai TOEFL sekitar 500. Dosen ini memutuskan melakukan tes TOEFL ke 20 orang mahasiswa sebagai sampel. Jika rata-rata hasilnya adalah 500, maka materi tidak perlu diganti. Gunakan derajat kepercayaan 5% untuk menentukan apakah rata-rata mahasiswa memiliki nilai TOEFL 500.
-
-- $H_0: \mu = 500$
-
-- $H_1: \mu \neq 500$
-
-## Data {.scrollable}
-
-Bisa didownload di [sini](https://docs.google.com/spreadsheets/d/1aE74llk9RkTuL2nLsp6WfvK0faz3DGKv/edit?usp=drive_link&ouid=117760147588370390523&rtpof=true&sd=true)
+- Misalnya anda melakukan survey merk handphone yang dimiliki saat ini dengan sample 50 orang.
 
 ```{r}
-library(readxl)
 library(tidyverse)
 library(kableExtra)
-dat<-read_excel("data91.xlsx")
-dat %>% kableExtra::kbl(digits = 0)
+sample(x=c("Apple","Samsung","Oppo","Vivo","Xiaomi","Lainnya"),
+                      prob=c(0.1,0.3,0.15,0.13,0.17,0.15),
+                      size=50,
+                      replace = TRUE)
 ```
 
-## Soal 1
+- Cara mengolahnya secara manual adalah dengan menggunakan **Tally**
 
-- Didapat $\bar{X}=501,93$ dan $S=49.22$ lalu hitung t:
+- Informasi apa yang menarik dari tabel ini?
 
-$$
-t_0=\frac{482,62-500}{28,62/\sqrt{20}}=-2,72
-$$
+## Distribusi kualitatif {.scrollable .s}
 
-- Dengan $\alpha=5\%$ dan $df=19$, didapat $t_{0,025}=\pm2,093$
-
-- $|t_0| > |t_{0,025}|$ maka kita tolak $H_0$
-
-- Dengan derajat kepercayaan 95%, Disimpulkan bahwa rata-rata populasi tidak sama dengan 500. Mungkin kurikulum perlu diubah.
-
-## Soal 2
-
-- Anto memulai bisnis pecel lele. PT.A menawarkan menjadi pemasok lele untuk Anto. Tapi anto hanya menerima bila PT.A mampu dengan konsisten mengirimkan lele dengan berat minimal rata-rata lebih dari 100 gram. Anto pergi ke kolam PT.A dan mengambil sampel 10 ekor lele dengan data seperti berikut:
+- Gimana kalau datanya ada 1000?
 
 ```{r}
-data<-c(104.8712518,	109.9144173,	95.45148765,	91.17421667,	104.7746066,	101.859766,	89.45831416,	102.2185982,	85.21047661,	94.92018572)
-data
+library(tidyverse)
+library(kableExtra)
+dat<-as.tibble(sample(x=c("Apple","Samsung","Oppo","Vivo","Xiaomi","Lainnya"),
+                      prob=c(0.1,0.3,0.15,0.13,0.17,0.15),
+                      size=1000,
+                      replace = TRUE))
+kbl(dat) %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"))
 ```
 
-- Dengan $\alpha=5\%$, tentukan apakah Anto jadi mengambil dari PT.A atau tidak.
+## Google sheet
 
-## One-tail kiri
+Step-by-step kalau pakai google sheet:
 
-$$
-H_0: \mu \geq 100
-$$
-$$
-H_1: \mu < 100
-$$
+1. Block data dengan `ctrl+panah`
+2. Pilih `instert` -> `pivot table`
+3. Pastikan data range benar dan pilih "new sheet". klik `create`
+4. Pilih `rows` lalu klik `brand`
+5. Pilih `values` lalu klik `brand`
 
-- Kita gunakan uji 1 tail dengan rumus yang sama.
+## Frekuensi relatif
 
-- Didapat $\bar{X}=97,99$ dan $S=7,94$, dengan $n=10$ didapat t-hitung:
+- Apa yang kita lakukan di atas adalah menghitung **frekuensi absolut**
 
-- $t_{hitung}=-0.8$ sementara $t_{0,025}=-1,833$, terima $H_0$
+- Terkadang kita memerlukan informasi tentang frekuensi relatif.
 
-- Artinya anto akan mengambil lele PT.A.
+- Frekuensi relatif sebuah kelas adalah frekuensi absolut si kelas tersebut dibagi dengan total observasi.
 
-## Soal 3
+## Google sheet
 
-- Sebuah bank mengevaluasi kecepatan customer servicenya dalam melayani pelanggan. Diambil data sampel dari 40 layanan, didapatkan rata-rata 16,23 menit dengan standar deviasi 3,13 menit. Bank tersebut ingin mendeteksi apakah layanan secara keseluruhan lebih cepat dari 15 menit. Gunakan $\alpha=5\%$.
+| Brand | freq absolut | freq relatif |
+| ----- | ----- | ----- |
+| Apple | 100 | 10% |
+| Lainnya | 153 | 15.3% |
+| Oppo | 129 | 12.9% |
+| Samsung | 310 | 31% |
+| Vivo | 136 | 13.6% |
+| Xiaomi | 172 | 17.2% |
+| Total | 1000 | 100% |
 
-$$
-H_0: \mu\leq15
-$$
-$$
-H_1: \mu>15
-$$
+- data ini dapat divisualisasikan dengan **histogram**.
 
-## One-tail
+## Distribusi frekuensi
 
-- $t_{hitung}=2,485$ sementara $Z_{0.05}=1,645$
+- Anda akan lebih sering bertemu data numerik.
 
-- Berarti $t$ ada di daerah penolakan, sehingga kita tolak $H_0$ dan dapat disimpulkan bahwa kinerja customer service masih lebih dari 15 menit secara keseluruhan.
+- Data numerik lebih mudah diolah dan biasanya memiliki lebih banyak *insight*.
 
-- Two-tail digunakan jika kita ingin menguji apakah sebuah rata-rata sama dengan sebuah parameter.
+- Data numerik juga memiliki berbagai jenis indikator.
 
-- One-tail: Jika ingin menguji lebih besar sama dengan, maka gunakan yang daerah penolakannya di kiri(negatif).
+## Contoh data
 
-    - Sebaliknya jika menguji lebih kecil sama dengan.
-    
-## Uji hipotesis 2 populasi
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSdLsm-5nIFgcspOncjaLwwKX1vmGbTOvhkYVOFWdHS3h15EWmHcXDSm562eyR4MiftmPJiPom7X2RM/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
 
-Prinsipnya sama dengan sebelumnya, tapi:
+Data tersebut adalah nilai UTS semester sebelumnya. Dapat didownload di [sini](https://docs.google.com/spreadsheets/d/e/2PACX-1vSdLsm-5nIFgcspOncjaLwwKX1vmGbTOvhkYVOFWdHS3h15EWmHcXDSm562eyR4MiftmPJiPom7X2RM/pubhtml)
 
-$$
-df=n_1+n_2-2
-$$
+## Distribusi frekueksi 
 
-$$
-t=\frac{(\bar{X_1}-\bar{X_2})}{S_{gab}\sqrt{\frac{1}{n_1}+\frac{1}{n_2}}}
-$$
+- Untuk data numerik, menghitung frekuensi dengan pivot tidak praktis.
 
-$$
-S_{gab}=\sqrt{\frac{(n_1-1)S_1^2+(n_2-1)S_2^2}{n_1+n_2-2}}
-$$
+- Anda perlu membuat kelas dengan interval.
 
-$$
-H_0: \mu_1=\mu_2
-$$
+- Baik penentuan kelas maupun penentuan interval membutuhkan pemikiran yang cukup matang.
 
-## soal 3
+- Slide berikutnya akan membuat tabel distribusi frekuensi dengan kelas yang arbitrari.
 
-- Ada 2 buah populasi dengan karakteristik sebagai berikut:
+## Google sheet
 
-    - populasi 1: n=10, $\bar{X}=15$, S=6
-    
-    - populasi 2: n=12, $\bar{X}=10$, S=5
-    
-- dengan $\alpha=5\%$, cek apakah kedua populasi adalah populasi yang sama atau tidak.
+1. ketik rumus `=FREQUENCY(data,class)`
+1. Isi `data` dengan data yang ingin anda buat tabel frekuensinya.
+1. Isi `class` dengan batas atas dari kelas anda.
 
-- $H_0: \mu_1 = \mu_2$
+## Banyaknya kelas yang ideal
 
-- $H_1: \mu_1 \neq \mu_2$
+- Jumlah kelas dan interval yang baik sebenarnya cukup fluid.
 
-## Soal 3
+- Secara umum, kita menginginkan pembagian distribusi yang cukup merata dan tidak ekstrim.
 
-$$
-S_{gab}=\sqrt{\frac{(10-1)6^2+(12-1)5^2}{10+12-2}}= 5,63
-$$
+- Interval kelas tidak harus seragam, namun biasanya anda akan sering ketemu interval kelas yang seragam.
 
-$$
-t=\frac{(15-10)}{5.63\sqrt{\frac{1}{10}+\frac{1}{12}}}=2,07
-$$
+- Membuat umlah kelas dan interval kelas membutuhkan pengalaman.
 
-- $t_{0,025}=1.725 < t$ sehingga tolak $H_0$
+## Rumus jumlah kelas
 
-- Karena $\bar{X_1}>\bar{X_2}$ maka kita boleh menyimpulkan $\mu_1>\mu_2$
+- Jumlah kelas dapat dibuat dengan rumus
 
-## Uji Hipotesis berpasangan
+$$k=1+3.322\log(n)$$
 
-- Uji ini dilakukan apabila populasi 1 dan populasi 2 kita hitung secara berpasangan.
+di mana:
 
-- Umumnya dilakukan jika ada suatu intervensi di individu yang sama, lalu dicek sebelum dan sesudahnya.
+- k = jumlah kelas
+- n = jumlah observasi/sample.
+- gunakan log base 10.
 
-- Kita hitung perbedaan tiap sampelnya (dibuat kolom baru yaitu $B=X_1-X_2$) lalu hitung dengan rumus:
+## Rumus interval kelas
 
-- $t=\frac{\bar{B}}{S_B\sqrt{n}}$
+- Interval kelas dapat juga menggunakan rumus:
 
-- gunakan $H_0: \mu_1=\mu_2$ atau $H_0: \bar{B}=0$
+$$c=\frac{X_n-X_1}{k}$$
 
-## Soal 4
+- $k$ didapat dari rumus sebelumnya.
 
-Sebuah kelas barusan pasang AC, lalu menghitung nilai UTS (sebelum AC) dan UAS (sesudah AC). Didapat:
+- $X_n$ adalah nilai observasi terbesar, $X_1$ adalah nilai observasi terkecil.
 
-| Mahasiswa | 1 | 2 | 3 | 4 | 5 |
-| --- | --- | --- | --- | --- | --- |
-| Pre-AC | 40 | 70 | 63 | 56 | 65 |
-| Post-AC | 45 | 64 | 59 | 51 | 67 |
-| B | -5 | 6 | 4 | 5 | 2 |
+- $c$ adalah lebarnya interval.
 
-Apakah setelah pasang AC hasilnya lebih baik? gunakan $\alpha=5\%$
+## Exercise
 
-## Soal 4
+Membuat tabel distribusi frekuensi absolut dan frekuensi relatif.
 
-- $\bar{B}=\frac{-5+6+4+5+2}{5}=1,6$
+## Normal distribution
 
-- $S_B=4,83$ (lihat lagi cara hitung simpangan baku di materi sebelumnya)
+```{r}
+ N <- 10000
+ x <- rnorm(N, 10, 5)
+ hist(x, 
+ xlim=c(min(x),max(x)), probability=T, nclass=max(x)-min(x)+1, 
+   col='lightblue', xlab=' ', ylab=' ', axes=F,
+   main='Normal distribution')
+lines(density(x,bw=1), col='red', lwd=3)
+```
 
-- $t=\frac{1,6}{4,83\sqrt{5}}=0,74$
+## Normal distribution
 
-- $t_{tabel}=2,776$ dan hasilnya $t$ ada di daerah penerimaan.
+- Sebagian besar distribusi umumnya akan mengikuti distribusi normal.
 
-- Tidak menolak $H_0 \rightarrow$ Sebelum dan setelah pasang AC hasil belajar tidak berubah.
+- Kurva distribusi normal seringkali disebut juga dengan kurva lonceng atau _bell curve_.
+
+- Distribusi normal adalah sebuah distribusi populasi di mana observasi terbanyak akan dapat anda temui di rata-rata. Semakian jauh dari rata-rata, makin sedikit observasi yang anda temui.
+
+## Pengukuran gejala pusat
+
+- Untuk setiap data, kita umumnya perlu sebuah indikator yang menunjukkan representasi dari keseluruhan populasi.
+
+- Indikator ini kita sebut juga dengan **ukuran gejala pusat** atau *central tendency*.
+
+- Pengukuran gejala pusat dilakukan dengan melihat *Modus*, *Median*, dan *Mean*
+
+- Modus = angka yang paling sering muncul, Median = nilai tengah
+
+- Mean = rata-rata atau $\mu=\frac{\sum_iX_i}{n}$
+
+## Ukuran sebaran
+
+- Di samping ukuran gejala pusat, kita juga menggunakan beberapa indikator untuk mengukur seberapa jauh rentang data kita dari gejala pusat tersebut.
+
+- Kita menggunakan max (nilai paling tinggi), min (nilai paling kecil), dan kuartil.
+
+- Kuartil 1 adalah data paling tinggi dari 25% data terkecil, kuartil 2 = median, dan kuartil 3 adalah data paling tinggi dari 75% data terkecil.
+
+## Exercise
+
+- mendapatkan ukuran central tendency dan ukuran sebaran dengan google sheet.
+
+- Semua ukuran-ukuran ini kita sebut dengan **statistik deskriptif**.
+
+## Mingdep
+
+- probability atau more on central tendency

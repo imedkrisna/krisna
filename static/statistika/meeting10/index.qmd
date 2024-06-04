@@ -1,175 +1,224 @@
 ---
-title: "Korelasi dan regresi"
-subtitle: "Pertemuan 10"
+title: "Z-Score dan menebak probabilitas"
+subtitle: "Pertemuan 6"
 author: "Matematika & Statistika"
 format: 
   revealjs:
     theme: [simple,../mytheme.scss]
     chalkboard: true
-    incremental: true
+    incremental: false
     transition: convex
     background-transition: fade
     slide-number: true
 ---
 
-## Hari ini
+## Minggu ini
 
-- Korelasi
+- Review PDF dan distribusi normal
 
-- Pengantar regresi
+- Z-score
 
-## Korelasi
+- Menebak probabilitas
 
-- Pada uji hipotesis, kita mencoba menebak apakah sampel yang kita miliki telah sesuai dengan pembandingnya:
-
-    - dibandingkan dengan sebuah angka -> uji hipotesis 1 populasi.
-    
-    - dibandingkan dengan sampel lain -> uji hipotesis 2 populasi.
-    
-- Kadang-kadang pertanyaan yang kita punya adalah seberapa kuat hubungan antar 2 variabel.
-
-## Korelasi
-
-- Misalnya, apakah PDB terkait dengan tingkat harga? Apakah PDB China beriringan dengan ekspor Indonesia? Apakah jam belajar berpotensi menyebabkan nilai yang tinggi?
-
-- Pertanyaan-pertanyaan seperti ini intinya mencoba menjawab seberapa kuat hubungan $Y$ dan $X$.
-
-- Korelasi memiliki nilai 0-1: 0=tidak ada hubungan, 1=hubungan sempurna.
-
-- Hari ini kita menghitung korelasi variabel kuantitatif dan korelasi variabel kualitatif.
-
-## Korelasi kualitatif
-
-Misalnya kita ingin tau apakah kemampuan bahasa inggris seorang pegawai punya korelasi dengan asal kampusnya. Kita memiliki data seperti berikut.
-
-|   | Kurang | Cukup | Lancar |
-| --- | --- | --- | --- |
-| Kampus A | 82 | 65 | 12 |
-| Kampus B | 59 | 112 | 24 |
-| Kampus C | 37 | 94 | 42 |
-
-Kedua variabel (asal kampus dan kemampuan bahasa inggris) berisi data kualitatif. Angka tersebut adalah jumlah pegawai.
-
-## Korelasi kualitatif {.m}
-
-| $f_{ij}$ | Kurang | Cukup | Lancar | Total |
-| --- | --- | --- | --- | --- |
-| Kampus A | 82 | 65 | 12 | $n_{1.}=159$ |
-| Kampus B | 59 | 112 | 24 | $n_{2.}=195$ |
-| Kampus C | 37 | 94 | 42 | $n_{3.}=173$ |
-| Total | $n_{.1}=178$ | $n_{.2}=271$ | $n_{.1}=78$ | $n=527$ |
+## PDF normal distribution
 
 $$
-\chi^2=\sum_{i=1}^{p} \sum_{j=1}^{q} \frac{(f_{ij}-e_{ij})^2}{e_{ij}}
-$$
-$i=$ variabel baris, $j=$ variabel kolom. $f_{ij}$ adalah angka di baris $i$ & kolom $j$
-
-$e_{ij}=\frac{n_{i.}\times n_{.j}}{n}=$ expected frequency.
-
-## Korelasi kualitatif {.m}
-
-| $e_{ij}$  | Kurang | Cukup | Lancar | Total |
-| --- | --- | --- | --- | --- |
-| Kampus A | 53,70 | 81,76 | 23,53 | $n_{1.}=159$ |
-| Kampus B | 65,86 | 100,28 | 28,86 | $n_{2.}=195$ |
-| Kampus C | 58,43 | 88,96 | 25,61 | $n_{3.}=173$ |
-| Total | $n_{.1}=178$ | $n_{.2}=271$ | $n_{.1}=78$ | $n=527$ |
-
-$$
-e_{11}=\frac{159 \times 178}{527} \ ; \ e_{12}=\frac{159 \times 271}{527} \ ; \ e_{12}=\frac{159 \times 78}{527} \\ e_{21}=\frac{195 \times 178}{527} \ ; \ e_{22}=\frac{195 \times 271}{527} \ ; \ e_{23}=\frac{195 \times 78}{527} \\ e_{31}=\frac{173 \times 178}{527} \ ; \ e_{32}=\frac{173 \times 271}{527} \ ; \ e_{33}=\frac{173 \times 78}{527}
+f(x)=\frac{1}{\sigma \sqrt{2\pi}}e^{-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^2}
 $$
 
-## Korelasi kualitatif
+- $\mu$ adalah nilai rata-rata dari total populasi.
 
-$$
-\chi^2=\sum_{i=1}^{p} \sum_{j=1}^{q} \frac{(f_{ij}-e_{ij})^2}{e_{ij}} \\ \chi^2=\frac{28,30^2}{53,70}+\frac{(-16,76)^2}{81,76}+\frac{(-11.53)^2}{23,53} \\ +\frac{(-6,86)^2}{65,86}+\frac{11,72^2}{100,28}+\frac{(-4,86)^2}{28,86} \\ +\frac{(-21,43)^2}{58,43}+\frac{5,04^2}{88,96}+\frac{16,39^2}{25,61}
-$$
+- $\sigma$ adalah simpangan baku.
 
-## Korelasi kualitatif
+- Keduanya adalah nilai dari _central tendency_ / ukuran gejala pusat dan sebaran.
 
-$$
-\chi^2=45,54
-$$
+## Kurva dan parameter
 
-Next, hitung $C_c=\sqrt{\frac{\chi^2}{\chi^2+n}}$
+![sumber:wikipedia](normal.svg)
 
-$$
-C_c+\sqrt{\frac{45,54}{45,54+527}}=0,28
-$$
-
-Kemudian, hitung $C_{max}=\sqrt{\frac{v-1}{v}}$ di mana $v=$jumlah kolom/baris, mana yang paling kecil.
-
-## Korelasi Kualitatif
-
-$$
-C_{max}=\sqrt{\frac{3-1}{3}}=0,82
-$$
-
-Terakhir, korelasi $C=\frac{C_C}{C_{max}}$
-
-$$
-C=\frac{0,28}{0,82}=0,34
-$$
-
-Kita dapat katakan bahwa korelasi antara asal kampus dan kemampuan bahasa inggris = 0,34. Artinya korelasinya sangat kecil.
-
-## Korelasi kuantitatif
-
-- Biasanya kalau kita sebut "korelasi", kita langsung berpikir ke korelasi kuantitatif.
-
-- Untuk korelasi kuantitatif, kita memiliki dua variabel $X$ dan $Y$ yang bernilai kuantitatif.
-
-$$
-r=\frac{n\sum_{i=1}^{n}X_iY_i-\sum_{i=1}^{n}X_i\sum_{i=1}^{n}Y_i}{\sqrt{n\sum_{i=1}^{n}X_i^2-\left(\sum_{i=1}^{n}X_i\right)^2} \sqrt{n\sum_{i=1}^{n}Y_i^2-\left(\sum_{i=1}^{n}Y_i\right)^2}}
-$$
-
-- Rumus ini disebut juga Pearson Correlation.
-
-## Korelasi kuantitatif
-
-- Anda membutuhkan beberapa kolom tambahan, antara lain $X^2$, $Y^2$ dan $XY$
-
-- Katakanlah seorang mahasiswa ingin tau apakah nilai UTS berhubungan dengan jumlah jam belajar dalam seminggu.
-
-- Datanya dapat didownload di [sini](https://docs.google.com/spreadsheets/d/16ZuQPD1sk76pv6sRpvjiiZcSP68CNPRq/edit?usp=drive_link&ouid=117760147588370390523&rtpof=true&sd=true)
-
-## Korelasi kuantitatif
-
-- Data yang ingin kita cari korelasinya dapat kita coba analisis sederhana dengan menggunakan _scatterplot_
-
-- scatterplot adalah grafik yang menunjukkan dua data kita di dua sumbu berbeda.
-
-- Jika $X=$jam belajar dan $Y=$nilai UTS, maka kita pasang X di sumbu X dan Y di sumbu Y dari grafik kita.
-
-- Coba gunakan excel untuk menggambarkan grafik kita sebelumnya.
-
-## Korelasi kuantitatif
+## Probabilitas
 
 ```{r}
-dat<-readxl::read_excel("jambelajar.xlsx")
-plot(dat$X,dat$Y,xlab="jam belajar",ylab="nilai UTS")
+library(tidyverse)
+grafik<-function(dataset,...) {
+  dataset |>
+    ggplot(aes(...))+
+    scale_x_continuous(expand = c(0, 0)) + scale_y_continuous(expand = c(0, 0))+
+    theme_classic()+
+    theme(axis.title.x = element_text(hjust=1),
+        axis.title.y = element_text(angle=0,hjust=1,vjust=1),
+        panel.grid=element_blank(),
+#        axis.text.x=element_blank(),
+        axis.text.y=element_blank(),
+        axis.ticks.x=element_blank(),
+        axis.ticks.y=element_blank(),
+        legend.position=c(1,1),
+        legend.justification = c(1,1),
+        legend.spacing=unit(0,"cm"),
+        legend.margin=margin(0,0,0,0),
+        panel.background = element_rect(fill = "#f0f1eb",
+                                        colour = "#f0f1eb"),
+        plot.background = element_rect(fill = "#f0f1eb"),
+        legend.key = element_rect(fill = "#f0f1eb",linetype = "blank"),
+        legend.background = element_rect(fill="#f0f1eb"))
+}  
+det<-data.frame(x=c(0,1))
+
+wew<-seq(0,1,0.01)
+
+sd1 <- function(x) {
+    y <- dnorm(wew, mean = 0.5, sd = 0.1)
+    y[x < 0.4 | x > .6] <- NA
+    return(y)
+}
+sd2 <- function(x) {
+    y <- dnorm(wew, mean = 0.5, sd = 0.1)
+    y[x < 0.3 | x > .701] <- NA
+    y[x > 0.4 & x < .6] <- NA
+    return(y)
+}
+sd3 <- function(x) {
+    y <- dnorm(wew, mean = 0.5, sd = 0.1)
+    y[x < 0.2 | x > .8] <- NA
+    y[x > 0.3 & x < .7] <- NA
+    return(y)
+}
+
+det |>
+  grafik(x=x)+
+  stat_function(fun=dnorm,args=list(0.5,0.1),size=1.1)+
+  stat_function(fun=sd1,geom="area",fill="lightgreen",alpha=.3)+
+  stat_function(fun=sd2,geom="area",fill="lightpink",alpha=.3)+
+  stat_function(fun=sd3,geom="area",fill="lightblue",alpha=.3)+
+  geom_vline(xintercept=.5)+
+  annotate("text",label="34,1%",y=.2,x=.55)+
+  annotate("text",label="34,1%",y=.2,x=.45)+
+  annotate("text",label="13,6%",y=.15,x=.65)+
+  annotate("text",label="13,6%",y=.15,x=.35)+
+  annotate("text",label="2,1%",y=.1,x=.75)+
+  annotate("text",label="2,1%",y=.1,x=.25)+
+  scale_x_continuous(breaks = c(0.2,.3,.4,.5,.6,.7,.8),labels = c(paste0('-3\U03C3'),paste0('-2\U03C3'),paste0('-\U03C3'),expression(mu),paste0('\U03C3'),paste0('2\U03C3'),paste0('3\U03C3')))+
+  labs(x="X",y="f")
+
 ```
 
-## Korelasi kuantitatif
+## Z-score
 
-- Jika melihat gambarnya, kita dapat lihat seperti ada pola.
+- Z-score disebut juga dengan standardized values / scores.
 
-- Tidak hanya keduanya berkorelasi, namun juga terlihat bahwa korelasinya positif: semakin tinggi jam belajar, semakin tinggi juga nilai UTS.
+- Z-score adalah transformasi yang kita lakukan untuk mengubah angka pada data kita menjadi sebuah nilai standar dalam menggunakan PDF distribusi normal.
 
-- Korelasi positif adalah korelasi di mana $X$ dan $Y$ terlihat bergerak searah.
+- PDF distribusi normal yang standar adalah di mana:
 
-- Korelasi negatif adalah korelasi di mana $X$ dan $Y$ terlihat bergerak berlawanan arah.
-
-- Dapatkah anda memberi contoh korelasi positif dan korelasi negatif?
-
-## Regresi
-
-- Jika kita berhasil membuat sebuah fungsi dari pola tersebut, kita bisa menebak dengan lebih akurat $Y$ jika kita mengetahui $X$, atau sebaliknya:
-
-    - Jika anda belajar $X$ jam, anda bisa tebak akan dapat UTS berapa
+    - $\mu=0$
     
-    - Sebaliknya: Jika anda ingin dapat UTS sebesar $Y$, anda bisa kira-kira harus belajar berapa jam.
+    - $\sigma=1$
     
-- Teknik ini disebut dengan regresi, dan akan kita pelajari minggu depan.
+## Z-score
 
-- 
+$$
+z=\frac{x-\mu}{\sigma}
+$$
+
+Di mana x adalah data point yang mau kita transformasi.
+
+| Jajan | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| BPP	| 500	|	450	|	350	|	600	|	550	|	550	|	600	|	450	|	500	|	450	|
+
+$\mu=500 \ ; \ \sigma=74,16$
+
+## Z-score
+
+| Jajan | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| BPP	| 500	|	450	|	350	|	600	|	550	|	550	|	600	|	450	|	500	|	450	|
+| $z_b$ | 0 |	-0.67 |	-2.02 |	1.35 |	0.67 |	0.674 |	1.35 |	-0.67 |	0 |	-0.67 |
+
+## Z-score
+
+- Posisi angka-angka pada data tentunya tidak sama: semua bergeser jika rata-rata dan standar deviasinya berbeda.
+
+- Kita menjadikan data biasa ke dalam Z-score karena Z-score membuat angkanya menjadi standar.
+
+- Dengan angka yang standar, kita jadi dapat menggunakan tabel yang standar
+
+- Dengan tabel yang standar kita jadi tidak harus membuat tabel baru untuk setiap data poin.
+
+## Tabel PDF Distribusi normal
+
+<iframe src="https://onedrive.live.com/embed?cid=ACC929CA35B3A537&resid=acc929ca35b3a537%21162501&authkey=AIx-FChNmjZ8zzQ&em=2" width="900" height="600" frameborder="0" scrolling="no"></iframe>
+
+Bisa [Google](https://www.google.com/search?client=firefox-b-d&q=z+score+table) atau download di [sini](https://drive.google.com/file/d/1ywI58hnM8p0ZyFV7B9rCOosk72iCGguq/view?usp=sharing)
+
+## Contoh 1
+
+- Berapa banyak kira-kira  di BPP dengan uang jajan di bawah 700 ribu?
+
+- Cari Z-score dulu $Z_{700}=\frac{700-500}{74,16}=2,7$
+
+- $P(X<700) \approx P(Z_X<2,7)$
+
+- Lihat di tabel, $P(Z<2,7)=0,9965$
+
+## Contoh 2
+
+- Berapa banyak mahasiswa di BPP dengan uang jajan di atas 400 ribu?
+
+- $Z_{700}=\frac{400-500}{74,16}=-1,348$
+
+- $P(X<600) \approx P(Z_X<-1,348) \approx 0,0885$
+
+- $P(Z_X>-1,348)=1-0,0885=0.9115$
+
+## Contoh 3
+
+- Negara Wokondo memiliki pendapatan bulanan bersih per kapita rata-rata 6 juta rupiah, dengan standar deviasi 8 juta rupiah. Di Wokondo, orang berpendapatan di bawah 2 juta rupiah sudah dianggap miskin. Jika penduduk Wokondo ada 200 juta orang, berapa jumlah penduduk miskin di Wokondo?
+
+- Intinya ini pertanyaan $P(X<2)$. Bisa jawabnya?
+
+## Contoh 4
+
+- Di Wokondo, anda dianggap kelas menengah jika pendapatannya ada di kisaran 5 juta sampai 8 juta rupiah. Berapakah jumlah penduduk Wokondo yang dianggap sebagai kelas menengah?
+
+- Intinya ini pertanyaan $P(5<X<8)$. Bisa jawabnya?
+
+## Contoh 5
+
+- Di Wokondo ada sekitar 2 juta orang yang dianggap sebagai orang ultra kaya. Bisakah anda menebak berapa pendapatan paling minimal untuk masuk golongan ultra kaya?
+
+- $P(Z_X > Y) = \frac{2}{200}=0,01$
+
+- $P(Z_X < Y) = 1-0,01=0,99 \rightarrow Y=2,33$
+
+- $2,33=\frac{X-6}{8} \rightarrow X=(2,33 \times 8 ) + 6 = 24,64$ Juta
+
+## Penutup
+
+- Teknik ini dapat kita lakukan karena PDF = probabilitas!
+
+- Penggunaan distribusi normal seperti ini sangat praktis bagi kita yang tidak mungkin melakukan survey karena keterbatasan dana.
+
+- Dengan mengasumsikan distribusi normal, anda dapat melihat satu angka saja, lalu cari rata-rata dan standar deviasi dari lembaga yang kredibel, lalu bisa menebak posisi seseorang dalam distribusi keseluruhan.
+
+- Tapi ingat selalu bahwa Statistika = tebak-tebakan!
+
+## Penutup
+
+- Untuk latihan, anda dapat mencoba dengan variasi P(X), bisa lebih kecil, lebih besar, antara, silakan dicoba-coba. ada banyak kemungkinannya.
+
+- Anda juga bisa mencoba dengan menggunakan nilai $\mu$ dan $\sigma$ yang berbeda-beda. 
+
+- Misalnya, dengan rata-rata yang sama, bagaimanakah bedanya P(Z) antara data dengan $\sigma$ kecil vs $\sigma$ besar?
+
+## DISCLAIMER
+
+- jangan lupa bahwa teknik ini kita gunakan dengan sebuah **ASUMSI** bahwa populasi yang ingin kita tebak memiliki distribusi normal.
+
+- Distribusi normal belum tentu benar untuk beberapa karakteristik.
+
+- Meski demikian, distribusi normal dianggap paling mungkin menjelaskan suatu populasi.
+
+- Pada kenyataannya, tidak ada manusia yang tau dan yakin 100% bahwa distribusi normal pasti benar.
+
+- Pastikan anda paham hal ini.

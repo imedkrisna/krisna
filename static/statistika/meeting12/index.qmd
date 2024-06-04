@@ -1,12 +1,12 @@
 ---
-title: "Regresi Univariat: asumsi dan keterbatasan"
-subtitle: "Pertemuan 12"
+title: "Uji Hopotesis"
+subtitle: "Pertemuan 9"
 author: "Matematika & Statistika"
 format: 
   revealjs:
     theme: [simple,../mytheme.scss]
     chalkboard: true
-    incremental: false
+    incremental: true
     transition: convex
     background-transition: fade
     slide-number: true
@@ -14,184 +14,222 @@ format:
 
 ## Hari ini
 
-- Regresi univariat
+- Uji hipotesis
 
-## Reminer tentang OLS
+## Langkah Uji Hipotesis
 
--   OLS tidak beda dari statistik lain, dalam artian, pada prinsipnya dia adalah tebak-tebakan berbasis data.
--   Kita tidak bisa menebak sesuatu dengan ketepatan 100%.
--   Tapi kita bisa membuat perkiraan rentang tebakan kita, yang paling tidak punya kemungkinan benar yang cukup tinggi.
--   Meleset dikit gak papa yang penting berguna.
+- Membuat hipotesis dulu.
 
-## BLUE
+    - Outcome: ada statement $H_0$ dan $H_1$
+    
+- Melakukan uji hipotesis.
 
--   Parameter dari OLS memiliki karakteristik yang disebut juga dengan BLUE, atau Best, Linear, Unbiased Estimators.
--   linear cukup jelas, karena dari persamaannya aja udah linear.
--   Best artinya efisien, artinya bahwa parameter OLS memiliki standar deviasi yang kecil, atau rentang estimasinya kecil.
--   Unbiased artinya parameter OLS akan mendapatkan parameter yang mendekati aslinya.
+    - Hitung t, tentukan daerah penolakan, cek apakah t ada di daerah penolakan.
+    
+    - Outcome: ada keputusan apakah terima atau tolak $H_0$
+    
+- Membuat kesimpulan.
 
-------------------------------------------------------------------------
+    - Jelaskan secara verbal apa kesimpulan dari uji tersebut.
 
-::: columns
-::: {.column widht="47%"}
-![sasaran](Picture1.png)
-:::
+## Uji deskriptif
 
-::: {.column width="47%"}
--   ada dua pemanah, plus merah dan lingkarang hitam.
--   Jika anda harus memilih 1 untuk kompetisi, pilih yang mana?
+- Uji hipotesis deskriptif seringkali juga disebut dengan uji 1 sampel.
 
-::: {.fragment .fade-in}
--   plus merah: bias namun efisien.
--   titik hitam: unbiased but not efficient.
-:::
-:::
-:::
-
-## Key assumption
-
--   $X$-nya independen, khususnya terhadap $\mu_i$. alias $cov(X_i,,\mu_i)=0$
-    -   by extension, errornya juga harus random.
--   nilai ekspektasi dari errornya adalah 0, atau $E[\mu_i|x_i]=0$, atau *conditional zero mean*
--   homoskedastis, atau variasi error-nya konstan, atau $var(\mu_i)=\sigma^2$
-
-Tanpa ini semua, parameter OLS tidak lagi BLUE.
-
-## Key assumption
-
--   Key assumptions ini sangat penting untuk dipahami.
--   Sebagus apapun hasil regresinya, namun apabila key assumptions ini terlanggar, maka hasilnya bisa misleading.
--   Hasil yang misleading ini sangat berbahaya jika menjadi sebuah kebijakan, baik kebijakan publik maupun kebijakan perusahaan.
--   Yang penting anda paham keterbatasan teknik yang anda gunakan.
-
-## Independensi X
-
--   Independen berarti tidak dipengaruhi oleh hal lain.
--   Jika kita yakin X ini independen, maka kita bisa klaim hubungan kausal $X \rightarrow Y$ dan bukan $Y \rightarrow X$.
--   Biasanya arah hubungan tersebut dapat kita bangun dengan teori/hipotesis.
-
-## Independensi X
-
--   Independen berarti X-nya bisa kita ubah-ubah sesuka kita.
--   Apakah karena kita belajar maka nilai kita bagus, atau karena nilai kita bagus makanya kita jadi rajin belajar?
-    -   Belajar itu terserah kita, tapi nilai terserah dosen (tidak bisa diubah sesuka kita)
--   Di dunia nyata, sering kali hubungan sebab-akibat $X$ dan $Y$ ga jelas.
-    -   *reverse causality*: ketika hubungan $X$ dan $Y$ ketuker.
-    -   unhealthy eating vs depresi, merokok dan konsumsi.
-
-## Independensi X
-
--   *spurious* : ketika hubungan $X$ dan $Y$ cuma kebetulan.
-    -   Pertumbuhan PDB vs panjang rumput.
--   Ada teknik lanjutan OLS yang namanya *causal inference*
--   tapi jika pakai OLS biasa, sebaiknya hindari klaim *causality*
-
-> correlation does not imply causation
-
-## tentang error
-
--   OLS mewajibkan error/residual yang juga independen.
-    -   error ga boleh berkorelasi dengan X maupun Y
--   error harus punya rata-rata==0 (zero mean condition)
--   error harus punya variance yang konstan (tidak tambah lebar/tambah kecil distribusinya).
--   contoh kemarin, X dan Y yang bagus adalah yang ada polanya. Error yang bagus adalah yang gak ada polanya.
-
-## Kenapa error harus random?
-
--   error harusnya hanya menangkap hal-hal yang sifatnya random.
--   X tidak akan pernah bisa 100% memprediksi Y
-    -   akan ada variasi-variasi kecil.
-    -   setiap individu tidak 100% sama.
-    -   yang penting variasi-variasi ini sifatnya random.
-
-## Bentuk error yang baik
-
-```{r}
-x<-rnorm(100,5)
-u<-rnorm(100)
-plot(x,u )
-abline(h=0)
-
-```
-
-## Contoh error yang jelek
-
-::: columns
-::: {.column width="47%"}
-```{r}
-#| fig-cap: "error yang punya pola terhadap X"
-#| fig-height: 7
-#| fig-width: 8
-x<-rnorm(100,5)
-u<- sin(x)
-plot(x,u)
-abline(h=0)
-```
-:::
-
-::: {.column width="47%"}
-```{r}
-#| fig-cap: "error yang heteroskedastik"
-#| fig-height: 7
-#| fig-width: 8
-x<-1:100
-u<- rnorm(100,0,x)
-plot(x,u)
-abline(h=0)
-```
-:::
-:::
-
-## Kesalahan error
-
--   error yang berpola adalah permasalahan yang paling fatal.
-    -   artinya, estimasi kita akan bias, karena ada pola yang ada di error yang tidak ditangkap oleh X.
--   error yang heteroskedastik masih ga papa karena masih unbiased.
-    -   meski demikian, heteroskedastik mengurangi ke-"best"-an dari estimator kita.
--   Tapi standar deviasi yang agak lebar masih mending daripada estimasi yang bias.
-
-## Contoh
-
--   Mari kita coba regresi dengan microsoft excel
--   Kita mau cek hubungan antara jam belajar dengan nilai UAS
-    -   $X=$ jumlah jam belajar dalam seminggu
-    -   $Y=$ nilai UAS
--   Kita akan regresi, hitung $\hat{Y}$, dan plot error.
--   Datanya bisa didownload di [sini](https://1drv.ms/x/s!AjelszXKKcmshp49OxcdnSEy_gdgVg?e=UUbZwm)
-
-## Summary
-
--   OLS: simple (linear) dan powerful (best & unbiased)
--   Asumsinya sangat kuat:
-    -   independensi X dan $\mu$
-    -   rata-rata error = 0
-    -   homoskedastis
-
-## Regresi multivariat
-
--   Seringkali $Y$ dapat dijelaskan oleh lebih dari 1 $X$.
+- Umumnya uji ini digunakan untuk pernyataan misalnya "lampu X tahan 10.000 jam", atau "best before 6 bulan".
 
 $$
-Y=\beta_0+\beta_1 X_1+\beta_2 X_2 +...+\beta_jX_j+\mu
-$$ - Ini disebut juga dengan regresi multivariat.
+H_0: \mu = \mu_0
+$$
+$$
+H_1: \mu \neq \mu_0
+$$
 
--   Problemnya regresi ini jadi susah digambar dalam 2 dimensi.
+## Uji deskriptif
 
--   Jarang ada penelitian yang hanya menggunakan 1 jenis variabel saja.
+:::: columns
+::: {.column width="45%"}
 
-## Omitted variable bias
+- Kita cek apakah $t_{hitung}$ ada di daerah penolakan. Hitung dengan rumus:
 
--   Jika seandainya aslinya $Y=\beta_0+\beta_1X_1+\beta_2X_2=\mu$
--   kita regressnya $Y=\beta_0+\beta_1X_1+\varepsilon$
--   Artinya, aslinya ada $X_2$ yang ngaruh, tapi nggak kita masukan ke model regresi.
--   akibatnya variasi yang harusnya bisa dijelaskan $X_2$ jadi masuk ke $\varepsilon$
--   dan artinya $\varepsilon$ akan punya pola.
+$$
+t=\frac{\bar{X}-\mu_0}{\frac{S}{\sqrt{n}}}
+$$
+:::
+::: {.column width="45%"}
 
-## Omitted variable bias
+![alpha (arsir biru tua) disebut juga daerah penolakan](pvalue1.gif)
 
--   Jika errornya punya pola, artinya ada variabel yang mestinya ngefek tapi tidak kita masukan ke regresi.
--   beta kita (si $\beta_1$) akan jadi bias.
--   Karena itu, omitted variable bias adalah problem yang cukup serius.
--   usahakan kita sudah menggunakan semua variabel yang ngaruh ke Y menurut teori.
+:::
+::::
 
+- bandingkan $t_{hitung}$ dengan $t_{tabel}$. Jika $t_{hitung}$ ada di daerah penolakan, maka tolak $H_0$.
 
+## Soal 1
+
+- Seorang dosen bahasa inggris memiliki materi ajar yang cocok untuk kelas dengan nilai TOEFL sekitar 500. Dosen ini memutuskan melakukan tes TOEFL ke 20 orang mahasiswa sebagai sampel. Jika rata-rata hasilnya adalah 500, maka materi tidak perlu diganti. Gunakan derajat kepercayaan 5% untuk menentukan apakah rata-rata mahasiswa memiliki nilai TOEFL 500.
+
+- $H_0: \mu = 500$
+
+- $H_1: \mu \neq 500$
+
+## Data {.scrollable}
+
+Bisa didownload di [sini](https://docs.google.com/spreadsheets/d/1aE74llk9RkTuL2nLsp6WfvK0faz3DGKv/edit?usp=drive_link&ouid=117760147588370390523&rtpof=true&sd=true)
+
+```{r}
+library(readxl)
+library(tidyverse)
+library(kableExtra)
+dat<-read_excel("data91.xlsx")
+dat %>% kableExtra::kbl(digits = 0)
+```
+
+## Soal 1
+
+- Didapat $\bar{X}=501,93$ dan $S=49.22$ lalu hitung t:
+
+$$
+t_0=\frac{482,62-500}{28,62/\sqrt{20}}=-2,72
+$$
+
+- Dengan $\alpha=5\%$ dan $df=19$, didapat $t_{0,025}=\pm2,093$
+
+- $|t_0| > |t_{0,025}|$ maka kita tolak $H_0$
+
+- Dengan derajat kepercayaan 95%, Disimpulkan bahwa rata-rata populasi tidak sama dengan 500. Mungkin kurikulum perlu diubah.
+
+## Soal 2
+
+- Anto memulai bisnis pecel lele. PT.A menawarkan menjadi pemasok lele untuk Anto. Tapi anto hanya menerima bila PT.A mampu dengan konsisten mengirimkan lele dengan berat minimal rata-rata lebih dari 100 gram. Anto pergi ke kolam PT.A dan mengambil sampel 10 ekor lele dengan data seperti berikut:
+
+```{r}
+data<-c(104.8712518,	109.9144173,	95.45148765,	91.17421667,	104.7746066,	101.859766,	89.45831416,	102.2185982,	85.21047661,	94.92018572)
+data
+```
+
+- Dengan $\alpha=5\%$, tentukan apakah Anto jadi mengambil dari PT.A atau tidak.
+
+## One-tail kiri
+
+$$
+H_0: \mu \geq 100
+$$
+$$
+H_1: \mu < 100
+$$
+
+- Kita gunakan uji 1 tail dengan rumus yang sama.
+
+- Didapat $\bar{X}=97,99$ dan $S=7,94$, dengan $n=10$ didapat t-hitung:
+
+- $t_{hitung}=-0.8$ sementara $t_{0,025}=-1,833$, terima $H_0$
+
+- Artinya anto akan mengambil lele PT.A.
+
+## Soal 3
+
+- Sebuah bank mengevaluasi kecepatan customer servicenya dalam melayani pelanggan. Diambil data sampel dari 40 layanan, didapatkan rata-rata 16,23 menit dengan standar deviasi 3,13 menit. Bank tersebut ingin mendeteksi apakah layanan secara keseluruhan lebih cepat dari 15 menit. Gunakan $\alpha=5\%$.
+
+$$
+H_0: \mu\leq15
+$$
+$$
+H_1: \mu>15
+$$
+
+## One-tail
+
+- $t_{hitung}=2,485$ sementara $Z_{0.05}=1,645$
+
+- Berarti $t$ ada di daerah penolakan, sehingga kita tolak $H_0$ dan dapat disimpulkan bahwa kinerja customer service masih lebih dari 15 menit secara keseluruhan.
+
+- Two-tail digunakan jika kita ingin menguji apakah sebuah rata-rata sama dengan sebuah parameter.
+
+- One-tail: Jika ingin menguji lebih besar sama dengan, maka gunakan yang daerah penolakannya di kiri(negatif).
+
+    - Sebaliknya jika menguji lebih kecil sama dengan.
+    
+## Uji hipotesis 2 populasi
+
+Prinsipnya sama dengan sebelumnya, tapi:
+
+$$
+df=n_1+n_2-2
+$$
+
+$$
+t=\frac{(\bar{X_1}-\bar{X_2})}{S_{gab}\sqrt{\frac{1}{n_1}+\frac{1}{n_2}}}
+$$
+
+$$
+S_{gab}=\sqrt{\frac{(n_1-1)S_1^2+(n_2-1)S_2^2}{n_1+n_2-2}}
+$$
+
+$$
+H_0: \mu_1=\mu_2
+$$
+
+## soal 3
+
+- Ada 2 buah populasi dengan karakteristik sebagai berikut:
+
+    - populasi 1: n=10, $\bar{X}=15$, S=6
+    
+    - populasi 2: n=12, $\bar{X}=10$, S=5
+    
+- dengan $\alpha=5\%$, cek apakah kedua populasi adalah populasi yang sama atau tidak.
+
+- $H_0: \mu_1 = \mu_2$
+
+- $H_1: \mu_1 \neq \mu_2$
+
+## Soal 3
+
+$$
+S_{gab}=\sqrt{\frac{(10-1)6^2+(12-1)5^2}{10+12-2}}= 5,63
+$$
+
+$$
+t=\frac{(15-10)}{5.63\sqrt{\frac{1}{10}+\frac{1}{12}}}=2,07
+$$
+
+- $t_{0,025}=1.725 < t$ sehingga tolak $H_0$
+
+- Karena $\bar{X_1}>\bar{X_2}$ maka kita boleh menyimpulkan $\mu_1>\mu_2$
+
+## Uji Hipotesis berpasangan
+
+- Uji ini dilakukan apabila populasi 1 dan populasi 2 kita hitung secara berpasangan.
+
+- Umumnya dilakukan jika ada suatu intervensi di individu yang sama, lalu dicek sebelum dan sesudahnya.
+
+- Kita hitung perbedaan tiap sampelnya (dibuat kolom baru yaitu $B=X_1-X_2$) lalu hitung dengan rumus:
+
+- $t=\frac{\bar{B}}{S_B\sqrt{n}}$
+
+- gunakan $H_0: \mu_1=\mu_2$ atau $H_0: \bar{B}=0$
+
+## Soal 4
+
+Sebuah kelas barusan pasang AC, lalu menghitung nilai UTS (sebelum AC) dan UAS (sesudah AC). Didapat:
+
+| Mahasiswa | 1 | 2 | 3 | 4 | 5 |
+| --- | --- | --- | --- | --- | --- |
+| Pre-AC | 40 | 70 | 63 | 56 | 65 |
+| Post-AC | 45 | 64 | 59 | 51 | 67 |
+| B | -5 | 6 | 4 | 5 | 2 |
+
+Apakah setelah pasang AC hasilnya lebih baik? gunakan $\alpha=5\%$
+
+## Soal 4
+
+- $\bar{B}=\frac{-5+6+4+5+2}{5}=1,6$
+
+- $S_B=4,83$ (lihat lagi cara hitung simpangan baku di materi sebelumnya)
+
+- $t=\frac{1,6}{4,83\sqrt{5}}=0,74$
+
+- $t_{tabel}=2,776$ dan hasilnya $t$ ada di daerah penerimaan.
+
+- Tidak menolak $H_0 \rightarrow$ Sebelum dan setelah pasang AC hasil belajar tidak berubah.

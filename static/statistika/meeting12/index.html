@@ -8,10 +8,10 @@
 <link href="index_files/libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="index_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="index_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.3.427">
+  <meta name="generator" content="quarto-1.3.340">
 
   <meta name="author" content="Matematika &amp; Statistika">
-  <title>Regresi Univariat: asumsi dan keterbatasan</title>
+  <title>Uji Hopotesis</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -30,7 +30,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto.css">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto.css" id="theme">
   <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -321,14 +321,17 @@
       margin-right: 0; 
     }
   </style>
+  
+  <script src="index_files/libs/kePrint-0.0.1/kePrint.js"></script>
+  <link href="index_files/libs/lightable-0.0.1/lightable.css" rel="stylesheet">
 </head>
 <body class="quarto-light">
   <div class="reveal">
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Regresi Univariat: asumsi dan keterbatasan</h1>
-  <p class="subtitle">Pertemuan 12</p>
+  <h1 class="title">Uji Hopotesis</h1>
+  <p class="subtitle">Pertemuan 9</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -342,234 +345,318 @@ Matematika &amp; Statistika
 <section id="hari-ini" class="slide level2">
 <h2>Hari ini</h2>
 <ul>
-<li>Regresi univariat</li>
+<li class="fragment">Uji hipotesis</li>
 </ul>
 </section>
-<section id="reminer-tentang-ols" class="slide level2">
-<h2>Reminer tentang OLS</h2>
+<section id="langkah-uji-hipotesis" class="slide level2">
+<h2>Langkah Uji Hipotesis</h2>
 <ul>
-<li>OLS tidak beda dari statistik lain, dalam artian, pada prinsipnya dia adalah tebak-tebakan berbasis data.</li>
-<li>Kita tidak bisa menebak sesuatu dengan ketepatan 100%.</li>
-<li>Tapi kita bisa membuat perkiraan rentang tebakan kita, yang paling tidak punya kemungkinan benar yang cukup tinggi.</li>
-<li>Meleset dikit gak papa yang penting berguna.</li>
-</ul>
-</section>
-<section id="blue" class="slide level2">
-<h2>BLUE</h2>
+<li class="fragment"><p>Membuat hipotesis dulu.</p>
 <ul>
-<li>Parameter dari OLS memiliki karakteristik yang disebut juga dengan BLUE, atau Best, Linear, Unbiased Estimators.</li>
-<li>linear cukup jelas, karena dari persamaannya aja udah linear.</li>
-<li>Best artinya efisien, artinya bahwa parameter OLS memiliki standar deviasi yang kecil, atau rentang estimasinya kecil.</li>
-<li>Unbiased artinya parameter OLS akan mendapatkan parameter yang mendekati aslinya.</li>
-</ul>
-</section>
-<section class="slide level2">
-
-<div class="columns">
-<div class="column" data-widht="47%">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="Picture1.png"></p>
-<figcaption>sasaran</figcaption>
-</figure>
-</div>
-</div><div class="column" style="width:47%;">
-<ul>
-<li>ada dua pemanah, plus merah dan lingkarang hitam.</li>
-<li>Jika anda harus memilih 1 untuk kompetisi, pilih yang mana?</li>
-</ul>
-<div class="fragment fade-in">
-<ul>
-<li>plus merah: bias namun efisien.</li>
-<li>titik hitam: unbiased but not efficient.</li>
-</ul>
-</div>
-</div>
-</div>
-</section>
-<section id="key-assumption" class="slide level2">
-<h2>Key assumption</h2>
-<ul>
-<li><span class="math inline">\(X\)</span>-nya independen, khususnya terhadap <span class="math inline">\(\mu_i\)</span>. alias <span class="math inline">\(cov(X_i,,\mu_i)=0\)</span>
-<ul>
-<li>by extension, errornya juga harus random.</li>
+<li class="fragment">Outcome: ada statement <span class="math inline">\(H_0\)</span> dan <span class="math inline">\(H_1\)</span></li>
 </ul></li>
-<li>nilai ekspektasi dari errornya adalah 0, atau <span class="math inline">\(E[\mu_i|x_i]=0\)</span>, atau <em>conditional zero mean</em></li>
-<li>homoskedastis, atau variasi error-nya konstan, atau <span class="math inline">\(var(\mu_i)=\sigma^2\)</span></li>
-</ul>
-<p>Tanpa ini semua, parameter OLS tidak lagi BLUE.</p>
-</section>
-<section id="key-assumption-1" class="slide level2">
-<h2>Key assumption</h2>
+<li class="fragment"><p>Melakukan uji hipotesis.</p>
 <ul>
-<li>Key assumptions ini sangat penting untuk dipahami.</li>
-<li>Sebagus apapun hasil regresinya, namun apabila key assumptions ini terlanggar, maka hasilnya bisa misleading.</li>
-<li>Hasil yang misleading ini sangat berbahaya jika menjadi sebuah kebijakan, baik kebijakan publik maupun kebijakan perusahaan.</li>
-<li>Yang penting anda paham keterbatasan teknik yang anda gunakan.</li>
-</ul>
-</section>
-<section id="independensi-x" class="slide level2">
-<h2>Independensi X</h2>
-<ul>
-<li>Independen berarti tidak dipengaruhi oleh hal lain.</li>
-<li>Jika kita yakin X ini independen, maka kita bisa klaim hubungan kausal <span class="math inline">\(X \rightarrow Y\)</span> dan bukan <span class="math inline">\(Y \rightarrow X\)</span>.</li>
-<li>Biasanya arah hubungan tersebut dapat kita bangun dengan teori/hipotesis.</li>
-</ul>
-</section>
-<section id="independensi-x-1" class="slide level2">
-<h2>Independensi X</h2>
-<ul>
-<li>Independen berarti X-nya bisa kita ubah-ubah sesuka kita.</li>
-<li>Apakah karena kita belajar maka nilai kita bagus, atau karena nilai kita bagus makanya kita jadi rajin belajar?
-<ul>
-<li>Belajar itu terserah kita, tapi nilai terserah dosen (tidak bisa diubah sesuka kita)</li>
+<li class="fragment"><p>Hitung t, tentukan daerah penolakan, cek apakah t ada di daerah penolakan.</p></li>
+<li class="fragment"><p>Outcome: ada keputusan apakah terima atau tolak <span class="math inline">\(H_0\)</span></p></li>
 </ul></li>
-<li>Di dunia nyata, sering kali hubungan sebab-akibat <span class="math inline">\(X\)</span> dan <span class="math inline">\(Y\)</span> ga jelas.
+<li class="fragment"><p>Membuat kesimpulan.</p>
 <ul>
-<li><em>reverse causality</em>: ketika hubungan <span class="math inline">\(X\)</span> dan <span class="math inline">\(Y\)</span> ketuker.</li>
-<li>unhealthy eating vs depresi, merokok dan konsumsi.</li>
+<li class="fragment">Jelaskan secara verbal apa kesimpulan dari uji tersebut.</li>
 </ul></li>
 </ul>
 </section>
-<section id="independensi-x-2" class="slide level2">
-<h2>Independensi X</h2>
+<section id="uji-deskriptif" class="slide level2">
+<h2>Uji deskriptif</h2>
 <ul>
-<li><em>spurious</em> : ketika hubungan <span class="math inline">\(X\)</span> dan <span class="math inline">\(Y\)</span> cuma kebetulan.
-<ul>
-<li>Pertumbuhan PDB vs panjang rumput.</li>
-</ul></li>
-<li>Ada teknik lanjutan OLS yang namanya <em>causal inference</em></li>
-<li>tapi jika pakai OLS biasa, sebaiknya hindari klaim <em>causality</em></li>
-</ul>
-<blockquote>
-<p>correlation does not imply causation</p>
-</blockquote>
-</section>
-<section id="tentang-error" class="slide level2">
-<h2>tentang error</h2>
-<ul>
-<li>OLS mewajibkan error/residual yang juga independen.
-<ul>
-<li>error ga boleh berkorelasi dengan X maupun Y</li>
-</ul></li>
-<li>error harus punya rata-rata==0 (zero mean condition)</li>
-<li>error harus punya variance yang konstan (tidak tambah lebar/tambah kecil distribusinya).</li>
-<li>contoh kemarin, X dan Y yang bagus adalah yang ada polanya. Error yang bagus adalah yang gak ada polanya.</li>
-</ul>
-</section>
-<section id="kenapa-error-harus-random" class="slide level2">
-<h2>Kenapa error harus random?</h2>
-<ul>
-<li>error harusnya hanya menangkap hal-hal yang sifatnya random.</li>
-<li>X tidak akan pernah bisa 100% memprediksi Y
-<ul>
-<li>akan ada variasi-variasi kecil.</li>
-<li>setiap individu tidak 100% sama.</li>
-<li>yang penting variasi-variasi ini sifatnya random.</li>
-</ul></li>
-</ul>
-</section>
-<section id="bentuk-error-yang-baik" class="slide level2">
-<h2>Bentuk error yang baik</h2>
-
-<img data-src="index_files/figure-revealjs/unnamed-chunk-1-1.png" width="960" class="r-stretch"></section>
-<section id="contoh-error-yang-jelek" class="slide level2">
-<h2>Contoh error yang jelek</h2>
-<div class="columns">
-<div class="column" style="width:47%;">
-<div class="cell">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="index_files/figure-revealjs/unnamed-chunk-2-1.png" width="768"></p>
-<figcaption>error yang punya pola terhadap X</figcaption>
-</figure>
-</div>
-</div>
-</div>
-</div><div class="column" style="width:47%;">
-<div class="cell">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="index_files/figure-revealjs/unnamed-chunk-3-1.png" width="768"></p>
-<figcaption>error yang heteroskedastik</figcaption>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="kesalahan-error" class="slide level2">
-<h2>Kesalahan error</h2>
-<ul>
-<li>error yang berpola adalah permasalahan yang paling fatal.
-<ul>
-<li>artinya, estimasi kita akan bias, karena ada pola yang ada di error yang tidak ditangkap oleh X.</li>
-</ul></li>
-<li>error yang heteroskedastik masih ga papa karena masih unbiased.
-<ul>
-<li>meski demikian, heteroskedastik mengurangi ke-“best”-an dari estimator kita.</li>
-</ul></li>
-<li>Tapi standar deviasi yang agak lebar masih mending daripada estimasi yang bias.</li>
-</ul>
-</section>
-<section id="contoh" class="slide level2">
-<h2>Contoh</h2>
-<ul>
-<li>Mari kita coba regresi dengan microsoft excel</li>
-<li>Kita mau cek hubungan antara jam belajar dengan nilai UAS
-<ul>
-<li><span class="math inline">\(X=\)</span> jumlah jam belajar dalam seminggu</li>
-<li><span class="math inline">\(Y=\)</span> nilai UAS</li>
-</ul></li>
-<li>Kita akan regresi, hitung <span class="math inline">\(\hat{Y}\)</span>, dan plot error.</li>
-<li>Datanya bisa didownload di <a href="https://1drv.ms/x/s!AjelszXKKcmshp49OxcdnSEy_gdgVg?e=UUbZwm">sini</a></li>
-</ul>
-</section>
-<section id="summary" class="slide level2">
-<h2>Summary</h2>
-<ul>
-<li>OLS: simple (linear) dan powerful (best &amp; unbiased)</li>
-<li>Asumsinya sangat kuat:
-<ul>
-<li>independensi X dan <span class="math inline">\(\mu\)</span></li>
-<li>rata-rata error = 0</li>
-<li>homoskedastis</li>
-</ul></li>
-</ul>
-</section>
-<section id="regresi-multivariat" class="slide level2">
-<h2>Regresi multivariat</h2>
-<ul>
-<li>Seringkali <span class="math inline">\(Y\)</span> dapat dijelaskan oleh lebih dari 1 <span class="math inline">\(X\)</span>.</li>
+<li class="fragment"><p>Uji hipotesis deskriptif seringkali juga disebut dengan uji 1 sampel.</p></li>
+<li class="fragment"><p>Umumnya uji ini digunakan untuk pernyataan misalnya “lampu X tahan 10.000 jam”, atau “best before 6 bulan”.</p></li>
 </ul>
 <p><span class="math display">\[
-Y=\beta_0+\beta_1 X_1+\beta_2 X_2 +...+\beta_jX_j+\mu
-\]</span> - Ini disebut juga dengan regresi multivariat.</p>
+H_0: \mu = \mu_0
+\]</span> <span class="math display">\[
+H_1: \mu \neq \mu_0
+\]</span></p>
+</section>
+<section id="uji-deskriptif-1" class="slide level2">
+<h2>Uji deskriptif</h2>
+<div class="columns">
+<div class="column" style="width:45%;">
 <ul>
-<li><p>Problemnya regresi ini jadi susah digambar dalam 2 dimensi.</p></li>
-<li><p>Jarang ada penelitian yang hanya menggunakan 1 jenis variabel saja.</p></li>
+<li class="fragment">Kita cek apakah <span class="math inline">\(t_{hitung}\)</span> ada di daerah penolakan. Hitung dengan rumus:</li>
+</ul>
+<p><span class="math display">\[
+t=\frac{\bar{X}-\mu_0}{\frac{S}{\sqrt{n}}}
+\]</span></p>
+</div><div class="column" style="width:45%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="pvalue1.gif"></p>
+<figcaption>alpha (arsir biru tua) disebut juga daerah penolakan</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<ul>
+<li class="fragment">bandingkan <span class="math inline">\(t_{hitung}\)</span> dengan <span class="math inline">\(t_{tabel}\)</span>. Jika <span class="math inline">\(t_{hitung}\)</span> ada di daerah penolakan, maka tolak <span class="math inline">\(H_0\)</span>.</li>
 </ul>
 </section>
-<section id="omitted-variable-bias" class="slide level2">
-<h2>Omitted variable bias</h2>
+<section id="soal-1" class="slide level2">
+<h2>Soal 1</h2>
 <ul>
-<li>Jika seandainya aslinya <span class="math inline">\(Y=\beta_0+\beta_1X_1+\beta_2X_2=\mu\)</span></li>
-<li>kita regressnya <span class="math inline">\(Y=\beta_0+\beta_1X_1+\varepsilon\)</span></li>
-<li>Artinya, aslinya ada <span class="math inline">\(X_2\)</span> yang ngaruh, tapi nggak kita masukan ke model regresi.</li>
-<li>akibatnya variasi yang harusnya bisa dijelaskan <span class="math inline">\(X_2\)</span> jadi masuk ke <span class="math inline">\(\varepsilon\)</span></li>
-<li>dan artinya <span class="math inline">\(\varepsilon\)</span> akan punya pola.</li>
+<li class="fragment"><p>Seorang dosen bahasa inggris memiliki materi ajar yang cocok untuk kelas dengan nilai TOEFL sekitar 500. Dosen ini memutuskan melakukan tes TOEFL ke 20 orang mahasiswa sebagai sampel. Jika rata-rata hasilnya adalah 500, maka materi tidak perlu diganti. Gunakan derajat kepercayaan 5% untuk menentukan apakah rata-rata mahasiswa memiliki nilai TOEFL 500.</p></li>
+<li class="fragment"><p><span class="math inline">\(H_0: \mu = 500\)</span></p></li>
+<li class="fragment"><p><span class="math inline">\(H_1: \mu \neq 500\)</span></p></li>
 </ul>
 </section>
-<section id="omitted-variable-bias-1" class="slide level2">
-<h2>Omitted variable bias</h2>
+<section id="data" class="slide level2 scrollable">
+<h2>Data</h2>
+<p>Bisa didownload di <a href="https://docs.google.com/spreadsheets/d/1aE74llk9RkTuL2nLsp6WfvK0faz3DGKv/edit?usp=drive_link&amp;ouid=117760147588370390523&amp;rtpof=true&amp;sd=true">sini</a></p>
+<div class="cell">
+<div class="cell-output-display">
+<table data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: right;" data-quarto-table-cell-role="th">nilai</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">522</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">467</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">437</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">475</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">444</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">470</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">503</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">466</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">456</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">504</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">503</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">468</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">453</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">534</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">510</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">495</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">462</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">459</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">522</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">503</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+</section>
+<section id="soal-1-1" class="slide level2">
+<h2>Soal 1</h2>
 <ul>
-<li>Jika errornya punya pola, artinya ada variabel yang mestinya ngefek tapi tidak kita masukan ke regresi.</li>
-<li>beta kita (si <span class="math inline">\(\beta_1\)</span>) akan jadi bias.</li>
-<li>Karena itu, omitted variable bias adalah problem yang cukup serius.</li>
-<li>usahakan kita sudah menggunakan semua variabel yang ngaruh ke Y menurut teori.</li>
+<li class="fragment">Didapat <span class="math inline">\(\bar{X}=501,93\)</span> dan <span class="math inline">\(S=49.22\)</span> lalu hitung t:</li>
+</ul>
+<p><span class="math display">\[
+t_0=\frac{482,62-500}{28,62/\sqrt{20}}=-2,72
+\]</span></p>
+<ul>
+<li class="fragment"><p>Dengan <span class="math inline">\(\alpha=5\%\)</span> dan <span class="math inline">\(df=19\)</span>, didapat <span class="math inline">\(t_{0,025}=\pm2,093\)</span></p></li>
+<li class="fragment"><p><span class="math inline">\(|t_0| &gt; |t_{0,025}|\)</span> maka kita tolak <span class="math inline">\(H_0\)</span></p></li>
+<li class="fragment"><p>Dengan derajat kepercayaan 95%, Disimpulkan bahwa rata-rata populasi tidak sama dengan 500. Mungkin kurikulum perlu diubah.</p></li>
+</ul>
+</section>
+<section id="soal-2" class="slide level2">
+<h2>Soal 2</h2>
+<ul>
+<li class="fragment">Anto memulai bisnis pecel lele. PT.A menawarkan menjadi pemasok lele untuk Anto. Tapi anto hanya menerima bila PT.A mampu dengan konsisten mengirimkan lele dengan berat minimal rata-rata lebih dari 100 gram. Anto pergi ke kolam PT.A dan mengambil sampel 10 ekor lele dengan data seperti berikut:</li>
+</ul>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] 104.87125 109.91442  95.45149  91.17422 104.77461 101.85977  89.45831
+ [8] 102.21860  85.21048  94.92019</code></pre>
+</div>
+</div>
+<ul>
+<li class="fragment">Dengan <span class="math inline">\(\alpha=5\%\)</span>, tentukan apakah Anto jadi mengambil dari PT.A atau tidak.</li>
+</ul>
+</section>
+<section id="one-tail-kiri" class="slide level2">
+<h2>One-tail kiri</h2>
+<p><span class="math display">\[
+H_0: \mu \geq 100
+\]</span> <span class="math display">\[
+H_1: \mu &lt; 100
+\]</span></p>
+<ul>
+<li class="fragment"><p>Kita gunakan uji 1 tail dengan rumus yang sama.</p></li>
+<li class="fragment"><p>Didapat <span class="math inline">\(\bar{X}=97,99\)</span> dan <span class="math inline">\(S=7,94\)</span>, dengan <span class="math inline">\(n=10\)</span> didapat t-hitung:</p></li>
+<li class="fragment"><p><span class="math inline">\(t_{hitung}=-0.8\)</span> sementara <span class="math inline">\(t_{0,025}=-1,833\)</span>, terima <span class="math inline">\(H_0\)</span></p></li>
+<li class="fragment"><p>Artinya anto akan mengambil lele PT.A.</p></li>
+</ul>
+</section>
+<section id="soal-3" class="slide level2">
+<h2>Soal 3</h2>
+<ul>
+<li class="fragment">Sebuah bank mengevaluasi kecepatan customer servicenya dalam melayani pelanggan. Diambil data sampel dari 40 layanan, didapatkan rata-rata 16,23 menit dengan standar deviasi 3,13 menit. Bank tersebut ingin mendeteksi apakah layanan secara keseluruhan lebih cepat dari 15 menit. Gunakan <span class="math inline">\(\alpha=5\%\)</span>.</li>
+</ul>
+<p><span class="math display">\[
+H_0: \mu\leq15
+\]</span> <span class="math display">\[
+H_1: \mu&gt;15
+\]</span></p>
+</section>
+<section id="one-tail" class="slide level2">
+<h2>One-tail</h2>
+<ul>
+<li class="fragment"><p><span class="math inline">\(t_{hitung}=2,485\)</span> sementara <span class="math inline">\(Z_{0.05}=1,645\)</span></p></li>
+<li class="fragment"><p>Berarti <span class="math inline">\(t\)</span> ada di daerah penolakan, sehingga kita tolak <span class="math inline">\(H_0\)</span> dan dapat disimpulkan bahwa kinerja customer service masih lebih dari 15 menit secara keseluruhan.</p></li>
+<li class="fragment"><p>Two-tail digunakan jika kita ingin menguji apakah sebuah rata-rata sama dengan sebuah parameter.</p></li>
+<li class="fragment"><p>One-tail: Jika ingin menguji lebih besar sama dengan, maka gunakan yang daerah penolakannya di kiri(negatif).</p>
+<ul>
+<li class="fragment">Sebaliknya jika menguji lebih kecil sama dengan.</li>
+</ul></li>
+</ul>
+</section>
+<section id="uji-hipotesis-2-populasi" class="slide level2">
+<h2>Uji hipotesis 2 populasi</h2>
+<p>Prinsipnya sama dengan sebelumnya, tapi:</p>
+<p><span class="math display">\[
+df=n_1+n_2-2
+\]</span></p>
+<p><span class="math display">\[
+t=\frac{(\bar{X_1}-\bar{X_2})}{S_{gab}\sqrt{\frac{1}{n_1}+\frac{1}{n_2}}}
+\]</span></p>
+<p><span class="math display">\[
+S_{gab}=\sqrt{\frac{(n_1-1)S_1^2+(n_2-1)S_2^2}{n_1+n_2-2}}
+\]</span></p>
+<p><span class="math display">\[
+H_0: \mu_1=\mu_2
+\]</span></p>
+</section>
+<section id="soal-3-1" class="slide level2">
+<h2>soal 3</h2>
+<ul>
+<li class="fragment"><p>Ada 2 buah populasi dengan karakteristik sebagai berikut:</p>
+<ul>
+<li class="fragment"><p>populasi 1: n=10, <span class="math inline">\(\bar{X}=15\)</span>, S=6</p></li>
+<li class="fragment"><p>populasi 2: n=12, <span class="math inline">\(\bar{X}=10\)</span>, S=5</p></li>
+</ul></li>
+<li class="fragment"><p>dengan <span class="math inline">\(\alpha=5\%\)</span>, cek apakah kedua populasi adalah populasi yang sama atau tidak.</p></li>
+<li class="fragment"><p><span class="math inline">\(H_0: \mu_1 = \mu_2\)</span></p></li>
+<li class="fragment"><p><span class="math inline">\(H_1: \mu_1 \neq \mu_2\)</span></p></li>
+</ul>
+</section>
+<section id="soal-3-2" class="slide level2">
+<h2>Soal 3</h2>
+<p><span class="math display">\[
+S_{gab}=\sqrt{\frac{(10-1)6^2+(12-1)5^2}{10+12-2}}= 5,63
+\]</span></p>
+<p><span class="math display">\[
+t=\frac{(15-10)}{5.63\sqrt{\frac{1}{10}+\frac{1}{12}}}=2,07
+\]</span></p>
+<ul>
+<li class="fragment"><p><span class="math inline">\(t_{0,025}=1.725 &lt; t\)</span> sehingga tolak <span class="math inline">\(H_0\)</span></p></li>
+<li class="fragment"><p>Karena <span class="math inline">\(\bar{X_1}&gt;\bar{X_2}\)</span> maka kita boleh menyimpulkan <span class="math inline">\(\mu_1&gt;\mu_2\)</span></p></li>
+</ul>
+</section>
+<section id="uji-hipotesis-berpasangan" class="slide level2">
+<h2>Uji Hipotesis berpasangan</h2>
+<ul>
+<li class="fragment"><p>Uji ini dilakukan apabila populasi 1 dan populasi 2 kita hitung secara berpasangan.</p></li>
+<li class="fragment"><p>Umumnya dilakukan jika ada suatu intervensi di individu yang sama, lalu dicek sebelum dan sesudahnya.</p></li>
+<li class="fragment"><p>Kita hitung perbedaan tiap sampelnya (dibuat kolom baru yaitu <span class="math inline">\(B=X_1-X_2\)</span>) lalu hitung dengan rumus:</p></li>
+<li class="fragment"><p><span class="math inline">\(t=\frac{\bar{B}}{S_B\sqrt{n}}\)</span></p></li>
+<li class="fragment"><p>gunakan <span class="math inline">\(H_0: \mu_1=\mu_2\)</span> atau <span class="math inline">\(H_0: \bar{B}=0\)</span></p></li>
+</ul>
+</section>
+<section id="soal-4" class="slide level2">
+<h2>Soal 4</h2>
+<p>Sebuah kelas barusan pasang AC, lalu menghitung nilai UTS (sebelum AC) dan UAS (sesudah AC). Didapat:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Mahasiswa</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Pre-AC</td>
+<td>40</td>
+<td>70</td>
+<td>63</td>
+<td>56</td>
+<td>65</td>
+</tr>
+<tr class="even">
+<td>Post-AC</td>
+<td>45</td>
+<td>64</td>
+<td>59</td>
+<td>51</td>
+<td>67</td>
+</tr>
+<tr class="odd">
+<td>B</td>
+<td>-5</td>
+<td>6</td>
+<td>4</td>
+<td>5</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<p>Apakah setelah pasang AC hasilnya lebih baik? gunakan <span class="math inline">\(\alpha=5\%\)</span></p>
+</section>
+<section id="soal-4-1" class="slide level2">
+<h2>Soal 4</h2>
+<ul>
+<li class="fragment"><p><span class="math inline">\(\bar{B}=\frac{-5+6+4+5+2}{5}=1,6\)</span></p></li>
+<li class="fragment"><p><span class="math inline">\(S_B=4,83\)</span> (lihat lagi cara hitung simpangan baku di materi sebelumnya)</p></li>
+<li class="fragment"><p><span class="math inline">\(t=\frac{1,6}{4,83\sqrt{5}}=0,74\)</span></p></li>
+<li class="fragment"><p><span class="math inline">\(t_{tabel}=2,776\)</span> dan hasilnya <span class="math inline">\(t\)</span> ada di daerah penerimaan.</p></li>
+<li class="fragment"><p>Tidak menolak <span class="math inline">\(H_0 \rightarrow\)</span> Sebelum dan setelah pasang AC hasil belajar tidak berubah.</p></li>
 </ul>
 <div class="footer footer-default">
 

@@ -8,10 +8,10 @@
 <link href="index_files/libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="index_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="index_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.3.427">
+  <meta name="generator" content="quarto-1.3.340">
 
   <meta name="author" content="Matematika &amp; Statistika">
-  <title>Regresi Univariat: how to</title>
+  <title>Menebak populasi dengan sampel</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -30,7 +30,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto.css">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto.css" id="theme">
   <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -327,8 +327,8 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Regresi Univariat: how to</h1>
-  <p class="subtitle">Pertemuan 11</p>
+  <h1 class="title">Menebak populasi dengan sampel</h1>
+  <p class="subtitle">Pertemuan 8</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -342,171 +342,224 @@ Matematika &amp; Statistika
 <section id="hari-ini" class="slide level2">
 <h2>Hari ini</h2>
 <ul>
-<li>Regresi univariat</li>
+<li><p>Menebak rata-rata populasi dari sampel</p></li>
+<li><p>Konsep rentang kepercayaan</p></li>
+<li><p>Konsep student distribution (distribusi t)</p></li>
+<li><p>Pendahuluan uji hipotesis</p></li>
 </ul>
 </section>
-<section id="korelasi" class="slide level2">
-<h2>Korelasi</h2>
+<section id="konsep-rentang-kepercayaan" class="slide level2">
+<h2>Konsep rentang kepercayaan</h2>
 <ul>
-<li><p>Pada uji hipotesis, kita mencoba menebak apakah sampel yang kita miliki telah sesuai dengan pembandingnya:</p>
+<li><p>Sampling bisa jadi memberikan kita nilai rata-rata yang tidak sama dengan populasi.</p></li>
+<li><p><span class="math inline">\(\mu \neq \bar{X}\)</span></p></li>
+<li><p>Tapi kita bisa menebak rata-rata populasi <span class="math inline">\(\mu\)</span> dengan menggunakan rentang kepercayaan.</p></li>
+<li><p>Rentang kepercayaan adalah rentang di mana kita yakin dengan tingkat keyakinan <span class="math inline">\(1-\alpha\)</span></p></li>
+</ul>
+</section>
+<section id="rentang-kepercayaan" class="slide level2">
+<h2>Rentang kepercayaan</h2>
+<div class="columns">
+<div class="column" style="width:47%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="pvalue1.gif"></p>
+<figcaption>Two-tailed</figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:47%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="pvalue2.gif"></p>
+<figcaption>One-tailed</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Gambar biru = <span class="math inline">\(\alpha\)</span></p>
+<p>Gambar diambil dari <a href="https://stats.oarc.ucla.edu/other/mult-pkg/faq/general/faq-what-are-the-differences-between-one-tailed-and-two-tailed-tests/">UCLA</a></p>
+</section>
+<section id="tingkat-kepercayaan" class="slide level2">
+<h2>Tingkat kepercayaan</h2>
 <ul>
-<li><p>dibandingkan dengan sebuah angka -&gt; uji hipotesis 1 populasi.</p></li>
-<li><p>dibandingkan dengan sampel lain -&gt; uji hipotesis 2 populasi.</p></li>
+<li><p>Kita menentukan dulu level kepercayaan.</p>
+<ul>
+<li><p>Standardnya adalah 95%, atau <span class="math inline">\(\alpha=5%\)</span></p></li>
+<li><p>kalau two-tailed, berarti kiri kanan masing-masing <span class="math inline">\(\frac{5}{2}\%\)</span></p></li>
 </ul></li>
-<li><p>Pada perhitungan korelasi, kita mendapatkan informasi tentang hubungan 2 variabel, Y dan X.</p></li>
-<li><p>Regresi menggunakan 2 prinsip di atas untuk mencari perubahan marjinal dari Y dan X.</p></li>
+<li><p>Makin tinggi tingkat kepercayaan, makin besar rentangnya.</p></li>
+<li><p>Makin besar rentangnya, makin ga guna tebakannya (inefisien),</p></li>
 </ul>
 </section>
-<section id="regresi" class="slide level2 m">
-<h2>Regresi</h2>
-<div class="columns">
-<div class="column" style="width:47%;">
-<div class="cell">
-<div class="cell-output-display">
-<p><img data-src="index_files/figure-revealjs/unnamed-chunk-1-1.png" width="480"></p>
-</div>
-</div>
-</div><div class="column" style="width:47%;">
+<section id="rentang-kepercayaan-1" class="slide level2">
+<h2>Rentang kepercayaan</h2>
 <ul>
-<li><p>Kali ini kita coba plot data jam belajar vs nilai UTS, tapi datanya ada 70 observasi (n=70).</p></li>
-<li><p>Dapat dilihat ada pattern di data tersebut, di mana X dan Y memiliki korelasi positif.</p></li>
-<li><p>Jika terdapat korelasi linear, kita dapat membuat garis lurus yang mewakili kurang lebih korelasi tersebut. (lihat garis biru)</p></li>
-<li><p>Bagaimana cara membuatnya?</p></li>
-</ul>
-</div>
-</div>
-</section>
-<section id="regresi-1" class="slide level2 m">
-<h2>Regresi</h2>
-<div class="columns">
-<div class="column" style="width:47%;">
-<div class="cell">
-<div class="cell-output-display">
-<p><img data-src="index_files/figure-revealjs/unnamed-chunk-2-1.png" width="480"></p>
-</div>
-</div>
-</div><div class="column" style="width:47%;">
-<ul>
-<li>Garis biru tersebut dibuat sedemikian sehingga ia <strong>meminimalisir jarak vertikal</strong> antara setiap titik observasi dengan si garis biru.</li>
-<li>misalnya, lihat X=15, ada 4 titik berbeda, yaitu 64,65,68, dan 69.</li>
-<li>garis biru bertemu X=15 di Y=69.</li>
-<li>Jarak setiap titik terhadap Y=69 adalah [-5,-4,-1,0]</li>
-<li>Lakukan untuk semua titik, maka garis biru akan memberikan jumlah perbedaan terkecil dibanding posisi lain.</li>
-</ul>
-</div>
-</div>
-</section>
-<section id="ordinary-least-square" class="slide level2">
-<h2>Ordinary Least Square</h2>
-<ul>
-<li>Ada yang ingat rumus untuk membuat sebuah garis linear di diagram kartesian?</li>
+<li>Rumus menghitung rentang kepercayaan:</li>
 </ul>
 <p><span class="math display">\[
-\hat{Y}=\beta_0+\beta_1 X
+\bar{X} \pm Z_{\frac{\alpha}{2}} \frac{S}{\sqrt{n}}
 \]</span></p>
-<ul>
-<li><p><span class="math inline">\(\hat{Y}\)</span> adalah <span class="math inline">\(Y\)</span> yang didapatkan dari persamaan tersebut.</p></li>
-<li><p><span class="math inline">\(\beta_0\)</span> adalah titik awal, atau <span class="math inline">\(Y\)</span> ketika <span class="math inline">\(X=0\)</span>, disebut juga konstanta.</p></li>
-<li><p><span class="math inline">\(\beta_1\)</span> menunjukkan kemiringan garis. Disebut juga dengan gradien.</p></li>
-</ul>
-</section>
-<section id="ols" class="slide level2">
-<h2>OLS</h2>
-<ul>
-<li>Perbedaan vertikal antara garis biru dengan setiap observasi adalah:</li>
-</ul>
+<p>atau</p>
 <p><span class="math display">\[
-\varepsilon=Y-\hat{Y}
-\]</span></p>
-<p>di mana <span class="math inline">\(Y\)</span> adalah <span class="math inline">\(Y\)</span> yang kita dapat dari data. si <span class="math inline">\(\varepsilon\)</span> inilah yang diminimalisir.</p>
-<ul>
-<li>Untuk melakukan minimalisasi, kita memanfaatkan <em>First Order Condition</em> di mana untuk beberapa fungsi <span class="math inline">\(f(x)\)</span>, kita dapat menemukan titik optimal di mana <span class="math inline">\(f'(x)=0\)</span></li>
-</ul>
-</section>
-<section id="ols-1" class="slide level2">
-<h2>OLS</h2>
-<ul>
-<li>karena <span class="math inline">\(\varepsilon\)</span> bisa jadi negatif, kita kuadratkan dulu lalu ditambahkan, sehingga:</li>
-</ul>
-<p><span class="math display">\[
-\min_{\beta_0,\beta_1} \sum_i \left(Y_i-\beta_0-\beta_1 X_i \right)^2
+\mu=\left[ \bar{X}-Z_{\frac{\alpha}{2}} \frac{S}{\sqrt{n}}, \bar{X}+Z_{\frac{\alpha}{2}}\frac{S}{\sqrt{n}}\right]
 \]</span></p>
 <ul>
-<li><p>kita mencari <span class="math inline">\(\beta_0\)</span> dan <span class="math inline">\(\beta_1\)</span> di mana <span class="math inline">\(\frac{\partial}{\partial \beta_0}=0\)</span> dan <span class="math inline">\(\frac{\partial}{\partial \beta_1}=0\)</span></p></li>
-<li><p>Dengan kata lain, kita buat dulu persamaannya baru kita cari parameter garisnya dulu.</p></li>
-<li><p>Metode ini disebut Ordinary Least Square (OLS) / metode kuadrat terkecil.</p></li>
+<li>Z adalah nilai baku / standardized score yang memberikan kita rentang kepercayaan <span class="math inline">\(1-\alpha\)</span></li>
 </ul>
 </section>
-<section id="ols-2" class="slide level2">
-<h2>OLS</h2>
+<section id="contoh-soal-1" class="slide level2">
+<h2>Contoh soal 1</h2>
+<div>
 <ul>
-<li><p>Kita tidak perlu melakukan penurunan rumus dari slide sebelumnya.</p></li>
-<li><p>Sudah ada rumus yg siap pakai, yaitu:</p></li>
+<li class="fragment"><p>Diambil sebuah sampel berisikan 100 mahasiswa, didapatkan memiliki rata-rata nilai tes TOEFL sebesar 500 dengan simbangan baku 50. Dengan rentang kepercayaan 95%, tentukan rentang nilai TOEFL keseluruhan mahasiswa tersebut!</p></li>
+<li class="fragment"><p>Gunakan tabel Z untuk mendapatkan <span class="math inline">\(Z_{0.025}\)</span></p></li>
+<li class="fragment"><p>Rentang rata-rata = <span class="math inline">\(500 \pm 1,96\times\frac{50}{\sqrt{100}}\)</span></p></li>
+<li class="fragment"><p>Rentang rata-rata = <span class="math inline">\(\left[490,2;509,8\right]\)</span></p></li>
 </ul>
-<p><span class="math display">\[
-\beta_0=\frac{\sum Y \sum X^2-\sum X \sum XY}{n\sum X^2-(\sum X)^2}
-\]</span> dan <span class="math display">\[
-\beta_1=\frac{n\sum XY - \sum X \sum Y}{n \sum X^2-(\sum X)^2}
-\]</span></p>
+</div>
 </section>
-<section id="rumus-lain" class="slide level2">
-<h2>Rumus lain</h2>
-<ul>
-<li>setelah mendapatkan kedua parameter kita, kita dapat menggambar garis kita:</li>
-</ul>
-<p><span class="math display">\[
-\hat{Y}=\beta_0+\beta_1 X
-\]</span></p>
-<ul>
-<li><p>Dan dapat menghitung error <span class="math inline">\(\varepsilon=Y-\hat{Y}\)</span></p></li>
-<li><p>Sehingga rumus regresi utuhnya adalah:</p></li>
-</ul>
-<p><span class="math display">\[
-Y=\beta_0+\beta_1 X + \varepsilon
-\]</span></p>
+<section id="tabel-z" class="slide level2">
+<h2>Tabel Z</h2>
+<iframe src="https://onedrive.live.com/embed?cid=ACC929CA35B3A537&amp;resid=acc929ca35b3a537%21162501&amp;authkey=AIx-FChNmjZ8zzQ&amp;em=2" width="900" height="600" frameborder="0" scrolling="no">
+</iframe>
+<p>Bisa <a href="https://www.google.com/search?client=firefox-b-d&amp;q=z+score+table">Google</a> atau download di <a href="https://drive.google.com/file/d/1ywI58hnM8p0ZyFV7B9rCOosk72iCGguq/view?usp=sharing">sini</a></p>
 </section>
-<section id="regresi-univariat" class="slide level2">
-<h2>Regresi univariat</h2>
-<p><span class="math display">\[
-Y_i=\beta_0+\beta_1 X_i+\varepsilon_i
-\]</span></p>
+<section id="distrubusi-t" class="slide level2">
+<h2>distrubusi t</h2>
 <ul>
-<li><p>Y disebut juga variabel dependen</p></li>
-<li><p>X disebut juga variabel independen</p></li>
-<li><p>nilai Y dan X kita dapatkan dari data</p></li>
-<li><p><span class="math inline">\(\varepsilon\)</span> disebut juga error term / residual. Dia bersifat <strong>independen</strong></p></li>
-<li><p><span class="math inline">\(\beta_1\)</span> disebut juga dengan marginal effect. Ada yang ingat turunan?</p></li>
+<li><p>Distribusi normal (atau distribusi z) merupakan sebaran kontinyu dari <span class="math inline">\(-\infty\)</span> sampai <span class="math inline">\(\infty\)</span></p></li>
+<li><p>Meski demikian, hanya dari 3 standar deviasi kiri dan kanan aja udah lebih dari 99,99%.</p></li>
+<li><p>Sampel dari populasi tersebut belum tentu terdistribusi normal, meski mirip:</p>
+<p>= sampel cenderung lebih mungkin dapat di sekitar rata-rata.</p></li>
 </ul>
 </section>
-<section id="marginal-effect" class="slide level2 incremental">
-<h2>Marginal effect</h2>
+<section id="distribusi-t" class="slide level2">
+<h2>distribusi t</h2>
 <ul>
-<li><p>pada dasarnya, <span class="math inline">\(\beta_1=\frac{dY}{dX}\)</span>. Apa artinya?</p></li>
-<li><p>Untuk kenaikan <span class="math inline">\(X\)</span> sebesar 1 satuan, Y naik sebesar <span class="math inline">\(\beta_1\)</span></p></li>
-<li><p>Jika kita gunakan konteks kita, bagaimana menerjemahkan <span class="math inline">\(\beta_1\)</span> ?</p></li>
-<li><p>Jika jam belajar bertambah 1 jam/minggu, nilai UTS naik sebesar <span class="math inline">\(\beta_1\)</span></p></li>
+<li><p>Semakin banyak sampel yang kita ambil, semakin mirip distribusinya dengan distribusi normal</p></li>
+<li><p>Karena itu kita butuh distribusi baru di mana:</p>
+<ul>
+<li><p>karakteristiknya mirip distribusi normal</p></li>
+<li><p>Seiring sampel meningkat, bentuknya semakin mendekati distribusi normal</p></li>
+</ul></li>
+<li><p>Distribusi tersebut adalah distribusi t.</p></li>
 </ul>
 </section>
-<section id="ramalan" class="slide level2">
-<h2>Ramalan</h2>
-<ul>
-<li><p>Disamping itu, kita dapat meramal <span class="math inline">\(Y\)</span> jika tau <span class="math inline">\(X\)</span>. Jika saya belajar 13 jam, berapa ekspektasi nilai UTS saya?</p></li>
-<li><p><span class="math inline">\(\hat{Y}=\beta_0+\beta_1 \times 13\)</span></p></li>
-<li><p><span class="math inline">\(Y\)</span> aslinya belum tentu sama dengan <span class="math inline">\(\hat{Y}\)</span>, tapi walaupun beda, harusnya tidak terlalu jauh.</p></li>
-<li><p>Semakin besar korelasinya, semakin bagus ramalannya.</p></li>
-</ul>
-</section>
-<section id="video-regresi-excel" class="slide level2">
-<h2>Video regresi excel</h2>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/QbReMOBVzOY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+<section id="t-table" class="slide level2">
+<h2>t-table</h2>
+<p>Download <a href="https://1drv.ms/b/s!AjelszXKKcmsifhDr8cYIgeuMVSIDw?e=ioiSHv">t-table di sini</a></p>
+<p><span class="math inline">\(df=n-1\)</span></p>
+<iframe src="https://onedrive.live.com/embed?cid=ACC929CA35B3A537&amp;resid=acc929ca35b3a537%21162883&amp;authkey=ACByMk8EqPx1N3s&amp;em=2" width="800" height="400" frameborder="0" scrolling="no">
 </iframe>
 </section>
-<section id="minggu-depan" class="slide level2">
-<h2>Minggu depan</h2>
+<section id="contoh-2" class="slide level2">
+<h2>Contoh 2</h2>
 <ul>
-<li><p>Syarat menggunakan regresi</p></li>
-<li><p>analisis pola error</p></li>
+<li><p>Diambil sebuah sampel berisikan 10 mahasiswa, didapatkan memiliki rata-rata nilai tes TOEFL sebesar 500 dengan simbangan baku 50. Dengan rentang kepercayaan 90%, tentukan rentang nilai TOEFL keseluruhan mahasiswa tersebut!</p></li>
+<li><p>Gunakan tabel Z untuk mendapatkan <span class="math inline">\(t_{0.05}\)</span></p></li>
+<li><p>Rentang rata-rata = <span class="math inline">\(500 \pm 1,833\times\frac{50}{\sqrt{10}}\)</span></p></li>
+<li><p>Rentang rata-rata = <span class="math inline">\(\left[471,02;528,98\right]\)</span></p></li>
 </ul>
+</section>
+<section id="student-t" class="slide level2">
+<h2>Student t</h2>
+<ul>
+<li><p>Student distribution umumnya digunakan untuk sampel yang sedikit.</p></li>
+<li><p>Beberapa buku menyarankan menggunakan distribusi t selama sampel anda di bawah 30.</p></li>
+<li><p>Saya akan menyarankan hal yang sama di sini.</p></li>
+<li><p>Di dunia nyata, sampling adalah hal yang ribet, terutama jika anda memiliki banyak karakteristik yang harus diseimbangkan.</p></li>
+<li><p>Secara umum, semakin banyak semakin baik. Batasnya? Budget. Yang penting <strong>Representatif</strong>.</p></li>
+</ul>
+</section>
+<section id="uji-hipotesis" class="slide level2">
+<h2>Uji Hipotesis</h2>
+<ul>
+<li><p>Kita telah belajar menebak nilai pusat (dengan rata-rata) dan menghitung standar deviasi / simpangan baku.</p></li>
+<li><p>Berikutnya kita akan belajar uji hipotesis dengan jumlah data yang lebih dari 1 jenis.</p></li>
+<li><p>Kita masih menggunakan asumsi distribusi normal.</p></li>
+</ul>
+</section>
+<section id="hipotesis" class="slide level2">
+<h2>Hipotesis</h2>
+<ul>
+<li><p>Hipotesis adalah pernyataan tentatif mengenai parameter acak.</p></li>
+<li><p>Parameter acak dimaksud adalah parameter yang menunjukkan karakteristik data yang sedang kita uji.</p></li>
+<li><p>Misalnya kelas A punya rata-rata nilai 80 dan simpangan baku 10, kelas B 76 dan 8. Manakah yang lebih tinggi?</p></li>
+<li><p>Supplier A dan supplier B, manakah yang produknya lebih baik?</p></li>
+</ul>
+</section>
+<section id="uji-hipotesis-1" class="slide level2">
+<h2>Uji hipotesis</h2>
+<ul>
+<li>Uji hipotesis umumnya dilakukan dengan membandingkan nilai rata-rata dengan suatu parameter.</li>
+</ul>
+<p>-Misalnya, rata-rata kelas A lebih tinggi daripada rata-rata kelas B, kita tuliskan sebagai:</p>
+<p><span class="math display">\[
+H_0: \mu_A &gt; \mu_B
+\]</span></p>
+<p><span class="math display">\[
+H_1: \mu_A \leq \mu_B
+\]</span> - <span class="math inline">\(H_0\)</span> disebut juga hipotesis nol, sementara <span class="math inline">\(H_1\)</span> disebut juga hipotesis alternatif.</p>
+</section>
+<section id="uji-hipotesis-2" class="slide level2">
+<h2>Uji Hipotesis</h2>
+<ul>
+<li><p>Pada prosedur uji hipotesis, kita gunakan prinsip bahwa <span class="math inline">\(H_0\)</span> dianggap benar, kecuali kita punya cukup bukti statistik untuk menolak <span class="math inline">\(H_0\)</span>.</p></li>
+<li><p>Mirip prinsip praduga tak bersalah: seseorang dinyatakan tidak bersalah kecuali terbukti sebaliknya.</p></li>
+<li><p>Kita menggunakan nilai tengah (<span class="math inline">\(\mu\)</span>) untuk menguji <span class="math inline">\(H_0\)</span>.</p></li>
+</ul>
+</section>
+<section id="arah-uji" class="slide level2">
+<h2>Arah uji</h2>
+<ul>
+<li><p>Uji hipotesis dapat dibagi dua: uji hipotesis 2 arah (two-tailed) dan uji hipotesis 1 arah (1-tailed).</p></li>
+<li><p>Uji hipotesis 2 arah kita gunakan bila <span class="math inline">\(H_0: \mu=\mu_0\)</span> dan <span class="math inline">\(H_1: \mu\neq\mu_0\)</span></p>
+<ul>
+<li>artinya, kita tolah <span class="math inline">\(H_0\)</span> jika mendapati bahwa nilai rata-rata lebih besar ATAU lebih kecil dari nilai referensi.</li>
+</ul></li>
+<li><p>Uji hipotesis 1 arah kita ginakan bila yang kita uji adalah lebih besar atau lebih kecil.</p>
+<ul>
+<li>misalnya kita uji lebih besar dari, maka selama nilai rata-rata lebih kecil atau sama dengan, maka kita tolah <span class="math inline">\(H_0\)</span></li>
+</ul></li>
+</ul>
+</section>
+<section id="dua-jenis-eror" class="slide level2">
+<h2>Dua jenis eror</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Kenyataan</th>
+<th>Menerima <span class="math inline">\(H_0\)</span></th>
+<th>Menolak <span class="math inline">\(H_0\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Benar</td>
+<td>tidak salah</td>
+<td>Type I error</td>
+</tr>
+<tr class="even">
+<td>Salah</td>
+<td>Type II error</td>
+<td>tidak salah</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>Type I error (<span class="math inline">\(\alpha\)</span>): aslinya benar tapi kita tolak.</p></li>
+<li><p>Type II error (<span class="math inline">\(\beta\)</span>): aslinya salah tapi kita terima.</p></li>
+</ul>
+</section>
+<section id="prosedur-uji-hipotesis" class="slide level2">
+<h2>Prosedur Uji hipotesis</h2>
+<ol type="1">
+<li>Menetapkan hipotesis: Tulis apa <span class="math inline">\(H_0\)</span> dan <span class="math inline">\(H_1\)</span> nya</li>
+<li>Menetapkan <span class="math inline">\(\alpha\)</span>, atau level kepercayaan untuk menolak <span class="math inline">\(h_0\)</span></li>
+<li>Menghitung parameter uji</li>
+<li>Memutuskan penolakan atau penerimaan <span class="math inline">\(H_0\)</span></li>
+<li>Membuat kesimpulan.</li>
+</ol>
 <div class="footer footer-default">
 
 </div>
@@ -724,44 +777,6 @@ Y_i=\beta_0+\beta_1 X_i+\varepsilon_i
         ]
       });
     </script>
-    
-    <script>
-      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-      // slide changes (different for each slide format).
-      (function () {
-        // dispatch for htmlwidgets
-        function fireSlideEnter() {
-          const event = window.document.createEvent("Event");
-          event.initEvent("slideenter", true, true);
-          window.document.dispatchEvent(event);
-        }
-
-        function fireSlideChanged(previousSlide, currentSlide) {
-          fireSlideEnter();
-
-          // dispatch for shiny
-          if (window.jQuery) {
-            if (previousSlide) {
-              window.jQuery(previousSlide).trigger("hidden");
-            }
-            if (currentSlide) {
-              window.jQuery(currentSlide).trigger("shown");
-            }
-          }
-        }
-
-        // hookup for slidy
-        if (window.w3c_slidy) {
-          window.w3c_slidy.add_observer(function (slide_num) {
-            // slide_num starts at position 1
-            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-          });
-        }
-
-      })();
-    </script>
-
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
