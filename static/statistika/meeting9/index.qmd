@@ -381,10 +381,15 @@ det |>
   labs(x="X",y="f")
 
 ```
+
+## Rekap
+
+- Untuk mendaptkan gambaran tentang bentuk data kita dengan lebih singkat, kita menggunakan distribusi frekuensi.
+
+- Sebuah data kita katakan berdistribusi normal jika nilai rata-rata memiliki frekuensi tertinggi dan semakin langka jika semakin menjauhi rata-rata.
+
+- Statistik deskriptif dapat menggambarkan keseluruhan data. Kita dapatkan dengan menghitung tendensi sentral dan sebaran.
+
 ## Next
 
-- Sangat penting untuk memahami bahwa kurva distribusi normal = probability density.
-
-- Dengan mengetahui nilai gejala pusat dan sebaran, kita bisa menebak karakteristik populasi kita, dan sampel yang bisa kita dapatkan.
-
-- Next kita akan kembali mencoba hitung deskriptif statistik, lalu uji normalitas, z-score dan distribusi populasi lain.
+- Standardisasi dan penggunaan asumsi distribusi normal untuk menebak populasi.
