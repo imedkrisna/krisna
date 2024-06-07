@@ -12,7 +12,7 @@ node_modules/
 *.dta
 *.csv
 *.xls
-*.xlsx
+
 *.rds
 
 *.txt
