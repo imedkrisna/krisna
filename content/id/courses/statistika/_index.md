@@ -40,16 +40,24 @@ flowchart BT
 
 Setelah lulus mata kuliah ini, mahasiswa diharapkan akan mampu menggunakan alat-alat analisis berbasis statistika.
 
+Capaian pembelajaran mata kuliah ini (CPMK) adalah:
+
+1.	Mengenal alat-alat dasar dalam matematika (C1)
+2.	Menggunakan matematika dalam bisnis dan ekonomi (C2)
+3.	Memahami cara membaca informasi dalam data (C3)
+4.	Mampu menggunakan alat-alat statistik dalam bisnis dan ekonomi (C4)
+
+
 Beberapa sub-capaian antara lain:
 
-1.	Mengidentifikasi berbagai jenis data (C1).
-2.	Menerangkan prinsip dasar sampling dan distribusi (C2).
-3.	Menerangkan prinsip-prinsip dasar probabilitas (C2).
-4.	Menjelaskan kondisi dari populasi berdasarkan informasi statistik (C2). 
-5.	Menghitung expected value dari probabilitas berbasis frekuensi (C3).
-6.	Membersihkan data sehingga _machine-readable_ (C3).
-7.	Melakukan tes hipotesis (C3).
-8.	Melakukan regresi univariat (C3).
+1.	Mahasiswa mengenal alat-alat dasar dan notasi dalam algebra sederhana (C1)
+2.	Mahasiswa mampu menyelesaikan permasalahan yang menggunakan prinsip deret dan index (C1)
+3.	Mahasiswa mampu menggambar fungsi dan menyelesaikan permasalahan dengan fungsi (C2)
+4.	Mahasiswa memahami prinsip-prinsip dasar peluang dan aplikasinya (C2)
+5.	Mahasiswa mampu menghitung statistik deskriptif (C3)
+6.	Mahasiswa mampu melakukan visualisasi data dengan alat sederhana (C3)
+7.	Mahasiswa mampu melakukan uji hipotesis dalam konteks ekonomi dan bisnis (C4)
+8.	Mahasiswa mampu melakukan regresi dalam konteks ekonomi dan bisnis (C4)
 
 
 ## Syarat & Prasayarat
@@ -60,14 +68,14 @@ Tidak ada prasyarat untuk mata kuliah ini. Mata kuliah ini sendiri merupakan pra
 
 | Rumusan kompetensi | Ceramah | Seminar/ diskusi | praktikum | problem-based learning | project-based learning | collaborate learning | simulasi |
 | ------ | --- | --- | --- | --- | --- | --- | --- |
-| Mengidentifikasi berbagai jenis data (C1). | ✅ | - | - | - | - | - | - |
+| Mahasiswa mampu menyelesaikan permasalahan yang menggunakan prinsip deret dan index (C1) | ✅ | - | - | - | - | - | - |
 | Menerangkan prinsip dasar sampling dan distribusi (C2). | ✅ | - | - | - | - | - | - |
-| Menerangkan prinsip-prinsip dasar probabilitas (C2). | ✅ | - | - | - | - | - | - |
-| Menjelaskan kondisi dari populasi berdasarkan informasi statistik (C2).  | ✅ | ✅ | - | ✅ | - | ✅ | - |
-| Menghitung expected value dari probabilitas berbasis frekuensi (C3). | ✅ | - | - | ✅ | - | - | - |
-| Membersihkan data sehingga _machine-readable_ (C3). | ✅ | - | - | ✅ | - | ✅ | - |
-| Melakukan tes hipotesis (C3). |  ✅ | - | - | ✅ | - | - | - |
-| Melakukan regresi univariat (C3). | ✅ | - | - | ✅ | - | - | - |
+| Mahasiswa mampu menggambar fungsi dan menyelesaikan permasalahan dengan fungsi (C2) | ✅ | - | - | - | - | - | - |
+| Mahasiswa memahami prinsip-prinsip dasar peluang dan aplikasinya (C2)  | ✅ | ✅ | - | ✅ | - | ✅ | - |
+| Mahasiswa mampu menghitung statistik deskriptif (C3) | ✅ | - | - | ✅ | - | - | - |
+| Mahasiswa mampu melakukan visualisasi data dengan alat sederhana (C3) | ✅ | - | - | ✅ | - | ✅ | - |
+| Mahasiswa mampu melakukan uji hipotesis dalam konteks ekonomi dan bisnis (C4) |  ✅ | - | - | ✅ | - | - | - |
+| Mahasiswa mampu melakukan regresi dalam konteks ekonomi dan bisnis (C4) | ✅ | - | - | ✅ | - | - | - |
 
 ## Buku Pegangan
 
@@ -77,10 +85,13 @@ Buku yang paling saya rekomendasikan adalah Supranto (2016). Saefuddin dkk (2009
 
 ## Evaluasi
 
+Evaluasi dilakukan dengan UTS, UAS dan Tugas. UTS dan UAS berisi pertanyaan-pertanyaan essay tentang konsep dan juga perhitungan. Tugas berfokus pada pengerjaan permasalahan statistik dengan menggunakan alat praktis berupa aplikasi _spreadsheet_.
+
 ## Daftar Pustaka
 
-- Saefuddin, A., Notodiputro, K. A., Alamudi, A., & Sadik, K. (2009). Statistika Dasar. BM Adam. 
-- Sugiyono. (2017). Statistika untuk penelitian. Bandung: Alfabeta.
-- Supranto, J. (2016). Statistik: Teori & Aplikasi. Jakarta: Erlangga.
+1.	Dumairy. 2003. Matematika Terapan untuk Bisnis dan Ekonomi Yogyakarta: BPFE-Yogyakarta.
+2.	Heumann, C., Schomaker, M., Shalabh. 2016. Introduction to Statistics and Data Analysis. Cham: Springer
+3.	Irianto, Agus. 2004. Statistik: Konsep Dasar, Aplikasi, dan Pengembangannya. Jakarta: Kencana Prenadamedia Group
+
 
 
