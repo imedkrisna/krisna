@@ -11,12 +11,12 @@ format:
 
 ## Dosen anda
 
-::: columns
-::: {.column width="40%"}
-![](https://www.krisna.or.id/files/foto_krisna.jpg)
-:::
 
-::: {.column .s width="60%"}
+
+![](https://www.krisna.or.id/files/foto_krisna.jpg)
+
+
+
 -   Timeline:
 
     - 2010-2012: Kementerian Perindustrian
@@ -43,9 +43,6 @@ format:
     
 - more at [krisna.or.id](https://krisna.or.id) and [imedkrisna.github.io](https://imedkrisna.github.io/)
     
-:::
-:::
-
 ## Agenda hari ini
 
 -   Administrasi dan Struktur mata kuliah
@@ -98,7 +95,7 @@ Diturunkan menjadi capaian mata kuliah:
 
 - Beberapa hal yang akan anda pelajari:
 
-::: {.incremental}
+
     
 - present & future value
 
@@ -108,9 +105,9 @@ Diturunkan menjadi capaian mata kuliah:
     
 - belajar menggunakan alat-alat analisis: hypothesis testing dan regresi.
     
-:::
 
-## Tentang mata kuliah ini {.m}
+
+## Tentang mata kuliah ini 
 
 - Ilmu di mata kuliah ini merupakan konsep-konsep dasar.
 
@@ -188,7 +185,7 @@ Diturunkan menjadi capaian mata kuliah:
 
 ## Matematika
 
-::: {.incremental}
+
 - Apa yang dimaksud dengan matematika?
 
 - Matematika **bukan** (hanya) soal berhitung!
@@ -196,7 +193,7 @@ Diturunkan menjadi capaian mata kuliah:
 - Matematika (dari bahasa Yunani Kuno) berarti ilmu pengetahuan, pengkajian, pembelajaran.
 
 - Matematika sendiri merupakan sekumpulan ilmu abstrak dan terapan yang mempelajari bilangan, struktur, ruang, dan perubahan.
-:::
+
 
 ## Matematika
 
@@ -249,27 +246,20 @@ $$
 
 Coba jawab pertanyaan-pertanyaan ini:
 
-:::: columns
-::: {.column width=47%}
+
 
 1. $A \cap B=$
 2. $D \cup C=$
 
-:::
-::: {.column width=47%}
+
 3. $B \subset A$, True / False?
 4. $D \cap B=$
-:::
-::::
 
 ## Himpunan
 
 Himpunan juga dapat kita batasi dengan aturan verbal. Misalnya:
 
 A adalah sebuah himpunan yang anggotanya adalah bilangan genap antara 1 sampai 9
-
-:::: columns
-::: {.column width=47%}
 
 | nama | nilai matstat |
 | ------- | --- |
@@ -278,11 +268,8 @@ A adalah sebuah himpunan yang anggotanya adalah bilangan genap antara 1 sampai 9
 | Dian | 70 |
 | Raja | 65 |
 
-:::
-::: {.column width=47%}
+
 B adalah himpunan mahasiswa yang dapet nilai di atas 80.
-:::
-::::
 
 ## Perbandingan
 
@@ -307,9 +294,6 @@ B adalah himpunan mahasiswa yang dapet nilai di atas 80.
 
 ## Kaidah bilangan
 
-:::: columns
-::: {.column width=47%}
-
 1. kaidah komutatif
 
 $$
@@ -328,8 +312,6 @@ a \times b &= b \times a
 \end{align}
 $$
 
-:::
-::: {.column width=47%}
 
 3. Kaidah pembatalan
 
@@ -343,8 +325,6 @@ $$
 a(b+c)=ab+ac
 $$
 
-:::
-::::
 
 ## Kaidah bilangan
 
@@ -362,10 +342,7 @@ $$
 
 $a+(-a)=0 \ \ \ \ \ \ \ \ \ \ a \times \frac{1}{a}=1 \ \ \ \ \ \ \ \ \ \ \ \ \ \frac{a}{a}=1$
 
-## Kaidah bilangan {.m}
-
-:::: columns
-::: {.column width=47%}
+## Kaidah bilangan 
 
 7. Operasi tambah kurang: nyebrang menjadi minus
 
@@ -384,8 +361,7 @@ a-b-d &= c \\
 a-b-c-d &= 0
 \end{align}
 $$
-:::
-::: {.column width=47%}
+
 
 8. Operasi kali bagi: nyebrang tuker posisi
 
@@ -400,8 +376,6 @@ axy &= b \\
 \end{align}
 $$
 
-:::
-::::
 
 
 
@@ -453,29 +427,21 @@ $5^3=5 \times 5 \times 5$.
 
 ## Kaidah pangkat
 
-:::: columns
-::: {.column width=47%}
-
 1. $x^0=1$
 2. $x^1=x$
 3. $0^a=0$
 4. $x^{-a}=\frac{1}{x^a}$
 5. $x^{\frac{1}{a}}=\sqrt[a]{x}$
 
-:::
-::: {.column width=47%}
+
 6. $x^{\frac{a}{b}}=\sqrt[b]{x^a}$
 7. ${\left(\frac{x}{y}\right)}^a=\frac{x^a}{y^a}$
 8. $\left(x^a\right)^b=x^{ab}$
 9. $x^{a^b}=x^c,$ di mana $c=a^b$
 
-:::
-::::
+
 
 ## Contoh pangkat
-
-:::: columns
-::: {.column width=47%}
 
 1. $3^0=1$
 2. $3^1=3$
@@ -483,15 +449,11 @@ $5^3=5 \times 5 \times 5$.
 4. $3^{-2}=\frac{1}{3^2}$
 5. $5^{\frac{1}{3}}=\sqrt[3]{5}$
 
-:::
-::: {.column width=47%}
+
 6. $5^{\frac{2}{3}}=\sqrt[3]{5^2}$
 7. ${\left(\frac{3}{5}\right)}^2=\frac{3^2}{5^2}$
 8. $\left(3^5\right)^2=3^{5\times 2}$
 9. $3^{2^3}=x^8$
-
-:::
-::::
 
 ## Kaidah pangkat
 
@@ -515,9 +477,6 @@ $$
 
 ## Kaidah akar
 
-:::: columns
-::: {.column width=47%}
-
 kaidah:
 
 1. $\sqrt[b]{x}=x^{\frac{1}{b}}$
@@ -525,8 +484,6 @@ kaidah:
 3. $\sqrt[b]{xy}=\sqrt[b]{x} \cdot \sqrt[b]{y}$
 4. $\sqrt[b]{\frac{x}{y}}=\frac{\sqrt[b]{x}}{\sqrt[b]{y}}$
 
-:::
-::: {.column width=47%}
 
 contoh:
 
@@ -535,8 +492,6 @@ contoh:
 3. $\sqrt[3]{5 \cdot 4}=\sqrt[3]{5} \cdot \sqrt[3]{4}$
 4. $\sqrt[3]{\frac{2}{5}}=\frac{\sqrt[3]{2}}{\sqrt[3]{5}}$
 
-:::
-::::
 
 ## Kaidah perkalian
 
@@ -564,18 +519,12 @@ contoh: $\frac{\sqrt[3]{5}}{\sqrt[3]{7}}=\sqrt[3]{\frac{5}{7}}$
 
 logaritma pada intinya merupakan kebalikan dari proses pangkat dan/atau akar.
 
-:::: columns
-::: {.column width=33%}
-
 $$
 \begin{align}
 x^a &= m \\
 5^3 &= 125
 \end{align}
 $$
-
-:::
-::: {.column width=33%}
 
 $$
 \begin{align}
@@ -584,8 +533,7 @@ $$
 \end{align}
 $$
 
-:::
-::: {.column width=33%}
+
 
 $$
 \begin{align}
@@ -594,14 +542,11 @@ $$
 \end{align}
 $$
 
-:::
-::::
-
 - 5 harus dipangkatkan berapa supaya jadi 125.
 
 - 5 (atau secara umum $x$) disebut dengan **basis**
 
-## Basis logaritma {.m}
+## Basis logaritma 
 
 $$
 \log_x m=a \\
@@ -622,17 +567,11 @@ $$
 
 ## Kaidah logaritma
 
-:::: columns
-::: {.column width=47%}
-
 1. $^x \log x = 1$
 2. $^x \log 1 = 0$
 3. $^x \log m = \text{undefined} \\ if\ m \le 0$
 4. $^x \log x^a=a$
 5. $\log_x m^a = a \ \log_x m$
-
-:::
-::: {.column width=47%}
 
 6. $x^{log_x m}=m$
 7. $\log_x mn = \log_x m + \log_x n$
@@ -640,13 +579,9 @@ $$
 9. $\log_x m \cdot loog_m x =1$
 10. $\log_x m \cdot \log_m n \cdot \log_n x=1$
 
-:::
-::::
 
 ## Contoh
 
-:::: columns
-::: {.column width=47%}
 
 1. $^8\log 8=1$
 2. $\log_8 1=0$
@@ -654,17 +589,12 @@ $$
 4. $^5\log 3^7=7 \times ^5\log 3$
 5. $5^{^5\lg 25}=25$
 
-:::
-::: {.column width=47%}
-
 6. $\log 1000 = ?$
 7. $\log_5 \frac{3}{7}=\log_5 3-\log_5 7$
 8. $\log_3 5 \cdot \log_5 3 =1$
 9. $\log_5 (3\times 7)=\log_5 3 + \log_5 7$
 10. $\log_3 5 \cdot \log_5 2 \cdot \log_2 3=1$
 
-:::
-::::
 
 ## Penjumlahan
 
@@ -782,9 +712,6 @@ $$
 
 ## Visualisasi
 
-:::: columns
-::: {.column width=47%}
-
 ```{r}
 #| fig-width: 5
 #| fig-height: 5
@@ -815,8 +742,6 @@ grafik1 <- graph +
 grafik1
 ```
 
-:::
-::: {.column widht=47% .incremental}
 
 Ada 6 titik di bidang/diagram kartesian ini:
 
@@ -827,8 +752,6 @@ Ada 6 titik di bidang/diagram kartesian ini:
 - E=(5,-3)
 - F=(-5,5)
 
-:::
-::::
 
 ## Visualisasi fungsi
 
@@ -873,9 +796,6 @@ $$
 
 ## Visualisasi integer
 
-:::: columns
-::: {.column width=47%}
-
 ```{r}
 #| fig-width: 5
 #| fig-height: 5
@@ -898,8 +818,6 @@ grafik2
 ```
 
 
-:::
-::: {.column width=47%}
 
 | i | x | y |
 | --- | --- | --- |
@@ -911,8 +829,6 @@ grafik2
 
 perhatikan bahwa skala untuk sumbu X dan sumbu Y berbeda. Boleh kok.
 
-:::
-::::
 
 ## Visualisasi riil
 
@@ -931,8 +847,7 @@ $$
 
 ## Visualisasi riil
 
-:::: columns
-::: {.column width=47%}
+
 
 ```{r}
 #| fig-width: 5
@@ -952,22 +867,14 @@ grafik3
 ```
 
 
-:::
-::: {.column width=47%}
-
 - Visualisasi jika X kita batasi bilangan riil dengan desimal 1 angka di belakang koma.
 
 - Semakin banyak desimal yang kita ikutkan, maka akan semakin banyak titiknya.
 
 - Kumpulan titik-titik yang banyaknya tak hingga akan menjadi **garis**
 
-:::
-::::
-
 ## Fungsi linear
 
-:::: columns
-::: {.column width=47%}
 
 ```{r}
 #| fig-width: 5
@@ -986,8 +893,6 @@ grafik4
 ```
 
 
-:::
-::: {.column width=47%}
 
 - Fungsi $y=3+2x$ merupakan fungsi linear karena visualnya membentuk garis lurus.
 
@@ -995,8 +900,6 @@ grafik4
 
 - Gambarnya gambang: cari 2 ditik, lalu hubungkan dgn garis.
 
-:::
-::::
 
 ## Gambar fungsi lain
 
@@ -1070,10 +973,8 @@ Pada fungsi linear $y=a_0+a_1x$
     
 - Hal ini menjadi penting jika kita transformasi fungsinya.
 
-## fungsi linear {.m}
+## fungsi linear 
 
-:::: columns
-::: {.column width=47%}
 
 ```{r}
 #| fig-width: 5
@@ -1097,8 +998,6 @@ grafik5
 
 perubahan konstanta: grafik naik turun, kemiringan tetap.
 
-:::
-::: {.column width=47%}
 
 ```{r}
 #| fig-width: 5
@@ -1126,9 +1025,6 @@ grafik6
 
 Perubahan koefisien: grafik muter dgn konstanta sebagai porosnya
 
-:::
-::::
-
 ## fungsi linear
 
 - Fungsi linear jika ditambah hanya akan mengubah konstanta.
@@ -1141,7 +1037,7 @@ Perubahan koefisien: grafik muter dgn konstanta sebagai porosnya
 
 - jika $z=y \times 2$, maka $z=4+12x$, grafik naik dan mencuram.
 
-## Contoh soal {.m}
+## Contoh soal 
 
 1. Raka bermaksud jualan somay. Untuk itu dia perlu menyewa gerobak somay selama sebulan dan membeli bahan baku somay. Biaya sewa gerobak somay sebulan adalah 1 juta rupiah. Untuk membuat 1 porsi somay, perlu bahan baku senilai 7 ribu rupiah.
 
@@ -1161,8 +1057,6 @@ d. Harus jual berapa somay agar usaha Raka impas (_breakeven_)?  kalo jual 12 ri
 
 ## Jawaban
 
-:::: columns
-::: {.column width=47%}
 
 ```{r}
 #| fig-width: 5
@@ -1186,9 +1080,6 @@ grafik6 <- graph +
 grafik6
 ```
 
-:::
-::: {.column width=47%}
-
 1a. $C=1000+7Q$
 
 2a. $R=10Q$
@@ -1209,8 +1100,6 @@ profit if Jual >334 somay.
 
 
 
-:::
-::::
 
 ## Last note
 
@@ -1263,25 +1152,21 @@ Misalnya kita punya deret seperti ini
 
 Dapat kita ketahui bahwa $a_1=7$ dan $d=5$.
 
-::: {.incremental}
 
 - jika ditanya suku ke 21, maka:
 
 - $a_21=a_1+(i-1)d=107$
 
-:::
+
 
 ## Contoh
 
-::: {.incremental}
 
 - Anda berhasil menyisihkan uang jajan anda setiap bulan 500 ribu rupiah untuk menabung.Jika tabungan awal anda adalah 1 juta rupiah, berapa tabungan anda setelah 1 tahun?
 
 - diketahui $a_1=1000$ ribu rupiah, $d=500$ ribu rupiah, $n=12$
 
 - $a_12=a_1+(n-1)d=1000+12\times 500=1600$ ribu rupiah.
-
-:::
 
 ## Note
 
@@ -1316,8 +1201,6 @@ a_i=a_1\times p^{n-1}, \text{atau } a_i=a_0\times p^n
 $$
 
 - Misalnya, sebuah deret dengan suku $5,10,20,40,...$, berapakah $a_6$?
-
-::: {.incremental}
 
 - $a_6=5 \times 2^5=5 \times 32=160$
 
@@ -1360,7 +1243,7 @@ $$a_6=1000 \times (1+0.07)^5=1402,55$$
 
 - IHSG juga sama: Kan perusahaan di bursa efek ada banyak. Mau tau harga saham yg mana?
 
-## Angka Indeks {.m}
+## Angka Indeks 
 
 - Angka Indeks adalah sebuah angka representatif dari sekumpulan data yang kita dapatkan dengan menggunakan metode rerata tertimbang.
 
@@ -1538,15 +1421,13 @@ $$
 
 Ada fungsi $y=3x^2-x$. Tentukan perubahan dari y jika x naik dari 2 jadi 3.
 
-::: {.incremental}
-
 - jika $x=2$, $y=3(2)^2-(2)=10$
 
 - Jika $x=3$, $y=3(3)^2-(3)=24$
 
 - Artinya, $\Delta y=24-10=14$
 
-:::
+
 
 ## Turunan
 
@@ -1596,15 +1477,13 @@ $$
 
 Ada fungsi $y=3x^2-x$. Tentukan perubahan dari y jika x naik dari 2 jadi 3.
 
-::: {.incremental}
-
 - $\frac{dy}{dx}=6x-1$
 
 - $dy=(6x-1)(dx)$
 
 - $dy=(6(2)-1)(1)=11$
 
-:::
+
 
 ## Diferensial
 
@@ -1620,15 +1499,13 @@ Ada fungsi $y=3x^2-x$. Tentukan perubahan dari y jika x naik dari 2 jadi 3.
 
 Ada fungsi $y=3x-2$. Tentukan perubahan dari y jika x naik dari 2 jadi 3.
 
-::: {.incremental}
-
 - $\frac{dy}{dx}=3$
 
 - Karena fungsinya linear, jadinya: jika x naik 1, maka y akan naik 3.
 
 - Coba hitung ulang jika x naik dari 2 jadi 5
 
-:::
+
 
 ## Somay
 
@@ -1835,25 +1712,19 @@ grafik5
 
 ## Hari ini
 
-::: {.incremental}
-
 - Definisi dan pendekatan klasik
 - Aplikasi probabilitas dalam asuransi
 - Aturan dasar dalam probabilitas
 - Kejadian independen
 
 - Setelah kuliah hari ini, diharapkan anda dapat menerangkan prinsip-prinsip dasar probabilitas.
-:::
 
-## Apa itu peluang? {.s}
+
+## Apa itu peluang? 
 
 - kejadian berpeluang adalah suatu kejadian atau aksi yang memiliki lebih dari satu kemungkinan hasil (_outcome_) yang didapatkan secara acak (_random_).
 
-. . .
-
 ![](ea.png)
-
-. . .
 
 jalur kiri (not confess) adalah kepastian, sementara jalur kanan (confess) adalah kejadian atau aksi berpeluang.
 
@@ -1867,13 +1738,10 @@ jalur kiri (not confess) adalah kepastian, sementara jalur kanan (confess) adala
 
 - Melempar dadu bisa muncul angka 1, 2, 3, 4, 5, atau 6.
 
-. . .
-
 Seperti yang anda mungkin paham, hampir semua kejadian di dunia ini adalah kejadian berpeluang.
 
-## Notasi {.m}
+## Notasi 
 
-::: {.incremental}
 - $S$ (*State*) melambangkan himpunan kemungkinan kejadian.
 
     - Lempar koin punya $S=\{A,G\}$
@@ -1891,7 +1759,7 @@ Seperti yang anda mungkin paham, hampir semua kejadian di dunia ini adalah kejad
 - $P(\bar{A})$ atau $P(X=\bar{A})$ artinya peluang munculnya kejadian selain A.
     
     - Di koin, $P(\bar{A})=P(G)$
-:::
+
 
 ## Beberapa istilah
 
@@ -1935,13 +1803,13 @@ $$
 
 Berapa peluang munculnya 1 atau 2 pada lemparan sebuah dadu yang adil?
 
-::: {.incremental}
+
 - $P(X=1 \cup X=2)=P(X=1)+P(X=2)=\frac{1}{6}+\frac{1}{6}$
-:::
+
 
 ## Rules dasar
 
-::: {.incremental}
+
 - $P(S_1 \cup S_2 \cup .... S_S)=\sum_{i=1}^S S_i=1$
 
     - koin: $P(A)+P(G)=1$
@@ -1953,18 +1821,16 @@ Berapa peluang munculnya 1 atau 2 pada lemparan sebuah dadu yang adil?
     - $P(\bar{X}<3)=P(3)+P(4)+P(5)+P(6)$
     
     - $P(\bar{X}<3)=1-\left(P(1)+P(2) \right)$
-:::
+
 
 ## Pendekatan klasik
-
-::: {.incremental}
 
 - Tahun lalu, dari 40 mahasiswa yang mengambil mata kuliah Statistika, 5 orang dapat nilai A, 10 orang dapat nilai B, 20 orang dapat nilai C, 4 orang dapat nilai D dan 1 orang dapat nilai E. Berapa persen peluang mahasiswa untuk tidak lulus di kelas Statistika?
 
 - $P(\text{tidak lulus})=P(D)+P(E)=1-P(A \cup B \cup C)$
 
 - $P(\text{tidak lulus})=\frac{4+1}{40}=\frac{5}{40}=\frac{1}{8}$
-:::
+
 
 ## Review {.incremental}
 
@@ -1986,15 +1852,11 @@ $$
 
 ## EV Judi
 
-::: {.incremental}
-
 - Sebuah koin yang adil digunakan sebagai dasar sebuah perjudian. Jika keluar A, anda akan mendapatkan Rp 10.000. Jika keluar G, anda harus membayar Rp 12.000. Berapa nilai ekspektasi dari perjudian tersebut?
 
 - $EV=P(A) \times V(A) + P(G) \times V(G)$
 
 - $EV=\frac{1}{2} \times 10000 + \frac{1}{2} \times -12000=-1000$
-
-:::
 
 ## EV judi {.incremental}
 
@@ -2006,8 +1868,6 @@ $$
 
 ## Memaknai EV
 
-::: {.incremental}
-
 - EV judi koin di atas artinya anda mungkin aja menang 10000 ketika sekali ikut. Mungkin juga kalah 12000.
 
 - namun, jika judi tersebut diulang berkali-kali sebanyak mungkin, anda akan secara total mendapatkan -1000.
@@ -2018,8 +1878,6 @@ $$
     
 - Jika anda bandar, judi mana yang lebih baik?
 
-:::
-    
 ## Bandar judi
 
 - Bandar judi sudah pasti akan membuat judi yang memiliki nilai ekspektasi yang negatif bagi peserta judi.
@@ -2036,8 +1894,6 @@ $$
     
 ## Pengambilan keputusan
 
-::: {.incremental}
-
 - EV dapat digunakan sebagai basis pengambilan keputusan.
 
 - Kita dapat membandingkan dua kejadian dan memilih sebuah keputusan yang memiliki nilai EV lebih besar.
@@ -2045,8 +1901,6 @@ $$
     - jika ada keputusan A dan keputusan B, kita memilih keputusan A jika $EV(A) > EV(B)$
 
 - Namun Ketika kita melibatkan kejadian berpeluang, pengambilan keputusan ini tergantung dari **profil risiko**.
-
-:::
 
 ## Profil risiko
 
@@ -2058,9 +1912,8 @@ $$
     
     - Risk loving ketika orang tsb memilih B bahkan ketika $V(A)>EV(B)$.
     
-## Profil risiko {.m}
+## Profil risiko 
 
-::: {.incremental}
 - Lihat kembali judi koin dengan EV=-1.000:
 
     - tidak ikut: V=0, ikut: EV=-1.000.
@@ -2073,21 +1926,14 @@ $$
     
     - orang risk neutral dan risk loving akan ikut, sementara orang risk averse tidak akan ikut.
 
-:::
-
 ## Asuransi
-
-::: {.incremental}
 
 - Daerah Jigikirsi merupakan daerah yang cukup rawan dalan kejahatan curanmor. Dalam setahun ada setidaknya 1000 kejadian curanmor. Asumsikan di jigikirsi ada 10.000 pemilik kendaraan bermotor, dan semuanya memiliki harga yang sama yaitu 15 juta rupiah. berapa nilai ekspektasi sebuah motor di jigikirsi?
 
 - Hitung probability motor hilang, baru hitung EV.
 
-:::
+## Asuransi 
 
-## Asuransi {.m}
-
-::: {.incremental}
 - Anda menawarkan sebuah produk asuransi yang menjanjikan pergantian motor baru jika ada motor hilang di jigikirsi. Berapa premi yang akan anda tawarkan ke pemilik motor di jigikirsi?
 
 - Seorang risk neutral akan bayar selama preminya di bawah 1,5 juta.
@@ -2100,11 +1946,7 @@ $$
 
 - Risk lovers sebaliknya: baru rela bayar kalo preminya semurah mungkin.
 
-:::
-
 ## Asuransi
-
-::: {.incremental}
 
 - Sebuah kapal mengirimkan 10.000 kontainer dalam sehari. Dari 10.000 kontainer tersebut, ada 100 diantaranya rusak saat handling, 50 diantaranya hilang, dan 65 diantaranya tertahan di pabean, dan 85 diantaranya salah kirim. Semua kejadian di atas mengakibatkan nilai barang anda menjadi 0.
 
@@ -2113,8 +1955,6 @@ $$
 - Pebisnis umumnya risk averse. Makanya perusahaan asuransi untung.
 
 - Pejudi biasanya risk loving. Makanya bandar untung.
-
-:::
 
 ## Odds
 
@@ -2144,8 +1984,6 @@ $$
 
 ## Odds
 
-::: {.incremental}
-
 - Jika ikut judi dan bayar 1 juta, maka anda akan indifferent jika:
 
 $$
@@ -2154,19 +1992,13 @@ $$
 
 - Bagi bandar, kemungkinan menang RBL adalah sekitar 18,17%. ONIC berapa?
 
-:::
-
 ## Review
-
-::: {.incremental}
 
 - Peluang digunakan untuk menghitung expected value.
 
 - Expected value memiliki banyak aplikasi seperti di perjudian dan asuransi.
 
 - Odds digunakan untuk menyeimbangkan pasang taruhan. Tapi perlu diingat kemungkinan *fraud*.
-
-:::
 
 ## Minggu depan
 
@@ -2187,8 +2019,6 @@ $$
 
 ## Tindakan Ganda
 
-::: {.incremental}
-
 - Lemparan 2 koin secara bersamaan memiliki kemungkinan hasil:
 
 - $S=\{AA,AG,GA,GG\}$
@@ -2201,11 +2031,7 @@ $$
 
 - Berapa $S$ kalau kita melempar 2 buah dadu?
 
-:::
-
 ## Rules baru
-
-::: {.incremental}
 
 - Peluang independen gabungan/beririsan: peluang munculnya A DAN B.
 
@@ -2217,11 +2043,7 @@ $$
 
 - Berapa peluang munculnya 1 dan ganjil dalam lemparan 2 dadu adil?
 
-:::
-
 ## Rules baru
-
-::: {.incremental}
 
 - Peluang kejadian bersyarat: peluang munculnya A jika B terjadi.
 
@@ -2231,11 +2053,7 @@ $$
 
 - Jika kejadian independen, maka $P(B|A)= P(B)$ 
 
-:::
-
 ## Lotre
-
-::: {.incremental}
 
 - Sebuah kotak undian berisi 100 tiket. 50 diantaranya tiket zonk, 30 diantaranya tiket uang tunai 100 ribu rupiah, 10 diantaranya tiket 200 ribu rupiah, 8 diantaranya tiket 300 ribu dan 2 tiket 500 ribu rupiah. Berapa peluang seseorang bisa ambil tiket 500 ribu 2x berturut-turut? (1) jika tiket dikembalikan, (2) jika tiket tidak dikembalikan.
 
@@ -2245,11 +2063,7 @@ $$
 
 - Jika narik lotre ini bayar 90 ribu rupiah, orang risk neutral ikut ga?
 
-:::
-
 ## Kejadian beririsan
-
-::: {.incremental}
 
 - Sebuah deck terdiri dari 52 kartu standar. Berapa kemungkinan tarikan pertama anda dapat lambang hati atau as?
 
@@ -2257,11 +2071,7 @@ $$
 
 - $P(💗 \cap A) \neq 0$ karena ada 1 kartu yang adalah As dan juga berlambang hati.
 
-:::
-
 ## Kejadian beririsan
-
-::: {.incremental}
 
 - Ada 140 anak yang saat ini mengambil kelas statistik. 100 diantaranya anak-anak yang rupawan. 50 diantaranya anak-anak yang pinter. Berapa probabilitas jika saya ambil 1 anak, saya dapat anak yang rupawan atau pinter?
 
@@ -2270,8 +2080,6 @@ $$
 - Apakah ga mungkin? Masalahnya, ada anak yang pinter DAN rupawan. Misalnya yg rupawan & pinter = 40 orang.
 
 - $P(R \cup P)=P(R)+P(P)-P(R\cap P)=\frac{100+50-40}{140}=\frac{110}{140}$
-
-:::
 
 ## Kejadian beririsan
 
@@ -2293,17 +2101,13 @@ wew
 
 ## Kejadian beririsan
 
-::: {.incremental}
-
 - Sebuah acara sosialisasi mengundang 120 orang. Dari data, diketahui 100 diantaranya beragama islam. Berbekal pengetahuan tersebut, panitia mempersiapkan 20 kotak makan siang. Pas break siang, panitia mengumumkan "bagi yang tidak puasa bisa ambil makan siang di meja panitia". Ternyata ada 15 orang yang tidak kebagian. Berapa banyak yang tidak puasa? Apa kesalahan dari panitia?
 
 - $P(Maksi)=1-P(Muslim)+P(Muslim \ \cap \ Maksi)$
 
 - Panitia mengasumsikan bahwa $P(Muslim \ \cap \ Maksi) = 0$.
 
-:::
-
-## Permutasi dan Kombinasi {.m}
+## Permutasi dan Kombinasi 
 
 - Jika kita perlu menghitung ada berapa cara untuk mendapatkan $r$ keluaran dari total kemungkinan $n$ keluaran, kita dapat menggunakan permutasi dan kombinasi.
 
@@ -2333,19 +2137,13 @@ $$
 
 ## Permutasi
 
-::: {.incremental}
-
 - Sebuah ujian terdiri dari total 10 soal. Namun, setiap mahasiswa hanya akan mengerjakan 4 soal saja yang muncul secara acak dari 10 soal tersebut. Ada berapa tipe soal yang mungkin muncul di ujian tersebut?
 
 - Jika beda urutan diitung 1 tipe soal, maka 
 
 - $$P^{10}_4=\frac{10!}{(10-4)!}=\frac{10!}{6!}=5040$$
 
-:::
-
 ## Kombinasi
-
-::: {.incremental}
 
 - Sebuah ujian terdiri dari total 10 soal. Namun, setiap mahasiswa hanya akan mengerjakan 4 soal saja yang muncul secara acak dari 10 soal tersebut. Ada berapa tipe soal yang mungkin muncul di ujian tersebut?
 
@@ -2353,11 +2151,7 @@ $$
 
 - $$C^{10}_4=\frac{10!}{4!(10-4)!}=\frac{10!}{4!6!}=\frac{10\times9\times 8\times 7}{4 \times 3\times 2\times 1}=210$$
 
-:::
-
 ## Permutasi
-
-::: {.incremental}
 
 - Sebuah kotak berisi 12 bola merah, 13 bola biru dan 15 bola hijau. Pengambilan bola tidak dikembalikan. Hitung kemungkinan pengambilan pertama bola merah, bola ke-2 hijau, dan bola ke-3 biru.
 
@@ -2366,8 +2160,6 @@ $$
 - $P(R_1G_2B_3)=P(R) \times P(G|R) \times P(B|R_1G_2)=\frac{12}{40} \times \frac{15}{39} \times \frac{13}{38}$
 
 - $P(R_1G_2B_3) \approx 0,04$
-
-:::
 
 ## Permutasi
 
@@ -2438,8 +2230,6 @@ $$
 
 ## Bayesian
 
-::: {.incremental}
-
 - Lihat soal sebelumnya. ditemukan bahwa ada 1 produk cacat / _defect_, berapa kemungkinannya produk tersebut datang dari supplier A?
 
 - $A=$ produk berasal dari supplier A, $D=$ produk cacat.
@@ -2450,8 +2240,6 @@ $$
 
 - Produk cacat tersebut paling mungkin datang dari supplier mana?
 
-:::
-
 ## Bayesian
 
 - $P(B|D)=\frac{P(D|B) \times P(B)}{P(D)}=\frac{0,02 \times \frac{320}{700}}{0,0216}=0,465$
@@ -2460,7 +2248,7 @@ $$
 
 - $P(D|C)$ paling besar, tapi order datang paling banyak dari perusahaan B. Karena itu, kemungkinan barang rusak itu datang dari B juga jadi lebih besar.
 
-## Bayesian {.m}
+## Bayesian 
 
 - Tesle, sebuah perusahaan mobil listrik, tertarik investasi di negara Wikindi karena ada program insentif. Namun Wikindi mau pilpres dengan 3 calon. Calon A punya kans 90% akan melanjutkan program insentif. Calon B sekitar 50%, dan Calon C sangat anti program tsb dan hanya akan lanjutkan sekitar 10% kans. Berdasarkan survey, Kemungkinan menang calon A,B dan C adalah 25%,35% dan 40%.
 
@@ -2514,7 +2302,7 @@ $$
 | Hitung | 	kuantitatif, integer |	nomor telepon, jumlah anak |
 | Riil / kontinyu | 	kuantitatif, riil |	PDB, ekspor impor |
 
-## Data Kontinyu {.m}
+## Data Kontinyu 
 
 - data kontinyu dapat dibagi 2: rasio dan interval.
 
@@ -2610,7 +2398,7 @@ $$
 
 - Next time kita akan belajar tendensi sentral, rentang dan distribusi lebih jauh.
     
-## Sampling acak {.m}
+## Sampling acak 
 
 - Simple random sampling berarti mengambil sampel secara acak langsung dari populasinya.
 
@@ -3077,14 +2865,9 @@ Bisa [Google](https://www.google.com/search?client=firefox-b-d&q=z+score+table) 
 
 ## Rentang kepercayaan
 
-:::: columns
-::: {.column width="47%"}
 ![Two-tailed](pvalue1.gif)
-:::
-::: {.column width="47%"}
+
 ![One-tailed](pvalue2.gif)
-:::
-::::
 
 Gambar biru = $\alpha$
 
@@ -3120,8 +2903,6 @@ $$
 
 ## Contoh soal 1
 
-::: {.incremental}
-
 - Diambil sebuah sampel berisikan 100 mahasiswa, didapatkan memiliki rata-rata nilai tes TOEFL sebesar 500 dengan simbangan baku 50. Dengan rentang kepercayaan 95%, tentukan rentang nilai TOEFL keseluruhan mahasiswa tersebut!
 
 - Gunakan tabel Z untuk mendapatkan $Z_{0.025}$
@@ -3129,8 +2910,6 @@ $$
 - Rentang rata-rata = $500 \pm 1,96\times\frac{50}{\sqrt{100}}$
 
 - Rentang rata-rata = $\left[490,2;509,8\right]$
-
-:::
 
 ## Tabel Z
 
@@ -3299,21 +3078,14 @@ $$
 
 ## Uji deskriptif
 
-:::: columns
-::: {.column width="45%"}
 
 - Kita cek apakah $t_{hitung}$ ada di daerah penolakan. Hitung dengan rumus:
 
 $$
 t=\frac{\bar{X}-\mu_0}{\frac{S}{\sqrt{n}}}
 $$
-:::
-::: {.column width="45%"}
 
 ![alpha (arsir biru tua) disebut juga daerah penolakan](pvalue1.gif)
-
-:::
-::::
 
 - bandingkan $t_{hitung}$ dengan $t_{tabel}$. Jika $t_{hitung}$ ada di daerah penolakan, maka tolak $H_0$.
 
@@ -3526,7 +3298,7 @@ Misalnya kita ingin tau apakah kemampuan bahasa inggris seorang pegawai punya ko
 
 Kedua variabel (asal kampus dan kemampuan bahasa inggris) berisi data kualitatif. Angka tersebut adalah jumlah pegawai.
 
-## Korelasi kualitatif {.m}
+## Korelasi kualitatif 
 
 | $f_{ij}$ | Kurang | Cukup | Lancar | Total |
 | --- | --- | --- | --- | --- |
@@ -3542,7 +3314,7 @@ $i=$ variabel baris, $j=$ variabel kolom. $f_{ij}$ adalah angka di baris $i$ & k
 
 $e_{ij}=\frac{n_{i.}\times n_{.j}}{n}=$ expected frequency.
 
-## Korelasi kualitatif {.m}
+## Korelasi kualitatif 
 
 | $e_{ij}$  | Kurang | Cukup | Lancar | Total |
 | --- | --- | --- | --- | --- |
@@ -3666,10 +3438,8 @@ plot(dat$X,dat$Y,xlab="jam belajar",ylab="nilai UTS")
 
 - Regresi menggunakan 2 prinsip di atas untuk mencari perubahan marjinal dari Y dan X.
 
-## Regresi {.m}
+## Regresi 
 
-:::: columns
-::: {.column width="47%"}
 ```{r}
 #| fig-height: 5
 #| fig-width: 5
@@ -3688,8 +3458,7 @@ dat |> ggplot(aes(x=X,y=Y))+
   geom_smooth(method=lm,se=FALSE)+z+theme(text = element_text(size=20))+
   scale_x_continuous(expand = c(0, 0)) + scale_y_continuous(expand = c(0, 0))
 ```
-:::
-::: {.column width="47%"}
+
 - Kali ini kita coba plot data jam belajar vs nilai UTS, tapi datanya ada 70 observasi (n=70).
 
 - Dapat dilihat ada pattern di data tersebut, di mana X dan Y memiliki korelasi positif.
@@ -3697,13 +3466,11 @@ dat |> ggplot(aes(x=X,y=Y))+
 - Jika terdapat korelasi linear, kita dapat membuat garis lurus yang mewakili kurang lebih korelasi tersebut. (lihat garis biru)
 
 - Bagaimana cara membuatnya?
-:::
-::::
 
-## Regresi {.m}
 
-:::: columns
-::: {.column width="47%"}
+## Regresi 
+
+
 ```{r}
 #| fig-height: 5
 #| fig-width: 5
@@ -3726,15 +3493,12 @@ dat |> ggplot(aes(x=X,y=Y))+
   geom_segment(x=0,xend=15,y=69,yend=69,linetype=2,alpha=.4)+
   scale_x_continuous(expand = c(0, 0)) + scale_y_continuous(expand = c(0, 0))
 ```
-:::
-::: {.column width="47%"}
+
 - Garis biru tersebut dibuat sedemikian sehingga ia **meminimalisir jarak vertikal** antara setiap titik observasi dengan si garis biru.
 - misalnya, lihat X=15, ada 4 titik berbeda, yaitu 64,65,68, dan 69.
 - garis biru bertemu X=15 di Y=69.
 - Jarak setiap titik terhadap Y=69 adalah [-5,-4,-1,0]
 - Lakukan untuk semua titik, maka garis biru akan memberikan jumlah perbedaan terkecil dibanding posisi lain.
-:::
-::::
 
 ## Ordinary Least Square
 

@@ -40,18 +40,38 @@
   \KOMAoptions{parskip=half}}
 \makeatother
 \usepackage{xcolor}
-\usepackage{soul}
+\ifLuaTeX
+  \usepackage{luacolor}
+  \usepackage[soul]{lua-ul}
+\else
+  \usepackage{soul}
+  
+\fi
 \setlength{\emergencystretch}{3em} % prevent overfull lines
 \setcounter{secnumdepth}{-\maxdimen} % remove section numbering
 % Make \paragraph and \subparagraph free-standing
+\makeatletter
 \ifx\paragraph\undefined\else
   \let\oldparagraph\paragraph
-  \renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+  \renewcommand{\paragraph}{
+    \@ifstar
+      \xxxParagraphStar
+      \xxxParagraphNoStar
+  }
+  \newcommand{\xxxParagraphStar}[1]{\oldparagraph*{#1}\mbox{}}
+  \newcommand{\xxxParagraphNoStar}[1]{\oldparagraph{#1}\mbox{}}
 \fi
 \ifx\subparagraph\undefined\else
   \let\oldsubparagraph\subparagraph
-  \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+  \renewcommand{\subparagraph}{
+    \@ifstar
+      \xxxSubParagraphStar
+      \xxxSubParagraphNoStar
+  }
+  \newcommand{\xxxSubParagraphStar}[1]{\oldsubparagraph*{#1}\mbox{}}
+  \newcommand{\xxxSubParagraphNoStar}[1]{\oldsubparagraph{#1}\mbox{}}
 \fi
+\makeatother
 
 \usepackage{color}
 \usepackage{fancyvrb}
@@ -71,7 +91,7 @@
 \newcommand{\CommentTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
 \newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
 \newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
-\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{\textbf{#1}}}
 \newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
 \newcommand{\DecValTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
 \newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
@@ -81,7 +101,7 @@
 \newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.28,0.35,0.67}{#1}}
 \newcommand{\ImportTok}[1]{\textcolor[rgb]{0.00,0.46,0.62}{#1}}
 \newcommand{\InformationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
-\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{\textbf{#1}}}
 \newcommand{\NormalTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
 \newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
 \newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
@@ -135,10 +155,6 @@
 \usepackage{xcolor}
 \KOMAoption{captions}{tableheading}
 \makeatletter
-\makeatother
-\makeatletter
-\makeatother
-\makeatletter
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \AtBeginDocument{%
 \ifdefined\contentsname
@@ -174,23 +190,16 @@
 \newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
 \makeatother
 \makeatletter
+\makeatother
+\makeatletter
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
-\makeatother
-\makeatletter
-\@ifpackageloaded{tcolorbox}{}{\usepackage[skins,breakable]{tcolorbox}}
-\makeatother
-\makeatletter
-\@ifundefined{shadecolor}{\definecolor{shadecolor}{rgb}{.97, .97, .97}}
-\makeatother
-\makeatletter
-\makeatother
-\makeatletter
 \makeatother
 \ifLuaTeX
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
-\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\usepackage{bookmark}
+
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same} % disable monospaced font for URLs
 \hypersetup{
@@ -216,7 +225,6 @@
 
 \begin{document}
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[frame hidden, boxrule=0pt, interior hidden, enhanced, sharp corners, breakable, borderline west={3pt}{0pt}{shadecolor}]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table of contents}
 {
@@ -224,8 +232,7 @@
 \setcounter{tocdepth}{3}
 \tableofcontents
 }
-\hypertarget{dosen-anda}{%
-\subsection{Dosen anda}\label{dosen-anda}}
+\subsection{Dosen anda}\label{dosen-anda}
 
 \includegraphics{index_files/mediabag/foto_krisna.jpg}
 
@@ -268,8 +275,7 @@
   \href{https://imedkrisna.github.io/}{imedkrisna.github.io}
 \end{itemize}
 
-\hypertarget{agenda-hari-ini}{%
-\subsection{Agenda hari ini}\label{agenda-hari-ini}}
+\subsection{Agenda hari ini}\label{agenda-hari-ini}
 
 \begin{itemize}
 \item
@@ -278,9 +284,8 @@
   Notasi dan dasar-dasar matematika
 \end{itemize}
 
-\hypertarget{sosial-kok-belajar-statistika}{%
 \subsection{Sosial kok belajar
-statistika?}\label{sosial-kok-belajar-statistika}}
+statistika?}\label{sosial-kok-belajar-statistika}
 
 \begin{itemize}
 \item
@@ -306,12 +311,10 @@ statistika?}\label{sosial-kok-belajar-statistika}}
   \end{itemize}
 \end{itemize}
 
-\hypertarget{contoh}{%
-\subsection{Contoh}\label{contoh}}
+\subsection{Contoh}\label{contoh}
 
-\hypertarget{sosial-kok-belajar-statistika-1}{%
 \subsection{Sosial kok belajar
-statistika?}\label{sosial-kok-belajar-statistika-1}}
+statistika?}\label{sosial-kok-belajar-statistika-1}
 
 \begin{itemize}
 \item
@@ -337,8 +340,7 @@ statistika?}\label{sosial-kok-belajar-statistika-1}}
   Data semakin banyak, pengolahnya masih sedikit.
 \end{itemize}
 
-\hypertarget{tentang-mata-kuliah-ini}{%
-\subsection{Tentang mata kuliah ini}\label{tentang-mata-kuliah-ini}}
+\subsection{Tentang mata kuliah ini}\label{tentang-mata-kuliah-ini}
 
 Profil lulusan yang diincar:
 
@@ -353,8 +355,7 @@ Diturunkan menjadi capaian mata kuliah:
 Mahasiswa mampu Menggunakan alat analisis berbasis statistika.
 \end{quote}
 
-\hypertarget{tentang-mata-kuliah-ini-1}{%
-\subsection{Tentang Mata kuliah ini}\label{tentang-mata-kuliah-ini-1}}
+\subsection{Tentang Mata kuliah ini}\label{tentang-mata-kuliah-ini-1}
 
 \begin{itemize}
 \item
@@ -362,9 +363,6 @@ Mahasiswa mampu Menggunakan alat analisis berbasis statistika.
   Metodologi Penelitian.
 \item
   Beberapa hal yang akan anda pelajari:
-\end{itemize}
-
-\begin{itemize}
 \item
   present \& future value
 \item
@@ -376,8 +374,7 @@ Mahasiswa mampu Menggunakan alat analisis berbasis statistika.
   regresi.
 \end{itemize}
 
-\hypertarget{tentang-mata-kuliah-ini-2}{%
-\subsection{Tentang mata kuliah ini}\label{tentang-mata-kuliah-ini-2}}
+\subsection{Tentang mata kuliah ini}\label{tentang-mata-kuliah-ini-2}
 
 \begin{itemize}
 \item
@@ -405,8 +402,7 @@ Mahasiswa mampu Menggunakan alat analisis berbasis statistika.
   \end{itemize}
 \end{itemize}
 
-\hypertarget{buku-pegangan}{%
-\subsection{Buku pegangan}\label{buku-pegangan}}
+\subsection{Buku pegangan}\label{buku-pegangan}
 
 \begin{itemize}
 \item
@@ -428,8 +424,7 @@ Mahasiswa mampu Menggunakan alat analisis berbasis statistika.
   No 1 dan 3 Tersedia di perpustakaan
 \end{itemize}
 
-\hypertarget{ekspektasi-dari-mahasiswa}{%
-\subsection{Ekspektasi dari Mahasiswa}\label{ekspektasi-dari-mahasiswa}}
+\subsection{Ekspektasi dari Mahasiswa}\label{ekspektasi-dari-mahasiswa}
 
 \begin{itemize}
 \tightlist
@@ -446,8 +441,7 @@ Mahasiswa mampu Menggunakan alat analisis berbasis statistika.
   Pernah bermain Microsoft Excel atau Google Sheet akan sangat membantu.
 \end{itemize}
 
-\hypertarget{beberapa-rules}{%
-\subsection{Beberapa rules}\label{beberapa-rules}}
+\subsection{Beberapa rules}\label{beberapa-rules}
 
 \begin{itemize}
 \tightlist
@@ -463,8 +457,7 @@ Mahasiswa mampu Menggunakan alat analisis berbasis statistika.
   Jika ada pertanyaan, silakan langsung diajukan.
 \end{itemize}
 
-\hypertarget{evaluasi-pembelajaran}{%
-\subsection{Evaluasi pembelajaran}\label{evaluasi-pembelajaran}}
+\subsection{Evaluasi pembelajaran}\label{evaluasi-pembelajaran}
 
 \begin{longtable}[]{@{}lll@{}}
 \toprule\noalign{}
@@ -486,8 +479,7 @@ UAS & semua & 40 \\
   Materi di slides harusnya cukup untuk dapat A.
 \end{itemize}
 
-\hypertarget{evaluasi-pembelajaran-1}{%
-\subsection{Evaluasi pembelajaran}\label{evaluasi-pembelajaran-1}}
+\subsection{Evaluasi pembelajaran}\label{evaluasi-pembelajaran-1}
 
 \begin{itemize}
 \item
@@ -499,8 +491,7 @@ UAS & semua & 40 \\
   Masih tentatif. Jika ada perubahan akan dikabari lebih lanjut.
 \end{itemize}
 
-\hypertarget{tools}{%
-\subsection{Tools}\label{tools}}
+\subsection{Tools}\label{tools}
 
 \begin{itemize}
 \item
@@ -511,13 +502,11 @@ UAS & semua & 40 \\
   Drive}
 \end{itemize}
 
-\hypertarget{questions}{%
-\subsection{Questions?}\label{questions}}
+\subsection{Questions?}\label{questions}
 
 via GIPHY
 
-\hypertarget{matematika}{%
-\subsection{Matematika}\label{matematika}}
+\subsection{Matematika}\label{matematika}
 
 \begin{itemize}
 \item
@@ -532,8 +521,7 @@ via GIPHY
   mempelajari bilangan, struktur, ruang, dan perubahan.
 \end{itemize}
 
-\hypertarget{matematika-1}{%
-\subsection{Matematika}\label{matematika-1}}
+\subsection{Matematika}\label{matematika-1}
 
 \begin{itemize}
 \item
@@ -549,8 +537,7 @@ via GIPHY
   turunan.
 \end{itemize}
 
-\hypertarget{himpunan}{%
-\subsection{Himpunan}\label{himpunan}}
+\subsection{Himpunan}\label{himpunan}
 
 \begin{itemize}
 \item
@@ -579,8 +566,7 @@ via GIPHY
   \end{itemize}
 \end{itemize}
 
-\hypertarget{notasi}{%
-\subsection{Notasi}\label{notasi}}
+\subsection{Notasi}\label{notasi}
 
 \begin{longtable}[]{@{}ll@{}}
 \toprule\noalign{}
@@ -600,8 +586,7 @@ Notasi & Artinya \\
 
 Contoh: Carol \(\in\) HIMA, 4 \(\in\) A, Soni \(\not \in\) HIMA
 
-\hypertarget{contoh-1}{%
-\subsection{Contoh}\label{contoh-1}}
+\subsection{Contoh}\label{contoh-1}
 
 \[
 \begin{align}
@@ -616,25 +601,17 @@ Coba jawab pertanyaan-pertanyaan ini:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
-\tightlist
 \item
   \(A \cap B=\)
 \item
   \(D \cup C=\)
-\end{enumerate}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{2}
-\tightlist
 \item
   \(B \subset A\), True / False?
 \item
   \(D \cap B=\)
 \end{enumerate}
 
-\hypertarget{himpunan-1}{%
-\subsection{Himpunan}\label{himpunan-1}}
+\subsection{Himpunan}\label{himpunan-1}
 
 Himpunan juga dapat kita batasi dengan aturan verbal. Misalnya:
 
@@ -656,8 +633,7 @@ Raja & 65 \\
 
 B adalah himpunan mahasiswa yang dapet nilai di atas 80.
 
-\hypertarget{perbandingan}{%
-\subsection{Perbandingan}\label{perbandingan}}
+\subsection{Perbandingan}\label{perbandingan}
 
 \begin{itemize}
 \tightlist
@@ -671,8 +647,7 @@ B adalah himpunan mahasiswa yang dapet nilai di atas 80.
   a \(\geq\) b artinya a lebih besar dari atau sama dengan b
 \end{itemize}
 
-\hypertarget{kaidah-perbandingan}{%
-\subsection{Kaidah perbandingan}\label{kaidah-perbandingan}}
+\subsection{Kaidah perbandingan}\label{kaidah-perbandingan}
 
 \begin{itemize}
 \item
@@ -692,8 +667,7 @@ B adalah himpunan mahasiswa yang dapet nilai di atas 80.
   puyeng? Coba ganti huruf2 tsb dengan angka.
 \end{itemize}
 
-\hypertarget{kaidah-bilangan}{%
-\subsection{Kaidah bilangan}\label{kaidah-bilangan}}
+\subsection{Kaidah bilangan}\label{kaidah-bilangan}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -748,8 +722,7 @@ maka \(\ \ \ \ \ \ \ a = b\)
 a(b+c)=ab+ac
 \]
 
-\hypertarget{kaidah-bilangan-1}{%
-\subsection{Kaidah bilangan}\label{kaidah-bilangan-1}}
+\subsection{Kaidah bilangan}\label{kaidah-bilangan-1}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -777,8 +750,7 @@ a : 1 &= a
 
 \(a+(-a)=0 \ \ \ \ \ \ \ \ \ \ a \times \frac{1}{a}=1 \ \ \ \ \ \ \ \ \ \ \ \ \ \frac{a}{a}=1\)
 
-\hypertarget{kaidah-bilangan-2}{%
-\subsection{Kaidah bilangan}\label{kaidah-bilangan-2}}
+\subsection{Kaidah bilangan}\label{kaidah-bilangan-2}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -823,8 +795,7 @@ axy &= b \\
 \end{align}
 \]
 
-\hypertarget{operasi-pecahan}{%
-\subsection{Operasi pecahan}\label{operasi-pecahan}}
+\subsection{Operasi pecahan}\label{operasi-pecahan}
 
 \begin{itemize}
 \item
@@ -838,13 +809,11 @@ axy &= b \\
   \(\frac{a}{x} : \frac{b}{y}=\frac{a}{x} \times \frac{y}{b}\)
 \end{itemize}
 
-\hypertarget{mingdep}{%
-\subsection{Mingdep}\label{mingdep}}
+\subsection{Mingdep}\label{mingdep}
 
 akar dan deret
 
-\hypertarget{latihan-perbandingan}{%
-\subsection{Latihan perbandingan}\label{latihan-perbandingan}}
+\subsection{Latihan perbandingan}\label{latihan-perbandingan}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -861,8 +830,7 @@ akar dan deret
   murah daripada perusahaan B?
 \end{enumerate}
 
-\hypertarget{perhitungan}{%
-\subsection{Perhitungan}\label{perhitungan}}
+\subsection{Perhitungan}\label{perhitungan}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -881,11 +849,9 @@ akar dan deret
   Tanpa hitung, tebak \(\frac{8}{11} : \frac{13}{13}\)
 \end{enumerate}
 
-\hypertarget{pertemuan-2}{%
-\section{Pertemuan 2}\label{pertemuan-2}}
+\section{Pertemuan 2}\label{pertemuan-2}
 
-\hypertarget{pangkat}{%
-\subsection{Pangkat}\label{pangkat}}
+\subsection{Pangkat}\label{pangkat}
 
 \begin{itemize}
 \item
@@ -905,12 +871,10 @@ akar dan deret
   topi atau \emph{hat}.
 \end{itemize}
 
-\hypertarget{kaidah-pangkat}{%
-\subsection{Kaidah pangkat}\label{kaidah-pangkat}}
+\subsection{Kaidah pangkat}\label{kaidah-pangkat}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
-\tightlist
 \item
   \(x^0=1\)
 \item
@@ -921,12 +885,6 @@ akar dan deret
   \(x^{-a}=\frac{1}{x^a}\)
 \item
   \(x^{\frac{1}{a}}=\sqrt[a]{x}\)
-\end{enumerate}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{5}
-\tightlist
 \item
   \(x^{\frac{a}{b}}=\sqrt[b]{x^a}\)
 \item
@@ -937,12 +895,10 @@ akar dan deret
   \(x^{a^b}=x^c,\) di mana \(c=a^b\)
 \end{enumerate}
 
-\hypertarget{contoh-pangkat}{%
-\subsection{Contoh pangkat}\label{contoh-pangkat}}
+\subsection{Contoh pangkat}\label{contoh-pangkat}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
-\tightlist
 \item
   \(3^0=1\)
 \item
@@ -953,12 +909,6 @@ akar dan deret
   \(3^{-2}=\frac{1}{3^2}\)
 \item
   \(5^{\frac{1}{3}}=\sqrt[3]{5}\)
-\end{enumerate}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{5}
-\tightlist
 \item
   \(5^{\frac{2}{3}}=\sqrt[3]{5^2}\)
 \item
@@ -969,8 +919,7 @@ akar dan deret
   \(3^{2^3}=x^8\)
 \end{enumerate}
 
-\hypertarget{kaidah-pangkat-1}{%
-\subsection{Kaidah pangkat}\label{kaidah-pangkat-1}}
+\subsection{Kaidah pangkat}\label{kaidah-pangkat-1}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -985,8 +934,7 @@ akar dan deret
   \(x^a:y^a=(\frac{x}{y})^a\)
 \end{enumerate}
 
-\hypertarget{akar}{%
-\subsection{Akar}\label{akar}}
+\subsection{Akar}\label{akar}
 
 \begin{itemize}
 \tightlist
@@ -1006,8 +954,7 @@ akar dan deret
   tutup kurung jangan lupa.
 \end{itemize}
 
-\hypertarget{kaidah-akar}{%
-\subsection{Kaidah akar}\label{kaidah-akar}}
+\subsection{Kaidah akar}\label{kaidah-akar}
 
 kaidah:
 
@@ -1039,8 +986,7 @@ contoh:
   \(\sqrt[3]{\frac{2}{5}}=\frac{\sqrt[3]{2}}{\sqrt[3]{5}}\)
 \end{enumerate}
 
-\hypertarget{kaidah-perkalian}{%
-\subsection{Kaidah perkalian}\label{kaidah-perkalian}}
+\subsection{Kaidah perkalian}\label{kaidah-perkalian}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -1067,8 +1013,7 @@ formal: \(\sqrt[b]{\sqrt[c]{x^a}}=\sqrt[bc]{x^a}\)
 
 contoh: \(\sqrt[3]{\sqrt[2]{7^5}}=\sqrt[3 \cdot 2]{7^5}\)
 
-\hypertarget{kaidah-pembagian}{%
-\subsection{Kaidah pembagian}\label{kaidah-pembagian}}
+\subsection{Kaidah pembagian}\label{kaidah-pembagian}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -1084,8 +1029,7 @@ formal: \(\frac{\sqrt[b]{x}}{\sqrt[b]{y}}=\sqrt[b]{\frac{x}{y}}\)
 
 contoh: \(\frac{\sqrt[3]{5}}{\sqrt[3]{7}}=\sqrt[3]{\frac{5}{7}}\)
 
-\hypertarget{logaritma}{%
-\subsection{Logaritma}\label{logaritma}}
+\subsection{Logaritma}\label{logaritma}
 
 logaritma pada intinya merupakan kebalikan dari proses pangkat dan/atau
 akar.
@@ -1118,8 +1062,7 @@ x^a &= m \\
   5 (atau secara umum \(x\)) disebut dengan \textbf{basis}
 \end{itemize}
 
-\hypertarget{basis-logaritma}{%
-\subsection{Basis logaritma}\label{basis-logaritma}}
+\subsection{Basis logaritma}\label{basis-logaritma}
 
 \[
 \log_x m=a \\
@@ -1145,12 +1088,10 @@ x^a &= m \\
   \(\log\).
 \end{itemize}
 
-\hypertarget{kaidah-logaritma}{%
-\subsection{Kaidah logaritma}\label{kaidah-logaritma}}
+\subsection{Kaidah logaritma}\label{kaidah-logaritma}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
-\tightlist
 \item
   \(^x \log x = 1\)
 \item
@@ -1161,12 +1102,6 @@ x^a &= m \\
   \(^x \log x^a=a\)
 \item
   \(\log_x m^a = a \ \log_x m\)
-\end{enumerate}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{5}
-\tightlist
 \item
   \(x^{log_x m}=m\)
 \item
@@ -1179,12 +1114,10 @@ x^a &= m \\
   \(\log_x m \cdot \log_m n \cdot \log_n x=1\)
 \end{enumerate}
 
-\hypertarget{contoh-2}{%
-\subsection{Contoh}\label{contoh-2}}
+\subsection{Contoh}\label{contoh-2}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
-\tightlist
 \item
   \(^8\log 8=1\)
 \item
@@ -1193,12 +1126,6 @@ x^a &= m \\
   \(^5\log 3^7=7 \times ^5\log 3\)
 \item
   \(5^{^5\lg 25}=25\)
-\end{enumerate}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{5}
-\tightlist
 \item
   \(\log 1000 = ?\)
 \item
@@ -1211,8 +1138,7 @@ x^a &= m \\
   \(\log_3 5 \cdot \log_5 2 \cdot \log_2 3=1\)
 \end{enumerate}
 
-\hypertarget{penjumlahan}{%
-\subsection{Penjumlahan}\label{penjumlahan}}
+\subsection{Penjumlahan}\label{penjumlahan}
 
 penjumlahan/pengurangan untuk bilangan menempel/dikali dengan akar,
 pangkat dan log serta eksponen dapat kita lakukan selama pengalinya
@@ -1230,8 +1156,7 @@ sama.
   \(m \cdot e^a+n \cdot e^a=(m\pm n) e^a\)
 \end{enumerate}
 
-\hypertarget{persamaan}{%
-\subsection{Persamaan}\label{persamaan}}
+\subsection{Persamaan}\label{persamaan}
 
 \begin{itemize}
 \item
@@ -1249,8 +1174,7 @@ sama.
   dilakukan di kedua sisi \(=\)
 \end{itemize}
 
-\hypertarget{contoh-soal}{%
-\subsection{Contoh soal}\label{contoh-soal}}
+\subsection{Contoh soal}\label{contoh-soal}
 
 Carilah \(x\)
 
@@ -1268,8 +1192,7 @@ Carilah \(x\)
   \(\log (5x-50)=2\)
 \end{enumerate}
 
-\hypertarget{note}{%
-\subsection{Note}\label{note}}
+\subsection{Note}\label{note}
 
 \begin{itemize}
 \item
@@ -1282,8 +1205,7 @@ Carilah \(x\)
   benar.
 \end{itemize}
 
-\hypertarget{mingdep-1}{%
-\subsection{Mingdep}\label{mingdep-1}}
+\subsection{Mingdep}\label{mingdep-1}
 
 \begin{itemize}
 \item
@@ -1292,11 +1214,9 @@ Carilah \(x\)
   Diagram kartesian
 \end{itemize}
 
-\hypertarget{pertemuan-3}{%
-\section{Pertemuan 3}\label{pertemuan-3}}
+\section{Pertemuan 3}\label{pertemuan-3}
 
-\hypertarget{bentuk-umum-pengertian}{%
-\subsection{Bentuk umum \& pengertian}\label{bentuk-umum-pengertian}}
+\subsection{Bentuk umum \& pengertian}\label{bentuk-umum-pengertian}
 
 \begin{itemize}
 \item
@@ -1315,8 +1235,7 @@ artinya, variabel \(Y\) adalah fungsi dari variabel \(X\). Atau,
 besarnya variabel \(Y\) ditentukan oleh besarnya variabel \(X\), tapi
 tidak sebaliknya.
 
-\hypertarget{pengertian-unsur}{%
-\subsection{Pengertian \& unsur}\label{pengertian-unsur}}
+\subsection{Pengertian \& unsur}\label{pengertian-unsur}
 
 \begin{itemize}
 \item
@@ -1336,8 +1255,7 @@ tidak sebaliknya.
   konstanta bukan.
 \end{itemize}
 
-\hypertarget{bentuk-khususspesifik}{%
-\subsection{Bentuk khusus/spesifik}\label{bentuk-khususspesifik}}
+\subsection{Bentuk khusus/spesifik}\label{bentuk-khususspesifik}
 
 \begin{itemize}
 \item
@@ -1358,8 +1276,7 @@ Y=a_0+a_1X
   dan \(a_1\) adalah koefisien/parameter.
 \end{itemize}
 
-\hypertarget{fungsi}{%
-\subsection{Fungsi}\label{fungsi}}
+\subsection{Fungsi}\label{fungsi}
 
 \begin{itemize}
 \item
@@ -1375,8 +1292,7 @@ Y=a_0+a_1X
   disebut variabel input dan \(Y\) variabel output
 \end{itemize}
 
-\hypertarget{bentuk-fungsi}{%
-\subsection{Bentuk fungsi}\label{bentuk-fungsi}}
+\subsection{Bentuk fungsi}\label{bentuk-fungsi}
 
 \begin{itemize}
 \tightlist
@@ -1399,8 +1315,7 @@ Fungsi & Nama \\
 \(Y=a_0+a_1 \ln X\) & Fungsi logaritma \\
 \end{longtable}
 
-\hypertarget{visualisasi}{%
-\subsection{Visualisasi}\label{visualisasi}}
+\subsection{Visualisasi}\label{visualisasi}
 
 \begin{itemize}
 \item
@@ -1420,8 +1335,7 @@ Fungsi & Nama \\
   Sebuah titik \(A\) di bidang kartesian punya koordinat \(A=(x,y)\).
 \end{itemize}
 
-\hypertarget{visualisasi-1}{%
-\subsection{Visualisasi}\label{visualisasi-1}}
+\subsection{Visualisasi}\label{visualisasi-1}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -1494,13 +1408,7 @@ i Please use `tibble()` instead.
 \end{Highlighting}
 \end{Shaded}
 
-\begin{figure}[H]
-
-{\centering \includegraphics{index_files/figure-pdf/unnamed-chunk-1-1.pdf}
-
-}
-
-\end{figure}
+\includegraphics{index_files/figure-pdf/unnamed-chunk-1-1.pdf}
 
 Ada 6 titik di bidang/diagram kartesian ini:
 
@@ -1520,8 +1428,7 @@ Ada 6 titik di bidang/diagram kartesian ini:
   F=(-5,5)
 \end{itemize}
 
-\hypertarget{visualisasi-fungsi}{%
-\subsection{Visualisasi fungsi}\label{visualisasi-fungsi}}
+\subsection{Visualisasi fungsi}\label{visualisasi-fungsi}
 
 \begin{itemize}
 \item
@@ -1542,8 +1449,7 @@ Ada 6 titik di bidang/diagram kartesian ini:
   Kita akan lebih sering pakai bilangan riil.
 \end{itemize}
 
-\hypertarget{bilangan}{%
-\subsection{Bilangan}\label{bilangan}}
+\subsection{Bilangan}\label{bilangan}
 
 \begin{itemize}
 \item
@@ -1564,8 +1470,7 @@ simbol & himpunan & elemen \\
 \(\mathbb{R}\) & riil / real & integral tapi ada pecahan/desimal \\
 \end{longtable}
 
-\hypertarget{visualisasi-2}{%
-\subsection{Visualisasi}\label{visualisasi-2}}
+\subsection{Visualisasi}\label{visualisasi-2}
 
 \begin{itemize}
 \tightlist
@@ -1590,8 +1495,7 @@ Y&=\{y_i \ |\  y_i=3+2x_i\}
   cth: \(x_3\) anggota himpunan \(X\) yang ke-3, yaitu 3.
 \end{itemize}
 
-\hypertarget{visualisasi-integer}{%
-\subsection{Visualisasi integer}\label{visualisasi-integer}}
+\subsection{Visualisasi integer}\label{visualisasi-integer}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -1613,13 +1517,7 @@ Y&=\{y_i \ |\  y_i=3+2x_i\}
 \end{Highlighting}
 \end{Shaded}
 
-\begin{figure}[H]
-
-{\centering \includegraphics{index_files/figure-pdf/unnamed-chunk-2-1.pdf}
-
-}
-
-\end{figure}
+\includegraphics{index_files/figure-pdf/unnamed-chunk-2-1.pdf}
 
 \begin{longtable}[]{@{}lll@{}}
 \toprule\noalign{}
@@ -1637,8 +1535,7 @@ i & x & y \\
 
 perhatikan bahwa skala untuk sumbu X dan sumbu Y berbeda. Boleh kok.
 
-\hypertarget{visualisasi-riil}{%
-\subsection{Visualisasi riil}\label{visualisasi-riil}}
+\subsection{Visualisasi riil}\label{visualisasi-riil}
 
 \begin{itemize}
 \tightlist
@@ -1661,8 +1558,7 @@ Y&=\{y_i \ | \  y_i=3+2x_i\}
   ada berapa bilangan riil antara 0 dan 1?
 \end{itemize}
 
-\hypertarget{visualisasi-riil-1}{%
-\subsection{Visualisasi riil}\label{visualisasi-riil-1}}
+\subsection{Visualisasi riil}\label{visualisasi-riil-1}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -1680,13 +1576,7 @@ Y&=\{y_i \ | \  y_i=3+2x_i\}
 \end{Highlighting}
 \end{Shaded}
 
-\begin{figure}[H]
-
-{\centering \includegraphics{index_files/figure-pdf/unnamed-chunk-3-1.pdf}
-
-}
-
-\end{figure}
+\includegraphics{index_files/figure-pdf/unnamed-chunk-3-1.pdf}
 
 \begin{itemize}
 \item
@@ -1700,8 +1590,7 @@ Y&=\{y_i \ | \  y_i=3+2x_i\}
   \textbf{garis}
 \end{itemize}
 
-\hypertarget{fungsi-linear}{%
-\subsection{Fungsi linear}\label{fungsi-linear}}
+\subsection{Fungsi linear}\label{fungsi-linear}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -1727,13 +1616,7 @@ i Please use `linewidth` instead.
 \end{Highlighting}
 \end{Shaded}
 
-\begin{figure}[H]
-
-{\centering \includegraphics{index_files/figure-pdf/unnamed-chunk-4-1.pdf}
-
-}
-
-\end{figure}
+\includegraphics{index_files/figure-pdf/unnamed-chunk-4-1.pdf}
 
 \begin{itemize}
 \item
@@ -1745,8 +1628,7 @@ i Please use `linewidth` instead.
   Gambarnya gambang: cari 2 ditik, lalu hubungkan dgn garis.
 \end{itemize}
 
-\hypertarget{gambar-fungsi-lain}{%
-\subsection{Gambar fungsi lain}\label{gambar-fungsi-lain}}
+\subsection{Gambar fungsi lain}\label{gambar-fungsi-lain}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -1813,106 +1695,93 @@ Warning: Removed 50 rows containing missing values or values outside the scale r
 
 \begin{figure}
 
-\begin{minipage}[t]{0.33\linewidth}
+\begin{minipage}{0.33\linewidth}
 
-{\centering 
+\begin{figure}[H]
 
-\raisebox{-\height}{
-
-\includegraphics{index_files/figure-pdf/unnamed-chunk-5-1.pdf}
+{\centering \includegraphics{index_files/figure-pdf/unnamed-chunk-5-1.pdf}
 
 }
 
-\caption{fungsi kuadratik}
+\subcaption{fungsi kuadratik}
 
-}
+\end{figure}%
 
 \end{minipage}%
 %
-\begin{minipage}[t]{0.33\linewidth}
+\begin{minipage}{0.33\linewidth}
 
-{\centering 
+\begin{figure}[H]
 
-\raisebox{-\height}{
-
-\includegraphics{index_files/figure-pdf/unnamed-chunk-5-2.pdf}
+{\centering \includegraphics{index_files/figure-pdf/unnamed-chunk-5-2.pdf}
 
 }
 
-\caption{fungsi kubik}
+\subcaption{fungsi kubik}
 
-}
+\end{figure}%
 
 \end{minipage}%
 %
-\begin{minipage}[t]{0.33\linewidth}
+\begin{minipage}{0.33\linewidth}
 
-{\centering 
+\begin{figure}[H]
 
-\raisebox{-\height}{
-
-\includegraphics{index_files/figure-pdf/unnamed-chunk-5-3.pdf}
+{\centering \includegraphics{index_files/figure-pdf/unnamed-chunk-5-3.pdf}
 
 }
 
-\caption{fungsi eksponensial}
+\subcaption{fungsi eksponensial}
 
-}
+\end{figure}%
 
 \end{minipage}%
 \newline
-\begin{minipage}[t]{0.33\linewidth}
+\begin{minipage}{0.33\linewidth}
 
-{\centering 
+\begin{figure}[H]
 
-\raisebox{-\height}{
-
-\includegraphics{index_files/figure-pdf/unnamed-chunk-5-4.pdf}
+{\centering \includegraphics{index_files/figure-pdf/unnamed-chunk-5-4.pdf}
 
 }
 
-\caption{fungsi logaritmik}
+\subcaption{fungsi logaritmik}
 
-}
+\end{figure}%
 
 \end{minipage}%
 %
-\begin{minipage}[t]{0.33\linewidth}
+\begin{minipage}{0.33\linewidth}
 
-{\centering 
+\begin{figure}[H]
 
-\raisebox{-\height}{
-
-\includegraphics{index_files/figure-pdf/unnamed-chunk-5-5.pdf}
+{\centering \includegraphics{index_files/figure-pdf/unnamed-chunk-5-5.pdf}
 
 }
 
-\caption{fungsi resiprokal}
+\subcaption{fungsi resiprokal}
 
-}
+\end{figure}%
 
 \end{minipage}%
 %
-\begin{minipage}[t]{0.33\linewidth}
+\begin{minipage}{0.33\linewidth}
 
-{\centering 
+\begin{figure}[H]
 
-\raisebox{-\height}{
-
-\includegraphics{index_files/figure-pdf/unnamed-chunk-5-6.pdf}
+{\centering \includegraphics{index_files/figure-pdf/unnamed-chunk-5-6.pdf}
 
 }
 
-\caption{fungsi sinus}
+\subcaption{fungsi sinus}
 
-}
+\end{figure}%
 
 \end{minipage}%
 
-\end{figure}
+\end{figure}%
 
-\hypertarget{fungsi-linear-1}{%
-\subsection{fungsi linear}\label{fungsi-linear-1}}
+\subsection{fungsi linear}\label{fungsi-linear-1}
 
 Pada fungsi linear \(y=a_0+a_1x\)
 
@@ -1931,8 +1800,7 @@ Pada fungsi linear \(y=a_0+a_1x\)
   Hal ini menjadi penting jika kita transformasi fungsinya.
 \end{itemize}
 
-\hypertarget{fungsi-linear-2}{%
-\subsection{fungsi linear}\label{fungsi-linear-2}}
+\subsection{fungsi linear}\label{fungsi-linear-2}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -1953,13 +1821,7 @@ Pada fungsi linear \(y=a_0+a_1x\)
 \end{Highlighting}
 \end{Shaded}
 
-\begin{figure}[H]
-
-{\centering \includegraphics{index_files/figure-pdf/unnamed-chunk-6-1.pdf}
-
-}
-
-\end{figure}
+\includegraphics{index_files/figure-pdf/unnamed-chunk-6-1.pdf}
 
 perubahan konstanta: grafik naik turun, kemiringan tetap.
 
@@ -1986,18 +1848,11 @@ perubahan konstanta: grafik naik turun, kemiringan tetap.
 \end{Highlighting}
 \end{Shaded}
 
-\begin{figure}[H]
-
-{\centering \includegraphics{index_files/figure-pdf/unnamed-chunk-7-1.pdf}
-
-}
-
-\end{figure}
+\includegraphics{index_files/figure-pdf/unnamed-chunk-7-1.pdf}
 
 Perubahan koefisien: grafik muter dgn konstanta sebagai porosnya
 
-\hypertarget{fungsi-linear-3}{%
-\subsection{fungsi linear}\label{fungsi-linear-3}}
+\subsection{fungsi linear}\label{fungsi-linear-3}
 
 \begin{itemize}
 \item
@@ -2012,8 +1867,7 @@ Perubahan koefisien: grafik muter dgn konstanta sebagai porosnya
   jika \(z=y \times 2\), maka \(z=4+12x\), grafik naik dan mencuram.
 \end{itemize}
 
-\hypertarget{contoh-soal-1}{%
-\subsection{Contoh soal}\label{contoh-soal-1}}
+\subsection{Contoh soal}\label{contoh-soal-1}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -2040,8 +1894,7 @@ Perubahan koefisien: grafik muter dgn konstanta sebagai porosnya
   gambar kurva biaya Raka.
 \end{enumerate}
 
-\hypertarget{contoh-soal-2}{%
-\subsection{Contoh soal}\label{contoh-soal-2}}
+\subsection{Contoh soal}\label{contoh-soal-2}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -2069,8 +1922,7 @@ Perubahan koefisien: grafik muter dgn konstanta sebagai porosnya
   jual 12 ribu?
 \end{enumerate}
 
-\hypertarget{jawaban}{%
-\subsection{Jawaban}\label{jawaban}}
+\subsection{Jawaban}\label{jawaban}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -2104,13 +1956,7 @@ Removed 1 row containing missing values or values outside the scale range
 (`geom_text()`).
 \end{verbatim}
 
-\begin{figure}[H]
-
-{\centering \includegraphics{index_files/figure-pdf/unnamed-chunk-8-1.pdf}
-
-}
-
-\end{figure}
+\includegraphics{index_files/figure-pdf/unnamed-chunk-8-1.pdf}
 
 1a. \(C=1000+7Q\)
 
@@ -2130,8 +1976,7 @@ Q&=\frac{1000}{3}
 
 profit if Jual \textgreater334 somay.
 
-\hypertarget{last-note}{%
-\subsection{Last note}\label{last-note}}
+\subsection{Last note}\label{last-note}
 
 \begin{itemize}
 \item
@@ -2147,11 +1992,9 @@ profit if Jual \textgreater334 somay.
   penting-penting aja, ga harus semua ditulis labelnya.
 \end{itemize}
 
-\hypertarget{pertemuan-4}{%
-\section{Pertemuan 4}\label{pertemuan-4}}
+\section{Pertemuan 4}\label{pertemuan-4}
 
-\hypertarget{deret}{%
-\subsection{Deret}\label{deret}}
+\subsection{Deret}\label{deret}
 
 \begin{itemize}
 \item
@@ -2164,8 +2007,7 @@ profit if Jual \textgreater334 somay.
   harmonik jarang digunakan di ekonomi dan bisnis jadi tidak kita bahas.
 \end{itemize}
 
-\hypertarget{deret-hitung}{%
-\subsection{Deret hitung}\label{deret-hitung}}
+\subsection{Deret hitung}\label{deret-hitung}
 
 \begin{itemize}
 \item
@@ -2179,8 +2021,7 @@ contoh: \(7,12,17,22,32\) pembeda \(=5\)
 
 contoh: \(93, 83, 73,63,53,43\) pembeda \(=-10\)
 
-\hypertarget{deret-hitung-1}{%
-\subsection{Deret hitung}\label{deret-hitung-1}}
+\subsection{Deret hitung}\label{deret-hitung-1}
 
 \begin{itemize}
 \item
@@ -2201,8 +2042,7 @@ a_i=a_1+(i-1)d
   dan \(d\) adalah pembeda.
 \end{itemize}
 
-\hypertarget{deret-hitung-2}{%
-\subsection{Deret hitung}\label{deret-hitung-2}}
+\subsection{Deret hitung}\label{deret-hitung-2}
 
 Misalnya kita punya deret seperti ini
 
@@ -2217,8 +2057,7 @@ Dapat kita ketahui bahwa \(a_1=7\) dan \(d=5\).
   \(a_21=a_1+(i-1)d=107\)
 \end{itemize}
 
-\hypertarget{contoh-3}{%
-\subsection{Contoh}\label{contoh-3}}
+\subsection{Contoh}\label{contoh-3}
 
 \begin{itemize}
 \item
@@ -2231,8 +2070,7 @@ Dapat kita ketahui bahwa \(a_1=7\) dan \(d=5\).
   \(a_12=a_1+(n-1)d=1000+12\times 500=1600\) ribu rupiah.
 \end{itemize}
 
-\hypertarget{note-1}{%
-\subsection{Note}\label{note-1}}
+\subsection{Note}\label{note-1}
 
 \begin{itemize}
 \item
@@ -2253,8 +2091,7 @@ Dapat kita ketahui bahwa \(a_1=7\) dan \(d=5\).
 a_i=a_0+id
 \]
 
-\hypertarget{deret-ukur}{%
-\subsection{Deret ukur}\label{deret-ukur}}
+\subsection{Deret ukur}\label{deret-ukur}
 
 \begin{itemize}
 \item
@@ -2270,8 +2107,7 @@ a_i=a_0+id
   \(512, 256, 128,64,32\) (pengganda=\(\frac{1}{2}\))
 \end{itemize}
 
-\hypertarget{deret-ukur-1}{%
-\subsection{Deret ukur}\label{deret-ukur-1}}
+\subsection{Deret ukur}\label{deret-ukur-1}
 
 \begin{itemize}
 \tightlist
@@ -2284,22 +2120,14 @@ a_i=a_1\times p^{n-1}, \text{atau } a_i=a_0\times p^n
 \]
 
 \begin{itemize}
-\tightlist
 \item
   Misalnya, sebuah deret dengan suku \(5,10,20,40,...\), berapakah
   \(a_6\)?
-\end{itemize}
-
-::: \{.incremental\}
-
-\begin{itemize}
-\tightlist
 \item
   \(a_6=5 \times 2^5=5 \times 32=160\)
 \end{itemize}
 
-\hypertarget{pertumbuhan}{%
-\subsection{Pertumbuhan}\label{pertumbuhan}}
+\subsection{Pertumbuhan}\label{pertumbuhan}
 
 \begin{itemize}
 \item
@@ -2322,8 +2150,7 @@ a_i=a_1\times (1+r)^{n-1}, \text{atau } a_i=a_0 \times (1+r)^{n}
   Pertumbuhan 100\% = pertumbuhan 2x lipat.
 \end{itemize}
 
-\hypertarget{contoh-4}{%
-\subsection{Contoh}\label{contoh-4}}
+\subsection{Contoh}\label{contoh-4}
 
 \begin{itemize}
 \tightlist
@@ -2333,8 +2160,7 @@ a_i=a_1\times (1+r)^{n-1}, \text{atau } a_i=a_0 \times (1+r)^{n}
   berapa PDB negara Wakwaw 5 tahun lagi?
 \end{itemize}
 
-\hypertarget{jawaban-1}{%
-\subsection{Jawaban}\label{jawaban-1}}
+\subsection{Jawaban}\label{jawaban-1}
 
 \[a_6=1000 \times (1+0.07)^5=1402,55\]
 
@@ -2353,8 +2179,7 @@ a & PDB \\
 5 & 1.402,55 \\
 \end{longtable}
 
-\hypertarget{angka-index}{%
-\subsection{Angka Index}\label{angka-index}}
+\subsection{Angka Index}\label{angka-index}
 
 \begin{itemize}
 \item
@@ -2368,8 +2193,7 @@ a & PDB \\
   saham yg mana?
 \end{itemize}
 
-\hypertarget{angka-indeks}{%
-\subsection{Angka Indeks}\label{angka-indeks}}
+\subsection{Angka Indeks}\label{angka-indeks}
 
 \begin{itemize}
 \item
@@ -2391,8 +2215,7 @@ a & PDB \\
   kini/\textbf{tahun berjalan}.
 \end{itemize}
 
-\hypertarget{angka-indeks-1}{%
-\subsection{Angka Indeks}\label{angka-indeks-1}}
+\subsection{Angka Indeks}\label{angka-indeks-1}
 
 \begin{itemize}
 \item
@@ -2419,8 +2242,7 @@ a & PDB \\
   \end{itemize}
 \end{itemize}
 
-\hypertarget{indeks-harga-tertimbang}{%
-\subsection{Indeks harga tertimbang}\label{indeks-harga-tertimbang}}
+\subsection{Indeks harga tertimbang}\label{indeks-harga-tertimbang}
 
 \begin{longtable}[]{@{}lllll@{}}
 \toprule\noalign{}
@@ -2442,8 +2264,7 @@ Kosan & 12 & 1000 & 12000 & 0,727 \\
   Harga rata2 tertimbang=\(\sum Share \times P\)=739,93
 \end{itemize}
 
-\hypertarget{cpi}{%
-\subsection{CPI}\label{cpi}}
+\subsection{CPI}\label{cpi}
 
 \begin{itemize}
 \item
@@ -2459,8 +2280,7 @@ Kosan & 12 & 1000 & 12000 & 0,727 \\
   Indeks perubahan seperti CPI biasanya terdiri dari 3 digit.
 \end{itemize}
 
-\hypertarget{indeks-laspeyres}{%
-\subsection{Indeks Laspeyres}\label{indeks-laspeyres}}
+\subsection{Indeks Laspeyres}\label{indeks-laspeyres}
 
 \begin{longtable}[]{@{}lllllll@{}}
 \toprule\noalign{}
@@ -2479,8 +2299,7 @@ Kosan & 12 & 1000 & 12 & 1100 & 12 & 1200 \\
 IL_t=\frac{\sum P_t Q_0}{\sum P_0 Q_0} \times 100 \ \ \ ; \ \ IP_t=\frac{\sum P_t Q_t}{\sum P_0 Q_t} \times 100
 \]
 
-\hypertarget{indeks-laspeyres-1}{%
-\subsection{Indeks Laspeyres}\label{indeks-laspeyres-1}}
+\subsection{Indeks Laspeyres}\label{indeks-laspeyres-1}
 
 \begin{longtable}[]{@{}lllllll@{}}
 \toprule\noalign{}
@@ -2499,8 +2318,7 @@ Kosan & 12 & 1000 & 12 & 1100 & 12 & 1200 \\
 IL_1=\frac{17950}{16500}=108,79
 \]
 
-\hypertarget{indeks-laspeyres-2}{%
-\subsection{Indeks Laspeyres}\label{indeks-laspeyres-2}}
+\subsection{Indeks Laspeyres}\label{indeks-laspeyres-2}
 
 \begin{longtable}[]{@{}lllllll@{}}
 \toprule\noalign{}
@@ -2519,8 +2337,7 @@ Kosan & 12 & 1000 & 12 & 1100 & 12 & 1200 \\
 IP_1=\frac{18740}{16500}=108,95
 \]
 
-\hypertarget{il-vs-ip}{%
-\subsection{IL vs IP}\label{il-vs-ip}}
+\subsection{IL vs IP}\label{il-vs-ip}
 
 \begin{itemize}
 \item
@@ -2538,8 +2355,7 @@ IP_1=\frac{18740}{16500}=108,95
   karena survey keranjang dilakukan tiap saat.
 \end{itemize}
 
-\hypertarget{indeks-fisher}{%
-\subsection{Indeks Fisher}\label{indeks-fisher}}
+\subsection{Indeks Fisher}\label{indeks-fisher}
 
 \begin{itemize}
 \tightlist
@@ -2555,8 +2371,7 @@ IF_t=\sqrt{IL_t \times IP_t}
 IF_1=\sqrt{108,79\times 108,95}=108,87
 \]
 
-\hypertarget{tabel-lengkap}{%
-\subsection{Tabel Lengkap}\label{tabel-lengkap}}
+\subsection{Tabel Lengkap}\label{tabel-lengkap}
 
 \begin{longtable}[]{@{}llll@{}}
 \toprule\noalign{}
@@ -2577,8 +2392,7 @@ Fisher & 100 & 108,87 & 118,29 \\
   \(INF_1=\frac{108,87-100}{100}\times 100\%=8,87\%\)
 \end{itemize}
 
-\hypertarget{mengubah-tahun-dasar}{%
-\subsection{Mengubah tahun dasar}\label{mengubah-tahun-dasar}}
+\subsection{Mengubah tahun dasar}\label{mengubah-tahun-dasar}
 
 \begin{itemize}
 \item
@@ -2599,8 +2413,7 @@ Fisher & 100 & 108,87 & 118,29 \\
   tahun berikutnya 2019 dan 2020.
 \end{itemize}
 
-\hypertarget{mengubah-tahun-dasar-1}{%
-\subsection{Mengubah tahun dasar}\label{mengubah-tahun-dasar-1}}
+\subsection{Mengubah tahun dasar}\label{mengubah-tahun-dasar-1}
 
 \begin{longtable}[]{@{}llll@{}}
 \toprule\noalign{}
@@ -2627,8 +2440,7 @@ Fisher & 91.85 & 100 & 108.65 \\
 
 Skrg kita bandingkan semua dengan 2019,
 
-\hypertarget{latihan-di-rumah}{%
-\subsection{Latihan di rumah}\label{latihan-di-rumah}}
+\subsection{Latihan di rumah}\label{latihan-di-rumah}
 
 \begin{itemize}
 \item
@@ -2638,11 +2450,9 @@ Skrg kita bandingkan semua dengan 2019,
   2019=100 dan 2020=100!
 \end{itemize}
 
-\hypertarget{pertemuan-5}{%
-\section{Pertemuan 5}\label{pertemuan-5}}
+\section{Pertemuan 5}\label{pertemuan-5}
 
-\hypertarget{diferensial}{%
-\subsection{Diferensial}\label{diferensial}}
+\subsection{Diferensial}\label{diferensial}
 
 \begin{itemize}
 \item
@@ -2658,8 +2468,7 @@ Skrg kita bandingkan semua dengan 2019,
   lebih lanjut di ilmu ekonomi).
 \end{itemize}
 
-\hypertarget{perubahan}{%
-\subsection{Perubahan}\label{perubahan}}
+\subsection{Perubahan}\label{perubahan}
 
 \begin{itemize}
 \item
@@ -2675,8 +2484,7 @@ Skrg kita bandingkan semua dengan 2019,
 \frac{\Delta y}{\Delta x}=\frac{f(x+\Delta x)-f(x)}{\Delta x}
 \]
 
-\hypertarget{contoh-5}{%
-\subsection{Contoh}\label{contoh-5}}
+\subsection{Contoh}\label{contoh-5}
 
 Ada fungsi \(y=3x^2-x\). Tentukan perubahan dari y jika x naik dari 2
 jadi 3.
@@ -2690,8 +2498,7 @@ jadi 3.
   Artinya, \(\Delta y=24-10=14\)
 \end{itemize}
 
-\hypertarget{turunan}{%
-\subsection{Turunan}\label{turunan}}
+\subsection{Turunan}\label{turunan}
 
 \begin{itemize}
 \item
@@ -2708,8 +2515,7 @@ jadi 3.
   kaidah-kaidah diferensial.
 \end{itemize}
 
-\hypertarget{kaidah-turunan}{%
-\subsection{Kaidah turunan}\label{kaidah-turunan}}
+\subsection{Kaidah turunan}\label{kaidah-turunan}
 
 \textbf{Diferensiasi konstanta}: Jika sebuah fungsi adalah sebuah
 konstanta, maka diferensialnya 0.
@@ -2725,8 +2531,7 @@ konstanta, maka diferensialnya 0.
 \text{if }y=4x^3, \ \text{then } \frac{dy}{dx}=3\cdot 4x^{3-1}=\frac{dy}{dx}=12x^2
 \]
 
-\hypertarget{kaidah-turunan-1}{%
-\subsection{Kaidah turunan}\label{kaidah-turunan-1}}
+\subsection{Kaidah turunan}\label{kaidah-turunan-1}
 
 \textbf{diferensiasi eksponen}: jika \(y=ae^n\), maka
 \(\frac{dy}{dx}=yae^n\)
@@ -2742,8 +2547,7 @@ konstanta, maka diferensialnya 0.
 \text{if }y= \ln x, \text{ then } \frac{dy}{dx}=\frac{1}{x}
 \]
 
-\hypertarget{kaidah-lain}{%
-\subsection{Kaidah lain}\label{kaidah-lain}}
+\subsection{Kaidah lain}\label{kaidah-lain}
 
 \begin{itemize}
 \item
@@ -2754,8 +2558,7 @@ konstanta, maka diferensialnya 0.
   diferensial.
 \end{itemize}
 
-\hypertarget{contoh-6}{%
-\subsection{Contoh}\label{contoh-6}}
+\subsection{Contoh}\label{contoh-6}
 
 Ada fungsi \(y=3x^2-x\). Tentukan perubahan dari y jika x naik dari 2
 jadi 3.
@@ -2769,8 +2572,7 @@ jadi 3.
   \(dy=(6(2)-1)(1)=11\)
 \end{itemize}
 
-\hypertarget{diferensial-1}{%
-\subsection{Diferensial}\label{diferensial-1}}
+\subsection{Diferensial}\label{diferensial-1}
 
 \begin{itemize}
 \item
@@ -2784,8 +2586,7 @@ jadi 3.
   Tapi perkiraannya lebih baik daripada ga punya informasi apa-apa.
 \end{itemize}
 
-\hypertarget{fungsi-linear-4}{%
-\subsection{Fungsi linear}\label{fungsi-linear-4}}
+\subsection{Fungsi linear}\label{fungsi-linear-4}
 
 Ada fungsi \(y=3x-2\). Tentukan perubahan dari y jika x naik dari 2 jadi
 3.
@@ -2799,8 +2600,7 @@ Ada fungsi \(y=3x-2\). Tentukan perubahan dari y jika x naik dari 2 jadi
   Coba hitung ulang jika x naik dari 2 jadi 5
 \end{itemize}
 
-\hypertarget{somay}{%
-\subsection{Somay}\label{somay}}
+\subsection{Somay}\label{somay}
 
 \begin{itemize}
 \tightlist
@@ -2822,8 +2622,7 @@ R&=10Q
   Apa yang terjadi kalo kita aplikasikan turunan?
 \end{itemize}
 
-\hypertarget{somay-1}{%
-\subsection{Somay}\label{somay-1}}
+\subsection{Somay}\label{somay-1}
 
 \[
 \frac{dC}{dQ}=7 \\
@@ -2844,8 +2643,7 @@ R&=10Q
   Ini disebut juga dengan dampak marjinal / \emph{marginal effect}
 \end{itemize}
 
-\hypertarget{marginal-effect}{%
-\subsection{Marginal effect}\label{marginal-effect}}
+\subsection{Marginal effect}\label{marginal-effect}
 
 \begin{itemize}
 \item
@@ -2865,8 +2663,7 @@ R&=10Q
   jika \(x\) berubah sebesar 1 unit.
 \end{itemize}
 
-\hypertarget{marginal-effect-1}{%
-\subsection{Marginal effect}\label{marginal-effect-1}}
+\subsection{Marginal effect}\label{marginal-effect-1}
 
 \begin{itemize}
 \item
@@ -2883,8 +2680,7 @@ R&=10Q
   Semua ini akan kita bahas lebih lanjut di ilmu ekonomi.
 \end{itemize}
 
-\hypertarget{fungsi-kuadratik}{%
-\subsection{Fungsi kuadratik}\label{fungsi-kuadratik}}
+\subsection{Fungsi kuadratik}\label{fungsi-kuadratik}
 
 \begin{itemize}
 \tightlist
@@ -2899,8 +2695,7 @@ R&=10Q
 -Sebuah fungsi kuadratik akan memiliki titik minimum jika
 \textbf{turunan pertama=0} dan \textbf{turunan ke-2 bernilai positif}
 
-\hypertarget{contoh-7}{%
-\subsection{Contoh}\label{contoh-7}}
+\subsection{Contoh}\label{contoh-7}
 
 Seandainya fungsi pendapatan dan fungsi biaya somay Raka adalah seperti
 berikut:
@@ -2915,8 +2710,7 @@ C&=2Q^2-200Q+10000
 Carilah \(Q\) di mana: (a) biayanya optimal, (b) apakah Q di (a) itu
 maksimal atau minimal?, (c) profitnya minimal/maksimal
 
-\hypertarget{contoh-8}{%
-\subsection{Contoh}\label{contoh-8}}
+\subsection{Contoh}\label{contoh-8}
 
 \begin{enumerate}
 \def\labelenumi{\alph{enumi}.}
@@ -2933,8 +2727,7 @@ Q&=50
 
 \end{align} \$\$
 
-\hypertarget{contoh-9}{%
-\subsection{Contoh}\label{contoh-9}}
+\subsection{Contoh}\label{contoh-9}
 
 \begin{enumerate}
 \def\labelenumi{\alph{enumi}.}
@@ -2954,8 +2747,7 @@ C''&=1 >0
 Karena turunan ke-2 positif, maka 50 adalah jumlah somay yang
 meminimalisir biaya.
 
-\hypertarget{contoh-10}{%
-\subsection{Contoh}\label{contoh-10}}
+\subsection{Contoh}\label{contoh-10}
 
 \begin{enumerate}
 \def\labelenumi{\alph{enumi}.}
@@ -2975,8 +2767,7 @@ Q&=75
 \end{align}
 \]
 
-\hypertarget{contoh-11}{%
-\subsection{Contoh}\label{contoh-11}}
+\subsection{Contoh}\label{contoh-11}
 
 Apakah Q=75 itu titik maksimum atau minimum?
 
@@ -2990,8 +2781,7 @@ Apakah Q=75 itu titik maksimum atau minimum?
 
 Karena turunan ke-2 nya negatif, berarti Q=300 adalah titik maksimal.
 
-\hypertarget{cost-dan-profit}{%
-\subsection{Cost dan profit}\label{cost-dan-profit}}
+\subsection{Cost dan profit}\label{cost-dan-profit}
 
 Cost akan minimal jika \(Q=50\). Berapa costnya?
 
@@ -3011,8 +2801,7 @@ Profit akan maksimal jika \(Q=75\). berapa profitnya?
 \end{align}
 \]
 
-\hypertarget{kurva-cost-dan-revenue}{%
-\subsection{Kurva cost dan revenue}\label{kurva-cost-dan-revenue}}
+\subsection{Kurva cost dan revenue}\label{kurva-cost-dan-revenue}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -3050,16 +2839,9 @@ Profit akan maksimal jika \(Q=75\). berapa profitnya?
 \end{Highlighting}
 \end{Shaded}
 
-\begin{figure}[H]
+\includegraphics{index_files/figure-pdf/unnamed-chunk-9-1.pdf}
 
-{\centering \includegraphics{index_files/figure-pdf/unnamed-chunk-9-1.pdf}
-
-}
-
-\end{figure}
-
-\hypertarget{kurva-profit}{%
-\subsection{Kurva profit}\label{kurva-profit}}
+\subsection{Kurva profit}\label{kurva-profit}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -3067,19 +2849,11 @@ Profit akan maksimal jika \(Q=75\). berapa profitnya?
 \end{Highlighting}
 \end{Shaded}
 
-\begin{figure}[H]
+\includegraphics{index_files/figure-pdf/unnamed-chunk-10-1.pdf}
 
-{\centering \includegraphics{index_files/figure-pdf/unnamed-chunk-10-1.pdf}
+\section{Pertemuan 6}\label{pertemuan-6}
 
-}
-
-\end{figure}
-
-\hypertarget{pertemuan-6}{%
-\section{Pertemuan 6}\label{pertemuan-6}}
-
-\hypertarget{minggu-lalu}{%
-\subsection{Minggu lalu}\label{minggu-lalu}}
+\subsection{Minggu lalu}\label{minggu-lalu}
 
 \begin{itemize}
 \tightlist
@@ -3087,8 +2861,7 @@ Profit akan maksimal jika \(Q=75\). berapa profitnya?
   Distribusi frekuensi dan statistik deskriptif.
 \end{itemize}
 
-\hypertarget{next}{%
-\paragraph{Next}\label{next}}
+\paragraph{Next}\label{next}
 
 \begin{itemize}
 \tightlist
@@ -3098,8 +2871,7 @@ Profit akan maksimal jika \(Q=75\). berapa profitnya?
   uji normalitas dan probabilitas sampel
 \end{itemize}
 
-\hypertarget{hari-ini}{%
-\subsection{Hari ini}\label{hari-ini}}
+\subsection{Hari ini}\label{hari-ini}
 
 \begin{itemize}
 \item
@@ -3115,8 +2887,7 @@ Profit akan maksimal jika \(Q=75\). berapa profitnya?
   prinsip-prinsip dasar probabilitas.
 \end{itemize}
 
-\hypertarget{apa-itu-peluang}{%
-\subsection{Apa itu peluang?}\label{apa-itu-peluang}}
+\subsection{Apa itu peluang?}\label{apa-itu-peluang}
 
 \begin{itemize}
 \tightlist
@@ -3126,17 +2897,12 @@ Profit akan maksimal jika \(Q=75\). berapa profitnya?
   secara acak (\emph{random}).
 \end{itemize}
 
-. . .
-
 \includegraphics{ea.png}
-
-. . .
 
 jalur kiri (not confess) adalah kepastian, sementara jalur kanan
 (confess) adalah kejadian atau aksi berpeluang.
 
-\hypertarget{contoh-lain}{%
-\subsection{Contoh lain}\label{contoh-lain}}
+\subsection{Contoh lain}\label{contoh-lain}
 
 \begin{itemize}
 \item
@@ -3149,13 +2915,10 @@ jalur kiri (not confess) adalah kepastian, sementara jalur kanan
   Melempar dadu bisa muncul angka 1, 2, 3, 4, 5, atau 6.
 \end{itemize}
 
-. . .
-
 Seperti yang anda mungkin paham, hampir semua kejadian di dunia ini
 adalah kejadian berpeluang.
 
-\hypertarget{notasi-1}{%
-\subsection{Notasi}\label{notasi-1}}
+\subsection{Notasi}\label{notasi-1}
 
 \begin{itemize}
 \item
@@ -3190,8 +2953,7 @@ adalah kejadian berpeluang.
   \end{itemize}
 \end{itemize}
 
-\hypertarget{beberapa-istilah}{%
-\subsection{Beberapa istilah}\label{beberapa-istilah}}
+\subsection{Beberapa istilah}\label{beberapa-istilah}
 
 \begin{itemize}
 \item
@@ -3216,8 +2978,7 @@ adalah kejadian berpeluang.
   \end{itemize}
 \end{itemize}
 
-\hypertarget{menghitung-peluang}{%
-\subsection{Menghitung peluang}\label{menghitung-peluang}}
+\subsection{Menghitung peluang}\label{menghitung-peluang}
 
 \begin{itemize}
 \item
@@ -3231,8 +2992,7 @@ adalah kejadian berpeluang.
 P(A)=\frac{n(A)}{n(S)}
 \]
 
-\hypertarget{menghitung-peluang-1}{%
-\subsection{Menghitung peluang}\label{menghitung-peluang-1}}
+\subsection{Menghitung peluang}\label{menghitung-peluang-1}
 
 \begin{itemize}
 \item
@@ -3252,8 +3012,7 @@ P(A)=\frac{4}{10}
   berapa \(P(G)\)?
 \end{itemize}
 
-\hypertarget{rules-dasar}{%
-\subsection{Rules dasar}\label{rules-dasar}}
+\subsection{Rules dasar}\label{rules-dasar}
 
 \begin{itemize}
 \item
@@ -3274,8 +3033,7 @@ Berapa peluang munculnya 1 atau 2 pada lemparan sebuah dadu yang adil?
   \(P(X=1 \cup X=2)=P(X=1)+P(X=2)=\frac{1}{6}+\frac{1}{6}\)
 \end{itemize}
 
-\hypertarget{rules-dasar-1}{%
-\subsection{Rules dasar}\label{rules-dasar-1}}
+\subsection{Rules dasar}\label{rules-dasar-1}
 
 \begin{itemize}
 \item
@@ -3298,8 +3056,7 @@ Berapa peluang munculnya 1 atau 2 pada lemparan sebuah dadu yang adil?
   \end{itemize}
 \end{itemize}
 
-\hypertarget{pendekatan-klasik}{%
-\subsection{Pendekatan klasik}\label{pendekatan-klasik}}
+\subsection{Pendekatan klasik}\label{pendekatan-klasik}
 
 \begin{itemize}
 \item
@@ -3313,8 +3070,7 @@ Berapa peluang munculnya 1 atau 2 pada lemparan sebuah dadu yang adil?
   \(P(\text{tidak lulus})=\frac{4+1}{40}=\frac{5}{40}=\frac{1}{8}\)
 \end{itemize}
 
-\hypertarget{review}{%
-\subsection{Review}\label{review}}
+\subsection{Review}\label{review}
 
 \begin{itemize}
 \item
@@ -3328,8 +3084,7 @@ Berapa peluang munculnya 1 atau 2 pada lemparan sebuah dadu yang adil?
   jumlah munculnya \emph{outcome} \(X\) dibagi jumlah experiment \(n\).
 \end{itemize}
 
-\hypertarget{expected-value}{%
-\subsection{Expected Value}\label{expected-value}}
+\subsection{Expected Value}\label{expected-value}
 
 \begin{itemize}
 \item
@@ -3344,8 +3099,7 @@ Berapa peluang munculnya 1 atau 2 pada lemparan sebuah dadu yang adil?
 EV=\sum P(X_i) \times X_i
 \]
 
-\hypertarget{ev-judi}{%
-\subsection{EV Judi}\label{ev-judi}}
+\subsection{EV Judi}\label{ev-judi}
 
 \begin{itemize}
 \item
@@ -3358,8 +3112,7 @@ EV=\sum P(X_i) \times X_i
   \(EV=\frac{1}{2} \times 10000 + \frac{1}{2} \times -12000=-1000\)
 \end{itemize}
 
-\hypertarget{ev-judi-1}{%
-\subsection{EV judi}\label{ev-judi-1}}
+\subsection{EV judi}\label{ev-judi-1}
 
 \begin{itemize}
 \item
@@ -3374,8 +3127,7 @@ EV=\sum P(X_i) \times X_i
   \(EV=3666,67\)
 \end{itemize}
 
-\hypertarget{memaknai-ev}{%
-\subsection{Memaknai EV}\label{memaknai-ev}}
+\subsection{Memaknai EV}\label{memaknai-ev}
 
 \begin{itemize}
 \item
@@ -3398,8 +3150,7 @@ EV=\sum P(X_i) \times X_i
   Jika anda bandar, judi mana yang lebih baik?
 \end{itemize}
 
-\hypertarget{bandar-judi}{%
-\subsection{Bandar judi}\label{bandar-judi}}
+\subsection{Bandar judi}\label{bandar-judi}
 
 \begin{itemize}
 \item
@@ -3424,8 +3175,7 @@ EV=\sum P(X_i) \times X_i
   \end{itemize}
 \end{itemize}
 
-\hypertarget{pengambilan-keputusan}{%
-\subsection{Pengambilan keputusan}\label{pengambilan-keputusan}}
+\subsection{Pengambilan keputusan}\label{pengambilan-keputusan}
 
 \begin{itemize}
 \item
@@ -3445,8 +3195,7 @@ EV=\sum P(X_i) \times X_i
   keputusan ini tergantung dari \textbf{profil risiko}.
 \end{itemize}
 
-\hypertarget{profil-risiko}{%
-\subsection{Profil risiko}\label{profil-risiko}}
+\subsection{Profil risiko}\label{profil-risiko}
 
 \begin{itemize}
 \item
@@ -3465,8 +3214,7 @@ EV=\sum P(X_i) \times X_i
   \end{itemize}
 \end{itemize}
 
-\hypertarget{profil-risiko-1}{%
-\subsection{Profil risiko}\label{profil-risiko-1}}
+\subsection{Profil risiko}\label{profil-risiko-1}
 
 \begin{itemize}
 \item
@@ -3491,8 +3239,7 @@ EV=\sum P(X_i) \times X_i
   \end{itemize}
 \end{itemize}
 
-\hypertarget{asuransi}{%
-\subsection{Asuransi}\label{asuransi}}
+\subsection{Asuransi}\label{asuransi}
 
 \begin{itemize}
 \item
@@ -3505,8 +3252,7 @@ EV=\sum P(X_i) \times X_i
   Hitung probability motor hilang, baru hitung EV.
 \end{itemize}
 
-\hypertarget{asuransi-1}{%
-\subsection{Asuransi}\label{asuransi-1}}
+\subsection{Asuransi}\label{asuransi-1}
 
 \begin{itemize}
 \item
@@ -3529,8 +3275,7 @@ EV=\sum P(X_i) \times X_i
   Risk lovers sebaliknya: baru rela bayar kalo preminya semurah mungkin.
 \end{itemize}
 
-\hypertarget{asuransi-2}{%
-\subsection{Asuransi}\label{asuransi-2}}
+\subsection{Asuransi}\label{asuransi-2}
 
 \begin{itemize}
 \item
@@ -3547,8 +3292,7 @@ EV=\sum P(X_i) \times X_i
   Pejudi biasanya risk loving. Makanya bandar untung.
 \end{itemize}
 
-\hypertarget{odds}{%
-\subsection{Odds}\label{odds}}
+\subsection{Odds}\label{odds}
 
 \begin{itemize}
 \item
@@ -3564,8 +3308,7 @@ EV=\sum P(X_i) \times X_i
   sebagainya.
 \end{itemize}
 
-\hypertarget{odds-1}{%
-\subsection{Odds}\label{odds-1}}
+\subsection{Odds}\label{odds-1}
 
 \begin{itemize}
 \item
@@ -3580,8 +3323,7 @@ EV=\sum P(X_i) \times X_i
   Odds diset sedemikian sehingga jumlah nilai taruhannya akan seimbang.
 \end{itemize}
 
-\hypertarget{odds-2}{%
-\subsection{Odds}\label{odds-2}}
+\subsection{Odds}\label{odds-2}
 
 \includegraphics{bet.jpg}
 
@@ -3593,8 +3335,7 @@ EV=\sum P(X_i) \times X_i
   Tim mana yang diunggulkan?
 \end{itemize}
 
-\hypertarget{odds-3}{%
-\subsection{Odds}\label{odds-3}}
+\subsection{Odds}\label{odds-3}
 
 \begin{itemize}
 \tightlist
@@ -3613,8 +3354,7 @@ P(\text{RBL menang}) \times \text{Odds RBL menang} = \\ P(\text{RBL kalah}) \tim
   berapa?
 \end{itemize}
 
-\hypertarget{review-1}{%
-\subsection{Review}\label{review-1}}
+\subsection{Review}\label{review-1}
 
 \begin{itemize}
 \item
@@ -3627,8 +3367,7 @@ P(\text{RBL menang}) \times \text{Odds RBL menang} = \\ P(\text{RBL kalah}) \tim
   kemungkinan \emph{fraud}.
 \end{itemize}
 
-\hypertarget{minggu-depan}{%
-\subsection{Minggu depan}\label{minggu-depan}}
+\subsection{Minggu depan}\label{minggu-depan}
 
 \begin{itemize}
 \item
@@ -3637,11 +3376,9 @@ P(\text{RBL menang}) \times \text{Odds RBL menang} = \\ P(\text{RBL kalah}) \tim
   Distribusi probabilitas.
 \end{itemize}
 
-\hypertarget{pertemuan-7}{%
-\section{Pertemuan 7}\label{pertemuan-7}}
+\section{Pertemuan 7}\label{pertemuan-7}
 
-\hypertarget{minggu-lalu-1}{%
-\subsection{Minggu lalu}\label{minggu-lalu-1}}
+\subsection{Minggu lalu}\label{minggu-lalu-1}
 
 \begin{itemize}
 \tightlist
@@ -3649,8 +3386,7 @@ P(\text{RBL menang}) \times \text{Odds RBL menang} = \\ P(\text{RBL kalah}) \tim
   Peluang independen \& pendekatan klasik.
 \end{itemize}
 
-\hypertarget{next-1}{%
-\paragraph{Next}\label{next-1}}
+\paragraph{Next}\label{next-1}
 
 \begin{itemize}
 \tightlist
@@ -3660,8 +3396,7 @@ P(\text{RBL menang}) \times \text{Odds RBL menang} = \\ P(\text{RBL kalah}) \tim
   uji normalitas dan probabilitas sampel
 \end{itemize}
 
-\hypertarget{tindakan-ganda}{%
-\subsection{Tindakan Ganda}\label{tindakan-ganda}}
+\subsection{Tindakan Ganda}\label{tindakan-ganda}
 
 \begin{itemize}
 \item
@@ -3678,8 +3413,7 @@ P(\text{RBL menang}) \times \text{Odds RBL menang} = \\ P(\text{RBL kalah}) \tim
   Berapa \(S\) kalau kita melempar 2 buah dadu?
 \end{itemize}
 
-\hypertarget{rules-baru}{%
-\subsection{Rules baru}\label{rules-baru}}
+\subsection{Rules baru}\label{rules-baru}
 
 \begin{itemize}
 \item
@@ -3694,8 +3428,7 @@ P(\text{RBL menang}) \times \text{Odds RBL menang} = \\ P(\text{RBL kalah}) \tim
   Berapa peluang munculnya 1 dan ganjil dalam lemparan 2 dadu adil?
 \end{itemize}
 
-\hypertarget{rules-baru-1}{%
-\subsection{Rules baru}\label{rules-baru-1}}
+\subsection{Rules baru}\label{rules-baru-1}
 
 \begin{itemize}
 \item
@@ -3709,8 +3442,7 @@ P(\text{RBL menang}) \times \text{Odds RBL menang} = \\ P(\text{RBL kalah}) \tim
   Jika kejadian independen, maka \(P(B|A)= P(B)\)
 \end{itemize}
 
-\hypertarget{lotre}{%
-\subsection{Lotre}\label{lotre}}
+\subsection{Lotre}\label{lotre}
 
 \begin{itemize}
 \item
@@ -3738,8 +3470,7 @@ P(\text{RBL menang}) \times \text{Odds RBL menang} = \\ P(\text{RBL kalah}) \tim
   Jika narik lotre ini bayar 90 ribu rupiah, orang risk neutral ikut ga?
 \end{itemize}
 
-\hypertarget{kejadian-beririsan}{%
-\subsection{Kejadian beririsan}\label{kejadian-beririsan}}
+\subsection{Kejadian beririsan}\label{kejadian-beririsan}
 
 \begin{itemize}
 \item
@@ -3752,8 +3483,7 @@ P(\text{RBL menang}) \times \text{Odds RBL menang} = \\ P(\text{RBL kalah}) \tim
   berlambang hati.
 \end{itemize}
 
-\hypertarget{kejadian-beririsan-1}{%
-\subsection{Kejadian beririsan}\label{kejadian-beririsan-1}}
+\subsection{Kejadian beririsan}\label{kejadian-beririsan-1}
 
 \begin{itemize}
 \item
@@ -3770,8 +3500,7 @@ P(\text{RBL menang}) \times \text{Odds RBL menang} = \\ P(\text{RBL kalah}) \tim
   \(P(R \cup P)=P(R)+P(P)-P(R\cap P)=\frac{100+50-40}{140}=\frac{110}{140}\)
 \end{itemize}
 
-\hypertarget{kejadian-beririsan-2}{%
-\subsection{Kejadian beririsan}\label{kejadian-beririsan-2}}
+\subsection{Kejadian beririsan}\label{kejadian-beririsan-2}
 
 \begin{itemize}
 \tightlist
@@ -3791,8 +3520,7 @@ P(\text{RBL menang}) \times \text{Odds RBL menang} = \\ P(\text{RBL kalah}) \tim
 (polygon[GRID.polygon.560], polygon[GRID.polygon.561], polygon[GRID.polygon.562], polygon[GRID.polygon.563], text[GRID.text.564], text[GRID.text.565], text[GRID.text.566], text[GRID.text.567], text[GRID.text.568]) 
 \end{verbatim}
 
-\hypertarget{kejadian-beririsan-3}{%
-\subsection{Kejadian beririsan}\label{kejadian-beririsan-3}}
+\subsection{Kejadian beririsan}\label{kejadian-beririsan-3}
 
 \begin{itemize}
 \item
@@ -3808,8 +3536,7 @@ P(\text{RBL menang}) \times \text{Odds RBL menang} = \\ P(\text{RBL kalah}) \tim
   Panitia mengasumsikan bahwa \(P(Muslim \ \cap \ Maksi) = 0\).
 \end{itemize}
 
-\hypertarget{permutasi-dan-kombinasi}{%
-\subsection{Permutasi dan Kombinasi}\label{permutasi-dan-kombinasi}}
+\subsection{Permutasi dan Kombinasi}\label{permutasi-dan-kombinasi}
 
 \begin{itemize}
 \item
@@ -3834,8 +3561,7 @@ P^n_r=\frac{n!}{(n-r)!}
 C^n_r=\frac{n!}{r!(n-r)!}
 \]
 
-\hypertarget{faktorial}{%
-\subsection{Faktorial}\label{faktorial}}
+\subsection{Faktorial}\label{faktorial}
 
 \begin{itemize}
 \item
@@ -3850,8 +3576,7 @@ C^n_r=\frac{n!}{r!(n-r)!}
   \(\frac{6!}{3!}=\frac{6 \times 5 \times 4 \times 3!}{3!}=6 \times 5 \times 4\)
 \end{itemize}
 
-\hypertarget{permutasi}{%
-\subsection{Permutasi}\label{permutasi}}
+\subsection{Permutasi}\label{permutasi}
 
 \begin{itemize}
 \item
@@ -3864,8 +3589,7 @@ C^n_r=\frac{n!}{r!(n-r)!}
   \[P^{10}_4=\frac{10!}{(10-4)!}=\frac{10!}{6!}=5040\]
 \end{itemize}
 
-\hypertarget{kombinasi}{%
-\subsection{Kombinasi}\label{kombinasi}}
+\subsection{Kombinasi}\label{kombinasi}
 
 \begin{itemize}
 \item
@@ -3878,8 +3602,7 @@ C^n_r=\frac{n!}{r!(n-r)!}
   \[C^{10}_4=\frac{10!}{4!(10-4)!}=\frac{10!}{4!6!}=\frac{10\times9\times 8\times 7}{4 \times 3\times 2\times 1}=210\]
 \end{itemize}
 
-\hypertarget{permutasi-1}{%
-\subsection{Permutasi}\label{permutasi-1}}
+\subsection{Permutasi}\label{permutasi-1}
 
 \begin{itemize}
 \item
@@ -3894,8 +3617,7 @@ C^n_r=\frac{n!}{r!(n-r)!}
   \(P(R_1G_2B_3) \approx 0,04\)
 \end{itemize}
 
-\hypertarget{permutasi-2}{%
-\subsection{Permutasi}\label{permutasi-2}}
+\subsection{Permutasi}\label{permutasi-2}
 
 \begin{itemize}
 \tightlist
@@ -3907,8 +3629,7 @@ C^n_r=\frac{n!}{r!(n-r)!}
 P(R_1G_2B_3)=\frac{P^{12}_1P^{15}_1P^{13}_1}{P^{40}_3}=\frac{\frac{12!}{11!}\times\frac{15!}{14!}\times\frac{13!}{12!}}{\frac{40!}{37!}}=\frac{2340}{59280} \approx 0,04
 \]
 
-\hypertarget{kombinasi-1}{%
-\subsection{Kombinasi}\label{kombinasi-1}}
+\subsection{Kombinasi}\label{kombinasi-1}
 
 \begin{itemize}
 \item
@@ -3922,8 +3643,7 @@ P(R_1G_2B_3)=\frac{P^{12}_1P^{15}_1P^{13}_1}{P^{40}_3}=\frac{\frac{12!}{11!}\tim
   \(P(RGB)=3! \times P(R_1G_2B_3)\approx6\times0,04\approx0,24\)
 \end{itemize}
 
-\hypertarget{kombinasi-2}{%
-\subsection{Kombinasi}\label{kombinasi-2}}
+\subsection{Kombinasi}\label{kombinasi-2}
 
 \begin{itemize}
 \tightlist
@@ -3935,19 +3655,11 @@ P(R_1G_2B_3)=\frac{P^{12}_1P^{15}_1P^{13}_1}{P^{40}_3}=\frac{\frac{12!}{11!}\tim
 P(RGB)=\frac{C^{12}_1C^{15}_1C^{13}_1}{C^{40}_3}=\frac{\frac{12!}{11!}\times\frac{15!}{14!}\times\frac{13!}{12!}}{\frac{40!}{3!37!}}=\frac{2340}{9880}\approx0,24.
 \]
 
-\hypertarget{diagram-pohon}{%
-\subsection{Diagram pohon}\label{diagram-pohon}}
+\subsection{Diagram pohon}\label{diagram-pohon}
 
-\begin{figure}[H]
+\includegraphics[width=20.66in,height=3.15in]{index_files/figure-latex/mermaid-figure-1.png}
 
-{\centering \includegraphics[width=20.66in,height=3.15in]{index_files/figure-latex/mermaid-figure-1.png}
-
-}
-
-\end{figure}
-
-\hypertarget{probabilitas-marjinal}{%
-\subsection{Probabilitas marjinal}\label{probabilitas-marjinal}}
+\subsection{Probabilitas marjinal}\label{probabilitas-marjinal}
 
 \begin{itemize}
 \item
@@ -3965,8 +3677,7 @@ P(RGB)=\frac{C^{12}_1C^{15}_1C^{13}_1}{C^{40}_3}=\frac{\frac{12!}{11!}\times\fra
   \(P(D)=0,0196 \approx 0,02\)
 \end{itemize}
 
-\hypertarget{bayesian-probability}{%
-\subsection{Bayesian Probability}\label{bayesian-probability}}
+\subsection{Bayesian Probability}\label{bayesian-probability}
 
 \begin{itemize}
 \tightlist
@@ -3986,8 +3697,7 @@ P(A|B)=\frac{P(B|A) \times P(A)}{P(B)}
   mmunculnya B jika A terjadi.
 \end{itemize}
 
-\hypertarget{bayesian}{%
-\subsection{Bayesian}\label{bayesian}}
+\subsection{Bayesian}\label{bayesian}
 
 \begin{itemize}
 \item
@@ -4004,8 +3714,7 @@ P(A|B)=\frac{P(B|A) \times P(A)}{P(B)}
   Produk cacat tersebut paling mungkin datang dari supplier mana?
 \end{itemize}
 
-\hypertarget{bayesian-1}{%
-\subsection{Bayesian}\label{bayesian-1}}
+\subsection{Bayesian}\label{bayesian-1}
 
 \begin{itemize}
 \item
@@ -4018,8 +3727,7 @@ P(A|B)=\frac{P(B|A) \times P(A)}{P(B)}
   juga jadi lebih besar.
 \end{itemize}
 
-\hypertarget{bayesian-2}{%
-\subsection{Bayesian}\label{bayesian-2}}
+\subsection{Bayesian}\label{bayesian-2}
 
 \begin{itemize}
 \item
@@ -4037,11 +3745,9 @@ P(A|B)=\frac{P(B|A) \times P(A)}{P(B)}
   akhirnya yang menang calon A, calon B dan calon C.
 \end{itemize}
 
-\hypertarget{pertemuan-8}{%
-\section{Pertemuan 8}\label{pertemuan-8}}
+\section{Pertemuan 8}\label{pertemuan-8}
 
-\hypertarget{data-dan-statistika}{%
-\subsection{Data dan Statistika}\label{data-dan-statistika}}
+\subsection{Data dan Statistika}\label{data-dan-statistika}
 
 \begin{itemize}
 \item
@@ -4063,8 +3769,7 @@ P(A|B)=\frac{P(B|A) \times P(A)}{P(B)}
   Anda setiap hari juga mengumpulkan data!
 \end{itemize}
 
-\hypertarget{data-yang-baik}{%
-\subsection{Data yang baik}\label{data-yang-baik}}
+\subsection{Data yang baik}\label{data-yang-baik}
 
 \begin{itemize}
 \item
@@ -4084,8 +3789,7 @@ P(A|B)=\frac{P(B|A) \times P(A)}{P(B)}
   orang punya berat badan di atas 70 kg.
 \end{itemize}
 
-\hypertarget{data-yang-baik-1}{%
-\subsection{Data yang baik}\label{data-yang-baik-1}}
+\subsection{Data yang baik}\label{data-yang-baik-1}
 
 \begin{itemize}
 \item
@@ -4103,8 +3807,7 @@ P(A|B)=\frac{P(B|A) \times P(A)}{P(B)}
   dengan pertanyaan yang ingin dijawab.
 \end{itemize}
 
-\hypertarget{jenis-jenis-data}{%
-\subsection{Jenis-jenis data}\label{jenis-jenis-data}}
+\subsection{Jenis-jenis data}\label{jenis-jenis-data}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.2941}}
@@ -4129,8 +3832,7 @@ Hitung & kuantitatif, integer & nomor telepon, jumlah anak \\
 Riil / kontinyu & kuantitatif, riil & PDB, ekspor impor \\
 \end{longtable}
 
-\hypertarget{data-kontinyu}{%
-\subsection{Data Kontinyu}\label{data-kontinyu}}
+\subsection{Data Kontinyu}\label{data-kontinyu}
 
 \begin{itemize}
 \item
@@ -4160,8 +3862,7 @@ Riil / kontinyu & kuantitatif, riil & PDB, ekspor impor \\
   \end{itemize}
 \end{itemize}
 
-\hypertarget{dampaknya}{%
-\subsection{Dampaknya?}\label{dampaknya}}
+\subsection{Dampaknya?}\label{dampaknya}
 
 \begin{itemize}
 \item
@@ -4177,8 +3878,7 @@ Riil / kontinyu & kuantitatif, riil & PDB, ekspor impor \\
   berupa data rasio.
 \end{itemize}
 
-\hypertarget{cara-pengambilan-data}{%
-\subsection{Cara pengambilan data}\label{cara-pengambilan-data}}
+\subsection{Cara pengambilan data}\label{cara-pengambilan-data}
 
 \begin{itemize}
 \item
@@ -4206,8 +3906,7 @@ Riil / kontinyu & kuantitatif, riil & PDB, ekspor impor \\
   Kelemahan sensus: mahal dan makan banyak waktu.
 \end{itemize}
 
-\hypertarget{cara-pengambilan-data-1}{%
-\subsection{Cara pengambilan data}\label{cara-pengambilan-data-1}}
+\subsection{Cara pengambilan data}\label{cara-pengambilan-data-1}
 
 \begin{itemize}
 \item
@@ -4228,8 +3927,7 @@ Riil / kontinyu & kuantitatif, riil & PDB, ekspor impor \\
   \textbf{representatif}.
 \end{itemize}
 
-\hypertarget{sampling}{%
-\subsection{Sampling}\label{sampling}}
+\subsection{Sampling}\label{sampling}
 
 \begin{itemize}
 \item
@@ -4256,8 +3954,7 @@ Riil / kontinyu & kuantitatif, riil & PDB, ekspor impor \\
   \end{itemize}
 \end{itemize}
 
-\hypertarget{acak-atau-jangan}{%
-\subsection{Acak atau jangan?}\label{acak-atau-jangan}}
+\subsection{Acak atau jangan?}\label{acak-atau-jangan}
 
 \begin{itemize}
 \item
@@ -4270,8 +3967,7 @@ Riil / kontinyu & kuantitatif, riil & PDB, ekspor impor \\
   karakteristik yang kita yakini mendekati populasi aslinya.
 \end{itemize}
 
-\hypertarget{representatif}{%
-\subsection{Representatif}\label{representatif}}
+\subsection{Representatif}\label{representatif}
 
 \begin{itemize}
 \item
@@ -4286,8 +3982,7 @@ Riil / kontinyu & kuantitatif, riil & PDB, ekspor impor \\
   dianggap ada 550 orang yang bisa mewakili.
 \end{itemize}
 
-\hypertarget{representatif-1}{%
-\subsection{Representatif}\label{representatif-1}}
+\subsection{Representatif}\label{representatif-1}
 
 \begin{itemize}
 \item
@@ -4304,8 +3999,7 @@ Riil / kontinyu & kuantitatif, riil & PDB, ekspor impor \\
   harus punya rata-rata dan rentang yang sama.
 \end{itemize}
 
-\hypertarget{random}{%
-\subsection{Random}\label{random}}
+\subsection{Random}\label{random}
 
 \begin{itemize}
 \item
@@ -4321,8 +4015,7 @@ Riil / kontinyu & kuantitatif, riil & PDB, ekspor impor \\
   lebih jauh.
 \end{itemize}
 
-\hypertarget{sampling-acak}{%
-\subsection{Sampling acak}\label{sampling-acak}}
+\subsection{Sampling acak}\label{sampling-acak}
 
 \begin{itemize}
 \item
@@ -4341,8 +4034,7 @@ Riil / kontinyu & kuantitatif, riil & PDB, ekspor impor \\
   tersebut disampling lagi.
 \end{itemize}
 
-\hypertarget{pilih-yang-mana}{%
-\subsection{Pilih yang mana?}\label{pilih-yang-mana}}
+\subsection{Pilih yang mana?}\label{pilih-yang-mana}
 
 \begin{itemize}
 \item
@@ -4358,8 +4050,7 @@ Riil / kontinyu & kuantitatif, riil & PDB, ekspor impor \\
   manapun akan memiliki data yang tidak berbeda jauh.
 \end{itemize}
 
-\hypertarget{statistika}{%
-\subsection{Statistika}\label{statistika}}
+\subsection{Statistika}\label{statistika}
 
 \begin{itemize}
 \item
@@ -4373,11 +4064,9 @@ Riil / kontinyu & kuantitatif, riil & PDB, ekspor impor \\
   dari jenis data yang kita perlukan.
 \end{itemize}
 
-\hypertarget{pertemuan-9}{%
-\section{Pertemuan 9}\label{pertemuan-9}}
+\section{Pertemuan 9}\label{pertemuan-9}
 
-\hypertarget{minggu-lalu-2}{%
-\subsection{Minggu lalu}\label{minggu-lalu-2}}
+\subsection{Minggu lalu}\label{minggu-lalu-2}
 
 \begin{itemize}
 \item
@@ -4386,8 +4075,7 @@ Riil / kontinyu & kuantitatif, riil & PDB, ekspor impor \\
   survey: random dan non-random
 \end{itemize}
 
-\hypertarget{minggu-ini}{%
-\paragraph{Minggu ini}\label{minggu-ini}}
+\paragraph{Minggu ini}\label{minggu-ini}
 
 \begin{itemize}
 \tightlist
@@ -4395,8 +4083,7 @@ Riil / kontinyu & kuantitatif, riil & PDB, ekspor impor \\
   Distribusi frekuensi dan statistik deskriptif
 \end{itemize}
 
-\hypertarget{distribusi-frekuensi}{%
-\subsection{Distribusi frekuensi}\label{distribusi-frekuensi}}
+\subsection{Distribusi frekuensi}\label{distribusi-frekuensi}
 
 \begin{itemize}
 \item
@@ -4409,8 +4096,7 @@ Riil / kontinyu & kuantitatif, riil & PDB, ekspor impor \\
   Perlu semacam alat ukur yang menggambarkan semua data yang kita punya.
 \end{itemize}
 
-\hypertarget{distribusi-kualitatif}{%
-\subsection{Distribusi kualitatif}\label{distribusi-kualitatif}}
+\subsection{Distribusi kualitatif}\label{distribusi-kualitatif}
 
 \begin{itemize}
 \tightlist
@@ -4447,13 +4133,13 @@ The following object is masked from 'package:dplyr':
 \end{Shaded}
 
 \begin{verbatim}
- [1] "Lainnya" "Lainnya" "Xiaomi"  "Vivo"    "Lainnya" "Lainnya" "Lainnya"
- [8] "Apple"   "Oppo"    "Lainnya" "Vivo"    "Samsung" "Vivo"    "Lainnya"
-[15] "Xiaomi"  "Xiaomi"  "Samsung" "Lainnya" "Oppo"    "Samsung" "Samsung"
-[22] "Vivo"    "Lainnya" "Vivo"    "Lainnya" "Samsung" "Samsung" "Xiaomi" 
-[29] "Oppo"    "Samsung" "Samsung" "Samsung" "Samsung" "Vivo"    "Samsung"
-[36] "Vivo"    "Samsung" "Apple"   "Oppo"    "Oppo"    "Lainnya" "Samsung"
-[43] "Lainnya" "Samsung" "Vivo"    "Oppo"    "Vivo"    "Xiaomi"  "Apple"  
+ [1] "Vivo"    "Oppo"    "Lainnya" "Oppo"    "Xiaomi"  "Samsung" "Lainnya"
+ [8] "Samsung" "Lainnya" "Lainnya" "Vivo"    "Samsung" "Lainnya" "Vivo"   
+[15] "Xiaomi"  "Lainnya" "Oppo"    "Xiaomi"  "Xiaomi"  "Lainnya" "Samsung"
+[22] "Samsung" "Xiaomi"  "Vivo"    "Lainnya" "Vivo"    "Vivo"    "Vivo"   
+[29] "Xiaomi"  "Xiaomi"  "Samsung" "Apple"   "Oppo"    "Oppo"    "Vivo"   
+[36] "Xiaomi"  "Samsung" "Lainnya" "Oppo"    "Lainnya" "Apple"   "Apple"  
+[43] "Xiaomi"  "Vivo"    "Samsung" "Samsung" "Xiaomi"  "Oppo"    "Samsung"
 [50] "Lainnya"
 \end{verbatim}
 
@@ -4465,8 +4151,7 @@ The following object is masked from 'package:dplyr':
   Informasi apa yang menarik dari tabel ini?
 \end{itemize}
 
-\hypertarget{distribusi-kualitatif-1}{%
-\subsection{Distribusi kualitatif}\label{distribusi-kualitatif-1}}
+\subsection{Distribusi kualitatif}\label{distribusi-kualitatif-1}
 
 \begin{itemize}
 \tightlist
@@ -4504,189 +4189,171 @@ i The signature and semantics have changed, see `?as_tibble`.
 \hline
 value\\
 \hline
-Samsung\\
-\hline
-Samsung\\
-\hline
-Samsung\\
-\hline
-Lainnya\\
+Vivo\\
 \hline
-Xiaomi\\
+Vivo\\
 \hline
-Samsung\\
+Oppo\\
 \hline
 Samsung\\
-\hline
-Lainnya\\
 \hline
 Samsung\\
 \hline
 Lainnya\\
 \hline
-Xiaomi\\
+Vivo\\
 \hline
-Apple\\
+Vivo\\
 \hline
-Samsung\\
+Vivo\\
 \hline
 Samsung\\
 \hline
-Samsung\\
+Vivo\\
 \hline
-Lainnya\\
+Oppo\\
 \hline
 Samsung\\
 \hline
 Lainnya\\
 \hline
-Vivo\\
+Lainnya\\
 \hline
 Oppo\\
-\hline
-Xiaomi\\
 \hline
-Xiaomi\\
+Samsung\\
 \hline
-Oppo\\
+Lainnya\\
 \hline
 Xiaomi\\
 \hline
 Apple\\
+\hline
+Oppo\\
 \hline
 Samsung\\
 \hline
 Samsung\\
 \hline
-Lainnya\\
+Samsung\\
 \hline
-Oppo\\
+Xiaomi\\
 \hline
 Xiaomi\\
 \hline
 Apple\\
 \hline
-Apple\\
+Oppo\\
 \hline
 Vivo\\
 \hline
-Xiaomi\\
+Lainnya\\
 \hline
-Xiaomi\\
+Apple\\
+\hline
+Oppo\\
+\hline
+Samsung\\
 \hline
 Xiaomi\\
 \hline
-Vivo\\
+Xiaomi\\
 \hline
 Vivo\\
-\hline
-Lainnya\\
 \hline
-Samsung\\
+Xiaomi\\
 \hline
-Apple\\
+Vivo\\
 \hline
 Oppo\\
 \hline
-Samsung\\
-\hline
 Oppo\\
 \hline
-Samsung\\
+Apple\\
 \hline
 Vivo\\
 \hline
 Xiaomi\\
 \hline
-Vivo\\
+Lainnya\\
 \hline
-Apple\\
+Samsung\\
 \hline
 Lainnya\\
 \hline
 Oppo\\
 \hline
-Apple\\
+Xiaomi\\
 \hline
 Xiaomi\\
 \hline
-Samsung\\
+Vivo\\
 \hline
-Apple\\
+Lainnya\\
 \hline
+Samsung\\
+\hline
 Xiaomi\\
 \hline
-Apple\\
+Samsung\\
 \hline
 Apple\\
 \hline
 Oppo\\
 \hline
-Xiaomi\\
+Vivo\\
 \hline
 Samsung\\
 \hline
-Xiaomi\\
+Oppo\\
 \hline
-Xiaomi\\
+Lainnya\\
 \hline
 Xiaomi\\
 \hline
 Lainnya\\
 \hline
-Samsung\\
+Apple\\
 \hline
-Samsung\\
+Oppo\\
 \hline
 Samsung\\
 \hline
-Oppo\\
+Samsung\\
 \hline
 Vivo\\
-\hline
-Apple\\
 \hline
 Samsung\\
 \hline
-Lainnya\\
+Vivo\\
 \hline
-Lainnya\\
+Samsung\\
 \hline
 Samsung\\
 \hline
 Oppo\\
 \hline
 Apple\\
-\hline
-Samsung\\
 \hline
-Lainnya\\
-\hline
-Apple\\
+Xiaomi\\
 \hline
-Samsung\\
+Xiaomi\\
 \hline
 Vivo\\
 \hline
-Vivo\\
+Xiaomi\\
 \hline
 Samsung\\
-\hline
-Vivo\\
-\hline
-Lainnya\\
-\hline
-Oppo\\
 \hline
-Lainnya\\
+Apple\\
 \hline
-Oppo\\
+Vivo\\
 \hline
 Vivo\\
 \hline
 Oppo\\
 \hline
-Apple\\
+Samsung\\
 \hline
 Vivo\\
 \hline
@@ -4694,41 +4361,35 @@ Samsung\\
 \hline
 Samsung\\
 \hline
-Xiaomi\\
+Apple\\
 \hline
+Vivo\\
+\hline
 Oppo\\
 \hline
 Lainnya\\
-\hline
-Vivo\\
 \hline
-Apple\\
-\hline
 Xiaomi\\
 \hline
 Xiaomi\\
 \hline
 Samsung\\
 \hline
-Apple\\
+Vivo\\
 \hline
-Samsung\\
+Xiaomi\\
 \hline
 Apple\\
-\hline
-Oppo\\
 \hline
 Lainnya\\
-\hline
-Oppo\\
 \hline
-Lainnya\\
+Apple\\
 \hline
 Apple\\
 \hline
 Samsung\\
 \hline
-Lainnya\\
+Samsung\\
 \hline
 Xiaomi\\
 \hline
@@ -4736,17 +4397,27 @@ Oppo\\
 \hline
 Samsung\\
 \hline
+Apple\\
+\hline
 Samsung\\
 \hline
 Xiaomi\\
-\hline
-Oppo\\
 \hline
 Xiaomi\\
+\hline
+Vivo\\
+\hline
+Vivo\\
+\hline
+Vivo\\
 \hline
 Xiaomi\\
 \hline
+Lainnya\\
+\hline
 Xiaomi\\
+\hline
+Vivo\\
 \hline
 Vivo\\
 \hline
@@ -4754,11 +4425,11 @@ Xiaomi\\
 \hline
 Xiaomi\\
 \hline
-Oppo\\
+Xiaomi\\
 \hline
-Oppo\\
+Samsung\\
 \hline
-Apple\\
+Oppo\\
 \hline
 Oppo\\
 \hline
@@ -4766,87 +4437,91 @@ Samsung\\
 \hline
 Samsung\\
 \hline
-Apple\\
+Samsung\\
 \hline
-Oppo\\
+Samsung\\
 \hline
-Xiaomi\\
+Samsung\\
 \hline
-Xiaomi\\
+Oppo\\
 \hline
 Xiaomi\\
 \hline
 Oppo\\
 \hline
-Samsung\\
-\hline
 Lainnya\\
 \hline
-Oppo\\
+Xiaomi\\
 \hline
 Oppo\\
 \hline
-Xiaomi\\
+Vivo\\
+\hline
+Vivo\\
 \hline
 Samsung\\
 \hline
+Apple\\
+\hline
 Xiaomi\\
 \hline
-Lainnya\\
+Samsung\\
 \hline
-Apple\\
+Samsung\\
 \hline
 Samsung\\
 \hline
-Xiaomi\\
+Samsung\\
 \hline
 Oppo\\
 \hline
-Oppo\\
+Samsung\\
 \hline
-Apple\\
+Lainnya\\
 \hline
 Samsung\\
 \hline
-Oppo\\
+Xiaomi\\
 \hline
 Lainnya\\
 \hline
 Oppo\\
 \hline
-Oppo\\
+Lainnya\\
 \hline
-Oppo\\
+Apple\\
 \hline
-Oppo\\
+Xiaomi\\
+\hline
+Vivo\\
 \hline
 Lainnya\\
 \hline
 Oppo\\
 \hline
 Xiaomi\\
-\hline
-Lainnya\\
 \hline
 Xiaomi\\
 \hline
+Lainnya\\
+\hline
 Oppo\\
 \hline
-Vivo\\
+Oppo\\
 \hline
-Xiaomi\\
+Samsung\\
 \hline
-Oppo\\
+Lainnya\\
 \hline
-Vivo\\
+Apple\\
 \hline
-Xiaomi\\
+Lainnya\\
 \hline
-Oppo\\
+Samsung\\
 \hline
-Xiaomi\\
+Apple\\
 \hline
-Lainnya\\
+Samsung\\
 \hline
 Xiaomi\\
 \hline
@@ -4854,13 +4529,17 @@ Vivo\\
 \hline
 Samsung\\
 \hline
-Oppo\\
+Lainnya\\
 \hline
-Apple\\
+Samsung\\
 \hline
 Samsung\\
 \hline
-Lainnya\\
+Samsung\\
+\hline
+Apple\\
+\hline
+Samsung\\
 \hline
 Samsung\\
 \hline
@@ -4872,35 +4551,33 @@ Samsung\\
 \hline
 Samsung\\
 \hline
-Lainnya\\
+Oppo\\
 \hline
-Lainnya\\
+Apple\\
 \hline
-Xiaomi\\
+Samsung\\
 \hline
 Vivo\\
 \hline
 Vivo\\
-\hline
-Xiaomi\\
 \hline
-Xiaomi\\
+Oppo\\
 \hline
-Apple\\
+Lainnya\\
 \hline
-Samsung\\
+Xiaomi\\
 \hline
-Oppo\\
+Xiaomi\\
 \hline
-Apple\\
+Xiaomi\\
 \hline
 Lainnya\\
 \hline
-Samsung\\
+Lainnya\\
 \hline
 Xiaomi\\
 \hline
-Vivo\\
+Lainnya\\
 \hline
 Xiaomi\\
 \hline
@@ -4908,69 +4585,69 @@ Samsung\\
 \hline
 Lainnya\\
 \hline
-Apple\\
-\hline
-Vivo\\
+Lainnya\\
 \hline
 Vivo\\
 \hline
-Xiaomi\\
+Samsung\\
 \hline
 Vivo\\
-\hline
-Samsung\\
 \hline
-Xiaomi\\
+Lainnya\\
 \hline
-Vivo\\
+Oppo\\
 \hline
 Xiaomi\\
+\hline
+Oppo\\
 \hline
 Samsung\\
 \hline
 Samsung\\
 \hline
 Oppo\\
+\hline
+Lainnya\\
+\hline
+Lainnya\\
 \hline
 Lainnya\\
 \hline
 Xiaomi\\
 \hline
-Oppo\\
+Samsung\\
 \hline
 Vivo\\
+\hline
+Lainnya\\
 \hline
 Oppo\\
+\hline
+Xiaomi\\
 \hline
 Samsung\\
 \hline
-Lainnya\\
+Oppo\\
 \hline
-Lainnya\\
+Samsung\\
 \hline
-Xiaomi\\
+Samsung\\
 \hline
 Apple\\
-\hline
-Xiaomi\\
 \hline
-Samsung\\
+Oppo\\
 \hline
-Xiaomi\\
+Vivo\\
 \hline
 Samsung\\
 \hline
 Xiaomi\\
 \hline
 Vivo\\
-\hline
-Oppo\\
-\hline
-Oppo\\
 \hline
 Samsung\\
 \hline
-Lainnya\\
+Vivo\\
 \hline
 Samsung\\
 \hline
@@ -4978,67 +4655,95 @@ Samsung\\
 \hline
 Apple\\
 \hline
-Lainnya\\
+Samsung\\
 \hline
-Lainnya\\
+Samsung\\
 \hline
-Vivo\\
+Samsung\\
 \hline
 Oppo\\
 \hline
-Oppo\\
+Vivo\\
 \hline
+Vivo\\
+\hline
 Samsung\\
 \hline
 Samsung\\
 \hline
-Oppo\\
+Xiaomi\\
 \hline
 Lainnya\\
 \hline
-Xiaomi\\
+Lainnya\\
 \hline
-Xiaomi\\
+Oppo\\
 \hline
 Apple\\
 \hline
 Xiaomi\\
 \hline
-Oppo\\
+Lainnya\\
 \hline
-Apple\\
+Samsung\\
+\hline
+Samsung\\
 \hline
 Lainnya\\
+\hline
+Oppo\\
+\hline
+Xiaomi\\
 \hline
+Vivo\\
+\hline
 Samsung\\
+\hline
+Vivo\\
 \hline
 Samsung\\
 \hline
 Samsung\\
 \hline
-Apple\\
+Samsung\\
 \hline
 Lainnya\\
+\hline
+Samsung\\
 \hline
 Xiaomi\\
 \hline
 Lainnya\\
+\hline
+Samsung\\
+\hline
+Samsung\\
+\hline
+Samsung\\
 \hline
 Oppo\\
 \hline
-Apple\\
+Oppo\\
 \hline
-Xiaomi\\
+Lainnya\\
+\hline
+Samsung\\
 \hline
 Xiaomi\\
 \hline
 Samsung\\
 \hline
-Vivo\\
+Lainnya\\
+\hline
+Samsung\\
 \hline
 Lainnya\\
 \hline
-Xiaomi\\
+Oppo\\
+\hline
+Samsung\\
+\hline
+Samsung\\
 \hline
 Vivo\\
 \hline
@@ -5046,145 +4751,205 @@ Samsung\\
 \hline
 Xiaomi\\
 \hline
-Lainnya\\
+Vivo\\
 \hline
-Xiaomi\\
+Apple\\
 \hline
 Samsung\\
-\hline
-Xiaomi\\
 \hline
 Apple\\
 \hline
 Oppo\\
 \hline
-Lainnya\\
-\hline
 Samsung\\
 \hline
-Xiaomi\\
+Apple\\
 \hline
 Samsung\\
-\hline
-Xiaomi\\
 \hline
 Xiaomi\\
 \hline
 Samsung\\
+\hline
+Oppo\\
 \hline
 Oppo\\
+\hline
+Xiaomi\\
 \hline
 Lainnya\\
 \hline
+Xiaomi\\
+\hline
 Samsung\\
 \hline
 Samsung\\
 \hline
 Samsung\\
 \hline
-Oppo\\
+Apple\\
 \hline
 Samsung\\
 \hline
 Vivo\\
 \hline
-Apple\\
+Xiaomi\\
+\hline
+Vivo\\
 \hline
 Lainnya\\
 \hline
 Samsung\\
-\hline
-Xiaomi\\
 \hline
-Oppo\\
+Samsung\\
 \hline
 Samsung\\
 \hline
 Lainnya\\
+\hline
+Samsung\\
 \hline
+Samsung\\
+\hline
 Xiaomi\\
 \hline
 Samsung\\
+\hline
+Lainnya\\
 \hline
+Oppo\\
+\hline
 Xiaomi\\
 \hline
 Oppo\\
+\hline
+Vivo\\
 \hline
 Samsung\\
 \hline
-Lainnya\\
+Samsung\\
 \hline
-Lainnya\\
+Apple\\
 \hline
-Xiaomi\\
+Samsung\\
 \hline
 Apple\\
 \hline
-Oppo\\
+Lainnya\\
 \hline
 Samsung\\
+\hline
+Oppo\\
 \hline
 Apple\\
 \hline
+Oppo\\
+\hline
 Lainnya\\
+\hline
+Samsung\\
 \hline
+Samsung\\
+\hline
 Vivo\\
 \hline
-Xiaomi\\
+Vivo\\
 \hline
 Xiaomi\\
 \hline
+Apple\\
+\hline
 Samsung\\
+\hline
+Xiaomi\\
 \hline
 Samsung\\
+\hline
+Xiaomi\\
+\hline
+Lainnya\\
+\hline
+Oppo\\
+\hline
+Apple\\
+\hline
+Lainnya\\
 \hline
 Apple\\
 \hline
+Oppo\\
+\hline
 Vivo\\
 \hline
-Samsung\\
+Lainnya\\
 \hline
 Samsung\\
 \hline
-Samsung\\
+Oppo\\
+\hline
+Lainnya\\
+\hline
+Vivo\\
+\hline
+Lainnya\\
+\hline
+Lainnya\\
 \hline
+Apple\\
+\hline
+Oppo\\
+\hline
+Oppo\\
+\hline
 Lainnya\\
+\hline
+Xiaomi\\
+\hline
+Vivo\\
 \hline
+Apple\\
+\hline
 Samsung\\
 \hline
 Samsung\\
 \hline
 Samsung\\
+\hline
+Oppo\\
 \hline
 Samsung\\
 \hline
+Lainnya\\
+\hline
 Samsung\\
 \hline
-Vivo\\
+Lainnya\\
 \hline
-Vivo\\
+Oppo\\
 \hline
-Samsung\\
+Lainnya\\
+\hline
+Lainnya\\
 \hline
 Lainnya\\
+\hline
+Oppo\\
+\hline
+Samsung\\
+\hline
+Oppo\\
 \hline
 Oppo\\
 \hline
-Xiaomi\\
+Apple\\
 \hline
 Samsung\\
-\hline
-Vivo\\
 \hline
-Oppo\\
+Lainnya\\
 \hline
 Vivo\\
-\hline
-Xiaomi\\
 \hline
 Xiaomi\\
-\hline
-Samsung\\
 \hline
 Samsung\\
 \hline
@@ -5195,88 +4960,66 @@ Xiaomi\\
 Oppo\\
 \hline
 Samsung\\
-\hline
-Xiaomi\\
-\hline
-Xiaomi\\
-\hline
-Lainnya\\
-\hline
-Apple\\
 \hline
 Samsung\\
+\hline
+Vivo\\
 \hline
 Samsung\\
 \hline
 Samsung\\
 \hline
 Oppo\\
-\hline
-Apple\\
 \hline
-Vivo\\
+Samsung\\
 \hline
 Samsung\\
 \hline
 Samsung\\
 \hline
-Vivo\\
+Apple\\
 \hline
-Oppo\\
+Samsung\\
 \hline
-Vivo\\
+Lainnya\\
 \hline
-Vivo\\
+Lainnya\\
 \hline
 Oppo\\
-\hline
-Samsung\\
 \hline
-Xiaomi\\
+Oppo\\
 \hline
 Samsung\\
-\hline
-Lainnya\\
-\hline
-Apple\\
 \hline
-Lainnya\\
+Oppo\\
 \hline
 Xiaomi\\
 \hline
 Samsung\\
-\hline
-Lainnya\\
-\hline
-Lainnya\\
 \hline
 Xiaomi\\
+\hline
+Vivo\\
 \hline
 Samsung\\
 \hline
 Apple\\
-\hline
-Samsung\\
 \hline
 Lainnya\\
 \hline
 Oppo\\
 \hline
-Lainnya\\
+Samsung\\
 \hline
-Lainnya\\
+Samsung\\
 \hline
 Lainnya\\
 \hline
 Xiaomi\\
-\hline
-Vivo\\
 \hline
-Oppo\\
+Lainnya\\
 \hline
 Oppo\\
-\hline
-Lainnya\\
 \hline
 Samsung\\
 \hline
@@ -5286,19 +5029,21 @@ Xiaomi\\
 \hline
 Apple\\
 \hline
-Xiaomi\\
+Lainnya\\
 \hline
-Samsung\\
+Lainnya\\
 \hline
 Lainnya\\
 \hline
-Apple\\
+Samsung\\
 \hline
 Samsung\\
 \hline
-Oppo\\
+Lainnya\\
 \hline
-Samsung\\
+Lainnya\\
+\hline
+Xiaomi\\
 \hline
 Samsung\\
 \hline
@@ -5306,69 +5051,73 @@ Samsung\\
 \hline
 Samsung\\
 \hline
-Xiaomi\\
+Lainnya\\
 \hline
 Oppo\\
 \hline
 Vivo\\
-\hline
-Xiaomi\\
 \hline
 Samsung\\
 \hline
-Vivo\\
+Lainnya\\
 \hline
 Samsung\\
 \hline
-Lainnya\\
+Oppo\\
+\hline
+Samsung\\
 \hline
 Apple\\
 \hline
 Lainnya\\
-\hline
-Samsung\\
 \hline
 Samsung\\
 \hline
-Samsung\\
+Oppo\\
 \hline
 Samsung\\
-\hline
-Oppo\\
 \hline
 Xiaomi\\
+\hline
+Vivo\\
 \hline
 Xiaomi\\
 \hline
-Vivo\\
+Lainnya\\
 \hline
-Apple\\
+Oppo\\
 \hline
 Oppo\\
 \hline
-Samsung\\
+Lainnya\\
+\hline
+Vivo\\
 \hline
 Samsung\\
+\hline
+Xiaomi\\
 \hline
 Lainnya\\
+\hline
+Apple\\
 \hline
 Vivo\\
+\hline
+Apple\\
 \hline
 Samsung\\
 \hline
 Xiaomi\\
 \hline
-Samsung\\
+Vivo\\
+\hline
+Apple\\
 \hline
 Apple\\
 \hline
 Samsung\\
 \hline
 Lainnya\\
-\hline
-Vivo\\
-\hline
-Xiaomi\\
 \hline
 Samsung\\
 \hline
@@ -5377,36 +5126,34 @@ Samsung\\
 Xiaomi\\
 \hline
 Samsung\\
-\hline
-Vivo\\
 \hline
 Oppo\\
-\hline
-Lainnya\\
 \hline
 Apple\\
-\hline
-Samsung\\
 \hline
 Samsung\\
 \hline
 Oppo\\
 \hline
-Oppo\\
+Lainnya\\
 \hline
 Samsung\\
 \hline
-Samsung\\
+Apple\\
 \hline
-Lainnya\\
+Apple\\
 \hline
 Samsung\\
 \hline
 Samsung\\
 \hline
 Oppo\\
+\hline
+Samsung\\
 \hline
 Samsung\\
+\hline
+Xiaomi\\
 \hline
 Lainnya\\
 \hline
@@ -5414,29 +5161,39 @@ Samsung\\
 \hline
 Xiaomi\\
 \hline
-Xiaomi\\
+Samsung\\
 \hline
-Xiaomi\\
+Samsung\\
 \hline
 Vivo\\
+\hline
+Lainnya\\
 \hline
 Samsung\\
 \hline
 Xiaomi\\
-\hline
-Apple\\
 \hline
 Samsung\\
+\hline
+Vivo\\
 \hline
 Samsung\\
+\hline
+Apple\\
 \hline
 Vivo\\
+\hline
+Samsung\\
 \hline
 Apple\\
+\hline
+Oppo\\
 \hline
 Xiaomi\\
 \hline
 Samsung\\
+\hline
+Lainnya\\
 \hline
 Vivo\\
 \hline
@@ -5444,199 +5201,187 @@ Vivo\\
 \hline
 Vivo\\
 \hline
-Apple\\
+Vivo\\
 \hline
 Samsung\\
 \hline
-Apple\\
+Oppo\\
 \hline
-Samsung\\
+Lainnya\\
 \hline
 Lainnya\\
 \hline
 Oppo\\
 \hline
-Xiaomi\\
+Samsung\\
 \hline
 Oppo\\
 \hline
 Xiaomi\\
-\hline
-Apple\\
 \hline
 Apple\\
-\hline
-Lainnya\\
 \hline
-Xiaomi\\
+Samsung\\
 \hline
 Xiaomi\\
-\hline
-Samsung\\
 \hline
-Samsung\\
+Lainnya\\
 \hline
 Oppo\\
-\hline
-Xiaomi\\
-\hline
-Apple\\
 \hline
 Apple\\
 \hline
 Lainnya\\
-\hline
-Apple\\
 \hline
-Samsung\\
+Lainnya\\
 \hline
 Oppo\\
 \hline
-Apple\\
+Samsung\\
 \hline
-Xiaomi\\
+Samsung\\
 \hline
-Lainnya\\
+Samsung\\
 \hline
-Lainnya\\
+Samsung\\
 \hline
 Lainnya\\
-\hline
-Vivo\\
 \hline
-Apple\\
+Xiaomi\\
 \hline
 Samsung\\
 \hline
 Samsung\\
 \hline
-Samsung\\
+Xiaomi\\
 \hline
-Samsung\\
+Lainnya\\
 \hline
-Oppo\\
+Vivo\\
+\hline
+Vivo\\
 \hline
 Oppo\\
 \hline
-Samsung\\
+Vivo\\
 \hline
-Apple\\
+Xiaomi\\
+\hline
+Xiaomi\\
+\hline
+Vivo\\
 \hline
 Vivo\\
 \hline
 Samsung\\
 \hline
-Xiaomi\\
+Lainnya\\
 \hline
-Samsung\\
+Lainnya\\
 \hline
 Xiaomi\\
 \hline
-Lainnya\\
+Xiaomi\\
 \hline
 Xiaomi\\
+\hline
+Oppo\\
+\hline
+Vivo\\
 \hline
 Lainnya\\
 \hline
 Vivo\\
 \hline
-Oppo\\
+Vivo\\
 \hline
-Lainnya\\
+Xiaomi\\
 \hline
-Oppo\\
+Vivo\\
 \hline
 Samsung\\
 \hline
 Samsung\\
+\hline
+Apple\\
 \hline
 Vivo\\
 \hline
-Oppo\\
+Samsung\\
 \hline
 Vivo\\
 \hline
-Lainnya\\
+Vivo\\
 \hline
-Oppo\\
+Vivo\\
 \hline
 Lainnya\\
 \hline
-Samsung\\
+Apple\\
 \hline
 Vivo\\
 \hline
-Vivo\\
+Xiaomi\\
 \hline
 Lainnya\\
-\hline
-Vivo\\
 \hline
-Vivo\\
+Apple\\
 \hline
-Samsung\\
+Apple\\
 \hline
 Vivo\\
 \hline
 Oppo\\
-\hline
-Samsung\\
 \hline
 Oppo\\
 \hline
-Lainnya\\
+Oppo\\
 \hline
 Xiaomi\\
 \hline
-Xiaomi\\
+Vivo\\
 \hline
 Vivo\\
 \hline
 Samsung\\
 \hline
-Oppo\\
+Xiaomi\\
 \hline
 Samsung\\
 \hline
-Apple\\
+Samsung\\
 \hline
 Samsung\\
 \hline
 Apple\\
-\hline
-Xiaomi\\
 \hline
-Vivo\\
+Oppo\\
 \hline
 Lainnya\\
-\hline
-Samsung\\
 \hline
 Lainnya\\
-\hline
-Vivo\\
 \hline
-Samsung\\
+Oppo\\
 \hline
-Vivo\\
+Lainnya\\
 \hline
 Samsung\\
 \hline
 Lainnya\\
 \hline
-Samsung\\
+Xiaomi\\
 \hline
-Samsung\\
+Apple\\
 \hline
-Oppo\\
+Xiaomi\\
 \hline
-Lainnya\\
+Samsung\\
 \hline
 Lainnya\\
 \hline
-Lainnya\\
+Oppo\\
 \hline
-Lainnya\\
+Samsung\\
 \hline
 Samsung\\
 \hline
@@ -5646,222 +5391,182 @@ Oppo\\
 \hline
 Samsung\\
 \hline
-Xiaomi\\
-\hline
 Vivo\\
-\hline
-Apple\\
 \hline
 Xiaomi\\
 \hline
 Samsung\\
 \hline
-Samsung\\
+Oppo\\
 \hline
-Xiaomi\\
+Vivo\\
 \hline
 Vivo\\
 \hline
-Oppo\\
+Vivo\\
 \hline
-Lainnya\\
+Apple\\
 \hline
 Vivo\\
 \hline
-Xiaomi\\
+Apple\\
 \hline
-Xiaomi\\
+Samsung\\
 \hline
 Samsung\\
 \hline
-Xiaomi\\
+Samsung\\
 \hline
-Lainnya\\
+Apple\\
 \hline
 Samsung\\
 \hline
 Samsung\\
 \hline
+Oppo\\
+\hline
 Vivo\\
 \hline
 Apple\\
 \hline
 Lainnya\\
 \hline
-Samsung\\
+Xiaomi\\
 \hline
-Oppo\\
+Samsung\\
 \hline
 Lainnya\\
-\hline
-Samsung\\
 \hline
 Samsung\\
 \hline
-Samsung\\
+Apple\\
 \hline
 Oppo\\
-\hline
-Vivo\\
 \hline
-Apple\\
-\hline
 Xiaomi\\
 \hline
 Oppo\\
-\hline
-Apple\\
 \hline
-Apple\\
+Xiaomi\\
 \hline
 Oppo\\
 \hline
-Samsung\\
+Vivo\\
 \hline
-Lainnya\\
+Apple\\
 \hline
-Xiaomi\\
+Apple\\
 \hline
 Lainnya\\
 \hline
 Xiaomi\\
 \hline
-Apple\\
-\hline
 Samsung\\
 \hline
-Lainnya\\
+Samsung\\
 \hline
-Lainnya\\
+Apple\\
 \hline
 Vivo\\
 \hline
 Vivo\\
-\hline
-Oppo\\
 \hline
-Samsung\\
-\hline
-Samsung\\
+Xiaomi\\
 \hline
 Vivo\\
 \hline
 Samsung\\
 \hline
+Oppo\\
+\hline
 Lainnya\\
 \hline
-Apple\\
+Oppo\\
 \hline
-Xiaomi\\
+Samsung\\
 \hline
-Xiaomi\\
+Apple\\
 \hline
 Lainnya\\
 \hline
 Xiaomi\\
 \hline
-Samsung\\
-\hline
-Apple\\
+Lainnya\\
 \hline
 Vivo\\
 \hline
-Samsung\\
-\hline
 Apple\\
 \hline
 Samsung\\
 \hline
-Lainnya\\
+Apple\\
 \hline
-Oppo\\
+Vivo\\
 \hline
 Xiaomi\\
 \hline
 Vivo\\
-\hline
-Oppo\\
 \hline
-Lainnya\\
+Xiaomi\\
 \hline
 Samsung\\
-\hline
-Lainnya\\
 \hline
-Vivo\\
-\hline
 Oppo\\
 \hline
 Samsung\\
 \hline
-Vivo\\
+Xiaomi\\
 \hline
-Vivo\\
+Oppo\\
 \hline
-Vivo\\
+Xiaomi\\
 \hline
 Samsung\\
 \hline
-Apple\\
+Oppo\\
 \hline
 Vivo\\
 \hline
-Lainnya\\
+Samsung\\
 \hline
 Xiaomi\\
 \hline
-Vivo\\
-\hline
-Vivo\\
+Samsung\\
 \hline
-Vivo\\
+Samsung\\
 \hline
-Oppo\\
+Xiaomi\\
 \hline
-Oppo\\
+Samsung\\
 \hline
 Oppo\\
 \hline
-Lainnya\\
+Vivo\\
 \hline
 Lainnya\\
 \hline
 Oppo\\
 \hline
-Samsung\\
-\hline
 Xiaomi\\
-\hline
-Vivo\\
 \hline
-Oppo\\
-\hline
 Samsung\\
 \hline
-Lainnya\\
+Vivo\\
 \hline
 Xiaomi\\
 \hline
 Samsung\\
 \hline
-Xiaomi\\
+Lainnya\\
 \hline
 Xiaomi\\
-\hline
-Samsung\\
 \hline
-Xiaomi\\
+Vivo\\
 \hline
-Xiaomi\\
+Oppo\\
 \hline
 Xiaomi\\
-\hline
-Lainnya\\
-\hline
-Lainnya\\
 \hline
-Lainnya\\
-\hline
 Xiaomi\\
 \hline
 Lainnya\\
@@ -5874,84 +5579,84 @@ Xiaomi\\
 \hline
 Samsung\\
 \hline
-Xiaomi\\
+Oppo\\
 \hline
 Vivo\\
 \hline
-Vivo\\
+Oppo\\
 \hline
-Samsung\\
+Xiaomi\\
 \hline
 Oppo\\
 \hline
-Samsung\\
+Apple\\
 \hline
-Vivo\\
+Lainnya\\
 \hline
-Oppo\\
+Samsung\\
 \hline
 Xiaomi\\
 \hline
-Vivo\\
+Samsung\\
 \hline
+Xiaomi\\
+\hline
 Oppo\\
 \hline
-Vivo\\
+Xiaomi\\
 \hline
-Samsung\\
+Apple\\
 \hline
 Samsung\\
 \hline
 Samsung\\
 \hline
-Oppo\\
+Apple\\
 \hline
 Samsung\\
 \hline
 Xiaomi\\
 \hline
-Lainnya\\
-\hline
-Apple\\
-\hline
-Xiaomi\\
-\hline
-Lainnya\\
-\hline
 Xiaomi\\
 \hline
 Oppo\\
 \hline
-Oppo\\
+Vivo\\
 \hline
 Vivo\\
 \hline
 Samsung\\
-\hline
-Xiaomi\\
 \hline
 Samsung\\
 \hline
-Lainnya\\
+Samsung\\
 \hline
-Oppo\\
+Xiaomi\\
 \hline
-Samsung\\
+Xiaomi\\
 \hline
-Oppo\\
+Vivo\\
 \hline
-Lainnya\\
+Apple\\
 \hline
 Samsung\\
+\hline
+Lainnya\\
 \hline
 Xiaomi\\
 \hline
+Apple\\
+\hline
+Vivo\\
+\hline
 Samsung\\
 \hline
 Oppo\\
 \hline
 Xiaomi\\
 \hline
+Vivo\\
+\hline
 Samsung\\
 \hline
 Lainnya\\
@@ -5960,103 +5665,73 @@ Oppo\\
 \hline
 Samsung\\
 \hline
-Samsung\\
+Apple\\
 \hline
-Oppo\\
+Vivo\\
 \hline
-Oppo\\
+Lainnya\\
 \hline
 Xiaomi\\
 \hline
-Apple\\
+Lainnya\\
 \hline
-Oppo\\
+Vivo\\
 \hline
-Samsung\\
+Xiaomi\\
 \hline
 Samsung\\
+\hline
+Lainnya\\
 \hline
 Samsung\\
 \hline
 Xiaomi\\
 \hline
-Lainnya\\
-\hline
 Oppo\\
 \hline
 Lainnya\\
-\hline
-Xiaomi\\
 \hline
 Oppo\\
 \hline
 Samsung\\
 \hline
-Samsung\\
-\hline
 Oppo\\
 \hline
-Oppo\\
+Xiaomi\\
 \hline
-Apple\\
+Vivo\\
 \hline
-Oppo\\
+Xiaomi\\
 \hline
 Oppo\\
 \hline
-Samsung\\
+Apple\\
 \hline
 Xiaomi\\
-\hline
-Samsung\\
 \hline
 Samsung\\
 \hline
 Lainnya\\
-\hline
-Oppo\\
-\hline
-Oppo\\
 \hline
 Samsung\\
 \hline
-Samsung\\
-\hline
-Samsung\\
-\hline
-Xiaomi\\
-\hline
-Oppo\\
-\hline
-Vivo\\
-\hline
 Lainnya\\
-\hline
-Samsung\\
 \hline
-Samsung\\
-\hline
 Lainnya\\
 \hline
-Samsung\\
+Apple\\
 \hline
 Samsung\\
 \hline
-Xiaomi\\
+Apple\\
 \hline
 Xiaomi\\
 \hline
 Samsung\\
-\hline
-Xiaomi\\
-\hline
-Xiaomi\\
-\hline
-Lainnya\\
 \hline
-Vivo\\
+Oppo\\
 \hline
-Vivo\\
+Oppo\\
 \hline
 Samsung\\
 \hline
@@ -6068,49 +5743,51 @@ Xiaomi\\
 \hline
 Vivo\\
 \hline
+Oppo\\
+\hline
 Lainnya\\
 \hline
 Samsung\\
 \hline
-Apple\\
-\hline
-Apple\\
+Xiaomi\\
 \hline
 Lainnya\\
 \hline
-Xiaomi\\
+Vivo\\
+\hline
+Samsung\\
 \hline
 Vivo\\
+\hline
+Oppo\\
 \hline
 Vivo\\
 \hline
-Lainnya\\
+Samsung\\
 \hline
 Apple\\
 \hline
-Xiaomi\\
+Lainnya\\
 \hline
 Oppo\\
-\hline
-Samsung\\
 \hline
 Samsung\\
 \hline
 Samsung\\
 \hline
-Samsung\\
+Oppo\\
 \hline
-Vivo\\
+Oppo\\
 \hline
 Samsung\\
 \hline
-Vivo\\
+Oppo\\
 \hline
-Apple\\
+Samsung\\
 \hline
-Xiaomi\\
+Samsung\\
 \hline
-Vivo\\
+Oppo\\
 \hline
 Samsung\\
 \hline
@@ -6122,25 +5799,31 @@ Samsung\\
 \hline
 Xiaomi\\
 \hline
-Samsung\\
+Oppo\\
 \hline
 Apple\\
+\hline
+Lainnya\\
 \hline
 Apple\\
 \hline
-Lainnya\\
+Vivo\\
+\hline
+Samsung\\
 \hline
 Vivo\\
+\hline
+Oppo\\
 \hline
 Apple\\
 \hline
-Samsung\\
+Xiaomi\\
 \hline
-Lainnya\\
+Apple\\
 \hline
 Vivo\\
 \hline
-Lainnya\\
+Xiaomi\\
 \hline
 Xiaomi\\
 \hline
@@ -6149,16 +5832,22 @@ Lainnya\\
 Samsung\\
 \hline
 Oppo\\
+\hline
+Lainnya\\
+\hline
+Lainnya\\
+\hline
+Xiaomi\\
 \hline
 Samsung\\
 \hline
 Vivo\\
 \hline
-Samsung\\
+Vivo\\
 \hline
 Xiaomi\\
 \hline
-Samsung\\
+Oppo\\
 \hline
 Samsung\\
 \hline
@@ -6166,11 +5855,19 @@ Apple\\
 \hline
 Xiaomi\\
 \hline
-Lainnya\\
+Apple\\
+\hline
+Oppo\\
 \hline
 Samsung\\
 \hline
-Apple\\
+Lainnya\\
+\hline
+Lainnya\\
+\hline
+Xiaomi\\
+\hline
+Samsung\\
 \hline
 Samsung\\
 \hline
@@ -6178,85 +5875,67 @@ Lainnya\\
 \hline
 Samsung\\
 \hline
-Vivo\\
+Samsung\\
 \hline
 Samsung\\
 \hline
-Lainnya\\
+Oppo\\
 \hline
 Apple\\
 \hline
-Oppo\\
+Samsung\\
 \hline
-Vivo\\
+Samsung\\
 \hline
 Xiaomi\\
 \hline
 Xiaomi\\
-\hline
-Samsung\\
-\hline
-Apple\\
-\hline
-Lainnya\\
 \hline
-Vivo\\
+Xiaomi\\
 \hline
 Lainnya\\
 \hline
 Samsung\\
-\hline
-Vivo\\
 \hline
 Xiaomi\\
 \hline
-Xiaomi\\
+Lainnya\\
 \hline
 Samsung\\
 \hline
 Apple\\
 \hline
-Samsung\\
+Xiaomi\\
 \hline
-Samsung\\
+Oppo\\
 \hline
-Apple\\
+Lainnya\\
 \hline
 Samsung\\
 \hline
 Samsung\\
-\hline
-Apple\\
-\hline
-Xiaomi\\
 \hline
-Xiaomi\\
+Samsung\\
 \hline
 Oppo\\
 \hline
-Samsung\\
+Lainnya\\
 \hline
 Apple\\
-\hline
-Xiaomi\\
 \hline
 Samsung\\
 \hline
 Xiaomi\\
-\hline
-Vivo\\
-\hline
-Oppo\\
 \hline
 Samsung\\
 \hline
 Samsung\\
 \hline
-Xiaomi\\
+Lainnya\\
 \hline
 Samsung\\
 \hline
-Oppo\\
+Xiaomi\\
 \hline
 Xiaomi\\
 \hline
@@ -6264,57 +5943,61 @@ Samsung\\
 \hline
 Vivo\\
 \hline
-Lainnya\\
+Xiaomi\\
+\hline
+Oppo\\
 \hline
 Samsung\\
 \hline
-Vivo\\
+Lainnya\\
 \hline
 Vivo\\
 \hline
 Samsung\\
 \hline
-Apple\\
+Vivo\\
+\hline
+Xiaomi\\
 \hline
 Samsung\\
 \hline
-Xiaomi\\
+Samsung\\
 \hline
 Oppo\\
 \hline
-Lainnya\\
+Vivo\\
 \hline
 Xiaomi\\
 \hline
-Samsung\\
+Lainnya\\
 \hline
 Samsung\\
-\hline
-Oppo\\
 \hline
-Lainnya\\
+Xiaomi\\
 \hline
 Samsung\\
 \hline
-Oppo\\
+Xiaomi\\
 \hline
-Samsung\\
+Xiaomi\\
 \hline
 Oppo\\
 \hline
 Samsung\\
 \hline
-Lainnya\\
+Samsung\\
 \hline
 Samsung\\
 \hline
-Lainnya\\
+Xiaomi\\
 \hline
-Samsung\\
+Oppo\\
+\hline
+Vivo\\
 \hline
 Oppo\\
 \hline
-Samsung\\
+Xiaomi\\
 \hline
 Samsung\\
 \hline
@@ -6322,73 +6005,81 @@ Samsung\\
 \hline
 Lainnya\\
 \hline
-Samsung\\
+Xiaomi\\
 \hline
 Samsung\\
 \hline
-Xiaomi\\
+Samsung\\
 \hline
 Samsung\\
 \hline
 Lainnya\\
-\hline
-Xiaomi\\
 \hline
-Samsung\\
+Apple\\
 \hline
 Oppo\\
 \hline
-Lainnya\\
+Oppo\\
 \hline
 Oppo\\
+\hline
+Samsung\\
 \hline
 Xiaomi\\
 \hline
-Samsung\\
+Xiaomi\\
+\hline
+Oppo\\
 \hline
 Samsung\\
 \hline
-Apple\\
+Xiaomi\\
 \hline
-Vivo\\
+Samsung\\
 \hline
-Lainnya\\
+Samsung\\
 \hline
-Lainnya\\
+Samsung\\
 \hline
-Xiaomi\\
+Lainnya\\
 \hline
 Samsung\\
 \hline
-Lainnya\\
+Vivo\\
+\hline
+Xiaomi\\
 \hline
 Xiaomi\\
 \hline
 Apple\\
+\hline
+Vivo\\
 \hline
 Xiaomi\\
 \hline
 Samsung\\
 \hline
 Lainnya\\
+\hline
+Xiaomi\\
 \hline
 Samsung\\
 \hline
 Xiaomi\\
 \hline
-Xiaomi\\
+Samsung\\
 \hline
-Xiaomi\\
+Vivo\\
 \hline
-Oppo\\
+Samsung\\
 \hline
-Xiaomi\\
+Lainnya\\
+\hline
+Samsung\\
 \hline
 Lainnya\\
 \hline
 Vivo\\
-\hline
-Samsung\\
 \hline
 Lainnya\\
 \hline
@@ -6398,99 +6089,91 @@ Oppo\\
 \hline
 Samsung\\
 \hline
-Vivo\\
+Oppo\\
 \hline
 Lainnya\\
-\hline
-Vivo\\
 \hline
 Samsung\\
 \hline
-Xiaomi\\
+Lainnya\\
 \hline
 Samsung\\
 \hline
-Oppo\\
+Samsung\\
 \hline
 Lainnya\\
 \hline
-Xiaomi\\
+Samsung\\
 \hline
-Apple\\
+Samsung\\
 \hline
-Xiaomi\\
+Lainnya\\
 \hline
-Apple\\
+Xiaomi\\
 \hline
-Oppo\\
+Lainnya\\
 \hline
-Oppo\\
+Samsung\\
 \hline
 Vivo\\
-\hline
-Xiaomi\\
-\hline
-Samsung\\
 \hline
 Samsung\\
 \hline
-Samsung\\
+Xiaomi\\
 \hline
-Oppo\\
+Xiaomi\\
 \hline
-Apple\\
+Xiaomi\\
 \hline
-Apple\\
+Lainnya\\
 \hline
 Samsung\\
 \hline
-Samsung\\
+Lainnya\\
 \hline
-Samsung\\
+Xiaomi\\
 \hline
 Apple\\
 \hline
-Samsung\\
+Lainnya\\
 \hline
-Oppo\\
+Lainnya\\
 \hline
-Vivo\\
+Samsung\\
 \hline
 Xiaomi\\
-\hline
-Lainnya\\
 \hline
 Vivo\\
 \hline
 Lainnya\\
 \hline
 Samsung\\
-\hline
-Vivo\\
-\hline
-Oppo\\
 \hline
 Samsung\\
 \hline
 Xiaomi\\
-\hline
-Oppo\\
 \hline
-Oppo\\
+Xiaomi\\
 \hline
 Apple\\
-\hline
-Samsung\\
 \hline
-Samsung\\
+Xiaomi\\
 \hline
 Oppo\\
 \hline
 Xiaomi\\
+\hline
+Samsung\\
+\hline
+Oppo\\
 \hline
 Xiaomi\\
 \hline
 Samsung\\
+\hline
+Oppo\\
+\hline
+Xiaomi\\
 \hline
 Samsung\\
 \hline
@@ -6498,17 +6181,18 @@ Samsung\\
 \hline
 Lainnya\\
 \hline
-Lainnya\\
+Oppo\\
+\hline
+Oppo\\
 \hline
 Samsung\\
 \hline
-Vivo\\
+Xiaomi\\
 \hline
 \end{tabular}
 \end{table}
 
-\hypertarget{google-sheet}{%
-\subsection{Google sheet}\label{google-sheet}}
+\subsection{Google sheet}\label{google-sheet}
 
 Step-by-step kalau pakai google sheet:
 
@@ -6528,8 +6212,7 @@ Step-by-step kalau pakai google sheet:
   Pilih \texttt{values} lalu klik \texttt{brand}
 \end{enumerate}
 
-\hypertarget{frekuensi-relatif}{%
-\subsection{Frekuensi relatif}\label{frekuensi-relatif}}
+\subsection{Frekuensi relatif}\label{frekuensi-relatif}
 
 \begin{itemize}
 \item
@@ -6542,8 +6225,7 @@ Step-by-step kalau pakai google sheet:
   tersebut dibagi dengan total observasi.
 \end{itemize}
 
-\hypertarget{google-sheet-1}{%
-\subsection{Google sheet}\label{google-sheet-1}}
+\subsection{Google sheet}\label{google-sheet-1}
 
 \begin{longtable}[]{@{}lll@{}}
 \toprule\noalign{}
@@ -6567,8 +6249,7 @@ Total & 1000 & 100\% \\
   data ini dapat divisualisasikan dengan \textbf{histogram}.
 \end{itemize}
 
-\hypertarget{distribusi-frekuensi-1}{%
-\subsection{Distribusi frekuensi}\label{distribusi-frekuensi-1}}
+\subsection{Distribusi frekuensi}\label{distribusi-frekuensi-1}
 
 \begin{itemize}
 \item
@@ -6580,14 +6261,12 @@ Total & 1000 & 100\% \\
   Data numerik juga memiliki berbagai jenis indikator.
 \end{itemize}
 
-\hypertarget{contoh-data}{%
-\subsection{Contoh data}\label{contoh-data}}
+\subsection{Contoh data}\label{contoh-data}
 
 Data tersebut adalah nilai UTS semester sebelumnya. Dapat didownload di
 \href{https://docs.google.com/spreadsheets/d/e/2PACX-1vSdLsm-5nIFgcspOncjaLwwKX1vmGbTOvhkYVOFWdHS3h15EWmHcXDSm562eyR4MiftmPJiPom7X2RM/pubhtml}{sini}
 
-\hypertarget{distribusi-frekueksi}{%
-\subsection{Distribusi frekueksi}\label{distribusi-frekueksi}}
+\subsection{Distribusi frekueksi}\label{distribusi-frekueksi}
 
 \begin{itemize}
 \item
@@ -6602,8 +6281,7 @@ Data tersebut adalah nilai UTS semester sebelumnya. Dapat didownload di
   yang arbitrari.
 \end{itemize}
 
-\hypertarget{google-sheet-2}{%
-\subsection{Google sheet}\label{google-sheet-2}}
+\subsection{Google sheet}\label{google-sheet-2}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -6616,9 +6294,8 @@ Data tersebut adalah nilai UTS semester sebelumnya. Dapat didownload di
   Isi \texttt{class} dengan batas atas dari kelas anda.
 \end{enumerate}
 
-\hypertarget{banyaknya-kelas-yang-ideal}{%
 \subsection{Banyaknya kelas yang
-ideal}\label{banyaknya-kelas-yang-ideal}}
+ideal}\label{banyaknya-kelas-yang-ideal}
 
 \begin{itemize}
 \item
@@ -6633,8 +6310,7 @@ ideal}\label{banyaknya-kelas-yang-ideal}}
   Membuat umlah kelas dan interval kelas membutuhkan pengalaman.
 \end{itemize}
 
-\hypertarget{rumus-jumlah-kelas}{%
-\subsection{Rumus jumlah kelas}\label{rumus-jumlah-kelas}}
+\subsection{Rumus jumlah kelas}\label{rumus-jumlah-kelas}
 
 \begin{itemize}
 \tightlist
@@ -6656,8 +6332,7 @@ di mana:
   gunakan log base 10.
 \end{itemize}
 
-\hypertarget{rumus-interval-kelas}{%
-\subsection{Rumus interval kelas}\label{rumus-interval-kelas}}
+\subsection{Rumus interval kelas}\label{rumus-interval-kelas}
 
 \begin{itemize}
 \tightlist
@@ -6677,13 +6352,11 @@ di mana:
   \(c\) adalah lebarnya interval.
 \end{itemize}
 
-\hypertarget{exercise}{%
-\subsection{Exercise}\label{exercise}}
+\subsection{Exercise}\label{exercise}
 
 Membuat tabel distribusi frekuensi absolut dan frekuensi relatif.
 
-\hypertarget{normal-distribution}{%
-\subsection{Normal distribution}\label{normal-distribution}}
+\subsection{Normal distribution}\label{normal-distribution}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -6697,16 +6370,9 @@ Membuat tabel distribusi frekuensi absolut dan frekuensi relatif.
 \end{Highlighting}
 \end{Shaded}
 
-\begin{figure}[H]
+\includegraphics{index_files/figure-pdf/unnamed-chunk-16-1.pdf}
 
-{\centering \includegraphics{index_files/figure-pdf/unnamed-chunk-16-1.pdf}
-
-}
-
-\end{figure}
-
-\hypertarget{normal-distribution-1}{%
-\subsection{Normal distribution}\label{normal-distribution-1}}
+\subsection{Normal distribution}\label{normal-distribution-1}
 
 \begin{itemize}
 \item
@@ -6720,8 +6386,7 @@ Membuat tabel distribusi frekuensi absolut dan frekuensi relatif.
   rata-rata, makin sedikit observasi yang anda temui.
 \end{itemize}
 
-\hypertarget{pengukuran-gejala-pusat}{%
-\subsection{Pengukuran gejala pusat}\label{pengukuran-gejala-pusat}}
+\subsection{Pengukuran gejala pusat}\label{pengukuran-gejala-pusat}
 
 \begin{itemize}
 \item
@@ -6739,8 +6404,7 @@ Membuat tabel distribusi frekuensi absolut dan frekuensi relatif.
   Mean = rata-rata atau \(\mu=\frac{\sum_iX_i}{n}\)
 \end{itemize}
 
-\hypertarget{ukuran-sebaran}{%
-\subsection{Ukuran sebaran}\label{ukuran-sebaran}}
+\subsection{Ukuran sebaran}\label{ukuran-sebaran}
 
 \begin{itemize}
 \item
@@ -6756,8 +6420,7 @@ Membuat tabel distribusi frekuensi absolut dan frekuensi relatif.
   terkecil.
 \end{itemize}
 
-\hypertarget{exercise-1}{%
-\subsection{Exercise}\label{exercise-1}}
+\subsection{Exercise}\label{exercise-1}
 
 \begin{itemize}
 \item
@@ -6768,8 +6431,7 @@ Membuat tabel distribusi frekuensi absolut dan frekuensi relatif.
   deskriptif}.
 \end{itemize}
 
-\hypertarget{mingdep-2}{%
-\subsection{Mingdep}\label{mingdep-2}}
+\subsection{Mingdep}\label{mingdep-2}
 
 \begin{itemize}
 \tightlist
@@ -6777,11 +6439,9 @@ Membuat tabel distribusi frekuensi absolut dan frekuensi relatif.
   probability atau more on central tendency
 \end{itemize}
 
-\hypertarget{pertemuan-10}{%
-\section{Pertemuan 10}\label{pertemuan-10}}
+\section{Pertemuan 10}\label{pertemuan-10}
 
-\hypertarget{minggu-ini-1}{%
-\subsection{Minggu ini}\label{minggu-ini-1}}
+\subsection{Minggu ini}\label{minggu-ini-1}
 
 \begin{itemize}
 \item
@@ -6792,8 +6452,7 @@ Membuat tabel distribusi frekuensi absolut dan frekuensi relatif.
   Menebak probabilitas
 \end{itemize}
 
-\hypertarget{pdf-normal-distribution}{%
-\subsection{PDF normal distribution}\label{pdf-normal-distribution}}
+\subsection{PDF normal distribution}\label{pdf-normal-distribution}
 
 \[
 f(x)=\frac{1}{\sigma \sqrt{2\pi}}e^{-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^2}
@@ -6809,10 +6468,9 @@ f(x)=\frac{1}{\sigma \sqrt{2\pi}}e^{-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right
   pusat dan sebaran.
 \end{itemize}
 
-\hypertarget{kurva-dan-parameter}{%
-\subsection{Kurva dan parameter}\label{kurva-dan-parameter}}
+\subsection{Kurva dan parameter}\label{kurva-dan-parameter}
 
-\begin{figure}
+\begin{figure}[H]
 
 {\centering \includegraphics{normal.png}
 
@@ -6820,10 +6478,9 @@ f(x)=\frac{1}{\sigma \sqrt{2\pi}}e^{-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right
 
 \caption{sumber:wikipedia}
 
-\end{figure}
+\end{figure}%
 
-\hypertarget{probabilitas}{%
-\subsection{Probabilitas}\label{probabilitas}}
+\subsection{Probabilitas}\label{probabilitas}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -6901,16 +6558,9 @@ Scale for x is already present.
 Adding another scale for x, which will replace the existing scale.
 \end{verbatim}
 
-\begin{figure}[H]
+\includegraphics{index_files/figure-pdf/unnamed-chunk-17-1.pdf}
 
-{\centering \includegraphics{index_files/figure-pdf/unnamed-chunk-17-1.pdf}
-
-}
-
-\end{figure}
-
-\hypertarget{z-score}{%
-\subsection{Z-score}\label{z-score}}
+\subsection{Z-score}\label{z-score}
 
 \begin{itemize}
 \item
@@ -6930,8 +6580,7 @@ Adding another scale for x, which will replace the existing scale.
   \end{itemize}
 \end{itemize}
 
-\hypertarget{z-score-1}{%
-\subsection{Z-score}\label{z-score-1}}
+\subsection{Z-score}\label{z-score-1}
 
 \[
 z=\frac{x-\mu}{\sigma}
@@ -6984,8 +6633,7 @@ BPP & 500 & 450 & 350 & 600 & 550 & 550 & 600 & 450 & 500 & 450 \\
 
 \(\mu=500 \ ; \ \sigma=74,16\)
 
-\hypertarget{z-score-2}{%
-\subsection{Z-score}\label{z-score-2}}
+\subsection{Z-score}\label{z-score-2}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.0909}}
@@ -7032,8 +6680,7 @@ BPP & 500 & 450 & 350 & 600 & 550 & 550 & 600 & 450 & 500 & 450 \\
 -0.67 \\
 \end{longtable}
 
-\hypertarget{z-score-3}{%
-\subsection{Z-score}\label{z-score-3}}
+\subsection{Z-score}\label{z-score-3}
 
 \begin{itemize}
 \item
@@ -7050,17 +6697,15 @@ BPP & 500 & 450 & 350 & 600 & 550 & 550 & 600 & 450 & 500 & 450 \\
   untuk setiap data poin.
 \end{itemize}
 
-\hypertarget{tabel-pdf-distribusi-normal}{%
 \subsection{Tabel PDF Distribusi
-normal}\label{tabel-pdf-distribusi-normal}}
+normal}\label{tabel-pdf-distribusi-normal}
 
 Bisa
-\href{https://www.google.com/search?client=firefox-b-d\&q=z+score+table}{Google}
+\href{https://www.google.com/search?client=firefox-b-d&q=z+score+table}{Google}
 atau download di
 \href{https://drive.google.com/file/d/1ywI58hnM8p0ZyFV7B9rCOosk72iCGguq/view?usp=sharing}{sini}
 
-\hypertarget{contoh-1-1}{%
-\subsection{Contoh 1}\label{contoh-1-1}}
+\subsection{Contoh 1}\label{contoh-1-1}
 
 \begin{itemize}
 \item
@@ -7073,8 +6718,7 @@ atau download di
   Lihat di tabel, \(P(Z<2,7)=0,9965\)
 \end{itemize}
 
-\hypertarget{contoh-2-1}{%
-\subsection{Contoh 2}\label{contoh-2-1}}
+\subsection{Contoh 2}\label{contoh-2-1}
 
 \begin{itemize}
 \item
@@ -7087,8 +6731,7 @@ atau download di
   \(P(Z_X>-1,348)=1-0,0885=0.9115\)
 \end{itemize}
 
-\hypertarget{contoh-3-1}{%
-\subsection{Contoh 3}\label{contoh-3-1}}
+\subsection{Contoh 3}\label{contoh-3-1}
 
 \begin{itemize}
 \item
@@ -7101,8 +6744,7 @@ atau download di
   Intinya ini pertanyaan \(P(X<2)\). Bisa jawabnya?
 \end{itemize}
 
-\hypertarget{contoh-4-1}{%
-\subsection{Contoh 4}\label{contoh-4-1}}
+\subsection{Contoh 4}\label{contoh-4-1}
 
 \begin{itemize}
 \item
@@ -7113,8 +6755,7 @@ atau download di
   Intinya ini pertanyaan \(P(5<X<8)\). Bisa jawabnya?
 \end{itemize}
 
-\hypertarget{contoh-5-1}{%
-\subsection{Contoh 5}\label{contoh-5-1}}
+\subsection{Contoh 5}\label{contoh-5-1}
 
 \begin{itemize}
 \item
@@ -7129,8 +6770,7 @@ atau download di
   \(2,33=\frac{X-6}{8} \rightarrow X=(2,33 \times 8 ) + 6 = 24,64\) Juta
 \end{itemize}
 
-\hypertarget{penutup}{%
-\subsection{Penutup}\label{penutup}}
+\subsection{Penutup}\label{penutup}
 
 \begin{itemize}
 \item
@@ -7147,8 +6787,7 @@ atau download di
   Tapi ingat selalu bahwa Statistika = tebak-tebakan!
 \end{itemize}
 
-\hypertarget{penutup-1}{%
-\subsection{Penutup}\label{penutup-1}}
+\subsection{Penutup}\label{penutup-1}
 
 \begin{itemize}
 \item
@@ -7163,8 +6802,7 @@ atau download di
   data dengan \(\sigma\) kecil vs \(\sigma\) besar?
 \end{itemize}
 
-\hypertarget{disclaimer}{%
-\subsection{DISCLAIMER}\label{disclaimer}}
+\subsection{DISCLAIMER}\label{disclaimer}
 
 \begin{itemize}
 \item
@@ -7183,11 +6821,9 @@ atau download di
   Pastikan anda paham hal ini.
 \end{itemize}
 
-\hypertarget{pertemuan-11}{%
-\section{Pertemuan 11}\label{pertemuan-11}}
+\section{Pertemuan 11}\label{pertemuan-11}
 
-\hypertarget{hari-ini-1}{%
-\subsection{Hari ini}\label{hari-ini-1}}
+\subsection{Hari ini}\label{hari-ini-1}
 
 \begin{itemize}
 \item
@@ -7200,9 +6836,8 @@ atau download di
   Pendahuluan uji hipotesis
 \end{itemize}
 
-\hypertarget{konsep-rentang-kepercayaan}{%
 \subsection{Konsep rentang
-kepercayaan}\label{konsep-rentang-kepercayaan}}
+kepercayaan}\label{konsep-rentang-kepercayaan}
 
 \begin{itemize}
 \item
@@ -7218,10 +6853,9 @@ kepercayaan}\label{konsep-rentang-kepercayaan}}
   keyakinan \(1-\alpha\)
 \end{itemize}
 
-\hypertarget{rentang-kepercayaan}{%
-\subsection{Rentang kepercayaan}\label{rentang-kepercayaan}}
+\subsection{Rentang kepercayaan}\label{rentang-kepercayaan}
 
-\begin{figure}
+\begin{figure}[H]
 
 {\centering \includegraphics{pvalue1.gif}
 
@@ -7229,9 +6863,8 @@ kepercayaan}\label{konsep-rentang-kepercayaan}}
 
 \caption{Two-tailed}
 
-\end{figure}
-
-\begin{figure}
+\end{figure}%%
+\begin{figure}[H]
 
 {\centering \includegraphics{pvalue2.gif}
 
@@ -7239,15 +6872,14 @@ kepercayaan}\label{konsep-rentang-kepercayaan}}
 
 \caption{One-tailed}
 
-\end{figure}
+\end{figure}%
 
 Gambar biru = \(\alpha\)
 
 Gambar diambil dari
 \href{https://stats.oarc.ucla.edu/other/mult-pkg/faq/general/faq-what-are-the-differences-between-one-tailed-and-two-tailed-tests/}{UCLA}
 
-\hypertarget{tingkat-kepercayaan}{%
-\subsection{Tingkat kepercayaan}\label{tingkat-kepercayaan}}
+\subsection{Tingkat kepercayaan}\label{tingkat-kepercayaan}
 
 \begin{itemize}
 \item
@@ -7266,8 +6898,7 @@ Gambar diambil dari
   Makin besar rentangnya, makin ga guna tebakannya (inefisien),
 \end{itemize}
 
-\hypertarget{rentang-kepercayaan-1}{%
-\subsection{Rentang kepercayaan}\label{rentang-kepercayaan-1}}
+\subsection{Rentang kepercayaan}\label{rentang-kepercayaan-1}
 
 \begin{itemize}
 \tightlist
@@ -7292,8 +6923,7 @@ atau
   kepercayaan \(1-\alpha\)
 \end{itemize}
 
-\hypertarget{contoh-soal-1-1}{%
-\subsection{Contoh soal 1}\label{contoh-soal-1-1}}
+\subsection{Contoh soal 1}\label{contoh-soal-1-1}
 
 \begin{itemize}
 \item
@@ -7309,16 +6939,14 @@ atau
   Rentang rata-rata = \(\left[490,2;509,8\right]\)
 \end{itemize}
 
-\hypertarget{tabel-z}{%
-\subsection{Tabel Z}\label{tabel-z}}
+\subsection{Tabel Z}\label{tabel-z}
 
 Bisa
-\href{https://www.google.com/search?client=firefox-b-d\&q=z+score+table}{Google}
+\href{https://www.google.com/search?client=firefox-b-d&q=z+score+table}{Google}
 atau download di
 \href{https://drive.google.com/file/d/1ywI58hnM8p0ZyFV7B9rCOosk72iCGguq/view?usp=sharing}{sini}
 
-\hypertarget{distrubusi-t}{%
-\subsection{distrubusi t}\label{distrubusi-t}}
+\subsection{distrubusi t}\label{distrubusi-t}
 
 \begin{itemize}
 \item
@@ -7334,8 +6962,7 @@ atau download di
   = sampel cenderung lebih mungkin dapat di sekitar rata-rata.
 \end{itemize}
 
-\hypertarget{distribusi-t}{%
-\subsection{distribusi t}\label{distribusi-t}}
+\subsection{distribusi t}\label{distribusi-t}
 
 \begin{itemize}
 \item
@@ -7355,8 +6982,7 @@ atau download di
   Distribusi tersebut adalah distribusi t.
 \end{itemize}
 
-\hypertarget{t-table}{%
-\subsection{t-table}\label{t-table}}
+\subsection{t-table}\label{t-table}
 
 Download
 \href{https://1drv.ms/b/s!AjelszXKKcmsifhDr8cYIgeuMVSIDw?e=ioiSHv}{t-table
@@ -7364,8 +6990,7 @@ di sini}
 
 \(df=n-1\)
 
-\hypertarget{contoh-2-2}{%
-\subsection{Contoh 2}\label{contoh-2-2}}
+\subsection{Contoh 2}\label{contoh-2-2}
 
 \begin{itemize}
 \item
@@ -7381,8 +7006,7 @@ di sini}
   Rentang rata-rata = \(\left[471,02;528,98\right]\)
 \end{itemize}
 
-\hypertarget{student-t}{%
-\subsection{Student t}\label{student-t}}
+\subsection{Student t}\label{student-t}
 
 \begin{itemize}
 \item
@@ -7400,8 +7024,7 @@ di sini}
   penting \textbf{Representatif}.
 \end{itemize}
 
-\hypertarget{uji-hipotesis}{%
-\subsection{Uji Hipotesis}\label{uji-hipotesis}}
+\subsection{Uji Hipotesis}\label{uji-hipotesis}
 
 \begin{itemize}
 \item
@@ -7414,8 +7037,7 @@ di sini}
   Kita masih menggunakan asumsi distribusi normal.
 \end{itemize}
 
-\hypertarget{hipotesis}{%
-\subsection{Hipotesis}\label{hipotesis}}
+\subsection{Hipotesis}\label{hipotesis}
 
 \begin{itemize}
 \item
@@ -7430,8 +7052,7 @@ di sini}
   Supplier A dan supplier B, manakah yang produknya lebih baik?
 \end{itemize}
 
-\hypertarget{uji-hipotesis-1}{%
-\subsection{Uji hipotesis}\label{uji-hipotesis-1}}
+\subsection{Uji hipotesis}\label{uji-hipotesis-1}
 
 \begin{itemize}
 \tightlist
@@ -7452,8 +7073,7 @@ H_1: \mu_A \leq \mu_B
 \] - \(H_0\) disebut juga hipotesis nol, sementara \(H_1\) disebut juga
 hipotesis alternatif.
 
-\hypertarget{uji-hipotesis-2}{%
-\subsection{Uji Hipotesis}\label{uji-hipotesis-2}}
+\subsection{Uji Hipotesis}\label{uji-hipotesis-2}
 
 \begin{itemize}
 \item
@@ -7467,8 +7087,7 @@ hipotesis alternatif.
   Kita menggunakan nilai tengah (\(\mu\)) untuk menguji \(H_0\).
 \end{itemize}
 
-\hypertarget{arah-uji}{%
-\subsection{Arah uji}\label{arah-uji}}
+\subsection{Arah uji}\label{arah-uji}
 
 \begin{itemize}
 \item
@@ -7496,8 +7115,7 @@ hipotesis alternatif.
   \end{itemize}
 \end{itemize}
 
-\hypertarget{dua-jenis-eror}{%
-\subsection{Dua jenis eror}\label{dua-jenis-eror}}
+\subsection{Dua jenis eror}\label{dua-jenis-eror}
 
 \begin{longtable}[]{@{}lll@{}}
 \toprule\noalign{}
@@ -7517,8 +7135,7 @@ Salah & Type II error & tidak salah \\
   Type II error (\(\beta\)): aslinya salah tapi kita terima.
 \end{itemize}
 
-\hypertarget{prosedur-uji-hipotesis}{%
-\subsection{Prosedur Uji hipotesis}\label{prosedur-uji-hipotesis}}
+\subsection{Prosedur Uji hipotesis}\label{prosedur-uji-hipotesis}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -7535,11 +7152,9 @@ Salah & Type II error & tidak salah \\
   Membuat kesimpulan.
 \end{enumerate}
 
-\hypertarget{pertemuan-12}{%
-\section{Pertemuan 12}\label{pertemuan-12}}
+\section{Pertemuan 12}\label{pertemuan-12}
 
-\hypertarget{hari-ini-2}{%
-\subsection{Hari ini}\label{hari-ini-2}}
+\subsection{Hari ini}\label{hari-ini-2}
 
 \begin{itemize}
 \tightlist
@@ -7547,8 +7162,7 @@ Salah & Type II error & tidak salah \\
   Uji hipotesis
 \end{itemize}
 
-\hypertarget{langkah-uji-hipotesis}{%
-\subsection{Langkah Uji Hipotesis}\label{langkah-uji-hipotesis}}
+\subsection{Langkah Uji Hipotesis}\label{langkah-uji-hipotesis}
 
 \begin{itemize}
 \item
@@ -7579,8 +7193,7 @@ Salah & Type II error & tidak salah \\
   \end{itemize}
 \end{itemize}
 
-\hypertarget{uji-deskriptif}{%
-\subsection{Uji deskriptif}\label{uji-deskriptif}}
+\subsection{Uji deskriptif}\label{uji-deskriptif}
 
 \begin{itemize}
 \item
@@ -7596,8 +7209,7 @@ H_0: \mu = \mu_0
 H_1: \mu \neq \mu_0
 \]
 
-\hypertarget{uji-deskriptif-1}{%
-\subsection{Uji deskriptif}\label{uji-deskriptif-1}}
+\subsection{Uji deskriptif}\label{uji-deskriptif-1}
 
 \begin{itemize}
 \tightlist
@@ -7610,7 +7222,7 @@ H_1: \mu \neq \mu_0
 t=\frac{\bar{X}-\mu_0}{\frac{S}{\sqrt{n}}}
 \]
 
-\begin{figure}
+\begin{figure}[H]
 
 {\centering \includegraphics{pvalue1.gif}
 
@@ -7618,7 +7230,7 @@ t=\frac{\bar{X}-\mu_0}{\frac{S}{\sqrt{n}}}
 
 \caption{alpha (arsir biru tua) disebut juga daerah penolakan}
 
-\end{figure}
+\end{figure}%
 
 \begin{itemize}
 \tightlist
@@ -7627,8 +7239,7 @@ t=\frac{\bar{X}-\mu_0}{\frac{S}{\sqrt{n}}}
   ada di daerah penolakan, maka tolak \(H_0\).
 \end{itemize}
 
-\hypertarget{soal-1}{%
-\subsection{Soal 1}\label{soal-1}}
+\subsection{Soal 1}\label{soal-1}
 
 \begin{itemize}
 \item
@@ -7644,11 +7255,10 @@ t=\frac{\bar{X}-\mu_0}{\frac{S}{\sqrt{n}}}
   \(H_1: \mu \neq 500\)
 \end{itemize}
 
-\hypertarget{data}{%
-\subsection{Data}\label{data}}
+\subsection{Data}\label{data}
 
 Bisa didownload di
-\href{https://docs.google.com/spreadsheets/d/1aE74llk9RkTuL2nLsp6WfvK0faz3DGKv/edit?usp=drive_link\&ouid=117760147588370390523\&rtpof=true\&sd=true}{sini}
+\href{https://docs.google.com/spreadsheets/d/1aE74llk9RkTuL2nLsp6WfvK0faz3DGKv/edit?usp=drive_link&ouid=117760147588370390523&rtpof=true&sd=true}{sini}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -7706,8 +7316,7 @@ nilai\\
 \hline
 \end{tabular}
 
-\hypertarget{soal-1-1}{%
-\subsection{Soal 1}\label{soal-1-1}}
+\subsection{Soal 1}\label{soal-1-1}
 
 \begin{itemize}
 \tightlist
@@ -7729,8 +7338,7 @@ t_0=\frac{482,62-500}{28,62/\sqrt{20}}=-2,72
   tidak sama dengan 500. Mungkin kurikulum perlu diubah.
 \end{itemize}
 
-\hypertarget{soal-2}{%
-\subsection{Soal 2}\label{soal-2}}
+\subsection{Soal 2}\label{soal-2}
 
 \begin{itemize}
 \tightlist
@@ -7761,8 +7369,7 @@ t_0=\frac{482,62-500}{28,62/\sqrt{20}}=-2,72
   atau tidak.
 \end{itemize}
 
-\hypertarget{one-tail-kiri}{%
-\subsection{One-tail kiri}\label{one-tail-kiri}}
+\subsection{One-tail kiri}\label{one-tail-kiri}
 
 \[
 H_0: \mu \geq 100
@@ -7782,8 +7389,7 @@ H_1: \mu < 100
   Artinya anto akan mengambil lele PT.A.
 \end{itemize}
 
-\hypertarget{soal-3}{%
-\subsection{Soal 3}\label{soal-3}}
+\subsection{Soal 3}\label{soal-3}
 
 \begin{itemize}
 \tightlist
@@ -7801,8 +7407,7 @@ H_0: \mu\leq15
 H_1: \mu>15
 \]
 
-\hypertarget{one-tail}{%
-\subsection{One-tail}\label{one-tail}}
+\subsection{One-tail}\label{one-tail}
 
 \begin{itemize}
 \item
@@ -7825,8 +7430,7 @@ H_1: \mu>15
   \end{itemize}
 \end{itemize}
 
-\hypertarget{uji-hipotesis-2-populasi}{%
-\subsection{Uji hipotesis 2 populasi}\label{uji-hipotesis-2-populasi}}
+\subsection{Uji hipotesis 2 populasi}\label{uji-hipotesis-2-populasi}
 
 Prinsipnya sama dengan sebelumnya, tapi:
 
@@ -7846,8 +7450,7 @@ S_{gab}=\sqrt{\frac{(n_1-1)S_1^2+(n_2-1)S_2^2}{n_1+n_2-2}}
 H_0: \mu_1=\mu_2
 \]
 
-\hypertarget{soal-3-1}{%
-\subsection{soal 3}\label{soal-3-1}}
+\subsection{soal 3}\label{soal-3-1}
 
 \begin{itemize}
 \item
@@ -7868,8 +7471,7 @@ H_0: \mu_1=\mu_2
   \(H_1: \mu_1 \neq \mu_2\)
 \end{itemize}
 
-\hypertarget{soal-3-2}{%
-\subsection{Soal 3}\label{soal-3-2}}
+\subsection{Soal 3}\label{soal-3-2}
 
 \[
 S_{gab}=\sqrt{\frac{(10-1)6^2+(12-1)5^2}{10+12-2}}= 5,63
@@ -7887,8 +7489,7 @@ t=\frac{(15-10)}{5.63\sqrt{\frac{1}{10}+\frac{1}{12}}}=2,07
   \(\mu_1>\mu_2\)
 \end{itemize}
 
-\hypertarget{uji-hipotesis-berpasangan}{%
-\subsection{Uji Hipotesis berpasangan}\label{uji-hipotesis-berpasangan}}
+\subsection{Uji Hipotesis berpasangan}\label{uji-hipotesis-berpasangan}
 
 \begin{itemize}
 \item
@@ -7906,8 +7507,7 @@ t=\frac{(15-10)}{5.63\sqrt{\frac{1}{10}+\frac{1}{12}}}=2,07
   gunakan \(H_0: \mu_1=\mu_2\) atau \(H_0: \bar{B}=0\)
 \end{itemize}
 
-\hypertarget{soal-4}{%
-\subsection{Soal 4}\label{soal-4}}
+\subsection{Soal 4}\label{soal-4}
 
 Sebuah kelas barusan pasang AC, lalu menghitung nilai UTS (sebelum AC)
 dan UAS (sesudah AC). Didapat:
@@ -7926,8 +7526,7 @@ B & -5 & 6 & 4 & 5 & 2 \\
 
 Apakah setelah pasang AC hasilnya lebih baik? gunakan \(\alpha=5\%\)
 
-\hypertarget{soal-4-1}{%
-\subsection{Soal 4}\label{soal-4-1}}
+\subsection{Soal 4}\label{soal-4-1}
 
 \begin{itemize}
 \item
@@ -7944,11 +7543,9 @@ Apakah setelah pasang AC hasilnya lebih baik? gunakan \(\alpha=5\%\)
   belajar tidak berubah.
 \end{itemize}
 
-\hypertarget{pertemuan-13}{%
-\section{Pertemuan 13}\label{pertemuan-13}}
+\section{Pertemuan 13}\label{pertemuan-13}
 
-\hypertarget{hari-ini-3}{%
-\subsection{Hari ini}\label{hari-ini-3}}
+\subsection{Hari ini}\label{hari-ini-3}
 
 \begin{itemize}
 \item
@@ -7957,8 +7554,7 @@ Apakah setelah pasang AC hasilnya lebih baik? gunakan \(\alpha=5\%\)
   Pengantar regresi
 \end{itemize}
 
-\hypertarget{korelasi}{%
-\subsection{Korelasi}\label{korelasi}}
+\subsection{Korelasi}\label{korelasi}
 
 \begin{itemize}
 \item
@@ -7978,8 +7574,7 @@ Apakah setelah pasang AC hasilnya lebih baik? gunakan \(\alpha=5\%\)
   antar 2 variabel.
 \end{itemize}
 
-\hypertarget{korelasi-1}{%
-\subsection{Korelasi}\label{korelasi-1}}
+\subsection{Korelasi}\label{korelasi-1}
 
 \begin{itemize}
 \item
@@ -7997,8 +7592,7 @@ Apakah setelah pasang AC hasilnya lebih baik? gunakan \(\alpha=5\%\)
   variabel kualitatif.
 \end{itemize}
 
-\hypertarget{korelasi-kualitatif}{%
-\subsection{Korelasi kualitatif}\label{korelasi-kualitatif}}
+\subsection{Korelasi kualitatif}\label{korelasi-kualitatif}
 
 Misalnya kita ingin tau apakah kemampuan bahasa inggris seorang pegawai
 punya korelasi dengan asal kampusnya. Kita memiliki data seperti
@@ -8019,8 +7613,7 @@ Kampus C & 37 & 94 & 42 \\
 Kedua variabel (asal kampus dan kemampuan bahasa inggris) berisi data
 kualitatif. Angka tersebut adalah jumlah pegawai.
 
-\hypertarget{korelasi-kualitatif-1}{%
-\subsection{Korelasi kualitatif}\label{korelasi-kualitatif-1}}
+\subsection{Korelasi kualitatif}\label{korelasi-kualitatif-1}
 
 \begin{longtable}[]{@{}lllll@{}}
 \toprule\noalign{}
@@ -8042,8 +7635,7 @@ di baris \(i\) \& kolom \(j\)
 
 \(e_{ij}=\frac{n_{i.}\times n_{.j}}{n}=\) expected frequency.
 
-\hypertarget{korelasi-kualitatif-2}{%
-\subsection{Korelasi kualitatif}\label{korelasi-kualitatif-2}}
+\subsection{Korelasi kualitatif}\label{korelasi-kualitatif-2}
 
 \begin{longtable}[]{@{}lllll@{}}
 \toprule\noalign{}
@@ -8062,15 +7654,13 @@ Total & \(n_{.1}=178\) & \(n_{.2}=271\) & \(n_{.1}=78\) & \(n=527\) \\
 e_{11}=\frac{159 \times 178}{527} \ ; \ e_{12}=\frac{159 \times 271}{527} \ ; \ e_{12}=\frac{159 \times 78}{527} \\ e_{21}=\frac{195 \times 178}{527} \ ; \ e_{22}=\frac{195 \times 271}{527} \ ; \ e_{23}=\frac{195 \times 78}{527} \\ e_{31}=\frac{173 \times 178}{527} \ ; \ e_{32}=\frac{173 \times 271}{527} \ ; \ e_{33}=\frac{173 \times 78}{527}
 \]
 
-\hypertarget{korelasi-kualitatif-3}{%
-\subsection{Korelasi kualitatif}\label{korelasi-kualitatif-3}}
+\subsection{Korelasi kualitatif}\label{korelasi-kualitatif-3}
 
 \[
 \chi^2=\sum_{i=1}^{p} \sum_{j=1}^{q} \frac{(f_{ij}-e_{ij})^2}{e_{ij}} \\ \chi^2=\frac{28,30^2}{53,70}+\frac{(-16,76)^2}{81,76}+\frac{(-11.53)^2}{23,53} \\ +\frac{(-6,86)^2}{65,86}+\frac{11,72^2}{100,28}+\frac{(-4,86)^2}{28,86} \\ +\frac{(-21,43)^2}{58,43}+\frac{5,04^2}{88,96}+\frac{16,39^2}{25,61}
 \]
 
-\hypertarget{korelasi-kualitatif-4}{%
-\subsection{Korelasi kualitatif}\label{korelasi-kualitatif-4}}
+\subsection{Korelasi kualitatif}\label{korelasi-kualitatif-4}
 
 \[
 \chi^2=45,54
@@ -8085,8 +7675,7 @@ C_c+\sqrt{\frac{45,54}{45,54+527}}=0,28
 Kemudian, hitung \(C_{max}=\sqrt{\frac{v-1}{v}}\) di mana \(v=\)jumlah
 kolom/baris, mana yang paling kecil.
 
-\hypertarget{korelasi-kualitatif-5}{%
-\subsection{Korelasi Kualitatif}\label{korelasi-kualitatif-5}}
+\subsection{Korelasi Kualitatif}\label{korelasi-kualitatif-5}
 
 \[
 C_{max}=\sqrt{\frac{3-1}{3}}=0,82
@@ -8101,8 +7690,7 @@ C=\frac{0,28}{0,82}=0,34
 Kita dapat katakan bahwa korelasi antara asal kampus dan kemampuan
 bahasa inggris = 0,34. Artinya korelasinya sangat kecil.
 
-\hypertarget{korelasi-kuantitatif}{%
-\subsection{Korelasi kuantitatif}\label{korelasi-kuantitatif}}
+\subsection{Korelasi kuantitatif}\label{korelasi-kuantitatif}
 
 \begin{itemize}
 \item
@@ -8123,8 +7711,7 @@ r=\frac{n\sum_{i=1}^{n}X_iY_i-\sum_{i=1}^{n}X_i\sum_{i=1}^{n}Y_i}{\sqrt{n\sum_{i
   Rumus ini disebut juga Pearson Correlation.
 \end{itemize}
 
-\hypertarget{korelasi-kuantitatif-1}{%
-\subsection{Korelasi kuantitatif}\label{korelasi-kuantitatif-1}}
+\subsection{Korelasi kuantitatif}\label{korelasi-kuantitatif-1}
 
 \begin{itemize}
 \item
@@ -8135,11 +7722,10 @@ r=\frac{n\sum_{i=1}^{n}X_iY_i-\sum_{i=1}^{n}X_i\sum_{i=1}^{n}Y_i}{\sqrt{n\sum_{i
   dengan jumlah jam belajar dalam seminggu.
 \item
   Datanya dapat didownload di
-  \href{https://docs.google.com/spreadsheets/d/16ZuQPD1sk76pv6sRpvjiiZcSP68CNPRq/edit?usp=drive_link\&ouid=117760147588370390523\&rtpof=true\&sd=true}{sini}
+  \href{https://docs.google.com/spreadsheets/d/16ZuQPD1sk76pv6sRpvjiiZcSP68CNPRq/edit?usp=drive_link&ouid=117760147588370390523&rtpof=true&sd=true}{sini}
 \end{itemize}
 
-\hypertarget{korelasi-kuantitatif-2}{%
-\subsection{Korelasi kuantitatif}\label{korelasi-kuantitatif-2}}
+\subsection{Korelasi kuantitatif}\label{korelasi-kuantitatif-2}
 
 \begin{itemize}
 \item
@@ -8155,8 +7741,7 @@ r=\frac{n\sum_{i=1}^{n}X_iY_i-\sum_{i=1}^{n}X_i\sum_{i=1}^{n}Y_i}{\sqrt{n\sum_{i
   Coba gunakan excel untuk menggambarkan grafik kita sebelumnya.
 \end{itemize}
 
-\hypertarget{korelasi-kuantitatif-3}{%
-\subsection{Korelasi kuantitatif}\label{korelasi-kuantitatif-3}}
+\subsection{Korelasi kuantitatif}\label{korelasi-kuantitatif-3}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -8165,16 +7750,9 @@ r=\frac{n\sum_{i=1}^{n}X_iY_i-\sum_{i=1}^{n}X_i\sum_{i=1}^{n}Y_i}{\sqrt{n\sum_{i
 \end{Highlighting}
 \end{Shaded}
 
-\begin{figure}[H]
+\includegraphics{index_files/figure-pdf/unnamed-chunk-20-1.pdf}
 
-{\centering \includegraphics{index_files/figure-pdf/unnamed-chunk-20-1.pdf}
-
-}
-
-\end{figure}
-
-\hypertarget{korelasi-kuantitatif-4}{%
-\subsection{Korelasi kuantitatif}\label{korelasi-kuantitatif-4}}
+\subsection{Korelasi kuantitatif}\label{korelasi-kuantitatif-4}
 
 \begin{itemize}
 \item
@@ -8193,8 +7771,7 @@ r=\frac{n\sum_{i=1}^{n}X_iY_i-\sum_{i=1}^{n}X_i\sum_{i=1}^{n}Y_i}{\sqrt{n\sum_{i
   Dapatkah anda memberi contoh korelasi positif dan korelasi negatif?
 \end{itemize}
 
-\hypertarget{regresi}{%
-\subsection{Regresi}\label{regresi}}
+\subsection{Regresi}\label{regresi}
 
 \begin{itemize}
 \item
@@ -8214,11 +7791,9 @@ r=\frac{n\sum_{i=1}^{n}X_iY_i-\sum_{i=1}^{n}X_i\sum_{i=1}^{n}Y_i}{\sqrt{n\sum_{i
   depan.
 \end{itemize}
 
-\hypertarget{pertemuan-14}{%
-\section{Pertemuan 14}\label{pertemuan-14}}
+\section{Pertemuan 14}\label{pertemuan-14}
 
-\hypertarget{hari-ini-4}{%
-\subsection{Hari ini}\label{hari-ini-4}}
+\subsection{Hari ini}\label{hari-ini-4}
 
 \begin{itemize}
 \tightlist
@@ -8226,8 +7801,7 @@ r=\frac{n\sum_{i=1}^{n}X_iY_i-\sum_{i=1}^{n}X_i\sum_{i=1}^{n}Y_i}{\sqrt{n\sum_{i
   Regresi univariat
 \end{itemize}
 
-\hypertarget{korelasi-2}{%
-\subsection{Korelasi}\label{korelasi-2}}
+\subsection{Korelasi}\label{korelasi-2}
 
 \begin{itemize}
 \item
@@ -8250,8 +7824,7 @@ r=\frac{n\sum_{i=1}^{n}X_iY_i-\sum_{i=1}^{n}X_i\sum_{i=1}^{n}Y_i}{\sqrt{n\sum_{i
   dari Y dan X.
 \end{itemize}
 
-\hypertarget{regresi-1}{%
-\subsection{Regresi}\label{regresi-1}}
+\subsection{Regresi}\label{regresi-1}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -8276,13 +7849,7 @@ r=\frac{n\sum_{i=1}^{n}X_iY_i-\sum_{i=1}^{n}X_i\sum_{i=1}^{n}Y_i}{\sqrt{n\sum_{i
 `geom_smooth()` using formula = 'y ~ x'
 \end{verbatim}
 
-\begin{figure}[H]
-
-{\centering \includegraphics{index_files/figure-pdf/unnamed-chunk-21-1.pdf}
-
-}
-
-\end{figure}
+\includegraphics{index_files/figure-pdf/unnamed-chunk-21-1.pdf}
 
 \begin{itemize}
 \item
@@ -8298,8 +7865,7 @@ r=\frac{n\sum_{i=1}^{n}X_iY_i-\sum_{i=1}^{n}X_i\sum_{i=1}^{n}Y_i}{\sqrt{n\sum_{i
   Bagaimana cara membuatnya?
 \end{itemize}
 
-\hypertarget{regresi-2}{%
-\subsection{Regresi}\label{regresi-2}}
+\subsection{Regresi}\label{regresi-2}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -8328,13 +7894,7 @@ r=\frac{n\sum_{i=1}^{n}X_iY_i-\sum_{i=1}^{n}X_i\sum_{i=1}^{n}Y_i}{\sqrt{n\sum_{i
 `geom_smooth()` using formula = 'y ~ x'
 \end{verbatim}
 
-\begin{figure}[H]
-
-{\centering \includegraphics{index_files/figure-pdf/unnamed-chunk-22-1.pdf}
-
-}
-
-\end{figure}
+\includegraphics{index_files/figure-pdf/unnamed-chunk-22-1.pdf}
 
 \begin{itemize}
 \tightlist
@@ -8353,8 +7913,7 @@ r=\frac{n\sum_{i=1}^{n}X_iY_i-\sum_{i=1}^{n}X_i\sum_{i=1}^{n}Y_i}{\sqrt{n\sum_{i
   perbedaan terkecil dibanding posisi lain.
 \end{itemize}
 
-\hypertarget{ordinary-least-square}{%
-\subsection{Ordinary Least Square}\label{ordinary-least-square}}
+\subsection{Ordinary Least Square}\label{ordinary-least-square}
 
 \begin{itemize}
 \tightlist
@@ -8377,8 +7936,7 @@ r=\frac{n\sum_{i=1}^{n}X_iY_i-\sum_{i=1}^{n}X_i\sum_{i=1}^{n}Y_i}{\sqrt{n\sum_{i
   \(\beta_1\) menunjukkan kemiringan garis. Disebut juga dengan gradien.
 \end{itemize}
 
-\hypertarget{ols}{%
-\subsection{OLS}\label{ols}}
+\subsection{OLS}\label{ols}
 
 \begin{itemize}
 \tightlist
@@ -8401,8 +7959,7 @@ inilah yang diminimalisir.
   menemukan titik optimal di mana \(f'(x)=0\)
 \end{itemize}
 
-\hypertarget{ols-1}{%
-\subsection{OLS}\label{ols-1}}
+\subsection{OLS}\label{ols-1}
 
 \begin{itemize}
 \tightlist
@@ -8428,8 +7985,7 @@ inilah yang diminimalisir.
   terkecil.
 \end{itemize}
 
-\hypertarget{ols-2}{%
-\subsection{OLS}\label{ols-2}}
+\subsection{OLS}\label{ols-2}
 
 \begin{itemize}
 \item
@@ -8444,8 +8000,7 @@ inilah yang diminimalisir.
 \beta_1=\frac{n\sum XY - \sum X \sum Y}{n \sum X^2-(\sum X)^2}
 \]
 
-\hypertarget{rumus-lain}{%
-\subsection{Rumus lain}\label{rumus-lain}}
+\subsection{Rumus lain}\label{rumus-lain}
 
 \begin{itemize}
 \tightlist
@@ -8469,8 +8024,7 @@ inilah yang diminimalisir.
 Y=\beta_0+\beta_1 X + \varepsilon
 \]
 
-\hypertarget{regresi-univariat}{%
-\subsection{Regresi univariat}\label{regresi-univariat}}
+\subsection{Regresi univariat}\label{regresi-univariat}
 
 \[
 Y_i=\beta_0+\beta_1 X_i+\varepsilon_i
@@ -8491,8 +8045,7 @@ Y_i=\beta_0+\beta_1 X_i+\varepsilon_i
   turunan?
 \end{itemize}
 
-\hypertarget{marginal-effect-2}{%
-\subsection{Marginal effect}\label{marginal-effect-2}}
+\subsection{Marginal effect}\label{marginal-effect-2}
 
 \begin{itemize}
 \item
@@ -8506,8 +8059,7 @@ Y_i=\beta_0+\beta_1 X_i+\varepsilon_i
   \(\beta_1\)
 \end{itemize}
 
-\hypertarget{ramalan}{%
-\subsection{Ramalan}\label{ramalan}}
+\subsection{Ramalan}\label{ramalan}
 
 \begin{itemize}
 \item
@@ -8522,8 +8074,7 @@ Y_i=\beta_0+\beta_1 X_i+\varepsilon_i
   Semakin besar korelasinya, semakin bagus ramalannya.
 \end{itemize}
 
-\hypertarget{video-regresi-excel}{%
-\subsection{Video regresi excel}\label{video-regresi-excel}}
+\subsection{Video regresi excel}\label{video-regresi-excel}
 
 
 
