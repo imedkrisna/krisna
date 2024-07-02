@@ -1,6 +1,6 @@
 ---
 title: "Uji Hopotesis"
-subtitle: "Pertemuan 9"
+subtitle: "Pertemuan 12"
 author: "Matematika & Statistika"
 format: 
   revealjs:
@@ -75,7 +75,7 @@ $$
 
 ## Data {.scrollable}
 
-Bisa didownload di [sini](https://docs.google.com/spreadsheets/d/1aE74llk9RkTuL2nLsp6WfvK0faz3DGKv/edit?usp=drive_link&ouid=117760147588370390523&rtpof=true&sd=true)
+Bisa didownload di [sini judulnya data91.xlsx](https://drive.google.com/drive/folders/1OQYBKx4fTxPC3CZCS9KlxOKyZl3q1hfB?usp=drive_link)
 
 ```{r}
 library(readxl)
@@ -90,12 +90,12 @@ dat %>% kableExtra::kbl(digits = 0)
 - Didapat $\bar{X}=501,93$ dan $S=49.22$ lalu hitung t:
 
 $$
-t_0=\frac{482,62-500}{28,62/\sqrt{20}}=-2,72
+t_0=\frac{501,93-500}{49,22/\sqrt{20}}=0,17
 $$
 
 - Dengan $\alpha=5\%$ dan $df=19$, didapat $t_{0,025}=\pm2,093$
 
-- $|t_0| > |t_{0,025}|$ maka kita tolak $H_0$
+- $|t_0| > |t_{0,025}|$ maka kita terima $H_0$
 
 - Dengan derajat kepercayaan 95%, Disimpulkan bahwa rata-rata populasi tidak sama dengan 500. Mungkin kurikulum perlu diubah.
 
