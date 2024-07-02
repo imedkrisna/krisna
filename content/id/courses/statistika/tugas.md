@@ -27,10 +27,12 @@ Lihat folder tugas di drive kelas, atau [klik ini](https://drive.google.com/driv
 - Beberapa pertanyaan akan menggunakan digit terakhir NIM anda, jadi pastikan anda tau digit terakhir NIM anda
 - Download file excel di folder "tugas" bernama "Tugas_statistika", rename dengan NIM anda, lalu langsung jawab di file tsb. Kumpulkan file dalam bentuk Excel karena saya perlu lihat formula anda.
 - Boleh bekerja sama ketika mengerjakan, tapi tulisan harus original (jangan kopas)
-- Link upload jawaban adalah [https://forms.gle/y2J57g9fWDWkLZUUA](https://forms.gle/y2J57g9fWDWkLZUUA)
-- Batas akhir pengumpulan adalah tanggal 7 Juli 2023 Pukul 23.59 WIB
+- Batas akhir pengumpulan adalah tanggal 21 Juli 2024 Pukul 23.59 WIB
+- https://forms.gle/jwnHYwXqPpwnwi8v7
+
+#### Extra info:
 - Tidak ada tugas tambahan atau tanggal mundur. Jika tanggal segitu belum ngumpulin berarti tugas 0
-- Tugas ini bernilai 20% total (20% lagi dari quiz, lalu UTS UAS masing2 30%)
+- Tugas ini bernilai 30% total (30% UTS 40% UAS)
 - Tugas ini fungsinya buat praktik. Please coba kerjain dulu lalu kumpulkan apa adanya aja jika anda kesulitan. Lebih baik daripada 0. Saya menghargai usaha anda.
 - Anda bebas menambahkan sheet baru jika diperlukan.
 - Gunakan sheet "jawaban (narasi)" untuk menjawab dengan kata-kata. Jangan lupa dikasih referensi ke sheet mana jika perlu. Misalnya, "merujuk sheet xx cell A24, kita dapat melihat bahwa indexnya naik...."
