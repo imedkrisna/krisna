@@ -5,10 +5,10 @@ title: 'textile'
 subtitle: ""
 summary: ""
 authors: [admin]
-tags: [ekonomi, perdagangan, model, HecksherOhlin]
-categories: [ekonomi, perdagangan, model, HecksherOhlin]
-date: 2024-02-25T15:10:34+07:00
-lastmod: 2024-02-25T15:10:34+07:00
+tags: [ekonomi, perdagangan]
+categories: [ekonomi, perdagangan]
+date: 2024-07-08T15:10:34+07:00
+lastmod: 2024-07-08T15:10:34+07:00
 featured: false
 draft: false
 
@@ -29,3 +29,4 @@ projects: []
 ---
 
 From [SEKI Bank Indonesia](https://www.bi.go.id/id/statistik/ekonomi-keuangan/seki/default.aspx#headingFour)
+
