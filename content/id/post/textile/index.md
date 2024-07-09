@@ -30,3 +30,16 @@ projects: []
 
 From [SEKI Bank Indonesia](https://www.bi.go.id/id/statistik/ekonomi-keuangan/seki/default.aspx#headingFour)
 
+
+
+
+| Year | 18         | 19         | 20          | 21          | 22          | 23          |
+|------|------------|------------|-------------|-------------|-------------|-------------|
+| nonmigas | 0.0477 | 0.0434 | -0.0252 | 0.0367 | 0.0501 | 0.0469 |
+| Industri Makanan dan Minuman | 0.0791 | 0.0778 | 0.0158 | 0.0254 | 0.0490 | 0.0447 |
+| Pengolahan Tembakau | 0.0352 | 0.0336 | -0.0578 | -0.0132 | -0.0234 | 0.0480 |
+| Industri Tekstil dan Pakaian Jadi | 0.0873 | 0.1535 | -0.0888 | -0.0408 | 0.0934 | -0.0198 |
+| Industri Kulit, Barang dari Kulit dan Alas Kaki | 0.0942 | -0.0099 | -0.0876 | 0.0775 | 0.0936 | -0.0034 |
+| PRODUK DOMESTIK BRUTO | 0.0517 | 0.0502 | -0.0207 | 0.0370 | 0.0531 | 0.0505 |
+
+Feel free to adjust the formatting or add any additional information you'd like! 😊
