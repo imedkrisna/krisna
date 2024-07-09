@@ -67,7 +67,7 @@ Table 3. growth of Indonesian Manufactures non oil and gas import by source
 | countries |	19 |	20 |	21 |	22 |	23 |
 | ------- | --- | --- | --- | --- | --- |
 | USA	| -11.30% | 	-8.60% |	17.92% |	6.72% |	-1.11% |
-| EU |	-11.58% |	-11.12%	8.31%	6.50%	17.18% |
+| EU |	-11.58% |	-11.12% |	8.31% |	6.50% |	17.18% |
 | ASEAN |	-7.56% |	-20.58% |	27.41% |	11.54% |	-8.21% |
 | India |	-14.91% |	-7.83% |	72.62% |	9.77% |	-16.75% |
 | Japan |	-12.17% |	-31.71% |	41.39% |	11.66% |	-4.95% |
@@ -78,6 +78,7 @@ Table 3. growth of Indonesian Manufactures non oil and gas import by source
 
 Table 4. growth of Indonesian Manufactures non oil and gas export by source
 | countries |  19 |	20 |	21 |	22 |	23 |
+| ------- | --- | --- | --- | --- | --- |
 | Amerika Serikat |	0.77% |	4.61% |	38.56% |	9.88% |	-18.18% |
 | Uni Eropa |	-15.06% |	-1.97% |	36.59% |	16.04% |	-20.85% |
 | ASEAN |	2.27% |	-9.75% |	28.59% |	26.11% |	-15.90% |
