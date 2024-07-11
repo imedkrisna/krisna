@@ -30,8 +30,21 @@ projects: []
 
 Various data from [SEKI Bank Indonesia](https://www.bi.go.id/id/statistik/ekonomi-keuangan/seki/default.aspx#headingFour)
 
+Table 1. Indonesian imports from China by broad economic category
+| Goods category | 2018 |	2019 |	2020 |	2021 |	2022 |
+| ------ | --- | --- | --- | --- | --- |
+| Capital value | 11,487,301.6 | 12,321,681.1 | 10,828,207.3 | 14,880,690.1 | 20,127,730.3 |
+| Consumer value | 5,761,119.1 | 6,023,792.5 |	5,468,645.2 |	6,515,606.2 |	7,113,856.5 |
+| Intermediate value | 28,039,338.4 |	26,302,772.6 | 23,054,342.8 |	34,354,081.1 | 39,842,624.6 |
+| Capital share | 25.2 | 27.4 | 27.3 | 26.5 | 29.7 |
+| Consumer share | 12.7 | 13.4 | 13.8 | 11.6 | 10.5 |
+| Intermediate share | 61.6 | 58.5 | 58.2 | 61.1 | 58.8 |
 
-Table 1. Growth rate of Indonesian industries
+
+
+
+
+Table 2. Growth rate of Indonesian industries
 | Year | 18   | 19   | 20    | 21    | 22    | 23    |
 |------|------|------|-------|-------|-------|-------|
 | nonmigas | 4.77 | 4.34 | -2.52 | 3.67 | 5.01 | 4.69 |
@@ -53,7 +66,7 @@ Table 1. Growth rate of Indonesian industries
 | PRODUK DOMESTIK BRUTO | 5.17 | 5.02 | -2.07 | 3.70 | 5.31 | 5.05 |
 
 
-Table 2. Indonesian imports by broad economic category
+Table 3. Indonesian imports by broad economic category
 | year |  18 |	19 | 	20 |	21 |	22 | 	23 |
 | ------- | --- | --- | --- | --- | --- | --- |
 | Share of consumption goods	| 14.37%	|	14.29%	|	13.31%	|	14.18%	|	14.19%	|	14.84%	|
@@ -63,7 +76,7 @@ Table 2. Indonesian imports by broad economic category
 | Growth of material goods	|	-	| -9.32%	|	-23.75%	|	49.10%	|	21.70%	|	-3.10%	|
 | Growth of capital goods	|	-	| -9.41%	|	-17.36%	|	42.96%	|	19.70%	|	-10.80%	|
 
-Table 3. growth of Indonesian Manufactures non oil and gas import by source
+Table 4. growth of Indonesian Manufactures non oil and gas import by source
 | countries |	19 |	20 |	21 |	22 |	23 |
 | ------- | --- | --- | --- | --- | --- |
 | USA	| -11.30% | 	-8.60% |	17.92% |	6.72% |	-1.11% |
@@ -76,7 +89,7 @@ Table 3. growth of Indonesian Manufactures non oil and gas import by source
 | China |	-1.32% |	-11.38% |	40.05% |	21.65% |	-7.62% |
 | Australia |	-7.77% |	-13.23% |	106.29% |	7.33% |	-1.57% |
 
-Table 4. growth of Indonesian Manufactures non oil and gas export by source
+Table 5. growth of Indonesian Manufactures non oil and gas export by source
 | countries |  19 |	20 |	21 |	22 |	23 |
 | ------- | --- | --- | --- | --- | --- |
 | Amerika Serikat |	0.77% |	4.61% |	38.56% |	9.88% |	-18.18% |
