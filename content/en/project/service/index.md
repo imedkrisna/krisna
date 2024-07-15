@@ -9,7 +9,7 @@ categories: []
 date: 2024-07-15T07:28:22+07:00
 
 # Optional external URL for project (replaces project detail page).
-external_link: "/project/carbon/green_paper.html"
+external_link: "/project/service/services_document.html"
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.
