@@ -36,3 +36,7 @@ projects: []
 | Linear changes in consumption | consumption rise with income 1 to 1 | sustainable but unlikely |
 | Increase in credit-financed consumption | HH feels wealthier amid higher asset prices, fund consumption with debt | not sustainable |
 | Increase in unemployment | When Q^S > Q^D, firms reduce capacity -> fire workers | sustainable |
+
+From Pettis (2013)[^1]
+
+[^1]: Pettis, M. (2013). The Great Rebalancing: Trade, Conflict, and the Perilous Road Ahead for the World Economy. Princeton University Press. 
