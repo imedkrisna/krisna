@@ -1,7 +1,7 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: "Macro Trade"
+title: "Permasalahan neraca pembayaran bukan (hanya) gara-gara perdagangan"
 subtitle: ""
 summary: ""
 authors: [] 
@@ -27,6 +27,19 @@ image:
 #   Otherwise, set `projects = []`.
 projects: []
 ---
+
+Sebagai orang yang lama berkecimpung di bidang perdagangan dan industrialisasi, saya tumbuh dengan pandangan bahwa _comparative advantage is everything_. Jika ekspor kita untuk sebuah barang, misalnya komputer, itu kecil atau bahkan net impor, artinya kita tidak pintar membuat barang itu. Alias, keunggulan komparatif bangsa Indonesia bukan di komputer. Akibatnya kita membuat ekspor menjadi indikator penting akan keunggulan kita dalam industrialisasi.
+
+Tentu saja ini tidak salah. _Comparative advantage_ ini emang alasan yang sangat kuat untuk berdagang, dan alasan utama kenapa 9 dari 10 pintu rejeki ada di perdagangan he he he. Itu pula alasan kenapa saya jadi dosen, dan bukan profesi lain: saya akan bisa bepunya beras lebih banyak jika saya kerja jadi dosen daripada saya jadi petani. Saya harap pemerintah bisa lebih paham hal sederhana seperti _comparative advantage_.
+
+Tapi model yang menjelaskan _comparative advantage_ punya asumsi tersendiri yang belum tentu benar di dunia nyata. Sebagai lulusan S2 ekonomi waktu itu, hal ini tentu saja sesuatu yang sudah jelas, tapi pemahaman saya masih kurang untuk menghubungkan ini dengan makro keseluruhan. Saya baru bener-bener ngerti setelah mengikuti Michael Pettis dari Peking University. Prof. Pettis menjelaskan dengan konsep yang sangat-sangat basic, yaitu _accounting identity_. Simpel aritmatika yang kita semua udah belajar di S1: the infamous $Y=C+I+G+(X-M)$.
+
+Intinya adalah _current account_, atau neraca pembayaran, itu harus selalu seimbang. Jika dia surplus atau defisit, maka dia akan diseimbangkan oleh _financial account_. Dengan kata lain, jika ada ketidakseimbangan / _imbalance_ di neraca finansial, neraca pembayaran akan menyeimbangkannya.
+
+Salah satu asumsi yang ada di model _comparative advantage_ yang paling primitif (maksudnya tentu saja Ricardian, model yg pertama kali anda pelajari di S1 ekonomi internasional) adalah bahwa _current account_=0. Dengan kata lain, di model tersebut, ekspor = impor, which implies saving = investment.
+
+
+
 
 | counterbalance | Condition | Sustainability |
 | --- | --- | --- |
