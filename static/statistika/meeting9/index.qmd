@@ -243,7 +243,7 @@ $$
 |   | populasi | sampel |
 | ----- | ----- | ----- |
 | Variance | $\sigma^2=\frac{\sum_i (x_i-\mu)^2}{N}$ | $S=\frac{\sum_i (x_i-\bar{X})^2}{n-1}$ |
-| simpangan baku | $\sigma=\sqrt{\frac{\sum_i (x_i-\mu)^2}{N}}$ | $S=\sqrt{\frac{\sum_i (x_i-\mu)^2}{N}}$ |
+| simpangan baku | $\sigma=\sqrt{\frac{\sum_i (x_i-\mu)^2}{N}}$ | $S=\sqrt{\frac{\sum_i (x_i-\mu)^2}{n-1}}$ |
 
 ## Deskriptif statistik
 
