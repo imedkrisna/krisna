@@ -206,7 +206,7 @@ $$
 
 - Kita hitung perbedaan tiap sampelnya (dibuat kolom baru yaitu $B=X_1-X_2$) lalu hitung dengan rumus:
 
-- $t=\frac{\bar{B}}{S_B\sqrt{n}}$
+- $t=\frac{\bar{B}}{S_B \frac{1}{\sqrt{n}}}$
 
 - gunakan $H_0: \mu_1=\mu_2$ atau $H_0: \bar{B}=0$
 
@@ -218,17 +218,17 @@ Sebuah kelas barusan pasang AC, lalu menghitung nilai UTS (sebelum AC) dan UAS (
 | --- | --- | --- | --- | --- | --- |
 | Pre-AC | 40 | 70 | 63 | 56 | 65 |
 | Post-AC | 45 | 64 | 59 | 51 | 67 |
-| B | -5 | 6 | 4 | 5 | 2 |
+| B | -5 | 6 | 4 | 5 | -2 |
 
 Apakah setelah pasang AC hasilnya lebih baik? gunakan $\alpha=5\%$
 
 ## Soal 4
 
-- $\bar{B}=\frac{-5+6+4+5+2}{5}=1,6$
+- $\bar{B}=\frac{-5+6+4+5-2}{5}=1,6$
 
 - $S_B=4,83$ (lihat lagi cara hitung simpangan baku di materi sebelumnya)
 
-- $t=\frac{1,6}{4,83\sqrt{5}}=0,74$
+- $t=\frac{1,6}{4,83\frac{1}{\sqrt{5}}}=0,74$
 
 - $t_{tabel}=2,776$ dan hasilnya $t$ ada di daerah penerimaan.
 
