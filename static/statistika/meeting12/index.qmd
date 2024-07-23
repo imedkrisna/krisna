@@ -1,5 +1,5 @@
 ---
-title: "Uji Hopotesis"
+title: "Uji Hipotesis"
 subtitle: "Pertemuan 12"
 author: "Matematika & Statistika"
 format: 

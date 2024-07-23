@@ -8,10 +8,10 @@
 <link href="index_files/libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="index_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="index_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.4.554">
+  <meta name="generator" content="quarto-1.5.54">
 
   <meta name="author" content="Matematika &amp; Statistika">
-  <title>Uji Hopotesis</title>
+  <title>Uji Hipotesis</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -332,7 +332,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Uji Hopotesis</h1>
+  <h1 class="title">Uji Hipotesis</h1>
   <p class="subtitle">Pertemuan 12</p>
 
 <div class="quarto-title-authors">
@@ -397,8 +397,7 @@ t=\frac{\bar{X}-\mu_0}{\frac{S}{\sqrt{n}}}
 <figcaption>alpha (arsir biru tua) disebut juga daerah penolakan</figcaption>
 </figure>
 </div>
-</div>
-</div>
+</div></div>
 <ul>
 <li class="fragment">bandingkan <span class="math inline">\(t_{hitung}\)</span> dengan <span class="math inline">\(t_{tabel}\)</span>. Jika <span class="math inline">\(t_{hitung}\)</span> ada di daerah penolakan, maka tolak <span class="math inline">\(H_0\)</span>.</li>
 </ul>
@@ -416,8 +415,7 @@ t=\frac{\bar{X}-\mu_0}{\frac{S}{\sqrt{n}}}
 <p>Bisa didownload di <a href="https://drive.google.com/drive/folders/1OQYBKx4fTxPC3CZCS9KlxOKyZl3q1hfB?usp=drive_link">sini judulnya data91.xlsx</a></p>
 <div class="cell">
 <div class="cell-output-display">
-<div>
-<table data-quarto-postprocess="true">
+<table class="caption-top" data-quarto-postprocess="true">
 <thead>
 <tr class="header">
 <th style="text-align: right;" data-quarto-table-cell-role="th">nilai</th>
@@ -488,7 +486,6 @@ t=\frac{\bar{X}-\mu_0}{\frac{S}{\sqrt{n}}}
 </table>
 
 
-</div>
 </div>
 </div>
 </section>
@@ -606,14 +603,14 @@ t=\frac{(15-10)}{5.63\sqrt{\frac{1}{10}+\frac{1}{12}}}=2,07
 <li class="fragment"><p>Uji ini dilakukan apabila populasi 1 dan populasi 2 kita hitung secara berpasangan.</p></li>
 <li class="fragment"><p>Umumnya dilakukan jika ada suatu intervensi di individu yang sama, lalu dicek sebelum dan sesudahnya.</p></li>
 <li class="fragment"><p>Kita hitung perbedaan tiap sampelnya (dibuat kolom baru yaitu <span class="math inline">\(B=X_1-X_2\)</span>) lalu hitung dengan rumus:</p></li>
-<li class="fragment"><p><span class="math inline">\(t=\frac{\bar{B}}{S_B\sqrt{n}}\)</span></p></li>
+<li class="fragment"><p><span class="math inline">\(t=\frac{\bar{B}}{S_B \frac{1}{\sqrt{n}}}\)</span></p></li>
 <li class="fragment"><p>gunakan <span class="math inline">\(H_0: \mu_1=\mu_2\)</span> atau <span class="math inline">\(H_0: \bar{B}=0\)</span></p></li>
 </ul>
 </section>
 <section id="soal-4" class="slide level2">
 <h2>Soal 4</h2>
 <p>Sebuah kelas barusan pasang AC, lalu menghitung nilai UTS (sebelum AC) dan UAS (sesudah AC). Didapat:</p>
-<table>
+<table class="caption-top">
 <thead>
 <tr class="header">
 <th>Mahasiswa</th>
@@ -647,7 +644,7 @@ t=\frac{(15-10)}{5.63\sqrt{\frac{1}{10}+\frac{1}{12}}}=2,07
 <td>6</td>
 <td>4</td>
 <td>5</td>
-<td>2</td>
+<td>-2</td>
 </tr>
 </tbody>
 </table>
@@ -656,9 +653,9 @@ t=\frac{(15-10)}{5.63\sqrt{\frac{1}{10}+\frac{1}{12}}}=2,07
 <section id="soal-4-1" class="slide level2">
 <h2>Soal 4</h2>
 <ul>
-<li class="fragment"><p><span class="math inline">\(\bar{B}=\frac{-5+6+4+5+2}{5}=1,6\)</span></p></li>
+<li class="fragment"><p><span class="math inline">\(\bar{B}=\frac{-5+6+4+5-2}{5}=1,6\)</span></p></li>
 <li class="fragment"><p><span class="math inline">\(S_B=4,83\)</span> (lihat lagi cara hitung simpangan baku di materi sebelumnya)</p></li>
-<li class="fragment"><p><span class="math inline">\(t=\frac{1,6}{4,83\sqrt{5}}=0,74\)</span></p></li>
+<li class="fragment"><p><span class="math inline">\(t=\frac{1,6}{4,83\frac{1}{\sqrt{5}}}=0,74\)</span></p></li>
 <li class="fragment"><p><span class="math inline">\(t_{tabel}=2,776\)</span> dan hasilnya <span class="math inline">\(t\)</span> ada di daerah penerimaan.</p></li>
 <li class="fragment"><p>Tidak menolak <span class="math inline">\(H_0 \rightarrow\)</span> Sebelum dan setelah pasang AC hasil belajar tidak berubah.</p></li>
 </ul>
@@ -988,18 +985,7 @@ t=\frac{(15-10)}{5.63\sqrt{\frac{1}{10}+\frac{1}{12}}}=2,07
         }
         return false;
       }
-      const clipboard = new window.ClipboardJS('.code-copy-button', {
-        text: function(trigger) {
-          const codeEl = trigger.previousElementSibling.cloneNode(true);
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
-            }
-          }
-          return codeEl.innerText;
-        }
-      });
-      clipboard.on('success', function(e) {
+      const onCopySuccess = function(e) {
         // button target
         const button = e.trigger;
         // don't keep focus
@@ -1031,7 +1017,29 @@ t=\frac{(15-10)}{5.63\sqrt{\frac{1}{10}+\frac{1}{12}}}=2,07
         }, 1000);
         // clear code selection
         e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
       });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        // For code content inside modals, clipBoardJS needs to be initialized with a container option
+        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
         var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
         var mailtoRegex = new RegExp(/^mailto:/);
           var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -1039,7 +1047,7 @@ t=\frac{(15-10)}{5.63\sqrt{\frac{1}{10}+\frac{1}{12}}}=2,07
             return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
         }
         // Inspect non-navigation links and adorn them if external
-     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
         for (var i=0; i<links.length; i++) {
           const link = links[i];
           if (!isInternal(link.href)) {
