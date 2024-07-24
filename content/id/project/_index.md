@@ -46,4 +46,4 @@ slides: ""
 - {{% staticref "/project/carbon/green_paper.html" "newtab" %}}Seminar APP{{% /staticref %}}
 - {{% staticref "/project/migas/index.html" "newtab" %}}Short brief for DJ Migas{{% /staticref %}}
 - {{% staticref "/project/service/services_document.html" "newtab" %}}docs ERIA Services{{% /staticref %}}
-- {{% staticref "/project/service/ERIA_services_Slides_files.html" "newtab" %}}slides ERIA Services{{% /staticref %}}
+- {{% staticref "/project/service/ERIA_services_Slides.html" "newtab" %}}slides ERIA Services{{% /staticref %}}
