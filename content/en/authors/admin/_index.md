@@ -76,6 +76,6 @@ user_groups:
 - Visitors
 ---
 
- My name is Krisna. I am a lecturer at Politeknik APP Jakarta, a vocational school under Ministry of Industry. My research is about trade and investment policy and how it affects Indonesian firms. I use some structured equation such as GTAP model, but also do some empirics like gravity models.
+ My name is Krisna, some calls me Imed. I am a lecturer at Politeknik APP Jakarta, a vocational school under Ministry of Industry. My research is about trade and investment policy and how it affects Indonesian firms. I use some structured equation such as GTAP model, but also do some empirics like gravity models.
 
- I currently assume a lecturer position at Politeknik APP Jakarta and Universitas Indonesia. I also a senior fellow at Center for Indonesian Policy Studies.
+ I am a lecturer at Politeknik APP Jakarta (full-time) and Universitas Indonesia. Additionally, I assume a senior fellow position at Center for Indonesian Policy Studies.

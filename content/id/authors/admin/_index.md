@@ -18,12 +18,12 @@ organizations:
   url: "https://poltekapp.ac.id/"
 
 # Short bio (displayed in user profile at end of posts)
-bio: Dosen di Politeknik APP Jakarta. Juga mengajar di Program Pascasarjana Universitas Indonesia. Associate researcher di Center for Indonesian Policy Studies. Fokus penelitian tentang dampak kebijakan perdagangan dan investasi terhadap ekonomi Indonesia, terutama sektor manufaktur.
+bio: Dosen di Politeknik APP Jakarta. Juga mengajar di Universitas Indonesia. Mitra senior di Center for Indonesian Policy Studies. Fokus penelitian tentang dampak kebijakan perdagangan dan investasi terhadap ekonomi Indonesia, terutama sektor manufaktur.
 
 interests:
 - Perdagangan internasional
 - Pertumbuhan manufaktur
-- CGE Modeling
+- CGE Modeling & econometrics
 
 education:
   courses:
@@ -78,4 +78,4 @@ user_groups:
 
  Nama saya Krisna, sering dipanggil juga Imed. Saya adalah Dosen di Politeknik APP Jakarta. Riset saya tentang dampak kebijakan perdagangan dan investasi terhadap pertumbuhan sektor manufaktur di Indonesia. Saya menggunakan metode persamaan linear struktural seperti GTAP, tapi juga menggunakan berbagai teknik ekonometrika seperti *gravity models*.
 
- Saat ini mengajar di program D3 prodi Perdagangan Internasional di Politeknik APP Jakarta dan Program Pascasarjana Ilmu Ekonomi Universitas Indonesia. Saya juga adalah _senior fellow_ di Center for Indonesian Policy Studies.
+ Saya saat ini mengajar di program D3 prodi Perdagangan Internasional di Politeknik APP Jakarta dan Program Sarjana dan Pascasarjana Ilmu Ekonomi Universitas Indonesia. Saya juga adalah mitra senior di Center for Indonesian Policy Studies.
