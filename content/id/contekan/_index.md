@@ -20,6 +20,9 @@ Beberapa link yang sering kupencet:
 - [memakai outreg2 untuk bikin tabel regresi dan summary statistics](https://www.princeton.edu/~otorres/Outreg2.pdf)
 - [comprehensive latex output](https://lukestein.github.io/stata-latex-workflows/)
 - [Synthetic Control Method](https://web.stanford.edu/~jhain/synthpage.html)
+- [Difference-in-difference aka DiD method](https://www.jonathandroth.com/did-resources/)
+- [General Methods of Moments Kripfganz](https://www.kripfganz.de/stata/xtdpdgmm.html)
+- [General Methods of Moments Roodman](https://journals.sagepub.com/doi/10.1177/1536867X0900900106)
 
 ## R dan Rmarkdown
 - [Mengontrol ukuran gambar di Rmarkdown](http://zevross.com/blog/2017/06/19/tips-and-tricks-for-working-with-images-and-figures-in-r-markdown-documents/)
