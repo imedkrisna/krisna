@@ -1,27 +1,27 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: "Compleksitas mengevaluasi kinerja Direktorat Jenderal Agro"
-event: "Evaluasi Kinerja Direktorat Jenderal Industri Agro Triwulan I Tahun 2023"
+title: "Unbundlling, GVC and TiVA"
+event: "Pelatihan Perdagangan Internasional dan Market Intelligence"
 event_url:
-location: "Swiss-Bell Inn Bogor"
+location: "Pusdiklat Kementerian Luar Nergeri RI"
 address:
   street:
   city:
   region:
   postcode:
   country:
-summary: "Pada kesempatan kali ini saya diundang oleh Direktorat Jenderal Agro Kementerian Perindustrian untuk menyampaikan apa yang saya ketahui tentang evaluasi dan tentang hal-hal yang penting untuk diketahui di bidang industri khususnya industri agro"
-abstract: "Pada kesempatan kali ini saya diundang oleh Direktorat Jenderal Agro Kementerian Perindustrian untuk menyampaikan apa yang saya ketahui tentang evaluasi dan tentang hal-hal yang penting untuk diketahui di bidang industri khususnya industri agro"
+summary: "Pembicara dalam diklat di Kemenlu"
+abstract: "Pembicara dalam diklat di Kemenlu"
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
-date: 2023-06-09T09:00:00+07:00
+date: 2024-08-20T09:00:00+07:00
 # date_end: 2023-06-08T14:56:44+07:00
 all_day: True
 
 # Schedule page publish date (NOT event date).
-publishDate: 2023-06-08T14:56:44+07:00
+publishDate: 2024-08-20T09:00:00+07:00
 
 authors: [admin]
 tags: []
@@ -46,7 +46,7 @@ image:
 #   icon: twitter
 
 # Optional filename of your slides within your event's folder or a URL.
-url_slides: "agro.html"
+url_slides: "index.html"
 
 url_code:
 url_pdf:
