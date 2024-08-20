@@ -3,6 +3,7 @@ title: "Unbundling and the global value chain"
 subtitle: "TiVA analysis"
 date: "21 August 2024"
 author: "I Made Krisna Gupta"
+date-format: long
 format: 
   revealjs:
     theme: [simple,mytheme.scss]
@@ -26,8 +27,7 @@ format:
 
     -   [imade.krisna@ui.ac.id](mailto:imade.krisna@ui.ac.id)
     -   [\@imedkrisna](https://www.twitter.com/imedkrisna)
-:::
-:::
+
 
 ## So far
 
@@ -216,7 +216,31 @@ format:
 
 ## Analytical consequences
 
+- Trade data is no longer useful if large components are sourced from import.
 
+- You can know how much salt we import, but it's much harder to know who use them: end consumers? food industry? Chemists?
+
+- The value of a country's export may be doublecounted: Vietnam is not making phones. Just assembling.
+
+- This is where TiVA comes in.
+
+## TiVA
+
+- Trade in Value Added (TiVA) uses input-output statistics to infrom how much an industry uses imported inputs.
+
+- OECD collects and estimates these information from national statistics. More information is [here](https://www.oecd.org/en/topics/sub-issues/trade-in-value-added.html), and data can be downloaded from [here](https://data-explorer.oecd.org/vis?pg=0&bp=true&snb=14&tm=TIVA&df[ds]=dsDisseminateFinalCloud&df[id]=DSD_TIVA_MAINLV%40DF_MAINLV&df[ag]=OECD.STI.PIE&df[vs]=1.0&dq=FFD_DVA.AUS..W..A&pd=2015%2C2020&to[TIME_PERIOD]=false&ly[cl]=TIME_PERIOD&ly[rw]=ACTIVITY)
+
+## GVC in the food industry
+
+![](pic8.png)
+
+[from Amanta & Gupta 2022](https://cutt.ly/cips-pp51)
+
+## GVC in semiconductor
+
+![](chip.png)
+
+[BCG and SIA report](https://www.semiconductors.org/wp-content/uploads/2024/05/Report_Emerging-Resilience-in-the-Semiconductor-Supply-Chain.pdf)
 
 ## The third unbundling {.m}
 
@@ -224,13 +248,5 @@ format:
 
 - The industry 4.0: face-to-face cost reduces thanks to telepresence and telerobotics. Data transfer, human-machine and machine-machine interface allows it to happen.
 
-- Telerobotics: example, a doctor can provide his/her service through robots, lecturers can do zoom class, etc.
-
-- It remains to be seen its consequences.
-
-## Rebundling?
-
-- De-globalization phenomena may moves us back a little bit, where countries are on the move to re-introduce measures which increase trade costs (tariffs, non-tariffs, WTO dead).
-
-- Will unbundled production be re-bundle?
+- Services and digital trade is taking the front stage. A story for another time.
 

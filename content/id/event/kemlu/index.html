@@ -8,10 +8,10 @@
 <link href="index_files/libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="index_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="index_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.3.450">
+  <meta name="generator" content="quarto-1.4.554">
 
   <meta name="author" content="I Made Krisna Gupta">
-  <meta name="dcterms.date" content="2024-03-21">
+  <meta name="dcterms.date" content="2024-08-21">
   <title>Unbundling and the global value chain</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -159,7 +159,8 @@
   }
 
   .callout.callout-titled .callout-body > .callout-content > :last-child {
-    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
   }
 
   .callout.callout-titled .callout-icon::before {
@@ -329,7 +330,7 @@
 
 <section id="title-slide" class="quarto-title-block center">
   <h1 class="title">Unbundling and the global value chain</h1>
-  <p class="subtitle">ECES905205 meeting 7</p>
+  <p class="subtitle">TiVA analysis</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -339,7 +340,20 @@ I Made Krisna Gupta
 </div>
 </div>
 
-  <p class="date">2024-03-21</p>
+  <p class="date">August 21, 2024</p>
+</section>
+<section id="who-am-i" class="slide level2">
+<h2>Who am I</h2>
+<ul>
+<li><p>Full-time lecturer di Politeknik APP, part-time di Universitas Indonesia, Associate researcher di Center for Indonesian Policy Studies.</p></li>
+<li><p>Master degree in economics at UI/VU (2014), PhD in economics at ANU (2022).</p></li>
+<li><p>Research mainly in trade in industry.</p></li>
+<li><p>web at <a href="https://www.krisna.or.id/">krisna.or.id</a></p>
+<ul>
+<li><a href="mailto:imade.krisna@ui.ac.id">imade.krisna@ui.ac.id</a></li>
+<li><a href="https://www.twitter.com/imedkrisna">@imedkrisna</a></li>
+</ul></li>
+</ul>
 </section>
 <section id="so-far" class="slide level2">
 <h2>So far</h2>
@@ -348,10 +362,11 @@ I Made Krisna Gupta
 <ul>
 <li>can be driven by difference in technology or factor abundance.</li>
 </ul></li>
-<li><p>In industries with significant fixed cost, we also see that intra-industry trade benefits.</p>
+<li><p>Trade in final goods are basically using the global resources to full efficiency.</p>
 <ul>
-<li>gains come from economies of scale, number of brands, and improvement of average productivity.</li>
+<li>in this case, using trade data is enough to analyze, and tariff use is much simpler.</li>
 </ul></li>
+<li><p>That, until the Global Value Chain (GVC) went mainstream.</p></li>
 </ul>
 </section>
 <section id="today" class="slide level2">
@@ -359,10 +374,11 @@ I Made Krisna Gupta
 <ul>
 <li><p>Today we discuss the concept of offshoring.</p></li>
 <li><p>We also unpack the concept of unbundling stages of production.</p></li>
+<li><p>We’ll have a look at TiVA data and making sense of it.</p></li>
 </ul>
 </section>
-<section id="intro" class="slide level2">
-<h2>Intro</h2>
+<section id="no-more-aeroplane-countries" class="slide level2">
+<h2>No more aeroplane countries</h2>
 
 <img data-src="feenstra.png" class="r-stretch"></section>
 <section id="offshoring" class="slide level2 m">
@@ -480,29 +496,6 @@ I Made Krisna Gupta
 <li><p>Suppose Home country is a high-tech country, then it’s better for home to outsource the left bundle abroad.</p></li>
 </ul>
 </section>
-<section id="offshoring-model-1" class="slide level2">
-<h2>Offshoring model</h2>
-<ul>
-<li><p>Think of a HO model, but instead of having a labor/capital ratio, we have high skilled/low skilled labor <span class="math inline">\(\frac{H}{L}\)</span>.</p></li>
-<li><p>Let G7 countries represented by a region called Home, while China is foreign. We assume that</p></li>
-</ul>
-<p><span class="math display">\[
-\frac{H}{L} &gt; \frac{H^*}{L^*}
-\]</span></p>
-</section>
-<section id="offshoring-model-2" class="slide level2 m">
-<h2>Offshoring model</h2>
-<ul>
-<li>Goes without saying that wage of high-skilled labor relative to low-skilled labor is lower in Home</li>
-</ul>
-<p><span class="math display">\[
-\frac{W_H}{W_L}&lt;\frac{W_H^*}{W_L^*}
-\]</span></p>
-<ul>
-<li><p>Meaning, Home has comparative advantage in producing high value production which use high-skilled labor intensively.</p></li>
-<li><p>Of course foreign thus have comparative advantage in producing lower value production, which Home country offshore.</p></li>
-</ul>
-</section>
 <section id="offshoring-2" class="slide level2">
 <h2>Offshoring</h2>
 <ul>
@@ -511,35 +504,10 @@ I Made Krisna Gupta
 <li><p>Just like Standard Trade Model (STM), we can model this with a relative wage vs relative labor demand graph.</p></li>
 </ul>
 </section>
-<section id="offshoring-3" class="slide level2">
-<h2>Offshoring</h2>
-
-<img data-src="feenstra2.png" class="r-stretch"></section>
-<section id="relative-labor-market" class="slide level2">
-<h2>Relative labor market</h2>
-<ul>
-<li><p>High-skilled labor relative to low-skilled ones are abundant at Home, thus <span class="math inline">\(\frac{W_H}{W_L}\)</span> equilibrium is low.</p></li>
-<li><p><span class="math inline">\(\frac{W_H}{W_L}&lt;\frac{W_H^*}{W_L^*}\)</span>, thus this create an arbirtage.</p></li>
-<li><p>Just like H-O model, trade would benefits H in Home and L* in foreign, while L and H* suffers.</p></li>
-</ul>
-</section>
 <section id="lower-trade-cost" class="slide level2">
-<h2>Lower trade cost</h2>
-<ul>
-<li><p>An even lower trade cost may reduce operating cost at Foreign.</p></li>
-<li><p>This means, offshoring become even cheaper: Home may increase its offshoring, moving more process of production abroad.</p></li>
-<li><p>If this happens, demand for L goes down (because more low-skilled jobs are offshored), thus <span class="math inline">\(\frac{H}{L} \uparrow\)</span></p></li>
-<li><p>Foreign gets more job, thus <span class="math inline">\(\frac{H*}{L*} \downarrow\)</span></p></li>
-</ul>
-</section>
-<section id="lower-trade-cost-1" class="slide level2">
 <h2>Lower trade cost</h2>
 
 <img data-src="feenstra3.png" class="r-stretch"></section>
-<section id="lower-trade-cost-2" class="slide level2">
-<h2>Lower trade cost</h2>
-
-<img data-src="feenstra4.png" class="r-stretch"></section>
 <section id="second-unbundling-2" class="slide level2">
 <h2>Second unbundling</h2>
 <ul>
@@ -579,23 +547,43 @@ I Made Krisna Gupta
 <li><p>G7 competitiveness now relies on offshoring. Cannot compete without one.</p></li>
 </ul>
 </section>
+<section id="analytical-consequences" class="slide level2">
+<h2>Analytical consequences</h2>
+<ul>
+<li><p>Trade data is no longer useful if large components are sourced from import.</p></li>
+<li><p>You can know how much salt we import, but it’s much harder to know who use them: end consumers? food industry? Chemists?</p></li>
+<li><p>The value of a country’s export may be doublecounted: Vietnam is not making phones. Just assembling.</p></li>
+<li><p>This is where TiVA comes in.</p></li>
+</ul>
+</section>
+<section id="tiva" class="slide level2">
+<h2>TiVA</h2>
+<ul>
+<li><p>Trade in Value Added (TiVA) uses input-output statistics to infrom how much an industry uses imported inputs.</p></li>
+<li><p>OECD collects and estimates these information from national statistics. More information is <a href="https://www.oecd.org/en/topics/sub-issues/trade-in-value-added.html">here</a>, and data can be downloaded from <a href="https://data-explorer.oecd.org/vis?pg=0&amp;bp=true&amp;snb=14&amp;tm=TIVA&amp;df%5Bds%5D=dsDisseminateFinalCloud&amp;df%5Bid%5D=DSD_TIVA_MAINLV%40DF_MAINLV&amp;df%5Bag%5D=OECD.STI.PIE&amp;df%5Bvs%5D=1.0&amp;dq=FFD_DVA.AUS..W..A&amp;pd=2015%2C2020&amp;to%5BTIME_PERIOD%5D=false&amp;ly%5Bcl%5D=TIME_PERIOD&amp;ly%5Brw%5D=ACTIVITY">here</a></p></li>
+</ul>
+</section>
+<section id="gvc-in-the-food-industry" class="slide level2">
+<h2>GVC in the food industry</h2>
+
+<img data-src="pic8.png" class="r-stretch"><p><a href="https://cutt.ly/cips-pp51">from Amanta &amp; Gupta 2022</a></p>
+</section>
+<section id="gvc-in-semiconductor" class="slide level2">
+<h2>GVC in semiconductor</h2>
+
+<img data-src="chip.png" class="r-stretch"><p><a href="https://www.semiconductors.org/wp-content/uploads/2024/05/Report_Emerging-Resilience-in-the-Semiconductor-Supply-Chain.pdf">BCG and SIA report</a></p>
+</section>
 <section id="the-third-unbundling" class="slide level2 m">
 <h2>The third unbundling</h2>
 <ul>
 <li><p>Third unbundling is a relatively new phenomenon: happens when face-to-face cost reduce.</p></li>
 <li><p>The industry 4.0: face-to-face cost reduces thanks to telepresence and telerobotics. Data transfer, human-machine and machine-machine interface allows it to happen.</p></li>
-<li><p>Telerobotics: example, a doctor can provide his/her service through robots, lecturers can do zoom class, etc.</p></li>
-<li><p>It remains to be seen its consequences.</p></li>
+<li><p>Services and digital trade is taking the front stage. A story for another time.</p></li>
 </ul>
-</section>
-<section id="rebundling" class="slide level2">
-<h2>Rebundling?</h2>
-<ul>
-<li><p>De-globalization phenomena may moves us back a little bit, where countries are on the move to re-introduce measures which increase trade costs (tariffs, non-tariffs, WTO dead).</p></li>
-<li><p>Will unbundled production be re-bundle?</p></li>
-</ul>
+<div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
+</div>
 </div>
 </section>
     </div>
@@ -625,7 +613,6 @@ I Made Krisna Gupta
       Reveal.initialize({
 'controlsAuto': true,
 'previewLinksAuto': false,
-'smaller': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
@@ -887,10 +874,27 @@ I Made Krisna Gupta
         // clear code selection
         e.clearSelection();
       });
-      function tippyHover(el, contentFn) {
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp('/' + window.location.host + '/');
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
-          content: contentFn,
           maxWidth: 500,
           delay: 100,
           arrow: false,
@@ -900,8 +904,17 @@ I Made Krisna Gupta
           interactive: true,
           interactiveBorder: 10,
           theme: 'light-border',
-          placement: 'bottom-start'
+          placement: 'bottom-start',
         };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
           config['offset'] = [0,0];
           config['maxWidth'] = 700;
         window.tippy(el, config); 
@@ -915,7 +928,11 @@ I Made Krisna Gupta
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
-          return note.innerHTML;
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
         });
       }
       const findCites = (el) => {
