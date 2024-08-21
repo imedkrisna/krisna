@@ -230,6 +230,14 @@ format:
 
 - OECD collects and estimates these information from national statistics. More information is [here](https://www.oecd.org/en/topics/sub-issues/trade-in-value-added.html), and data can be downloaded from [here](https://data-explorer.oecd.org/vis?pg=0&bp=true&snb=14&tm=TIVA&df[ds]=dsDisseminateFinalCloud&df[id]=DSD_TIVA_MAINLV%40DF_MAINLV&df[ag]=OECD.STI.PIE&df[vs]=1.0&dq=FFD_DVA.AUS..W..A&pd=2015%2C2020&to[TIME_PERIOD]=false&ly[cl]=TIME_PERIOD&ly[rw]=ACTIVITY)
 
+## Questions
+
+1. Seberapa besar kontribusi asing / negara tertentu terhadap produksi dan/atau ekspor di sebuah industri?
+
+2. Seberapa besar kontribusi negara kita dalam supply chain negara lain?
+
+3. Seberapa jauh keterlibatan industri kita (backward+forward) di dalam Global Value Chain (GVC) dibandingkan negara lain?
+
 ## GVC in the food industry
 
 ![](pic8.png)

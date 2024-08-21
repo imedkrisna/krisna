@@ -8,7 +8,7 @@
 <link href="kemlugvc_files/libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="kemlugvc_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="kemlugvc_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.4.554">
+  <meta name="generator" content="quarto-1.5.54">
 
   <meta name="author" content="I Made Krisna Gupta">
   <meta name="dcterms.date" content="2024-08-21">
@@ -563,6 +563,14 @@ I Made Krisna Gupta
 <li><p>OECD collects and estimates these information from national statistics. More information is <a href="https://www.oecd.org/en/topics/sub-issues/trade-in-value-added.html">here</a>, and data can be downloaded from <a href="https://data-explorer.oecd.org/vis?pg=0&amp;bp=true&amp;snb=14&amp;tm=TIVA&amp;df%5Bds%5D=dsDisseminateFinalCloud&amp;df%5Bid%5D=DSD_TIVA_MAINLV%40DF_MAINLV&amp;df%5Bag%5D=OECD.STI.PIE&amp;df%5Bvs%5D=1.0&amp;dq=FFD_DVA.AUS..W..A&amp;pd=2015%2C2020&amp;to%5BTIME_PERIOD%5D=false&amp;ly%5Bcl%5D=TIME_PERIOD&amp;ly%5Brw%5D=ACTIVITY">here</a></p></li>
 </ul>
 </section>
+<section id="questions" class="slide level2">
+<h2>Questions</h2>
+<ol type="1">
+<li><p>Seberapa besar kontribusi asing / negara tertentu terhadap produksi dan/atau ekspor di sebuah industri?</p></li>
+<li><p>Seberapa besar kontribusi negara kita dalam supply chain negara lain?</p></li>
+<li><p>Seberapa jauh keterlibatan industri kita (backward+forward) di dalam Global Value Chain (GVC) dibandingkan negara lain?</p></li>
+</ol>
+</section>
 <section id="gvc-in-the-food-industry" class="slide level2">
 <h2>GVC in the food industry</h2>
 
@@ -830,18 +838,7 @@ I Made Krisna Gupta
         }
         return false;
       }
-      const clipboard = new window.ClipboardJS('.code-copy-button', {
-        text: function(trigger) {
-          const codeEl = trigger.previousElementSibling.cloneNode(true);
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
-            }
-          }
-          return codeEl.innerText;
-        }
-      });
-      clipboard.on('success', function(e) {
+      const onCopySuccess = function(e) {
         // button target
         const button = e.trigger;
         // don't keep focus
@@ -873,7 +870,29 @@ I Made Krisna Gupta
         }, 1000);
         // clear code selection
         e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
       });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        // For code content inside modals, clipBoardJS needs to be initialized with a container option
+        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
         var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
         var mailtoRegex = new RegExp(/^mailto:/);
           var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -881,7 +900,7 @@ I Made Krisna Gupta
             return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
         }
         // Inspect non-navigation links and adorn them if external
-     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
         for (var i=0; i<links.length; i++) {
           const link = links[i];
           if (!isInternal(link.href)) {
