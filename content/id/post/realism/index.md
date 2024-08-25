@@ -64,3 +64,5 @@ Tentunya di ilmu ekonomi, pareto optimality sendiri kemudian dijabarkan lebih ja
 
 Lho tumben ada tukang baso di depan. Gw beli baso dulu ya bye guys!
 
+eh btw ini postingan part 2 tentang realism bisa klik di [sini](../realism2/)
+
