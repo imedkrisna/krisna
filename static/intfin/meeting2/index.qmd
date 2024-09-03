@@ -66,6 +66,43 @@ format:
 
 - Misalnya ketika kita bicara tentang Indonesia sebagai _home country_, maka nilai tukar Indonesia akan diekspresikan sebagai rupiah yang diperlukan untuk 1 dolar AS.
 
+## Harga USD
+
+| Jenis Valuta | May-24 | Jun-24 | Jul-24 |
+| ------- | --- | --- | --- |
+| EUR |  0.92 |	 0.93 |	 0.92 |
+| GBP | 0.78 	| 0.79 	| 0.78 |
+| IDR |  16,253.00 |	 16,375.00 	| *16,260.00* |
+| SGD |  1.35 |	 1.36 |	 1.34 |
+| CNY |  7.24 |	 7.27 |	 7.23 |
+
+: Nilai tukar Dolar AS ([Tabel IX.6 SEKI](https://www.bi.go.id/id/statistik/ekonomi-keuangan/seki/Default.aspx#headingFour))
+
+$E_{\$/Rp}=6.15\times 10^{-5}$ U.S. exchange rate (America terms)
+$E_{Rp/\$}=16,260.00$ Indonesian exchange rate (Indonesian terms)
+
+Note that we usually switch this up in the news.
+
+## Apredepre
+
+- Jika 1 Rp dapat membeli lebih banyak dolar, kita katakan Rp *menguat*, *naik harga*, atau *apresiasi* terhadap dolar.
+
+- Jika 1 Rp dapat membeli lebih sedikit dolar, kita katakan Rp *melemah*, *turun harga*, atau *depresiasi* terhadap dolar.
+
+- Jika Rupiah menguat terhadap Dolar, maka Dolar melemah terhadap Rupiah.
+
+- Karena kita biasa menulis nilai tukar rupiah sebagai $E_{Rp/\$}$, maka angkanya jadi kebalik. Angkanya naik = depresiasi.
+
+- Apresiasi dan depresiasi biasanya diekspresikan dalam persen, atau $\frac{E_{t}-E_{t-1}}{E_{t-1}}$
+
+## Apredepre
+
+| Jenis Valuta | May-24 | Jun-24 | Jul-24 |
+| ------- | --- | --- | --- |
+| IDR |  16,253.00 |	 16,375.00 	| *16,260.00* |
+
+Rupiah 
+
 
 
 
