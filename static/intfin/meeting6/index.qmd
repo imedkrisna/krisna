@@ -1,0 +1,612 @@
+---
+title: "Internal and External Economies of Scale"
+subtitle: "ECES905205 pertemuan 6"
+date: ""
+author: "I Made Krisna Gupta"
+format: 
+  revealjs:
+    theme: [simple,../mytheme.scss]
+    chalkboard: true
+    incremental: false
+    transition: convex
+    background-transition: fade
+    slide-number: true
+  beamer: default
+---
+
+## So far
+
+- Under the standard theory, trade improves welfare under our typical assumption. Among them:
+
+- constant (Ricardian) or decreasing returns to scale (SFM, HO, STM).
+
+    - that is, the more Q, factor productivity goes down.
+
+- What if the production function is increasing returns to scale: cost goes down.
+
+    - Trade under the existence of externalities / non-trivial fixed cost.
+    
+## Economies of scale and market structure
+
+- Economies of scale could mean either that larger firms or a larger industry would be more efficient.
+
+- External economies of scale occur when the cost per unit of output depends on the size of the industry.
+
+- Internal economies of scale occur when the cost per unit of output depends on the size of the firm.
+
+## Economies of scale and market
+
+- Both external and internal economies of scale are important causes of international trade.
+
+- They have different implications for the structure of industries:
+
+- An industry where economies of scale are purely external will typically consist of many small firms and be perfectly competitive.
+
+- Internal economies of scale result when large firms have a cost advantage over small firms, causing the industry to become imperfectly competitive.
+
+## External economies theory
+
+- Production becomes efficient when it is concentrated in one of few locations (aka the agglomeration effect)
+
+- In the United States, the semiconductor industry is concentrated in Silicon Valley, investment banking in New York, and the entertainment industry in Hollywood.
+
+- One town in China produces most of the world’s underwear production, another produces nearly all cigarette lighters.
+
+- Indian information services companies are still clustered in Bangalore.
+
+## Why agglomeration?
+
+1. Specialized equipment or services may be needed for the industry, but are only supplied by other firms if the industry is large and concentrated.
+
+- For example, Silicon Valley in California has a large concentration of silicon chip companies, which are serviced by companies that make special machines for manufacturing silicon chips.
+
+- These machines are cheaper and more easily available there than elsewhere.
+
+## Why agglomeration?
+
+2. Labor pooling: a large and concentrated industry may attract a pool of workers, reducing employee search and hiring costs for each firm.
+
+3. Knowledge spillovers: workers from different firms may more easily share ideas that benefit each firm when a large and concentrated industry exists.
+
+## Equilibrium {.m}
+
+:::: columns
+::: {.column width=47%}
+
+![](Picture1.png)
+
+:::
+::: {.column width=47%}
+
+- unlike perfect market, external economies of scale leads to a downward sloping AC.
+
+- However, competition is still fierce -> AC curve become **forward-falling supply curve**.
+
+- The equilibrium is at point 1.
+
+- This point different between countries: depends on initial condition of supply and demand, also depends on comparative advantage.
+
+:::
+::::
+
+## External economies and trade
+
+Suppose US vs China where the $P_CHINA<P_US$ before trade. When they trade, the two countries suddenly joined their demand. For consumers, it is cheaper to source all Button from China.
+
+![](Picture2.png)
+
+## External economies and trade
+
+ - The Chinese button industry will expand, while the U.S. button industry will contract.
+
+- This process feeds on itself: As the Chinese industry’s output rises, its costs will fall further; as the U.S. industry’s output falls, its costs will rise.
+
+- In the end, all button production will be in China.
+
+## External economies and trade
+
+- How does this concentration of production affect prices?
+
+- Chinese button prices were lower than U.S. button prices before trade.
+
+- Because China’s supply curve is forward-falling, increased production as a result of trade leads to a button price that is lower than the price before trade.
+
+- Trade leads to prices that are lower than the prices in either country before trade!
+
+## External economies and trade
+
+- This is very different from the implications of models without increasing returns.
+
+- In the standard trade model, relative prices converge as a result of trade.
+
+- If cloth is relatively cheap in the home country and relatively expensive in the foreign country before trade opens, the effect of trade was to raise cloth prices in Home and reduce them in Foreign.
+
+- With external economies, by contrast, the effect of trade is to reduce prices everywhere.
+
+## External economies and trade
+
+- What might cause one country to have an initial advantage from having a lower price?
+
+- One possibility is comparative advantage due to underlying differences in technology and resources.
+
+- If external economies exist, however, the pattern of trade could be due to historical accidents:
+
+- Countries that start as large producers in certain industries tend to remain large producers even if another country could potentially produce more cheaply.
+
+## External economies and trade
+
+- A tufted blanket, crafted as a wedding gift by a 19th-century teenager, gave rise to the cluster of carpet manufacturers around Dalton, Georgia.
+
+- Silicon Valley may owe its existence to two Stanford graduates named Hewlett and Packard who started a business in a garage there.
+
+- Legend has it, Kudus become [The Kretek City](https://travel.kompas.com/read/2023/11/08/204000527/mengapa-kudus-dijuluki-kota-kretek-ketahui-5-alasannya?page=all#google_vignette) was credited to Haji Djamhari and Nitisemito.
+
+## External economies and trade
+
+- Assume that the Vietnamese cost curve lies below the Chinese curve because Vietnamese wages are lower than Chinese wages.
+
+- At any given level of production, Vietnam could manufacture buttons more cheaply than China.
+
+- One might hope that this would always imply that Vietnam will in fact supply the world market.
+
+- But this need not always be the case if China has enough of a head start.
+
+- No guarantee that the right country will produce a good that is subject to external economies.
+
+## External econ & trade {.m}
+
+:::: columns
+::: {.column width=47%}
+
+![](Picture3.png)
+
+:::
+::: {.column width=47%}
+
+- Suppose Vietnam has even lower $AC$ than China.Producing in Vietnam would placed world Q and P at point 2.
+
+- If the Chinese industry established first (Hence started at 1), while Vietnam hasn't built its button industry, it starts at $C_0$.
+
+- since $C_0 > P_1$, no firms would even starting its company in Vietnam.
+
+:::
+::::
+
+## External econ & trade
+
+- Trade based on external economies has an ambiguous effect on national welfare.
+
+- There will be gains to the world economy by concentrating production of industries with external economies.
+
+- It’s possible that a country is worse off with trade than it would have been without trade: a country may be better off if it produces everything for its domestic market rather than pay for imports.
+
+## Worse with trade
+
+- Imagine that Thailand could make watches more cheaply, but Switzerland got there first.
+
+- The price of watches could be lower in Thailand with no trade.
+
+- Trade could make Thailand worse off, creating an incentive to protect its potential watch industry from foreign competition.
+
+- What if Thailand reverts to autarky?
+
+## Worse with trade {.m}
+
+:::: columns
+::: {.column width=47%}
+
+![](Picture4.png)
+
+:::
+::: {.column width=47%}
+
+- At first, TH import watch from SW at point 1. $P_1$ is low enough to block entry.
+
+- However, if Thailand block import, its industry must produce, and the scale can go to point 2, where $P_2<P_1$.
+
+- This situation provides a reason for a temporary protectionism.
+
+:::
+::::
+
+## External economies
+
+- Note that it’s still to the benefit of the world economy to take advantage of the gains from concentrating industries.
+
+- Each country wanting to reap the benefits of housing an industry with economies of scale creates trade conflicts.
+
+- Overall, it’s better for the world that each industry with external economies be concentrated somewhere.
+
+## Dynamic scale {.m}
+
+- So far, we have considered cases where external economies depend on the amount of current output at a point in time.
+
+- But external economies may also depend on the amount of cumulative output over time.
+
+- Dynamic increasing returns to scale exist if average costs fall as cumulative output over time rises.
+
+- Dynamic increasing returns to scale imply dynamic external economies of scale, which provide a case for protectionism.
+
+- Trade based on external economies of scale may increase or decrease national welfare, and countries may benefit from temporary protectionism if their industries exhibit external economies of scale either at a point in time or over time.
+
+## Internal economies of scale
+
+- Internal economies of scale result when large firms have a cost advantage over small firms, causing the industry to become uncompetitive.
+
+- Internal economies of scale imply that a firm’s average cost of production decreases the more output it produces.
+
+- This can be modeled by a large fixed cost, which can create a **barrier to entry**.
+
+- example of fixed cost: R&D, specialized machine, access to natural resources, brand name, network effect.
+
+## Monopolistic competition
+
+- Kondisi monopolistic competition sangat cocok untuk menganalisis hal ini.
+- Monopolistik competition: firms tau mereka bisa kontrol harga (to some extent)
+- Kondisi ini tercipta ketika salah satu dari dua hal ini terjadi:
+  - hanya sedikit major player in the industry.
+  - product is differentiated enough (hanya ada 1 produsen iOS, misalnya)
+
+## Monopoly: a brief review
+
+- Assume an industry face demand $Q=a-bP$
+- $P$ is not exogen (why?), thus rearrange:
+  - $P=\frac{a}{b}-\frac{Q}{b}$
+- Revenue in the industry $R=Q\times P$, subs $P$:
+  - $R=Q \times \left(\frac{a}{b}-\frac{Q}{b}\right)$
+  - $MR=\frac{a}{b}-2\frac{Q}{b}=P-\frac{Q}{b}$
+
+## Monopoly: a brief review
+
+- Total cost: $C=F+cQ$
+- Marginal cost: $c$
+- Average cost: $\frac{F}{Q}+c$
+- as $Q \rightarrow \infty$, $\frac{F}{Q} \rightarrow 0$
+- The larger F, the larger Q is required.
+
+---
+
+## The cost curve
+
+AC2 has a higher fixed cost, thus requires more Q to reach "flat-ish" part of the cost curve.
+
+```{r}
+#| output: false
+library(tidyverse)
+
+plot<-ggplot()+theme_classic()+
+  theme(panel.background = element_rect(fill = '#f0f1eb'),
+        plot.background = element_rect(fill = '#f0f1eb'),
+        axis.title.x = element_text(hjust=1),
+        axis.title.y = element_text(angle=0,hjust=1,vjust=1),
+        panel.grid=element_blank(),
+#        axis.text.x=element_blank(),
+#        axis.text.y=element_blank(),
+#        axis.ticks.x=element_blank(),
+#        axis.ticks.y=element_blank(),
+        legend.position=c(1,1),
+        legend.justification = c(1,1),
+        legend.spacing=unit(0,"cm"),
+        legend.margin=margin(0,0,0,0))
+```
+
+```{r}
+#| label: fig1
+#| warning: false
+AC1 <- function(q) 1.5/q+1
+AC2 <- function(q) 10/q+1
+plot+
+  stat_function(fun = AC1,size=1.1, color='red') +
+  stat_function(fun = AC2,size=1.1, color='blue') +
+  geom_hline(yintercept=1,size=1.1,color='black')+
+  labs(x="Q", y="C",color=NULL,fill=NULL)+
+  annotate("text",x=10,y=1.3,label="AC1")+
+  annotate("text",x=20,y=2,label="AC2")+
+  annotate("text",x=10,y=0.8,label="MC")+
+  scale_x_continuous(expand=c(0,0),limits = c(0,30))+
+  scale_y_continuous(expand=c(0,0),limits = c(0,5))+
+  theme(      axis.text.x=element_blank(),
+        axis.text.y=element_blank(),
+        axis.ticks.x=element_blank(),
+        axis.ticks.y=element_blank())
+```
+
+## Monopoly Q
+
+::: columns
+::: {.column width="47%"}
+
+```{r}
+#| label: fig2
+#| warning: false
+#| fig-width: 5
+#| fig-height: 4
+
+demand<- function(q) 5.5-q
+mr<- function(q) 5.5-q-q
+z<-seq(0, 4.5/2, 0.01)
+AC1 <- function(q) 2/q+1
+
+plot+
+  stat_function(fun = AC1,size=1.1, color='red') +
+  stat_function(fun = demand,size=1.1, color='blue') +
+  stat_function(fun = mr,size=1.1, color='#008080') +
+  geom_hline(yintercept=1,size=1.1,color='black')+
+  labs(x="Q", y="C,P",color=NULL,fill=NULL)+
+  geom_ribbon(aes(x = z, ymin = AC1(4.5/2), ymax=demand(4.5/2)), alpha = 0.25) +
+  annotate("point",x=4.5/2,y=1)+
+  annotate("segment",x=4.5/2,y=0,xend=4.5/2,yend=demand(4.5/2),lty="dotted",size=1.1)+
+  annotate("segment",x=0,y=demand(4.5/2),xend=4.5/2,yend=demand(4.5/2),lty="dotted",size=1.1)+
+  annotate("segment",x=0,y=AC1(4.5/2),xend=4.5/2,yend=AC1(4.5/2),lty="dotted",size=1.1)+
+  annotate("text",x=4.5,y=1.8,label="AC")+
+  annotate("text",x=4.9,y=1.1,label="MC")+
+  annotate("text",x=4.8,y=0.5,label="Demand")+
+  annotate("text",x=2.7,y=0.5,label="MR")+
+  scale_x_continuous(expand=c(0,0),limits = c(0,5),breaks = 4.5/2,labels="Qm")+
+  scale_y_continuous(expand=c(0,0),limits = c(0,5),breaks=c(AC1(2.25),demand(2.25)),
+                     labels=c("ACm","Pm"))
+  
+```
+:::
+::: {.column width="47%"}
+- monopolist maximized profit at MR=MC
+- Will charge P>AC
+- profit $=(P-AC)Q$
+:::
+:::
+
+## Monopolistic competition
+
+- Each firm under monopolistic competition industries:
+  - can differentiate its product from competitors'
+  - takes prices charged by rivals as given
+  - expected to sell more as total sales in the industry increase & as prices charged by rivals increase.
+  - sell less as number of firms decreases and firm's price increases.
+
+## monopolistic characteristics
+
+$$
+Q=S\times\left[1/n-b(P-\bar{P})\right]
+$$
+
+- Q = total sales of individual firm
+    
+- S = total sales of the industry
+
+- n = number of firms
+
+- b = elasticity of supply
+
+- P = firms' price
+
+- $\bar{P}$ = rival's price index
+
+## Monopolistic characteristics
+
+$$
+Q=S\times\left[1/n-b(P-\bar{P})\right]
+$$
+
+- Suppose all firms are identical, then $P=\bar{P}$
+
+- All firms share equal amount of market share $S/n$
+
+- Average costs should depend on the size of the market and the number of firms.
+
+$AC=\frac{F}{Q}+c \Rightarrow AC=n\frac{F}{S}+c$
+
+## Monopolistic Characteristic
+
+- Rearrange $Q=S\times\left[1/n-b(P-\bar{P})\right]$ to get $Q=\left[S/n-Sb\bar{P}\right]-SbP$
+
+- Since S, n and $\bar{P}$ are exogeneous, we can skip them to get $Q=A-SbP$.
+
+- $R=QP=AP-SbP^2$ hence $MR=A-SbP-SbP=Q-SbP$
+
+- $P-\frac{Q}{Sb}=c \rightarrow P-c=\frac{Q}{Sb} \rightarrow P-c=\frac{1}{nb}$
+
+## Monopolistic Characteristic
+
+$P-c=\frac{1}{nb} \rightarrow P=\frac{1}{nb}+c$
+
+- As $n \uparrow$, $P-c \downarrow$ 
+  - Since $c$ is exogen, the reduction in markup is driven by $P \downarrow$
+  - The higher $n$, the more pressure to keep $P$ low.
+- Firms will keep coming in as long as $p-c>0$
+- In the long-run, number of firms settles at $P=AC$
+
+## Monopolistic
+
+::: columns
+::: {.column width="47%"}
+
+```{r}
+#| label: fig3
+#| warning: false
+#| fig-width: 5
+#| fig-height: 4
+
+DD<- function(q) 9/q+1
+CC<- function(q) q+1
+
+plot+
+  stat_function(fun = DD,size=1.1, color='blue') +
+  stat_function(fun = CC,size=1.1, color='red') +
+  labs(x="n", y="C,P",color=NULL,fill=NULL)+
+  scale_x_continuous(expand=c(0,0),limits = c(0,10),breaks = 3,labels="n*")+
+  scale_y_continuous(expand=c(0,0),limits = c(0,10),breaks=4,labels="P*,AC*")+
+  annotate("text",x=7,y=7,label="AC(n,.)")+
+  annotate("text",x=7,y=3,label="P(n,.)")
+  
+```
+:::
+::: {.column width="47%"}
+- Any higher than $n^*$, firms cost is too much.
+- Any lower than $n^*$, mark-up will go up, incentives for new entrant to join.
+:::
+:::
+
+## Trade & monopolistic {.m}
+
+::: columns
+::: {.column width="47%"}
+
+```{r}
+#| label: fig4
+#| warning: false
+#| fig-width: 5
+#| fig-height: 4
+
+DD<- function(q) 9/q+1
+DDD<- function(q) 18/q+1
+CC<- function(q) q+1
+CCC<- function(q) q/2+1
+
+plot+
+  stat_function(fun = DD,size=1.1, color='blue') +
+  stat_function(fun = CC,size=1.1, color='red') +
+  stat_function(fun = CCC,size=1.1, color='red',lty='dashed') +
+  labs(x="n", y="C,P",color=NULL,fill=NULL)+
+  scale_x_continuous(expand=c(0,0),limits = c(0,10),breaks =c(3,sqrt(18)),labels=c("n1","n2"))+
+  scale_y_continuous(expand=c(0,0),limits = c(0,10),breaks=c(4,DD(sqrt(18))),labels=c("P1,AC1","P2,AC2"))+
+  annotate("text",x=7,y=7,label="AC(n,.)")+
+  annotate("text",x=7,y=3,label="P(n,.)")
+
+  
+```
+:::
+::: {.column width="47%" .m}
+- Trade will increase market size $S$.
+  - AC goes down, number of firms goes up relative to each market prior.
+  
+- Price decrease benefits consumers from both countries.
+
+- Because trade increases the variety of goods that consumers can buy under monopolistic competition, it increases the welfare of consumers.
+
+:::
+:::
+
+## Numeric example
+
+- Let there be automotive industries as such:
+
+$$
+Q=S\times[(1/n)-(1/30000)\times(P-\bar{P})] \\
+$$
+
+- With cost:
+
+$$
+AC=750000000/Q+5000
+$$
+
+-Let home market sells 900k cars in a year, while Foreign 1,6 million.
+
+## Nummeric example
+
+```{r}
+#| label: fig5
+#| warning: false
+
+library("patchwork")
+DA<- function(q) 5000+1/(1/30000*q)
+CA<- function(q) 750000000*q/900000+5000
+CB<- function(q) 750000000*q/1600000+5000
+C3<- function(q) 750000000*q/2500000+5000
+
+
+a<-plot+
+  stat_function(fun = DA,size=1.1, color='blue') +
+  stat_function(fun = CA,size=1.1, color='red') +
+  labs(x="n", y="C,P",color=NULL,fill=NULL)+
+  scale_x_continuous(expand=c(0,0),limits = c(0,12))+
+  scale_y_continuous(expand=c(0,0),limits = c(0,36000))+
+  ggtitle("Home")
+
+b<-plot+
+  stat_function(fun = DA,size=1.1, color='blue') +
+  stat_function(fun = CB,size=1.1, color='red') +
+  labs(x="n", y="C,P",color=NULL,fill=NULL)+
+  scale_x_continuous(expand=c(0,0),limits = c(0,12))+
+  scale_y_continuous(expand=c(0,0),limits = c(0,36000))+
+  ggtitle("Foreign")
+
+c<-plot+
+  stat_function(fun = DA,size=1.1, color='blue') +
+  stat_function(fun = C3,size=1.1, color='red') +
+  labs(x="n", y="C,P",color=NULL,fill=NULL)+
+  scale_x_continuous(expand=c(0,0),limits = c(0,12))+
+  scale_y_continuous(expand=c(0,0),limits = c(0,36000))+
+  ggtitle("Trade")
+
+a+b+c
+```
+
+## Nummeric example
+
+|     | Home, no trade | Foreign, no trade | Integrated market |
+| --- | -------------- | ----------------- | ----------------- |
+| Output | 900.000 | 1.600.000 | 2.500.000 |
+| n | 6 | 8 | 10 |
+| Output per firm | 150.000 | 200.000 | 250.000 |
+| AC,P | 10.000 | 8.750 | 8.000 |
+
+## Highlighted feature
+
+- Here, even countries with the same characteristics (same cost structure) in the same industry benefited from trade.
+
+- This is called **intra-industry trade**.
+  - Export car, also import car.
+  - Think of Toyota and Ford.
+- more car variety: from 6 & 8 brands to 10 for both.
+
+## Highlighted feature
+
+- Note that intra-industry trade benefits home more.
+  - Price down by 2k while foreign downs only 750.
+- This is because Home has smaller market.
+  - the smaller the market, the higher the fixed cost needs to be covered.
+  - This is why small countries like Singapore, Thailand loves FTAs.
+
+## Firms response to trade
+
+- From total 14 brands, only 10 survives.
+
+- these 10 brands get higher market share, hence smaller cost.
+
+- Since all firms are identic, we don't care who exit.
+
+- In the real world where firms are heterogeneous, these 4 firms must be the least productive.
+
+## Firms response to trade
+
+- Market integration will force lowest cost firms to exit.
+
+- When market integrates, there's a threshold $c^*$ where any firm with higher marginal cost exits.
+
+- The cost threshold is the fifth firm from bottom: lower than that, the firm exit.
+
+## More gain from trade
+
+- Meaning, this gives us even more gains from trade:
+
+  - the average productivity of the 10 remaining firms must be higher than the initial 14.
+  
+  - Leads to higher productivity overall.
+  
+- Of course by exit doesn't mean the entrepreneur and labor go unemployed.
+
+    - they are absorbed by the remaining 10, either by acquisition or recruitment.
+
+## Gains from trade
+
+- So in all, internal economies of scale gains from trade:
+
+    - for countries similar with each other
+    
+    - reduction in price for both countries.
+    
+    - more variety in the market.
+    
+    - Increased average quality/productivity.
+
