@@ -182,13 +182,13 @@ Home’s effective exchange rate terdepresiasi 14%.
 
 ## XR Indonesia
 
-![](idr.png)
+![](idr2.png)
 
 Indonesia memiliki nilai tukar yang ada di tengah, atau managed floating. Tidak begitu ketat, tapi juga tidak terbang bebas. Bisa dikatakan kita melakukan managed float. Data ini didapat dari [Yahoo finance](https://yhoo.it/3ZaTko7).
 
 ## Rezim XR
 
-![Gambar ini didapat oleh Feenstra Taylor dari IMF, yang melakukan klasifikasi terhadap 182 negara. Rezim XR merupakan spektrum dari yang paling fix sampai paling float. 6 negara melakukan ultrapeg yang namanya currency peg.](regime.png)
+![Gambar ini didapat oleh Feenstra Taylor dari IMF, yang melakukan klasifikasi terhadap 182 negara. Rezim XR merupakan spektrum dari yang paling fix sampai paling float. 6 negara melakukan ultrapeg yang namanya currency board.](regime.png)
 
 ## Pasar uang
 
