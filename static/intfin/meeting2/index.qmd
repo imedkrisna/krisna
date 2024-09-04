@@ -68,7 +68,7 @@ format:
 
 - Misalnya ketika kita bicara tentang Indonesia sebagai _home country_, maka nilai tukar Indonesia akan diekspresikan sebagai rupiah yang diperlukan untuk 1 dolar AS.
 
-## Harga IDR
+## Harga IDR {.m}
 
 | Jenis Valuta | May-24 | Jun-24 | Jul-24 |
 | ------- | --- | --- | --- |
@@ -79,13 +79,13 @@ format:
 | JPY/100 |	10.353 |	10.228 |	10.540 |
 
 
-: Nilai tukar Rupiah ([Tabel IX.6 SEKI](https://www.bi.go.id/id/statistik/ekonomi-keuangan/seki/Default.aspx#headingFour))
+: Nilai tukar Rupiah ([Tabel V.40 SEKI](https://www.bi.go.id/id/statistik/ekonomi-keuangan/seki/Default.aspx#headingFour))
 
 $E_{\$/Rp}=6,127\times 10^{-5}$ U.S. exchange rate (America terms)
-$E_{Rp/\$}=16.320$ Indonesian exchange rate (Indonesian terms)
-$E_{Rp/\$,t}=\frac{1}{E_{\$/Rp,t}}$
 
-Note that we usually switch this up in the news.
+$E_{Rp/\$}=16.320$ Indonesian exchange rate (Indo terms)
+
+$E_{Rp/\$,t}=\frac{1}{E_{\$/Rp,t}}$
 
 ## Apredepre
 
@@ -320,6 +320,14 @@ $$
 
 - Ini disebut juga Covered Interest Parity (CIP) karena risiko valas sudah ter"cover" oleh kontrak forward.
 
+## CIP
+
+![](pic1.png)
+
+## CIP
+
+![](pic2.png)
+
 ## Uncovered parity {.m}
 
 - Jika investor tidak membeli kontrak forward, maka ia harus menebak spot rate di tahun depan. Tebakan ini disebut juga *expected exchange rate*, kita simbolkan $E_{\$/€}^e$.
@@ -341,6 +349,56 @@ $$
 $$
 E_{\$/€}=E_{\$/€}^e \frac{1+i_{€}}{1+i_{\$}}
 $$
+
+## UIP
+
+![](pic3.png)
+
+## Tentang aset {.m}
+
+- Portolio seorang investor dapat terdiri dari saham, surat berharga, vila di Swiss, lukisan, deposito dan lain-lain dalam berbagai mata uang.
+
+- Atribut penting dari aset: return/imbal balik, risiko, dan likuiditas.
+
+- Return dari suatu aset adalah total pertumbuhan bersih dari portfolionya. Biasanya diukur tahunan.
+
+- Risiko aset maksudnya adalah volatilitas dari return aset tersebut.
+
+- likuiditas artinya seberapa mudah aset tersebut bisa dicairkan/dijual.
+
+- Hasil ramalan return kita katakan sebagai ekspektasi return.
+
+## UIP dan CIP
+
+- Jika kondisi UIP dan CIP terjaga. maka kita akan mendapati bahwa
+
+$$
+E_{\$/€}=F_{\$/€}
+$$
+
+- Meskipun nilai ekspektasi spot rate dan forward rate digunakan secara terpisah, tapi di ekuilibrium keduanya harusnya sama.
+
+- Akibatnya, bagi investor yang risk-neutral, risky dan riskless trade akan memberikan return yang sama.
+
+## UIP dan CIP
+
+![](pic4.png)
+
+## UIP dan CIP
+
+Aproksimasi dari UIP:
+
+$$
+i_\$=i_{€}+\frac{E_{\$/€}^e-E_{\$/€}}{E_{\$/€}}
+$$
+
+nilai ekspektasi biasanya sulit diukur, tapi jika UIP terjaga, maka kita bisa menebak nilai ekspektasi berdasarkan rumus di atas.
+
+Misalnya bunga dolar 4% sementara euro di 3%. Andai UIP terjaga, maka ekspektasi depresiasi dolar tahun depan akan 1%. Orang yang melakukan arbitrase dari euro ke dolar akan dapat return yang sama dengan yang nabung euro dari awal.
+
+## UIP dan CIP
+
+![](pic5.png)
 
 ## Kesimpulan
 
