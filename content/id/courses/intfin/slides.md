@@ -11,7 +11,7 @@ weight: 20
 
 slides:
 
-- {{% staticref "/intfin/meeting1.pdf" "newtab" %}}Meeting 1: General overview of international finance{{% /staticref %}}
-- {{% staticref "/intecon/meeting2/index.html" "newtab" %}}Pertemuan 2: Reviewing exchange rate{{% /staticref %}}
+- {{% staticref "/intfin/meeting1.pdf" "newtab" %}}Pertemuan 1: General overview of international finance{{% /staticref %}}
+- {{% staticref "/intfin/meeting2/index.html" "newtab" %}}Pertemuan 2: Reviewing exchange rate{{% /staticref %}}
 
 
