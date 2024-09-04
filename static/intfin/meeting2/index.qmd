@@ -26,6 +26,8 @@ format:
 
 - As discussed, we will use contents from Feenstra & Taylor's International Macroeconomics.
 
+    - pictures, graphs, tables with no explicit source is from the book.
+
 - Slides, homeworks, and announcements will be on EMAS (at least pre-midterm).
 
 ## Eploring questions
@@ -66,20 +68,22 @@ format:
 
 - Misalnya ketika kita bicara tentang Indonesia sebagai _home country_, maka nilai tukar Indonesia akan diekspresikan sebagai rupiah yang diperlukan untuk 1 dolar AS.
 
-## Harga USD
+## Harga IDR
 
 | Jenis Valuta | May-24 | Jun-24 | Jul-24 |
 | ------- | --- | --- | --- |
-| EUR |  0.92 |	 0.93 |	 0.92 |
-| GBP | 0.78 	| 0.79 	| 0.78 |
-| IDR |  16,253.00 |	 16,375.00 	| *16,260.00* |
-| SGD |  1.35 |	 1.36 |	 1.34 |
-| CNY |  7.24 |	 7.27 |	 7.23 |
+| USD |  16.253 |	 16.421 	| *16.320* |
+| EUR |  17.569 |	 17.554 |	 17.655 |
+| GBP | 20.656	| 20.746	| 20.972 |
+| SGD |  12.023	| 12.096 |	12.144 |
+| JPY/100 |	10.353 |	10.228 |	10.540 |
 
-: Nilai tukar Dolar AS ([Tabel IX.6 SEKI](https://www.bi.go.id/id/statistik/ekonomi-keuangan/seki/Default.aspx#headingFour))
 
-$E_{\$/Rp}=6.15\times 10^{-5}$ U.S. exchange rate (America terms)
-$E_{Rp/\$}=16,260.00$ Indonesian exchange rate (Indonesian terms)
+: Nilai tukar Rupiah ([Tabel IX.6 SEKI](https://www.bi.go.id/id/statistik/ekonomi-keuangan/seki/Default.aspx#headingFour))
+
+$E_{\$/Rp}=6,127\times 10^{-5}$ U.S. exchange rate (America terms)
+$E_{Rp/\$}=16.320$ Indonesian exchange rate (Indonesian terms)
+$E_{Rp/\$,t}=\frac{1}{E_{\$/Rp,t}}$
 
 Note that we usually switch this up in the news.
 
@@ -93,16 +97,271 @@ Note that we usually switch this up in the news.
 
 - Karena kita biasa menulis nilai tukar rupiah sebagai $E_{Rp/\$}$, maka angkanya jadi kebalik. Angkanya naik = depresiasi.
 
-- Apresiasi dan depresiasi biasanya diekspresikan dalam persen, atau $\frac{E_{t}-E_{t-1}}{E_{t-1}}$
+- Apresiasi dan depresiasi biasanya diekspresikan dalam persen, atau $\frac{\Delta E_{t}}{E_t}=\frac{E_{t+1}-E_{t}}{E_{t}}$
 
 ## Apredepre
 
-| Jenis Valuta | May-24 | Jun-24 | Jul-24 |
-| ------- | --- | --- | --- |
-| IDR |  16,253.00 |	 16,375.00 	| *16,260.00* |
+| Jenis Valuta | Jul-23 | Jul-24 |
+| ------- | --- | --- |
+| IDR/USD |  15.083	| *16.320* |
+| USD/IDR |  6.63e-05 	| *6.127e-05* |
 
-Rupiah 
+Perubahan nilai rupiah tahunan di bulan Juli jadinya adalah:
 
+::: {.fragment .m}
 
+$$
+\frac{\Delta E_{\$/Rp}}{E_{\$/Rp}}=\frac{16320-15083}{15083}=0,082=8,2\%
+$$
 
+Rupiah terdepresiasi 8,2% terhadap dolar.
 
+:::
+
+## Apredepre
+
+| Jenis Valuta | Jul-23 | Jul-24 |
+| ------- | --- | --- |
+| IDR/USD |  15.083	| *16.320* |
+| USD/IDR |  6.63e-05 	| *6.127e-05* |
+
+Perubahan nilai dolar adalah:
+
+::: {.fragment .m}
+
+$$
+\frac{\Delta E_{Rp/\$}}{E_{Rp/\$}}=\frac{6,127-6,63}{6,63}=-0,0759=-7,59\%
+$$
+
+Dolar terapresiasi 7,59% terhadap rupiah.
+
+:::
+
+## Multilateral XR {.m}
+
+- Dihitung dengan melakukan agregasi nilai tukar bilateral dengan menggunakan bobot berdasarkan nilai perdagangan.
+
+- Hasilnya disebut juga dengan *effective exchange rate*.
+
+- Misalnya 40% perdagangan Home adalah dengan negara 1 dan 60% dengan negara 2. Nilai tukar Home apresiasi 10% terhadap 1 tapi depresiasi 30% terhadap 2.
+
+- Nilai tukar efektif Home adalah:
+
+(−10% • 40%) + (30% • 60%) = (−0.1 • 0.4) + (0.3 • 0.6) =
+−0.04 + 0.18 = 0.14 = +14%. 
+
+Home’s effective exchange rate terdepresiasi 14%.
+
+## Perbandingan harga
+
+![Di mana James Bond harus membeli tuxedonya?](Picture1.png)
+
+## Rezim nilai tukar
+
+2 jenis rezim nilai tukar utama adalah:
+
+- Fixed (pegged) exchange rate: nilai tukar cenderung stabil atau sangat kecil volatilitasnya terhadap _base currecny_. Agar ini bisa tercapai, pemerintah / bank sentral harus intervensi (gak gratis).
+
+- Floating (flexible) exchange rate: nilai tukar berfluktuasi lebih lebar dibanding pegged. Pasar uang berpengaruh lebih tinggi dan intervensi pemerintah sangat minimal. Perubahan bisa terjadi tiap detik.
+
+## Contoh rezim XR
+
+![Ini adalah nilai tukar dolar AS terhadap 3 nilai tukar utama. Nilai tukar dolar AS cenderung volatil karena AS menerapkan free float rezim.](Picture2.jpg)
+
+## Contoh rezim XR
+
+![Ini adalah nilai tukar 3 mata uang terhadap Euro. Yen dan pound float terhadap euro. Krone menerapkan fixed exchange rate dengan toleransi 2% perubahan terhadap euro (disebut juga band).](Picture3.jpg)
+
+## Contoh rezim XR
+
+![Nilai tukar di negara berkembang menunjukkan volatilitas yang agak terbatas (biasanya dipeg terbatas atau managed float), tapi juga dampak periode krisis yang sangat terlihat.](Picture4.jpg)
+
+## Contoh rezim XR
+
+![Kolombia adalah contoh crawling peg, di mana peg dilakukan dan depresiasi dilakukan pelan-pelan. Sementara itu Ekuador melakukan dolarisasi,di mana mata uang mereka sepenuhnya tergantung pada AS](Picture5.jpg)
+
+## XR Indonesia
+
+![](idr.png)
+
+Indonesia memiliki nilai tukar yang ada di tengah, atau managed floating. Tidak begitu ketat, tapi juga tidak terbang bebas. Bisa dikatakan kita melakukan managed float. Data ini didapat dari [Yahoo finance](https://yhoo.it/3ZaTko7).
+
+## Rezim XR
+
+![Gambar ini didapat oleh Feenstra Taylor dari IMF, yang melakukan klasifikasi terhadap 182 negara. Rezim XR merupakan spektrum dari yang paling fix sampai paling float. 6 negara melakukan ultrapeg yang namanya currency peg.](regime.png)
+
+## Pasar uang
+
+- nilai tukar diatur di pasar uang, atau pasar forex atau _foreign exchange market_ atau FX Market.
+
+- Dibilang "diatur" juga sebenarnya tidak ada 1 institusi yang mengatur. Pasar ini adalah pasar terdesentralisasi yang terdiri dari bank, perusahaan, pemerintah, dan investor.
+
+- In January 2013, the global forex market traded $5.3 trillion per day in currency.
+
+- Pasar uang paling ramai saat ini ada di London, New York, Tokyo, Singapura, dan Hong Kong.
+
+## Spot contract
+
+- Transaksi paling simpel adalah kontrak "on the spot" atau nilai yang langsung diberikan. Disebut juga *spot contract*.
+
+- Exchange rate yang digunakan disebut juga *spot price* atau *spot exchange rate* atau *spot rate*.
+
+- Nilai spot rate inilah yang biasanya muncul di berita-berita dan secara umum.
+
+- Spot contract adalah metode yang paling umum, sebanyak 90% total transaksi nilai tukar.
+
+## Derivatives
+
+- Selain spot, perdagangan mata uang juga dilakukan dengan kontrak lain, yaitu forwards, swaps, futures dan options.
+
+- Secara kolektif, keempat kontrak ini disebut dengan derivatives.
+
+- Spot rate dan forward rate biasanya tidak begitu berbeda.
+
+## Derivatives
+
+- Forward contract dilakukan hari ini, dengan harga hari ini, tapi pembayaran (settlement) dilakukan di masa depan (settlement date). Karena itu dapat dikatakan forward contract tidak ada risikonya.
+
+- Kontrak swap adalah kombinasi spot dan forward, di mana kontrak dieksekusi saat itu juga (seperti spot) dengan perjanjian repurchase atau pembelian kembali di masa depan (seperti forward). Kombinasi 2 transaksi ini dapat menurunkan biaya transaksi.
+
+## Derivatives
+
+- Kontrak future adalah perjanjian pertukaran valas di masa depan dengan harga yang sudah ditentukan, seperti halnya forward. Bedanya dengan forward, kontrak ini terstandar, mature-nya juga di tanggal yang standar, dan dapat diperdagangkan di bursa.
+
+- Options memberikan izin pada pembeli untuk membeli (call) atau menjual (put) valas di masa depan dengan harga yang sudah ditentukan. Pembeli options tidak harus tunduk pada kontrak tersebut jika spot rate ternyata lebih baik.
+
+## Manfaat derivatives
+
+- Derivatives berguna untuk mengurangi risiko nilai tukar. atau malah berspekulasi terhadap nilai tukar.
+
+- Example 1: Hedging. As chief financial officer of a U.S. firm, you expect to receive payment of €1 million in 90 days for exports to France. The current spot rate is \$1.20 per euro. Your firm will incur losses on the deal if the euro weakens to less than \$1.10 per euro. You advise that the firm buy €1 million in call options on dollars at a rate of \$1.15 per euro, ensuring that the firm’s euro receipts will sell for at least this rate. This locks in a minimal profit even if the spot rate falls below $1.15. This is hedging.
+
+## Manfaat derivatives
+
+- Derivatives berguna untuk mengurangi risiko nilai tukar. atau malah berspekulasi terhadap nilai tukar.
+
+- Example 2: Speculation. The market currently prices one-year euro futures at \$1.30, but you think the dollar will weaken to \$1.43 in the next 12 months. If you wish to make a bet, you would buy these futures, and if you are proved right, you will realize a 10% profit. Any level above \$1.30 will generate a profit. If the dollar is at or below \$1.30 a year from now, however, your investment in futures will be a total loss. This is speculation. 
+
+## Aktor pasar uang
+
+- Bank komersil merupakan aktor paling sering melakukan perdagangan forex. 75% transaksi forex dieksekusi oleh hanya 10 bank.
+
+- Nilai tukar yang sering dijadikan acuan adalah hasil aktivitas mereka.
+
+- Perusahaan non-bank bisa saja berdagang di pasar uang langsung jika banyak menggunakan valas.
+
+- Pemerintah dapat melakukan intervensi dengan merestriksi perdagangan forex atau transaksi finansial antar-negara. Intervensi ini disebut _capital control_.
+
+- Akibatnya Bank sentral akan jadi lebih aktif di pasar uang.
+
+## Arbitrase
+
+![](Picture6.png)
+
+## Arbitrase
+
+3 kemungkinan dalam arbitrase 3 mata uang.
+
+1. Direct trade lebih menguntungkan, atau $E_{£/\$}>E_{£/€}E_{€/\$}$.
+2. Indirect trade lebih menguntungkan, atau $E_{£/\$}<E_{£/€}E_{€/\$}$.
+3. Tidak ada yang lebih menguntungkan, atau $E_{£/\$}=E_{£/€}E_{€/\$}$. Di sini, tidak ada peluang untuk arbitrase. Disebut juga *no-arbitrage condition*.
+
+## Arbitrase
+
+$$
+\underbrace{E_{£/\$}}_{\text{direct exchange rate}}=E_{£/€}E_{€/\$}=\underbrace{\frac{E_{£/€}}{E_{\$/€}}}_{\text{cross  rate}}
+$$
+
+Rasio dari 2 exchange rate disebut juga dengan *cross rate*. Prinsipnya sama dengan *chain rule* dalam kalkulus.
+
+## Arbitrase
+
+![](Picture7.png)
+
+## Arbitrase
+
+- Mayoritas valas dunia diperdagangankan secara langsung hanya dengan satu atau dua valas utama seperti dolar AS, yen, euro, dan pound.
+
+- Banyak negara melakukan bisnis internasional dalam dolar AS atau valas utama lain, sehingga seseorang selalu dapat menggunakan dolar AS untuk _triangular trade_.
+
+- Ketika 2 negara berdagang dengan menggunakan mata uang negara ke-3, mata uang tersebut dinamakan *vehicle currency*, karena mata uang tersebut hanya menjadi perantara.
+
+## Arbitrase dan return
+
+- Pertanyaan penting bagi investor adalah dalam mata uang apa seorang investor menyimpan asetnya?
+
+- Seandainya saya punya rupiah nganggur, apakah sebaiknya dibiarkan atau diconvert ke dolar?
+
+- Keputusan ini akan mempengaruhi permintaan mata uang relatif serta menentukan nilai tukarnya.
+
+- Beli bond rupiah = dapat return rupiah, tapi beli bond dolar = beli dolar sekarang -> beli bond dolar -> returnnya balikin ke rupiah.
+
+- Cara ke-2 jadi ada risky arbitrage.
+
+## Covered parity
+
+- Sebuah kontrak pertukaran euro dengan dolar di tahun depan seharga $F_{\$/€}$ dolar per euro. Disebut juga *forward exchange rate*.
+
+- menabung 1\$ di bank AS akan memberikan return $(1+i_{\$})$\$ di tahun depan. Disebut juga _dollar return_.
+
+- untuk menabung di akun euro, kita harus menukar 1\$-nya ke euro dulu. Dengan spot rate, 1\$ dapat 1/$E_{\$/€}$ euro.
+
+- si 1/$E_{\$/€}$ euro ini lalu kita tabung di akun euro dan dapat $(1+i_{€})/E_{\$/€}$ euro di tahun depan.
+
+## Covered parity {.m}
+
+- mengindari risiko valas, anda beli kontrak forward hari ini sehingga tahun depan anda akan bisa beli dolar seharga $F_{\$/€}$ dolar per euro.
+
+- Jadi, $(1+i_{€})/E_{\$/€}$ euro di tahun depan dapat ditukar jadi $(1+i_{€})F_{\$/€}/E_{\$/€}$ dolar.
+
+$$
+\underbrace{(1+i_{\$})}_\text{Dollar return on dollar deposit}=\underbrace{(1+i_{€})}_\text{Dollar return on euro deposit}\frac{F_{\$/€}}{E_{\$/€}}
+$$
+
+- Ini disebut juga Covered Interest Parity (CIP) karena risiko valas sudah ter"cover" oleh kontrak forward.
+
+## Uncovered parity {.m}
+
+- Jika investor tidak membeli kontrak forward, maka ia harus menebak spot rate di tahun depan. Tebakan ini disebut juga *expected exchange rate*, kita simbolkan $E_{\$/€}^e$.
+
+- Jika kita tebak spot rate di tahun depan adalah $E_{\$/€}^e$, maka kita akan mendapat $(1+i_{€})/E_{\$/€} \times E_{\$/€}^e$ dolar.
+
+$$
+\underbrace{(1+i_{\$})}_\text{Dollar return on dollar deposit}=\underbrace{(1+i_{€})\frac{E_{\$/€}^e}{E_{\$/€}}}_\text{Expected dollar return on euro deposit}
+$$
+
+- Ini disebut juga Uncovered Interest Parity (UIP)
+
+## Determinan nilai tukar
+
+- UIP adalah sebuah kondisi no-arbitrase yang menjelaskan ekuilibrium di mana menabung di 2 mata uang berbeda memiliki nilai imbal balik yang sama, tanpa menggunakan kontrak forward.
+
+- Dengan IUP, kita dapat melihat determinan nilai tukar (spot rate) di mana:
+
+$$
+E_{\$/€}=E_{\$/€}^e \frac{1+i_{€}}{1+i_{\$}}
+$$
+
+## Kesimpulan
+
+- Nilai tukar mata uang suatu negara adalah harga dari mata uang tersebut dinilai dengan mata uang negara lain. Harga ini ditentukan di spot market pasar uang.
+
+- Nilai tukar Home naik berarti jumlah valas yang diperlukan untuk membeli mata uang Home semakin banyak, dan sebaliknya.
+
+- Nilai tukar digunakan untuk membandingkan harga barang dan jasa, serta aset keuangan dengan valas yang sama.
+
+- Ada banyak rezim nilai tukar, dari yang fixed sampai yang float.
+
+## Kesimpulan
+
+- Pasar uang didominasi oleh spot rate, dengan aktornya terutama bank komersil.
+
+- Pertukaran bebas nilai tukar mengakibatkan cross rate dan spot rate kurang lebih sama.
+
+- Riskless interest arbitrage mengakibatkan kondisi CIP, sementara risky interest arbitrage mengakibatkan kondisi UIP.
+
+- CIP menunjukkan determinan forward rate, sementara UIP menunjukkan determinan spot rate.
+
+## Minggu depan
+
+- kita akan melanjutkan pembahasan pergerakan nilai tukar jangka panjang dengan melibatkan harga-harga barang.
