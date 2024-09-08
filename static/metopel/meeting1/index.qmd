@@ -10,8 +10,6 @@ format:
     transition: convex
     background-transition: fade
     slide-number: true
-
-editor: visual
 ---
 
 ## Hari ini ☀️
@@ -24,11 +22,10 @@ editor: visual
 ## Tentang Metodoologi penelitian
 
 -   Part 1 Melanjutkan math&stats.
-    -   time series regression.
+    -   Regresi multivariat, mencari data perdagangan dan visualisasinya.
 -   Part 2 fokus ke metode penulisan laporan penelitian.
-    -   Pola berpikir,struktur laporan & cara mengisinya.
-    -   mencari data perdagangan dan visualisasinya.
-    -   Membuat dokumennya.
+    -   Menulis TA penelitian.
+    -   metode-metode lain selain regresi.
 -   Sebagian besar materi merupakan pengenalan minimal.
 -   Pendalaman bisa dilakukan di luar kelas.
 
@@ -47,7 +44,7 @@ editor: visual
 
 | nama                                       | ruangan                  | matkul lain |
 |-------------------|----------------------|-------------------------------|
-| Bayu Prabowo Sutjiatmo | Ruang Kaprodi PIWAR | \- |
+| Bayu Prabowo Sutjiatmo                     | Ruang Kaprodi PIWAR      | \-          |
 | Theresia Anindita                          | Ruang Pudir II           | \-          |
 | [I Made Krisna](https://www.krisna.or.id/) | A2004 (Ruang Kerja Sama) | LLP         |
 
@@ -77,11 +74,14 @@ editor: visual
 ## Tools
 
 -   Kuliah ini dapat diakses di [krisna.or.id/courses/metopel/slides](https://www.krisna.or.id/courses/metopel/slides/)
+
     -   pencet `E`, tunggu, lalu `ctrl+P` (PDF)
     -   klik kanan, save page as. (html).
-- pra-UTS akan diperlukan [R](https://www.r-project.org/) dan [RStudio](https://www.rstudio.com/products/rstudio/download/).
 
-- pasca-UTS anda butuh [Zotero](https://www.zotero.org/download/) dan [Quarto](https://quarto.org/docs/get-started/).
+-   pra-UTS akan diperlukan [R](https://www.r-project.org/) dan [RStudio](https://www.rstudio.com/products/rstudio/download/).
+
+-   pasca-UTS anda butuh [Zotero](https://www.zotero.org/download/) dan [Quarto](https://quarto.org/docs/get-started/).
+
     -   downloadnya nanti aja siapa tau ada update.
 
 ## Struktur kuliah
@@ -89,25 +89,26 @@ editor: visual
 | minggu | konten                                      |
 |:------:|---------------------------------------------|
 |   1    | intro & regresi multivariat                 |
-|   2    | Prinsip dasar OLS                           |
-|   3    | Karakteristik umum data                     |
-|   4    | Data serial waktu                           |
-|   5    | Regresi time series                         |
-|   6    | Teknik lanjutan time series                 |
-|   7    | Lanjut time series + intro to R and RStudio |
+|   2    | Instalasi software yang diperlukan          |
+|   3    | Prinsip dasar OLS                           |
+|   4    | Karakteristik umum data                     |
+|   5    | Data serial waktu                           |
+|   6    | Mencari dan melakukan visualisasi data      |
+|   7    | Visualisasi di R dengan ggplot              |
 |   8    | UTS                                         |
 
 ## Struktur kuliah
 
 | minggu | konten                                 |
 |:------:|----------------------------------------|
-|   9    | mencari dan melakukan visualisasi data |
-|   10   | Visualisasi di R dengan ggplot         |
-|   11   | Regresi di R                           |
-|   12   | Menulis dokumen di RStudio             |
-|   13   | Menggunakan Zotero                     |
-|   14   | Proses membuat laporan yang baik       |
-|   15   | Pedoman TA Politeknik APP Jakarta      |
+|   9   | Proses membuat laporan yang baik        |
+|   10   | Melakukan review literatur            |
+|   11   | Metode lain di luar regresi            |
+|   12   | Metode kualitatif            |
+|   13   | Membuat diagram alir dan gap analysis  |
+|   14   | Menulis dokumen di RStudio             |
+|   15   | Menggunakan Zotero                     |
+|   16   | UAS                                    |
 
 ------------------------------------------------------------------------
 
@@ -115,13 +116,12 @@ editor: visual
 
 | evaluation     | covers           | \%  |
 |----------------|------------------|-----|
-| Tugas kelompok | semua            | 30  |
+| Tugas individu | semua            | 30  |
 | UTS            | 7 minggu pertama | 30  |
-| Tugas individu | semua            | 40  |
+| UAS | semua            | 40  |
 
--   Slides saja mestinya cukup untuk dapat 100 di UTS.
--   Tugas kelompok akan berupa replikasi sebuah laporan penelitian.
-    -   detil setelah UTS
+-   Slides saja mestinya cukup untuk dapat 100 di UTS dan UAS.
+
 -   Tugas individu berupa membuat laporan dalam 3 format: pdf, html dan docx.
     -   contohnya [begini](https://imedkrisna.github.io/metopel.html).
     -   webpage ini dapat jadi portofolio anda.
@@ -160,11 +160,11 @@ $$
 Y_i=\beta_0+\beta_1 X_i+\mu_i
 $$
 
-- Y disebut juga variabel dependen
-- X disebut juga variabel independen
-- nilai Y dan X kita dapatkan dari data
-- $\beta_0$ dan $\beta_1$ disebut parameter. Nilainya kita dapat dari hasil estimasi komputer.
-- $\mu$ disebut juga error term / residual. Dia bersifat **independen**
+-   Y disebut juga variabel dependen
+-   X disebut juga variabel independen
+-   nilai Y dan X kita dapatkan dari data
+-   $\beta_0$ dan $\beta_1$ disebut parameter. Nilainya kita dapat dari hasil estimasi komputer.
+-   $\mu$ disebut juga error term / residual. Dia bersifat **independen**
 
 ## Regresi dengan R
 
@@ -262,6 +262,6 @@ summary(model)
 
 ## Minggu depan
 
--   Karakteristik dan asumsi OLS.
--   Regresi multivariat.
--   Regresi Biner / kategori.
+-   Bawa laptop karena kita mau install-install software.
+-   Kalau sudah bisa install sendiri, ga perlu masuk gpp.
+-   Speknya ga perlu sakti-sakti. Ram 1Gb udah sangat cukup.
