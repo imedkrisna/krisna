@@ -34,7 +34,7 @@ format:
 
 ## Your convenors
 
-- The course conveners are I Made Krisna (Imed) & Mas Rangga Cili.
+- The course conveners are I Made Krisna (Imed) & Intan Vierke.
 
 - Contact us anytime but we may have delayed responses. Alternatively just show up to our offices.
 
@@ -52,6 +52,7 @@ format:
 - I expect all students to pay attention.
 - Feel free to interrupt my class with questions.
 - email me at imade.krisna@poltekapp.ac.id  
+- Typical length of course is $\pm$120 mins
 
 ## Structure of this course {.s}
 
