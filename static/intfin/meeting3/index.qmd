@@ -68,10 +68,10 @@ $$
 - PPP is the macroeconomic version of LOOP. We compute two basket of goods in each location, find their local prices, and compare them.
 
 $$
-q^g_{ID/US}=E_{Rp/\$}\frac{P^g_{US}}{P^g_{ID}}
+q_{ID/US}=E_{Rp/\$}\frac{P_{US}}{P_{ID}}
 $$
 
-- If there are no arbitrage, then the same basket of goods in two countries should have the same price. i.e.,$q^g_{ID/US}=1$
+- If there are no arbitrage, then the same basket of goods in two countries should have the same price. i.e.,$q_{ID/US}=1$
 
 - PPP thus holds: price levels in two countries are equal when expressed in common currency. This is called absolute PPP.
 
@@ -79,8 +79,8 @@ $$
 
 - The real exchange rate is the relative price of the baskets.
 
-- The Indonesian real exchange rate $q^g_{ID/US}=E_{Rp/\$}P^g_{US}/P^g_{ID}$ tells us how many Indonesian baskets are needed to purchase U.S. basket.
+- The Indonesian real exchange rate $q_{ID/US}=E_{Rp/\$}P_{US}/P_{ID}$ tells us how many Indonesian baskets are needed to purchase U.S. basket.
 
-- The exchange rate for currencies:
+- The exchange rate for currencies is a nominal concept. The real exchange rate is the real concept.
 
 - 
