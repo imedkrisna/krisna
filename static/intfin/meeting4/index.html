@@ -8,11 +8,11 @@
 <link href="index_files/libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="index_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="index_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.3.450">
+  <meta name="generator" content="quarto-1.5.57">
 
   <meta name="author" content="I Made Krisna Gupta">
-  <meta name="dcterms.date" content="2022-09-12">
-  <title>Hecksher-Ohlin and the Standard Model</title>
+  <meta name="dcterms.date" content="2024-09-12">
+  <title>Exchange rate II: the asset approach in the short run</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -159,7 +159,8 @@
   }
 
   .callout.callout-titled .callout-body > .callout-content > :last-child {
-    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
   }
 
   .callout.callout-titled .callout-icon::before {
@@ -322,13 +323,17 @@
       margin-right: 0; 
     }
   </style>
+  <script src="index_files/libs/kePrint-0.0.1/kePrint.js"></script>
+
+  <link href="index_files/libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+
 </head>
 <body class="quarto-light">
   <div class="reveal">
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Hecksher-Ohlin and the Standard Model</h1>
+  <h1 class="title">Exchange rate II: the asset approach in the short run</h1>
   <p class="subtitle">ECES905205 pertemuan 4</p>
 
 <div class="quarto-title-authors">
@@ -339,471 +344,172 @@ I Made Krisna Gupta
 </div>
 </div>
 
-  <p class="date">2022-09-12</p>
+  <p class="date">2024-09-12</p>
 </section>
-<section id="last-time" class="slide level2">
-<h2>Last time</h2>
+<section id="overview" class="slide level2">
+<h2>Overview</h2>
 <ul>
-<li><p>Different in tech create comparative advantage:</p>
-<ul>
-<li><p>Ricardian: pure specialization, everybody happy.</p></li>
-<li><p>Specific factor: winner and loser, but overall optimal.</p></li>
-<li><p>same tech -&gt; not trade</p></li>
-</ul></li>
-<li><p>Or is it?</p></li>
+<li><p>How the arbitrage in the short-run plays out the dynamics of exchange rate?</p></li>
+<li><p>How do money market and central bank policy choices determines interest rate?</p></li>
+<li><p>What can the theory of exchange rates tell us about the difference between floating and fixed XR?</p></li>
 </ul>
 </section>
-<section id="intro-h-o-model" class="slide level2">
-<h2>Intro H-O Model</h2>
+<section id="intro" class="slide level2 m">
+<h2>Intro</h2>
 <ul>
-<li><p>Even if countries has the same tech/opportunity cost, difference in <strong>relative abundance of resources</strong> can still drive trade.</p></li>
-<li><p>Here, we also show how different <strong>relative factor intensity</strong> drives trade.</p></li>
-<li><p>Also will discuss <strong>factor price equalization</strong> and <strong>income distribution</strong>.</p></li>
+<li><p>Deviations from purchasing power parity (PPP) occur in the short run: The same basket of goods generally does not cost the same everywhere at all times.</p></li>
+<li><p>Short-run failures of the monetary approach led economists to develop an alternative theory to explain exchange rates in the short run: the asset approach to exchange rates.</p></li>
+<li><p>It is called the asset approach because it is based on the idea that currencies are assets (i.e., stores of value).</p></li>
+<li><p>The price of the asset in this case is the spot exchange rate, the price of one unit of foreign exchange.</p></li>
 </ul>
 </section>
-<section id="two-factor-h-o-model" class="slide level2">
-<h2>Two Factor H-O model</h2>
+<section id="risky-arbitrage" class="slide level2">
+<h2>Risky arbitrage</h2>
 <ul>
-<li>2 countries: Home and foreign</li>
-<li>2 mobile factor <span class="math inline">\(i\)</span>: kapital (K) and labor (L)</li>
-<li>2 sectors <span class="math inline">\(j\)</span>: cloth (C) dan Food (F)</li>
-<li>Countries has different total K and L</li>
-<li>Industries have different <strong>relative intensity</strong>.</li>
+<li>The Uncovered Interest Parity (UIP) equation is the fundamental equation of the asset approach to exchange rates.</li>
 </ul>
+<p><span class="math display">\[\begin{equation}
+i_{Rp}=i_\$+\frac{E^e_{Rp/\$}-E_{Rp/\$}}{E_{Rp/\$}}
+\end{equation}\]</span></p>
+<p>the left-hand side is the rupiah return on rupiah asset while the right-hand side is the expected rupiah return on dollar asset.</p>
 </section>
-<section id="production" class="slide level2 m">
-<h2>Production</h2>
-<ul>
-<li><p><span class="math inline">\(a_{i,j}\)</span> are the number of factor <span class="math inline">\(i\)</span> used by industry <span class="math inline">\(j\)</span> to make 1 unit of good <span class="math inline">\(j\)</span>.</p>
-<ul>
-<li>e.g.: <span class="math inline">\(a_{KC}=\)</span> the amount of K used to make 1 m of cloth.</li>
-</ul></li>
-<li><p>We still have <strong>diminishing return</strong> like specific factor model.</p>
-<ul>
-<li><span class="math inline">\(MPL\)</span> will decrease as <span class="math inline">\(L\)</span> increase if <span class="math inline">\(K\)</span> is not added.</li>
-</ul></li>
-<li><p>This time though, we can add <span class="math inline">\(K\)</span>, unlike specific factor model.</p></li>
-<li><p>long run model: capital and labor can move between sectors.</p>
-<ul>
-<li>all labor paid <span class="math inline">\(w\)</span>, all capital paid <span class="math inline">\(r\)</span>.</li>
-</ul></li>
-</ul>
-</section>
-<section id="h-o-model" class="slide level2 m">
-<h2>H-O model</h2>
-<div class="columns">
-<div class="column" style="width:47%;">
+<section id="example" class="slide level2 m">
+<h2>Example</h2>
 <div class="cell">
 <div class="cell-output-display">
-<p><img data-src="index_files/figure-revealjs/fig1-1.png" width="384"></p>
-</div>
-</div>
-<p>Without substitution, the production possibilities will be a minimum of 2 straight lines. (see appendix)</p>
-</div><div class="column" style="width:47%;">
-<ul>
-<li>Production is conducted at the tangency between PPF and price ratio <span class="math inline">\(-\frac{P_C}{P_F}\)</span>, like specific factr model.</li>
-<li>Similarly, the price ratio equates <strong>the opportunity cost</strong> for production.</li>
-<li>Remember, Opprtunity cost of making <span class="math inline">\(Q_j\)</span> increases as we make more <span class="math inline">\(Q_j\)</span></li>
-</ul>
-</div>
-</div>
-</section>
-<section id="mixing-inputs" class="slide level2">
-<h2>Mixing inputs</h2>
-<ul>
-<li><p>Producers may choose different amounts of factors of production used to make cloth or food.</p></li>
-<li><p>Their choice depends on the wage, w, paid to labor and the rental rate, r, paid when renting capital.</p></li>
-<li><p>As the wage w increases relative to the rental rate r, producers use less labor and more capital in the production of both food and cloth.</p>
-<ul>
-<li>They can do this because substitutability and factor movement.</li>
-</ul></li>
-</ul>
-</section>
-<section id="input-mix" class="slide level2 m">
-<h2>Input mix</h2>
-<div class="columns">
-<div class="column" style="width:47%;">
-<ul>
-<li><p>a farmer can produce a calorie of food with less capital if he or she uses more labor.</p></li>
-<li><p>Think of the <a href="https://krisna.or.id/post/hofarmers">Indonesian farmers vs western farmers</a>: Hired labor is around 3.5% of total cost in the US, while it is 47% in Indonesia!</p></li>
-<li><p>Their choice depends on the wage, w, paid to labor and the rental rate, r, paid when renting capital.</p></li>
-</ul>
-</div><div class="column" style="width:47%;">
-<p><img data-src="Picture2.jpg"></p>
-</div>
-</div>
-</section>
-<section id="factor-intensity" class="slide level2 m">
-<h2>Factor intensity</h2>
-<div class="columns">
-<div class="column" style="width:47%;">
-<ul>
-<li>Say <span class="math inline">\(C\)</span> is a relatively labor intensive industry:</li>
-</ul>
-<p><span class="math display">\[
-\frac{a_{LC}}{a_{KC}} &gt; \frac{a_{LF}}{a_{KF}} \\
-\frac{L_C}{K_C} &gt; \frac{L_F}{K_F}
-\]</span></p>
-<ul>
-<li>Relative factor demand curve for cloth CC lies outside that for food FF.</li>
-</ul>
-</div><div class="column" style="width:47%;">
-<p><img data-src="Picture3.jpg"></p>
-</div>
-</div>
-</section>
-<section id="reminder-micro" class="slide level2">
-<h2>Reminder micro</h2>
-<ul>
-<li>Production and price ratio: remember your lagrange approach:
-<ul>
-<li>MRS = price ratio.</li>
-</ul></li>
-</ul>
-<p><span class="math display">\[
-\frac{\frac{\partial Q}{\partial K}}{\frac{\partial Q}{\partial L}}=\frac{r}{w} \rightarrow \frac{L}{K}=\omega \left(\frac{w}{r}\right)
-\]</span> <span class="math inline">\(\frac{MP_L}{MP_K} \propto \frac{L}{K} \propto \frac{w}{r} \propto \frac{P_C}{P_F}\)</span></p>
-</section>
-<section id="prices" class="slide level2 m">
-<h2>Prices</h2>
-<ul>
-<li><p>In competitive markets, the price of a good should equal its cost of production, which depends on the factor prices.</p></li>
-<li><p>How changes in the wage and rent affect the cost of producing a good depends on the mix of factors used.</p>
-<ul>
-<li>An increase in the rental rate of capital should affect the price of food more than the price of cloth since food is the capital intensive industry.</li>
-</ul></li>
-<li><p>Changes in <span class="math inline">\(\frac{w}{r}\)</span> are tied to changes in <span class="math inline">\(\frac{P_C}{P_C}\)</span></p></li>
-</ul>
-</section>
-<section id="stolper-samuelson-theorem" class="slide level2">
-<h2>Stolper-Samuelson Theorem</h2>
-<blockquote>
-<p>if the relative price of a good increases, then the real factor price used intensively in the production of that good increases, while the real price of the other factor decreases.</p>
-</blockquote>
-<ul>
-<li>Any change in the relative price of goods alters the distribution of income.</li>
-</ul>
-</section>
-<section id="stolper-samuelson-thm" class="slide level2">
-<h2>Stolper-Samuelson Thm</h2>
+<table class="table table-striped caption-top" data-quarto-postprocess="true" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr class="header">
+<th style="text-align: right;" data-quarto-table-cell-role="th">iRp</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">iD</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">spot</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">e</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">ee</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">fore</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">0.05</td>
+<td style="text-align: right;">0.03</td>
+<td style="text-align: right;">15000</td>
+<td style="text-align: right;">15700</td>
+<td style="text-align: right;">0.0466667</td>
+<td style="text-align: right;">0.0766667</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">0.05</td>
+<td style="text-align: right;">0.03</td>
+<td style="text-align: right;">15300</td>
+<td style="text-align: right;">15700</td>
+<td style="text-align: right;">0.0261438</td>
+<td style="text-align: right;">0.0561438</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right; font-weight: bold; color: white !important; background-color: blue !important;">0.05</td>
+<td style="text-align: right; font-weight: bold; color: white !important; background-color: blue !important;">0.03</td>
+<td style="text-align: right; font-weight: bold; color: white !important; background-color: blue !important;">15392</td>
+<td style="text-align: right; font-weight: bold; color: white !important; background-color: blue !important;">15700</td>
+<td style="text-align: right; font-weight: bold; color: white !important; background-color: blue !important;">0.0200104</td>
+<td style="text-align: right; font-weight: bold; color: white !important; background-color: blue !important;">0.0500104</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">0.05</td>
+<td style="text-align: right;">0.03</td>
+<td style="text-align: right;">15600</td>
+<td style="text-align: right;">15700</td>
+<td style="text-align: right;">0.0064103</td>
+<td style="text-align: right;">0.0364103</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">0.05</td>
+<td style="text-align: right;">0.03</td>
+<td style="text-align: right;">15800</td>
+<td style="text-align: right;">15700</td>
+<td style="text-align: right;">-0.0063291</td>
+<td style="text-align: right;">0.0236709</td>
+</tr>
+</tbody>
+</table>
 
-<img data-src="Picture6.jpg" class="r-stretch"><p>If the relative price of cloth rises, the wage-rental ratio must rise. This will cause the labor-capital ratio used in the production of both goods to drop.</p>
+
+</div>
+</div>
+<p>where ee is the expected depreciation of rupiah while fore is the expected rupiah return on dollar asset. Any spot higher than 15392 will create an opportunity to hold dollar asset, while the opposite is true for spot lower than 15392.</p>
 </section>
-<section id="factor-goods-prices" class="slide level2">
-<h2>Factor &amp; goods prices</h2>
-<ul>
-<li><p>An increase in the relative price of cloth <span class="math inline">\(\frac{P_C}{P_F}\)</span> is predicted to:</p>
-<ul>
-<li><p>raise income of workers relative to the capitalists, <span class="math inline">\(\frac{w}{r}\)</span></p></li>
-<li><p>raise the ratio of capital to labor services <span class="math inline">\(\frac{K}{L}\)</span> used in both industries.</p></li>
-<li><p>raise the real income (purchasing power) of workers and lower the real income of capital owners.</p></li>
-</ul></li>
-</ul>
+<section id="money-market" class="slide level2">
+<h2>Money market</h2>
+
+<img data-src="index_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch"><p>Blue line shows the rupiah return on dollar asset while the red line is the rupiah return on rupiah asset. Intersection is the equilibrium. Any point above red line is a case for holding dollar asset.</p>
 </section>
-<section id="rybczynski-theorem" class="slide level2 m">
-<h2>Rybczynski Theorem</h2>
-<blockquote>
-<p>If you hold output prices constant as the amount of a factor of production increases, then the supply of the good that uses this factor intensively increases and the supply of the other good decreases.</p>
-</blockquote>
-<ul>
-<li>Assume an increase of labor (bonus demografi) so that <span class="math inline">\(\frac{L}{K} \uparrow\)</span></li>
-<li>PPF will grow but biased toward <span class="math inline">\(C\)</span></li>
-<li>If <span class="math inline">\(\frac{P_C}{P_F}\)</span> doesn’t change, the ratio f labor to capital used in both sectors remains constant.</li>
-<li>To expand, cloth sector will absorb labor AND capital from <span class="math inline">\(F\)</span>.</li>
-</ul>
+<section id="fx-market-movement" class="slide level2">
+<h2>FX market movement</h2>
+<p>Using framework above, lets see what happens under these following scenarios:</p>
+<ol type="1">
+<li><p>A higher domestic interest rate of 7%</p></li>
+<li><p>A lower foreign rate of 1%</p></li>
+<li><p>A lower expected future exchange rate <span class="math inline">\(E^e_{Rp/\$}=15600\)</span> which is an appreciation.</p></li>
+</ol>
 </section>
-<section id="ppf" class="slide level2">
-<h2>PPF</h2>
+<section id="case-1" class="slide level2">
+<h2>Case 1</h2>
 <div class="columns">
-<div class="column" style="width:57%;">
+<div class="column" style="width:50%;">
 <div class="cell">
 <div class="cell-output-display">
-<p><img data-src="index_files/figure-revealjs/fig2-1.png" width="480"></p>
-</div>
-</div>
-</div><div class="column" style="width:37%;">
-<ul>
-<li>cloth-biased growth of PPF.</li>
-</ul>
-</div>
-</div>
-</section>
-<section id="resources-and-output" class="slide level2">
-<h2>Resources and output</h2>
-<ul>
-<li><p>An economy with high <span class="math inline">\(\frac{L}{K}\)</span> produces high output of cloth relative to food.</p></li>
-<li><p>if <span class="math inline">\(\frac{L}{K}&gt;\frac{L^*}{K^*}\)</span> then home will be more efficient in making <span class="math inline">\(C\)</span>.</p></li>
-<li><p>home will be relatively efficient at producing cloth</p></li>
-</ul>
-</section>
-<section id="trade-in-ho" class="slide level2">
-<h2>Trade in HO</h2>
-<p>The countries are assumed to have the same technology and the same tastes.</p>
-<ul>
-<li><p>With the same technology, each economy has a comparative advantage in producing the good that relatively intensively uses the factors of production in which the country is relatively well endowed.</p></li>
-<li><p>With the same tastes, the two countries will consume cloth to food in the same ratio when faced with the same relative price of cloth under free trade.</p></li>
-</ul>
-</section>
-<section id="trade-in-ho-1" class="slide level2">
-<h2>Trade in HO</h2>
-<ul>
-<li><p>Since cloth is relatively labor intensive, at each relative price of cloth to food, Home will produce a higher ratio of cloth to food than Foreign.</p></li>
-<li><p>Home will have a larger relative supply of cloth to food than Foreign.</p></li>
-<li><p>Like the Ricardian model, the Heckscher-Ohlin model predicts a convergence of relative prices with trade.</p></li>
-<li><p>With trade, the relative price of cloth rises in the relatively labor abundant (home) country and falls in the relatively labor scarce (foreign) country.</p></li>
-</ul>
-</section>
-<section id="trade-in-ho-2" class="slide level2">
-<h2>Trade in HO</h2>
-<ul>
-<li><p>Relative prices and the pattern of trade: In Home, the rise in the relative price of cloth leads to a rise in the relative production of cloth and a fall in relative consumption of cloth.</p>
-<ul>
-<li>Home becomes an exporter of cloth and an importer of food.</li>
-</ul></li>
-<li><p>The decline in the relative price of cloth in Foreign leads it to become an importer of cloth and an exporter of food.</p></li>
-</ul>
-</section>
-<section id="ho-theorem" class="slide level2">
-<h2>HO Theorem</h2>
-<ul>
-<li><p>Heckscher-Ohlin theorem: The country that is abundant in a factor exports the good whose production is intensive in that factor.</p></li>
-<li><p>This result generalizes to a correlation:</p></li>
-</ul>
-<blockquote>
-<p>Countries tend to export goods whose production is intensive in factors with which the countries are abundantly endowed.</p>
-</blockquote>
-<div class="footer">
-<p>see Alan Deardorff “the general validity of the Hecksher-Ohlin theorem.”</p>
-</div>
-</section>
-<section id="trade-and-income" class="slide level2">
-<h2>Trade and income</h2>
-<ul>
-<li><p>Changes in relative prices can affect the earnings of labor and capital.</p>
-<ul>
-<li><p>A rise in the price of cloth raises the purchasing power of labor in terms of both goods while lowering the purchasing power of capital in terms of both goods.</p></li>
-<li><p>A rise in the price of food has the reverse effect.</p></li>
-</ul></li>
-</ul>
-</section>
-<section id="trade-and-income-1" class="slide level2">
-<h2>Trade and income</h2>
-<p>Thus, international trade can affect the distribution of income, even in the long run:</p>
-<ul>
-<li><p>Owners of a country’s abundant factors gain from trade, but owners of a country’s scarce factors lose.</p></li>
-<li><p>Factors of production that are used intensively by the import-competing industry are hurt by the opening of trade—regardless of the industry in which they are employed.</p></li>
-</ul>
-</section>
-<section id="distribusi-pendapatan" class="slide level2">
-<h2>Distribusi pendapatan</h2>
-<ul>
-<li><p>Di home, perdagangan sangat menguntungkan bagi buruh karena mereka bisa ekspor (<span class="math inline">\(P_C&gt;P_C^*\)</span>) dan bisa konsumsi makanan dengan harga lebih murah (<span class="math inline">\(P_F&gt;P_F^*\)</span>)</p></li>
-<li><p>Sebaliknya, di foreign, trade menguntungkan pemilik kapital.</p></li>
-</ul>
-<blockquote>
-<p>Owners of a country’s abundant factors gain from trade, but owners of a country’s scarce factors lose</p>
-</blockquote>
-</section>
-<section class="slide level2">
-
-
-<img data-src="indo.jpg" class="r-stretch quarto-figure-center"><p class="caption">factor intensity in Indonesia (Amiti and Konings 2007 “Trade Liberalization, Intermediate Inputs, and Productivity: Evidence from Indonesia”)</p></section>
-<section id="trade-and-income-2" class="slide level2 m">
-<h2>Trade and income</h2>
-<ul>
-<li>Changes in income distribution occur with every economic change, not only international trade.
-<ul>
-<li>Changes in technology, changes in consumer preferences, exhaustion of resources and discovery of new ones all affect income distribution.</li>
-<li>Economists put most of the blame on technological change and the resulting premium paid on education as the major cause of increasing income inequality in the United States.</li>
-</ul></li>
-<li>It would be better to compensate the losers from trade (or any economic change) than prohibit trade.
-<ul>
-<li>The economy as a whole does benefit from trade.</li>
-</ul></li>
-</ul>
-</section>
-<section id="north-south-inequality" class="slide level2 m">
-<h2>North-south inequality</h2>
-<ul>
-<li><p>The Heckscher-Ohlin model predicts that owners of relatively abundant factors will gain from trade and owners of relatively scarce factors will lose from trade.</p>
-<ul>
-<li>Little evidence supporting this prediction exists.</li>
-</ul></li>
-<li><p>According to the model, a change in the distribution of income occurs through changes in output prices, but there is no evidence of a change in the prices of skill-intensive goods relative to prices of unskilled-intensive goods.</p></li>
-</ul>
-</section>
-<section id="north-south-inequality-1" class="slide level2 m">
-<h2>North-south inequality</h2>
-<p>According to the model, wages of unskilled workers should increase in unskilled labor abundant countries relative to wages of skilled labor, but in some cases the reverse has occurred.</p>
-<p>The majority view of trade economists is that the villain is not trade but rather new production technologies that put a greater emphasis on worker skills (such as the widespread introduction of computers and other advanced technologies in the workplace).</p>
-</section>
-<section id="skill-biased" class="slide level2 m">
-<h2>Skill-biased</h2>
-<ul>
-<li><p>Trade likely has been an indirect contributor to increases in wage inequality, by accelerating the process of technological change.</p>
-<ul>
-<li><p>Firms that begin to export may upgrade to more skill-intensive production technologies.</p></li>
-<li><p>Trade liberalization can then generate widespread technological change by inducing a large proportion of firms to make such technology-upgrade choices.</p></li>
-</ul></li>
-<li><p>Breaking up the production process across countries can increase the relative demand for skilled workers in developed countries similar to skill-biased technological change.</p></li>
-</ul>
-</section>
-<section id="capital-skill-complementarity" class="slide level2 m">
-<h2>Capital-skill complementarity</h2>
-<ul>
-<li><p>Technological change often takes the form of new and better machines (capital) that displace unskilled workers but still require skilled workers.</p>
-<ul>
-<li>This generates higher returns for both capital and skilled workers while depressing the returns to unskilled workers.</li>
-</ul></li>
-<li><p>Increased automation can explain the observed worldwide increases in both wage inequality and the returns to capital, as well as the within-sector increases in the employment share of (relatively skilled) non-production workers.</p></li>
-</ul>
-</section>
-<section id="factor-price-equalization" class="slide level2 m">
-<h2>Factor price equalization</h2>
-<ul>
-<li><p>Unlike the Ricardian model, the Heckscher-Ohlin model predicts that factor prices will be equalized among countries that trade.</p></li>
-<li><p>Free trade equalizes relative output prices.</p></li>
-<li><p>Due to the connection between output prices and factor prices, factor prices are also equalized.</p></li>
-<li><p>Trade increases the demand of goods produced by relatively abundant factors, indirectly increasing the demand of these factors, raising the prices of the relatively abundant factors.</p></li>
-</ul>
-</section>
-<section id="factor-price-equalization-1" class="slide level2 m">
-<h2>Factor price equalization</h2>
-<ul>
-<li><p>In the real world, factor prices are not equal across countries.</p></li>
-<li><p>The model assumes that trading countries produce the same goods, but countries may produce different goods if their factor ratios radically differ.</p></li>
-<li><p>The model also assumes that trading countries have the same technology, but different technologies could affect the productivities of factors and therefore the wages/rates paid to these factors.</p></li>
-</ul>
-</section>
-<section id="factor-price-eq" class="slide level2">
-<h2>factor price eq</h2>
-<ul>
-<li><p>Because the Heckscher-Ohlin model predicts that factor prices will be equalized across trading countries, it also predicts that factors of production will produce and export a certain quantity goods until factor prices are equalized.</p>
-<ul>
-<li>In other words, a predicted value of services from factors of production will be embodied in a predicted volume of trade between countries.</li>
-</ul></li>
-</ul>
-</section>
-<section id="factor-price-eq-1" class="slide level2 m">
-<h2>factor price eq</h2>
-<ul>
-<li><p>But because factor prices are not equalized across countries, the predicted volume of trade is much larger than actually occurs.</p>
-<ul>
-<li>A result of “missing trade” discovered by Daniel Trefler.</li>
-</ul></li>
-<li><p>The reason for this “missing trade” appears to be the assumption of identical technology among countries.</p>
-<ul>
-<li><p>Technology affects the productivity of workers and therefore the value of labor services.</p></li>
-<li><p>A country with high technology and a high value of labor services would not necessarily import a lot from a country with low technology and a low value of labor services.</p></li>
-</ul></li>
-</ul>
-</section>
-<section id="ho-empirics" class="slide level2 m">
-<h2>HO empirics</h2>
-<ul>
-<li><p>An important study by Donald Davis and David Weinstein showed that if relax the assumption of common technologies, along with assumptions underlying factor price equalization (countries produce the same goods and costless trade equalizes prices of goods):</p>
-<ul>
-<li>then the predictions for the direction and volume of the factor content of trade line-up well with empirical evidence and ultimately generate a good fit.</li>
-</ul></li>
-<li><p>Difficulty finding support for the predictions of the “pure” Heckscher-Ohlin model can be blamed on some of the assumptions made.</p></li>
-</ul>
-</section>
-<section id="ho-empirics-1" class="slide level2 m">
-<h2>HO empirics</h2>
-<ul>
-<li><p>Contrast the exports of labor-abundant, skill-scarce nations in the developing world with the exports of skill-abundant, labor-scarce (rich) nations.</p>
-<ul>
-<li><p>The exports of the three developing countries to the United States are concentrated in sectors with the lowest skill intensity.</p></li>
-<li><p>The exports of the three skill abundant countries to the United States are concentrated in sectors with higher skill intensity.</p></li>
-</ul></li>
-</ul>
-</section>
-<section id="summary" class="slide level2">
-<h2>Summary</h2>
-<ul>
-<li><p>HO assume difference in factr abundance still promotes trade even if the technology is the same.</p></li>
-<li><p>changes in relative prices changes distribution of income, benefiting factor which used intensively by industry with increased price.</p></li>
-<li><p>Changes in factor abundance also changes production and income distribution.</p></li>
-<li><p>Empirical support of the Heckscher-Ohlin model is weak except for cases involving trade between high-income countries and low/middle- income countries or when technology differences are included.</p></li>
-</ul>
-</section>
-<section>
-<section id="appendix" class="title-slide slide level1 center">
-<h1>Appendix</h1>
-
-</section>
-<section id="production-wo-subs" class="slide level2">
-<h2>Production w/o subs</h2>
-<ul>
-<li><p>Production constraint will be similar with Ricardian economy, except this time we have 2 constraints: Labor (L, same as ricardian), and Capital (K).</p></li>
-<li><p>let <span class="math inline">\(a_{ij}\)</span> be the amount of factor <span class="math inline">\(i\)</span> used to produce 1 unit of product <span class="math inline">\(j\)</span>, while <span class="math inline">\(K\)</span> and <span class="math inline">\(L\)</span> are constant.</p></li>
-</ul>
-<p><span class="math display">\[
-a_{KC}Q_C+a_{KF}Q_F \le K \\
-a_{LC}Q_C+a_{LF}Q_F \le L
-\]</span></p>
-</section>
-<section id="no-subs" class="slide level2">
-<h2>No subs</h2>
-<p>Suppose use a fixed mix of capital and labor in each sector.</p>
-<ul>
-<li><p><span class="math inline">\(a_{KC}=2\)</span>, capital used to produce one yard of cloth</p></li>
-<li><p><span class="math inline">\(a_{LC}=2\)</span>, labor used to produce one yard of cloth</p></li>
-<li><p><span class="math inline">\(a_{KF}=3\)</span>, capital used to produce one calorie of food</p></li>
-<li><p><span class="math inline">\(a_{LF}=1\)</span>, labor used to produce one calorie of food</p></li>
-<li><p><span class="math inline">\(L=2000\)</span> while <span class="math inline">\(K=3000\)</span>.</p></li>
-</ul>
-</section>
-<section id="no-subs-1" class="slide level2">
-<h2>No subs</h2>
-<p>Constraint on capital that capital used cannot exceed supply for the numerical example:</p>
-<p><span class="math display">\[
-2Q_C+3Q_F \le 3000
-\]</span></p>
-<p>Constraint on labor that labor used cannot exceed labor supply:</p>
-<p><span class="math display">\[
-2Q_C+QF\le 2000
-\]</span></p>
-</section>
-<section id="no-subs-2" class="slide level2">
-<h2>No subs</h2>
-<div class="columns">
-<div class="m column" style="width:47%;">
-<p>If capital cannot be substituted for labor or vice versa, the production possibility frontier in the factor-proportions model would be defined by two resource constraints: The economy can’t use more than the available supply of labor (2,000 work-hours) or capital (3,000 machine-hours). So the production possibility frontier is defined by the red line in this figure.</p>
-</div><div class="column" style="width:47%;">
-<div class="quarto-figure quarto-figure-center">
+<div>
 <figure>
-<p><img data-src="Picture1.jpg"></p>
-<figcaption>source; Krugman, Obstfeld &amp; Melitz 2022</figcaption>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-3-1.png" width="576"></p>
 </figure>
 </div>
 </div>
 </div>
+</div><div class="column" style="width:50%;">
+<p>Under the first case, increase in domestic interest rate leads to a lower spot rate, which means an appreciation of the local currency against the dollar.</p>
+</div></div>
 </section>
-<section id="no-subs-3" class="slide level2 m">
-<h2>No subs</h2>
-<p>The opportunity cost of producing one more yard of cloth, in terms of food, is not constant:</p>
-<ul>
-<li><p>low (<span class="math inline">\(\frac{2}{3}\)</span>) when the economy produces low amount of cloth relative to food.</p></li>
-<li><p>high (2 in the example) when the economy produces high amount of cloth relative to food.</p></li>
-<li><p>Why? Because when the economy devotes more resources towards production of one good, the marginal productivity of those resources tends to be low so that the opportunity cost is high.</p></li>
-</ul>
+<section id="case-2" class="slide level2">
+<h2>Case 2</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-4-1.png" width="576"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<p>Under the second case, decrease in foreign interest rate, which means an appreciation of the local currency against the dollar.</p>
+</div></div>
 </section>
-<section id="no-subs-4" class="slide level2">
-<h2>No subs</h2>
-<p>The above P P F equations do not allow substitution of capital for labor in production.</p>
-<ul>
-<li>Unit factor requirements (<span class="math inline">\(a_{ij}\)</span>) are constant along each line segment of the P P F.</li>
-</ul>
-<p>If producers can substitute one input for another in the production process, then the P P F is curved (bowed).</p>
-<ul>
-<li><p>Opportunity cost of cloth increases as producers make more cloth.</p></li>
-<li><p>similar as specific factor model.</p></li>
-</ul>
+<section id="case-3" class="slide level2">
+<h2>Case 3</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-5-1.png" width="576"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<p>When expectation of the future rate is a lower spot rate, it leads to an appreciation of the local currency against the dollar.</p>
+</div></div>
+</section>
+<section id="cases" class="slide level2">
+<h2>3 cases</h2>
+<div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
 </div>
-</section></section>
+</div>
+</section>
     </div>
   </div>
 
@@ -831,7 +537,6 @@ a_{LC}Q_C+a_{LF}Q_F \le L
       Reveal.initialize({
 'controlsAuto': true,
 'previewLinksAuto': false,
-'smaller': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
@@ -1018,42 +723,80 @@ a_{LC}Q_C+a_{LF}Q_F \le L
       });
     </script>
     
+
     <script>
+
       // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+
       // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+
       // slide changes (different for each slide format).
+
       (function () {
+
         // dispatch for htmlwidgets
+
         function fireSlideEnter() {
+
           const event = window.document.createEvent("Event");
+
           event.initEvent("slideenter", true, true);
+
           window.document.dispatchEvent(event);
+
         }
+
+    
 
         function fireSlideChanged(previousSlide, currentSlide) {
+
           fireSlideEnter();
 
+    
+
           // dispatch for shiny
+
           if (window.jQuery) {
+
             if (previousSlide) {
+
               window.jQuery(previousSlide).trigger("hidden");
+
             }
+
             if (currentSlide) {
+
               window.jQuery(currentSlide).trigger("shown");
+
             }
+
           }
+
         }
+
+    
 
         // hookup for slidy
+
         if (window.w3c_slidy) {
+
           window.w3c_slidy.add_observer(function (slide_num) {
+
             // slide_num starts at position 1
+
             fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+
           });
+
         }
 
+    
+
       })();
+
     </script>
+
+    
 
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
@@ -1087,18 +830,7 @@ a_{LC}Q_C+a_{LF}Q_F \le L
         }
         return false;
       }
-      const clipboard = new window.ClipboardJS('.code-copy-button', {
-        text: function(trigger) {
-          const codeEl = trigger.previousElementSibling.cloneNode(true);
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
-            }
-          }
-          return codeEl.innerText;
-        }
-      });
-      clipboard.on('success', function(e) {
+      const onCopySuccess = function(e) {
         // button target
         const button = e.trigger;
         // don't keep focus
@@ -1130,11 +862,50 @@ a_{LC}Q_C+a_{LF}Q_F \le L
         }, 1000);
         // clear code selection
         e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
       });
-      function tippyHover(el, contentFn) {
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        // For code content inside modals, clipBoardJS needs to be initialized with a container option
+        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp('/' + window.location.host + '/');
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
-          content: contentFn,
           maxWidth: 500,
           delay: 100,
           arrow: false,
@@ -1144,8 +915,17 @@ a_{LC}Q_C+a_{LF}Q_F \le L
           interactive: true,
           interactiveBorder: 10,
           theme: 'light-border',
-          placement: 'bottom-start'
+          placement: 'bottom-start',
         };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
           config['offset'] = [0,0];
           config['maxWidth'] = 700;
         window.tippy(el, config); 
@@ -1159,7 +939,11 @@ a_{LC}Q_C+a_{LF}Q_F \le L
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
-          return note.innerHTML;
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
         });
       }
       const findCites = (el) => {
