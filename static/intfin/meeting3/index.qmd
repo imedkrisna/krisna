@@ -11,7 +11,9 @@ format:
     transition: convex
     background-transition: fade
     slide-number: true
-  beamer: default
+  beamer:
+    latex-tinytex: true
+    latex-auto-install: true
   pptx: default
 ---
 
@@ -63,7 +65,7 @@ $$
 E_{Rp/\$}=\frac{P_{ID}}{P_{US}}
 $$
 
-## Purchasing power parity
+## Purchasing power parity {.m}
 
 - PPP is the macroeconomic version of LOOP. We compute two basket of goods in each location, find their local prices, and compare them.
 
@@ -83,4 +85,481 @@ $$
 
 - The exchange rate for currencies is a nominal concept. The real exchange rate is the real concept.
 
-- 
+- The apreciation and depreciation terminology is the same, but add real: real appreciation (if $q \downarrow$) and real depreciation (if $q \uparrow$).
+
+## PPP and exchange rate
+
+- PPP is holding if $q_{ID/US}=1$, and no incentive to do arbitrage.
+
+- If $q_{ID/US}>1$, then the Indonesian basket is more expensive than the U.S. basket. This means the Rp is overvalued.
+
+- if $q_{ID/US}<1$, then the Indonesian basket is cheaper than the U.S. basket. This means the Rp is undervalued.
+
+## PPP and exchange rate
+
+- When $q_{ID/US}=1$, then:
+
+\begin{equation}
+\underbrace{E_{Rp/\$}}_{\text{exchange rate}}=\underbrace{P_{ID}/P_{US}}_\text{ratio of price levels}
+\end{equation}
+
+_Purchasing power parity implies that the exchange rate at which two currencies trade equals the relative price levels of the two countries._
+
+## Long-run relationship
+
+- We have established that $E_{Rp/\$}=P_{ID}/P_{US}$
+
+- Left-hand side: Let's take a rate of change of the exchange rate (i.e., rate of depreciation/appreciation).
+
+\begin{equation}
+\frac{\Delta E_{Rp/\$}}{E_{Rp/\$}}=\frac{\Delta P_{ID}}{P_{ID}}-\frac{\Delta P_{US}}{P_{US}}
+\end{equation}
+
+## Long-run relationship
+
+Right-hand side: We do the same, taking growth rate of the price ratio:
+
+\begin{align*}
+\frac{\Delta (P_{ID}/P_{US})}{P_{ID}/P_{US}}&=\frac{\Delta P_{ID,t}}{P_{ID,t}}-\frac{\Delta P_{US,t}}{P_{US,t}} \\
+&=\left(\frac{P_{ID,t+1}-P_{ID,t}}{P_{ID,t}}\right)-\left(\frac{P_{US,t+1}-P_{US,t}}{P_{US,t}}\right) \\
+&=\pi_{ID,t}-\pi_{US,t}\\
+
+\end{align*}
+
+## XR and inflation
+
+- If $q_{Rp/\$}=1$, then we have:
+
+\begin{equation}
+\frac{\Delta E_{Rp/\$,t}}{E_{Rp/\$,t}}=\pi_{ID,t}-\pi_{US,t}
+\end{equation}
+
+This is what we call *relative PPP*, which implies that the rate of depreciation of the nominal exchange rate equals the difference between the inflation rates of two countries.
+
+## Application {.m}
+
+![The diagonal line expresses rate of depreciation against USD to be equal with inflation differential against US inflation. Not all align perfectly with the line, but shows a long-run tendecy of both to be very close](Picture1.jpg)
+
+## Application {.m}    
+
+![Likewise, US/UK exchange rate versus relative price. The two has tendency to move the same direction and to be equal. Not precisely all the time but shows a tendency towards equality.](Picture2.jpg)
+
+## Indonesia?
+
+What do you think about Indonesia?
+
+```{r}
+#| layout-ncol: 2
+#| fig-cap: 
+#|   - "Price ratio"
+#|   - "Official exchange rate (Rp/$)"
+
+library(tidyverse)
+library(WDI)
+
+indi<-c(            # membuat dictionary
+  "CPI"="FP.CPI.TOTL"
+)
+
+dat<-WDI(           # Menarik data World Bank
+  country=c("IDN","USA"),
+  indicator=indi,
+  start=2010
+)
+
+dat2<-dat|>select(iso3c,CPI,year)|>pivot_wider(names_from=iso3c,values_from=CPI)
+dat2$RCPI=dat2$IDN/dat2$USA
+indi2<-c(            # membuat dictionary
+  "XR"="PA.NUS.FCRF"
+)
+dat3=WDI(country="IDN",indicator=indi2,start=2010)
+
+ggplot(dat2,aes(x=year,y=RCPI))+geom_line()+labs(title="Price ratio")
+ggplot(dat3,aes(x=year,y=XR))+geom_line()+labs(title="Exchange rate")
+```
+
+## Slow convergence
+
+- Research shows that price differences—the deviations from PPP—can be quite persistent. 
+
+- Estimates suggest that these deviations may die out at a rate of about 15% per year. This kind of measure is often called a speed of convergence.
+
+- Approximately half of any PPP deviation still remains after four years: Economists refer to this as a four-year half-life.
+
+- Such estimates provide a rule of thumb that is useful as a guide to forecasting real exchange rates.
+
+## Forecasting overvaluation
+
+- When PPP doesn't hold (which  often the case), knowing the real exchange rate and the convergence speed may still allow us to construct a forecast of real and nominal exchange rate.
+
+\begin{equation}
+\frac{\Delta E_{Rp/\$,t}}{E_{Rp/\$,t}}=\frac{\Delta q_{Rp/\$,t}}{q_{Rp/\$,t}}+\pi_{ID,t}-\pi_{US,t}
+\end{equation}
+
+## Why PPP doesn't hold
+
+- Transaction cost, like cost of transportaton, tariffs and nnon-tariffs, other shipping cost and delays amid red tape. On average, these costs are about 20% of the goods' price.
+
+- Non-traded goods. Some goods are just non-traded. We can think of it as infinitely high transaction cost. Most goods are falling between perfectly tradable and non-tradable.
+
+## Why PPP doesn't hold
+
+- Price stickiness. Prices are sticky, and it takes time for prices to adjust. This is especially true for services, which are more difficult to trade.
+
+- Imperfect competition. Firms may have market power, and thus can charge different prices in different markets.
+
+## Big Mac Index {.m}
+
+For more than 25 years, [The Economist newspaper](https://www.krisna.or.id/post/bigmacindex/) has engaged in a whimsical attempt to judge PPP theory based on a well-known, globally uniform consumer good: the McDonald’s Big Mac. The over- or undervaluation of a currency against the U.S. dollar is gauged by comparing the relative prices of a burger in a common currency, and expressing the difference as a percentage deviation from one:
+
+\begin{equation}
+\text{Big Mac Index}=q^{\text{Big Mac}}-1=\left(\frac{E_{\$/lc}P^{Bigmac}_local}{P_{US}^{Bigmac}}\right)-1
+\end{equation}
+
+## Monetary theory
+
+- Exchange rates determined by price ratio of two countries, but what determines those prices?
+
+- Monetary theory: in the long run, price levels are determined in each country by the relative demand and supply of money.
+
+## What is money? {.m}
+
+Stuff that serves these 3 functions:
+
+1. Money is a store of value because it can be used to buy goods and services in the future. If the opportunity cost of holding money is low, we will hold money more willingly than we hold other assets.
+
+2. Money also gives us a unit of account in which all prices in the economy are quoted.
+
+3. Money is a medium of exchange that allows us to buy and sell goods and services without the need to engage in inefficient barter. 
+
+## Money demand
+
+- A simple model of money demand: we want to hold money when we want to have a transaction. The more nominal income (PY), the more money we want to hold. Adding a constant multiplier $\bar{L}$:
+
+\begin{equation}
+M^d=\bar{L}PY
+\end{equation}
+
+Real money demand thus:
+
+\begin{equation}
+\frac{M^d}{P}=\bar{L}Y
+\end{equation}
+
+## Money market equilibrium
+
+- In the equilibrium, money demand = money supply $M_d=M$. M is exogenous because we assume it's fully controlled by the central bank.
+
+- Therefore, $M=\bar{L}PY$, which means in the equilibrium:
+
+\begin{equation}
+\frac{M}{P}=\bar{L}Y
+\end{equation}
+
+## Simple price model
+
+- Since ID and US has their own market, thus 2 prices, then
+
+\begin{equation}
+P_{ID}=\frac{M_{ID}}{\bar{L}Y_{ID}} \quad \text{and} \quad P_{US}=\frac{M_{US}}{\bar{L}Y_{US}}
+\end{equation}
+
+- These twoequationns are examples of the fundamental equation of the monetary model of the price level.
+
+- In the long run, we assume prices are flexible and will adjust to put the money market in equilibrium.
+
+## Money, Prices, XR {.m}
+
+We use our absolute PPP to solve for the exchange rate:
+
+\begin{align*}
+E_{Rp/\$}&=\frac{P_{ID}}{P_{US}}=\frac{\left(\frac{M_{ID}}{\bar{L}_{ID}Y_{ID}}\right)}{\left(\frac{M_{US}}{\bar{L}_{US}Y_{US}}\right)} \\
+E_{Rp/\$}&=\frac{M_{ID}/M_{US}}{\bar{L}_{ID}Y_{ID}/\bar{L}_{US}Y_{US}}
+\end{align*}
+
+This is the fundamental equation of the monetary approach to exchange rates.
+
+## M, P, XR {.m}
+
+\begin{equation}
+E_{Rp/\$}=\frac{P_{ID}}{P_{US}}\frac{M_{ID}/M_{US}}{\bar{L}_{ID}Y_{ID}/\bar{L}_{US}Y_{US}}
+\end{equation}
+
+Say ID's money supply goes up, all else equal. The right handside equation increases, thus ID's price goes up relative to the US, thus E goes up (IDR depreciate against USD)
+
+Suppose ID real income goes up, IDR will appreciate. Can you explain why?
+
+## M, P, XR growth
+
+We use similar approach as befre using growth, where growth of money supply and real income are expressed as follows:
+
+\begin{align*}
+\mu_{ID,t}&=\frac{M_{ID,t+1}-M_{ID,t}}{M_{ID}} \\
+g_{ID,t}&=\frac{Y_{ID,t+1}-Y_{ID,t}}{Y_{ID}}
+\end{align*}
+
+## M, P, XR growth
+
+Therefore, the growth rate of $P_{ID}=M_{ID}/\bar{L}_{ID}Y_{ID}$ equals the money supply growth rate $\mu_{ID}$ minus the real income growth rate $g_{ID}$ ($\bar{L}$ is gone. why?)
+
+Growth rate of $P_{i}$ is an inflation rate $\pi_{i}$, we get:
+
+\begin{align*}
+\text{in ID:} \pi_{ID,t}&=\mu_{ID,t}-g_{ID,t} \\
+\text{in US:} \pi_{US,t}&=\mu_{US,t}-g_{US,t}
+\end{align*}
+
+_When money growth is higher than income growth, we have "more money chasing fewer goods" and this leads to inflation._
+
+## M, P, XR growth
+
+Combining the two, we get:
+
+\begin{align*}
+\frac{\Delta E_{Rp/\$,t}}{E_{Rp/\$,t}}&=\pi_{ID,t}-\pi_{US,t} \\
+&= (\mu_{ID,t}-g_{ID,t})-(\mu_{US,t}-g_{US,t}) \\
+\end{align*}
+
+XR depreciation reflects a differece of two countries' money growth and growth rate.
+
+## M,P,depreciation
+
+\begin{align*}
+\frac{\Delta E_{Rp/\$,t}}{E_{Rp/\$,t}}&=\pi_{ID,t}-\pi_{US,t} \\
+&= (\mu_{ID,t}-g_{ID,t})-(\mu_{US,t}-g_{US,t}) \\
+\end{align*}
+
+If ID runs a looser monetary policy in the long run, measured by a faster money growth rate, the Rupiah will depreciate more rapidly, ceteris paribus.
+
+- If ID growth rate is higher than US in the long run, IDR will appreciate more rapidly, ceteris paribus.
+
+## Forecasting XR
+
+Using this model, we ask what path would exchange rate follows from now on if prices were flexible and PPP held?
+
+- Assume ID and US real income growth rates are identical and equal to zero (0%). Also, US price level is constant with zero inflation.
+
+- 2 cases: (1) a one-time increase in the money supply, and (2) an increase in the rate of money growth.
+
+## Case 1 {.m}
+
+- There is a 10% increase in the money supply M.
+
+- Real money balances M/P remain constant because real income is constant.
+
+- These previous two statements imply that price level P and money supply M must move in the same proportion, so there is a 10% increase in the price level P.
+
+- PPP implies that the exchange rate E and price level P must move in the same proportion, so there is a 10% increase in the exchange rate E.
+
+## Case 2 {.m}
+
+At time T the Indonesia will raise the rate of money supply growth to rate of μ + Δμ from a steady fixed rate μ.
+
+- Money supply M is growing at a constant rate.
+
+- Real money balances M/P remain constant, as before.
+
+- These previous two statements imply that price level P and money supply M must move in the same proportion, so P is always a constant multiple of M.
+
+- PPP implies that the exchange rate E and price level P must move in the same proportion, so E is always a constant multiple of P (and hence of M).
+
+## Application {.m}
+
+![It shows the relationship between rate of inflation rate and money growth differential relative to the US. The line reflects equality. Not exactly the same but very close.](Picture3.jpg)
+
+## Applicationn {.m}
+
+![It shows the relationship between rate of exchange rate depreciation and money growth differential relative to the US. The line reflects equality. Not exactly the same but very close.](Picture4.jpg)
+
+## Hyperinflation {.m}
+
+The monetary approach assumes long-run PPP, which generally works poorly in the short run. There is one notable exception to this general failure of PPP in the short run: hyperinflation.
+
+- Economists traditionally define a hyperinflation as a sustained inflation of more than 50% per month (which means that prices are doubling every 51 days).
+
+- In common usage, some lower-inflation episodes are also called hyperinflations. An inflation rate of 1,000% per year is a common rule of thumb (22% per month).
+
+- Hyperinflations usually occur when governments face a budget crisis, are unable to borrow to finance a deficit, and instead choose to print money.
+
+## Zimbabwe case {.m}
+
+By 2007 Zimbabwe was almost at an economic standstill, except for the printing presses churning out the banknotes.
+- A creeping inflation—58% in 1999, 132% in 2001, 385% in 2003, and 586% in 2005—was about to become hyperinflation, and the long-suffering people faced an accelerating descent into even deeper chaos. 
+- By 2007 inflation had risen to 12,000%! 
+- This was one the five worst hyperinflations of all time.
+- In 2008, the local currency disappeared from use, replaced by U.S. dollars and South African rand.
+
+## Currency reform {.s}
+
+Currencies can become extinct if they cease to function well and lose value rapidly (e.g., dollarization in Ecuador). If the currency survives, the government may redenominate a new currency unit equal to 10N (10 to the power N) old units. Sometimes N can get quite large….
+
+
+- In the 1980s, Argentina suffered hyperinflation. In June 1983, the peso argentino replaced the (old) peso at a rate of 10,000 to 1. In June 1985, the austral replaced the peso argentino at 1,000 to 1. Finally, in January 1992, the convertible peso replaced the austral at a rate of 10,000 to 1 (i.e., 10,000,000,000 old pesos).
+- In 1946, the Hungarian pengö became worthless. By July 15, 1946, there were 76,041,000,000,000,000,000,000,000 pengö in circulation.
+
+## General model
+
+- We assume a stable demand of money, and it's not necessarily true.
+
+- We will now explore a more general model that allows for money demand to vary with the nominal interest rate. 
+- We consider the links between inflation and the nominal interest rate in an open economy.
+- We then return to the question of how best to understand what determines exchange rates in the long run.
+
+## General model
+
+- Suppose the demand for money depends on interest rate: high interest rate makes holding money expensive. This makes $\bar{L}$ no longer constant.
+
+- L is a decreasing function of the nominal interest rate $i$
+
+\begin{equation}
+M^d=L(i_{Rp})PY \rightarrow \frac{M^d}{P}=L(i_{Rp})Y
+\end{equation}
+
+## M and i {.m}
+
+![The higher innterest rate, the lower money demand is. An increase in real income will shifts the curve to the right](Picture5.jpg)
+
+
+## General model
+
+Money market long-run equilibrium ($M=M^d$)
+
+\begin{equationn}
+\frac{M}{P}=L(i)Y
+\end{equationn}
+
+With this relationship and PPP and UIP holds, we can derive the long-run exchange rate depretiation.
+
+\begin{equation}
+\frac{\Delta E^e_{Rp/\$,t}}{E_{Rp/\$,t}}=\pi^e_{ID,t}-\pi^e_{US,t} \ \text{and} \ \frac{\Delta E^e_{Rp/\$,t}}{E_{Rp/\$,t}}=i_{Rp,t}-i_{US,t}
+\end{equation}
+
+## The fisher effect {.m}
+
+Therefore, we have that inflation expectation difference is equal to nominal interest rate difference.
+
+\begin{equation}
+\pi^e_{ID,t}-\pi^e_{US,t} = i_{Rp,t}-i_{US,t}
+\end{equation}
+
+All else equal, a rise in the expected inflation rate in a country will lead to an equal rise in its nominal interest rate. This is called the fisher effect.
+
+Fisher effect predicts that the change in the opportunity cost of money is equal not just to the change in the nominal interest rate but also to the change in the inflation rate.
+
+## Real interest parity {.m}
+
+- rearranging the previous equation gets us
+
+\begin{equation}
+i_{Rp,t}-\pi^e_{ID,t} = i_{US,t}-\pi^e_{US,t}
+\end{equation}
+
+- subtracting th einflation rate from the nominal interest rate gives us *real interest rate* (r), the inflation-adjusted return on an interest-bearing asset.
+
+\begin{equation}
+r^e_{ID}=r^e_{US}
+\end{equation}
+
+## Real interest parity
+
+The condition is called real interest parity:
+
+_If PPP and UIP hold, then nexpected real interest rates are equalized across countries_
+
+Real interest parity implies that arbitrage in goods (PPP) and financial markets (UIP) alone in sufficient, in the long run, to cause the equalization of real interest rates across countries.
+
+Thus, $r^e_{ID}=r^e_{US}=r^*$
+
+## Real interest parity
+
+We treat $r^*$ as an exogeneous variable, something no policy maker in any country can control.
+
+Unnder this condition, the Fisher effect is even clearer because by definition
+
+\begin{align*}
+i_{Rp}=r^e_{ID}+\pi^e_{ID} = r^*+\pi^e_{ID} \\
+i_{\$}=r^e_{US}+\pi^e_{US} = r^*+\pi^e_{US}
+\end{align*}
+
+## Fisher effect evidence
+
+![](Picture6.jpg)
+
+## General model fundamental
+
+Now that money demand moves negatively with interest rate, we can express exchange rate as:
+
+\begin{equation}
+E_{Rp/\$}=\frac{P_{ID}}{P_{US}}\frac{M_{ID}/M_{US}}{L_{ID}(i_{Rp})Y_{ID}/L_{US}(i_\$)Y_{US}}
+\end{equation}
+
+Let's reexamine case 2 where Indonesia rises money growth rate from $\mu$ to $\mu+\Delta\mu$.
+
+## Case 2 revisited {.m}
+
+At time T the Indonesia will raise the rate of money supply growth to rate of μ + Δμ from a steady fixed rate μ.
+
+- Money supply M is growing at a constant rate.
+
+- Real money balances M/P remain constant, as before.
+
+- These previous two statements imply that price level P and money supply M must move in the same proportion, so P is always a constant multiple of M.
+
+- Fisher effect suggests that inflation leads to a same proportion changes of interest rate.
+
+- Real money demand thus falls with a discrete jump at time $T$
+
+## Monetary and exchange rate regime {.m}
+
+An overarching aspect of a nation’s economic policy is the desire to keep inflation within certain bounds. 
+
+- To achieve such an objective requires that policy makers be subject to some kind of constraint in the long run. Such constraints are called nominal anchors.
+
+- Long-run nominal anchoring and short-run flexibility are the characteristics of the policy framework that economists call the monetary regime.
+
+- The three main nominal anchor choices that emerge are exchange rate target, money supply target, and inflation target plus interest rate policy.
+
+## Exchange rate target:
+
+We relabel Indonesia as Home (H) and US as Foreign (F)
+
+\begin{equation}
+\pi_H=\underbrace{\frac{\Delta E_{H/F}}{E_{H/F}}}_{text{anchor variable}}+\pi_F
+\end{equation}
+
+Relative PPP says that home inflation equals the rate of depreciation plus foreign inflation. A simple rule would be to set the rate of depreciation equal to a constant.
+
+## Money supply target {.m}
+
+\begin{equation}
+\pi_H=\mu_H+\g_H
+\end{equation}
+
+Simple rule in this case is to set a growth rate of money supply equal to a constant, say 2% a year.
+
+The drawback is the final term in the previous equation: real income growth can be unstable. In periods of high growth, inflation will be below the desired level. In periods of low growth, inflation will be above the desired level.
+
+## Inflation target
+
+combined with interest rate policy as its anchor variable:
+
+\begin{equation}
+\pi^e_H=i_H+r^*
+\end{equation}
+
+Fisher effect says home inflation is the home nomninal interest rate minus world interest rate. If the latter is constant and the average home nominal interest rate is stable, inflation can be kept stable. But the target nominnal rate must be adjusted if the world real interest rate changes, as recently happend.
+
+## Anchoring {.s}
+
+![This table illustrates the possible exchange rate regimes that are consistent with various types of nominal anchors. Countries that are dollarized or in a currency union have a “superfixed” exchange rate target. Pegs, bands, and crawls also target the exchange rate. Managed floats have no preset path for the exchange rate, which allows other targets to be employed. Countries that float freely or independently are judged to pay no serious attention to exchange rate targets; if they have anchors, they will involve monetary targets or inflation targets with an interest rate policy. The countries with “freely falling” exchange rates have no serious target and have high rates of inflation and depreciation](Picture7.jpg)
+
+## Nominal anchoring
+
+- An appreciation of the importance of nominal anchors has transformed monetary policy making and inflation performance throughout the global economy in recent decades.
+
+- In the 1970s and 1980s, most of the world was struggling with high inflation. 
+
+- In the 1990s, policies designed to create effective nominal anchors were put in place in many countries.
+
+- Most of those policies have turned out to be credible, too, thanks to political developments in many countries that have fostered central-bank independence.
+
