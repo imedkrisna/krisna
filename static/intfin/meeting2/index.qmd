@@ -12,7 +12,9 @@ format:
     transition: convex
     background-transition: fade
     slide-number: true
-  beamer: default
+  beamer:
+    pdf-engine: latexmk
+    latex-auto-install: true
   pptx: default
 ---
 
@@ -87,7 +89,7 @@ $E_{Rp/\$}=16.320$ Indonesian exchange rate (Indo terms)
 
 $E_{Rp/\$,t}=\frac{1}{E_{\$/Rp,t}}$
 
-## Apredepre
+## Apredepre {.m}
 
 - Jika 1 Rp dapat membeli lebih banyak dolar, kita katakan Rp *menguat*, *naik harga*, atau *apresiasi* terhadap dolar.
 
@@ -110,9 +112,9 @@ Perubahan nilai rupiah tahunan di bulan Juli jadinya adalah:
 
 ::: {.fragment .m}
 
-$$
+\begin{equation}
 \frac{\Delta E_{\$/Rp}}{E_{\$/Rp}}=\frac{16320-15083}{15083}=0,082=8,2\%
-$$
+\end{equation}
 
 Rupiah terdepresiasi 8,2% terhadap dolar.
 
@@ -242,7 +244,7 @@ Indonesia memiliki nilai tukar yang ada di tengah, atau managed floating. Tidak 
 
 - Example 2: Speculation. The market currently prices one-year euro futures at \$1.30, but you think the dollar will weaken to \$1.43 in the next 12 months. If you wish to make a bet, you would buy these futures, and if you are proved right, you will realize a 10% profit. Any level above \$1.30 will generate a profit. If the dollar is at or below \$1.30 a year from now, however, your investment in futures will be a total loss. This is speculation. 
 
-## Aktor pasar uang
+## Aktor pasar uang {.m}
 
 - Bank komersil merupakan aktor paling sering melakukan perdagangan forex. 75% transaksi forex dieksekusi oleh hanya 10 bank.
 
@@ -400,7 +402,7 @@ Misalnya bunga dolar 4% sementara euro di 3%. Andai UIP terjaga, maka ekspektasi
 
 ![](pic5.png)
 
-## Kesimpulan
+## Kesimpulan {.m}
 
 - Nilai tukar mata uang suatu negara adalah harga dari mata uang tersebut dinilai dengan mata uang negara lain. Harga ini ditentukan di spot market pasar uang.
 

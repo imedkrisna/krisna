@@ -144,6 +144,7 @@
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
 \makeatother
+
 \ifLuaTeX
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
@@ -157,6 +158,7 @@
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
 
+
 \title{Reviewing the exchange rate}
 \subtitle{ECEU603002 Keuangan internasional}
 \author{I Made Krisna Gupta}
@@ -164,6 +166,7 @@
 
 \begin{document}
 \frame{\titlepage}
+
 
 \begin{frame}{Reminder}
 \phantomsection\label{reminder}
@@ -328,9 +331,9 @@ USD/IDR & 6.63e-05 & \emph{6.127e-05} \\
 
 Perubahan nilai rupiah tahunan di bulan Juli jadinya adalah:
 
-\[
+\begin{equation}
 \frac{\Delta E_{\$/Rp}}{E_{\$/Rp}}=\frac{16320-15083}{15083}=0,082=8,2\%
-\]
+\end{equation}
 
 Rupiah terdepresiasi 8,2\% terhadap dolar.
 \end{frame}
@@ -918,6 +921,7 @@ nabung euro dari awal.
   dengan melibatkan harga-harga barang.
 \end{itemize}
 \end{frame}
+
 
 
 

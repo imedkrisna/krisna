@@ -8,7 +8,7 @@
 <link href="index_files/libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="index_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="index_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.4.554">
+  <meta name="generator" content="quarto-1.5.57">
 
   <meta name="author" content="I Made Krisna Gupta">
   <meta name="dcterms.date" content="2024-09-05">
@@ -397,7 +397,7 @@ I Made Krisna Gupta
 </section>
 <section id="harga-idr" class="slide level2 m">
 <h2>Harga IDR</h2>
-<table>
+<table class="caption-top">
 <caption>Nilai tukar Rupiah (<a href="https://www.bi.go.id/id/statistik/ekonomi-keuangan/seki/Default.aspx#headingFour">Tabel V.40 SEKI</a>)</caption>
 <thead>
 <tr class="header">
@@ -444,7 +444,7 @@ I Made Krisna Gupta
 <p><span class="math inline">\(E_{Rp/\$}=16.320\)</span> Indonesian exchange rate (Indo terms)</p>
 <p><span class="math inline">\(E_{Rp/\$,t}=\frac{1}{E_{\$/Rp,t}}\)</span></p>
 </section>
-<section id="apredepre" class="slide level2">
+<section id="apredepre" class="slide level2 m">
 <h2>Apredepre</h2>
 <ul>
 <li><p>Jika 1 Rp dapat membeli lebih banyak dolar, kita katakan Rp <em>menguat</em>, <em>naik harga</em>, atau <em>apresiasi</em> terhadap dolar.</p></li>
@@ -456,7 +456,7 @@ I Made Krisna Gupta
 </section>
 <section id="apredepre-1" class="slide level2">
 <h2>Apredepre</h2>
-<table>
+<table class="caption-top">
 <thead>
 <tr class="header">
 <th>Jenis Valuta</th>
@@ -479,15 +479,15 @@ I Made Krisna Gupta
 </table>
 <p>Perubahan nilai rupiah tahunan di bulan Juli jadinya adalah:</p>
 <div class="fragment m">
-<p><span class="math display">\[
+<p><span class="math display">\[\begin{equation}
 \frac{\Delta E_{\$/Rp}}{E_{\$/Rp}}=\frac{16320-15083}{15083}=0,082=8,2\%
-\]</span></p>
+\end{equation}\]</span></p>
 <p>Rupiah terdepresiasi 8,2% terhadap dolar.</p>
 </div>
 </section>
 <section id="apredepre-2" class="slide level2">
 <h2>Apredepre</h2>
-<table>
+<table class="caption-top">
 <thead>
 <tr class="header">
 <th>Jenis Valuta</th>
@@ -618,7 +618,7 @@ I Made Krisna Gupta
 <li><p>Example 2: Speculation. The market currently prices one-year euro futures at $1.30, but you think the dollar will weaken to $1.43 in the next 12 months. If you wish to make a bet, you would buy these futures, and if you are proved right, you will realize a 10% profit. Any level above $1.30 will generate a profit. If the dollar is at or below $1.30 a year from now, however, your investment in futures will be a total loss. This is speculation.</p></li>
 </ul>
 </section>
-<section id="aktor-pasar-uang" class="slide level2">
+<section id="aktor-pasar-uang" class="slide level2 m">
 <h2>Aktor pasar uang</h2>
 <ul>
 <li><p>Bank komersil merupakan aktor paling sering melakukan perdagangan forex. 75% transaksi forex dieksekusi oleh hanya 10 bank.</p></li>
@@ -768,7 +768,7 @@ i_\$=i_{€}+\frac{E_{\$/€}^e-E_{\$/€}}{E_{\$/€}}
 <h2>UIP dan CIP</h2>
 
 <img data-src="pic5.png" class="r-stretch"></section>
-<section id="kesimpulan" class="slide level2">
+<section id="kesimpulan" class="slide level2 m">
 <h2>Kesimpulan</h2>
 <ul>
 <li><p>Nilai tukar mata uang suatu negara adalah harga dari mata uang tersebut dinilai dengan mata uang negara lain. Harga ini ditentukan di spot market pasar uang.</p></li>
@@ -1041,18 +1041,7 @@ i_\$=i_{€}+\frac{E_{\$/€}^e-E_{\$/€}}{E_{\$/€}}
         }
         return false;
       }
-      const clipboard = new window.ClipboardJS('.code-copy-button', {
-        text: function(trigger) {
-          const codeEl = trigger.previousElementSibling.cloneNode(true);
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
-            }
-          }
-          return codeEl.innerText;
-        }
-      });
-      clipboard.on('success', function(e) {
+      const onCopySuccess = function(e) {
         // button target
         const button = e.trigger;
         // don't keep focus
@@ -1084,7 +1073,29 @@ i_\$=i_{€}+\frac{E_{\$/€}^e-E_{\$/€}}{E_{\$/€}}
         }, 1000);
         // clear code selection
         e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
       });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        // For code content inside modals, clipBoardJS needs to be initialized with a container option
+        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
         var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
         var mailtoRegex = new RegExp(/^mailto:/);
           var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -1092,7 +1103,7 @@ i_\$=i_{€}+\frac{E_{\$/€}^e-E_{\$/€}}{E_{\$/€}}
             return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
         }
         // Inspect non-navigation links and adorn them if external
-     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
         for (var i=0; i<links.length; i++) {
           const link = links[i];
           if (!isInternal(link.href)) {
