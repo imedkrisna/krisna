@@ -26,7 +26,7 @@ graph<-function(dataset, ...) {
   theme_classic() +
   theme(panel.background = element_rect(fill = "#f0f1eb",
                                         colour = "#f0f1eb"),
-        
+        plot.margin = margin(0,0,0,0),
         plot.background = element_rect(fill = "#f0f1eb"),
         legend.key = element_rect(fill = "#f0f1eb",linetype = "blank"),
         legend.background = element_rect(fill="#f0f1eb"))
