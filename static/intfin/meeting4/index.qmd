@@ -31,11 +31,19 @@ graph<-function(dataset, ...) {
         legend.key = element_rect(fill = "#f0f1eb",linetype = "blank"),
         legend.background = element_rect(fill="#f0f1eb"))
 }
-
+graph3<-theme_classic() +
+  theme(panel.background = element_rect(fill = "#f0f1eb",
+                                        colour = "#f0f1eb"),
+        plot.margin = margin(0,0,0,0),
+        plot.background = element_rect(fill = "#f0f1eb"),
+        axis.title.x = element_text(hjust=1),
+        axis.title.y = element_text(angle=0,hjust=1,vjust=1),
+        legend.key = element_rect(fill = "#f0f1eb",linetype = "blank"),
+        legend.background = element_rect(fill="#f0f1eb"))
 graph2<-theme_classic() +
   theme(panel.background = element_rect(fill = "#f0f1eb",
                                         colour = "#f0f1eb"),
-        
+        plot.margin = margin(0,0,0,0),
         plot.background = element_rect(fill = "#f0f1eb"),
         legend.key = element_rect(fill = "#f0f1eb",linetype = "blank"),
         legend.background = element_rect(fill="#f0f1eb"),
@@ -224,14 +232,111 @@ The expressions for money market equilibrium in two countries are as follows:
 
 Remember, money supply is controlled by the central bank.
 
-## wew
+## Short run equilibrium {.m}
+
+:::: columns
+::: {.column width=47%}
 
 ```{r}
+#| fig-width: 5
+#| fig-height: 4
+x=40
+y=15.625
 demand<-function(q) (q/100)^(-3)
-ggplot()+stat_function(fun=demand)+
-  scale_x_continuous(limits=c(25,50)) +
-  scale_y_continuous(limits=c(0,50))+
+ggplot()+stat_function(fun=demand,linewidth=1.1,color="blue")+
+  scale_x_continuous(limits=c(25,50),breaks = 40, expand = c(0,0),
+                     labels = expression(frac(M[ID]^1,P[ID]^1))) +
+  scale_y_continuous(limits=c(0,50),breaks = 15.625,expand = c(0,0),
+                     labels=expression(i[Rp]^1))+
+  geom_vline(xintercept=40,color="red",linewidth=1.1)+
+  geom_point(x=40,y=15.625)+
+  annotate("segment",x=25,y=y,xend=x,yend = y,linetype="dotted")+
+  annotate("segment",x=x,y=0,xend=x,yend = y,linetype="dotted")+
   
-  graph2
+  labs(x="Real Money\nBalance (M/P)",
+       y="nominal\ninterest\nrate (i)")+
+  graph3
 
 ```
+
+:::
+::: {.column width=47%}
+
+The mney supply curve (red line) is vertical because it does not depends on domestic interest rate. Money demand curve (blue line) is downward sloping amid interest rate increase leads to lower money demand.
+
+The money market equilibrium is at $i^1_{Rp}$ because it is where demand equals supply. 
+
+:::
+::::
+
+## Short run equilibrium {.m}
+
+:::: columns
+::: {.column width=47%}
+
+```{r}
+#| fig-width: 5
+#| fig-height: 4
+x=40
+y=15.625
+demand<-function(q) (q/100)^(-3)
+ggplot()+stat_function(fun=demand,linewidth=1.1,color="blue")+
+  scale_x_continuous(limits=c(25,50),breaks = 40, expand = c(0,0),
+                     labels = expression(frac(M[ID]^1,P[ID]^1))) +
+  scale_y_continuous(limits=c(0,50),breaks = 15.625,expand = c(0,0),
+                     labels=expression(i[Rp]^1))+
+  geom_vline(xintercept=40,color="red",linewidth=1.1)+
+  geom_point(x=40,y=15.625)+
+  annotate("segment",x=25,y=y,xend=x,yend = y,linetype="dotted")+
+  annotate("segment",x=x,y=0,xend=x,yend = y,linetype="dotted")+
+  
+  labs(x="Real Money\nBalance (M/P)",
+       y="nominal\ninterest\nrate (i)")+
+  graph3
+
+```
+
+:::
+::: {.column width=47%}
+
+With a fixed price level $P_{ID}^1$, an increase in nominal money supply from $M^1_{ID}$ to $M^2_{ID}$ will increase real money supply from $\frac{M^1_{ID}}{P_{ID}^1}$ to $\frac{M^2_{ID}}{P_{ID}^1}$
+
+:::
+::::
+
+## Short run equilibrium {.m}
+
+:::: columns
+::: {.column width=47%}
+
+```{r}
+#| fig-width: 5
+#| fig-height: 4
+x=40
+y=15.625
+demand<-function(q) (q/100)^(-3)
+ggplot()+stat_function(fun=demand,linewidth=1.1,color="blue")+
+  scale_x_continuous(limits=c(25,50),breaks = 40, expand = c(0,0),
+                     labels = expression(frac(M[ID]^1,P[ID]^1))) +
+  scale_y_continuous(limits=c(0,50),breaks = 15.625,expand = c(0,0),
+                     labels=expression(i[Rp]^1))+
+  geom_vline(xintercept=40,color="red",linewidth=1.1)+
+  geom_point(x=40,y=15.625)+
+  annotate("segment",x=25,y=y,xend=x,yend = y,linetype="dotted")+
+  annotate("segment",x=x,y=0,xend=x,yend = y,linetype="dotted")+
+  
+  labs(x="Real Money\nBalance (M/P)",
+       y="nominal\ninterest\nrate (i)")+
+  graph3
+
+```
+
+:::
+::: {.column width=47%}
+
+The mney supply curve (red line) is vertical because it does not depends on domestic interest rate. Money demand curve (blue line) is downward sloping amid interest rate increase leads to lower money demand.
+
+The money market equilibrium is at $i^1_{Rp}$ because it is where demand equals supply. 
+
+:::
+::::
