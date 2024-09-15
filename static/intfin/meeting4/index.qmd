@@ -36,6 +36,7 @@ graph3<-theme_classic() +
                                         colour = "#f0f1eb"),
         plot.margin = margin(0,0,0,0),
         plot.background = element_rect(fill = "#f0f1eb"),
+        axis.text=element_text(size=12),
         axis.title.x = element_text(hjust=1),
         axis.title.y = element_text(angle=0,hjust=1,vjust=1),
         legend.key = element_rect(fill = "#f0f1eb",linetype = "blank"),
@@ -281,13 +282,18 @@ x=40
 y=15.625
 demand<-function(q) (q/100)^(-3)
 ggplot()+stat_function(fun=demand,linewidth=1.1,color="blue")+
-  scale_x_continuous(limits=c(25,50),breaks = 40, expand = c(0,0),
-                     labels = expression(frac(M[ID]^1,P[ID]^1))) +
-  scale_y_continuous(limits=c(0,50),breaks = 15.625,expand = c(0,0),
-                     labels=expression(i[Rp]^1))+
-  geom_vline(xintercept=40,color="red",linewidth=1.1)+
+  scale_x_continuous(limits=c(25,50),breaks = c(40,45), expand = c(0,0),
+                     labels = c(expression(frac(M[ID]^1,P[ID]^1)),
+                     expression(frac(M[ID]^2,P[ID]^1)))) +
+  scale_y_continuous(limits=c(0,50),breaks = c(10.97394,15.625),expand = c(0,0),
+                     labels=c(expression(i[Rp]^2),expression(i[Rp]^1)))+
+  geom_vline(xintercept=40,color="red",linewidth=1.1,linetype='dashed')+
+  geom_vline(xintercept=45,color="red",linewidth=1.1)+
+  annotate("segment",x=41,y=30,xend=44,yend = 30,
+           arrow=arrow(length=unit(0.3,"cm"),type='closed'))+
   geom_point(x=40,y=15.625)+
   annotate("segment",x=25,y=y,xend=x,yend = y,linetype="dotted")+
+  annotate("segment",x=25,y=10.97394,xend=45,yend = 10.97394,linetype="dotted")+
   annotate("segment",x=x,y=0,xend=x,yend = y,linetype="dotted")+
   
   labs(x="Real Money\nBalance (M/P)",
@@ -299,7 +305,9 @@ ggplot()+stat_function(fun=demand,linewidth=1.1,color="blue")+
 :::
 ::: {.column width=47%}
 
-With a fixed price level $P_{ID}^1$, an increase in nominal money supply from $M^1_{ID}$ to $M^2_{ID}$ will increase real money supply from $\frac{M^1_{ID}}{P_{ID}^1}$ to $\frac{M^2_{ID}}{P_{ID}^1}$
+#### Increase in money supply
+
+With a fixed price level $P_{ID}^1$, an increase in nominal money supply from $M^1_{ID}$ to $M^2_{ID}$ will increase real money supply from $\frac{M^1_{ID}}{P_{ID}^1}$ to $\frac{M^2_{ID}}{P_{ID}^1}$. If nothing else happens on the demand curve, then the equilibrium interest rate is going down. 
 
 :::
 ::::
@@ -310,21 +318,27 @@ With a fixed price level $P_{ID}^1$, an increase in nominal money supply from $M
 ::: {.column width=47%}
 
 ```{r}
-#| fig-width: 5
+#| fig-width: 4
 #| fig-height: 4
+
 x=40
 y=15.625
+y2=(x/100)^(-3)*1.5
 demand<-function(q) (q/100)^(-3)
-ggplot()+stat_function(fun=demand,linewidth=1.1,color="blue")+
+demand2<-function(q) (q/100)^(-3)*1.5
+ggplot()+stat_function(fun=demand,linewidth=1.1,color="blue",linetype='dashed')+
+  stat_function(fun=demand2,linewidth=1.1,color="blue")+
   scale_x_continuous(limits=c(25,50),breaks = 40, expand = c(0,0),
                      labels = expression(frac(M[ID]^1,P[ID]^1))) +
-  scale_y_continuous(limits=c(0,50),breaks = 15.625,expand = c(0,0),
-                     labels=expression(i[Rp]^1))+
+  scale_y_continuous(limits=c(0,50),breaks = c(y,y2),expand = c(0,0),
+                     labels=c(expression(i[Rp]^1),expression(i[Rp]^2)))+
   geom_vline(xintercept=40,color="red",linewidth=1.1)+
   geom_point(x=40,y=15.625)+
   annotate("segment",x=25,y=y,xend=x,yend = y,linetype="dotted")+
   annotate("segment",x=x,y=0,xend=x,yend = y,linetype="dotted")+
-  
+  annotate("segment",x=25,y=y2,xend=x,yend = y2,linetype="dotted")+
+  annotate("segment",x=35,y=28,xend=35,yend = 33,
+           arrow=arrow(length=unit(0.3,"cm"),type='closed'))+
   labs(x="Real Money\nBalance (M/P)",
        y="nominal\ninterest\nrate (i)")+
   graph3
@@ -334,9 +348,12 @@ ggplot()+stat_function(fun=demand,linewidth=1.1,color="blue")+
 :::
 ::: {.column width=47%}
 
-The mney supply curve (red line) is vertical because it does not depends on domestic interest rate. Money demand curve (blue line) is downward sloping amid interest rate increase leads to lower money demand.
+#### Increase in money demand
 
-The money market equilibrium is at $i^1_{Rp}$ because it is where demand equals supply. 
+Suppose real income $Y$ in Indonesia goes up, then $\frac{M^d}{P}$ goes up, causing demand curve shifts to the right. If money supply stays the same, then the higher demand for money will rise interest rate in the equilibrium.
 
 :::
 ::::
+
+## Central bank rate
+
