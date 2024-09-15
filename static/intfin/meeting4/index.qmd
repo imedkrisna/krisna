@@ -17,6 +17,41 @@ format:
   pptx: default
 ---
 
+```{r}
+library(tidyverse)
+library(kableExtra)
+graph<-function(dataset, ...) {
+  dataset |>
+  ggplot(aes(...))+
+  theme_classic() +
+  theme(panel.background = element_rect(fill = "#f0f1eb",
+                                        colour = "#f0f1eb"),
+        
+        plot.background = element_rect(fill = "#f0f1eb"),
+        legend.key = element_rect(fill = "#f0f1eb",linetype = "blank"),
+        legend.background = element_rect(fill="#f0f1eb"))
+}
+
+graph2<-theme_classic() +
+  theme(panel.background = element_rect(fill = "#f0f1eb",
+                                        colour = "#f0f1eb"),
+        
+        plot.background = element_rect(fill = "#f0f1eb"),
+        legend.key = element_rect(fill = "#f0f1eb",linetype = "blank"),
+        legend.background = element_rect(fill="#f0f1eb"),
+        axis.title.x = element_text(hjust=1),
+        axis.title.y = element_text(angle=0,hjust=1,vjust=1),
+        panel.grid=element_blank(),
+        axis.text.x=element_blank(),
+        axis.text.y=element_blank(),
+        axis.ticks.x=element_blank(),
+        axis.ticks.y=element_blank(),
+        legend.position=c(1,1),
+        legend.justification = c(1,1),
+        legend.spacing=unit(0,"cm"),
+        legend.margin=margin(0,0,0,0))
+```
+
 ## Overview
 
 - How the arbitrage in the short-run plays out the dynamics of exchange rate?
@@ -48,8 +83,7 @@ the left-hand side is the rupiah return on rupiah asset while the right-hand sid
 ## Example {.m}
 
 ```{r}
-library(tidyverse)
-library(kableExtra)
+
 dat<-tibble(
   iRp=rep(0.05,5),
   iD=rep(0.03,5),
@@ -71,12 +105,12 @@ where ee is the expected depreciation of rupiah while fore is the expected rupia
 ## Money market
 
 ```{r}
-ggplot(dat,aes(x=spot,y=fore))+geom_line(color="blue",linewidth=1.1)+geom_point()+
+graph(dat)+geom_line(aes(x=spot,y=fore),color="blue",linewidth=1.1)+
+  geom_point(aes(x=spot,y=fore),size=2)+
   geom_hline(yintercept = 0.05,color="red",linewidth=1.1)+
   labs(title="Money market",
        x="Spot exchange rate",
-       y="Expected rupiah return")+
-  theme_classic()
+       y="Expected rupiah return")
 ```
 
 Blue line shows the rupiah return on dollar asset while the red line is the rupiah return on rupiah asset. Intersection is the equilibrium. Any point above red line is a case for holding dollar asset.
@@ -100,18 +134,18 @@ Using framework above, lets see what happens under these following scenarios:
 #| fig-width: 5
 #| fig-height: 4
 
-ggplot(dat,aes(x=spot,y=fore))+geom_line(color="blue",linewidth=1.1)+geom_point()+
+graph(dat)+geom_line(aes(x=spot,y=fore),color="blue",linewidth=1.1)+
+  geom_point(aes(x=spot,y=fore),size=2)+
   geom_hline(yintercept = 0.05,color="red",linewidth=1.1,linetype="dashed")+
   geom_hline(yintercept = 0.07,color="red",linewidth=1.1)+
   labs(title="Money market",
-       x="Spot exchange rate",
-       y="Expected rupiah return")+
-  theme_classic()
+       x="Spot exchange rate (Rp/$)",
+       y="Expected rupiah return")
 ```
 
 :::
 ::: {.column width=50%}
-Under the first case, increase in domestic interest rate leads to a lower spot rate, which means an appreciation of the local currency against the dollar.
+An increase in domestic interest rate rises our red line. When interest rate goes up, it is now better to hold Indonesian asset. Rupiah demand went up which means an appreciation of the local currency against the dollar, up until the UIP holds.
 :::
 ::::
 
@@ -130,18 +164,18 @@ dat$ee3<-(dat$e2-dat$spot)/dat$spot
 dat$fore2<-dat$ee+dat$iDD
 dat$fore3<-dat$ee3+dat$iD
 
-ggplot(dat,aes(x=spot,y=fore2))+geom_line(color="blue",linewidth=1.1)+geom_point()+
+graph(dat)+geom_line(aes(x=spot,y=fore2),color="blue",linewidth=1.1)+
+  geom_point(aes(x=spot,y=fore2),size=2)+
   geom_hline(yintercept = 0.05,color="red",linewidth=1.1)+
-  geom_line(aes(y=fore),color="blue",linetype="dashed")+
+  geom_line(aes(x=spot,y=fore),color="blue",linetype="dashed")+
   labs(title="Money market",
        x="Spot exchange rate",
-       y="Expected rupiah return")+
-  theme_classic()
+       y="Expected rupiah return")
 ```
 
 :::
 ::: {.column width=50%}
-Under the second case, decrease in foreign interest rate, which means an appreciation of the local currency against the dollar.
+Under the second case, decrease in foreign interest rate leads to changes in the right-hand side equation (rupiah return in dollar asset) which affects the blue line. Decrease in foreign interest rate decreases the rupiah return in dollar asset. The blue line shifts downward, and equilibrium shifts to lower E which means an appreciation to IDR.
 :::
 ::::
 
@@ -156,18 +190,18 @@ Under the second case, decrease in foreign interest rate, which means an appreci
 dat$iDD<-rep(0.01,5)
 dat$e2<-rep(15600,5)
 
-ggplot(dat,aes(x=spot,y=fore3))+geom_line(color="blue",linewidth=1.1)+geom_point()+
+graph(dat)+geom_line(aes(x=spot,y=fore3),color="blue",linewidth=1.1)+
+  geom_point(aes(x=spot,y=fore3),size=2)+
   geom_hline(yintercept = 0.05,color="red",linewidth=1.1)+
-  geom_line(aes(y=fore),color="blue",linetype="dashed")+
+  geom_line(aes(x=spot,y=fore),color="blue",linetype="dashed")+
   labs(title="Money market",
        x="Spot exchange rate",
-       y="Expected rupiah return")+
-  theme_classic()
+       y="Expected rupiah return")
 ```
 
 :::
 ::: {.column width=50% .incremental}
-When expectation of the future rate is a lower spot rate, it leads to an appreciation of the local currency against the dollar.
+When expectation of the future rate is a lower spot rate (an appreciation of IDR), it affects the return in dollar asset. The blue line shifts downward, leading to more opportunity to hold rupiah asset. equilibrium spot rate is shifting down, leading to an appreciation of IDR.
 :::
 ::::
 
@@ -189,3 +223,15 @@ The expressions for money market equilibrium in two countries are as follows:
 \end{equation}
 
 Remember, money supply is controlled by the central bank.
+
+## wew
+
+```{r}
+demand<-function(q) (q/100)^(-3)
+ggplot()+stat_function(fun=demand)+
+  scale_x_continuous(limits=c(25,50)) +
+  scale_y_continuous(limits=c(0,50))+
+  
+  graph2
+
+```
