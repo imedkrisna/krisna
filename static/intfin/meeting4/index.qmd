@@ -355,5 +355,340 @@ Suppose real income $Y$ in Indonesia goes up, then $\frac{M^d}{P}$ goes up, caus
 :::
 ::::
 
-## Central bank rate
+## Learning from US {.m}
 
+- Can Central Banks Always Control the Interest Rate? A Lesson from the Crisis of 2008–2009
+
+- In the United States, the Federal Reserve sets as its policy rate the interest rate that it charges banks for overnight loans. 
+
+- In normal times, changes in this cost of short-term funds for the banks are usually passed through into the market rates the banks charge to borrowers as well as on interbank loans between the banks themselves. 
+
+- This process is one of the most basic elements in the so-called transmission mechanism through which the effects of monetary policy are eventually felt in the real economy.
+
+## Learning from US {.m}
+
+- In the recent crisis, although the Fed brought its policy rate all the way down from 5.25% to 0% in 2007 and 2008, there was no similar decrease in market rates.
+
+- A second problem arose once policy rates hit the zero lower bound (ZLB). 
+
+- At the ZLB, the central banks’ capacity to lower interest rate further was exhausted. However, many central banks wanted to keep applying downward pressure to market rates to calm financial markets. 
+
+- The Fed’s response was a policy of quantitative easing.
+
+## Learning from US {.m}
+
+The Fed engaged in a number of extraordinary policy actions to push more money out more quickly:
+
+1. It expanded the range of credit securities it would accept as collateral to include lower-grade, private-sector bonds.
+
+2. It expanded the range of securities that it would buy outright to include private-sector credit instruments such as commercial papers and mortgage-backed securities.
+
+3. It expanded the range of counterparties from which it would buy securities to include some nonbank institutions such as primary dealers and money market funds.
+
+## Learning from US
+
+![A broken transmission: The Fed’s extraordinary interventions did little to change private credit market interest rates in 2008–2009.](Picture1.jpg)
+
+## What about BI?
+
+```{r}
+library(readxl)
+datt<-read_excel("dat2.xlsx")|>select(month,bi,lending)|>
+  pivot_longer(!month,values_to="value",names_to="rate")
+graph(datt)+geom_line(aes(x=month,y=value,color=rate,linetype=rate),size=1.1)+
+  geom_point(aes(x=month,y=value,color=rate),size=2)+
+  labs(title="BI policy rate and persero lending rate",
+       x="Month",
+       y="Interest rate (%)",
+       caption="Source: SEKI, BI")
+```
+
+## Monetary model LR vs SR {.m}
+
+Suppose the home central bank that previously kept money supply constant now switches to an expansionary policy, allowing the money supply to grow at a rate of 5%.
+
+- If this expansion is expected to be permanent, the predictions of the long-run monetary approach and Fisher effect are clear. The Home interest rate rises in the long run.
+
+- If this expansion is expected to be temporary, all else equal, the immediate short-run effect in the asset approach is an excess supply of real money balances. The home interest rate will then fall in the short run.
+
+It is important to grasp the difference between these two forces.
+
+## Asset approach {.m}
+:::: columns
+::: {.column width=49%}
+
+```{r}
+#| fig-width: 5
+#| fig-height: 4
+x=40
+y=15.625
+demand<-function(q) (q/100)^(-3)
+ggplot()+stat_function(fun=demand,linewidth=1.1,color="blue")+
+  scale_x_continuous(limits=c(25,50),breaks = 40, expand = c(0,0),
+                     labels = expression(M[ID]^1/P[ID]^1)) +
+  scale_y_continuous(limits=c(0,50),breaks = 15.625,expand = c(0,0),
+                     labels=expression(i[Rp]^1))+
+  geom_vline(xintercept=40,color="red",linewidth=1.1)+
+  geom_point(x=40,y=15.625)+
+  annotate("segment",x=25,y=y,xend=x,yend = y,linetype="dotted")+
+  annotate("segment",x=x,y=0,xend=x,yend = y,linetype="dotted")+
+  annotate("text",x=x-1,y=y+20,label="MS")+
+  annotate("text",x=x+8,y=y-3,label="MD")+
+  labs(title="Home Money Market",
+       x="Real Money\nBalance (M/P)",
+       y="nominal\ninterest\nrate (i)")+
+  graph3
+
+```
+
+We have the interest rate equilibrium from the domestic money demand curve and money supply. 
+
+:::
+::: {.column width=49%}
+
+```{r}
+#| fig-width: 5
+#| fig-height: 4
+x=40
+y=15.625
+demand<-function(q) (q/100)^(-3)
+ggplot()+stat_function(fun=demand,linewidth=1.1,color="blue")+
+  scale_x_continuous(limits=c(25,50),breaks = 40, expand = c(0,0),
+                     labels = expression(E[ID/US]^1)) +
+  scale_y_continuous(limits=c(0,50),breaks = 15.625,expand = c(0,0),
+                     labels=expression(i[Rp]^1))+
+  geom_hline(yintercept=y,color="red",linewidth=1.1)+
+  geom_point(x=40,y=15.625)+
+  annotate("segment",x=25,y=y,xend=x,yend = y,linetype="dotted")+
+  annotate("segment",x=x,y=0,xend=x,yend = y,linetype="dotted")+
+  annotate("text",x=x+8,y=y+3,label="DR")+
+  annotate("text",x=x+8,y=y-3,label="FR")+
+  labs(title="FX market",
+       x="Expected\nreturn",
+       y="Exchange\nrate (E)")+
+  graph3
+
+```
+
+
+In the rupiah-dollar FX market, the spot rate $E^1$ is determined by foreign expected return (FR) and domestic expected return (DR) amid arbitrage.
+
+:::
+::::
+
+## Asset approach
+
+- *Capital mobility is crucial*. Remember that our assumption that DR equals FR depends on capital mobility. If capital controls are imposed, there is no arbitrage, and no reason DR has to equal FR.
+
+- With this graphical apparatus in place, it is relatively straightforward to solve for the exchange rate given all the known (exogenous) variables we have specified previously.
+
+## SR Asset approach {.m}
+
+:::: columns
+
+::: {.column width=49%}
+
+```{r}
+#| fig-width: 5
+#| fig-height: 4
+x=40
+y=15.625
+demand<-function(q) (q/100)^(-3)
+
+ggplot()+stat_function(fun=demand,linewidth=1.1,color="blue")+
+  scale_x_continuous(limits=c(25,50),breaks = c(40,45), expand = c(0,0),
+                     labels = c(expression(M[ID]^1/P[ID]^1),
+                     expression(M[ID]^2/P[ID]^1))) +
+  scale_y_continuous(limits=c(0,50),breaks = c(10.97394,15.625),expand = c(0,0),
+                     labels=c(expression(i[Rp]^2),expression(i[Rp]^1)))+
+  geom_vline(xintercept=40,color="red",linewidth=1.1,linetype='dashed')+
+  geom_vline(xintercept=45,color="red",linewidth=1.1)+
+  annotate("segment",x=41,y=30,xend=44,yend = 30,
+           arrow=arrow(length=unit(0.3,"cm"),type='closed'))+
+  geom_point(x=40,y=15.625)+
+  annotate("segment",x=25,y=y,xend=x,yend = y,linetype="dotted")+
+  annotate("segment",x=25,y=10.97394,xend=45,yend = 10.97394,linetype="dotted")+
+  annotate("segment",x=x,y=0,xend=x,yend = y,linetype="dotted")+
+  
+  labs(x="Real Money\nBalance (M/P)",
+       y="nominal\ninterest\nrate (i)")+
+  graph3
+
+
+```
+
+When real money supply rises, it drives interest rate lower, just like our previous analysis. 
+
+:::
+::: {.column width=49%}
+
+```{r}
+#| fig-width: 5
+#| fig-height: 4
+x=40
+y=15.625
+y2=10.97394
+demand<-function(q) (q/100)^(-3)
+ggplot()+stat_function(fun=demand,linewidth=1.1,color="blue")+
+  scale_x_continuous(limits=c(25,50),breaks = c(40,45), expand = c(0,0),
+                     labels = c(expression(E[ID/US]^1),expression(E[ID/US]^2))) +
+                     
+  scale_y_continuous(limits=c(0,50),breaks = c(10.97394,15.625),expand = c(0,0),
+                     labels=c(expression(i[Rp]^2),expression(i[Rp]^1)))+
+  geom_hline(yintercept=y,color="red",linewidth=1.1,linetype='dashed')+
+  geom_hline(yintercept=10.97394,color="red",linewidth=1.1)+
+  geom_point(x=40,y=15.625)+
+  annotate("segment",x=25,y=y,xend=x,yend = y,linetype="dotted")+
+  annotate("segment",x=x,y=0,xend=x,yend = y,linetype="dotted")+
+  annotate("text",x=x+8,y=y+3,label="DR")+
+  annotate("text",x=x+8,y=y-3,label="DR2")+
+  annotate("text",x=x+8,y=y2-3,label="FR")+
+  annotate("segment",x=45,y=0,xend=45,yend = 10.97394,linetype="dotted")+
+  labs(title="FX market",
+       x="Expected\nreturn",
+       y="Exchange\nrate (E)")+
+  graph3
+
+```
+
+
+In the rupiah-dollar FX market, the reduction of indonesian interest rate causes Domestic rate to fall, leading to a depreciation of IDR (E $\uparrow$).
+
+:::
+::::
+
+## Asset approach {.m}
+:::: columns
+::: {.column width=49%}
+
+```{r}
+#| fig-width: 5
+#| fig-height: 4
+x=40
+y=15.625
+demand<-function(q) (q/100)^(-3)
+ggplot()+stat_function(fun=demand,linewidth=1.1,color="blue")+
+  scale_x_continuous(limits=c(25,50),breaks = 40, expand = c(0,0),
+                     labels = expression(M[ID]^1/P[ID]^1)) +
+  scale_y_continuous(limits=c(0,50),breaks = 15.625,expand = c(0,0),
+                     labels=expression(i[Rp]^1))+
+  geom_vline(xintercept=40,color="red",linewidth=1.1)+
+  geom_point(x=40,y=15.625)+
+  annotate("segment",x=25,y=y,xend=x,yend = y,linetype="dotted")+
+  annotate("segment",x=x,y=0,xend=x,yend = y,linetype="dotted")+
+  annotate("text",x=x-1,y=y+20,label="MS")+
+  annotate("text",x=x+8,y=y-3,label="MD")+
+  labs(title="Home Money Market",
+       x="Real Money\nBalance (M/P)",
+       y="nominal\ninterest\nrate (i)")+
+  graph3
+
+```
+
+Suppose there is nothing happen in Indonesia, but there is a large quantitative easing in the US, causing foreign real money supply to rise.
+:::
+::: {.column width=49%}
+
+```{r}
+#| fig-width: 5
+#| fig-height: 4
+x=40
+x2=36.343
+y=15.625
+demand<-function(q) (q/100)^(-3)
+demand2<-function(q) (q/100)^(-3)*0.75
+ggplot()+stat_function(fun=demand,linewidth=1.1,color="blue",linetype='dashed')+
+  stat_function(fun=demand2,linewidth=1.1,color="blue")+
+  scale_x_continuous(limits=c(25,50),breaks = c(36.343,40), expand = c(0,0),
+                     labels = c(expression(E[ID/US]^2),expression(E[ID/US]^1))) +
+  scale_y_continuous(limits=c(0,50),breaks = 15.625,expand = c(0,0),
+                     labels=expression(i[Rp]^1))+
+  geom_hline(yintercept=y,color="red",linewidth=1.1)+
+  geom_point(x=40,y=15.625)+
+  annotate("segment",x=25,y=y,xend=x,yend = y,linetype="dotted")+
+  annotate("segment",x=x,y=0,xend=x,yend = y,linetype="dotted")+
+  annotate("segment",x=x2,y=0,xend=x2,yend = y,linetype="dotted")+
+  annotate("text",x=x+8,y=y+3,label="DR")+
+  annotate("text",x=x+8,y=y-3,label="FR")+
+  labs(title="FX market",
+       x="Expected\nreturn",
+       y="Exchange\nrate (E)")+
+  graph3
+
+```
+
+
+The foreign money supply rise reduces interest rate in the US, which in turn reduces its return to dollar asset. Arbitrage forces rupiah to appreciate (E $\downarrow$).
+
+:::
+::::
+
+## evidence {.m}
+
+:::: columns
+::: {.column width=49%}
+```{r}
+#| fig-width: 5
+#| fig-height: 4
+library(readxl)
+datt<-read_excel("dat2.xlsx")|>select(month,lending,usl)|>
+  pivot_longer(!month,values_to="value",names_to="rate")
+graph(datt)+geom_line(aes(x=month,y=value,color=rate,linetype=rate),size=1.1)+
+
+  labs(title="BI policy rate and persero lending rate",
+       x="Month",
+       y="Interest rate (%)",
+       caption="Source: SEKI, BI")
+```
+
+lending is Indonesian lending rate while usl is the US' prime lending rate. xr is exchange rate. While Indonesian rupiah moves quite liberally, 
+
+:::
+::: {.column width=49%}
+
+```{r}
+#| fig-width: 5
+#| fig-height: 4
+library(readxl)
+datt<-read_excel("dat2.xlsx")|>select(month,xr)|>
+  pivot_longer(!month,values_to="value",names_to="rate")
+graph(datt)+geom_line(aes(x=month,y=value,color=rate,linetype=rate),size=1.1)+
+
+  labs(title="BI policy rate and persero lending rate",
+       x="Month",
+       y="Interest rate (%)",
+       caption="Source: SEKI, BI")
+```
+
+the reduction of difference between Indonesian vs USian rate in 2023-ish seems to correlate with rupiah's depreciation. Try do this graph in 2008-2015 period.
+
+:::
+::::
+
+## Complete theory of XR
+
+The asset approach: short-run money market equilibrium (the first 2 eq) and UIP.
+
+\begin{align*}
+\bar{P}_ID=\frac{M_{ID}}{L_{ID}(i_{Rp})Y_{ID}} \\
+\bar{P}_US=\frac{M_{US}}{L_{US}(i_{\$})Y_{US}} \\
+i_{Rp}=i_{\$}+\frac{E^e_{Rp/\$}-E_{Rp/\$}}{E_{Rp/\$}}
+\end{align*}
+
+## Complete theory of XR
+
+The long run monetary approach:
+
+\begin{align*}
+P_ID=\frac{M^e_{ID}}{L_{ID}(i_{Rp}^e)Y_{ID}^e} \\
+P_US=\frac{M^e_{US}}{L_{US}(i_{\$}^e)Y_{US}^e} \\
+E^e_{Rp/\$}=\frac{P_{ID}^e}{P_{US}^e}
+\end{align*}
+
+Combining the two approach, we see how two key mechanisms of expectations and arbitrage determine exchange rate in both the short run and long run.
+
+## Complete theory of XR
+
+![](pic1.png)
+
+## 
