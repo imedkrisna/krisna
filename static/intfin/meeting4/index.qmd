@@ -691,4 +691,151 @@ Combining the two approach, we see how two key mechanisms of expectations and ar
 
 ![](pic1.png)
 
-## 
+## wew
+
+![](pic2.jpg)
+
+
+## wewew
+
+![](Picture2.jpg)
+
+## wewew
+
+![](Picture3.png)
+
+## wewew
+
+![](Picture4.png)
+
+## uwuwuw
+
+![](Picture5.jpg)
+
+## Fixed exchange rate {.m}
+
+- Here we focus on the case of a fixed rate regime without controls so that capital is mobile (no capital controls) and arbitrage is free to operate in the foreign exchange market.
+
+- Central banks buy and sell foreign currency at a fixed price, thus holding the market exchange rate at a fixed level $\bar{E}$.
+
+- We examine the implications of Denmark’s decision to peg its currency, the krone, to the euro at a fixed rate: $\bar{E}_{DKr/€}$
+
+- The foreign country remains the Eurozone, and the home country is now Denmark. 
+
+## Fixed exchange rate {.m}
+
+- In the long run, fixing the exchange rate is one kind of nominal anchor. Even if it allowed the krone to float but had some other nominal anchor, Denmark’s monetary policy would still be constrained in the long run by its chosen nominal target. 
+
+- What we now also show is that a country with a fixed exchange rate faces monetary policy constraints not just in the long run but also in the short run.
+
+## Fixed exchange rate
+
+The Danish central bank must set its interest rate equal to $i_{€}$, the rate set by the European Central Bank (ECB):
+
+$$
+i_{DKr}=i_{€}+\frac{E^e_{DKr/€}-E_{DKr/€}}{E_{DKr/€}}=i_{€}
+$$
+
+since no appreciation/depreciation is allowed. It also means Denmark has lost control of its interest rate:
+
+$$
+M_{DEN}=\bar{P}L_{DEN}(i_{DKr})Y_{DEN}=\bar{P}L_{DEN}(i_{€})Y_{DEN}
+$$
+
+## Short run theory {.m}
+
+Under a float:
+
+-  The home monetary authorities pick the money supply $M$. 
+
+- In the short run, the choice of $M$ determines the interest rate $i$ in the money market; in turn, via UIP, the level of $i$ determines the exchange rate $E$. 
+
+- The money supply is an input in the model (an exogenous variable), and the exchange rate is an output of the model (an endogenous variable).
+
+
+## Short run theory {.m}
+
+Under a fix, the opposite is true:
+
+- Home monetary authorities pick the fixed level of the exchange rate $E$. 
+- In the short run, a fixed $E$ pins down the home interest rate $i$ via UIP ($i = i^*$, the foreign interest rate); in turn, this $i$ determines the money supply $M$ necessary to meet money demand. 
+
+- The exchange rate is an input in the model (an exogenous variable), and the money supply is an output of the model (an endogenous variable).
+
+## Short run theory {.m}
+
+![](Picture6.jpg)
+
+## Fixed XR in LR {.m}
+
+- The price level in Denmark is determined by PPP. But if the exchange rate is pegged, we can write long-run PPP for Denmark as:
+
+$$
+P_{DEN}=\bar{E}_{DKr/€}P_{EUR}
+$$
+
+- With the long-run nominal interest and price level outside of Danish control, monetary policy autonomy is impossible. 
+
+- We just substitute $i_{DKr}=i_{€}$ and $P_{DEN}=\bar{E}_{DKr/€}P_{EUR}$ into Denmark's long-run money market equilibrium condition to get:
+
+$$
+M_{DEN}=P_{DEN}L_{DEN}(i_{DKr})Y_{DEN}=\bar{E}_{DKr/€}P_{EUR}L_{DEN}(i_{€})Y_{DEN}
+$$
+
+## Fixed XR in LR {.m}
+
+Under a float:
+
+- The home monetary authorities pick the money supply $M$.
+
+- In the long run, the growth rate of M determines the interest rate $i$ via the Fisher effect and also the price level $P$; in turn, via PPP, the level of $P$ determines the exchange rate $E$. 
+
+- The money supply is an input in the model (an exogenous variable), and the exchange rate is an output of the model (an endogenous variable).
+
+## Fixed XR in LR {.m}
+
+Under a fix:
+
+- Home monetary authorities pick the exchange rate $E$. 
+
+- In the long run, the choice of $E$ determines the price level $P$ via PPP, and also the interest rate $i$ via UIP; these, in turn, determine the necessary level of the money supply $M$. 
+
+- The exchange rate is an input in the model (an exogenous variable), and the money supply is an output of the model (an endogenous variable).
+
+## The trilemma {.m}
+
+:::: columns
+::: {.column width=49%}
+
+$$\frac{E^e_{DKr/€}-E_{DKr/€}}{E_{DKr/€}}=0$$
+
+::: {.xs}
+\
+:::
+
+---
+
+$$i_{DKr}=i_{€}+\frac{E^e_{DKr/€}-E_{DKr/€}}{E_{DKr/€}}$$
+
+::: {.xs}
+\
+:::
+---
+
+$$i_{DKr} \neq i_{€}$$ 
+
+:::
+::: {.column widht=49%}
+
+Fixed exchange rate. this is desired to promote stability in trade and investment. This represented by zero expected depreciation
+
+---
+
+International capital mobility, desired as a means to promote integration, efficiency and risk sharing. Represented by UIP
+
+---
+
+Monetary policy autonomy, desired to manage home business cycle. Represented by the ability to set interest rate independently
+
+:::
+::::
