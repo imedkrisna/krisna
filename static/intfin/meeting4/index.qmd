@@ -839,3 +839,34 @@ Monetary policy autonomy, desired to manage home business cycle. Represented by 
 
 :::
 ::::
+
+## The trilemma {.m}
+
+The three formula show that achieving all three policy goals at the same time is a mathematical impossibility, since:
+
+- 1 and 2 imply not 3 (1 and 2 imply interest equality, contradicting 3).
+
+- 2 and 3 imply not 1 (2 and 3 imply an expected change in E, contradicting 1).
+
+- 3 and 1 imply not 2 (3 and 1 imply a difference between domestic and foreign returns, contradicting 2).
+
+This result, known as the *trilemma*, is one of the most important ideas in international macroeconomics.
+
+## The trilemma {.m}
+
+![](Pictu1.jpg)
+The Trilemma Each corner of the triangle represents a viable policy choice. The labels on the two adjacent edges of the triangle are the goals that can be attained; the label on the opposite edge is the goal that has to be sacrificed.
+
+## The trilemma {.m}
+
+The lessons of the Trilemma most clearly apply when the policies are at the ends of a spectrum: 
+
+- A hard peg or a float
+
+- Perfect capital mobility or immobility
+
+- Complete autonomy or none at all
+
+But sometimes a country may not be fully in one of the three corners: The rigidity of the peg, the degree of capital mobility, and the independence of monetary policy could be partial rather than full.
+
+
