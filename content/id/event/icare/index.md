@@ -1,8 +1,8 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: 
-event: 
+title: "Aman dan Nyaman di Tempat Kerja"
+event: "Pelatihan iCare Politeknik APP Jakarta"
 event_url:
 location:
 address:
