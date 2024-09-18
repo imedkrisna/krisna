@@ -1,7 +1,8 @@
 ---
 title: "Exchange rate II: the asset approach in the short run"
 subtitle: "ECES905205 pertemuan 4"
-date: "12 September 2024"
+date: "19 September 2024"
+date-format: "long"
 author: "I Made Krisna Gupta"
 format: 
   revealjs:
@@ -670,19 +671,19 @@ the reduction of difference between Indonesian vs USian rate in 2023-ish seems t
 The asset approach: short-run money market equilibrium (the first 2 eq) and UIP.
 
 \begin{align*}
-\bar{P}_ID=\frac{M_{ID}}{L_{ID}(i_{Rp})Y_{ID}} \\
-\bar{P}_US=\frac{M_{US}}{L_{US}(i_{\$})Y_{US}} \\
-i_{Rp}=i_{\$}+\frac{E^e_{Rp/\$}-E_{Rp/\$}}{E_{Rp/\$}}
+\bar{P}_{ID}&=\frac{M_{ID}}{L_{ID}(i_{Rp})Y_{ID}} \\
+\bar{P}_{US}&=\frac{M_{US}}{L_{US}(i_{\$})Y_{US}} \\
+i_{Rp}&=i_{\$}+\frac{E^e_{Rp/\$}-E_{Rp/\$}}{E_{Rp/\$}}
 \end{align*}
 
-## Complete theory of XR
+## Complete theory of XR {.m}
 
 The long run monetary approach:
 
 \begin{align*}
-P_ID=\frac{M^e_{ID}}{L_{ID}(i_{Rp}^e)Y_{ID}^e} \\
-P_US=\frac{M^e_{US}}{L_{US}(i_{\$}^e)Y_{US}^e} \\
-E^e_{Rp/\$}=\frac{P_{ID}^e}{P_{US}^e}
+P_{ID}&=\frac{M^e_{ID}}{L_{ID}(i_{Rp}^e)Y_{ID}^e} \\
+P_{US}&=\frac{M^e_{US}}{L_{US}(i_{\$}^e)Y_{US}^e} \\
+E^e_{Rp/\$}&=\frac{P_{ID}^e}{P_{US}^e}
 \end{align*}
 
 Combining the two approach, we see how two key mechanisms of expectations and arbitrage determine exchange rate in both the short run and long run.
@@ -691,24 +692,35 @@ Combining the two approach, we see how two key mechanisms of expectations and ar
 
 ![](pic1.png)
 
-## wew
+## Complete theory {.m}
 
 ![](pic2.jpg)
 
+The *permanent* increase in real money suppy has two effect: (1) reducing interest rate (DR), and (2) Permanent depreciation of dollar (FR).
 
-## wewew
+## Complete theory {.m}
 
 ![](Picture2.jpg)
 
-## wewew
+In the long run, price adjust so M/P went back to normal, moving interest rate back to normal as well. DR also go back, but FR stays at FR2.
+
+## The complete theory {.m}
 
 ![](Picture3.png)
 
-## wewew
+In panel (a), there is a one-time permanent increase in home (U.S.) nominal money supply at time T.
+
+In panel (b), prices are sticky in the short run, so there is a short-run increase in the real money supply and a fall in the home interest rate over time.
+
+
+## The complete theory {.m}
 
 ![](Picture4.png)
 
-## uwuwuw
+In panel (c), in the long run, prices rise in the same proportion as the money supply. In panel (d), in the short run, the exchange rate overshoots its long-run value (the dollar depreciates by a large amount), but in the long run, the exchange rate will have risen only in proportion to changes in money and prices.
+
+
+## The complete theory {.m}
 
 ![](Picture5.jpg)
 
@@ -855,7 +867,7 @@ This result, known as the *trilemma*, is one of the most important ideas in inte
 ## The trilemma {.m}
 
 ![](Pictu1.jpg)
-The Trilemma Each corner of the triangle represents a viable policy choice. The labels on the two adjacent edges of the triangle are the goals that can be attained; the label on the opposite edge is the goal that has to be sacrificed.
+The Trilemma Each corner of the triangle represents a viable policy choice. The labels on the two adjacent edges of the triangle are the goals that can be attained; the label on the opposite edge is the sacrificed goal.
 
 ## The trilemma {.m}
 
