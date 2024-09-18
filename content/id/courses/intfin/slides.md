@@ -13,6 +13,6 @@ slides:
 
 - {{% staticref "/intfin/meeting1.pdf" "newtab" %}}Pertemuan 1: General overview of international finance{{% /staticref %}}
 - {{% staticref "/intfin/meeting2/index.html" "newtab" %}}Pertemuan 2: Reviewing exchange rate{{% /staticref %}}
-- {{% staticref "/intfin/meeting3/index.html" "newtab" %}}Meeting 3: Monetary approach on the long run exchange rate{{% /staticref %}}
-
+- {{% staticref "/intfin/meeting3/index.html" "newtab" %}}Meeting 3: Monetary approach on the long run exchange rateZ {{% /staticref %}}
+- {{% staticref "/intfin/meeting4/index.html" "newtab" %}}Meeting 4: short-run XR and complete theory of exchange rate {{% /staticref %}}
 
