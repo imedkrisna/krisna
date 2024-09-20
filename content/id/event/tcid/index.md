@@ -24,7 +24,7 @@ all_day: false
 publishDate: 2024-09-18T14:00:00+11:00
 
 authors: [admin]
-tags: [management]
+tags: [kelas menengah, podcast]
 
 # Is this a featured event? (true/false)
 featured: false
@@ -50,7 +50,7 @@ image:
 url_slides: 
 
 url_code:
-url_pdf: "https://1drv.ms/p/s!AjelszXKKcmskYtufHA5RA5Iv4tYmA?e=hC3u7f"
+url_pdf: 
 url_video: 
 
 # Markdown Slides (optional).
@@ -58,7 +58,7 @@ url_video:
 #   Simply enter your slide deck's filename without extension.
 #   E.g. `slides = "example-slides"` references `content/slides/example-slides.md`.
 #   Otherwise, set `slides = ""`.
-slides: "5s.pptx"
+slides: 
 
 # Projects (optional).
 #   Associate this post with one or more of your projects.
