@@ -64,7 +64,7 @@ The Closed Economy Measurements of national expenditure, product, and income are
 :::
 ::::
 
-## Open economy
+## Open economy {.m}
 
 - The difference between payments made for imports and payments received for exports is called the trade balance (TB), which equals net payments to domestic firms due to trade. 
 
@@ -226,9 +226,9 @@ dat<-WDI(           # Menarik data World Bank
   country="IDN",
   indicator=indi,
   start=2010
-) |> select(year,GNIcap,GDPcap) |> pivot_longer(!year,values_to="value",names_to="ctr")
-
-
+)
+dat<-dat |> select(year,GNIcap,GDPcap) |> pivot_longer(!year,values_to="value",names_to="ctr")
+ 
 graph(dat)+geom_line(aes(x=year,y=value,color=ctr),linewidth=1.1)+
   labs(title="GNI vs GDP in Indonesia",
        x="",
@@ -273,6 +273,63 @@ $$
 | Gross national disposable income | GNDI | 19,053 |
 
 : [Table VII.3 SEKI BI](https://www.bi.go.id/id/statistik/ekonomi-keuangan/seki/Default.aspx#headingThree)
+
+## Indonesian GNE & TB
+
+:::: columns
+::: {.column width=50%}
+
+```{r}
+#| fig-width: 5
+#| fig-height: 4
+
+indi<-c(            # membuat dictionary
+  "C"="NE.CON.PRVT.CN",
+  "I"="NE.GDI.TOTL.CN",
+  "G"="NE.CON.GOVT.CN"
+)
+
+datt<-WDI(           # Menarik data World Bank
+  country="IDN",
+  indicator=indi,
+  start=2000,
+) |> select(year,C,I,G) |> pivot_longer(!year,values_to="value",names_to="what")
+
+graph(datt)+geom_bar(aes(fill=what,x=year,y=value),stat="identity",position="stack")+
+  labs(title="Indonesian GNE",
+       x="",
+       y="")
+```
+
+:::
+::: {.column width=50%}
+
+```{r}
+#| fig-width: 5
+#| fig-height: 4
+
+indi<-c(            # membuat dictionary
+  "TB"="BN.GSR.GNFS.CD",
+  "NFIA"="BN.GSR.FCTY.CD",
+  "NUT"="BN.TRF.CURR.CD"
+)
+
+dutt<-WDI(           # Menarik data World Bank
+  country="IDN",
+  indicator=indi,
+  start=2000,
+) |> select(year,TB,NFIA,NUT) |> pivot_longer(!year,values_to="value",names_to="what")
+
+graph(dutt)+geom_bar(aes(fill=what,x=year,y=value),stat="identity",position="stack")+
+  labs(title="Indonesian CA",
+       x="",
+       y="")
+```
+
+:::
+::::
+
+
 
 ## Current account {.m}
 
@@ -425,3 +482,280 @@ This graph shows current account balance of the 4 countries. Indonesia sees a su
 
 :::
 ::::
+
+## Global imbalances {.m}
+
+- We define private saving $(S_p)$ as that part of after-tax private sector disposable income $Y$ that is not devoted to private consumption $C$
+
+$$
+S_p=Y-T-C
+$$
+
+- We define government saving $(S_g)$ as the difference between tax revenue $T$ received by the government and government spending $G$.
+
+$$
+S_g=T-G
+$$
+
+- It gives us the national saving $S=S_p+S_g$
+
+## Global imbalances {.m}
+
+- By definition, government saving is the government budget surplus $(T-G)$.
+
+- Government deficit sometimes goes together with CAD ("twin deficit"), but not always.
+
+$$
+CA=S_p+S_g+I
+$$
+
+- _Ricardian equivalence_ assets that a fall in $S_g$ will be offset by a rise in $S_p$.
+
+- This theory is unproven empirically.
+
+## The financial account {.m}
+
+- The financial account (FA) records transactions between residents and nonresidents that involve financial assets. This definition covers all types of assets: 
+
+    - Real assets such as land or structures
+
+    - Financial assets such as debt (bonds, loans) or equity issued by any entity
+
+- Subtracting asset imports from asset exports yields the home country’s net overall balance on asset transactions, which is known as the financial account, where $FA = EX_{A} − IM_{A}$.
+
+- The financial account therefore measures how the country accumulates or decumulates assets through international transactions.
+
+## The Capital Account {.m}
+
+The capital account (KA) covers two remaining areas of asset movement, both of minor quantitative significance:
+
+1. Capital transfers (i.e., gifts of assets), an example of which is the forgiveness of debts
+2. The acquisition and disposal of nonfinancial, nonproduced assets (e.g., patents, copyrights, trademarks)
+
+We denote capital transfers received by the home country as $KA_{IN}$  vcand capital transfers given by the home country as $KA_{OUT}$. The capital account, $KA = KA_{IN} − KA_{OUT}$, denotes net capital transfers received, and is typically small in magnitude.
+
+## Balance of Payments {.m}
+
+- From the home perspective, a foreign asset is a claim on a foreign country.
+- When a home entity holds such an asset, it is called an external asset of the home country.
+- From the foreign perspective, a foreign asset is a claim on the home country.
+- When a foreign entity holds such an asset, it is called an external liability of the home country because it represents an obligation owed by the home country to the rest of the world.
+
+## Double entry {.s}
+
+| no | example | sym | value |
+| --- | ---------- | --- | --- |
+| 1 | CA: drinks in Paris bar | $-IM$ | -$110 |
+|   | FA: Bar's claim on AMEX | $EX^H_A$ | +$110 |
+| 2 | CA: Arkansas wine exported to Denmark | $EX$ | +$36 |
+|   | CA: Jutland wine imported to United States | $-IM$ | -$36 |
+| 3 | FA: George's French tech stocks | $-IM^F_A$ | -$10,000 |
+|   | FA: BNP claim against Citibank | $+EX^H_A$ | +$10,000 |
+| 4 | CA: Relief supplies exported to Bam | $+EX$ | +$5,000 |
+|   | CA: George's charitable gift | $-UT_{OUT}$ | -$5,000 |
+| 5 | KA: US grant of debt relief | $-KA_{OUT}$ | -$1,000,000,000 |
+|   | FA: Decline in US external assets | $+EX^F_A$ | +$1,000,000,000 |
+
+: a hypothetical BOP entry. For each debit, there's credit.
+
+## Home and foreign asset {.m}
+
+- Let "H" denote the home asset and "F" the foreign asset.
+
+$$
+\begin{align*}
+FA&=\left( EX^H_A-IM^F_A \right)-\left( EX^F_A-IM^H_A \right) \\
+&=\left(EX^H_A-IM^H_A \right)-\left(IM^F_A-EX^F_A\right)
+\end{align*}
+$$
+
+FA equals _the additions to external liabilities_ (home-owned assets moving into foreign ownership, net) minus _the additions to external assets_ (foreign-owned assets moving into home ownership, net).
+
+## Macro view {.m}
+
+- Recall that gross national disposable income is
+
+$$
+Y=GNDI=GNE+TB+NFIA+NUT=GNE+CA
+$$
+
+which is resources available to home country from income.
+
+- But the home economy can also free up resources by sales (or purchases) of assets. We calculate these extra resources using our previous definitions:
+
+$$
+EX_A-IM_A+KA_{IN}-KA_{OUT}=FA+KA
+$$
+
+which is extra resources available to home country due to all asset trades.
+
+## Macro view {.m}
+
+- Adding the last two expressions, we have the value of the total resources available to the home country for expenditures. This total value is equal to total value of home expenditure on final goods and services, GNE
+
+$$
+\underbrace{GNE+CA}_{\text{Resources from income}}+\underbrace{FA+KA}_{\text{Resources from asset trade}}=GNE
+$$
+
+- cancelling GNE from both sides we get *BOP Identity*:
+
+$$
+CA+KA+FA=0
+$$
+
+## BOP Identity {.m}
+
+- The component of the bOP identity shows why the accounts must balance
+
+$$
+\begin{align*}
+CA&=(EX-IM)+(EX_{FS}-IM_{FS})+(UT_{IN}-UT_{OUT}) \\
+KA&=(KA_{IN}-KA_{OUT}) \\
+FA&=(EX_{A}^H-IM_{A}^H)+(EX^F_A-IM^F_A)
+\end{align*}
+$$
+
+- If an item has a plus sign, it is called a BOP credit.
+- If an item has a plus sign, it is called a BOP debit.
+
+## BOP Identity
+
+- We have to understand one simple principle: Every market transaction (whether for goods, services, factor services, or assets) has two parts. 
+
+- If party A engages in a transaction with a counterparty B, then A receives from B an item of a given value, and in return B receives from A an item of equal value.
+
+## BOP Indonesia
+
+See [SEKI table V.1](https://www.bi.go.id/id/statistik/ekonomi-keuangan/seki/Default.aspx#headingFour)
+
+<iframe src="https://1drv.ms/x/s!AjelszXKKcmskZI4zSVqbR9nqimB7w?embed=1&em=2" width="900" height="600" frameborder="0" scrolling="yes"></iframe>
+
+## BOP Indonesia
+
+```{r}
+
+
+indi<-c(            # membuat dictionary
+  "FA"="BN.FIN.TOTL.CD",
+  "KA"="BN.TRF.KOGT.CD",
+  "CAB"="BN.CAB.XOKA.CD"
+)
+
+dot<-WDI(           # Menarik data World Bank
+  country="IDN",
+  indicator=indi,
+  start=2000,
+) |> select(year,FA,KA,CAB)
+
+dot$FAB<-dot$FA*-1
+dot$KAB<-dot$KA*-1
+
+dot<-dot|>select(-FA,-KA)
+
+dot<-dot|>pivot_longer(!year,values_to="value",names_to="what")
+
+graph(dot)+geom_bar(aes(fill=what,x=year,y=value),stat="identity",position="stack")+
+  labs(title="Indonesian BOP",
+       x="",
+       y="")
+
+```
+
+## Understanding BOP {.m}
+
+- A country with a current account surplus is a (net) lender. 
+
+    - By the BOP identity, it must have a deficit in its asset accounts.
+
+    - Any lender, on net, buys assets (acquiring IOUs from borrowers). For example, China is a large net lender. 
+
+- A country with a current account deficit is a (net) borrower. 
+
+    - By the BOP identity, it must have a surplus in its asset accounts.
+
+    - Any borrower, on net, sells assets (issuing IOUs to lenders). As we saw, the U.S. is a large net borrower.
+
+## Understanding BOP {.m}
+
+- The balance of payments accounts consist of: 
+
+
+    - The current account, which measures external imbalances in goods, services, factor services, and unilateral transfers
+
+    - The financial and capital accounts, which measure asset trades
+
+- Surpluses on the current account side must be offset by deficits on the asset side. Deficits on the current account must be offset by surpluses on the asset side. 
+
+- The balance of payments makes the connection between a country’s income and spending decisions and the evolution of that country’s wealth.
+
+## External wealth {.m}
+
+- Just as a household is better off with higher wealth, all else equal, so is a country.
+
+- “Net worth” or external wealth with respect to the rest of the world (ROW) can be calculated by adding up all of the ROW assets owned by the home country and then subtracting all of the home assets owned by the ROW.
+
+- In 2015, the United States had an external wealth of about –\$7,357 billion. 
+
+- This made the United States the world’s biggest debtor in history at the time of this writing.
+
+- Indonesia? -\$-376 billion in 2015 and -\$261 billion in 2023 (SEKI table V.39)
+
+## External wealth {.m}
+
+$$
+\underbrace{\text{External wealth}}_{W}=\underbrace{\text{ROW assets owned by home}}_{A}-\underbrace{\text{Home assets owned by ROW}}_{L}
+$$
+
+- A country's level of external wealth is also called its net international investment position or net foreign assets. It is a stock measure, not a flow measure.
+
+- If W>0, home is a *net creditor* country: external assets > external liabilities.
+- If W<0, home is a *net debtor* country: external assets < external liabilities.
+
+## Changes in W {.m}
+
+There are two reasons a country’s level of external wealth changes over time.
+
+1. Financial flows: As a result of asset trades, the country can increase or decrease its external assets and liabilities. Net exports of home assets cause an equal increase in the level of external liabilities and hence a corresponding decrease in external wealth.
+
+2. Valuation effects: The value of existing external assets and liabilities may change over time due to capital gains or losses. In the case of external wealth, this change in value could be due to price effects or exchange rate effects.
+
+## Changes in W
+
+$$
+\Delta W= -FA+\text{Capital gains}
+$$
+
+From BOP Identity: $-FA=CA+KA$, thus
+
+$$
+\Delta W = CA+KA+\text{Capital gains}
+$$
+
+## External wealth
+
+- Without valuation effects, previous equation implies that $\Delta W$ should equal the cumulative net import of assets overtime.
+
+- However, valuation effects (i.e., capital gains) can generate a significant difference in external wealth.
+
+- In the US since 1988, valuation effects reduced US net external indebtedness by almost 20% in 2015 compared with the level financial flows alone would have predicted.
+
+- In Indonesia this effect is understudy and you cannot see it in the SEKI table V.39 alone.
+
+## External wealth
+
+- External wealth data tell us the net credit or debit position of a country with respect to the rest of the world.
+
+- They include data on external assets (foreign assets owned by the home country) and external liabilities (home assets owned by foreigners). 
+
+- A creditor country has positive external wealth; a debtor country has negative external wealth.
+
+- Countries with a current account surplus (deficit) must be net buyers (sellers) of assets.
+
+## External wealth
+
+- An increase in a country’s external wealth results from every net import of assets; conversely, a decrease in external wealth results from every net export of assets.
+
+- In addition, countries can experience capital gains or losses on their external assets and liabilities that cause changes in external wealth.
+
+- All of these changes are summarized in the statement of a country’s net international investment position.
+
