@@ -11,8 +11,9 @@ weight: 20
 
 slides:
 
-- {{% staticref "/bing/unit2.pdf" "newtab" %}}Pertemuan 1: General overview of international finance{{% /staticref %}}
-- {{% staticref "/bing/unit3.pdf" "newtab" %}}Pertemuan 2: Reviewing exchange rate{{% /staticref %}}
+- {{% staticref "/bing/unit2.pdf" "newtab" %}}Pertemuan 1{{% /staticref %}}
+- {{% staticref "/bing/unit3.pdf" "newtab" %}}Pertemuan 2{{% /staticref %}}
+- {{% staticref "/bing/unit56.pdf" "newtab" %}}Pertemuan 5-6{{% /staticref %}}
 
 
 

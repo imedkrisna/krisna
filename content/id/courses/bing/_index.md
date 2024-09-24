@@ -1,7 +1,7 @@
 ---
-title: International Economics
+title: bing
 linkTitle: Introduction
-summary: International Economics
+summary: bing
 date: '2023-02-12'
 type: book
 commentable: false
@@ -9,4 +9,4 @@ commentable: false
 
 
 
-Course page for International Finance at Universitas Indonesia. Co-taught with Dr. Kiki Verico.
+Bing
