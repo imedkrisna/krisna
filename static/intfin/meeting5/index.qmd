@@ -1,8 +1,8 @@
 ---
-title: "The Standard Model"
+title: "National Accounts and the Balance of Payments"
 subtitle: "ECES905205 pertemuan 5"
-date: "4 March 2024"
-date-format: "DD MMMM YYYY"
+date: "19 September 2024"
+date-format: "long"
 author: "I Made Krisna Gupta"
 format: 
   revealjs:
@@ -12,436 +12,416 @@ format:
     transition: convex
     background-transition: fade
     slide-number: true
-  beamer: default
-
+  beamer:
+    latex-tinytex: true
+    latex-auto-install: true
+  pptx: default
 ---
 
-## Similarities
+## Intro {.m}
 
-So far, our models have certain similarities:
+- In this chapter, we study economic transactions between countries, how they are undertaken, and what impact they have on the macroeconomy.
 
-1.  Trade is driven by difference in PPF.
-2.  PPF determines relative supply scheduule.
-3.  World equilibrium ditentukan oleh demand dunia dan posisi kita sebelum trade.
+- The first task of any macroeconomist is to measure economic transactions.
 
-Today, we're standardizing 'em
+- The goals of this chapter are to:
 
-We continue the case where home country export $C$ and import $F$.
+    - Explain the international system of trade and payments
 
-## The standard model
+    - Discover how international trade in goods and services is complemented and balanced by a parallel trade in assets
 
-- Relative supply and relative deman
+    - Understand how these international transactions relate to national income and wealth
 
-- Terms of trade & welfare
+## Measuring macro
 
-- Effects of economic growth, import tariffs, and export subsidies
+- At various points in the circular flow of payments, a nation’s aggregate economic activity is measured and recorded in the national income and product accounts.
 
-- International borrowing and lending
+- In an open economy, however, such measurements are more complicated because we must account for cross-border flows. 
 
-## Principle
+- All of these additional flows are recorded in a nation’s balance of payments accounts.
 
-1. the relationship between the production possibility frontier and the relative supply curve,
+## Measuring macro {.m}
 
-2. the relationship between relative prices and relative demand,
+- *Gross national expenditure (GNE)* is the total expenditure on final goods and services by home entities in any given period. It is made up of three parts: personal consumption C, investment I, and government spending G. GNE = C + I + G
 
-3. the determination of world equilibrium by world relative supply and world relative demand, and 
+- A country’s *gross domestic product (GDP)* is the value of all (intermediate and final) goods and services produced as output by firms, minus the value of all goods and services purchased as intermediate inputs by firms.
 
-4. the effect of the terms of trade—the price of a country’s exports divided by the price of its imports—on a nation’s welfare.
+- In a closed economy, income is paid to domestic entities. It thus equals the total income resources of the economy, also known as *gross national income (GNI)*.
 
-## PPF
+## Measuring macro {.m}
 
 :::: columns
-::: {.column width="47%"}
+::: {.column width=59%}
+
 ![](Picture1.jpg)
+
 :::
-::: {.column width="47%"}
+::: {.column width=40%}
 
-- What country produces depensd on the relative price of cloth to food $\frac{P_C}{P_F}$
+The Closed Economy Measurements of national expenditure, product, and income are recorded in the national income and product accounts, with the major categories shown. The purple line shows the circular flow of all transactions in a closed economy.
 
-- An economy chose $Q_C,Q_F$ to maximize $V=P_CQ_C+P_FQ_F$ given $\frac{P_C}{P_F}$.
-
-- V is an isovalue of output with slope = $\frac{P_C}{P_F}$
 
 :::
 ::::
 
-## PPF
+## Open economy
+
+- The difference between payments made for imports and payments received for exports is called the trade balance (TB), which equals net payments to domestic firms due to trade. 
+
+- GNE plus TB equals GDP, the total value of production in the home economy.
+
+- The value of factor service exports minus factor service imports is known as net factor income from abroad (NFIA), and thus GDP plus NFIA equal GNI, the total income earned by domestic entities from all sources, domestic and foreign.
+
+## Open economy
+
+- Gifts may take the form of income transfers or “in kind” transfers of goods and services. 
+
+- They are considered nonmarket transactions, and are referred to as unilateral transfers.
+
+- Net unilateral transfers (NUT) equals the value of unilateral transfers the country receives from the rest of the world minus those it gives to the rest of the world.
+
+## Open economy
+
+- These net transfers have to be added to GNI in order to calculate gross national disposable income (GNDI). 
+
+- Thus, GNI plus NUT equals GNDI, which represents the total income resources available to the home country.
+
+## Open economy {.m}
+
+:::: columns
+::: {.column width=59%}
 
 ![](Picture2.jpg)
 
-When $\frac{P_C}{P_F} \uparrow$, slope gets steeper, production decision moves to Q2. This changes reflected in the market as a relative supply of cloth.
+:::
+::: {.column width=40%}
 
-## Relative prices & demand
-
-- The value of the economy's consumption must equal the value of the economyu's production
-
-$$
-P_CD_C+P_FD_F=P_CQ_C+P_FQ_F=V
-$$
-
-- let's assume the economy's consumption decision may be represented by a single representative consumer.
-
-- more assumption: this decision follows a certain nicely designed function which can be visualized by an indifference curve.
-
-## Price & welfare
-
-![](Picture3.jpg)
+The current account (CA) is a tally of all international transactions in goods, services, and income (occurring through market transactions or transfers).
 
 
-When $\frac{P_C}{P_F} \uparrow$, VV's slope steepen. Production & consumption moves from $\{Q^1,D^1\}$ to $\{Q^2,D^2\}$. $D^3=Q^3$ is the autarky equilibrium.
-
-## Case: US & China
-
-- The aggregate gains from trade are in large part driven by consumers’ access to cheaper imported goods.
-
-- On average, US gains from trading with China represented $1,500 per household per year between 2000-2007, mainly from decrease in prices.
-
-- And those price decreases were more pronounced for goods consumed by relatively poorer households.
-
-## Case: Indonesian rice
-
-- Rice import protection is in place to protect farmers' income.
-
-- However, [McCulloch (2008)](https://www.tandfonline.com/doi/full/10.1080/00074910802001579) shows that only 25% of HH plant rice, and 80% of them are net consumers in 2004.
-
-    - In 2012, the number is 88% according to [Patunru](https://medium.com/@acopatunru/beras-dan-mitos-762cf88b7bd9#id_token=eyJhbGciOiJSUzI1NiIsImtpZCI6IjZmOTc3N2E2ODU5MDc3OThlZjc5NDA2MmMwMGI2NWQ2NmMyNDBiMWIiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiIyMTYyOTYwMzU4MzQtazFrNnFlMDYwczJ0cDJhMmphbTRsamRjbXMwMHN0dGcuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiIyMTYyOTYwMzU4MzQtazFrNnFlMDYwczJ0cDJhMmphbTRsamRjbXMwMHN0dGcuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMTc3NjAxNDc1ODgzNzAzOTA1MjMiLCJlbWFpbCI6ImltZWRrcmlzbmFAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsIm5iZiI6MTcwOTQ0NzA5MSwibmFtZSI6ImltZWQga3Jpc25hIiwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0poVldOdEhteTZFUXU0NFFQTEI5bE5vZ29UR3M5ZW5rdVpiVWxWUzcxbzlBPXM5Ni1jIiwiZ2l2ZW5fbmFtZSI6ImltZWQiLCJmYW1pbHlfbmFtZSI6ImtyaXNuYSIsImxvY2FsZSI6ImVuIiwiaWF0IjoxNzA5NDQ3MzkxLCJleHAiOjE3MDk0NTA5OTEsImp0aSI6ImFmNDA4MDY1YjFhZDk3NjAxMDJmOGFiZTdkMTMxMWIxOTllZWIxZWUifQ.C2pudqMajwOvUfR9a807lLxI90lMLjjpEob1WaCjjznC0AlKpxC7u-bmx7QrJASPFd77FejnDLUMmvqUAECdaMym1cwnnIfSfYS8y5ovm6EW9Wc5Z2LIGzVdBr4WLxlCYHuYOWEcow1PyK5T6qnWvvKYD4Hag4Xnho3LTVvdxH1R-QWflfb3oizKDbQqJEQkTTQWlaEqVbcpZEAFxB2kJrvKD0cnEB7Z4hNN-xAsvLzwjmua9cj988XJO-c326opF6Cj4BnGDoRMCWUr07uxJOzBbSs1Y-6M29ru1RQmfsVyxuvl6GRHwt1o56G25CvIRFO-eiL-tohqRn4ZBLM9hA).
-    
-- Those that gain from higher prices tend to be farmers with access to slightly larger plots of land.
-
-- Thus an increase in the rice price constitutes a transfer from the large majority of consumers to a minority of producers at all income levels.
-
-## Terms of trade {.m}
-
-- The terms of trade refers to the price of exports relative to the price of imports.
-When a country exports cloth and the relative
-
-    -price of cloth increases, the terms of trade rise.
-    
-- Because a higher relative price for exports means that the country can afford to buy more imports, an increase in the terms of trade increases a country’ s welfare.
-
-- A decline in the terms of trade decreases a country’s welfare.
-
-## Determining prices {.m}
-
-:::: columns
-::: {.column width="47%"}
-
-![](Picture4.jpg)
 
 :::
-::: {.column width="47%"}
-
-- We need to have world quantities from H & F (assume only these 2 countries exist)
-
-$$
-\frac{Q_C+Q_C^*}{Q_F+Q_F^*} \\ \frac{D_C+D_C^*}{D_F+D_F^*}
-$$
-
-- w/o trade, home has lower $\frac{P_C}{P_F}$ and higher C production relative to F cuz it's good at making $C$.
-
-- trade converges to $RS^{WORLD}$
-
-:::
-
 ::::
 
-## Equilibrium prices
+## Asset side {.m}
 
-![](Picture5.jpg)
+- The value of asset exports minus asset imports is called the *financial account (FA)*. 
 
-Home PPF skews toward $C$ while foreign toward $F$. This differences allow trade to benefit both countries.
+- These net asset exports are added to home GNDI when calculating the total resources available for expenditure in the home country.
 
-## International effects of growth {.m}
+- A country may not only buy and sell assets but also transfer assets as gifts. 
 
-- Growth is usually biased: it occurs in one sectore more than others, leads to changes in relative supply & in turn relative prices.
+- Such asset transfers are measured by the *capital account (KA)*, which is the value of capital transfers from the rest of the world minus those to the rest of the world.
 
-- Rapid growth has occurred in U.S. computer industries but relatively little growth has occurred in U.S. textile industries.
+## Open economy {.s}
 
-- In the Ricardian model, technological progress in one sector causes biased growth.
+:::: columns
+::: {.column width=59%}
 
-- In the Heckscher-Ohlin model, an increase in one factor of production causes biased growth.
+![](Picture2.jpg)
 
-## Biased growth
+:::
+::: {.column width=40%}
 
-- Biased growth and the resulting change in relative supply causes a change in the terms of trade.
+The Open Economy Measurements of national expenditure, product, and income are recorded in the national income and product accounts, with the major categories shown on the left.
+Measurements of international transactions are recorded in the balance of payments accounts, with the major categories shown on the right.
+The purple line shows the flow of transactions within the home economy.
+The green lines show all cross-border transactions.
 
-- Biased growth in the cloth industry (in either the home or foreign country) will lower the price of cloth relative to the price of food and lower the terms of trade for cloth exporters.
+:::
+::::
 
-- Biased growth in the food industry (in either the home or foreign country) will raise the price of cloth relative to the price of food and raise the terms of trade for cloth exporters.
+## Three approach {.m}
 
-## Biased growth
+- The expenditure approach looks at the demand for goods: It examines how much is spent on demand for final goods and services. The key measure is GNE.
 
-![](Picture6.jpg)
+- The product approach looks at the supply of goods: It measures the value of all goods and services produced as output minus the value of goods used as inputs in production. The key measure is GDP.
 
-Growth biased toward cloth shifts the R S curve for the world to the right (a), while growth biased toward food shifts it to the left (b).
+- The income approach focuses on payments to owners of factors: It tracks the amount of income they receive. The key measures are gross national income (GNI) and gross national disposable income (GNDI) (which includes net transfers).
 
-## Effects of growth {.m}
+## Expenditures
 
-- Export-biased growth is growth that expands a country’s production possibilities disproportionately in that country’s export sector.
+Personal consumption expenditures (usually called “consumption”) equal total spending by private households on final goods and services. This includes nondurable goods (e.g., food), durable goods (e.g., autos), and services.
 
-    - Biased growth in the food industry in the foreign country is export-biased growth for the foreign country.
+Gross private domestic investment (usually called “investment”) equals total spending by firms or households on final goods and services to make additions to the stock of capital. This includes construction of a new house or factory, the purchase of new equipment, and net increases in inventories of goods held by firms (i.e., unsold output).
 
-- Import-biased growth is growth that expands a country’s production possibilities disproportionately in that country’s import sector.
+## Expenditures
 
-    - Biased growth in cloth production in the foreign country is import-biased growth for the foreign country.
+Government consumption expenditures and gross investment (often called “government consumption”) equal spending by the public sector on final goods and services. This includes spending on public works, national defense, the police, and the civil service. It does not include any transfer payments or income redistributions, e.g., Social Security or unemployment insurance payments—these are not purchases of goods or services, just rearrangements of private spending power.
 
-## Terms of trade
+## GNE GDP
 
-- Export-biased growth reduces a country’s terms of trade, reducing its welfare and increasing the welfare of foreign countries.
+$$
+GDP=\underbrace{C+I+G}_{\text{GNE}}+\underbrace{\left(X-M\right)}_{\text{Trade Balance}}
+$$
 
-- Import-biased growth increases a country’s terms of trade, increasing its welfare and decreasing the welfare of foreign countries.
+The trade balance (TB), also referred to as net exports, may be positive (trade surplus) or negative (trade deficit).
 
-- The larger the countries, the larger its growth impacting the global economy.
+## GNI
 
-## 2 large countries
+Gross national income equals gross domestic product (GDP) plus net factor income from abroad (NFIA).
 
-- Has the United States suffered from a deterioration in its terms of trade as some of its main trading partners (such as China) experienced rapid growth?
+$$
+GNI=\underbrace{\underbrace{C+I+G}_{\text{GNE}}+\underbrace{\left(X-M\right)}_{\text{Trade Balance}}}_{\text{GDP}}+\underbrace{\left(EX_{FS}-IM_{FS}\right)}_{\text{NFIA}}
+$$
 
-    - This would represent an aggregate income loss for the United States.
+## GDP vs GNI
 
-- The standard trade model predicts that if the growth in China is mainly import-biased, the growth in sectors that compete with U.S. exports would reduce the U.S. terms of trade.
-
-## 2 large countries
-
-- But data indicates that changes in the U.S. terms of trade have been small with no clear trend over last few decades.
-
-    - The U.S. terms of trade in 2014 was essentially at the same level as it was in 1980.
-
-- The terms of trade for China have deteriorated over the past decade, suggesting their recent growth may have been export-biased.
-
-## Terms of trade
-
-```{r}
-library(WDI)
-library(tidyverse)
-
-indi<-c(            # membuat dictionary
-  "tot"="TT.PRI.MRCH.XD.WD"
-  
-)
-
-dat<-WDI(           # Menarik data World Bank
-  country=c("IDN","USA","CHN"),
-  indicator=indi,
-  start=1980
-)
-
-dat |> ggplot(aes(x=year,y=tot,col=country))+geom_line(linewidth=1.1)+theme_classic()+theme(legend.position = "bottom")+labs(y="")
-```
-
-## US vs China
-
-- But data indicates that changes in the U.S. terms of trade have been small with no clear trend over last few decades.
-
-- The U.S. terms of trade in 2014 was essentially at the same level as it was in 1980.
-
-- The terms of trade for China have deteriorated over the past decade, suggesting their recent growth may have been export-biased.
+![](Picture4.png)
 
 ## Indonesia?
 
-- Like the United States, most developed countries tend to experience mild swings in their terms of trade, around 1 percent or less a year (on average).
+```{r}
+library(tidyverse)
+library(kableExtra)
+graph<-function(dataset, ...) {
+  dataset |>
+  ggplot(aes(...))+
+  theme_classic() +
+  theme(panel.background = element_rect(fill = "#f0f1eb",
+                                        colour = "#f0f1eb"),
+        plot.margin = margin(0,0,0,0),
+        plot.background = element_rect(fill = "#f0f1eb"),
+        legend.key = element_rect(fill = "#f0f1eb",linetype = "blank"),
+        legend.background = element_rect(fill="#f0f1eb"))
+}
+graph3<-theme_classic() +
+  theme(panel.background = element_rect(fill = "#f0f1eb",
+                                        colour = "#f0f1eb"),
+        plot.margin = margin(0,0,0,0),
+        plot.background = element_rect(fill = "#f0f1eb"),
+        axis.text=element_text(size=12),
+        axis.title.x = element_text(hjust=1),
+        axis.title.y = element_text(angle=0,hjust=1,vjust=1),
+        legend.key = element_rect(fill = "#f0f1eb",linetype = "blank"),
+        legend.background = element_rect(fill="#f0f1eb"))
+graph2<-theme_classic() +
+  theme(panel.background = element_rect(fill = "#f0f1eb",
+                                        colour = "#f0f1eb"),
+        plot.margin = margin(0,0,0,0),
+        plot.background = element_rect(fill = "#f0f1eb"),
+        legend.key = element_rect(fill = "#f0f1eb",linetype = "blank"),
+        legend.background = element_rect(fill="#f0f1eb"),
+        axis.title.x = element_text(hjust=1),
+        axis.title.y = element_text(angle=0,hjust=1,vjust=1),
+        panel.grid=element_blank(),
+        axis.text.x=element_blank(),
+        axis.text.y=element_blank(),
+        axis.ticks.x=element_blank(),
+        axis.ticks.y=element_blank(),
+        legend.position=c(1,1),
+        legend.justification = c(1,1),
+        legend.spacing=unit(0,"cm"),
+        legend.margin=margin(0,0,0,0))
+```
 
-- Some developing countries’ exports are heavily concentrated in mineral and agricultural sectors.
+```{r}
+library(WDI)
+indi<-c(            # membuat dictionary
+  "GNIcap"="NY.GNP.PCAP.KN",
+  "GDPcap"="NY.GDP.PCAP.KN"
+)
 
-    - The prices of those goods on world markets are very volatile, leading to large swings in the terms of trade.
-
-    - These swings in turn translate into substantial changes in welfare.
-
-## Tariff & subsidies
-
-- Import tariffs are taxes levied on imports.
-
-- Export subsidies are payments given to domestic producers that export.
-
-- Both policies influence the terms of trade and therefore national welfare.
-
-- Import tariffs and export subsidies drive a wedge between prices in world markets and prices in domestic markets.
-
-## Tariff effect
-
-- say home govt impose tariff on food import
-
-    - $\frac{P_C}{P_F}$ decrease in domestic market.
-    
-    - $\frac{Q_C}{Q_F}$ and $\frac{D_C}{D_F}$ goes down as well.
-    
-- If the decreased food demand is large enough, this will decrease global price.
-
-- Meaning, tot goes up, which may increase domestic welfare.
-
-## Tariff effect
-
-- The magnitude of this effect depends on the size of the home country relative to the world economy.
-
-- If the country is a small part of the world economy, its tariff (or subsidy) policies will not have much effect on world relative supply and demand, and thus on the terms of trade.
-
-- But for large countries, a tariff may maximize national welfare at the expense of foreign countries.
-
-## Export subsidy effect {.m}
-
-- If the home country imposes a subsidy on cloth exports, the price of cloth relative to the price of food rises for domestic consumers.
-
-    - Domestic producers will receive a higher relative price of cloth when they export, and therefore will be more willing to switch to cloth production: relative supply of cloth will increase.
-    
-    - Domestic consumers must pay a higher relative price of cloth to producers, and therefore will be more willing to switch to food consumption: relative demand for cloth will decrease.
-    
-- When the home country imposes an export subsidy, the terms of trade decrease and the welfare of the country decreases to the benefit of the foreign country.
+dat<-WDI(           # Menarik data World Bank
+  country="IDN",
+  indicator=indi,
+  start=2010
+) |> select(year,GNIcap,GDPcap) |> pivot_longer(!year,values_to="value",names_to="ctr")
 
 
-## Tot gain & loss
+graph(dat)+geom_line(aes(x=year,y=value,color=ctr),linewidth=1.1)+
+  labs(title="GNI vs GDP in Indonesia",
+       x="",
+       y="")
+```
 
-The standard trade model predicts that
+## GNI GNDI
 
-- an import tariff by the home country can increase domestic welfare at the expense of the foreign country. by increasing terms of trade.
+A country which engage in in kind transfer has Net Unilateral Transfer (NUT), so that:
 
-- an export subsidy by the home country reduces domestic welfare to the benefit of the foreign country.
+$$
+\underbrace{Y}_{GNDI}=\underbrace{\underbrace{C+I+G}_{GNE}+\underbrace{(X-M)}_{TB}+\underbrace{(EX_{FS}-IM_{FS})}_{NFIA}}_{GNI}+\underbrace{(UT_{IN}-UT_{OUT}}_{NUT})
+$$
 
-## More implications {.m}
+For some country, NUT can be very large. e.g., in West Bank and Gaza, NUT is around 31% of GNI.
 
-- Additional effects of tariffs and subsidies that can occur in a world with many countries and many goods:
+## National account {.m}
 
-- A foreign country may subsidize the export of a good that the United States also exports, which will reduce the price for the United States in world markets and decrease its terms of trade.
+$$
+\underbrace{Y}_{GNDI}=\underbrace{C+I+G}_{GNE}+\underbrace{\underbrace{(X-M)}_{TB}+\underbrace{(EX_{FS}-IM_{FS})}_{NFIA}+\underbrace{(UT_{IN}-UT_{OUT}}_{NUT}}_{\text{Current Account (CA)}})
+$$
 
-- [Chinese industrial subsidies](https://www.wsj.com/articles/SB10001424127887323836504578551474072138676) reduces manufacturing goods' prices, which hurt Indonesian manufacturers.
+- On the left is our full income measure, GNDI. 
 
-- A foreign country may put a tariff on an imported good that the Indonesia also imports, which will reduce the price for the Indonesia in world markets and increase its terms of trade.
+- The first term on the right is GNE, which measures payments by home entities. 
 
-## More implications {.m}
+- The remaining terms measure net payments to the home country from all international transactions in goods, services, and income. We group the three cross-border terms into an umbrella term that is called the current account (CA).
 
-Export subsidies by foreign countries on goods that
+## National account, Indonesia, 2022 {.s}
 
-- Indonesian imports reduce the world price of Indonesian imports and increase the terms of trade for Indonesia
+| Category | Symbol | Trillions of Rp |
+| ------- | --- | ---- |
+| Consumption | C | 10,390 |
+| Investment | I | 6,998 |
+| Government | G | 1,505 |
+| Gross National Expenditure | GNE | 18,893 |
+| Trade Balance  | TB | 693 |
+| Gross Domestic Product | GDP | 19,586 |
+| Net factor income from abroad | NFIA | -538 |
+| Gross national income | GNI | 19,048 |
+| Net unilateral transfers | NUT | 5 |
+| Gross national disposable income | GNDI | 19,053 |
 
-- Indonesia also exports reduce the world price of Indonesian exports and decrease the terms of trade for Indonesia.
+: [Table VII.3 SEKI BI](https://www.bi.go.id/id/statistik/ekonomi-keuangan/seki/Default.aspx#headingThree)
 
-Import tariffs by foreign countries on goods that
+## Current account {.m}
 
-- Indonesia exports reduce the world price of Indonesian exports and decrease the terms of trade for Indonesia.
+$$
+Y=C+I+G+CA
+$$
 
-- the Indonesia also imports reduce the world price of Indonesian imports and increase the terms of trade for Indonesia.
+- This equation is the open-economy national income identity. It tells us that the current account represents the difference between national income Y (or GNDI) and gross national expenditure GNE (or C + I + G). Hence:
 
-## Implications
+- GNDI is greater than GNE if and only if CA is positive, or in surplus.
 
-- Export subsidies on a good **decrease the relative world price** of that good by increasing relative supply of that good and decreasing relative demand of that good.
+- GNDI is less than GNE if and only if CA is negative, or in deficit.
 
-- Import tariffs on a good **decrease the relative world price** of that good (and increase the relative world price of other goods) by increasing the relative supply of that good and decreasing the relative demand of that good.
+## Current account {.m}
 
-- Results depend on the size of the countries in question.
+The current account is also the difference between national saving (S = Y − C − G, by definition) and investment:
 
-## International borrowing & lending {.m}
+$$
+\underbrace{S}_{Y-C-G}=I+CA
+$$
 
-- The standard trade model can be modified to analyze international borrowing and lending.
+This equation, often written as CA = S – I , is called the current account identity even though it is just a rearrangement of the national income identity.
 
-    - Two goods are current and future consumption (same good at different times), rather than different goods at the same time.
 
-- Countries usually have different opportunities to invest to become able to produce more in the future.
+- S > I if and only if CA is positive, or in surplus.
 
-- A special kind of production possibility frontier, an intertemporal production possibility frontier, depicts different possible combinations of current output and future output.
+- S < I if and only if CA is negative, or in deficit.
 
-## International borrowing
+## Saving-investment {.m}
 
-- If you borrow 1 unit of output, you must repay principal + interest $= 1+ r$ in the future, where $r$ is the **real interest rate**.
+```{r}
 
-- The price of future consumption relative to current consumption is $\frac{1}{1+r}$
+library(WDI)
+indi<-c(            # membuat dictionary
+  "GCF"="NE.GDI.TOTL.ZS",
+  "GSav"="NY.GDS.TOTL.ZS",
+  "CAB"="BN.CAB.XOKA.GD.ZS"
+)
 
-- 1 unit of current consumption is worth $1+r$ of future consumption.
+det<-WDI(           # Menarik data World Bank
+  country=c("IDN","CHN","USA","JPN"),
+  indicator=indi,
+  start=1970,
+) 
 
-- so 1 unit of future consumption is worth $\frac{1}{1+r}$
+dat<-det |> select(year,iso3c,GCF,GSav)
+dut<-det |> select(year,iso3c,CAB)
 
-## International borrowing
-
-- Home exports current consumption and imports future consumption.
-
-- Home lends to Foreign by consuming less than it produces now. Home able to consume more than produces in the future when Foreign pays back the loan.
-
-- Foreign borrows to be able to consume more than produces now, and pays back the loan by consuming less than produces in the future.
-
-## International borrowing
-
-- When international borrowing and lending are allowed, the world real interest rate is determined by the intersection of world relative demand and world relative supply.
-
-- The world real interest rate will be between the real interest rates that existed in the two country’s prior to intertemporal trade.
-
-- The real interest rate rises in the country that lends (home) and falls in the country that borrows (foreign) due to intertemporal trade.
-
-## Intl borrowing & lending {.m}
+idn<-dat|>filter(iso3c=="IDN") |> select(!iso3c) |>
+  pivot_longer(!year,values_to="value",names_to="what")
+usa<-dat|>filter(iso3c=="USA") |>select(!iso3c) |>
+  pivot_longer(!year,values_to="value",names_to="what")
+jpn<-dat|>filter(iso3c=="JPN") |> select(!iso3c) |>
+  pivot_longer(!year,values_to="value",names_to="what")
+chn<-dat|>filter(iso3c=="CHN") |> select(!iso3c) |>
+  pivot_longer(!year,values_to="value",names_to="what")
+```
 
 :::: columns
-::: {.column width="47%"}
+::: {.column width=50%}
 
-![](Picture7.jpg)
+```{r}
+#| fig-width: 5
+#| fig-height: 4
+
+graph(idn)+geom_line(aes(x=year,y=value,color=what),linewidth=1.1)+
+  theme(legend.position = "bottom")+
+  labs(title="Indonesia",
+       x="",
+       y="")
+```
+
+Current account balance (CAB) is simply the difference between Domestic saving (GSav) and investment (Gross Capital Formation, GCF) in Indonesia.
 
 :::
-::: {.column width="47%"}
+::: {.column width=50%}
 
-![](Picture8.jpg)
+```{r}
+#| fig-width: 5
+#| fig-height: 4
+graph(jpn)+geom_line(aes(x=year,y=value,color=what),linewidth=1.1)+
+  theme(legend.position = "bottom")+
+  labs(title="Japan",
+       x="",
+       y="")
+```
+
+Meanwhile in Japan, saving rate keeps decreasing since 1970. However, Japan constantly see saving>investment (surplus CAB) with notable exceptions.
 
 :::
 ::::
 
-## Intl transfers
+## Saving-investment {.m}
 
-- Transfers of income sometimes occur from one country to another.
+:::: columns
+::: {.column width=50%}
 
-    - War reparations or foreign aid may influence demand of traded goods and therefore relative demand.
+```{r}
+#| fig-width: 5
+#| fig-height: 4
 
-    - International loans may also influence relative demand in the short run, before the loan is paid back.
-    
-- How do transfers of income across countries affect relative demand and the terms of trade?
+graph(usa)+geom_line(aes(x=year,y=value,color=what),linewidth=1.1)+
+  theme(legend.position = "bottom")+
+  labs(title="USA",
+       x="",
+       y="")
+```
 
-## Intl transfers
+USA constantly has higher GCF compared to its saving rate. Meaning, US sees a constant CAD (current account deficit) which seems to be increasing in 2000s.
 
-- Quite often, international income transfers are used to fund imports. Meaning, demand of imported goods increased, hence lower relative price.
+:::
+::: {.column width=50%}
 
-- This means $\frac{P_C}{P_F} \downarrow$ cuz F is the imported goods.
-    
-- the terms of trade would fall and the demand of cloth relative to food would decrease (represented by shifting the relative demand curve left).
+```{r}
+#| fig-width: 5
+#| fig-height: 4
+graph(chn)+geom_line(aes(x=year,y=value,color=what),linewidth=1.1)+
+  theme(legend.position = "bottom")+
+  labs(title="China",
+       x="",
+       y="")
+```
 
-## Intl trade & borrowing
+China, meanwhile, see a constant CA surplus with no notable decrease in saving rate (like Japan), but instead tend to go up (like Indonesia)
 
-- In our standard trade, gains come from more access to goods and services: the only reason we export is so we can import.
+:::
+::::
 
-    - if we can't import then exporting is useless.
-    
-    - therefore, trade will always balance ($PQ =PD$).
-    
-- In intertemporal trade, we can export more than we import.
+## CAB
 
-    - $PQ > PD \rightarrow$ trade surplus, meaning we lend.
-    - $PQ < PD \rightarrow$ trade deficit, meaning we borrow.
-    
-## Intl trade & borrowing
+:::: columns
+::: {.column width=50%}
 
-- This is the case of Norway & Saudi. Both countries are huge exporters of oil.
+```{r}
+#| fig-width: 5
+#| fig-height: 4
 
-    - Instead of consuming their exports by importing stuff, they lend internationally in the form of sovereign wealth fund.
-    
-- Also the case why we have plenty of FDI in Indonesia: surplus countries like China, Korea and Japan are investing their surpluses into Indonesia.
+graph(dut)+geom_line(aes(x=year,y=CAB,color=iso3c),linewidth=1.1)+
+  geom_hline(yintercept=0,linetype="dashed",color="black")+
+  theme(legend.position = "bottom")+
+  labs(title="CAB of 4 countries",
+       x="",
+       y="")
+```
 
-- At the same time, Indonesia is also invest in other countries. Remember [Panama Papers](https://offshoreleaks.icij.org/search?c=IDN&cat=1)?
-    
-## Conclusions {.m}
+:::
+::: {.column width=50%}
 
-- The standard trade model combines all trade models we learned so far into 1 framework
+This graph shows current account balance of the 4 countries. Indonesia sees a surplus during the commodity boom, but overall moves around. China and Japan sees a constant surplus while the US a constant deficit. Japan and China = net creditors, USA = net debtor.
 
-- It predicts changes in welfare and income in various cases:
-
-    - import tax, export subsidy, international income transfers.
-    
-    - all of these impact are through changes in terms of trade.
-    
-- It is important to understand the assumption behind this model.
-
-    - In the policy part, we will learn what if these assumptions are violated.
-
-## The finance part {.m}
-
-- The standard model is a real model in the sense that it doesn't care about the financial sector.
-
-    - The only reason you export is because you want to import. ie. X-M=0
-
-- The international income transfers and intertemporal trade are cases where we must include the finance part of trade.
-
-- We will learn more in the international finance part of the course after mid-term.
-
-- we will also learn more on the impact of tariffs on a small and large countries after mid-term.
+:::
+::::
