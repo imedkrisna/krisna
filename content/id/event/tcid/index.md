@@ -68,6 +68,6 @@ slides:
 projects: []
 ---
 
-Saya diundang oleh The Conversation Indonesia untuk membicarakan tentang [tren penurunan kelas menengah](https://open.spotify.com/episode/0NhTDAeIbTmlTdjyDcs7AV?si=908aec861266427b). Kami membahas tentang kenapa hal ini terjadi dan seberapa signifikan implikasinya untuk ekonomi Indonesia. Saya pribadi merasa tren penurunan kelas menengah harus menjadi alarm bagi kita semua
+Saya diundang oleh The Conversation Indonesia untuk membicarakan tentang [tren penurunan kelas menengah](https://open.spotify.com/episode/0NhTDAeIbTmlTdjyDcs7AV?si=908aec861266427b). Kami membahas tentang kenapa hal ini terjadi dan seberapa signifikan implikasinya untuk ekonomi Indonesia. Saya pribadi merasa tren penurunan kelas menengah harus menjadi alarm bagi kita semua hehe
 
 <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/0NhTDAeIbTmlTdjyDcs7AV?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
