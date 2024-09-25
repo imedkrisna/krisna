@@ -47,7 +47,7 @@ image:
 
 
 # Optional filename of your slides within your event's folder or a URL.
-url_slides: "BI_service.html"
+url_slides: 
 
 url_code:
 url_pdf: 
