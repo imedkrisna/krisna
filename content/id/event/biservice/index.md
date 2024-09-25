@@ -4,7 +4,7 @@
 title: "Services, manufacturing and the Indonesian third unbundling"
 event: "FGD Riset Bank Indonesia Institute 2024"
 event_url:
-location: Hotel Rafles
+location: "Hotel Rafles"
 address:
   street:
   city:
@@ -47,7 +47,7 @@ image:
 
 
 # Optional filename of your slides within your event's folder or a URL.
-url_slides: 
+url_slides: "BI_service.html"
 
 url_code:
 url_pdf: 
