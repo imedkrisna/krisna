@@ -124,3 +124,79 @@ $$
 \frac{100}{(1+5\%)}+\frac{100}{(1+5\%)^2}+\frac{100}{(1+5\%)^3}+\cdots=\frac{X}{5\%}=2,000
 $$
 
+## LRBC
+
+- Since TB=GDP-GNE, LRBC says that _in present value terms, a country's expenditures (GNE) must equal its production (GDP) plus any initial wealth_.
+
+$$
+
+(1+r^*)W_{-1}+GDP_0+\frac{GDP_1}{(1+r^*)}+\frac{GDP_2}{(1+r^*)^2}+\cdots \\
+=GNE_0+\frac{GNE_1}{(1+r^*)}+\frac{GNE_2}{(1+r^*)^2}+\cdots
+
+$$
+
+Present value of present and future GNE = present value of country's spending.
+
+## Exorbitant privilege {.m}
+
+The US has been a net debtr with $W=A-L<0$ since the 1980s. Negative external wealth leads to a deficit n net factor income from abroad with $r^*W=r^*(A-L)<0$. Yet as we saw yesterweek, US net factor income from abroad has been positive throughout this period.
+
+- The only way a net debtor can earn a positive net interest income is by receiving a higher rate of interest on its assets than it pays on its liabilities.
+
+- e.g., in the 1960s French officials complained that the US has the "exorbitant privilege" of being able to borrow cheaply while earning higher returns on its foreign investments.
+
+## Manna from Heaven {.m}
+
+- The United States enjoys positive capital gains, KG, on its external wealth. These large capital gains on external assets and the smaller capital losses on external liabilities are gains that cannot be otherwise measured, so their accuracy and meaning is controversial. 
+
+- Some skeptics call these capital gains “statistical manna from heaven.”
+- Others think these gains are real and may reflect the United States acting as a kind of “venture capitalist to the world.”
+- As with the “exorbitant privilege,” this financial gain for the United States is a loss for the rest of the world. 
+
+## Conclusion {.m}
+
+When we add the +1.5% capital gain differential to the +0.5% interest differential, we end up with a US total return differential (interest+capital gains) of about 2% per year since the 1980s. For comparison, in the same period, the total return differential was close to zero in every other G7 country.
+
+$$
+\Delta W_N=W_N-W_{N-1}=TB_N+r^*W_{N-1}+(r^*-r^0)L+KG
+$$
+
+## Emerging market
+
+The US borrows low and lends high. For most poorer countries, the opposite is true. They borrow high and lend low. This is because they are riskier borrowers and lenders.
+
+Because of country risk, investors typically demand a risk premium before they will invest in any assets issued by these countries, whether government debt, private equity, private debt, or FDI.
+
+## Consumption smoothing
+
+In this section, we use the long-run budget constraint and a simplified model of an economy to examine the gains from financial globalization.
+
+We focus on the gains that result when an open economy uses external borrowing and lending to eliminate an important kind of risk, namely, undesirable fluctuations in aggregate consumption.
+
+## Consumption smoothing {.m}
+
+We now examine the gains from external borrowing and lending, allowing an economy to eliminate fluctuations in aggregate consumption. We adopt some additional assumptions:
+- Real output or GDP (denoted Q) is produced using labor as the only input. Production of GDP may be subject to shocks; depending on the shock, the same amount of labor input may yield different amounts of output.
+- We use the terms “household” and “country” interchangeably. Preferences of the country/household are such that it will choose a level of consumption C that is constant over time. This level of smooth consumption must be consistent with the LRBC.
+
+## Consumption smoothing {.m}
+
+- For now, we assume consumption is the only source of demand. Both investment I and government spending G are zero; therefore, GNE equals personal consumption expenditures C.
+
+- Our analysis begins at time 0, and we assume the country begins with zero initial wealth inherited from the past, so that W−1 is equal to zero.
+
+- We assume that the country is small and the rest of the world (ROW) is large, and the prevailing world real interest rate is constant at $r^*$. In the numerical examples that follow, we will assume $r* = 0.05 = 5\%$ per year.
+
+## Consumption smoothing {.m}
+
+These assumptions give us a special case of the LRBC that requires the present value of current and future trade balances to equal zero (amid zero initial wealth):
+
+$$
+\underbrace{0}_{\text{initial W}}=\text{PV of TB}=\underbrace{\text{PV of } Q}_{PV \  GDP}-\underbrace{\text{PV of } C}_{PV \ GNE}
+$$
+
+## Close vs Open
+
+In a closed economy, TB will always be zero, trhus LRBC will always be satisifed. There won't be any gains from financial globalization.
+
+
