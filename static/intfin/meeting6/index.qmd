@@ -1,7 +1,7 @@
 ---
 title: "Gains from Asset Trade"
 subtitle: "ECES905205 pertemuan 6"
-date: "3 Oktober 2024"
+date: "3 October 2024"
 date-format: "long"
 author: "I Made Krisna Gupta"
 format: 
@@ -207,7 +207,7 @@ $$
 
 In a closed economy, TB will always be zero, trhus LRBC will always be satisifed. There won't be any gains from financial globalization. Under no shock, the same thing is true. No need to do anything.
 
-| period | 0 | 1 | 2 | 3 | 4 | ... | $r^*=0.05 |
+| period | 0 | 1 | 2 | 3 | 4 | ... | $r^*=0.05$ |
 | ----- | --- | --- | --- | --- | --- | --- | --- |
 | GDP Q | 100 | 100 | 100 | 100 | 100 | ... | 2,100 |
 | GNE C | 100 | 100 | 100 | 100 | 100 | ... | 2,100 |
@@ -217,7 +217,7 @@ In a closed economy, TB will always be zero, trhus LRBC will always be satisifed
 
 Suppose there's unanticipted -21 shock in year 0 then returns to Q=100 after that. with $r^*=5\%$, PV reduces by 1%. With no trade of asset, the reduction of GDP equate exactly with GDP, because in a closed economy, TB=0.
 
-| period | 0 | 1 | 2 | 3 | 4 | ... | $r^*=0.05 |
+| period | 0 | 1 | 2 | 3 | 4 | ... | $r^*=0.05$ |
 | ----- | --- | --- | --- | --- | --- | --- | --- |
 | GDP Q | 79 | 100 | 100 | 100 | 100 | ... | 2,079 |
 | GNE C | 79 | 100 | 100 | 100 | 100 | ... | 2,079 |
@@ -227,7 +227,7 @@ Suppose there's unanticipted -21 shock in year 0 then returns to Q=100 after tha
 
 However, under open economy regime, consumption can be smoothen while still satisfying LRBC by reducing consumption by 1% for each year. The present value of C is then: 99 + 99/0.05 = 2,079. PV GDP = PV GNE.
 
-| period | 0 | 1 | 2 | 3 | 4 | ... | $r^*=0.05 |
+| period | 0 | 1 | 2 | 3 | 4 | ... | $r^*=0.05$ |
 | ----- | --- | --- | --- | --- | --- | --- | --- |
 | GDP Q | 79 | 100 | 100 | 100 | 100 | ... | 2,079 |
 | GNE C | 99 | 99 | 99 | 99 | 99 | ... | 2,079 |
