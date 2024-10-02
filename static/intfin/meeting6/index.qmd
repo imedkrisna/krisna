@@ -129,10 +129,8 @@ $$
 - Since TB=GDP-GNE, LRBC says that _in present value terms, a country's expenditures (GNE) must equal its production (GDP) plus any initial wealth_.
 
 $$
-
 (1+r^*)W_{-1}+GDP_0+\frac{GDP_1}{(1+r^*)}+\frac{GDP_2}{(1+r^*)^2}+\cdots \\
 =GNE_0+\frac{GNE_1}{(1+r^*)}+\frac{GNE_2}{(1+r^*)^2}+\cdots
-
 $$
 
 Present value of present and future GNE = present value of country's spending.
@@ -184,7 +182,9 @@ We focus on the gains that result when an open economy uses external borrowing a
 ## Consumption smoothing {.m}
 
 We now examine the gains from external borrowing and lending, allowing an economy to eliminate fluctuations in aggregate consumption. We adopt some additional assumptions:
+
 - Real output or GDP (denoted Q) is produced using labor as the only input. Production of GDP may be subject to shocks; depending on the shock, the same amount of labor input may yield different amounts of output.
+
 - We use the terms “household” and “country” interchangeably. Preferences of the country/household are such that it will choose a level of consumption C that is constant over time. This level of smooth consumption must be consistent with the LRBC.
 
 ## Consumption smoothing {.m}
@@ -305,7 +305,7 @@ Consumption-smoothing gains in emerging markets require improving poor governanc
 
 - The second form is called sovereign wealth funds, whereby state-owned asset management companies invest some of the government savings.
 
-## SWF
+## SWF {.m}
 
 - During a three-year copper boom, Chile set aside $48.6 billion, more than 30 percent of the country’s gross domestic product, resisting calls for more government spending.
 
@@ -347,7 +347,7 @@ Baseline case, no investment: Q=100, C=100, I=0, TB=0. W=0
 
 ## Efficient investment {.m}
 
-| period | 0 | 1 | 2 | 3 | 4 | ... | $r^*=0.05 |
+| period | 0 | 1 | 2 | 3 | 4 | ... | $r^*=0.05$ |
 | ----- | --- | --- | --- | --- | --- | --- | --- |
 | GDP Q | 100 | 105 | 105 | 105 | 105 | ... | 2,079 |
 | GNE C | 104 | 104 | 104 | 104 | 104 | ... | 2,079 |
@@ -440,7 +440,7 @@ $$
 
 ![](Picture4.png)
 
-## Lucas paradox
+## Lucas paradox {.m}
 
 In his widely cited article “Why Doesn’t Capital Flow from Rich to Poor Countries?” Nobel laureate Robert Lucas wrote:
 
@@ -452,7 +452,6 @@ To see why capital does not flow to poor countries, we now suppose that A, the p
 
 $$
 q_{US}=A_{US}k^{\theta}_{US} \ \ \ \ \ \ \ \ \ \ \ q_{US}=A_{MX}k^{\theta}_{MX} \\
-
 \frac{MPK_{MX}}{MPK_{US}}=\frac{\theta \ q_{MX}}{\theta q_{US}/k_{US}}=\frac{q_{MX}/q_{US}}{k_{MX}/k_{US}}
 $$
 
@@ -471,6 +470,184 @@ $$
 - Unless poor countries can lift their levels of productivity, access to international financial markets is of limited use.
 - There are not enough opportunities for productive investment for complete convergence to occur.
 
+## A vs k
 
+![](pic3.png)
 
+## A vs k
 
+![](pic4.png)
+
+## A vs k
+
+- An older school of thought focused on A as reflecting a country’s technical efficiency, construed narrowly as a function of its technology and management capabilities.
+- Today, many economists believe that the level of A may primarily reflect a country’s social efficiency, construed broadly to include institutions, public policies, and cultural differences.
+- And indeed there is some evidence that, among poorer countries, capital tends to flow to the countries with better institutions.
+
+## A vs k
+
+Other factors are against the likelihood of convergence.
+
+- The model makes no allowance for risk premiums to compensate for the risk of investing in an emerging market (e.g., risks of regulatory changes, tax changes, expropriation, and other political risks).
+- Risk premiums can be substantial, and may be large enough to cause capital to flow “uphill” from poor to rich.
+
+## A vs k
+
+![](pic5.png)
+
+## A vs k
+
+- The model assumes that investment goods can be acquired at the same relative price, but in developing countries, it often costs much more than one unit of output to purchase one unit of capital goods.
+
+- The model assumes that the contribution of capital to production is equal across countries, but the capital’s share may be much lower in many developing countries. This lowers the MPK even more.
+
+## A vs k {.m}
+
+- The model suggests that foreign aid may do no better than foreign investors in promoting growth. 
+- Economists dispute whether foreign aid can make a difference to long-term development and growth.
+- The argument also extends to nonmarket and preferential lending offered to poor countries by international financial institutions such as the World Bank.
+- Proponents argue that aid can finance public goods that can provide externalities sufficient to jolt a poor country out of a bad equilibrium or “poverty trap.” Aid skeptics reply that the evidence for such effects is weak.
+
+## World bank 
+
+The World Bank (worldbank.org), based in Washington, D.C., is one of the Bretton Woods “twins” established in 1944 (the other is the International Monetary Fund). 
+
+Its main arm, the International Bank for Reconstruction and Development, has 188 member countries. Its principal purpose is to provide financing and technical assistance to reduce poverty and promote sustained economic development in poor countries.
+
+The World Bank can raise funds at low interest rates and issue AAA-rated debt as good as that of any sovereign nation. It then lends to poor borrowers at low rates.
+
+## Foreign aid
+
+Nobody doubts that vast amounts of aid have been squandered, but there are reasons to think that we can improve on that record.
+
+We now understand that the kind of aid you give, and the policies of the countries you give it to, makes a real difference. 
+
+There’s still a lot wrong with the way that foreign aid is administered. Too little attention is paid to figuring out which programs work and which don’t, and aid still takes too little advantage of market mechanisms, which are essential to making improvements last.
+
+## Diversification of risk {.m}
+
+Diversification can help smooth shocks by promoting risk sharing. With diversification, countries may be able to reduce the volatility of their incomes without any net lending or borrowing.
+
+- We consider two countries, A and B, with outputs that fluctuate asymmetrically. 
+
+- There are two possible “states of the world,” with equal probability of occurring. State 1 is a bad state for A and a good state for B; state 2 is good for A and bad for B. 
+
+- We assume that all output is consumed, and that there is no investment or government spending. Output is divided 60–40 between labor income and capital income. 
+
+## Home portfolio {.m}
+
+- Both countries are closed, and each owns 100% of its capital. Output is the same as income.
+
+- A numerical example is given in Table 6-6, panel (a).
+
+- In state 1, A’s output is 90, of which 54 units are payments to labor and 36 units are payments to capital; in state 2, A’s output rises to 110, and factor payments rise to 66 for labor and 44 units for capital. The opposite is true in B: In state 1, B’s output is higher than it is in state 2.
+
+- The variation of GNI about its mean of 100 is plus or minus 10 in each country. Because households prefer smooth consumption, this variation is undesirable.
+
+## Risk diversification
+
+![](pic5a.png)
+
+## World Portfolio {.m}
+
+- Two countries can achieve partial income smoothing if they diversify their portfolios of capital assets.
+
+- For example, each country could own half of the domestic capital stock, and half of the other country’s capital stock. Indeed, this is what standard portfolio theory says that investors should try to do.
+
+- The results of this portfolio diversification are shown in Table 6-6, panel (b). 
+
+- Capital income for each country is smoothed at 40 units, the average of A and B capital income in panel (a), also illustrated in Figure 6-9.
+
+## Risk diversification
+
+![](pic6.png)
+
+## Risk diversification
+
+![](pic7.png)
+
+## Risk diversification {.m}
+
+- How does the balance of payments work when countries hold the world portfolio?
+
+- Consider country A. In state 1 (bad for A, good for B), A’s income or GNI exceeds A’s output. The extra income is net factor income from abroad, which is the difference between the income earned on A’s external assets and the income paid on A’s external liabilities. 
+
+- With that net factor income, country A runs a negative trade balance, which means that A can consume more than it produces.
+
+- Adding the trade balance of –4 to net factor income from abroad of +4 means that the current account is 0, and there is still no need for any net borrowing or lending.
+
+## Risk diversification {.m}
+
+![](pic8.png)
+
+## Generalization {.m}
+
+Let us generalize the concept of capital income smoothing through diversification.
+
+- Each country’s payments to capital are volatile. A portfolio of 100% of country A’s capital or 100% of country B’s capital has capital income that varies by plus or minus 4 (between 36 and 44). But a 50–50 mix of the two leaves the investor with a portfolio of minimum, zero volatility (it always pays 40).
+
+- In general, there will be some common shocks, which are identical shocks experienced by both countries. In this case, there is no way to avoid this shock by portfolio diversification.
+
+- But as long as some shocks are asymmetric, the two countries can take advantage of gains from the diversification of risk.
+
+## Generalization {.m}
+
+![](pic9.png)
+
+## Limits to Diversification {.m}
+
+- Labor income risk (and hence GDP risk) may not be diversifiable through the trading of claims to labor assets or GDP.
+
+- But capital and labor income in each country are perfectly correlated, and shocks to production tend to raise and lower incomes of capital and labor simultaneously. 
+
+- This means that, as a risk-sharing device, trading claims to capital income can substitute for trading claims to labor income.
+
+## Home bias puzzle
+
+In practice, we do not observe countries owning foreign-biased portfolios or even the world portfolio.
+
+Countries tend to own portfolios that suffer from a strong home bias, a tendency of investors to devote a disproportionate fraction of their wealth to assets from their own home country, when a more globally diversified portfolio might protect them better from risk.
+
+## Diversification in US
+
+![](pic10.jpg)
+
+## Diversification in US
+
+![](pic11.jpg)
+
+## Risk Diversification {.m}
+
+If countries were able to borrow and lend without limit or restrictions, they should be able to cope quite well with the array of possible shocks, in order to smooth consumption.
+
+- In reality, as the evidence shows, countries are not able to fully exploit the intertemporal borrowing mechanism.
+
+- In theory, if countries were able to pool their income streams and take shares from that common pool of income, all country-specific shocks would be averaged out, and the sole undiversifiable shocks would be common global shocks.
+
+## Risk diversification {.m}
+
+Financial openness allows countries—like households—to follow the old adage “Don’t put all your eggs in one basket.”
+
+- In practice, however, risk sharing through asset trade is limited. The market for claims to capital income is incomplete because not all capital assets are traded (e.g., many firms are privately held and are not listed on stock markets), and trade in labor assets is legally prohibited.
+
+- Investors have shown very little inclination to invest their wealth outside their own country, although that may be slowly changing in an environment of ongoing financial globalization.
+
+## Conclusion {.m}
+
+- Financial markets help households smooth consumption in the face of shocks to their income.
+
+- Financial markets allow firms to borrow in order to invest efficiently in productive projects and permit investors to diversify their portfolios across a wide range of assets.
+
+- The same principles apply to countries, subject to the long-run budget constraint. They face income shocks, new investment opportunities, and country-specific risks.
+
+- However, the use of global financial markets is still limited. Even in advanced countries, consumption shocks remain, investment is often financed out of domestic saving, and a home bias persists in investors’ portfolios.
+
+## Conclusion {.m}
+
+- We see no consumption smoothing gains in poorer countries, and there is little scope for development based on external finance until productivity levels are improved.
+
+- Many emerging markets are still on the road to full financial liberalization, and large barriers remain.
+
+- Institutional weaknesses in developing countries may hinder the efficient operation of the mechanisms we have studied. Such weaknesses may be corrected by the stimulus to competition, transparency, accountability, and stability that financial openness may provide.
+
+- The benefits of financial globalization are likely to be much smaller for these countries, and they must also be weighed against potential offsetting costs, such as the risk of crises.
