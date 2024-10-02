@@ -153,6 +153,10 @@ The US has been a net debtr with $W=A-L<0$ since the 1980s. Negative external we
 - Others think these gains are real and may reflect the United States acting as a kind of “venture capitalist to the world.”
 - As with the “exorbitant privilege,” this financial gain for the United States is a loss for the rest of the world. 
 
+## US privilege
+
+![](pic1.png)
+
 ## Conclusion {.m}
 
 When we add the +1.5% capital gain differential to the +0.5% interest differential, we end up with a US total return differential (interest+capital gains) of about 2% per year since the 1980s. For comparison, in the same period, the total return differential was close to zero in every other G7 country.
@@ -166,6 +170,10 @@ $$
 The US borrows low and lends high. For most poorer countries, the opposite is true. They borrow high and lend low. This is because they are riskier borrowers and lenders.
 
 Because of country risk, investors typically demand a risk premium before they will invest in any assets issued by these countries, whether government debt, private equity, private debt, or FDI.
+
+## Close vs Open
+
+![](pic2.png)
 
 ## Consumption smoothing
 
@@ -195,8 +203,274 @@ $$
 \underbrace{0}_{\text{initial W}}=\text{PV of TB}=\underbrace{\text{PV of } Q}_{PV \  GDP}-\underbrace{\text{PV of } C}_{PV \ GNE}
 $$
 
-## Close vs Open
+## Close vs Open {.m}
 
-In a closed economy, TB will always be zero, trhus LRBC will always be satisifed. There won't be any gains from financial globalization.
+In a closed economy, TB will always be zero, trhus LRBC will always be satisifed. There won't be any gains from financial globalization. Under no shock, the same thing is true. No need to do anything.
+
+| period | 0 | 1 | 2 | 3 | 4 | ... | $r^*=0.05 |
+| ----- | --- | --- | --- | --- | --- | --- | --- |
+| GDP Q | 100 | 100 | 100 | 100 | 100 | ... | 2,100 |
+| GNE C | 100 | 100 | 100 | 100 | 100 | ... | 2,100 |
+| TB | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+
+## Close vs Open {.m}
+
+Suppose there's unanticipted -21 shock in year 0 then returns to Q=100 after that. with $r^*=5\%$, PV reduces by 1%. With no trade of asset, the reduction of GDP equate exactly with GDP, because in a closed economy, TB=0.
+
+| period | 0 | 1 | 2 | 3 | 4 | ... | $r^*=0.05 |
+| ----- | --- | --- | --- | --- | --- | --- | --- |
+| GDP Q | 79 | 100 | 100 | 100 | 100 | ... | 2,079 |
+| GNE C | 79 | 100 | 100 | 100 | 100 | ... | 2,079 |
+| TB | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+
+## Close vs Open {.m}
+
+However, under open economy regime, consumption can be smoothen while still satisfying LRBC by reducing consumption by 1% for each year. The present value of C is then: 99 + 99/0.05 = 2,079. PV GDP = PV GNE.
+
+| period | 0 | 1 | 2 | 3 | 4 | ... | $r^*=0.05 |
+| ----- | --- | --- | --- | --- | --- | --- | --- |
+| GDP Q | 79 | 100 | 100 | 100 | 100 | ... | 2,079 |
+| GNE C | 99 | 99 | 99 | 99 | 99 | ... | 2,079 |
+| TB | -20 | +1 | +1 | +1 | +1 | ... | 0 |
+| NFIA | 0 | -1 | -1 | -1 | -1 | ... | - |
+| CA | -20 | 0 | 0 | 0 | 0 | ... | - |
+| W | -20 | -20 | -20 | -20 | -20 | ... | - |
+
+## Generalizing {.m}
+
+- Suppose, more generally, that output $Q$ and consumption $C$ are initially stable at some value with $Q = C$ and external wealth of zero. The LRBC is satisfied.
+- If output falls in year 0 by ΔQ and then returns to its prior value for all future periods, then the present value of output decreases by ΔQ.
+- To meet the LRBC, a closed economy lowers its consumption by the whole ΔQ in year 0.
+- An open economy can lower its consumption uniformly (every period) by a smaller amount so that ΔC < ΔQ.
+
+## Consumption smoothing {.m}
+
+- A loan of $\Delta Q-\Delta C$ in year 0 requires interest payment of $r^*(\Delta Q -\Delta C)$ in later years.
+
+- In future years consumption cuts create trade surpluses of $\Delta C$, and if these are to cover the interst paymets, then $\Delta C$ must be chosen so that
+
+$$
+r^*(\Delta Q-\Delta C)=\Delta C
+$$
+where $\Delta Q- \Delta C$ is the amount borrowed in year 0. Rearranging above, we get
+
+$$
+\Delta C=\frac{r^*}{1+r^*} \Delta Q
+$$
+
+## Permanent shock {.m}
+
+With a permanent shock, output will be lower by ΔQ in all years, so the only way either a closed or open economy can satisfy the LRBC while keeping consumption smooth is to cut consumption by ΔC = ΔQ in all years.
+
+Comparing the results for a temporary shock and a permanent shock, we see an important point: 
+
+- Consumers can smooth out temporary shocks—they have to adjust a bit. 
+But the adjustment is far smaller than the shock itself—yet they must 
+
+- adjust immediately and fully to permanent shocks. 
+
+## Gains from smoothing {.m}
+
+Financial openness allows countries to “save for a rainy day.” Without financial institutions, you have to spend what you earn each period.
+
+- Using financial transactions to smooth consumption fluctuations makes a household and/or country better off.
+- In a closed economy, Q = C, so output fluctuations immediately generate consumption fluctuations.
+- In an open economy, the desired smooth consumption path can be achieved by running a trade deficit during bad times and a trade surplus during good times.   
+
+## C and financial openness {.m}
+
+- Does the evidence show that countries avoid consumption volatility by embracing financial globalization?
+
+- The ratio of a country’s consumption to the volatility of its output should fall as more consumption smoothing is achieved.
+
+- In our model of a small, open economy that can borrow or lend without limit, this ratio should fall to zero when the gains from financial globalization are realized.
+
+-Since not all shocks are global, countries ought to be able to achieve some reduction in consumption volatility through external finance.
+
+## Some evidence {.m}
+
+![Feenstra & Taylor compute consumption volatility/output volatility of 166 countriesfrom 1990-2010, then arrange them from least open to most open. <100%=not volatile. Apparently even in a relatively open countries, (desile 8), ratio still exceed 100%](Picture1.jpg)
+
+## Remarks
+
+The lack of evidence suggests that some of the relatively high consumption volatility must be unrelated to financial openness.
+
+Consumption-smoothing gains in emerging markets require improving poor governance and weak institutions, developing their financial systems, and pursuing further financial liberalization. 
+
+## Sovereign Wealth Funds {.m}
+
+- Countries may engage in precautionary saving, whereby the government acquires a buffer of external assets, a “rainy day” fund. 
+
+- Precautionary saving is on the rise and takes two forms. The first is the accumulation of foreign reserves by central banks, which may be used to achieve certain goals, such as maintaining a fixed exchange rate, or as reserves that can be deployed during a sudden stop.
+
+- The second form is called sovereign wealth funds, whereby state-owned asset management companies invest some of the government savings.
+
+## SWF
+
+- During a three-year copper boom, Chile set aside $48.6 billion, more than 30 percent of the country’s gross domestic product, resisting calls for more government spending.
+
+- At the time, the finance minister Andrés Velasco was criticized for austerity, but after the global credit freeze in 2008, Chile unveiled a $4 billion package of tax cuts and subsidies, including aid to poor families.
+
+- “People finally understood what was behind his ‘stinginess’ of early years,” said Sebastian Edwards, a Chilean economist at the University of California, Los Angeles.
+
+## Efficient investment {.m}
+
+- Openness may also deliver gains by improving a country’s ability to augment its capital stock and take advantage of new production opportunities.
+
+- Assume that producing output requires labor and capital, which is created over time by investing output. 
+
+- When we make this change, the LRBC must be modified to include investment I as a component of GNE. We still assume that government consumption G is zero.
+
+- With this change, the LRBC becomes $0=\text{PV for TB}$
+
+## Efficient investment {.m}
+
+Since PV of TB is the difference between PV of Q and C,
+
+$$
+\text{PV of Q}=\text{PV of C}+\text{PV of I}
+$$
+
+- A closed economy, in which external borrowing and lending are not possible, the trade balance is zero in all periods, and the LRBC is automatically satisfied.
+
+- An open economy, in which borrowing and lending are possible, the trade balance can be more or less than zero, and we must verify that the LRBC is 
+
+## Efficient investment {.m}
+
+Baseline case, no investment: Q=100, C=100, I=0, TB=0. W=0
+
+- Now assume a shock in year 0 in the form of a new investment opportunity: requires an expenditure of 16 units, and will pay off in future years by increasing the country’s output by 5 units in year 1 and all subsequent years (but not in year 0).
+
+- Output would be 100 today, then 105 in every subsequent year. 
+
+- The present value of this stream of output is 100 plus 105/0.05 or 2,200, and the present value of consumption must equal 2,200 minus 16, or 2,184.
+
+## Efficient investment {.m}
+
+| period | 0 | 1 | 2 | 3 | 4 | ... | $r^*=0.05 |
+| ----- | --- | --- | --- | --- | --- | --- | --- |
+| GDP Q | 100 | 105 | 105 | 105 | 105 | ... | 2,079 |
+| GNE C | 104 | 104 | 104 | 104 | 104 | ... | 2,079 |
+| GNE I | 16 | 0 | 0 | 0 | 0 | ... | 16 |
+| TB | -20 | +1 | +1 | +1 | +1 | ...    | 0 |
+| NFIA | 0 | -1 | -1 | -1 | -1 | ... | - |
+| CA | -20 | 0 | 0 | 0 | 0 | ... | - |
+| W | -20 | -20 | -20 | -20 | -20 | ... | - |
+
+The economy run a deficit TB to invest, then surplus to pay em back.
+
+## Generalizing {.m}
+
+- Suppose that a country starts with zero external wealth, constant output Q, consumption C equal to output, and investment I equal to zero. 
+- An investment opportunity appears requiring ΔK units of output in year 0. This investment will generate an additional ΔQ units of output in year 1 and all later years (but not in year 0).
+
+$$
+\Delta PVQ=\frac{\Delta Q}{(1+r^*)}+\frac{\Delta Q}{(1+r^*)^2}+\frac{\Delta Q}{(1+r^*)^3}+\cdots=\frac{\Delta Q}{r^*}
+$$
+
+- Investment will increase the PV of C in and only if $\Delta Q/r^* \geq \Delta K$
+
+## Efficient investment {.m}
+
+The change in $PV(I)$ is simply $\Delta K$. Investment will increase the PV of consumption if and only if $\Delta Q/r^* \geq \Delta K$. Rearranging:
+
+$$
+\Delta Q \geq r^* \times \Delta K
+$$
+
+Dividing by $\Delta K$, investment is undertaken when
+
+$$
+\frac{\Delta Q}{\Delta K} \geq r^*
+$$
+
+Firms will invest in projects as long as the marginal product of capital, or MPK, is at least as great as the real interest rate.
+
+## Efficient investment
+
+- In an open economy, firms borrow and repay to undertake investment that maximizes the present value of output.
+
+- When investing, an open economy sets its MPK equal to the world real rate of interest.
+
+- In a closed economy, any resources invested are not consumed. More investment implies less consumption. This creates a trade-off.
+
+- Financial openness helps countries to “make hay while the sun shines” without having to engage in a trade-off against the important objective of consumption smoothing.
+
+## Norway case
+
+![](Picture2.png)
+
+## Can poor country gain?
+
+If the world real interest rate is r* and a country has investment projects for which MPK exceeds r*, then the country should borrow to finance those projects. 
+With this in mind, we ask: Why doesn’t more capital flow to poor countries?
+
+To look at what determines a country’s marginal product of capital, economists use a version of a production function that maps available capital per worker, k = K/L, and the prevailing level of productivity A to the level of output per worker, q = Q/L, where Q is GDP.
+
+## Production fn approach {.m}
+
+$$
+\underbrace{q}_{\text{Output per worker}}=\underbrace{A}_{\text{productivity level}} \times \underbrace{k^\theta}_{\text{Capital per worker}}
+$$
+
+where $\theta$ is a number between 0 and 1 that measures the contribution of capital to production, or the elasticity of capital with respect to output. θ is estimated to be 1/3, and setting the productivity level at 1, we have:
+
+$$
+q=k^{1/3}
+$$
+
+MPK, the slope of the production function is given by
+
+$$
+MPK=\frac{\Delta q}{\Delta k}=\theta Ak^{\theta-1}=\theta \times \frac{q}{k}
+$$
+
+## efficient investment {.m}
+
+- Assuming countries have the same level of productivity, A = 1, our model implies that the poorer the country, the higher its MPK, due to the assumptions of diminishing marginal product and a common productivity level.
+- Investment ought to be very profitable in Mexico (and India, and all poor countries).
+- Investment in Mexico should continue until rates of return are equalized. This trajectory is called convergence. 
+- If the world is characterized by convergence, countries can reach the level of capital per worker and output per worker of the rich country through investment and capital accumulation.
+
+---
+
+![](Picture3.png)
+
+---
+
+![](Picture4.png)
+
+## Lucas paradox
+
+In his widely cited article “Why Doesn’t Capital Flow from Rich to Poor Countries?” Nobel laureate Robert Lucas wrote:
+
+> If this model were anywhere close to being accurate, and if world capital markets were anywhere close to being free and complete, it is clear that, in the face of return differentials of this magnitude, investment goods would flow rapidly from the United States and other wealthy countries to India and other poor countries. Indeed, one would expect no investment to occur in the wealthy countries. . . .
+
+## Efficient investment
+
+To see why capital does not flow to poor countries, we now suppose that A, the productivity level, is different in the United States and Mexico, as denoted by country subscripts. Then:
+
+$$
+q_{US}=A_{US}k^{\theta}_{US} \ \ \ \ \ \ \ \ \ \ \ q_{US}=A_{MX}k^{\theta}_{MX} \\
+
+\frac{MPK_{MX}}{MPK_{US}}=\frac{\theta \ q_{MX}}{\theta q_{US}/k_{US}}=\frac{q_{MX}/q_{US}}{k_{MX}/k_{US}}
+$$
+
+## Efficient investment {.m}
+
+- The data show that Mexico’s capital per worker is about one-third that of the United States.
+- If the model were true, Mexico would have a level of output level per worker of (1/3)1/3 = 0.69 or 69% of the U.S. level. However, Mexico’s output per worker was much less, 43% of the U.S. level. 
+- This gap can be explained only by lower productivity in Mexico. We infer A in Mexico equals 0.43/0.69 = 63% of that in the United States, meaning Mexico’s production function and MPK curves are lower than those for the United States.
+- The MPK gap between Mexico and the United States is much smaller, which reduces the incentive for capital to migrate to Mexico from the United States.
+
+## A vs k {.m}
+
+- For many developing countries, the predicted gains due to financial globalization are large with the benchmark model, but small once we correct for productivity differences.
+- Allowing for productivity differences, investment will not cause poor countries to reach the same level of capital per worker or output per worker as rich countries.
+- Economists describe this outcome as one of long-run divergence between rich and poor countries. 
+- Unless poor countries can lift their levels of productivity, access to international financial markets is of limited use.
+- There are not enough opportunities for productive investment for complete convergence to occur.
+
+
 
 
