@@ -17,3 +17,4 @@ slides:
 - {{% staticref "/intfin/meeting4/index.html" "newtab" %}}Meeting 4: short-run XR and complete theory of exchange rate {{% /staticref %}}
 - {{% staticref "/intfin/meeting5/index.html" "newtab" %}}Meeting 5: National account & Balance of Payment {{% /staticref %}}
 - {{% staticref "/intfin/meeting6/index.html" "newtab" %}}Meeting 6: Gains from asset trade {{% /staticref %}}
+- [Meeting 7: IS-LM model](https://univindonesia-my.sharepoint.com/:p:/g/personal/imade_krisna_office_ui_ac_id/EVfvPMm_tQNHgysalwXbb94Bw8kiMzxPgQ45_OfC9o7hJg?e=68AQ52)
