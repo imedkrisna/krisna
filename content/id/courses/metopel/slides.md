@@ -30,11 +30,9 @@ slides:
 - {{% staticref "/metopel/meeting2/index.html" "newtab" %}}Pertemuan 2: R & RStudio{{% /staticref %}}
 - {{% staticref "/metopel/meeting3/index.html" "newtab" %}}Pertemuan 3: OLS{{% /staticref %}}
 - {{% staticref "/metopel/meeting4/index.html" "newtab" %}}Pertemuan 4: Multivariate & dummy regression{{% /staticref %}}
-- {{% staticref "/metopel/meeting5/index.html" "newtab" %}}Pertemuan 5: Gravitty & time series{{% /staticref %}}
-- {{% staticref "/metopel/meeting6/index.html" "newtab" %}}Pertemuan 6: Time series regression{{% /staticref %}}
-- {{% staticref "/metopel/meeting7/index.html" "newtab" %}}Pertemuan 7: ARDL dan Panel{{% /staticref %}}
-- {{% staticref "/metopel/meeting8/index.html" "newtab" %}}Pertemuan 8: Data ekonomi: cari di mana?{{% /staticref %}}
-- {{% staticref "/metopel/meeting9/index.html" "newtab" %}}Pertemuan 9: Visualisasi data untuk pemula{{% /staticref %}}
+- {{% staticref "/metopel/meeting5/index.html" "newtab" %}}Pertemuan 5: Gravity & time series{{% /staticref %}}
+- {{% staticref "/metopel/meeting8/index.html" "newtab" %}}Pertemuan 6: Data ekonomi: cari di mana?{{% /staticref %}}
+- {{% staticref "/metopel/meeting9/index.html" "newtab" %}}Pertemuan 7: Visualisasi data untuk pemula{{% /staticref %}}
 - {{% staticref "/metopel/meeting10/index.html" "newtab" %}}Pertemuan 10: Menggunakan Zotero{{% /staticref %}}
 - {{% staticref "/metopel/meeting11/index.html" "newtab" %}}Pertemuan 11: Menggunakan Quarto dan Github{{% /staticref %}}
 - {{% staticref "/metopel/meeting12/index.html" "newtab" %}}Pertemuan 12: Kerangka penelitian{{% /staticref %}}
