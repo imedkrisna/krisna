@@ -11,7 +11,7 @@
   <meta name="generator" content="quarto-1.3.450">
 
   <meta name="author" content="Metodologi penelitian">
-  <title>Literature Review</title>
+  <title>Menggunakan Quarto &amp; Github</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -29,71 +29,6 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-    /* CSS for syntax highlighting */
-    pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
-    .sourceCode { overflow: visible; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
-    @media screen {
-    div.sourceCode { overflow: auto; }
-    }
-    @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-    }
-    pre.numberSource code
-      { counter-reset: source-line 0; }
-    pre.numberSource code > span
-      { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
-      { content: counter(source-line);
-        position: relative; left: -1em; text-align: right; vertical-align: baseline;
-        border: none; display: inline-block;
-        -webkit-touch-callout: none; -webkit-user-select: none;
-        -khtml-user-select: none; -moz-user-select: none;
-        -ms-user-select: none; user-select: none;
-        padding: 0 4px; width: 4em;
-        color: #aaaaaa;
-      }
-    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-    div.sourceCode
-      { color: #003b4f; background-color: #f1f3f5; }
-    @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-    }
-    code span { color: #003b4f; } /* Normal */
-    code span.al { color: #ad0000; } /* Alert */
-    code span.an { color: #5e5e5e; } /* Annotation */
-    code span.at { color: #657422; } /* Attribute */
-    code span.bn { color: #ad0000; } /* BaseN */
-    code span.bu { } /* BuiltIn */
-    code span.cf { color: #003b4f; } /* ControlFlow */
-    code span.ch { color: #20794d; } /* Char */
-    code span.cn { color: #8f5902; } /* Constant */
-    code span.co { color: #5e5e5e; } /* Comment */
-    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
-    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
-    code span.dt { color: #ad0000; } /* DataType */
-    code span.dv { color: #ad0000; } /* DecVal */
-    code span.er { color: #ad0000; } /* Error */
-    code span.ex { } /* Extension */
-    code span.fl { color: #ad0000; } /* Float */
-    code span.fu { color: #4758ab; } /* Function */
-    code span.im { color: #00769e; } /* Import */
-    code span.in { color: #5e5e5e; } /* Information */
-    code span.kw { color: #003b4f; } /* Keyword */
-    code span.op { color: #5e5e5e; } /* Operator */
-    code span.ot { color: #003b4f; } /* Other */
-    code span.pp { color: #ad0000; } /* Preprocessor */
-    code span.sc { color: #5e5e5e; } /* SpecialChar */
-    code span.ss { color: #20794d; } /* SpecialString */
-    code span.st { color: #20794d; } /* String */
-    code span.va { color: #111111; } /* Variable */
-    code span.vs { color: #20794d; } /* VerbatimString */
-    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto.css">
   <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -392,8 +327,8 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Literature Review</h1>
-  <p class="subtitle">Pertemuan 13</p>
+  <h1 class="title">Menggunakan Quarto &amp; Github</h1>
+  <p class="subtitle">Pertemuan 11</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -404,325 +339,196 @@ Metodologi penelitian
 </div>
 
 </section>
-<section id="tentang-hari-ini" class="slide level2">
-<h2>Tentang hari ini 👀</h2>
+<section id="hari-ini" class="slide level2">
+<h2>Hari ini</h2>
 <ul>
-<li>Tips and trick</li>
-<li>Some tools</li>
-<li>diskusi</li>
+<li><p>Menggunakan quarto untuk menulis artikel.</p></li>
+<li><p>Menggunakan github untuk hosting tulisan anda.</p></li>
 </ul>
-<p>Tips yang ada di sini benar untuk penelitian secara umum. Di APP mungkin sedikit lebih sederhana ketimbang beberapa poin seperti mencari gap.</p>
 </section>
-<section id="literature-review" class="slide level2">
-<h2>Literature review?</h2>
+<section id="quarto" class="slide level2">
+<h2>Quarto</h2>
 <ul>
-<li><p>Peneliti pemula seringkali bingung bagaimana memulai tinjauan literatur</p></li>
-<li><p>Sebenarnya, tinjauan literatur (dan <em>referencing</em>) adalah <em>skill</em> yang kita perlukan untuk semua jenis pekerjaan!</p></li>
-</ul>
-<p><em>Literature review is actually an investigation!</em></p>
-</section>
-<section id="untuk-menulis-10-ribu-kata-anda-harus-membaca-100-ribu-kata" class="slide level2 m">
-<h2>Untuk menulis 10 ribu kata, anda harus membaca 100 ribu kata!</h2>
-<div>
-<p><span class="math display">\[\max_{B,T,S} \{f(B,T,S): B+T+S \leq 24\}\]</span></p>
-<p><span class="math inline">\(B&gt;T&gt;S\)</span></p>
-</div>
-<p>Baca <span class="math inline">\(\Rightarrow\)</span> Tulis <span class="math inline">\(\Rightarrow\)</span> Speak</p>
-<p>JANGAN KEBALIK!</p>
-<p>hehe 😊</p>
-</section>
-<section id="kenapa-melakukan-tinjauan-literatur" class="slide level2 m">
-<h2>Kenapa melakukan tinjauan literatur</h2>
+<li><p>Quarto adalah versi <em>upgrade</em> dari rscript.</p></li>
+<li><p>Dengan file quarto (ekstensi .qmd), anda bisa menggabungkan kode R anda dengan tulisan, dan dirender menjadi html, pdf dan word sekaligus.</p>
 <ul>
-<li>Kita tidak bisa meneliti sesuatu yang kita tidak tau!
-<ul>
-<li>mendapatkan konteks</li>
-<li>metode termutakhir</li>
-<li>mencari <em>gap</em> di literatur: metode / konteks</li>
+<li>setelah itu anda dapat edit wordnya.</li>
 </ul></li>
-<li>Meyakinkan pembaca bahwa riset kita <ins>relevan</ins>:
-<ul>
-<li>terupdate</li>
-<li>penting</li>
-</ul></li>
-<li>Bonus: membantu mengarahkan yang baru mau terjun ke bidang kita!</li>
+<li><p>Tapi kekuatan quarto yang sebenarnya (menurut saya) adalah render html-nya.</p></li>
 </ul>
 </section>
-<section id="beberapa-kesalahan-pemula" class="slide level2 m">
-<h2>Beberapa kesalahan pemula</h2>
-<table>
-<colgroup>
-<col style="width: 46%">
-<col style="width: 53%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Problem</th>
-<th>Komentar</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Kurang terorganisir</td>
-<td>fokus ke isu, bukan paper. Gunakan mindmap dapat membantu</td>
-</tr>
-<tr class="even">
-<td>Kurang relevan</td>
-<td>Seminal paper biasanya jadul. Penting, tapi fokus ke yang lebih baru</td>
-</tr>
-<tr class="odd">
-<td>Kurang kritis</td>
-<td>Ingat, anda bukan <ins>hanya</ins> merangkum, tapi juga mencari <em>gap</em></td>
-</tr>
-<tr class="even">
-<td>Takut salah</td>
-<td>Mahasiswa adalah tempatnya salah. Yang penting kita belajar dari situ</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="mulai-dari-mana" class="slide level2">
-<h2>Mulai dari mana?</h2>
+<section id="download-quarto" class="slide level2">
+<h2>Download Quarto</h2>
 <ul>
-<li>Kata kunci-nya adalah relevan!
-<ul>
-<li>meneliti tentang Kazakhstan bagi audience Indonesia mungkin kurang rame</li>
-</ul></li>
-<li>Paling mudah adalah mulai dari isu yang relevan dengan kita:
-<ul>
-<li>Misal, sesuatu yang kita sering dengar (misalnya korupsi daging sapi, omnibus law)</li>
-<li>Bisa juga yang relevan dengan kerjaan kita</li>
-</ul></li>
-<li>Bisa juga mulai dari metode.</li>
+<li><p>Quarto dapat didownload di <a href="https://quarto.org/docs/get-started/">sini</a>.</p></li>
+<li><p>Atau google aja “download quarto”</p></li>
+<li><p>Quarto dapat digunakan dengan VSCode, Jupyter, dan text editor lainnya. Di kuliah ini, kita pakai RStudio.</p></li>
 </ul>
 </section>
-<section id="mulai-dari-mana-1" class="slide level2">
-<h2>Mulai dari mana?</h2>
+<section id="download-quarto-1" class="slide level2">
+<h2>Download Quarto</h2>
+
+<img data-src="gambar1.jpg" class="r-stretch"></section>
+<section id="memulai-quarto" class="slide level2">
+<h2>Memulai Quarto</h2>
+
+<img data-src="gambar2.jpg" class="r-stretch quarto-figure-center"><p class="caption">Quarto dapat dimulai dengan `file -&gt; new file -&gt; quarto document</p></section>
+<section id="memulai-quarto-1" class="slide level2">
+<h2>Memulai Quarto</h2>
+
+<img data-src="gambar3.jpg" class="r-stretch quarto-figure-center"><p class="caption">silakan pilih html, bisa juga pdf atau word. lainnya cuekin</p></section>
+<section id="memulai-quarto-2" class="slide level2">
+<h2>Memulai Quarto</h2>
+
+<img data-src="gambar4.jpg" class="r-stretch quarto-figure-center"><p class="caption">akan ada file di lokasi kita edit rscript tapi bukan rscript</p></section>
+<section id="memulai-quarto-3" class="slide level2">
+<h2>Memulai Quarto</h2>
 <ul>
-<li>Sebagian besar pertanyaan di bidang ilmu ekonomi adalah tentang hubungan dua variabel:</li>
+<li><p>Quarto tidak dirun seperti rscript, tapi dirender.</p></li>
+<li><p>Sekali render, quarto akan menghasilkan file html, pdf atau docx tergantung pilihan di “format”.</p></li>
+<li><p>Note bahwa ekstensi Quarto adalah <code>.qmd</code> bukan <code>.r</code></p></li>
+<li><p>Diantara 3 dash (—) itu disebut metadata/options/header.</p></li>
+<li><p>Jika anda mulai dengan cara ini, options-nya terbatas di title, author dan format.</p></li>
 </ul>
-<blockquote>
-<p>Does X causes Y?</p>
-</blockquote>
-<p><span class="math display">\[ Y = X\beta + \varepsilon \]</span></p>
-<p>Kita bisa mulai mencari menggunakan kata kunci Y atau X, atau keduanya.</p>
 </section>
-<section id="mulai-dari-mana-2" class="slide level2">
-<h2>Mulai dari mana?</h2>
+<section id="menggunakan-format" class="slide level2">
+<h2>Menggunakan format</h2>
 <ul>
-<li><p>beberapa pertanyaan yang bisa dijawab, misalnya:</p>
+<li><p>Saya sudah menyiapkan <a href="https://1drv.ms/u/s!AjelszXKKcmsibt_MGYrBYBHznHTIw?e=yyphLf">format Quarto</a> untuk anda gunakan.</p></li>
+<li><p>Untuk ke depannya, mendingan pake format saya karena options-nya lebih lengkap.</p></li>
+<li><p>Untuk belajar apa aja yang ditaruh di options-nya, bisa ke <a href="https://quarto.org/docs/reference/formats/html.html">dokumentasi quarto</a> atau <a href="https://www.google.com/search?client=firefox-b-d&amp;q=quarto+yaml+options">google</a>.</p></li>
+</ul>
+</section>
+<section id="cara-pakai-quarto" class="slide level2">
+<h2>Cara pakai quarto</h2>
 <ul>
-<li><span class="math inline">\(Y \Rightarrow X\)</span> atau <span class="math inline">\(X \Rightarrow Y\)</span>?<br>
-</li>
-<li>bagaimana dengan <span class="math inline">\(Z\)</span>?<br>
-</li>
-<li>di Amerika, <span class="math inline">\(X \Rightarrow Y\)</span>. Bagaimana dengan di Indonesia?</li>
-<li>apa lagi kira-kira?</li>
+<li><p>gunakan tanda pagar (#) untuk judul. Perbanyak pagar untuk level heading yang lebih kecil.</p></li>
+<li><p>Selengkapnya dapat dibaca di <a href="https://quarto.org/docs/authoring/markdown-basics.html">markdown basic</a></p>
+<ul>
+<li><p>“Markdown syntax” = apa yang kita ketik di file <code>.qmd</code></p></li>
+<li><p>“output” = hasilnya ketika dirender.</p></li>
 </ul></li>
 </ul>
 </section>
-<section id="tabel-dapat-membantu-proses-berpikir-kita" class="slide level2 s">
-<h2>Tabel dapat membantu proses berpikir kita</h2>
-<table>
-<colgroup>
-<col style="width: 24%">
-<col style="width: 4%">
-<col style="width: 4%">
-<col style="width: 16%">
-<col style="width: 28%">
-<col style="width: 24%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Author</th>
-<th>Y</th>
-<th>X</th>
-<th>sign</th>
-<th>context</th>
-<th>method</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Amiti &amp; Konings 2007</td>
-<td>TFP</td>
-<td>input tariff</td>
-<td>+</td>
-<td>Indonesia, firm level</td>
-<td>levpet, gravity</td>
-</tr>
-<tr class="even">
-<td>Kee, Nicita, Olarreaga 2009</td>
-<td>import val</td>
-<td>NTM count</td>
-<td>+</td>
-<td>global</td>
-<td>cross-section gravity</td>
-</tr>
-<tr class="odd">
-<td>Fugazza, Olarreaga, Ugarte 2017</td>
-<td>export val</td>
-<td>NTM count</td>
-<td>+,-</td>
-<td>Peru</td>
-<td>gravity, firm size</td>
-</tr>
-<tr class="even">
-<td>Cadot et al 2015</td>
-<td>export val</td>
-<td>NTM count, Reg. dist.</td>
-<td>+</td>
-<td>global</td>
-<td>gravity cross-section</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>Contoh di atas adalah pencarian yang berfokus pada <span class="math inline">\(X\)</span>: Bagaimana Non-Tariff Measures (NTMs) mempengaruhi perdagangan dan produktivitas (dan lainnya kalau ada)</p>
-</blockquote>
-</section>
-<section id="diisi-juga-kontribusi-atau-gap" class="slide level2 s">
-<h2>Diisi juga kontribusi atau gap</h2>
-<table>
-<colgroup>
-<col style="width: 75%">
-<col style="width: 12%">
-<col style="width: 12%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Author</th>
-<th>+</th>
-<th>-</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Amiti &amp; Konings 2007</td>
-<td>Jurnal AER, konteks Indonesia, firm level, TFP</td>
-<td>Tidak ada NTM</td>
-</tr>
-<tr class="even">
-<td>Kee, Nicita, Olarreaga 2009</td>
-<td>Seminal utk AVE</td>
-<td>Terlalu global dan makro</td>
-</tr>
-<tr class="odd">
-<td>Fugazza, Olarreaga, Ugarte 2017</td>
-<td>heterogenous firm, firm level</td>
-<td>konteks Peru, export may not be best measure, no PPML</td>
-</tr>
-<tr class="even">
-<td>Cadot et al 2015</td>
-<td>Seminal NTM, konsep <em>regulatory distance</em></td>
-<td>Cross section, terlalu makro</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>Saya dapat berkontribusi di konteks Indonesia, firm level dengan TFP. Trade policy measures adalah tariff dan NTMs. Measures untuk firm level export dapat dipakai untuk <em>robustness</em>. Data ada, metode ada, export lebih baik dimodelkan dengan PPML. Sip!</p>
-</blockquote>
-</section>
-<section id="mulai-dari-mana-3" class="slide level2">
-<h2>Mulai dari mana?</h2>
+<section id="gambar" class="slide level2">
+<h2>Gambar</h2>
 <ul>
-<li><p>Literaturnya literatur: akan ada <em>author(s)</em> yang disebut berkali-kali oleh literatur yang anda sudah temukan.</p>
+<li><p>Untuk memasang gambar, anda harus meletakkan file gambarnya di folder yang sama dengan file qmd-nya.</p></li>
+<li><p>Misalnya di folder UAS ada file <code>index.qmd</code> dan <code>gambar1.jpg</code></p></li>
+<li><p>Anda bisa attach gambar di hasil render qmd-nya.</p></li>
+<li><p>lengkapnya di <a href="https://quarto.org/docs/authoring/figures.html">figure basic</a></p></li>
+</ul>
+</section>
+<section id="gambar-1" class="slide level2">
+<h2>Gambar</h2>
 <ul>
-<li><p>Trade context: Krugman, Melitz, Grossman &amp; Helpman, Bernard, Kee, Cadot</p></li>
-<li><p>General equilibrium: Hertel, Horridge, McKibbin, Dixon, Costinot</p></li>
-<li><p>Indonesian context: Sjoholm, Hill, Aswicahyono, Patunru, Sparrow</p></li>
+<li><p>Cara cepat untuk menaruh tabel atau diagram misalnya dapat dengan cara print screen atau pakai snip (tekan 🪟+<code>shift</code>+S)</p></li>
+<li><p>Lalu dicrop hanya part yang ingin anda attach di tulisan anda.</p></li>
+<li><p>save hasil cropnya dalam jpg atau png, lalu kopas ke folder anda.</p></li>
+</ul>
+</section>
+<section id="tabel" class="slide level2">
+<h2>tabel</h2>
+<ul>
+<li><p>Untuk tabel yang simpel, anda dapat gunakan markdown tabel seperti <a href="https://quarto.org/docs/authoring/tables.html">di sini</a></p></li>
+<li><p>Untuk tabel yang lebih ribet, anda dapat menggunakan tabel editor di qmd. Tekan tombol <code>visual</code>. lalu pilih <code>insert</code> lalu <code>table</code></p></li>
+<li><p>Jika tabelnya ribet banget, buat saja di excel, lalu discreenshot dan gunakan gambar.</p></li>
+</ul>
+</section>
+<section id="insert-table" class="slide level2">
+<h2>Insert table</h2>
+
+<img data-src="gambar4.jpg" class="r-stretch quarto-figure-center"><p class="caption">insert tabel ribet</p></section>
+<section id="r-codes" class="slide level2">
+<h2>R Codes</h2>
+<ul>
+<li><p>R codes dapat langsung ditulis di qmd anda, dan akan dirun ketika anda render.</p></li>
+<li><p>R codes harus diawali dengan 3 backticks (sebelah angka 1) dan {r}, diakhiri dengan tanda 3 backticks.</p></li>
+</ul>
+
+<img data-src="gambar12.jpg" class="r-stretch"></section>
+<section id="hasilnya" class="slide level2">
+<h2>Hasilnya</h2>
+
+<img data-src="index_files/figure-revealjs/unnamed-chunk-1-1.png" width="960" class="r-stretch"></section>
+<section id="template" class="slide level2">
+<h2>Template</h2>
+<ul>
+<li><p>Untuk tugas akhir anda, ambil template qmd yang sudah saya siapkan di <a href="https://1drv.ms/u/s!AjelszXKKcmsibt_MGYrBYBHznHTIw?e=5wZWyC">sini</a></p></li>
+<li><p>download juga <a href="https://1drv.ms/u/s!AjelszXKKcmsib94P19jDzQxzDKuiw?e=ZyhAXU">gambar logo APP</a> dan <a href="https://1drv.ms/x/s!AjelszXKKcmsib91KU4DqMfl5s0lfQ?e=m5n6aN">data latihan</a>.</p></li>
+<li><p>Simpan semuanya di 1 folder, buka file <code>index.qmd</code> dengan R Studio. Pastikan anda sudah install Quarto.</p></li>
+<li><p>Pelajari baik-baik file qmd-nya, lalu klik panah kecil di sebelah <span class="math inline">\(\Rightarrow\)</span>Render.</p></li>
+<li><p>Pilih Render HTML untuk render HTML, atau pilih Render MS Word untuk menjadikannya word.</p></li>
+</ul>
+</section>
+<section id="render" class="slide level2">
+<h2>Render</h2>
+
+<img data-src="gambar6.jpg" class="r-stretch"></section>
+<section id="render-1" class="slide level2">
+<h2>Render</h2>
+<ul>
+<li><p>Jika anda pilih Render HTML, di folder anda akan ada file baru yaitu <code>index.html</code> dan sebuah folder baru.</p></li>
+<li><p>Jika anda pilih Render MS Word, anda akan lihat file <code>index.docx</code>.</p></li>
+<li><p>Tentu keunggulan render MS Word adalah anda bisa melanjutkan ngedit di aplikasi word.</p></li>
+<li><p>Keunggulan HTML? tentu saja hosting di internet!</p>
+<ul>
+<li>word juga bisa dikopas ke wordpress sih, tapi kerenan github!</li>
 </ul></li>
-<li><p>Bisa juga tanya dosen</p></li>
 </ul>
 </section>
-<section id="mulai-dari-mana-4" class="slide level2">
-<h2>Mulai dari mana?</h2>
+<section id="github" class="slide level2">
+<h2>Github</h2>
 <ul>
-<li><p><em>report</em> lembaga penting seperti IMF, World Bank dan Kementerian/Lembaga.</p></li>
-<li><p><em>textbook</em> dan referensinya.</p></li>
-<li><p>Google (scholar) sangat berguna karena repositori-nya sangat luas. Namun harus agak berhati-hati. Pastikan yang anda sitasi adalah yang <em>peer-reviewed</em>.</p></li>
-<li><p>Mulai dari wikipedia jika anda bener-bener newb juga boleh. Jangan lupa lihat sitasi yang ada di Wikipedia, jangan Wikipedianya langsung ya.</p></li>
-<li><p>Jika ragu, tanya pembimbing anda.</p></li>
+<li><p>Github aslinya adalah sebuah website untuk hosting code projects (disebut juga dengan repository.</p></li>
+<li><p>Dia berfungsi sebagai version control dan melakukan kolaborasi terutama untuk project open source.</p></li>
+<li><p>Singkatnya, semua programer pasti pernah pake github.</p></li>
+<li><p>Namun github bisa menawarkan hosting mini untuk website anda.</p></li>
 </ul>
 </section>
-<section id="final-tips" class="slide level2">
-<h2>Final tips</h2>
+<section id="github-1" class="slide level2">
+<h2>Github</h2>
 <ul>
-<li><p>Tinjauan literatur sangat penting dilakukan meskipun skripsi anda tidak punya bab berjudul “tinjauan literatur”</p></li>
-<li><p>Baca bab <em>literature review</em> orang lain, dan coba bedah strukturnya</p></li>
-<li><p>Minta tolong orang lain membaca bab <em>literature review</em> anda (kalau ada)</p></li>
-<li><p>tanya dosen / pembimbing / teman anda yang pintar</p></li>
-</ul>
-</section>
-<section id="butuh-berapa-referensi" class="slide level2">
-<h2>butuh berapa referensi?</h2>
+<li><p>Buka github dan buat akun baru di <a href="https://github.com/signup?ref_cta=Sign+up&amp;ref_loc=header+logged+out&amp;ref_page=%2F&amp;source=header-home">sini</a></p></li>
+<li><p>pilih username yang cukup profesional dan mudah diingat.</p>
 <ul>
-<li><p><em>Rule of thumb</em> saya: minimal 10 referensi utama di 5 tahun terakhir, tentang metode.</p></li>
-<li><p>Dari 10 itu, ambil referensi mereka yang paling relevan (cek abstrak).</p></li>
-<li><p>Gunakan referensi lain untuk <em>setting</em> konteks.</p>
-<ul>
-<li>Misalnya, saya pake <a href="https://think-asia.org/handle/11540/6410">Patunru dan Rahardja (2015)</a> untuk pembukaan saja, bukan metodenya.</li>
+<li>username ini akan jadi bagian dari url website anda.</li>
 </ul></li>
-<li><p>Tapi jumlahnya kira-kira aja. Sebaiknya tanya pembimbing.</p></li>
+<li><p>Kode verifikasi akan dikirim ke email anda.</p></li>
+<li><p>kalau disuruh pilih paket, pilih yang free.</p></li>
 </ul>
 </section>
-<section id="mindmap" class="slide level2 m">
-<h2>Mindmap</h2>
+<section id="welcome-to-github" class="slide level2">
+<h2>Welcome to github</h2>
+
+<img data-src="gambar7.jpg" class="r-stretch"></section>
+<section id="github-2" class="slide level2">
+<h2>Github</h2>
+
+<img data-src="gambar8.jpg" class="r-stretch quarto-figure-center"><p class="caption">pilih skip personalization</p></section>
+<section id="membuat-website-github" class="slide level2">
+<h2>Membuat website github</h2>
+<iframe width="1000" height="600" src="https://www.youtube.com/embed/-NorOid-YQw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</section>
+<section id="more-on-quarto" class="slide level2">
+<h2>More on Quarto</h2>
 <ul>
-<li><p>Beberapa mindmap bisa digunakan, tapi favorit saya adalah connected papers (https://www.connectedpapers.com/)</p></li>
-<li><p>connected papers akan menunjukkan interkoneksi antar artikel. Cara cepat untuk mengetahui jaringan sitasi di sebuah isu.</p></li>
-<li><p>ukuran node menunjukkan besarnya sitasi, sementara ketebalan warna menunjukan keterbaruan.</p></li>
-<li><p>contohnya ketika kita mencari <a href="https://www.connectedpapers.com/search?q=melitz%202003">Melitz 2003</a></p></li>
-<li><p>Menariknya, koneksi berbasis isu juga ditampilkan. Lebih keliatan jika kita cari artikel yang belum ada sitasinya. Misalnya <a href="https://www.connectedpapers.com/search?q=krisna%20gupta">krisna gupta</a></p></li>
+<li><p>Quarto jauh lebih sakti daripada sekedar buat 1 artikel.</p></li>
+<li><p>Quarto dapat digunakan untuk membuat website dari 0 (dengan mayoritas ekstensi html), membuat presentasi (kuliah ini dibuat dengan Quarto), dan masih banyak lagi.</p>
+<ul>
+<li>membuat website dari 0 jauh lebih susah daripada wordpress atau blogpost, tapi jauh lebih customizable.</li>
+</ul></li>
+<li><p>Jika anda tertarik, anda dapat belajar quarto dan RStudio sendiri lebih jauh.</p></li>
 </ul>
 </section>
-<section id="menggunakan-reference-manager" class="slide level2">
-<h2>Menggunakan <em>reference manager</em></h2>
+<section id="next-3-meetings" class="slide level2">
+<h2>Next 3 meetings</h2>
 <ul>
-<li><p><em>Reference manager</em> adalah piranti lunak yang sangat membantu dalam me-<em>manage</em> daftar pustaka kita.</p></li>
-<li><p>Dengan <em>Reference manager</em>, kita bisa dengan cepat melakukan sitasi dan membuat daftar pustaka dengan format yang kita inginkan.</p></li>
-<li><p><em>Reference manager</em> juga membantu kita mengelompokan dan memasang tag di referensi-referensi kita.</p></li>
-<li><p>Zotero dan Mendeley termasuk <em>software</em> gratisan yang paling terkenal. Google Scholar Library juga layak coba</p></li>
-</ul>
-</section>
-<section id="menggunakan-google-scholar" class="slide level2">
-<h2>Menggunakan google scholar</h2>
-<p>gunakan AND atau &amp; untuk irisan, dan OR untuk <em>union</em></p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a>Indonesia AND Australia <span class="co"># will show only Indonesia &amp; AUstralia included</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a>Indonesia OR Australia <span class="co"># will show results also when only one of them is present</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="menggunakan-google-scholar-1" class="slide level2">
-<h2>Menggunakan google scholar</h2>
-<p>gunakan tanda petik untuk mencari satu rangkaian kata</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="co">"the case of indonesia"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>gunakan author:“nama-author” untuk mencari karya peneliti tersebut</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a>author:<span class="st">"Costinot"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>gunakan <code>..</code> untuk memberi interval di pencarian kita</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a>Indonesia AND Trade <span class="fl">2010..2018</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="menggunakan-google-scholar-2" class="slide level2">
-<h2>Menggunakan google scholar</h2>
-<ul>
-<li><p>pakai tanda bintang untuk mencari lanjutan. Misalnya, <code>indust*</code> akan mencarikan <code>industri</code>, <code>industry</code>, <code>industrial</code> dan <code>industrialisasi</code>.</p></li>
-<li><p>gunakan tanda tanya untuk mencari produk yang ejaannya berbeda. Misalnya, <code>labo?r</code> akan menemukan sesuatu yang ada kata <code>labor</code> dan <code>labour</code></p></li>
-<li><p>Trik asterisk juga bisa digunakan untuk ejaan berbeda, misalnya <code>globali*</code> akan menemukan <code>globalization</code> dan <code>globalisation</code></p></li>
-<li><p>Selengkapnya bisa google <code>wildcard search</code></p></li>
-</ul>
-</section>
-<section id="kesimpulan" class="slide level2">
-<h2>Kesimpulan</h2>
-<ul>
-<li><p>Tinjauan literatur sejatinya adalah investigasi</p></li>
-<li><p>Kata kuncinya adalah relevan!</p></li>
-<li><p>Gunakan semua resources yang ada!</p></li>
-<li><p>Jika bingung, tanya pembimbing</p></li>
-</ul>
-</section>
-<section id="references" class="slide level2">
-<h2>References</h2>
-<ul>
-<li><p>Lange, Cheryl. (N.D.). <a href="https://www.student.uwa.edu.au/__data/assets/pdf_file/0011/2521658/3_Write_literature_review_sem1.pdf?utm_content=bufferbbda3&amp;utm_medium=social&amp;utm_source=twitter.com&amp;utm_campaign=buffer">Writing your literature review</a>. <em>Studysmarter research series</em>. The University of Western Australia.</p></li>
-<li><p>Rowland, DR. (N.D.). <a href="https://my.uq.edu.au/files/11020/guide-literature-review-research-students.pdf?utm_content=buffer0f227&amp;utm_medium=social&amp;utm_source=twitter.com&amp;utm_campaign=buffer">Reviewing the literature: a short guide for research students</a>. The University of Queensland.</p></li>
+<li><p>fokus ke cara menulis dan berbagai alternative methods.</p></li>
+<li><p>mostly nggak pakai software lagi.</p></li>
+<li><p>Karena anda udah bisa quarto, buat dulu aja templatenya. nanti diedit2 sambil kita belajar cara menulis.</p></li>
+<li><p>next up: Kerangka, literature review, methods.</p></li>
 </ul>
 <div class="footer footer-default">
 
@@ -941,6 +747,44 @@ Metodologi penelitian
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {

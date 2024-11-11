@@ -1,0 +1,361 @@
+---
+title: "ARDL dan Panel regression"
+subtitle: "Pertemuan 7"
+author: "Metodologi penelitian"
+format: 
+  revealjs:
+    theme: [simple,../mytheme.scss]
+    chalkboard: true
+    incremental: false
+    transition: convex
+    background-transition: fade
+    slide-number: true
+---
+
+## So far
+
+- Kita sudah membahas data cross-section (bermacam-macam individu, 1 waktu) dan data time series (waktunya banyak tapi hanya track 1 individu).
+
+- Hari ini, terakhir untuk teknik regresi:
+    - Time series dengan lebih dari 1 variabel: ARDL
+    - Regresi 2 index: individu dan waktu, yaitu regresi panel data.
+    - Tentang UTS dan what's next.
+
+## Packages & plot
+
+```{r}
+#| echo: true
+#| warning: false
+library(tidyverse) # untuk pivot longer
+library(kableExtra) # untuk bikin tabel di slide
+library(readxl)
+library(writexl)
+library(ARDL)
+library(plm)
+```
+
+```{r}
+plot<-ggplot()+theme_classic() +
+  theme(panel.background = element_rect(fill = "#f0f1eb",
+                                        colour = "#f0f1eb"),
+        plot.background = element_rect(fill = "#f0f1eb"),
+        legend.key = element_rect(fill = "#f0f1eb",linetype = "blank"),
+        legend.background = element_rect(fill="#f0f1eb"))
+```
+
+## ARDL
+
+- ARIMA mengandalkan dirinya sendiri untuk melakukan forecasting.
+
+    - Variabelnya wajib stasioner.
+    
+    - Kadang, variabel lain berpengaruh.
+    
+- Auto-Regressive Distributed Lag (ARDL) adalah teknik yang dapat digunakan untuk variabel yang tidak stasioner.
+
+    - Tapi perlu ada variabel lain untuk kointegrasi.
+    
+## Data ARDL {.scrollable}
+
+```{r}
+dat<-read_excel("latihan8.xlsx")
+dat |> kbl() |> kable_styling(bootstrap_options = c("striped", "hover"))
+```
+    
+## Data
+
+- Data di atas adalah data ekspor dan impor barang yang terkait dengan industri makanan dan minuman.
+    
+    - first difference dari log.
+    
+    - ekspor produk final (dfx), ekspor bahan baku (dintx), impor produk final (dfm) dan impor bahan baku (dintm).
+    
+- Data ini merupakan salah satu data yang digunakan dalam penelitian [Amanta & Gupta (2021)](https://cutt.ly/cips-mk51).
+
+    - melihat GVC di industri pangan: seberapa besar impor bahan baku berdampak ke ekspor barang jadi.
+
+## Plot
+
+```{r}
+dat$Year<-as.Date(as.character(dat$Year),format="%Y")
+dat2<-pivot_longer(data=dat,!Year,names_to="wew",values_to = "values")
+plot+geom_line(data=dat2,aes(x=Year,y=values,color=wew))
+```
+
+## auto ARDL
+
+```{r}
+#| echo: true
+reg1<-auto_ardl(dfx~dintm+dfm,data=dat,max_order = 5)
+reg1
+```
+
+## Auto ARDL
+
+- urutan lag-nya sesuai urutan di formula.
+
+- auto ARDL melakukan iterasi beberapa kali untuk spesifikasi berbeda-beda, seperti ARIMA.
+
+- Namun dapat kita lihat, jika seriesnya terlalu pendek, iterasinya kurang.
+
+    - AIC baru muncul di spesifikasi dengan lag lebih sedikit.
+    
+- Kita gunakan lag 1,5,1
+
+## ARDL
+
+```{r}
+#| echo: true
+reg1<-ardl(dfx~dintm+dfm,data=dat,order = c(1,5,1))
+summary(reg1)
+```
+
+## Hasilnya
+
+- dapat kita lihat bahwa di industri makanan, pertumbuhan impor bahan baku secara signifikan meningkatkan pertumbuhan ekspor barang jadi.
+
+    - 1% kenaikan pertumbuhan impor bahan baku sejalan dengan 0,96% kenaikan pertumbuhan ekspor barang jadi.
+    
+- AR-based regression membutuhkan series yang panjang.
+
+    - Idealnya dilakukan dengan high-frequency data (bulanan, harian, kuartalan)
+
+## Data Panel
+
+- Hari ini kita belajar gabungan cross-section & time series: data panel.
+
+    - Punya informasi dari variasi individu dan variasi waktu.
+    
+    - Punya masalah keduanya: heteroskedastis dan autokorelasi.
+    
+- Secara umum, manfaatnya lebih besar daripada masalahnya.
+
+## Struktur data panel
+
+- Secara umum, ada 2 struktur data panel yang mungkin akan anda sering dapatkan. 
+
+- wide: jika bentuk datanya melebar ke samping, antara waktunya atau variabel individunya yang ke samping.
+
+- long: jika nama individu dan tahunnya sama-sama jadi variabel sendiri, dan datanya jadi panjang ke bawah.
+
+- Umumnya, data wide lebih enak dilihat jika variabelnya cuma 1, tapi data long lebih mudah digunakan.
+
+## Wide dan long
+
+<iframe src="https://onedrive.live.com/embed?cid=ACC929CA35B3A537&resid=ACC929CA35B3A537%21106424&authkey=ADmDun2ljLyEYzc&em=2" width="900" height="500" frameborder="0" scrolling="yes"></iframe>
+
+## Menuliskan persamaan
+
+- Karena ada 2 index yaitu individu dan waktu, maka regresi data panel ada 2 subscript:
+
+$$
+Y_{it}=\beta_0 + \beta_1 X_{it} + \mu_{it}
+$$
+
+- Di contoh wide barusan, kita bisa lihat bahwa yg $i$ adalah yang ke bawah, sementara yang $t$ adalah yang ke samping. Variabelnya sendiri adalah si angka PDB per kapita.
+
+- Di contoh long, $i=$ country, $t=$year, dan variabelnya sendiri adalah kolom $PDBperkapita$
+
+## Mengubah wide jadi long {.m}
+
+- Di R (maupun aplikasi lainnya), biasanya kita lebih sering menggunakan long.
+
+    - lebih mudah jika $i$ dan $t$-nya ada nama kolomnya.
+    
+    - Kita biasanya akan punya lebih dari 1 variabel.
+    
+- Di package "tidyverse", ada command yang namanya `pivot_longer()` yang dapat kita gunakan untuk mengubah data wide jadi data long.
+
+- Untuk regresi panel data maupun membuat grafik, kita akan selalu menggunakan format data long.
+
+    - Data hari ini didownload dari [World Bank](data.worldbank.org)
+    
+    - Semuanya berbentuk wide, jadi saya long-in dulu. Sumber data lain biasanya sudah otomatis long.
+    
+## Mengubah wide jadi long
+
+```r
+library("tidyverse") # untuk command pivot_longer()
+library("readxl") # untuk command read_excel()
+library("writexl") # untuk command write_xlsx()
+dat<-read_excel("wide.xlsx")
+dat2<-pivot_longer(data=dat,cols=!country, names_to="year",values_to="PDBperkapita")
+# tanda seru (!) di depan country maksudnya mau bilang "kecuali country, semua dibuat long"
+write_xlsx(dat2,"long.xlsx")
+```
+## Data
+
+- "latihan7.xlsx" adalah file excel yang berisi PDB per kapita, ekspor, dan impor dalam Dolar AS.
+
+    - ada 5 negara dan range tahun 1967-2021.
+    
+    - dengan kata lain, $i=$negara dan $t=$tahun.
+    
+- Datanya bersumber dari World Bank, tapi sudah dibuat jadi long.
+
+## Data
+
+```{r}
+#| echo: true
+dat<-read_excel("latihan7.xlsx")
+dat$year<-as.Date(dat$year,"%Y") # mengubah year dari chr ke tss
+```
+
+## Intermezzo: chr vs ts
+
+::: panel-tabset
+
+### Tanpa as.Date
+
+```{r}
+#| echo: true
+read_excel("latihan7.xlsx")
+```
+
+### Dengan as.Date
+
+```{r}
+#| echo: true
+dat<-read_excel("latihan7.xlsx")
+dat$year<-as.Date(dat$year,"%Y") # mengubah year dari chr ke tss
+dat
+```
+
+:::
+
+## Plot the data: PDB per capita
+
+```{r}
+plot+geom_line(data=dat,aes(x=year,y=PDBperkapita,color=country))
+```
+
+## Plot the data: exports
+
+```{r}
+plot+geom_line(data=dat,aes(x=year,y=export,color=country))
+```
+
+## Plot the data: imports
+
+```{r}
+plot+geom_line(data=dat,aes(x=year,y=import,color=country))
+```
+
+## Regresi panel
+
+- Sebelum melakukan regresi panel, pastikan bentuk datanya long.
+
+- Kita dapat melakukan regresi biasa menggunakan `lm()`.
+
+    - disebut juga pooled OLS / pooling.
+    
+    - kita anggap setiap negara tidak ada perbedaan, setiap tahun tidak ada perbedaan.
+    
+    - keunggulan panel di sini hanya memberikan kita data yang lebih banyak.
+    
+## Regresi panel
+
+- Namun keuntungan panel adalah kita dapat melakukan regresi untuk masing-masing $i$.
+
+- Regresi ini disebut Fixed effect regression:
+
+$$
+Y_{it}=\alpha_i + \beta_1 X_{1,it} + \mu_{it}
+$$
+di mana $\alpha_i$ adalah time-invariant intercept untuk masing-masing $i$.
+
+- Mengurangi bias karena tiap negara pastinya beda-beda.
+
+## Regresi Panel: pooled OLS
+
+```{r}
+#| echo: true
+reg2<-lm(LP~LX+LM,data=dat)
+summary(reg2)
+```
+
+## Residuals pooled
+
+```{r}
+#| echo: true
+dat$u<-resid(reg2)
+plot(dat$LP,dat$u)
+```
+
+## Regresi Panel: fixed effect
+
+```{r}
+#| echo: true
+reg3<-plm(LP~LX+LM,data=dat,index=c("country","year"))
+summary(reg3)
+```
+
+## Residuals fixed effect
+
+```{r}
+#| echo: true
+dat$u2<-residuals(reg3)
+plot(dat$u2)
+```
+
+## Panel data
+
+- Jika memang tiap negara sama, maka hasil dari fixed effect = pooling.
+
+    - jika beda, kita akan memilih fixed effect karena bias antar-individu diatasi dengan $\alpha_i$
+    
+- dari contoh sebelumnya, kita bisa lihat bahwa betanya beda.
+
+    - dari residuals, tiap negara punya residual masing-masing.
+    
+- Tapi jelas dari residuals bahwa masih ada hal yang perlu kita kontrol.
+
+## Metode penelitian
+
+- Berbagai metode kualitatif:
+
+    - regresi multivariat: nominal, log-log, dan dummy.
+    
+    - ARIMA dan ARDL.
+    
+    - Regresi panel: Pooled dan fixed effect.
+
+- Teknik-teknik cukup oke untuk ditunjukkan ke orang lain.
+
+- Anda harus paham kekurangan metode-metode ini.
+
+## Langkah-langkah penelitian
+
+- Tujuan penelitian: melihat hubungan $X$ dan $Y$
+
+- Grafik $X$ dan $Y$: scatterplot atau line.
+
+- Regresi
+
+- plot error terhadap $X$ dan $Y$
+
+- Diskusi hasil dan keterbatasan
+
+## Post-UTS
+
+- Kita akan membahas praktis penulis (less teori, more praktik)
+
+- Sangat penting untuk membuat framework penulisan.
+
+- Sumber data sekunder yang sering dipakai dan bagaimana mendownloadnya.
+
+- Visualisasi dengan ggplot.
+
+- Membuat daftar pustaka.
+
+## Tentang UTS
+
+- UTS akan berlangsung selama 2 jam.
+
+- Close everything kecuali:
+
+    - kalkulator (bukan handphone/smartphone).
+
+    - 1 lembar A4 bolak balik, bebas diisi apa saja.
+    
+- Tidak akan disuruh regresi, tapi mungkin akan disuruh menerjemahkan tabel regresi.

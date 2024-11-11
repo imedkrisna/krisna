@@ -1,136 +1,182 @@
 ---
-title: "Menulis metodologi"
-subtitle: "Pertemuan 14"
+title: "Menggunakan Zotero"
+subtitle: "Pertemuan 10"
 author: "Metodologi penelitian"
 format: 
   revealjs:
     theme: [simple,../mytheme.scss]
     chalkboard: true
+    incremental: false
     transition: convex
     background-transition: fade
     slide-number: true
-    incremental: false
 ---
 
 ## Hari ini
 
-- Bagaimana mempresentasikan data dalam tulisan ilmiah.
+- Menggunakan Reference manager untuk menyimpan dan memformat referensi.
 
-- Bagaimana menulis metode dalam tulisan ilmiah.
+- Mengisi library Zotero
 
-- beberapa metode selain regresi yang sering digunakan.
+- Mengatur Style
 
-## Data
+## Reference manager
 
-- Bagian data diperlukan untuk menceritakan sedikit data yang digunakan.
+- adalah _software_ yang biasa digunakan akademisi untuk _manage_ daftar pustaka.
 
-- Kita harus menceritakan beberapa informasi tentang data tersebut, seperti sumber data, definisi, satuan yang digunakan, dan hal-hal penting lainnya.
+- Menggunakan reference manager tidak wajib!
 
-- Contohnya jika anda menggunakan data dari WDI, ceritakan sedikit tentang apa itu WDI, lalu bahas indikator apa saja yang digunakan.
-
-## Contoh basis data
-
-Jika data diambil dari sebuah _database_, maka ceritakan secara singkat tentang _database_ tersebut.
-
-> Penelitian ini menggunakan data dari World Development Indicators (WDI). WDI merupakan basis data yang dikelola World Bank, sebuah lembaga internasional. WDI memiliki lebih dari 1000 indikator penting dari sekitar 200 negara dengan rentang waktu yang bervariasi.
-
-## contoh variabel
-
-Kemudian, sebutkan variabel yang digunakan, lalu ceritakan sedikit tentang definisi, alat ukur, dan informasi relevan lainnya.
-
-> Variabel yang menjadi fokus penelitian ini adalah total ekspor, Produk Domestik Bruto (PDB), jarak, dan status FTA. Total ekspor adalah total ekspor Indonesia ke beberapa negara tujuan dengan satuan yang digunakan adalah milyar dolar Amerika (USD)....
-
-Anda juga dapat menceritakan informasi menarik misalnya ekspor Indonesia paling tinggi adalah ke negara X,Y dan Z.
-
-## Summary
-
-- Jika data yang anda gunakan sedikit, anda dapat menggunakan tabel untuk menampilkan keseluruhan data anda.
-
-- Jika data anda banyak, pakai summary statistics aja. Summary statistics (udah dipelajari lho waktu mat&stat) umumnya berisi informasi tentang rata-rata dan rentang.
-
-- jadi itung aja rata-rata dan standar deviasi setiap variabel, lalu buat ini dalam tabel.
-
-- di R, anda dapat menggunakan `summary()`.
-
-- kalo udah ada summary-nya, bisa dibahas jika ada info menarik dari situ.
-
-## Summary
-
-```{r}
-#| echo: true
-library(tidyverse)
-library(readxl)
-dat<-read_excel("latihan4.xlsx")
-summary(dat)
-```
-
-## Method
-
-- Jika anda menggunakan regresi, maka di part inilah anda menuliskan rumus regresinya.
-
-- Kemudian jelaskan setiap notasi dan variabelnya.
-
-- Jangan lupa, yang terpenting adalah anda menjelaskan logika dari persamaan regresi yg digunakan masuk akal.
-
-    - misalnya, kenapa meregresikan impor terhadap PDB adalah ide bagus?
+    - tapi kalo udah ahli, akan sangat membantu
     
-## Contoh method
+- Reference manager berguna untuk menyimpan referensi-referensi.
 
-Jika anda menggunakan gravity, maka anda bisa mulai dengan menulis rumus regresi, misalnya:
-
-$$
-Ex_i = \beta_0 + \beta_1 PDB_i + \beta_2 jarak_i + \beta_3 FTA_i + \varepsilon_i
-$$
-
-> di mana Ex adalah nilai ekspor Indonesia ke negara tujuan, PDB adalah PDB dari negara tujuan ekspor, jarak adalah jarak antara Indonesia dengan negara tujuan ekspor, dan FTA adalah sebuah dummy variable bernilai 1 jika Indonesia dan negara tujuan ekspor memiliki perjanjian perdagangan bebas.
-
-## Hipotesis
-
-Anda juga perlu menjelaskan hipotesis penelitian anda dengan mengngunakan rumus yg dipakai.
-
-$$
-Ex_i = \beta_0 + \beta_1 PDB_i + \beta_2 jarak_i + \beta_3 FTA_i + \varepsilon_i
-$$
-
-> Jika sesuai teori, maka koefisien regresi dari PDB akan positif, jarak akan negatif, dan FTA akan positif.
+    - dapat juga otomatis format APA7 yg digunakan oleh APP.
     
-## math mode
+## Kenapa Zotero
 
-- Anda dapat menggunakan tanda `$$` untuk masuk ke math mode di quarto.
+- Depannya G!
 
-```
-$$
-Ex_i = \beta_0 + \beta_1 PDB_i + \beta_2 jarak_i + \beta_3 FTA_i + \varepsilon_i
-$$
-```
+::: {.fragment}
+GRATIS!
+:::
 
-$$
-Ex_i = \beta_0 + \beta_1 PDB_i + \beta_2 jarak_i + \beta_3 FTA_i + \varepsilon_i
-$$
+::: {.fragment}
+- cukup simpel dan powerful.
 
-Jika susah, pake gambar aja. tulis di word atau tulis tangan, lalu foto, trus masukin sebagai gambar dengan
+- Mendeley juga gratis sih, tapi Zotero karena lebih simpel dan [non-profit](https://www.google.com/search?client=firefox-b-d&q=whos+behind+zotero).
 
-`![](gambar.jpg)`
+- Dokumentasi Zotero [di sini](https://www.zotero.org/support/quick_start_guide)
+:::
 
-## Alternative method: RCA
+## Install Zotero
 
-$$
-RCA_Cg=\frac{\frac{X_Cg}{X_C}}{\frac{X_Wg}{X_W}}
-$$
+Ada setidaknya 2 cara download Zotero:
 
-di mana:
+- Download di [Zotero.org/download](https://www.zotero.org/download/).
 
-$X_{cg}$ = nilai ekspor barang $g$ oleh negara $C$
+- Google "Download Zotero".
 
-$X_{c}$ = nilai total ekspor negara $C$
+Anda dapat download Zotero Connector juga untuk browser. Tapi ini ga wajib.
 
-$X_{Wg}$ = nilai total ekspor dunia dari barang $g$
+Anda juga bisa buat akun Zotero untuk cloud tapi storagenya kecil.
 
-$X_{W}$ = nilai total ekspor dunia
+## Menggunakan Zotero
 
-## Some tips
+- Pertama kali dibuka, library anda pasti kosong.
 
-## Referensi
+- Anda harus menambahkan library dengan sitasi baru.
 
-Plummer, M. G., Cheong, D., & Hamanaka, S. (2010). Methodology for impact assessment of free trade agreements. In. Manila, Philippines: Asian Development Bank. [link](https://www.adb.org/publications/methodology-impact-assessment-free-trade-agreements)
+- Anda harus ngeset mau pakai style apa.
+
+- Anda dapat menggunakan Zotero Connector (browser) dan word plugin (microsoft word atau libreoffice).
+
+## Tampilan Zotero
+
+![Kalau baru pertama kali, pasti masih pada kosong](gambar1.jpg)
+
+## Tampilan Zotero
+
+![Gunakan tombol yg dilingkari untuk nambah folder](gambar2.jpg)
+
+## Tambah folder atau library {.m}
+
+- folder atau library digunakan untuk mengelompokkan koleksi referensi anda.
+
+- Misalnya anda punya 1 folder isinya referensi untuk tugas, klik gambar folder lalu tulis "tugas metopel" misalnya.
+
+- nanti tiap nambah koleksi, anda bisa click+drag koleksi tersebut ke folder tugas.
+
+- Pas mau nulis tugas akhir, tambah lagi folder "TA", misalnya. Nanti folder itu tinggal diisi semua refernsi yg dipake untuk bikin TA.
+
+## Mengisi library
+
+![Untuk nambah koleksi, tekan tanda plus hijau, lalu pilih sesuai referensinya](gambar3.jpg)
+
+## Mengisi library
+
+![Misalnya memilih journal article, infonya diisi di panel kanan](gambar4.png)
+
+## Mengisi library
+
+- Meskipun anda pilih book misalnya, pilihan yg paling atas masih bisa diganti jadi journal article atau lainnya.
+
+- yang jelas, anda harus isi semuanya dengan isian yang diperlukan, seperti Judul, Author (penulis), Publication (nama jurnalnya), Volume, Issue, dst.
+
+- Nama penulis harus last name dulu baru first name, bisa ditambah sebanyak mungkin.
+
+## Latihan
+
+- Coba isi referensi-referensi berikut ini:
+
+    - [Journal article ini](https://onlinelibrary.wiley.com/doi/10.1111/twec.13231)
+    
+    - [Book Chapter ini, chapter 10](https://penerbit.brin.go.id/press/catalog/book/537)
+
+    - [Berita ini (News Article)](https://www.republika.co.id/berita/rae295349/peneliti-neraca-komoditas-pangan-terganjal-data-akurat)
+    
+    - [Policy paper ini](https://www.cips-indonesia.org/publications/the-advent-of-a-new-trade-governance-after-the-omnibus-law%3A-neraca-komoditas?lang=id)
+    
+## FAQ
+
+- Kalo ga ada nama penulisnya gimana?
+
+    - kosongin aja, atau isi nama institusinya. Untuk nama institusi, isi aja di last name
+    
+- Kalo ngga ada opsi tipe artikelnya gimana?
+
+    - bisanya policy paper, itu ga ada opsinya. gpp pilih aja journal article. Isi yg bisa diisi aja.
+    
+## Cara setting style
+
+- Politeknik APP menggunakan American Psychological Association 7th Edition, atau APA7.
+
+- Kita harus set Zotero ke APA7 dulu sebelum dipakai.
+
+- Klik `Edit` lalu pilih `preferences`
+
+- di tab "cite", pilih "American Psychological Association 7th Edition"
+
+## Style
+
+![](gambar5.png)
+
+## Style
+
+- Jika di Zotero anda belum ada APA7, maka harus install dulu.
+
+- klik "Get additional styles..." (tulisan biru).
+
+- di kolom search, ketik "APA".
+
+- pilih "American Psychological Association 7th Edition", lalu tunggi dia install.
+
+- step ini perlu internet. Tapi kalau sudah diinstall udah ga perlu internet lagi.
+
+## memunculkan referensi
+
+- Blok referensi yang mau dimasukin ke tulisan dengan ctrl+klik kiri.
+
+- Klik kanan, lalu pilih "create bibliography from item...."
+
+- pilih APA7, centang "bibliography" dan "copy to clipboard".
+
+- paste di word atau di qmd.
+
+## Memunculkan referensi
+
+![](gambar7.jpg)
+
+## Tips & trick
+
+- Gunakan google untuk membantu prolem solving, misalnya ketika ada sumber yang anda nggak tau gimana cara cite nya.
+
+- Selalu gunakan folder untuk mengelompokan referensi project anda, sehingga lebih mudah ketika ctrl+click.
+
+- Output dari Zotero bisa jadi kurang sempurna. Selalu cek hasilnya setelah library dari Zotero di-paste di daftar pustaka anda.
+
+- Dengan qmd, anda juga bisa menggunakan apa yang disebut bibtex. agak lebih advance, tapi bisa membantu kalau anda akan sering nulis akademis.
+
+## Video
+
+<iframe width="1000" height="600" src="https://www.youtube.com/embed/IyTZBFNAYBo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 

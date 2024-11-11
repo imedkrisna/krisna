@@ -1,333 +1,244 @@
 ---
-title: "Beginner Data Viz"
-subtitle: "Pertemuan 9"
+title: "Literature Review"
+subtitle: "Pertemuan 13"
 author: "Metodologi penelitian"
 format: 
   revealjs:
     theme: [simple,../mytheme.scss]
     chalkboard: true
-    incremental: false
     transition: convex
     background-transition: fade
     slide-number: true
+    incremental: false
 ---
 
-## Hari ini
+## Tentang hari ini 👀
 
-- Menggambar dengan ggplot
+- Tips and trick
+- Some tools
+- diskusi
 
-    - scatter untuk cross section
-    
-    - garis untuk time series dan panel
-    
+Tips yang ada di sini benar untuk penelitian secara umum. Di APP mungkin sedikit lebih sederhana ketimbang beberapa poin seperti mencari gap.
 
-## Kenapa dataviz
+## Literature review?
 
-- Dataviz (kependekan dari data visualization) merupakan teknik yang digunakan untuk mempresentasikan data dalam bentuk yang lebih _user friendly_ atau lebih enak dilihat oleh manusia.
+- Peneliti pemula seringkali bingung bagaimana memulai tinjauan literatur
 
-- Dataviz ga ada gunanya untuk regresi di R. Fungsinya simply untuk komunikasi dengan manusia.
+- Sebenarnya, tinjauan literatur (dan *referencing*) adalah *skill* yang kita perlukan untuk semua jenis pekerjaan!
 
-- Seringkali, dataviz bahkan lebih penting dari analisis regresi!
+*Literature review is actually an investigation!*
 
-## Step dataviz
+---
 
-- Cari datanya dulu! Apa yang mau di-viz-in kalo datanya gak ada?
+## Untuk menulis 10 ribu kata, anda harus membaca 100 ribu kata! {.m}
 
-- Tentukan viz yang paling cocok.
+::: {.incremental}
 
-- Koneksikan viz dengan cerita/narasi tulisan anda!
+$$\max_{B,T,S} \{f(B,T,S): B+T+S \leq 24\}$$
 
-> A picture worth a thousand words!
-
-## Fungsi umum dataviz {.m}
-
-- menunjukkan hubungan dua atau lebih data untuk analisis awal
-
-    - hubungan seperti ini ujung-ujungnya harus menggunakan regresi.
-    
-- Menunjukkan tren / growth / perubahan data poin sepanjang waktu.
-
-    - misalnya nilai tukar dari bulan ke bulan apakah stabil, naik, atau turun.
-    
-    - perubahan harga, perubahan PDB, dan lain-lain
-    
-- Menunjukkan fraction/berapa besar data 1 observasi dibandingkan total.
-
-    - seberapa besar ekspor batubara dibanding keseluruhan ekspor Indonesia?
-    
-## Tools
-
-- Tools paling standard adalah microsoft excel!
-
-- R punya native command `plot` tapi fungsinya agak terbatas, terutama untuk time series.
-
-- Di R, penggunaan `ggplot` sangat disarankan.
-
-    - `ggplot` merupakan bagian dari package `tidyverse`
-    
-    - install dan liberary `tidyverse` sudah cukup untuk memakai ggplot
-    
-## Excel
-
-![explore di tab "insert"](gambar1.jpg)
-
-## ggplot
-
-- Untuk pengguna R, ggplot merupakan pilihan favorit, terutama jika anda menggunakan api call via R seperti `WDI`
-
-- ggplot jauh lebih versatile daripada `plot`, dapat langsung diinput di .qmd, tapi juga bisa disave ke .png untuk digunakan di word.
-
-- Namun sedikit problemnya adalah syntax-nya ggplot agak ribet.
-
-## Syntax ggplot
-
-- Di kuliah ini, anda akan diberikan kode yang bisa tinggal copy-paste.
-
-- Namun untuk bisa menguasai ggplot dengan penuh, anda perlu kuliah sendiri tentang dataviz, atau bisa juga otodidak (seperti saya)
-
-- Ada banyak buku untuk belajar ggplot yang gratis, juga course online.
-
-- Jika anda sudah paham syntaxnya, maka mengandalkan google saja cukup (seperti saya)
-
-## Syntax dasar
-
-- syntax dasar ggplot dibuka denga command ggplot(data,aes()) dan diikuti tanda tambah.
-
-- command `ggplot()` berfungsi untuk menginformasikan ke R bahwa anda ingin memulai gambar dengan data ini.
-
-- kita akan coba contoh yang cocok dengan cross section
-
-## Data {.scrollable}
-
-Data ini sama dengan di pertemuan 1, yaitu data cross-section.
-
-```{r}
-#| echo: true
-library(WDI)
-library(tidyverse)
-
-indi<-c(            # membuat dictionary
-  "PDB"="NY.GDP.MKTP.CD",
-  "import"="NE.IMP.GNFS.CD"
-)
-
-dat<-WDI(           # Menarik data World Bank
-  country="all",
-  indicator=indi,
-  start=2019,end=2019,
-)
-
-dat
-```
-
-## ggplot
-
-- Kita declare dulu dengan ggplot:
-
-```r
-ggplot(data=dat,aes(x=PDB,y=import))
-```
-
-- Ini akan memberi tahu ggplot bahwa kita ingin membuat grafik dari data "dat", di mana PDB jadi x-nya dan import jadi y-nya.
-
-- Tapi ini saja tidak cukup. Anda harus secara eksplisit memberi tahu bahwa anda ingin membuat titik (scatterplot). Tambahkan `+ geom_point()` di belakangnya.
-
-## geom_point
-
-```{r}
-#| echo: true
-ggplot(data=dat,aes(x=PDB,y=import)) +
-  geom_point()
-```
-
-## Memberi judul {.m}
-
-Untuk memberi label di sumbu X, Y dan judul tabel, anda dapat menggunakan `labs`
-
-```{r}
-#| echo: true
-ggplot(data=dat,aes(x=PDB,y=import)) +
-  geom_point() + # setiap nambah command, selalu kasih tanda +
-  labs(title="tabel 1. hubungan antara impor dan PDB",
-       x="Produk Domestik Bruto, current US$ million",
-       y="Nilai impor, current US$ million",
-       caption = "sumber: World Development Indicators, World Bank") # yang terakhir ga perlu +
-```
-
-## Cara save ggplot
-
-![pilih export, save as png. filenya akan muncul di folder anda.](gambar2.jpg)
-
-## Theme BW
-
-Anda juga bisa nambah theme utk ganti kosmetik grafik.
-
-```{r}
-#| echo: true
-ggplot(data=dat,aes(x=PDB,y=import)) +
-  geom_point() + # setiap nambah command, selalu kasih tanda +
-  labs(title="tabel 1. hubungan antara impor dan PDB",
-       x="Produk Domestik Bruto, current US$ million",
-       y="Nilai impor, current US$ million",
-       caption = "sumber: World Development Indicators, World Bank") +
-  theme_bw()
-  
-```
-
-## Theme Classic
-
-Theme-theme built in bisa dilihat di [sini](https://r-charts.com/ggplot2/themes/)
-
-```{r}
-#| echo: true
-ggplot(data=dat,aes(x=PDB,y=import)) +
-  geom_point() + # setiap nambah command, selalu kasih tanda +
-  labs(title="tabel 1. hubungan antara impor dan PDB",
-       x="Produk Domestik Bruto, current US$ million",
-       y="Nilai impor, current US$ million",
-       caption = "sumber: World Development Indicators, World Bank") +
-  theme_classic()
-```
-
-
-## Size & color
-
-- Anda bisa mewarnai dan ganti size di geom_point
-
-```{r}
-#| echo: true
-ggplot(data=dat,aes(x=PDB,y=import)) +
-  geom_point(color="red",size=2) + # setiap nambah command, selalu kasih tanda +
-  labs(title="tabel 1. hubungan antara impor dan PDB",
-       x="Produk Domestik Bruto, current US$ million",
-       y="Nilai impor, current US$ million",
-       caption = "sumber: World Development Indicators, World Bank") +
-  theme_classic()
-```
-
-## Time Series
-
-- setelah scatterplot, kita akan coba line graph.
-
-- Line graph biasanya digunakan untuk data time series atau panel.
-
-    - pengguna ggplot harus menggunakan format data "long".
-
-    - kolom waktu harus menggunakan tipe "tss" atau datetime.
-
-## Datetime
-
-- Format long dan wide dibahas di pertemuan 7.
-
-- Untuk datetime, anda harus memastikan variable waktu (tahun, bulan, dll) harus dalam bentuk tss.
-
-- Kadang-kadang saat kita pakai `read_excel()` atau `read_csv()`, R tidak membaca kolom waktu sebagai "tss", tapi malah sebagai "chr" (karakter) atau bahkan numerik (dbl, fl64, dst)
-
-- Jika bentuknya "chr", harus kita ubah ke "tss" dengan `as.Date()`
-
-## Datetime
-
-```{r}
-#| echo: true
-library(readxl)
-dat<-read_excel("latihan7.xlsx")
-dat$year<-as.Date(dat$year,format="%Y") # mengubah year dari chr ke tss
-```
-
-- Di latihan7.xlsx, kolom "year" bentuknya adalah "chr". Dengan `as.Date()`, kita mengubah kolom "year" dari "chr" jadi "tss".
-
-- sub-command "format" memberitau kita bahwa year itu merupakan tahun.
-
-## Intermezzo: chr vs ts
-
-::: panel-tabset
-
-### Tanpa as.Date
-
-```{r}
-#| echo: true
-read_excel("latihan7.xlsx")
-```
-
-### Dengan as.Date
-
-```{r}
-#| echo: true
-dat<-read_excel("latihan7.xlsx")
-dat$year<-as.Date(dat$year,"%Y") # mengubah year dari chr ke tss
-dat
-```
+$B>T>S$
 
 :::
 
-## Format time series
+Baca $\Rightarrow$ Tulis $\Rightarrow$ Speak
 
-| bentuk | format |
-| ----- | ----- |
-| 2020 | "%Y" |
-| 2020-01-01 | "%Y-%m-%d" |
-| 2020/01/01 | "%Y/%m/%d" |
-| 10 Jan 2020 | "%d %b %Y" |
+JANGAN KEBALIK!
 
-Lengkapnya, cek di [sini](https://www.r-bloggers.com/2013/08/date-formats-in-r/) atau di [sini](https://www.stat.berkeley.edu/~s133/dates.html)
+hehe 😊
 
-## Line graph
+## Kenapa melakukan tinjauan literatur {.m}
 
-- Sumbu x dari line graph hampir pasti variabel waktu.
+- Kita tidak bisa meneliti sesuatu yang kita tidak tau!
+  - mendapatkan konteks
+  - metode termutakhir
+  - mencari *gap* di literatur: metode / konteks
+  
+- Meyakinkan pembaca bahwa riset kita <ins>relevan</ins>:
+  - terupdate
+  - penting
 
-- Sangat tidak disarankan ngeplot multiple indicators in one line.
+- Bonus: membantu mengarahkan yang baru mau terjun ke bidang kita!
 
-- Tapi, 1 indikator dan ngeplot berbagai negara biasanya bisa-bisa aja dilakukan di line graph.
+## Beberapa kesalahan pemula {.m}
 
-- syntaxnya mirip dengan scatter, dengan beberapa twist.
+| Problem | Komentar |
+| ------- | -------- |
+| Kurang terorganisir | fokus ke isu, bukan paper. Gunakan mindmap dapat membantu |
+| Kurang relevan | Seminal paper biasanya jadul. Penting, tapi fokus ke yang lebih baru |
+| Kurang kritis | Ingat, anda bukan <ins>hanya</ins> merangkum, tapi juga mencari *gap* |
+| Takut salah | Mahasiswa adalah tempatnya salah. Yang penting kita belajar dari situ |
 
-## Line graph
+## Mulai dari mana?
 
-```{r}
-#| echo: true
-ggplot(data=dat,aes(x=year,y=PDBperkapita)) +
-  geom_line() # Kita tidak pakai geom_point, tapi pakai geom_line
+- Kata kunci-nya adalah relevan!
+  - meneliti tentang Kazakhstan bagi audience Indonesia mungkin kurang rame
+  
+- Paling mudah adalah mulai dari isu yang relevan dengan kita:
+  - Misal, sesuatu yang kita sering dengar (misalnya korupsi daging sapi, omnibus law)
+  - Bisa juga yang relevan dengan kerjaan kita
+
+- Bisa juga mulai dari metode.
+
+## Mulai dari mana?
+
+- Sebagian besar pertanyaan di bidang ilmu ekonomi adalah tentang hubungan dua variabel:
+
+> Does X causes Y?
+
+$$ Y = X\beta + \varepsilon $$
+
+Kita bisa mulai mencari menggunakan kata kunci Y atau X, atau keduanya.
+
+---
+
+## Mulai dari mana?
+
+- beberapa pertanyaan yang bisa dijawab, misalnya:
+
+  - $Y \Rightarrow X$ atau $X \Rightarrow Y$?  
+  - bagaimana dengan $Z$?  
+  - di Amerika, $X \Rightarrow Y$. Bagaimana dengan di Indonesia?
+  - apa lagi kira-kira?
+
+## Tabel dapat membantu proses berpikir kita {.s}
+
+| Author | Y | X | sign | context | method |
+| ------ | - | - | ---- | ------- | ------ |
+| Amiti & Konings 2007 | TFP | input tariff | + | Indonesia, firm level | levpet, gravity |
+| Kee, Nicita, Olarreaga 2009 | import val | NTM count | + | global | cross-section gravity |
+| Fugazza, Olarreaga, Ugarte 2017 | export val | NTM count | +,- | Peru | gravity, firm size |
+| Cadot et al 2015 | export val | NTM count, Reg. dist. | + | global | gravity cross-section |
+
+> Contoh di atas adalah pencarian yang berfokus pada $X$: Bagaimana Non-Tariff Measures (NTMs) mempengaruhi perdagangan dan produktivitas (dan lainnya kalau ada)
+
+## Diisi juga kontribusi atau gap {.s}
+
+| Author | + | - |
+| ------ | - | - | 
+| Amiti & Konings 2007 | Jurnal AER, konteks Indonesia, firm level, TFP | Tidak ada NTM |
+| Kee, Nicita, Olarreaga 2009 | Seminal utk AVE | Terlalu global dan makro |
+| Fugazza, Olarreaga, Ugarte 2017 | heterogenous firm, firm level | konteks Peru, export may not be best measure, no PPML |
+| Cadot et al 2015 | Seminal NTM, konsep *regulatory distance* | Cross section, terlalu makro |
+
+> Saya dapat berkontribusi di konteks Indonesia, firm level dengan TFP. Trade policy measures adalah tariff dan NTMs. Measures untuk firm level export dapat dipakai untuk *robustness*. Data ada, metode ada, export lebih baik dimodelkan dengan PPML. Sip!
+
+## Mulai dari mana?
+
+- Literaturnya literatur: akan ada *author(s)* yang disebut berkali-kali oleh literatur yang anda sudah temukan.
+
+  - Trade context: Krugman, Melitz, Grossman & Helpman, Bernard, Kee, Cadot
+
+  - General equilibrium: Hertel, Horridge, McKibbin, Dixon, Costinot
+
+  - Indonesian context: Sjoholm, Hill, Aswicahyono, Patunru, Sparrow
+
+- Bisa juga tanya dosen
+
+## Mulai dari mana?
+
+- *report* lembaga penting seperti IMF, World Bank dan Kementerian/Lembaga.
+
+- *textbook* dan referensinya.
+
+- Google (scholar) sangat berguna karena repositori-nya sangat luas. Namun harus agak berhati-hati. Pastikan yang anda sitasi adalah yang *peer-reviewed*.
+
+- Mulai dari wikipedia jika anda bener-bener newb juga boleh. Jangan lupa lihat sitasi yang ada di Wikipedia, jangan Wikipedianya langsung ya.
+
+- Jika ragu, tanya pembimbing anda.
+
+## Final tips
+
+- Tinjauan literatur sangat penting dilakukan meskipun skripsi anda tidak punya bab berjudul "tinjauan literatur"
+
+- Baca bab *literature review* orang lain, dan coba bedah strukturnya
+
+- Minta tolong orang lain membaca bab *literature review* anda (kalau ada)
+
+- tanya dosen / pembimbing / teman anda yang pintar
+
+## butuh berapa referensi?
+
+- *Rule of thumb* saya: minimal 10 referensi utama di 5 tahun terakhir, tentang metode.
+
+- Dari 10 itu, ambil referensi mereka yang paling relevan (cek abstrak).
+
+- Gunakan referensi lain untuk *setting* konteks.
+  - Misalnya, saya pake [Patunru dan Rahardja (2015)](https://think-asia.org/handle/11540/6410) untuk pembukaan saja, bukan metodenya.
+
+- Tapi jumlahnya kira-kira aja. Sebaiknya tanya pembimbing.
+
+## Mindmap {.m}
+
+- Beberapa mindmap bisa digunakan, tapi favorit saya adalah connected papers (https://www.connectedpapers.com/)
+
+- connected papers akan menunjukkan interkoneksi antar artikel. Cara cepat untuk mengetahui jaringan sitasi di sebuah isu.
+
+- ukuran node menunjukkan besarnya sitasi, sementara ketebalan warna menunjukan keterbaruan.
+
+- contohnya ketika kita mencari [Melitz 2003](https://www.connectedpapers.com/search?q=melitz%202003)
+
+- Menariknya, koneksi berbasis isu juga ditampilkan. Lebih keliatan jika kita cari artikel yang belum ada sitasinya. Misalnya [krisna gupta](https://www.connectedpapers.com/search?q=krisna%20gupta)
+
+## Menggunakan *reference manager*
+
+- *Reference manager* adalah piranti lunak yang sangat membantu dalam me-*manage* daftar pustaka kita.
+
+- Dengan *Reference manager*, kita bisa dengan cepat melakukan sitasi dan membuat daftar pustaka dengan format yang kita inginkan.
+
+- *Reference manager* juga membantu kita mengelompokan dan memasang tag di referensi-referensi kita.
+
+- Zotero dan Mendeley termasuk *software* gratisan yang paling terkenal. Google Scholar Library juga layak coba
+
+## Menggunakan google scholar
+
+gunakan AND atau & untuk irisan, dan OR untuk *union*
+
+```python
+Indonesia AND Australia # will show only Indonesia & AUstralia included
+```
+```python
+Indonesia OR Australia # will show results also when only one of them is present
 ```
 
-hasilnya jelek karena dalam 1 waktu ada lebih dari 1 data point karena ada beberapa negara
+## Menggunakan google scholar
 
-## Line graph
+gunakan tanda petik untuk mencari satu rangkaian kata
 
-```{r}
-#| echo: true
-ggplot(data=dat,aes(x=year,y=PDBperkapita,color=country)) +
-  geom_line()
+```python
+"the case of indonesia"
+```
+gunakan author:"nama-author" untuk mencari karya peneliti tersebut
+
+```python
+author:"Costinot"
 ```
 
-## Line graph
+gunakan `..` untuk memberi interval di pencarian kita
 
-- note bahwa di sub-command `aes()` ada tambahan argumen namanya "color". Color ini memberikan masing-masing garis untuk setiap kolom "country".
-
-- Dengan argumen "color", anda akan otomatis mendapatkan legenda di sisi kanan.
-
-- anda juga dapat menggunakan "linetype" daripada "color" jika gambarnya hitam putih.
-
-- Note kita menggunakan `geom_line()` bukan `geom_point()`
-
-    - apa yang terjadi kalau kita pakai 2 2 nya?
-
-## Linetype
-
-```{r}
-#| echo: true
-ggplot(data=dat,aes(x=year,y=PDBperkapita,linetype=country)) +
-  geom_line()
+```python
+Indonesia AND Trade 2010..2018
 ```
+## Menggunakan google scholar
 
-Harus selalu diingat nama variabelnya, mana yang jadi x, y, dan color/linetype. Anda juga bisa pakai labs dan theme sama seperti di contoh scatterplot.
+- pakai tanda bintang untuk mencari lanjutan. Misalnya, `indust*` akan mencarikan `industri`, `industry`, `industrial` dan `industrialisasi`.
 
-## More on ggplot
+- gunakan tanda tanya untuk mencari produk yang ejaannya berbeda. Misalnya, `labo?r` akan menemukan sesuatu yang ada kata `labor` dan `labour`
 
-- masih ada banyak jurus-jurus di ggplot bahkan bisa buat gambar hal-hal yang bukan data.
+- Trik asterisk juga bisa digunakan untuk ejaan berbeda, misalnya `globali*` akan menemukan `globalization` dan `globalisation`
 
-- Ada banyak built-in theme yang bisa dilihat di [sini](https://r-charts.com/ggplot2/themes/)
+- Selengkapnya bisa google `wildcard search`
 
-- Tapi untuk saat ini, cukup segini dulu yang dipelajari.
+## Kesimpulan
 
-- Jika anda tertarik lebih lanjut mempelajari ggplot, anda dapat gunakan google.
+- Tinjauan literatur sejatinya adalah investigasi
 
+- Kata kuncinya adalah relevan!
+
+- Gunakan semua resources yang ada!
+
+- Jika bingung, tanya pembimbing
+
+## References
+- Lange, Cheryl. (N.D.). [Writing your literature review](https://www.student.uwa.edu.au/__data/assets/pdf_file/0011/2521658/3_Write_literature_review_sem1.pdf?utm_content=bufferbbda3&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer). *Studysmarter research series*. The University of Western Australia.
+
+- Rowland, DR. (N.D.). [Reviewing the literature: a short guide for research students](https://my.uq.edu.au/files/11020/guide-literature-review-research-students.pdf?utm_content=buffer0f227&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer). The University of Queensland.

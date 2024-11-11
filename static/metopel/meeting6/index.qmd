@@ -1,6 +1,6 @@
 ---
-title: "Time series regression"
-subtitle: "Pertemuan 6"
+title: "Menggunakan beberapa sumber data"
+subtitle: "Pertemuan 8"
 author: "Metodologi penelitian"
 format: 
   revealjs:
@@ -12,286 +12,187 @@ format:
     slide-number: true
 ---
 
-## So far
+## After UTS
 
-- OLS dan asumsinya.
+- Sumber download data & data visualization.
 
-- mengoperasikan R melalui RStudio.
+- cara menggunakan reference managers.
 
-- Berbagai jenis data: cross-section, time series.
+- Publish your writing on a website.
 
-## Tentang R lagi
+- kerangka tulisan, literature review, dan methods.
 
-- Mudah-mudahan mahasiswa sudah mulai latihan-latihan dengan R.
+## Mengapa kita menggunakan data?
 
-- Diharapkan saat ini sudah bisa menggunakan R script.
+- Data dapat menyampaikan konteks dengan efisien.
   
-    - File yang muncul di folder yang belakangnya ada .R-nya.
-    
-    - Setelah UTS kita akan bahas lebih jauh tentang RStudio.
+    - pembaca orang sibuk. makanya harus efisien.
 
-- Diharapkan mahasiswa sudah memahami konsep working directory dan packages.
+- Data sangat *powerful* untuk menyampaikan pesan.
 
-## R Packages
+- Data menunjukkan seberapa paham kita dengan isu.
 
-- R packages adalah beberapa fungsi ketengan atau fungsi yang bisa didownload untuk melakukan fungsi ekstra di R.
+- Data biasanya cukup obyektif.
 
-- `install.packages('NAMA PACKAGE')` adalah command yang kita gunakan untuk install pertama kali.
+## Bagaimana menggunakan data? {.m}
 
-- Kita memanggil packages tersebut dengan `library('NAMA PACKAGE')` setiap memulai sesi R.
+- data bukanlah cerita! Ia memperkuat.
+  - Data adalah support, bukan inti tulisan anda.
+  - lebih baik jika sudah ada kerangka berpikir.
 
-    - install.packages perlu internet tapi library tidak perlu.
-    
-    - sejauh ini kita baru install "readxl" dan "tidyverse". Hari ini kita akan perlu package baru namanya "dynlm" dan "urca".
-    
-## Error?
+- Data tidak harus yang berupa statistik.
+  - bisa juga referensi seperti pasal atau argumen orang lain.
 
-- Baik dengan menggunakan R Script maupun menggunakan Console langsung, anda akan dikasih warning kalau ada masalah / error.
+- Data harus relevan!
+  - jangan pasang data yang anda ga pake.
 
-- Beberapa warnings yang sering terjadi minggu lalu:
+- Hati-hati dengan informasi yang partisan.
 
-    - `read_excel()` tidak dipahami oleh R karena belum run `library("readxl")`.
-    
-    - `library()` gagal karena belum `install_packages()`.
-    
-    - Garis miring untuk `set_wd()` belum diganti dari \ ke /.
-    
-    - `set_wd()`-nya masih di folder "metopel" belum di folder "latihan"
+## Beberapa sumber data {.m}
 
-## Problem solving
+- [World Development Indicators](https://data.worldbank.org). Memiliki visualisasi yang sangat user friendly dan mudah diakses. Isinya berbagai indikator ekonomi makro dari banyak negara. Dapat diakses dengan package `WDI`.
 
-- Anda bisa menyelesaikan masalah-masalah tersebut dengan melihat warning-nya.
+- [UN COMTRADE database](https://comtrade.un.org/) merupakan sumber data ekspor impor yang dikelola oleh PBB. Memiliki data yang sangat luas tentang ekspor impor berbagai negara dalam berbagai kode HS.
 
-- Di sini pentingnya pengetahuan bahasa inggris dan kemampuan problem solving.
+- [BPS](https://www.bps.go.id/) adalah sumber data resmi milik pemerintah. BPS memiliki berbagai data tentang Indonesia yang cukup akurat di bidang ekonomi maupun bidang lainnya.
 
-    - Warnings biasanya disampaikan dalam bahasa inggris (tidak hanya R, aplikasi lain juga sama)
-    
-    - Banyak hal di R itu bisa digoogle, tapi enakan pakai bahasa inggris.
-    
-    - Menemukan cara menyelesaikan suatu masalah membutuhkan kemampuan menganalisis masalahnya ada dan solusinya bagaimana. 
+- [SEKI](https://www.bi.go.id/id/statistik/ekonomi-keuangan/seki/Default.aspx#headingFour) dimaintain BI, isinya indikator-indikator ekonomi termasuk trade. Di BPS juga ada sih.
 
-## Pertanyaan tentang R dan RStudio?
+## WDI {.m}
 
-## Time series
+- Sumber data yang paling enak nyarinya dan sering sekali saya pakai untuk bikin artikel blog.
 
-- Adalah data yang bentuknya serial waktu.
-  
-    - ada antara data 1 dan data lainnya (untuk individu yang sama) punya urutan kronologis.
-    
-    - Grafik time series sangant powerful.
-  
-- Main feature (or bug) in time series data:
+- dapat mulai dengan mencari indikator ataupun mencari negara.
 
-    - Autocorrelation: di mana data kemarin dapat menjelaskan (sebagian) apa yang akan terjadi besok: $Y_t=\beta_0+\beta_1 Y_{t-1}+\mu_t$
+- Saya biasanya memulai dengan mencari indikator.
 
-    - Moving average: di mana error di masa lalu ada hubungannya dengan Y saat ini.
-    
-## Autocorrelation
+- data dapat didisplay, diembed (jika anda cukup tech savvy), dan didwonload dalam bentuk excel.
 
-- Autocorrelation diberi simbol AR(p) di mana dalam kurung diisi dengan "lag".
+- Excel akan download semua negara untuk 1 indikator. Jangan lupa difilter.
 
-    - lag: sejauh mana variabel masa lalu mau ditambahkan di spesifikasi AR-nya
-    
-- Misalnya, AR(2) (atau kita sebut AR dengan p=2) berarti punya spek:
+- Dapat dibuka di [data.worldbank.org](https://data.worldbank.org)
 
-$$
-Y_t=\alpha + \beta_1 Y_{t-1} + \beta_2 Y_{t-2} + \mu_t
-$$
+## WDI in R
 
-- AR(3) berarti sampai $Y_{t-3}$ dst.
+- Bagi pengguna R, lebih enak akses WDI pakai package `WDI`.
 
-## Moving Average
+- Kami menggunakan package `WDI` untuk bikin materi Metopel part 1.
 
-- Moving average pada intinya adalah kondisi di mana error term di masa lalu berpengaruh di saat ini.
+- Untuk menggunakannya, jangan lupa `install.packages("WDI")` lalu `library("WDI")`. Jangan lupa anda perlu internet tiap ngerun WDI.
 
-    - disimbolkan dengan MA(q)
-    
-- MA(2) (atau MA dengan q=2) berarti:
+- Part paling krusial adalam mengetahui "indicator"
 
-$$
-Y_t=\alpha + \beta_1 Y_{t-1}+\mu_t + \gamma_1 \mu_{t-1} + \gamma_2 \mu_{t-2}
-$$
+## WDI in R
 
-## Digabung
+::: panel-tabset
 
-- Kita bisa menggabungkan konsep AR dan MA menjadi ARMA(p,q).
 
-- Misalnya ARMA(2,2) atau ARMA dengan p=2 dan q=2:
+### Kodenya
 
-$$
-Y_t=\alpha + \beta_1Y_{t-1} + \beta_2Y_{t-2} + \gamma_1 \mu_{t-1} + \gamma_2 \mu_{t-2} + \mu_t
-$$
+```r
+library(WDI)
+library(tidyverse)
+library(writexl)
 
-## Konsep penting
+indi<-c(            # membuat dictionary
+  "PDB"="NY.GDP.MKTP.CD", ## nama, diikuti indikator di WDI.
+  "import"="NE.IMP.GNFS.CD" ## Cek indikator di website.
+)
 
-- Autocorrelation pada intinya adalah melihat hubungan variabel dengan dirinya sendiri di masa lalu.
-    
-    - artinya error-nya kebawa-bawa sampai tahun yang terakhir.
-    
-```{=tex}
-\begin{align*}
-Y_{t-1}&=\beta_1 Y_{t-2} + \mu_{t-1} \\
-Y_{t}&=\beta_1 Y_{t-1} + \mu_{t} \\
-Y_{t}&=\beta_1 (\beta_1 Y_{t-2} + \mu_{t-1}) + \mu_{t} \\
-Y_{t}&=\beta_1 (\beta_1 Y_{t-2}) + \beta_1 \mu_{t-1}) + \mu_{t}
-\end{align*}
+dat<-WDI(           # Menarik data World Bank
+  country="all",
+  indicator=indi,
+  start=2019,end=2019,
+)
+
+dat$LPDB<-log(dat$PDB) # menambahkan transformasi log
+dat$Limport<-log(dat$import)
+write_xlsx(dat,"dat.xlsx") # Ngesave hasilnya dalam excel
+View(dat)
 ```
 
-## Stationarity
-
-- Intinya, untuk menggunakan metode ARMA, kita perlu memastikan bahwa data kita stasioner.
-
-- Stasioner disebut juga dengan mean-reverting:
-  
-  - jika datanya ada gerakan naik, dia akan segera kembali ke nilai rata-rata tidak lama dari situ.
-  
-  - akibatnya data yang stasioner adalah data yang tidak ada tren.
-  
-  - cara membuat stasioner? Apa yang disebut first difference.
-  
-## Loading package
-
-load packages dulu
+### WDI di R {.m}
 
 ```{r}
-#| warning: false
-#| echo: true
-library("readxl")
-library("tidyverse") # Kalau tidyverse gagal, load ggplot2 aja.
-library("forecast")
-library("urca")
+library(WDI)
+library(tidyverse)
+library(writexl)
+library(kableExtra)
+
+indi<-c(            # membuat dictionary
+  "PDB"="NY.GDP.MKTP.CD", ## nama, diikuti indikator di WDI.
+  "import"="NE.IMP.GNFS.CD" ## Cek indikator di website.
+)
+
+dat<-WDI(           # Menarik data World Bank
+  country="all",
+  indicator=indi,
+  start=2019,end=2019,
+)
+
+dat$LPDB<-log(dat$PDB) # menambahkan transformasi log
+dat$Limport<-log(dat$import)
+dat %>%
+  kbl() %>%
+  kable_minimal()
 ```
 
-Jangan lupa di-`set_wd()` dulu ya.
+### Excelnya
 
-## Stationarity
+<iframe src="https://onedrive.live.com/embed?cid=ACC929CA35B3A537&resid=ACC929CA35B3A537%21153591&authkey=AM2a0jQRZs_4XIo&em=2" width="800" height="500" frameborder="0" scrolling="no"></iframe>
 
-```{r}
-#| echo: false
-#| fig-width: 6
-#| fig-height: 4
-library("patchwork")
-dat<-read_excel("latihan6.xlsx")
-dat$DPDB<-c(NA,diff(dat$PDB))
-dat$LPDB<-log(dat$PDB)
-dat$DLPDB<-c(NA,diff(dat$LPDB))
-dat<-na.omit(dat)
-plot<-ggplot()+theme_classic()+
-  theme(panel.background = element_rect(fill = '#f0f1eb'),
-        plot.background = element_rect(fill = '#f0f1eb'))
-a<-plot+geom_line(aes(x=kuartal,y=PDB),data=dat)
-b<-plot+geom_line(aes(x=kuartal,y=DPDB),data=dat)+labs(y="diff PDB")
-c<-plot+geom_line(aes(x=kuartal,y=DLPDB),data=dat)+labs(y="growth (%)")
-a/b/c
-```
+:::
 
-## Mengecek stasioneritas
+## UNCOMTRADE
 
-- semua regresi berbasis autoregression perlu cek stasionaritas.
+- UN COMTRADE adalah bagian dari PBB yang memiliki fungsi menganalisis perdagangan internasional.
 
-- Meski dengan mata bisa kita cek, tapi kita dapat menggunakan metode Augmented Dickey-Fuller (ADF) untuk lebih pastinya.
+- Database di UN COMTRADE cukup lengkap jika kita tertarik dengan ekspor impor banyak negara dalam HS tertentu.
 
-- Autoregression perlu melakukan uji stasioneritas dulu dengan metode bernama Augmented Dickey-Fuller (ADF).
+- Dapat diakses di [comtrade.un.org](https://comtrade.un.org/), tapi bikin account dulu, lalu login. Gratis.
 
-    - memerlukan package "urca"
+- Hasilnya dapat didownload dalam excel.
+
+## BPS
+
+- Badan Pusat Statistik adalah lembaga resmi milik pemerintah yang bertanggung jawab atas pengumpulan dan diseminasi atas berbagai data.
+
+- Dapat diakses di [bps.go.id](https://www.bps.go.id/)
+
+- Menu yang terpenting ada di kiri, lalu pilih judul tabel yang diinginkan.
+
+- pilih "unduh tabel" di kanan atas, akan didownload dalam excel.
+
+- Untuk data perdagangan Indonesia bisa langsung ke [bps.go.id/exim](https://bps.go.id/exim)
+
+## SEKI
+
+- SEKI dimaintain oleh BI, naturally isinya adalah data-data sektor riil dan keuangan makro seperti exchange rate, interest rate, dan lain sebagainya.
+
+- Data-data trade di SEKI juga lumayan menarik.
+
+- Akses SEKI di [sini](https://www.bi.go.id/id/statistik/ekonomi-keuangan/seki/Default.aspx#headingFour) atau google "SEKI Bank Indonesia"/
+
+- Problem SEKI&BPS->datanya kotor. ga machine readable. Agak PR bersihinnya.
+
+## Penutup
+
+- Anda dapat menggunakan data-data di sini untuk tugas akhir.
+
+- Jangan lupa mensitasi data-data ini jika anda gunakan.
+
+- Tentu saja ada banyak sumber data lain yg dapat anda gunakan. Tapi kalau bisa 4 ini pun sudah lumayan.
+
+## Next to install
+
+- Harapan kami, anda sudah cukup lancar ngutak atik RStudio.
+
+- Next, pastikan anda punya package `tidyverse`. kalo belum, install dengan `install.packages("tidyverse")`
+
+- Anda perlu mendownload 2 program baru:
+
+    - [Zotero](https://www.zotero.org/download/) utk pertemuan 10;
     
-- Kita akan coba pakai data nilai tukar IDR/USD di [sini](https://1drv.ms/x/s!AjelszXKKcmshrwlmg-vAQT0kSGB5w?e=xtdkp5)
+    - [Quarto](https://quarto.org/docs/download/index.html) utk pertemuan 11
 
-## Mengecek stasioneritas nilai tukar
-
-```{r}
-#| echo: true
-dat<-na.omit(read_excel("latihan5a.xlsx")) # NA omit fungsinya menghilangkan data yg missing/kosong (NA)
-summary(ur.df(dat$xr))
-```
-
-## Mengecek stasioneritas Diff exchange rate
-
-```{r}
-#| echo: true
-summary(ur.df(dat$dxr))
-```
-
-## Hasil stasioneritas
-
-- Dapat dilihat bahwa untuk critical value 1%, difference nilai tukar ternyata stasioner sementara nilai tukarnya tidak.
-
-- Jika data kita stasioner di first difference (atau setelah dilakukan perubahan selisih sebanyak 1x), kita katakan I=1.
-
-- ARIMA(p,I,q) adalah konsem stasioneritas digabung dengan ARMA.
-
-- Sekarang kita akan coba forecast dengan ARIMA untuk data nilai tukar.
-
-## ARIMA
-
-- di package "forecast", kita dapat menggunakan fungsi `auto.arima()` untuk dapat spesifikasi terbaik.
-
-- Sudah dihitung di difference ke berapa stasionernya. Bener-bener tinggal pake.
-
-```{r}
-#| echo: true
-reg1<-auto.arima(dat$xr)
-reg1
-```
-
-## ARIMA
-
-- dapat kita lihat di layar sebelumnya bahwa spesifikasi yang dipilih oleh `auto.arima()` adalah ARIMA(1,1,1)
-
-    - dengan kata lain, AR(1) dan MA(1) dengan first difference.
-    
-- Kita dapat mencoba model kita sendiri dengan fungsi `Arima()` (huruf A yg di depan kapital ya).
-
-- `auto.arima()` memilihkan model dengan AICc paling kecil. Karena itu anda akan melihat AICc yang lebih besar di model selain ARIMA(1,1,1)
-
-## ARIMA
-
-```{r}
-#| echo: true
-reg2<-Arima(dat$xr, order=c(2,1,2))
-reg2
-```
-
-## Residuals
-
-- Untuk cek residual, kita menggunakan fungsi `checkresiduals` yang sudah built-in di dalam paket "forecast"
-
-- Yang perlu diperhatikan adalah plot ACF-nya harus di dalam titik-titik biru (yang artinya dapat dikatakan sebagai random / white noise).
-
-- Juga perlu diperhatikan distribusinya, yang seharusnya berbentuk distribusi normal / student-t / lonceng.
-
-## Residuals
-
-```{r}
-#| echo: true
-checkresiduals(reg1)
-```
-
-## Forecast
-
-```{r}
-#| echo: true
-autoplot(forecast(reg1))
-```
-
-## Forecasting?
-
-- ARIMA dengan lag 1 sepertinya tidak terlalu informatif.
-
-    - Prediksi apa yang akan terjadi besok rasanya masih terlalu pendek.
-
-- Bagaimanapun juga, forecasting sesuatu memang merupakan hal yang sulit.
-
-- Fenomena-fenomena kejut seringkali lebih penting daripada forecasting.
-
-    - ingat waktu kita mencoba menjelaskan berbagai fenomena di data ekspor 2 minggu lalu?
-    
-## More reading
-
-- bagi yang tertarik forecasting dapat membaca lebih jauh di [sini](https://otexts.com/fpp2/arima-r.html)
-
-- rekomended paling tidak bab 1, 2 dan 8.
-
-## Minggu depan
-
-- Panel data
+- nginstallnya gampang. tinggal download, run, lalu pencet next2 aja.

@@ -1,244 +1,215 @@
 ---
-title: "Literature Review"
-subtitle: "Pertemuan 13"
+title: "Menggunakan Quarto & Github"
+subtitle: "Pertemuan 11"
 author: "Metodologi penelitian"
 format: 
   revealjs:
     theme: [simple,../mytheme.scss]
     chalkboard: true
+    incremental: false
     transition: convex
     background-transition: fade
     slide-number: true
-    incremental: false
 ---
 
-## Tentang hari ini 👀
+## Hari ini
 
-- Tips and trick
-- Some tools
-- diskusi
+-   Menggunakan quarto untuk menulis artikel.
 
-Tips yang ada di sini benar untuk penelitian secara umum. Di APP mungkin sedikit lebih sederhana ketimbang beberapa poin seperti mencari gap.
+-   Menggunakan github untuk hosting tulisan anda.
 
-## Literature review?
+## Quarto
 
-- Peneliti pemula seringkali bingung bagaimana memulai tinjauan literatur
+-   Quarto adalah versi *upgrade* dari rscript.
 
-- Sebenarnya, tinjauan literatur (dan *referencing*) adalah *skill* yang kita perlukan untuk semua jenis pekerjaan!
+-   Dengan file quarto (ekstensi .qmd), anda bisa menggabungkan kode R anda dengan tulisan, dan dirender menjadi html, pdf dan word sekaligus.
 
-*Literature review is actually an investigation!*
+    -   setelah itu anda dapat edit wordnya.
 
----
+-   Tapi kekuatan quarto yang sebenarnya (menurut saya) adalah render html-nya.
 
-## Untuk menulis 10 ribu kata, anda harus membaca 100 ribu kata! {.m}
+## Download Quarto
 
-::: {.incremental}
+-   Quarto dapat didownload di [sini](https://quarto.org/docs/get-started/).
 
-$$\max_{B,T,S} \{f(B,T,S): B+T+S \leq 24\}$$
+-   Atau google aja "download quarto"
 
-$B>T>S$
+-   Quarto dapat digunakan dengan VSCode, Jupyter, dan text editor lainnya. Di kuliah ini, kita pakai RStudio.
 
-:::
+## Download Quarto
 
-Baca $\Rightarrow$ Tulis $\Rightarrow$ Speak
+![](gambar1.jpg)
 
-JANGAN KEBALIK!
+## Memulai Quarto
 
-hehe 😊
+![Quarto dapat dimulai dengan \`file -\> new file -\> quarto document](gambar2.jpg)
 
-## Kenapa melakukan tinjauan literatur {.m}
+## Memulai Quarto
 
-- Kita tidak bisa meneliti sesuatu yang kita tidak tau!
-  - mendapatkan konteks
-  - metode termutakhir
-  - mencari *gap* di literatur: metode / konteks
-  
-- Meyakinkan pembaca bahwa riset kita <ins>relevan</ins>:
-  - terupdate
-  - penting
+![silakan pilih html, bisa juga pdf atau word. lainnya cuekin](gambar3.jpg)
 
-- Bonus: membantu mengarahkan yang baru mau terjun ke bidang kita!
+## Memulai Quarto
 
-## Beberapa kesalahan pemula {.m}
+![akan ada file di lokasi kita edit rscript tapi bukan rscript](gambar4.jpg)
 
-| Problem | Komentar |
-| ------- | -------- |
-| Kurang terorganisir | fokus ke isu, bukan paper. Gunakan mindmap dapat membantu |
-| Kurang relevan | Seminal paper biasanya jadul. Penting, tapi fokus ke yang lebih baru |
-| Kurang kritis | Ingat, anda bukan <ins>hanya</ins> merangkum, tapi juga mencari *gap* |
-| Takut salah | Mahasiswa adalah tempatnya salah. Yang penting kita belajar dari situ |
+## Memulai Quarto
 
-## Mulai dari mana?
+-   Quarto tidak dirun seperti rscript, tapi dirender.
 
-- Kata kunci-nya adalah relevan!
-  - meneliti tentang Kazakhstan bagi audience Indonesia mungkin kurang rame
-  
-- Paling mudah adalah mulai dari isu yang relevan dengan kita:
-  - Misal, sesuatu yang kita sering dengar (misalnya korupsi daging sapi, omnibus law)
-  - Bisa juga yang relevan dengan kerjaan kita
+-   Sekali render, quarto akan menghasilkan file html, pdf atau docx tergantung pilihan di "format".
 
-- Bisa juga mulai dari metode.
+-   Note bahwa ekstensi Quarto adalah `.qmd` bukan `.r`
 
-## Mulai dari mana?
+-   Diantara 3 dash (---) itu disebut metadata/options/header.
 
-- Sebagian besar pertanyaan di bidang ilmu ekonomi adalah tentang hubungan dua variabel:
+-   Jika anda mulai dengan cara ini, options-nya terbatas di title, author dan format.
 
-> Does X causes Y?
+## Menggunakan format
 
-$$ Y = X\beta + \varepsilon $$
+-   Saya sudah menyiapkan [format Quarto](https://1drv.ms/u/s!AjelszXKKcmsibt_MGYrBYBHznHTIw?e=yyphLf) untuk anda gunakan.
 
-Kita bisa mulai mencari menggunakan kata kunci Y atau X, atau keduanya.
+-   Untuk ke depannya, mendingan pake format saya karena options-nya lebih lengkap.
 
----
+-   Untuk belajar apa aja yang ditaruh di options-nya, bisa ke [dokumentasi quarto](https://quarto.org/docs/reference/formats/html.html) atau [google](https://www.google.com/search?client=firefox-b-d&q=quarto+yaml+options).
 
-## Mulai dari mana?
+## Cara pakai quarto
 
-- beberapa pertanyaan yang bisa dijawab, misalnya:
+-   gunakan tanda pagar (#) untuk judul. Perbanyak pagar untuk level heading yang lebih kecil.
 
-  - $Y \Rightarrow X$ atau $X \Rightarrow Y$?  
-  - bagaimana dengan $Z$?  
-  - di Amerika, $X \Rightarrow Y$. Bagaimana dengan di Indonesia?
-  - apa lagi kira-kira?
+-   Selengkapnya dapat dibaca di [markdown basic](https://quarto.org/docs/authoring/markdown-basics.html)
 
-## Tabel dapat membantu proses berpikir kita {.s}
+    -   "Markdown syntax" = apa yang kita ketik di file `.qmd`
 
-| Author | Y | X | sign | context | method |
-| ------ | - | - | ---- | ------- | ------ |
-| Amiti & Konings 2007 | TFP | input tariff | + | Indonesia, firm level | levpet, gravity |
-| Kee, Nicita, Olarreaga 2009 | import val | NTM count | + | global | cross-section gravity |
-| Fugazza, Olarreaga, Ugarte 2017 | export val | NTM count | +,- | Peru | gravity, firm size |
-| Cadot et al 2015 | export val | NTM count, Reg. dist. | + | global | gravity cross-section |
+    -   "output" = hasilnya ketika dirender.
 
-> Contoh di atas adalah pencarian yang berfokus pada $X$: Bagaimana Non-Tariff Measures (NTMs) mempengaruhi perdagangan dan produktivitas (dan lainnya kalau ada)
+## Gambar
 
-## Diisi juga kontribusi atau gap {.s}
+-   Untuk memasang gambar, anda harus meletakkan file gambarnya di folder yang sama dengan file qmd-nya.
 
-| Author | + | - |
-| ------ | - | - | 
-| Amiti & Konings 2007 | Jurnal AER, konteks Indonesia, firm level, TFP | Tidak ada NTM |
-| Kee, Nicita, Olarreaga 2009 | Seminal utk AVE | Terlalu global dan makro |
-| Fugazza, Olarreaga, Ugarte 2017 | heterogenous firm, firm level | konteks Peru, export may not be best measure, no PPML |
-| Cadot et al 2015 | Seminal NTM, konsep *regulatory distance* | Cross section, terlalu makro |
+-   Misalnya di folder UAS ada file `index.qmd` dan `gambar1.jpg`
 
-> Saya dapat berkontribusi di konteks Indonesia, firm level dengan TFP. Trade policy measures adalah tariff dan NTMs. Measures untuk firm level export dapat dipakai untuk *robustness*. Data ada, metode ada, export lebih baik dimodelkan dengan PPML. Sip!
+-   Anda bisa attach gambar di hasil render qmd-nya.
 
-## Mulai dari mana?
+-   lengkapnya di [figure basic](https://quarto.org/docs/authoring/figures.html)
 
-- Literaturnya literatur: akan ada *author(s)* yang disebut berkali-kali oleh literatur yang anda sudah temukan.
+## Gambar
 
-  - Trade context: Krugman, Melitz, Grossman & Helpman, Bernard, Kee, Cadot
+-   Cara cepat untuk menaruh tabel atau diagram misalnya dapat dengan cara print screen atau pakai snip (tekan 🪟+`shift`+S)
 
-  - General equilibrium: Hertel, Horridge, McKibbin, Dixon, Costinot
+-   Lalu dicrop hanya part yang ingin anda attach di tulisan anda.
 
-  - Indonesian context: Sjoholm, Hill, Aswicahyono, Patunru, Sparrow
+-   save hasil cropnya dalam jpg atau png, lalu kopas ke folder anda.
 
-- Bisa juga tanya dosen
+## tabel
 
-## Mulai dari mana?
+-   Untuk tabel yang simpel, anda dapat gunakan markdown tabel seperti [di sini](https://quarto.org/docs/authoring/tables.html)
 
-- *report* lembaga penting seperti IMF, World Bank dan Kementerian/Lembaga.
+- Untuk tabel yang lebih ribet, anda dapat menggunakan tabel editor di qmd. Tekan tombol `visual`. lalu pilih `insert` lalu `table`
 
-- *textbook* dan referensinya.
+- Jika tabelnya ribet banget, buat saja di excel, lalu discreenshot dan gunakan gambar.
 
-- Google (scholar) sangat berguna karena repositori-nya sangat luas. Namun harus agak berhati-hati. Pastikan yang anda sitasi adalah yang *peer-reviewed*.
+## Insert table
 
-- Mulai dari wikipedia jika anda bener-bener newb juga boleh. Jangan lupa lihat sitasi yang ada di Wikipedia, jangan Wikipedianya langsung ya.
+![insert tabel ribet](gambar4.jpg)
 
-- Jika ragu, tanya pembimbing anda.
+## R Codes
 
-## Final tips
+- R codes dapat langsung ditulis di qmd anda, dan akan dirun ketika anda render.
 
-- Tinjauan literatur sangat penting dilakukan meskipun skripsi anda tidak punya bab berjudul "tinjauan literatur"
+- R codes harus diawali dengan 3 backticks (sebelah angka 1) dan {r}, diakhiri dengan tanda 3 backticks.
 
-- Baca bab *literature review* orang lain, dan coba bedah strukturnya
+![](gambar12.jpg)
 
-- Minta tolong orang lain membaca bab *literature review* anda (kalau ada)
+## Hasilnya
 
-- tanya dosen / pembimbing / teman anda yang pintar
 
-## butuh berapa referensi?
-
-- *Rule of thumb* saya: minimal 10 referensi utama di 5 tahun terakhir, tentang metode.
-
-- Dari 10 itu, ambil referensi mereka yang paling relevan (cek abstrak).
-
-- Gunakan referensi lain untuk *setting* konteks.
-  - Misalnya, saya pake [Patunru dan Rahardja (2015)](https://think-asia.org/handle/11540/6410) untuk pembukaan saja, bukan metodenya.
-
-- Tapi jumlahnya kira-kira aja. Sebaiknya tanya pembimbing.
-
-## Mindmap {.m}
-
-- Beberapa mindmap bisa digunakan, tapi favorit saya adalah connected papers (https://www.connectedpapers.com/)
-
-- connected papers akan menunjukkan interkoneksi antar artikel. Cara cepat untuk mengetahui jaringan sitasi di sebuah isu.
-
-- ukuran node menunjukkan besarnya sitasi, sementara ketebalan warna menunjukan keterbaruan.
-
-- contohnya ketika kita mencari [Melitz 2003](https://www.connectedpapers.com/search?q=melitz%202003)
-
-- Menariknya, koneksi berbasis isu juga ditampilkan. Lebih keliatan jika kita cari artikel yang belum ada sitasinya. Misalnya [krisna gupta](https://www.connectedpapers.com/search?q=krisna%20gupta)
-
-## Menggunakan *reference manager*
-
-- *Reference manager* adalah piranti lunak yang sangat membantu dalam me-*manage* daftar pustaka kita.
-
-- Dengan *Reference manager*, kita bisa dengan cepat melakukan sitasi dan membuat daftar pustaka dengan format yang kita inginkan.
-
-- *Reference manager* juga membantu kita mengelompokan dan memasang tag di referensi-referensi kita.
-
-- Zotero dan Mendeley termasuk *software* gratisan yang paling terkenal. Google Scholar Library juga layak coba
-
-## Menggunakan google scholar
-
-gunakan AND atau & untuk irisan, dan OR untuk *union*
-
-```python
-Indonesia AND Australia # will show only Indonesia & AUstralia included
-```
-```python
-Indonesia OR Australia # will show results also when only one of them is present
+```{r}
+library(tidyverse)
+library(readxl)
+dat<-read_excel("latihan.xlsx")
+ggplot(data=dat,aes(x=X,y=Y))+
+  geom_point()
 ```
 
-## Menggunakan google scholar
 
-gunakan tanda petik untuk mencari satu rangkaian kata
+## Template
 
-```python
-"the case of indonesia"
-```
-gunakan author:"nama-author" untuk mencari karya peneliti tersebut
+- Untuk tugas akhir anda, ambil template qmd yang sudah saya siapkan di [sini](https://1drv.ms/u/s!AjelszXKKcmsibt_MGYrBYBHznHTIw?e=5wZWyC)
 
-```python
-author:"Costinot"
-```
+- download juga [gambar logo APP](https://1drv.ms/u/s!AjelszXKKcmsib94P19jDzQxzDKuiw?e=ZyhAXU) dan [data latihan](https://1drv.ms/x/s!AjelszXKKcmsib91KU4DqMfl5s0lfQ?e=m5n6aN).
 
-gunakan `..` untuk memberi interval di pencarian kita
+- Simpan semuanya di 1 folder, buka file `index.qmd` dengan R Studio. Pastikan anda sudah install Quarto.
 
-```python
-Indonesia AND Trade 2010..2018
-```
-## Menggunakan google scholar
+- Pelajari baik-baik file qmd-nya, lalu klik panah kecil di sebelah $\Rightarrow$Render.
 
-- pakai tanda bintang untuk mencari lanjutan. Misalnya, `indust*` akan mencarikan `industri`, `industry`, `industrial` dan `industrialisasi`.
+- Pilih Render HTML untuk render HTML, atau pilih Render MS Word untuk menjadikannya word.
 
-- gunakan tanda tanya untuk mencari produk yang ejaannya berbeda. Misalnya, `labo?r` akan menemukan sesuatu yang ada kata `labor` dan `labour`
+## Render
 
-- Trik asterisk juga bisa digunakan untuk ejaan berbeda, misalnya `globali*` akan menemukan `globalization` dan `globalisation`
+![](gambar6.jpg)
 
-- Selengkapnya bisa google `wildcard search`
+## Render
 
-## Kesimpulan
+- Jika anda pilih Render HTML, di folder anda akan ada file baru yaitu `index.html` dan sebuah folder baru.
 
-- Tinjauan literatur sejatinya adalah investigasi
+- Jika anda pilih Render MS Word, anda akan lihat file `index.docx`.
 
-- Kata kuncinya adalah relevan!
+- Tentu keunggulan render MS Word adalah anda bisa melanjutkan ngedit di aplikasi word.
 
-- Gunakan semua resources yang ada!
+- Keunggulan HTML? tentu saja hosting di internet!
 
-- Jika bingung, tanya pembimbing
+    - word juga bisa dikopas ke wordpress sih, tapi kerenan github!
 
-## References
-- Lange, Cheryl. (N.D.). [Writing your literature review](https://www.student.uwa.edu.au/__data/assets/pdf_file/0011/2521658/3_Write_literature_review_sem1.pdf?utm_content=bufferbbda3&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer). *Studysmarter research series*. The University of Western Australia.
+## Github
 
-- Rowland, DR. (N.D.). [Reviewing the literature: a short guide for research students](https://my.uq.edu.au/files/11020/guide-literature-review-research-students.pdf?utm_content=buffer0f227&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer). The University of Queensland.
+- Github aslinya adalah sebuah website untuk hosting code projects (disebut juga dengan repository.
+
+- Dia berfungsi sebagai version control dan melakukan kolaborasi terutama untuk project open source.
+
+- Singkatnya, semua programer pasti pernah pake github.
+
+- Namun github bisa menawarkan hosting mini untuk website anda.
+
+## Github
+
+- Buka github dan buat akun baru di [sini](https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home)
+
+- pilih username yang cukup profesional dan mudah diingat.
+
+    - username ini akan jadi bagian dari url website anda.
+    
+- Kode verifikasi akan dikirim ke email anda.
+
+- kalau disuruh pilih paket, pilih yang free.
+    
+## Welcome to github
+
+![](gambar7.jpg)
+
+## Github
+
+![pilih skip personalization](gambar8.jpg)
+
+## Membuat website github
+
+<iframe width="1000" height="600" src="https://www.youtube.com/embed/-NorOid-YQw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## More on Quarto
+
+-   Quarto jauh lebih sakti daripada sekedar buat 1 artikel.
+
+-   Quarto dapat digunakan untuk membuat website dari 0 (dengan mayoritas ekstensi html), membuat presentasi (kuliah ini dibuat dengan Quarto), dan masih banyak lagi.
+
+    -   membuat website dari 0 jauh lebih susah daripada wordpress atau blogpost, tapi jauh lebih customizable.
+
+-   Jika anda tertarik, anda dapat belajar quarto dan RStudio sendiri lebih jauh.
+
+## Next 3 meetings
+
+- fokus ke cara menulis dan berbagai alternative methods.
+
+- mostly nggak pakai software lagi.
+
+- Karena anda udah bisa quarto, buat dulu aja templatenya. nanti diedit2 sambil kita belajar cara menulis.
+
+- next up: Kerangka, literature review, methods.

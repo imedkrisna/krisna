@@ -1,198 +1,161 @@
 ---
-title: "Menggunakan beberapa sumber data"
+title: "Membuat kerangka penelitian"
 subtitle: "Pertemuan 8"
 author: "Metodologi penelitian"
 format: 
   revealjs:
     theme: [simple,../mytheme.scss]
     chalkboard: true
-    incremental: false
     transition: convex
     background-transition: fade
     slide-number: true
+    incremental: false
 ---
 
-## After UTS
+## What's next
 
-- Sumber download data & data visualization.
+- Kita akan fokus di 7 pertemuan ke depan mempelajari bagaimana membuat penelitian yang bagus.
 
-- cara menggunakan reference managers.
+- Kita akan mulai dengan kerangka penelitian, kemudian membahas tinjauan literatur, menulis metodologi, analisis/pembahasan, dan kesimpulan.
 
-- Publish your writing on a website.
+- Juga mempelajari metode-metode yang bisa dipilih, serta alat-alat yang akan berguna seperti Zotero dan Github.
 
-- kerangka tulisan, literature review, dan methods.
+## TA Penelitian di APP
 
-## Mengapa kita menggunakan data?
+- Format TA di APP bisa berupa laporan kerja praktik, analisis, dan penelitian.
 
-- Data dapat menyampaikan konteks dengan efisien.
-  
-    - pembaca orang sibuk. makanya harus efisien.
+- Penelitian paling jarang dilakukan (biasanya dikira susah padahal ~iya~ bisa dipelajari).
 
-- Data sangat *powerful* untuk menyampaikan pesan.
+- Keuntungan penelitian:
 
-- Data menunjukkan seberapa paham kita dengan isu.
-
-- Data biasanya cukup obyektif.
-
-## Bagaimana menggunakan data? {.m}
-
-- data bukanlah cerita! Ia memperkuat.
-  - Data adalah support, bukan inti tulisan anda.
-  - lebih baik jika sudah ada kerangka berpikir.
-
-- Data tidak harus yang berupa statistik.
-  - bisa juga referensi seperti pasal atau argumen orang lain.
-
-- Data harus relevan!
-  - jangan pasang data yang anda ga pake.
-
-- Hati-hati dengan informasi yang partisan.
-
-## Beberapa sumber data {.m}
-
-- [World Development Indicators](https://data.worldbank.org). Memiliki visualisasi yang sangat user friendly dan mudah diakses. Isinya berbagai indikator ekonomi makro dari banyak negara. Dapat diakses dengan package `WDI`.
-
-- [UN COMTRADE database](https://comtrade.un.org/) merupakan sumber data ekspor impor yang dikelola oleh PBB. Memiliki data yang sangat luas tentang ekspor impor berbagai negara dalam berbagai kode HS.
-
-- [BPS](https://www.bps.go.id/) adalah sumber data resmi milik pemerintah. BPS memiliki berbagai data tentang Indonesia yang cukup akurat di bidang ekonomi maupun bidang lainnya.
-
-- [SEKI](https://www.bi.go.id/id/statistik/ekonomi-keuangan/seki/Default.aspx#headingFour) dimaintain BI, isinya indikator-indikator ekonomi termasuk trade. Di BPS juga ada sih.
-
-## WDI {.m}
-
-- Sumber data yang paling enak nyarinya dan sering sekali saya pakai untuk bikin artikel blog.
-
-- dapat mulai dengan mencari indikator ataupun mencari negara.
-
-- Saya biasanya memulai dengan mencari indikator.
-
-- data dapat didisplay, diembed (jika anda cukup tech savvy), dan didwonload dalam bentuk excel.
-
-- Excel akan download semua negara untuk 1 indikator. Jangan lupa difilter.
-
-- Dapat dibuka di [data.worldbank.org](https://data.worldbank.org)
-
-## WDI in R
-
-- Bagi pengguna R, lebih enak akses WDI pakai package `WDI`.
-
-- Kami menggunakan package `WDI` untuk bikin materi Metopel part 1.
-
-- Untuk menggunakannya, jangan lupa `install.packages("WDI")` lalu `library("WDI")`. Jangan lupa anda perlu internet tiap ngerun WDI.
-
-- Part paling krusial adalam mengetahui "indicator"
-
-## WDI in R
-
-::: panel-tabset
-
-
-### Kodenya
-
-```r
-library(WDI)
-library(tidyverse)
-library(writexl)
-
-indi<-c(            # membuat dictionary
-  "PDB"="NY.GDP.MKTP.CD", ## nama, diikuti indikator di WDI.
-  "import"="NE.IMP.GNFS.CD" ## Cek indikator di website.
-)
-
-dat<-WDI(           # Menarik data World Bank
-  country="all",
-  indicator=indi,
-  start=2019,end=2019,
-)
-
-dat$LPDB<-log(dat$PDB) # menambahkan transformasi log
-dat$Limport<-log(dat$import)
-write_xlsx(dat,"dat.xlsx") # Ngesave hasilnya dalam excel
-View(dat)
-```
-
-### WDI di R {.m}
-
-```{r}
-library(WDI)
-library(tidyverse)
-library(writexl)
-library(kableExtra)
-
-indi<-c(            # membuat dictionary
-  "PDB"="NY.GDP.MKTP.CD", ## nama, diikuti indikator di WDI.
-  "import"="NE.IMP.GNFS.CD" ## Cek indikator di website.
-)
-
-dat<-WDI(           # Menarik data World Bank
-  country="all",
-  indicator=indi,
-  start=2019,end=2019,
-)
-
-dat$LPDB<-log(dat$PDB) # menambahkan transformasi log
-dat$Limport<-log(dat$import)
-dat %>%
-  kbl() %>%
-  kable_minimal()
-```
-
-### Excelnya
-
-<iframe src="https://onedrive.live.com/embed?cid=ACC929CA35B3A537&resid=ACC929CA35B3A537%21153591&authkey=AM2a0jQRZs_4XIo&em=2" width="800" height="500" frameborder="0" scrolling="no"></iframe>
-
-:::
-
-## UNCOMTRADE
-
-- UN COMTRADE adalah bagian dari PBB yang memiliki fungsi menganalisis perdagangan internasional.
-
-- Database di UN COMTRADE cukup lengkap jika kita tertarik dengan ekspor impor banyak negara dalam HS tertentu.
-
-- Dapat diakses di [comtrade.un.org](https://comtrade.un.org/), tapi bikin account dulu, lalu login. Gratis.
-
-- Hasilnya dapat didownload dalam excel.
-
-## BPS
-
-- Badan Pusat Statistik adalah lembaga resmi milik pemerintah yang bertanggung jawab atas pengumpulan dan diseminasi atas berbagai data.
-
-- Dapat diakses di [bps.go.id](https://www.bps.go.id/)
-
-- Menu yang terpenting ada di kiri, lalu pilih judul tabel yang diinginkan.
-
-- pilih "unduh tabel" di kanan atas, akan didownload dalam excel.
-
-- Untuk data perdagangan Indonesia bisa langsung ke [bps.go.id/exim](https://bps.go.id/exim)
-
-## SEKI
-
-- SEKI dimaintain oleh BI, naturally isinya adalah data-data sektor riil dan keuangan makro seperti exchange rate, interest rate, dan lain sebagainya.
-
-- Data-data trade di SEKI juga lumayan menarik.
-
-- Akses SEKI di [sini](https://www.bi.go.id/id/statistik/ekonomi-keuangan/seki/Default.aspx#headingFour) atau google "SEKI Bank Indonesia"/
-
-- Problem SEKI&BPS->datanya kotor. ga machine readable. Agak PR bersihinnya.
-
-## Penutup
-
-- Anda dapat menggunakan data-data di sini untuk tugas akhir.
-
-- Jangan lupa mensitasi data-data ini jika anda gunakan.
-
-- Tentu saja ada banyak sumber data lain yg dapat anda gunakan. Tapi kalau bisa 4 ini pun sudah lumayan.
-
-## Next to install
-
-- Harapan kami, anda sudah cukup lancar ngutak atik RStudio.
-
-- Next, pastikan anda punya package `tidyverse`. kalo belum, install dengan `install.packages("tidyverse")`
-
-- Anda perlu mendownload 2 program baru:
-
-    - [Zotero](https://www.zotero.org/download/) utk pertemuan 10;
+    - bisa magang di mana saja
     
-    - [Quarto](https://quarto.org/docs/download/index.html) utk pertemuan 11
+    - data sekunder (tinggal pakai)
+    
+## Tugas
 
-- nginstallnya gampang. tinggal download, run, lalu pencet next2 aja.
+- Tugas anda adalah membuat mini-TA penelitian.
+
+- Fungsi tugas ini untuk memfamiliarkan anda dengan format TA penelitian.
+
+- Gunakan ilmu yang akan dipelajari di 7 pertemuan ke depan untuk membuat tugas.
+
+- Tugas akan dikumpulkan di H-1 sebelum UAS, tapi bisa dicicil dari sekarang.
+
+- Lebih lanjut bisa dilihat di [sini](https://krisna.or.id/courses/metopel/tugas/)
+
+## Susunan/outline penelitian {.m}
+
+- TA penelitian di APP terdiri dari beberapa bagian.
+
+- Bagian Awal:
+
+    - Halaman Judul (dan sub judul) ;
+    
+    - Abstrak/Ringkasan;
+    
+    - Daftar Isi;
+    
+    - Daftar Tabel (jika ada)
+    
+    - Daftar Gambar (jika ada);
+    
+    - Daftar Grafik (jika ada);
+    
+    - Daftar Diagram (jika ada); dan
+    
+    - Daftar Lampiran (jika ada)
+
+## Outline {.m}
+
+- Bagian Inti:
+    
+    - Pendahuluan;
+
+    - Studi Pustaka;
+
+    - Metode Penelitian/Metodologi;
+
+    - Pembahasan;
+
+    - Kesimpulan
+
+- Bagian Akhir:
+
+    - Daftar Pustaka dan lampiran
+    
+- Outline ini bentuk standar dalam penyusunan tulisan ilmiah (laporan penelitian, jurnal ilmiah). Dalam penyusunan tugas dalam matkul ini akan menggunakan versi ringkas yaitu bagian inti ditambah dengan daftar Pustaka/referensi saja.
+
+## Bab 1 Pendahuluan {.m}
+
+- **1.1 Latar Belakang** berisi tentang pentingnya topik yang diangkat dalam laporan.
+
+- Motivasi itu penting. Misalnya jika anda memeriksa hubungan antara nilai tukar dan harga CPO, jelaskan di sini kenapa ini penting.
+
+- dapat menggunakan metode identifikasi masalah (fishbone diagram, 5W1H).
+
+- Jika perlu, jelaskan juga tentang konteks tentang penelitian ini. Kenapa penting di Indo tapi ga penting2 amat di negara lain, misalnya.
+
+- di TA, company profile jg taruh sini.
+
+## Bab I Pendahuluan {.m}
+
+- **1.2 Batasan Permasalahan/Ruang Lingkup** menguraikan batasan ruang lingkup bahasan permasalahan pada laporan, dapat berupa batasan waktu maupun topik yang dibahas. Misalnya, penelitian ini mencakup tahun 2001 - 2019, negara yang dipilih adalah 10 negara terbesar, HS yg dipilih, dst.
+
+- **1.3 Rumusan Masalah** menuliskan poin-poin permasalahan apa saja yang akan dibahas dalam laporan. Dapat juga merumuskan hipotesis penelitian. Misalnya, penelitian ini bermaksud melihat tren ekspor barang X.
+
+- **1.4 Tujuan dan Manfaat Penelitian** merupakan jawaban yang akan dicapai dari pembahasan laporan, biasanya dirumuskan dari poin-poin masalah yang telah dijabarkan sebelumnya. Misalnya, mengetahui tren barang X berguna utk perusahaan di bidang X.
+
+## Bab II Studi Pustaka
+
+- Hasil bacaan oleh penulis dari berbagai sumber sesuai dengan topik yang diteliti untuk menghasilkan ide/analisis baru yang dipresentasikan dalam sebuah karya ilmiah. 
+
+- Studi pustaka harus mencakup setidaknya literatur di hubungan variabel yang dipilih (boleh beda konteks), dan metode yang digunakan.
+
+- Jika penelitian anda punya konteks / aturan pemerintah tertentu, maka konteks ini juga perlu dibahas di sini.
+
+- Untuk TA, sebaiknya gunakan setidaknya 3 buku yang terbit 10 tahun terakhir dan jurnal yang terbit 5 tahun terakhir. Utk UAS bebas.
+
+## Bab III Metode Penelitian {.m}
+
+- Bab ini berisikan penjelasan mengenai kerangka pemecahan permasalahan yang ditemui.
+
+- **3.1. Data** Berisikan data yang digunakan, sumber dan metode pengumpulan data yang akan digunakan untuk melakukan analisis dalam laporan.
+
+- **3.2. Metode Analisis** Berisikan metode pengolahan data yang digunakan dalam menyelesaikan permasalahan teknis/operasional yang ditemui, baik secara kualitatif maupun kuantitatif. Pada bagian ini dijelaskan model yang digunakan serta alat bantu dalam pengolahan data.
+
+## Bab IV Pembahasan {.m}
+
+- Bab ini menyajikan penerapan metode yang telah dituangkan pada bab 3 dan hasilnya. 
+
+- Selanjutnya bab ini memaparkan temuan-temuan, analisis dan penjelasan atas temuan tersebut, dan bukti-bukti pendukung penjelasan tersebut.
+
+- **4.1 Pembahasan Masalah** menampilkan data (deskripsi, sumber, kelemahan dan kelebihan) dan visualisasi data yang telah dikumpulkan.
+
+- **4.2 Analisis Masalah** berisi penerapan metode dan pembahasan temuan, serta penjelasan atas temuan tersebut. Hasil dari pembahasan didasari teori yang telah dijelaskan pada bab II dan dapat dikaitkan dengan hasil temuan terdahulu.
+
+## Bab V Kesimpulan
+
+- Bagian ini berisi jawaban dari permasalahan dan tujuan yang diajukan pada laporan, yang diperoleh dari hasil pembahasan dan usulan perbaikan. 
+
+- Saran merupakan tindak lanjut dari kesimpulan, berupa anjuran atau rekomendasi yang disampaikan secara ringkas dan dapat diimplementasikan
+
+## Daftar Pustaka/Referensi
+
+- Dalam penulisan daftar pustaka tugas akhir Politeknik APP Jakarta menggunakan format American Psychological Association (APA) 7, bisa menggunakan Zotero.
+
+- Berpeganglah pada pedoman TA Poltek APP jakarta.
+
+- Ada banyak resource yang bisa dipakai untuk APA7, misalnya [ini](https://www.griffith.edu.au/library/study/referencing/apa-7).
+
+- Zotero / Mendeley / sejenisnya akan sangat mempermudah.
+
+## Tips (Tugas dan TA)
+
+- Mulai aja dari isu-isu yang anda tertarik. Tapi kalau bingung, tinggal liat WDI/BPS/SEKI lalu cari variabel yang menurut anda menarik.
+
+- kalo anda mau bikin penelitian TA yg terkait tempat magang, tanya ke bos anda di tempat magang apa isu yg menarik.
+
+- Rajin-rajin bertanya ke pembimbing. Kunci sukses TA adalah rajin bimbingan.
+
+- Diingatkan kembali, apapun bentuk TA anda, **ujian komprehensif** mempunyai bobot 50% di nilai akhir anda.

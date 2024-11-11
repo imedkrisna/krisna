@@ -31,10 +31,12 @@ slides:
 - {{% staticref "/metopel/meeting3/index.html" "newtab" %}}Pertemuan 3: OLS{{% /staticref %}}
 - {{% staticref "/metopel/meeting4/index.html" "newtab" %}}Pertemuan 4: Multivariate & dummy regression{{% /staticref %}}
 - {{% staticref "/metopel/meeting5/index.html" "newtab" %}}Pertemuan 5: Gravity & time series{{% /staticref %}}
-- {{% staticref "/metopel/meeting8/index.html" "newtab" %}}Pertemuan 6: Data ekonomi: cari di mana?{{% /staticref %}}
-- {{% staticref "/metopel/meeting9/index.html" "newtab" %}}Pertemuan 7: Visualisasi data untuk pemula{{% /staticref %}}
-- {{% staticref "/metopel/meeting10/index.html" "newtab" %}}Pertemuan 10: Menggunakan Zotero{{% /staticref %}}
-- {{% staticref "/metopel/meeting11/index.html" "newtab" %}}Pertemuan 11: Menggunakan Quarto dan Github{{% /staticref %}}
-- {{% staticref "/metopel/meeting12/index.html" "newtab" %}}Pertemuan 12: Kerangka penelitian{{% /staticref %}}
-- {{% staticref "/metopel/meeting13/index.html" "newtab" %}}Pertemuan 13: Melakukan tinjauan literatur{{% /staticref %}}
-- {{% staticref "/metopel/meeting14/index.html" "newtab" %}}Pertemuan 14: Metode penelitian di Poltek APP Jakarta{{% /staticref %}}
+- {{% staticref "/metopel/meeting6/index.html" "newtab" %}}Pertemuan 6: Data ekonomi: cari di mana?{{% /staticref %}}
+- {{% staticref "/metopel/meeting7/index.html" "newtab" %}}Pertemuan 7: Visualisasi data untuk pemula{{% /staticref %}}
+- {{% staticref "/metopel/meeting8/index.html" "newtab" %}}Pertemuan 8: Kerangka penelitian{{% /staticref %}}
+- {{% staticref "/metopel/meeting9/index.html" "newtab" %}}Pertemuan 9: Melakukan tinjauan literatur{{% /staticref %}}
+- {{% staticref "/metopel/meeting10/index.html" "newtab" %}}Pertemuan 10: Menuliskan metodologi penelitian dan metode kuantitatif lain selain regresi{{% /staticref %}}
+- {{% staticref "/metopel/meeting11/index.html" "newtab" %}}Pertemuan 11: Metode kualitatif{{% /staticref %}}
+- {{% staticref "/metopel/meeting12/index.html" "newtab" %}}Pertemuan 12: Melakukan tinjauan literatur{{% /staticref %}}
+- {{% staticref "/metopel/meeting13/index.html" "newtab" %}}Pertemuan 13: Menuliskan dokumen di RStudio dengan Quarto dan Github{{% /staticref %}}
+- {{% staticref "/metopel/meeting14/index.html" "newtab" %}}Pertemuan 14: Menggunakan Zotero{{% /staticref %}}

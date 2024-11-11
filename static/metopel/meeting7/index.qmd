@@ -1,6 +1,6 @@
 ---
-title: "ARDL dan Panel regression"
-subtitle: "Pertemuan 7"
+title: "Beginner Data Viz"
+subtitle: "Pertemuan 9"
 author: "Metodologi penelitian"
 format: 
   revealjs:
@@ -12,194 +12,231 @@ format:
     slide-number: true
 ---
 
-## So far
+## Hari ini
 
-- Kita sudah membahas data cross-section (bermacam-macam individu, 1 waktu) dan data time series (waktunya banyak tapi hanya track 1 individu).
+- Menggambar dengan ggplot
 
-- Hari ini, terakhir untuk teknik regresi:
-    - Time series dengan lebih dari 1 variabel: ARDL
-    - Regresi 2 index: individu dan waktu, yaitu regresi panel data.
-    - Tentang UTS dan what's next.
+    - scatter untuk cross section
+    
+    - garis untuk time series dan panel
+    
 
-## Packages & plot
+## Kenapa dataviz
+
+- Dataviz (kependekan dari data visualization) merupakan teknik yang digunakan untuk mempresentasikan data dalam bentuk yang lebih _user friendly_ atau lebih enak dilihat oleh manusia.
+
+- Dataviz ga ada gunanya untuk regresi di R. Fungsinya simply untuk komunikasi dengan manusia.
+
+- Seringkali, dataviz bahkan lebih penting dari analisis regresi!
+
+## Step dataviz
+
+- Cari datanya dulu! Apa yang mau di-viz-in kalo datanya gak ada?
+
+- Tentukan viz yang paling cocok.
+
+- Koneksikan viz dengan cerita/narasi tulisan anda!
+
+> A picture worth a thousand words!
+
+## Fungsi umum dataviz {.m}
+
+- menunjukkan hubungan dua atau lebih data untuk analisis awal
+
+    - hubungan seperti ini ujung-ujungnya harus menggunakan regresi.
+    
+- Menunjukkan tren / growth / perubahan data poin sepanjang waktu.
+
+    - misalnya nilai tukar dari bulan ke bulan apakah stabil, naik, atau turun.
+    
+    - perubahan harga, perubahan PDB, dan lain-lain
+    
+- Menunjukkan fraction/berapa besar data 1 observasi dibandingkan total.
+
+    - seberapa besar ekspor batubara dibanding keseluruhan ekspor Indonesia?
+    
+## Tools
+
+- Tools paling standard adalah microsoft excel!
+
+- R punya native command `plot` tapi fungsinya agak terbatas, terutama untuk time series.
+
+- Di R, penggunaan `ggplot` sangat disarankan.
+
+    - `ggplot` merupakan bagian dari package `tidyverse`
+    
+    - install dan liberary `tidyverse` sudah cukup untuk memakai ggplot
+    
+## Excel
+
+![explore di tab "insert"](gambar1.jpg)
+
+## ggplot
+
+- Untuk pengguna R, ggplot merupakan pilihan favorit, terutama jika anda menggunakan api call via R seperti `WDI`
+
+- ggplot jauh lebih versatile daripada `plot`, dapat langsung diinput di .qmd, tapi juga bisa disave ke .png untuk digunakan di word.
+
+- Namun sedikit problemnya adalah syntax-nya ggplot agak ribet.
+
+## Syntax ggplot
+
+- Di kuliah ini, anda akan diberikan kode yang bisa tinggal copy-paste.
+
+- Namun untuk bisa menguasai ggplot dengan penuh, anda perlu kuliah sendiri tentang dataviz, atau bisa juga otodidak (seperti saya)
+
+- Ada banyak buku untuk belajar ggplot yang gratis, juga course online.
+
+- Jika anda sudah paham syntaxnya, maka mengandalkan google saja cukup (seperti saya)
+
+## Syntax dasar
+
+- syntax dasar ggplot dibuka denga command ggplot(data,aes()) dan diikuti tanda tambah.
+
+- command `ggplot()` berfungsi untuk menginformasikan ke R bahwa anda ingin memulai gambar dengan data ini.
+
+- kita akan coba contoh yang cocok dengan cross section
+
+## Data {.scrollable}
+
+Data ini sama dengan di pertemuan 1, yaitu data cross-section.
 
 ```{r}
 #| echo: true
-#| warning: false
-library(tidyverse) # untuk pivot longer
-library(kableExtra) # untuk bikin tabel di slide
-library(readxl)
-library(writexl)
-library(ARDL)
-library(plm)
+library(WDI)
+library(tidyverse)
+
+indi<-c(            # membuat dictionary
+  "PDB"="NY.GDP.MKTP.CD",
+  "import"="NE.IMP.GNFS.CD"
+)
+
+dat<-WDI(           # Menarik data World Bank
+  country="all",
+  indicator=indi,
+  start=2019,end=2019,
+)
+
+dat
 ```
 
-```{r}
-plot<-ggplot()+theme_classic() +
-  theme(panel.background = element_rect(fill = "#f0f1eb",
-                                        colour = "#f0f1eb"),
-        plot.background = element_rect(fill = "#f0f1eb"),
-        legend.key = element_rect(fill = "#f0f1eb",linetype = "blank"),
-        legend.background = element_rect(fill="#f0f1eb"))
-```
+## ggplot
 
-## ARDL
-
-- ARIMA mengandalkan dirinya sendiri untuk melakukan forecasting.
-
-    - Variabelnya wajib stasioner.
-    
-    - Kadang, variabel lain berpengaruh.
-    
-- Auto-Regressive Distributed Lag (ARDL) adalah teknik yang dapat digunakan untuk variabel yang tidak stasioner.
-
-    - Tapi perlu ada variabel lain untuk kointegrasi.
-    
-## Data ARDL {.scrollable}
-
-```{r}
-dat<-read_excel("latihan8.xlsx")
-dat |> kbl() |> kable_styling(bootstrap_options = c("striped", "hover"))
-```
-    
-## Data
-
-- Data di atas adalah data ekspor dan impor barang yang terkait dengan industri makanan dan minuman.
-    
-    - first difference dari log.
-    
-    - ekspor produk final (dfx), ekspor bahan baku (dintx), impor produk final (dfm) dan impor bahan baku (dintm).
-    
-- Data ini merupakan salah satu data yang digunakan dalam penelitian [Amanta & Gupta (2021)](https://cutt.ly/cips-mk51).
-
-    - melihat GVC di industri pangan: seberapa besar impor bahan baku berdampak ke ekspor barang jadi.
-
-## Plot
-
-```{r}
-dat$Year<-as.Date(as.character(dat$Year),format="%Y")
-dat2<-pivot_longer(data=dat,!Year,names_to="wew",values_to = "values")
-plot+geom_line(data=dat2,aes(x=Year,y=values,color=wew))
-```
-
-## auto ARDL
-
-```{r}
-#| echo: true
-reg1<-auto_ardl(dfx~dintm+dfm,data=dat,max_order = 5)
-reg1
-```
-
-## Auto ARDL
-
-- urutan lag-nya sesuai urutan di formula.
-
-- auto ARDL melakukan iterasi beberapa kali untuk spesifikasi berbeda-beda, seperti ARIMA.
-
-- Namun dapat kita lihat, jika seriesnya terlalu pendek, iterasinya kurang.
-
-    - AIC baru muncul di spesifikasi dengan lag lebih sedikit.
-    
-- Kita gunakan lag 1,5,1
-
-## ARDL
-
-```{r}
-#| echo: true
-reg1<-ardl(dfx~dintm+dfm,data=dat,order = c(1,5,1))
-summary(reg1)
-```
-
-## Hasilnya
-
-- dapat kita lihat bahwa di industri makanan, pertumbuhan impor bahan baku secara signifikan meningkatkan pertumbuhan ekspor barang jadi.
-
-    - 1% kenaikan pertumbuhan impor bahan baku sejalan dengan 0,96% kenaikan pertumbuhan ekspor barang jadi.
-    
-- AR-based regression membutuhkan series yang panjang.
-
-    - Idealnya dilakukan dengan high-frequency data (bulanan, harian, kuartalan)
-
-## Data Panel
-
-- Hari ini kita belajar gabungan cross-section & time series: data panel.
-
-    - Punya informasi dari variasi individu dan variasi waktu.
-    
-    - Punya masalah keduanya: heteroskedastis dan autokorelasi.
-    
-- Secara umum, manfaatnya lebih besar daripada masalahnya.
-
-## Struktur data panel
-
-- Secara umum, ada 2 struktur data panel yang mungkin akan anda sering dapatkan. 
-
-- wide: jika bentuk datanya melebar ke samping, antara waktunya atau variabel individunya yang ke samping.
-
-- long: jika nama individu dan tahunnya sama-sama jadi variabel sendiri, dan datanya jadi panjang ke bawah.
-
-- Umumnya, data wide lebih enak dilihat jika variabelnya cuma 1, tapi data long lebih mudah digunakan.
-
-## Wide dan long
-
-<iframe src="https://onedrive.live.com/embed?cid=ACC929CA35B3A537&resid=ACC929CA35B3A537%21106424&authkey=ADmDun2ljLyEYzc&em=2" width="900" height="500" frameborder="0" scrolling="yes"></iframe>
-
-## Menuliskan persamaan
-
-- Karena ada 2 index yaitu individu dan waktu, maka regresi data panel ada 2 subscript:
-
-$$
-Y_{it}=\beta_0 + \beta_1 X_{it} + \mu_{it}
-$$
-
-- Di contoh wide barusan, kita bisa lihat bahwa yg $i$ adalah yang ke bawah, sementara yang $t$ adalah yang ke samping. Variabelnya sendiri adalah si angka PDB per kapita.
-
-- Di contoh long, $i=$ country, $t=$year, dan variabelnya sendiri adalah kolom $PDBperkapita$
-
-## Mengubah wide jadi long {.m}
-
-- Di R (maupun aplikasi lainnya), biasanya kita lebih sering menggunakan long.
-
-    - lebih mudah jika $i$ dan $t$-nya ada nama kolomnya.
-    
-    - Kita biasanya akan punya lebih dari 1 variabel.
-    
-- Di package "tidyverse", ada command yang namanya `pivot_longer()` yang dapat kita gunakan untuk mengubah data wide jadi data long.
-
-- Untuk regresi panel data maupun membuat grafik, kita akan selalu menggunakan format data long.
-
-    - Data hari ini didownload dari [World Bank](data.worldbank.org)
-    
-    - Semuanya berbentuk wide, jadi saya long-in dulu. Sumber data lain biasanya sudah otomatis long.
-    
-## Mengubah wide jadi long
+- Kita declare dulu dengan ggplot:
 
 ```r
-library("tidyverse") # untuk command pivot_longer()
-library("readxl") # untuk command read_excel()
-library("writexl") # untuk command write_xlsx()
-dat<-read_excel("wide.xlsx")
-dat2<-pivot_longer(data=dat,cols=!country, names_to="year",values_to="PDBperkapita")
-# tanda seru (!) di depan country maksudnya mau bilang "kecuali country, semua dibuat long"
-write_xlsx(dat2,"long.xlsx")
+ggplot(data=dat,aes(x=PDB,y=import))
 ```
-## Data
 
-- "latihan7.xlsx" adalah file excel yang berisi PDB per kapita, ekspor, dan impor dalam Dolar AS.
+- Ini akan memberi tahu ggplot bahwa kita ingin membuat grafik dari data "dat", di mana PDB jadi x-nya dan import jadi y-nya.
 
-    - ada 5 negara dan range tahun 1967-2021.
-    
-    - dengan kata lain, $i=$negara dan $t=$tahun.
-    
-- Datanya bersumber dari World Bank, tapi sudah dibuat jadi long.
+- Tapi ini saja tidak cukup. Anda harus secara eksplisit memberi tahu bahwa anda ingin membuat titik (scatterplot). Tambahkan `+ geom_point()` di belakangnya.
 
-## Data
+## geom_point
 
 ```{r}
 #| echo: true
-dat<-read_excel("latihan7.xlsx")
-dat$year<-as.Date(dat$year,"%Y") # mengubah year dari chr ke tss
+ggplot(data=dat,aes(x=PDB,y=import)) +
+  geom_point()
 ```
+
+## Memberi judul {.m}
+
+Untuk memberi label di sumbu X, Y dan judul tabel, anda dapat menggunakan `labs`
+
+```{r}
+#| echo: true
+ggplot(data=dat,aes(x=PDB,y=import)) +
+  geom_point() + # setiap nambah command, selalu kasih tanda +
+  labs(title="tabel 1. hubungan antara impor dan PDB",
+       x="Produk Domestik Bruto, current US$ million",
+       y="Nilai impor, current US$ million",
+       caption = "sumber: World Development Indicators, World Bank") # yang terakhir ga perlu +
+```
+
+## Cara save ggplot
+
+![pilih export, save as png. filenya akan muncul di folder anda.](gambar2.jpg)
+
+## Theme BW
+
+Anda juga bisa nambah theme utk ganti kosmetik grafik.
+
+```{r}
+#| echo: true
+ggplot(data=dat,aes(x=PDB,y=import)) +
+  geom_point() + # setiap nambah command, selalu kasih tanda +
+  labs(title="tabel 1. hubungan antara impor dan PDB",
+       x="Produk Domestik Bruto, current US$ million",
+       y="Nilai impor, current US$ million",
+       caption = "sumber: World Development Indicators, World Bank") +
+  theme_bw()
+  
+```
+
+## Theme Classic
+
+Theme-theme built in bisa dilihat di [sini](https://r-charts.com/ggplot2/themes/)
+
+```{r}
+#| echo: true
+ggplot(data=dat,aes(x=PDB,y=import)) +
+  geom_point() + # setiap nambah command, selalu kasih tanda +
+  labs(title="tabel 1. hubungan antara impor dan PDB",
+       x="Produk Domestik Bruto, current US$ million",
+       y="Nilai impor, current US$ million",
+       caption = "sumber: World Development Indicators, World Bank") +
+  theme_classic()
+```
+
+
+## Size & color
+
+- Anda bisa mewarnai dan ganti size di geom_point
+
+```{r}
+#| echo: true
+ggplot(data=dat,aes(x=PDB,y=import)) +
+  geom_point(color="red",size=2) + # setiap nambah command, selalu kasih tanda +
+  labs(title="tabel 1. hubungan antara impor dan PDB",
+       x="Produk Domestik Bruto, current US$ million",
+       y="Nilai impor, current US$ million",
+       caption = "sumber: World Development Indicators, World Bank") +
+  theme_classic()
+```
+
+## Time Series
+
+- setelah scatterplot, kita akan coba line graph.
+
+- Line graph biasanya digunakan untuk data time series atau panel.
+
+    - pengguna ggplot harus menggunakan format data "long".
+
+    - kolom waktu harus menggunakan tipe "tss" atau datetime.
+
+## Datetime
+
+- Format long dan wide dibahas di pertemuan 7.
+
+- Untuk datetime, anda harus memastikan variable waktu (tahun, bulan, dll) harus dalam bentuk tss.
+
+- Kadang-kadang saat kita pakai `read_excel()` atau `read_csv()`, R tidak membaca kolom waktu sebagai "tss", tapi malah sebagai "chr" (karakter) atau bahkan numerik (dbl, fl64, dst)
+
+- Jika bentuknya "chr", harus kita ubah ke "tss" dengan `as.Date()`
+
+## Datetime
+
+```{r}
+#| echo: true
+library(readxl)
+dat<-read_excel("latihan7.xlsx")
+dat$year<-as.Date(dat$year,format="%Y") # mengubah year dari chr ke tss
+```
+
+- Di latihan7.xlsx, kolom "year" bentuknya adalah "chr". Dengan `as.Date()`, kita mengubah kolom "year" dari "chr" jadi "tss".
+
+- sub-command "format" memberitau kita bahwa year itu merupakan tahun.
 
 ## Intermezzo: chr vs ts
 
@@ -223,139 +260,74 @@ dat
 
 :::
 
-## Plot the data: PDB per capita
+## Format time series
 
-```{r}
-plot+geom_line(data=dat,aes(x=year,y=PDBperkapita,color=country))
-```
+| bentuk | format |
+| ----- | ----- |
+| 2020 | "%Y" |
+| 2020-01-01 | "%Y-%m-%d" |
+| 2020/01/01 | "%Y/%m/%d" |
+| 10 Jan 2020 | "%d %b %Y" |
 
-## Plot the data: exports
+Lengkapnya, cek di [sini](https://www.r-bloggers.com/2013/08/date-formats-in-r/) atau di [sini](https://www.stat.berkeley.edu/~s133/dates.html)
 
-```{r}
-plot+geom_line(data=dat,aes(x=year,y=export,color=country))
-```
+## Line graph
 
-## Plot the data: imports
+- Sumbu x dari line graph hampir pasti variabel waktu.
 
-```{r}
-plot+geom_line(data=dat,aes(x=year,y=import,color=country))
-```
+- Sangat tidak disarankan ngeplot multiple indicators in one line.
 
-## Regresi panel
+- Tapi, 1 indikator dan ngeplot berbagai negara biasanya bisa-bisa aja dilakukan di line graph.
 
-- Sebelum melakukan regresi panel, pastikan bentuk datanya long.
+- syntaxnya mirip dengan scatter, dengan beberapa twist.
 
-- Kita dapat melakukan regresi biasa menggunakan `lm()`.
-
-    - disebut juga pooled OLS / pooling.
-    
-    - kita anggap setiap negara tidak ada perbedaan, setiap tahun tidak ada perbedaan.
-    
-    - keunggulan panel di sini hanya memberikan kita data yang lebih banyak.
-    
-## Regresi panel
-
-- Namun keuntungan panel adalah kita dapat melakukan regresi untuk masing-masing $i$.
-
-- Regresi ini disebut Fixed effect regression:
-
-$$
-Y_{it}=\alpha_i + \beta_1 X_{1,it} + \mu_{it}
-$$
-di mana $\alpha_i$ adalah time-invariant intercept untuk masing-masing $i$.
-
-- Mengurangi bias karena tiap negara pastinya beda-beda.
-
-## Regresi Panel: pooled OLS
+## Line graph
 
 ```{r}
 #| echo: true
-reg2<-lm(LP~LX+LM,data=dat)
-summary(reg2)
+ggplot(data=dat,aes(x=year,y=PDBperkapita)) +
+  geom_line() # Kita tidak pakai geom_point, tapi pakai geom_line
 ```
 
-## Residuals pooled
+hasilnya jelek karena dalam 1 waktu ada lebih dari 1 data point karena ada beberapa negara
+
+## Line graph
 
 ```{r}
 #| echo: true
-dat$u<-resid(reg2)
-plot(dat$LP,dat$u)
+ggplot(data=dat,aes(x=year,y=PDBperkapita,color=country)) +
+  geom_line()
 ```
 
-## Regresi Panel: fixed effect
+## Line graph
+
+- note bahwa di sub-command `aes()` ada tambahan argumen namanya "color". Color ini memberikan masing-masing garis untuk setiap kolom "country".
+
+- Dengan argumen "color", anda akan otomatis mendapatkan legenda di sisi kanan.
+
+- anda juga dapat menggunakan "linetype" daripada "color" jika gambarnya hitam putih.
+
+- Note kita menggunakan `geom_line()` bukan `geom_point()`
+
+    - apa yang terjadi kalau kita pakai 2 2 nya?
+
+## Linetype
 
 ```{r}
 #| echo: true
-reg3<-plm(LP~LX+LM,data=dat,index=c("country","year"))
-summary(reg3)
+ggplot(data=dat,aes(x=year,y=PDBperkapita,linetype=country)) +
+  geom_line()
 ```
 
-## Residuals fixed effect
+Harus selalu diingat nama variabelnya, mana yang jadi x, y, dan color/linetype. Anda juga bisa pakai labs dan theme sama seperti di contoh scatterplot.
 
-```{r}
-#| echo: true
-dat$u2<-residuals(reg3)
-plot(dat$u2)
-```
+## More on ggplot
 
-## Panel data
+- masih ada banyak jurus-jurus di ggplot bahkan bisa buat gambar hal-hal yang bukan data.
 
-- Jika memang tiap negara sama, maka hasil dari fixed effect = pooling.
+- Ada banyak built-in theme yang bisa dilihat di [sini](https://r-charts.com/ggplot2/themes/)
 
-    - jika beda, kita akan memilih fixed effect karena bias antar-individu diatasi dengan $\alpha_i$
-    
-- dari contoh sebelumnya, kita bisa lihat bahwa betanya beda.
+- Tapi untuk saat ini, cukup segini dulu yang dipelajari.
 
-    - dari residuals, tiap negara punya residual masing-masing.
-    
-- Tapi jelas dari residuals bahwa masih ada hal yang perlu kita kontrol.
+- Jika anda tertarik lebih lanjut mempelajari ggplot, anda dapat gunakan google.
 
-## Metode penelitian
-
-- Berbagai metode kualitatif:
-
-    - regresi multivariat: nominal, log-log, dan dummy.
-    
-    - ARIMA dan ARDL.
-    
-    - Regresi panel: Pooled dan fixed effect.
-
-- Teknik-teknik cukup oke untuk ditunjukkan ke orang lain.
-
-- Anda harus paham kekurangan metode-metode ini.
-
-## Langkah-langkah penelitian
-
-- Tujuan penelitian: melihat hubungan $X$ dan $Y$
-
-- Grafik $X$ dan $Y$: scatterplot atau line.
-
-- Regresi
-
-- plot error terhadap $X$ dan $Y$
-
-- Diskusi hasil dan keterbatasan
-
-## Post-UTS
-
-- Kita akan membahas praktis penulis (less teori, more praktik)
-
-- Sangat penting untuk membuat framework penulisan.
-
-- Sumber data sekunder yang sering dipakai dan bagaimana mendownloadnya.
-
-- Visualisasi dengan ggplot.
-
-- Membuat daftar pustaka.
-
-## Tentang UTS
-
-- UTS akan berlangsung selama 2 jam.
-
-- Close everything kecuali:
-
-    - kalkulator (bukan handphone/smartphone).
-
-    - 1 lembar A4 bolak balik, bebas diisi apa saja.
-    
-- Tidak akan disuruh regresi, tapi mungkin akan disuruh menerjemahkan tabel regresi.

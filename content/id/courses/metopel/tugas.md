@@ -1,82 +1,48 @@
 ---
-date: "2022-10-04T00:00:00Z"
+date: "2022-08-10T00:00:00Z"
 draft: false
-lastmod: "2022-10-04T00:00:00Z"
-linktitle: Tugas
+lastmod: "2022-08-10T00:00:00Z"
+linktitle: tugas
 menu:
   example:
-    name: Tugas
-    weight: 30
-summary: Tugas
-title: Tugas
+    name: tugas
+    weight: 50
+summary: tugas
+title: tugas
 toc: true
 type: book
-weight: 40
+weight: 50
 editable: false
 commentable: false
 ---
 
-## Tugas Metodologi Penelitian
+## Membuat makalah penelitian
 
-Tugas metodologi penelitian kali ini adalah membuat sebuah _policy brief_ singkat (sekitar 1500 kata / 3 halaman A4). Tugas ini dikerjakan berkelompok. _Policy brief_ yang ditulis adalah tentang pertumbuhan PDB, inflasi, dan tingkat pengangguran.
+- Tugas ini bertujuan untuk mengevaluasi kemampuan mahasiswa membuat sebuah makalah penelitian sesuai dengan kaidah-kaidah yang diajarkan di kelas.
 
-Pada mata kuliah ilmu ekonomi, anda belajar hubungan antara pertumbuhan PDB, inflasi dan tingkat pengangguran. Bagaimana perubahan di salah satu indikator akan mengubah indikator yang lain. Tugas anda adalah membahas perubahan-perubahan ini berdasarkan data tahunan yang tersedia, dan menuliskannya dalam sebuah risalah singkat. Risalah singkat ini diperkirakan akan terdiri dari sekitar 1500-2000 kata (atau sekitar 3 halaman A4 tanpa tabel dan gambar). Format penulisan dapat dibagi ke dalam 4 bagian:
+- Buatlah sebuah penelitian ilmiah sesuai dengan guide dan materi yang telah dipelajari di kelas.
 
-1. Pendahuluan (simple context aja ga usa panjang-panjang)
-2. Data (gunakan grafik untuk melakukan visualisasi 3 indikator makro yang ditugaskan, lalu bahas sedikit masing-masing indikator tersebut. Boleh pake ggplot, boleh pake excel)
-3. Pembahasan (gunakan _framework_ ilmu ekonomi dalam membahas data yang ada)
-4. Kesimpulan (no new info. Inget kerangka penelitian di meeting 12)
+- Gunakan [template ini](https://1drv.ms/f/s!AjelszXKKcmsheUiQlirP5wEFu8ZVA?e=EBei3L).
 
-## Data yang digunakan
+- Silakan bertanya ke dosen kapan saja. Usahakan pertanyaannya sudah dikumpulkan dan datang bersama-sama.
 
-Anda dapat menggunakan [World Development Indicators](https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG) untuk mendapatkan data yang diperlukan. Anda dapat mengunduh sendiri dengan browser, namun menggunakan R package `WDI` sangat disarankan.
-
-Kelompok anda SAMA dengan kelompok di mata kuliah ILMU EKONOMI. Ada total 7 kelompok, di mana setiap kelompok harus menggunakan data pertumbuhan PDB, inflasi, dan tingkat pengangguran. Negara yang dibahas adalah sebagai berikut:
-
-| kelompok | negara | Country code |
-| --- | ------ | --- |
-| 1 | Indonesia | IDN |
-| 2 | China | CHN |
-| 3 | Singapura | SGP |
-| 4 | Jepang | JPN |
-| 5 | Amerika Serikat | USA |
-| 6 | Malaysia | MYS |
-| 7 | Thailand | THA |
-
-Anda harus membahas 3 indikator tersebut secara tahunan dalam rentang waktu antara 2002-sekarang. Indikator yang anda perlukan adalah:
-
-| indikator | kode WDI | link |
-| ------ | --- | --- |
-| GDP growth (annual %) | NY.GDP.MKTP.KD.ZG | [link](https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG) |
-| Inflation, consumer prices (annual %) | FP.CPI.TOTL.ZG | [link](https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG) |
-| Unemployment, total (% of total labor force) (national estimate) | SL.UEM.TOTL.NE.ZS | [link](https://data.worldbank.org/indicator/SL.UEM.TOTL.NE.ZS) |
-
-Jika anda menggunakan package WDI, anda bisa pake kode ini:
-
-```r
-library(WDI)
-library(tidyverse)
-library(writexl)
-
-indi<-c(            
-  "growth"="NY.GDP.MKTP.KD.ZG", 
-  "inflation"="FP.CPI.TOTL.ZG",
-  "unemployment"="SL.UEM.TOTL.NE.ZS"
-)
-
-dat<-WDI(           # Menarik data World Bank
-  country="IDN", # Ganti nama negaranya sesuai kelompok
-  indicator=indi,
-  start=2002,end=2019,
-)
-
-## Mengeksport dat ke excel (jika perlu)
-write_xlsx(dat,"dat.xlsx")
-```
+- Jika tidak bisa menggunakan github, silakan menggunakan word/docs.
 
 ## Pengumpulan
 
-1. Format yang digunakan boleh word maupun pdf.
-2. Gunakan halaman cover yang memuat informasi setidaknya judul tulisan, kelompok, kelas, tanggal, dan NIM dan nama anggota kelompok.
-3. File dapat diupload di [link ini](https://forms.gle/rbS2dYsborq58b4Q7)
-4. Deadline tugas ini sama dengan UAS yaitu tanggal 26 Januari 2024.
+- Mahasiswa yang berhasil membuat tugas dengan menggunakan github cukup mengumpulkan linknya saja.
+
+- Sebelum mengumpulkan tugas, pastikan LINK ANDA BISA ANDA BUKA / tidak broken. Kalo bisa dibuka di browser anda, harusnya juga bisa dibuka di browser saya.
+
+- Bagi mahasiswa yang tidak berhasil menggunakan github, dapat mengumpulkan file dalam bentuk word atau pdf.
+
+- Kumpulkan tugas melalui [link google form ini]() (nanti diupdate)
+- DEADLINE AKAN DIUPDATE
+
+## Top 3 Tugas sebelumnya
+
+### 2022
+
+- [Adriansyah Prasetyo](https://adrianpras.github.io/)
+- [Hizkia Frederikh Nainggolan](https://hizkiafree.github.io/)
+- [Raja Shafa Pratama Bintang](https://rajashafa.github.io/)
