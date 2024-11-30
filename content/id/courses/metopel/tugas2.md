@@ -1,6 +1,6 @@
 ---
 date: "2022-10-04T00:00:00Z"
-draft: false
+draft: true
 lastmod: "2022-10-04T00:00:00Z"
 linktitle: Tugas
 menu:
