@@ -1,10 +1,10 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: ""
-event: "FGD Riset Bank Indonesia Institute 2024"
+title: "Neraca perdagangan yang berkelanjutan"
+event: "Sharing knowledge BPKP"
 event_url:
-location: "Hotel Rafles"
+location: "Online"
 address:
   street:
   city:
@@ -16,15 +16,15 @@ abstract:
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
-date: 2024-09-24T14:00:00+11:00
-date_end: 2024-09-24T14:00:00+11:00
+date: 2024-12-3T09:30:00+11:00
+date_end: 2024-12-3T12:00:00+11:00
 all_day: false
 
 # Schedule page publish date (NOT event date).
-publishDate: 2024-09-24T14:00:00+11:00
+publishDate: 2024-12-2T14:00:00+11:00
 
 authors: [admin]
-tags: [FGD, servicification]
+tags: [FGD, Neraca pembayaran]
 
 # Is this a featured event? (true/false)
 featured: false
@@ -47,7 +47,7 @@ image:
 
 
 # Optional filename of your slides within your event's folder or a URL.
-url_slides: "BI_service.html"
+url_slides: "bpkp.html"
 
 url_code:
 url_pdf: 
