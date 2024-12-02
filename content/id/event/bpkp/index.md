@@ -1,7 +1,7 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: "Services, manufacturing and the Indonesian third unbundling"
+title: ""
 event: "FGD Riset Bank Indonesia Institute 2024"
 event_url:
 location: "Hotel Rafles"
