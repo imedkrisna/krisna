@@ -16,12 +16,12 @@ abstract:
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
-date: 2024-12-3T09:30:00+11:00
-date_end: 2024-12-3T12:00:00+11:00
+date: 2024-12-03T09:30:00+11:00
+date_end: 2024-12-03T12:00:00+11:00
 all_day: false
 
 # Schedule page publish date (NOT event date).
-publishDate: 2024-12-1T10:00:00+11:00
+publishDate: 2024-12-01T10:00:00+11:00
 
 authors: [admin]
 tags: [FGD, Neraca pembayaran]
