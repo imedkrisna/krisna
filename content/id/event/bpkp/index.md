@@ -21,7 +21,7 @@ date_end: 2024-12-3T12:00:00+11:00
 all_day: false
 
 # Schedule page publish date (NOT event date).
-publishDate: 2024-12-2T14:00:00+11:00
+publishDate: 2024-12-1T10:00:00+11:00
 
 authors: [admin]
 tags: [FGD, Neraca pembayaran]
