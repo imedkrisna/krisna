@@ -1,0 +1,20 @@
+---
+title: "Diagram alir dan wawancara"
+subtitle: "Pertemuan 11"
+author: "Metodologi penelitian"
+format: 
+  revealjs:
+    theme: [simple,../mytheme.scss]
+    chalkboard: true
+    transition: convex
+    background-transition: fade
+    slide-number: true
+    incremental: false
+---
+
+## Hari ini
+
+- Membuat diagram alir
+
+- Wawancara
+

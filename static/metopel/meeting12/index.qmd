@@ -1,0 +1,136 @@
+---
+title: "Menulis metodologi"
+subtitle: "Pertemuan 14"
+author: "Metodologi penelitian"
+format: 
+  revealjs:
+    theme: [simple,../mytheme.scss]
+    chalkboard: true
+    transition: convex
+    background-transition: fade
+    slide-number: true
+    incremental: false
+---
+
+## Hari ini
+
+- Bagaimana mempresentasikan data dalam tulisan ilmiah.
+
+- Bagaimana menulis metode dalam tulisan ilmiah.
+
+- beberapa metode selain regresi yang sering digunakan.
+
+## Data
+
+- Bagian data diperlukan untuk menceritakan sedikit data yang digunakan.
+
+- Kita harus menceritakan beberapa informasi tentang data tersebut, seperti sumber data, definisi, satuan yang digunakan, dan hal-hal penting lainnya.
+
+- Contohnya jika anda menggunakan data dari WDI, ceritakan sedikit tentang apa itu WDI, lalu bahas indikator apa saja yang digunakan.
+
+## Contoh basis data
+
+Jika data diambil dari sebuah _database_, maka ceritakan secara singkat tentang _database_ tersebut.
+
+> Penelitian ini menggunakan data dari World Development Indicators (WDI). WDI merupakan basis data yang dikelola World Bank, sebuah lembaga internasional. WDI memiliki lebih dari 1000 indikator penting dari sekitar 200 negara dengan rentang waktu yang bervariasi.
+
+## contoh variabel
+
+Kemudian, sebutkan variabel yang digunakan, lalu ceritakan sedikit tentang definisi, alat ukur, dan informasi relevan lainnya.
+
+> Variabel yang menjadi fokus penelitian ini adalah total ekspor, Produk Domestik Bruto (PDB), jarak, dan status FTA. Total ekspor adalah total ekspor Indonesia ke beberapa negara tujuan dengan satuan yang digunakan adalah milyar dolar Amerika (USD)....
+
+Anda juga dapat menceritakan informasi menarik misalnya ekspor Indonesia paling tinggi adalah ke negara X,Y dan Z.
+
+## Summary
+
+- Jika data yang anda gunakan sedikit, anda dapat menggunakan tabel untuk menampilkan keseluruhan data anda.
+
+- Jika data anda banyak, pakai summary statistics aja. Summary statistics (udah dipelajari lho waktu mat&stat) umumnya berisi informasi tentang rata-rata dan rentang.
+
+- jadi itung aja rata-rata dan standar deviasi setiap variabel, lalu buat ini dalam tabel.
+
+- di R, anda dapat menggunakan `summary()`.
+
+- kalo udah ada summary-nya, bisa dibahas jika ada info menarik dari situ.
+
+## Summary
+
+```{r}
+#| echo: true
+library(tidyverse)
+library(readxl)
+dat<-read_excel("latihan4.xlsx")
+summary(dat)
+```
+
+## Method
+
+- Jika anda menggunakan regresi, maka di part inilah anda menuliskan rumus regresinya.
+
+- Kemudian jelaskan setiap notasi dan variabelnya.
+
+- Jangan lupa, yang terpenting adalah anda menjelaskan logika dari persamaan regresi yg digunakan masuk akal.
+
+    - misalnya, kenapa meregresikan impor terhadap PDB adalah ide bagus?
+    
+## Contoh method
+
+Jika anda menggunakan gravity, maka anda bisa mulai dengan menulis rumus regresi, misalnya:
+
+$$
+Ex_i = \beta_0 + \beta_1 PDB_i + \beta_2 jarak_i + \beta_3 FTA_i + \varepsilon_i
+$$
+
+> di mana Ex adalah nilai ekspor Indonesia ke negara tujuan, PDB adalah PDB dari negara tujuan ekspor, jarak adalah jarak antara Indonesia dengan negara tujuan ekspor, dan FTA adalah sebuah dummy variable bernilai 1 jika Indonesia dan negara tujuan ekspor memiliki perjanjian perdagangan bebas.
+
+## Hipotesis
+
+Anda juga perlu menjelaskan hipotesis penelitian anda dengan mengngunakan rumus yg dipakai.
+
+$$
+Ex_i = \beta_0 + \beta_1 PDB_i + \beta_2 jarak_i + \beta_3 FTA_i + \varepsilon_i
+$$
+
+> Jika sesuai teori, maka koefisien regresi dari PDB akan positif, jarak akan negatif, dan FTA akan positif.
+    
+## math mode
+
+- Anda dapat menggunakan tanda `$$` untuk masuk ke math mode di quarto.
+
+```
+$$
+Ex_i = \beta_0 + \beta_1 PDB_i + \beta_2 jarak_i + \beta_3 FTA_i + \varepsilon_i
+$$
+```
+
+$$
+Ex_i = \beta_0 + \beta_1 PDB_i + \beta_2 jarak_i + \beta_3 FTA_i + \varepsilon_i
+$$
+
+Jika susah, pake gambar aja. tulis di word atau tulis tangan, lalu foto, trus masukin sebagai gambar dengan
+
+`![](gambar.jpg)`
+
+## Alternative method: RCA
+
+$$
+RCA_Cg=\frac{\frac{X_Cg}{X_C}}{\frac{X_Wg}{X_W}}
+$$
+
+di mana:
+
+$X_{cg}$ = nilai ekspor barang $g$ oleh negara $C$
+
+$X_{c}$ = nilai total ekspor negara $C$
+
+$X_{Wg}$ = nilai total ekspor dunia dari barang $g$
+
+$X_{W}$ = nilai total ekspor dunia
+
+## Some tips
+
+## Referensi
+
+Plummer, M. G., Cheong, D., & Hamanaka, S. (2010). Methodology for impact assessment of free trade agreements. In. Manila, Philippines: Asian Development Bank. [link](https://www.adb.org/publications/methodology-impact-assessment-free-trade-agreements)
+
