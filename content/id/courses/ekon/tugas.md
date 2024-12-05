@@ -18,12 +18,8 @@ Tugas yang dibebankan pada mata kuliah ini berbentuk pembuatan makalah dan prese
 
 ## Format
 
-1. Presentasi menggunakan file powerpoint (microsoft ppt, google slides, dll), format bebas.
+1. Slide Presentasi menggunakan file powerpoint (microsoft ppt, google slides, dll), format bebas.
 2. Tulisan 
-
-## Detil Tanggal penting
-
-1. Mahasiswa membentuk 7 kelompok, lalu melaporkan kelompoknya kepada 
 
 ## Topik
 
@@ -50,13 +46,11 @@ Tugas yang dibebankan pada mata kuliah ini berbentuk pembuatan makalah dan prese
 
 ## Presentasi
 
-1. Presentasi dikumpulkan di hari yang sama dengan tulisan, namun dipresentasikan sesuai minggu-nya.
-2. Jumlah slide tidak diatur.
-3. Incar presentasi sekitar 15 menit.
-4. Presenternya terserah, apakah 1 orang aja atau 7-7nya gantian.
-5. yang tidak presentasi bisa dinilai dari cara menjawab pertanyaan.
-6. Format boleh ppt atau pdf.
+1. Jumlah slide tidak diatur.
+2. Format boleh ppt atau pdf.
 
 ## Link pengumpulan
 
-Tugas dikumpulkan lewat [link ini](https://forms.gle/Uy4PraiLftEXETez6)
+- Tugas dikumpulkan lewat [link ini](https://forms.gle/u5g1Mvemh2t44Jzt8)
+
+- Tugas dikumpulkan 10 Januari 2025
