@@ -53,4 +53,4 @@ Tugas yang dibebankan pada mata kuliah ini berbentuk pembuatan makalah dan prese
 
 - Tugas dikumpulkan lewat [link ini](https://forms.gle/u5g1Mvemh2t44Jzt8)
 
-- Tugas dikumpulkan 10 Januari 2025
+- Tugas dikumpulkan sebelum tanggal 10 Januari 2025 jam 18.00 WIB
