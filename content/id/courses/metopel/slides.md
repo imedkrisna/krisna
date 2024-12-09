@@ -36,7 +36,7 @@ slides:
 - {{% staticref "/metopel/meeting8/index.html" "newtab" %}}Pertemuan 8: Kerangka penelitian{{% /staticref %}}
 - {{% staticref "/metopel/meeting9/index.html" "newtab" %}}Pertemuan 9: Melakukan tinjauan literatur{{% /staticref %}}
 - {{% staticref "/metopel/meeting10/index.html" "newtab" %}}Pertemuan 10: Menuliskan metodologi penelitian dan metode kuantitatif lain selain regresi{{% /staticref %}}
-- {{% staticref "/metopel/meeting11/index.html" "newtab" %}}Pertemuan 11: Metode kualitatif{{% /staticref %}}
-- {{% staticref "/metopel/meeting12/index.html" "newtab" %}}Pertemuan 12: Melakukan tinjauan literatur{{% /staticref %}}
+- {{% staticref "/metopel/meeting11/index.html" "newtab" %}}Pertemuan 11: Diagram alir dan wawancara{{% /staticref %}}
+- {{% staticref "/metopel/meeting12/index.html" "newtab" %}}Pertemuan 12: Metode kualitatif{{% /staticref %}}
 - {{% staticref "/metopel/meeting13/index.html" "newtab" %}}Pertemuan 13: Menuliskan dokumen di RStudio dengan Quarto dan Github{{% /staticref %}}
 - {{% staticref "/metopel/meeting14/index.html" "newtab" %}}Pertemuan 14: Menggunakan Zotero{{% /staticref %}}
