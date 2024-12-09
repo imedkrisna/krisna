@@ -60,7 +60,7 @@ format:
 
 :::: columns
 ::: {.column width=50%}
-![](Picture4.png){.size }
+![](Picture4.png){width=85%}
 :::
 
 ::: {.column width=50%}
@@ -79,6 +79,15 @@ format:
 ## Complex flowchart
 
 ![](Picture6.png)
+
+
+## Complex flowchart
+
+![](Picture7.png)
+
+## Complex flowchart
+
+![](Picture8.png)
 
 ## flowchart
 
@@ -120,7 +129,7 @@ Observasi adalah teknik untuk meneliti perilaku yang terjadi secara alami di sua
 - **Observer-as-participant**: peneliti hanya melakukan wawancara dan observasi, kadang terlibat di dalam kelompok yang diteliti
 - **Complete observer**: Peneliti tidak melakukan interaksi dengan obyek yang diteliti, hanya melakukan observasi, tanpa wawancara
 
-## Wawancara
+## Wawancara {.m}
 
 - Wawancara dapat dilakukan secara terstruktur: menggunakan daftar pertanyaan dan mengarahkan diskusi dengan rigid. Subject oriented.
 
@@ -130,7 +139,7 @@ Observasi adalah teknik untuk meneliti perilaku yang terjadi secara alami di sua
 
 - Alternatifnya, mencatat langsung hal-hal yang penting dalam wawancara namun kelemahannya jika ada yang kurang jelas akan sulit untuk mengulang kembali diskusi tersebut.
 
-## Wawancara
+## Wawancara {.m}
 
 - Manapun teknik wawancara yang anda gunakan, pastikan memiliki transkrip wawancara yang nanti menjadi lampiran TA.
 
