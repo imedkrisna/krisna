@@ -18,3 +18,135 @@ format:
 
 - Wawancara
 
+## Diagram alir
+
+- Membuat diagram alir ada di hampir semua jenis TA non-penelitian.
+
+- Tapi di TA Penelitianpun, diagram alir adalah alat yang baik untuk membantu kerangka berpikir.
+
+## Diagram alir / flowchart
+
+- Diagram alir artinya simbol yang mewakili urutan operasi/proses dan aliran data dan dokumen. Dalam membuat diagram alir lazimnya menggunakan standar yang disusun oleh American National Standard Institute (ANSI), 
+
+- Boleh saja menggunakan symbol yang berbeda, namun perlu dijelaskan pengertian dari masing-masing symbol tersebut.
+
+- Jenis-jenis flowchart: system flowchart, document flowchart, schematic flowchart, program flowchart, process flowchart
+
+## Jenis-jenis flowchart {.m}
+
+- *System flowchart*: Contoh yang paling sering ditemui adalah SOP Perusahaan. Diagram ini menjelaskan urutan dari prosedur yang ada di dalam sistem
+
+- *Document flowchart*: Menunjukkan alur dari dokumen atau formular, termasuk tembusannya
+
+- *Schematic flowchart*: Bentuk lebih detail dari system flowchart, karena juga menggambarkan symbol-symbol lainnya, misalnya gambar computer untuk menunjukkan pengolahan data menggunakan komputer
+
+- *Program flowchart*: Turunan dari system flowchart yang menggambarkan logika program secara rinci, biasanya diperlukan dalam pengembangan program komputer
+
+- *Process flowchart*: Menggambarkan proses dalam suatu prosedur.
+
+## Simbol input-output
+
+![](Picture1.png)
+
+## Simbol proses
+
+![](Picture2.png)
+
+## Simbol penghubung
+
+![](Picture3.png)
+
+## Flowchart sederhana {.m}
+
+:::: columns
+::: {.column width=50%}
+![](Picture4.png){.size }
+:::
+
+::: {.column width=50%}
+- Ini adalah contoh flowchart sederhana dari aplikasi pembelajaran interaktif untuk menjawab soal.
+
+- Flowchart sederhana dibuat untuk konteks tertentu, apabila _agent_ atau divisi atau _person in charge_ tidak lebih dari satu.
+
+- Selanjutnya adalah contoh flowchart prosedur kegiatan impor yang melibatkan banyak PIC / divisi.
+:::
+::::
+
+## Complex flowchart
+
+![](Picture5.png)
+
+## Complex flowchart
+
+![](Picture6.png)
+
+## flowchart
+
+- Setiap divisi dibuat dalam sebuah kolom. Alirannya pindah kolom ketika melibatkan PIC lain.
+
+- Simple flowchart dapat dibuat horizontal, tetapi complex flowchart umumnya pasti vertikal.
+
+- Jangan lupa gunakan fitur "repeated header" sehingga ketika diagram alir anda pindah halaman, informasi PIC tetap ada di halaman berikutnya.
+
+## Penggunaan flowchart {.m}
+
+- Jika TA berbentuk penelitian maka perlu membuat diagram alir untuk menyusun kerangka penelitian: untuk menggambarkan hubungan antar variabel dan metode analisis
+- Jika TA berbentuk Analisis Proses Kerja dan Laporan Prakerin biasanya memerlukan diagram alir untuk menggambarkan proses atau prosedur yang berlaku di Perusahaan.
+- Semua symbol yang tadi dijelaskan sudah tersedia di MS word, bisa anda pilih Insert $\rightarrow$ Shapes $\rightarrow$ Flowchart
+- Ada beberapa program juga yang bisa membantu anda membuat flowchart
+
+## Latihan flowchart {.m}
+
+Buatlah flowchart dengan karakteristik seperti ini:
+
+1. Sebuah kegiatan purchasing di PT. XYZ melibatkan 3 divisi yaitu divisi A, B dan C.  Pihak luar yang terlibat adalah PT. D selaku supplier.
+
+2. Divisi A mendesain spesifikasi untuk bahan baku tertentu. Kemudian mengajukan ke divisi B untuk dibeli.
+
+3. Divisi B membuat dokumen pembelian dan menyerahkan ke PT. D.
+
+4. PT. D membeli dan memberikan barangnya ke PT. XYZ yang diterima oleh PT. B.
+
+5. B memeriksa barangnya. Jika sesuai spek, maka barang diterima. Jika tidak, barang dikembalikan ke PT. D.
+
+6. Jika barang diterima, Divisi B memerintahkan divisi C untuk membayar PT. D. Barang lalu diberikan ke divisi A.
+
+## Teknik observasi {.m}
+
+Observasi adalah teknik untuk meneliti perilaku yang terjadi secara alami di suatu kelompok sosial tertentu dengan pengamatan. Misalnya meneliti penggunaan bahasa, sistem kepercayaan, nilai-nilai budaya, dsb
+
+- **Complete participant**: menjadi bagian dari kelompok dan tidak disadari oleh kelompok yang diteliti (covert observer)
+- **Participant-as-observer**: menjadi bagian dari kelompok tapi kelompok yang diteliti menyadari bahwa dia adalah peneliti
+- **Observer-as-participant**: peneliti hanya melakukan wawancara dan observasi, kadang terlibat di dalam kelompok yang diteliti
+- **Complete observer**: Peneliti tidak melakukan interaksi dengan obyek yang diteliti, hanya melakukan observasi, tanpa wawancara
+
+## Wawancara
+
+- Wawancara dapat dilakukan secara terstruktur: menggunakan daftar pertanyaan dan mengarahkan diskusi dengan rigid. Subject oriented.
+
+- Wawancara tidak terstruktur: biasanya tidak memerlukan daftar pertanyaan, namun hanya perlu topik diskusi dan dapat dikembangkan lebih jauh. Fokusnya pada sudut pandang narasumber (object oriented).
+
+- Karena tidak terstruktur maka sebaiknya wawancara direkam lalu selanjutnya diubah bentuk menjadi transkrip wawancara. Ini pasti memakan waktu yang lama.
+
+- Alternatifnya, mencatat langsung hal-hal yang penting dalam wawancara namun kelemahannya jika ada yang kurang jelas akan sulit untuk mengulang kembali diskusi tersebut.
+
+## Wawancara
+
+- Manapun teknik wawancara yang anda gunakan, pastikan memiliki transkrip wawancara yang nanti menjadi lampiran TA.
+
+- Dalam transkrip tersebut, pastikan diawali dengan informasi berikut ini: tempat, tanggal dan waktu wawancara, media wawancara (langsung/telepon/online), nama narasumber, divisi narasumber, dan jabatan narasumber di perusahaan tersebut.
+
+- Pastikan ada pertanyaan dan jawabannya. [Ini contoh transkrip wawancara dengan pemenang nobel literatur 2024](https://www.nobelprize.org/prizes/literature/2024/han/interview/).
+
+- Tunjukkan transkripnya ke narasumber anda. Tanya apakah ada yang mau diedit oleh dia. Lalu akhiri dengan tanda tangan narasumber tersebut.
+
+
+## Referensi
+
+- Fauzi, Rizki Ahmad. (2017). Sistem Informasi Akuntansi (Berbasis Akuntansi). Yogyakarta: Deepublish Publisher.
+
+- Indrajani. (2015). Perancangan Basis Data All in 1. Jakarta : Elex Media Komputindo.
+
+- Chapin, Ned (1970). Flowcharting With the ANSI Standard: A Tutorial. ACM Computing Surveys. 2, 2 (June 1970), 119–146. https://doi.org/10.1145/356566.356570
+
+- Bryman, A., Bell, E. (2007). Business Research Methods. Second edition. New York: Oxford University Press Inc.
