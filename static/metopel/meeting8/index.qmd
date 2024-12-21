@@ -140,6 +140,8 @@ format:
 
 - Saran merupakan tindak lanjut dari kesimpulan, berupa anjuran atau rekomendasi yang disampaikan secara ringkas dan dapat diimplementasikan
 
+- Tidak boleh memberi informasi baru di bab kesimpulan. Semua informasi yang ada di bab ini harus berasal dari bab I sampai bab IV. Jika ada informasi baru, sebaiknya ditaruh di bab sebelumnya.
+
 ## Daftar Pustaka/Referensi
 
 - Dalam penulisan daftar pustaka tugas akhir Politeknik APP Jakarta menggunakan format American Psychological Association (APA) 7, bisa menggunakan Zotero.
