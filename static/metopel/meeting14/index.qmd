@@ -1,6 +1,6 @@
 ---
 title: "Menggunakan Zotero"
-subtitle: "Pertemuan 10"
+subtitle: "Pertemuan 14"
 author: "Metodologi penelitian"
 format: 
   revealjs:

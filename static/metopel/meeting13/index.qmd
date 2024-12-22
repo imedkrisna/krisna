@@ -1,6 +1,6 @@
 ---
 title: "Menggunakan Quarto & Github"
-subtitle: "Pertemuan 11"
+subtitle: "Pertemuan 13"
 author: "Metodologi penelitian"
 format: 
   revealjs:

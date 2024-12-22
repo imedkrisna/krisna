@@ -1,6 +1,6 @@
 ---
 title: "Menulis metodologi"
-subtitle: "Pertemuan 14"
+subtitle: "Pertemuan 10"
 author: "Metodologi penelitian"
 format: 
   revealjs:

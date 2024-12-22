@@ -1,6 +1,6 @@
 ---
-title: "Menulis metodologi"
-subtitle: "Pertemuan 14"
+title: "Metode kualitatif"
+subtitle: "Pertemuan 12"
 author: "Metodologi penelitian"
 format: 
   revealjs:
@@ -12,125 +12,143 @@ format:
     incremental: false
 ---
 
-## Hari ini
+## Metode kualitatif {.m}
 
-- Bagaimana mempresentasikan data dalam tulisan ilmiah.
+-   Kalau metode kuantitatif untuk menguji hipotesis, metode kualitatif memungkinkan untuk mengumpulkan Informasi di lapangan lalu dirumuskan menjadi teori. Jadi analisis datanya bersifat induktif.
 
-- Bagaimana menulis metode dalam tulisan ilmiah.
+-   Contoh judul penelitian kualitatif, biasanya digunakan dalam ilmu sosial:
 
-- beberapa metode selain regresi yang sering digunakan.
+    -   Analisis Beban Mental Karyawan Divisi Marketing Pada PT ABC
 
-## Data
+    -   Strategi Komunikasi Politik Partai WOW Selama Masa Pilkada di Kota Depok
 
-- Bagian data diperlukan untuk menceritakan sedikit data yang digunakan.
+    -   Pengembangan Pariwisata Berbasis Masyarakat (Community Based Tourism) Masyarakat Pantai Crystal Bay, Desa Sakti, Kecamatan Nusa Penida, Kabupaten Klungkung
 
-- Kita harus menceritakan beberapa informasi tentang data tersebut, seperti sumber data, definisi, satuan yang digunakan, dan hal-hal penting lainnya.
+-   Dalam penelitian kualitatif lebih berfokus pada seberapa lengkap dan dalamnya informasi yang didapatkan oleh peneliti, bukan dari banyaknya jumlah data.
 
-- Contohnya jika anda menggunakan data dari WDI, ceritakan sedikit tentang apa itu WDI, lalu bahas indikator apa saja yang digunakan.
+## Beberapa metode
 
-## Contoh basis data
+-   Brainstorming
 
-Jika data diambil dari sebuah _database_, maka ceritakan secara singkat tentang _database_ tersebut.
+-   Mind maps
 
-> Penelitian ini menggunakan data dari World Development Indicators (WDI). WDI merupakan basis data yang dikelola World Bank, sebuah lembaga internasional. WDI memiliki lebih dari 1000 indikator penting dari sekitar 200 negara dengan rentang waktu yang bervariasi.
+-   Cause and Effect Analysis/Fishbone Diagram: gabungan brainstorming dan mind map
 
-## contoh variabel
+-   Root Cause Problem Solving
 
-Kemudian, sebutkan variabel yang digunakan, lalu ceritakan sedikit tentang definisi, alat ukur, dan informasi relevan lainnya.
+-   SWOT/TOWS
 
-> Variabel yang menjadi fokus penelitian ini adalah total ekspor, Produk Domestik Bruto (PDB), jarak, dan status FTA. Total ekspor adalah total ekspor Indonesia ke beberapa negara tujuan dengan satuan yang digunakan adalah milyar dolar Amerika (USD)....
+## Brainstorming {.m}
 
-Anda juga dapat menceritakan informasi menarik misalnya ekspor Indonesia paling tinggi adalah ke negara X,Y dan Z.
+-   Pendidikan kita diajarkan untuk berfikir linear, khususnya dalam melakukan penelitian yang menggunakan kaidah ilmiah. Dalam praktiknya ada permasalahan yang sebab dan solusinya out of the box yang membutuhkan pemikiran secara lateral.
 
-## Summary
+-   Untuk dapat menghasilkan ide dan solusi yang kreatif dapat dicapai dengan membentuk kelompok diskusi yang setiap anggotanya dapat berpartisipasi dalam memberikan masukan berdasarkan cara berfikir masing-masing
 
-- Jika data yang anda gunakan sedikit, anda dapat menggunakan tabel untuk menampilkan keseluruhan data anda.
+-   Kelemahan dan kelebihan: Diskusi tetap perlu terstruktur walaupun sifatnya sebaiknya lebih informal untuk mendorong kreatifitas berfikir. Ada risiko dalam diskusi adanya asumsi, saling mendebat atau saling mengarahkan antar anggota
 
-- Jika data anda banyak, pakai summary statistics aja. Summary statistics (udah dipelajari lho waktu mat&stat) umumnya berisi informasi tentang rata-rata dan rentang.
+## Mindmap {.m}
 
-- jadi itung aja rata-rata dan standar deviasi setiap variabel, lalu buat ini dalam tabel.
+::::: columns
+::: {.column width="40%"}
+-   Berusaha memetakan proses berfikir, mengingat, mengumpulkan informasi, memunculkan ide, mengorganisir dan asosiasi
 
-- di R, anda dapat menggunakan `summary()`.
+-   Menurut para ahli, menggunakan variasi warna dan gambar juga membantu kita dalam mengingat
+:::
 
-- kalo udah ada summary-nya, bisa dibahas jika ada info menarik dari situ.
+::: {.column width="60%"}
+![](bs.jpg)
+:::
+:::::
 
-## Summary
+## Fishbone {.m}
 
-```{r}
-#| echo: true
-library(tidyverse)
-library(readxl)
-dat<-read_excel("latihan4.xlsx")
-summary(dat)
-```
+-   Kombinasi dari brainstorming dan mind mapping
 
-## Method
+-   Awalnya diciptakan sebagai tools dalam proses quality control, namun dalam perkembangannya banyak digunakan sebagai alat dalam mencari akar penyebab masalah.
 
-- Jika anda menggunakan regresi, maka di part inilah anda menuliskan rumus regresinya.
+![](fishbone1.png)
 
-- Kemudian jelaskan setiap notasi dan variabelnya.
+-   Setelah identifikasi masalah lalu identifikasi kategori/faktor-faktor utama masalah lalu penyebabnya, ini dapat dilakukan dengan melakukan brainstorming
 
-- Jangan lupa, yang terpenting adalah anda menjelaskan logika dari persamaan regresi yg digunakan masuk akal.
+## Fishbone
 
-    - misalnya, kenapa meregresikan impor terhadap PDB adalah ide bagus?
-    
-## Contoh method
+![](fishbone2.png)
 
-Jika anda menggunakan gravity, maka anda bisa mulai dengan menulis rumus regresi, misalnya:
+## Fishbone {.m}
 
-$$
-Ex_i = \beta_0 + \beta_1 PDB_i + \beta_2 jarak_i + \beta_3 FTA_i + \varepsilon_i
-$$
+-   Dalam menentukan “penyebab” dalam fishbone diagram dapat digali hingga ke “sub-penyebab”, hal ini merupakan salah satu kelebihan dari metode ini karena dapat menggali hingga ke akar masalah dengan relatif mudah tanpa menggunakan metode rumit.
 
-> di mana Ex adalah nilai ekspor Indonesia ke negara tujuan, PDB adalah PDB dari negara tujuan ekspor, jarak adalah jarak antara Indonesia dengan negara tujuan ekspor, dan FTA adalah sebuah dummy variable bernilai 1 jika Indonesia dan negara tujuan ekspor memiliki perjanjian perdagangan bebas.
+-   Kelemahan dari metode ini: tidak dapat membedakan tingkat kekritisan masalah dalam diagram yang dibuat, hal ini dapat mengakibatkan terjebak dalam diskusi yang panjang dalam mencari penyebab masalah yang sebenarnya tidak signifikan. Selain ini juga tidak tampak jika ada hubungan timbal balik antar faktor dan penyebab.
 
-## Hipotesis
+-   Jika sudah diidentifikasi cause dan sub-cause maka dapat dihubungkan dengan teori untuk membangun hipotesis dan menentukan variable independent (X) supaya dapat diteliti lebih lanjut.
 
-Anda juga perlu menjelaskan hipotesis penelitian anda dengan mengngunakan rumus yg dipakai.
+## RCPS
 
-$$
-Ex_i = \beta_0 + \beta_1 PDB_i + \beta_2 jarak_i + \beta_3 FTA_i + \varepsilon_i
-$$
+-   Root Cause Problem Solving (RCPS) seringkali disebut juga problem tree analysis.
 
-> Jika sesuai teori, maka koefisien regresi dari PDB akan positif, jarak akan negatif, dan FTA akan positif.
-    
-## math mode
+-   Dalam membuat pohon masalah akan dapat dipetakan penyebab langsung dan tidak langsung dari suatu masalah.
 
-- Anda dapat menggunakan tanda `$$` untuk masuk ke math mode di quarto.
+## RCPS
 
-```
-$$
-Ex_i = \beta_0 + \beta_1 PDB_i + \beta_2 jarak_i + \beta_3 FTA_i + \varepsilon_i
-$$
-```
+![](rcps.png)
 
-$$
-Ex_i = \beta_0 + \beta_1 PDB_i + \beta_2 jarak_i + \beta_3 FTA_i + \varepsilon_i
-$$
+-   Akar/penyebab dibagi menjadi 2 level:
+    -   Level 1 = penyebab langsung
+    -   Level 2 = penyebab tidak langsung
+-   Ada yang menyebut why why diagram atau 5 why diagram
 
-Jika susah, pake gambar aja. tulis di word atau tulis tangan, lalu foto, trus masukin sebagai gambar dengan
+## SWOT {.m}
 
-`![](gambar.jpg)`
+-   SWOT juga merupakan alat yang digunakan untuk mengidentifikasi posisi sebuah entitas (biasanya perusahaan, industri, atau negara) dalam menghadapi sebuah masalah.
 
-## Alternative method: RCA
+-   Semua faktor (internal dan eksternal, positif dan negatif) diidentifikasi dan dikelompokkan ke 4 kategori, yaitu Strength, Weakness, Opportunity dan Threat dalam sebuah diagram.
 
-$$
-RCA_Cg=\frac{\frac{X_Cg}{X_C}}{\frac{X_Wg}{X_W}}
-$$
+-   Strength (kekuatan) dan Weakness (kelemahan) merupakan sumber daya internal yang menjadi kekuatan (strength) dan kelemahan (weakness) untuk mencapai sebuah tujuan. SW ini umumnya kita bandingkan dengan pesaing.
 
-di mana:
+-   Opportunity (peluang) dan Threat (tantangan) merupakan faktor-faktor di luar kontrol kita yang sangat mempengaruhi kemampuan kita mencapai tujuan.
 
-$X_{cg}$ = nilai ekspor barang $g$ oleh negara $C$
+## SWOT {.m}
 
-$X_{c}$ = nilai total ekspor negara $C$
+Contoh SWOT tentang membangun sebuah usaha forwarder:
 
-$X_{Wg}$ = nilai total ekspor dunia dari barang $g$
+:::: columns
+::: {.column width=45%}
 
-$X_{W}$ = nilai total ekspor dunia
+#### Strength
+1. memiliki SDM yang baik.
+2. Memiliki partner yang kuat.
 
-## Some tips
+#### Opportunities
+1. Aktivitas ekspor impor negara yang tinggi.
+2. Banyak Free Trage Agreement.
 
-## Referensi
+:::
+::: {.column width=45%}
 
-Plummer, M. G., Cheong, D., & Hamanaka, S. (2010). Methodology for impact assessment of free trade agreements. In. Manila, Philippines: Asian Development Bank. [link](https://www.adb.org/publications/methodology-impact-assessment-free-trade-agreements)
+#### Weakness
+1. Kurang brand di luar otomotif.
+2. Kurang kemampuan digital.
 
+#### Threat
+1. Tergantung pada industri otomotif.
+2. AS berniat mengurangi impor, China melemah.
+
+:::
+::::
+
+Strategi dibangun dengan memanfaatkan S&O, mengurangi W, dan mengantisipasi T.
+
+## Kapan digunakan
+
+-   Fishbone diagram $\rightarrow$ saat ingin mencari kemungkinan penyebab dari sebuah masalah
+
+-   RCPS $\rightarrow$ saat ingin mengetahui akar masalah dari sebuah masalah
+
+-   SWOT/TOWS $\rightarrow$ digunakan untuk menghubungkan antara sasaran organisasi dan strategi
+
+-   Dapat dilakukan penggabungan teknik fishbone dan RCPS jika masalah yang dihadapi cukup kompleks dan diharapkan tidak terjadi lagi.
+
+## Reference
+
+Bryman, A., Bell, E. (2007). Business Research Methods. Second edition. New York: Oxford University Press Inc.
+:::::
