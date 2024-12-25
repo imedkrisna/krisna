@@ -106,7 +106,7 @@ N/A
 
 ### Popular Publications / Oped
 
-- Gupta, Krisna (2024). Hilirisasi dan peningkatan kompleksitas ekonomi ([ID](https://www.kompas.id/baca/opini/2024/01/21/hilirisasi-dan-peningkatan-kompleksitas-ekonomi)) ([EN](https://www.kompas.id/baca/english/2024/01/21/en-hilirisasi-dan-peningkatan-kompleksitas-ekonomi)). Kompas.
+- Gupta, Krisna (2024). [Hilirisasi dan kompleksitas ekonomi](https://www.kompas.id/baca/opini/2024/01/21/hilirisasi-dan-peningkatan-kompleksitas-ekonomi) / [Downstreaming and economic complexity](https://www.kompas.id/baca/english/2024/01/21/en-hilirisasi-dan-peningkatan-kompleksitas-ekonomi). Kompas.
 - Gupta, Krisna and Dhany Ratana (2023). [Indonesia’s stubborn logistics dilemma](https://www.eastasiaforum.org/2023/08/18/indonesias-stubborn-logistics-dilemma/). East Asia Forum.
 - Gupta, Krisna. 2022. [Indonesia's claim that banning nickel exports spurs downstreaming is questionable](https://theconversation.com/indonesias-claim-that-banning-nickel-exports-spurs-downstreaming-is-questionable-180229). The Conversation.
 - Gupta, Krisna and Deasy Pane. 2021. ["Restrictive regulations on foreign trade may hurt economy"](https://www.thejakartapost.com/paper/2021/03/11/restrictive-regulations-on-foreign-trade-may-hurt-economy.html). *The Jakarta Post*.
@@ -126,6 +126,7 @@ Teaching Experience {data-icon=chalkboard-teacher}
 
 - [Research method](https://www.krisna.or.id/courses/metopel/)
 - [Statistics](https://www.krisna.or.id/courses/statistika/)
+- [Introduction to economics](https://www.krisna.or.id/courses/ekon/)
 
 
 N/A
@@ -135,6 +136,7 @@ N/A
 ### Universitas Indonesia
 
 - [International economics part 1](https://www.krisna.or.id/courses/intecon/)
+- [International finance part 1](https://www.krisna.or.id/courses/intfin/)
 
 
 N/A
