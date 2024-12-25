@@ -106,10 +106,10 @@ N/A
 
 ### Popular Publications / Oped
 
+- Gupta, Krisna (2024). Hilirisasi dan peningkatan kompleksitas ekonomi ([ID](https://www.kompas.id/baca/opini/2024/01/21/hilirisasi-dan-peningkatan-kompleksitas-ekonomi)) ([EN](https://www.kompas.id/baca/english/2024/01/21/en-hilirisasi-dan-peningkatan-kompleksitas-ekonomi)). Kompas.
 - Gupta, Krisna and Dhany Ratana (2023). [Indonesia’s stubborn logistics dilemma](https://www.eastasiaforum.org/2023/08/18/indonesias-stubborn-logistics-dilemma/). East Asia Forum.
 - Gupta, Krisna. 2022. [Indonesia's claim that banning nickel exports spurs downstreaming is questionable](https://theconversation.com/indonesias-claim-that-banning-nickel-exports-spurs-downstreaming-is-questionable-180229). The Conversation.
 - Gupta, Krisna and Deasy Pane. 2021. ["Restrictive regulations on foreign trade may hurt economy"](https://www.thejakartapost.com/paper/2021/03/11/restrictive-regulations-on-foreign-trade-may-hurt-economy.html). *The Jakarta Post*.
-- Pasaribu, Donny and Krisna Gupta. 2020. ["Will IA-CEPA be the boost to Australia-Indonesia relations leaders are banking on?"](https://indonesiaatmelbourne.unimelb.edu.au/will-ia-cepa-be-the-boost-to-the-australia-indonesia-relationship-leaders-are-banking-on/). *Indonesia At Melbourne*.
 
 
 
@@ -124,8 +124,8 @@ Teaching Experience {data-icon=chalkboard-teacher}
 
 ### Politeknik APP Jakarta
 
-- [Research method](https://www.krisna.or.id/courses/metopel/) (2023)
-- [Mathematics & statistics](https://www.krisna.or.id/courses/statistika/) (2023)
+- [Research method](https://www.krisna.or.id/courses/metopel/)
+- [Statistics](https://www.krisna.or.id/courses/statistika/)
 
 
 N/A
@@ -134,7 +134,7 @@ N/A
 
 ### Universitas Indonesia
 
-- [Trade and Industry economic development analysis](https://www.krisna.or.id/courses/trade/) (2023)
+- [International economics part 1](https://www.krisna.or.id/courses/intecon/)
 
 
 N/A
