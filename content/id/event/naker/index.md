@@ -1,10 +1,10 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: "Neraca perdagangan yang berkelanjutan"
-event: "Sharing knowledge BPKP"
+title: "Industri Padat Karya dan Kondisi Tenaga Kerja di Indonesia"
+event: "Rapat Apindo"
 event_url:
-location: "Online"
+location: "Kemenaker Gedung A lantai 2"
 address:
   street:
   city:
@@ -16,8 +16,8 @@ abstract:
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
-date: 2024-12-03T09:30:00+11:00
-date_end: 2024-12-03T12:00:00+11:00
+date: 2024-12-27T14:00:00+07:00
+date_end: 2024-12-27T16:00:00+07:00
 all_day: false
 
 # Schedule page publish date (NOT event date).
@@ -47,7 +47,7 @@ image:
 
 
 # Optional filename of your slides within your event's folder or a URL.
-url_slides: "bpkp.html"
+url_slides: "naker.html"
 
 url_code:
 url_pdf: 
