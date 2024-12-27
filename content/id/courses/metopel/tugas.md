@@ -36,7 +36,7 @@ commentable: false
 
 - Bagi mahasiswa yang tidak berhasil menggunakan github, dapat mengumpulkan file dalam bentuk word atau pdf.
 
-- Kumpulkan tugas melalui [link google form ini]() (nanti diupdate)
+- Kumpulkan tugas melalui [link google form ini](https://forms.gle/pBEuVEwHMkCDYh7Z6) 
 - DEADLINE AKAN DIUPDATE
 
 ## Top 3 Tugas sebelumnya
