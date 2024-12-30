@@ -37,7 +37,7 @@ commentable: false
 - Bagi mahasiswa yang tidak berhasil menggunakan github, dapat mengumpulkan file dalam bentuk word atau pdf.
 
 - Kumpulkan tugas melalui [link google form ini](https://forms.gle/pBEuVEwHMkCDYh7Z6) 
-- DEADLINE adalah HARI TERAKHIR UAS JAM 18.00 (tanggal tepatnya akan diupdate nanti)
+- DEADLINE adalah HARI TERAKHIR UAS TANGGAL 17 JANUARI 2025 JAM 18.00 WIB.
 
 ## Top 3 Tugas sebelumnya
 
