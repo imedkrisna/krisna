@@ -16,9 +16,11 @@ role: Lecturer
 organizations:
 - name: Politeknik APP Jakarta
   url: "https://poltekapp.ac.id/"
+- name: Center for Indonesian Policy Studies
+  url: "https://www.cips-indonesia.org/team/dr.-krisna-gupta?lang=id"
 
 # Short bio (displayed in user profile at end of posts)
-bio: Research mainly on international trade and investment policy and its impact on firms. Indonesia in particular is my main geographical focus.
+bio: Research mainly on international trade and investment policy and its impact on firms. Indonesia in particular is my main geographical focus. I also write at [East Asia Forum](https://na01.safelinks.protection.outlook.com/?url=https%3A%2F%2Feastasiaforum.org%2Fauthor%2Fkrisna-gupta%2F&data=05%7C02%7C%7C6f5474a5624a432cf2c708dd2fda826c%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638719337714830829%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=1XzF71sSUGR%2FSZ6HMZ5rA1Fd62ZoMJi29ILgioaRuFc%3D&reserved=0) and [The Conversation Indonesia](https://theconversation.com/profiles/krisna-gupta-1133995)
 
 interests:
 - International Trade
