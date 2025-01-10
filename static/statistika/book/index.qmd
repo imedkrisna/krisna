@@ -1,17 +1,21 @@
 # Preface {.unnumbered}
 
-Why I make this book 
+Kemampuan berpikir analitik dan penggunaan teknologi merupakan kemampuan yang paling dicari di masa depan. Hal ini sejalan dengan keinginan Kementerian Perindustrian untuk mengarahkan pengembangan Industri 4.0 yang menitikberatkan pada kemampuan analitis dan penggunaan teknologi komputasi. Seiring meningkatnya akses data, maka pemahaman statistik semakin diperlukan, apalagi di bidang ilmu sosial. Melihat tren ke depan, Politeknik APP Jakarta merasa perlunya membekali mahasiswa dengan kemampuan yang akan tinggi permintaannya di masa depan.
 
-(untuk kuliah Politeknik APP Jakarta)
+Buku ini dapat digunakan untuk mata kuliah yang memiliki tujuan untuk memberi pemahaman tentang prinsip dasar ilmu statistika, seperti probabilitas dan sampling. Buku ini juga membahas bagaimana mendapat gambaran dari populasi dengan melihat angka rata-rata, median, modus, rentang dan distribusi. Pembaca akan juga dibekali kemampuan untuk menggunakan alat-alat analisis seperti hypothesis testing dan regresi.
 
-(perlu ada intro mathematics)
+Sebelum memasuki bagian statistika, Buku ini dibuka dengan pemahaman matematika level dasar terlebih dahulu. Karena itu, buku ini cocok digunakan untuk program studi yang memerlukan statistika, namun dengan calon mahasiswa yang memerlukan penyegaran soal prinsip matematika. Prinsip matematika yang akan dibahas di sini adalah mulai dari himpunan, fungsi, deret, dan turunan.
 
-Structure of this book
+Tujuan akhir dari buku ini bukanlah untuk menjadikan pembaca sebagai seorang ahli di bidang statistika dan data sains. Buku ini bertujuan untuk memperkenalkan pembaca terhadap dunia statistika dan probabilitas, serta hal-hal yang harus diperhatikan ketika membaca data statistika dan hasil regresi. Kemampuan ini menjadi semakin diperlukan dalam kehidupan sehari-hari, namun juga dapat menjadi pintu masuk untuk mempelajari ilmu selanjutnya dari statistika.
 
-What this book is about
+Buku ini dibuat ke dalam 14 bab. 7 bab pertama membahas tentang alat-alat dalam matematika yang akan diperlukan dalam studi ekonomi, bisnis, dan statistika secara umum. 7 bab setelahnya berisi tentang pengantar data dan statistika, probabilitas, dan regresi univariat. Bagi pembaca yang sudah tidak memerlukan pengantar matematika dapat langsung lompat ke bab 7.
 
-What this book isn't about
+Setelah membaca buku ini, diharapkan pembaca akan dapat mencapai kemampuan-kemampuan di bawah ini:
 
-How to use: student
-
-How to use: lecturer
+1.	Mengenal alat-alat dasar dalam matematika.
+2.	Mengenal Mengenal berbagai jenis data.
+3.	Menerangkan prinsip dasar sampling dan distribusi.
+4.	Menerangkan prinsip-prinsip dasar probabilitas.
+5.	Menjelaskan kondisi dari populasi berdasarkan informasi statistik.
+6.	Melakukan tes hipotesis.
+7.	Melakukan regresi univariat.
