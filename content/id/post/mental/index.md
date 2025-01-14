@@ -50,4 +50,6 @@ And don't get me started on keramaian soal [Jelita Jeje](https://www.tempo.co/ar
 
 Mental-mental merasa si paling berjasa ini nih yang bikin birokrasi kita susah efisien. Di negara lain pengusaha dipermudah untuk usaha selama sesuai aturan. Ini kok malah merasa paling berjasa dan paling berhak request macem-macem sih? Gimana mau saingan sama negara lain coba? Gimana entrepreneur jujur no sogok-sogok bisa usaha kalo gini? Ini mah ngundang entrepreneur yang emang hobi nyogok!
 
+Kalaupun mereka "beruntung" karena diperbolehkan usaha, ya bayarnya bukan ke pejabat dong? Tapi ke negara. dan mereka sudah bayar! kan bayar pajak? Kan bayar gaji sesuai UMP? Kalo ada sesuatu yang harus dilakukan untuk menunjukkan "rasa syukur karena boleh buka usaha", ya diperjelas aja di peraturan perundang-undangan, apa aja kewajiban yang harus dilakukan untuk negara.
+
 Atau apakah 3 contoh di atas (posting linkedin, impor sapi paksa, BP Bintan) ini cuma kebetulan? 3 oknum? Atau emang kita ga siap tumbuh 8%? Ntahlah. What do you think?
