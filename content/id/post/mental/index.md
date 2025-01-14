@@ -40,13 +40,13 @@ Pas liat frasa itu, saya langsung sangat-sangat bisa relate. Pejabat atau birokr
 
 Pas baca bagian itu, saya langsung inget cerita dari senior di PNS (orangnya udah pensiun sekarang. dia angkatan jadul banget). Jaman dulu, alasan birokrat itu minta pelicin untuk mempercepat izin usaha apapun adalah ya karena mereka merasa kerjaan mereka itu punya andil besar yang membuat si pengusaha jadi kaya. Ibaratnya, "lu tuh sukses berkat ijinnya gue urus." Padahal itu kan kerjaan dia. digaji buat itu. Liek, wtf?
 
-Sebelumnya lagi, saya sempet dengerin youtube Tempo "Jelasin Dong" tentang [impor sapi "paksa"](https://www.youtube.com/watch?v=-G2EjOriAjY). Jadi ceritanya tuh Kementan mau impor sapi untuk kebutuhan susu dan daging makan bergizi gratis (MBG). Si Kementan ngumpulin semua pengusaha untuk melakukan impor sapi hidup, meski menurut pengusaha-pengusaha tersebut, impor sapi hidup dalam jumlah banyak itu akan jauh dari praktis.
+Sebelumnya lagi, saya sempet dengerin youtube Tempo "Jelasin Dong" tentang [impor sapi "paksa"](https://www.youtube.com/watch?v=-G2EjOriAjY). Jadi ceritanya tuh Sebuah K/L mau impor hewan untuk kebutuhan sebuah program penting. Si K/L ini ngumpulin semua pengusaha untuk melakukan impor hewan hidup ini, meski menurut pengusaha-pengusaha tersebut, impor sapi hidup dalam jumlah banyak itu akan jauh dari praktis.
 
-Singkat cerita, di menit-menit menjelang akhir (maaf saya lupa menit berapa) muncul celetukan bahwa pejabat Kementan pake argumen mantap. "Kalian pengusaha kan selama ini impor agrikulturnya udah dibantuin kementan (melalui rekomendasi teknis). Sekarang saatnya kalian bantu pemerintah (maksudnya bantu provide sapi buat MBG).
+Singkat cerita, di menit-menit menjelang akhir (maaf saya lupa menit berapa) muncul celetukan bahwa pejabat K/L pake argumen mantap. "Kalian pengusaha kan selama ini impornya udah dibantuin kami (melalui semacem ijin). Sekarang saatnya kalian bantu kami (maksudnya bantu provide hewan hidup buat program tersebut)."
 
-Wkwkw. Lah nyedian izin impor itu kan emang tugas mereka? Supaya ekonomi jalan? Kok jadi berasa si paling berjasa trus jadi bisa request-request ke pengusaha?
+Wkwkw. Lah nyedian izin impor itu kan emang tugas mereka? Supaya ekonomi jalan? Kok jadi berasa si paling berjasa trus jadi bisa request-request ke pengusaha? Tonton aja tuh videonya yg Tempo. Seru kok.
 
-And don't get me started on keramaian soal [Jelita Jeje](https://www.tempo.co/arsip/profil-farid-irfan-siddik-suami-jelita-jeje-kepala-bp-bintan-dan-anak-staf-ahli-jaksa-agung-15708) si istri kepala BP Bintan yang merasa bahwa dientertain pengusaha itu wajar karena keluarga dia adalah yang ngurusin kawasan ekonomi khusus Bintan.
+And don't get me started on keramaian soal [Sosialita influenser](https://www.tempo.co/arsip/profil-farid-irfan-siddik-suami-jelita-jeje-kepala-bp-bintan-dan-anak-staf-ahli-jaksa-agung-15708) si istri kepala badan yang jadi lokasi investasi yang merasa bahwa dientertain pengusaha itu wajar karena keluarga dia adalah yang ngurusin kawasan investasi spesial.
 
 Mental-mental merasa si paling berjasa ini nih yang bikin birokrasi kita susah efisien. Di negara lain pengusaha dipermudah untuk usaha selama sesuai aturan. Ini kok malah merasa paling berjasa dan paling berhak request macem-macem sih? Gimana mau saingan sama negara lain coba? Gimana entrepreneur jujur no sogok-sogok bisa usaha kalo gini? Ini mah ngundang entrepreneur yang emang hobi nyogok!
 
