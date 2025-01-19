@@ -98,6 +98,10 @@ Obviously 2020 ada pandemi COVID-19 sehingga tingkat pengangguran langsung melon
 
 Secara keseluruhan, bisa kita lihat bahwa 2024 Agustus dan Februari, tingkat pengangguran sudah mulai kembali ke tren awal. Di samping itu, Jakarta selama ini memang memiliki tingkat pengangguran yang tinggi, di atas rata-rata nasional, seperti halnya Aceh. Bahkan bisa dikatakan Jakarta seringkali lebih tinggi tingkat penganggurannya dibanding Aceh.
 
+Singkatnya:
+
+> (1) kemungkinan tingkat pengangguran memang tidak lebih buruk seperti yang di berita-berita, karena sudah mendekati tren 10 tahun terakhir, dan generally membaik sejak dikacaukan COVID. (2) Jakarta memiliki tingkat pengangguran yang setara dengan Aceh, dan tingkat pengangguran keduanya berada di atas rata-rata nasional.
+
 Penting juga untuk diingat bahwa angka pengangguran saja tidak cukup untuk melakukan analisis terhadap lapangan kerja karena banyak indikator lain yang juga perlu diperhatikan. Pertama adalah pentingnya mengetahui **jumlah angkatan kerja**, yang bisa saja naik karena berbagai faktor (misalnya orang yang biasanya lanjut kuliah memutuskan tidak kuliah sehingga masuk angkatan kerja), atau bahkan turun (saking desperate-nya ga dapet kerja, sehingga memutuskan nyerah nyari kerja dan memilih nganggur). Berapa **jam kerja**-nya (orang bekerja menurut BPS adalah jika kerjanya setidaknya 1 jam seminggu. jadi bisa saja masih kerja tapi jam kerjanya berkurang, yang menunjukkan lesu-nya pasar tenaga kerja). Dan yang terpenting adalah berapa **upah** yang dibayarkan untuk jam kerja tersebut. Saya pernah bahas sedikit tentang potensi dampak UMK ke pasar tenaga kerja di [sini](https://www.krisna.or.id/post/umk/).
 
 Dengan kata lain, sangat mungkin tingkat pengangguran tidak berbeda jauh, tapi sebenarnya yang terjadi adalah pengurangan jam kerja atau upah. Ini tuh mirip dengan harga _snack_ gak turun tapi isinya berkurang.
