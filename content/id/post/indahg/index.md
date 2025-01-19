@@ -62,7 +62,7 @@ ax.set(xlabel="",ylabel="Tingkat pengangguran (%)",title="tingkat pengangguran t
 
     [Text(0.5, 0, ''),
      Text(0, 0.5, 'Tingkat pengangguran (%)'),
-     Text(0.5, 1.0, 'tingkat pengangguran tahunan bulan februari')]
+     Text(0.5, 1.0, 'tingkat pengangguran tahunan bulan Februari')]
 
 
 
@@ -84,7 +84,7 @@ ax.set(xlabel="",ylabel="Tingkat pengangguran (%)",title="tingkat pengangguran t
 
     [Text(0.5, 0, ''),
      Text(0, 0.5, 'Tingkat pengangguran (%)'),
-     Text(0.5, 1.0, 'tingkat pengangguran tahunan bulan februari')]
+     Text(0.5, 1.0, 'tingkat pengangguran tahunan bulan Agustus')]
 
 
 
@@ -98,4 +98,50 @@ Obviously 2020 ada pandemi COVID-19 sehingga tingkat pengangguran langsung melon
 
 Secara keseluruhan, bisa kita lihat bahwa 2024 Agustus dan Februari, tingkat pengangguran sudah mulai kembali ke tren awal. Di samping itu, Jakarta selama ini memang memiliki tingkat pengangguran yang tinggi, di atas rata-rata nasional, seperti halnya Aceh. Bahkan bisa dikatakan Jakarta seringkali lebih tinggi tingkat penganggurannya dibanding Aceh.
 
-Mudah-mudahan grafik ini membantu klarifikasi.
+Penting juga untuk diingat bahwa angka pengangguran saja tidak cukup untuk melakukan analisis terhadap lapangan kerja karena banyak indikator lain yang juga perlu diperhatikan. Pertama adalah pentingnya mengetahui **jumlah angkatan kerja**, yang bisa saja naik karena berbagai faktor (misalnya orang yang biasanya lanjut kuliah memutuskan tidak kuliah sehingga masuk angkatan kerja), atau bahkan turun (saking desperate-nya ga dapet kerja, sehingga memutuskan nyerah nyari kerja dan memilih nganggur). Berapa **jam kerja**-nya (orang bekerja menurut BPS adalah jika kerjanya setidaknya 1 jam seminggu. jadi bisa saja masih kerja tapi jam kerjanya berkurang, yang menunjukkan lesu-nya pasar tenaga kerja). Dan yang terpenting adalah berapa **upah** yang dibayarkan untuk jam kerja tersebut. Dengan kata lain, sangat mungkin tingkat pengangguran tidak berbeda jauh, tapi sebenarnya yang terjadi adalah pengurangan jam kerja atau upah. Ini tuh mirip dengan harga _snack_ gak turun tapi isinya berkurang.
+
+So yeah, menganalisis pasar tenaga kerja tidak semudah itu, makanya di kami ekonom pun bahkan pasar tenaga kerja bisa menjadi sebuah spesialisasi sendiri. Mudah-mudahan bapak ibu dan teman-teman lebih kritis ke depannya jika melihat angka-angka ini.
+
+BTW, BPS mulai banyak diseminasi data soal upah, sebuah progres yang sangat perlu diapresiasi. Ini salah satu data soal upah yang ada di [website BPS](https://www.bps.go.id/id/statistics-table/2/MTE3MiMy/upah-rata---rata-per-jam-pekerja-menurut-provinsi--rupiah-jam-.html). Oh iya hati-hati juga melihat rata-rata yah karena rata-rata akan di-skew ke kiri dan terinflate oleh orang kaya, to some degree.
+
+Mudah-mudahan postingan ini membantu klarifikasi.
+
+
+```python
+## This is a copilot generated code.
+import pandas as pd
+from io import StringIO
+
+# Tab-delimited data
+data = """daerah\t2015\t2016\t2017\t2018\t2019\t2020\t2021\t2022\t2023
+ACEH\t11226\t13627\t14809\t13814\t15065\t18099\t17037\t16772\t17585
+DKI JAKARTA\t17012\t23181\t23826\t25238\t25236\t28420\t30662\t32685\t42354
+DI YOGYAKARTA\t10440\t12070\t12281\t12554\t13275\t15771\t15098\t14916\t16478
+BALI\t11038\t14852\t15624\t15889\t16408\t17775\t17662\t16857\t18521
+MALUKU UTARA\t13607\t15226\t15760\t15864\t17425\t23338\t21131\t18278\t27078
+INDONESIA\t11434\t14068\t14731\t15275\t15823\t17696\t18089\t17542\t19027"""
+
+# Use StringIO to read the string data into a pandas dataframe
+df = pd.read_csv(StringIO(data), delimiter='\t')
+df_long = pd.melt(df, id_vars=['daerah'], var_name='year', value_name='value')
+
+## Seaborn
+ax=sns.lineplot(data=df_long,x="year",y="value",hue='daerah',palette='Paired')
+sns.move_legend(ax,loc='lower right',bbox_to_anchor=(1.35,.5))
+ax.set(xlabel="",ylabel="Rp",title="Upah per jam, provinsi, Rupiah/jam")
+```
+
+
+
+
+    [Text(0.5, 0, ''),
+     Text(0, 0.5, 'Rp'),
+     Text(0.5, 1.0, 'Upah per jam, provinsi, Rupiah/jam')]
+
+
+
+
+    
+![png](index_files/index_6_1.png)
+    
+
