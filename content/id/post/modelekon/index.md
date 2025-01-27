@@ -49,11 +49,14 @@ Dengan kata lain, objective function dari ekonomi kecil kita ini adalah:
 
 
 
-$$ \max_{A^D,B^D} \ & {A^D}^{\alpha}{B^D}^{\beta} $$
+$$\max_{A^D,B^D} \ & {A^D}^{\alpha}{B^D}^{\beta}$$
 
 $$\text{subject to } \ & A^S=f\times L_A$$
+
 $$& B^S=g \times L_B$$
+
 $$& L_A+L_B=L$$
+
 $$& A^S=A^D, B^S=B^D$$
 
 
@@ -63,6 +66,7 @@ Alias, sebuah negara ada untuk memaksimalkan kebahagiaan warganya, yang di persa
 Kita bisa langsung mengaplikasikan substitusi dengan memanfaatkan fakta bahwa permintaan sama dengan penawaran $e.g., \ (A^S=A^D=A)$, sehingga kita akan punya reduced form seperti ini:
 
 $$\max_{L_A,L_B} \ & (fL_A)^{\alpha}(gL_B)^{\beta}$$
+
 $$\text{subject to } \ & L_A+L_B=L$$
 
 
@@ -92,8 +96,11 @@ Kita kudu nambah asumsi untuk hitung harga dan gaji. Asumsi berikutnya adalah pe
 jadi kita tambah parameter at least 3, yaitu $p_A, p_B \text{ dan } w$ alias harga barang A, harga barang B, dan gaji. Asumsi berikutnya yang perlu ditambahin adalah perfect competition di mana kedua industri akan menghabiskan semua profitnya untuk menggaji pegawai. Artinya, revenue dari hasil penjualan barang A akan sama dengan belanja pegawai, atau upah kali jumlah tenaga kerja:
 
 $$p_A\times A &= w\times L_A$$
+
 $$p_A \times fL_A&=w\times L_A$$
+
 $$p_A\times f&=w$$$
+
 $$\frac{w}{p_A}=f$$
 
 
@@ -110,10 +117,11 @@ Artinya, harga barang keduanya tergantung produktivitas relatif kedua barang ter
 Nah, kita juga bisa kalkulasi jumlah barang yang diproduksi dengan:
 
 $$
-A=fL_A=f \frac{\alpha}{\alpha+\beta} \frac{L}{f}=\frac{\alpha}{\alpha+\beta} L
+A=fL_A=fL \frac{\alpha}{\alpha+\beta}
 $$
+
 $$
-B=gL_B=g \frac{\beta}{\alpha+\beta} \frac{L}{g}=\frac{\beta}{\alpha+\beta} L
+B=gL_B=gL \frac{\beta}{\alpha+\beta}
 $$
 
 Sementara itu utility atau kebahagiaan di negara ini juga bisa kita hitung dengan:
@@ -121,7 +129,9 @@ Sementara itu utility atau kebahagiaan di negara ini juga bisa kita hitung denga
 $$
 U&=A^{\alpha}B^{\beta}
 $$
+
 $$&=\left(\frac{\alpha}{\alpha+\beta}\right)^\alpha L^{\alpha}\left(\frac{\beta}{\alpha+\beta}\right)^{\beta} L^{\beta}$$
+
 $$U&={\alpha^\alpha}{\beta^\beta}\left({\alpha+\beta}\right)^{-\left(\alpha+\beta\right)}L^{\alpha+\beta}$$
 
 
