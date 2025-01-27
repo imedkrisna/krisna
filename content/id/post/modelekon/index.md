@@ -48,13 +48,13 @@ Mari kita buat sebuah model kecil untuk ekonomi sebuah negara dengan aturan main
 Dengan kata lain, objective function dari ekonomi kecil kita ini adalah:
 
 $$
-\begin{align*}
+\begin{align}
   \max_{A^D,B^D} \ & {A^D}^{\alpha}{B^D}^{\beta} \\
   \text{subject to } \ & A^S=f\times L_A \\
     & B^S=g \times L_B \\
     & L_A+L_B=L \\
     & A^S=A^D, B^S=B^D
-\end{align*}
+\end{align}
 $$
 
 Alias, sebuah negara ada untuk memaksimalkan kebahagiaan warganya, yang di persamaan ini diwakilkan oleh $U$. si $U$ sendiri akan makin besar seiring naiknya konsumsi barang dan jasa, yang di model ini cuma diwakili 2 barang, yaitu $A$ dan $B$. Satu-satunya alasan kenapa kita tidak bisa semena-mena naikin $A$ dan $B$ adalah karena keterbatasan sumber daya, dalam hal ini diwakilkan oleh $L$ atau sumber daya manusia. Nah, nanti lama-lama semakin banyak barang dan sumber daya yang bisa kita tambahkan ke persamaan ini. Tapi untuk sekarang, kita mulai dari yang simpel dulu.
