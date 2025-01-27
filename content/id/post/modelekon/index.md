@@ -30,11 +30,11 @@ projects: []
 
 Semakin maraknya pembicaraan soal swasembada dan anti-impor semakin kuat aja. Terakhir yang saya sering baca adalah soal [impor paksa sapi](https://www.youtube.com/watch?v=-G2EjOriAjY&t=1s) dan lebih serem lagi, soal [deklarasi tidak akan impor pangan](https://www.tempo.co/ekonomi/zulkifli-hasan-tegaskan-komitmen-soal-swasembada-pangan-stop-impor-beras-hingga-gula-mulai-tahun-ini-1195061). Ntah bagaimana cara pemerintah meningkatkan produktivitas pertanian, yang mana merupakan satu-satunya cara agar bisa memenuhi kebutuhan pangan domestik tanpa impor. Tapi sepertinya sih ketika harga terlihat mulai naik, kemungkinan besar impor bakal tetap dibuka.
 
-Kayaknya perdagangan internasional adalah salah satu subyek yang banyak orang tuh susah banget nangkepnya. Bagi saya sendiri, perdagangan internasional ini ya memang subyek yang susah banget disampaikan. Sebenarnya insightnya sangat straight-forward, simple, tapi kayaknya emang susah banget disampaikannya. Ga semua orang tuh langsung nangkep. Padahal tools di international trade itu sebenernya sama aja dengan tools di econ lain seperti di makro dan development. Tapi kenapa ya kayaknya susah banget ditangkep orang. Mungkin karena kontekstual? Ntahlah.
+Kayaknya perdagangan internasional adalah salah satu subyek yang banyak orang tuh susah banget nangkepnya. Bagi saya sendiri, perdagangan internasional ini ya memang subyek yang susah banget menjelaskannya. Padahal sebenarnya insightnya sangat straight-forward, simple, tapi kayaknya emang susah banget disampaikannya. Ga semua orang tuh langsung nangkep. Padahal tools di international trade itu sebenernya sama aja dengan tools di econ lain seperti di makro dan development. Tapi kenapa ya kayaknya susah banget ditangkep orang. Mungkin karena kontekstual? Ntahlah.
 
 Tapi terlepas dari itu semua, saya memang sudah lama pengen bikin postingan soal bagaimana ekonom diajarkan permodelan. Seperti halnya anak teknik, anak ekonomi juga belajar model ekonomi dari simplifikasi matematika. Sebenernya tools buat anak-anak econ mirip-mirip kok sama anak teknik, yaitu tools-tools yang terpakai di optimal control. Ya, kalkulus, linear algebra, real analysis, set theorem, topologi gitu2 belajarnya. Kita juga biasanya memulai dengan memodelkan sesuatu yang simple dengan penuh restriksi (at times, far from reality). Nah, seiring perjalanan, asumsi-asumsi ini mulai dilepas satu-satu sehingga kita paham implikasinya di dunia nyata.
 
-Hari ini saya coba ajak temen-temen "menyicip" apa yang diajarin di ekonomi di semester 1. Sukur-sukur pada tertarik dan jadi ekonom wkwkwkwkw.
+Hari ini saya coba ajak temen-temen "menyicip" apa yang diajarin di ekonomi di semester 1. Sukur-sukur pada tertarik jadi ekonom wkwkwkwkw.
 
 ## Ekonomi tertutup
 
@@ -103,11 +103,10 @@ Dengan kata lain, jumlah penduduk negara ini akan bekerja di sektor pangan akan 
 
 1. seberapa besar kecintaan penduduk negara ini dengan produk pangan relatif terhadap sandang ${\alpha}{\alpha+\beta}$. semakin besar $\alpha$ relatif terhadap $\beta$, maka semakin banyak juga penduduk yang kerja di sektor tersebut karena permintaan akan produknya besar.
 2. Seberapa besar ukuran tenaga kerjanya $(L)$. cukup jelas.
-3. seberapa produktif sektornya $(f)$. Semakin produktif sektornya, maka jumlah tenaga kerja yang diperlukan di sektor tersebut lebih sedikit.
 
-Bagaimana dengan harga dan upah? Bagi awam yang selama ini menjalani kehidupan sehari-hari dengan menggunakan level harga dan upah untuk mengambil keputusan, mungkin tidak begitu familiar dengan konsep bahwa harga relatif. Bahwa harga dan upah, atau lebih tepatnya mata uang sebagai "barang" yang fungsinya cuma menjembatani transaksi. Artinya, harga cuma sebuah "jembatan". Pada hakekatnya, kita membeli barang dan jasa bukan dengan kerja. Alias, berapa jam kerja yang harus saya berikan untuk mendapatkan barang sejumlah X.
+Bagaimana dengan harga dan upah? Bagi awam yang selama ini menjalani kehidupan sehari-hari dengan menggunakan level harga dan upah untuk mengambil keputusan, mungkin tidak begitu familiar dengan konsep bahwa harga relatif. Bahwa harga dan upah, atau lebih tepatnya mata uang sebagai "barang" yang fungsinya cuma menjembatani transaksi. Artinya, harga cuma sebuah "jembatan". Pada hakekatnya, kita membeli barang dan jasa bukan dengan uang, tapi dengan jam kerja. Alias, berapa jam kerja yang harus saya berikan untuk mendapatkan barang sejumlah X. Uang hanyalah jembatan.
 
-Misalnya, kita kerja seminggu 40 jam dengan gaji 2 juta. 2 juta itu dipakai untuk 1 unit pangan 1,5 juta dan 1 unit sandang 500 ribu. Dengan kata lain, untuk beli 1 unit sandang dan 1 unit pangan, kita butuh 2 juta. Untuk dapat 2 juta, kita butuh kerja 40 jam. Nah di dunia matematika, kita ga butuh tuh harga pangan dan upah. Kita ga butuh $L \rightarrow w \rightarrow p \rightarrow A+B$ karena ya langsung aja $L \rightarrow A+B$.
+Misalnya, kita kerja seminggu 40 jam dengan gaji 2 juta. 2 juta itu dipakai untuk 1 unit pangan 1,5 juta dan 1 unit sandang 500 ribu. Dengan kata lain, untuk beli 1 unit sandang dan 1 unit pangan, kita butuh 2 juta. Untuk dapat 2 juta, kita butuh kerja 40 jam. Kalau 2 juta-nya di-bypass, sebenernya "harga" dari membeli 1 unit sandang dan pangan adalah 40 jam kerja. Di dunia matematika, kita ga butuh tuh harga pangan dan upah. Kita ga butuh $L \rightarrow w \rightarrow p \rightarrow A+B$ karena ya langsung aja $L \rightarrow A+B$.
 
 Tapi let's say kita mau punya harga dan gaji buat ancer-ancer. Kita bisa gunakan pendekatan dari sisi produksi.
 
