@@ -49,13 +49,13 @@ Dengan kata lain, objective function dari ekonomi kecil kita ini adalah:
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
   \max_{A^D,B^D} \ & {A^D}^{\alpha}{B^D}^{\beta} \\
   \text{subject to } \ & A^S=f\times L_A \\
     & B^S=g \times L_B \\
     & L_A+L_B=L \\
     & A^S=A^D, B^S=B^D
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -74,10 +74,12 @@ dan problemnya jadi jauh lebih simple, serta essentially problem kita di atas ad
 
 Setelah kita kerjain lagrange-nya, kita akan mendapatkan solusi alokasi tenaga kerja sebagai berikut:
 
+{{< math >}}
 $$
 L_A=\frac{\alpha}{\alpha+\beta} L \\
 L_B=\frac{\beta}{\alpha+\beta} L
 $$
+{{< /math >}}
 
 Dengan kata lain, jumlah penduduk negara ini akan bekerja di sektor pangan akan tergantung dengan 3 hal:
 
