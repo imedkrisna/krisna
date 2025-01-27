@@ -38,6 +38,8 @@ Hari ini saya coba ajak temen-temen "menyicip" apa yang diajarin di ekonomi di s
 
 ## Ekonomi tertutup
 
+Tidak seperti pemahaman populer, matematika sangat sentral perannya di ilmu ekonomi. Kita menggunakan matematika utamanya untuk bikin problem optimisasi model general equilibrium, dan untuk mencari hubungan kausalitas antar-variabel. Makanya sebenernya salah banget kalo ada orang yang masuk ekonomi dengan alasan gak suka matematika. Lagipula sebenernya matematika itu seru kok. Bisa kepake banget buat beresin masalah-masalah kehidupan. Well to a degree wkkw.
+
 Mari kita buat sebuah model kecil untuk ekonomi sebuah negara dengan aturan main sebagai berikut:
 
 1. Penduduk negara ini hanya mengonsumsi 2 jenis barang, yaitu pangan (A) dan sandang (B). Kombinasi konsumsi penduduknya mengikuti fungsi $U={A^D}^{\alpha}{B^D}^{\beta}$. Artinya, kombinasi konsumsi A dan B mana yang akan memaksimalkan kebahagiaan penduduknya, itulah yang dipilih. Pemilihan ini sensitif terhadap parameter kesukaan, yaitu $\alpha$ (seberapa cinta negara ini dengan pangan) dan $\beta$ (sandang).
