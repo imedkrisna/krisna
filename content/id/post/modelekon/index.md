@@ -49,7 +49,7 @@ Dengan kata lain, objective function dari ekonomi kecil kita ini adalah:
 
 $$
 \begin{align*}
-  \max_{A^D,B^D} \ & {A^D}^{0.5}{B^D}^{0.5} \\
+  \max_{A^D,B^D} \ & {A^D}^{\alpha}{B^D}^{\beta} \\
   \text{subject to } \ & A^S=f\times L_A \\
     & B^S=g \times L_B \\
     & L_A+L_B=L \\
@@ -63,7 +63,7 @@ Kita bisa langsung mengaplikasikan substitusi dengan memanfaatkan fakta bahwa pe
 
 $$
 \begin{align*}
-  \max_{L_A,L_B} \ & (fL_A)^{0.5}(gL_B)^{0.5} \\
+  \max_{L_A,L_B} \ & (fL_A)^{\alpha}(gL_B)^{\beta} \\
   \text{subject to } \ & L_A+L_B=L
 \end{align*}
 $$
