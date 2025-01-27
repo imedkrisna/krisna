@@ -156,9 +156,9 @@ $$
 U=A^{\alpha}B^{\beta}
 $$
 
-$$U=\left(\frac{\alpha}{\alpha+\beta}\right)^\alpha L^{\alpha}\left(\frac{\beta}{\alpha+\beta}\right)^{\beta} L^{\beta}$$
+$$U=\left(\frac{\alpha}{\alpha+\beta}\right)^\alpha (fL)^{\alpha}\left(\frac{\beta}{\alpha+\beta}\right)^{\beta} (gL)^{\beta}$$
 
-$$U={\alpha^\alpha}{\beta^\beta}\left({\alpha+\beta}\right)^{-\left(\alpha+\beta\right)}L^{\alpha+\beta}$$
+$$U={\alpha^\alpha}{\beta^\beta}\left({\alpha+\beta}\right)^{-\left(\alpha+\beta\right)}L^{\alpha+\beta}f^\alpha g^\beta$$
 
 
 Selanjutnya kita tinggal hitung. Karena saya pemalas, saya malas hitung secara manual. Karena itu mari kita buat `class` python sederhana untuk menulis contoh model di atas. Saya akan sekalian pasang beberapa parameter _default_ untuk jumlah total labor, produktivitas, dan preferensi warga. Di sini saya pasang _default_-nya 200 untuk jumlah pekerja (anggeplah diukur dalam juta orang). Lalu untuk teknologi, saya pasang kondisi di mana negara ini lebih produktif bikin sandang daripada pangan. Preferensi dibuat seimbang dengan restriksi $\alpha+\beta=1$. Terakhir, gaji di sini dipasang 1. Tapi kalau mau dibuat 5 juta misalnya, juga bisa sih.
