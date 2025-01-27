@@ -1,11 +1,11 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: "Bagaimana cara ekonom berpikir:"
-subtitle: "membuat sebuah Model Ekonomi Sederhana"
+title: "Bagaimana cara ekonom berpikir:membuat sebuah Model Ekonomi Sederhana"
+subtitle: ""
 summary: ""
 authors: [admin] 
-tags: [perdagangan, ekonomi]
+tags: [perdagangan, ekonomi, python,general equilibrium]
 categories: []
 date: 2025-01-27T11:00:00+07:00
 lastmod: 2025-01-27T11:00:00+07:00
