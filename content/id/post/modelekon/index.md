@@ -74,10 +74,8 @@ dan problemnya jadi jauh lebih simple, serta essentially problem kita di atas ad
 Setelah kita kerjain lagrange-nya, kita akan mendapatkan solusi alokasi tenaga kerja sebagai berikut:
 
 {{< math >}}
-$$
-L_A=\frac{\alpha}{\alpha+\beta} L \\
-L_B=\frac{\beta}{\alpha+\beta} L
-$$
+$$L_A=\frac{\alpha}{\alpha+\beta} L \\
+L_B=\frac{\beta}{\alpha+\beta} L$$
 {{< /math >}}
 
 Dengan kata lain, jumlah penduduk negara ini akan bekerja di sektor pangan akan tergantung dengan 3 hal:
