@@ -49,34 +49,30 @@ Dengan kata lain, objective function dari ekonomi kecil kita ini adalah:
 
 
 
-\begin{align*}
-  \max_{A^D,B^D} \ & {A^D}^{\alpha}{B^D}^{\beta} \\
-  \text{subject to } \ & A^S=f\times L_A \\
-    & B^S=g \times L_B \\
-    & L_A+L_B=L \\
-    & A^S=A^D, B^S=B^D
-\end{align*}
+$$\max_{A^D,B^D} \ & {A^D}^{\alpha}{B^D}^{\beta}$$
+$$\text{subject to } \ & A^S=f\times L_A$$
+$$& B^S=g \times L_B$$
+$$& L_A+L_B=L$$
+$$& A^S=A^D, B^S=B^D$$
+
 
 
 Alias, sebuah negara ada untuk memaksimalkan kebahagiaan warganya, yang di persamaan ini diwakilkan oleh $U$. si $U$ sendiri akan makin besar seiring naiknya konsumsi barang dan jasa, yang di model ini cuma diwakili 2 barang, yaitu $A$ dan $B$. Satu-satunya alasan kenapa kita tidak bisa semena-mena naikin $A$ dan $B$ adalah karena keterbatasan sumber daya, dalam hal ini diwakilkan oleh $L$ atau sumber daya manusia. Nah, nanti lama-lama semakin banyak barang dan sumber daya yang bisa kita tambahkan ke persamaan ini. Tapi untuk sekarang, kita mulai dari yang simpel dulu.
 
 Kita bisa langsung mengaplikasikan substitusi dengan memanfaatkan fakta bahwa permintaan sama dengan penawaran $e.g., \ (A^S=A^D=A)$, sehingga kita akan punya reduced form seperti ini:
 
-$$
-\begin{align*}
-  \max_{L_A,L_B} \ & (fL_A)^{\alpha}(gL_B)^{\beta} \\
-  \text{subject to } \ & L_A+L_B=L
-\end{align*}
-$$
+$$\max_{L_A,L_B} \ & (fL_A)^{\alpha}(gL_B)^{\beta}$$
+$$\text{subject to } \ & L_A+L_B=L$$
+
+
 
 dan problemnya jadi jauh lebih simple, serta essentially problem kita di atas adalah soal **alokasi tenaga kerja**. Problem di atas cukup trivial untuk diselesaikan dengan lagrange untuk kasus tertentu.
 
 Setelah kita kerjain lagrange-nya, kita akan mendapatkan solusi alokasi tenaga kerja sebagai berikut:
 
-{{< math >}}
-$$L_A=\frac{\alpha}{\alpha+\beta} L \\
-L_B=\frac{\beta}{\alpha+\beta} L$$
-{{< /math >}}
+$$L_A=\frac{\alpha}{\alpha+\beta} L$$
+
+$$L_B=\frac{\beta}{\alpha+\beta} L$$
 
 Dengan kata lain, jumlah penduduk negara ini akan bekerja di sektor pangan akan tergantung dengan 3 hal:
 
@@ -94,14 +90,11 @@ Kita kudu nambah asumsi untuk hitung harga dan gaji. Asumsi berikutnya adalah pe
 
 jadi kita tambah parameter at least 3, yaitu $p_A, p_B \text{ dan } w$ alias harga barang A, harga barang B, dan gaji. Asumsi berikutnya yang perlu ditambahin adalah perfect competition di mana kedua industri akan menghabiskan semua profitnya untuk menggaji pegawai. Artinya, revenue dari hasil penjualan barang A akan sama dengan belanja pegawai, atau upah kali jumlah tenaga kerja:
 
-$$
-\begin{align*}
-  p_A\times A &= w\times L_A \\
-  p_A \times fL_A&=w\times L_A \\
-  p_A\times f&=w \\
-  \frac{w}{p_A}=f
-\end{align*}
-$$
+$$p_A\times A &= w\times L_A$$
+$$p_A \times fL_A&=w\times L_A$$
+$$p_A\times f&=w$$$
+$$\frac{w}{p_A}=f$$
+
 
 Ini adalah kondisi di mana gaji dibayar secara fair sesuai dengan produktivitas. Karena $f$ adalah produktivitas pekerja di industri $A$, maka mereka dibayar sebesar $w/p_A$ atau upah riil untuk barang A.
 
@@ -116,19 +109,20 @@ Artinya, harga barang keduanya tergantung produktivitas relatif kedua barang ter
 Nah, kita juga bisa kalkulasi jumlah barang yang diproduksi dengan:
 
 $$
-A=fL_A=f \frac{\alpha}{\alpha+\beta} \frac{L}{f}=\frac{\alpha}{\alpha+\beta} L \\
+A=fL_A=f \frac{\alpha}{\alpha+\beta} \frac{L}{f}=\frac{\alpha}{\alpha+\beta} L
+$$
+$$
 B=gL_B=g \frac{\beta}{\alpha+\beta} \frac{L}{g}=\frac{\beta}{\alpha+\beta} L
 $$
 
 Sementara itu utility atau kebahagiaan di negara ini juga bisa kita hitung dengan:
 
 $$
-\begin{align*}
-  U&=A^{\alpha}B^{\beta}\\
-  &=\left(\frac{\alpha}{\alpha+\beta}\right)^\alpha L^{\alpha}\left(\frac{\beta}{\alpha+\beta}\right)^{\beta} L^{\beta} \\
-  U&={\alpha^\alpha}{\beta^\beta}\left({\alpha+\beta}\right)^{-\left(\alpha+\beta\right)}L^{\alpha+\beta}
-\end{align*}
+U&=A^{\alpha}B^{\beta}
 $$
+$$&=\left(\frac{\alpha}{\alpha+\beta}\right)^\alpha L^{\alpha}\left(\frac{\beta}{\alpha+\beta}\right)^{\beta} L^{\beta}$$
+$$U&={\alpha^\alpha}{\beta^\beta}\left({\alpha+\beta}\right)^{-\left(\alpha+\beta\right)}L^{\alpha+\beta}$$
+
 
 Selanjutnya kita tinggal hitung. Karena saya pemalas, saya malas hitung secara manual. Karena itu mari kita buat `class` python sederhana untuk menulis contoh model di atas. Saya akan sekalian pasang beberapa parameter _default_ untuk jumlah total labor, produktivitas, dan preferensi warga. Di sini saya pasang _default_-nya 200 untuk jumlah pekerja (anggeplah diukur dalam juta orang). Lalu untuk teknologi, saya pasang kondisi di mana negara ini lebih produktif bikin sandang daripada pangan. Preferensi dibuat seimbang dengan restriksi $\alpha+\beta=1$. Terakhir, gaji di sini dipasang 1. Tapi kalau mau dibuat 5 juta misalnya, juga bisa sih.
 
