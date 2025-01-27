@@ -49,7 +49,8 @@ Dengan kata lain, objective function dari ekonomi kecil kita ini adalah:
 
 
 
-$$\max_{A^D,B^D} \ & {A^D}^{\alpha}{B^D}^{\beta}$$
+$$ \max_{A^D,B^D} \ & {A^D}^{\alpha}{B^D}^{\beta} $$
+
 $$\text{subject to } \ & A^S=f\times L_A$$
 $$& B^S=g \times L_B$$
 $$& L_A+L_B=L$$
