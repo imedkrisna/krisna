@@ -99,6 +99,7 @@ $$
   p_A \times fL_A&=w\times L_A \\
   p_A\times f&=w \\
   \frac{w}{p_A}=f
+\end{align*}
 $$
 
 Ini adalah kondisi di mana gaji dibayar secara fair sesuai dengan produktivitas. Karena $f$ adalah produktivitas pekerja di industri $A$, maka mereka dibayar sebesar $w/p_A$ atau upah riil untuk barang A.
