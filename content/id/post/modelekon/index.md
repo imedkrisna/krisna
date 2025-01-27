@@ -255,3 +255,5 @@ Katakanlah negara pertama kita sebut Home (H) sementara negara ke-2 kita sebut F
 Kita juga bisa bereksperimen dengan karakteristik lain, misalnya negara F lebih suka garmen sehingga $\beta=0.7$ sementara $\alpha=0.3$, dan lain sebagainya.
 
 Nah pertanyaan lebih menariknya adalah, apa yang terjadi kalau kedua negara ini melakukan trade? Ntar ya saya bikinin lagi kalo postingan ini rame wkwk.
+
+[^1]: In fact, ini adalah premis dari perhitungan "surplus" dan "defisit" komoditas yang biasa digaungkan pemerinta, which is oxymoron. Kapan-kapan kita bahas kalau ada yang tertarik.
