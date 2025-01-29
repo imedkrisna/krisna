@@ -71,8 +71,6 @@ $$
 A^S=A^D, B^S=B^D
 $$
 
-
-
 Alias, sebuah negara ada untuk memaksimalkan kebahagiaan warganya, yang di persamaan ini diwakilkan oleh $U$. si $U$ sendiri akan makin besar seiring naiknya konsumsi barang dan jasa, yang di model ini cuma diwakili 2 barang, yaitu $A$ dan $B$. Satu-satunya alasan kenapa kita tidak bisa semena-mena naikin $A$ dan $B$ adalah karena keterbatasan sumber daya, dalam hal ini diwakilkan oleh $L$ atau sumber daya manusia. Nah, nanti lama-lama semakin banyak barang dan sumber daya yang bisa kita tambahkan ke persamaan ini. Tapi untuk sekarang, kita mulai dari yang simpel dulu.
 
 Kita bisa langsung mengaplikasikan substitusi dengan memanfaatkan fakta bahwa permintaan sama dengan penawaran $e.g., \ (A^S=A^D=A)$, sehingga kita akan punya reduced form seperti ini:
