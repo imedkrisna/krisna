@@ -7,6 +7,12 @@ weight: 20
 
 {{% callout note %}} This page is still under development. Expect weekly changes. {{% /callout %}}
 
+Syllabus:
+
+- {{% staticref "/intecon/syllabus_ekinter2025.pdf" "newtab" %}}Syllabus for International Economics, 2024/2025{{% /staticref %}}
+
+- {{% staticref "/intecon/syllabus_interla2025.pdf" "newtab" %}}Syllabus for Advanced International Economics, 2024/2024{{% /staticref %}}
+
 slides:
 
 - {{% staticref "/intecon/meeting2/index.html" "newtab" %}}Pertemuan 2: Ricardian model & comparative advantage{{% /staticref %}}
