@@ -6,8 +6,6 @@ date: '2021-07-21'
 type: book
 ---
 
-{{% callout note %}} Akan selalu diupdate {{% /callout %}}
-
 Postingan ini khusus buat contekan belajaran waktu nyoba-nyoba. Akan coba dibagi berdasarkan program. Contekan ini akan diupdate terus sambil saya belajaran.
 
 Daftar isi:
