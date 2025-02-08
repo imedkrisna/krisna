@@ -7,7 +7,7 @@ weight: 20
 
 slides:
 
-- {{% staticref "econ101/week2/index.html" "newtab" %}}Week 2: Supply and demand{{% /staticref %}}
+- {{% staticref "econ101/week2/index.html" "newtab" %}} Week 2: Supply and demand {{% /staticref %}}
 - {{% staticref "econ101/week3/index.html" "newtab" %}}week 3: Meddling with the market{{% /staticref %}}
 - {{% staticref "econ101/week4/index.html" "newtab" %}}week 4: Elasticities and taxation{{% /staticref %}}
 - {{% staticref "econ101/week5/index.html" "newtab" %}}Week 5: Firm problem{{% /staticref %}}
