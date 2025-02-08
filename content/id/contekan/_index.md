@@ -8,10 +8,6 @@ type: book
 
 Postingan ini khusus buat contekan belajaran waktu nyoba-nyoba. Akan coba dibagi berdasarkan program. Contekan ini akan diupdate terus sambil saya belajaran.
 
-Daftar isi:
-
-{{< list_children >}}
-
 Beberapa link yang sering kupencet:
 
 ## STATA
