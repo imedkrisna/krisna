@@ -97,7 +97,7 @@ $$
 L_B=\frac{\beta}{\alpha+\beta} L
 $$
 
-Dengan kata lain, jumlah penduduk negara ini akan bekerja di sektor pangan akan tergantung dengan 3 hal:
+Dengan kata lain, jumlah penduduk negara ini akan bekerja di sektor pangan akan tergantung dengan 2 hal:
 
 1. seberapa besar kecintaan penduduk negara ini dengan produk pangan relatif terhadap sandang $\frac{\alpha}{\alpha+\beta}$. semakin besar $\alpha$ relatif terhadap $\beta$, maka semakin banyak juga penduduk yang kerja di sektor tersebut karena permintaan akan produknya besar.
 2. Seberapa besar ukuran tenaga kerjanya $(L)$. cukup jelas.
