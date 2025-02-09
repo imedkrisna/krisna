@@ -99,7 +99,7 @@ $$
 
 Dengan kata lain, jumlah penduduk negara ini akan bekerja di sektor pangan akan tergantung dengan 3 hal:
 
-1. seberapa besar kecintaan penduduk negara ini dengan produk pangan relatif terhadap sandang ${\alpha}{\alpha+\beta}$. semakin besar $\alpha$ relatif terhadap $\beta$, maka semakin banyak juga penduduk yang kerja di sektor tersebut karena permintaan akan produknya besar.
+1. seberapa besar kecintaan penduduk negara ini dengan produk pangan relatif terhadap sandang $\frac{\alpha}{\alpha+\beta}$. semakin besar $\alpha$ relatif terhadap $\beta$, maka semakin banyak juga penduduk yang kerja di sektor tersebut karena permintaan akan produknya besar.
 2. Seberapa besar ukuran tenaga kerjanya $(L)$. cukup jelas.
 
 Bagaimana dengan harga dan upah? Bagi awam yang selama ini menjalani kehidupan sehari-hari dengan menggunakan level harga dan upah untuk mengambil keputusan, mungkin tidak begitu familiar dengan konsep bahwa harga relatif. Bahwa harga dan upah, atau lebih tepatnya mata uang sebagai "barang" yang fungsinya cuma menjembatani transaksi. Artinya, harga cuma sebuah "jembatan". Pada hakekatnya, kita membeli barang dan jasa bukan dengan uang, tapi dengan jam kerja. Alias, berapa jam kerja yang harus saya berikan untuk mendapatkan barang sejumlah X. Uang hanyalah jembatan.
