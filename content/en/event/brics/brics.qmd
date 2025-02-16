@@ -1,0 +1,353 @@
+---
+title: "Indonesia in BRICS: a discussion"
+subtitle: ""
+date: "19 February 2025"
+date-format: "long"
+author: "Krisna Gupta"
+format: 
+  revealjs:
+    theme: [simple,mytheme.scss]
+    chalkboard: true
+    incremental: false
+    transition: convex
+    background-transition: fade
+    slide-number: true
+  beamer:
+    latex-tinytex: true
+    latex-auto-install: true
+  pptx: default
+---
+
+```{r}
+library(tidyverse)
+library(readxl)
+library(WDI)
+library(scales)
+
+graph<-function(dataset, ...) {
+  dataset |>
+  ggplot(aes(...))+
+  theme_classic() +
+  theme(panel.background = element_rect(fill = "#f0f1eb",
+                                        colour = "#f0f1eb"),
+        plot.margin = margin(0,0,0,0),
+        plot.background = element_rect(fill = "#f0f1eb"),
+        legend.key = element_rect(fill = "#f0f1eb",linetype = "blank"),
+        legend.background = element_rect(fill="#f0f1eb"),
+        axis.text=element_text(size=16))
+}
+```
+
+## Intro
+
+- Indonesia surprises many when it suddenly joined BRICS.
+
+    - something avoided by the previous administration.
+
+- Main reasons: alternatives to the western-led global order.
+
+    - Does Indonesia really needs to join BRICS?
+
+- BRICS is a part of a bigger conversation: the end(?) of a unipolarity world.
+
+    - Move aside, economists!
+
+## Why?
+
+- Export market access.
+
+- Fairer global order, more agency.
+
+- Alternative financing for development & agency.
+
+- Alternatives to the dollar.
+
+- Alternative source of technology: climate, food, defense.
+
+## Why not?
+
+- BRICS is extremely diverse.
+
+- Some of the previous arguments may not be true.
+
+- Many of the previous arguments may be achievable without joining BRICS.
+
+- BRICS may not matter in reality, but it may matter in Trump's mind.
+
+- Out of the west, into the dragon?
+
+## GDP {.m}
+
+```{r}
+indi<-c(            # membuat dictionary
+  "PDB"="NY.GDP.MKTP.CD" # NY.GDP.MKTP.PP.CD vs NY.GDP.MKTP.CD
+)
+
+dat<-WDI(           # Menarik data World Bank
+  country=c("BRA","RUS","IND","CHN","ZAF","EGY","ETH","IRN","ARE","IDN","WLD"),
+  indicator=indi,
+  start=2023,end=2023
+)
+
+wld <- dat |> filter(iso3c == "WLD") %>% select(PDB) %>% pull()
+
+dat<-dat|>filter(iso3c!="WLD")
+brics<-sum(dat$PDB)
+bricsf<-brics/wld
+dat$frac1<-dat$PDB/brics*100
+dat<-dat|>arrange(frac1)|>mutate(country=factor(country,country))
+
+graph(dat,x=country,y=frac1)+geom_bar(stat="identity")+coord_flip()+
+  labs(x="",y="%",caption="source: WDI",
+       title="Share of GDP (PPP) within BRICS membership")
+```
+
+In 2023, BRICS member represents around 38% of the world's GDP PPP. G7 is 27%. It is, however, unorthodox, in the sense it doesn't have a secretariat. China's size in BRICS > US' in the G7.
+
+## Export (left) & import, 2023
+
+:::: columns
+::: {.column width=49%}
+![](ekspor.svg)
+:::
+::: {.column width=49%}
+![](impor.svg)
+:::
+::::
+
+## Trade Balance {.m}
+
+:::: columns
+::: {.column width=49%}
+
+```{r}
+#| fig-width: 5
+#| fig-length: 5
+indi<-c(            # membuat dictionary
+  "ca"="BN.GSR.GNFS.CD" # BN.GSR.GNFS.CD vs BN.CAB.XOKA.CD
+)
+
+CAA<-WDI(           # Menarik data World Bank
+  country=c("BRA","RUS","IND","CHN","ZAF","EGY","ETH","IRN","ARE","IDN"),
+  indicator=indi
+)
+
+bricsca<-CAA|>drop_na()
+swt<-bricsca|>group_by(year)|>summarize(total=sum(ca))
+
+swt$total<-swt$total/1e9
+
+graph(swt,x=year,y=total)+geom_line(linewidth=1.1)+
+  scale_y_continuous(labels = label_comma(accuracy=1))+
+  geom_hline(yintercept=0)+
+  labs(title="Total net export of goods and services of\nBRICS current members",
+       x="",y="Billion current USD",caption="source:IMF via WDI")+
+  theme(legend.position="bottom")
+```
+
+On aggregate, BRICS's export is larger than its import. Collectively, they all need other markets.
+
+:::
+::: {.column width=49%}
+
+```{r}
+#| fig-width: 5
+#| fig-length: 5
+indi<-c(            # membuat dictionary
+  "ca"="BN.GSR.GNFS.CD" # BN.GSR.GNFS.CD vs BN.CAB.XOKA.CD
+)
+CA<-WDI(           # Menarik data World Bank
+  country=c("BRA","RUS","IND","CHN","ZAF","IDN"),
+  indicator=indi
+)
+
+CA$ca<-CA$ca/1e9
+
+graph(CA,x=year,y=ca,color=country)+geom_line(linewidth=1.1)+
+  scale_y_continuous(labels = label_comma(accuracy=1))+
+  geom_hline(yintercept=0)+
+  labs(title="Net export of the original BRICS+Indonesia",
+       x="",y="Current billion USD",caption="source:IMF via WDI")+
+  theme(legend.position="bottom")
+```
+
+India is the largest deficit countries, but it won't act as 'the buyer' in BRICS.
+
+:::
+::::
+
+## BRICS-USA relationship {.m}
+
+```{r}
+indi<-c(            # membuat dictionary
+  "ca"="BN.GSR.GNFS.CD" # BN.GSR.GNFS.CD vs BN.CAB.XOKA.CD
+)
+CA<-WDI(           # Menarik data World Bank
+  country=c("BRA","RUS","IND","CHN","ZAF","IDN","USA"),
+  indicator=indi
+)
+
+CA$ca<-CA$ca/1e9
+
+graph(CA,x=year,y=ca,color=country)+geom_line(linewidth=1.1)+
+  scale_y_continuous(labels = label_comma(accuracy=1))+
+  geom_hline(yintercept=0)+
+  labs(x="",y="Current billion USD",caption="source:IMF via WDI")
+```
+
+Decoupling won't happen without radical changes in relative prices and productivity shock, a lose-to-all situation (economically)
+
+## Dedollarization
+
+```{r}
+cofer<-read_csv("COFER.csv")|>
+  select(!`Country Code`)|>select(!`Indicator Code`)|>
+  select(!`Attribute`)|>
+  filter(`Indicator Name`!="Shares of Allocated Reserves, Percent")|>
+  filter(`Indicator Name`!="Shares of Unallocated Reserves, Percent")|>
+  filter(grepl('Shares', `Indicator Name`))|>
+  filter(grepl('euro|yen|pounds sterling|U.S.|renminbi|other', `Indicator Name`))
+
+lab<-c("Shares of Allocated Reserves, Shares of Japanese yen, Percent" = "JPY", 
+               "Shares of Allocated Reserves, Shares of euro, Percent" = "EUR", 
+               "Shares of Allocated Reserves, Shares of Chinese renminbi, Percent" = "CNY",
+               "Shares of Allocated Reserves, Shares of pounds sterling, Percent" = "GBP",
+               "Shares of Allocated Reserves, Shares of U.S. dollars, Percent" = "USD",
+       "Shares of Allocated Reserves, Shares of other currencies, Percent" = "other")
+
+wld<-cofer|>filter(`Country Name`=="World")|>
+  select(!'Country Name')|>
+  pivot_longer(!`Indicator Name`,values_to = "value",names_to = "year")
+wld$year<-as.numeric(wld$year)
+adv<-cofer|>filter(`Country Name`=="Advanced Economies")|>
+  select(!'Country Name')|>
+  pivot_longer(!`Indicator Name`,values_to = "value",names_to = "year")
+adv$year<-as.numeric(adv$year)
+emg<-cofer|>filter(`Country Name`=="Emerging and Developing Economies")|>
+  select(!'Country Name')|>
+  pivot_longer(!`Indicator Name`,values_to = "value",names_to = "year")
+emg$year<-as.numeric(emg$year)
+
+graph(wld,x=year,y=value,color=`Indicator Name`)+
+  geom_line(linewidth=1.1)+
+  scale_color_discrete(labels = lab)+
+  labs(title="share of currency in the global reserves",
+       y="%",x="",caption="source:COFER, IMF")
+#graph(adv,x=year,y=value,color=`Indicator Name`)+geom_line()+
+#  scale_color_discrete(labels = lab)
+#graph(emg,x=year,y=value,color=`Indicator Name`)+geom_line()+
+#  scale_color_discrete(labels = lab)
+```
+
+## Dedollarization
+
+- Having so much dollar asset risks a sanction, alternative solution is in everyone's (non-west) interest,
+
+- The closest alternative in BRICS is CNY. but it requires PBoC to loosen its control over the renminbi, something it probably won't give up.
+
+- Indeed, the U.S. remains accomodative to the global saving needs.
+
+    - Even if countries trade with other currency, it'll be converted to USD to buy US assets.
+    
+- another pain point in "escaping the west".
+    
+## Foreign Aid
+
+```{r}
+indi<-c(            # membuat dictionary
+  "Aid"="DT.ODA.ODAT.CD" # NY.GDP.MKTP.PP.CD vs NY.GDP.MKTP.CD
+)
+
+aid<-WDI(           # Menarik data World Bank
+  country=c("BRA","RUS","IND","CHN","ZAF","IDN"),
+  indicator=indi
+)
+
+aid$Aid<-aid$Aid/1e9
+
+graph(aid,x=year,y=Aid,color=country)+geom_line(linewidth=1.1)+
+  scale_y_continuous(labels = label_comma(accuracy=0.01))+
+  geom_hline(yintercept=0)+
+  labs(title="Net flow of foreign aid",
+       x="",y="Current billion USD",caption="source:OECD via WDI")
+
+```
+
+## Foreign aid
+
+- Most of BRICS members are net recipient of foreign aid but China.
+
+- NDB's role so far is outstripped by western-led institution.
+
+- Indeed, Chinese role in foreign aid is increasing, especially since the mid 2010s.
+
+- Chinese loan focuses on infrastructure development, while DAC focues on MDGs (poverty, health, etc)
+
+- tapping to non-DAC aid doesn't require one to be a member of BRICS
+
+## Conclusion
+
+- Larger export market, alternative financial source and dollar alternatives may not be the feasible reasons to join BRICS.
+
+    - worse, it risks an uncessarily costly 'decouple'.
+
+- The non-DAC loans and grants can still be accessed even without joining BRICS.
+
+- Many observers note the need for a platform where Indonesia can have larger role, it can be questioned whether BRICS won't be heavily influenced by China.
+
+## What's next?
+
+- "The west" may be in a challenging situation themselves.
+
+- Trump isn't hostile towards BRICS: he's hostile towards everyone.
+
+- There may be a vaccuum in the global leadership as a whole.
+
+- It's not clear how the next global order would look like.
+
+    - trade is not guided by comparative advantage anymore, but by politics and security.
+    
+## What's next
+
+- As a patriotic Indonesian, It's time for Indonesia to take a leadership role in all its platform, helps BRICS formalized its membership, leads ASEAN, and help guiding the world.
+
+- As a reasonably sensible Indonesian, it seems wiser to acknowledge our not-so-tough position and keep it balanced.
+
+    - are we currently well-equipped to take a leading role?
+
+- At least in ASEAN, Indonesia is a large player: it should act like one.
+
+- Let's entertain the idea of the increasing role of Japan.
+
+## References {.s}
+
+:::: columns
+::: {.column width=49%}
+Associated Press. 2025. [Indonesia is admitted to the BRICS bloc of developing nations](https://www.voanews.com/a/indonesia-is-admitted-to-the-brics-bloc-of-developing-nations/7926970.html). VOA News.
+
+
+Rachman, A.A. 2025. [Indonesia bergabung dengan BRICS: peluang besar dan babak baru dalam hubungan bilateral](https://theconversation.com/indonesia-bergabung-dengan-brics-peluang-besar-dan-babak-baru-dalam-hubungan-bilateral-247344). SuarAkademia TCID.
+
+Gopinath, G & Oleg Itskhoki. 2021. Dominant Currency Paradigm: A Reviw. NBER Working Paper Series.
+
+Intan, G. 2025. [Luhut: Indonesia tidak takut dikucilkan Amerika usai gabung BRICS](https://www.voaindonesia.com/a/luhut-indonesia-tidak-takut-dikucilkan-amerika-usai-gabung-brics/7934001.html). VOA News.
+
+Jailani, A.K. 2025. [Indonesia’s entry into BRICS: Reshaping the global legal order](https://www.thejakartapost.com/opinion/2025/01/09/indonesias-entry-into-brics-reshaping-the-global-legal-order.html.). The Jakarta Post.
+
+:::
+::: {.column width=49%}
+
+Bryan Tan Jia Yang. 2025. [BRICS expansion and Japan’s latent leadership in a torn Indo-Pacific](https://eastasiaforum.org/2025/02/15/brics-expansion-and-japans-latent-leadership-in-a-torn-indo-pacific/). East Asia Forum.
+
+Mai, L. 2025. [The latest on Southeast Asia: Indonesia joins BRICS](https://www.csis.org/blogs/latest-southeast-asia/latest-southeast-asia-indonesia-joins-brics). CSIS.
+
+Pierre van der Eng. 2017. [Why does Indonesia seem to prefer foreign aid from China?](https://eastasiaforum.org/2017/12/02/why-does-indonesia-seem-to-prefer-foreign-aid-from-china/#:~:text=Foreign%20aid%20peaked%20at%20US$2.5%20billion%20in,exceed%20new%20aid%20commitments%20from%20these%20countries.) East Asia Forum.
+
+Economist, The. 2023. [The BRICS bloc is riven with tensions.](https://www.economist.com/international/2023/08/17/the-brics-are-getting-together-in-south-africa?ppccampaignID=17210591673&ppcadID=&gad_source=1&gclsrc=aw.ds)
+
+Manggala, P.U. 2025. [Indonesia’s bold step into BRICS and beyond](https://eastasiaforum.org/2025/02/04/indonesias-bold-step-into-brics-and-beyond/). East Asia Forum.
+
+Sakti, R.E. 2025. [Indonesia resmi gabung BRICS, apa tantangannya?](https://www.kompas.id/artikel/indonesia-resmi-gabung-brics-apa-tantangannya). Kompas.
+
+:::
+::::
