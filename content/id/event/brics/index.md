@@ -70,7 +70,17 @@ projects: []
 
 In this Global Seminar, we talk with Dr Lili Yan Ing and Dr Krisna Gupta on the economics of Indonesia joining BRICS, a bloc formed by Brazil, Russia, India, and China in 2009 with the addition of South Africa in 2010. What are the benefits to Indonesia? 
 
+Pada tanggal 19 Februari 2025, saya berkesempatan berbagi bersama dengan ANU Indonesia project tentang keanggotaan Indonesia di BRICS. Saya sangat _excited_ karena di situ saya satu panel dengan [Dr. Lili Yan Ing](https://www.eria.org/experts/lili-yan-ing), setjen ERIA. Beliau adalah orang yang sangat jago dalam hal perdagangan internasional dan saya melewati studi S3 saya membaca beberapa karya beliau. Panel ini dimoderasi oleh [Dr. Arianto Patunru](https://sites.google.com/site/patunru).
 
+Nah, di acara tersebut, saya membuka dengan merinci beberapa alasan populer kenapa Indonesia harus bergabung dengan BRICS. Tentu saja sebagai seorang ekonom, saya menggunakan alasan ekonomi dan berusaha tidak menyentuh alasan politik hubungan internasional maupun pertahanan. Dan menurut saya, alasan untuk bergabung dengan BRICS dari sisi ekonomi sepertinya tidak begitu kuat. Lengkapnya liat aja di bawah ini wkwk.
+
+BRICS, sayangnya, belum menjadi sebuah institusi yang "resmi". Masuk ke BRICS tidak ada komitmen apa-apa. Mungkin salah satu keunggulan Indonesia masuk BRICS di saat ini adalah bahwa Indonesia bisa punya suara di masa-masa pembentukan institusi ini.
+
+Tapi kita sebaiknya tidak terlalu terdistraksi dengan isu BRICS ini untuk saat ini, karena isu yang sebenarnya lebih sentral adalah perang dingin AS vs China. BRICS, menurut saya, akan dijadikan kendaraan oleh China dalam menantang hegemoni AS. Trump bahkan mengatakan akan mengamati dan melakukan sesuatu terhadap anggota BRICS jika mereka mengancam Dollar.
+
+Kita ga tau sih seberapa serius Trump karena semua kata-kata dia tuh kayak susah dipegang gitu. Bahkan, sejauh ini, Trump malah nyerang-nyerang Kanada, EU, Mexico, area-area yang notabene teman AS dan dibutuhkan oleh AS dalam menantang Tapi sangat sentral bagi Indonesia untuk terus menghubungi  AS. 
+
+Pertanyaannya, haruskah Indonesia maju sendiri, atau membawa kepentingan regional seperti ASEAN? DT sangat transaksional. Bukan tidak mungkin konsesi yang ia minta untuk Indonesia akan mengorbankan kepentingan negara lain di kawasan. Semoga its just me being pessimistic.
 
 The talk was recorded and can be seen here
 
