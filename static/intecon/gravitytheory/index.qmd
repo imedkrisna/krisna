@@ -1,0 +1,190 @@
+---
+title: "The new industrial policy"
+subtitle: "Advanced International Economics"
+date: "16 April 2024"
+author: "I Made Krisna Gupta"
+format: 
+  revealjs:
+    theme: [simple,../mytheme.scss]
+    chalkboard: true
+    incremental: false
+    transition: convex
+    background-transition: fade
+    slide-number: true
+  beamer: default
+---
+
+## Intro
+
+- We learn on the theoretical model of gravity equation: from theory to empirics.
+
+- some development of problems and how to tackle 'em
+
+- Preparation on practicing with gravity model.
+
+- main text is Yotov et al. (2016) chapter I
+
+## Why gravity model
+
+- Gravity model is very intuitive.
+
+- It has a strong theoretical foundation.
+
+- Structure is pretty flexible. Can be applied to labor market, investment, environment, etc.
+
+- Remarkable predictive power (with some caveats).
+
+- fit for your empirical thesis. 
+
+## Setting
+
+Now let $Q_i$ be the supply of a good from country $i$ which is fixed with factory gate $i$.
+
+The value of a domestic production in a country $i$ thus
+
+$$
+Y_i=p_iQ_i
+$$
+
+$Y_i$ is also the nominal income of the country i.
+
+## Setting
+
+Meanwhile, let $E_i=\phi_iY_i$  be the total expenditure of the country i. $0 < \phi_i < 1$ would represent a fraction of $Y_i$ that is spent to be consumed. Therefore, a $(1-\phi_i)Y_i$ is a net export.
+
+Consequently, $\phi>1$ would suggest a net-import economy (i.e., trade deficit).
+
+We can add a time index $t$ if needed. Maybe later.
+
+## Setting
+
+Suppose consumers in a country j have a representative CES-utility function
+
+$$
+\left\{ \sum_i \alpha_i^{\frac{1-\sigma}{\sigma}} c_{ij}^{\frac{\sigma-1}{\sigma}} \right\}^{\frac{\sigma}{\sigma-1}}
+$$
+
+Where $\sigma>1$ is the elasticity of substitution among varieties of goods from country i. $\alpha_i>0$ is a CES preference parameter for good from country $i$.
+
+## Setting
+
+Consumer maximize its utility with a budget constraint
+
+$$
+\sum_i p_{ij}c_{ij}=E_j
+$$
+
+Where $E_j$ is a total expenditure of a country $j$. 
+
+Meanwhile, $p_{ij}=p_it_{ij}$ reflects a price in country i times its trade cost $t_{ij}\geq 1$.
+
+Think of the trade cost as an "iceberg" cost: to deliver 1 unit of its variety to country j, country i must ship $t_{ij} \geq 1$ units, i.e. $1/t_{ij}$ of the initial shipment melts “en route”.
+
+## Demand funtion
+
+Optimization on $c_{ij}$ would result in
+
+$$
+X_{ij}=\left( \frac{\alpha_i p_i t_{ij}}{P_j} \right)^{1-\sigma} E_{j}
+$$
+
+where $X_{ij}$ is the export from origin $i$ to destination $j$. $P_j$ can be interpreted as a CES consumer price index:
+
+$$
+P_j=\left( \sum_j (\alpha_ip_it_{ij})^{1-\sigma} \right)^{\frac{1}{1-\sigma}}
+$$
+
+## Interpretation
+
+expenditure in country $j$ on goods from source $i$, $X_{ij}$, is:
+
+1. Proportional to $E_j$. i.e., countries with large expenditure buys more from many countries.
+
+2. inversely related to the (delivered) prices of varieties from origin $i$ to destination $j$. Its not just $p_i$ but also $t_{ij}$.
+
+3. Directly related to price index $P_j$, which is a substitution effect.
+
+4. A high $\sigma$ will magnify the substition effect.
+
+## Market clearance
+
+We then clears the market with:
+
+$$
+Y_i=\sum_j \left( \frac{\alpha_i p_it_{ij}}{P_j} \right)^{1-\sigma} E_j
+$$
+WHich means all trade conducted by a country $i$ (including with itself) must be equal to its total production. (i.e., $Y_i \equiv \sum_j X_{ij} \forall i$)
+
+If we define $Y=\sum_i Y_i$ which is the global market, divide both equations with it, then:
+
+## Structural gravity
+
+$$
+(\alpha_i p_i)^{1-\sigma}=\frac{\frac{Y_i}{Y}}{\sum_j \left(\frac{t_{ij}}{P_j} \right)^{1-\sigma} \frac{E_j}{Y}}
+$$
+
+We substitute a $\Pi_j^{1-\sigma}\equiv \sum_j (t_{ij}/P_j)^{1-\sigma}E_j/Y$, then we get
+
+$$
+(\alpha_i p_i)^{1-\sigma}=\frac{Y_i/Y}{\Pi_i^{1-\sigma}}
+$$
+
+We now plug this into our $X_{ij}$ to get:
+
+## Structural gravity
+
+\begin{align*}
+X_{ij}&=\frac{Y_iE_j}{Y}\left(\frac{t_{ij}}{\Pi_i P_j}\right)^{1-\sigma} \\
+\Pi_{i}^{1-\sigma}&=\sum_j \left(\frac{t_{ij}}{P_j}\right)^{1-\sigma}\frac{E_j}{Y} \\
+P_{ij}&=\sum_i \left( \frac{t_{ij}}{\Pi_i} \right)^{1-\sigma} \frac{Y_i}{Y}
+\end{align*}
+
+We can decompose $X_{ij}$ into two term: the size term ($Y_iE_j/Y$) and the trade cost term ($(t_{ij}/(\Pi_iP_j))^{1-\sigma}$)
+
+## Size effect
+
+- The size term can be interpreted as a hypothetical trade flow if there is no trade cost (ie frictionless trade).
+
+- That is, customers face same factory-gate price no matter where they are.
+
+- The size effect provides us with the intuition that:
+
+    - large producers will export more to all destinations
+    
+    - big/rich markets will import more from all sources
+    
+    - trade flows between simiarly-sized countries will be larger.
+
+## Trade cost {.m}
+
+1. Bilateral trade cost between partners i and j, tij , is typically approximated in the literature by various geographic and trade policy variables, such as bilateral distance, tariffs and the presence of regional trade agreements (RTAs) between partners i and j.
+
+2. The structural term Pj , coined by Anderson and van Wincoop (2003) as inward multilateral resistance represents importer j’s ease of market access.
+
+3. The structural term Πi , defined as outward multilateral resistances by Anderson and van Wincoop (2003), measures exporter i’s ease of market access.
+
+## Gravity equation
+
+We log-linearized $X_ij$ to get the following:
+
+\begin{align*}
+\ln X_{ij,t}&=\ln E_{j,t}+\ln Y_{i,t}-\ln Y_t \\
+&+(1-\sigma) \ln t_{ij,t}-(1-\sigma)\ln P_{j,t} \\
+&-(1-\sigma) \ln \Pi_{i,t}+\varepsilon_{ij,t}
+\end{align*}
+
+This equation is so popular. Despite that, most students often conduct a consequential mistakes that can be easily remedied with Stata (or R) command. We learn it today so your thesis is safe.
+
+## Multilateral resistance
+
+
+
+## References {.s}
+
+- Silva, Santos, and Silvana Tenreyro. 2006. “The Log of Gravity.” The Review of Economics and Statistics 88 (4): 19.
+
+- Yotov, Yoto. 2022. [“Gravity at Sixty: The Workhorse Model of Trade.”](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4037001.) CESifo Working Papers 9584. 
+
+- Yotov, Yoto, Roberta Piermartini, Jose-Antonio Monteiro, and Mario Larch. 2016. ["An Advanced Guide to Trade Policy Analysis: The Structural Gravity Model"](https://www.wto.org/english/res_e/publications_e/advancedguide2016_e.htm). WTO and UNCTAD. 
+
+- Correia, Sergio, Paulo Guimarães, and Tom Zylkin. 2020. [“Fast Poisson Estimation with High-Dimensional Fixed Effects.”](https://doi.org/10.1177/1536867x20909691.) The Stata Journal 20 (1): 95–115. 
