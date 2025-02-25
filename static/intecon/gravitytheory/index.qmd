@@ -1,7 +1,7 @@
 ---
-title: "The new industrial policy"
+title: "The theory of the gravity equation"
 subtitle: "Advanced International Economics"
-date: "16 April 2024"
+date: "25 February 2025"
 author: "I Made Krisna Gupta"
 format: 
   revealjs:
