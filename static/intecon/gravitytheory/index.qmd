@@ -175,9 +175,174 @@ We log-linearized $X_ij$ to get the following:
 
 This equation is so popular. Despite that, most students often conduct a consequential mistakes that can be easily remedied with Stata (or R) command. We learn it today so your thesis is safe.
 
-## Multilateral resistance
+## Gravity: 2 disciplines {.m}
 
+:::: columns
+::: {.column width=49%}
 
+$$
+F_{ij}=G \frac{M_iM_j}{D^2_{ij}}
+$$
+
+where F=force, G=constant, M=mass, D=distance
+
+:::
+::: {.column width=49%}
+
+$$
+X_{ij}=\tilde{G} \frac{Y_iE_j}{T_{ij}^\theta}
+$$
+
+where $\tilde{G}\equiv 1/Y$ inverse of the world production, $Y_i$ is the exporter's production capacity, $E_J$ is the importer's expenditure.
+
+$T_{ij}$ is the total trade cost $(t_{ij}/(\Pi_iP_j))^{\sigma-1}$
+:::
+::::
+
+## Multilateral resistance (MR) {.m}
+
+- obviously the main challenge comes from dissecting the multilateral resistance $P_{j,t}$ and $\Pi_{i,t}$ which are inherently observable.
+
+- Anderson and Wincoop (2003) conducted a nonlinear OLS by estimating a predicted trade without MR, then construct MR to account for difference with the real world trade.
+
+- These days, Olivero and Yotov (2016) shows that we can use *exporter-time* and *importer-time fixed effect* to account for the MR.
+
+- Note that these FE will absorb many all unobservables that varies by country-time, including GDP, distance, XR and policies.
+
+## Zero trade flows
+
+- The nice thing about linearizing the gravity equation is that we can use OLS.
+
+- Unfortunately, this will lead us to forefully drop zero trade.
+
+    - obviously zero trade is not random.
+    
+- Typical easy solution is to assign an arbitrary number to the zero trade flow (typically log 1), but this leads to a inconsistent estimate.
+
+- The best solution for now is the PPML approach.
+
+## Heteroscedasticity
+
+- Trade data is heteroscedastic: variance of larger countries are structurally differ than that of the smaller countries.
+
+- An OLS would bias the estimated trade policy and MR. It also inconsistent with the theory.
+
+- You can remedy this by weighting the trade data, but the better way is to do PPML.
+
+    - PPML is more convinient and also fixes zero-trade problem.
+    
+## Bilateral trade cost
+
+- This is crucial to properly model a partial and general equilibrium effect of trade.
+
+- The standard practice to proxy the bilateral trade cost $t_{ij}$ is to use the following:
+
+\begin{align*}
+(1-\sigma) \ln t_{ij}&=\beta_1 \ln D_{ij}+\beta_2 \ln CNTG_{ij} +\beta_3 \ln LANG_{ij} \\
+&+\beta_4 \ln CLNY_{ij} + \beta_5 RTA_{ij,t} + \beta_6 \tilde{\tau}_{ij,t}
+\end{align*}
+
+- D=distance, while Contiguity, same language, and ex colonies are dummy variables.
+
+## Trade policies
+
+- RTA is a dummy noting whether both countries are a member of a trade agreement.
+
+- $\tilde{\tau}$ is a bilateral tariff $\ln (1+tariff_{ij,t})$
+
+- Since tariff is a price shifter, which can be expressed as a terms of the trade elasticity of substitution. (i.e., $\beta_6=-\sigma$)
+
+This is the part where we can also add more trade policy that represents trade costs. However, the next problem is prolly the most important for trade policy enthusiasts.
+
+## The endogeneity of policies
+
+- Trade policies (like any policies really) are typically non-random/endogeneous.
+
+- Potential reverse causality problem: 
+
+    - a country would propose a trade agreements with its closest neighbor and its largest trading partner first.
+    
+    - Industry with large trade deficit would lobby for protectionist policies.
+
+## Policy endogeneity
+
+- It is hard to propose an instrumental variable since we can hardly find good instruments for trade policies.
+
+- An approach like first difference (or GMM in general) can also be used, but we still have the problem of zero trade.
+
+- The most practical way is to have a country-pair fixed effects to count for unobserved variables that affect trade policies.
+
+## Non-discriminatory trade policies
+
+- This is a policy that does not discriminate trade partners (e.g., unilateral MFN tariffs or subsidies).
+
+- Meaning, it will be absorbed by exporter-time or importer-time fixed effects.
+
+- If your variable of interest is a non-discriminatory trade policies by other countries, then an approach like building "remoteness index" to absorb MR instead of country-time FE can be the solution.
+
+- See Anderson and Yotov (2016) & Head and Mayer (2014)
+
+## Adjustment to shock
+
+- Sometimes trade patterns take time to adjust to a policy change.
+
+- Therefore, it's not ideal to use annual data since we would assume the change in trade policy happens in the same year (or even month)
+
+- Trefler (2004) uses 3-year inter vals, Anderson and Yotov (2016) use 4-year intervals, and Baier and Bergstrand (2007) use 5-year intervals.
+
+- Olivero and Yotov (2012) provide empirical evidence that gravity estimates obtained with 3-year and 5-year interval trade data are very similar.
+
+## Sectoral gravity
+
+- Students (and myself) often estimate gravity at sectoral level because we care about specific sectoral policies.
+
+- Gravity estimation is separable: if we separate a sector from the general economy, it retains a gravity-like structure. i.e.:
+
+$$
+X^k_{ij,t}=\frac{Y^k_{i,t}E^k_{j,t}}{Y^k_t}\left( \frac{t^k_{ij,t}}{P^k_{j,t}\Pi^k_{i,t}} \right)^{1-\sigma_k}
+$$
+
+## Sectoral gravity
+
+- the nice feature of the this is that bilateral trade cost (which includes policy) is sector specific. 
+
+- It can also be estimated across sectors with importer-product-time FE and exporter-product-time FE.
+
+- We can have a specific sector MR / policy or be pooled accross some sectors with a sleight of coding.
+
+## Practical recommendation
+
+1. Always use panel data when available.
+
+2. Experiment with lagged trade cost / policy variable.
+
+3. Use intra-national trade if possible. It really helps with border trade cost.
+
+4. Use fixed effects as discussed in previous slides.
+
+5. Use PPML. (4+5=use PPMLHDFE)
+
+## PPML construction
+
+for example:
+
+$$
+X_{ij,t}=exp[\pi_{i,t}+\chi_{j,t}+\beta_1D_{ij,t}+\beta_2RTA_{ij,t}]\times \varepsilon_{ij,t}
+$$
+
+$D_{ij,t}$ is a log distance. $\beta_1<0$ can be interpreted as an increase in D by 1% would reduce trade flow by $\beta_1$ percent, _ceteris paribus_
+
+$RTA_{ij,t}$ is a dummy variable=1 if an RTA exists. We interpret $\beta_2>0$ as a country would trade $\left[e^{\beta_2}-1\right]\times 100$ more if there is a trade agreement, _ceteris paribus_.
+
+## Next week
+
+Please have a look at [imedkrisna.github.io/misc](https://imedkrisna.github.io/misc.html). Choose whether you want to use R or Stata.
+
+Complete the preparation of installing R & RStudio or Stata.
+
+Download everything in [here](https://1drv.ms/f/s!AjelszXKKcmskMsKLZRRwRJq1a2MnA?e=xsdpxL). Be mindful of the size of the dataset.
+
+Bring your laptop. We will conduct an exercise of replicating Silva & Tenreyro (2006) but also a sectoral gravity regression.
 
 ## References {.s}
 
