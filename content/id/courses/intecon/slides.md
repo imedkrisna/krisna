@@ -24,5 +24,6 @@ slides:
 - {{% staticref "/intecon/industrial/index.html" "newtab" %}}Advanced: Industrial policy 1{{% /staticref %}}
 - {{% staticref "/intecon/hilir.pdf" "newtab" %}}Advanced: Industrial policy 2a{{% /staticref %}}
 - {{% staticref "/intecon/lcr.pdf" "newtab" %}}Advanced: Industrial policy 2b{{% /staticref %}}
+- {{% staticref "/intecon/gravitytheory/index.html" "newtab" %}}Advanced: Theory of the gravity equation{{% /staticref %}}
 - [Advanced: Estimating the gravity equations](https://imedkrisna.github.io/gravity/)"
 
