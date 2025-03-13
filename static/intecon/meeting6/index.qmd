@@ -18,9 +18,9 @@ format:
 
 - Under the standard theory, trade improves welfare under our typical assumption. Among them:
 
-- constant (Ricardian) or decreasing returns to scale (SFM, HO, STM).
+- constant (or decreasing, for that matter) returns to scale.
 
-    - that is, the more Q, factor productivity goes down.
+    - that is, decreasing marginal productivity of factor.
 
 - What if the production function is increasing returns to scale: cost goes down.
 
