@@ -7,7 +7,7 @@ date: '2020-02-27'
 author: admin
 ---
 
-This article is originally appears [here on my medium blog](https://medium.com/@imedkrisna/application-of-infrastructure-development-problem-long-chu-style-to-indonesias-toll-road-7ccdc68ee817). I remake it in this blog because here I can use $$\LaTeX$$!! yay!! I don't change anything so if you've red this in my medium domain then skip this. 
+This article is originally appears [here on my medium blog](https://medium.com/@imedkrisna/application-of-infrastructure-development-problem-long-chu-style-to-indonesias-toll-road-7ccdc68ee817). I remake it in this blog because here I can use $\LaTeX$!! yay!! I don't change anything so if you've red this in my medium domain then skip this. 
 
 I’ve been ranting a lot about stuff in this blog. This time, let me share what I have learned from my study at ANU. Particularly the [master’s microeconomics course, IDEC8064][1]. Long Chu is the teacher’s name. There is this one problem called “Infrastructure Development Problem”, which is extremely relevant to lots of developing countries’ problem of public provision of services. This time I will present Indonesia’s current case: Jakarta Outer Ring Road (JORR) increased tariff.
 Most Jakartans must know this, that JORR have changed their tariff to a one-off payment of 15,000 IDR (Indonesian currency) every entry (for car. Other heavier vehicles face scarier tariff). This leads to increased cost for people who travel a short distance, but reduced cost for long distance travelers. This leads to a question “how much we should charge for toll service”, especially after taking Long Chu’s Final Exam a couple of days ago. If you also took long’s final exam, think of this as the answer to Question 3… xD
@@ -16,7 +16,9 @@ So I try to do some google, and found this good paper by [Hermawan et al (2013)]
 
 Next, we need to have capacity. Unlike water provision in Long’s example, capacity of toll roads can be a big debate. Hermawan et al (2013) uses Highway Capacity Manual (2010) to tackle this situation. According to the manual (table 1 in Hermawan et al), we can calculate a (debatable) capacity of a toll road with something called Volume to Capacity Ratio 
 
-$$ VCR = \frac{Q}{C} \label{1}$$ 
+$$ 
+VCR = \frac{Q}{C} \label{1}
+$$ 
 
 This ratio says if $$\frac{Q}{C}=1$$, then it meets its capacity. at $$\frac{Q}{C}=1$$, we will see 2000 vehicles per hour, with the speed of less than equal to 30 mph (around 48 kph). This measure makes me laugh. JORR is definitely well over its capacity.
 By the way, the standard of having a good provision of toll road is at $$ VCR=0.6–0.8 $$, which have the speed at around 55 mph (88 kph) with 1500-ish vehicles per hour. I laughed even harder.
@@ -25,22 +27,33 @@ Anyway, i tried to find the exact capacity of JORR only to no avail. So I had to
 
 We then can calculate the demand for toll road:
 
-$$ 2289=Ad*P^{-0.72} $$
+$$
+2289=Ad*P^{-0.72} 
+$$
 
 Let’s calculate just the average tariff for car at around 10,000 IDR. If we plug that to P, we will get Ad= 1,736,384.07 (too many numbers, right? This is why i hate working with IDR). So we can get the full demand function of JORR:
 
-$$ Q(P)=1,736,384.07*P^{-0.72} $$
+$$
+Q(P)=1,736,384.07*P^{-0.72}
+$$
 
 Next we find the Dead Weight Loss (DWL) of having such tariff. To do this, we need to find the willingness to pay to get the normal, non-breakdown level of capacity. Let’s use $$ VCR=0.77 $$, then we will get $$ Q=1550 $$. Now estimate $$P$$ with $$ Q=1550 $$,
 
-$$ 1550=1,736,384.07*P^{-0.72} $$
+$$
+1550=1,736,384.07*P^{-0.72}
+$$
 
-$$ P= 17,185.35329 $$ -> let’s say the proper Toll price to get $$ VCR=0.77 $$, one ideal ratio, is 17,200 IDR. This is the willingness to pay value for JORR user to get an ideal flow of Toll Road.
+$P= 17,185.35329$ -> let’s say the proper Toll price to get $VCR=0.77$, one ideal ratio, is 17,200 IDR. This is the willingness to pay value for JORR user to get an ideal flow of Toll Road.
 
 We can calculate the DWL using integration, but since i’m lazy, we can just try to approximate it using triangle area.
 
-$$ DWL=(0.5)*(2289–1550)*(17,200–10,000) $$
-$$ DWL= 2,660,400 IDR \frac{Vehicle}{Hour} $$
+$$
+DWL=(0.5)*(2289–1550)*(17,200–10,000)
+$$
+
+$$
+DWL= 2,660,400 IDR \frac{Vehicle}{Hour}
+$$
 
 That’s… a lot of IDR
 
