@@ -1,0 +1,281 @@
+---
+title: "Tips n trick menulis"
+subtitle: ""
+date: "21 March 2025"
+date-format: "long"
+author: "Krisna Gupta"
+format: 
+  revealjs:
+    theme: [simple,mytheme.scss]
+    chalkboard: true
+    incremental: false
+    transition: convex
+    background-transition: fade
+    slide-number: true
+  beamer:
+    latex-tinytex: true
+    latex-auto-install: true
+  pptx: default
+---
+
+```{r}
+library(tidyverse)
+library(readxl)
+library(WDI)
+library(scales)
+
+graph<-function(dataset, ...) {
+  dataset |>
+  ggplot(aes(...))+
+  theme_classic() +
+  theme(panel.background = element_rect(fill = "#f0f1eb",
+                                        colour = "#f0f1eb"),
+        plot.margin = margin(0,0,0,0),
+        plot.background = element_rect(fill = "#f0f1eb"),
+        legend.key = element_rect(fill = "#f0f1eb",linetype = "blank"),
+        legend.background = element_rect(fill="#f0f1eb"),
+        axis.text=element_text(size=16))
+}
+```
+
+## Intro
+
+- Krisna Gupta (Imed), peneliti, dosen, columnist.
+
+- Materi hari ini sebagian besar berasal dari kuliah saya di [Metodologi Penelitian](https://www.krisna.or.id/courses/metopel/), krisna.or.id/courses/metopel
+
+- Saya banyak menulis blog di krisna.or.id/post
+
+- Beberapa tulisan resmi saya bisa dilihat di [imedkrisna.github.io/research](https://imedkrisna.github.io/research.html)
+
+## Tentang hari ini
+
+- Memulai konsep tulisan
+
+- mencari bacaan (literature review)
+
+- Q & A
+
+## Menulis = meneliti
+
+- Penulis/peneliti pemula seringkali bingung bagaimana memulai tinjauan literatur
+
+- Sebenarnya, tinjauan literatur (dan *referencing*) adalah *skill* yang kita perlukan untuk semua jenis pekerjaan!
+
+*Literature review is actually an investigation!*
+
+- Kemampuan menulis akan meningkat seiring jam terbang, baik sebagai pembaca maupun sebagai penulis.
+
+## Untuk menulis 10 ribu kata, anda harus membaca 100 ribu kata! {.m}
+
+::: {.incremental}
+
+$$\max_{B,T,S} \{f(B,T,S): B+T+S \leq 24\}$$
+
+$B>T>S$
+
+:::
+
+Baca $\Rightarrow$ Tulis $\Rightarrow$ Speak
+
+JANGAN KEBALIK!
+
+## Tips umum
+
+- Gunakan kerangka tulisan.
+
+- Riset lebih jauh! (literature review).
+
+- Cari pembaca lain selain anda sendiri sebelum disubmit untuk mendapat feedback.
+
+## Kerangka tulisan
+
+- Semua tulisan, baik yang pendek maupun yang panjang, punya kerangka yang kurang lebih sama:
+
+    - Intro (pendahuluan), Body (isi), Conclusion (kesimpulan)
+    
+- umumnya, Body mengambil porsi lebih kurang 70%-80% total tulisan, intro dan conclusion masing-masing 10-15%.
+
+    - Misalnya, untuk artikel sepanjang 2000 kata, targetkan 200 intro, 200 kesimpulan, dan 1600 isi.
+
+## Kerangka tulisan {.m}
+
+Apapun tulisan anda, mulai dari caption ig sampai skripsi mahasiswa, selalu punya hal-hal berikut:
+
+1. Motivasi dan konteks (sebagai _hook_)
+
+2. Isu yang ingin dibahas (menjawab pertanyaan, atau menjelaskan fenomena)
+
+3. Argumen dan support terhadap argumen.
+
+4. Kesimpulan.
+
+## Kerangka tulisan
+
+## Pendahuluan
+
+- Pendahuluan adalah tempat meletakkan motivasi dan konteks.
+
+- Jika anda menulis artikel yang cukup panjang, kita bisa juga menuliskan cuplikan kesimpulan di depan (deduktif).
+
+- Anda juga harus jelaskan dengan klir, isu apa yang diadress oleh tulisan anda.
+
+- Untuk menulis motivasi dan konteks, biasanya kita perlu memahami siapa yang secara umum membaca tulisan kita.
+
+## Mengenali pembaca
+
+- Motivasi itu penting. Misalnya jika anda memeriksa hubungan antara nilai tukar dan harga CPO, jelaskan di sini kenapa ini penting.
+
+- dapat menggunakan metode identifikasi masalah (fishbone diagram, 5W1H).
+
+- Jika perlu, jelaskan juga tentang konteks tentang penelitian ini. Kenapa penting di Indo tapi ga penting2 amat di negara lain, misalnya.
+
+## Mengenali pembaca
+
+- Kata kunci-nya adalah relevan!
+  
+- meneliti tentang Kazakhstan bagi audience Indonesia mungkin kurang rame.
+  
+- Jika pembaca anda non-expert, gunakan bahasa sederhana dan hindari jargon.
+  
+- Jika terpaksa pakai jargon, jelaskan.
+
+## Pendahuluan
+
+- Di pendahuluan, anda juga harus menyertakan kalimat kunci mengenai apa isu yang ingin anda bahas.
+
+- Misalnya ingin menjawab pertanyaan, gunakan kata seperti "di tulisan ini, kami hendak membahas apakah hilirisasi berdampak pada pertumbuhan ekonomi."
+
+- Bisa juga sekalian bilang "tulisan ini hendak memberikan argumen bahwa hilirisasi akan meningkatkan pertumbuhan ekonomi".
+
+- Jika tulisan anda hendak menjelaskan sebuah fenomena, bisa juga mengatakan "Di tulisan ini, kami akan menjabarkan apa yang dimaksud dengan hilirisasi".
+
+## Isi
+
+- Segera setelah anda melewati pendahuluan, barulah kita menuliskan isi.
+
+- Tentu saja isi harus menjawab apa yang sudah kita _tease_ di pendahuluan.
+
+- Sebelum menjawabnya, anda wajib melakukan riset terlebih dahulu. Umumnya, kita melakukan apa yang disebut "tinjauan pustaka" / "literatur review".
+
+## Melakukan tinjauan literatur {.m}
+
+- Kita tidak bisa meneliti sesuatu yang kita tidak tau!
+  - mendapatkan konteks
+  - metode termutakhir
+  - mencari *gap* di literatur: metode / konteks
+  
+- Meyakinkan pembaca bahwa riset kita <ins>relevan</ins>:
+  - terupdate
+  - penting
+
+## Beberapa kesalahan pemula {.m}
+
+| Problem | Komentar |
+| ------- | -------- |
+| Kurang terorganisir | fokus ke isu, bukan paper. Gunakan mindmap dapat membantu |
+| Kurang relevan | Seminal paper biasanya jadul. Penting, tapi fokus ke yang lebih baru |
+| Kurang kritis | Ingat, anda bukan <ins>hanya</ins> merangkum, tapi juga mencari *gap* |
+| Takut salah | Pelajar adalah tempatnya salah. Yang penting kita belajar dari situ |
+
+## Mulai dari mana?
+
+## Tabel dapat membantu proses berpikir kita {.s}
+
+| Penulis | Ide | Alasan | Metode | Link |
+| ------ | ----- | ------ | ------- | --- |
+| Amiti & Konings | Impor baik untuk manufaktur | Mempermudah akses bahan baku | Regresi semi-parametrik | - |
+| Cadot | menjelaskan tariff | dialektika | dialektika | - |
+| Fugazza | impor bagus untuk manufaktur khusus perusahaan kecil | Heterogenous regression | - |
+
+## Mulai dari mana?
+
+- *report* lembaga penting seperti IMF, World Bank dan Kementerian/Lembaga.
+
+- *textbook* dan referensinya.
+
+- Google (scholar) sangat berguna karena repositori-nya sangat luas. Namun harus agak berhati-hati. Pastikan yang anda sitasi adalah yang *peer-reviewed*.
+
+- Mulai dari wikipedia jika anda bener-bener newb juga boleh. Jangan lupa lihat sitasi yang ada di Wikipedia, jangan Wikipedianya langsung ya.
+
+- Jika ragu, tanya pembimbing anda.
+
+## butuh berapa referensi?
+
+- *Rule of thumb* saya: minimal 10 referensi utama di 5 tahun terakhir, tentang metode.
+
+- Dari 10 itu, ambil referensi mereka yang paling relevan (cek abstrak).
+
+- Gunakan referensi lain untuk *setting* konteks.
+  - Misalnya, saya pake [Patunru dan Rahardja (2015)](https://think-asia.org/handle/11540/6410) untuk pembukaan saja, bukan metodenya.
+
+## Menggunakan google scholar
+
+gunakan AND atau & untuk irisan, dan OR untuk *union*
+
+```python
+Indonesia AND Australia # will show only Indonesia & AUstralia included
+```
+```python
+Indonesia OR Australia # will show results also when only one of them is present
+```
+
+## Menggunakan google scholar
+
+gunakan tanda petik untuk mencari satu rangkaian kata
+
+```python
+"the case of indonesia"
+```
+gunakan author:"nama-author" untuk mencari karya peneliti tersebut
+
+```python
+author:"Costinot"
+```
+
+gunakan `..` untuk memberi interval di pencarian kita
+
+```python
+Indonesia AND Trade 2010..2018
+```
+## Menggunakan google scholar
+
+- pakai tanda bintang untuk mencari lanjutan. Misalnya, `indust*` akan mencarikan `industri`, `industry`, `industrial` dan `industrialisasi`.
+
+- gunakan tanda tanya untuk mencari produk yang ejaannya berbeda. Misalnya, `labo?r` akan menemukan sesuatu yang ada kata `labor` dan `labour`
+
+- Trik asterisk juga bisa digunakan untuk ejaan berbeda, misalnya `globali*` akan menemukan `globalization` dan `globalisation`
+
+- Selengkapnya bisa google `wildcard search`
+
+## Kesimpulan
+
+- Kesimpulan adalah bagian paling bawah. Biasanya saya spare wordcount lebih sedikit di sini.
+
+- Kita mengingatkan pembaca lagi apa saja yang sudah kita tulis, secara ringkas.
+
+- Kesimpulan harus ditulis berdasarkan apa yang kita tulis dari intro sampai isi.
+
+- Kadang-kadang ada saran juga.
+
+- **tidak boleh ada informasi baru di kesimpulan**.
+
+## Cari feedback
+
+- Mencari pembaca lain untuk memberi feedback adalah keharusan.
+
+- Karena kita sendiri akan susah melihat kekurangan tulisan kita sendiri secara obyektif.
+
+- Orang lain ini bisa siapa saja!
+
+## Akhir kata
+
+- Ingat, semua tulisan, sependek dan sepanjang apapun, mengandung motivasi, konteks, argumen, dan kesimpulan.
+
+    - Bahkan semua media, termasuk audio dan video!
+
+- Cobalah membaca sebanyak mungkin, dan bedahlah bacaan-bacaan tersebut dalam 4 bagian tadi.
+
+- Semakin banyak baca, semakin kaya pengetahuan dan _vocabulary_ anda.
+
+- Jangan pernah lelah membaca!
