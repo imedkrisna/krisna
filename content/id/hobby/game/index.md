@@ -48,5 +48,4 @@ Game yang baru keluar, saya emang penggemar Monster Hunter dari dulu. Mainly pak
 
 Sebagai mantan pemain DotA, kayaknya udah wajar saya akhirnya main ini. Lagi, Saya mainnya suka on/off. mostly main support/roamer. Kadang-kadang ngisi lane lain tapi yang jelas ga bisa asasin dan jungle.
 
-add me MadTriX or 242310541
-```
+add my id 242310541
