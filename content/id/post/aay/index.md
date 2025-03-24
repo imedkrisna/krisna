@@ -116,12 +116,15 @@ misalnya demand di sektor $k$ meningkat jadi $y_k+1$ sehingga vektor $y$ berbent
 
 $$
   y+
-  \left [
+  \left[
   \begin{bmatrix}
-  1 & 2 & 3 //
-  4 & 5 & 6 //
+  0 \\
+  \vdots \\
+  1 \\
+  \vdots \\
+  0 
   \end{bmatrix}
-  \right ]
+  \right]
 $$
 
 Biasanya di CGE tuh kita bikin production function pake model nesting. Misalnya _suppose_ Kita punya $x_i=$ output industri $i$ dengan fungsi produksi seperti ini:
@@ -150,7 +153,7 @@ Di mana $q^j_i$ adalah komposit material input dari industri $j$ ke industri $i$
 
 
 $$
-  q^j_i=a_^j_ix_j //
+  q^j_i=a_^j_ix_j \\\\
   0<a^j_i<1
 $$
 
@@ -158,7 +161,7 @@ $$
 Tentu saja jika fungsi produksi komposit $f$ juga kita asumsikan sebagai leontief, maka semua nest produksi menjadi sangat simpel:
 
 $$
-  x_i=min\left(a_{va}va_i,g_i\right), \\
+  x_i=min\left(a_{va}va_i,g_i\right) \\
   \text{Leontief implies kita bisa buka gi in terms of its component} \\
   x_i=min\left(a_{va}va_i,a^1_ix_1,\dots,a^j_ix_i) \\
   \text{optimization implies:} \\
