@@ -116,15 +116,15 @@ misalnya demand di sektor $k$ meningkat jadi $y_k+1$ sehingga vektor $y$ berbent
 
 $$
   y+
-  \[
+  
   \begin{bmatrix}
-  0 \\
-  \vdots \\
-  1 \\
-  \vdots \\
+  0 \newline
+  \vdots \newline
+  1 \newline
+  \vdots \newline
   0 
   \end{bmatrix}
-  \]
+  
 $$
 
 mari kita namakan dia vektor $d$ sehingga $y_n=y+d$
@@ -175,13 +175,13 @@ $$
 Tentu saja jika fungsi produksi komposit $f$ juga kita asumsikan sebagai leontief, maka semua nest produksi menjadi sangat simpel:
 
 
-\begin{align*}
-  x_i=\min \left(a_{va}va_i,g_i\right) \\
-  \text{Leontief implies kita bisa buka gi in terms of its component} \\
-  x_i=\min \left(a_{va}va_i,a^1_ix_1,\dots,a^j_ix_i) \\
-  \text{optimization implies:} \\
+$$
+  x_i=\min \left(a_{va}va_i,g_i\right) \newline
+  \text{Leontief implies kita bisa buka gi in terms of its component} \newline
+  x_i=\min \left(a_{va}va_i,a^1_ix_1,\dots,a^j_ix_i) \newline
+  \text{optimization implies:} \newline
   x_i=a_{va}va_i=a^j_ix_j \forall j
-\end{align*}
+$$
 
 
 Dari _exercise_ di atas, kita bisa lihat bahwa supply dari industri $i$ harus sama dengan _composite product of value added_ yang didapat dari optimisasi faktor produksi dan _composite product of materials_ yang didapat dari matriks $Ax$ di atas. Karena itu, _composite demand of materials_ aja nggak bisa expand tinggi-tinggi jika tertahan oleh faktor produksi. Jika _composite demand material_ coba dipush dengan belanja pemerintah tapi produksinya ketahan dari sisi faktor produksi, maka hal tersebut hanya akan mengakibatkan inflasi, tanpa berhasil mendorong actual output.
