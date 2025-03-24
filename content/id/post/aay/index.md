@@ -57,9 +57,9 @@ Hanya saja, Di paparannya, AAY mengatakan dua caveats yang sangat heroik dan oto
 1. Model ini adalah skenario _ex-ante_ dengan asumsi pelaksanaannya berjalan dengan ideal. Semua kritikan terkait aspek operasional tidak dapat dijawab dengan paper ini.
 2. Tidak ada aspek aspek general equilibrium, sehingga perubahan harga tidak ada di model ini.
 
-Menurut saya pribadi, dua hal tersebut justru dua hal yang _arguably_ paling berpengaruh terhadap hasil simulasi yang dilakukan di paper tersebut.
+Menurut saya pribadi, dua hal tersebut justru dua hal yang _arguably_ paling berpengaruh terhadap hasil simulasi yang dilakukan di paper tersebut. Di acara Doctrine UK tempo hari, mungkin mayoritas pertanyaan dan diskusi peserta justru adalah tentang best practice dan kesiapan institusi.
 
-Saya akan fokus ke no.2 dulu, yaitu bahwa ia berargumen IO analysis $\neq$ Computable General Equilibrium (CGE), dan IO tidak memperhitungkan adanya perubahan harga. Saya akan nerding out a bit soal CGE untuk menjawab caveat no.2. Caveat no.1 lebih less-nerdy jadi anda bisa langsung lompat ke [Problem pelaksanaan](#problem-pelaksanaan).
+Di postingan ini, saya akan fokus ke no.2 dulu, yaitu bahwa ia berargumen IO analysis $\neq$ Computable General Equilibrium (CGE), dan IO tidak memperhitungkan adanya perubahan harga. Saya akan nerding out a bit soal CGE untuk menjawab caveat no.2.
 
 ## Aspek General Equilibrium
 
@@ -98,7 +98,71 @@ Di samping itu, Leontief itu enak karena optimisasinya hanya ekspansi sesuai sha
 
 Misalnya, Sebuah input function $U=min(a_1x_1,a2_x2)$ akan memiliki titik optimal di $a_1x_1=a_2x_2$ sehingga demand function dari si $x_1$ akan berupa $x_1=\frac{a_2}{a_1}x_2$ dan $\frac{a_2}{a_1}$ ini akan konstan dan fixed sepanjang komposit barang konsumsinya.
 
-Ada setidaknya 2 kritik terhadap penggunaan model ini. Pertama adalah bahwa vektor $y$ dianggap final demand terakhir, tanpa mempertimbangkan ekspor impor. Indeed, di kolom $y$ di tabel IO BPS tuh aslinya ada pembentuk modal dan ekspor, yang di sini diagregasi ke dalam $y$. Sementara itu, di kolom pertama harusnya ada baris impor bahan baku. Di CGE, kita sering kali menambah sebuah fungsi substitusi dengan elastisitas armington antara input impor dan domestik untuk setiap sektor. Tentu saja ketiadaan perdagangan internasional (atau lebih tepatnya menganggap shift-share international trade as exogeneous/constant) mengakibatkan sulitnya meramal dampak MBG terhadap ekspor impor. Karena itu, Pak AAY di acara [ini](https://www.youtube.com/watch?v=YapJrjVDYpY) bilang something like MBG akan berdampak baik selama tidak ada "kebocoran", bahwa "bahan yang tidak perlu diimpor" sebaiknya tidak diimpor. I think this is not the best way to use the model.
+Metode ini relatif tidak sulit dilakukan di Python, selama matriks IO-nya ada. Saya coba pake versi lite, [yang 17 sektor](https://www.bps.go.id/en/statistics-table/1/MjI2OSMx/tabel-input-output-indonesia-transaksi-domestik-atas-dasar-harga-dasar--17-produk---2020--juta-rupiah-.html). Saya coba replikasi skenario A1 di papernya.
+
+
+
+
+```python
+import numpy as np
+A=np.loadtxt('A.csv',delimiter=',') # matrix A
+#y=np.loadtxt('y.csv',delimiter=',') ini final demand yang ada final importnya
+u=np.loadtxt('x.csv',delimiter=',') # output
+y=u-np.dot(A,u) # final demand tanpa final import
+ia=np.identity(17)-A
+invA=np.linalg.inv(ia)
+np.savetxt('invA.csv', invA,delimiter=",") # save the change matrix result to a new file
+x=np.dot(invA,y) ## Make sure replikasi final output di tabel.
+x-u
+```
+
+
+
+
+    array([ 0.00000000e+00,  4.76837158e-07,  9.53674316e-07,  1.19209290e-07,
+           -1.49011612e-08, -4.76837158e-07,  4.76837158e-07,  0.00000000e+00,
+            2.38418579e-07,  0.00000000e+00,  0.00000000e+00, -1.19209290e-07,
+            0.00000000e+00, -1.19209290e-07,  1.19209290e-07, -1.19209290e-07,
+           -1.19209290e-07])
+
+
+
+
+```python
+## Simulasi MBG A1 di paper AAY
+yy=y+np.array([0,0,0,0,0,0,0,0,171e6,0,0,0,0,-171e6,0,0,0]) ## + MBG shock - budget shock
+xx=np.dot(invA,yy)
+print(f'perubahan %output sektoral setelah +MBG-penghematan:\n {(xx-x)/x*100}') ## Percent change of sectoral output
+```
+
+    perubahan %output sektoral setelah +MBG-penghematan:
+     [  1.08864224   0.03824485   0.57615184  -0.79322713  -0.71996072
+      -0.27533884   0.34350708  -0.80514386  13.29429074  -1.13615204
+       0.0553673   -0.13483742  -1.60608706 -22.73385632  -0.14187647
+      -0.18583608  -0.23295487]
+    
+
+
+```python
+print(f'pertumbuhan output nasional adalah {(np.sum(xx)-np.sum(x))/np.sum(x)*100} persen') ## Percent change of total output
+```
+
+    pertumbuhan output adalah 0.046445748306372714
+    
+
+| indikator | ori | kawe |
+| ------ | --- | --- |
+| Output nasional | 0.06 | 0.046 |
+| Agriculture | 1.37 | 1.08 |
+| manufacture | 0.12 | 0.57 |
+
+Hasil simulasi A1, yang ori punya pak AAY, yang kawe punya saya. yah ga beda jauh sih jadi keknya lumayan bener wkwkwk.
+
+Langsung terlihat ada setidaknya 3 keterbatasan terhadap penggunaan model ini.
+
+Pertama adalah keterbatasan asumsi _constant shift-share_ a la Leontief. Hal ini langsung terlihat dari sumber pertumbuhan. realokasi _balance budget_ memberikan tambahan output positif karena sektor jasa penyedia makanan memiliki "total multiplier" (kalo di papernya term $m_{ij}$ dan $m_{ik}$, pp.6) yang lebih besar daripada jasa pemerintahan. Masalahnya si total multiplier ini konstan regardless mau ditambahin atau dikurangin berapapun. Tanpa adanya perubahan marginal return, maka jika yang diincar adalah pertumbuhan output, ya sekalian aja SEMUA output di jasa government kita pindahin ke sektor jasa penyedia makanan (aka corner solution). Tapi di dunia nyata kan ga terjadi, karena seiring suatu sektor kekurangan output, marginal productivity di situ akan naik, sementara sektor yang sudah bloated akan diminishing, menghilangkan gain seiring semakin banyaknya resources yang masuk ke situ. Plus, di demand juga ada merginal utility yang berubah seiring pola konsumsi cendering konsentrasi ke satu layanan. Hal ini tidak jadi masalah jika shocknya relatif kecil. Tapi mengingat shock MBG ini sampe naikin sektor jasa makanan sampai 13.3% dan motong sektor jasa pemerintah sampe -22.73%, kayaknya constant marginal return ini bakal jadi masalah.
+
+Kedua adalah bahwa vektor $y$ dianggap final demand terakhir, tanpa mempertimbangkan ekspor impor. Indeed, di kolom $y$ di tabel IO BPS tuh aslinya ada pembentuk modal dan ekspor, yang di sini diagregasi ke dalam $y$. Sementara itu, di kolom pertama harusnya ada baris impor bahan baku. Di CGE, kita sering kali menambah sebuah fungsi substitusi dengan elastisitas armington antara input impor dan domestik untuk setiap sektor. Tentu saja ketiadaan perdagangan internasional (atau lebih tepatnya menganggap shift-share international trade as exogeneous/constant) mengakibatkan sulitnya meramal dampak MBG terhadap ekspor impor. Karena itu, Pak AAY di acara [ini](https://www.youtube.com/watch?v=YapJrjVDYpY) bilang something like MBG akan berdampak baik selama tidak ada "kebocoran", bahwa "bahan yang tidak perlu diimpor" sebaiknya tidak diimpor. I think this is not the best way to conclude from the model.
 
 More importantly, di paper AAY, saya tidak menemukan info tentang tabel mana yang ia gunakan untung melakukan analisis. Hal ini penting karena di BPS tuh IO table-nya ada 2 jenis, yaitu menggunakan [total transaksi](https://www.bps.go.id/en/statistics-table/1/MjI3MSMx/indonesia-input-output-table-for-total-transactions-at-basic-prices--17-products---2020.html) dan [transaksi domestik](https://www.bps.go.id/en/statistics-table/1/MjI2OSMx/tabel-input-output-indonesia-transaksi-domestik-atas-dasar-harga-dasar--17-produk---2020--juta-rupiah-.html). Di tabel domestik tu hanya ada angka input domestik untuk matrix $Ax$, dan impor semua dipool di baris 2000. Di total, matriks $Ax$-nya udah termasuk impor sehingga baris 2000-nya kosong. Tidak ada info di papernya apakah dilakukan kalibrasi armington untuk pilihan produk domestik vs impor.
 
@@ -115,9 +179,7 @@ Di Leontief assumption, ketika kita melakukan _shock_ terhadap final demand (di 
 misalnya demand di sektor $k$ meningkat jadi $y_k+1$ sehingga vektor $y$ berbentuk kayak gini:
 
 $$
-  y+
-  
-  \begin{bmatrix}
+  y+\begin{bmatrix}
   0 \newline
   \vdots \newline
   1 \newline
@@ -135,11 +197,9 @@ $$x_n=(I-A)^{-1}y+(I-A)^{-1}d$$
 
 $$x_n=x+(I-A)^{-1}d$$
 
-vektor $x$ yang baru adalah vektor $x$ yang lama ditambah dengan perubahan input demand dari sektor $k$. Hanya sektor tersebut yang bertambah karena elemen lain di $d$ adalah 0. Di tabel input output, semua elemen di kolom $k$ akan bertambah. Kolom ini sendiri merepresentasikan permintaan antara dari sektor $k$.
+perubahan yang terjadi pada input demand dari sektor $k$ adalah exactly $(I-A)^{-1}$. Pak AAY menjelaskan ini di halaman 6 di papernya. Nah, term tersebut mengandung matriks identitas dan matriks $A$, yang sudah kita buat eksogen. Artinya, perubahan input demand dari sektor tersebut hanya bergantung pada $\Delta y$ dan tidak tergantung sama sekali dengan perubahan harga.
 
-
-
-Biasanya di CGE tuh kita bikin production function pake model nesting. Misalnya _suppose_ Kita punya $x_i=$ output industri $i$ dengan fungsi produksi seperti ini:
+Consider optimisasi di CGE. tuh kita bikin production function pake model nesting. Misalnya _suppose_ Kita punya $x_i=$ output industri $i$ dengan fungsi produksi seperti ini:
 
 $$
 x_i=f(va_i,g_i)
@@ -176,7 +236,7 @@ Tentu saja jika fungsi produksi komposit $f$ juga kita asumsikan sebagai leontie
 
 
 $$
-  x_i=\min \left(a_{va}va_i,g_i\right) \newline
+  x_i=\min \left(a_{va}va_i,g_i \right) \newline
   \text{Leontief implies kita bisa buka gi in terms of its component} \newline
   x_i=\min \left(a_{va}va_i,a^1_ix_1,\dots,a^j_ix_i) \newline
   \text{optimization implies:} \newline
@@ -235,5 +295,3 @@ Kedua adalah soal korupsi. Jika program ini dikorupsi, koruptornya most likely a
 
 [^1]: Sejujurnya saya juga nggak jago-jago banget sih CGE, so please take this post with a grain of salt.
 [^2]: BTW MPC <1 inilah yang bikin bantuan secara in-kind kayak MBG bisa jadi lebih efektif naikin konsumsi daripada cash transfer. Worth discussion sendiri.
-
-
