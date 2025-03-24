@@ -71,11 +71,11 @@ Ada 3 istilah penting yang dipakai AAY ketika menjelaskan IO analysis, yaitu out
 
 Struktur IO di paper AAY sama persis dengan typical IO model yang lebih kurang begini:
 
-$$x=Ax+y \\ (I-A)x=y \\ x=(I-A)^{-1}y$$
+$$x=Ax+y // 
+(I-A)x=y // 
+x=(I-A)^{-1}y$$
 
 di mana hasil akhir vektor x melambangkan input demand untuk sektor $i$. artinya, input demand dari vektor $i$ tergantung dari shift-share $A$ dari setiap industri di $x$ untuk setiap industri di $x$, dan demand akhir $y$.
-
-$$\underbrace{x}_\text{total output}=\underbrace{Ax}_\text{internal demand}+\underbrace{y}_\text{final demand}$$
 
 Dalam tabel Input-Output, kita bisa tunjukkan output dan value added jika anda buka actual tabel IO dari BPS.
 
@@ -112,10 +112,16 @@ Let me explain.
 
 Di Leontief assumption, ketika kita melakukan _shock_ terhadap final demand (di kolom $y_i$ di mana $i=$ sektor yang dishock), output dari sektor yang di-_shock_ akan meningkat, dan input demand dari sektor tersebut akan meningkat, terlihat di kolom $s_j$ di mana $j=$ sektor yang mengalami perubahan $y$.
 
-misalnya 
+misalnya demand di sektor $k$ meningkat jadi $y_k+1$ sehingga vektor $y$ berbentuk kayak gini:
 
 $$
-
+  y+
+  \left [
+  \begin{bmatrix}
+  1 & 2 & 3 //
+  4 & 5 & 6 //
+  \end{bmatrix}
+  \right ]
 $$
 
 Biasanya di CGE tuh kita bikin production function pake model nesting. Misalnya _suppose_ Kita punya $x_i=$ output industri $i$ dengan fungsi produksi seperti ini:
@@ -144,7 +150,7 @@ Di mana $q^j_i$ adalah komposit material input dari industri $j$ ke industri $i$
 
 {{< math >}}
 $$
-  q^j_i=a_^j_ix_j, \\ 
+  q^j_i=a_^j_ix_j //
   0<a^j_i<1
 $$
 {{< /math >}}
