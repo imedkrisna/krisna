@@ -30,7 +30,7 @@ projects: []
 
 Cukup mengejutkan tapi menarik waktu saya lihat [konferensi pers](https://www.youtube.com/watch?v=YapJrjVDYpY) Dewan Ekonomi Nasional (DEN) beberapa waktu lalu. Alasannya adalah karena Pak Luhut Binsar Panjaitan (LBP), ketua DEN, memberikan _spotlight_ untuk Profesor Arif Anshory Yusuf (AAY) untuk memberikan _teaser_ hasil model _ex=ante_ beliau tentang dampak program Makan Bergizi Gratis (MBG) terhadap perekonomian. Menurut AAY, MBG berpotensi menambah pekerjaan untuk 1.9 juta orang dan menurunkan kemiskinan sampai 5.8%. MBG, menurutnya, setara dengan memberikan uang 600 ribu per keluarga jika rata-rata anak-anak di keluarga miskin ada 3 orang. Angka ini 3x lipat dari PKH! Dia juga menambahkan bahwa untuk merealisasikan dampak maksimal MBG, maka "Kebocoran" permintaan bahan pangan "yang tidak perlu diimpor" dengan mengutamakan produk dalam negeri.
 
-Kemudian pada tanggal 23 Maret 2025 malam waktu Jakarta, saya menyaksikan presentasi Profesor Arief Anshory Yusuf (AAY) tentang paper terbaru yang ia tulis untuk Dewan Ekonomi Nasional (DEN). Acara ini diselenggarakan oleh Doctrine UK, sebuah perkumpulan mahasiswa Indonesia di Inggris. Di sana, ia menyampaikan paper tentang analisis dampak makroekonomi program Makan Bergizi Gratis (MBG). Papernya sendiri dibagikan di chat acara tersebut.
+Kemudian pada tanggal 23 Maret 2025 malam waktu Jakarta, saya menyaksikan presentasi Profesor Arief Anshory Yusuf (AAY) tentang paper terbaru yang ia tulis untuk Dewan Ekonomi Nasional (DEN). Acara ini diselenggarakan oleh Doctrine UK, sebuah perkumpulan mahasiswa Indonesia di Inggris. Di sana, ia menyampaikan paper tentang analisis dampak makroekonomi program Makan Bergizi Gratis (MBG). Papernya sendiri dibagikan di chat acara tersebut. Rekamannya sudah diupload di youtube dan bisa dilihat [di sini](https://www.youtube.com/watch?v=J9Q6J9Q6J9Q).
 
 Setelah melihat baik papernya maupun presentasinya, saya merasa perlu untuk menulis beberapa catatan tentang papernya. Tujuan utamanya sih sebenernya buat diri saya sendiri, karena model ini cukup seru untuk dikulik dan direplikasi. Selain itu, di acara tersebut, Pak AAY juga membawa nama DEN, yang berarti kebijakan yang munjul dari paper ini dapat dianggap datang dari pemerintah dan kemungkinan akan menjadi kebijakan publik. Saya juga nulis ini buat teman-teman belum begitu paham CGE[^1], tapi pengen belajar. Terakhir, sukur-sukur postingan ini dibaca oleh beliau dan DEN, tapi saya yakin sih orang dengan kaliber beliau pasti udah dapat banyak masukan dari orang-orang yang lebih keren dari saya, jadi tujuan ini ga begitu penting. Mostly, postingan ini untuk belajar dan berbagi.
 
@@ -57,15 +57,15 @@ Hanya saja, Di paparannya, AAY mengatakan dua caveats yang sangat heroik dan oto
 1. Model ini adalah skenario _ex-ante_ dengan asumsi pelaksanaannya berjalan dengan ideal. Semua kritikan terkait aspek operasional tidak dapat dijawab dengan paper ini.
 2. Tidak ada aspek aspek general equilibrium, sehingga perubahan harga tidak ada di model ini.
 
-Menurut saya pribadi, dua hal tersebut justru dua hal yang _arguably_ paling berpengaruh terhadap hasil simulasi yang dilakukan di paper tersebut. Di acara Doctrine UK tempo hari, mungkin mayoritas pertanyaan dan diskusi peserta justru adalah tentang best practice dan kesiapan institusi.
+Menurut saya pribadi, dua hal tersebut justru dua hal yang _arguably_ paling berpengaruh terhadap hasil simulasi yang dilakukan di paper tersebut. Di acara Doctrine UK tempo hari, mungkin mayoritas pertanyaan dan diskusi peserta justru adalah tentang best practice dan kesiapan institusi. Saya menambahkan beberapa pemikiran tambahan di sini selain apa yang sudah disampaikan teman-teman di acara tersebut, yang bisa langsung dibaca di [akhir postingan ini](#problem-pelaksanaan).
 
-Di postingan ini, saya akan fokus ke no.2 dulu, yaitu bahwa ia berargumen IO analysis $\neq$ Computable General Equilibrium (CGE), dan IO tidak memperhitungkan adanya perubahan harga. Saya akan nerding out a bit soal CGE untuk menjawab caveat no.2.
+Tapi postingan ini akan hyperfokus ke no.2, yaitu bahwa ia berargumen IO analysis $\neq$ Computable General Equilibrium (CGE), dan IO tidak memperhitungkan adanya perubahan harga. Saya akan nerding out a bit soal CGE untuk menjawab caveat no.2. Bagian ini akan jadi terlalu _geeky_. Baca dengan risiko masing-masing. You've been warned.
 
 ## Aspek General Equilibrium
 
-### Adding context: Tentang Input-Output Analysis (IO)
+### Apa itu Input-Output Analysis (IO)?
 
-Di paper tersebut, AAY menjelaskan IO di 3.1.1., wicis di halaman 4 di papernya. Bagian ini akan jadi terlalu _geeky_. Baca dengan risiko masing-masing. You've been warned.
+Di paper tersebut, AAY menjelaskan IO di 3.1.1., wicis di halaman 4 di papernya.
 
 Ada 3 istilah penting yang dipakai AAY ketika menjelaskan IO analysis, yaitu output, value added, dan employment. Output pada prinsipnya adalah produksi total dari suatu industri. Value added adalah total produksi dikurangi dengan input / bahan baku. Jadi value added isinya adalah faktor produksi, _mainly_ pekerja (labor) dan modal (capital). nah, labor ini sama dengan employment.
 
@@ -117,14 +117,28 @@ x-u
 ```
 
 
+    ---------------------------------------------------------------------------
 
+    PermissionError                           Traceback (most recent call last)
 
-    array([ 0.00000000e+00,  4.76837158e-07,  9.53674316e-07,  1.19209290e-07,
-           -1.49011612e-08, -4.76837158e-07,  4.76837158e-07,  0.00000000e+00,
-            2.38418579e-07,  0.00000000e+00,  0.00000000e+00, -1.19209290e-07,
-            0.00000000e+00, -1.19209290e-07,  1.19209290e-07, -1.19209290e-07,
-           -1.19209290e-07])
+    Cell In[52], line 8
+          6 ia=np.identity(17)-A
+          7 invA=np.linalg.inv(ia)
+    ----> 8 np.savetxt('invA.csv', invA,delimiter=",") # save the change matrix result to a new file
+          9 x=np.dot(invA,y) ## Make sure replikasi final output di tabel.
+         10 x-u
+    
 
+    File c:\ProgramData\anaconda3\Lib\site-packages\numpy\lib\npyio.py:1556, in savetxt(fname, X, fmt, delimiter, newline, header, footer, comments, encoding)
+       1553     fname = os_fspath(fname)
+       1554 if _is_string_like(fname):
+       1555     # datasource doesn't support creating a new file ...
+    -> 1556     open(fname, 'wt').close()
+       1557     fh = np.lib._datasource.open(fname, 'wt', encoding=encoding)
+       1558     own_fh = True
+    
+
+    PermissionError: [Errno 13] Permission denied: 'invA.csv'
 
 
 
@@ -199,56 +213,11 @@ $$x_n=x+(I-A)^{-1}d$$
 
 perubahan yang terjadi pada input demand dari sektor $k$ adalah exactly $(I-A)^{-1}$. Pak AAY menjelaskan ini di halaman 6 di papernya. Nah, term tersebut mengandung matriks identitas dan matriks $A$, yang sudah kita buat eksogen. Artinya, perubahan input demand dari sektor tersebut hanya bergantung pada $\Delta y$ dan tidak tergantung sama sekali dengan perubahan harga.
 
-Consider optimisasi di CGE. tuh kita bikin production function pake model nesting. Misalnya _suppose_ Kita punya $x_i=$ output industri $i$ dengan fungsi produksi seperti ini:
+Tabel IO BPS 2020 yang notabene adalah matriks transaksi. Transaksi _implies current prices_, di mana ada kuantitas dan harga di situ. Nah, exercise IO sederhana biasanya menganggap matrix nilai tersebut sebagai kuantitas. Sehingga jika elemen dari matriks tersebut (yang sejatinya adalah nilai) bergerak, maka gerakannya akan dianggap sebagai gerakan kuantitas.
 
-$$
-x_i=f(va_i,g_i)
-$$
+Problemnya adalah, dengan _constraint_, kita dapat menunjukkan bahwa _input demand_ biasanya akan tergantung dari harga! 
 
-Di mana $va_i$ adalah production nest untuk value-added yang essentially datang dari faktor produksi (typically labor dan capital tapi bisa lebih, misalnya land dan natural resource deposit). Sementara itu, $g_i$ adalah komposit untuk input material. Nah, kedua produk komposit tersebut dapat diturunkan lagi di production nest lain:
-
-$$
-va_i=v(K,L)
-$$
-
-$$
-g_i=g(q^j_i)
-$$
-
-Si $q^j_i$ adalah input material dari industri $j$ ke industri $i$. Nah, di CGE, kita bisa bikin fungsi produksi ini jadi non-linear, misalnya dengan Cobb-Douglas atau Leontief. Tapi di IO, kita menggunakan fungsi produksi Leontief, sehingga:
-
-$$
-g_i=\min \left( q^1_i,q^2_i,\ldots , q^j_i \right)
-$$
-
-Di mana $q^j_i$ adalah komposit material input dari industri $j$ ke industri $i$. Si fungsi komposit ini diterjemahkan sebagai sebuah matrix $A$ yang disebut input-output matrix. Di matrix IO, $q^j_i$ dianggap proporsional dengan $x_j$ (output industri $j$). Jadi kita bisa tulis:
-
-
-$$
-  \begin{align*}
-  q^j_i=a^j_ix_j \newline
-  0<a^j_i<1
-  \end{align*}
-$$
-
-
-Tentu saja jika fungsi produksi komposit $f$ juga kita asumsikan sebagai leontief, maka semua nest produksi menjadi sangat simpel:
-
-
-$$
-  x_i=\min \left(a_{va}va_i,g_i \right) \newline
-  \text{Leontief implies kita bisa buka gi in terms of its component} \newline
-  x_i=\min \left(a_{va}va_i,a^1_ix_1,\dots,a^j_ix_i) \newline
-  \text{optimization implies:} \newline
-  x_i=a_{va}va_i=a^j_ix_j \forall j
-$$
-
-
-Dari _exercise_ di atas, kita bisa lihat bahwa supply dari industri $i$ harus sama dengan _composite product of value added_ yang didapat dari optimisasi faktor produksi dan _composite product of materials_ yang didapat dari matriks $Ax$ di atas. Karena itu, _composite demand of materials_ aja nggak bisa expand tinggi-tinggi jika tertahan oleh faktor produksi. Jika _composite demand material_ coba dipush dengan belanja pemerintah tapi produksinya ketahan dari sisi faktor produksi, maka hal tersebut hanya akan mengakibatkan inflasi, tanpa berhasil mendorong actual output.
-
-Problem datang dari penggunaan tabel IO BPS 2020 yang notabene adalah matriks transaksi. Transaksi _implies current prices_, di mana ada kuantitas dan harga di situ. Nah, exercise IO sederhana biasanya menganggap matrix nilai tersebut sebagai kuantitas. Sehingga jika elemen dari matriks tersebut (yang sejatinya adalah nilai) bergerak, maka gerakannya akan dianggap sebagai gerakan kuantitas.
-
-Problemnya adalah, dengan _constraint_, kita dapat menunjukkan bahwa _input demand_ biasanya akan tergantung dari harga! Typical Leontief production:
+Consider typical Leontief production:
 
 $$
 \max min(a_1q_1,a_2q_2) \ \text{subject to} \ p_1 q_1+p_2 q_2 \leq I
@@ -275,23 +244,33 @@ $$
 
 di mana $q^j_i$ adalah input material dari industri $j$ ke industri $i$, $p_i$ adalah harga output industri $i$, $x_i$ adalah output industri $i$. $q^j_i$ adalah fungsi dari isocost industri $i$ (yang sama dengan total revenue) serta harga barang input untuk masing-masing industri $s$ termasuk $s=j$.
 
-Poinnya adalah pergerakan harga akan sangat mempengaruhi input demand dari setiap industri. Karena itu, tanpa memperhitungkan harga (relatif), maka akan sangat sulit menganggap perubahan atas matrix Ax sebagai perubahan quantitas saja.
+Di kasus replikasi [di atas](#apa-itu-input-output-analysis-io), $q^j_i$ itulah yang diproxy dengan $a_{i,j}x_i$, di mana term ini menjadi hanya berubah gara-gara $x_i$ saja. Padahal, dapat dilihat di atas bahwa harganya juga ngaruh. Jika $p=1$, maka $q$ tinggal memiliki relatif shift share $a$ dan final demand $x$, wicis exactly yang terjadi di replikasi di atas.
 
-### Back to the IO table
+Nah, one can argue that input demand yang bergantung pada harga bukan menjadi masalah selama kita anggap sektor ini adalah _price taker_. Alias, sektor yang mendemand ini begitu kecilnya, pasar pasti akan selalu memberikan supply (i.e., suppliernya _infinitely many_) tanpa mempengaruhi kenaikan harga. Tapi tentu saja hal ini belum tentu realistis, apalagi sektor _in question_ memiliki permintaan yang tinggi dari produk agrikultur, sebuah sektor yang secara historis selalu diramaikan dengan tata kelola perdagangan yang penuh birokrasi, salah itung, swasembada yang selalu gagal, dan sebagainya. Rasanya sulit untuk mengharapkan supply yang super elastis dari sektor ini.
 
-Kita dapat menggunakan semua elemen di tabel IO sebagai kuantitas dikali dengan sebuah indeks harga $p=1$. Dengan menahan $p=1$ untuk semua elemen di dalam tabel IO, maka ya, semua perubahan dari _shock_ MBG hanya menggerakkan kuantitas.
+Tentu saja kita juga bisa modelkan keterbatasan dari sisi _supply composite_ labor, yang juga bisa kita modelkan _production nest_-nya. Benar saja, di IO table tuh sebenernya ada labor share sendiri, yang juga diasumsikan memiliki sebuah parameter konstan $e$, seperti halnya value added yang memiliki parameter konstan $v$. Keduanya bisa kita relaksasi asumsinya.
 
-
+Tapi mungkin lain waktu deh wkwk.
 
 ## Problem pelaksanaan
 
-Problem pelaksanaan menjadi masalah paling fundamental dalam mengatakan bahwa program ini pro-poor.
+Saya juga bermaksud menambahkan sedikit pemikiran soal pentingnya memikirkan problem pelaksanaan yang akan berdampak sangat signifikan terhadap kesimpulan dari dampak MBG.s
 
 Saya sepakat bahwa jika SEMUA sekolah mendapatkan program ini, maka bisa jadi program ini progresif, dengan asumsi anggaran yang dikorbankan untuk MBG adalah pos yang biasanya dinikmati oleh [bagian masyarakat yang relatif lebih kaya](https://www.krisna.or.id/post/consumption/) (hence lower marginal propensity to consume[^2]). Tapi ada beberapa kemungkinan penerapan bahwa ini belum tentu terjadi di lapangan.
 
 Pertama soal sebaran sekolah penerima. Sepemahaman saya, tidak semua sekolah menerima program ini secara serentak. Ada sekolah yang mendapat MBG (treatment) dan ada yang tidak (control). Problem muncul jika treatment tidak terjadi secara random/eksogen. Misalnya, jika secara umum sekolah yang menerima duluan adalah sekolah yang cenderung lebih siap secara infrastruktur. Sekolah seperti ini notabene terletak di daerah yang relatif lebih kaya. Jika ini yang terjadi, meski AAY memberikan beberapa anekdot kelompok masyarakat miskin sebagai penerima manfaat, bisa jadi banyak peserta sebenarnya berada di daerah yang sebenarnya cukup mampu.
 
-Kedua adalah soal korupsi. Jika program ini dikorupsi, koruptornya most likely adalah orang yang tajir melintir dibandingkan dengan penerima manfaat. Artinya MBG akan berbahaya kalau menjadi sarana transfer income dari pihak yang kena potong anggaran ke pihak yang mengkorupsi MBG. 
+Kedua adalah soal korupsi. Jika program ini dikorupsi, koruptornya most likely adalah orang yang tajir melintir dibandingkan dengan penerima manfaat. Artinya MBG akan berbahaya kalau menjadi sarana transfer income dari pihak yang kena potong anggaran ke pihak yang mengkorupsi MBG. Sudah pasti ini tidak pro poor. Indikasi korupsi (atau setidaknya kegagalan memenuhi standar gizi yang baik) sudah disampaikan teman-teman di acara Doctrine UK tempo hari.
+
+Lastly, mungkin skenario di CGE di atas juga akan berkurang khasiatnya jika ternyata tidak semua 171Tr tersebut digunakan untuk porsi makanan. Bisa saja uangnya juga digunakan untuk operasional dan pembangunan institusi. Kemaren ada yang bilang Kemenkes sebenernya sudah punya isntitusi yang siap pakai, jagi ga perlu lagi bikin institusi baru seperti BGN dan dapur umum. Sayang resourcesnya.
+
+## Penutup
+
+Akhir kata, saya coba menyampaikan kritik konstruktif di postingan ini. Saya fokus di model IO-nya, dan coba menunjukkan bahwa 3 asumsi di model IO (konstan shift-share, tidak adanya perdagangan internasional, dan tidak fixed nominal prices) bisa saja terlanggar. Tentu tidak ada model yang akan persis sama dengan dunia nyata. _All models are wrong_ tapi gak papa selama modelnya useful untuk menjelaskan fenomena. Cuma bisa jadi problem ketika asumsi yang tidak hold tadi memiliki konsekuensi yang sangat penting terhadap kesimpulan yang diambil untuk dasar kebijakan.
+
+Saya juga lagi-lagi mau apresiasi Pak AAY karena sudah memberikan transparansi yang tergolong langka di lingkungan pemerintahan. Jarang banget ada orang mendokumentasikan studi yang digunakan pemerintah yang dijadikan _policy guide_, sehingga _civil society_ seperti saya bisa ikut berpartisipasi dalam perdebatan. Sebagai orang masih junior, bisa jadi input ini sebenenrya ga begitu penting, tapi enak juga bisa ngikutin jalan pemikiran para konseptor kebijakan Indonesia dan belajar dari situ. Mudah-mudahan keterbukaan semacam ini makin menular ke semua sektor pemerintahan.
+
+Mungkin segini dulu ya. Maybe next time kita coba modelin si _production nest_ tadi kalo saya lagi ada waktu wkwkwk. It's been fun! See ya next post.
 
 [^1]: Sejujurnya saya juga nggak jago-jago banget sih CGE, so please take this post with a grain of salt.
 [^2]: BTW MPC <1 inilah yang bikin bantuan secara in-kind kayak MBG bisa jadi lebih efektif naikin konsumsi daripada cash transfer. Worth discussion sendiri.
