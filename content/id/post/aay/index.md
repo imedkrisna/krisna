@@ -116,7 +116,7 @@ misalnya demand di sektor $k$ meningkat jadi $y_k+1$ sehingga vektor $y$ berbent
 
 $$
   y+
-  \left[
+  \[
   \begin{bmatrix}
   0 \\
   \vdots \\
@@ -124,8 +124,20 @@ $$
   \vdots \\
   0 
   \end{bmatrix}
-  \right]
+  \]
 $$
+
+mari kita namakan dia vektor $d$ sehingga $y_n=y+d$
+
+$$x_n=(I-A)^{-1}(y+d)$$
+
+$$x_n=(I-A)^{-1}y+(I-A)^{-1}d$$
+
+$$x_n=x+(I-A)^{-1}d$$
+
+vektor $x$ yang baru adalah vektor $x$ yang lama ditambah dengan perubahan input demand dari sektor $k$. Hanya sektor tersebut yang bertambah karena elemen lain di $d$ adalah 0. Di tabel input output, semua elemen di kolom $k$ akan bertambah. Kolom ini sendiri merepresentasikan permintaan antara dari sektor $k$.
+
+
 
 Biasanya di CGE tuh kita bikin production function pake model nesting. Misalnya _suppose_ Kita punya $x_i=$ output industri $i$ dengan fungsi produksi seperti ini:
 
@@ -146,26 +158,30 @@ $$
 Si $q^j_i$ adalah input material dari industri $j$ ke industri $i$. Nah, di CGE, kita bisa bikin fungsi produksi ini jadi non-linear, misalnya dengan Cobb-Douglas atau Leontief. Tapi di IO, kita menggunakan fungsi produksi Leontief, sehingga:
 
 $$
-g_i=min\left(q^1_i,q^2_i,\ldots,q^j_i\right)
+g_i=\min \left( q^1_i,q^2_i,\ldots , q^j_i \right)
 $$
 
 Di mana $q^j_i$ adalah komposit material input dari industri $j$ ke industri $i$. Si fungsi komposit ini diterjemahkan sebagai sebuah matrix $A$ yang disebut input-output matrix. Di matrix IO, $q^j_i$ dianggap proporsional dengan $x_j$ (output industri $j$). Jadi kita bisa tulis:
 
 
 $$
-  q^j_i=a_^j_ix_j \\\\
+  \begin{align*}
+  q^j_i=a^j_ix_j \\
   0<a^j_i<1
+  \end{align*}
 $$
 
 
 Tentu saja jika fungsi produksi komposit $f$ juga kita asumsikan sebagai leontief, maka semua nest produksi menjadi sangat simpel:
 
 $$
-  x_i=min\left(a_{va}va_i,g_i\right) \\
+  \begin{align*}
+  x_i=\min \left(a_{va}va_i,g_i\right) \\
   \text{Leontief implies kita bisa buka gi in terms of its component} \\
-  x_i=min\left(a_{va}va_i,a^1_ix_1,\dots,a^j_ix_i) \\
+  x_i=\min \left(a_{va}va_i,a^1_ix_1,\dots,a^j_ix_i) \\
   \text{optimization implies:} \\
   x_i=a_{va}va_i=a^j_ix_j \forall j
+  \end{align*}
 $$
 
 Dari _exercise_ di atas, kita bisa lihat bahwa supply dari industri $i$ harus sama dengan _composite product of value added_ yang didapat dari optimisasi faktor produksi dan _composite product of materials_ yang didapat dari matriks $Ax$ di atas. Karena itu, _composite demand of materials_ aja nggak bisa expand tinggi-tinggi jika tertahan oleh faktor produksi. Jika _composite demand material_ coba dipush dengan belanja pemerintah tapi produksinya ketahan dari sisi faktor produksi, maka hal tersebut hanya akan mengakibatkan inflasi, tanpa berhasil mendorong actual output.
