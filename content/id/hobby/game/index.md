@@ -44,6 +44,8 @@ Saya main di regional America di server Dragonbrand. Hit my id at Madboy.6804
 
 Game yang baru keluar, saya emang penggemar Monster Hunter dari dulu. Mainly pake insect glaive dan bow, tapi juga suka pake long sword. Saya diracunin kolega PhD saya orang Filipina dulu waktu Monster Hunter World keluar. Makanya pas Wilds nongol, auto beli. Cuma saya sama temen pinoy sama malah sama-sama sibuk belakangan ini jadi ga pernah main bareng ha ha ha.
 
+Anyway, username MadtriX dan hunter ID 3L49L6V4
+
 ## Mobile Legends: Bang Bang
 
 Sebagai mantan pemain DotA, kayaknya udah wajar saya akhirnya main ini. Lagi, Saya mainnya suka on/off. mostly main support/roamer. Kadang-kadang ngisi lane lain tapi yang jelas ga bisa asasin dan jungle.
