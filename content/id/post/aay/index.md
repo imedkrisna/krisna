@@ -142,10 +142,12 @@ $$
 
 Di mana $q^j_i$ adalah komposit material input dari industri $j$ ke industri $i$. Si fungsi komposit ini diterjemahkan sebagai sebuah matrix $A$ yang disebut input-output matrix. Di matrix IO, $q^j_i$ dianggap proporsional dengan $x_j$ (output industri $j$). Jadi kita bisa tulis:
 
+{{< math >}}
 $$
   q^j_i=a_^j_ix_j, \\ 
   0<a^j_i<1
 $$
+{{< /math >}}
 
 Tentu saja jika fungsi produksi komposit $f$ juga kita asumsikan sebagai leontief, maka semua nest produksi menjadi sangat simpel:
 
