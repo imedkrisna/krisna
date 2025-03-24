@@ -71,17 +71,11 @@ Ada 3 istilah penting yang dipakai AAY ketika menjelaskan IO analysis, yaitu out
 
 Struktur IO di paper AAY sama persis dengan typical IO model yang lebih kurang begini:
 
-$$
-x=Ax+y \\
-(I-A)x=y \\
-x=(I-A)^{-1}y
-$$
+$$x=Ax+y \\ (I-A)x=y \\ x=(I-A)^{-1}y$$
 
 di mana hasil akhir vektor x melambangkan input demand untuk sektor $i$. artinya, input demand dari vektor $i$ tergantung dari shift-share $A$ dari setiap industri di $x$ untuk setiap industri di $x$, dan demand akhir $y$.
 
-$$
-\underbrace{x}_\text{total output}=\underbrace{Ax}_\text{internal demand}+\underbrace{y}_\text{final demand}
-$$
+$$\underbrace{x}_\text{total output}=\underbrace{Ax}_\text{internal demand}+\underbrace{y}_\text{final demand}$$
 
 Dalam tabel Input-Output, kita bisa tunjukkan output dan value added jika anda buka actual tabel IO dari BPS.
 
@@ -106,11 +100,23 @@ Misalnya, Sebuah input function $U=min(a_1x_1,a2_x2)$ akan memiliki titik optima
 
 Ada setidaknya 2 kritik terhadap penggunaan model ini. Pertama adalah bahwa vektor $y$ dianggap final demand terakhir, tanpa mempertimbangkan ekspor impor. Indeed, di kolom $y$ di tabel IO BPS tuh aslinya ada pembentuk modal dan ekspor, yang di sini diagregasi ke dalam $y$. Sementara itu, di kolom pertama harusnya ada baris impor bahan baku. Di CGE, kita sering kali menambah sebuah fungsi substitusi dengan elastisitas armington antara input impor dan domestik untuk setiap sektor. Tentu saja ketiadaan perdagangan internasional (atau lebih tepatnya menganggap shift-share international trade as exogeneous/constant) mengakibatkan sulitnya meramal dampak MBG terhadap ekspor impor. Karena itu, Pak AAY di acara [ini](https://www.youtube.com/watch?v=YapJrjVDYpY) bilang something like MBG akan berdampak baik selama tidak ada "kebocoran", bahwa "bahan yang tidak perlu diimpor" sebaiknya tidak diimpor. I think this is not the best way to use the model.
 
+More importantly, di paper AAY, saya tidak menemukan info tentang tabel mana yang ia gunakan untung melakukan analisis. Hal ini penting karena di BPS tuh IO table-nya ada 2 jenis, yaitu menggunakan [total transaksi](https://www.bps.go.id/en/statistics-table/1/MjI3MSMx/indonesia-input-output-table-for-total-transactions-at-basic-prices--17-products---2020.html) dan [transaksi domestik](https://www.bps.go.id/en/statistics-table/1/MjI2OSMx/tabel-input-output-indonesia-transaksi-domestik-atas-dasar-harga-dasar--17-produk---2020--juta-rupiah-.html). Di tabel domestik tu hanya ada angka input domestik untuk matrix $Ax$, dan impor semua dipool di baris 2000. Di total, matriks $Ax$-nya udah termasuk impor sehingga baris 2000-nya kosong. Tidak ada info di papernya apakah dilakukan kalibrasi armington untuk pilihan produk domestik vs impor.
+
+Jika tabel transaksi domestik yang digunakan, berarti matriks $Ax$ tidak mencerminkan keseluruhan input (cenderung bias), implicitly menganggap impornya fixed sehingga muncul "jangan bocor" tadi dan bisa jadi sesuai dengan apa yang modelnya katakan. Tapi jika transaksi total yang digunakan, maka matriks $Ax$ sudah _include_ barang impor juga di dalamnya dan mungkin saja sebenernya "bocor" di model dan ga ada konsekuensi jelek apapun. Atau bisa aja saya yang gak bener bacanya dan sebenernya dikasih tau prosedur ngeluarin imported input ini wkkwkw. Tapi ya mestinya bisa dipertegas di papernya.
+
 Tapi kritik soal neraca perdagangan yang eksogen sebenarnya terkait sangat dengan kritik ke-2: tidak adanya prices. Ketiadaan prices sebenarnya menjadi super relevan ketika kita menggunakan model dengan optimisasi dan _constraint_. Tanpa constraint, tentu seolah-olah produksi di sektor yang ketimpaan MBG akan bisa berkembang sejauh $Ax$. Padahal, constraint dari sisi supply lah yang akan mengakibatkan inflasi. Ketika ada (budget) constraint, maka optimisasi harus dilakukan dan akibatnya akan muncul _income effect_ dan _substitution effect_ (jika pake asumsi selain leontief). In particular, _income effect_ ini akan sangat ngaruh ke perlunya ekspor/impor, tapi lebih penting lagi ke konsumsi total dan perhitungan kemiskinan.
 
 Let me explain.
 
 ### Constraint and prices
+
+Di Leontief assumption, ketika kita melakukan _shock_ terhadap final demand (di kolom $y_i$ di mana $i=$ sektor yang dishock), output dari sektor yang di-_shock_ akan meningkat, dan input demand dari sektor tersebut akan meningkat, terlihat di kolom $s_j$ di mana $j=$ sektor yang mengalami perubahan $y$.
+
+misalnya 
+
+$$
+
+$$
 
 Biasanya di CGE tuh kita bikin production function pake model nesting. Misalnya _suppose_ Kita punya $x_i=$ output industri $i$ dengan fungsi produksi seperti ini:
 
