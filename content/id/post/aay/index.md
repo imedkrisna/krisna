@@ -1,7 +1,7 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: "Menyikapi input-output analysis Dewan Ekonomi Nasional untuk menunjukkan dampak makroekonomi program Makan Bergizi Gratis"
+title: "Bisakah analisis Input-Output digunakan untuk menganalisis dampak ekonomi program Makan Bergizi Gratis?"
 subtitle: ""
 summary: ""
 authors: [admin]
@@ -32,7 +32,7 @@ Cukup mengejutkan tapi menarik waktu saya lihat [konferensi pers](https://www.yo
 
 Kemudian pada tanggal 23 Maret 2025 malam waktu Jakarta, saya menyaksikan presentasi Profesor Arief Anshory Yusuf (AAY) tentang paper terbaru yang ia tulis untuk Dewan Ekonomi Nasional (DEN). Acara ini diselenggarakan oleh Doctrine UK, sebuah perkumpulan mahasiswa Indonesia di Inggris. Di sana, ia menyampaikan paper tentang analisis dampak makroekonomi program Makan Bergizi Gratis (MBG). Papernya sendiri dibagikan di chat acara tersebut. Rekamannya sudah diupload di youtube dan bisa dilihat [di sini](https://www.youtube.com/watch?v=J9Q6J9Q6J9Q).
 
-Setelah melihat baik papernya maupun presentasinya, saya merasa perlu untuk menulis beberapa catatan tentang papernya. Tujuan utamanya sih sebenernya buat diri saya sendiri, karena model ini cukup seru untuk dikulik dan direplikasi. Selain itu, di acara tersebut, Pak AAY juga membawa nama DEN, yang berarti kebijakan yang munjul dari paper ini dapat dianggap datang dari pemerintah dan kemungkinan akan menjadi kebijakan publik. Saya juga nulis ini buat teman-teman belum begitu paham CGE[^1], tapi pengen belajar. Terakhir, sukur-sukur postingan ini dibaca oleh beliau dan DEN, tapi saya yakin sih orang dengan kaliber beliau pasti udah dapat banyak masukan dari orang-orang yang lebih keren dari saya, jadi tujuan ini ga begitu penting. Mostly, postingan ini untuk belajar dan berbagi.
+Setelah melihat baik papernya maupun presentasinya, saya jadi kepingin untuk menulis beberapa catatan tentang papernya. Tujuan utamanya sih sebenernya buat diri saya sendiri, karena model ini cukup seru untuk dikulik dan direplikasi. Selain itu, di acara tersebut, Pak AAY juga membawa nama DEN, yang berarti kebijakan yang munjul dari paper ini dapat dianggap datang dari pemerintah dan kemungkinan akan menjadi kebijakan publik. Saya juga nulis ini buat teman-teman belum begitu paham CGE[^1], tapi pengen belajar. Terakhir, sukur-sukur postingan ini dibaca oleh beliau dan DEN, tapi saya yakin sih orang dengan kaliber beliau pasti udah dapat banyak masukan dari orang-orang yang lebih keren dari saya, jadi tujuan ini ga begitu penting. Mostly, postingan ini untuk belajar dan berbagi.
 
 Saya sangat menghormati beliau sebagai akademisi karena AAY adalah satu dari sedikit ekonom Indonesia yang sangat vokal terhadap isu-isu ekonomi di Indonesia, terutama tentang Pendidikan Tinggi dan program pro-poor dan pro-job. Beliau tidak segan-segan mengkritik pemerintah. Bahkan paper beliau yang menjadi justifikasi _ex-ante_ MBG dibagikan ke semua dan ia juga rajin presentasi dan minta pendapat dari banyak sekali orang di berbagai kalangan. Level transparansi ini tidak saya temukan di kebijakan pemerintah yang lain.
 
@@ -50,7 +50,7 @@ Tidak kalah penting: AAY menyebutkan beberapa tujuan resmi MBG: better nutrition
 
 Akhirnya, AAY menggunakan analisis input-output (IO) dan mikrosimulasi untuk menunjukkan dampak ekonomi berupa peningkatan output, value added, dan lapangan kerja, serta penurunan kemiskinan dari program ini. Ada berbagai simulasi dengan skenario yang dilakukan, tapi hasilnya konsisten positif secara umum.
 
-## Large caveats
+## Some caveats
 
 Hanya saja, Di paparannya, AAY mengatakan dua caveats yang sangat heroik dan otomatis mendismiss banyak sekali diskusi tentang MBG:
 
