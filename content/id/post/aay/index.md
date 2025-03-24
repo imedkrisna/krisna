@@ -166,7 +166,7 @@ Di mana $q^j_i$ adalah komposit material input dari industri $j$ ke industri $i$
 
 $$
   \begin{align*}
-  q^j_i=a^j_ix_j \\
+  q^j_i=a^j_ix_j \newline
   0<a^j_i<1
   \end{align*}
 $$
@@ -174,15 +174,15 @@ $$
 
 Tentu saja jika fungsi produksi komposit $f$ juga kita asumsikan sebagai leontief, maka semua nest produksi menjadi sangat simpel:
 
-$$
-  \begin{align*}
+
+\begin{align*}
   x_i=\min \left(a_{va}va_i,g_i\right) \\
   \text{Leontief implies kita bisa buka gi in terms of its component} \\
   x_i=\min \left(a_{va}va_i,a^1_ix_1,\dots,a^j_ix_i) \\
   \text{optimization implies:} \\
   x_i=a_{va}va_i=a^j_ix_j \forall j
-  \end{align*}
-$$
+\end{align*}
+
 
 Dari _exercise_ di atas, kita bisa lihat bahwa supply dari industri $i$ harus sama dengan _composite product of value added_ yang didapat dari optimisasi faktor produksi dan _composite product of materials_ yang didapat dari matriks $Ax$ di atas. Karena itu, _composite demand of materials_ aja nggak bisa expand tinggi-tinggi jika tertahan oleh faktor produksi. Jika _composite demand material_ coba dipush dengan belanja pemerintah tapi produksinya ketahan dari sisi faktor produksi, maka hal tersebut hanya akan mengakibatkan inflasi, tanpa berhasil mendorong actual output.
 
