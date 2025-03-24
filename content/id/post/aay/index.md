@@ -1,14 +1,14 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: "Bisakah analisis Input-Output digunakan untuk menganalisis dampak ekonomi program Makan Bergizi Gratis?"
+title: "Review Paper Dewan Ekonomi Nasional tentang dampak ekonomi Makan Bergizi Gratis"
 subtitle: ""
 summary: ""
 authors: [admin]
 tags: [CGE, ekonomi]
 categories: [CGE, ekonomi]
-date: 2025-03-23T12:06:59+07:00
-lastmod: 2025-03-23T12:06:59+07:00
+date: 2025-03-24T21:06:59+07:00
+lastmod: 2025-03-24T21:06:59+07:00
 featured: false
 draft: false
 
@@ -32,7 +32,7 @@ Cukup mengejutkan tapi menarik waktu saya lihat [konferensi pers](https://www.yo
 
 Kemudian pada tanggal 23 Maret 2025 malam waktu Jakarta, saya menyaksikan presentasi Profesor Arief Anshory Yusuf (AAY) tentang paper terbaru yang ia tulis untuk Dewan Ekonomi Nasional (DEN). Acara ini diselenggarakan oleh Doctrine UK, sebuah perkumpulan mahasiswa Indonesia di Inggris. Di sana, ia menyampaikan paper tentang analisis dampak makroekonomi program Makan Bergizi Gratis (MBG). Papernya sendiri dibagikan di chat acara tersebut. Rekamannya sudah diupload di youtube dan bisa dilihat [di sini](https://www.youtube.com/watch?v=J9Q6J9Q6J9Q).
 
-Setelah melihat baik papernya maupun presentasinya, saya jadi kepingin untuk menulis beberapa catatan tentang papernya. Tujuan utamanya sih sebenernya buat diri saya sendiri, karena model ini cukup seru untuk dikulik dan direplikasi. Selain itu, di acara tersebut, Pak AAY juga membawa nama DEN, yang berarti kebijakan yang munjul dari paper ini dapat dianggap datang dari pemerintah dan kemungkinan akan menjadi kebijakan publik. Saya juga nulis ini buat teman-teman belum begitu paham CGE[^1], tapi pengen belajar. Terakhir, sukur-sukur postingan ini dibaca oleh beliau dan DEN, tapi saya yakin sih orang dengan kaliber beliau pasti udah dapat banyak masukan dari orang-orang yang lebih keren dari saya, jadi tujuan ini ga begitu penting. Mostly, postingan ini untuk belajar dan berbagi.
+Setelah melihat baik papernya maupun presentasinya, saya jadi kepingin menulis beberapa catatan tentang papernya. Tujuan utamanya sih sebenernya buat diri saya sendiri, karena model ini cukup seru untuk dikulik dan direplikasi. Selain itu, di acara tersebut, Pak AAY juga membawa nama DEN, yang berarti kebijakan yang munjul dari paper ini dapat dianggap datang dari pemerintah dan kemungkinan akan menjadi kebijakan publik. Saya juga nulis ini buat teman-teman belum begitu paham CGE[^1], tapi pengen belajar. Terakhir, sukur-sukur postingan ini dibaca oleh beliau dan DEN, tapi saya yakin sih orang dengan kaliber beliau pasti udah dapat banyak masukan dari orang-orang yang lebih keren dari saya, jadi tujuan ini ga begitu penting. Mostly, postingan ini untuk belajar dan berbagi.
 
 Saya sangat menghormati beliau sebagai akademisi karena AAY adalah satu dari sedikit ekonom Indonesia yang sangat vokal terhadap isu-isu ekonomi di Indonesia, terutama tentang Pendidikan Tinggi dan program pro-poor dan pro-job. Beliau tidak segan-segan mengkritik pemerintah. Bahkan paper beliau yang menjadi justifikasi _ex-ante_ MBG dibagikan ke semua dan ia juga rajin presentasi dan minta pendapat dari banyak sekali orang di berbagai kalangan. Level transparansi ini tidak saya temukan di kebijakan pemerintah yang lain.
 
@@ -50,7 +50,7 @@ Tidak kalah penting: AAY menyebutkan beberapa tujuan resmi MBG: better nutrition
 
 Akhirnya, AAY menggunakan analisis input-output (IO) dan mikrosimulasi untuk menunjukkan dampak ekonomi berupa peningkatan output, value added, dan lapangan kerja, serta penurunan kemiskinan dari program ini. Ada berbagai simulasi dengan skenario yang dilakukan, tapi hasilnya konsisten positif secara umum.
 
-## Some caveats
+## Large caveats
 
 Hanya saja, Di paparannya, AAY mengatakan dua caveats yang sangat heroik dan otomatis mendismiss banyak sekali diskusi tentang MBG:
 
@@ -117,28 +117,14 @@ x-u
 ```
 
 
-    ---------------------------------------------------------------------------
 
-    PermissionError                           Traceback (most recent call last)
 
-    Cell In[52], line 8
-          6 ia=np.identity(17)-A
-          7 invA=np.linalg.inv(ia)
-    ----> 8 np.savetxt('invA.csv', invA,delimiter=",") # save the change matrix result to a new file
-          9 x=np.dot(invA,y) ## Make sure replikasi final output di tabel.
-         10 x-u
-    
+    array([ 0.00000000e+00,  4.76837158e-07,  9.53674316e-07,  1.19209290e-07,
+           -1.49011612e-08, -4.76837158e-07,  4.76837158e-07,  0.00000000e+00,
+            2.38418579e-07,  0.00000000e+00,  0.00000000e+00, -1.19209290e-07,
+            0.00000000e+00, -1.19209290e-07,  1.19209290e-07, -1.19209290e-07,
+           -1.19209290e-07])
 
-    File c:\ProgramData\anaconda3\Lib\site-packages\numpy\lib\npyio.py:1556, in savetxt(fname, X, fmt, delimiter, newline, header, footer, comments, encoding)
-       1553     fname = os_fspath(fname)
-       1554 if _is_string_like(fname):
-       1555     # datasource doesn't support creating a new file ...
-    -> 1556     open(fname, 'wt').close()
-       1557     fh = np.lib._datasource.open(fname, 'wt', encoding=encoding)
-       1558     own_fh = True
-    
-
-    PermissionError: [Errno 13] Permission denied: 'invA.csv'
 
 
 
@@ -161,7 +147,7 @@ print(f'perubahan %output sektoral setelah +MBG-penghematan:\n {(xx-x)/x*100}') 
 print(f'pertumbuhan output nasional adalah {(np.sum(xx)-np.sum(x))/np.sum(x)*100} persen') ## Percent change of total output
 ```
 
-    pertumbuhan output adalah 0.046445748306372714
+    pertumbuhan output nasional adalah 0.046445748306372714 persen
     
 
 | indikator | ori | kawe |
@@ -270,7 +256,7 @@ Akhir kata, saya coba menyampaikan kritik konstruktif di postingan ini. Saya fok
 
 Saya juga lagi-lagi mau apresiasi Pak AAY karena sudah memberikan transparansi yang tergolong langka di lingkungan pemerintahan. Jarang banget ada orang mendokumentasikan studi yang digunakan pemerintah yang dijadikan _policy guide_, sehingga _civil society_ seperti saya bisa ikut berpartisipasi dalam perdebatan. Sebagai orang masih junior, bisa jadi input ini sebenenrya ga begitu penting, tapi enak juga bisa ngikutin jalan pemikiran para konseptor kebijakan Indonesia dan belajar dari situ. Mudah-mudahan keterbukaan semacam ini makin menular ke semua sektor pemerintahan.
 
-Mungkin segini dulu ya. Maybe next time kita coba modelin si _production nest_ tadi kalo saya lagi ada waktu wkwkwk. It's been fun! See ya next post.
+Mungkin segini dulu ya. Maybe next time kita coba modelin si _production nest_ tadi kalo saya lagi ada waktu wkwkwk. It's gonna be fun! Dah lama banget gak ngoprek CGE. Oke deh See ya next post.
 
 [^1]: Sejujurnya saya juga nggak jago-jago banget sih CGE, so please take this post with a grain of salt.
 [^2]: BTW MPC <1 inilah yang bikin bantuan secara in-kind kayak MBG bisa jadi lebih efektif naikin konsumsi daripada cash transfer. Worth discussion sendiri.
