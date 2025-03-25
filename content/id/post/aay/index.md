@@ -201,6 +201,8 @@ $$x_n=(I-A)^{-1}y+(I-A)^{-1}d$$
 
 $$x_n=x+(I-A)^{-1}d$$
 
+As you can probably tell, this is purely income effect, wicis emang fitur dari Leontief.
+
 perubahan yang terjadi pada input demand dari sektor $k$ adalah exactly $(I-A)^{-1}$. Pak AAY menjelaskan ini di halaman 6 di papernya. Nah, term tersebut mengandung matriks identitas dan matriks $A$, yang sudah kita buat eksogen. Artinya, perubahan input demand dari sektor tersebut hanya bergantung pada $\Delta y$ dan tidak tergantung sama sekali dengan perubahan harga.
 
 Tabel IO BPS 2020 yang notabene adalah matriks transaksi. Transaksi _implies current prices_, di mana ada kuantitas dan harga di situ. Nah, exercise IO sederhana biasanya menganggap matrix nilai tersebut sebagai kuantitas. Sehingga jika elemen dari matriks tersebut (yang sejatinya adalah nilai) bergerak, maka gerakannya akan dianggap sebagai gerakan kuantitas.
