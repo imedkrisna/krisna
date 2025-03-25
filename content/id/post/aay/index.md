@@ -74,9 +74,11 @@ Ada 3 istilah penting yang dipakai AAY ketika menjelaskan IO analysis, yaitu out
 Struktur IO di paper AAY sama persis dengan typical IO model yang lebih kurang begini:
 
 $$
+  \begin{align*}
   x=Ax+y \newline
   (I-A)x=y \newline
   x=(I-A)^{-1}y
+  \end{align*}
 $$
 
 di mana hasil akhir vektor x melambangkan input demand untuk sektor $i$. artinya, input demand dari vektor $i$ tergantung dari shift-share $A$ dari setiap industri di $x$ untuk setiap industri di $x$, dan demand akhir $y$.
@@ -346,7 +348,10 @@ Problemnya adalah, dengan _constraint_, kita dapat menunjukkan bahwa _input dema
 Consider typical Leontief production:
 
 $$
-  \max \min(a_1q_1,a_2q_2) \newline \text{subject to} \ p_1 q_1+p_2 q_2 \leq I
+  \begin{align*}
+  \max \min(a_1q_1,a_2q_2) \newline
+  \text{subject to} \ p_1 q_1+p_2 q_2 \leq I
+  \end{align*}
 $$
 
 Optimisasi implies $a_1q_1=a_2q_2$, sehingga $q_1=\frac{a_2}{a_1}q_2$. Masukin ke constraint:
