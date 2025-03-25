@@ -75,9 +75,9 @@ Struktur IO di paper AAY sama persis dengan typical IO model yang lebih kurang b
 
 $$
   \begin{align*}
-  x=Ax+y \newline
-  (I-A)x=y \newline
-  x=(I-A)^{-1}y
+  x&=Ax+y \newline
+  (I-A)x&=y \newline
+  x&=(I-A)^{-1}y
   \end{align*}
 $$
 
