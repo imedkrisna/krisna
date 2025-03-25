@@ -34,9 +34,11 @@ Kemudian pada tanggal 23 Maret 2025 malam waktu Jakarta, saya menyaksikan presen
 
 Setelah melihat baik papernya maupun presentasinya, saya jadi kepingin menulis beberapa catatan tentang papernya. Tujuan utamanya sih sebenernya buat diri saya sendiri, karena model ini cukup seru untuk dikulik dan direplikasi. Selain itu, di acara tersebut, Pak AAY juga membawa nama DEN, yang berarti kebijakan yang munjul dari paper ini dapat dianggap datang dari pemerintah dan kemungkinan akan menjadi kebijakan publik. Saya juga nulis ini buat teman-teman belum begitu paham CGE[^1], tapi pengen belajar. Terakhir, sukur-sukur postingan ini dibaca oleh beliau dan DEN, tapi saya yakin sih orang dengan kaliber beliau pasti udah dapat banyak masukan dari orang-orang yang lebih keren dari saya, jadi tujuan ini ga begitu penting. Mostly, postingan ini untuk belajar dan berbagi.
 
-Saya sangat menghormati beliau sebagai akademisi karena AAY adalah satu dari sedikit ekonom Indonesia yang sangat vokal terhadap isu-isu ekonomi di Indonesia, terutama tentang Pendidikan Tinggi dan program pro-poor dan pro-job. Beliau tidak segan-segan mengkritik pemerintah. Bahkan paper beliau yang menjadi justifikasi _ex-ante_ MBG dibagikan ke semua dan ia juga rajin presentasi dan minta pendapat dari banyak sekali orang di berbagai kalangan. Level transparansi ini tidak saya temukan di kebijakan pemerintah yang lain.
+Saya sangat menghormati beliau sebagai akademisi karena AAY adalah satu dari sedikit ekonom Indonesia yang sangat vokal terhadap isu-isu ekonomi di Indonesia, terutama tentang Pendidikan Tinggi dan program pro-poor dan pro-job. Beliau tidak segan-segan mengkritik pemerintah. Bahkan paper beliau yang menjadi justifikasi _ex-ante_ MBG dibagikan ke semua dan ia juga rajin presentasi dan minta pendapat dari banyak sekali orang di berbagai kalangan. Level transparansi ini tidak saya temukan di aparatur pemerintah yang lain.
 
-_Having said that_, saya punya beberapa catatan yang menurut saya sangat penting dan _worth_ ditulis di blog. Saya akan fokus ke 2 caveats yang ia sampaikan di paparannya. Untuk bagian lain, bisa jadi kesempatan dan untuk teman-teman yang lain yang mau sumbang komen ke beliau awokwokwok.
+_Having said that_, saya punya beberapa catatan yang menurut saya sangat penting dan _worth_ ditulis di blog. Saya akan fokus ke 2 caveats yang ia sampaikan di paparannya. Untuk bagian lain, biarlah menjadi kesempatan dan untuk teman-teman yang lain yang mau sumbang komen ke beliau awokwokwok.
+
+Note bahwa postingan ini tidak _exhaustive_. Saya hanya akan mencoba mendalami sedikit bagian IO Analysisnya aja. Papernya sendiri berisi berbagai aspek seperti review on MBG di negara lain dan microsimulation untuk melihat dampak heterogen pada kemiskinan di desil berbeda. Ya, ada incidence curve juga. Karena itu kalau mau tau keseluruhan papernya, sebaiknya dibaca langsung aja. Cek di acara yang diupload Doctrine UK, di situ ada link ke papernya (kalo gak salah).
 
 Saya akan mulai dengan sedikit merangkup hal-hal yang saya sepakat, baru move on ke hal-hal yang saya kurang paham/tidak setuju.
 
@@ -98,7 +100,7 @@ Di samping itu, Leontief itu enak karena optimisasinya hanya ekspansi sesuai sha
 
 Misalnya, Sebuah input function $U=min(a_1x_1,a2_x2)$ akan memiliki titik optimal di $a_1x_1=a_2x_2$ sehingga demand function dari si $x_1$ akan berupa $x_1=\frac{a_2}{a_1}x_2$ dan $\frac{a_2}{a_1}$ ini akan konstan dan fixed sepanjang komposit barang konsumsinya.
 
-Metode ini relatif tidak sulit dilakukan di Python, selama matriks IO-nya ada. Saya coba pake versi lite, [yang 17 sektor](https://www.bps.go.id/en/statistics-table/1/MjI2OSMx/tabel-input-output-indonesia-transaksi-domestik-atas-dasar-harga-dasar--17-produk---2020--juta-rupiah-.html). Saya coba replikasi skenario A1 di papernya.
+Metode ini relatif tidak sulit dilakukan di Python, selama matriks IO-nya ada. Saya coba replikasi pake IO table versi lite, [yang isinya diagregasi ke 17 sektor](https://www.bps.go.id/en/statistics-table/1/MjI2OSMx/tabel-input-output-indonesia-transaksi-domestik-atas-dasar-harga-dasar--17-produk---2020--juta-rupiah-.html). Dari semua skenario, saya akan coba replikasi skenario A1 di papernya.
 
 
 
@@ -253,6 +255,8 @@ Lastly, mungkin skenario di CGE di atas juga akan berkurang khasiatnya jika tern
 ## Penutup
 
 Akhir kata, saya coba menyampaikan kritik konstruktif di postingan ini. Saya fokus di model IO-nya, dan coba menunjukkan bahwa 3 asumsi di model IO (konstan shift-share, tidak adanya perdagangan internasional, dan tidak fixed nominal prices) bisa saja terlanggar. Tentu tidak ada model yang akan persis sama dengan dunia nyata. _All models are wrong_ tapi gak papa selama modelnya useful untuk menjelaskan fenomena. Cuma bisa jadi problem ketika asumsi yang tidak hold tadi memiliki konsekuensi yang sangat penting terhadap kesimpulan yang diambil untuk dasar kebijakan.
+
+Papernya berisi jauh lebih banyak detil daripada IO Analysis. Di situ juga dijabarkan microsimulationnya yang pake feeding dari hasil IO, yang juga menurut saya perlu untuk dibedah. Saya serahkan ke temen-temen mikro kalo itu. Mungkin ada detil Susenas dan detil metode yang ada di luar ekspertis saya. Untuk itu, jangan anggep blog ini sebagai _exhaustive_ Karena seperti saya sebut di atas, cuma hyperfocused ke IO Analysisnya aja. Please read the whole paper!
 
 Saya juga lagi-lagi mau apresiasi Pak AAY karena sudah memberikan transparansi yang tergolong langka di lingkungan pemerintahan. Jarang banget ada orang mendokumentasikan studi yang digunakan pemerintah yang dijadikan _policy guide_, sehingga _civil society_ seperti saya bisa ikut berpartisipasi dalam perdebatan. Sebagai orang masih junior, bisa jadi input ini sebenenrya ga begitu penting, tapi enak juga bisa ngikutin jalan pemikiran para konseptor kebijakan Indonesia dan belajar dari situ. Mudah-mudahan keterbukaan semacam ini makin menular ke semua sektor pemerintahan.
 
