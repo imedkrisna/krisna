@@ -73,9 +73,11 @@ Ada 3 istilah penting yang dipakai AAY ketika menjelaskan IO analysis, yaitu out
 
 Struktur IO di paper AAY sama persis dengan typical IO model yang lebih kurang begini:
 
-$$x=Ax+y /newline
-(I-A)x=y /newline 
-x=(I-A)^{-1}y$$
+$$
+x=Ax+y \newline
+(I-A)x=y \newline 
+x=(I-A)^{-1}y
+$$
 
 di mana hasil akhir vektor x melambangkan input demand untuk sektor $i$. artinya, input demand dari vektor $i$ tergantung dari shift-share $A$ dari setiap industri di $x$ untuk setiap industri di $x$, dan demand akhir $y$.
 
@@ -100,7 +102,7 @@ Di samping itu, Leontief itu enak karena optimisasinya hanya ekspansi sesuai sha
 
 Misalnya, Sebuah input function $U=min(a_1x_1,a2_x2)$ akan memiliki titik optimal di $a_1x_1=a_2x_2$ sehingga demand function dari si $x_1$ akan berupa $x_1=\frac{a_2}{a_1}x_2$ dan $\frac{a_2}{a_1}$ ini akan konstan dan fixed sepanjang komposit barang konsumsinya.
 
-Metode ini relatif tidak sulit dilakukan di Python, selama matriks IO-nya ada. Saya coba replikasi pake IO table versi lite, [yang isinya diagregasi ke 17 sektor](https://www.bps.go.id/en/statistics-table/1/MjI2OSMx/tabel-input-output-indonesia-transaksi-domestik-atas-dasar-harga-dasar--17-produk---2020--juta-rupiah-.html). Dari semua skenario, saya akan coba replikasi skenario A1 di papernya.
+Metode ini relatif tidak sulit dilakukan di Python, selama matriks IO-nya ada. Saya coba replikasi pake IO table versi lite, [yang isinya diagregasi ke 17 sektor](https://www.bps.go.id/en/statistics-table/1/MjI2OSMx/tabel-input-output-indonesia-transaksi-domestik-atas-dasar-harga-dasar--17-produk---2020--juta-rupiah-.html). Dari semua skenario, saya akan coba replikasi skenario A1 di papernya. Dari tabel IO 17 sektor tersebut, yg versi lite, saya ubah jadi matriks A, x dan y, dan data untuk matriks dan vektornya bisa didownload di [sini](https://1drv.ms/f/s!AjelszXKKcmskdpCs3C-MVYQOLtW0w?e=kIzj2t). Note bahwa matriks y masih memiliki impor di situ, makanya di simulasi saya construct y sendiri, ga pake y dari situ, supaya impornya ilang. Sebenernya anda bisa juga ngurangin sendiri impornya dari final demand di excelnya.
 
 
 
