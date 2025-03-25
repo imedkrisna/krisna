@@ -102,7 +102,7 @@ Sebenernya IO itu ya CGE juga. Cuma, IO adalah _special case_ dari CGE, yaitu fu
 
 Di samping itu, Leontief itu enak karena optimisasinya hanya ekspansi sesuai share optimal masing-masing komponennya.
 
-Misalnya, Sebuah input function $U=min(a_1x_1,a2_x2)$ akan memiliki titik optimal di $a_1x_1=a_2x_2$ sehingga demand function dari si $x_1$ akan berupa $x_1=\frac{a_2}{a_1}x_2$ dan $\frac{a_2}{a_1}$ ini akan konstan dan fixed sepanjang perubahan komposit barang konsumsinya.
+Misalnya, Sebuah input function $U=min(a_1x_1,a_2x_2)$ akan memiliki titik optimal di $a_1x_1=a_2x_2$ sehingga demand function dari si $x_1$ akan berupa $x_1=\frac{a_2}{a_1}x_2$ dan $\frac{a_2}{a_1}$ ini akan konstan dan fixed sepanjang perubahan komposit barang konsumsinya.
 
 Metode ini relatif tidak sulit dilakukan di Python, selama matriks IO-nya ada. Saya coba replikasi pake IO table versi lite, [yang isinya diagregasi ke 17 sektor](https://www.bps.go.id/en/statistics-table/1/MjI2OSMx/tabel-input-output-indonesia-transaksi-domestik-atas-dasar-harga-dasar--17-produk---2020--juta-rupiah-.html). Dari semua skenario, saya akan coba replikasi skenario A1 di papernya. Dari tabel IO 17 sektor tersebut, yg versi lite, saya ubah jadi matriks A, x dan y, dan data untuk matriks dan vektornya bisa didownload di [sini](https://1drv.ms/f/s!AjelszXKKcmskdpCs3C-MVYQOLtW0w?e=kIzj2t). Note bahwa matriks y di situ masih mengandung nilai impor. makanya di simulasi saya construct y sendiri, ga pake y dari situ, supaya impornya ilang. Sebenernya anda bisa juga ngurangin sendiri impornya dari final demand di excelnya.
 
@@ -333,11 +333,13 @@ $$
 
 mari kita namakan vektor baru tadi $d$ sehingga $y_{new}=y+d$. Kemudian kita hitung $x_{new}=(I-A)^{-1}y_{new}$.
 
-$$x_{new}=(I-A)^{-1}(y+d)$$
-
-$$x_{new}=(I-A)^{-1}y+(I-A)^{-1}d$$
-
-$$x_{new}=x+(I-A)^{-1}d$$
+$$
+  \begin{align*}
+  x_{new}&=(I-A)^{-1}(y+d) \newline
+  x_{new}&=(I-A)^{-1}y+(I-A)^{-1}d \newline
+  x_{new}&=x+(I-A)^{-1}d
+  \end{align*}
+$$
 
 perubahan yang terjadi pada input demand dari sektor $k$ adalah exactly $(I-A)^{-1}$. Pak AAY menjelaskan ini di halaman 6 di papernya. Nah, term tersebut mengandung matriks identitas dan matriks $A$, yang sudah kita buat eksogen. Artinya, perubahan input demand dari sektor tersebut hanya bergantung pada $\Delta y$ dan tidak tergantung sama sekali dengan perubahan harga.
 
