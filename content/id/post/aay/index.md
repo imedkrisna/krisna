@@ -5,8 +5,8 @@ title: "Review Paper Dewan Ekonomi Nasional tentang dampak ekonomi Makan Bergizi
 subtitle: ""
 summary: ""
 authors: [admin]
-tags: [CGE, ekonomi]
-categories: [CGE, ekonomi]
+tags: [CGE, ekonomi, MBG]
+categories: [CGE, ekonomi, MBG]
 date: 2025-03-24T21:06:59+07:00
 lastmod: 2025-03-24T21:06:59+07:00
 featured: false
@@ -50,7 +50,7 @@ Tidak kalah penting: AAY menyebutkan beberapa tujuan resmi MBG: better nutrition
 
 Akhirnya, AAY menggunakan analisis input-output (IO) dan mikrosimulasi untuk menunjukkan dampak ekonomi berupa peningkatan output, value added, dan lapangan kerja, serta penurunan kemiskinan dari program ini. Ada berbagai simulasi dengan skenario yang dilakukan, tapi hasilnya konsisten positif secara umum.
 
-## Large caveats
+## Important caveats
 
 Hanya saja, Di paparannya, AAY mengatakan dua caveats yang sangat heroik dan otomatis mendismiss banyak sekali diskusi tentang MBG:
 
@@ -71,8 +71,8 @@ Ada 3 istilah penting yang dipakai AAY ketika menjelaskan IO analysis, yaitu out
 
 Struktur IO di paper AAY sama persis dengan typical IO model yang lebih kurang begini:
 
-$$x=Ax+y // 
-(I-A)x=y // 
+$$x=Ax+y /newline
+(I-A)x=y /newline 
 x=(I-A)^{-1}y$$
 
 di mana hasil akhir vektor x melambangkan input demand untuk sektor $i$. artinya, input demand dari vektor $i$ tergantung dari shift-share $A$ dari setiap industri di $x$ untuk setiap industri di $x$, dan demand akhir $y$.
@@ -179,14 +179,14 @@ Di Leontief assumption, ketika kita melakukan _shock_ terhadap final demand (di 
 misalnya demand di sektor $k$ meningkat jadi $y_k+1$ sehingga vektor $y$ berbentuk kayak gini:
 
 $$
-  y+\begin{bmatrix}
+  y+
+  \begin{bmatrix}
   0 \newline
   \vdots \newline
   1 \newline
   \vdots \newline
   0 
   \end{bmatrix}
-  
 $$
 
 mari kita namakan dia vektor $d$ sehingga $y_n=y+d$
