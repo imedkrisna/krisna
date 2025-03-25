@@ -352,8 +352,10 @@ $$
 Optimisasi implies $a_1q_1=a_2q_2$, sehingga $q_1=\frac{a_2}{a_1}q_2$. Masukin ke constraint:
 
 $$
+  \begin{align*}
   p_1 \frac{a_2}{a_1}q_2+p_2 q_2 = I \newline
   q_2=\frac{I}{\frac{a_2}{a_2}p_2+\frac{a_2}{a_i}p_1}
+  \end{align*}
 $$
 
 Jika kita ganti income $I$ sebagai harga dari output 1 dikali jumlah output 1 $p_1x_1$, maka demand output 2 jadi:
