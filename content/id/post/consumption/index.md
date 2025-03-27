@@ -5,8 +5,8 @@ title: "Melihat pertumbuhan konsumsi Indonesia"
 subtitle: ""
 summary: ""
 authors: [admin]
-tags: [pengangguran,podcast]
-categories: [pengangguran,podcast]
+tags: [ekonomi]
+categories: [ekonomi]
 date: 2025-03-23T12:06:59+07:00
 lastmod: 2025-03-23T12:06:59+07:00
 featured: false
@@ -32,6 +32,35 @@ Belakangan ini banyak reportase tentang lemahnya kelas menengah Indonesia saat i
 
 <iframe src="https://data.worldbank.org/share/widget?end=2023&indicators=NE.CON.TOTL.KD.ZG&locations=ID-TH-VN-PH-MY&start=2013" width='900' height='600' frameBorder='0' scrolling="no" ></iframe>
 
+
+
+
+
+```python
+import seaborn as sns
+import matplotlib as plt
+import pandas as pd
+import wbdata as wb
+
+indi={"NE.CON.TOTL.KD.ZG":"Consumption"}
+
+data=wb.get_dataframe(indi,country=["IDN","MYS","THA","VNM","PHL"],date=("2010","2024"),parse_dates=True)
+sns.lineplot(data=data,x="date",y="Consumption",hue="country")
+```
+
+
+
+
+    <Axes: xlabel='date', ylabel='Consumption'>
+
+
+
+
+    
+![png](index_files/index_1_1.png)
+    
+
+
 Pertumbuhan konsumsi Indonesia telah cukup lama berada di bawah kecepatan pertumbuhan ekonomi secara umum. Kok bisa ya pertumbuhan ekonomi bisa lebih cepat dari pertumbuhan konsumsi?
 
 Salah satu penjelasannya adalah karena pertumbuhan ekonomi ini dinikmati oleh pihak-pihak yang tidak terlalu tinggi _consumption share_-nya. Consumption share adalah bagian dari pendapatan seseorang yang digunakan untuk konsumsi. Biasanya, pihak-pihak ini adalah antara orang kaya atau perusahaan. Pihak-pihak ini sudah memiliki konsumsi yang tinggi. Pertambahan pendapatan untuk pihak-pihak ini lebih banyak digunakan untuk meningkatkan asetnya (menabung), atau meningkatkan konsumsinya di luar negeri. Saya sempat membahas permasalahan ini di [The Conversation Indonesia](https://theconversation.com/jokowi-resah-tabungan-mengendap-rp-690-triliun-di-bank-betulkah-masyarakat-yang-harus-belanja-200929).
@@ -42,14 +71,6 @@ Saya akan mencoba eksplorasi teori ini dengan menunjukkan 2 hal: (1) saving rate
 
 Saving rate menunjukkan seberapa besar pendapatan yang disimpan oleh masyarakat. Saving rate yang tinggi menunjukkan masyarakat lebih banyak menabung daripada mengkonsumsi. Seperti diskusi di atas, neraca ekonomi tidak membedakan siapa pemilik saving rate tersebut, tapi biasanya kenaikan saving rate yang sangat tinggi menunjukkan semakin tingginya _income share_ dari pihak yang lebih mungkin menabung, seperti orang kaya atau perusahaan.
 
-
-
-
-```python
-import seaborn as sns
-import matplotlib as plt
-import pandas as pd
-```
 
 
 ```python
@@ -76,11 +97,159 @@ ax.set(xlabel="",ylabel="(%)",title="Saving rate (i.e., disposable income minus 
 
 
     
-![png](index_files/index_3_1.png)
+![png](index_files/index_4_1.png)
     
 
 
 Sejak 2016, saving rate Indonesia terus meningkat. COVID-19 memaksa semua pihak mengurangi saving-nya, bahkan meningkatkan utang untuk menjaga konsumsi. Namun sejak itu, saving rate kembali naik bahkan lebih tinggi daripada biasanya. Sepertinya COVID-19 benar-benar memberi pukulan untuk kaum konsumen Indonesia.
+
+Lebih jauh, saya nemu data menarik dari [Sistem Neraca Sosial Ekonomi (SNSE)](https://www.bps.go.id/id/publication/2024/10/31/9976e1b3df32ba9d98d76768/sistem-neraca-sosial-ekonomi-indonesia-2022.html) Indonesia 2022, courtesy of Prof AAY. Data disposable income dan gross saving dari situ sangat sangat menarik.
+
+| No  | Institusi                                      | Disposable Income | Gross Saving |
+| --- | ---------------------------------------------- | ----------------- | ------------------ |
+| 1   | Rumah Tangga                                   | 11.368,51         | 1.231,47          |
+|     | - Rumah Tangga 20%-1                           | 414,11            | -96,21            |
+|     | - Rumah Tangga 20%-2                           | 924,70            | 34,63             |
+|     | - Rumah Tangga 20%-3                           | 1.782,32          | 189,10            |
+|     | - Rumah Tangga 20%-4                           | 2.657,59          | 326,76            |
+|     | - Rumah Tangga 20%-5                           | 5.589,80          | 777,18            |
+| 2   | Lembaga Non Profit yang Melayani Rumah Tangga  | 294,48            | 65,48             |
+| 3   | Pemerintah                                     | 1.620,85          | 115,84            |
+| 4   | Korporasi Non Finansial                        | 5.498,78          | 5.498,78          |
+| 5   | Korporasi Finansial                            | 554,52            | 529,83            |
+|     | **Total**                                      | **19.337,14**     | **7.441,39**      |
+
+Gw coba bikin tabel pake pandas untuk ngitung saving rate dan benar saja opkors, makin kaya kelompok masyarakat, makin gede saving ratenya. Tentu ini minus orang ultra kaya yah. Dan ya, bottom 20% makan tabungan / utang di 2022. Pinjol?
+
+
+```python
+wew=pd.read_csv("snse.txt")
+wew['saving rate']=wew['Gross saving']/wew['Disposable Income']*100
+wew
+```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>No</th>
+      <th>Institusi</th>
+      <th>Disposable Income</th>
+      <th>Gross saving</th>
+      <th>saving rate</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1.0</td>
+      <td>Rumah Tangga</td>
+      <td>11368.51</td>
+      <td>1231.47</td>
+      <td>10.832290</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>NaN</td>
+      <td>Rumah Tangga 20%-1</td>
+      <td>414.11</td>
+      <td>-96.21</td>
+      <td>-23.232957</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>NaN</td>
+      <td>Rumah Tangga 20%-2</td>
+      <td>924.70</td>
+      <td>34.63</td>
+      <td>3.744998</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>NaN</td>
+      <td>Rumah Tangga 20%-3</td>
+      <td>1782.32</td>
+      <td>189.10</td>
+      <td>10.609767</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>NaN</td>
+      <td>Rumah Tangga 20%-4</td>
+      <td>2657.59</td>
+      <td>326.76</td>
+      <td>12.295350</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>NaN</td>
+      <td>Rumah Tangga 20%-5</td>
+      <td>5589.80</td>
+      <td>777.18</td>
+      <td>13.903539</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>2.0</td>
+      <td>Lembaga Non Profit yang Melayani Rumah Tangga</td>
+      <td>294.48</td>
+      <td>65.48</td>
+      <td>22.235805</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>3.0</td>
+      <td>Pemerintah</td>
+      <td>1620.85</td>
+      <td>115.84</td>
+      <td>7.146867</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>4.0</td>
+      <td>Korporasi Non Finansial</td>
+      <td>5498.78</td>
+      <td>5498.78</td>
+      <td>100.000000</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>5.0</td>
+      <td>Korporasi Finansial</td>
+      <td>554.52</td>
+      <td>529.83</td>
+      <td>95.547501</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>NaN</td>
+      <td>Total</td>
+      <td>19337.14</td>
+      <td>7441.39</td>
+      <td>38.482371</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
 
 ## Labor share yang menurun
 
@@ -109,7 +278,7 @@ ax.set(xlabel="",ylabel="(%)",title="Labor share (LS) and profit share (KS) of i
 
 
     
-![png](index_files/index_5_1.png)
+![png](index_files/index_8_1.png)
     
 
 
