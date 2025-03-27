@@ -153,17 +153,17 @@ N/A
 Consulting Experience {data-icon=suitcase}
 --------------------------------------------------------------------------------
 
-### Policy Adviser
+### Policy Analyst
 
-Prospera
+Asian Development Bank
 
 Jakarta, Indonesia
 
-2022-2023
+2023-2024
 
 ::: concise
-- Act as an adviser for Prospera on various project.
-- tax, customs, excise, industry and trade.
+- Estimating the impact of tobacco taxes in Indonesia
+- Work closely with ADB and John Hopkins University
 :::
 
 ### Lead Economist
