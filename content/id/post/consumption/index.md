@@ -30,7 +30,6 @@ projects: []
 
 Belakangan ini banyak reportase tentang lemahnya kelas menengah Indonesia saat ini. Kelas menengah Indonesia terus berkurang sejak 2018 hingga saat ini [tinggal 17% total penduduk](https://databoks.katadata.co.id/infografik/2024/09/05/populasi-kelas-menengah-indonesia-kian-berkurang). Padahal, pertumbuhan konsumsi acapkali mengandalkan kelas menengah. Benar saja, pertumbuhan konsumsi Indonesia memang telah lama berada di bawah kecepatan negara-negara lain di kawasan, kecuali Thailand.
 
-<iframe src="https://data.worldbank.org/share/widget?end=2023&indicators=NE.CON.TOTL.KD.ZG&locations=ID-TH-VN-PH-MY&start=2013" width='900' height='600' frameBorder='0' scrolling="no" ></iframe>
 
 
 
