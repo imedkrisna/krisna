@@ -108,6 +108,8 @@ $$
 
 - $a_6=5 \times 2^5=5 \times 32=160$
 
+:::
+
 ## Pertumbuhan
 
 - Pengali dalam persen $(r)$ disebut juga **pertumbuhan** (_growth rate_)
@@ -138,6 +140,54 @@ $$a_6=1000 \times (1+0.07)^5=1402,55$$
 | 3 | 1.225,043 |
 | 4 | 1.310,8 |
 | 5 | 1.402,55 |
+
+## Investment decision
+
+- Menabung pada dasarnya adalah menyimpan uang untuk dipakai nanti.
+
+- Investasi sebaliknya, meminjam uang untuk dipakai sekarang, dibayar nanti.
+
+- Dengan konsep bunga, kita dapat mengatur nabung berapa hari ini untuk dapat X rupiah di masa datang.
+
+- Sebaliknya, kita juga bisa hitung berapa harus kembalikan uang di masa datang jika kita pinjam X rupiah sekarang.
+
+## Present value {.m}
+
+- Karena menyimpan uang di aset keuangan umumnya mendapatkan bunga, maka uang yang dijanjikan di masa datang bisa kita ukur "nilai masa kini"-nya.
+
+- Present value adalah kebalikan dari pertumbuhan.
+
+$$
+PV=\frac{A}{(1+r)^t}
+$$
+
+Di mana t adalah tahun.
+
+## Contoh
+
+Ada teman ngutang 100ribu dan bilang akan dibalikin di tahun ke-3. Senilai 110ribu. Apakah anda akan meminjamkan uang tersebut jika suku bunga adalah 5%?
+
+::: {.incremental}
+
+- untuk menjawabnya, kita harus hitung apakah 110ribu di tahun ke-3 sama nilainya dengan 100ribu sekarang. Jadi perlu dihitung PV dari 110ribu.
+
+- PV=\frac{110}{(1+0,05)^3}=95,022 ribu. Berarti gak worth it.
+
+:::
+
+## Contoh
+
+Supaya worth it, berapa teman anda harus mengembalikan 100 ribu tersebut di tahun ke-3?
+
+::: {.incremental}
+
+- Kita balik PV-nya jadi future value (FV) pakai deret seperti PDB di contoh sebelumnya.
+
+- FV=100\times (1+0,05)^3=115,7625 ribu
+
+- Jika anda taruh 100ribu di deposito dengan bunga 5%, 3 tahun kemudian anda dapat 115,76 ribu. Ngapain pinjemin teman anda kalau deposito kasih return lebih?
+
+:::
 
 ## Angka Index
 
