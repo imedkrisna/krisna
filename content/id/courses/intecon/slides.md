@@ -27,3 +27,4 @@ slides:
 - {{% staticref "/intecon/gravitytheory/index.html" "newtab" %}}Advanced: Theory of the gravity equation{{% /staticref %}}
 - [Advanced: Estimating the gravity equations](https://imedkrisna.github.io/gravity/)"
 
+- {{% staticref "/intecon/services/services.html" "newtab" %}}Advanced: Trade in Services{{% /staticref %}}
