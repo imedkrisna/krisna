@@ -1,6 +1,6 @@
 ---
 title: "Konsep Probabilitas"
-subtitle: "Pertemuan 3"
+subtitle: "Pertemuan 6"
 author: "Matematika & Statistika"
 format: 
   revealjs:
@@ -11,15 +11,6 @@ format:
     background-transition: fade
     slide-number: true
 ---
-
-## Minggu lalu
-
-- Distribusi frekuensi dan statistik deskriptif.
-
-#### Next
-
-- peluang independen dan gabungan, bayesian.
-- uji normalitas dan probabilitas sampel
 
 ## Hari ini
 
