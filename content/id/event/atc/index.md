@@ -49,7 +49,7 @@ links:
 url_slides: "apindotrainingcenter.html"
 
 url_code:
-url_pdf: ""
+url_pdf: "trumptariff.pdf"
 url_video:
 
 # Markdown Slides (optional).
