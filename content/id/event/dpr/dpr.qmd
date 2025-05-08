@@ -1,0 +1,272 @@
+---
+title: "Permasalahan APBN Kita"
+subtitle: "utang, penerimaan, dan ketidakpastian"
+date: "9 May 2025"
+date-format: "long"
+author: "Krisna Gupta"
+institution: "Center for Indonesian Policy Studies"
+format: 
+  revealjs:
+    theme: [simple,mytheme.scss]
+    chalkboard: true
+    incremental: false
+    transition: convex
+    background-transition: fade
+    slide-number: true
+  beamer:
+    latex-tinytex: true
+    latex-auto-install: true
+  pptx: default
+---
+
+```{r}
+#| warning: false
+#| message: false
+library(tidyverse)
+library(readxl)
+library(WDI)
+library(scales)
+
+graph<-function(dataset, ...) {
+  dataset |>
+  ggplot(aes(...))+
+  theme_classic() +
+  theme(panel.background = element_rect(fill = "#f0f1eb",
+                                        colour = "#f0f1eb"),
+        plot.margin = margin(0,0,0,0),
+        plot.background = element_rect(fill = "#f0f1eb"),
+        legend.key = element_rect(fill = "#f0f1eb",linetype = "blank"),
+        legend.background = element_rect(fill="#f0f1eb"),
+        axis.text=element_text(size=12))
+}
+
+## Read
+#partsx<-read_excel('automotive_trade.xlsx',sheet='partsxx')
+#gdp<-read_excel('automotive_trade.xlsx',sheet='gdp')
+#partsm<-read_excel('automotive_trade.xlsx',sheet='partsmm')
+#carx<-read_excel('automotive_trade.xlsx',sheet='carx')
+#motorx<-read_excel('automotive_trade.xlsx',sheet='motorx')
+```
+
+
+## About me
+
+- Full time lecturer at [Politeknik APP Jakarta](https://poltekapp.ac.id), Universitas Indonesia, and Researcher at [Center for Indonesian Policy Studies](https://cips-indonesia.org).
+
+- Master in Economics at UI/VU, PhD in economics at ANU.
+
+- Focues on trade and industrial policy in Indonesia.
+
+- Ocassionally writes a [blog](https://krisna.or.id/) and rants at X. Hit me [@iMedkrisna](https://twitter.com/iMedkrisna).
+
+## Tantangan APBN
+
+- Penerimaan yang stagnan.
+
+    - problem with middle class
+    
+    - high informality
+
+- Risiko nilai tukar dan suku bunga akibat ketidakpastian global.
+
+## RAPBN 2025
+
+:::: {.Columns}
+::: {.column width="45%"}
+![](pic1.png)
+:::
+::: {.column width="49%}
+![](pic2.png)
+:::
+::::
+
+## Asumsi makro
+
+| Variabel         | 2022  | 2023  | 2024  | 2025  |
+|-----------------|------|------|------|------|
+| **Suku bunga**  | 6,9% | 7,1% | 6,7% | 6,5% |
+| **Nilai tukar** | 14,500 | 14,900 | 15,000 | 16,100 |
+| **Inflasi**     | 5,51% | 3,52% | 2,8% | 2,5% |
+| **Pertumbuhan PDB** | 5,31% | 5,2% | 5,2% | 5,2% |
+
+## Penerimaan negara
+
+![[10-Y yield starts to go up](https://tradingeconomics.com/indonesia/government-bond-yield)](10y.svg)
+
+## Nilai tukar
+
+![[IDR is weakning](https://tradingeconomics.com/indonesia/currency)](usdidr_cur.svg)
+
+## Pembiayaan
+
+- Tahun 2025, sekitar 775,9 Triliun rupiah adalah pembayaran bunga utang, atau sekitar 21,47% dari total belanja negara.
+
+- Di tahun yang sama, utang baru yang diterbitkan adalah 616,2 Triliun rupiah, atau sekitar 16,8% dari total belanja negara.
+
+- Artinya, penerbitan utang baru hanya untuk menutupi bunga utang yang jatuh tempo. Tidak ada ekspansi belanja.
+
+- Di sisi lain, penerimaan perpajakan juga masih stagnan.
+
+## Penerimaan perpajakan
+
+![](pic3.png)
+
+## Penerimaan perpajakan
+
+Dengan PDB nominal di 2024 sebesar 22.139 Triliun rupiah, berarti:
+
+- Rasio Pph $\approx$ 5.14\%
+    
+- Rasio PPN+PPn BM $\approx$ 3.7\%
+    
+Kedua angka ini jauh di bawah rate pajak yang berlaku. Artinya, bisa jadi Indonesia:
+
+- Punya peraturan pajak yang terlalu bebas
+    
+- Low compliance rate.
+    
+## Penerimaan perpajakan.
+
+- Menurut Bank Dunia, _compliance rate_ untuk sumber-sumber pajak utama hanya sekitar 50-60\%
+
+- Compliance rate untuk UMKM hanya sekitar 15\%. Padahal, UMKM menyumbang 89% total pekerja, 58% investasi domestik.
+
+- Hanya sekitar 6% total UMKM yang punya izin usaha. UMKM sangat informal, kecil-kecil, dan tidak terdaftar. Mendatangi UMKM sangat tidak efisien bagi pegawai pajak.
+
+## Declining middle class
+
+- Typically highly educated, entrepreneurial, able to tolerate a degree of risk.
+
+- Net-saver, helps with capital deepening, lower rate required
+
+- Large consumption and are willing to spend more for quality products.
+
+- Net tax payer, pays around 50.7% of tax revenue. (84% including aspiring middle class).
+
+## Best tax-payer
+
+![](mc.png)
+
+## What is a middle-class?
+
+| class | Definition |
+| --- | ----- |
+| Poor/miskin | Below poverty line |
+| Vulnerable/rentan | < 1.5x pl |
+| Aspiring middle class/calon kelas menengah | <3.5x poverty line |
+| Middle class/kelas menengah | <17x pl
+| Upper class/kelas atas | >17x pl |
+
+## Poverty line
+
+- Poverty line [(Garis Kemiskinan, GK)](https://jambi.bps.go.id/id/news/2022/08/23/270/this-is-step-by-step-understanding-macro-poverty-indicators.html) measures how much money a person needs in a month to meet basic needs.
+
+- The number varies [by province](https://www.bps.go.id/id/statistics-table/2/MTk1IzI=/poverty-line--rupiah-kapita-month--by-province-and-area.html).
+
+- national average for cities is around 616k IDR, 567k IDR for rural areas.
+
+## Classes in Jakarta
+
+| class | Definition |
+| --- | ----- |
+| Poor/miskin | <846k |
+| Vulnerable/rentan | <1,267.5k |
+| Aspiring middle class/calon kelas menengah | <2,957.5k |
+| Middle class/kelas menengah | <14,365k |
+| Upper class/kelas atas | >14,365k |
+
+Jakarta's UMR is [5,067,381 IDR](https://money.kompas.com/read/2024/01/10/085304026/rincian-umr-jakarta-2024-dan-seluruh-jabodetabek-terbaru), which already give you a "comfortable" middle class living standard if you are single.
+
+## Declining mc
+
+![](pica.png)
+
+## Informal
+
+![](informal.png)
+
+## PISA
+
+![](pisa.png)
+
+## Tren ke depan
+
+![](pdb.png)
+
+## Konsumsi
+
+![](konsumsi.png)
+
+## Trump tariff
+
+## Trump tariff
+
+- Pada 2 April 2025, Amerika Serikat mengumumkan ["tarif resiprokal"](https://www.csis.or.id/publication/asean-under-pressure-export-exposure-and-the-implications-of-us-reciprocal-tariffs/) yang didesain untuk mengurangi defisit perdagangan dengan negara-negara yang memiliki surplus perdagangan dengan AS.
+
+- Pemerintah bereaksi cukup cepat terhadap pengumuman itu, dan menawarkan akan dilakukan banyak perubahan peraturan untuk mengakomodasi keinginan tertulis AS.
+
+## Trump tariff
+
+| Negara | Tariff (%) | Negara | Tariff (%) |
+| --- | --- | --- | --- |
+| Kamboja | 49 | Indonesia | 32 |
+| Laos | 48 | Malaysia | 24 |
+| Vietnam | 46 | Brunei | 24 |
+| Myanmar | 45 | Philippines | 17 |
+| Thailand | 37 | Singapore | 10 |
+
+## Simulasi GTAP {.m}
+
+:::: {.columns}
+::: {.column width="49%"}
+
+![](gtap.png)
+
+:::
+
+::: {.column width="49%"}
+
+- Simulasi tarif dilakukan dengan menggunakan model [GTAP](https://www.gtap.agecon.purdue.edu/uploads/resources/download/9143.pdf), sebuah model General Equilibrium ekonomi.
+
+- Shock dilakukan terhadap tarif yang dikenakan oleh AS terhadap semua negara target.
+
+:::
+::::
+
+## Hasil
+
+- Pertumbuhan ekonomi Indonesia diramalkan akan sedikit terkoreksi, sejalan dengan ramalan berbagai lembaga lain.
+
+- _terms of trade_ diramalkan berkurang, yang mana akan terefleksi dari nilai tukar yang melemah.
+
+- penerimaan negara berpotensi terkoreksi sekitar 1,2\% dari rencana awal. Artinya, bisa jadi harus dilakukan tambahan utang baru.
+
+## Trump
+
+- Biasanya, pasar finansial AS akan bergairah ketika muncul ketidakpastian:
+
+    - AS adalah tempat parkir paling aman di dunia.
+    
+- Masalahnya, saat ini AS-lah sumber ketidakpastian itu sendiri. Beberapa hari lampau, kapital mulai pergi dan negara pemegang aset AS seperti China mulai mendiversifikasi asetnya.
+
+- Artinya, ada peluang untuk kapital masuk ke INdonesia. Mungkinkah yield SBN turun?
+
+## Kesimpulan
+
+- Di tengah ketidakpastian ini, asumsi makro APBN 2025 bisa jadi terlanggar. Potensi asumsi yang lebih kuat diperlukan di 2026.
+
+- APBN yang digunakan untuk menyicil hutang mulai tinggi (riil yang dispending jadi berkurang)
+
+- Masalahnya penerimaan pajak sedang stagnan, dan belum tampak tanda-tanda membaik.
+
+- Peluang spending tinggi lewat utang bisa ada seandainya kapital yang sedang mencari tempat aman baru bisa diyakinkan untuk datang ke Indonesia.
+
+## Sumber
+
+- [Advetorial RAPBN 2025](https://media.kemenkeu.go.id/getmedia/e5cce069-f565-4413-b400-4bedd8769de6/Advertorial-RAPBN-2025.pdf?ext=.pdf)
+
+- [LPEM tentang kelas menengah](https://lpem.org/wp-content/uploads/2024/08/IEO-Q3-2024-ID.pdf)
+
+- [World Bank-DJP](https://documents1.worldbank.org/curated/en/448871615957692506/pdf/Applying-Behavioral-Insights-to-Promote-SME-Tax-Compliance-in-Indonesia-Activity-Report.pdf#:~:text=Indonesia%27s%20fiscal%20capacity%20is%20limited%2C%20as%20shown,percent%20of%20potential%20revenues%20(World%20Bank%202018).) 
+
+- [Rilis BPS](https://www.bps.go.id/id/pressrelease/2025/05/05/2431/ekonomi-indonesia-triwulan-i-2025-tumbuh-4-87-persen--y-on-y---ekonomi-indonesia-triwulan-i-2025-terkontraksi-0-98-persen--q-to-q--.html)
