@@ -21,7 +21,7 @@ date_end: 2025-05-09T11:00:00+07:00
 all_day: false
 
 # Schedule page publish date (NOT talk date).
-publishDate: 2025-05-09T07:00:00+07:00
+publishDate: 2025-05-08T07:00:00+07:00
 
 authors: [admin]
 tags: [macem-macem]
