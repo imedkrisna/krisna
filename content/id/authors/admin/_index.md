@@ -82,4 +82,4 @@ user_groups:
 
  Saya saat ini mengajar di program D3 prodi Perdagangan Internasional di Politeknik APP Jakarta dan Program Sarjana dan Pascasarjana Ilmu Ekonomi Universitas Indonesia. Saya juga adalah mitra senior di Center for Indonesian Policy Studies. 
  
- Saya terlibat dalam beberapa proyek dengan ADB, Prospera, dan ERIA, antara lain. Silakan lihat CV atau hubungi saya untuk informasi lebih lanjut.
+ Saya terlibat dalam beberapa proyek dengan Bank Indonesia, Bappenas, ADB, Prospera, dan ERIA, antara lain. Silakan lihat CV atau hubungi saya untuk informasi lebih lanjut.
