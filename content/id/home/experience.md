@@ -17,13 +17,23 @@ date_format = "Jan 2006"
 #   Required fields are `title`, `company`, and `date_start`.
 #   Leave `date_end` empty if it's your current employer.
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
+
+[[experience]]
+  title = "Dosen"
+  company = "Politeknik APP Jakarta"
+  company_url = "https://politekapp.ac.id"
+  location = "Jakarta"
+  date_start = "2022-07-01"
+  date_end = ""
+  description = """Statistika"""
+
 [[experience]]
   title = "Tutor"
   company = "Australian National University"
   company_url = "https://www.cbe.anu.edu.au/"
   location = "Canberra"
   date_start = "2017-08-01"
-  date_end = ""
+  date_end = "2012-02-27"
   description = """
   Mata kuliah:
   
