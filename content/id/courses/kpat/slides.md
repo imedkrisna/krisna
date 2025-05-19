@@ -14,4 +14,5 @@ slides:
 - {{% staticref "/kpat/meeting10/index.html" "newtab" %}}Meeting 10: ASEAN digital economy{{% /staticref %}}
 - {{% staticref "/kpat/meeting11/index.html" "newtab" %}}Meeting 11: ASEAN and the climate change{{% /staticref %}}
 - {{% staticref "/kpat/meeting12/index.html" "newtab" %}}Meeting 12: FDI in ASEAN: issues and opportunities{{% /staticref %}}
+- {{% staticref "/kpat/gravser/services.html" "newtab" %}}The role of services input in trade in ASEAN countries: an empirical gravity workshop{{% /staticref %}}
 
