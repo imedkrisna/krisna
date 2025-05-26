@@ -30,13 +30,15 @@ projects: []
 
 Di suatu pagi, saya melihat sebuah cuitan di twitter tentang produk makanan yang ternyata tidak halal:
 
-<blockquote class=e"twitter-tweet"><p lang="in" dir="ltr">Ayam Widuran Solo, fix Haram <a href="https://t.co/7AyIhEaOMQ">pic.twitter.com/7AyIhEaOMQ</a></p>&mdash; Halal Corner Indonesia Foundation (@halalcorner) <a href="https://twitter.com/halalcorner/status/1926185599779668374?ref_src=twsrc%5Etfw">May 24, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+<blockquote class="twitter-tweet"><p lang="in" dir="ltr">Ayam Gorengan Widuran Solo klarifikasi bahwa rumah makannya NON HALAL setelah bertahun-tahun mencantumkan logo HALAL di bannernya. <a href="https://t.co/JfrvjqtR6u">pic.twitter.com/JfrvjqtR6u</a></p>&mdash; Txt dari Kuliner (@txtdrkuliner) <a href="https://twitter.com/txtdrkuliner/status/1926469121048224077?ref_src=twsrc%5Etfw">May 25, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
 
 Jadi ceritanya uth si tempat makan ini naruh tulisan "halal" (bukan logo MUI) dan ternyata ada kandungan babi-nya di makanan yang mereka jual. Saya juga gak tau sih awalnya kenapa bisa ketahuan, tapi bagaimanapun juga, si tempat makan mengakui bahwa emang makanan mereka ngga halal. Makanya di foto yang ada di cuitan itu, si resto bilang mereka akan nulis "non-halal". Ini kan berarti emang bener makanannya nggak halal.
 
 Nah menariknya, inisiatif pencantuman "non-halal" tersebut membuat diskusi di cuitan itu berkembang menjadi "harusnya Indonesia bikin sertifikasi haram aja, bukan sertifikasi halal" mengingat di Indonesia, kemungkinan besar memang produk yang dijual itu halal, mengingat mayoritas penduduknya adalah muslim.
 
 Diskusi ini menarik. Tes haram kemungkinan besar lebih praktikal karena ya itu tadi, mayoritas market produk pangan adalah muslim. Sebuah produsen produk makanan lebih punya insentif bikin produk halal anyway, sehingga jumlah produsen produk halal akan jauh lebih banyak dibandingkan produsen produk haram.
+
+Tentu saja ga semua resto (dan penjual produk pangan secara umum) melakukan sertifikasi halal. Self declare seperti yang dilakukan oleh resto di cuitan di atas bisa jadi banyak dilakukan oleh aktor lain. Artinya, ga ada jaminan bahwa produk yang mereka jual itu halal. 
 
 ## Uji hipotesis
 
@@ -71,3 +73,4 @@ $$
 $$
 P(haram|ada)=\frac{P(haram)P(ada|haram)}{P(ada)}
 $$
+
