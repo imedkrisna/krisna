@@ -30,6 +30,7 @@ projects: []
 
 diambil dari [APBN kita](https://www.kemenkeu.go.id/apbnkita) bulan Januari 2023 dan Januari 2024. 
 
+https://kabar24.bisnis.com/read/20250210/15/1838141/riuh-efisiensi-pemerintah-alokasikan-rp5529-triliun-buat-bayar-bunga-utang
 
 | Indikator | 2022 | 2023 |
 |-----------|------|-----|
