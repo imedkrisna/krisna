@@ -123,11 +123,23 @@ fig.write_html('margin.html', full_html=False, include_plotlyjs='cdn')
     
     
 
-{% include_relative wew.html %} 
+{{% include_relative "wew.html" %}}
+
+ikikikik
+
+{{% include_relative="wew.html" %}}
+
+ehehehhe
+
+{{% include_relative wew.html %}}
 
 awokwokowkowkokw
 
-{% include_relative margin.html %} 
+{{< include_relative margin.html >}} 
+
+lalala yeyeye
+
+{{< include_relative="margin.html" >}}
 
 
 awkoawkodkaodkwaodk
