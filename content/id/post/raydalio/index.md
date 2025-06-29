@@ -108,6 +108,7 @@ Khusus utang dibeli bank sentral, ini adalah pola yang disebut Ray Dalio di buku
 Yaudah demikian dulu. Mudah-mudahan kita selalu dalam kondisi yang baik-baik saja. Jangan lupa [mensen saya di X](https://x.com/imedkrisna) kalau mau diskusi ya.
 
 ![coba](pb.html)
+![cobi](image.png)
 
 
 [^1]: Ekonom, terutama ekonom makro, biasanya akan mengatakan bahwa indikator untuk individual firms tidak berlaku untuk negara. Hal ini gak salah sih, tapi akan saya kesampingkan dulu karena nanti blogpostnya jadi kemana-mana.
