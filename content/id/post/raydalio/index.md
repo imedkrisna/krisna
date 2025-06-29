@@ -107,6 +107,8 @@ Khusus utang dibeli bank sentral, ini adalah pola yang disebut Ray Dalio di buku
 
 Yaudah demikian dulu. Mudah-mudahan kita selalu dalam kondisi yang baik-baik saja. Jangan lupa [mensen saya di X](https://x.com/imedkrisna) kalau mau diskusi ya.
 
+![coba](pb.html)
+
 
 [^1]: Ekonom, terutama ekonom makro, biasanya akan mengatakan bahwa indikator untuk individual firms tidak berlaku untuk negara. Hal ini gak salah sih, tapi akan saya kesampingkan dulu karena nanti blogpostnya jadi kemana-mana.
 [^2]: Mauro, P., Romeu, R., Binder, A., & Zaman, A. (2015). A modern history of fiscal prudence and profligacy. Journal of Monetary Economics, 76, 55-70. https://doi.org/https://doi.org/10.1016/j.jmoneco.2015.07.003 
