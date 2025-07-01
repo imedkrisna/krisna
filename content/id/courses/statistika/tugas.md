@@ -28,7 +28,7 @@ Lihat folder tugas di drive kelas, atau [klik ini](https://drive.google.com/driv
 - Download file excel di folder "tugas" bernama "Tugas_statistika", rename dengan NIM anda, lalu langsung jawab di file tsb. Kumpulkan file dalam bentuk Excel karena saya perlu lihat formula anda.
 - Boleh bekerja sama ketika mengerjakan, tapi tulisan harus original (jangan kopas)
 - Batas akhir pengumpulan adalah tanggal 21 Juli 2024 Pukul 23.59 WIB
-- Link ngumpulin di [sini](https://forms.gle/jwnHYwXqPpwnwi8v7)
+- Link ngumpulin di [sini](https://forms.gle/ngaYaBMPZ4t6WtV98)
 
 #### Extra info:
 - Tidak ada tugas tambahan atau tanggal mundur. Jika tanggal segitu belum ngumpulin berarti tugas 0
