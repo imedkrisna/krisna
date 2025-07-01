@@ -116,9 +116,6 @@ The real question is: have we reached that stage yet?
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Who&#39;s buying Indonesia&#39;s government bonds? <a href="https://t.co/DYR8RKy9ZC">pic.twitter.com/DYR8RKy9ZC</a></p>&mdash; 🐦 (@dionbisara) <a href="https://twitter.com/dionbisara/status/1902324760702546012?ref_src=twsrc%5Etfw">March 19, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-Here's the translation of your closing section, Krisna:
-
-
 Alright, that’s all for now. Hopefully, we’ll always stay in good shape, economically and otherwise. Don’t forget to mention me on X if you want to chat further.
 
 [^1]: Economists—especially macroeconomists—often argue that indicators used for individual firms don’t really apply to countries. That’s not entirely wrong, but I’ll set that aside for now so this blog post doesn’t go off the rails.
