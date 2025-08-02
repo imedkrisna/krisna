@@ -139,6 +139,8 @@ plt.legend()
     
 
 
-Hasil forecastingnya menunjukkan bahwa harga beras domestik mestinya mengalami tren menurun atau setidaknya datar sejak diterapkannya Neraca Komodtias. Tapi yang terjadi adalah harga beras domestik justru naik. Sementara itu, harga beras internasional kayaknya ga beda jauh dari hasil forecastingnya. Tapi yaa sebenernya hasil forecastingnya masih masuk ke confidence interval 95%, tapi lumayan mepet wkwk. Apakah ini gara-gara Neraca Komoditas? Bisa jadi, tapi kita perlu analisis lebih lanjut untuk memastikan.
+Wkwkw gile confidence intervalnya lebar banget wkkw. Yah to be expected sih, soalnya seriesnya pendek banget dan amat sangat mungkin ada banyak faktor-faktor struktural yang mempengaruhi harga beras. Tapi yaa gapapa, namanya juga iseng.
+
+Hasil forecastingnya menunjukkan bahwa harga beras domestik mestinya mengalami tren menurun atau setidaknya datar sejak diterapkannya Neraca Komodtias. Tapi yang terjadi adalah harga beras domestik justru naik. Sementara itu, harga beras internasional kayaknya ga beda jauh dari hasil forecastingnya. Tapi yaa sebenernya hasil forecastingnya masih masuk ke confidence interval 95%, tapi lumayan mepet wkwk. Apakah ini gara-gara Neraca Komoditas? Bisa jadi, tapi kita perlu analisis lebih lanjut untuk memastikan. Jangan lupa, ini cuma iseng-iseng aja, jangan dijadikan dasar untuk kebijakan publik ya wkwk.
 
 Oke deh segini aja dulu postingan hari ini. Sebenernya postingan ini semi-semi promosi paper dan juga semi-semi nyoba-nyoba Darts. Next time kita coba forecasting lain lagi yang lebih seru ya.

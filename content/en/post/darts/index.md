@@ -138,8 +138,8 @@ plt.legend()
     
 ![png](index_files/index_4_1.png)
     
+Lol look at that confidence interval! It’s so wide that it’s almost useless. Of course there're structural stuff in the rice market and our series isnt that long anyway. For fun, still okay i supposoe. Just dont be too serious about it.
 
-
-The forecasting results show that domestic rice prices should have either declined or at least flattened since the Commodity Balance Sheet was implemented. But in reality, domestic prices actually increased. Meanwhile, international rice prices don’t seem too far off from the forecast. Technically, the forecast still falls within the 95% confidence interval—though just barely, haha. Is this because of the Commodity Balance Sheet? Possibly, but we’d need further analysis to confirm.
+The forecasting results show that domestic rice prices should have either declined or at least flattened since the Commodity Balance Sheet was implemented. But in reality, domestic prices actually increased. Meanwhile, international rice prices don’t seem too far off from the forecast. Technically, the forecast still falls within the 95% confidence interval—though just barely, haha. Is this because of the Commodity Balance Sheet? Possibly, but we’d need further analysis to confirm. Again, this is just a playful experiment, not a definitive conclusion. Treat it as a light-hearted exploration of forecasting with Darts, not a rigorous analysis.
 
 Alright, that’s it for today’s post. Honestly, this entry is half a soft promo for the paper and half a playful experiment with Darts. Next time, we’ll try another, more exciting forecasting model!
