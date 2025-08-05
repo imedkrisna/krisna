@@ -122,7 +122,7 @@ N/A
 Teaching Experience {data-icon=chalkboard-teacher}
 --------------------------------------------------------------------------------
 
-### Politeknik APP Jakarta (on leave)
+### Politeknik APP Jakarta
 
 - [Research method](https://www.krisna.or.id/courses/metopel/)
 - [Statistics](https://www.krisna.or.id/courses/statistika/)
@@ -162,9 +162,22 @@ Jakarta, Indonesia
 2025
 
 ::: concise
-- Run a simulation to assess the impact of Indonesian Sovereign Wealthh Fund.
-- Mainly use Computable General Equilibrium (CGE).
-- Work under Dr. Barli Suryanta.
+- Economic modeling and policy evaluation
+- Work closely with the Indonesian government
+:::
+
+### Economist
+
+Center for Indonesian Policy Studies
+
+Jakarta, Indonesia
+
+2024-2025
+
+::: concise
+- Estimate a potential impact of Indonesian OECD accession.
+- CGE and Stata is used.
+- Lead by Hasran.
 :::
 
 ### Policy Analyst
@@ -193,38 +206,24 @@ Jakarta, Indonesia
 - Collaboration with Prospera
 :::
 
-### Economist
-
-Center for Indonesian Policy Studies
-
-Jakarta, Indonesia
-
-2020
-
-::: concise
-- Design a policy evaluation method on IACEPA implementation for Prospera.
-- CGE and Stata is used.
-- Work under Rainer Heufers.
-:::
-
-Prizes {data-icon=award data-concise=true}
+Grants/Prizes {data-icon=award data-concise=true}
 --------------------------------------------------------------------------------
 
-### VU Fellowship Programme (VUFP)
+### BI Research Grant
 
-A scholarship given by VU for my master degree
+Research grant from Bank Indonesia on a paper (with Pane and Massie) inspecting the relationship between global uncertainty and Indonesian provincial economy. 
 
 Amsterdam, The Netherlands
 
 2012
 
-### Australia Awards Indonesia (AAI)
+### Templeton World Charity Foundation (TWCF)
 
-A scholarship from the Australian government to conduct a study in Australia.
+A research grant for CIPS paper series on the impact of trade on Indonesian human flourishing.
 
-Canberra, Australia
+Jakarta, Indonesia
 
-2017
+2023-2024
 
 ### Hadi Soesastro Prize (HSP)
 
