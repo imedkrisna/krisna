@@ -51,7 +51,7 @@ Krisna Gupta {#title}
 
 ### Lecturer at Politeknik APP Jakarta
 
-I am a full time lecturer at [Politeknik APP Jakarta](https://www.poltekapp.ac.id), part time lecturer at [Universitas Indonesia](https://www.ui.ac.id/), and a senior fellow at [CIPS Indonesia](https://www.cips-indonesia.org/about).
+Expert Staff at National Economic Council / Tenaga Ahli Madya di Dewan Ekonomi Nasional (DEN). Other affiliations include [Politeknik APP Jakarta](https://www.poltekapp.ac.id),  [Universitas Indonesia](https://www.ui.ac.id/), and [CIPS Indonesia](https://www.cips-indonesia.org/about).
 
 Education {data-icon=graduation-cap data-concise=true}
 --------------------------------------------------------------------------------
@@ -122,7 +122,7 @@ N/A
 Teaching Experience {data-icon=chalkboard-teacher}
 --------------------------------------------------------------------------------
 
-### Politeknik APP Jakarta
+### Politeknik APP Jakarta (on leave)
 
 - [Research method](https://www.krisna.or.id/courses/metopel/)
 - [Statistics](https://www.krisna.or.id/courses/statistika/)
@@ -152,6 +152,20 @@ N/A
 
 Consulting Experience {data-icon=suitcase}
 --------------------------------------------------------------------------------
+
+### Expert / Tenaga Ahli
+
+National Economic Council / Dewan Ekonomi Nasional
+
+Jakarta, Indonesia
+
+2025
+
+::: concise
+- Run a simulation to assess the impact of Indonesian Sovereign Wealthh Fund.
+- Mainly use Computable General Equilibrium (CGE).
+- Work under Dr. Barli Suryanta.
+:::
 
 ### Policy Analyst
 
@@ -191,20 +205,6 @@ Jakarta, Indonesia
 - Design a policy evaluation method on IACEPA implementation for Prospera.
 - CGE and Stata is used.
 - Work under Rainer Heufers.
-:::
-
-### Economist
-
-PT. LAPI ITB.
-
-Jakarta, Indonesia
-
-2020
-
-::: concise
-- Run a simulation to assess the impact of Indonesian Sovereign Wealthh Fund.
-- Mainly use Computable General Equilibrium (CGE).
-- Work under Dr. Barli Suryanta.
 :::
 
 Prizes {data-icon=award data-concise=true}
