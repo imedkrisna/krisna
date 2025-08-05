@@ -34,7 +34,7 @@ Skills {#skills}
 
 - Experience in running structural model (e.g. GTAP) with GEMPACK software
 
-- Good familiarity with various data & docs processing tools (Microsoft Office, Google Docs, Rstudio & $\LaTeX$)
+- Good familiarity with various data & docs processing tools (Microsoft Office, Google Docs, Quarto & $\LaTeX$)
 
 Disclaimer {#disclaimer}
 --------------------------------------------------------------------------------
@@ -125,7 +125,6 @@ Teaching Experience {data-icon=chalkboard-teacher}
 ### Politeknik APP Jakarta
 
 - [Research method](https://www.krisna.or.id/courses/metopel/)
-- [Statistics](https://www.krisna.or.id/courses/statistika/)
 - [Introduction to economics](https://www.krisna.or.id/courses/ekon/)
 
 
