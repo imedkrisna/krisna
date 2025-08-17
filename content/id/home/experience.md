@@ -19,12 +19,21 @@ date_format = "Jan 2006"
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
 
 [[experience]]
+  title = "Tenaga Ahli Madya"
+  company = "Dewan Ekonomi Nasional"
+  company_url = ""
+  location = "Jakarta"
+  date_start = "2025-08-01"
+  date_end = ""
+  description = """Public policy advisor in economic development, focusing on trade and investment policies. Engaged in policy analysis and recommendations to support Indonesia's economic growth."""
+
+[[experience]]
   title = "Dosen"
   company = "Politeknik APP Jakarta"
   company_url = "https://politekapp.ac.id"
   location = "Jakarta"
   date_start = "2022-07-01"
-  date_end = ""
+  date_end = "2025-07-31"
   description = """Statistika"""
 
 [[experience]]

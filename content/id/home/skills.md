@@ -23,7 +23,7 @@ subtitle = ""
 [[feature]]
   icon = "chart-line"
   icon_pack = "fas"
-  name = "STATA"
+  name = "Stata"
   description = "90%"  
   
 [[feature]]

@@ -14,6 +14,7 @@ role: Lecturer
 
 # Organizations/Affiliations
 organizations:
+- name: National Economic Council, Republic of Indonesia
 - name: Politeknik APP Jakarta
   url: "https://poltekapp.ac.id/"
 - name: Center for Indonesian Policy Studies
@@ -78,8 +79,8 @@ user_groups:
 - Visitors
 ---
 
- My name is Krisna, some calls me Imed. I am a lecturer at Politeknik APP Jakarta, a vocational school under Ministry of Industry. My research is about trade and investment policy and how it affects Indonesian firms. I use some structured equation such as GTAP model, but also do some empirics like gravity models.
+ My name is Krisna, some call me Imed. I am an advisor at the Indonesian National Economic Council. My research is about trade and investment policy and how it affects Indonesian firms. I use some structured equation such as GTAP model, but also do some empirics like gravity models.
 
- I am a lecturer at Politeknik APP Jakarta (full-time) and Universitas Indonesia. Additionally, I assume a senior fellow position at Center for Indonesian Policy Studies.
+ I lectures at Universitas Indonesia. Additionally, I assume a senior fellow position at Center for Indonesian Policy Studies.
  
- I contributed to several projects with Bank Indonesia, Bappenas, ADB, Prospera, and ERIA, among others. Please see CV or contact me for more information.
+ I contributed to several projects with Bank Indonesia, Bappenas, ADB, Prospera, and ERIA, among others. Occassional oped writer, typically at Kompas, Jakarta Post and East Asia Forum. Please see CV or contact me for more information.

@@ -18,6 +18,15 @@ date_format = "Jan 2006"
 #   Leave `date_end` empty if it's your current employer.
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
 [[experience]]
+  title = "Advisor"
+  company = "National Economic Council, Republic of Indonesia"
+  company_url = ""
+  location = "Jakarta"
+  date_start = "2025-08-01"
+  date_end = ""
+  description = """Public policy advisor in economic development, focusing on trade and investment policies. Engaged in policy analysis and recommendations to support Indonesia's economic growth."""
+
+[[experience]]
   title = "Lecturer"
   company = "Politeknik APP Jakarta"
   company_url = "https://politekapp.ac.id"

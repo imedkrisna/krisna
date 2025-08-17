@@ -10,17 +10,18 @@ authors:
 superuser: true
 
 # Role/position
-role: Dosen
+role: Tenaga Ahli Madya
 
 # Organizations/Affiliations
 organizations:
+- name: Dewan Ekonomi Nasional
 - name: Politeknik APP Jakarta
   url: "https://poltekapp.ac.id/"
 - name: Center for Indonesian Policy Studies
   url: "https://www.cips-indonesia.org/team/dr.-krisna-gupta?lang=id"
 
 # Short bio (displayed in user profile at end of posts)
-bio: Dosen di Politeknik APP Jakarta. Juga mengajar di Universitas Indonesia. Mitra senior di Center for Indonesian Policy Studies. Fokus penelitian tentang dampak kebijakan perdagangan dan investasi terhadap ekonomi Indonesia, terutama sektor manufaktur. Kontributor di [East Asia Forum](https://eastasiaforum.org/author/krisna-gupta/) dan [The Conversation Indonesia](https://theconversation.com/profiles/krisna-gupta-1133995)
+bio: Tenaga ahli di Dewan Ekonomi Nasional. Juga mengajar di Universitas Indonesia. Mitra senior di Center for Indonesian Policy Studies. Fokus penelitian tentang dampak kebijakan perdagangan dan investasi terhadap ekonomi Indonesia, terutama sektor manufaktur. Kontributor di [East Asia Forum](https://eastasiaforum.org/author/krisna-gupta/) dan [The Conversation Indonesia](https://theconversation.com/profiles/krisna-gupta-1133995)
 
 interests:
 - Perdagangan internasional
@@ -78,8 +79,6 @@ user_groups:
 - Visitors
 ---
 
- Nama saya Krisna, sering dipanggil juga Imed. Saya adalah Dosen di Politeknik APP Jakarta. Riset saya tentang dampak kebijakan perdagangan dan investasi terhadap pertumbuhan sektor manufaktur di Indonesia. Saya menggunakan metode persamaan linear struktural seperti GTAP, tapi juga menggunakan berbagai teknik ekonometrika seperti *gravity models*.
+ Nama saya Krisna, sering dipanggil juga Imed. Saya adalah Tenaga Ahli Madya di Dewan Ekonomi Nasional. Riset saya tentang dampak kebijakan perdagangan dan investasi terhadap pertumbuhan sektor manufaktur di Indonesia. Saya menggunakan metode persamaan linear struktural seperti GTAP, tapi juga menggunakan berbagai teknik ekonometrika seperti *gravity models*.
 
- Saya saat ini mengajar di program D3 prodi Perdagangan Internasional di Politeknik APP Jakarta dan Program Sarjana dan Pascasarjana Ilmu Ekonomi Universitas Indonesia. Saya juga adalah mitra senior di Center for Indonesian Policy Studies. 
- 
- Saya terlibat dalam beberapa proyek dengan Bank Indonesia, Bappenas, ADB, Prospera, dan ERIA, antara lain. Silakan lihat CV atau hubungi saya untuk informasi lebih lanjut.
+ Saya saat ini mengajar Program Sarjana Ilmu Ekonomi Universitas Indonesia. Saya juga adalah mitra senior di Center for Indonesian Policy Studies. Saya cukup aktif berkontribusi menulis di media massa seperti Kompas, Jakarta Post, dan East Asia Forum.
