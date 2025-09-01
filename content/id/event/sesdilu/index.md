@@ -17,7 +17,7 @@ abstract: "Pembicara dalam diklat di Kemenlu"
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
 date: 2025-09-02T08:00:00+07:00
-date_end: 2025-09-02T10:00:0044+07:00
+#date_end: 2025-09-02T10:00:0044+07:00
 all_day: True
 
 # Schedule page publish date (NOT event date).
