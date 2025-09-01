@@ -1,0 +1,260 @@
+---
+title: "Unbundling and the global value chain"
+subtitle: "TiVA analysis"
+date: "21 August 2024"
+author: "I Made Krisna Gupta"
+date-format: long
+format: 
+  revealjs:
+    theme: [simple,mytheme.scss]
+    chalkboard: true
+    incremental: false
+    transition: convex
+    background-transition: fade
+    slide-number: true
+  beamer: default
+---
+
+## Who am I
+
+-   Full-time lecturer di Politeknik APP, part-time di Universitas Indonesia, Associate researcher di Center for Indonesian Policy Studies.
+
+-   Master degree in economics at UI/VU (2014), PhD in economics at ANU (2022).
+
+-   Research mainly in trade in industry.
+
+-   web at [krisna.or.id](https://www.krisna.or.id/)
+
+    -   [imade.krisna@ui.ac.id](mailto:imade.krisna@ui.ac.id)
+    -   [\@imedkrisna](https://www.twitter.com/imedkrisna)
+
+
+## So far
+
+- we have discusses extra-industry trade, where countries are buying and selling different goods (e.g., cloth exporter and food exporter)
+
+    - can be driven by difference in technology or factor abundance.
+
+- Trade in final goods are basically using the global resources to full efficiency.
+
+    - in this case, using trade data is enough to analyze, and tariff use is much simpler.
+
+- That, until the Global Value Chain (GVC) went mainstream.
+    
+## Today
+
+- Today we discuss the concept of offshoring.
+
+- We also unpack the concept of unbundling stages of production.
+
+- We'll have a look at TiVA data and making sense of it.
+
+## No more aeroplane countries
+
+![](feenstra.png)
+
+## Offshoring {.m}
+
+- The provision of a service or the production of various parts of a good in different countries that are then used or assembled into a final good in another location is called **foreign outsourcing**.
+
+    - sometimes called offshoring.
+    
+- Offshoring is a typoe of international trade that differs from the type we see in Ricardian and H-O models where goods traded are **final goods**.
+
+- Offshoring is trade in _intermediate inputs_, which can sometimes crosses several borders before turned into a final good.
+
+## Offshoring
+
+- At its core, offshoring has the same reasoning as our standard trade model:
+
+    - A firm in a country is better of sourcing part of their production in countries with comparative advantage in that good.
+    
+- In essence, offshoring breaks down a final good into several intermediate goods (and services).
+
+    - these goods embed different factor intensities.
+    
+## Unbundling
+
+- To understand offshoring better, we utilise the theory of product unbundling, coined by Richard Baldwin.
+
+- So far, our model assume a trivial trade cost. which is of course far from true in the real world.
+
+- However, trade cost is indeed dropping in various speed.
+
+- Decreasing cost of trade is what causes economic undbundling.
+
+## Cost of trade
+
+1. **trade cost / cost of moving goods** leads to the first unbundling.
+
+2. **communivation costs / cost of moving ideas** leads to the second unbundling
+
+3. **Face-to-face costs / cost of moving people** leads to the third unbundling.
+
+## First unbundling
+
+- Happened in around 1820, the brittain industrial revolution
+
+    - aka the steam revolution -> steam ship, steam rail, containerization, telegram/telephone.
+    
+- Also the Pax Brittanica, a relatively peace time after Napoleonic war.
+
+- Characterized by **low** trade cost, but high communication costs and face-to-face costs.
+
+
+## First unbundling {.m}
+
+- also called **old globalization**.
+
+- With high trade cost, all countries must produce their own goods and services because moving goods are expensive.
+
+- The first unbundling is basically unbundle production and consumption: various goods can be produced abroad.
+
+- Production clustered locally (to reduce communcation costs), but market are global (goods can be moved to different countries relatively cheaply)
+
+    - also, remember internal economies of scale?
+
+## Old globalization
+
+- High communication costs meant Northern (aka rich countries) innovation stayed in the north.
+
+- There is a knowhow imbalance, where all the knowledge is accumulated in the place of productions (remember external economies of scale?)
+
+## Second unbundling
+
+- Happened after 1990 thanks to ICT revolution (basically the internet).
+
+- Characterized by **low** cost of trade and communication cost, but still high face-to-face costs.
+
+- Now firms can organize production easily. Location of ideas can be different from the manufacturing.
+
+- 2nd unbundling: unbundling process of production / production value chain.
+
+## Second unbundling {.m}
+
+- The second unbundling creates hyperglobalization, where globalization happens on the process of production.
+
+    - This is offshoring. Also called the global value chain (GVC) phenomenon.
+    
+- To ensure offshored production meshed seamlessly, G7 firms offshored knowhow with the jobs.
+
+- This creates a comparative advantage, hence trade opportunities from high-tech value chain and low-wage one.
+
+- With lower value outsourced (hence gets cheaper with lower wage), the trade cost become worth it.
+
+## Modeling the offshoring {.m}
+
+- For any given final product, we unbundle its process of production. We first list these process from start to finish.
+
+- For example, to make an aeroplane, you need to start with research and development (R&D), produce components, assemble them, and then do marketing and sales as well as customer service.
+
+- We then rearrange the list in terms of value: from lower value to higher value.
+
+    - e.g., start with assembly, end with R&D.
+
+## Modeling the offshoring
+
+![](feenstra1.png)
+
+## Offshoring model
+
+- panel (a) is the unbundle list based on production process, while panel (b) is the rearranging from lower value to higher value.
+
+- In the panel (b), there exists a point A where we can slice/unbundle the production process: a low-value process (left of A), and a high-value process (right of A).
+
+- Suppose Home country is a high-tech country, then it's better for home to outsource the left bundle abroad.
+
+## Offshoring
+
+- This is the second unbundling: we unbundle process of production into two: high-value bundle and low-value bundle.
+
+- Two countries with different labor profile then trade these bundles.
+
+- Just like Standard Trade Model (STM), we can model this with a relative wage vs relative labor demand graph.
+
+## Lower trade cost
+
+![](feenstra3.png)
+
+## Second unbundling
+
+- The new 'hi-tech-low-wage' mix shifted manufacturing & knowhow massively to a handful of developing nations.
+
+- The result is the great convergence between 1990-2014:
+
+    - Developed countries are catching up, enlarging their pie share in the global GDP.
+    
+    - While G7 economies relatively reduced in the global GDP share.
+    
+## Consequences
+
+1. New globalization (aka the second undbundling) breaks monopoly that G7 labour had on G7 knowhow. Now G7 firms can pick other labor in other countries basically.
+
+2. New globalization affects economies with finer resolution: it used to be that countries compete on the final product level, now on the manufacturing stage and job level.
+
+3. Impact of the new globalization is now more sudden, individual, unpredictable and uncontrollable.
+
+## Consequences
+
+- production that used to be happened all in one country is now become an international trade.
+
+    - Trade policy affects not just final product, but also granularry
+    
+    - Predictable trade policy become even more important because changes in one chain of value affects the overall production.
+    
+- National competitiveness is now become regional competitiveness.
+
+## Consequences {.m}
+
+- Developing countries now don't have to start to build final good from the ground-up. They can join the value chain / production network.
+
+- Vietnam is one of the largest smartphone exporter. It does not have to know how to make the whole smartphone, but starting from the assembly.
+
+- China also started with assembly and then [become more upstream](https://www.sciencedirect.com/science/article/pii/S0022199621000222)
+
+- G7 competitiveness now relies on offshoring. Cannot compete without one.
+
+## Analytical consequences
+
+- Trade data is no longer useful if large components are sourced from import.
+
+- You can know how much salt we import, but it's much harder to know who use them: end consumers? food industry? Chemists?
+
+- The value of a country's export may be doublecounted: Vietnam is not making phones. Just assembling.
+
+- This is where TiVA comes in.
+
+## TiVA
+
+- Trade in Value Added (TiVA) uses input-output statistics to infrom how much an industry uses imported inputs.
+
+- OECD collects and estimates these information from national statistics. More information is [here](https://www.oecd.org/en/topics/sub-issues/trade-in-value-added.html), and data can be downloaded from [here](https://data-explorer.oecd.org/vis?pg=0&bp=true&snb=14&tm=TIVA&df[ds]=dsDisseminateFinalCloud&df[id]=DSD_TIVA_MAINLV%40DF_MAINLV&df[ag]=OECD.STI.PIE&df[vs]=1.0&dq=FFD_DVA.AUS..W..A&pd=2015%2C2020&to[TIME_PERIOD]=false&ly[cl]=TIME_PERIOD&ly[rw]=ACTIVITY)
+
+## Questions
+
+1. Seberapa besar kontribusi asing / negara tertentu terhadap produksi dan/atau ekspor di sebuah industri?
+
+2. Seberapa besar kontribusi negara kita dalam supply chain negara lain?
+
+3. Seberapa jauh keterlibatan industri kita (backward+forward) di dalam Global Value Chain (GVC) dibandingkan negara lain?
+
+## GVC in the food industry
+
+![](pic8.png)
+
+[from Amanta & Gupta 2022](https://cutt.ly/cips-pp51)
+
+## GVC in semiconductor
+
+![](chip.png)
+
+[BCG and SIA report](https://www.semiconductors.org/wp-content/uploads/2024/05/Report_Emerging-Resilience-in-the-Semiconductor-Supply-Chain.pdf)
+
+## The third unbundling {.m}
+
+- Third unbundling is a relatively new phenomenon: happens when face-to-face cost reduce.
+
+- The industry 4.0: face-to-face cost reduces thanks to telepresence and telerobotics. Data transfer, human-machine and machine-machine interface allows it to happen.
+
+- Services and digital trade is taking the front stage. A story for another time.
+

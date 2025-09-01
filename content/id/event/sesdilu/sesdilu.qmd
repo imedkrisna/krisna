@@ -1,0 +1,283 @@
+---
+title: "Mendorong Perdagangan untuk Pertumbuhan"
+subtitle: ""
+date: "2 September 2025"
+date-format: "long"
+author: "Imed Krisna Gupta"
+format: 
+  revealjs:
+    theme: [simple,mytheme.scss]
+    chalkboard: true
+    incremental: false
+    transition: convex
+    background-transition: fade
+    slide-number: true
+  beamer:
+    latex-tinytex: true
+    latex-auto-install: true
+  pptx: default
+---
+
+## Profile
+
+- I Made Krisna Gupta (Imed)
+
+- Dewan Ekonomi Nasional, Universitas Indonesia, Center for Indonesian Policy Studies
+
+- S3 di Australian National University, S2 di UI/VU Amsterdam
+
+- Fokus riset di perdagangan internasional dan kebijakan publik (particularly kebijakan industri)
+
+- more at [krisna.or.id](https) atau @imedkrisna
+
+## Outline
+
+- Problem investasi
+
+- Perdagangan, FTA dan GVC
+
+## Problem investasi
+
+![Sumber: [WBES](https://www.enterprisesurveys.org/content/dam/enterprisesurveys/documents/country/Indonesia-2023.pdf)](wbes.png)
+
+## Problem investasi
+
+![Sumber: DEN](wbes2.png)
+
+## Problem investasi
+
+![Sumber:DEN](den.png)
+
+## Problem investasi
+
+- Kemenlu memiliki peran strategis untuk menghubungkan investor luar negeri dengan Indonesia
+
+- Akan tetapi, Kemenlu akan sulit "jualan" jika kondisi investasi domestik masih penuh ketidakpastian.
+
+- Kemenlu harus memastikan institusi domestik benar-benar bekerja sesuai materi promosinya.
+
+## Pentingnya perdagangan
+
+- Perdagangan merupakan salah satu kunci sukses investasi.
+
+- Dewasa ini, perusahaan asing masih kencang terlibat dengan Global Value Chain, di mana kelancaran perdagangan internasional memegang peran penting.
+
+- Itulah sebabnya pabrik-pabrik tekstil dan sepatu memilih membentuk kawasan berikat: agar lancar memasok bahan baku.
+
+- Tapi outputnya jadi harus 100% ekspor.
+
+## Why Trade is Good?
+
+- Comparative advantage and specialization: tech & resources.
+
+- More variation & competition: inovasi, efisiensi, learning by doing.
+
+- Economies of scale: larger market efisien jika ada fixed cost besar.
+
+- Global Value Chain and access to inputs: bahan baku, teknologi, skill.
+
+## ToT Gain Problem
+
+- ToT gain memungkinkan sebuah negara yang besar dapat untung dengan tarif.
+
+- Reaksi terbaik bagi negara partnernya, jika besar juga, adalah dengan retaliasi: memberi tariff untuk barang lain.
+
+- Ini adalah contoh klasik dari prisoner’s dilemma:
+
+- jika A free trade, B being protectionist will get ToT gain.
+
+- Tapi jika keduanya protectionist, keduanya lose out.
+
+## Negara besar
+
+- AS adalah contoh negara besar. Merupaka pembeli produk jadi terbesar di dunia.
+
+- Ketika AS memberikan terif impor, warganya _worse off_ karena ada pajak ekstra. Mengakibatkan inflasi.
+
+- Tapi tarif ini bisa teroffset karena AS punya market power:
+
+    - eksportir terpaksa menurunkan harga
+    
+    - exchange rate appretiation
+    
+## Negara besar
+
+- Karena 2 efek tadi, bisa jadi AS akan untung.
+
+- Yang rugi tentu saja trading partnernya.
+
+- Negara lain dapat melakukan retaliasi agar keuntungan AS tersebut hilang, tapi tentu saja negara yang retaliasi tersebut akan rugi juga.
+
+- Inilah yang disebut prisoner's dilemma: equilibrium terbaik bisa jadi lose-lose.
+
+- Secara umum, FTA memberi kepastian lebih baik.
+
+## FTA
+
+- Karena itulah dilakukan FTA: suatu perjanjian mengikat agar tidak terjadi ekuilibrium yang lose-lose tadi.
+
+- Beberapa mengkritik FTA sebagai bentuk pengurangan _sovereignty_.
+
+- Tapi FTA sebenarnya seperti pernikahan: kebebasan individu sedikit dibatasi, tapi yang penting adalah bahagia.
+
+- Tentu saja kompleksitasnya sama: kadang bercerai dianggap pilihan yang lebih baik. Makanya terjadi Brexit dan Trump tariff.
+
+## Utilization rate
+
+- Datanya tidak tersedia secara luas.
+
+- Ada beberapa FTA untuk negara yang sama.
+
+- Seberapa besar ini masalah gap informasi?
+
+- Jika perbedaan tarifnya tidak signifikan, maka utilization rate tidak akan naik.
+
+    - Terutama jika ada compliance cost
+    
+    - makin hilir makin costly
+    
+    - 30-50% sudah considered ok
+    
+## Utilization rate
+
+![[Andiyani & Gupta (2024)](https://jurnal.kemendag.go.id/index.php/JCN/article/view/902/419)](Picture1.png)
+
+## No more aeroplane countries
+
+![](feenstra.png)
+
+## Offshoring {.m}
+
+- The provision of a service or the production of various parts of a good in different countries that are then used or assembled into a final good in another location is called **foreign outsourcing**.
+
+    - sometimes called offshoring.
+    
+- Offshoring is a typoe of international trade that differs from the type we see in Ricardian and H-O models where goods traded are **final goods**.
+
+- Offshoring is trade in _intermediate inputs_, which can sometimes crosses several borders before turned into a final good.
+
+## Offshoring
+
+- At its core, offshoring has the same reasoning as our standard trade model:
+
+    - A firm in a country is better of sourcing part of their production in countries with comparative advantage in that good.
+    
+- In essence, offshoring breaks down a final good into several intermediate goods (and services).
+
+    - these goods embed different factor intensities.
+
+## Modeling the offshoring {.m}
+
+- For any given final product, we unbundle its process of production. We first list these process from start to finish.
+
+- For example, to make an aeroplane, you need to start with research and development (R&D), produce components, assemble them, and then do marketing and sales as well as customer service.
+
+- We then rearrange the list in terms of value: from lower value to higher value.
+
+    - e.g., start with assembly, end with R&D.
+
+## Modeling the offshoring
+
+![](feenstra1.png)
+
+## Offshoring model
+
+- panel (a) is the unbundle list based on production process, while panel (b) is the rearranging from lower value to higher value.
+
+- In the panel (b), there exists a point A where we can slice/unbundle the production process: a low-value process (left of A), and a high-value process (right of A).
+
+- Suppose Home country is a high-tech country, then it's better for home to outsource the left bundle abroad.
+
+## Offshoring
+
+- This is the second unbundling: we unbundle process of production into two: high-value bundle and low-value bundle.
+
+- Two countries with different labor profile then trade these bundles.
+
+- Just like Standard Trade Model (STM), we can model this with a relative wage vs relative labor demand graph.
+
+## Lower trade cost
+
+![](feenstra3.png)
+
+## Second unbundling
+
+- The new 'hi-tech-low-wage' mix shifted manufacturing & knowhow massively to a handful of developing nations.
+
+- The result is the great convergence between 1990-2014:
+
+    - Developed countries are catching up, enlarging their pie share in the global GDP.
+    
+    - While G7 economies relatively reduced in the global GDP share.
+    
+## Consequences
+
+1. New globalization (aka the second undbundling) breaks monopoly that G7 labour had on G7 knowhow. Now G7 firms can pick other labor in other countries basically.
+
+2. New globalization affects economies with finer resolution: it used to be that countries compete on the final product level, now on the manufacturing stage and job level.
+
+3. Impact of the new globalization is now more sudden, individual, unpredictable and uncontrollable.
+
+## Consequences
+
+- production that used to be happened all in one country is now become an international trade.
+
+    - Trade policy affects not just final product, but also granularry
+    
+    - Predictable trade policy become even more important because changes in one chain of value affects the overall production.
+    
+- National competitiveness is now become regional competitiveness.
+
+## Consequences {.m}
+
+- Developing countries now don't have to start to build final good from the ground-up. They can join the value chain / production network.
+
+- Vietnam is one of the largest smartphone exporter. It does not have to know how to make the whole smartphone, but starting from the assembly.
+
+- China also started with assembly and then [become more upstream](https://www.sciencedirect.com/science/article/pii/S0022199621000222)
+
+- G7 competitiveness now relies on offshoring. Cannot compete without one.
+
+## Analytical consequences
+
+- Trade data is no longer useful if large components are sourced from import.
+
+- You can know how much salt we import, but it's much harder to know who use them: end consumers? food industry? Chemists?
+
+- The value of a country's export may be doublecounted: Vietnam is not making phones. Just assembling.
+
+- This is where TiVA comes in.
+
+## TiVA
+
+- Trade in Value Added (TiVA) uses input-output statistics to infrom how much an industry uses imported inputs.
+
+- OECD collects and estimates these information from national statistics. More information is [here](https://www.oecd.org/en/topics/sub-issues/trade-in-value-added.html), and data can be downloaded from [here](https://data-explorer.oecd.org/vis?pg=0&bp=true&snb=14&tm=TIVA&df[ds]=dsDisseminateFinalCloud&df[id]=DSD_TIVA_MAINLV%40DF_MAINLV&df[ag]=OECD.STI.PIE&df[vs]=1.0&dq=FFD_DVA.AUS..W..A&pd=2015%2C2020&to[TIME_PERIOD]=false&ly[cl]=TIME_PERIOD&ly[rw]=ACTIVITY)
+
+## Questions
+
+1. Seberapa besar kontribusi asing / negara tertentu terhadap produksi dan/atau ekspor di sebuah industri?
+
+2. Seberapa besar kontribusi negara kita dalam supply chain negara lain?
+
+3. Seberapa jauh keterlibatan industri kita (backward+forward) di dalam Global Value Chain (GVC) dibandingkan negara lain?
+
+## GVC in the food industry
+
+![](pic8.png)
+
+[from Amanta & Gupta 2022](https://cutt.ly/cips-pp51)
+
+## GVC in semiconductor
+
+![](chip.png)
+
+[BCG and SIA report](https://www.semiconductors.org/wp-content/uploads/2024/05/Report_Emerging-Resilience-in-the-Semiconductor-Supply-Chain.pdf)
+
+## The third unbundling {.m}
+
+- Third unbundling is a relatively new phenomenon: happens when face-to-face cost reduce.
+
+- The industry 4.0: face-to-face cost reduces thanks to telepresence and telerobotics. Data transfer, human-machine and machine-machine interface allows it to happen.
+
+- Services and digital trade is taking the front stage. A story for another time.
