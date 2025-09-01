@@ -1,7 +1,7 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: "Perdagangan untuk pertumbuhan"
+title: "Peran Kemenlu untuk perdagangan dan investasi"
 event: "Pelatihan Perdagangan Internasional"
 event_url:
 location: "Pusdiklat Kementerian Luar Nergeri RI"
