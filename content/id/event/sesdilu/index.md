@@ -21,7 +21,7 @@ date_end: 2025-09-02T10:00:0044+07:00
 all_day: True
 
 # Schedule page publish date (NOT event date).
-publishDate: 2025-09-01T22:00:00+07:00
+publishDate: 2025-09-01T10:00:00+07:00
 
 authors: [admin]
 tags: []
