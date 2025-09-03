@@ -213,7 +213,7 @@ ggplot(dat3,aes(x=year,y=XR))+geom_line()+labs(title="Exchange rate")
 For more than 25 years, [The Economist newspaper](https://www.krisna.or.id/post/bigmacindex/) has engaged in a whimsical attempt to judge PPP theory based on a well-known, globally uniform consumer good: the McDonald’s Big Mac. The over- or undervaluation of a currency against the U.S. dollar is gauged by comparing the relative prices of a burger in a common currency, and expressing the difference as a percentage deviation from one:
 
 \begin{equation}
-\text{Big Mac Index}=q^{\text{Big Mac}}-1=\left(\frac{E_{\$/lc}P^{Bigmac}_local}{P_{US}^{Bigmac}}\right)-1
+\text{Big Mac Index}=q^{\text{Big Mac}}-1=\left(\frac{E_{\$/lc}P^{Bigmac}_{local}}{P_{US}^{Bigmac}}\right)-1
 \end{equation}
 
 ## Monetary theory
