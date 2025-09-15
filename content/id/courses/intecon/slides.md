@@ -28,3 +28,4 @@ slides:
 - [Advanced: Estimating the gravity equations](https://imedkrisna.github.io/gravity/)"
 
 - {{% staticref "/intecon/services/services.html" "newtab" %}}Advanced: Trade in Services{{% /staticref %}}
+- {{% staticref "/intecon/bartik/bartik.html" "newtab" %}}Advanced: Bartik Instrument{{% /staticref %}}
