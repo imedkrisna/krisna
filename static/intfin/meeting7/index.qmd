@@ -56,7 +56,7 @@ $$
 
 ## Consumption {.m}
 
-![The Consumption Function The consumption function relates private consumption, C, to disposable income, Y − ¯𝑇. The slope of the function is the marginal propensity to consume, MPC.](Picture.jpg)
+![The Consumption Function The consumption function relates private consumption, C, to disposable income, Y − ¯𝑇. The slope of the function is the marginal propensity to consume, MPC.](Picture1.jpg)
 
 ## Investment {.m}
 
