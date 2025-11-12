@@ -16,8 +16,8 @@ abstract:
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
-date: 2025-11-12T13:30:00+07:00
-date_end: 2025-11-12T15:00:00+07:00
+date: 2025-11-13T09:00:00+07:00
+date_end: 2025-11-13T13:00:00+07:00
 all_day: false
 
 # Schedule page publish date (NOT event date).
@@ -47,7 +47,7 @@ image:
 
 
 # Optional filename of your slides within your event's folder or a URL.
-url_slides: "monash.html"
+url_slides: "lmui.html"
 
 url_code:
 url_pdf: 
