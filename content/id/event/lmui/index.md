@@ -1,8 +1,8 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: "Global macroeconomic imbalance and the future of trade"
-event: "Monash Public Lecture"
+title: "Global macroeconomic imbalance "
+event: "Lembaga Managemen Universitas Indonesia (LMUI) "
 event_url:
 location: "BSD"
 address:
