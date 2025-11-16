@@ -58,10 +58,10 @@ semua hasil produksi hanya dapat menjadi konsumsi, sementara sisanya dijadikan i
 ```mermaid
 graph TD;
   A[Produsen]-->B[tax income];
-  A-->C[gaji<br/>pekerja];
-  A-->D[Dividen/bunga<br/>kapitalis];
-  A-->M[bayar<br/>utang bank];
-  A-->E[Retained earning<br/>perusahaan];
+  A-->M[biaya di<br/>luar pajak];
+  M-->C[gaji<br/>pekerja];
+  M-->D[Dividen/bunga<br/>kapitalis];
+  M-->E[Retained earning<br/>perusahaan];
   C-->F[C pekerja];
   C-->G[Saving pekerja];
   D-->H[C kapitalis];
