@@ -63,10 +63,10 @@ graph TD;
   M-->D[Dividen/bunga<br/>kapitalis];
   M-->E[Retained earning<br/>perusahaan];
   C-->F[C pekerja];
-  C-->G[Saving pekerja];
+  C-->G[Saving<br/>pekerja];
   D-->H[C kapitalis];
-  D-->I[Saving kapitalis];
-  E-->J[I perusahaan];
+  D-->I[Saving<br/>kapitalis];
+  E-->J[Saving<br/>perusahaan];
   B-->K[I pemerintah];
   B-->L[C negara];
 ```
