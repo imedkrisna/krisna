@@ -47,15 +47,37 @@ Nah menurut Pettis, proses ketimpangan ini tidak hanya dapat terjadi antar-indiv
 
 Kekayaan perusahaan agak beda dengan kekayaan masyarakat di kelas kapitalis[^1]. Kelas kapitalis hanya dapat uang dari perusahaan seandainya perusahaan tersebut membagi deviden, atau perusahaan tersebut membayar bunga utang (ke bond holder, atau ke bank, yang mana profitnya ditransfer ke pemilik bank dan masyarakat dalam bentuk bunga tabungan). Jika perusahaan menahan laba (retained earning), baik untuk tujuan dibiarin aja atau direinvest, maka itu jadi kekayaan perusahaan. Jadi, saving nasional juga ada saving perusahaan di baliknya. Dan Pettis berargumen, semakin besar retained earning perusahaan (tidak dibagi dalam bentuk bonus utk karyawan maupun deviden utk pemilik saham), maka semakin besar saving rate nasional[^2].
 
-Nah, menurut Pettis, ketimpangan akan mengakibatkan saving rate yang lebih tinggi vis-a-vis consumption rate.
-
-Pertama, kita anggap 1 bumi sebagai satu sistem ekonomi tertutup (kita belum bisa trade dengan Bulan atau Mars).
+Kalo mau diilustrasikan, mungkin kurang lebih kayak gini. Pertama, kita anggap 1 bumi sebagai satu sistem ekonomi tertutup (kita belum bisa trade dengan Bulan atau Mars). 
 
 $$
 GDP = C + I
 $$
 
-semua hasil produksi hanya dapat menjadi konsumsi, sementara sisanya dijadikan investasi untuk hari esok. Mari kita asumsikan tiba-tiba ada **transfer dari pihak biasa ke pihak kaya**, tanpa mempengaruhi PDB (ini asumsi yang kuat tapi kita tinggalin dulu untuk sementara). Pihak kaya ini bisa saja transfer dari orang miskin ke orang kaya, tapi juga bisa aja transfer dari masyarakat ke perusahaan atau ke negara.
+semua hasil produksi hanya dapat menjadi konsumsi, sementara sisanya dijadikan investasi untuk hari esok. Maka C dan I dihitung dari:
+
+```mermaid
+graph TD;
+  A[Produsen]-->B[tax income];
+  A-->C[gaji<br/>pekerja];
+  A-->D[Dividen/bunga<br/>kapitalis];
+  A-->M[bayar<br/>utang bank];
+  A-->E[Retained earning<br/>perusahaan];
+  C-->F[C pekerja];
+  C-->G[Saving pekerja];
+  D-->H[C kapitalis];
+  D-->I[Saving kapitalis];
+  E-->J[I perusahaan];
+  B-->K[I pemerintah];
+  B-->L[C negara];
+```
+
+di mana C total adalah C pekerja + C kapitalis + C negara, dan I total adalah saving pekerja + saving kapitalis + I perusahaan + I pemerintah.
+
+Nah, menurut Pettis, ketimpangan akan mengakibatkan saving rate yang lebih tinggi vis-a-vis consumption rate. Ketika ketimpangan terjadi dari kenaikan retained earnings ketimbang gaji pekerja atau deviden kapitalis, maka otomatis total C akan turun karena reinvested earnings semuanya jadi I perusahaan[^3].
+
+Tentunya kenaikan proporsi pemerintah juga bisa ditingkatkan dengan, misalnya, meningkatkan rasio pajak ataupun meningkatkan peran BUMN. abis gitu semuanya terserah pemerintah apakah mau naikin C (misalnya subsidi atau program simply running admin dgn bayar gaji pegawai) atau naikin I(misalnya bangun kereta cepat atau kota baru. misalnya lho ini).
+
+Mari kita asumsikan tiba-tiba ada **transfer dari pihak biasa ke pihak kaya**, tanpa mempengaruhi PDB (ini asumsi yang kuat tapi kita tinggalin dulu untuk sementara). Pihak kaya ini bisa saja transfer dari orang miskin ke orang kaya, tapi juga bisa aja transfer dari masyarakat ke perusahaan atau ke negara.
 
 Framework dari Pettis cukup sederhana. Dapat diilustrasikan dengan diagram berikut:
 
@@ -65,9 +87,14 @@ graph TD;
   A-->C[Saving rate<br/>tetap];
   B-->D[investasi produktif<br/>naik];
   B-->E[investasi bodong<br/>naik];
-  C-->F[Konsumsi pihak kaya naik<br/>dengan proporsi yang sama];
-  C-->G[Konsumsi pihak biasa naik,<br/>saving rate mereka turun];
+  C-->F[C pihak kaya naik<br/>proporsional];
+  C-->G[C pihak biasa naik,<br/>nabungnya turun];
   C-->H[Employment<br/>turun];
+  D-->I[Sustainable];
+  E-->J[Unustainable];
+  F-->K[Sustainable tapi<br/>mustahil];
+  G-->L[Unustainable];
+  H-->M[Sustainable<br/>tapi buruk];
 ```
 
 Meskipun diagram di atas keliatan kayak dikotomis, tapi sebenenrya bisa aja semua terjadi secaara proporsional.
@@ -93,3 +120,5 @@ Well, at least semoga kenaikan saving rate ini menjadi investasi yang produktif 
 [^1]: Cara saya menggunakan definisi "kelas" sangat bebas nilai dan murni sesuai definisi aja. "kelas" yang saya maksud gini sebenernya engga bener-bener dikotomis. Karena kita, pekerja yang terima gaji, juga dapat memiliki kapital yang menghasilkan.
 
 [^2]: ketimpangan pendapatan lewat kapital (bunga dan deviden) vs pendapatan lewat gaji disebut juga "compositional inequality", dibahas dengan cukup lengkap oleh [Branko Milanovic](https://branko2f7.substack.com/p/new-capitalism-ii-compositional-vs), penulis "Capitalism, Alone".
+
+[^3]: Kenapa jadi I semua? Ya karena semua pendapatan yang tidak dikonsumsi akan jadi I. Tentu saja jika retained earningsnya dibiarin ngendap gitu aja di rekening, akan tetap dihitung sebagai I. Ini simply akunting aja.
