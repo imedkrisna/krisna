@@ -50,7 +50,7 @@ Kekayaan perusahaan agak beda dengan kekayaan masyarakat di kelas kapitalis[^1].
 Kalo mau diilustrasikan, mungkin kurang lebih kayak gini. Pertama, kita anggap 1 bumi sebagai satu sistem ekonomi tertutup (kita belum bisa trade dengan Bulan atau Mars). 
 
 $$
-GDP = C + I
+PDB = C + I
 $$
 
 semua hasil produksi hanya dapat menjadi konsumsi, sementara sisanya dijadikan investasi untuk hari esok. Maka C dan I dihitung dari:
@@ -71,7 +71,7 @@ graph TD;
   B-->L[C negara];
 ```
 
-di mana C total adalah C pekerja + C kapitalis + C negara, dan I total adalah saving pekerja + saving kapitalis + I perusahaan + I pemerintah.
+total PDB dari sisi lapangan usaha dihitung dari nilai tambah produsen, sementara PDB dari sisi konsumsi dihitung dari C + I. C total adalah C pekerja + C kapitalis + C negara, dan I total adalah saving pekerja + saving kapitalis + I perusahaan + I pemerintah. PDB dari 2 sisi tersebut harus sama. BPS menghitung ini tiap kuartal.
 
 Nah, menurut Pettis, ketimpangan akan mengakibatkan saving rate yang lebih tinggi vis-a-vis consumption rate. Ketika ketimpangan terjadi dari kenaikan retained earnings ketimbang gaji pekerja atau deviden kapitalis, maka otomatis total C akan turun karena reinvested earnings semuanya jadi I perusahaan[^3].
 
