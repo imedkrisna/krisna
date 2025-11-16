@@ -1,8 +1,8 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: "bahaya inequality"
-subtitle: ""
+title: "Bahaya Ekonomi dari Ketimpangan"
+subtitle: "Belajar dari buku Michael Pettis 'The Great Rebalancing'"
 summary: ""
 authors: [admin]
 tags: [Ekonomi, konsumsi,makro]
