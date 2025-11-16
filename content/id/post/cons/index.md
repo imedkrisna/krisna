@@ -62,12 +62,12 @@ Framework dari Pettis cukup sederhana. Dapat diilustrasikan dengan diagram berik
 ```mermaid
 graph TD;
   A[Inequality]-->B[Saving rate naik];
-  A-->C[Saving rate\ntetap];
-  B-->D[investasi produktif\nnaik];
-  B-->E[investasi bodong\nnaik];
-  C-->F[Konsumsi pihak kaya naik\ndengan proporsi yang sama];
-  C-->G[Konsumsi pihak biasa naik,\nsaving rate mereka turun];
-  C-->H[Employment\nturun];
+  A-->C[Saving rate<br/>tetap];
+  B-->D[investasi produktif<br/>naik];
+  B-->E[investasi bodong<br/>naik];
+  C-->F[Konsumsi pihak kaya naik<br/>dengan proporsi yang sama];
+  C-->G[Konsumsi pihak biasa naik,<br/>saving rate mereka turun];
+  C-->H[Employment<br/>turun];
 ```
 
 Meskipun diagram di atas keliatan kayak dikotomis, tapi sebenenrya bisa aja semua terjadi secaara proporsional.
