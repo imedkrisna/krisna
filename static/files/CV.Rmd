@@ -20,7 +20,7 @@ Aside
 Contact Info {#contact}
 --------------------------------------------------------------------------------
 
-- <i class="fa fa-envelope"></i> krisna.gupta@outlook.com
+- <i class="fa fa-envelope"></i> imedkrisna(at)pm.me 
 - <i class="fa fa-globe"></i> [imedkrisna.github.io](https:imedkrisna.github.io/)
 - <i class="fa fa-globe"></i> [krisna.or.id](https://krisna.or.id/)
 - For more information, please contact me via email.
