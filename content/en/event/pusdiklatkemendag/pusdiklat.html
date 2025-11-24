@@ -244,11 +244,11 @@ a_{LF}Q_F+a_{LC}Q_C\leq L
 <li>Say home country have this spec:</li>
 </ul>
 <p><span class="math display">\[
-Q_F+4Q_C \leq 200
+4Q_F+Q_C \leq 200
 \]</span></p>
 <ul>
 <li><p>How many labor needed to make 1 cloth? How many 1 food?</p></li>
-<li><p>Max possible food is 200 kg, max possible cloth is 50 metre.</p></li>
+<li><p>Max possible food is 50 ton, max possible cloth is 200 ton.</p></li>
 </ul>
 </section>
 <section id="home-ppf" class="slide level2">
@@ -297,9 +297,9 @@ Q_F+4Q_C \leq 200
 </section>
 <section id="opportunity-cost-1" class="slide level2">
 <h2>opportunity cost</h2>
-<p>For the case of <span class="math inline">\(Q_F+4Q_C \leq 200\)</span>:</p>
-<p>to increase 1 kg of food, we need 1 hour of labor. But 1 hour of labor equals to 0.25 m of cloth (because we need 4 hours of labor to make 1 m of cloth).</p>
-<p>Likewise, to have 1m more of cloth, we need 4 hour of labor, which could produce 4 kg of food instead.</p>
+<p>For the case of <span class="math inline">\(4Q_F+Q_C \leq 200\)</span>:</p>
+<p>to increase 1 ton of cloth, we need 1 hour of labor. But 1 hour of labor equals to 0.25 ton of food (because we need 4 hours of labor to make 1 ton of food).</p>
+<p>Likewise, to have 1 ton more of food, we need 4 hour of labor, which could produce 4 ton of cloth instead.</p>
 <table class="caption-top">
 <thead>
 <tr class="header">
@@ -309,12 +309,12 @@ Q_F+4Q_C \leq 200
 </thead>
 <tbody>
 <tr class="odd">
-<td>1 kg of food</td>
-<td>1/4 m of cloth</td>
+<td>1 ton of cloth</td>
+<td>1/4 ton of food</td>
 </tr>
 <tr class="even">
-<td>1 m of cloth</td>
-<td>4 kg of food</td>
+<td>1 ton of food</td>
+<td>4 ton of cloth</td>
 </tr>
 </tbody>
 </table>
@@ -540,8 +540,84 @@ with trade
 <section id="tweaking-a-bit" class="slide level2">
 <h2>Tweaking a bit</h2>
 <ul>
-<li>Results is consistent if</li>
+<li>In our previous case, comparative advantage (CA) and absolute advantage (AA) goes hand in hand.</li>
 </ul>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>country</th>
+<th>produce</th>
+<th>Cost (AA)</th>
+<th>Cost (CA)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>IDN</td>
+<td>cloth</td>
+<td>1 labor</td>
+<td>4 food</td>
+</tr>
+<tr class="even">
+<td>IDN</td>
+<td>food</td>
+<td>4 labor</td>
+<td>1/4 cloth</td>
+</tr>
+<tr class="odd">
+<td>USA</td>
+<td>cloth</td>
+<td>2 labor</td>
+<td>2 food</td>
+</tr>
+<tr class="even">
+<td>USA</td>
+<td>food</td>
+<td>2 labor</td>
+<td>2 food</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>IDN have both absolute advantage (less labor cost) and comparative advantage (less food cost) on textiles.</li>
+</ul>
+</section>
+<section id="tweaking" class="slide level2">
+<h2>Tweaking</h2>
+<p>Suppose we switch IDN to be worse at both by changing its technology to:</p>
+<p><span class="math display">\[
+4Q_F+3Q_C\leq 200
+\]</span></p>
+<p>IDN have both <span class="math inline">\(a_{LF}\)</span> and <span class="math inline">\(a_{LC}\)</span> lower than the USA. Meaning, USA have absolute advantage on both goods! would they stop trading?</p>
+</section>
+<section id="aa-vs-ca" class="slide level2 m">
+<h2>AA vs CA</h2>
+<p><span class="math display">\[
+4Q_F+3Q_C \leq 200
+\]</span></p>
+<p>making 1 textiles requires 3 hr, which can be used to make 3/4 food. Making 1 food requires 4 hr, which can be used to make 4/3 food.</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Produce</th>
+<th>US opportunity cost</th>
+<th>IDN opportunity cost</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1 ton of textiles</td>
+<td>1 ton of soybean</td>
+<td>3/4 ton of soybean</td>
+</tr>
+<tr class="even">
+<td>1 ton of soybean</td>
+<td>1 ton of textiles</td>
+<td>4/3 ton of soybean</td>
+</tr>
+</tbody>
+</table>
+<p>IDN still have lower opportunity cost to make textiles than USA <span class="math inline">\((3/4 &lt; 1)\)</span>, so USA would still import clothing from IDN.</p>
 </section>
 <section id="comparative-advantage-1" class="slide level2 m">
 <h2>Comparative advantage</h2>
