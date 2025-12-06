@@ -5,8 +5,8 @@ headless = true  # This file represents a page section.
 active = true  # Activate this widget? true/false
 weight = 40  # Order that this section will appear.
 
-title = "Teaching Experience"
-subtitle = "and some other work experiences"
+title = "Pengalaman mengajar"
+subtitle = "dan non-akademis"
 
 # Date format for experience
 #   Refer to https://sourcethemes.com/academic/docs/customization/#date-format
@@ -17,9 +17,10 @@ date_format = "Jan 2006"
 #   Required fields are `title`, `company`, and `date_start`.
 #   Leave `date_end` empty if it's your current employer.
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
+
 [[experience]]
-  title = "Advisor"
-  company = "National Economic Council, Republic of Indonesia"
+  title = "Tenaga Ahli Madya"
+  company = "Dewan Ekonomi Nasional"
   company_url = ""
   location = "Jakarta"
   date_start = "2025-08-01"
@@ -27,13 +28,22 @@ date_format = "Jan 2006"
   description = """Public policy advisor in economic development, focusing on trade and investment policies. Engaged in policy analysis and recommendations to support Indonesia's economic growth."""
 
 [[experience]]
-  title = "Lecturer"
+  title = "Dosen"
+  company = "Universitas Indonesia"
+  company_url = "https://feb.ui.ac.id"
+  location = "Jakarta"
+  date_start = "2022-07-01"
+  date_end = ""
+  description = """International Economics"""
+
+[[experience]]
+  title = "Dosen"
   company = "Politeknik APP Jakarta"
   company_url = "https://politekapp.ac.id"
   location = "Jakarta"
   date_start = "2022-07-01"
-  date_end = ""
-  description = """business statistics."""
+  date_end = "2025-07-31"
+  description = """Statistika"""
 
 [[experience]]
   title = "Tutor"
@@ -41,31 +51,31 @@ date_format = "Jan 2006"
   company_url = "https://www.cbe.anu.edu.au/"
   location = "Canberra"
   date_start = "2017-08-01"
-  date_end = ""
+  date_end = "2012-02-27"
   description = """
-  Courses I tutored:
+  Mata kuliah:
   
-  * POLS3025 Contemporary Political Analysis, using Stata in political analyses (2017)
+  * POLS3025 Contemporary Political Analysis, menggunakan Stata untuk analisis politik (2017)
   * ECON3101 Microeconomics 3 (2018-2020)
   * ECON2102 Macroeconomics 2 (2019)
   * EMET3008 Applied Macro and Financial Econometrics (2020)
   """
 
 [[experience]]
-  title = "Lecturer"
+  title = "Dosen"
   company = "Politeknik APP Jakarta"
-  company_url = ""
+  company_url = "https://politekapp.ac.id"
   location = "Jakarta"
   date_start = "2016-01-01"
   date_end = "2016-12-31"
-  description = """business statistics."""
+  description = """Statistika"""
 
 [[experience]]
-  title = "Junior Staff"
-  company = "Ministry of Industry, Republic of Indonesia"
+  title = "Fungsional umum"
+  company = "Kementerian Perindustrian"
   company_url = "https://kemenperin.go.id/"
   location = "Jakarta"
   date_start = "2010-03-01"
   date_end = "2015-08-31"
-  description = """Administering planning and budgetting documents"""
+  description = """Bagian perencanaan, Pusdiklat Industri"""
 +++

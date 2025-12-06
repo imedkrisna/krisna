@@ -29,6 +29,15 @@ date_format = "Jan 2006"
 
 [[experience]]
   title = "Dosen"
+  company = "Universitas Indonesia"
+  company_url = "https://feb.ui.ac.id"
+  location = "Jakarta"
+  date_start = "2022-07-01"
+  date_end = ""
+  description = """International Economics"""
+
+[[experience]]
+  title = "Dosen"
   company = "Politeknik APP Jakarta"
   company_url = "https://politekapp.ac.id"
   location = "Jakarta"
