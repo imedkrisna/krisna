@@ -51,7 +51,7 @@ date_format = "Jan 2006"
   company_url = "https://www.cbe.anu.edu.au/"
   location = "Canberra"
   date_start = "2017-08-01"
-  date_end = "2012-02-27"
+  date_end = "2022-02-27"
   description = """
   Mata kuliah:
   
