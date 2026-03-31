@@ -10,11 +10,13 @@ menu:
 summary: Menggunakan Zotero untuk membuat daftar pustaka
 title: Zotero
 toc: true
-type: book
 weight: 1
 editable: false
 commentable: false
 ---
+
+{{% list_children %}}
+
 
 ## Tentang pelatihan ini
 Pelatihan ini mengajarkan kepada pemula tentang bagaimana menggunakan Zotero, sebuah aplikasi untuk mempermudah menulis sitasi. Dengan aplikasi ini, anda dapat membuat sebuah koleksi publikasi ilmiah yang anda gunakan ketika menulis. Anda dapat membuat sitasi di dalam teks (_in-text citation_) dengan mudah dan secara otomatis. Anda juga dapat membuat sebuah daftar pustaka dengan cepat dalam berbagai format yang baku seperti APA, Chicago, dan lain-lain.

@@ -3,8 +3,10 @@ title: Introduction to Economics
 linkTitle: Introduction
 summary: An introduction to economics for non-economics programs
 date: '2021-01-24'
-type: book
 ---
+
+{{% list_children %}}
+
 
 {{% callout note %}} This page is still under development. Expect weekly changes. {{% /callout %}}
 
@@ -34,6 +36,6 @@ please let me know thru {{< icon name="envelope" pack="fas" >}}<a href="mailto:k
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.
 
-[^1]: Krugman, P. R., & Wells, R. (2016). [Essentials of economics (Fourth ed.)](](https://www.periplus.com/p/9781464186653/essentials-of-economics?filter_name=essentials%20of%20economics)). New York, NY: Worth Publishers, Macmillan Learning.
+[^1]: Krugman, P. R., & Wells, R. (2016). [Essentials of economics (Fourth ed.)](https://www.periplus.com/p/9781464186653/essentials-of-economics?filter_name=essentials%20of%20economics). New York, NY: Worth Publishers, Macmillan Learning.
 
 [^2]: McAfee, P. & Lewis, T. (2009) [Introduction to Economic Analysis](https://open.umn.edu/opentextbooks/textbooks/47). Saylor Foundation.

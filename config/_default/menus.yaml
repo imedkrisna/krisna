@@ -1,38 +1,21 @@
-# Navigation Links
-#   To link a homepage widget, specify the URL as a hash `#` followed by the filename of the
-#     desired widget in your `content/home/` folder.
-#   The weight parameter defines the order that the links will appear in.
+# Navigation Links (English)
 
 main:
   - name: Home
-    url: '#about'
+    url: /
     weight: 10
   - name: Blogs
-    url: '#posts'
+    url: /post/
     weight: 20
   - name: Publications
-    url: '#featured'
+    url: /publication/
     weight: 30
-  - name: Talks
-    url: '#events'
+  - name: Events
+    url: /event/
     weight: 40
   - name: Courses
-    url: '/courses'
+    url: /courses/
     weight: 50
-  - name: Contact
-    url: '#contact'
-    weight: 60
-
-# Link to a PDF of your resume/CV from the menu.
-# To enable, copy your resume/CV to `static/uploads/resume.pdf` and uncomment the lines below.
   - name: CV
-    url: '#CV'
-    weight: 70
-
-  - name: "Playlist"
-    url: "#music"
-    weight: 90
-  
-  - name: "🔎"
-    url: "/search"
-    weight: 100
+    url: /cv/
+    weight: 60

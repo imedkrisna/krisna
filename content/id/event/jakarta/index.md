@@ -48,7 +48,7 @@ image:
 
 
 # Optional filename of your slides within your event's folder or a URL.
-url_slides: "jakarta.html"
+url_slides: "/slides/id/event/jakarta/jakarta.html"
 
 url_code:
 url_pdf: 

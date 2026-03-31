@@ -8,7 +8,6 @@ menu:
     weight: 1
 title: Menjalankan Python di Jupyter Notebook
 toc: true
-type: book
 weight: 1
 editable: false
 commentable: false

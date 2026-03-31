@@ -3,10 +3,12 @@ title: Lalu Lintas Pembayaran Dalam dan Luar Negeri
 linkTitle: Introduction
 summary: Lalu lintas pembayaran dalam dan luar negeri diajarkan di semester 3 di Program Diploma 3 Politeknik APP Jakarta
 date: '2021-01-24'
-type: book
 commentable: false
 
 ---
+
+{{% list_children %}}
+
 
 {{% callout note %}} This page is still under development. Expect weekly changes. {{% /callout %}}
 

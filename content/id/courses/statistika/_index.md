@@ -10,11 +10,13 @@ menu:
 summary: Matematika dan Statistika
 title: Matematika dan Statistika
 toc: true
-type: book
 weight: 1
 editable: false
 commentable: false
 ---
+
+{{% list_children %}}
+
 
 ## Tentang mata kuliah ini
 

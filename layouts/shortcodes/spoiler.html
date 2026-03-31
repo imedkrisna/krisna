@@ -1,0 +1,5 @@
+{{- $title := .Get "text" | default "Spoiler" -}}
+<details>
+<summary>{{ $title }}</summary>
+{{ .Inner }}
+</details>

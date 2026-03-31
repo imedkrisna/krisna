@@ -6,7 +6,6 @@ categories: [python,r]
 tags: [python,r]
 author: admin
 date: '2020-05-31'
-type: book
 weight: 24
 ---
 

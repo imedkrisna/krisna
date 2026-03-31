@@ -3,7 +3,6 @@ title: Menjalankan Stata di rmarkdown dan jupyter notebook
 linktitle: bye do file
 summary: Saatnya meninggalkan do file karena Stata bisa dirun di RStudio dan di Jupyter
 date: '2021-01-01'
-type: book
 weight: 10
 ---
 

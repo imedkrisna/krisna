@@ -47,7 +47,7 @@ image:
 
 
 # Optional filename of your slides within your event's folder or a URL.
-url_slides: "investasi.html"
+url_slides: "/slides/id/event/freedom/investasi.html"
 
 url_code:
 url_pdf:  "imed_economic_freedom.pdf"

@@ -2,7 +2,6 @@
 title: Perkembangan perdagangan dan investasi di Indonesia
 linktitle: perkembangan
 date: '2021-01-01'
-type: book
 weight: 20
 ---
 

@@ -17,7 +17,7 @@ links:
 publication: "In A. P. Sunjaya, Y. B. Wang, R. Sagita, & D. Sugiharti (Eds.), Indonesia Post-Pandemic Outlook: Rethinking Health and Economics Post-COVID-19 Penerbit BRIN. https://doi.org/https://doi.org/10.55981/brin.537.c526"
 publication_short: "In A. P. Sunjaya, Y. B. Wang, R. Sagita, & D. Sugiharti (Eds.), Indonesia Post-Pandemic Outlook: Rethinking Health and Economics Post-COVID-19 Penerbit BRIN. https://doi.org/https://doi.org/10.55981/brin.537.c526"
 publication_types:
-- "6"
+- "chapter"
 publishDate: "2020-04-15T00:00:00Z"
 summary: ""
 tags:

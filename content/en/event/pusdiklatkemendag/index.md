@@ -47,7 +47,7 @@ image:
 
 
 # Optional filename of your slides within your event's folder or a URL.
-url_slides: "pusdiklat.html"
+url_slides: "/slides/en/event/pusdiklatkemendag/pusdiklat.html"
 
 url_code:
 url_pdf: 

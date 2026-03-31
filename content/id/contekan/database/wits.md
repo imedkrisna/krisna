@@ -6,7 +6,6 @@ categories: [perdagangan]
 tags: [perdagangan]
 author: admin
 date: '2020-05-31'
-type: book
 weight: 23
 ---
 

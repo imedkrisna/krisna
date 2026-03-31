@@ -47,7 +47,7 @@ image:
 
 
 # Optional filename of your slides within your event's folder or a URL.
-url_slides: "bpkp.html"
+url_slides: "/slides/id/event/bpkp/bpkp.html"
 
 url_code:
 url_pdf: 

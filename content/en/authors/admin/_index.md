@@ -2,85 +2,149 @@
 # Display name
 title: Krisna Gupta
 
-# Username (this should match the folder name)
-authors:
-- admin
+# Full name (for SEO)
+first_name: Krisna
+last_name: Gupta
 
 # Is this the primary user of the site?
 superuser: true
 
-# Role/position
+# Highlight the author in author lists?
+highlight_name: true
+
+# Role/position/tagline
 role: Lecturer
 
-# Organizations/Affiliations
+# Organizations/Affiliations to display in Biography blox
 organizations:
-- name: National Economic Council, Republic of Indonesia
-- name: Politeknik APP Jakarta
-  url: "https://poltekapp.ac.id/"
-- name: Center for Indonesian Policy Studies
-  url: "https://www.cips-indonesia.org/team/dr.-krisna-gupta?lang=id"
+  - name: National Economic Council, Republic of Indonesia
+  - name: Politeknik APP Jakarta
+    url: "https://poltekapp.ac.id/"
+  - name: Center for Indonesian Policy Studies
+    url: "https://www.cips-indonesia.org/team/dr.-krisna-gupta?lang=id"
 
-# Short bio (displayed in user profile at end of posts)
-bio: Research mainly on international trade and investment policy and its impact on firms. Indonesia in particular is my main geographical focus. I also write at [East Asia Forum](https://eastasiaforum.org/author/krisna-gupta/) and [The Conversation Indonesia](https://theconversation.com/profiles/krisna-gupta-1133995)
+# Social network links
+profiles:
+  - icon: at-symbol
+    url: 'mailto:imed@krisna.or.id'
+    label: E-mail Me
+  - icon: brands/x
+    url: https://twitter.com/imedkrisna
+  - icon: academicons/google-scholar
+    url: https://scholar.google.com/citations?user=FtBxfAcAAAAJ&hl=en
+  - icon: academicons/orcid
+    url: https://orcid.org/0000-0001-8695-0514
+  - icon: academicons/researchgate
+    url: https://www.researchgate.net/profile/Krisna_Gupta
+  - icon: brands/github
+    url: https://github.com/imedkrisna
 
 interests:
-- International Trade
-- Manufacturing growth
-- CGE Modeling
+  - International Trade
+  - Manufacturing growth
+  - CGE Modeling
 
 education:
-  courses:
-  - course: Ph.D. in Economics
+  - area: Ph.D. in Economics
     institution: Australian National University
-    year: 2022
-  - course: M.S.E. in Economics
+    date_start: 2017-01-01
+    date_end: 2022-06-30
+  - area: M.S.E. in Economics
     institution: Universitas Indonesia
-    year: 2014
-  - course: M.Sc. in Economics
+    date_start: 2012-08-01
+    date_end: 2014-07-31
+  - area: M.Sc. in Economics
     institution: VU Amsterdam
-    year: 2014
+    date_start: 2013-08-01
+    date_end: 2014-06-30
 
-# Social/Academic Networking
-# For available icons, see: https://sourcethemes.com/academic/docs/page-builder/#icons
-#   For an email link, use "fas" icon pack, "envelope" icon, and a link in the
-#   form "mailto:your-email@example.com" or "#contact" for contact widget.
-social:
-- icon: envelope
-  icon_pack: fas
-  link: '#contact'  # For a direct email link, use "mailto:test@example.org".
-- icon: twitter
-  icon_pack: fab
-  link: https://twitter.com/imedkrisna
-- icon: google-scholar
-  icon_pack: ai
-  link: https://scholar.google.com/citations?user=FtBxfAcAAAAJ&hl=en
-- icon: orcid
-  icon_pack: ai
-  link: https://orcid.org/0000-0001-8695-0514
-- icon: researchgate
-  icon_pack: ai
-  link: https://www.researchgate.net/profile/Krisna_Gupta
-- icon: github
-  icon_pack: fab
-  link: https://github.com/imedkrisna
-# Link to a PDF of your resume/CV from the About widget.
-# To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
-- icon: cv
-  icon_pack: ai
-  link: files/cv.pdf
+work:
+  - position: Tenaga Ahli Madya
+    company_name: Dewan Ekonomi Nasional
+    company_url: ''
+    company_logo: ''
+    date_start: 2025-08-01
+    date_end: ''
+    summary: Public policy advisor in economic development, focusing on trade and investment policies.
+  - position: Dosen
+    company_name: Universitas Indonesia
+    company_url: 'https://feb.ui.ac.id'
+    company_logo: ''
+    date_start: 2022-07-01
+    date_end: ''
+    summary: International Economics
+  - position: Dosen
+    company_name: Politeknik APP Jakarta
+    company_url: 'https://politekapp.ac.id'
+    company_logo: ''
+    date_start: 2022-07-01
+    date_end: 2025-07-31
+    summary: Statistika
+  - position: Tutor
+    company_name: Australian National University
+    company_url: 'https://www.cbe.anu.edu.au/'
+    company_logo: ''
+    date_start: 2017-08-01
+    date_end: 2022-02-27
+    summary: |
+      Courses: POLS3025 Contemporary Political Analysis (2017), ECON3101 Microeconomics 3 (2018-2020), ECON2102 Macroeconomics 2 (2019), EMET3008 Applied Macro and Financial Econometrics (2020)
+  - position: Dosen
+    company_name: Politeknik APP Jakarta
+    company_url: 'https://politekapp.ac.id'
+    company_logo: ''
+    date_start: 2016-01-01
+    date_end: 2016-12-31
+    summary: Statistika
+  - position: Fungsional umum
+    company_name: Kementerian Perindustrian
+    company_url: 'https://kemenperin.go.id/'
+    company_logo: ''
+    date_start: 2010-03-01
+    date_end: 2015-08-31
+    summary: Bagian perencanaan, Pusdiklat Industri
 
-# Enter email to display Gravatar (if Gravatar enabled in Config)
-email: ""
+skills:
+  - name: Technical Skills
+    items:
+      - name: R
+        description: ''
+        percent: 80
+        icon: devicon/r
+      - name: Stata
+        description: ''
+        percent: 90
+        icon: chart-bar
+      - name: Singing
+        description: ''
+        percent: 100
+        icon: musical-note
 
-# Organizational groups that you belong to (for People widget)
-#   Set this to `[]` or comment out if you are not using People widget.
-user_groups:
-- Researchers
-- Visitors
+languages:
+  - name: Indonesian
+    percent: 100
+  - name: English
+    percent: 95
+
+awards:
+  - title: VU Fellowship Programme
+    url: https://vuweb.vu.nl/en/more-about/scholarships-for-international-masters-students
+    date: '2013-08-01'
+    awarder: VU University Amsterdam
+    summary: A scholarship from VU for my master degree's tuition fee. I received this privilege along with other international masters students from different parts of the world!
+  - title: Australia Awards Indonesia
+    url: https://www.australiaawardsindonesia.org/
+    date: '2016-09-01'
+    awarder: Department of Foreign Affairs and Trade, Australian Government
+    summary: A scholarship to pursue my PhD. Australia Awards Indonesia grants around 300 scholarships for Indonesians each year, around 15% are PhD scholars.
+  - title: Hadi Soesastro Prize
+    url: https://www.australiaawardsindonesia.org/content/208/12/hadi-soesastro-prize
+    date: '2019-02-01'
+    awarder: Department of Foreign Affairs and Trade, Australian Government
+    summary: A grant given to 2 Australia Awards Indonesia PhD scholars per year intended to supplement their research on Indonesian development.
 ---
 
- My name is Krisna, some call me Imed. I am an advisor at the Indonesian National Economic Council. My research is about trade and investment policy and how it affects Indonesian firms. I use some structured equation such as GTAP model, but also do some empirics like gravity models.
+My name is Krisna, some call me Imed. I am an advisor at the Indonesian National Economic Council. My research is about trade and investment policy and how it affects Indonesian firms. I use some structured equation such as GTAP model, but also do some empirics like gravity models.
 
- I lectures at Universitas Indonesia. Additionally, I assume a senior fellow position at Center for Indonesian Policy Studies.
- 
- I contributed to several projects with Bank Indonesia, Bappenas, ADB, Prospera, and ERIA, among others. Occassional oped writer, typically at Kompas, Jakarta Post and East Asia Forum. Please see CV or contact me for more information.
+I lecture at Universitas Indonesia. Additionally, I assume a senior fellow position at Center for Indonesian Policy Studies.
+
+I contributed to several projects with Bank Indonesia, Bappenas, ADB, Prospera, and ERIA, among others. Occasional oped writer, typically at Kompas, Jakarta Post and East Asia Forum. Please see CV or contact me for more information.

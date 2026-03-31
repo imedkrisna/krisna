@@ -3,10 +3,12 @@ title: Trade and Industrial Economic Development Analysis
 linkTitle: Introduction
 summary: Analisis Ekonomi Perdagangan dan Industri
 date: '2021-01-24'
-type: book
 commentable: false
 draft: false
 ---
+
+{{% list_children %}}
+
 
 For the complete syllabus, [click here](https://1drv.ms/b/s!AjelszXKKcmsioVKZRsXoQFn29ibWA?e=gR7WFW)
 

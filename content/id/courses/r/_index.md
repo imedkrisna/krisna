@@ -3,9 +3,11 @@ title: Menggunakan r
 linkTitle: Introduction
 summary: Menggunakan r
 date: '2021-01-24'
-type: book
 draft: true
 ---
+
+{{% list_children %}}
+
 
 Di sini kita mencoba menggunakan r
 

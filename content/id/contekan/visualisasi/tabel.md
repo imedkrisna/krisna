@@ -3,7 +3,6 @@ title: Contekan Visualisasi
 linktitle: Tabel
 summary: Bagaimana membuat tabel
 date: '2021-01-01'
-type: book
 weight: 30
 ---
 

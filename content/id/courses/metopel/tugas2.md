@@ -10,7 +10,6 @@ menu:
 summary: Tugas
 title: Tugas
 toc: true
-type: book
 weight: 40
 editable: false
 commentable: false
