@@ -1,0 +1,74 @@
+---
+# Documentation: https://wowchemy.com/docs/managing-content/
+
+title: "Behind the Packaging: Understanding Global Supply Chains in Indonesia's Food Industry"
+event: "Dari lokal jadi global: mendorong kemajuan industri makanan dan minuman Indonesia melalui keterlibatan aktif di rantai pasok global"
+event_url: 
+location: Online
+address:
+  street:
+  city:
+  region:
+  postcode:
+  country:
+summary: This event aimed to share knowledge about global supply chains and their role in growing Indonesia's food and beverage industry.
+abstract: This event aimed to share knowledge about global supply chains and their role in growing Indonesia's food and beverage industry.
+
+# Talk start and end times.
+#   End time can optionally be hidden by prefixing the line with `#`.
+date: 2022-09-16T08:47:06+07:00
+date_end: 2022-09-16T08:47:06+07:00
+all_day: false
+
+# Schedule page publish date (NOT event date).
+publishDate: 2022-09-16T08:47:06+07:00
+
+authors: [admin]
+tags: []
+
+# Is this a featured event? (true/false)
+featured: false
+
+# Featured image
+# To use, add an image named `featured.jpg/png` to your page's folder. 
+# Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
+image:
+  caption: ""
+  focal_point: ""
+  preview_only: false
+
+# Custom links (optional).
+#   Uncomment and edit lines below to show custom links.
+# links:
+# - name: Follow
+#   url: https://twitter.com
+#   icon_pack: fab
+#   icon: twitter
+
+# Optional filename of your slides within your event's folder or a URL.
+url_slides: https://www.krisna.or.id/slides/dibalikbungkus
+
+url_code: https://dibalikbungkus.cips-indonesia.org/
+url_pdf: https://cutt.ly/cips-mk51
+url_video: https://youtu.be/--ujjzUgfGk
+
+# Markdown Slides (optional).
+#   Associate this event with Markdown slides.
+#   Simply enter your slide deck's filename without extension.
+#   E.g. `slides = "example-slides"` references `content/slides/example-slides.md`.
+#   Otherwise, set `slides = ""`.
+slides: ""
+
+# Projects (optional).
+#   Associate this post with one or more of your projects.
+#   Simply enter your project's folder or file name without extension.
+#   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
+#   Otherwise, set `projects = []`.
+projects: []
+---
+
+A very engaging event. Most participants were students, though some were from government and the private sector. Don't forget to visit the Di Balik Bungkus website [here](https://dibalikbungkus.cips-indonesia.org/).
+
+#### Guest Lecture Video
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/--ujjzUgfGk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

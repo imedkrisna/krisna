@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='svglite' width='412.80pt' height='309.60pt' viewBox='0 0 412.80 309.60'>
+<defs>
+  <style type='text/css'><![CDATA[
+    .svglite line, .svglite polyline, .svglite polygon, .svglite path, .svglite rect, .svglite circle {
+      fill: none;
+      stroke: #000000;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10.00;
+    }
+    .svglite text {
+      white-space: pre;
+    }
+  ]]></style>
+</defs>
+<rect width='100%' height='100%' style='stroke: none; fill: #FFFFFF;'/>
+<defs>
+  <clipPath id='cpMC4wMHw0MTIuODB8MC4wMHwzMDkuNjA='>
+    <rect x='0.00' y='0.00' width='412.80' height='309.60' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpMC4wMHw0MTIuODB8MC4wMHwzMDkuNjA=)'>
+<rect x='0.000000000000032' y='0.00' width='412.80' height='309.60' style='stroke-width: 1.07; stroke: #FFFFFF; fill: #FFFFFF;' />
+</g>
+<defs>
+  <clipPath id='cpMzkuMDF8MzE2LjE1fDIzLjE4fDI3OC4xMA=='>
+    <rect x='39.01' y='23.18' width='277.15' height='254.93' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpMzkuMDF8MzE2LjE1fDIzLjE4fDI3OC4xMA==)'>
+<rect x='39.01' y='23.18' width='277.15' height='254.93' style='stroke-width: 1.07; stroke: none; fill: #FFFFFF;' />
+<polyline points='51.60,244.23 114.59,242.18 177.58,243.90 240.57,245.18 303.56,245.64 ' style='stroke-width: 2.35; stroke: #F8766D; stroke-linecap: butt;' />
+<polyline points='51.60,116.46 114.59,109.25 177.58,80.81 240.57,34.76 303.56,100.52 ' style='stroke-width: 2.35; stroke: #B79F00; stroke-linecap: butt;' />
+<polyline points='51.60,181.61 114.59,186.97 177.58,166.60 240.57,186.08 303.56,179.41 ' style='stroke-width: 2.35; stroke: #00BA38; stroke-linecap: butt;' />
+<polyline points='51.60,218.92 114.59,222.48 177.58,219.63 240.57,236.70 303.56,188.02 ' style='stroke-width: 2.35; stroke: #00BFC4; stroke-linecap: butt;' />
+<polyline points='51.60,222.55 114.59,206.13 177.58,234.25 240.57,266.52 303.56,209.58 ' style='stroke-width: 2.35; stroke: #619CFF; stroke-linecap: butt;' />
+<polyline points='51.60,203.08 114.59,198.39 177.58,196.31 240.57,197.38 303.56,197.85 ' style='stroke-width: 2.35; stroke: #F564E3; stroke-linecap: butt;' />
+</g>
+<g clip-path='url(#cpMC4wMHw0MTIuODB8MC4wMHwzMDkuNjA=)'>
+<polyline points='39.01,278.10 39.01,23.18 ' style='stroke-width: 1.07; stroke-linecap: butt;' />
+<text x='34.07' y='253.44' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='4.90px' lengthAdjust='spacingAndGlyphs'>0</text>
+<text x='34.07' y='186.47' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='15.66px' lengthAdjust='spacingAndGlyphs'>20B</text>
+<text x='34.07' y='119.50' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='15.66px' lengthAdjust='spacingAndGlyphs'>40B</text>
+<text x='34.07' y='52.52' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='15.66px' lengthAdjust='spacingAndGlyphs'>60B</text>
+<polyline points='36.27,250.29 39.01,250.29 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='36.27,183.32 39.01,183.32 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='36.27,116.35 39.01,116.35 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='36.27,49.37 39.01,49.37 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='39.01,278.10 316.15,278.10 ' style='stroke-width: 1.07; stroke-linecap: butt;' />
+<polyline points='51.60,280.84 51.60,278.10 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='114.59,280.84 114.59,278.10 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='177.58,280.84 177.58,278.10 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='240.57,280.84 240.57,278.10 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='303.56,280.84 303.56,278.10 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<text x='51.60' y='289.34' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='19.58px' lengthAdjust='spacingAndGlyphs'>2017</text>
+<text x='114.59' y='289.34' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='19.58px' lengthAdjust='spacingAndGlyphs'>2018</text>
+<text x='177.58' y='289.34' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='19.58px' lengthAdjust='spacingAndGlyphs'>2019</text>
+<text x='240.57' y='289.34' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='19.58px' lengthAdjust='spacingAndGlyphs'>2020</text>
+<text x='303.56' y='289.34' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='19.58px' lengthAdjust='spacingAndGlyphs'>2021</text>
+<text x='177.58' y='301.80' text-anchor='middle' style='font-size: 11.00px; font-family: "Arial";' textLength='21.41px' lengthAdjust='spacingAndGlyphs'>year</text>
+<text transform='translate(13.36,150.64) rotate(-90)' text-anchor='middle' style='font-size: 11.00px; font-family: "Arial";' textLength='110.67px' lengthAdjust='spacingAndGlyphs'>Total FDI, current USD</text>
+<rect x='327.11' y='85.48' width='80.21' height='130.31' style='stroke-width: 1.07; stroke: none; fill: #FFFFFF;' />
+<text x='332.59' y='100.00' style='font-size: 11.00px; font-family: "Arial";' textLength='36.09px' lengthAdjust='spacingAndGlyphs'>country</text>
+<line x1='334.32' y1='115.28' x2='348.14' y2='115.28' style='stroke-width: 2.35; stroke: #F8766D; stroke-linecap: butt;' />
+<line x1='334.32' y1='132.56' x2='348.14' y2='132.56' style='stroke-width: 2.35; stroke: #B79F00; stroke-linecap: butt;' />
+<line x1='334.32' y1='149.84' x2='348.14' y2='149.84' style='stroke-width: 2.35; stroke: #00BA38; stroke-linecap: butt;' />
+<line x1='334.32' y1='167.12' x2='348.14' y2='167.12' style='stroke-width: 2.35; stroke: #00BFC4; stroke-linecap: butt;' />
+<line x1='334.32' y1='184.40' x2='348.14' y2='184.40' style='stroke-width: 2.35; stroke: #619CFF; stroke-linecap: butt;' />
+<line x1='334.32' y1='201.68' x2='348.14' y2='201.68' style='stroke-width: 2.35; stroke: #F564E3; stroke-linecap: butt;' />
+<text x='355.35' y='118.43' style='font-size: 8.80px; font-family: "Arial";' textLength='46.49px' lengthAdjust='spacingAndGlyphs'>Bangladesh</text>
+<text x='355.35' y='135.71' style='font-size: 8.80px; font-family: "Arial";' textLength='19.09px' lengthAdjust='spacingAndGlyphs'>India</text>
+<text x='355.35' y='152.99' style='font-size: 8.80px; font-family: "Arial";' textLength='38.17px' lengthAdjust='spacingAndGlyphs'>Indonesia</text>
+<text x='355.35' y='170.27' style='font-size: 8.80px; font-family: "Arial";' textLength='34.72px' lengthAdjust='spacingAndGlyphs'>Malaysia</text>
+<text x='355.35' y='187.55' style='font-size: 8.80px; font-family: "Arial";' textLength='33.75px' lengthAdjust='spacingAndGlyphs'>Thailand</text>
+<text x='355.35' y='204.83' style='font-size: 8.80px; font-family: "Arial";' textLength='32.13px' lengthAdjust='spacingAndGlyphs'>Vietnam</text>
+<text x='39.01' y='14.93' style='font-size: 13.20px; font-family: "Arial";' textLength='249.00px' lengthAdjust='spacingAndGlyphs'>Total FDI, BoP, current USD (minus China)</text>
+</g>
+</svg>
