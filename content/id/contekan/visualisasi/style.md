@@ -3,7 +3,6 @@ title: Contekan Visualisasi
 linktitle: Styling / theming grafik
 summary: Beberapa contekan untuk styling/theming/format grafik.
 date: '2021-01-01'
-type: book
 weight: 20
 ---
 

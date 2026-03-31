@@ -10,7 +10,6 @@ menu:
 summary: slides
 title: slides
 toc: true
-type: book
 weight: 10
 editable: false
 commentable: false

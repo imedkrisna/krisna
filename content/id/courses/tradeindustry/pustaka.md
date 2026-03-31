@@ -2,7 +2,6 @@
 title: Daftar Pustaka
 linktitle: Daftar Pustaka
 date: '2021-01-01'
-type: book
 weight: 70
 ---
 

@@ -10,7 +10,6 @@ menu:
 summary: cara menginstall R
 title: install R
 toc: true
-type: book
 weight: 20
 editable: false
 commentable: false

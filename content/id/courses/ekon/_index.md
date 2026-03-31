@@ -3,9 +3,11 @@ title: Ilmu Ekonomi
 linkTitle: Pendahuluan
 summary: Sebuah pengenalan untuk ilmu ekonomi
 date: '2021-01-24'
-type: book
 commentable: false
 ---
+
+{{% list_children %}}
+
 
 ## Tentang mata kuliah ini
 Ilmu ekonomi pada dasarnya adalah ilmu yang mempelajari bagaimana manusia membuat keputusan di tengah keterbatasan (_scarcity_). Memahami bahwa kita selalu memiliki sumber daya yang terbatas adalah salah satu prinsip utama ilmu ekonomi. Mata kuliah ini mencakup prinspi-prinsip dasar ilmu ekonomi baik dari sisi mikro maupun makro. Sisi mikro mempelajari prinsip dasar seperti biaya peluang (_opportunity cost_), hukum pasar dan kegagalan pasar serta dampak dari intervensi pemerintah. Di sisi makro kita belajar beberapa indikator-indikator seperti PDB, inflasi, dan nilai tukar.
@@ -32,6 +34,6 @@ Jika ada pertanyaan dapat disampaikan ke {{< icon name="envelope" pack="fas" >}}
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.
 
 
-[^1]: Krugman, P. R., & Wells, R. (2016). [Essentials of economics (Fourth ed.)](](https://www.periplus.com/p/9781464186653/essentials-of-economics?filter_name=essentials%20of%20economics)). New York, NY: Worth Publishers, Macmillan Learning.
+[^1]: Krugman, P. R., & Wells, R. (2016). [Essentials of economics (Fourth ed.)](https://www.periplus.com/p/9781464186653/essentials-of-economics?filter_name=essentials%20of%20economics). New York, NY: Worth Publishers, Macmillan Learning.
 
 [^2]: McAfee, P. & Lewis, T. (2009) [Introduction to Economic Analysis](https://open.umn.edu/opentextbooks/textbooks/47). Saylor Foundation.

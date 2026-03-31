@@ -47,7 +47,7 @@ image:
 
 
 # Optional filename of your slides within your event's folder or a URL.
-url_slides: "probability.html"
+url_slides: "/slides/id/event/probability/probability.html"
 
 url_code:
 url_pdf: 

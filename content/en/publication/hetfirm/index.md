@@ -13,7 +13,7 @@ publishDate: 2020-12-04T21:12:42+11:00
 # Legend: 0 = Uncategorized; 1 = Conference paper; 2 = Journal article;
 # 3 = Preprint / Working Paper; 4 = Report; 5 = Book; 6 = Book section;
 # 7 = Thesis; 8 = Patent; 9=opeds
-publication_types: ["2"]
+publication_types: ["article-journal"]
 
 # Publication name and optional abbreviated publication name.
 publication: ""
@@ -41,7 +41,7 @@ url_code:
 url_dataset:
 url_poster:
 url_project:
-url_slides: "https://krisna.netlify.app/event/paper2/index.html"
+url_slides: "/slides/en/event/paper2/paper2fix.html"
 url_source:
 url_video:
 

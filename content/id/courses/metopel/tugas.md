@@ -10,7 +10,6 @@ menu:
 summary: tugas
 title: tugas
 toc: true
-type: book
 weight: 50
 editable: false
 commentable: false

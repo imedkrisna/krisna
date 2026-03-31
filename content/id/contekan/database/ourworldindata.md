@@ -6,7 +6,6 @@ categories: [coronavirus COVID-19]
 tags: [coronavirus COVID-19,python]
 author: admin
 date: '2020-05-31'
-type: book
 weight: 22
 ---
 

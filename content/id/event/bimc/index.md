@@ -47,7 +47,7 @@ image:
 
 
 # Optional filename of your slides within your event's folder or a URL.
-url_slides: "middleclass.html"
+url_slides: "/slides/id/event/bimc/middleclass.html"
 
 url_code:
 url_pdf: 

@@ -8,7 +8,6 @@ menu:
     weight: 3
 title: Menggunakan Pandas
 toc: true
-type: book
 weight: 3
 editable: false
 commentable: false

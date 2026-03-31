@@ -1,0 +1,22 @@
+{{- /* Table shortcode: reads a CSV and renders as HTML table */ -}}
+{{- $path := .Get "path" -}}
+{{- $header := .Get "header" | default "true" -}}
+{{- $caption := .Get "caption" -}}
+{{- $file := .Page.Resources.GetMatch $path -}}
+{{- if $file -}}
+  {{- $data := $file.Content | transform.Unmarshal (dict "delimiter" ",") -}}
+  <table>
+  {{- if $caption }}<caption>{{ $caption }}</caption>{{ end -}}
+  {{- range $i, $row := $data -}}
+    {{- if and (eq $i 0) (eq $header "true") }}
+    <thead><tr>{{ range $row }}<th>{{ . }}</th>{{ end }}</tr></thead>
+    <tbody>
+    {{- else }}
+    <tr>{{ range $row }}<td>{{ . }}</td>{{ end }}</tr>
+    {{- end -}}
+  {{- end }}
+  </tbody>
+  </table>
+{{- else -}}
+  <p><em>Table file "{{ $path }}" not found.</em></p>
+{{- end -}}

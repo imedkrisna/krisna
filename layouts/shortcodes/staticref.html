@@ -1,0 +1,3 @@
+{{- $url := .Get 0 -}}
+{{- $newtab := eq (.Get 1) "newtab" -}}
+<a href="{{ $url }}"{{ if $newtab }} target="_blank" rel="noopener"{{ end }}>{{ .Inner }}</a>

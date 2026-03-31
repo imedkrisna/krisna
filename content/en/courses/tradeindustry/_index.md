@@ -3,10 +3,12 @@ title: Kajian Kebijakan Perdagangan dan Investasi
 linkTitle: Pendahuluan
 summary: Kajian mengenai kebijakan perdagangan internasional dan investasi di Indonesia, disajikan dalam enam pertemuan.
 date: '2021-01-24'
-type: book
 copyright: true
 draft: true
 ---
+
+{{% list_children %}}
+
 
 ## Pendahuluan
 

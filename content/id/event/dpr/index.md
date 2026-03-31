@@ -46,7 +46,7 @@ links:
   icon: twitter
 
 # Optional filename of your slides within your talk's folder or a URL.
-url_slides: "dpr.html"
+url_slides: "/slides/id/event/dpr/dpr.html"
 
 url_code:
 url_pdf: ""

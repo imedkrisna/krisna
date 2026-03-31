@@ -10,11 +10,13 @@ menu:
 summary: Dasar-dasar Python
 title: Dasar-dasar Python
 toc: true
-type: book
 weight: 1
 editable: false
 commentable: false
 ---
+
+{{% list_children %}}
+
 
 {{% callout note %}}
 This is a notebook for myself to store some codes so I don't have to keep googling. Will be updated regularly. It is in Indonesian.

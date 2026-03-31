@@ -3,14 +3,9 @@ date: "2022-08-10T00:00:00Z"
 draft: false
 lastmod: "2022-08-10T00:00:00Z"
 linktitle: tugas
-menu:
-  example:
-    name: tugas
-    weight: 10
 summary: slides
 title: slides
 toc: true
-type: book
 weight: 20
 editable: false
 commentable: false

@@ -1,0 +1,11 @@
+{{ $pages := .Page.Pages }}
+{{ if $pages }}
+<ul>
+  {{ range $pages }}
+  <li>
+    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    {{ if .Params.summary }}<br><small>{{ .Params.summary }}</small>{{ end }}
+  </li>
+  {{ end }}
+</ul>
+{{ end }}

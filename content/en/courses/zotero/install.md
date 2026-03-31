@@ -10,7 +10,6 @@ menu:
 summary: Melakukan analisis statistika sederhana dengan menggunakan Python
 title: Menggunakan Zotero untuk membuat daftar pustaka
 toc: true
-type: book
 weight: 10
 editable: false
 commentable: false

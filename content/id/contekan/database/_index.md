@@ -3,7 +3,6 @@ title: Menggunakan macam-macam database online
 linkTitle: Database
 summary: Contekan beberapa database yang bisa ditarik dari url atau API
 date: '2021-07-21'
-type: book
 weight: 90
 ---
 

@@ -3,10 +3,12 @@ title: Trade & Macro
 linkTitle: Introduction
 summary: Analisis Ekonomi Perdagangan dan Industri
 date: '2021-01-24'
-type: book
 commentable: false
 draft: false
 ---
+
+{{% list_children %}}
+
 
 Mata kuliah ini adalah mata kuliah pilihan di Program Pascasarjana Ilmu Ekonomi Universitas Indonesia semester ganjil 2022/2023.
 

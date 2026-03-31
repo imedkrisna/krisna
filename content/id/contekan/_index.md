@@ -3,7 +3,6 @@ title: Contekan Python, r dan Stata
 linkTitle: Introduction
 summary: Page ini dibuat untuk contekan saya kalau lagi nulis rmarkdown, jupyter notebook atau Stata do file. Mungkin nyelip GEMPACK juga sedikit.
 date: '2021-07-21'
-type: book
 ---
 
 {{% callout note %}} Akan selalu diupdate {{% /callout %}}

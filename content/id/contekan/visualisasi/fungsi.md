@@ -3,7 +3,6 @@ title: Contekan Visualisasi
 linktitle: Fungsi.
 summary: Menggunuakan fungsi untuk bikin grafik.
 date: '2022-06-26'
-type: book
 weight: 40
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: Slides
 date: '2023-02-12'
-type: book
 weight: 20
 ---
 

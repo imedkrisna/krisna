@@ -17,7 +17,7 @@ links:
 publication: "In Denny Irawan, Wasisto Raharjo Jati, Oscar Karnalim, Asrul Sidiq (Eds), *Mewujudkan Indonesia 4.0: Kumpulan Pemikiran Pelajar Indonesia di Australia*. Jakarta: Yayasan Pustaka Obor Indonesia"
 publication_short: "In Denny Irawan, Wasisto Raharjo Jati, Oscar Karnalim, Asrul Sidiq (Eds), *Mewujudkan Indonesia 4.0: Kumpulan Pemikiran Pelajar Indonesia di Australia*. Jakarta: Yayasan Pustaka Obor Indonesia"
 publication_types:
-- "6"
+- "chapter"
 publishDate: "2020-04-15T00:00:00Z"
 summary: ""
 tags:

@@ -10,7 +10,6 @@ menu:
 summary: Regresi di Excel
 title: Excel regression
 toc: true
-type: book
 weight: 30
 editable: false
 commentable: false

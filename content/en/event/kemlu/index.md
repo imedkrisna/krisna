@@ -46,7 +46,7 @@ image:
 #   icon: twitter
 
 # Optional filename of your slides within your event's folder or a URL.
-url_slides: "kemlugvc.html"
+url_slides: "/slides/en/event/kemlu/kemlugvc.html"
 
 url_code:
 url_pdf: "kemlugvc.pdf"

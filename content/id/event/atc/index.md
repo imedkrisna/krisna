@@ -46,7 +46,7 @@ links:
   icon: twitter
 
 # Optional filename of your slides within your talk's folder or a URL.
-url_slides: "apindotrainingcenter.html"
+url_slides: "/slides/id/event/atc/apindotrainingcenter.html"
 
 url_code:
 url_pdf: "trumptariff.pdf"

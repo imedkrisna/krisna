@@ -10,11 +10,13 @@ menu:
 summary: metodologi penelitian
 title: Metodologi Penelitian
 toc: true
-type: book
 weight: 1
 editable: false
 commentable: false
 ---
+
+{{% list_children %}}
+
 
 ## Tentang mata kuliah ini
 

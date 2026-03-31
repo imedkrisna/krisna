@@ -6,7 +6,6 @@ categories: [r]
 tags: [r]
 author: admin
 date: '2024-05-19'
-type: book
 weight: 25
 ---
 
