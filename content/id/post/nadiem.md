@@ -2,7 +2,8 @@
 layout: post
 title: Sebuah Catatan Tentang Kampus Merdeka-nya Mas Menteri
 Categories: [Kebijakan, macem-macem]
-tags: [Kebijakan, macem-macem]
+tags: [kebijakan, macem-macem]
+categories: [Kebijakan, Lain-lain]
 date: '2020-01-31'
 author: admin
 ---

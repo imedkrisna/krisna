@@ -25,7 +25,7 @@ publishDate: 2024-09-18T14:00:00+11:00
 
 authors: [admin]
 tags: [kelas menengah, podcast]
-
+categories: [Ekonomi, Lain-lain]
 # Is this a featured event? (true/false)
 featured: false
 

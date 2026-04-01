@@ -3,6 +3,7 @@ layout: post
 title: Henningsen and Henningsen 2011
 category: [ekonomi]
 tags: [ekonomi]
+categories: [Ekonomi]
 date: '2020-02-25'
 author: admin
 ---

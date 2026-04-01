@@ -5,7 +5,7 @@ title: "Sekilas tentang Buku Kami"
 summary: ""
 authors: [admin]
 tags: []
-categories: []
+categories: [Miscellaneous]
 date: 2021-08-19T16:44:04+10:00
 slides:
   # Choose a theme from https://github.com/hakimel/reveal.js#theming

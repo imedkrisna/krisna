@@ -5,7 +5,7 @@ title: "Cigarette excise project with PROSPERA"
 summary: "PROSPERA was asked to help Directorate General of Customs and Excise (DGCE) with estimating and forecasting demand elasticity of cigarettes. The purpose is to help DGCE forecasting its revenue and planning its excise hikes."
 authors: []
 tags: []
-categories: []
+categories: [Miscellaneous]
 date: 2023-11-20T11:28:22+10:00
 
 # Optional external URL for project (replaces project detail page).

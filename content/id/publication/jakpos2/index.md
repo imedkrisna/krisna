@@ -24,8 +24,8 @@ abstract: "Me and my colleague Deasy Pane of Bappenas look at how the follow-up 
 # Summary. An optional shortened abstract.
 summary: "Me and my colleague Deasy Pane of Bappenas look at how the follow-up regulation from Job Creation Law may restrict trade a great deal. In turn, this has the potential to distort the economy further with more red tape instead of less (paywalled)"
 
-tags: [English, Trade, Industry]
-categories: [English, Trade, Industry]
+tags: [perdagangan, industri]
+categories: [Perdagangan, Industri]
 featured: false
 
 # Custom links (optional).

@@ -25,7 +25,7 @@ publishDate: 2020-09-10T21:56:48+10:00
 
 authors: [Prof. Dr. Suharnomo, Aditia Prasta, Monasisca Noviannei, admin]
 tags: []
-
+categories: [Miscellaneous]
 # Is this a featured talk? (true/false)
 featured: false
 

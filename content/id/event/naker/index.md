@@ -24,8 +24,8 @@ all_day: false
 publishDate: 2024-12-01T10:00:00+11:00
 
 authors: [admin]
-tags: [FGD, Neraca pembayaran]
-
+tags: [FGD, neraca pembayaran]
+categories: [Perdagangan, Riset]
 # Is this a featured event? (true/false)
 featured: false
 

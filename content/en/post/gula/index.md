@@ -5,8 +5,8 @@ title: "Why Indonesian Sugar is Expensive? A closer look on Indonesian trade pol
 subtitle: ""
 summary: ""
 authors: [admin]
-tags: [trade, policy, python]
-categories: [trade, policy, python]
+tags: [trade, public policy, python]
+categories: [Trade, Public Policy, Data & Code]
 date: 2021-06-27T21:57:43+10:00
 lastmod: 2021-06-27T21:57:43+10:00
 featured: false

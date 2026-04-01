@@ -12,10 +12,8 @@ summary: ""
 
 authors: [admin]
 
-tags: [economics]
-
-categories: [economics]
-
+tags: [ekonomi]
+categories: [Ekonomi]
 date: 2021-10-06T14:06:59+11:00
 
 lastmod: 2021-10-06T14:06:59+11:00

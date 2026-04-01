@@ -25,7 +25,7 @@ abstract: ""
 summary: ""
 
 tags: [trade, public policy]
-categories: [trade, public policy]
+categories: [Trade, Public Policy]
 featured: true
 
 # Custom links (optional).

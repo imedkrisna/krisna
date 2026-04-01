@@ -1,6 +1,6 @@
 ---
 title: "Media and Politics: How Television Changed Democracy"
-categories: [miscellaneous]
+categories: [Miscellaneous]
 tags: [miscellaneous]
 date: '2020-02-22'
 authors: [admin]

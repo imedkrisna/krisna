@@ -5,8 +5,8 @@ title: "Update kasus baru dan kematian COVID-19 di Indonesia dari Our World in D
 subtitle: ""
 summary: ""
 authors: [admin]
-tags: [coronavirus COVID-19, python]
-categories: [coronavirus COVID-19, python]
+tags: [covid-19, python]
+categories: [Data & Kode, COVID-19]
 date: 2021-07-28T10:18:28+10:00
 lastmod: 2021-07-28T10:18:28+10:00
 featured: false

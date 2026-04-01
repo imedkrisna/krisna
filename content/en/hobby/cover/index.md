@@ -6,7 +6,7 @@ subtitle: ""
 summary: "I did some cover videos with my friends. The collaboration is done completely online, which is very convinient since COVID-19 requires measures of physical distancing and we have no plan violating those measures. I mainly sing in these vids while also play some instruments. It is also fun to learn a bit of mixing although my mixing skill is really crappy."
 authors: []
 tags: []
-categories: []
+categories: [Miscellaneous]
 date: 2020-08-16T19:33:41+10:00
 lastmod: 2020-08-16T19:33:41+10:00
 featured: true

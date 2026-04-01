@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Pelajaran dari Kisruh Impor Bawang: Quota Impor Sebagai Kebijakan Proteksi Petani"
-categories: [perdagangan]
+categories: [Perdagangan]
 tags: [perdagangan]
 date: '2020-03-02'
 author: admin

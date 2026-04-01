@@ -25,7 +25,7 @@ abstract: ""
 summary: ""
 
 tags: [ekonomi, perdagangan, industri]
-categories: [ekonomi, perdagangan, industri]
+categories: [Ekonomi, Perdagangan, Industri]
 featured: false
 
 # Custom links (optional).

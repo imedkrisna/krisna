@@ -24,8 +24,8 @@ all_day: false
 publishDate: 2022-01-26T15:56:00+07:00
 
 authors: [admin]
-tags: [perdagangan, trade]
-
+tags: [trade]
+categories: [Trade]
 # Is this a featured event? (true/false)
 featured: false
 

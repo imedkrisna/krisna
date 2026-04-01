@@ -25,8 +25,8 @@ abstract: "The Economic Partnership Agreement (EPA) is a trade agreement that ai
 # Summary. An optional shortened abstract.
 summary: ""
 
-tags: [ekonomi,perusahaan,perdagangan,jasa,service]
-categories: [ekonomi,perusahaan,perdagangan,jasa,service]
+tags: [economics, firms, trade, services]
+categories: [Economics, Trade, Industry]
 featured: true
 
 # Custom links (optional).

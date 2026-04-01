@@ -3,7 +3,7 @@ title: "Strategi sukses meraih beasiswa pendidikan lanjut"
 summary: "Presentasi mengenai pengalaman serta tips mendapatkan beasiswa."
 authors: [admin]
 tags: []
-categories: []
+categories: [Miscellaneous]
 date: "2019-02-05T00:00:00Z"
 slides:
   # Choose a theme from https://github.com/hakimel/reveal.js#theming

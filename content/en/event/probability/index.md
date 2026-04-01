@@ -25,7 +25,7 @@ publishDate: 2025-01-13T10:00:00+07:00
 
 authors: [admin]
 tags: [statistics, probability]
-
+categories: [Data & Code]
 # Is this a featured event? (true/false)
 featured: false
 

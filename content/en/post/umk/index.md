@@ -6,7 +6,7 @@ subtitle: ""
 summary: ""
 authors: [admin]
 tags: [python, economics, industry]
-categories: [python, economics, industry]
+categories: [Economics, Industry, Data & Code]
 date: 2021-12-08T00:12:12+11:00
 lastmod: 2021-12-08T00:12:12+11:00
 featured: false

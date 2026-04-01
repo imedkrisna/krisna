@@ -4,8 +4,8 @@
 title: "Comparative advantage untuk vaksin"
 summary: ""
 authors: [admin]
-tags: [economics, coronavirus COVID-19]
-categories: [economics, coronavirus COVID-19]
+tags: [economics, covid-19]
+categories: [Economics, COVID-19]
 date: 2021-02-04T22:04:07+11:00
 draft: false
 slides:

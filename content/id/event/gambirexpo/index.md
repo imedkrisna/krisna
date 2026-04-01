@@ -24,8 +24,8 @@ all_day: false
 publishDate: 2025-08-25T11:00:00+07:00
 
 authors: [admin]
-tags: [research]
-
+tags: [riset]
+categories: [Riset]
 # Is this a featured event? (true/false)
 featured: false
 

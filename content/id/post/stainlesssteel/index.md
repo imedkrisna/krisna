@@ -5,8 +5,8 @@ title: "Apakah melarang Ekspor Nikel berhasil mengangkat industrialisasi Stainle
 subtitle: ""
 summary: ""
 authors: [admin]
-tags: [ekonomi, perdagangan, industri]
-categories: [ekonomi, perdagangan, industri]
+tags: [ekonomi, perdagangan, industri, nikel, hilirisasi]
+categories: [Ekonomi, Perdagangan, Industri]
 date: 2022-01-12T23:50:30+07:00
 lastmod: 2022-01-12T23:50:30+07:00
 featured: false

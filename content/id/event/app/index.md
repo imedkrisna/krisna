@@ -24,8 +24,8 @@ all_day: false
 publishDate: 2023-11-14T14:00:00+07:00
 
 authors: [admin]
-tags: [ekonomi, kebijakan, energi, climate, poltekapp]
-
+tags: [ekonomi, kebijakan, energi, iklim, poltekapp]
+categories: [Ekonomi, Kebijakan]
 # Is this a featured event? (true/false)
 featured: false
 

@@ -6,7 +6,7 @@ subtitle: ""
 summary: ""
 authors: [admin]
 tags: [TKDN, trade, industry, public policy]
-categories: [TKDN, trade, industry, public policy]
+categories: [Trade, Industry, Public Policy]
 date: 2022-03-04T07:17:38+07:00
 lastmod: 2022-03-04T07:17:38+07:00
 featured: false

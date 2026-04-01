@@ -5,8 +5,8 @@ title: "COVID-19 death rate in Indonesia"
 subtitle: "is it converging?"
 summary: ""
 authors: [admin]
-tags: [coronavirus COVID-19, python, english]
-categories: [coronavirus COVID-19, python, english]
+tags: [covid-19, python]
+categories: [Data & Code, COVID-19]
 date: 2020-09-27T09:37:03+10:00
 lastmod: 2020-09-27T09:37:03+10:00
 featured: false

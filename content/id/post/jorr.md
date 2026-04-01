@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Application of Infrastructure Development Problem (Long Chu Style) to Indonesia’s Toll Road"
-categories: [ekonomi]
+categories: [Ekonomi]
 tags: [ekonomi]
 date: '2020-02-27'
 author: admin

@@ -5,8 +5,8 @@ title: "Adding equation numbering on my hugo academic theme blog."
 subtitle: "Goodbye ???"
 summary: "In this post, I addressed the only problem I had with migrating to hugo which is equation labeling"
 authors: []
-tags: [blog, english]
-categories: [blog]
+tags: [blog]
+categories: [Miscellaneous]
 date: 2020-08-21T11:01:29+10:00
 lastmod: 2020-08-21T11:01:29+10:00
 featured: false

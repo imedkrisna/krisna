@@ -24,8 +24,8 @@ abstract: ""
 # Summary. An optional shortened abstract.
 summary: ""
 
-tags: [economics, electric vehicle, trade, industry]
-categories: [economics, electric vehicle, trade, industry]
+tags: [economics, electric vehicles, trade, industry]
+categories: [Economics, Trade, Industry]
 featured: false
 
 # Custom links (optional).

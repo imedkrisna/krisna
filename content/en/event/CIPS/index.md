@@ -25,7 +25,7 @@ publishDate: 2025-03-16T21:00:00+07:00
 
 authors: [admin]
 tags: [research]
-
+categories: [Research]
 # Is this a featured event? (true/false)
 featured: false
 

@@ -5,8 +5,8 @@ title: "Rasio tingkat kematian akibat COVID-19 di Indonesia"
 subtitle: "rasio kematian akibat COVID-19 mengalami penurunan, tapi kita harus tetap waspada"
 summary: ""
 authors: [admin]
-tags: [coronavirus COVID-19, python]
-categories: [coronavirus COVID-19, python]
+tags: [covid-19, python]
+categories: [Data & Kode, COVID-19]
 date: 2020-09-27T09:37:03+10:00
 lastmod: 2020-09-27T09:37:03+10:00
 featured: false

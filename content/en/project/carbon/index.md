@@ -5,7 +5,7 @@ title: "A paper for Politeknik APP Jakarta national seminar"
 summary: "I made this paper to help with Politeknik APP Jakarta's seminar with green industry at its theme. I discusses the new NDCs of Indonesia and its strategy toward greening the grid. I utilize a simple linear model to project the increase in electricity cost by greening the grid."
 authors: []
 tags: []
-categories: []
+categories: [Miscellaneous]
 date: 2020-08-20T11:28:22+10:00
 
 # Optional external URL for project (replaces project detail page).

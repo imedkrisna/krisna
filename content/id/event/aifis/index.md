@@ -24,8 +24,8 @@ all_day: false
 publishDate: 2021-06-24T12:59:46+10:00
 
 authors: [admin]
-tags: [Industry, Trade, Conference]
-
+tags: [industri, perdagangan, conference]
+categories: [Perdagangan, Industri]
 # Is this a featured event? (true/false)
 featured: false
 

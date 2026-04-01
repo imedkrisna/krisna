@@ -6,7 +6,7 @@ subtitle: ""
 summary: ""
 authors: [admin]
 tags: [trade, python, UNCOMTRADE]
-categories: [trade, python, UNCOMTRADE]
+categories: [Trade, Data & Code]
 date: 2021-08-28T23:22:01+10:00
 lastmod: 2021-08-28T23:22:01+10:00
 featured: false

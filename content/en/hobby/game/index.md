@@ -6,7 +6,7 @@ subtitle: ""
 summary: "I am a gamer but I stick to the more casual/ez to play these days."
 authors: [admin]
 tags: []
-categories: []
+categories: [Miscellaneous]
 date: 2024-05-26T09:00:00+07:00
 lastmod: 2024-05-26T09:00:00+07:00
 featured: true

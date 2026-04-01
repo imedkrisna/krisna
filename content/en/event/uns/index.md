@@ -24,8 +24,8 @@ all_day: false
 publishDate: 2021-04-06T20:59:48+11:00
 
 authors: [admin]
-tags: [economics, presentation, coronavirus COVID-19]
-
+tags: [economics, presentation, covid-19]
+categories: [Economics, COVID-19, Research]
 # Is this a featured event? (true/false)
 featured: false
 

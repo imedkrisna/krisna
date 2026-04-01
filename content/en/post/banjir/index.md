@@ -3,6 +3,7 @@ layout: post
 title: "Wildfires and Floods: A Lesson"
 category: [miscellaneous]
 tags: [miscellaneous]
+categories: [Miscellaneous]
 date: '2020-01-12'
 author: admin
 ---

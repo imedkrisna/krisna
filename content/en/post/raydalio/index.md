@@ -3,8 +3,8 @@ title: "Melihat Indonesia lewat kacamata Ray Dalio: Bagaimana Negara Bankrut"
 subtitle: ""
 summary: ""
 authors: [admin]
-tags: [buku,ekonomi,utang]
-categories: [buku, ekonomi,utang]
+tags: [books, economics, debt]
+categories: [Economics, Miscellaneous]
 date: 2025-06-28T12:06:59+07:00
 lastmod: 2025-06-28T12:06:59+07:00
 featured: false

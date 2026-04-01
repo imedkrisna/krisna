@@ -24,8 +24,8 @@ abstract: "The government has again been resorting to curbing imports in a bid t
 # Summary. An optional shortened abstract.
 summary: "The government has again been resorting to curbing imports in a bid to manage the current account balance, but this policy has not had a significantly positive impact on either the trade balance or manufacturing growth; rather, studies show it can have the opposite effect and eventually reduce exports."
 
-tags: [english]
-categories: [english]
+tags: []
+categories: [Miscellaneous]
 featured: false
 
 # Custom links (optional).

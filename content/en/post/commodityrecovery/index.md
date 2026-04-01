@@ -5,8 +5,8 @@ title: "Price trends of Indonesia's export commodities"
 subtitle: ""
 summary: ""
 authors: [admin]
-tags: [trade, Economics]
-categories: [trade, Economics]
+tags: [trade, economics]
+categories: [Economics, Trade]
 date: 2020-12-04T21:43:58+11:00
 lastmod: 2020-12-04T21:43:58+11:00
 featured: false

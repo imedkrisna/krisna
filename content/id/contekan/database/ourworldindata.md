@@ -2,8 +2,8 @@
 title: Menarik data COVID-19 dari ourworldindata
 linkTitle: ourworldindata
 summary: Download data COVID-19 dari ourworldindata
-categories: [coronavirus COVID-19]
-tags: [coronavirus COVID-19,python]
+categories: [Data & Kode, COVID-19]
+tags: [covid-19, python]
 author: admin
 date: '2020-05-31'
 weight: 22

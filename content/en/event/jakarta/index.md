@@ -26,7 +26,7 @@ publishDate: 2024-11-28T14:00:00+11:00
 
 authors: [admin]
 tags: [FGD, Jakarta]
-
+categories: [Research]
 # Is this a featured event? (true/false)
 featured: false
 

@@ -2,7 +2,8 @@
 layout: post
 title: Kembalinya Kebijakan Industri
 Categories: [industri, kebijakan]
-tags: [Kebijakan, industri]
+tags: [kebijakan, industri]
+categories: [Industri, Kebijakan]
 author: admin
 date: '2020-01-04'
 ---

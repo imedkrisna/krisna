@@ -24,8 +24,8 @@ all_day: false
 publishDate: 2020-09-23T00:00:01+10:00
 
 authors: [admin]
-tags: [Economics, English, Econometrics, Trade]
-
+tags: [economics, econometrics, trade]
+categories: [Economics, Trade, Data & Code]
 # Is this a featured talk? (true/false)
 featured: false
 

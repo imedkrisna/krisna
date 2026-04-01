@@ -5,7 +5,7 @@ title: "A chapter for ERIA on Indonesian trade in services."
 summary: "This paper is a part of a book project by ERIA on service trade. I work on Indonesia's general services trade and how it relates to manufacturing production"
 authors: [admin]
 tags: []
-categories: []
+categories: [Miscellaneous]
 date: 2024-07-15T07:28:22+07:00
 
 # Optional external URL for project (replaces project detail page).

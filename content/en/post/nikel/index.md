@@ -5,8 +5,8 @@ title: "Electric vehicle production hub: investment driven by export bans?"
 subtitle: ""
 summary: ""
 authors: [admin]
-tags: [Economics,trade,industry,electric vehicles]
-categories: [Economics,trade,industry,electric vehicles]
+tags: [economics, trade, industry, electric vehicles, nickel, downstreaming]
+categories: [Economics, Trade, Industry]
 date: 2021-01-16T14:53:17+11:00
 lastmod: 2021-01-16T14:53:17+11:00
 featured: false

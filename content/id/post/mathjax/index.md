@@ -6,7 +6,7 @@ subtitle: "Goodbye ???"
 summary: "In this post, I addressed the only problem I had with migrating to hugo which is equation labeling"
 authors: []
 tags: [macem-macem]
-categories: [macem-macem]
+categories: [Lain-lain]
 date: 2020-08-21T11:01:29+10:00
 lastmod: 2020-08-21T11:01:29+10:00
 featured: false

@@ -25,7 +25,7 @@ publishDate: 2020-12-14T01:20:32+11:00
 
 authors: [admin]
 tags: []
-
+categories: [Miscellaneous]
 # Is this a featured talk? (true/false)
 featured: false
 

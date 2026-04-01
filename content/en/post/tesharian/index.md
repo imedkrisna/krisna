@@ -1,7 +1,7 @@
 ---
 title: "Daily COVID-19 Testing in Indonesia"
-categories: [coronavirus COVID-19]
-tags: [coronavirus COVID-19, python]
+categories: [Data & Code, COVID-19]
+tags: [covid-19, python]
 authors: [admin]
 date: '2020-05-31'
 ---

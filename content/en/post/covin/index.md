@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "The Role of Manufacturing Industry Amid the COVID-19 Storm"
-categories: [coronavirus COVID-19, industry]
-tags: [coronavirus COVID-19, industry]
+categories: [Industry, COVID-19]
+tags: [covid-19, industry]
 date: '2020-03-22'
 author: admin
 ---

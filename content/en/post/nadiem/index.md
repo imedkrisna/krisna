@@ -3,6 +3,7 @@ layout: post
 title: "A Note on the Minister's 'Kampus Merdeka' (Freedom to Learn)"
 Categories: [public policy, miscellaneous]
 tags: [public policy, miscellaneous]
+categories: [Public Policy, Miscellaneous]
 date: '2020-01-31'
 author: admin
 ---

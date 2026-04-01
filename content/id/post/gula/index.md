@@ -6,7 +6,7 @@ subtitle: ""
 summary: ""
 authors: [admin]
 tags: [perdagangan, kebijakan, python]
-categories: [perdagangan, kebijakan, python]
+categories: [Perdagangan, Kebijakan, Data & Kode]
 date: 2021-06-27T21:57:43+10:00
 lastmod: 2021-06-27T21:57:43+10:00
 featured: false

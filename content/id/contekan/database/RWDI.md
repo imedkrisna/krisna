@@ -2,7 +2,7 @@
 title: R WDI
 linkTitle: RWDI
 summary: Narik data WDI dari R
-categories: [r]
+categories: [Data & Kode]
 tags: [r]
 author: admin
 date: '2024-05-19'

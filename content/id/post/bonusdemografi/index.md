@@ -5,8 +5,8 @@ title: "Bonus demografi: berkah atau kutukan?"
 subtitle: ""
 summary: ""
 authors: [admin]
-tags: [ekonomi. makro]
-categories: [python, ekonomi, makro]
+tags: [makro]
+categories: [Ekonomi]
 date: 2023-05-25T06:35:25+11:00
 lastmod: 2023-05-25T06:35:25+11:00
 featured: false

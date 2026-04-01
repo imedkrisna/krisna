@@ -25,7 +25,7 @@ publishDate: 2024-09-18T14:00:00+11:00
 
 authors: [admin]
 tags: [middle class, podcast]
-
+categories: [Economics, Miscellaneous]
 # Is this a featured event? (true/false)
 featured: false
 

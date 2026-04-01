@@ -24,8 +24,8 @@ abstract: "IA-CEPA excited everyone when it was taken into effect, a result of 1
 # Summary. An optional shortened abstract.
 summary: "IA-CEPA excited everyone when it was taken into effect, a result of 10 years long of negotiations between two great neighbours in the region. We are sceptical that IACEPA would economically matter at least in the short to medium term, but celebrates the right step taken between both countries."
 
-tags: [English, IACEPA]
-categories: [English, IACEPA]
+tags: [IACEPA]
+categories: [Trade]
 featured: false
 
 # Custom links (optional).

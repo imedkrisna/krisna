@@ -2,8 +2,8 @@
 title: Menarik data World Bank
 linkTitle: WBdata
 summary: Data dari World Bank database, terutama World Development Indicators.
-categories: [python,r]
-tags: [python,r]
+categories: [Data & Kode]
+tags: [python, r]
 author: admin
 date: '2020-05-31'
 weight: 24

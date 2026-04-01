@@ -25,7 +25,7 @@ abstract: "In this information era where globalization and advancement of techno
 summary: "A proceeding with my colleagues, Bayu Sutjiatmo and Sani Kurniawan from [Politeknik APP Jakarta](https://poltekapp.ac.id)"
 
 tags: []
-categories: []
+categories: [Miscellaneous]
 featured: false
 
 # Custom links (optional).

@@ -24,8 +24,8 @@ all_day: false
 publishDate: 2020-09-16T21:22:27+10:00
 
 authors: [admin]
-tags: [macem-macem]
-
+tags: [miscellaneous]
+categories: [Miscellaneous]
 # Is this a featured talk? (true/false)
 featured: false
 

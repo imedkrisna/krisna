@@ -25,7 +25,7 @@ publishDate: 2021-10-06T20:29:40+11:00
 
 authors: [admin]
 tags: [economics]
-
+categories: [Economics]
 # Is this a featured event? (true/false)
 featured: false
 

@@ -3,7 +3,8 @@ layout: post
 title: Amiti and Konings 2007
 author: admin
 category: [Review]
-tags: [Economics, econometrics]
+tags: [economics, econometrics]
+categories: [Economics, Data & Code]
 date: '2020-02-25'
 ---
 This is a long-overdue blog review of Amiti and Konings' paper. This paper has been widely cited, and when it came out, the issue was really hot: how tariff reductions could help Indonesia join Global Value Chains (GVCs) and become more productive.

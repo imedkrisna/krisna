@@ -25,7 +25,7 @@ publishDate: 2023-10-28T14:00:00+07:00
 
 authors: [admin]
 tags: [economics, public policy, academic]
-
+categories: [Economics, Public Policy, Research]
 # Is this a featured event? (true/false)
 featured: false
 

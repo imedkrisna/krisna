@@ -24,8 +24,8 @@ abstract: "Policy brief on the Indonesian manufacturing industry, focused on the
 # Summary. An optional shortened abstract.
 summary: "Policy brief on the Indonesian manufacturing industry, focused on the decrease in Indonesia’s Purchasing Managers’ Index (PMI), submitted to the Indonesian minister of industry, Agus Kartasasmita, on 5 May 2020."
 
-tags: [coronavirus COVID-19, indonesian, kebijakan]
-categories: [coronavirus COVID-19, indonesian, kebijakan]
+tags: [covid-19, public policy]
+categories: [Public Policy, COVID-19]
 featured: false
 
 # Custom links (optional).

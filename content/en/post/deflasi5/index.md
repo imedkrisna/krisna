@@ -5,8 +5,8 @@ title: "Checking Indonesia's five consecutive months of deflation"
 subtitle: ""
 summary: ""
 authors: [admin]
-tags: [Economics,deflation]
-categories: [Economics,deflation]
+tags: [economics, deflation]
+categories: [Economics]
 date: 2024-10-05T14:06:59+11:00
 lastmod: 2024-10-05T14:06:59+11:00
 featured: false

@@ -5,8 +5,8 @@ title: "Menggunakan Darts untuk melihat bedanya prediksi harga beras domestik da
 subtitle: ""
 summary: ""
 authors: [admin] 
-tags: [perdagangan, ekonomi]
-categories: []
+tags: [trade, economics]
+categories: [Economics, Trade]
 date: 2025-08-02T11:00:00+07:00
 lastmod: 2025-08-02T11:00:00+07:00
 featured: false

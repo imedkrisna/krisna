@@ -5,7 +5,7 @@ title: "Data"
 summary: ""
 authors: [admin]
 tags: [data]
-categories: [data]
+categories: [Data & Kode]
 date: 2020-12-13T23:36:14+11:00
 slides:
   # Choose a theme from https://github.com/hakimel/reveal.js#theming

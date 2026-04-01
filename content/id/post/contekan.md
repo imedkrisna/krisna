@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Sumber-sumber contekan belajar"
-categories: [contekan]
+categories: [Lain-lain]
 tags: [contekan]
 date: '2020-08-10'
 author: admin

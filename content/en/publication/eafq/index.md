@@ -24,8 +24,8 @@ abstract: ""
 # Summary. An optional shortened abstract.
 summary: ""
 
-tags: [ekonomi, perdagangan, industri]
-categories: [ekonomi, perdagangan, industri]
+tags: [economics, trade, industry]
+categories: [Economics, Trade, Industry]
 featured: false
 
 # Custom links (optional).

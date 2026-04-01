@@ -24,8 +24,8 @@ all_day: false
 publishDate: 2021-02-26T20:41:11+11:00
 
 authors: [admin]
-tags: [economics, trade, coronavirus COVID-19]
-
+tags: [ekonomi, perdagangan, covid-19]
+categories: [Ekonomi, Perdagangan, COVID-19]
 # Is this a featured event? (true/false)
 featured: false
 

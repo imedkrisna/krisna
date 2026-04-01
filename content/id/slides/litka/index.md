@@ -5,7 +5,7 @@ title: "Litka"
 summary: ""
 authors: [admin]
 tags: []
-categories: []
+categories: [Lain-lain]
 date: 2020-12-13T23:36:14+11:00
 slides:
   # Choose a theme from https://github.com/hakimel/reveal.js#theming

@@ -24,8 +24,8 @@ abstract: "COVID-19 may punishes commodity exporter a bit more severe than other
 # Summary. An optional shortened abstract.
 summary: "COVID-19 may punishes commodity exporter a bit more severe than other economies. As a country dependent on commodity for its employment and tax revenue, Indonesia needs to be prepared."
 
-tags: [coronavirus COVID-19, english]
-categories: [coronavirus COVID-19, english]
+tags: [covid-19]
+categories: [COVID-19]
 featured: false
 
 # Custom links (optional).

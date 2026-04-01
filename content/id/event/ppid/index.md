@@ -24,8 +24,8 @@ all_day: false
 publishDate: 2021-08-21T16:53:41+10:00
 
 authors: [admin]
-tags: [Ekonomi]
-
+tags: [ekonomi]
+categories: [Ekonomi]
 # Is this a featured event? (true/false)
 featured: false
 

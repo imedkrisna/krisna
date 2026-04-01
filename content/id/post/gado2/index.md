@@ -12,10 +12,8 @@ summary: ""
 
 authors: [admin]
 
-tags: [perdagangan, Global Value Chain, Python, UNCOMTRADE]
-
-categories: [perdagangan, Global Value Chain, Python, UNCOMTRADE]
-
+tags: [perdagangan, global value chain, python, UNCOMTRADE]
+categories: [Perdagangan, Data & Kode]
 date: 2021-08-31T23:27:21+10:00
 
 lastmod: 2021-08-31T23:27:21+10:00

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Belajar estimasi non-linear Constant Elasticity of Substitution (CES) pakai ADMB
-categories: [ekonomi]
+categories: [Ekonomi]
 tags: [ekonomi]
 date: '2020-02-27'
 author: admin

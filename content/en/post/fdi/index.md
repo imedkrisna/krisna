@@ -5,8 +5,8 @@ title: "Recent FDI developments: Indonesia and the region"
 subtitle: ""
 summary: ""
 authors: [admin]
-tags: [fdi,r,wdi]
-categories: [fdi,r,wdi]
+tags: [FDI, r, WDI]
+categories: [Industry, Data & Code]
 date: 2023-01-07T18:29:28+07:00
 lastmod: 2023-01-07T18:29:28+07:00
 featured: false

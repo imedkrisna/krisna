@@ -2,7 +2,7 @@
 layout: post
 title: "Looking for the relationship between ministry budgets and industrial growth"
 categories: [Economics]
-tags: [Economics]
+tags: [economics]
 date: '2020-03-05'
 author: admin
 ---

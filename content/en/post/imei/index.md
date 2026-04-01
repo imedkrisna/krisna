@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "The War on Illegal Phones: Implications of TKDN Policy?"
-categories: [industry, public policy]
+categories: [Industry, Public Policy]
 tags: [public policy, industry]
 date: '2020-03-02'
 author: admin

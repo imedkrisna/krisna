@@ -5,7 +5,7 @@ title: "Sidang Komisi Ekonomi PPI Dunia"
 summary: ""
 authors: [admin]
 tags: []
-categories: []
+categories: [Lain-lain]
 date: 2021-07-27T21:36:20+10:00
 slides:
   # Choose a theme from https://github.com/hakimel/reveal.js#theming

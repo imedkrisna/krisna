@@ -6,7 +6,7 @@ subtitle: ""
 summary: ""
 authors: [admin]
 tags: [trade, Ukraine]
-categories: [trade, Ukraine]
+categories: [Trade]
 date: 2022-03-02T09:00:43+10:00
 lastmod: 2022-03-02T09:00:43+10:00
 featured: false

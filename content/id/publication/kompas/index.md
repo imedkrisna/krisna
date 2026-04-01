@@ -24,8 +24,8 @@ abstract: ""
 # Summary. An optional shortened abstract.
 summary: ""
 
-tags: [economics]
-categories: [economics]
+tags: [ekonomi]
+categories: [Ekonomi]
 featured: false
 
 # Custom links (optional).

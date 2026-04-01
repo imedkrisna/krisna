@@ -24,8 +24,8 @@ all_day: false
 publishDate: 2020-11-15T11:44:06+11:00
 
 authors: [admin]
-tags: [economics, trade, academics]
-
+tags: [economics, trade, academic]
+categories: [Economics, Trade, Research]
 # Is this a featured talk? (true/false)
 featured: false
 

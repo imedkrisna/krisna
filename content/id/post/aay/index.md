@@ -5,8 +5,8 @@ title: "Review Paper Dewan Ekonomi Nasional tentang dampak ekonomi Makan Bergizi
 subtitle: ""
 summary: ""
 authors: [admin]
-tags: [CGE, ekonomi,MBG]
-categories: [CGE, ekonomi,MBG]
+tags: [CGE, ekonomi, MBG]
+categories: [Ekonomi, Data & Kode, Riset]
 date: 2025-03-24T21:06:59+07:00
 lastmod: 2025-03-24T21:06:59+07:00
 featured: false

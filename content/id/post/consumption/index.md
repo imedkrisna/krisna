@@ -6,7 +6,7 @@ subtitle: ""
 summary: ""
 authors: [admin]
 tags: [ekonomi]
-categories: [ekonomi]
+categories: [Ekonomi]
 date: 2025-03-23T12:06:59+07:00
 lastmod: 2025-03-23T12:06:59+07:00
 featured: false

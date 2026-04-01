@@ -6,7 +6,7 @@ subtitle: ""
 summary: ""
 authors: [admin]
 tags: [ekonomi, python, perdagangan, industri, teknologi]
-categories: [ekonomi, python, perdagangan, industri, teknologi]
+categories: [Ekonomi, Perdagangan, Industri, Data & Kode]
 date: 2020-11-11T21:17:11+11:00
 lastmod: 2020-11-11T21:17:11+11:00
 featured: false

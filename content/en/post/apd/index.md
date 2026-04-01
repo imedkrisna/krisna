@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "The Export Ban and Standards Relaxation Drama in Indonesia's PPE Market"
-categories: [industry]
-tags: [coronavirus COVID-19, trade, industry]
+categories: [Trade, Industry, COVID-19]
+tags: [covid-19, trade, industry]
 date: '2020-06-10'
 author: admin
 ---

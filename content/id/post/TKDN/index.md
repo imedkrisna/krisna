@@ -6,7 +6,7 @@ subtitle: ""
 summary: ""
 authors: [admin]
 tags: [TKDN, perdagangan, industri, python]
-categories: [TKDN, perdagangan, industri, python]
+categories: [Perdagangan, Industri, Data & Kode]
 date: 2022-03-29T14:09:58+07:00
 lastmod: 2022-03-29T14:09:58+07:00
 featured: false

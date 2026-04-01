@@ -25,7 +25,7 @@ publishDate: 2025-05-07T11:00:00+10:00
 
 authors: [admin]
 tags: [macem-macem]
-
+categories: [Lain-lain]
 # Is this a featured talk? (true/false)
 featured: false
 

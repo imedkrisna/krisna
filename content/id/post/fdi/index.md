@@ -5,8 +5,8 @@ title: "Perkembangan FDI terbaru: Indonesia dan kawasan"
 subtitle: ""
 summary: ""
 authors: [admin]
-tags: [fdi,r,wdi]
-categories: [fdi,r,wdi]
+tags: [FDI, r, WDI]
+categories: [Industri, Data & Kode]
 date: 2023-01-07T18:29:28+07:00
 lastmod: 2023-01-07T18:29:28+07:00
 featured: false

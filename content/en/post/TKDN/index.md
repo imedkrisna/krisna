@@ -6,7 +6,7 @@ subtitle: ""
 summary: ""
 authors: [admin]
 tags: [TKDN, trade, industry, python]
-categories: [TKDN, trade, industry, python]
+categories: [Trade, Industry, Data & Code]
 date: 2022-03-29T14:09:58+07:00
 lastmod: 2022-03-29T14:09:58+07:00
 featured: false

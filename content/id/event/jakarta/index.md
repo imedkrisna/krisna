@@ -26,7 +26,7 @@ publishDate: 2024-11-28T14:00:00+11:00
 
 authors: [admin]
 tags: [FGD, Jakarta]
-
+categories: [Riset]
 # Is this a featured event? (true/false)
 featured: false
 

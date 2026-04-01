@@ -6,7 +6,7 @@ subtitle: ""
 summary: ""
 authors: [admin]
 tags: [macem-macem]
-categories: [macem-macem]
+categories: [Lain-lain]
 date: 2020-12-29T19:31:47+11:00
 lastmod: 2020-12-29T19:31:47+11:00
 featured: false

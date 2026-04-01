@@ -25,7 +25,7 @@ abstract: "The Fourth Industrial Revolution, or Industry 4.0, is coming. It allo
 summary: "A proceeding with my colleagues Dhany Ratana from [Politeknik APP Jakarta](https://poltekapp.ac.id)"
 
 tags: []
-categories: []
+categories: [Lain-lain]
 featured: false
 
 # Custom links (optional).

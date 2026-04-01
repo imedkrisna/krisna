@@ -5,8 +5,8 @@ title: "When Instrumental Variable (IV) is problematic"
 subtitle: ""
 summary: "One problem with IV is weak instrument, which may worsen an OLS. A course from CBE demonstrate weak instrument issue with R"
 authors: [admin]
-tags: [R, Econometrics]
-categories: [R, Econometrics]
+tags: [r, econometrics]
+categories: [Data & Code]
 date: 2020-09-16T18:46:31+10:00
 lastmod: 2020-09-16T18:46:31+10:00
 featured: false

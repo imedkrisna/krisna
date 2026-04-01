@@ -5,7 +5,7 @@ title: "Projects"
 summary: ""
 authors: []
 tags: []
-categories: []
+categories: [Miscellaneous]
 date: 2020-08-20T11:28:22+10:00
 
 # Optional external URL for project (replaces project detail page).

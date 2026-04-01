@@ -6,7 +6,7 @@ subtitle: ""
 summary: ""
 authors: [admin]
 tags: [perdagangan, kebijakan]
-categories: [perdagangan, kebijakan]
+categories: [Perdagangan, Kebijakan]
 date: 2022-03-04T07:29:50+07:00
 lastmod: 2022-03-04T07:29:50+07:00
 featured: false

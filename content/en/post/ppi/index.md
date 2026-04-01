@@ -6,7 +6,7 @@ subtitle: ""
 summary: ""
 authors: [admin]
 tags: [miscellaneous]
-categories: [miscellaneous]
+categories: [Miscellaneous]
 date: 2021-06-27T21:57:43+10:00
 lastmod: 2021-06-27T21:57:43+10:00
 featured: false

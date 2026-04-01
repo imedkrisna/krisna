@@ -2,7 +2,8 @@
 layout: post
 title: Henningsen and Henningsen 2011
 category: [Economics]
-tags: [Economics]
+tags: [economics]
+categories: [Economics]
 date: '2020-02-25'
 author: admin
 ---

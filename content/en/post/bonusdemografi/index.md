@@ -5,8 +5,8 @@ title: "Demographic bonus: blessing or curse?"
 subtitle: ""
 summary: ""
 authors: [admin]
-tags: [Economics, macro]
-categories: [python, Economics, macro]
+tags: [economics, macro]
+categories: [Economics]
 date: 2023-05-25T06:35:25+11:00
 lastmod: 2023-05-25T06:35:25+11:00
 featured: false

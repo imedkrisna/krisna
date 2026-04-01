@@ -5,7 +5,7 @@ title: "Kondisi perekonomian di masa COVID-19"
 summary: ""
 authors: [admin]
 tags: []
-categories: []
+categories: [Lain-lain]
 date: 2021-03-28T20:56:18+11:00
 slides:
   # Choose a theme from https://github.com/hakimel/reveal.js#theming

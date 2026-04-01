@@ -5,8 +5,8 @@ title: "Salah satu problem menggunakan Instrumental Variable (IV)"
 subtitle: ""
 summary: "Salah satu masalah di IV adalah 'weak instrument', yang dapat membuat regresi anda bisa jadi lebih buruk daripada OLS. Postingan ini mencoba mendemonstrasikannya dengan data hasi generasi pakai R"
 authors: [admin]
-tags: [R, ekonometri]
-categories: [R, ekonometri]
+tags: [r, ekonometri]
+categories: [Data & Kode]
 date: 2020-09-16T18:46:31+10:00
 lastmod: 2020-09-16T18:46:31+10:00
 featured: false

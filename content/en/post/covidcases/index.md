@@ -5,8 +5,8 @@ title: "New update of the recent second wave (or third?) of COVID-19 in Indonesi
 subtitle: ""
 summary: ""
 authors: [admin]
-tags: [coronavirus COVID-19, python]
-categories: [coronavirus COVID-19, python]
+tags: [covid-19, python]
+categories: [Data & Code, COVID-19]
 date: 2021-07-28T10:18:28+10:00
 lastmod: 2021-07-28T10:18:28+10:00
 featured: false

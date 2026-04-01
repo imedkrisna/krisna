@@ -2,8 +2,8 @@
 title: PEN brief
 summary: Kami mencermati stimulus kebijakan program Percepatan Ekonomi Nasional (PEN)
 authors: [admin]
-tags: [kebijakan, ekonomi, coronavirus COVID-19, fiskal, PPID]
-categories: []
+tags: [kebijakan, ekonomi, covid-19, fiskal, PPID]
+categories: [Ekonomi, Kebijakan, COVID-19]
 date: "2019-02-05T00:00:00Z"
 slides:
   # Choose a theme from https://github.com/hakimel/reveal.js#theming

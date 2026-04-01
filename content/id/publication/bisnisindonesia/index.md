@@ -25,7 +25,7 @@ abstract: ""
 summary: ""
 
 tags: []
-categories: []
+categories: [Lain-lain]
 featured: false
 
 # Custom links (optional).

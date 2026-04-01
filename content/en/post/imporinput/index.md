@@ -6,7 +6,7 @@ subtitle: ""
 summary: ""
 authors: [admin]
 tags: [python, economics]
-categories: [python, economics]
+categories: [Economics, Data & Code]
 date: 2020-10-21T21:07:25+11:00
 lastmod: 2020-10-21T21:07:25+11:00
 featured: false

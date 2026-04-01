@@ -5,8 +5,8 @@ title: "Checking BPS open unemployment rate data"
 subtitle: ""
 summary: ""
 authors: [admin]
-tags: [unemployment,podcast]
-categories: [unemployment,podcast]
+tags: [unemployment, podcast]
+categories: [Economics, Miscellaneous]
 date: 2025-01-18T14:06:59+11:00
 lastmod: 2025-01-18T14:06:59+11:00
 featured: false

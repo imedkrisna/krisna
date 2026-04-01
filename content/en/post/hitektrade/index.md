@@ -5,8 +5,8 @@ title: "FDI, industry, and trade policy"
 subtitle: ""
 summary: ""
 authors: [admin]
-tags: [Economics, python, trade, industry, technology]
-categories: [Economics, python, trade, industry, technology]
+tags: [economics, python, trade, industry, technology]
+categories: [Economics, Trade, Industry, Data & Code]
 date: 2020-11-11T21:17:11+11:00
 lastmod: 2020-11-11T21:17:11+11:00
 featured: false

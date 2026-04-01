@@ -6,7 +6,7 @@ subtitle: ""
 summary: ""
 authors: [admin]
 tags: [perdagangan, ekonomi, elektronik, AS]
-categories: [perdagangan, ekonomi, elektronik, AS]
+categories: [Ekonomi, Perdagangan, Industri]
 date: 2026-04-01T10:00:00+07:00
 lastmod: 2026-04-01T10:00:00+07:00
 featured: false

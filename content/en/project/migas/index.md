@@ -5,7 +5,7 @@ title: "Short brief for DJ Migas"
 summary: "A policy brief for Direktoran Jenderal Migas (DJ Migas) on the impact of global uncertainty and inflation on the Indonesian crude oil sector. Written in Bahasa Indonesia"
 authors: []
 tags: []
-categories: []
+categories: [Miscellaneous]
 date: 2020-08-20T11:28:22+10:00
 
 # Optional external URL for project (replaces project detail page).

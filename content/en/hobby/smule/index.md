@@ -6,7 +6,7 @@ subtitle: ""
 summary: "Ok so I also play with this app called Smule which basically a karaoke app. In this app, I often sing japanese song such as L`arc~en~Ciel and One Ok Rock, and I really love dueting with people! If you also play smule, let's follow each other!"
 authors: []
 tags: []
-categories: []
+categories: [Miscellaneous]
 date: 2020-08-16T19:33:41+10:00
 lastmod: 2020-08-16T19:33:41+10:00
 featured: true

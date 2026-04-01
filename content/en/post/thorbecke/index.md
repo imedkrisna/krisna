@@ -1,6 +1,6 @@
 ---
 title: "Thorbecke 2019: Japan's Exchange Rate and Electronics Exports"
-categories: [economics, econometrics]
+categories: [Economics, Data & Code]
 tags: [economics, econometrics]
 date: '2020-02-25'
 authors: [admin]

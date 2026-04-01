@@ -24,8 +24,8 @@ all_day: false
 publishDate: 2020-09-23T00:00:01+10:00
 
 authors: [admin]
-tags: [Economics, English, Econometrics, Trade]
-
+tags: [ekonomi, ekonometri, perdagangan]
+categories: [Ekonomi, Perdagangan, Data & Kode]
 # Is this a featured talk? (true/false)
 featured: false
 

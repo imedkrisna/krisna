@@ -5,7 +5,7 @@ title: "Neraca Komoditas Brief"
 summary: "A brief for CIPS' external relation team regarding Neraca Komoditas"
 authors: [admin]
 tags: []
-categories: []
+categories: [Lain-lain]
 date: 2022-01-10T14:03:50+07:00
 slides:
   # Choose a theme from https://github.com/hakimel/reveal.js#theming

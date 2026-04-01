@@ -5,8 +5,8 @@ title: "Mengecek deflasi 5 bulan berturut-turut di Indonesia"
 subtitle: ""
 summary: ""
 authors: [admin]
-tags: [economics,deflasi]
-categories: [economics,deflasi]
+tags: [ekonomi, deflasi]
+categories: [Ekonomi]
 date: 2024-10-05T14:06:59+11:00
 lastmod: 2024-10-05T14:06:59+11:00
 featured: false

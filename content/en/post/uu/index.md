@@ -1,6 +1,6 @@
 ---
 title: "Public Policy Practice the Indonesian Way"
-categories: [public policy]
+categories: [Public Policy]
 tags: [public policy]
 date: '2020-02-25'
 authors: [admin]

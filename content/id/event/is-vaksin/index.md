@@ -24,8 +24,8 @@ all_day: false
 publishDate: 2021-02-27T10:44:59+11:00
 
 authors: [admin]
-tags: [coronavirus COVID-19]
-
+tags: [covid-19]
+categories: [COVID-19]
 # Is this a featured event? (true/false)
 featured: false
 

@@ -6,7 +6,7 @@ subtitle: ""
 summary: "Makan siang ketoprak memberikan pencerahan tentang kebijakan substitusi impor"
 authors: [admin]
 tags: [blog]
-categories: [Kebijakan, Macem-macem]
+categories: [Lain-lain]
 date: 2020-08-24T18:53:20+10:00
 lastmod: 2020-08-24T18:53:20+10:00
 featured: false

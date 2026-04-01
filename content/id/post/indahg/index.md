@@ -5,8 +5,8 @@ title: "Mengecek data tingkat pengangguran terbuka BPS"
 subtitle: ""
 summary: ""
 authors: [admin]
-tags: [pengangguran,podcast]
-categories: [pengangguran,podcast]
+tags: [pengangguran, podcast]
+categories: [Ekonomi, Lain-lain]
 date: 2025-01-18T14:06:59+11:00
 lastmod: 2025-01-18T14:06:59+11:00
 featured: false

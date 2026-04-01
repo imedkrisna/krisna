@@ -4,8 +4,8 @@
 title: "Economics"
 summary: ""
 authors: [admin]
-tags: [economics, courses]
-categories: [economics, courses]
+tags: [ekonomi, kuliah]
+categories: [Ekonomi, Lain-lain]
 date: 2021-02-04T22:04:07+11:00
 slides:
   # Choose a theme from https://github.com/hakimel/reveal.js#theming

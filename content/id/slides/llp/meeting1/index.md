@@ -4,8 +4,8 @@
 title: "Lalu Lintas Pembayaran Dalan dan Luar Negeri"
 summary: ""
 authors: []
-tags: [courses]
-categories: [courses]
+tags: [kuliah]
+categories: [Lain-lain]
 date: 2021-02-04T22:04:07+11:00
 slides:
   # Choose a theme from https://github.com/hakimel/reveal.js#theming

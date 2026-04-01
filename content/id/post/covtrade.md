@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Kebijakan Perdagangan Indonesia di tengah COVID-19"
-categories: [coronavirus COVID-19, industri]
-tags: [coronavirus COVID-19, industri]
+categories: [Industri, COVID-19]
+tags: [covid-19, industri]
 date: '2020-04-15'
 author: admin
 ---

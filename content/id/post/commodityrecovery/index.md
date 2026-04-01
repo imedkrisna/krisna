@@ -6,7 +6,7 @@ subtitle: ""
 summary: ""
 authors: [admin]
 tags: [perdagangan, ekonomi]
-categories: [perdagangan, ekonomi]
+categories: [Ekonomi, Perdagangan]
 date: 2020-12-04T21:43:58+11:00
 lastmod: 2020-12-04T21:43:58+11:00
 featured: false

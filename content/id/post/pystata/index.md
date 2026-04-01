@@ -5,8 +5,8 @@ title: "Awesome Stata 17 Upgrade: Trying Pystata by using PPML on USITC and WITS
 subtitle: ""
 summary: "Finally I got to upgrade my stata to Stata 17! I was looking forward to using Stata in my Python environment. This post is just me trying a PPML package (Stata, not the USITC one)"
 authors: [admin]
-tags: [trade, econometrics, python, Stata]
-categories: [trade, econometrics, python, Stata]
+tags: [perdagangan, ekonometri, python, stata]
+categories: [Perdagangan, Data & Kode]
 date: 2021-08-22T20:39:04+10:00
 lastmod: 2021-08-22T20:39:04+10:00
 featured: false

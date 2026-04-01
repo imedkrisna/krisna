@@ -25,7 +25,7 @@ abstract: "Walau mendapatkan berbagai macam perlawanan dari publik, Undang-undan
 summary: ""
 
 tags: []
-categories: []
+categories: [Lain-lain]
 featured: false
 
 # Custom links (optional).

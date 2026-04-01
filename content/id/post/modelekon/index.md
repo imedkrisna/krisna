@@ -5,8 +5,8 @@ title: "Bagaimana cara ekonom berpikir:membuat sebuah Model Ekonomi Sederhana"
 subtitle: ""
 summary: ""
 authors: [admin] 
-tags: [perdagangan, ekonomi, python,general equilibrium]
-categories: []
+tags: [perdagangan, ekonomi, python, general equilibrium]
+categories: [Ekonomi, Perdagangan, Data & Kode]
 date: 2025-01-27T11:00:00+07:00
 lastmod: 2025-01-27T11:00:00+07:00
 featured: false

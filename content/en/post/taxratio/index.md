@@ -5,8 +5,8 @@ title: "Oil Boom vs Commodity Boom: Can Raw Materials Export Ban Save the State 
 subtitle: ""
 summary: ""
 authors: [admin]
-tags: [trade,industry,mining]
-categories: [trade,industry,mining]
+tags: [trade, industry, mining, nickel, downstreaming]
+categories: [Trade, Industry]
 date: 2022-01-31T11:37:13+07:00
 lastmod: 2022-01-31T11:37:13+07:00
 featured: false

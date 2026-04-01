@@ -5,8 +5,8 @@ title: "Indonesian tariff dynamics, 2000-2018"
 subtitle: "An illustration using WITS API on Python"
 summary: ""
 authors: [admin]
-tags: [python,tariff,trade,economics]
-categories: [python,tariff,trade,economics]
+tags: [python, tariff, trade, economics]
+categories: [Economics, Trade, Data & Code]
 date: 2020-11-05T22:26:15+11:00
 lastmod: 2020-11-05T22:26:15+11:00
 featured: false

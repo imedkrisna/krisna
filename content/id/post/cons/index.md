@@ -5,8 +5,8 @@ title: "Bahaya Ekonomi dari Ketimpangan"
 subtitle: "Belajar dari buku Michael Pettis 'The Great Rebalancing'"
 summary: ""
 authors: [admin]
-tags: [Ekonomi, konsumsi,makro]
-categories: [Ekonomi, konsumsi,makro]
+tags: [ekonomi, konsumsi, makro]
+categories: [Ekonomi]
 date: 2025-11-16T15:22:00+07:00
 lastmod: 2025-11-16T15:22:00+07:00
 featured: false

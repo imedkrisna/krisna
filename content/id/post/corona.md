@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "COVID-19 dan potensi dampaknya terhadap perdagangan Indonesia-RRT"
-categories: [coronavirus COVID-19]
-tags: [coronavirus COVID-19]
+categories: [COVID-19]
+tags: [covid-19]
 date: '2020-03-03'
 author: admin
 ---

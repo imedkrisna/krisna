@@ -6,7 +6,7 @@ subtitle: "melihat bedanya petani AS dan Indonesia"
 summary: ""
 authors: [admin]
 tags: [ekonomi, perdagangan, model, HecksherOhlin]
-categories: [ekonomi, perdagangan, model, HecksherOhlin]
+categories: [Ekonomi, Perdagangan, Riset]
 date: 2024-02-25T15:10:34+07:00
 lastmod: 2024-02-25T15:10:34+07:00
 featured: false

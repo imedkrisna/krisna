@@ -6,7 +6,7 @@ subtitle: "Techno-nationalism and Technology Competition"
 summary: ""
 authors: [admin]
 tags: [teknologi]
-categories: [teknologi]
+categories: [Industri]
 date: 2021-04-26T10:39:06+10:00
 lastmod: 2021-04-26T10:39:06+10:00
 featured: false

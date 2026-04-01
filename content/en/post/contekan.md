@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Sumber-sumber contekan belajar"
-categories: [blog]
-tags: [Macem-macem]
+categories: [Miscellaneous]
+tags: [miscellaneous]
 date: '2020-08-10'
 author: admin
 ---

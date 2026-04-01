@@ -3,6 +3,7 @@ layout: post
 title: "Kebakaran dan Kebanjiran: Sebuah Pelajaran"
 category: [macem-macem]
 tags: [macem-macem]
+categories: [Lain-lain]
 date: '2020-01-12'
 author: admin
 ---

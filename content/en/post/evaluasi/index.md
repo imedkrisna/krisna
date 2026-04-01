@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Industrial Development Targets According to Industrial Policy
-categories: [industry, public policy]
+categories: [Industry, Public Policy]
 tags: [industry, public policy]
 date: '2020-02-27'
 author: admin

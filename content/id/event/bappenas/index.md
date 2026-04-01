@@ -25,7 +25,7 @@ publishDate: 2022-11-13T00:47:06+07:00
 
 authors: [admin]
 tags: []
-
+categories: [Lain-lain]
 # Is this a featured event? (true/false)
 featured: false
 

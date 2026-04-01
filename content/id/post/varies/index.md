@@ -6,7 +6,7 @@ subtitle: "what can we learn from us?"
 summary: ""
 authors: [admin]
 tags: [macem-macem]
-categories: [macem-macem]
+categories: [Lain-lain]
 date: 2020-08-21T15:41:24+10:00
 lastmod: 2020-08-21T15:41:24+10:00
 featured: false

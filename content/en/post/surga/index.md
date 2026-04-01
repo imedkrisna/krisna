@@ -5,8 +5,8 @@ title: "Revisiting 3-period intertemporal consumption model: work, retire, after
 subtitle: ""
 summary: ""
 authors: [admin]
-tags: [ekonomi, surga, iseng]
-categories: [ekonomi, surga, iseng]
+tags: [economics, miscellaneous]
+categories: [Economics, Miscellaneous]
 date: 2020-12-02T10:48:50+11:00
 lastmod: 2020-12-02T10:48:50+11:00
 featured: false

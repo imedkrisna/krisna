@@ -25,8 +25,8 @@ all_day: false
 publishDate: 2021-04-30T13:57:09+10:00
 
 authors: [admin]
-tags: [public policy, economics, coronavirus COVID-19, fiscal, PPID]
-
+tags: [public policy, economics, covid-19, fiscal, PPID]
+categories: [Economics, Public Policy, COVID-19]
 # Is this a featured event? (true/false)
 featured: false
 

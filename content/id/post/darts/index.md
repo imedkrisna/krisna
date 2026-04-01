@@ -6,7 +6,7 @@ subtitle: ""
 summary: ""
 authors: [admin] 
 tags: [perdagangan, ekonomi]
-categories: []
+categories: [Ekonomi, Perdagangan]
 date: 2025-08-02T11:00:00+07:00
 lastmod: 2025-08-02T11:00:00+07:00
 featured: false

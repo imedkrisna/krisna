@@ -6,7 +6,7 @@ subtitle: ""
 summary: "A ketoprak lunch provides insight on import substitution policy"
 authors: [admin]
 tags: [blog]
-categories: [public policy, miscellaneous]
+categories: [Miscellaneous]
 date: 2020-08-24T18:53:20+10:00
 lastmod: 2020-08-24T18:53:20+10:00
 featured: false

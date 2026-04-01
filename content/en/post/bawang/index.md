@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Lessons from the Garlic Import Scandal: Import Quotas as a Farmer Protection Policy"
-categories: [trade]
+categories: [Trade]
 tags: [trade]
 date: '2020-03-02'
 author: admin

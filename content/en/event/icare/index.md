@@ -25,7 +25,7 @@ publishDate: 2024-09-17T14:00:00+11:00
 
 authors: [admin]
 tags: [management]
-
+categories: [Miscellaneous]
 # Is this a featured event? (true/false)
 featured: false
 

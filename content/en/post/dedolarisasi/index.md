@@ -5,8 +5,8 @@ title: "Goodbye dollar? Not quite yet"
 subtitle: ""
 summary: ""
 authors: [admin]
-tags: [python, Economics, macro]
-categories: [python, Economics, macro]
+tags: [python, economics, macro]
+categories: [Economics, Data & Code]
 date: 2023-05-25T06:35:25+11:00
 lastmod: 2023-05-25T06:35:25+11:00
 featured: false

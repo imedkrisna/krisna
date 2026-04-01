@@ -5,8 +5,8 @@ title: 'Indonesian trade and industry data 2018-2023 from SEKI Bank Indonesia'
 subtitle: ""
 summary: ""
 authors: [admin]
-tags: [ekonomi, perdagangan]
-categories: [ekonomi, perdagangan]
+tags: [economics, trade]
+categories: [Economics, Trade]
 date: 2024-07-08T15:10:34+07:00
 lastmod: 2024-07-08T15:10:34+07:00
 featured: false

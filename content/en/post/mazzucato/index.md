@@ -2,7 +2,7 @@
 layout: post
 title: "The Value of Everything: A Review"
 categories: [Economics]
-tags: [Economics]
+tags: [economics]
 date: '2020-05-07'
 author: admin
 ---

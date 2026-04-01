@@ -5,8 +5,8 @@ title: "Nickel ore export ban and the export performance of the downstream indus
 subtitle: ""
 summary: ""
 authors: [admin]
-tags: [ekonomi, perdagangan, industri]
-categories: [ekonomi, perdagangan, industri]
+tags: [economics, trade, industry, nickel, downstreaming]
+categories: [Economics, Trade, Industry]
 date: 2022-01-12T23:50:30+07:00
 lastmod: 2022-01-12T23:50:30+07:00
 featured: false

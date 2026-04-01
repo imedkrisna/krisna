@@ -25,7 +25,7 @@ abstract: "Indonesian government seem to wish IA-CEPA will bring many investment
 summary: "Indonesian government seem to wish IA-CEPA will bring many investment to its country. We suggest the opposite might happen. See full publication in [East Asia Forum](https://www.eastasiaforum.org/2020/08/05/ia-cepa-will-not-solve-indonesias-fdi-problem/)"
 
 tags: [IACEPA]
-categories: [IACEPA]
+categories: [Trade]
 featured: false
 
 # Custom links (optional).

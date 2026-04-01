@@ -4,7 +4,7 @@ subtitle: "Grafik-grafik yang tidak masuk di paper kami di BIES"
 summary: "Melengkapi Survey of Recent Developments di BIES dengan visualisasi tambahan soal belanja, belanja primer, dan penerimaan pemerintah Indonesia."
 authors: [admin]
 tags: [ekonomi, fiskal, pajak, APBN]
-categories: [ekonomi]
+categories: [Ekonomi]
 date: 2026-03-24T21:06:59+07:00
 lastmod: 2026-03-24T21:06:59+07:00
 featured: false

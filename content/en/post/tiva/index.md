@@ -6,7 +6,7 @@ subtitle: ""
 summary: ""
 authors: [admin]
 tags: [trade, economics, GVC, python]
-categories: [trade, economics, GVC, python]
+categories: [Economics, Trade, Data & Code]
 date: 2021-12-13T09:54:16+11:00
 lastmod: 2021-12-13T09:54:16+11:00
 featured: false

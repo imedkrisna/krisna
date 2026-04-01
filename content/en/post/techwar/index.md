@@ -5,8 +5,8 @@ title: "Notes on Professor Keyu Jin's Public Lecture titled"
 subtitle: "Techno-nationalism and Technology Competition"
 summary: ""
 authors: [admin]
-tags: [tech]
-categories: []
+tags: [technology]
+categories: [Industry]
 date: 2021-04-26T10:39:06+10:00
 lastmod: 2021-04-26T10:39:06+10:00
 featured: false

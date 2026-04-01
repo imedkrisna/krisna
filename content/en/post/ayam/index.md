@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "The Brazilian Chicken Import Dispute: Where There's Corn, There's Chicken"
-categories: [trade, industry, Economics, public policy]
-tags: [trade, industry, Economics, public policy]
+categories: [Economics, Trade, Industry, Public Policy]
+tags: [trade, industry, economics, public policy]
 date: '2020-03-02'
 author: admin
 ---

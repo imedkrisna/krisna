@@ -24,8 +24,8 @@ all_day: false
 publishDate: 2025-01-13T10:00:00+07:00
 
 authors: [admin]
-tags: [statistika, probability]
-
+tags: [statistika, probabilitas]
+categories: [Data & Kode]
 # Is this a featured event? (true/false)
 featured: false
 

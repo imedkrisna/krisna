@@ -5,7 +5,7 @@ title: "Litrev"
 summary: ""
 authors: []
 tags: []
-categories: []
+categories: [Lain-lain]
 date: 2020-11-06T21:03:23+11:00
 slides:
   # Choose a theme from https://github.com/hakimel/reveal.js#theming

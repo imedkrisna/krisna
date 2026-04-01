@@ -5,7 +5,7 @@ title: "Persiapan workshop menggunakan Zotero"
 summary: ""
 authors: []
 tags: []
-categories: []
+categories: [Lain-lain]
 date: 2021-01-14T11:46:09+11:00
 slides:
   # Choose a theme from https://github.com/hakimel/reveal.js#theming

@@ -2,7 +2,7 @@
 title: Menarik data WITS
 linkTitle: WITS
 summary: Data tariff dari WITS
-categories: [perdagangan]
+categories: [Perdagangan]
 tags: [perdagangan]
 author: admin
 date: '2020-05-31'

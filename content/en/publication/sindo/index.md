@@ -14,7 +14,7 @@ abstract: ""
 
 summary: ""
 
-tags: [Economics]
+tags: [economics]
 categories: [Economics]
 featured: false
 

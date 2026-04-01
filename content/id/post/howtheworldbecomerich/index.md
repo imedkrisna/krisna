@@ -6,7 +6,7 @@ subtitle: "karya Mark Koyama dan Jared Rubin"
 summary: ""
 authors: [admin]
 tags: [macem-macem]
-categories: [macem-macem]
+categories: [Lain-lain]
 date: 2022-08-19T15:10:34+07:00
 lastmod: 2022-08-19T15:10:34+07:00
 featured: false

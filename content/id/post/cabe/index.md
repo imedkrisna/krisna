@@ -6,7 +6,7 @@ subtitle: ""
 summary: ""
 authors: [admin]
 tags: [perdagangan, python, UNCOMTRADE]
-categories: [perdagangan, python, UNCOMTRADE]
+categories: [Perdagangan, Data & Kode]
 date: 2021-08-28T23:22:01+10:00
 lastmod: 2021-08-28T23:22:01+10:00
 featured: false

@@ -24,8 +24,8 @@ abstract: "During the pandemic, most countries in the world reacted with export 
 # Summary. An optional shortened abstract.
 summary: ""
 
-tags: [coronavirus COVID-19, English,]
-categories: [coronavirus COVID-19, English,]
+tags: [covid-19]
+categories: [COVID-19]
 featured: false
 
 # Custom links (optional).

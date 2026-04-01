@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Me, Canberra, and COVID-19"
-categories: [coronavirus COVID-19, miscellaneous]
-tags: [coronavirus COVID-19, miscellaneous]
+categories: [COVID-19, Miscellaneous]
+tags: [covid-19, miscellaneous]
 date: '2020-03-19'
 author: admin
 ---

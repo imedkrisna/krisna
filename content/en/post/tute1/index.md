@@ -6,7 +6,7 @@ subtitle: ""
 summary: ""
 authors: [admin]
 tags: [economics, r, WDI]
-categories: [economics, r, WDI]
+categories: [Economics, Data & Code]
 date: 2021-08-01T17:32:43+10:00
 lastmod: 2021-08-01T17:32:43+10:00
 featured: false

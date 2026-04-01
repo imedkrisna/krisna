@@ -5,8 +5,8 @@ title: "A small trip to Tidbinbilla Natural Reserve in Canberra, Australia"
 subtitle: ""
 summary: ""
 authors: [admin]
-tags: [things]
-categories: [things]
+tags: [miscellaneous]
+categories: [Miscellaneous]
 date: 2021-01-01T09:04:02+11:00
 lastmod: 2021-01-01T09:04:02+11:00
 featured: false

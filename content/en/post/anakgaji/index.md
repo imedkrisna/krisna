@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Does Having Children Hurt Women Financially? An Economics Perspective"
-categories: [blog]
+categories: [Miscellaneous]
 tags: [miscellaneous]
 date: '2020-01-06'
 author: admin

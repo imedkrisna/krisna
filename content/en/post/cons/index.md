@@ -5,8 +5,8 @@ title: "The Economic Danger of Inequality"
 subtitle: "Learning from Michael Pettis's 'The Great Rebalancing'"
 summary: ""
 authors: [admin]
-tags: [Economics, consumption, macro]
-categories: [Economics, consumption, macro]
+tags: [economics, consumption, macro]
+categories: [Economics]
 date: 2025-11-16T15:22:00+07:00
 lastmod: 2025-11-16T15:22:00+07:00
 featured: false

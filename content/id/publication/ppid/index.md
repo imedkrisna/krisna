@@ -24,8 +24,8 @@ abstract: "LIPI Press berkolaborasi dengan Perhimpunan Pelajar Indonesia (PPI) D
 # Summary. An optional shortened abstract.
 summary: ""
 
-tags: [Economics]
-categories: [Economics]
+tags: [ekonomi]
+categories: [Ekonomi]
 featured: true
 
 # Custom links (optional).

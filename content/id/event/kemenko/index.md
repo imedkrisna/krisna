@@ -25,7 +25,7 @@ publishDate: 2022-06-11T14:47:03+07:00
 
 authors: [admin]
 tags: [ekonomi, kebijakan, akademik]
-
+categories: [Ekonomi, Kebijakan, Riset]
 # Is this a featured event? (true/false)
 featured: false
 

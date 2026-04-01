@@ -5,8 +5,8 @@ title: "Indonesia's export and import for COVID-19-related goods: July 2020"
 subtitle: ""
 summary: ""
 authors: [admin]
-tags: [coronavirus COVID-19,r,perdagangan]
-categories: [coronavirus COVID-19,r,perdagangan]
+tags: [covid-19, r, trade]
+categories: [Trade, Data & Code, COVID-19]
 date: 2020-11-01T23:10:58+11:00
 lastmod: 2020-11-01T23:10:58+11:00
 featured: false

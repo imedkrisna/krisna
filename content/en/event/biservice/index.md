@@ -25,7 +25,7 @@ publishDate: 2024-09-24T14:00:00+11:00
 
 authors: [admin]
 tags: [FGD, servicification]
-
+categories: [Industry, Research]
 # Is this a featured event? (true/false)
 featured: false
 

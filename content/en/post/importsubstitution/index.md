@@ -6,7 +6,7 @@ subtitle: ""
 summary: ""
 authors: []
 tags: []
-categories: []
+categories: [Miscellaneous]
 date: 2020-10-17T19:45:21+11:00
 lastmod: 2020-10-17T19:45:21+11:00
 featured: false

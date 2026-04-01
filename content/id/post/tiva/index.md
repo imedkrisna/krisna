@@ -6,7 +6,7 @@ subtitle: ""
 summary: ""
 authors: [admin]
 tags: [perdagangan, ekonomi, GVC, python]
-categories: [perdagangan, ekonomi, GVC, python]
+categories: [Ekonomi, Perdagangan, Data & Kode]
 date: 2021-12-13T09:54:16+11:00
 lastmod: 2021-12-13T09:54:16+11:00
 featured: false

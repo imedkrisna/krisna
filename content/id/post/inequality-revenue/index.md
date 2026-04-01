@@ -6,7 +6,7 @@ subtitle: ""
 summary: ""
 authors: []
 tags: []
-categories: []
+categories: [Lain-lain]
 date: 2023-05-15T07:35:08+07:00
 lastmod: 2023-05-15T07:35:08+07:00
 featured: false

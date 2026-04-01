@@ -3,8 +3,8 @@ title: "Indonesia's Fiscal Situation: Bleaker Than It Looks?"
 subtitle: "The graphs that didn't make it into our BIES paper"
 summary: "Supplementing our Survey of Recent Developments in BIES with additional visualizations on government spending, primary expenditure, and revenue."
 authors: [admin]
-tags: [ekonomi, fiskal, pajak, APBN]
-categories: [ekonomi]
+tags: [economics, fiscal, tax, APBN]
+categories: [Economics]
 date: 2026-03-24T21:06:59+07:00
 lastmod: 2026-03-24T21:06:59+07:00
 featured: false

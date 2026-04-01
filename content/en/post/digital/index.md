@@ -5,8 +5,8 @@ title: "Indonesia's digital sector: opportunities and challenges"
 subtitle: ""
 summary: ""
 authors: [admin]
-tags: [Economics, technology]
-categories: [Economics, technology]
+tags: [economics, technology]
+categories: [Economics, Industry]
 date: 2021-02-08T18:19:57+11:00
 lastmod: 2021-02-08T18:19:57+11:00
 featured: false

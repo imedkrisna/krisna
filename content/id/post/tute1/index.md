@@ -5,8 +5,8 @@ title: "Question 4 Tutorial 1 ECON3102 2021"
 subtitle: ""
 summary: ""
 authors: [admin]
-tags: [economics, r, WDI]
-categories: [economics, r, WDI]
+tags: [ekonomi, r, WDI]
+categories: [Ekonomi, Data & Kode]
 date: 2021-08-01T17:32:43+10:00
 lastmod: 2021-08-01T17:32:43+10:00
 featured: false

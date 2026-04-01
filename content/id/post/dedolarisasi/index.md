@@ -5,8 +5,8 @@ title: "Selamat tinggal dollar? Sepertinya masih belum"
 subtitle: ""
 summary: ""
 authors: [admin]
-tags: [python, ekonomi. makro]
-categories: [python, ekonomi, makro]
+tags: [python, makro]
+categories: [Ekonomi, Data & Kode]
 date: 2023-05-25T06:35:25+11:00
 lastmod: 2023-05-25T06:35:25+11:00
 featured: false

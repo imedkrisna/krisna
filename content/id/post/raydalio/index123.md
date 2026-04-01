@@ -5,8 +5,8 @@ title: "Ray Dalio"
 subtitle: ""
 summary: ""
 authors: [admin]
-tags: [ekonomi,buku]
-categories: [ekonomi,buku]
+tags: [ekonomi, buku]
+categories: [Ekonomi, Lain-lain]
 date: 2025-05-07T21:06:59+07:00
 lastmod: 2025-05-07T21:06:59+07:00
 featured: false

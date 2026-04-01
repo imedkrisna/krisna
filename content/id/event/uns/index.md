@@ -24,8 +24,8 @@ all_day: false
 publishDate: 2021-04-06T20:59:48+11:00
 
 authors: [admin]
-tags: [ekonomi, presentasi, coronavirus COVID-19]
-
+tags: [ekonomi, presentasi, covid-19]
+categories: [Ekonomi, COVID-19, Riset]
 # Is this a featured event? (true/false)
 featured: false
 

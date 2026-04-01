@@ -6,7 +6,7 @@ subtitle: ""
 summary: ""
 authors: [admin] 
 tags: [pajak]
-categories: []
+categories: [Ekonomi]
 date: 2025-01-14T11:00:00+07:00
 lastmod: 2025-01-14T11:00:00+07:00
 featured: false

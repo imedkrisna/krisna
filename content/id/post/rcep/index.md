@@ -6,7 +6,7 @@ subtitle: ""
 summary: ""
 authors: [admin]
 tags: [python, perdagangan]
-categories: [python, perdagangan]
+categories: [Perdagangan, Data & Kode]
 date: 2020-11-28T13:39:10+11:00
 lastmod: 2020-11-28T13:39:10+11:00
 featured: false

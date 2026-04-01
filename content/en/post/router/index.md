@@ -6,7 +6,7 @@ subtitle: ""
 summary: ""
 authors: [admin]
 tags: [trade, economics, electronics, US]
-categories: [trade, economics, electronics, US]
+categories: [Economics, Trade, Industry]
 date: 2026-04-01T10:00:00+07:00
 lastmod: 2026-04-01T10:00:00+07:00
 featured: false

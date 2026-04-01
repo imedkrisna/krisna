@@ -25,7 +25,7 @@ publishDate: 2022-09-16T08:47:06+07:00
 
 authors: [admin]
 tags: []
-
+categories: [Miscellaneous]
 # Is this a featured event? (true/false)
 featured: false
 

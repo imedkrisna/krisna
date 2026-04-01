@@ -25,7 +25,7 @@ abstract: ""
 summary: ""
 
 tags: []
-categories: []
+categories: [Miscellaneous]
 featured: false
 
 # Custom links (optional).

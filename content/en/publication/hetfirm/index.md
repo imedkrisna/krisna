@@ -24,8 +24,8 @@ abstract: "Indonesian government has been working hard in engaging with the worl
 # Summary. An optional shortened abstract.
 summary: ""
 
-tags: [ekonomi,perusahaan,perdagangan,total factor productivity]
-categories: [ekonomi,perusahaan,perdagangan,total factor productivity]
+tags: [economics, firms, trade, total factor productivity]
+categories: [Economics, Trade, Industry, Data & Code]
 featured: true
 
 # Custom links (optional).

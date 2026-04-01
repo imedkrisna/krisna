@@ -5,8 +5,8 @@ title: 'Labor-machine substitution in agriculture'
 subtitle: "comparing US and Indonesian farmers"
 summary: ""
 authors: [admin]
-tags: [Economics, trade, model, HecksherOhlin]
-categories: [Economics, trade, model, HecksherOhlin]
+tags: [economics, trade, model, HecksherOhlin]
+categories: [Economics, Trade, Research]
 date: 2024-02-25T15:10:34+07:00
 lastmod: 2024-02-25T15:10:34+07:00
 featured: false

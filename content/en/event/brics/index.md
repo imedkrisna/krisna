@@ -24,8 +24,8 @@ all_day: false
 publishDate: 2025-02-16T21:00:00+07:00
 
 authors: [admin]
-tags: [ekonomi, brics]
-
+tags: [economics, BRICS]
+categories: [Economics]
 # Is this a featured event? (true/false)
 featured: false
 

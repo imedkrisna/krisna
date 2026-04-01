@@ -6,7 +6,7 @@ subtitle: "by Mark Koyama and Jared Rubin"
 summary: ""
 authors: [admin]
 tags: [miscellaneous]
-categories: [miscellaneous]
+categories: [Miscellaneous]
 date: 2022-08-19T15:10:34+07:00
 lastmod: 2022-08-19T15:10:34+07:00
 featured: false

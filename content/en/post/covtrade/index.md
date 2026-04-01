@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Indonesia's Trade Policy Amid COVID-19"
-categories: [coronavirus COVID-19, industry]
-tags: [coronavirus COVID-19, industry]
+categories: [Industry, COVID-19]
+tags: [covid-19, industry]
 date: '2020-04-15'
 author: admin
 ---

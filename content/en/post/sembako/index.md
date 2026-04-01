@@ -5,8 +5,8 @@ title: "Managing food inflation, Indonesian style"
 subtitle: ""
 summary: ""
 authors: [admin]
-tags: [trade, public policy,food]
-categories: [public policy, trade,food]
+tags: [trade, public policy, food]
+categories: [Trade, Industry, Public Policy]
 date: 2022-03-04T07:29:50+07:00
 lastmod: 2022-03-04T07:29:50+07:00
 featured: false

@@ -5,8 +5,8 @@ title: "Reviewing the National Economic Council Paper on the Economic Impact of 
 subtitle: ""
 summary: ""
 authors: [admin]
-tags: [CGE, Economics,MBG]
-categories: [CGE, Economics,MBG]
+tags: [CGE, economics, MBG]
+categories: [Economics, Data & Code, Research]
 date: 2025-03-24T21:06:59+07:00
 lastmod: 2025-03-24T21:06:59+07:00
 featured: false

@@ -25,7 +25,7 @@ abstract: ""
 summary: ""
 
 tags: [ekonomi, kendaraan listrik, perdagangan, industri]
-categories: [ekonomi, kendaraan listrik, perdagangan, industri]
+categories: [Ekonomi, Perdagangan, Industri]
 featured: false
 
 # Custom links (optional).

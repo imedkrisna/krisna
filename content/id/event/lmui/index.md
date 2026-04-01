@@ -24,8 +24,8 @@ all_day: false
 publishDate: 2025-11-11T10:00:00+07:00
 
 authors: [admin]
-tags: [Neraca pembayaran]
-
+tags: [neraca pembayaran]
+categories: [Perdagangan]
 # Is this a featured event? (true/false)
 featured: false
 

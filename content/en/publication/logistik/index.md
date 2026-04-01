@@ -24,8 +24,8 @@ abstract: ""
 # Summary. An optional shortened abstract.
 summary: ""
 
-tags: [ekonomi, kendaraan listrik, perdagangan, industri]
-categories: [ekonomi, kendaraan listrik, perdagangan, industri]
+tags: [economics, electric vehicles, trade, industry]
+categories: [Economics, Trade, Industry]
 featured: false
 
 # Custom links (optional).

@@ -5,8 +5,8 @@ title: "Global Value Chain dalam bumbu gado-gado"
 subtitle: ""
 summary: ""
 authors: [admin]
-tags: [perdagangan, Global Value Chain, Python, UNCOMTRADE]
-categories: [perdagangan, Global Value Chain, Python, UNCOMTRADE]
+tags: [trade, global value chain, python, UNCOMTRADE]
+categories: [Trade, Data & Code]
 date: 2021-08-31T23:27:21+10:00
 lastmod: 2021-08-31T23:27:21+10:00
 featured: false

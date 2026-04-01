@@ -24,8 +24,8 @@ abstract: ""
 # Summary. An optional shortened abstract.
 summary: ""
 
-tags: [perdagangan,kebijakan]
-categories: [perdagangan, kebijakan]
+tags: [trade, public policy]
+categories: [Trade, Public Policy]
 featured: true
 
 # Custom links (optional).

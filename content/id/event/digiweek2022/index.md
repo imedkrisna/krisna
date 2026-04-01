@@ -24,8 +24,8 @@ all_day: false
 publishDate: 2022-07-29T17:30:40+07:00
 
 authors: [admin]
-tags: [SME, Trade]
-
+tags: [SME, perdagangan]
+categories: [Perdagangan, Industri]
 # Is this a featured event? (true/false)
 featured: false
 

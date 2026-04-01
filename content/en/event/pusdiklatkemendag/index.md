@@ -24,8 +24,8 @@ all_day: false
 publishDate: 2025-11-24T10:00:00+07:00
 
 authors: [admin]
-tags: [Neraca pembayaran]
-
+tags: [balance of payments]
+categories: [Trade]
 # Is this a featured event? (true/false)
 featured: false
 

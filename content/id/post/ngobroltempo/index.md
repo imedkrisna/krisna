@@ -6,7 +6,7 @@ subtitle: ""
 summary: ""
 authors: [admin]
 tags: [TKDN, perdagangan, industri, kebijakan]
-categories: [TKDN, perdagangan, industri, kebijakan]
+categories: [Perdagangan, Industri, Kebijakan]
 date: 2022-03-04T07:17:38+07:00
 lastmod: 2022-03-04T07:17:38+07:00
 featured: false

@@ -3,6 +3,7 @@ layout: post
 title: Thorbecke 2019
 category: [ekonomi, ekonometri]
 tags: [ekonomi, ekonometri]
+categories: [Ekonomi, Data & Kode]
 date: '2020-02-25'
 author: admin
 ---

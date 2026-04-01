@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Perdagangan dan COVID-19: kelemahan comparative advantage di tengah coronavirus?"
-categories: [coronavirus COVID-19, industri]
-tags: [coronavirus COVID-19, industri]
+categories: [Industri, COVID-19]
+tags: [covid-19, industri]
 date: '2020-03-25'
 author: admin
 ---

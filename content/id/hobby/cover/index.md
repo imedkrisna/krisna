@@ -6,7 +6,7 @@ subtitle: ""
 summary: "Saya dan beberapa teman di Indonesia suka bikin cover video musik. Semua dikerjain on-line lho!"
 authors: [admin]
 tags: []
-categories: []
+categories: [Lain-lain]
 date: 2020-08-16T19:33:41+10:00
 lastmod: 2020-08-16T19:33:41+10:00
 featured: true

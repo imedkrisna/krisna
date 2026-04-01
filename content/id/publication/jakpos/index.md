@@ -24,8 +24,8 @@ abstract: "Complicated regulations have been one of the most persistent problem 
 # Summary. An optional shortened abstract.
 summary: "Complicated regulations have been one of the most persistent problem in Indonesian business climate. In this piece, I examine why relying on Omnibus Laws may not solve the rooted, long-time problems in Indonesian business climate."
 
-tags: [english]
-categories: [english]
+tags: []
+categories: [Lain-lain]
 featured: false
 
 # Custom links (optional).

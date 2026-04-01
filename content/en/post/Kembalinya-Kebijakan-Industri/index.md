@@ -3,6 +3,7 @@ layout: post
 title: The Return of Industrial Policy
 Categories: [industry, public policy]
 tags: [public policy, industry]
+categories: [Industry, Public Policy]
 author: admin
 date: '2020-01-04'
 ---

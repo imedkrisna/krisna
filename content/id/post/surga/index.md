@@ -6,7 +6,7 @@ subtitle: ""
 summary: ""
 authors: [admin]
 tags: [ekonomi, macem-macem]
-categories: [ekonomi, macem-macem]
+categories: [Ekonomi, Lain-lain]
 date: 2020-12-02T10:48:50+11:00
 lastmod: 2020-12-02T10:48:50+11:00
 featured: false
