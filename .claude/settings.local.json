@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(xargs grep:*)",
+      "Bash(find:*)",
+      "Bash(git checkout:*)",
+      "Bash(hugo mod:*)",
+      "Bash(/c/Users/imedk/hugo/hugo mod:*)",
+      "Bash(/c/Users/imedk/hugo/hugo:*)",
+      "Bash(echo \"EXIT: $?\")"
+    ]
+  }
+}
