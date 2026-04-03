@@ -45,20 +45,14 @@ image:
 #    icon_pack: fab
 #    icon: facebook
 
-
 # Optional filename of your slides within your event's folder or a URL.
-url_slides: 
-
-url_code:
-url_pdf: "https://1drv.ms/p/s!AjelszXKKcmskYtufHA5RA5Iv4tYmA?e=hC3u7f"
-url_video: 
 
 # Markdown Slides (optional).
 #   Associate this event with Markdown slides.
 #   Simply enter your slide deck's filename without extension.
 #   E.g. `slides = "example-slides"` references `content/slides/example-slides.md`.
 #   Otherwise, set `slides = ""`.
-slides: "5s.pptx"
+slides: ""
 
 # Projects (optional).
 #   Associate this post with one or more of your projects.
@@ -66,5 +60,9 @@ slides: "5s.pptx"
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: []
+
+links:
+  - type: pdf
+    url: "https://1drv.ms/p/s!AjelszXKKcmskYtufHA5RA5Iv4tYmA?e=hC3u7f"
 ---
 

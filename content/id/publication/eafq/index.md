@@ -4,8 +4,6 @@
 title: "Indonesia doubles down on nickel export bans and downstreaming"
 authors: [admin]
 date: 2023-11-27T06:09:00+11:00
-doi: ""
-
 # Schedule page publish date (NOT publication's date).
 publishDate: 2023-11-27T06:09:00+11:00
 
@@ -36,15 +34,6 @@ featured: false
 #   icon_pack: fab
 #   icon: twitter
 
-url_pdf: https://press-files.anu.edu.au/downloads/press/n11874/pdf/book.pdf
-url_code:
-url_dataset:
-url_poster:
-url_project:
-url_slides:
-url_source: https://press.anu.edu.au/publications/journals/east-asia-forum-quarterly/east-asia-forum-quarterly-volume-15-number-4-2023
-url_video:
-
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder. 
 # Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
@@ -66,4 +55,10 @@ projects: []
 #   E.g. `slides: "example"` references `content/slides/example/index.md`.
 #   Otherwise, set `slides: ""`.
 slides: ""
+
+links:
+  - type: pdf
+    url: "https://press-files.anu.edu.au/downloads/press/n11874/pdf/book.pdf"
+  - type: source
+    url: "https://press.anu.edu.au/publications/journals/east-asia-forum-quarterly/east-asia-forum-quarterly-volume-15-number-4-2023"
 ---

@@ -45,13 +45,7 @@ image:
 #    icon_pack: fab
 #    icon: facebook
 
-
 # Optional filename of your slides within your event's folder or a URL.
-url_slides: "/slides/id/event/bimc/middleclass.html"
-
-url_code:
-url_pdf: 
-url_video: 
 
 # Markdown Slides (optional).
 #   Associate this event with Markdown slides.
@@ -66,5 +60,9 @@ slides:
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: []
+
+links:
+  - type: slides
+    url: "/slides/id/event/bimc/middleclass.html"
 ---
 

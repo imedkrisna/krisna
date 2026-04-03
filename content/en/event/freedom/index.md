@@ -45,13 +45,7 @@ image:
 #    icon_pack: fab
 #    icon: facebook
 
-
 # Optional filename of your slides within your event's folder or a URL.
-url_slides: "/slides/id/event/freedom/investasi.html"
-
-url_code:
-url_pdf:  "imed_economic_freedom.pdf"
-url_video: 
 
 # Markdown Slides (optional).
 #   Associate this event with Markdown slides.
@@ -66,6 +60,12 @@ slides:
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: []
+
+links:
+  - type: pdf
+    url: "imed_economic_freedom.pdf"
+  - type: slides
+    url: "/slides/id/event/freedom/investasi.html"
 ---
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/68qSpkZp8x0?si=XMS7FSzg-dto505F" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

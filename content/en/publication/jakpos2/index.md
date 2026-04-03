@@ -4,8 +4,6 @@
 title: "Restrictive regulations on foreign trade may hurt economy"
 authors: [admin, Deasy Pane]
 date: 2021-03-12T22:43:13+11:00
-doi: ""
-
 # Schedule page publish date (NOT publication's date).
 publishDate: 2021-03-12T22:43:13+11:00
 
@@ -36,15 +34,6 @@ featured: false
 #   icon_pack: fab
 #   icon: twitter
 
-url_pdf:
-url_code:
-url_dataset:
-url_poster:
-url_project:
-url_slides:
-url_source: https://www.thejakartapost.com/paper/2021/03/11/restrictive-regulations-on-foreign-trade-may-hurt-economy.html?fbclid=IwAR3bYw1xMauZtDXfM9cjtaZM65jhJgACvOUEIo0ITTeOg9mj1SP8DisRIjQ
-url_video:
-
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder. 
 # Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
@@ -66,4 +55,8 @@ projects: []
 #   E.g. `slides: "example"` references `content/slides/example/index.md`.
 #   Otherwise, set `slides: ""`.
 slides: ""
+
+links:
+  - type: source
+    url: "https://www.thejakartapost.com/paper/2021/03/11/restrictive-regulations-on-foreign-trade-may-hurt-economy.html?fbclid=IwAR3bYw1xMauZtDXfM9cjtaZM65jhJgACvOUEIo0ITTeOg9mj1SP8DisRIjQ"
 ---

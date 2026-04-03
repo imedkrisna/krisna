@@ -46,10 +46,6 @@ image:
 #   icon: twitter
 
 # Optional filename of your slides within your event's folder or a URL.
-url_slides: "/slides/id/event/mari/mari.html"
-url_code: 'https://github.com/imedkrisna/tariff-ntm-industry'
-url_pdf: 'https://www.tandfonline.com/doi/full/10.1080/00074918.2021.2016613'
-url_video:
 
 # Markdown Slides (optional).
 #   Associate this event with Markdown slides.
@@ -64,5 +60,13 @@ slides: ""
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: []
+
+links:
+  - type: pdf
+    url: "https://www.tandfonline.com/doi/full/10.1080/00074918.2021.2016613"
+  - type: code
+    url: "https://github.com/imedkrisna/tariff-ntm-industry"
+  - type: slides
+    url: "/slides/id/event/mari/mari.html"
 ---
 

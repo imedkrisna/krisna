@@ -46,11 +46,6 @@ image:
 #   icon: twitter
 
 # Optional filename of your slides within your event's folder or a URL.
-url_slides: https://drive.google.com/file/d/1ozl2gV9zOeYZReF5fcx1cpYyuIrdsMiv/view?usp=sharing
-
-url_code:
-url_pdf: https://cutt.ly/cips-pp47
-url_video: https://www.youtube.com/watch?v=rj2MhtJXnMc
 
 # Markdown Slides (optional).
 #   Associate this event with Markdown slides.
@@ -65,6 +60,14 @@ slides: ""
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: []
+
+links:
+  - type: pdf
+    url: "https://cutt.ly/cips-pp47"
+  - type: slides
+    url: "https://drive.google.com/file/d/1ozl2gV9zOeYZReF5fcx1cpYyuIrdsMiv/view?usp=sharing"
+  - type: video
+    url: "https://www.youtube.com/watch?v=rj2MhtJXnMc"
 ---
 
 To access the paper, click the thumbnail above or alternatively click [here](https://repository.cips-indonesia.org/publications/354718/the-advent-of-a-new-trade-governance-after-the-omnibus-law-neraca-komoditas)

@@ -40,17 +40,13 @@ image:
 # Custom links (optional).
 #   Uncomment and edit lines below to show custom links.
 links:
-- name: Follow
-  url: https://twitter.com/imedkrisna
-  icon_pack: fab
-  icon: twitter
+  - type: pdf
+    url: "trumptariff.pdf"
+  - type: slides
+    url: "/slides/id/event/atc/apindotrainingcenter.html"
+
 
 # Optional filename of your slides within your talk's folder or a URL.
-url_slides: "/slides/id/event/atc/apindotrainingcenter.html"
-
-url_code:
-url_pdf: "trumptariff.pdf"
-url_video:
 
 # Markdown Slides (optional).
 #   Associate this talk with Markdown slides.

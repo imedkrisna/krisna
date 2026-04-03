@@ -40,25 +40,22 @@ image:
 # Custom links (optional).
 #   Uncomment and edit lines below to show custom links.
 links:
- - name: IDM
-   url: https://www.facebook.com/idmcooperatives/photos/?ref=page_internal
-   icon_pack: fab
-   icon: facebook
- - name: IDM
-   url: https://twitter.com/idmcoop/status/1365231406180233218?s=20
-   icon_pack: fab
-   icon: twitter
- - name: IDM
-   url: https://www.instagram.com/p/CLwS7SuA2Mt/?utm_source=ig_web_copy_link
-   icon_pack: fab
-   icon: instagram
+  - type: video
+    url: "https://www.youtube.com/watch?v=aJx7ymHrQqI"
+  - name: IDM
+    url: https://www.facebook.com/idmcooperatives/photos/?ref=page_internal
+    icon_pack: fab
+    icon: facebook
+  - name: IDM
+    url: https://twitter.com/idmcoop/status/1365231406180233218?s=20
+    icon_pack: fab
+    icon: twitter
+  - name: IDM
+    url: https://www.instagram.com/p/CLwS7SuA2Mt/?utm_source=ig_web_copy_link
+    icon_pack: fab
+    icon: instagram
 
 # Optional filename of your slides within your event's folder or a URL.
-url_slides: 
-
-url_code:
-url_pdf:
-url_video: https://www.youtube.com/watch?v=aJx7ymHrQqI
 
 # Markdown Slides (optional).
 #   Associate this event with Markdown slides.

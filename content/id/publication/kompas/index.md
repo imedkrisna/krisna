@@ -4,8 +4,6 @@
 title: "Hilirisasi dan Peningkatan Kompleksitas Ekonomi"
 authors: [admin]
 date: 2024-01-22T14:44:52+10:00
-doi: ""
-
 # Schedule page publish date (NOT publication's date).
 publishDate: 2024-01-22T14:44:52+10:00
 
@@ -36,15 +34,6 @@ featured: false
 #   icon_pack: fab
 #   icon: twitter
 
-url_pdf:
-url_code:
-url_dataset:
-url_poster:
-url_project:
-url_slides: 
-url_source: https://www.kompas.id/baca/opini/2024/01/21/hilirisasi-dan-peningkatan-kompleksitas-ekonomi
-url_video:
-
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder. 
 # Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
@@ -66,4 +55,8 @@ projects: []
 #   E.g. `slides: "example"` references `content/slides/example/index.md`.
 #   Otherwise, set `slides: ""`.
 slides: ""
+
+links:
+  - type: source
+    url: "https://www.kompas.id/baca/opini/2024/01/21/hilirisasi-dan-peningkatan-kompleksitas-ekonomi"
 ---

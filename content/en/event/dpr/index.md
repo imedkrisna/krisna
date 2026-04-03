@@ -40,17 +40,11 @@ image:
 # Custom links (optional).
 #   Uncomment and edit lines below to show custom links.
 links:
-- name: Follow
-  url: https://twitter.com/imedkrisna
-  icon_pack: fab
-  icon: twitter
+  - type: slides
+    url: "/slides/id/event/dpr/dpr.html"
+
 
 # Optional filename of your slides within your talk's folder or a URL.
-url_slides: "/slides/id/event/dpr/dpr.html"
-
-url_code:
-url_pdf: ""
-url_video:
 
 # Markdown Slides (optional).
 #   Associate this talk with Markdown slides.

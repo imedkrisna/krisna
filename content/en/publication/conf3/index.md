@@ -4,7 +4,6 @@
 title: "Can cryptocurrency help business to be more competitive?"
 authors: [Dhany Ratana, admin]
 date: 2019-04-18T10:18:40+10:00
-doi: "10.1201/9780429202629"
 
 # Schedule page publish date (NOT publication's date).
 publishDate: 2019-04-18T10:18:40+10:00
@@ -31,19 +30,9 @@ featured: false
 # Custom links (optional).
 #   Uncomment and edit lines below to show custom links.
 links:
-- name: Follow
-  url: https://twitter.com/imedkrisna
-  icon_pack: fab
-  icon: twitter
+  - type: source
+    url: "https://www.taylorfrancis.com/books/e/9780429202629"
 
-url_pdf:
-url_code:
-url_dataset:
-url_poster:
-url_project:
-url_slides:
-url_source: https://www.taylorfrancis.com/books/e/9780429202629
-url_video:
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder. 
@@ -66,4 +55,8 @@ projects: []
 #   E.g. `slides: "example"` references `content/slides/example/index.md`.
 #   Otherwise, set `slides: ""`.
 slides: ""
+
+hugoblox:
+  ids:
+    doi: "10.1201/9780429202629"
 ---

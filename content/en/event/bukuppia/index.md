@@ -46,11 +46,6 @@ image:
 #   icon: twitter
 
 # Optional filename of your slides within your talk's folder or a URL.
-url_slides: https://drive.google.com/drive/folders/12E8567Ibdex1FfE5ColmqvKeKmIQx8Wn?usp=sharing
-
-url_code:
-url_pdf:
-url_video: https://www.youtube.com/watch?v=sqfMf4WN_d4&t=1376s
 
 # Markdown Slides (optional).
 #   Associate this talk with Markdown slides.
@@ -65,6 +60,12 @@ slides: ""
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: []
+
+links:
+  - type: slides
+    url: "https://drive.google.com/drive/folders/12E8567Ibdex1FfE5ColmqvKeKmIQx8Wn?usp=sharing"
+  - type: video
+    url: "https://www.youtube.com/watch?v=sqfMf4WN_d4&t=1376s"
 ---
 
 Pada hari Kamis 10 September 2020, saya berkesempatan menjadi host sekaligus moderator di acara webinar dan bedah buku Mewujudkan Indonesia 4.0: Kumpulan pemikiran pelajar Indonesia di Australia. Acara ini terselenggara berkat kerjasama Perkumpulan Pelajar Indonesia di Australia atau PPI Australia dan Sobat Cyber Indonesia.

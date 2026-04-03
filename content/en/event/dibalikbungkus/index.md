@@ -46,11 +46,6 @@ image:
 #   icon: twitter
 
 # Optional filename of your slides within your event's folder or a URL.
-url_slides: https://www.krisna.or.id/slides/dibalikbungkus
-
-url_code: https://dibalikbungkus.cips-indonesia.org/
-url_pdf: https://cutt.ly/cips-mk51
-url_video: https://youtu.be/--ujjzUgfGk
 
 # Markdown Slides (optional).
 #   Associate this event with Markdown slides.
@@ -65,6 +60,16 @@ slides: ""
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: []
+
+links:
+  - type: pdf
+    url: "https://cutt.ly/cips-mk51"
+  - type: code
+    url: "https://dibalikbungkus.cips-indonesia.org/"
+  - type: slides
+    url: "https://www.krisna.or.id/slides/dibalikbungkus"
+  - type: video
+    url: "https://youtu.be/--ujjzUgfGk"
 ---
 
 A very engaging event. Most participants were students, though some were from government and the private sector. Don't forget to visit the Di Balik Bungkus website [here](https://dibalikbungkus.cips-indonesia.org/).

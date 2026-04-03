@@ -46,11 +46,6 @@ image:
 #   icon: twitter
 
 # Optional filename of your slides within your event's folder or a URL.
-url_slides:
-
-url_code:
-url_pdf: https://drive.google.com/drive/folders/1VK80F_CLLt26Nq_qZ0knrArXPWzl42Hu
-url_video: https://www.youtube.com/watch?v=7Dt-ZFjEfx8
 
 # Markdown Slides (optional).
 #   Associate this event with Markdown slides.
@@ -65,6 +60,12 @@ slides: "ppid"
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: []
+
+links:
+  - type: pdf
+    url: "https://drive.google.com/drive/folders/1VK80F_CLLt26Nq_qZ0knrArXPWzl42Hu"
+  - type: video
+    url: "https://www.youtube.com/watch?v=7Dt-ZFjEfx8"
 ---
 
 Acara ini dibuka dengan sambutan dari editor dan direktur penelitian dan kajian PPID, serta keynote speech dari Profesor (Emeritus) Dorodjatun Kuntjoro-Jakti.

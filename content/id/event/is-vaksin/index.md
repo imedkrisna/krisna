@@ -40,22 +40,16 @@ image:
 # Custom links (optional).
 #   Uncomment and edit lines below to show custom links.
 links:
- - name: Facebook
-   url: https://www.facebook.com/965003336858339/videos/976497749549938/
-   icon_pack: fab
-   icon: facebook
-
- - name: Twitter
-   url: https://twitter.com/SynergIndonesia
-   icon_pack: fab
-   icon: twitter   
+  - name: Facebook
+    url: https://www.facebook.com/965003336858339/videos/976497749549938/
+    icon_pack: fab
+    icon: facebook
+  - name: Twitter
+    url: https://twitter.com/SynergIndonesia
+    icon_pack: fab
+    icon: twitter
 
 # Optional filename of your slides within your event's folder or a URL.
-url_slides:
-
-url_code:
-url_pdf:
-url_video:
 
 # Markdown Slides (optional).
 #   Associate this event with Markdown slides.

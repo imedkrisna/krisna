@@ -36,15 +36,6 @@ featured: false
 #   icon_pack: fab
 #   icon: twitter
 
-url_pdf:
-url_code:
-url_dataset:
-url_poster:
-url_project:
-url_slides:
-url_source: https://www.thejakartapost.com/opinion/2024/04/15/the-trade-balance-and-why-we-cant-buy-nice-things.html
-url_video:
-
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder. 
 # Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
@@ -66,4 +57,8 @@ projects: []
 #   E.g. `slides: "example"` references `content/slides/example/index.md`.
 #   Otherwise, set `slides: ""`.
 slides: ""
+
+links:
+  - type: source
+    url: "https://www.thejakartapost.com/opinion/2024/04/15/the-trade-balance-and-why-we-cant-buy-nice-things.html"
 ---

@@ -46,11 +46,6 @@ image:
 #   icon: twitter
 
 # Optional filename of your slides within your event's folder or a URL.
-url_slides: "Krisna_Digiweek2022.pdf"
-
-url_code:
-url_pdf:
-url_video: https://www.youtube.com/watch?v=gcbXPJl-L34
 
 # Markdown Slides (optional).
 #   Associate this event with Markdown slides.
@@ -65,6 +60,12 @@ slides: ""
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: []
+
+links:
+  - type: slides
+    url: "Krisna_Digiweek2022.pdf"
+  - type: video
+    url: "https://www.youtube.com/watch?v=gcbXPJl-L34"
 ---
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/gcbXPJl-L34" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

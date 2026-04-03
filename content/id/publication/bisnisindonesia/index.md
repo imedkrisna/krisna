@@ -4,8 +4,6 @@
 title: "Menakar Efektivitas Neraca Komoditas"
 authors: [admin]
 date: 2022-02-23T09:28:58+07:00
-doi: ""
-
 # Schedule page publish date (NOT publication's date).
 publishDate: 2022-02-23T09:28:58+07:00
 
@@ -36,15 +34,6 @@ featured: false
 #   icon_pack: fab
 #   icon: twitter
 
-url_pdf:
-url_code:
-url_dataset:
-url_poster:
-url_project:
-url_slides:
-url_source: https://bisnisindonesia.id/article/menakar-efektivitas-neraca-komoditas
-url_video:
-
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder. 
 # Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
@@ -66,4 +55,8 @@ projects: []
 #   E.g. `slides: "example"` references `content/slides/example/index.md`.
 #   Otherwise, set `slides: ""`.
 slides: ""
+
+links:
+  - type: source
+    url: "https://bisnisindonesia.id/article/menakar-efektivitas-neraca-komoditas"
 ---

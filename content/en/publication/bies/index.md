@@ -3,19 +3,15 @@ abstract: Indonesia has been struggling to return to its pre-Asian Financial Cri
 authors:
 - admin
 date: "2020-04-07T00:00:00Z"
-doi: "10.1080/00074918.2020.1747596"
+
 featured: false
 image:
   caption: 'Image credit: [**Unsplash**](https://unsplash.com/photos/s9CC2SKySJM)'
   focal_point: ""
   preview_only: false
 links:
-# - name: Custom Link
-#   url: https://www-tandfonline-com.virtual.anu.edu.au/doi/full/10.1080/00074918.2020.1747596
-- name: Follow
-  url: https://twitter.com/imedkrisna
-  icon_pack: fab
-  icon: twitter
+  - type: source
+    url: "https://www-tandfonline-com.virtual.anu.edu.au/doi/full/10.1080/00074918.2020.1747596"
 publication: "Bulletin of Indonesian Economic Studies"
 publication_short: "BIES"
 publication_types:
@@ -26,14 +22,10 @@ tags:
 - Economics
 - Kebijakan
 title: "The Importance of Financial Liberalisation to Economic Growth: The Case of Indonesia"
-url_code: ''
-url_dataset: ''
-url_pdf: ''
-url_poster: ''
-url_project: ""
-url_slides: ""
-url_source: 'https://www-tandfonline-com.virtual.anu.edu.au/doi/full/10.1080/00074918.2020.1747596'
-url_video: ''
+
+hugoblox:
+  ids:
+    doi: "10.1080/00074918.2020.1747596"
 ---
 
 <a href="https://www.scimagojr.com/journalsearch.php?q=19966&amp;tip=sid&amp;exact=no" title="SCImago Journal &amp; Country Rank"><img border="0" src="https://www.scimagojr.com/journal_img.php?id=19966" alt="SCImago Journal &amp; Country Rank"  /></a>

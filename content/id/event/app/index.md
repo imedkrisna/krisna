@@ -46,10 +46,6 @@ image:
 #   icon: twitter
 
 # Optional filename of your slides within your event's folder or a URL.
-url_slides: "/slides/id/event/app/presentasi.html"
-url_code: 
-url_pdf: 'https://www.researchgate.net/publication/375632558_The_implication_of_the_aggressive_emission_target_on_the_Indonesian_electricity_sector'
-url_video:
 
 # Markdown Slides (optional).
 #   Associate this event with Markdown slides.
@@ -64,5 +60,11 @@ slides: ""
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: []
+
+links:
+  - type: pdf
+    url: "https://www.researchgate.net/publication/375632558_The_implication_of_the_aggressive_emission_target_on_the_Indonesian_electricity_sector"
+  - type: slides
+    url: "/slides/id/event/app/presentasi.html"
 ---
 

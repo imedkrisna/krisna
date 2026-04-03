@@ -46,11 +46,6 @@ image:
 #   icon: twitter
 
 # Optional filename of your slides within your event's folder or a URL.
-url_slides: "/slides/en/event/diksiPPIA/diksi.html"
-
-url_code:
-url_pdf:
-url_video: https://www.youtube.com/watch?v=co70_3gqekQ
 
 # Markdown Slides (optional).
 #   Associate this event with Markdown slides.
@@ -65,6 +60,12 @@ slides: ""
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: []
+
+links:
+  - type: slides
+    url: "/slides/en/event/diksiPPIA/diksi.html"
+  - type: video
+    url: "https://www.youtube.com/watch?v=co70_3gqekQ"
 ---
 
 The audio isn't the best, but the two speakers are audible.

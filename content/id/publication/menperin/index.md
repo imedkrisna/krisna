@@ -4,8 +4,6 @@
 title: "COVID-19 dan Anjloknya Indeks PMI Indonesia"
 authors: [Arianto Patunru, admin]
 date: 2020-05-05T14:45:13+10:00
-doi: ""
-
 # Schedule page publish date (NOT publication's date).
 publishDate: 2020-05-05T14:45:13+10:00
 
@@ -31,19 +29,10 @@ featured: false
 # Custom links (optional).
 #   Uncomment and edit lines below to show custom links.
 links:
- - name: Follow
-   url: https://twitter.com
-   icon_pack: fab
-   icon: twitter
-
-url_pdf: https://www.dropbox.com/s/8mb0l730ufuy0mc/Brief%20Anjloknya%20Indeks%20PMI%20Indonesia_050520_v2.pdf?dl=0
-url_code:
-url_dataset:
-url_poster:
-url_project:
-url_slides:
-url_source: https://www.covid19indonesia.net/indonesian-minister-of-industry
-url_video:
+  - type: pdf
+    url: "https://www.dropbox.com/s/8mb0l730ufuy0mc/Brief%20Anjloknya%20Indeks%20PMI%20Indonesia_050520_v2.pdf?dl=0"
+  - type: source
+    url: "https://www.covid19indonesia.net/indonesian-minister-of-industry"
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder. 

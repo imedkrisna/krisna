@@ -46,11 +46,6 @@ image:
 #   icon: twitter
 
 # Optional filename of your slides within your event's folder or a URL.
-url_slides: 'https://www.krisna.or.id/slides/kemenko/#/the-heterogeneous-impact-of-tariff-and-ntms-on-total-factor-productivity-of-indonesian-firms'
-
-url_code:
-url_pdf: 'https://acde.crawford.anu.edu.au/sites/default/files/publication/acde_crawford_anu_edu_au/2021-09/acde_gupta_2021_21.pdf'
-url_video:
 
 # Markdown Slides (optional).
 #   Associate this event with Markdown slides.
@@ -65,5 +60,11 @@ slides: ""
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: []
+
+links:
+  - type: pdf
+    url: "https://acde.crawford.anu.edu.au/sites/default/files/publication/acde_crawford_anu_edu_au/2021-09/acde_gupta_2021_21.pdf"
+  - type: slides
+    url: "https://www.krisna.or.id/slides/kemenko/#/the-heterogeneous-impact-of-tariff-and-ntms-on-total-factor-productivity-of-indonesian-firms"
 ---
 

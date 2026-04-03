@@ -46,11 +46,6 @@ image:
 #   icon: twitter
 
 # Optional filename of your slides within your event's folder or a URL.
-url_slides: https://1drv.ms/b/s!AjelszXKKcmshbo7mqiAcADRqCu8yw?e=UprlaQ
-
-url_code:
-url_pdf: https://www.gtap.agecon.purdue.edu/resources/download/11273.pdf
-url_video: https://www.youtube.com/watch?v=zfFhbkRrCAU&t=6s
 
 # Markdown Slides (optional).
 #   Associate this event with Markdown slides.
@@ -65,6 +60,14 @@ slides: ""
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: []
+
+links:
+  - type: pdf
+    url: "https://www.gtap.agecon.purdue.edu/resources/download/11273.pdf"
+  - type: slides
+    url: "https://1drv.ms/b/s!AjelszXKKcmshbo7mqiAcADRqCu8yw?e=UprlaQ"
+  - type: video
+    url: "https://www.youtube.com/watch?v=zfFhbkRrCAU&t=6s"
 ---
 
 ### Video Recording

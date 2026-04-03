@@ -1,0 +1,25 @@
+{
+  "name": "krisna",
+  "version": "1.0.0",
+  "description": "<p align=\"center\"><a href=\"https://sourcethemes.com/academic/\" target=\"_blank\" rel=\"noopener\"><img src=\"https://sourcethemes.com/academic/img/logo_200px.png\" alt=\"Academic logo\"></a></p>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imedkrisna/krisna.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/imedkrisna/krisna/issues"
+  },
+  "homepage": "https://github.com/imedkrisna/krisna#readme",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.2.2",
+    "@tailwindcss/typography": "^0.5.19"
+  }
+}

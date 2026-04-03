@@ -4,8 +4,6 @@
 title: "will IA-CEPA be the boost to the Australia-Indonesia relationship leaders are banking on"
 authors: [Donny Pasaribu, admin]
 date: 2020-02-18T14:44:20+10:00
-doi: ""
-
 # Schedule page publish date (NOT publication's date).
 publishDate: 2020-02-18T14:44:20+10:00
 
@@ -31,19 +29,9 @@ featured: false
 # Custom links (optional).
 #   Uncomment and edit lines below to show custom links.
 links:
-- name: Follow
-  url: https://twitter.com/imedkrisna
-  icon_pack: fab
-  icon: twitter
+  - type: source
+    url: "https://indonesiaatmelbourne.unimelb.edu.au/will-ia-cepa-be-the-boost-to-the-australia-indonesia-relationship-leaders-are-banking-on/"
 
-url_pdf:
-url_code:
-url_dataset:
-url_poster:
-url_project:
-url_slides:
-url_source: https://indonesiaatmelbourne.unimelb.edu.au/will-ia-cepa-be-the-boost-to-the-australia-indonesia-relationship-leaders-are-banking-on/
-url_video:
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder. 

@@ -36,15 +36,6 @@ featured: false
 #   icon_pack: fab
 #   icon: twitter
 
-url_pdf:
-url_code:
-url_dataset:
-url_poster:
-url_project:
-url_slides:
-url_source: https://nasional.sindonews.com/read/917721/18/3-tahun-jokowi-maruf-jalan-terjal-pulihkan-ekonomi-1666242630
-url_video:
-
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder. 
 # Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
@@ -66,4 +57,8 @@ projects: []
 #   E.g. `slides: "example"` references `content/slides/example/index.md`.
 #   Otherwise, set `slides: ""`.
 slides: ""
+
+links:
+  - type: source
+    url: "https://nasional.sindonews.com/read/917721/18/3-tahun-jokowi-maruf-jalan-terjal-pulihkan-ekonomi-1666242630"
 ---

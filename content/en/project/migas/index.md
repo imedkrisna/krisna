@@ -9,7 +9,6 @@ categories: [Miscellaneous]
 date: 2020-08-20T11:28:22+10:00
 
 # Optional external URL for project (replaces project detail page).
-external_link: "/project/migas/index.html"
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.
@@ -27,17 +26,16 @@ image:
 #   icon_pack: fab
 #   icon: twitter
 
-url_code: ""
-url_pdf: ""
-url_slides: ""
-url_video: ""
-
 # Slides (optional).
 #   Associate this project with Markdown slides.
 #   Simply enter your slide deck's filename without extension.
 #   E.g. `slides = "example-slides"` references `content/slides/example-slides.md`.
 #   Otherwise, set `slides = ""`.
 slides: ""
+
+links:
+  - type: site
+    url: "/project/migas/index.html"
 ---
 
 ## Macro Policy Brief: Global Inflation and the Oil Production Glut

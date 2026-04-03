@@ -40,18 +40,11 @@ image:
 # Custom links (optional).
 #   Uncomment and edit lines below to show custom links.
 links:
-- name: Follow
-  url: https://twitter.com/imedkrisna
-  icon_pack: fab
-  icon: twitter
+  - type: pdf
+    url: "talk/beasiswa/slide.pdf"
+
 
 # Optional filename of your slides within your talk's folder or a URL.
-url_slides: ""
-
-url_code:
-url_pdf: "talk/beasiswa/slide.pdf"
-url_video:
-
 # Markdown Slides (optional).
 #   Associate this talk with Markdown slides.
 #   Simply enter your slide deck's filename without extension.

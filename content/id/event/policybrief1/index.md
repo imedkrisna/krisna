@@ -14,7 +14,6 @@ address:
 summary: Komisi ekonomi PPID mencermati program Percepatan Ekonomi Nasional (PEN) di 2020 dan 2021, serta melihat beberapa permasalahan yang ada.
 abstract: Rendahnya inflasi (CPI) menyiratkan permintaan yang lemah. Di situasi seperti ini, stimulus ekonomi merupakan program yang sangat baik untuk pemulihan ekonomi. Namun demikian, pemerintah mengurangi pagu untuk perlindungan sosial. Kami mencermati beberapa permasalahan dan potensi solusi untuk meningkatkan bantuan sosial.
 
-
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
 date: 2021-05-01T14:30:00+10:00
@@ -47,18 +46,13 @@ image:
 #   icon: twitter
 
 # Optional filename of your slides within your event's folder or a URL.
-url_slides: 
-
-url_code: https://doi.org/10.13140/RG.2.2.12009.21605
-url_pdf: https://drive.google.com/file/d/1c-GQ2A-QZl9PjYavSlsVeG_J8gLlhF7g/view?usp=sharing
-url_video:
 
 # Markdown Slides (optional).
 #   Associate this event with Markdown slides.
 #   Simply enter your slide deck's filename without extension.
 #   E.g. `slides = "example-slides"` references `content/slides/example-slides.md`.
 #   Otherwise, set `slides = ""`.
-slides: "policybrief1"
+slides: ""
 
 # Projects (optional).
 #   Associate this post with one or more of your projects.
@@ -66,6 +60,12 @@ slides: "policybrief1"
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: []
+
+links:
+  - type: pdf
+    url: "https://drive.google.com/file/d/1c-GQ2A-QZl9PjYavSlsVeG_J8gLlhF7g/view?usp=sharing"
+  - type: code
+    url: "https://doi.org/10.13140/RG.2.2.12009.21605"
 ---
 
 # Ringkasan

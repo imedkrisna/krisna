@@ -45,13 +45,7 @@ image:
 #    icon_pack: fab
 #    icon: facebook
 
-
 # Optional filename of your slides within your event's folder or a URL.
-url_slides: "/slides/en/event/brics/brics.html"
-
-url_code:
-url_pdf: 
-url_video: 
 
 # Markdown Slides (optional).
 #   Associate this event with Markdown slides.
@@ -66,6 +60,10 @@ slides:
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: []
+
+links:
+  - type: slides
+    url: "/slides/en/event/brics/brics.html"
 ---
 
 In this Global Seminar, we talk with Dr Lili Yan Ing and Dr Krisna Gupta on the economics of Indonesia joining BRICS, a bloc formed by Brazil, Russia, India, and China in 2009 with the addition of South Africa in 2010. What are the benefits to Indonesia?

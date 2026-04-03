@@ -9,7 +9,6 @@ categories: [Miscellaneous]
 date: 2024-07-15T07:28:22+07:00
 
 # Optional external URL for project (replaces project detail page).
-external_link: "/project/service/services_document.html"
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.
@@ -27,17 +26,18 @@ image:
 #   icon_pack: fab
 #   icon: twitter
 
-url_code: "/project/service/services_document.html"
-url_pdf: ""
-url_slides: ""
-url_video: ""
-
 # Slides (optional).
 #   Associate this project with Markdown slides.
 #   Simply enter your slide deck's filename without extension.
 #   E.g. `slides = "example-slides"` references `content/slides/example-slides.md`.
 #   Otherwise, set `slides = ""`.
 slides: ""
+
+links:
+  - type: code
+    url: "/project/service/services_document.html"
+  - type: site
+    url: "/project/service/services_document.html"
 ---
 
 A working draft. Please don't circulate.

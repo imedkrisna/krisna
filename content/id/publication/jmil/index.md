@@ -4,7 +4,6 @@
 title: "Analysis of the Effect of Indonesia-Japan Economic Partnership Agreement (IJEPA) on the Trade in Service Sector in Indonesia"
 authors: [Evanti Syahputri, admin]
 date: 2024-05-29T09:12:42+07:00
-doi: "10.30988/jmil.v8i1.1356"
 
 # Schedule page publish date (NOT publication's date).
 publishDate: 2024-05-29T09:12:42+07:00
@@ -37,15 +36,6 @@ featured: true
 #   icon_pack: fab
 #   icon: twitter
 
-url_pdf: https://jurnal.poltekapp.ac.id/index.php/JMIL/article/view/1356/pdf
-url_code:
-url_dataset:
-url_poster:
-url_project:
-url_slides: 
-url_source:
-url_video:
-
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder. 
 # Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
@@ -66,6 +56,14 @@ projects: []
 #   Simply enter your slide deck's filename without extension.
 #   E.g. `slides: "example"` references `content/slides/example/index.md`.
 #   Otherwise, set `slides: ""`.
-slides: paper2
+slides: ""
+
+hugoblox:
+  ids:
+    doi: "10.30988/jmil.v8i1.1356"
+
+links:
+  - type: pdf
+    url: "https://jurnal.poltekapp.ac.id/index.php/JMIL/article/view/1356/pdf"
 ---
 

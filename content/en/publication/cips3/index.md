@@ -4,8 +4,6 @@
 title: "The Importance of Trade For MSEs in The Indonesian F&B Sector."
 authors: [Hasran, admin]
 date: 2023-01-30T19:25:33+07:00
-doi: ""
-
 # Schedule page publish date (NOT publication's date).
 publishDate: 2023-01-30T19:25:33+07:00
 
@@ -36,15 +34,6 @@ featured: true
 #   icon_pack: fab
 #   icon: twitter
 
-url_pdf: The Importance of Trade For MSEs in The Indonesian F&B Sector.
-url_code:
-url_dataset:
-url_poster:
-url_project: https://dibalikbungkus.cips-indonesia.org/
-url_slides: 
-url_source:
-url_video: https://www.youtube.com/watch?v=jtY_JqhjLj8
-
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder. 
 # Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
@@ -66,4 +55,12 @@ projects: []
 #   E.g. `slides: "example"` references `content/slides/example/index.md`.
 #   Otherwise, set `slides: ""`.
 slides: ""
+
+links:
+  - type: pdf
+    url: "The Importance of Trade For MSEs in The Indonesian F&B Sector."
+  - type: project
+    url: "https://dibalikbungkus.cips-indonesia.org/"
+  - type: video
+    url: "https://www.youtube.com/watch?v=jtY_JqhjLj8"
 ---

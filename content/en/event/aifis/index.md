@@ -46,11 +46,6 @@ image:
 #   icon: twitter
 
 # Optional filename of your slides within your event's folder or a URL.
-url_slides: https://www.krisna.or.id/en/slides/aifis/#1
-
-url_code: 
-url_pdf: https://www.researchgate.net/publication/346626166_THE_HETEROGENOUS_IMPACT_OF_TARIFF_AND_NTM_ON_TOTAL_FACTOR_PRODUCTIVITY_OF_INDONESIAN_FIRMS
-url_video:
 
 # Markdown Slides (optional).
 #   Associate this event with Markdown slides.
@@ -65,4 +60,10 @@ slides: ""
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: []
+
+links:
+  - type: pdf
+    url: "https://www.researchgate.net/publication/346626166_THE_HETEROGENOUS_IMPACT_OF_TARIFF_AND_NTM_ON_TOTAL_FACTOR_PRODUCTIVITY_OF_INDONESIAN_FIRMS"
+  - type: slides
+    url: "https://www.krisna.or.id/en/slides/aifis/#1"
 ---

@@ -4,8 +4,6 @@
 title: "Mengapa tren kendaraan listrik adalah momentum transformasi industri otomotif Indonesia"
 authors: [admin, Wishnu Mahraddika]
 date: 2021-01-15T13:59:45+11:00
-doi: ""
-
 # Schedule page publish date (NOT publication's date).
 publishDate: 2021-01-15T13:59:45+11:00
 
@@ -36,15 +34,6 @@ featured: false
 #   icon_pack: fab
 #   icon: twitter
 
-url_pdf:
-url_code:
-url_dataset:
-url_poster:
-url_project:
-url_slides:
-url_source: https://theconversation.com/mengapa-tren-kendaraan-listrik-adalah-momentum-transformasi-industri-otomotif-indonesia-152958
-url_video:
-
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder. 
 # Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
@@ -66,6 +55,10 @@ projects: []
 #   E.g. `slides: "example"` references `content/slides/example/index.md`.
 #   Otherwise, set `slides: ""`.
 slides: ""
+
+links:
+  - type: source
+    url: "https://theconversation.com/mengapa-tren-kendaraan-listrik-adalah-momentum-transformasi-industri-otomotif-indonesia-152958"
 ---
 
 <h1 class="legacy">Mengapa tren kendaraan listrik adalah momentum transformasi industri otomotif Indonesia</h1>

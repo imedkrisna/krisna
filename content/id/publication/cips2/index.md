@@ -4,8 +4,6 @@
 title: "Perdagangan untuk Pemulihan Ekonomi: Kebijakan Impor untuk Mendukung Sektor Makanan dan Minuman Indonesia"
 authors: [Felippa Amanta, admin]
 date: 2022-09-16T19:25:33+07:00
-doi: ""
-
 # Schedule page publish date (NOT publication's date).
 publishDate: 2022-09-16T19:25:33+07:00
 
@@ -36,15 +34,6 @@ featured: true
 #   icon_pack: fab
 #   icon: twitter
 
-url_pdf: https://www.cips-indonesia.org/publications/perdagangan-untuk-pemulihan-ekonomi%3A-kebijakan-impor-untuk-mendukung-sektor-makanan-dan-minuman-indonesia?lang=id
-url_code:
-url_dataset:
-url_poster:
-url_project: https://dibalikbungkus.cips-indonesia.org/
-url_slides: https://www.krisna.or.id/slides/dibalikbungkus
-url_source:
-url_video: https://youtu.be/--ujjzUgfGk
-
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder. 
 # Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
@@ -66,4 +55,14 @@ projects: []
 #   E.g. `slides: "example"` references `content/slides/example/index.md`.
 #   Otherwise, set `slides: ""`.
 slides: ""
+
+links:
+  - type: pdf
+    url: "https://www.cips-indonesia.org/publications/perdagangan-untuk-pemulihan-ekonomi%3A-kebijakan-impor-untuk-mendukung-sektor-makanan-dan-minuman-indonesia?lang=id"
+  - type: project
+    url: "https://dibalikbungkus.cips-indonesia.org/"
+  - type: slides
+    url: "https://www.krisna.or.id/slides/dibalikbungkus"
+  - type: video
+    url: "https://youtu.be/--ujjzUgfGk"
 ---

@@ -4,7 +4,6 @@
 title: "The heterogenous impact of tariff and NTM on total factor productivity of Indonesian firms"
 authors: [admin]
 date: 2020-12-04T21:12:42+11:00
-doi: "10.13140/RG.2.2.13503.53925"
 
 # Schedule page publish date (NOT publication's date).
 publishDate: 2020-12-04T21:12:42+11:00
@@ -37,15 +36,6 @@ featured: true
 #   icon_pack: fab
 #   icon: twitter
 
-url_pdf: https://www.tandfonline.com/doi/full/10.1080/00074918.2021.2016613
-url_code:
-url_dataset:
-url_poster:
-url_project:
-url_slides: https://krisna.or.id/slides/paper2
-url_source:
-url_video:
-
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder. 
 # Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
@@ -66,7 +56,17 @@ projects: []
 #   Simply enter your slide deck's filename without extension.
 #   E.g. `slides: "example"` references `content/slides/example/index.md`.
 #   Otherwise, set `slides: ""`.
-slides: paper2
+slides: ""
+
+hugoblox:
+  ids:
+    doi: "10.13140/RG.2.2.13503.53925"
+
+links:
+  - type: pdf
+    url: "https://www.tandfonline.com/doi/full/10.1080/00074918.2021.2016613"
+  - type: slides
+    url: "https://krisna.or.id/slides/paper2"
 ---
 
 Artikel ini telah diterima untuk diterbitkan di Bulletin of Indonesian Economic Studies (BIES) dan sedang mengalami proses edit. Artikel versi pre-edit dapat diakses di [sini](https://acde.crawford.anu.edu.au/publication/working-papers-trade-and-development/19325/heterogeneous-impact-tariff-and-non-tariff). Artikel ini telah dipresentasikan di Economics PhD Seminar di Crawford School of Public Policy. Slide presentasi dapat diakses [di sini](https://krisna.netlify.app/slides/paper2)

@@ -4,8 +4,6 @@
 title: "The Advent of A New Trade Governance after the Omnibus Law: Neraca Komoditas"
 authors: [admin, Deasy Pane, Donny Pasaribu]
 date: 2022-02-07T19:25:33+07:00
-doi: ""
-
 # Schedule page publish date (NOT publication's date).
 publishDate: 2022-02-07T19:25:33+07:00
 
@@ -36,15 +34,6 @@ featured: true
 #   icon_pack: fab
 #   icon: twitter
 
-url_pdf: https://www.cips-indonesia.org/neraca-komoditas-policy-paper
-url_code:
-url_dataset:
-url_poster:
-url_project:
-url_slides: https://drive.google.com/file/d/1ozl2gV9zOeYZReF5fcx1cpYyuIrdsMiv/view?usp=sharing
-url_source:
-url_video: https://www.youtube.com/watch?v=rj2MhtJXnMc&t=8s
-
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder. 
 # Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
@@ -66,4 +55,12 @@ projects: []
 #   E.g. `slides: "example"` references `content/slides/example/index.md`.
 #   Otherwise, set `slides: ""`.
 slides: ""
+
+links:
+  - type: pdf
+    url: "https://www.cips-indonesia.org/neraca-komoditas-policy-paper"
+  - type: slides
+    url: "https://drive.google.com/file/d/1ozl2gV9zOeYZReF5fcx1cpYyuIrdsMiv/view?usp=sharing"
+  - type: video
+    url: "https://www.youtube.com/watch?v=rj2MhtJXnMc&t=8s"
 ---

@@ -4,8 +4,6 @@
 title: "Visi Misi Pemilu 2024: Menakar janji industrialisasi dan hilirisasi Paslon Capres-Cawapres"
 authors: [Riandy Laksono, Andree Surianta, admin]
 date: 2023-11-14T06:09:00+11:00
-doi: ""
-
 # Schedule page publish date (NOT publication's date).
 publishDate: 2023-11-14T06:09:00+11:00
 
@@ -36,15 +34,6 @@ featured: false
 #   icon_pack: fab
 #   icon: twitter
 
-url_pdf:
-url_code:
-url_dataset:
-url_poster:
-url_project:
-url_slides:
-url_source: https://theconversation.com/visi-misi-pemilu-2024-menakar-janji-industrialisasi-dan-hilirisasi-paslon-capres-cawapres-217529
-url_video:
-
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder. 
 # Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
@@ -66,4 +55,8 @@ projects: []
 #   E.g. `slides: "example"` references `content/slides/example/index.md`.
 #   Otherwise, set `slides: ""`.
 slides: ""
+
+links:
+  - type: source
+    url: "https://theconversation.com/visi-misi-pemilu-2024-menakar-janji-industrialisasi-dan-hilirisasi-paslon-capres-cawapres-217529"
 ---

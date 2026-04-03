@@ -36,15 +36,6 @@ featured: false
 #   icon_pack: fab
 #   icon: twitter
 
-url_pdf:
-url_code:
-url_dataset:
-url_poster:
-url_project:
-url_slides:
-url_source: https://www.thejakartapost.com/academia/2020/01/31/managing-investment-trade-deficit-are-omnibus-laws-panacea-for-growth.html
-url_video:
-
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder. 
 # Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
@@ -66,4 +57,8 @@ projects: []
 #   E.g. `slides: "example"` references `content/slides/example/index.md`.
 #   Otherwise, set `slides: ""`.
 slides: ""
+
+links:
+  - type: source
+    url: "https://www.thejakartapost.com/academia/2020/01/31/managing-investment-trade-deficit-are-omnibus-laws-panacea-for-growth.html"
 ---

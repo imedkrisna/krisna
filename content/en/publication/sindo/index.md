@@ -18,15 +18,10 @@ tags: [economics]
 categories: [Economics]
 featured: false
 
-url_pdf:
-url_code:
-url_dataset:
-url_poster:
-url_project:
-url_slides:
-url_source: https://nasional.sindonews.com/read/917721/18/3-tahun-jokowi-maruf-jalan-terjal-pulihkan-ekonomi-1666242630
-url_video:
-
 projects: []
 slides: ""
+
+links:
+  - type: source
+    url: "https://nasional.sindonews.com/read/917721/18/3-tahun-jokowi-maruf-jalan-terjal-pulihkan-ekonomi-1666242630"
 ---

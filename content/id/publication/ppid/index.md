@@ -4,7 +4,6 @@
 title: "Indonesia Emas Berkelanjutan 2045: Kumpulan Pemikiran Pelajar Indonesia Sedunia Seri 01 Ekonomi"
 authors: [Admin, Enny Susilowati Mardjono]
 date: 2021-08-08T15:58:19+10:00
-doi: "https://doi.org/10.14203/press.357"
 
 # Schedule page publish date (NOT publication's date).
 publishDate: 2021-07-29T15:58:19+10:00
@@ -36,15 +35,6 @@ featured: true
 #   icon_pack: fab
 #   icon: twitter
 
-url_pdf: https://e-service.lipipress.lipi.go.id/press/catalog/view/357/326/3208-1
-url_code:
-url_dataset:
-url_poster:
-url_project:
-url_slides: https://drive.google.com/drive/folders/1VK80F_CLLt26Nq_qZ0knrArXPWzl42Hu?usp=sharing
-url_source: https://e-service.lipipress.lipi.go.id/press/catalog/book/357
-url_video:
-
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder. 
 # Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
@@ -66,6 +56,18 @@ projects: []
 #   E.g. `slides: "example"` references `content/slides/example/index.md`.
 #   Otherwise, set `slides: ""`.
 slides: "ppid"
+
+hugoblox:
+  ids:
+    doi: "https://doi.org/10.14203/press.357"
+
+links:
+  - type: pdf
+    url: "https://e-service.lipipress.lipi.go.id/press/catalog/view/357/326/3208-1"
+  - type: slides
+    url: "https://drive.google.com/drive/folders/1VK80F_CLLt26Nq_qZ0knrArXPWzl42Hu?usp=sharing"
+  - type: source
+    url: "https://e-service.lipipress.lipi.go.id/press/catalog/book/357"
 ---
 
 LIPI Press berkolaborasi dengan Perhimpunan Pelajar Indonesia (PPI) Dunia menerbitkan rangkaian buku seri Indonesia Emas Berkelanjutan 2045: Kumpulan Pemikiran Pelajar Indonesia Sedunia. Rangkaian bunga rampai ini terdiri dari 12 buku dengan sejumlah topik yang mendukung Tujuan Pembangunan Berkelanjutan atau Sustainable Development Goals (SDGs) untuk mencapai tujuan Indonesia Emas 2045. Buku ini merupakan seri pertama dari rangkaian tersebut.

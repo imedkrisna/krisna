@@ -9,7 +9,6 @@ categories: [Miscellaneous]
 date: 2020-08-20T11:28:22+10:00
 
 # Optional external URL for project (replaces project detail page).
-external_link: "/project/carbon/green_paper.html"
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.
@@ -27,17 +26,22 @@ image:
 #   icon_pack: fab
 #   icon: twitter
 
-url_code: "/project/carbon/green_paper.html"
-url_pdf: "https://www.researchgate.net/publication/375632558_The_implication_of_the_aggressive_emission_target_on_the_Indonesian_electricity_sector"
-url_slides: "s.id/greenpln"
-url_video: ""
-
 # Slides (optional).
 #   Associate this project with Markdown slides.
 #   Simply enter your slide deck's filename without extension.
 #   E.g. `slides = "example-slides"` references `content/slides/example-slides.md`.
 #   Otherwise, set `slides = ""`.
 slides: ""
+
+links:
+  - type: pdf
+    url: "https://www.researchgate.net/publication/375632558_The_implication_of_the_aggressive_emission_target_on_the_Indonesian_electricity_sector"
+  - type: code
+    url: "/project/carbon/green_paper.html"
+  - type: slides
+    url: "s.id/greenpln"
+  - type: site
+    url: "/project/carbon/green_paper.html"
 ---
 
 Currently under review at Asian-Pacific Economic Literature.

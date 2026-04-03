@@ -4,8 +4,6 @@
 title: "COVID-19 punishes Indonesian commodity exporters"
 authors: [Donny Pasaribu, Admin]
 date: 2020-07-06T14:44:34+10:00
-doi: ""
-
 # Schedule page publish date (NOT publication's date).
 publishDate: 2020-07-06T14:44:34+10:00
 
@@ -31,19 +29,9 @@ featured: false
 # Custom links (optional).
 #   Uncomment and edit lines below to show custom links.
 links:
-- name: Follow
-  url: https://twitter.com/imedkrisna
-  icon_pack: fab
-  icon: twitter
+  - type: source
+    url: "https://www.eastasiaforum.org/2020/07/16/covid-19-punishes-indonesian-commodity-exporters/"
 
-url_pdf:
-url_code:
-url_dataset:
-url_poster:
-url_project:
-url_slides:
-url_source: https://www.eastasiaforum.org/2020/07/16/covid-19-punishes-indonesian-commodity-exporters/
-url_video:
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder. 
