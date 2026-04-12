@@ -1,0 +1,17 @@
+---
+title: "Trade policies as means of development and its controversies"
+subtitle: "ECES905205 pertemuan 9"
+date: "10 Oktober 2022"
+author: "I Made Krisna Gupta"
+format: 
+  revealjs:
+    theme: [simple,../mytheme.scss]
+    chalkboard: true
+    incremental: false
+    transition: convex
+    background-transition: fade
+    slide-number: true
+  beamer: default
+---
+
+## 

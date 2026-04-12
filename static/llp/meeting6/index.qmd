@@ -1,0 +1,137 @@
+---
+title: "Lalu Lintas Pembayaran Dalam dan Luar Negeri"
+subtitle: "pertemuan 6"
+author: ""
+format: 
+  revealjs:
+    theme: [simple,../mytheme.scss]
+    chalkboard: true
+    incremental: false
+    transition: convex
+    background-transition: fade
+    slide-number: true
+---
+
+## Today
+
+- Memahami perlindungan L/C untuk importir dan juga eksportir
+- Mendeskripsikan berbagai tipe L/C dan fungsinya
+
+## The rule!
+
+- L/C selalu benar!!!
+
+- Memberikan perlindungan bagi Pembeli dan Penjual! 
+
+- Bank hanya tunduk pada L/C, tidak dapat dipengaruhi oleh Pembeli atau Penjual setelah L/C terbit
+
+> Issuing bank akan membayar Beneficiary sejumlah yang dinyatakan pada L/C
+> JIKA 
+> presentasi dokumen sesuai
+
+## Perlindungan untuk pembeli
+
+- Pembeli dapat membuat syarat pada L/C :
+    
+    - dokumen yang dibutuhkan dengan spesifikasi yang detil
+    
+    - dapat mengatur apa yang tercantum dalam invoice (kaitan dengan pabean)
+
+- dapat membatasi waktu mulai dari pengiriman barang sampai jeda presentasi dokumen
+
+- Bank baru akan membayar Penjual jika L/C terpenuhi
+
+- Jika terdapat Discrepancy yang tidak dapat diperbaiki, Bank harus meminta "waiver" dari pembeli untuk meneruskan dana.
+
+
+## Perlindungan untuk penjual
+
+- L/C tidak akan pernah bisa diubah tanpa persetujuan Penjual, sehingga pembeli tidak bisa mundur dari kewajibannya dalam L/C
+
+- Penjual memeriksa L/C dan dapat memutuskan untuk menerima atau menolak L/C. 
+
+    - Menerima dengan cara mengirimkan barang 
+
+    - Menolak dengan cara meminta pembeli melakukan amandemen
+
+- Jika penjual memenuhi semua syarat dalam L/C, Bank akan mencairkan uang dalam L/C
+
+## Amandemen
+
+![](Amandment.svg)
+
+## Jenis L/C
+
+- Irrevocable L/C- Sight-Usance-Negotiation 
+
+- Confirmed L/C
+
+- Red Clause L/C
+
+- Reinstatement L/C
+
+- Revolving L/C
+
+- Transferable L/C
+
+- Standby L/C
+
+## Irrevocable L/C
+
+- Artinya tidak bisa dibatalkan tanpa persetujuan Penjual
+
+- There IS no Revocable L/C
+
+- Perubahan atas L/C (disebut Amandemen) dapat disetujui/ditolak oleh penjual dengan:
+
+    - Menghubungi Issuing Bank dan menyatakan persetujuan/penolakan
+
+    - Mengirim barang sesuai persyaratan salah satu L/C
+
+- Amandemen tidak dapat dilakukan sebagian: seluruh amandemen harus diterima atau ditolak.
+
+## Confirmed L/C
+
+- Confirmed L/C adalah L/C yang jaminan pembayaranya dijamin oleh bank selain Issuing bank : Confirming Bank
+
+- Biaya akan bertambah besar karena ada dua bank penjamin, biasanya Confirming Bank berada di negara yang berbeda dengan Issuing Bank.
+
+- Normalnya dilakukan karena terdapat risiko pada Issuing Bank atau negara Issuing bank
+
+## Red Clause L/C
+
+- Penjual mendapat hak untuk mengambil sebagian dana yang terdapat pada L/C
+
+- Bank biasanya meminta penjual untuk memberikan Invoice untuk dana yang ditarik dan Letter of undertaking
+
+## Reinstatement L/C
+
+- L/C yang didalamnya terdapat jadwal pengiriman barang sebagai salah satu syarat pembayaran
+
+- Jika jadwal tersebut memiliki periode yang jelas, maka jika ada pengiriman yang menyalahi aturan pengiriman pada jadwal tersebut maka L/C hangus saat itu juga (pasal 32 UCP600)
+
+- Dilakukan jika pembeli ingin mengontrol rentang waktu pengiriman dari penjual secara presisi
+
+## Revolving L/C
+
+- L/C yang dananya dapat ditarik kembali sesuai dengan persyaratan yang tertulis dalam L/C
+
+- Syarat Revolve dapat berupa waktu atau jumlah. Dapat secara otomatis atau dengan otorisasi.
+
+- Biasanya dilakukan jika terdapat kontrak jangka panjang dengan jumlah barang dan nilai transaksi yang berulang secara reguler
+
+## Transferable L/C
+
+- L/C yang dapat ditransfer ke beneficiary kedua secara penuh atau sebagian
+
+- Not to be mixed up with Back-to-back L/C
+
+- Beneficiary dapat memberikan sebagian dari credit untuk rekannya atau berperan sebagai trader
+
+## Standby L/C
+
+- Bukan metode pembayaran!!!
+
+- Sebuah cara untuk mitigasi risiko jika terjadi gagal pembayaran dari Applicant
+
+- Pembayaran bisa Advance Payment atau Open Account. Kalau pembeli tidak bisa membayar padahal tanggung jawab penjual sudah diselesaikan, penjual bisa ke Bank untuk mencairkan L/C

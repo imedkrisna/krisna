@@ -1,0 +1,352 @@
+---
+title: "Pendahuluan"
+subtitle: "Pertemuan 1"
+author: "Matematika Statistika"
+format: 
+  revealjs:
+    theme: [simple,../mytheme.scss]
+    chalkboard: true
+    incremental: false
+    transition: convex
+    background-transition: fade
+    slide-number: true
+---
+
+## Dosen anda
+
+::: columns
+::: {.column width="40%"}
+![](https://www.krisna.or.id/files/foto_krisna.jpg)
+:::
+
+::: {.column .s width="60%"}
+-   Timeline:
+
+    - 2010-2012: Kementerian Perindustrian
+    
+    - 2012-2014: S2 in economics dari UI/VU
+    
+    - 2015-2017: Dosen di Poltek APP Jakarta
+    
+    - 2017-2022: S3 ekonomi di ANU
+    
+    - 2022-    : Dosen di Poltek APP Jakarta
+    
+-   Perkuliahan semester ini:
+    
+    -   Matematika & Statistika di Poltek APP
+    
+    - Ekonomi Internasional di UI
+
+- Akses:
+
+    -   Surel: imade.krisna@poltekapp.ac.id
+    
+    -   Lewat BPK masing-masing
+    
+:::
+:::
+
+## Agenda hari ini
+
+-   Administrasi dan Struktur mata kuliah
+
+-   Berbagai jenis data
+
+## Sosial kok belajar statistika?
+
+- Statistika mendapat reputasi sebagai "ilmunya anak IPA".
+
+- Padahal, statistika digunakan sebagai alat analisis oleh banyak bidang sosial!
+
+    - Menghitung risiko untuk keputusan investasi.
+    
+    - Meramalkan berbagai indikator ekonomi.
+    
+- Bahkan, statistika digunakan untuk **berbohong**.
+
+    - Pemahaman statistika yang baik dapat membantu.
+
+## Contoh
+
+<iframe style="height:700px; width:100%; border: none;" src="https://databoks.katadata.co.id/datapublishembed/144007/rata-rata-gaji-karyawan-di-jakarta-tertinggi-se-indonesia"></iframe>
+
+## Sosial kok belajar statistika?
+
+- Zaman sekarang, ilmu statistika dan analisis data menjadi semakin penting lagi.
+
+    - Menurut [World Economic Forum](https://www.weforum.org/agenda/2020/10/top-10-work-skills-of-tomorrow-how-long-it-takes-to-learn-them/), kemampuan berpikir analitik dan penggunaan teknologi merupakan 2 dari 10 kemampuan yang paling dicari pada 2025.
+    
+    - Melalui inisiatif Industri 4.0, Kementerian Perindustrian menitik-beratkan kemampuan analitik dan operasional teknologi komputasi.
+    
+    - Permintaan industri akan individu yang punya kemampuan analitik berdasarkan data semakin tinggi.
+    
+- Data semakin banyak, pengolahnya masih sedikit.
+    
+## Tentang mata kuliah ini
+
+Profil lulusan yang diincar:
+
+> Menguasai pengetahuan tentang cara memilih dan menggunakan alat manajemen (management tools) untuk menetapkan suatu keputusan manajerial
+
+Diturunkan menjadi capaian mata kuliah:
+
+> Mahasiswa mampu Menggunakan alat analisis berbasis statistika.
+
+## Tentang Mata kuliah ini
+
+- Mata kuliah ini wajib dan merupakan prasyarat dari mata kuliah Metodologi Penelitian.
+
+- Beberapa hal yang akan anda pelajari:
+
+::: {.incremental}
+    
+- probabilitas dan sampling. 
+    
+- mendapat gambaran dari populasi: nilai tengah, deviasi, distribusi.
+    
+- berkenalan dengan data.
+    
+- belajar menggunakan alat-alat analisis: hypothesis testing dan regresi.
+    
+:::
+
+## Tentang mata kuliah ini {.m}
+
+- Ilmu di mata kuliah ini merupakan konsep-konsep dasar.
+
+- Mengantarkan anda ke mata kuliah Metodologi Penelitian:
+
+    - Akan membahas data time-series, yang sangat penting di dunia perdagangan internasional.
+    
+    - Membuat laporan analitik yang berguna di industri (dan TA).
+    
+- Ilmu dari mata kuliah ini tidak akan membuat anda jadi ahlinya data!
+
+    - Analisis dapat dilakukan oleh supervisor anda.
+    
+    - Modal yang penting untuk mengejar pendidikan lanjut.
+
+## Buku pegangan
+
+- Mata kuliah ini tidak secara khusus mengikuti buku tertentu.
+
+- 3 pegangan utama:
+    
+    - Saefuddin, A., Notodiputro, K. A., Alamudi, A., & Sadik, K. (2009). Statistika Dasar. BM Adam.
+    
+    - Sugiyono. (2017). Statistika untuk penelitian. Bandung: Alfabeta.
+    
+    - Supranto, J. (2016). Statistik: Teori & Aplikasi. Jakarta: Erlangga.
+    
+- Tersedia di perpustakaan
+    
+## Buku pegangan
+
+- Useful but not mandatory:
+
+    - Nagadevara, V. (2019). Statistical Methods: Basic Inferences. In B. Pochiraju & Sridhar¬Seshadri (Eds.), Essentials of Business Analytics: An Introduction to the Methodology and its Applications. Springer.
+    
+    - Pochiraju, B and Kollipara,H. (2019). Statistical Methods: Regression Analysis. In B. Pochiraju & Sridhar¬Seshadri (Eds.), Essentials of Business Analytics: An Introduction to the Methodology and its Applications. Springer.
+    
+## Ekspektasi dari Mahasiswa
+
+-   Tidak ada prasyarat untuk mengikuti mata kuliah ini.
+-   Ilmu matematika yang anda dapat di SMA sudah cukup.
+-   Punya akses internet.
+-   Tidak perlu bisa bahasa inggris, _but a good command of english will certainly be helpful_.
+-   Pernah bermain Microsoft Excel atau Google Sheet akan sangat membantu.
+
+## Beberapa rules
+
+-   Saya tidak mewajibkan kehadiran, telat boleh.
+-   bagi yang hadir dimohon untuk fokus, sopan dan tertib.
+-   Makan dan minum boleh asal jangan berbau tajam. ~~Dosen harus dibagi~~
+-   Tidak perlu ijin kalau mau keluar dengan alasan apapun.
+-   Di tengah perkuliahan akan ada break sekitar 15 menit.
+-   Jika ada pertanyaan, silakan langsung diajukan.
+
+## Evaluasi pembelajaran
+
+| metode | cakupan materi | bobot (%) |
+|--------|----------------|-----------|
+| 7 quiz    | minggu 1-7     | 20        |
+| Tugas kelompok    | minggu 8-13     | 20        |
+| UTS    | minggu 1-7          | 30        |
+| UAS  | semua          | 30        |
+
+-   Akan ada remedial & tidak ada tugas tambahan apapun.
+-   Materi di slides harusnya cukup untuk dapat A.
+
+## Evaluasi pembelajaran
+
+- 7 quiz: Weekly, 10 soal, diambil 5 terbaik. Pre-UTS
+
+- Tugas kelompok: ngerjain soal kasus. Post-UTS.
+
+- UTS & UAS: 4 soal, essay semua, tutup buku kecuali catatan selembar A4. No tech kecuali kalkulator.
+
+- Masih tentatif. Jika ada perubahan akan dikabari lebih lanjut.
+
+## Tools
+
+-   [e-learn.poltekapp.ac.id](https://e-learn.poltekapp.ac.id/) diperlukan untuk membaca dan mengumpulkan tugas.
+
+-   Slides dapat diakses di [krisna.or.id/courses/statistika/slides](https://www.krisna.or.id/courses/statistika/slides).
+
+-   [Google Drive](https://drive.google.com/drive/folders/1s8YHrlTFrp-Iu0ip6FesyKahNHLo5had?usp=sharing)
+
+## Questions?
+
+<iframe src="https://giphy.com/embed/KUmcYqPW0dIGNHDEoE" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/disneyplus-marvel-studios-marvelstudios-msmarvel-KUmcYqPW0dIGNHDEoE">via GIPHY</a></p>
+
+## Data dan Statistika
+
+- Data adalah **kumpulan informasi yang didapatkan dari melakukan pengamatan (observasi)**.
+
+- Pada hakikatnya, penggunaan data dan statistika berfungsi untuk **menjawab pertanyaan** seperti:
+
+    - Bagaimana kondisi sosial ekonomi penduduk Indonesia? Dibandingkan dengan RRT?
+    
+    - Berapa ekspor Indonesia tahun 2020? Apakah meningkat dibandingkan tahun 2019?
+    
+- Anda setiap hari juga mengumpulkan data!
+
+## Data yang baik
+
+- Data akan menjadi basis dalam menjawab pertanyaan dan membuat keputusan. Data salah, keputusan juga salah!
+
+- Data yang baik haruslah objektif, representatif, valid, tepat waktu dan relevan.
+
+- Objektif berarti dapat meminimalisir perbedaan persepsi antar-pengamat / individu.
+
+- harus memiliki alat ukur yang konsisten dan disepakati, dengan metode yang dapat diaudit.
+
+- contoh: di kelas saya ada 10 orang yang gendut vs di kelas saya, 10 orang punya berat badan di atas 70 kg.
+
+## Data yang baik
+
+- Representatif berarti harus mewakili obyek yang diamati. Obyek yang representatif biasanya akan didapatkan dengan sampling yang acak.
+
+- valid berarti data tersebut memiliki kesalahan sampling yang kecil dan memiliki tingkat ketelitian yang tinggi. Jika diulang samplingnya, hasilnya akan sama.
+
+- tepat waktu berarti datanya harus sesuai berdasarkan waktu dan selalu terupdate.
+
+- relevan berarti data tersebut benar-benar mengukur hal yang sesuai dengan pertanyaan yang ingin dijawab.
+
+## Jenis-jenis data
+
+| jenis data | definisi |	contoh |
+| ----- | ----- | ------- |
+| Kategorikal / nominal | 	kualitatif, ga ada urutan |	nama, jenis kelamin, suku |
+| Ordinal |	kualitatif, ada urutan | ukuran baju, ukuran sepatu, medali |
+| Hitung | 	kuantitatif, integer |	nomor telepon, jumlah anak |
+| Riil / kontinyu | 	kuantitatif, riil |	PDB, ekspor impor |
+
+## Data Kontinyu {.m}
+
+- data kontinyu dapat dibagi 2: rasio dan interval.
+
+- keduanya memiliki interval yang sama untuk semua angka.
+
+- tapi, interval tidak punya 0 yang berarti.
+
+    - untuk rasio, 0 = tidak ada. contoh: ekspor, impor, kalori. Tidak ada nilai negatif.
+    
+    - interval, 0 = ga penting. contoh: nilai TOEFL, temperatur. Ada nilai negatif.
+    
+- Transformasi di rasio tidak akan mengubah besarnya urutan.
+
+    -  10 kg = 2x lebih berat dari 5 kg. begitupun 22.04 lbs vs 11.02 lbs
+    
+    - 1$^o$ C to 100$^o$ C = 100x lipat, tapi 274.15$^o$ K to 373.15$^o$ K bukan 100x lipat
+    
+## Dampaknya?
+
+- Tipe data yang berbeda menuntut cara analisis yang berbeda pula.
+
+- Biasanya, dalam metode statistik, data rasio adalah data yang paling mudah untuk digunakan dalam analisis.
+
+- Jika tipe data anda bukan rasio, harus sedikit diakalin metodenya. Bisa, tapi lebih ribet dikit.
+
+- Di mata kuliah ini, kita akan fokus pada data yang sebagian besar berupa data rasio.
+
+## Cara pengambilan data
+
+- **Sensus** adalah metode pengumpulan data yang melibatkan keseluruhan populasi yang ingin diselidiki.
+
+    - misalnya, untuk mendapatkan nilai UAS mata kuliah statistika, saya mencatat semua nilai UAS mahasiswa APP yang mengambil mata kuliah statistika.
+    
+- Sensus memiliki gambaran yang lengkap, tapi anda tidak boleh menyimpulkan sesuatu dari luar populasi.
+
+    - misalnya, hasil sensus penduduk jagakarsa tidak dapat anda gunakan untuk menyimpulkan Jakarta Selatan secara umum.
+    
+- Kelemahan sensus: mahal dan makan banyak waktu.
+
+## Cara pengambilan data
+
+- **sampling** adalah metode pengumpulan data yang melibatkan sebagian dari populasi yang ingin diselidiki.
+
+    - misalnya, untuk menilai apakah kelas A lebih bagus nilainya dari kelas B, saya menguji 10 orang dari kelas A dan 10 orang dari kelas B.
+    
+    - 10 orang ini kita sebut sampel, sementara populasinya adalah keseluruhan anggota kelas A dan kelas B.
+    
+- sampling lebih murah, namun kita harus memastikan bahwa samplenya **representatif**.
+
+## Sampling
+
+- dapat dilakukan secara **acak** dan **non-acak**.
+
+- Acak (_random_) artinya bahwa semua anggota populasi punya kesempatan yang sama untuk menjadi sampel.
+
+    - misalnya saya tunjuk secara acak 10 mahasiswa di tiap kelas.
+    
+- Non-acak berarti kita mendorong satu bagian dari populasi dengan karakteristik tertentu punya kesempatan yang lebih banyak untuk terpilih menjadi sampel.
+
+    - misalnya saya hanya menunjuk 10 anak yang pakai kacamata, atau menunjuk 10 anak yang duduknya paling dekat saya.
+    
+## Sampling acak {.m}
+
+- Simple random sampling berarti mengambil sampel secara acak langsung dari populasinya.
+
+- Stratified random sampling: membagi populasi menjadi sub-populasi atau strata, lalu mengambil secara acak dari tiap-tiap stratum.
+
+- Cluster random sampling: membagi populasi menjadi strata, lalu secara acak mengambil satu stratum dan mengambil semua anggota stratum tersebut menjadi sampel.
+
+- Multistage random sampling: Membagi populasi ke dalam strata, mengambil beberapa strata secara acak, lalu dari strata yang diambil tersebut disampling lagi.
+
+## Pilih yang mana?
+
+- Semua teknik di atas dapat dilakukan dengan kemungkinan mendapatkan sample representatif yang relatif mirip.
+
+- Tapi intinya, harus dilakukan secara acak!
+
+- Semakin besar populasinya, biasanya menggunakan strata bisa lebih membuat percaya diri.
+
+- tapi jika benar dapat melakukannya secara acak, maka seharusnya cara manapun akan memiliki data yang tidak berbeda jauh.
+
+## Statistika
+
+- Statistika adalah ilmu yang mempelajari bagaimana cara mengumpulkan, mengorganisasikan, menerjemahkan dan menarik kesimpulan dari data.
+
+- Meskipun statistika awalnya banyak diajarkan untuk bidang ilmu pasti, namun saat ini ekonomi dan manajemen juga menggunakannya.
+
+- Cara-cara menerjemahkan dan menarik kesimpulan ini juga tergantung dari jenis data yang kita perlukan.
+
+## Pertemuan pertama
+
+- Apa itu data? Mengapa data memiliki peranan yang penting di ilmu sosial?
+
+- Berbagai metode pengumpulan data
+
+- Definisi statistika
+
+- Quiz online minggu ini hari selasa, ditutup hari senin sore.
+
+    - link akan dibagikan oleh ketua kelas.
+
+## Minggu depan
+
+- Konsep probabilitas
+
+- Distribusi populasi dan sampel

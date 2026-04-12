@@ -1,0 +1,609 @@
+---
+title: "Oligopoly & Externality"
+subtitle: "Week 7"
+author: "Krisna Gupta"
+date: "22 March 2021 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: monokai
+      highlightLines: true
+      countIncrementalSlides: false
+    css: ["default","dark.css","dark-fonts.css"]
+
+---
+
+## Announcement
+
+- No quiz again for today
+
+- your assignments = 4 quiz
+
+- Take your time and no need to do all 4 if you are confident.
+
+- Your mid-term will cover week 1 to week 7 (today)
+
+---
+
+## Score so far
+
+###### note: This slide will be deleted after today's class
+
+| no | Q1 | Q2 | Q3 | Q4 | Q5 |
+| --- | --- | --- | --- | --- | --- |
+| c13200031 | 100 |	80 | 80 | 80 | 50 |
+| c13200042 | 100	|80|	50|	70|	60 |
+| c13200063 | 100	|90	|90	|80	|90|
+| c13200066 | 100	|80	|70	|50	|50 |
+
+.s[
+- Remember, I only take best of 10.
+    + If you do all 4 Qs on the assignment, you will have 9 scores.
+    + More quizzes and assignments after mid-term exam.
+]
+
+---
+
+## Recap on last week
+
+- We have learned the two extremens: perfect competition & Monopoly
+
+- In perfect competition, profit only last in the short run. As more firms join the market, price pushed down.
+
+- As long as there are profit, more firms will enter the market until  zero profit is reached.
+
+- In the monopoly, profit maximization can last forever because no more firm can join in.
+
+---
+
+## Today's content
+
+- The imperfect competition: oligopoly and monopolistic competition.
+  
+- A touch of externality ends the mid-term content.
+
+---
+
+class: center, middle
+
+# Oligopoly
+
+---
+
+## Skutik Price Cartel
+
+- In 2017, AHM and YIMM, two of the biggest skutik makers, were charged by KPPU for an alleged [price fixing](https://www.thejakartapost.com/news/2019/05/02/supreme-court-rejects-appeal-to-verdict-on-yamaha-honda-price-cartel.html).
+
+- In the perfect market, many producers are competing with each other, while in the monopoly, well, there's no other producer.
+
+- If the market is shared by small number of producers, they can decide a price together to behave similar to a monopoly.
+  - this is called price fixing.
+  
+---
+
+### A hypothetical skutik market
+
+.pull-left[
+```{r tab1,echo=FALSE, message=FALSE, warning=FALSE}
+library(kableExtra)
+library(dplyr)
+library(ggplot2)
+library(ggdark)
+
+graph<-ggplot()+
+  dark_theme_bw(base_size=25)+
+  theme(text = element_text(color='#e0e0e0'),
+        panel.border = element_blank(),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        axis.line = element_line(colour = "#e0e0e0"))
+
+P<-seq(17,7,length=11)
+Q<-seq(100,600,50)
+C<-rep(7,11)
+profit<-(P-C)*Q
+
+skutik<-data.frame('P'=P,'Q'=Q,'Profit'=profit)
+
+skutab<-kbl(skutik, format='html', align='c') %>%
+  add_header_above(c('million IDR','1000 unit','million IDR')) %>%
+  add_header_above(c('Unit Price','Monthly sales','Total Revenue')) %>%
+  kable_styling(font_size = 16)
+skutab
+```
+]
+
+.pull-right[.s[
+- Suppose skutik market behave like this table.
+- As you notice, increasing price is associated with decreasing demand.
+
+- Any monopolist operate in the skutik market have that revenue.
+
+- To simplify things, suppose per-unit cost is stagnant at 7 million IDR.
+
+- A monopolist will set P=13, produce Q=300 and gets 1800 as profit
+
+]]
+
+---
+
+### A 2-firm competition
+
+.pull-left[
+```{r tab2,echo=FALSE, message=FALSE, warning=FALSE}
+skutab
+```
+]
+
+.pull-right[.s[
+- Suppose another firm enters the market and offering P=12.
+
+- Everyone will buy from the entrant.
+
+- the incumbent will have zero sales while the new entrant will get 1750 profit.
+
+- Since per unit cost is 7, the incumbent will offer a discount to match the price.
+
+- Eventually, P=7
+]]
+
+---
+
+### A duopoly
+
+.pull-left[
+```{r tab3,echo=FALSE, message=FALSE, warning=FALSE}
+skutab
+```
+]
+
+.pull-right[.s[
+- A strategic firms know this. They will fare better if they collude and form a **cartel**.
+
+- Both can settle a **price-fixing** deal to limit their Q=150 and set the market price to P=13.
+
+- As you can see, this is a monopoly price and quantity.
+
+- Each will get profit=900, which is much higher than if they compete.
+]]
+
+---
+
+## A Duopoly
+
+- A duopoly has a potential to produce a similar outcome as a monopoly.
+
+- As the example above, the duopoly market produces only 300 with price as high as 13, while a competition makes 600 where P=7.
+
+- In short, like a monopoly, duopoly also harm consumers and is inefficient.
+
+- However, a duopoly is harder to maintain because every oligopolist has an incentive to deviate.
+
+---
+
+## Deviation
+
+.pull-left[
+```{r tab4,echo=FALSE, message=FALSE, warning=FALSE}
+skutab
+```
+]
+
+.pull-right[.s[
+- Suppose both producers agreed to produce Q=150 each at P=13
+
+- However, the incumbent decide that it will produce Q=200 instead.
+
+- Total Q=350 and P=12
+
+- Incumbent's profit= $200 \times 5 = 1000$
+
+- Entrant's profit= $150 \times 5 = 750$
+]]
+---
+
+## Non-cooperative behavior
+
+- Any player in a duopoly have an incentive to behave **non-cooperatively**.
+
+- By being non-cooperative, the incumbent improve its profit from 900 to 1000 at the expense of the entrant's profit.
+
+- If the entrant saw this coming, it will behave the same way. It is easy to see how a **cartel** can break down on its own.
+
+- This is the reason why an industry with an oligopolistic structure can have a less problematic market outcome than a monopoly in the real world.
+
+---
+
+## Game played by oligopolists
+
+- Oligopolist realize their profits depend on other players and vice-versa.
+
+- This situation is called **profit interdependence** where your own profit depends on the action of others in the market.
+  + No interdependence in perfect competition.
+  + monopoly is a single player
+
+- essentially oligopolists play a "game" in which the success of a player depends on other players' action.
+
+- This branch of economics is called **game theory**.
+
+---
+
+## Game theory
+
+- Let us represent the previous case with a game theory framework.
+
+- There are 2 **players**: AHM and YIMM.
+
+- There are 2 **actions** each player can take: Produces 150.000 units of skutik or 200.000
+
+- There are 4 possible sets of **payoff**, or profit scenario.
+
+- This game can be represented with a 2 $\times$ 2 matrix. A table of game theory matrix is called **payoff matrix**.
+
+---
+
+### Payoff matrix
+
+```{r game,echo=FALSE, message=FALSE, warning=FALSE}
+game <- data.frame(
+  "P1"=c(rep('AHM',times=2)), "P2"=c("Q=150","Q=200"),
+  "HP"=c("(900,900)","(1000,750)"), "LP"=c("(750,1000)","(875,875)")
+)
+
+matrix<-kbl(game, align = "c",format='html',
+    col.names = c("","","Q=150","Q=200")) %>%
+  collapse_rows(columns = 1) %>%
+  add_header_above(c(" "," ", "YIMM" = 2)) %>%
+  kable_material()
+matrix
+```
+
+- each element of a payoff matrix consists of a profit from two players, hence two numbers.
+
+- Player 1 (AHM, left) vs player 2 (top, right)
+
+- payoff structure is (player 1,player 2) for every element.
+
+---
+
+### Payoff matrix
+
+```{r game1,echo=FALSE, message=FALSE, warning=FALSE}
+matrix
+```
+
+- For example, the top left payoff element means both players get 900.
+
+- Top right payoff element means AHM gets 750 while YIMM gets 1000.
+
+- etc
+
+---
+
+### Payoff matrix
+
+```{r game2,echo=FALSE, message=FALSE, warning=FALSE}
+matrix
+```
+
+- We get the situation on the top left when both players play (Q=150,Q=150).
+
+- We get the situation on the top right when players play (Q=150,Q=200)
+
+- In Which  AHM set Q=150, YIMM set Q=200
+
+---
+
+### Dominant strategy
+
+```{r game3,echo=FALSE, message=FALSE, warning=FALSE}
+matrix
+```
+
+- You analize each player separately to see which strategy they will pick by comparing their payoff in different situation.
+
+- If you are AHM, which action you pick when YIMM pick Q=150? Which action you pick when YIMM pick Q=150?
+
+---
+
+### Dominant strategy
+
+```{r game4,echo=FALSE, message=FALSE, warning=FALSE}
+matrix
+```
+
+- If you are AHM, Q=200 is called **dominant strategy** because no matter what YIMM does, Q=200 give the best outcome.
+
+- Similarly, Q=200 is a dominant strategy for YIMM.
+
+---
+
+### Nash Equilibrium
+
+```{r game5,echo=FALSE, message=FALSE, warning=FALSE}
+game2 <- data.frame(
+  "P1"=c(rep('AHM',times=2)), "P2"=c("Q=150","Q=200"),
+  "HP"=c("(900,900)","(1000,750)"), "LP"=c("(750,1000)","(875,875)*")
+)
+
+matrix2<-kbl(game2, align = "c",format='html',
+    col.names = c("","","Q=150","Q=200")) %>%
+  collapse_rows(columns = 1) %>%
+  add_header_above(c(" "," ", "YIMM" = 2)) %>%
+  kable_material()
+matrix2
+  
+```
+
+- Since both have Q=200 as a dominant strategy, then we called (Q=200,Q=200) as a **Nash Equilibrium**.
+
+- A **set of actions** is called Nash Equilibrium (NE) when nobody gains from deviating from that set.
+
+---
+
+### Nash Equilibrium
+
+```{r game6,echo=FALSE, message=FALSE, warning=FALSE}
+game2 <- data.frame(
+  "P1"=c(rep('AHM',times=2)), "P2"=c("Q=150","Q=200"),
+  "HP"=c("(900,900)","(1000,750)"), "LP"=c("(750,1000)","(875,875)*")
+)
+
+matrix2<-kbl(game2, align = "c",format='html',
+    col.names = c("","","Q=150","Q=200")) %>%
+  collapse_rows(columns = 1) %>%
+  add_header_above(c(" "," ", "YIMM" = 2)) %>%
+  kable_material()
+matrix2
+  
+```
+
+- To analyze an NE, you can start from each possible outcome and see whether deviating gives a better payoff to anyone.
+
+- (Q=200,Q=200) is an NE because deviating gives a worse payoff for both
+
+---
+
+### Prisoner's Dilemma
+
+- This payoff structure is a typical of **prisoner's dilemma**
+
+- A game is called prisoner's dilemma when each player has an incentive to **cheat** regardless of what others do, but when both cheat, both are worse off.
+
+- That is why it is important for every players in this type a game to communicate with each other, but it is against the law in many countries.
+
+- Making a written contract is even worse.
+
+---
+
+### Tacit collusion
+
+- It is possible to signal another player without having to meet each other.
+
+- AHM can try to set price high and see if YIMM would follow with a high price, signalling collusion.
+
+- If YIMM followed with a low price, it is easy for AHM to punish YIMM's behavior by making a discount, hence both ended up at the NE.
+
+- Setting price is not against the law.
+
+- this behavior is called **tacit collusion**.
+
+---
+
+### Dealing with oligopolies
+
+- It is even possible for a firm to mergers or making an acquisition to strengthen their market power.
+
+- That's why governments often scrutinize mergers and acquisition. Sometimes even force big firms to separate their business.
+
+- Perhaps the best way to deal with oligopolies is to introduce competition.
+  + Lion group and GIA once considered an oligopolies until Air Asia come in.
+  + foreign comptition also improved telco market.
+  
+---
+
+### Dealing with oligopolies
+
+- Sometimes it is hard because an industry is a monopoly by nature due to economies of scale and/or network effect.
+
+- Wholesales, cinema, social media, telco, you name it.
+
+- small producers can be considered oligopolies if operate in a small market.
+  - Two minimarkets operate in a small town can be considered a duopoly.
+  - definition of market matters, again.
+  
+---
+
+class: center, middle
+
+# Monopolistic competition
+
+---
+
+### Monopolistic competition
+
+- Monopolistic competition is also a type of an imperfect market, in which a seller may have a control over price.
+
+- It still have characteristics of a perfectly competitive industry, with only differnce is the goods is differentiated.
+
+- The differentiation is not so much that it still have a close substitute.
+
+---
+
+### Example of a product differentiation
+
+- In a food court consists of 10 stalls, you might see different food types being offered.
+  + maybe 1 stall is Bakmi GM, another is KFC, Chinese food, italian food, Pecel, drinks, etc.
+
+- Each stall have a bit of control over their price because they have a specialized food.
+
+- However, charge too much and people will flee because other stalls are still food.
+
+  + if a portion of KFC is 100.000 IDR, I won't mind eating bakmi GM everday.
+
+---
+
+### Monopolistic competition
+
+- Suppose all 10 stalls offer Nasi Goreng with exact same quality, then it become a perfect competition where sellers will compete only on price.
+
+- Competing by making a different product can be called **blue ocean strategy**, while competing over cost can be called **red ocean strategy**.
+
+- blue ocean because you create your own market base, red ocean because you compete in an already crowded market and fight over a limited share of market.
+
+---
+
+### Product differentiation
+
+Monopolistic competition is driven by product differentiation:
+
+1. differentiation by **style/type** like our food stall example. Other example: specializing in women's clothing, or in utility vehicle.
+
+2. differentiation by **location**: all indomaret sell the same goods, but we prefer one that's near our location.
+
+3. differentiation by **quality**: there's $10 shoes, and there's $100 shoes.
+
+---
+
+### Product differentiation
+
+- Product differentiation can be annoying: streaming services, apple vs android vs windows
+
+- However, we generally don't hate monopolistic competition because:
+
+  + it improves variety in the market. (imagine if all cars are Avanza)
+  
+  + Cater everyone's need (not all people buys cheap or expensive products)
+
+  + Competition still push producers to innovate.
+
+---
+
+class: center, middle
+
+#externalities
+
+---
+
+### Externalities
+
+- Is another problem for perfect market because it creates **interdependence**, that is buyer's or seller's individual action affects the whole market.
+
+- The best example is **pollution**. A firm's decision to lower its **own cost** by using high emission power plant imposes cost to **everyone else**.
+
+- Traffic is another good example: a car user contributes to a traffic jam and has no incentive to care about other road users.
+
+- Smoking causes bad health to smokers but also impose cost to everyone around the smoker. etc
+
+---
+
+### Externalities
+
+- All of the examples on the previous slides are **negative externalities**.
+
+- An example for **positive externalities**:
+
+  + Having a bee farm and an apple tree farm leads to higher production because bees help pollinates apple tree.
+  + Having smart kids help not only a family but also the whole country.
+  
+- Externalities also sometimes called **spillover effects**
+
+---
+
+### Externalities 
+  
+- The problem with externalities is that the individual who do the action does not take into account the social cost and social benefit of their action.
+
+- That's why government would like to limit the activities that cause social cost.
+  + this is typicall done via taxation.
+
+- On the other hand, activities that cause positive spillovers needs to be promoted / subsidized.
+
+---
+
+<iframe src="https://embed.polleverywhere.com/free_text_polls/3lq05WgaODztTrjrByiQj?controls=none&short_poll=true" width="800px" height="600px"></iframe>
+
+---
+
+<iframe src="https://embed.polleverywhere.com/free_text_polls/AdfFsnUyUcaQnPOQ9lblT?controls=none&short_poll=true" width="800px" height="600px"></iframe>
+
+---
+
+### Externalities & Common goods
+
+- externalities can be mixed up with a **common good**.
+
+- A common is a type of good that can be consumed by everyone, but a consumption from a person leads to less good for others to consume.
+
+- This also creates **interdependence**: someone's consumption affects consumption of others in the economy.
+
+- An example is a ground water, a meadow, or fish stocks.
+
+---
+
+### Tragedy of the commons.
+
+- In a housing complex, people will make a ground water well for themselves.
+
+- However, ground water has limitation on how fast it recovers.
+
+- If more people in a housing complex make ground water well, there will be less water for others.
+
+- There is no incentive to preserve ground water individually, especially if you know your neighbours will also build ground water.
+
+- In the end, everyone consume unsustainably.
+
+---
+
+### Tragedy of the commons.
+
+- This is called **tragedy of the commons**, a situation where everyone consume even more for their own benefit.
+
+- Another example is fish stock. If you know other fisherman will fish unsustainably, you might fish even more unsustainably to reap the benefit to yourself.
+
+- Like negative externalities, government usually tries to intervene to preserve common goods since it won't solve individually.
+
+- Tax or quota are often use to deal with this situation.
+
+---
+
+### Interdependence
+
+- In a perfect market, acting based on self-interest gives best outcome for the economy.
+
+- However, interdependence creates problem because acting based on self-interest may harm the economy overall.
+
+- Imperfect market: oligopoly.
+
+- Interdependence causes market failure: externalities & tragedy of the commons.
+
+- Unfotunately dealing with these problems are not easy. It is important for you to understand how problems arise from interdependence.
+
+---
+
+# The end of part 1
+
+What we've learned so far:
+
+- What is economics.
+
+- Perfect competition: how supply demand shape the market.
+
+- Market distortion: tax, price and quota policy.
+
+- The importance of elasticities.
+
+- Costs and how firms shape the market.
+
+- Market structure & interdependence
+
+---
+
+# The end of part 1
+
+- This is the end the first part of our class.
+
+- Mid-term exam will only cover up to today's content.
+
+- Starting next week is part 2 which is final exam materials.

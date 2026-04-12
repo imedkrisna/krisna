@@ -1,0 +1,319 @@
+---
+title: "Differensial / Turunan"
+subtitle: "Pertemuan 5"
+author: "Matematika & Statistika"
+format: 
+  revealjs:
+    theme: [simple,../mytheme.scss]
+    chalkboard: true
+    incremental: false
+    transition: convex
+    background-transition: fade
+    slide-number: true
+---
+
+## Diferensial
+
+- Diferensial / _differential_ adalah pemahaman berikutnya dari sebuah fungsi.
+
+- Diferensial adalah sebuah metode perkiraan linear yang mencoba memperkirakan seberapa besar perubahan sebuah fungsi jika sebuah variabel eksogen berubah.
+
+- Diferensial biasanya digunakan untuk menentukan titik maksimum atau titik minimum, tapi juga digunakan untuk mencari elastisitas (dibahas lebih lanjut di ilmu ekonomi).
+
+## Perubahan
+
+- Jika anda punya fungsi $y=f(x)$ dan $\Delta y$ adalah perubahan kecil variabel y, sementara $\Delta x$ adalah perubahan kecil variabel x.
+
+- Anda mau tau seberapa besar $y$ berubah jika $x$ berubah. Dengan kata lain, seberapa besar $\Delta y$ given $\Delta x$.
+
+$$
+\frac{\Delta y}{\Delta x}=\frac{f(x+\Delta x)-f(x)}{\Delta x}
+$$
+
+## Contoh
+
+Ada fungsi $y=3x^2-x$. Tentukan perubahan dari y jika x naik dari 2 jadi 3.
+
+::: {.incremental}
+
+- jika $x=2$, $y=3(2)^2-(2)=10$
+
+- Jika $x=3$, $y=3(3)^2-(3)=24$
+
+- Artinya, $\Delta y=24-10=14$
+
+:::
+
+## Turunan
+
+- pertanyaan di atas bisa kita aproksimasi dengan menggunakan turunan / diferensial.
+
+- Turunan adalah cara cepat melakukan aproksimasi jika perubahan pada $x$ itu sangat kecil. Saking kecilnya sampe mendekati 0.
+
+- Jika anda berhadapan dengan fungsi yang rumit, maka diferensial akan sangat menguntungkan.
+
+- Kita akan kembali ke soal di atas, tapi kita pelajari dulu kaidah-kaidah diferensial.
+
+## Kaidah turunan
+
+**Diferensiasi konstanta**: Jika sebuah fungsi adalah sebuah konstanta, maka diferensialnya 0.
+
+$$
+\text{if }y=3, \ \text{then } \frac{dy}{dx}=0
+$$
+
+**Diferensiasi umum**: Jika $y=ax^n$, maka $\frac{dy}{dx}=nax^{n-1}$. Note bahwa a boleh =1.
+
+$$
+\text{if }y=4x^3, \ \text{then } \frac{dy}{dx}=3\cdot 4x^{3-1}=\frac{dy}{dx}=12x^2
+$$
+
+## Kaidah turunan
+
+**diferensiasi eksponen**: jika $y=ae^n$, maka $\frac{dy}{dx}=yae^n$
+
+$$
+\text{if } y=4e^x, \text{then } \ \frac{dy}{dx}=4e^x
+$$
+
+**diferensiasi logaritmik natural**: jika $y=a \ln x$, maka $\frac{dy}{dx}=\frac{a}{x}$
+
+$$
+\text{if }y= \ln x, \text{ then } \frac{dy}{dx}=\frac{1}{x}
+$$
+
+## Kaidah lain
+
+- ada banyak kaidah turunan, tapi cukup 4 itu aja yang kita perlukan di level ini.
+
+- Mari kita kembali ke contoh sebelumnya dan selesaikan dengan diferensial.
+
+## Contoh
+
+Ada fungsi $y=3x^2-x$. Tentukan perubahan dari y jika x naik dari 2 jadi 3.
+
+::: {.incremental}
+
+- $\frac{dy}{dx}=6x-1$
+
+- $dy=(6x-1)(dx)$
+
+- $dy=(6(2)-1)(1)=11$
+
+:::
+
+## Diferensial
+
+- Kalo pake cara delta, dapet 14. pake turunan, dapet 11. Kok beda?
+
+- Ini karena turunan adalah aproksimasi linear: jika fungsi aslinya nggak linear, maka aproksimasinya akan kurang akurat.
+
+- semakin besar $\Delta X$, semakin kurang akurasinya.
+
+- Tapi perkiraannya lebih baik daripada ga punya informasi apa-apa.
+
+## Fungsi linear
+
+Ada fungsi $y=3x-2$. Tentukan perubahan dari y jika x naik dari 2 jadi 3.
+
+::: {.incremental}
+
+- $\frac{dy}{dx}=3$
+
+- Karena fungsinya linear, jadinya: jika x naik 1, maka y akan naik 3.
+
+- Coba hitung ulang jika x naik dari 2 jadi 5
+
+:::
+
+## Somay
+
+- Inget contoh Raka, di mana dia punya fungsi biaya dan fungsi pendapatan:
+
+$$
+\begin{aligned}
+C&=1000+7Q \\
+
+R&=10Q
+
+\end{aligned}
+$$
+
+- Apa yang terjadi kalo kita aplikasikan turunan?
+
+## Somay
+
+$$
+\frac{dC}{dQ}=7 \\
+\frac{dR}{dQ}=10
+$$
+
+- artinya, jika somay bertambah 1, maka:
+
+    - cost bertambah 7
+    
+    - revenue bertambah 10
+    
+- Ini disebut juga dengan dampak marjinal / _marginal effect_
+
+## Marginal effect
+
+- Di persamaan linear, **koefisien** menjadi hasil dari turunannya.
+
+- Inilah kenapa **koefisien** dalam fungsi linear disebut juga dengan dampak marjinal.
+
+    - dan inilah juga kenapa **koefisien** biasanya lebih penting buat kita daripada konstanta.
+    
+- Koefisien fungsi linear bisa dianggap sebagai nilai perubahan $y$ jika $x$ berubah sebesar 1 unit.
+
+## Marginal effect
+
+- Dalam ekonomi, marginal effect ini sering sekali muncul, misalnya:
+
+    - _marginal cost_ (MC) dan _marginal revenue_ (MR).
+    
+    - elastisitas: seberapa besar permintaan/penawaran berubah jika harga berubah
+    
+- Semua ini akan kita bahas lebih lanjut di ilmu ekonomi.
+
+## Fungsi kuadratik
+
+- Jika anda menemukan permasalahan yang mengikuti fungsi kuadratik, turunan dapat memberikan anda titik maksimum dan titik minimum.
+
+-Sebuah fungsi kuadratik akan memiliki titik maksimum jika **turunan pertama=0** dan **turunan ke-2 bernilai negatif**
+
+-Sebuah fungsi kuadratik akan memiliki titik minimum jika **turunan pertama=0** dan **turunan ke-2 bernilai positif**
+
+## Contoh
+
+Seandainya fungsi pendapatan dan fungsi biaya somay Raka adalah seperti berikut:
+
+$$
+\begin{aligned}
+R&=100Q \\
+C&=2Q^2-200Q+10000
+\end{aligned}
+$$
+
+Carilah $Q$ di mana: (a) biayanya optimal, (b) apakah Q di (a) itu maksimal atau minimal?, (c) profitnya minimal/maksimal
+
+## Contoh
+
+a. $Q$ di mana $C$ ada di titik optimal:
+
+$$
+\begin{aligned}
+C&=2Q^2-200Q+10000 \\
+C'&=4Q-200 \ \text{, buat C'=0 untuk dapat titik optimal} \\
+4Q-200&=0\\
+Q&=50
+
+\end{aligned}
+$$
+
+## Contoh
+
+b. Apakah $Q=50$ titik maksimum atau minimum?
+
+$$
+\begin{aligned}
+C&=\frac{1}{2}Q^2-200Q+10000 \\
+C'&=Q-200 \\
+C''&=1 >0
+
+\end{aligned}
+$$
+
+Karena turunan ke-2 positif, maka 50 adalah jumlah somay yang meminimalisir biaya.
+
+## Contoh
+
+c. mencari $Q$ yang memaksimalkan profit:
+
+$$
+\begin{aligned}
+\pi&=R-C \\
+\pi&=100Q-2Q^2+200Q-10000 \\
+\pi&=-2Q^2+300Q-10000 \\
+\pi'&=-4Q+300,\text{buat =0 untuk optimum} \\
+Q&=75
+\end{aligned}
+$$
+
+## Contoh
+
+Apakah Q=75 itu titik maksimum atau minimum?
+
+$$
+\begin{aligned}
+\pi&=-2Q^2+300Q-10000 \\
+\pi'&=-4Q+300 \\
+\pi''&=-4<0
+\end{aligned}
+$$
+
+Karena turunan ke-2 nya negatif, berarti Q=300 adalah titik maksimal.
+
+## Cost dan profit
+
+Cost akan minimal jika $Q=50$. Berapa costnya?
+
+$$
+\begin{aligned}
+C&=2(50)^2-200(50)+10000 \\
+C&=5000
+\end{aligned}
+$$
+
+Profit akan maksimal jika $Q=75$. berapa profitnya?
+
+$$
+\begin{aligned}
+\pi&=-2(75)^2+300(75)-10000 \\
+\pi&=1250
+\end{aligned}
+$$
+
+## Kurva cost dan revenue
+
+```{r}
+
+library(tidyverse)
+library(ggh4x)
+cost<-function(x) 2*x^2-200*x+10000
+profit<-function(x) -2*x^2+300*x-10000
+reve<-function(x) 100*x
+
+x <- seq(0,100,.1)
+
+graph<-ggplot()+theme_classic() +
+  theme(panel.background = element_rect(fill = "#f0f1eb",
+                                        colour = "#f0f1eb"),
+        plot.background = element_rect(fill = "#f0f1eb"),
+        legend.key = element_rect(fill = "#f0f1eb",linetype = "blank"),
+        legend.background = element_rect(fill="#f0f1eb"))
+
+
+grafik6 <- graph +
+  stat_function(fun=cost,size=1.1,color='red')+
+  stat_function(fun=reve,size=1.1,color='blue')+
+  labs(x='Q',y='1000 Rp')+
+  scale_x_continuous(expand=c(0,0),limits=c(0,100))+
+  scale_y_continuous(expand=c(0,0))
+
+grafik5 <- graph +
+  stat_function(fun=profit,size=1.1)+
+  labs(x='Q',y='1000 Rp')+
+  coord_axes_inside(labels_inside = TRUE)+
+  scale_x_continuous(expand=c(0,0),limits=c(0,100))+
+  scale_y_continuous(expand=c(0,0),limits=c(-10000,1500))
+
+grafik6
+
+```
+
+## Kurva profit
+
+```{r}
+grafik5
+```

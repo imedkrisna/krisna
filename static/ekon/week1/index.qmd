@@ -1,0 +1,275 @@
+---
+title: "Ilmu Ekonomi"
+subtitle: "Pertemuan 1"
+author: "Prodi PIWAR Politeknik APP Jakarta"
+format: 
+  pptx:
+    theme: [simple,../mytheme.scss]
+  revealjs:
+    theme: [simple,../mytheme.scss]
+    chalkboard: true
+    incremental: false
+    transition: convex
+    background-transition: fade
+    slide-number: true
+
+---
+
+## Today's content ☀
+
+- housekeeping
+- about studying economics
+- some main principles
+
+## About the content of PIR2317 📚
+
+- This course is based on [Krugman and Wells (2016)](https://www.periplus.com/p/9781464186653/essentials-of-economics?filter_name=essentials%20of%20economics).
+- covered are principle of microeconomics:
+  - Supply and demand
+  - the market and its limitation
+- and macroeconomics:
+  - GDP, inflation, unemployment, the government
+  - What does it mean for business
+- books can be useful but are not required.
+
+## Your convenors
+
+- The course conveners are I Made Krisna (Imed) & Intan Vierke.
+
+- Contact us anytime but we may have delayed responses. Alternatively just show up to our offices.
+
+## Some expectations from student
+
+- No prior knowledge is required.
+    - We do expect you to understand Cartesian Plane.
+- Please be active and ask questions.
+- Do your assignments & be active.
+- No cheating! Especially during exams.
+- Please enrol to 2024_ilmu_ekonomi at e-learn.
+
+## Some rules
+
+- The lectures will be about 1.5 - 2 hours length.
+- I expect all students to pay attention.
+- Feel free to interrupt my class with questions.
+- email me at imade.krisna@poltekapp.ac.id  
+- Typical length of course is $\pm$120 mins
+
+## Structure of this course {.s}
+
+- week 1: introduction
+  - housekeeping
+  - some principles
+
+- week 2: supply and demand
+  - supply and demand curves
+  - perfect market equilibrium
+
+- week 3: Meddling with the market
+  - tax and quantity control
+  - price elasticity
+
+- week 4: firm problem
+  - production function
+  - marginal cost and average cost
+  - perfect competition
+
+## Structure of this course {.s}
+
+- week 5: Monopoly & oligopoly
+  - price discrimination
+  - game theory intro
+
+- week 6: Externalities & public goods
+  - deviation from perfect market
+  - policies that work
+
+- week 7: Welfare
+  - Poverty & inequality
+  - firms under different welfare setting
+
+*** MIDTERM EXAM ***
+
+## Structure of this course {.s}
+
+- week 8: Macro basics
+  - accounting and growth
+  - inflation and international imbalances
+
+- week 9: GDP, inflation and unemployment
+  - Measuring economy and price
+  - unemployment
+
+- week 10: Long run growth
+  - Dynamics of economic growth
+  - Aggregate demand and supply
+
+- week 11: Fiscal policy
+  - demand shock
+  - the state budget
+  
+## Structure of this course {.s}
+
+- week 12: Financial system
+  - Banks and money
+  - The central bank
+- week 13: Monetary policy
+  - interest rate
+  - central bank instruments
+
+- week 14: international economies
+  - trade policy
+  - international capital and exchange rate
+
+## Evaluation ✍🏾
+
+| evaluation | covers | % |
+| ---------- | ------ | - |
+| Group assignment | contextual | 40 |
+| midterm exam | first 7 meetings | 30 |
+| final exam | all meetings | 30 |  
+
+- Slides should be enough to get a good grade.
+- However, to get an A, you should master the principle.
+    - The more logic you use, the less memory you're going to need.
+
+## Assignment
+
+- You're divided into 7 groups! (you should already have a group by next week!)
+- each group writes a paper (makalah) & a presentation slide.
+- During a group's presentation, others ask questions (at least 1 per group)
+- Presentation will begin in week 4.
+- I will randomize which groups do what.
+
+## Assignments {.s}
+
+| group | Topic | coverage | meeting |
+| --- | ------ | ------ | --- |
+| 1 | Elasticity & tax | demand of cigarettes & the effectiveness of excise | 4 |
+| 2 | Oligopoly | Analyzing the market dynamics of matic scooter | 7 |
+| 3 | Inflation | what is inflation, how's it measured, and its dynamics  | 9 |
+| 4 | Economic growth | Compare Indonesia vs China vs South Korea growth from 1960-recent  | 10 |
+| 5 | Financial system  | Describe what is money, what is digital money, and difference between conventional system vs sharia  | 11 |
+| 6 | International trade  | Analyze beef import quota, the good, the bad  | 13 |
+| 7 | International finance  |  1998 financial crisis: how it started & ended | 14 |
+
+# About economics
+
+## Why economics?
+
+- Contrary to what normal people think, economics is not about (just) money.
+- Economics is all about making optimal decision under scarcity.
+- We use math principle to optimise our decision making.
+- This course is not going to dig too deep into the world of economic principles.
+- This course does not provide answers to your question: It teach how to use economic framework to shape your question.
+
+## Some questions asked by economists
+
+- Is minimum wage good?
+- Should we introduce tax holiday to firms?
+- Should the government increase expenditure by more tax or more debt?
+- Should we ban mineral export?
+- can we sustain economic growth?
+- what to do during economic crisis?
+
+---
+
+## More questions can be answered with (partially) economic principles
+
+- lockdown or not lockdown?
+- Should we invest in testing and tracing? or should we invest in treatment?
+- Who to vaccine first: the elderly and vulnerables, or the working age?
+- Should we trust BUMN, or private sector?
+- essentially, it's about tradeoffs, cost and benefit.
+
+# Principles of Economics 💰
+
+## People make choices
+
+##### because resources are scarce
+
+- resource can be anything you use to produce.
+
+- Money is the most mainstream limited resource.
+  - Buy only one holiday package.
+  - Buy only one portion of nasi goreng.
+
+- But there are other resources worth noting.
+  - There's only one holiday season in a year.
+  - Two nasi gorengs would be too much for my stomach.
+
+## The true cost of something is its opportunity cost {.m}
+
+- money is just one type of cost.
+- The true cost of taking a holiday to Hong Kong is going somewhere else.
+- Your holiday can be spent on learning new stuff.
+- What is the cost of doing your degree?
+  - Going straight to work and get experiences.
+  - Doing other degrees (biology, chemistry, etc).
+  - enjoy life.
+- essentially, opportunity cost of something is something else you gave up to get it.
+
+## Thinking at the margin
+
+- The principle of opportunity cost leads to a marginal thinking.
+- Understand your status quo, and think what action you can do to add a little improvement from it.
+- If you have two hours to study or play, how will you divide it?
+  - what if there's an exam tommorow?
+  - If you are tired of studying, would you study more?
+
+## Specialisation and gains from trade {.m}
+
+- During your daily time, you make decisions on allocating how much time to study and to cook, among other things.
+- Since you will die if you don't eat, you can't allocate 0 hour to cook.
+- On the other hand, there are those who are very good cook and will cook for you for a little money.
+- In this case, it may be better if you spend 0 hour to cook, and order food from these chefs.
+- Trade is the reason why I can study economics: I don't have to study how to be a doctor. I will just go to the hospital if I need a medical service.
+
+## Specialisation and gains from trade {.m}
+
+- Extending to firm level, many outsource part of their business from a third party.
+  - buying office probably better than developing our own softwares.
+  - why make our own server if we can use AWS?
+  - Use tokopedia instead of making your own e-store.
+
+- We can easily extend this to a country level:
+  - Japan makes car because they cannot plant palm oil.
+
+## Incentives matter
+
+- People move to cities because there are more opportunities there.
+- People will buy cheaper products given the same quality.
+- incentives are not always about money:
+  - You study more on the subjects you like.
+    
+> *"ada gula ada semut"*
+
+## Market and intervention
+
+- often times, market incentives are enough.
+- However, intervention is often used.
+  - education is an example where government intervene heavily.
+  - Gojek used subsidy to incentivies drivers and users.
+- Intervention may be temporary.
+  - The COVID-19 relieve bill (PEN) will likely stop after the pandemic.
+  - Gojek's subsidy is removed once they reach economies of scale.
+
+## Things tend to move to equilibrium {.m}
+
+- When there is an incentive to do something, there will be more and more people exploit it.
+- As more people do it, the incentive decreases to a point where it is not worth it anymore.
+- examples:
+  - City becomes more crowded (and costly to live in).
+  - Stock price stops growing few moments after its IPO.
+  - Countries' economic growth reduced after they get rich.
+- Movement towards equilibrium, however, varies.
+  - short run vs long run.
+  - individual vs aggregate.
+  
+## Conclusion
+
+- We will see how these principles come up again and again as we delve deeper into the course.
+- The principle will be carried over to your overall degree, and life in general.
+- I am not trying to make you an economist, but the principles are very useful.
+
+## Next week: Supply and demand

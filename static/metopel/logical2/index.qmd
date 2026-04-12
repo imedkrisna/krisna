@@ -1,0 +1,291 @@
+---
+title: "Logical writing, thinking, and problem solving"
+subtitle: "Pertemuan 8"
+author: "Metodologi penelitian"
+format: 
+  revealjs:
+    theme: [simple,../mytheme.scss]
+    chalkboard: true
+    incremental: false
+    transition: convex
+    background-transition: fade
+    slide-number: true
+---
+
+## Apa yang anda tau? {.m}
+
+- Apa saja _soft skills_ yang katanya diperlukan di dunia kerja jaman sekarang? Sebutkan yang anda tau!
+
+::: columns
+::: {.column width=48%}
+
+::: {.incremental}
+- komunikasi yang baik
+- leadership
+- berpikir kritis
+- kreatif
+- adaptif
+- kolaboratif
+- kompleks problem solving
+:::
+
+:::
+
+::: {.column width=48%}
+
+Apa saja yang menurut anda sudah anda kuasai?
+
+Apakah anda pernah belajar hal-hal ini?
+:::
+:::
+
+## Skills {.m}
+
+- Kita juga perlu hard skills:
+
+    - kemampuan berbahasa: bahasa asing, bahasa Indonesia yang benar, bahkan bahasa pemrograman.
+    
+    - Ijazah / gelar akademik
+    
+    - Sertifikat kompetensi: prosedur ekspor impor, presentasi, dataviz, analisis data, dst.
+    
+- Hard skills lebih mudah diukur dan dipelajari.
+
+- Untuk melakukan penelitian, butuh dua-duanya!
+
+    - mampu berpikir, menyelesaikan masalah dan menulis dengan baik
+    
+## Mengorganisir {.m}
+
+- Otak kita cenderung melakukan kategorisasi atau asosiasi:
+
+    - menghubungkan 1 hal dengan hal lain untuk mudah mengingat/memahami.
+    
+- Misalnya, coba ingat-ingat 2 hal yang normalnya tidak terkait:
+
+::: columns
+::: {.column width=48%}
+Danau
+
+Sepatu
+
+Wanita
+
+Pensil
+
+Perpustakaan
+
+Rel kereta
+
+Buku
+:::
+::: {.column width=48%}
+Gula
+
+Piring
+
+Koala
+
+Bensin
+
+Sepeda
+
+Gajah
+
+Sabun
+:::
+:::
+
+## Mengorganisir
+
+- Sekarang coba anda “menghubungkan” kedua hal ini dan menggambarkan situasinya di kepala anda: misal gula dilarutkan di air danau, sepatu diletakan di piring, dst. 
+
+- tutuplah deretan hal di sisi kanan dengan tangan anda dan coba ingat-ingat apa saja yang tertulis di sisi kanan hanya dengan membaca sisi kiri. Rata-rata kita akan dengan mudah melakukannya.
+
+- Namun ternyata ada batasan dalam kemampuan manusia mengingat dan memahami, bahkan berbeda antar individu.
+
+## Magical 7 {.m}
+
+Dalam bukunya, Barbara Pinto memberikan contoh seorang suami yang walaupun mager memutuskan untuk pergi keluar rumah di cuaca yang panas dengan tujuan membeli koran (bukunya tahun 1996, saat itu masih relevan). Sambil bersiap-siap untuk keluar rumah, pak suami bertanya ke istrinya apa ada hal lain yang perlu dibeli, jawaban istrinya seperti ini:
+
+“oiya, aku kayaknya pengen makan buah anggur gara2 lihat iklan di tv”
+
+“kayaknya perlu beli susu juga”
+
+“bentar, coba kulihat isi kulkas apa kita masih punya kentang. Eh, perlu beli telur”
+
+“kentang juga perlu beli”
+
+“wortel dan buah jeruk beli dikit aja”
+
+## Magical  {.m}
+
+Pak suami sudah membuka pintu dan keluar rumah
+
+“mentega!”
+
+Sudah masuk mobil
+
+“apel”
+
+“sama yoghurt”
+
+Pak suami bertanya, “udah itu aja?”
+
+Bu istri menjawab, “iya sayang, makasih ya”
+
+Dalam contoh ini, pak suami tidak berusaha membuat daftar belanjaan. Menurut anda barang apa saja yang akan dibeli pak suami?
+
+## Magical  {.m}
+
+- Dalam percobaan yang dilakukan, rata-rata para suami hanya mengingat membeli koran dan buah anggur saja.
+- Bagaimana dengan anda?
+- Menurut para ahli, berdasarkan penelitian dan percobaan, manusia normalnya hanya dapat memahami/mengingat maksimal 7 hal dalam satu waktu, kalaupun lebih atau kurang hanya 2 hal saja.
+- Dalam contoh ini ada 9 hal yang perlu diingat, akan jauh mudah jika kita mengkategorikan hal-hal tadi
+
+---
+
+::: columns
+::: {.column width=40% .m}
+- Setelah mengkategorikan 9 hal tadi, kita sekarang hanya perlu mengingat 4 hal saja (dairy product, buah, sayur, telur), setelah itu masing-masing hal akan lebih mudah diingat.
+- Dalam proses ini mungkin masing-masing orang akan menggunakan metode kategorisasi yang berbeda, mungkin berdasarkan warna atau yang lain
+
+:::
+::: {.column width=58%}
+![](aaa.jpg)
+:::
+:::
+
+---
+
+- Seluruh proses mental (berpikir, mengingat, memecahkan masalah) pada dasarnya menggunakan prinsip mengelompokan dan merumuskan
+- Hal ini mungkin secara alami bisa kita lakukan, namun mengkomunikasikannya kepada orang lain baik secara lisan maupun tulisan ternyata tidak mudah
+- Karena masing-masing individu memiliki logika berbeda saat melakukan kategorisasi dan perumusan. Komunikasi berarti kita berusaha membuat orang lain memahami logika berpikir yang kita gunakan.
+
+---
+
+## BTS rule! {.center .middle background-image="bts.jpg" background-opacity=0.4}
+
+::: {.fragment}
+Untuk menulis 10 ribu kata, anda harus membaca 100 ribu kata!
+:::
+
+::: {.fragment}
+
+$B>T>S$
+
+:::
+
+::: {.fragment}
+
+Baca $\Rightarrow$ Tulis $\Rightarrow$ Speak
+
+:::
+
+::: {.fragment}
+
+JANGAN KEBALIK!
+
+:::
+
+::: {.fragment}
+
+hehe 😊
+
+:::
+
+::: {.fragment}
+
+sumber background: [wallpapers.com](https://wallpapers.com/wallpapers/bts-group-photo-near-ocean-xdwcwrqitr1y234b.html)
+
+:::
+
+## Deduktif & Induktif {.m}
+
+- Dalam melakukan penelitian pada dasarnya kita akan mengumpulkan berbagai ide yang kita peroleh dari membaca atau melakukan eksperimen, perlu berhati-hati saat kita harus menyimpulkan berdasarkan ide-ide tersebut. Walaupun nampaknya rumit, namun ini basic skill yang diperlukan di era serbuan informasi lewat berbagai media social saat ini.
+
+- Deduksi adalah kesimpulan yang dibuat berdasarkan minimal 2 pernyataan yang berhubungan. Contohnya: 
+    
+    - Suatu perusahaan yang memenuhi 3 standar kriteria ini layak untuk dibeli sahamnya
+    
+    - Perusahaan A memenuhi 3 standar kriteria yang ditetapkan
+    
+    - Maka, perusahaan A layak dibeli sahamnya.
+
+## {background-image="bbb.jpg"}
+
+## {background-image="bbbb.jpg"}
+
+## Latihan {.m}
+
+- Perusahaan Jepang meningkatkan bisnisnya ke pasar Tiongkok
+
+- Perusahaan Amerika meningkatkan bisnisnya ke pasar Tiongkok
+
+    - Para pelaku bisnis tertarik untuk memasuki pasar Tiongkok
+
+Deduktif atau induktif?
+
+::: {.fragment}
+ini induktif
+:::
+
+::: {.fragment}
+contoh deduktif:
+
+- Perusahaan Jepang meningkatkan bisnisnya ke pasar Tiongkok
+
+- Hal ini didorong juga oleh berita bahwa perusahaan Amerika akan memasuki pasar Tiongkok
+:::
+
+
+## Deduktif? Induktif? {.m}
+
+- Dalam penelitian, kita tidak perlu mempermasalahkan apakah kita berpikir secara induktif atau deduktif.
+
+- Mungkin anda mulai dari membuat hipotesis, mungkin anda mulai dari mengamati rangkaian kejadian tidak berhubungan.
+
+    - lebih mungkin anda akan melakukan keduanya
+    
+- Karena itu biasanya apakah induktif atau deduktif, tidak perlu ditulis di laporan penelitian / skripsi.
+
+- Deduktif induktif biasanya lebih diperlukan dalam penulisan paragraf atau pembicaraan.
+
+## Logical fallacy {.m}
+
+Kesalahan logika menyimpulkan yang sering terjadi
+
+- Semua kelinci bisa berlari cepat
+
+- Beberapa kuda bisa berlari cepat
+
+::: {.incremental}
+- Maka, kuda adalah kelinci
+:::
+
+::: {.fragment}
+
+Bukan hanya terjadi dalam penelitian, logical fallacy juga merupakan salah satu template hoax. Contoh berita yang beredar melalui grup wa:
+
+- Seorang ibu rumah tangga telah mematenkan metoda menurunkan kolesterol dari hasil pengamatan kegiatan sehari-harinya. 
+
+- Dia mendapati kenyataan bahwa lemak-lemak di panci dan piring mudah dibersihkan dengan mengguyurnya dengan air mendidih. 
+
+- Dia menyimpulkan bahwa kolesterol tubuh dapat dihilangkan dengan minum air mendidih dua kali sehari.
+
+:::
+
+## Logika problem solving
+
+- Dalam membuat laporan penelitian, normalnya kita akan mengikuti urutan prosedur sebagai berikut:
+
+Merumuskan masalah $\rightarrow$ membuat struktur/kerangka analisis $\rightarrow$ melakukan analisis/mencari solusi $\rightarrow$ menyampaikan/ mengkomunikasikan hasil
+
+- Langkah kritis dan kompleks yang harus dilakukan dengan benar adalah “merumuskan masalah”
+
+
+## Next week
+
+- Metode-metode identifikasi masalah
+
+- Menyusun kerangka analisis

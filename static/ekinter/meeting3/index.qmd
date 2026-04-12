@@ -1,0 +1,727 @@
+---
+title: "Specific factor and Income Distribution"
+subtitle: "ECES905205 pertemuan 3"
+date: "12 September 2022"
+author: "I Made Krisna Gupta"
+format: 
+  revealjs:
+    theme: [simple,../mytheme.scss]
+    chalkboard: true
+    incremental: false
+    transition: convex
+    background-transition: fade
+    slide-number: true
+  beamer: default
+
+editor: visual
+---
+
+## The Repeal of the Corn Law {.m}
+
+::: columns
+::: {.column width="40%"}
+-   An effort to reduce food price
+    -   tarif grains sampe 80%
+-   Repealed under Robert Peel ruling in 1846.
+-   pivotal for UK manufacturing transformation.
+-   Birth of [the economist magazine](https://www.economist.com/finance-and-economics/2021/06/24/an-anniversary-for-free-traders)
+-   Our model today explains this phenomenon.
+:::
+
+::: {.column width="60%"}
+![](cornlaw.jpg)
+:::
+:::
+
+## Kemarin
+
+-   Kita telah mempelajari tentang Ricardian model, model paling primitif di literatur perdagangan internasional.
+
+-   *gains from trade*(in a purely economic sense) datang dari specialisasi dan keunggulan komparatif.
+
+-   Model ini memiliki asumsi yang sangat kuat, salah satunya adalah faktor produksi yang bebas berpindah antara satu industri ke industri lain.
+
+    -   Today we're relaxing this assumption.
+
+## Hari ini
+
+-   specific factor model
+
+## Specific factor model
+
+-   2 Sectors i: Cloth (C) and Food (F)
+
+-   3 factor j: Labor (L), Terrain (T), and Capital (K).
+
+    -   Labor can move between sectors
+    -   T can only used to produce F, K only C.
+
+```{=tex}
+\begin{align}
+Q_F=F(L_F,T)  \\ 
+Q_C=C(L_C,K)   \\
+L_F+L_C=L
+\end{align}
+```
+## PPF {.m}
+
+-   Karena sekarang ada 2 faktor, kita perlu memikirkan kembali PPF-nya.
+
+-   Karena hanya ada 1 faktor yang bergerak, tiap sektor hanya bisa meningkatkan produksi dengan cara nambah $L$.
+
+    -   $T$ tidak bisa ditambah karena mau dapat dari mana?
+    -   begitupun $K$
+
+-   Bisa kita bilang bahwa ini analisis jangka pendek.
+
+    -   Di jangka panjang, $K$ bisa naik dari investasi.
+    -   Di jangka puannnnjjjaaaangggg, $T$ bisa naik dari reklamasi (ya investasi juga sih...)
+    -   Di jangka panjang, $L$ naik?
+
+## PPF
+
+-   Tapi intinya, karena hanya 1 faktor yang bisa naik/turun, efisiensi produksi faktor tersebut mengalami **diminishing returns**
+    -   bayangin di kantor anda nambah pegawai tapi ga nambah komputer?
+    -   nambah petani tapi ga nambah lahan?
+-   Artinya, produktivitas pekerja (*marginal product of labor* (MPL)) turun seiring $L_i$ bertambah.
+    -   konsekuensi di sektor satunya, MPL naik seiring $L_{-i}$ turun.
+
+## PPF dan MPL
+
+```{r}
+#| fig-width: 10
+#| fig-height: 4
+#| label: fig1
+#| fig-cap: "PPF dan MPL sektor C"
+#| warning: false
+library(WDI)
+library(tidyverse)
+library(patchwork)
+
+prod <- function(q) (20*q)-(q)^(2)
+mpl<- function(q) (5+0.5*q^2-2.5*q)
+
+p<-ggplot() +
+  stat_function(fun = prod,size=1.1, color='black') +
+  labs(x=expression(L[C]), y=expression(Q[C]),color=NULL,fill=NULL)+
+  annotate("text",x=2,y=60,label=expression(Q[C]==Q[c](K,L[C])))+
+  scale_x_continuous(expand=c(0,0),limits = c(0,10))+
+  scale_y_continuous(expand=c(0,0))+
+  theme_classic()+
+  theme(panel.grid=element_blank(),
+        axis.text.x=element_blank(),
+        axis.text.y=element_blank(),
+        axis.ticks.x=element_blank(),
+        axis.ticks.y=element_blank(),
+        legend.position=c(1,1),
+        legend.justification = c(1,1),
+        legend.spacing=unit(0,"cm"),
+        legend.margin=margin(0,0,0,0))
+q<-ggplot() +
+  stat_function(fun = mpl,size=1.1, color='black') +
+  labs(x=expression(L[C]), y=expression(MPL[C]),color=NULL,fill=NULL)+
+  annotate("text",x=1.9,y=1.8,label=expression(MPL[C]))+
+  scale_x_continuous(expand=c(0,0),limits = c(0,2))+
+  scale_y_continuous(expand=c(0,0),limits=c(0,5))+
+  theme_classic()+
+  theme(panel.grid=element_blank(),
+        axis.text.x=element_blank(),
+        axis.text.y=element_blank(),
+        axis.ticks.x=element_blank(),
+        axis.ticks.y=element_blank(),
+        legend.position=c(1,1),
+        legend.justification = c(1,1),
+        legend.spacing=unit(0,"cm"),
+        legend.margin=margin(0,0,0,0))
+
+p+q
+```
+
+Note: industri F juga identik, cuma dia pake T, not K.
+
+## PPF
+
+-   Tambahan 1 unit of $L_C$ akan meningkatkan $Q_C$ sebanyak $MPL_C$.
+    -   Semakin naik $L_C$, $MPL_C$ semakin turun.
+    -   Artinya, $Q_C$ tetep naik, tapi ga sebanyak pas $L_C$-nya sedikit.
+-   Setiap kenaikan $L_C$ by 1 unit, $L_F$ turun by 1 unit.
+    -   artinya, kenaikan $Q_C$ bersamaan dengan penurunan $Q_F$.
+
+$$L_C+L_F=L$$
+
+## PPF
+
+-   dengan kata lain, untuk menaikkan $Q_C$ by 1 unit, $Q_F$ harus turun by $\frac{MPL_F}{MPL_C}$
+
+-   Dari sini, kita dapatkan hubungan antara $Q_C$ dan $Q_F$ yaitu:
+
+$$
+\text{Slope of PPF}=-\frac{MPL_F}{MPL_C}
+$$
+
+## PPF
+
+```{r}
+
+#| label: fig2
+#| fig-cap: "PPF of an economy with specific factor"
+#| warning: false
+
+
+fppf <- function(q) (16-q^2)^(0.5)
+
+
+ppf<-ggplot() +
+  stat_function(fun = fppf,size=1.1, color='black') +
+  labs(x=expression(Q[C]), y=expression(Q[F]),color=NULL,fill=NULL)+
+  annotate("text",x=2,y=60,label=expression(Q[C]==Q[c](K,L[C])))+
+  scale_x_continuous(expand=c(0,0),limits = c(0,5))+
+  scale_y_continuous(expand=c(0,0),limits = c(0,5))+
+  theme_classic()+
+  theme(panel.grid=element_blank(),
+        axis.text.x=element_blank(),
+        axis.text.y=element_blank(),
+        axis.ticks.x=element_blank(),
+        axis.ticks.y=element_blank(),
+        legend.position=c(1,1),
+        legend.justification = c(1,1),
+        legend.spacing=unit(0,"cm"),
+        legend.margin=margin(0,0,0,0))
+ppf
+```
+
+## Berapa harus produksi?
+
+-   A profit maximizing firms will want to employ until:
+
+$$ MPL_C \times P_C = w $$
+
+-   Jika udah di posisi tersebut lalu firms ambil 1 $L_C$ lagi, maka $MPL_C$ akan turun.
+-   Jika $P_C$ ga berubah tapi $MPL_C$ turun, maka $MPL_C \times P_C < w$
+    -   alias ga nutup ongkos produksi.
+
+## Berapa harus produksi?
+
+-   Industri F punya *employment rule* yang sama. Akibatnya:
+
+```{=tex}
+\begin{align}
+MPL_C \times P_C = MPL_F \times P_F = w \\ 
+\\
+-\frac{MPL_F}{MPL_C}=-\frac{P_C}{P_F}=w=\text{slope PPF}
+\end{align}
+```
+-   MPL merupakan ukuran teknologi/produktivitas.
+-   harga ditentukan oleh preference.
+    -   Preference (by extension, prices) is given.
+
+## Production status quo
+
+```{r}
+#\ fig-height: 10
+#| fig-width: 10
+#| label: fig3
+#| fig-cap: "Production allocation"
+#| warning: false
+
+ppf+
+#  annotate("segment",x = 2.4, y = 3.7,xend = 4.1, yend = 1,size=1.1)+
+  annotate("segment",x = 1.2, y = 3.9,xend = 2.7, yend = 3.1,size=1.1)+
+#  annotate("segment",x = 0, y = 2.12,xend = 3.4, yend = 2.12,size=1.1,lty="dotted")+
+#  annotate("segment",x = 3.4, y = 0,xend = 3.4, yend = 2.12,size=1.1,lty="dotted")+
+  annotate("segment",x = 0, y = 3.5,xend = 1.9, yend = 3.5,size=1.1,lty="dotted")+
+  annotate("segment",x = 1.9, y = 0,xend = 1.9, yend = 3.5,size=1.1,lty="dotted")+
+#  annotate("point", x=3.4,y=2.12,size=4)+
+  annotate("point", x=1.9,y=3.5,size=4)+
+#  annotate("text", x=3.5,y=2.2,label="1")+
+  annotate("text", x=2,y=3.6,label="1")+
+  annotate("text", x=0.1,y=2.27,label=expression(Q[F]^1))+
+  annotate("text", x=3.55,y=0.2,label=expression(Q[C]^1))+
+  annotate("text", x=1.4,y=3.2,label=expression(paste("slope =", - bgroup("(",frac(P[C], P[F]),")")^1)))
+#  annotate("text", x=3.2,y=3.1,label=expression(paste("slope =", - bgroup("(",frac(P[C], P[F]),")")^1)))
+```
+
+## Production status quo
+
+-   Dengan bentuk market yang sama-sama *diminishing return*, PPF akan berbentuk seperti gambar sebelumnya.
+-   Produksi terjadi di titik 1, di mana kurva PPF bersinggungan dengan price ratio.
+-   beda dari pure ricardian yg rasio produktivitasnya konstan (PPF-nya linear).
+-   Grafik 4-kuadran dapat digunakan untuk mengilustrasikan fungsi ppf ini.
+
+## Labor market
+
+-   pasar tenaga kerja akan bergerak tergantung MPL dari kedua industri.
+-   equilibrium tercipta berdasarkan $MPL_i \times P_i$, di mana employment akan berhenti di sebuah level $w$.
+-   Dinamika ini akan berubah jika ada pergeseran di teknologi (MPL) ataupun rasio harga $\left(\frac{P_C}{P_F}\right)$.
+
+## Labor market
+
+Note bahwa total L adalah fix. Kiri adalah $L_C$, kanan adalah $L_F$
+
+```{r}
+
+#| label: fig3
+#| fig-cap: "Labor market. Note: Food kebalik, mulai dari kanan."
+#| warning: false
+
+mplc<- function(q) (5+0.5*q^2-2.5*q)*1
+mplcc<- function(q) (5+0.5*q^2-2.5*q)*2
+mplf<- function(q) (1+0.2*q^2+2*q)*1
+mplff<- function(q) (1+0.2*q^2+2*q)*2
+
+labmar<-ggplot() +
+  geom_function(fun = mplc,color="red") +
+#  geom_function(fun = mplcc,color="red",linetype="dashed") +
+  geom_function(fun = mplf,color="blue") +
+#  geom_function(fun = mplff,color="blue",linetype="dashed") +
+  xlim(0,2)+
+  labs(x="", y="wage",color=NULL,fill=NULL)+
+  annotate("text", x =0.4, y = 1, label = expression(MPL[C] %*% P[C]^1)) +  
+  annotate("text", x =1.8, y = 1.5, label = expression(MPL[F] %*% P[F]^1)) +  
+  annotate("text", x =0.05, y = -.5, label = expression(L[C])) +  
+  annotate("text", x =1.94, y = -.5, label = expression(L[F])) +  
+  annotate("point", x =0.95, y = 3.05,color="black",size=4) +  
+  annotate("text", x =0.95, y = 3.4,label=1,size=4) +  
+  annotate("segment",arrow = arrow(length = unit(0.2, "inches")), x =1.8, y = -0.5, xend=1.6,yend=-.5) +  
+  annotate("segment",arrow = arrow(length = unit(0.2, "inches")), x =0.2, y = -0.5, xend=0.4,yend=-.5) +  
+  coord_cartesian(ylim=c(0,7),clip = "off")+
+  theme_classic()+
+  theme(panel.grid=element_blank(),
+        panel.background = element_rect(colour = "black"),
+        axis.text.x=element_blank(),
+        axis.text.y=element_blank(),
+        axis.ticks.x=element_blank(),
+        axis.ticks.y=element_blank(),
+        legend.position=c(1,1),
+        legend.justification = c(1,1),
+        legend.spacing=unit(0,"cm"),
+        legend.margin=margin(0,0,0,0))
+labmar
+```
+
+## Increase in both price
+
+-   Katakanlah negara ini trade, dan di pasar internasional, $P_C^*=1.1P_C$ dan $P_F*=1.1P_F$
+-   Dengan MPL fix, maka yg kenaikan kurva $MPL_i \times P_i$ adalah selaras dengan kenaikan $P$-nya.
+-   Karena harga kedua barang naik dengan proporsi yang sama, alokasi naker jadi tidak berubah
+-   hanya terjadi kenaikan gaji 10%, sama dengan tingkat kenaikan kedua jenis barang.
+
+## Increase in both price
+
+```{r}
+
+#| label: fig4
+#| fig-cap: "Increase in both price proportion only leads to increase in wage"
+#| warning: false
+
+mplc<- function(q) (5+0.5*q^2-2.5*q)*1
+mplcc<- function(q) (5+0.5*q^2-2.5*q)*2
+mplf<- function(q) (1+0.2*q^2+2*q)*1
+mplff<- function(q) (1+0.2*q^2+2*q)*2
+
+labmar2<-ggplot() +
+  geom_function(fun = mplc,color="red") +
+  geom_function(fun = mplcc,color="red",linetype="dashed") +
+  geom_function(fun = mplf,color="blue") +
+  geom_function(fun = mplff,color="blue",linetype="dashed") +
+  xlim(0,2)+
+  labs(x="", y="wage",color=NULL,fill=NULL)+
+  annotate("text", x =0.4, y = 1, label = expression(MPL[F] %*% P[F]^1)) +  
+  annotate("text", x =1.8, y = 1.5, label = expression(MPL[C] %*% P[C]^1)) + 
+  annotate("text", x =0.11, y = 3.5, label = expression(MPL[F] %*% P[F]^2)) +  
+  annotate("text", x =1.8, y = 3.5, label = expression(MPL[C] %*% P[C]^2)) + 
+  annotate("point", x =0.95, y = 3.05,color="black",size=4) +  
+  annotate("point", x =0.95, y = 6.1,color="black",size=4) + 
+  annotate("text", x =0.95, y = 3.47,label=1,size=4) +  
+  annotate("text", x =0.95, y = 7,label=2,size=4) +  
+  annotate("text", x =0.11, y = -1.2, label = expression(L[C])) +  
+  annotate("text", x =1.9, y = -1.2, label = expression(L[F])) +  
+  annotate("segment",arrow = arrow(length = unit(0.2, "inches")), x =0.95, y = 4, xend=0.95,yend=5.7) +  
+  annotate("segment",arrow = arrow(length = unit(0.2, "inches")), x =1.8, y = -1.2, xend=1.6,yend=-1.2) +  
+  annotate("segment",arrow = arrow(length = unit(0.2, "inches")), x =0.2, y = -1.2, xend=0.4,yend=-1.2) +  
+  coord_cartesian(ylim=c(0,12),clip = "off")+
+  theme_classic()+
+  theme(panel.grid=element_blank(),
+        panel.background = element_rect(colour = "black"),
+        axis.text.x=element_blank(),
+        axis.text.y=element_blank(),
+        axis.ticks.x=element_blank(),
+        axis.ticks.y=element_blank(),
+        legend.position=c(1,1),
+        legend.justification = c(1,1),
+        legend.spacing=unit(0,"cm"),
+        legend.margin=margin(0,0,0,0))
+labmar2
+```
+
+## Change in relative price
+
+-   Katakanlah negara ini terekspose international trade.
+    -   Di pasar internasional, $P_C^*=1.1P_C$ tapi $P_F^*=P_F$
+-   Katakanlah $P_C$ naik 10%, tapi $P_F$ tetap.
+-   Terjadi perubahan rasio harga di mana $\frac{P_C}{P_F} \uparrow$
+-   Ada kenaikan $L_C$ dengan mengambil $L_F$
+    -   inget, $L$ secara total tetap.
+-   gaji naik, tapi ga sebanyak kenaikan $P_C$.
+
+## Change in relative price
+
+```{r}
+
+#| label: fig5
+#| fig-cap: "Labor allocation changes if relative price changes"
+#| warning: false
+
+mplc<- function(q) (5+0.5*q^2-2.5*q)*1
+mplcc<- function(q) (5+0.5*q^2-2.5*q)*1.6
+mplf<- function(q) (1+0.2*q^2+2*q)*1
+
+
+labmar3<-ggplot() +
+  geom_function(fun = mplc,color="red") +
+  geom_function(fun = mplcc,color="red",linetype="dashed") +
+  geom_function(fun = mplf,color="blue") +
+#  geom_function(fun = mplff,color="blue",linetype="dashed") +
+  xlim(0,2)+
+  labs(x="", y="wage",color=NULL,fill=NULL)+
+  annotate("text", x =0.4, y = 1, label = expression(MPL[F] %*% P[F]^1)) +  
+  annotate("text", x =1.8, y = 1.5, label = expression(MPL[C] %*% P[C]^1)) + 
+  annotate("text", x =1.8, y = 3.5, label = expression(MPL[C] %*% P[C]^2)) + 
+  annotate("point", x =0.95, y = 3.05,color="black",size=4) +  
+  annotate("point", x =1.35, y = 4.1,color="black",size=4) + 
+  annotate("text", x =0.95, y = 3.47,label=1,size=4) +  
+  annotate("text", x =1.35, y = 4.6,label=2,size=4) +  
+  annotate("text", x =0.11, y = -1.2, label = expression(L[C])) +  
+  annotate("text", x =1.9, y = -1.2, label = expression(L[F])) +  
+  annotate("segment",arrow = arrow(length = unit(0.2, "inches")), x =0.95, y = 4, xend=1.3,yend=5.2) +  
+  annotate("segment",arrow = arrow(length = unit(0.2, "inches")), x =1.8, y = -1.2, xend=1.6,yend=-1.2) +  
+  annotate("segment",arrow = arrow(length = unit(0.2, "inches")), x =0.2, y = -1.2, xend=0.4,yend=-1.2) +  
+  coord_cartesian(ylim=c(0,12),clip = "off")+
+  theme_classic()+
+  theme(panel.grid=element_blank(),
+        panel.background = element_rect(colour = "black"),
+        axis.text.x=element_blank(),
+        axis.text.y=element_blank(),
+        axis.ticks.x=element_blank(),
+        axis.ticks.y=element_blank(),
+        legend.position=c(1,1),
+        legend.justification = c(1,1),
+        legend.spacing=unit(0,"cm"),
+        legend.margin=margin(0,0,0,0))
+labmar3
+```
+
+## New production allocation
+
+-   Karena terjadi perubahan rasio harga, maka alokasi produksi ikut berubah.
+-   Ingat bahwa produksi akan terjadi di titik yang slopenya = price ratio.
+-   Ketika harga relatif berubah, maka produksi akan pindah ke barang yang harganya naik tersebut.
+-   Ingat bahwa total faktor produksi tidak berubah: T,K dan L tetap sama.
+    -   Jika tidak ada perubahan teknologi, maka produksi hanya dapat dilakukan di PPF.
+
+## New production allocation
+
+```{r}
+#| label: fig6
+#| fig-cap: "New production allocation"
+#| warning: false
+
+ppf+
+  annotate("segment",x = 2.4, y = 3.7,xend = 4.1, yend = 1,size=1.1)+
+  annotate("segment",x = 1.2, y = 3.9,xend = 2.7, yend = 3.1,size=1.1)+
+  annotate("segment",x = 0, y = 2.12,xend = 3.4, yend = 2.12,size=1.1,lty="dotted")+
+  annotate("segment",x = 3.4, y = 0,xend = 3.4, yend = 2.12,size=1.1,lty="dotted")+
+  annotate("segment",x = 0, y = 3.5,xend = 1.9, yend = 3.5,size=1.1,lty="dotted")+
+  annotate("segment",x = 1.9, y = 0,xend = 1.9, yend = 3.5,size=1.1,lty="dotted")+
+  annotate("point", x=3.4,y=2.12,size=4)+
+  annotate("point", x=1.9,y=3.5,size=4)+
+  annotate("text", x=3.5,y=2.2,label="2")+
+  annotate("text", x=2,y=3.6,label="1")+
+  annotate("text", x=0.1,y=3.6,label=expression(Q[F]^1))+
+  annotate("text", x=2,y=0.2,label=expression(Q[C]^1))+
+  annotate("text", x=0.1,y=2.27,label=expression(Q[F]^2))+
+  annotate("text", x=3.55,y=0.2,label=expression(Q[C]^2))+
+  annotate("text", x=1.4,y=3.3,label=expression(paste("slope =", - bgroup("(",frac(P[C], P[F]),")")^1)))+
+  annotate("text", x=3.2,y=3.1,label=expression(paste("slope =", - bgroup("(",frac(P[C], P[F]),")")^2)))
+```
+
+## Understanding income distribution {.m}
+
+-   Jika ada perubahan relatif prices, maka akan terjadi perbedaan income distribution.
+-   Perbedaan ini utamanya datang dari kenaikan yang tidak proporsional: $$
+    \Delta P_C > \Delta w > \Delta P_F
+    $$
+
+$$
+\frac{w}{P_C} < \frac{w}{P_F}
+$$
+
+-   Produsen C better off karena bikin barang yg lebih mahal dan konsumsi barang yg lbh murah.
+
+## Income distribution
+
+-   Apakah kesejahteraan pekerja naik? Tergantung preference:
+    -   Apakah C lebih penting dari F di utility function mereka?
+    -   Dari sisi gaji, keduanya mendapatkan gaji yang sama
+-   Tapi pemilik *specific factor* sudah jelas:
+    -   Pemilik K lebih untung, dan pemilik T lebih rugi.
+    -   hal ini dapat ditunjukan dengan dinamika producer surplus.
+
+## Cloth Sector
+
+```{r}
+#| warning: false
+zzz<-seq(0,.81,0.01)
+ggplot() +
+  stat_function(fun = mpl,size=1.1, color='black') +
+  labs(x=expression(L[C]), y=expression(MPL[C]),color=NULL,fill=NULL)+
+  annotate("point",x=.81,y=3.3,size=4)+
+  annotate("segment",x=0,y=3.3,xend=.81,yend=3.3,lty="dotted")+
+  annotate("segment",x=.81,y=2,xend=.81,yend=3.3,lty="dotted")+
+  annotate("text",x=.2,y=4,label="capitalist income")+
+  annotate("text",x=.2,y=2.5,label="labor income")+
+  annotate("text",x=.1,y=3.38,label=expression((w/P[C])^1))+
+  annotate("text",x=.84,y=2.1,label=expression(L[C]^1))+
+  geom_ribbon(aes(x = zzz, ymax = mpl(zzz), ymin = 3.3,
+                  fill = "Capitalist surplus"), alpha = 0.25, show.legend=FALSE) +
+  geom_ribbon(aes(x = zzz, ymax = 3.3, ymin = 2,
+                  fill = "labor surplus"), alpha = 0.25, show.legend=FALSE) +
+  scale_x_continuous(expand=c(0,0),limits = c(0,2))+
+  scale_y_continuous(expand=c(0,0),limits=c(2,5))+
+  theme_classic()+
+  theme(panel.grid=element_blank(),
+        axis.text.x=element_blank(),
+        axis.text.y=element_blank(),
+        axis.ticks.x=element_blank(),
+        axis.ticks.y=element_blank(),
+        axis.title.x = element_text(hjust=1),
+        axis.title.y = element_text(hjust=1),
+        legend.position=c(1,1),
+        legend.justification = c(1,1),
+        legend.spacing=unit(0,"cm"),
+        legend.margin=margin(0,0,0,0))
+```
+
+## Increase in textile price
+
+```{r}
+#| warning: false
+zzz<-seq(0,1.15,0.01)
+ggplot() +
+  stat_function(fun = mpl,size=1.1, color='black') +
+  labs(x=expression(L[C]), y=expression(MPL[C]),color=NULL,fill=NULL)+
+  annotate("point",x=1.15,y=mpl(1.15),size=4)+
+  annotate("point",x=.81,y=3.3,size=4)+
+  annotate("text",x=1.15,y=.1+mpl(1.15),size=4,label="2")+
+  annotate("text",x=.81,y=3.4,size=4,label="1")+
+  annotate("segment",x=0,y=3.3,xend=.81,yend=3.3,lty="dotted")+
+  annotate("segment",x=.81,y=2,xend=.81,yend=3.3,lty="dotted")+
+  annotate("text",x=.2,y=4,label="capitalist income")+
+  annotate("text",x=.2,y=2.5,label="labor income")+
+  annotate("text",x=.1,y=.1+mpl(1.15),label=expression((w/P[C])^2))+
+  annotate("text",x=.1,y=3.38,label=expression((w/P[C])^1))+
+  annotate("text",x=.84,y=2.1,label=expression(L[C]^1))+
+  annotate("text",x=1.2,y=2.1,label=expression(L[C]^2))+
+  geom_ribbon(aes(x = zzz, ymax = mpl(zzz), ymin = mpl(1.15),
+                  fill = "Capitalist surplus"), alpha = 0.25, show.legend=FALSE) +
+  geom_ribbon(aes(x = zzz, ymax = mpl(1.15), ymin = 2,
+                  fill = "labor surplus"), alpha = 0.25, show.legend=FALSE) +
+  scale_x_continuous(expand=c(0,0),limits = c(0,2))+
+  scale_y_continuous(expand=c(0,0),limits=c(2,5))+
+  theme_classic()+
+  theme(panel.grid=element_blank(),
+        axis.text.x=element_blank(),
+        axis.text.y=element_blank(),
+        axis.ticks.x=element_blank(),
+        axis.ticks.y=element_blank(),
+        axis.title.x = element_text(hjust=1),
+        axis.title.y = element_text(hjust=1),
+        legend.position=c(1,1),
+        legend.justification = c(1,1),
+        legend.spacing=unit(0,"cm"),
+        legend.margin=margin(0,0,0,0))
+```
+
+## Food sector
+
+```{r}
+#| warning: false
+zzz<-seq(0,.81,0.01)
+ggplot() +
+  stat_function(fun = mpl,size=1.1, color='black') +
+  labs(x=expression(L[C]), y=expression(MPL[C]),color=NULL,fill=NULL)+
+  annotate("point",x=.81,y=3.3,size=4)+
+  annotate("segment",x=0,y=3.3,xend=.81,yend=3.3,lty="dotted")+
+  annotate("segment",x=.81,y=2,xend=.81,yend=3.3,lty="dotted")+
+  annotate("text",x=.2,y=4,label="landlord income")+
+  annotate("text",x=.2,y=2.5,label="labor income")+
+  annotate("text",x=.1,y=3.38,label=expression((w/P[F])^1))+
+  annotate("text",x=.84,y=2.1,label=expression(L[F]))+
+  geom_ribbon(aes(x = zzz, ymax = mpl(zzz), ymin = 3.3,
+                  fill = "Landlord surplus"), alpha = 0.25, show.legend=FALSE) +
+  geom_ribbon(aes(x = zzz, ymax = 3.3, ymin = 2,
+                  fill = "labor surplus"), alpha = 0.25, show.legend=FALSE) +
+  scale_fill_manual(values = c("cyan","green"))+
+  scale_x_continuous(expand=c(0,0),limits = c(0,2))+
+  scale_y_continuous(expand=c(0,0),limits=c(2,5))+
+  theme_classic()+
+  theme(panel.grid=element_blank(),
+        axis.text.x=element_blank(),
+        axis.text.y=element_blank(),
+        axis.ticks.x=element_blank(),
+        axis.ticks.y=element_blank(),
+        axis.title.x = element_text(hjust=1),
+        axis.title.y = element_text(hjust=1),
+        legend.position=c(1,1),
+        legend.justification = c(1,1),
+        legend.spacing=unit(0,"cm"),
+        legend.margin=margin(0,0,0,0))
+```
+
+## Landlord surplus
+
+```{r}
+#| warning: false
+zzz<-seq(0,.6,0.01)
+ggplot() +
+  stat_function(fun = mpl,size=1.1, color='black') +
+  labs(x=expression(L[C]), y=expression(MPL[C]),color=NULL,fill=NULL)+
+  annotate("point",x=.81,y=3.3,size=4)+
+  annotate("point",x=.6,y=mpl(.6),size=4)+
+  annotate("text",x=.81,y=3.4,size=4,label="1")+
+  annotate("text",x=.6,y=.1+mpl(.6),size=4,label="2")+
+  annotate("segment",x=0,y=3.3,xend=.81,yend=3.3,lty="dotted")+
+  annotate("segment",x=.81,y=2,xend=.81,yend=3.3,lty="dotted")+
+  annotate("text",x=.2,y=4,label="landlord income")+
+  annotate("text",x=.2,y=2.5,label="labor income")+
+  annotate("text",x=.1,y=3.38,label=expression((w/P[F])^1))+
+  annotate("text",x=.1,y=mpl(.6),label=expression((w/P[F])^2))+
+  annotate("text",x=.64,y=2.1,label=expression(L[F]^2))+
+  annotate("text",x=.84,y=2.1,label=expression(L[F]^1))+
+  geom_ribbon(aes(x = zzz, ymax = mpl(zzz), ymin = mpl(.6),
+                  fill = "Landlord surplus"), alpha = 0.25, show.legend=FALSE) +
+  geom_ribbon(aes(x = zzz, ymax = mpl(0.6), ymin = 2,
+                  fill = "labor surplus"), alpha = 0.25, show.legend=FALSE) +
+  scale_fill_manual(values = c("cyan","green"))+
+  scale_x_continuous(expand=c(0,0),limits = c(0,2))+
+  scale_y_continuous(expand=c(0,0),limits=c(2,5))+
+  theme_classic()+
+  theme(panel.grid=element_blank(),
+        axis.text.x=element_blank(),
+        axis.text.y=element_blank(),
+        axis.ticks.x=element_blank(),
+        axis.ticks.y=element_blank(),
+        axis.title.x = element_text(hjust=1),
+        axis.title.y = element_text(hjust=1),
+        legend.position=c(1,1),
+        legend.justification = c(1,1),
+        legend.spacing=unit(0,"cm"),
+        legend.margin=margin(0,0,0,0))
+```
+
+## Gains from trade
+
+> Trade benefits the factor that is specific to the export sector of each country but hurts the factor specific to the import-competing sectors, with ambiguous effect on mobile factors.
+
+-   tapi apakah kita bisa tau jika trade ini secara menyeluruh menguntungkan?
+    -   apakah kita tau jika untungnya lebih besar dari ruginya?
+    -   jika ya, maka secara teori kita bisa mengkompensasi *loser*.
+
+## Gains from trade
+
+tanpa trade, maka konsumsi = produksi, atau
+
+$$
+D_C=Q_C \ and \ D_F=Q_F
+$$ dengan trade, konsumsi ga harus = produksi. yang penting:
+
+$$
+P_C \times D_C + P_F \times D_F = P_C \times Q_C + P_F \times Q_F
+$$
+
+## Gains from trade
+
+Budget constraint tersebut dapat kita atur ulang sehingga:
+
+$$
+D_F - Q_F = \left(\frac{P_C}{P_F}\right) \times (Q_C-D_C)
+$$
+
+atau, impor F sama dengan rasio harga dikali ekspor C.
+
+Seberapa banyak kita bisa impor tergantung seberapa banyak kita bisa ekspor.
+
+## Gains from trade
+
+```{r}
+#| label: fig7
+#| fig-cap: "semua daerah abu-abu adalah better set"
+#| warning: false
+
+ppf+
+  annotate("segment",x = 2.4, y = 3.7,xend = 4.1, yend = 1,size=1.1)+
+  annotate("segment",x = 1.2, y = 3.9,xend = 2.7, yend = 3.1,size=1.1)+
+  annotate("segment",x = 0, y = 2.12,xend = 3.4, yend = 2.12,size=1.1,lty="dotted")+
+  annotate("segment",x = 3.4, y = 0,xend = 3.4, yend = 2.12,size=1.1,lty="dotted")+
+  annotate("segment",x = 0, y = 3.5,xend = 1.9, yend = 3.5,size=1.1,lty="dotted")+
+  annotate("segment",x = 1.9, y = 0,xend = 1.9, yend = 3.5,size=1.1,lty="dotted")+
+  geom_ribbon(aes(x = seq(1.9,3,0.01), ymax = 5, ymin = 3.5),
+              alpha = 0.25, show.legend=FALSE) +
+  annotate("point", x=3.4,y=2.12,size=4)+
+  annotate("point", x=1.9,y=3.5,size=4)+
+  annotate("text", x=3.5,y=2.2,label="2")+
+  annotate("text", x=2,y=3.6,label="1")+
+  annotate("text", x=0.1,y=3.6,label=expression(Q[F]^1))+
+  annotate("text", x=2,y=0.2,label=expression(Q[C]^1))+
+  annotate("text", x=0.1,y=2.27,label=expression(Q[F]^2))+
+  annotate("text", x=3.55,y=0.2,label=expression(Q[C]^2))+
+  annotate("text", x=1.4,y=3.3,label=expression(paste("slope =", - bgroup("(",frac(P[C], P[F]),")")^1)))+
+  annotate("text", x=3.2,y=3.1,label=expression(paste("slope =", - bgroup("(",frac(P[C], P[F]),")")^2)))
+```
+
+## Gains from trade {.m}
+
+1.  Pahami bahwa tanpa trade, konsumsi harus = produksi, alias di PPF persis.
+2.  Pahami bahwa dengan trade, opsi jadi banyak. Tapi tentunya opsi yang masuk akal adalah opsi yang membuat kita bisa konsumsi *more of both goods*. Note: ini tidak tergantung di mana alokasi awal berada.
+3.  Jika kita bisa dapat alokasi yang lebih baik, pada prinsipnya sangat mungkin dilakukan transfer.
+
+## Gains from trade
+
+-   dengan perdagangan internasional, kita bisa mengatur *bundle* konsumsi kita selama ia ada di jalur garis *budget constraint*.
+    -   geser dari titik produksi = ekspor dan impor.
+    -   trade opens up choices!
+-   alokasi yang tadinya tidak *feasible* menjadi *feasible*
+    -   artinya, secara teori, manfaat \> mudharat
+-   namun, hanya karena semua bisa untung tidak berarti semua AKAN untung.
+
+## Political economy of trade {.m}
+
+-   perdagangan internasional dapat merugikan *immobile factor owners*.
+    -   Di dunia nyata ga harus T atau K, tapi juga labor!
+-   2 alasan kenapa ekonom jarang mempermasalahkan distribus income ini:
+
+1.  perubahan distribusi pendapatan dapat terjadi akibat fenomena non-trade.
+
+-   pandemi menguntungkan yang bisa WFH, data dan teknologi menguntungkan coders, etc.
+
+2.  kompensasi selalu lebih baik daripada pembatasan perdagangan.
+
+-   bagaimana mengoptimalkan pendapatan negara dari trade dan mengalokasikannya untuk bantuan sosial.
+
+## Political economy of trade
+
+-   Di negara demokrasi, kemampuan mobilisasi gerakan itu penting.
+-   Intervensi banyak terjadi di industri yang terkonsentrasi:
+    -   pemainnya dikit tapi ukuran ekonominya banyak.
+    -   BUMN
+-   Biasanya kalau udah kepepet, pelaku industri jadi punya 1 tujuan dan better organized.
+-   yang untung dari trade biasanya konsumen yang bodo amatan.
+
+## Penutup
+
+-   Political economy of trade akan dibahas lebih banyak lagi di pasca-UTS.
+-   note bahwa ini bisa dibilang short-run model:
+    -   in long run, L,K,T dan bahkan MPL bisa berubah.
+-   Minggu depan belajar Hecksher-Ohlin model.
+    -   fokus di perbedaan sumber daya.
+    -   Specific factor bisa mobile (longer run).

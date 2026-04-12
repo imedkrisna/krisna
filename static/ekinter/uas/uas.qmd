@@ -1,0 +1,121 @@
+---
+title: "Ujian Akhir Semester"
+subtitle: "ECES905205 \n Analisis Ekonomi Perdagangan dan Industri"
+author: "I Made Krisna Yudhana Wisnu Gupta"
+date: "12 Desember 2022"
+format:
+  pdf:
+    documentclass: scrartcl
+    papersize: a4paper
+
+---
+
+```{=tex}
+\begin{center}
+\rule{5.9in}{0.5pt}
+\end{center}
+```
+# Instruksi Ujian
+
+1. Waktu ujian adalah **3 jam** (60x3 menit).
+1. close book, no electronics kecuuali kalkulator (**kalkulator diperbolehkan**), boleh bawa max **5 lembar A4** bolak-balik (dikumpulkan bersama kertas jawaban).
+1. Jumlah soal ada 4. Kerjakan yang dianggap paling mudah dahulu.
+1. Angka di sebelah soal yang ada di dalam kurung adalah total available poin untuk soal tersebut. Total bobot adalah 100.
+1. Usahakan menjawab soal dengan jumlah kata seefisien mungkin. Nulis kebanyakan tidak akan menambah angka (ongkos nulis = 0).
+1. 4 soal tersebut dapat dikerjakan acak, tapi mohon per nomor-nya konsisten (misalnya jika kerjakan nomer 4 duluan boleh tapi mohon selesaikan semuua pertanyaan di nomor 4 dulu sebelum pindah ke nomor lain.)
+1. Jika ada soal yang memerlukan analisis dengan grafik, tidak perlu terlalu presisi tidak apa-apa.
+1. Jika sudah bingung tidak tahu mau pakai tools mana, silakan mencoba kasih penjelasan verbal yang logis daripada dikosongin.
+1. Selamat mengerjakan dan semoga sukses.
+
+# Soal
+
+## Pertanyaan 1: Hecksher-Ohlin Economy (25)
+
+Negara Sokovia dengan karakteristik Hecksher-Ohlin economy memiliki 2 industri F dan C dengan teknologi sebagai berikut:
+```{=tex}
+\begin{align*}
+F=K^{\alpha}L^{\beta} \\
+C=K^{\gamma}L^{\delta}
+\end{align*}
+```
+
+di mana $\alpha+\beta=1$ dan $\gamma+\delta=1$. $K$ (kapital) dan $L$ (pekerja) adalah faktor produksi yang bergerak bebas antar industri. Total $K$ yang dapat digunakan oleh F dan C adalah $\bar{K}$, dan total $L$ yang dapat digunakan oleh kedua industri adalah $\bar{L}$. Dengan kata lain:
+```{=tex}
+\begin{align*}
+K_F+K_C&=\bar{K} \\
+L_F+L_C&=\bar{L}
+\end{align*}
+```
+harga yang harus dibayar oleh pengguna $K$ adalah, $r$, dan harga yang harus dibayar pengguna $L$ adalah $w$
+
+a. Agar F dapat disebut capital-intensive relative to C, apa restriksi yang harus diberikan kepada parameter $\alpha, \beta, \gamma \ \text{dan} \ \delta$? (3)
+
+b. Kenapa kita bisa mendapatkan nilai optimal dari factor demand dengan cara melakukan $MRS=\frac{w}{r}$? (4)
+
+Gunakan angka-angka berikut ini sebagai parameter di negara Sokovia untuk menjawab (c) dan (d):
+
+$$
+\alpha = \frac{1}{4}, \ 
+\beta = \frac{3}{4}, \
+\gamma = \frac{1}{3},\
+\delta = \frac{2}{3}
+$$
+
+c. Cari factor input demand untuk kedua industri tersebut sebagai fungsi dari $w,r,\bar{K} \ \text{dan} \ \bar{L}$ ! (10)
+
+d. Tiba-tiba negara Sokovia menerbitkan sebuah peraturan baru yaitu Omnibus Law yang mengakibatkan investasi asing berbondong-bondong masuk ke Sokovia. Akibatnya $\bar{K}$ naik jadi $\hat{K}$ di mana $\hat{K}>\bar{K}$. Omnibus Law ini tidak mengatur pekerja sehingga $L$ tidak berubah. Apa yang terjadi pada demand kapital dan tenaga kerja di kedua industri tersebut? Gunakan jawaban anda di (c) untuk menganalisis dampak Omnibus Law di Sokovia! (8)
+
+
+## Pertanyaan 2: Balance of Payment (25)
+
+a. Jelaskan apa yang dimaksud dengan paham merkantilisme! Jelaskan mekanisme yang membuat merkantilisme menjadi paham yang tidak lagi relevan. Hint: ingat kembali why we export? (5)
+
+b. Neraca pembayaran selalu surplus! Apabila terjadi surplus neraca perdagangan, maka apa yang, secara aritmatik (secara akuntansi) yang akan menyeimbangkannya? Jelaskan setiap kemungkinan yang ada! (5)
+
+c. Apakah naiknyua interest rate Amerika Serikat dapat berdampak ke performa ekspor impor Indonesia? Jelaskan mekanismenya! (5)
+
+d. Jelaskan apa yang dimaksud dengan "exorbitant privilige". Bagaimana hal tersebut mempengaruhi perdagangan internasional? (5)
+
+5. Jelaskan kenapa mendorong ekspor dan menekan impor tanpa meningkatkan produktivitas ekonomi malah berpengaruh negatif terhadap kesejahteraan! (5)
+
+## Pertanyaan 3: The New Industrial Policy (25)
+
+a. Apa bedanya kebijakan industrial baru dan yang lama? Elaborasikan dengan lengkap jawaban anda (5)
+
+b. Tentang Cherif dan Hasanov (2019):
+
+    i. Mengapa dikatakan bahwa industrial policy hanya valid untuk industri yang baru (emerging)! (5)
+
+    ii. Apa yang dimaksud dengan government failure? Berikan 2 contoh! (5)
+
+c. Kebijakan industri dan perdagangan adalah soal keberpihakan. Jelaskan maksud dari statement tersebut! (2)
+
+d. Dari kebijakan-kebijakan berikut ini, jelaskan siapa yang diuntungkan dan siapa yang dirugikan (8:
+
+    - Tarif impor
+    
+    - Subsidi ekspor
+    
+    - kuota impor
+    
+    - Voluntary Export Restriction
+    
+
+
+## Pertanyaan 4: Industrial Policy in Practice (25)
+
+a. Seandainya ada tiga kebijakan yang dilakukan sebuah pemerintahan::
+
+    - subsidi produksi biodiesel..
+    
+    - larangan ekspor bahan baku nikel untuk industri baterai sel.
+    
+    - Tariff anti-dumping impor industri baja
+
+Justrifikasi ekonomi apa yang dapat diberikan untuk kebijakan-kebijakan tersebut dari sudut pandang efisiensi ekonomi? Apa market failure yang coba diaddress? (9)
+
+b. Apa itu infant industry? Di Indonesia, apakah istilah infant industry dapat disematkan pada industri biodiesel, baterai sel dan industri baja? Mana yang bisa dan mana yang tidak bisa? Jelaskan jawaban anda! (8)
+
+c. Jelaskan apa saja **cost** dari 3 kebijakan di atas. SIapakah yang menanggung cost tersebut? (8)
+    
+    

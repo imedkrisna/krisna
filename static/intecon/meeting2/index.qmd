@@ -1,0 +1,521 @@
+---
+title: "Ricardian Model"
+subtitle: "ECES905205 pertemuan 2"
+date: "12 Februari 2024"
+author: "I Made Krisna Gupta"
+format: 
+  revealjs:
+    theme: [simple,../mytheme.scss]
+    chalkboard: true
+    incremental: false
+    transition: convex
+    background-transition: fade
+    slide-number: true
+  beamer: default
+  pptx: default
+---
+
+## Reminder
+
+- Your lecturer pre-midterm is I Made Krisna aka [Imed](https://krisna.or.id).
+
+    - contents are mostly to catch you up with trade theories.
+
+- Kiki Verico will handle post-midterm.
+
+- You'll have biweekly assignments. Please do it as best as you can.
+
+- Everything is on EMAS (at least pre-midterm).
+
+## Learning outcomes
+
+- Last week you've learned the new challenges in globalization & Indonesia's trade pattern.
+
+Today we learn Ricardian model of trade (aka comparative advantage) so:
+
+- you can explain how the model works
+
+- show where gains from trade come from
+
+## Today
+
+- Ricardian setting
+
+- Trade and its gais.
+
+## Concepts
+
+Concepts in trade is straightforward but people always lost idk why
+
+- Differences across countries are a key reason why trade occurs.
+
+- Economies of scale can also be a strong reason.
+
+- Opportunity cost is the root of comparative advantage concept which is the core of all trade model.
+
+## Comparative Advantage
+
+- The opportunity cost of producing something measures the cost of not being able to produce something else with the resources used.
+
+- Comparative advantage will be determined by comparing opportunity costs across countries.
+
+> A country $j$ has a comparative advantage in producing good $i$ if the opportunity cost of producing good $i$ is lower in the country $j$ than in other countries.
+
+## One factor economy {.m}
+
+1. Labor is the only factor of production.
+1. Labor productivity varies across countries due to differences in technology, but labor productivity in each country is constant.
+1. The supply of labor in each country is fixed.
+1. Two goods: food and cloth.
+1. Competition allows workers to be paid a wage equal to the value of what they produce, and allows them to work in the industry that pays the higher wage.
+1. Two countries: home and foreign.
+
+## One factor economy
+
+- Labor supply $L$ is the total labor resources a country has.
+
+- $a_{LF}$ indicates the amount of labor required to produced 1 kg of Food.
+
+- Food production $Q_F$=total food produced by the home country.
+
+- Production possibility frontier (PPF): the maximum amount of production given resources.
+
+$$
+a_{LF}Q_F+a_{LC}Q_C\leq L
+$$
+
+## PPF
+
+$$
+a_{LF}Q_F+a_{LC}Q_C\leq L
+$$
+
+- If $Q_C$=0, maximum food production is $Q_F=\frac{L}{a_{LF}}$
+
+- If $Q_F$=0, maximum cloth production is $Q_C=\frac{L}{a_{LC}}$
+
+## PPF ex.
+
+- Say home country have this spec:
+
+$$
+Q_F+2Q_C \leq 1000
+$$
+
+- How many labor needed to make 1 cloth? How many 1 food?
+
+- Max possible food is 1000 kg, max possible cloth is 500 metre.
+
+## Home PPF
+
+::: {.s layout-ncol="2"}
+
+- The production function has a linear PPF.
+
+- Home can produce anywhere on the line.
+
+    - below the line $\rightarrow$ inefficient
+    
+    - above the line $\rightarrow$ unfeasible
+
+- As you move along the line, you increase a production of 1 good while decreasing another.
+
+    - the opportunity cost of making a good is the other good!
+
+```{r}
+#| fig-width: 5
+#| fig-height: 4
+#| label: fig1
+#| fig-cap: "Production Possibility Frontier (PPF) country H"
+library('ggplot2')
+graph<-ggplot()+theme_classic()+
+  theme(panel.background = element_rect(fill = "#f0f1eb",
+                                        colour = "#f0f1eb"),
+        plot.background = element_rect(fill = "#f0f1eb"),
+        legend.key = element_rect(fill = "#f0f1eb",linetype = "blank"),
+        legend.background = element_rect(fill="#f0f1eb"))
+
+home <- function(x) 500-0.5*x
+graph+
+  stat_function(fun = home, size=1.1)+
+  scale_y_continuous(expand=c(0,0),limits=c(0,1000), breaks = c(0,500,1000))+
+  scale_x_continuous(expand=c(0,0),limits=c(0,1000), breaks =c(0,500,1000))+
+  labs(x="Food (kg)",y="Cloth (m)")
+```
+:::
+
+## Opportunity cost
+
+- The opportunity cost of making food is how many meter of cloth Home must stop producing in order to produce 1 kg of food:
+
+$$
+\frac{a_{LF}}{a_{LC}}
+$$
+
+- the opportunity cost is constant because the unit labor requirements are both constant.
+
+- the opportunity cost of food appears as the absolute value of the slope of the PPF:
+
+## PPF
+
+$$
+Q_F=\frac{L}{a_{LF}}-\left( \frac{a_{LF}}{a_{LC}} \right) Q_C
+$$
+
+- First difference, you get:
+
+$$
+\frac{dQ_F}{dQ_C}=-\frac{a_{LF}}{a_{LC}}, \text{in our case,}=-\frac{1}{2}
+$$
+
+## opportunity cost
+
+For the case of $Q_F+2Q_C \leq 1000$:
+
+to increase 1 kg of food, we need 1 hour of labor. But 1 hour of labor equals to 0.5 m of cloth (because we need 2 hours of labor to make 1 m of cloth).
+
+Likewise, to have 1m more of cloth, we need 2 hour of labor, which could produce 2 kg of food instead.
+
+| to produce | opportunity cost |
+| --- | --- |
+| 1 kg of food | 1/2 m of cloth |
+| 1 m of cloth | 2 kg of food |
+
+## Relative prices {.s}
+
+- Workers will choose to work in an industry with higher wage.
+
+- If the price of food relative to the price of cloth exceeds the opportunity cost of producing food:
+
+$$
+\frac{P_F}{P_C}>\frac{a_{LF}}{a_{LC}}
+$$
+
+- then the wage paid when making food will exceed the wage in cloth.
+
+$$
+W_F=\frac{P_F}{a_{LF}} > \frac{P_C}{a_{LC}}=W_C
+$$
+
+- so workers will only make food (specialize in food)
+
+
+
+## Example
+
+- Say $P_F=\$4$ while $P_C=\$7$.
+
+- Then, $W_F=\frac{P_F}{a_{LF}}=\$4/hr$
+
+- Also, $W_C=\frac{P_C}{a_{LC}}=\$3.5/hr$
+
+- Relative wage of food, 4/7, is larger than opportunity cost of food,1/2.
+
+- Therefore, all workers will just make Food.
+
+## Relative prices
+
+- If home country wants to produce both, then wage in both industries have to be equal.
+
+$$
+W_F=W_C \Rightarrow \frac{P_F}{a_{LF}}=\frac{P_C}{a_{LC}}
+$$
+
+- Labor Theory of Value (LTV):
+
+$$
+\frac{P_F}{P_C}=\frac{a_{LF}}{a_{LC}}
+$$
+
+## Relative prices
+
+- Note that prices in closed economy depends on demand as well, which we don't model here.
+
+- But the relative supply curve is a infinitely elastic:
+
+    - $\frac{Q_F}{Q_S} = 0$ for $\frac{P_F}{P_C}<\frac{a_{LF}}{a_{LC}}$
+    
+    - $\frac{Q_F}{Q_S} \in (0,\infty)$ for $\frac{P_F}{P_C}=\frac{a_{LF}}{a_{LC}}$
+    
+    - $\frac{Q_F}{Q_S} = undefined$ for $\frac{P_F}{P_C}>\frac{a_{LF}}{a_{LC}}$
+    
+- In an autarky where both goods are desirable, the LTV must hold (hence, the second solution will always be the case).
+    
+## Trade in Ricardian
+
+- Introducing foreign country, notified with "*", with different technology.
+
+> A country $j$ has an absolute advantage in producing good $i$ if that country can produce a unit of $i$ with less resources than another country
+
+- If $a_{LF} < a^*_{LF}$, home labor is more efficient in producing food than foreign because it needs less labor to make 1 kg of food.
+
+- Does that guarantee that Home should export food?
+
+## Trade in Ricardian
+
+- What determines the pattern of trade is comparative advantage, not absolute advantage.
+
+- Remember, comparative advantage is about the opportunity cost of production of good $i$
+
+- If home country has a comparative advantage of Food:
+
+$$
+\frac{a_{LF}}{a_{LC}} < \frac{a^*_{LF}}{a_{LC}^*}
+$$
+
+## Trade in Ricardian
+
+- Home exports food  if $\frac{a_{LF}}{a_{LC}} < \frac{a^*_{LF}}{a_{LC}^*}$
+
+- Home exports cloth if $\frac{a_{LF}}{a_{LC}} > \frac{a^*_{LF}}{a_{LC}^*}$
+
+- Both countries won't trade if $\frac{a_{LF}}{a_{LC}} = \frac{a^*_{LF}}{a_{LC}^*}$
+
+- If home has absolute advantage in both goods but the ratio are the same with foreign, then home will have more stuff but they still won't trade.
+
+## Foriegn's PPF
+
+::: {.s layout-ncol="2"}
+
+- if $\frac{a_{LF}}{a_{LC}} < \frac{a^*_{LF}}{a_{LC}^*}$, then foreign's ppf is steeper than home.
+
+- That is, home sacrifice smaller number of cloth to make food than the opposite.
+
+- In foreign, the reverse is true: making cloth requires less sacrifice of food than otherwise.
+
+```{r}
+#| fig-width: 5
+#| fig-height: 4
+#| label: fig2
+#| fig-cap: "Production Possibility Frontier (PPF) country F"
+
+foreign <- function(x) 1000-2*x
+graph+
+  stat_function(fun = foreign, size=1.1)+
+  scale_y_continuous(expand=c(0,0),limits=c(0,1000), breaks = c(0,500,1000))+
+  scale_x_continuous(expand=c(0,0),limits=c(0,1000), breaks =c(0,500,1000))+
+  labs(x="Food (kg)",y="Cloth (m)")
+```
+:::
+
+## Trade and prices
+
+- Before trade, each countries' relative price of food reclects the relative price of food in terms of cloth.
+
+- Therefore, relative price of food in Home is lower than relative price of food in Foreign.
+
+- It will be profitable to ship food from Home to foreign (and cloth from foreign to home).
+
+- What happens to price?
+
+## Price after trade {.m}
+
+- Let's work our way from low $\frac{P_F}{P_C}$ and increase it.
+
+- $\frac{P_F}{P_C}<\frac{a_{LF}}{a_{LC}}<\frac{a_{LF}^*}{a_{LC}^*}$ no food is produced.
+
+- $\frac{P_F}{P_C}=\frac{a_{LF}}{a_{LC}}<\frac{a_{LF}^*}{a_{LC}^*}$ Home indifferent, foreign produce only cloth.
+
+- $\frac{a_{LF}}{a_{LC}}<\frac{P_F}{P_C}<\frac{a_{LF}^*}{a_{LC}^*}$ Home produce only food, Foreign produce only cloth.
+
+- $\frac{a_{LF}}{a_{LC}}<\frac{P_F}{P_C}=\frac{a_{LF}^*}{a_{LC}^*}$ Home produce only food, Foreign indifferent
+
+- $\frac{a_{LF}}{a_{LC}}<\frac{a_{LF}^*}{a_{LC}^*}<\frac{P_F}{P_C}$ no cloth is produced.
+
+- In trade, both countries are price takers and prices are determined globally.
+
+## Example
+
+| a | Food | Cloth |
+| --- | --- | --- |
+| Home | $a_{LF}=1$ | $a_{LC}=2$ |
+| Foreign | $a_{LF}=6$ | $a_{LC}=3$ |
+| L | 1000 | 3000 |
+
+::: {.incremental}
+
+- Home has absolute advantages on both goods!
+
+- What about comparative advantage?
+
+- $\frac{1}{2}=\frac{a_{LF}}{a_{LC}}<\frac{a_{LF^*}}{a_{LC}^*}=2$
+
+:::
+
+## Example
+
+| production | Home opportunity cost | Foreign Opportunity cost |
+| --- | ----- | ----- |
+| 1 kg of Food | 1/2 m of cloth | 2 m of cloth |
+| 1 m of cloth | 2 kg of food | 1/2 kg of food |
+
+- Home has a comparative advantage in producing food.
+
+- Foreign has a comparative advantage in producing cloth.
+
+## Prices
+
+- Without trade, we know that $\frac{P_F}{P_C}$ are 1/2 in Home and 2 in Foreign.
+
+- Suppose the global relative price $\frac{P_F}{P_C}=1$, means the world relative price of food is higher for Home, and lower in Foreign.
+
+    - Home used to need to sacrifice 2 kg of food to get 1 m cloth. Now it's just 1.
+    
+    - Foreign used to need to sacrifice 2 m of cloth to get 1 kg of food. Now it's just 1.
+    
+## For Home
+
+$$
+Q_F+2Q_C \leq 1000
+$$
+
+- Say home used to demand 500 food and 250 cloth. Without trade, they achieve this by using L=500 to produce F and L=500 to produce C.
+
+- With trade, they can use L=1000 to produce 1000 Food. Sell 500 Food for 500 cloth (because $\frac{P_F}{P_C}=1$), and ended up with 500 food and 500 cloth.
+
+- Without trade, 500 food + 500 cloth would require them to have L=1500, which is unfeasible!
+
+## Gains from trade
+
+- Gains from trade come from specializing in the type of production that uses resources most efficiently, and using the income generated from that production to buy the goods and services that countries desire.
+
+- “Using resources most efficiently” means producing a good in which a country has a comparative advantage.
+
+- Without trade, a country must allocate resources to produce all goods it wants to consume.
+
+- I can get more food by being an economist rather than cultivating my own land. Same principle.
+
+## Gains from trade
+
+- Domestic workers earn a higher income from food production because the relative price of food increases with trade.
+
+- Foreign workers earn a higher income from cloth production because the relative price of food decreases with trade (making food cheaper), and the relative price of cloth increases with trade.
+
+- This is how both countries ended-up able to reach an otherwise unfeasible consumption bundle.
+
+## Relative wage
+
+- Our setting suggests Home to focus on producing Food while Foreign focuses on Cloth.
+
+- Suppose that $P_F=12$ and $P_C=12$,
+
+- Since Home produces Food, then $w_H=\frac{P_F}{a_{LF}}=\frac{12}{1}=12$
+
+- Since Foreign produces Cloth, then $w_F=\frac{P_C}{a_{LC}}=\frac{12}{3}=4$
+
+- Meaning, Home wage is 3 times Foreign (12/3).
+
+## Relative wage
+
+$$
+H: Q_F+2Q_C \leq 1000 ; F: 6Q_F^*+3Q_C^* \leq 3000
+$$
+
+- Relative wage lies between the ratio of productivities in each industry
+
+    - Home country is 6 times as productive in F production, but only 1.5 times as productive in C.
+
+## Relative wage
+
+- These relationship implies both countries have a cost advantage in production:
+
+    - High wages can be offset by high productivity
+    
+    - low productivity can be offset by low wages
+    
+- In Home, producing 1 kg of food costs \$12 (1 worker paid \$12/hr), but would have cost \$24 in Foreign (6 workers paid \$4/hr).
+
+- In Foreign, producing 1 m of cloth costs \$12 (3 workers paid \$4/hr), but would have cost \$24 in Home (2 paid \$12/hr).
+
+## Misconceptions
+
+1. Free trade is beneficial only if a country is more productive than foreign countries.
+
+    - But even an unproductive country benefits from free trade by avoiding the high costs for goods that it would otherwise have to prouce domestically
+    
+    - Free trade benefits come from comparative advantage, not absolute advantage.
+    
+## Misconseptions
+
+2. Free trade with countries that pay low wages hurts high-wage countries.
+
+- While trade may reduce wages for some workers, thereby affecting the distribution of income within a country, trade benefits consumers and other workers.
+
+- Consumers benefit because they can purchase goods more cheaply.
+
+- Producers/workers benefit by earning a higher income in the industries that use resources more efficiently, allowing them to earn higher prices and wages.
+
+## Misconceptions {.m}
+
+3. Free trade exploits less productive countries whose workers make low wages.
+
+- While labor standards in some countries are less than exemplary compared to Western standards, they are so with or without trade.
+
+- Are high wages and safe labor practices alternatives to trade? Deeper poverty and exploitation may result without export production.
+
+- Consumers benefit from free trade by having access to cheaply (efficiently) produced goods. 
+
+- Producers/workers benefit from having higher profits/wages—higher compared to the alternative.
+
+## What determines comparative advantage? {.m}
+
+1.  **Differences in climate** is the reason why we're so good at producing CPO and rubber, but sucks at producing soybean and wheat.
+
+2.  **Differences in Factor Endowment**. Some countries are endowed with natural resource, some with cheap labour. Countries which has no both has to find something else, such as:
+
+3.  **Differences in technology**. Japan, South Korea and Taiwan are one good example. While technology can be transferred, opportunity cost of investing in high-tech things is more production of CPOs.
+
+## What prevents specialisation?
+
+-   More than 1 factors
+-   Protectionisms.
+    -   more on this later.
+-   Transportation cost.
+    -   Some places are inherently difficult to reach.
+    -   Some goods are harder to move.
+-   at the extreme, a good can be **nontradable good**.
+    -   most services are like this.
+    -   Typical country has plenty of nontradables.
+
+------------------------------------------------------------------------
+
+## What prevents specialisation?
+
+-   Ricardian model: 1 very mobile factor of production.
+
+-   In reality, trade matters in distribution of income.
+
+    -   short-run: moving factors are costly.
+    -   long-run: shift in factor demand.
+
+-   Factor owners (land, labor, capital, etc) receive different gains from trade!
+
+## Summary
+
+1. Differences in labor productivity across countries generate comparative advantage
+
+2. A country has a comparative advantage in producing a good when its opportunity cost of producing that good is lower than other countries.
+
+3. Countries export goods in which they have a comparative advantage—high productivity or low wages give countries a cost advantage.
+
+## Summary
+
+4. With trade, the relative price settles in between what the relative prices were in each country before trade.
+
+5. Trade benefits all countries due to the relative price of the exported good rising: income for workers who produce exports rises, and imported goods become less expensive.
+
+6. Empirical evidence supports trade based on comparative advantage, although transportation costs and other factors prevent complete specialization in production.
+
+---
+
+::: r-stack
+<br/>
+
+<br/>
+
+<iframe src="https://giphy.com/embed/3ohs86vZAWiJXWvQI0" width="480" height="353" frameBorder="0" class="giphy-embed" allowFullScreen>
+
+</iframe>
+
+<p><a href="https://giphy.com/gifs/eminem-my-name-is-the-slim-shady-lp-3ohs86vZAWiJXWvQI0">via GIPHY</a></p>
+:::

@@ -1,0 +1,390 @@
+---
+title: "Gravitty model and Time Series"
+subtitle: "Pertemuan 4"
+author: "Metodologi penelitian"
+format: 
+  revealjs:
+    theme: [simple,../mytheme.scss]
+    chalkboard: true
+    incremental: false
+    transition: convex
+    background-transition: fade
+    slide-number: true
+---
+
+## Today
+
+- Combine various different regressions
+- Reading regression table
+- Various data characteristics: level, log, difference and time series
+
+## Level vs log vs kuadratik
+
+- Ingat BLUE: OLS merupakan fungsi yang linear.
+
+- bagaimana jika hubungan antar dua variabel tidak linear?
+
+- Inilah pentingnya ngeplot dulu.
+
+## Apa yang harus diplot?
+
+- Kita seringkali melakukan regresi multivariat.
+
+- Regresi multivariat diperlukan terutama menghindari kemungkinan Omitted Variable Bias.
+
+- Tapi, biasanya kita tertarik pada variabel yang tidak banyak.
+  - Biasanya paling cuma 1 atau 2 X
+
+- Karena itu minimal kita harus plot variable utama kita (variable of interest)
+
+## Gravity model
+
+- Tempo hari kita sudah belajar soal regresi impor dan PDB.
+
+- Hari ini kita akan fokus ke sebuah teori di perdagangan internasional.
+
+- Gravity model didasarkan pada Newtonian Gravity Theory di mana gaya gravitasi tergantung dari massa dan jarak.
+
+- 2 negara akan berdagang tergantung dari ukuran ekonomi dan jaraknya.
+
+## Gravity model
+
+$$
+Trade = \frac{PDB_o \times PDB_d}{D_{od}}
+$$
+
+- Seperti anda lihat di atas, hubungan antara PDB dan jarak tidak linear menurut teori gravity model.
+
+- Tapi persamaan di atas dapat diatasi dengan menggunakan log.
+
+## Gravity model
+
+$$
+\ln(Trade) = \ln\left(\frac{PDB_o \times PDB_d}{D_{od}}\right)
+$$
+
+$$
+\ln(Trade) = \ln PDB_o + \ln PDB_d - \ln D_{od}
+$$
+
+- Dengan transformasi log, kita bisa melinearkan persamaan yang tidak linear.
+
+- Persamaan di atas dapat kita ubah ke dalam regresi:
+
+$$
+\ln(Trade) = \beta_o + \beta_1 \ln PDB_o + \beta_2 \ln PDB_d + \beta_3 \ln D_{od}
+$$
+## Gravity model
+
+$$
+\ln(Trade) = \beta_o + \beta_1 \ln PDB_o + \beta_2 \ln PDB_d + \beta_3 \ln D_{od}
+$$
+- $\beta_1$ dan $\beta_2$ kita harapkan positif. Artinya, dua negara dengan kekuatan ekonomi yang besar cenderung akan saling trade.
+  - AS dan RRT contoh paling mudah.
+- $\beta_3$ kita harapkan negatif. Artinya, makin jauh suatu negara, makin susah untuk trade (trade cost besar).
+- kita akan coba dengan data yang saya namakan latihan4.
+
+## Catatan tentang log {.m}
+
+- Di data ekonomi, biasanya ketika kita bilang `log` maksud kita adalah `ln` atau natural logaritma.
+
+- Natural logaritma (log dalam hal ini) adalah cara untuk menetralkan exponen.
+
+- Banyak hal di dunia ini merupakan deret ukur: 2,4,8,16,32, dst:
+  - pertumbuhan PDB, pertumbuhan tabungan anda, pertumbuhan gaji, biasanya diukur dalam persen.
+  - deret ukur dapat dikatakan sebagai deret yang tumbuh secara eksponen.
+  
+## Contoh deret ukur
+
+- Jika anda menanam Rp. 10 juta di SUKUK dengan bunga 5% per tahun, berapa uang anda setelah 10 tahun?
+
+::: incremental
+- tahun 1: 10 $\times$ 1.05 $=$ 10.5 juta
+- tahun 2: 10.5 $\times$ 1.05 $=$ 11.025 juta
+- tahun 10: 10 $\times 1.05^{10}=$ 16.28895 juta
+- pertumbuhan ini tidak linear, dan perlu kita linearkan dengan log.
+:::
+
+## Uang dan log
+
+- Berbagai variabel yang menggunakan uang umumnya punya pengaruh dalam persen.
+
+- Jika anda tidak pakai helm lalu ketangkep dan didenda Rp. 500ribu, menurut anda mahal apa murah?
+
+::: incremental
+- Bagi yang uang bulanannya 2 juta, 500ribu itu 25% income bulanan!
+- Ecek-ecek bagi yang incomenya 200 juta.
+- Supaya damagenya sama, yang income 200 juta mestinya kena tilang 50juta.
+:::
+
+## Gravity data {.scrollable}
+
+```{r}
+#| echo: true
+library(readxl)
+library(tidyverse)
+library(WDI)
+library(kableExtra)
+dat<-read_excel('latihan4.xlsx')
+dat%>%kbl()%>%kable_styling()
+```
+
+## Gravity data
+
+- `latihan4.xlsx` mengandung informasi tujuan ekspor Indonesia di tahun 2019.
+- ekspor = jumlah total ekspor ke negara `country`.
+- fta = 1 jika Indonesia punya perjanjian dagang dengan negara tersebut.
+- PDB = PDB dari negara tujuan ekspor.
+- jarak = jarak antara Indonesia dengan negara tsb.
+
+## Plot level vs log
+
+::: columns
+::: {.column widtth="48%"}
+
+```{r}
+#| echo: true
+#| warning: false
+#| fig-width: 5
+#| fig-height: 4
+plot(dat$export,dat$pdb,xlab = 'ekspor (USD)',ylab = 'PDB (USD)',main='level')
+```
+:::
+::: {.column widtth="48%"}
+```{r}
+#| echo: true
+#| warning: false
+#| fig-width: 5
+#| fig-height: 4
+plot(dat$lexport,dat$lpdb,xlab = 'log ekspor',ylab = 'log PDB',main='log')
+```
+:::
+:::
+
+## Perbedaan plot
+
+- Anda dapat melihat ada perbedaan yang jomplang di plot yang dilakukan di "level".
+- Di "level" maksudnya adalah ketika tidak di-log.
+- Bahwa yang ekspor dan PDB-nya kecil agak ngumpul, dan yang PDB dan ekspornya besar tampak seperti outlier.
+- Ketika di-log, perbedaan antar-observasi jadi persen, bukan lagi dolar.
+- Karena itu, log bisa membantu mengurangi heteroskedastis.
+
+## Regresi di level
+
+```{r}
+#| echo: true
+reg1<-lm(export~pdb+jarak+fta,data=dat)
+summary(reg1)
+```
+
+## Regresi di level
+
+- Dari koefisien PDB: Jika PDB negara tujuan naik 1 USD, maka ekspor Indonesia ke negara tersebut naik 0,00156 USD.
+- Jarak: jika jarak bertambah 1km, maka ekspor Indonesia ke sana berkurang 34ribu USD.
+  - Tapi variabel ini tidak signifikan.
+- FTA: Indonesia mengekspor 4,463 Triliun USD lebih banyak ke negara yang punya FTA dengan Indonesia.
+
+## Macem-macem model
+
+- lin-lin: regresi biasa di mana Y dan X nya sama-sama diregresi di level (linear)
+- log-log: regresi yang Y dan X nya di-log.
+- lin-log: regresi yang X-nya aja yang di-log.
+- log-lin: regresi yang Y-nya aja yang di-log.
+
+## Intepretasi log
+
+- untuk log-log: kenaikan 1% X menaikan Y sebesar $\beta$ %
+- untuk log-lin: kenaikan 1 unit X menaikan Y sebesar kira-kira $\beta \times 100$ persen.
+- untuk lin-log: kenaikan 1% X menaikan Y sebesar $\beta \div 100$ unit.
+
+## Regresi di log
+
+```{r}
+#| echo: true
+reg2<-lm(lexport~lpdb+ljarak+fta,data=dat)
+summary(reg2)
+```
+
+## Regresi di log
+
+- PDB: Jika negara tujuan PDB-nya lebih besar 1%, maka ekspor Indonesia ke sana naik 0,895%.
+- jarak: 1% kenaikan jarak dengan negara tujuan mengurangi ekspor Indonesia ke sana 0,917%.
+  - kali ini jarak punya signifikansi yang kuat.
+- FTA: Ekspor Indonesia ke negara dengan FTA lebih tinggi sekitar 563% daripada ke negara tanpa FTA.
+  - note bahwa persennya dikali 100 untuk log-lin.
+  
+## Ekspor vs residual
+
+```{r}
+#| output: false
+dat$res1<-resid(reg1)
+dat$res2<-resid(reg2)
+plot<-ggplot()+theme_classic()+
+  theme(panel.background = element_rect(fill = '#f0f1eb'),
+        plot.background = element_rect(fill = '#f0f1eb'),
+        axis.title.x = element_text(hjust=1),
+        axis.title.y = element_text(angle=0,hjust=1,vjust=1),
+        panel.grid=element_blank(),
+#        axis.text.x=element_blank(),
+#        axis.text.y=element_blank(),
+#        axis.ticks.x=element_blank(),
+#        axis.ticks.y=element_blank(),
+        legend.position=c(1,1),
+        legend.justification = c(1,1),
+        legend.spacing=unit(0,"cm"),
+        legend.margin=margin(0,0,0,0))
+```
+
+::: columns
+::: {.column widtth="48%"}
+
+```{r}
+#| echo: true
+#| warning: false
+#| fig-width: 5
+#| fig-height: 4
+plot(dat$export,dat$res1,xlab = 'ekspor (USD)',ylab = 'error',main='level')
+```
+:::
+::: {.column widtth="48%"}
+```{r}
+#| echo: true
+#| warning: false
+#| fig-width: 5
+#| fig-height: 4
+plot(dat$lexport,dat$res2,xlab = 'log ekspor',ylab = 'error',main='log')
+```
+:::
+:::
+
+## PDB vs residual
+
+::: columns
+::: {.column widtth="48%"}
+
+```{r}
+#| echo: true
+#| warning: false
+#| fig-width: 5
+#| fig-height: 4
+plot(dat$pdb,dat$res1,xlab = 'PDB (USD)',ylab = 'error',main='level')
+```
+:::
+::: {.column widtth="48%"}
+```{r}
+#| echo: true
+#| warning: false
+#| fig-width: 5
+#| fig-height: 4
+plot(dat$lpdb,dat$res2,xlab = 'log PDB',ylab = 'error',main='log')
+```
+:::
+:::
+
+## Residual
+
+- Dapat dilihat bahwwa regresi di level memberikan kita residual yang sangat heteroskedastis.
+
+- Residual di regresi yang dilog jauh lebih smooth dan heteroskedastisnya berkurang.
+
+- Namun untuk keduanya tampak masih ada pola dengan Y. Artinya regresi kita masih punya kemungkinan bias.
+
+## Membaca tabel regresi
+
+```{r}
+summary(reg1)
+```
+
+## Membaca tabel regresi
+
+- estimate=koefisien $\beta$.
+- std.error=rentang. makin kecil makin bagus.
+- t-value menunjukkan signifikansi. Makin besar makin bagus. Biasanya setidaknya >2.
+- Pr(>|t|) disebut juga P-value. makin kecil makin bagus.
+
+## Membaca tabel regresi
+
+- Bintang menunjukkan level signifikansi.
+  - ***: signifikan di level 0,1%
+  - **: signifikan di level 1%
+  - *: signifikan di level 5%
+  - .:signifikan di level 10%
+- Adjusted R-squared menunjukkan 'goodness of fit'. semakin dekat ke 1 semakin baik, biasanya.
+
+## linear atau log?
+
+- Kalau lihat adjusted R-squared, kita bisa lihat bahwa regresi lin-lin memberikan nilai yang lebih besar.
+
+- Tapi error-nya lebih berantakan, dan jarak menjadi tidak signifikan.
+
+- Bagaimana memilih modelnya?
+
+- Biasanya kita tetap memilih yang log-log, terutama karena kita lihat error-nya.
+
+## Gravity yang kompleks
+
+- Di dunia nyata, riset dengan gravity model punya spesifikasi lebih ribet.
+- Persamaan bahasa, politik, hubungan kolonial, dan lain sebagainya juga ngaruh.
+- Di samping itu, ada tarif dan non-tarif barier yang harus juga diperhitungkan.
+- Tapi untuk sekarang segini aja dulu.
+
+## Time series
+
+- Di perdagangan internasional, kita akan bergelut dengan berbagai data yang sifatnya _time series_.
+
+- Time series adalah data yang punya urutan berdasarkan waktu: PDB sekarang terjadi setelah PDB tahun lalu, dan PDB tahun lalu terjadi setelah PDB 2 tahun lalu.
+
+- Biasanya kita punya 1 variabel yang kita ikuti di waktu-waktu yang berbeda.
+
+- Hal ini tidak seperti _cross section_, di mana tidak ada urutan pada observasi: Indonesia, Malaysia, Thailand, Singapura adalah cross section karena tidak ada urutannya.
+
+## Notice anything?
+
+```{r}
+zzz<-read_excel('ts.xlsx')
+plot+geom_line(data=zzz,aes(x=month,y=export))+scale_x_datetime(date_breaks = "6 months",labels = scales::date_format("%b %Y"))+labs(Y="export (ribu USD)",title='Total ekspor Indonesia, Januari 2016 - Juli 2022')
+```
+## Some noticeable things
+
+- Bulan Juli 2016, ekspor turun drastis.
+- Tahun berikutnya, bulan yang sama turun, tapi semakin maju tahunnya, drop ekspor semakin dekat ke bulan maret.
+- Setelah bulan Maret 2021, tiba-tiba ekspor Indonesia naik tajam.
+- Februari 2022 turun tajam. Ada apa?
+
+## Time series
+
+- **Trend**: Long-run increase or decrease in the data. Contoh: data PDB long-term.
+
+- **Seasonal**: Jika ada faktor musiman di data kita. Misalnya lebaran, tahun baru China, atau liburan anak sekolah.
+
+- **Cyclical**: Ada tren naik turun: setelah turun, lalu naik, lalu nanti turun lagi, lalu naik lagi. Frekuensinya tidak tetap seperti seasonal. Contoh: Data short-term saham atau PDB.
+
+- Semua ini dapat dilihat dengan mata.
+
+## Contoh Trend
+
+<iframe src="https://data.worldbank.org/share/widget?indicators=NY.GDP.MKTP.KN&locations=ID" width='900' height='600' frameBorder='0' scrolling="no" ></iframe>
+
+## Contoh cyclic
+
+![Sumber: Trading Economics](idr.svg)
+
+## Autocorrelation
+
+- Data time series punya kecenderungan memiliki keterkaitan dengan waktu sebelumnya.
+
+- PDB tahun ini tidak akan jauh beda dari PDB tahun lalu, kecuali ada _shock_
+
+- Data lain juga serupa: ekspor, impor, nilai mata uang, harga saham, dan lain sebagainya.
+
+- Hal ini disebut juga autocorrelation, ketia $Y$ berkorelasi dengan dirinya sendiri di masa lalu:
+
+$Y_t = \beta_0 + \beta_1 Y_{t-1}+\mu_t$
+
+## Forecasting
+
+- Data-data yang sifatnya time series nantinya akan berguna untuk melakukan forecasting.
+
+- Kita akan eksplorasi lagi soal time series minggu depan.
+
+- Kita juga akan menggambungkan cross-section dengan time-series: Panel data.

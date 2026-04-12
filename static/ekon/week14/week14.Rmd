@@ -1,0 +1,634 @@
+---
+title: "International economy"
+subtitle: "Week 14"
+author: "Krisna Gupta"
+date: "24 May 2021 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: monokai
+      highlightLines: true
+      countIncrementalSlides: false
+    css: ["default","dark.css","dark-fonts.css"]
+
+---
+
+## This week
+
+- We will study the last piece of macroeconomics: international finance
+
+- We will see how Balance of Payment is measured
+
+- We also will see the role of exchange rate
+
+---
+
+class: middle, center
+
+# Balance of payment
+
+---
+
+## Balance of payment
+
+$$GDP=C+I+G+(X-M)$$
+
+- $(X-M)$ is export minus import. We measure this part with something called **balance of Payment** (*neraca pembayaran*).
+
+- Balance of payment (BoP) is mainly collected by BI, because it uses information on payment system which mainly involve banks.
+
+- Basically, all things inside $X$ and $M$ are the same as our usual GDP accounting, with the only difference is, its crossing border.
+
+---
+
+## Ballance of Payment
+
+- BoP consists of three things:
+  - Current account (*transaksi berjalan*)
+  - Financial account (*transaksi finansial*)
+  - Capital account (*transaksi modal*)
+  
+- You can read more on definitions on [BI's website](https://www.bi.go.id/id/statistik/ekonomi-keuangan/seki/Default.aspx).
+
+- The important stuff:
+  - Current account is a short-term transaction: goods, transfer payment
+  - Financial account is a longer-term transaction: investments.
+  - Capital account is ownership transfer. Generally very small and less important.
+  
+---
+
+.s[
+**Current account** is the transaction that doesn't create liabilities. Countries which exports more than imports runs positive current account.
+
+**Financial account** creates liabilities. i.e., you need to pay it back, often with interests. A country which receive a lot of foreign investment (both portfolio and direct investment) runs a positive financial account.
+]
+
+```{r tab,echo=FALSE, message=FALSE, warning=FALSE}
+library(kableExtra)
+library(tidyverse)
+library(ggplot2)
+library(ggdark)
+
+graph<-ggplot()+
+  dark_theme_bw(base_size=18)+
+  theme(text = element_text(color='#e0e0e0'),
+        panel.border = element_blank(),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        axis.line = element_line(colour = "#e0e0e0"))
+
+graph2<-dark_theme_bw(base_size=18)+
+  theme(text = element_text(color='#e0e0e0'),
+        panel.border = element_blank(),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        axis.line = element_line(colour = "#e0e0e0"))
+
+library(WDI)
+library(lubridate)
+
+bop <- data.frame(
+  "No"=c(1,2,3,"",4,"",""),
+  "Component"=c("Sales of Goods and Services","Factor income","Transfers","Current account (1+2+3)","Asset sales and purchases","Financial account (4)","Statistical discrepancy"),
+  "Export"=c(200097,7373,12677,"",51903,"",""),
+  "Import"=c(-204230,-41147,-5048,"",-15340-4676,"",""),
+  "Net"=c(-4133,-33774,7629,-4133-33774+7629,31888,31888,-4133-33774+7629+31888)
+)
+
+bop1<-kbl(bop, align = "c", format='html',digits=2, format.args = list(big.mark = ","), col.names = c("","Component","Payment from foreigners","Payment to foreigners","Net"),caption="Simplified Balance of Payment of Indonesia in 2019 in million USD") %>%
+  kable_styling(font_size=18) %>%
+  column_spec(1, bold = T)
+bop1
+```
+
+.xs[
+source: [Bank Indonesia](https://www.bi.go.id/id/statistik/ekonomi-keuangan/seki/Default.aspx#headingFour)
+]
+
+.s[
+Current account deficit always balanced by positive financial account and vice versa.
+]
+
+---
+
+## Balance of Payment
+
+General component of a current account:
+
+1. **Balance of Trade**: export and import of goods and services. Balance of trade generally have better data and available much quicker.
+
+2. **Factor income**: payment for using factors owned by foreigners, mostly assets. There are many foreign owned asset in Indonesia, which generate interest payment for them (bonds, equities). For example, when Indonesian government bonds is bought by foreigners this year, they have to pay it back later. Other example is deviden you get from buying US firm's stock.
+
+3. **transfers**: This is often conducted by workers abroad (eg. TKI) who send money to their family in their home country.
+
+---
+
+## Balance of Payment
+
+General component of Financial Account:
+
+1. **Portfolio investment** is a transaction involving bonds or other types of loan with interest payment attached to it. Buying stock is included in portfolio investment, unless it is a controlling stake.
+
+2. **Direct investment** is a transaction involving controlling stakes of stocks or buying a firm or making new firm abroad.
+
+3. **Other investment** is typically involving payment for goods and services, Such as trade credit and saving account.
+
+---
+
+## Example of Balance of Payment 
+
+a modification from an example from [RBA](https://www.rba.gov.au/education/resources/explainers/the-balance-of-payments.html))
+
+1. Joy sell shoes in bulk to his friend in Australia. Her friend pays with letter of credit credit (which delays the payment untill the shoes is arrived). The price is Rp 100,000,000.
+
+1. Panca goes on Holiday to Singapore and spend Rp20,000,000. He pays for the holiday with his saving account in Indonesia.
+
+1. Livinia buys Alphabet's stock in NYSE using her Indonesian bank account. The amount is Rp 50,000,000.
+
+---
+
+## Example of the BoP
+
+```{r tab2,echo=FALSE, message=FALSE, warning=FALSE}
+bopp <- data.frame(
+  "Component"=c("Trade balance","- Goods","- Services","Current account","Portfolio investment","Other investment","","Financial account","Balance of Payment"),
+  "Export"=c("","100m(J)","","100m","","20m (P)","50m (L)","70m","170m"),
+  "Import"=c("","","-20m (P)","-20m","-50m (L)","-100m (J)","","-150m","-170m"),
+  "Net"=c("","100m","-20m","80m","-50m","-80m","","","0m")
+)
+
+bop2<-kbl(bopp, align = "c", format='html',digits=2, format.args = list(big.mark = ","), col.names = c("Component","Credit","Debit","Net"),caption="Simplified Balance of Payment of Joy-Pan-Liv") %>%
+  kable_styling(font_size=18) %>%
+  column_spec(1, bold = T) %>%
+  row_spec(4, bold = T) %>%
+  row_spec(9, bold = T) %>%
+  row_spec(8, bold = T)
+bop2
+```
+
+---
+
+## Current Account Balance (CAB)
+
+- International demands for funds reflect underlying differencecs in investment opportunities.
+
+- Generally, demand for funds are higher in countries where opportunities for growth is higher
+  + Countries that attract international funds are running **current account deficit**
+  + on the contrary, countries which have low growth rate usually run **current account surplus**
+  
+---
+
+.kiri[
+<iframe src="https://data.worldbank.org/share/widget?end=2019&indicators=BN.CAB.XOKA.CD&locations=CN-DE-JP-SA-RU-SG&start=2019&view=bar" width='450' height='300' frameBorder='0' scrolling="no" ></iframe>
+
+<iframe src="https://data.worldbank.org/share/widget?end=2019&indicators=BN.CAB.XOKA.CD&locations=ID-US-GB-CA-IN-FR&start=2019&view=bar" width='450' height='300' frameBorder='0' scrolling="no" ></iframe>
+]
+
+.kanan[
+.s[
+Many of the world's CA deficit come from the United States. It received a lot of investment mainly due to safe USD.
+
+Many countries register CA surplus to offset US' deficit (global CAB=0). These countries generate income from foreigner, but instead of buying goods and services, they save.
+
+Indonesia received many funds from abroad. Invest in Indonesia is attractive because it often borrow in high interest rate.
+]
+]
+
+---
+
+## Two-way capital flow
+
+- It is intuitive to think that investment flow towards countries with higher return / interest rate
+  + For example, US' coupon rate is around 1-2%, while Indonesian bond is 7%.
+  + This makes Indonesian bond much more attractive.
+
+- However, capital flows both ways: firms and consumers in a country both invest and borrow.
+
+- Other reasons to invest in other countries:
+  + Portfolio diversification
+  + Business strategy
+  + International capital market
+
+---
+
+## Reasons to invest
+
+**Portfolio diversification**
+
+- "don't put all your eggs in one basket". A US investor also invests in EU. If market in US is in bad shape, they have leverage in the EU. EU investors also behave similarly. This leads to US and EU have two-way capital flows.
+  
+- While many developing countries have high return, associated risks with investing in developing countries comparatively higher compared to developed countries.
+  
+- This is also true for direct investment, but might be a trade-off with economies of scale.
+  
+- Portfolio diversification is generally an advice echoed by many serious investors.
+  
+---
+
+## Reasons to invest
+
+**Business strategy**
+
+- firms in country A can serve country B in generally two ways:
+  + Produce in country A and export to country B, or
+  + Invest in country B and produce domestically.
+  
+- The main consideration is often comes down to **cost**:
+  + Export may incur transportation cost and tariff.
+  + Country B may have cheaper factor prices: labour, land, and capital.
+    - Capital generally moves internationally. Labour and land are harder.
+  + Country B may have comparative advantage on certain goods.
+    
+---
+
+## Reason to invest
+
+**International capital market**
+
+- There are many countries act as international capital market, such as UK, US, Singapore and Hong Kong.
+
+- A fund coming to Singapore might not be used to invest in Singapore: it most probably used to be invested in other countries.
+  + Indonesian firms who find that domestic financing to be too shallow, looks for funds in Singapore.
+  + For fund owners, these international capital market countries are generally a safer bet.
+
+- It works essentially like normal banks.
+
+---
+
+class: middle, center
+
+# The Role of Exchange rate
+
+---
+
+## Exchange rate
+
+- Basically, current account is very similar with AD-AS, while financial account is very similar with demand for money.
+  + When demand for goods is high but supply is low, price will go up.
+  + When demand for funds is high but supply is low, interest rate will go up.
+
+- However, in the international market, there are price and interest rate difference.
+  + In our previous framework, there are only one price and one interest rate.
+  + As we saw, Indonesia's interest rate may different with that of the US.
+  + How to make sure it's all balance?
+  
+- There is another price of money, and that is **exchange rate**.
+
+---
+
+## Exchange rate
+
+- In general, goods and services produced in a country must be paid for using that country's currency.
+  
+- Even when foreign currency is accepted, it often exchanged with their domestic currency.
+
+- International transaction requires a market for currency, and it is called **foreign exchange market**.
+
+- Price for a currency is valued with other currency
+
+---
+
+## Different but the same
+.s[
+| | Price | | Price |
+| --- | --- | --- | --- |
+| USDIDR | 14,350 | IDRUSD | 0.0000696 |
+| USDIDR | 17,479 | IDREUR | 0.0000572 |
+| GBPIDR | 20,315 | IDRGBP | 0.0000492 |
+| AUDIDR | 11,607 | IDRAUD | 0.0000862 |
+| JPYIDR | 131 | IDRJPY | 0.0076 |
+| CNYIDR | 2,500 | IDRCNY | 0.0004 |
+]
+Two prices are essentially the same: left is $\frac{IDR}{USD}$ while the right is $\frac{USD}{IDR}$
+
+and this relationship holds: $\text{left price}=\frac{1}{\text{right price}}$
+
+Indonesian generally use the left one. Important thing is you know which one is which when you see it.
+
+---
+
+## Which way is up?
+
+.s[
+| | Price | direction | IDR: | USD:
+| --- | --- | --- | --- | --- |
+| USDIDR | 14,350 | $\Uparrow$ | Depreciate | Appreciate |
+| IDRUSD | 0.0000696 | $\Uparrow$ | Appreciate | Deppreciate |
+]
+
+In exchange rate, "prices go up" can be a bit confusing.
+
+- When the number 14,350 goes up to 15,000, it means IDR is cheaper relative to USD, because now we need 15,000 IDR to buy 1 USD.
+
+- This is why it is important to know which number you are using.
+
+- Thankfully our currency has lots of digits so it's a bit easier to differentiate.
+
+---
+
+## Exchange rate
+
+- When IDR is weak, buying US goods and services become more expensive.
+  + This matters even more when we don't produce those products domestically.
+  
+- A [Google Pixel 5](https://store.google.com/au/product/pixel_5?hl=en-GB) phone priced $999 becomes:
+  + Rp14,335,650 when the price of USD is Rp14,350/USD
+  + Rp14,985,000 when the price of USD is Rp15,000/USD
+
+- As you can see, **depreciated** IDR makes **import more expensive**, but at the same time makes **export less expensive** for the global market.
+
+- But what determines exchange rate?
+
+
+---
+
+## Exchange rate
+
+- For simplicity, let's assume there's only two currencies: IDR and USD.
+
+- Indonesians who want to buy US goods, services or asset needs to purchase it in dollar.
+  + Importing phones? buy USD then buy phone.
+  + Buying Google stock? Buy USD then buy the stock.
+  + This creates demand for USD
+  
+- Retrospectively, US citizen wanted to buy Indonesian stuff needs to buy IDR with their USD, hence creating the supply of USD.
+
+- The higher the price of USD, the less the demand and the higher the supply.
+
+---
+
+## Equilibrium exchange rate
+
+.kiri[
+```{r xr,echo=FALSE, message=FALSE, warning=FALSE}
+supply <- function(x) x
+demand <- function(x) 10-x
+lul<-seq(0,5,0.1)
+graph +
+  scale_y_continuous(limits=c(0,10), breaks = 5,
+                     labels="14,350")+
+  scale_x_continuous(limits=c(0,10), breaks = NULL)+
+  labs(x="Quantity of USD",y="Exchange rate (IDR per USD)", title = "A hypothetical USD exchange market")+
+  annotate("text", x = 9, y = 7, label = 'Supply \n for USD' ,size=5)+
+  annotate("text", x = 9, y = 3, label = 'Demand \n for USD' ,size=5)+
+  annotate("text", x = 5, y = 6, label ='E' ,size=5)+
+  geom_point(aes(x=5,y=5),color='white',size=5)+
+  stat_function(fun = supply, color="red", size=1.1)+
+  stat_function(fun = demand, color="cyan", size=1.1)+
+  geom_segment(aes(x = 0, y = 5, xend = 5, yend = 5), lty = "dotted"
+               ,size=1.2)
+```
+]
+
+.kanan[
+.s[
+- When IDR is low, it becomes more expensive to buy USD, and in turn, US goods, services and assets.
+
+- On the contrary, it is cheaper for US to import from Indonesia.
+  - The more US import from Indonesia, the stronger IDR becomes.
+
+- Eventually it settles in an equilibrium point.
+]
+]
+
+---
+
+## Equilibrium exchange rate
+
+.kiri[
+```{r xr2,echo=FALSE, message=FALSE, warning=FALSE}
+supply <- function(x) x
+demand <- function(x) 10-x
+demand1 <- function(x) 12-x
+lul<-seq(0,5,0.1)
+graph +
+  scale_y_continuous(limits=c(0,10), breaks = c(5,6),
+                     labels=c("14,350","15,500"))+
+  scale_x_continuous(limits=c(0,10), breaks = NULL)+
+  labs(x="Quantity of USD",y="Exchange rate (IDR per USD)", title = "A hypothetical USD exchange market")+
+  annotate("text", x = 9, y = 7, label = 'Supply \n for USD' ,size=5)+
+  annotate("text", x = 9, y = 1, label = 'D1' ,size=5)+
+  annotate("text", x = 9, y = 3, label = 'D2' ,size=5)+
+  annotate("text", x = 5, y = 4.5, label ='E1' ,size=5)+
+  annotate("text", x = 6, y = 6.5, label ='E2' ,size=5)+
+  geom_point(aes(x=5,y=5),color='white',size=5)+
+  geom_point(aes(x=6,y=6),color='white',size=5)+
+  stat_function(fun = supply, color="red", size=1.1)+
+  stat_function(fun = demand, color="cyan", size=1.1,lty=3)+
+  stat_function(fun = demand1, color="cyan", size=1.1)+
+  geom_segment(aes(x = 0, y = 5, xend = 5, yend = 5), lty = "dotted"
+               ,size=1.2)+
+  geom_segment(aes(x = 0, y = 6, xend = 6, yend = 6), lty = "dotted"
+               ,size=1.2)
+```
+]
+
+.kanan[
+.s[
+- Suddenly demand for US stocks rises, hence demand for USD rises.
+- this leads to an appreciation of USD.
+- but because USD go up, import from US becomes expensive.
+- In IDN's BoP, current account $\Uparrow$, financial account $\Downarrow$
+- In USA's BoP, current account $\Downarrow$, financial account $\Uparrow$
+]
+]
+
+---
+
+## Exchange rate
+
+- As we saw in BoP, financial account always offsetted by current account and vice-versa.
+
+- The exchange rate will settles the BoP, or you can say the other way around: BoP will determine the new exchange rate.
+  + It is possible that exchange rate doesn't change.
+  
+- That's why, countries receiving a lot of investments are generally running a current account deficit.
+
+---
+
+## International financing
+
+- International financing opens up possibility to borrow from abroad:
+  - When loan interest rate in US is low, we can borrow from US.
+  - However, it may expose us to **exchange rate risks**
+  
+- Suppose we need Rp100,000,000 to start a production. We could get profit Rp200,000,000 by the end of the year.
+
+- Our options:
+  1. Borrow from Indonesian bank with 10% rate.
+  2. Borrow from US bank wit 5% rate.
+  
+- Suppose exchange rate is Rp10,000 per USD.
+
+---
+
+## International financing
+
+#### Option one
+Borrow Rp100,000,000 and have net profit
+$$
+200m-100m \times (1.07)=93m
+$$
+#### Option two
+- Borrow $10,000. Calculate the amount of money needed to give back which is 10,500
+
+- Buys IDR Rp100m, use it for production and gets Rp200m
+
+- Buys $10,500 by using Rp105m Which net profits **Rp95m**
+
+---
+
+## International financing
+
+- It is clear that we get higher profit by borrowing abroad.
+
+- However, this becomes problematic if by the time we have to return the money, IDR suddenly depreciated.
+
+- Consider our previous example, we need to return $10,500 which we can buy using Rp105m
+
+- But if by the time we finish our production USD becomes Rp11,000, then we need Rp115.5m to buy $10,500
+  + This nets us Rp200m - Rp115.5m = **Rp84.5m** in profit, which is less than option one.
+
+---
+
+## Leveraging / Hedging
+
+- Borrowing internationally requires long term strategy.
+
+- As we discuss previously, high demand of USD increases the price of USD:
+  + If everyone decided to borrow from US capital market, price of USD will go up
+  + With additional exchange risk, the low interest rate offered by US banks become less attractive.
+  
+- It is important to make sure that we hedge our liabilities, such as:
+  + Borrow in USD but also gets USD as payment.
+  + Secure a forward / option contract.
+
+---
+
+class: middle, center
+
+# Real exchange rate
+
+---
+
+## Real Exchange rate
+
+- Nominal exchange rate will not have any effect on international trade and investment unless we take into account the difference in price level.
+
+- To do this, we use **Real exchange rate**:
+
+$$\text{Real exchange rate}=\text{IDR per USD} \times \frac{P_{USA}}{P_{IDN}}$$
+---
+
+## Real exchange rate example
+
+- Say Indonesian rupiah is depreciated from Rp10,000 per USD to Rp11,000 per USD, but at the same time, Indonesian price level is also increase by 10%
+
+Exchange rate before changes:
+
+$$\text{IDR per USD} \times \frac{P_{USD}}{P_{IDN}}=10k \times \frac{100}{100}=10k$$
+
+Exchange rate after changes:
+
+$$\text{IDR per USD} \times \frac{P_{USD}}{P_{IDN}}=11k \times \frac{100}{110}=10k$$
+
+---
+
+## Real exchange rate
+
+- The example shows us that real exchange rate doesn't change when nominal exchange rate changes at the same rate as inflation.
+
+- When real exchange rate doesn't change, decisions regarding international trade and investment also don't change!
+
+Going back to our smartphone example:
+
+- A $1,000 Smartphone is Rp15,000,000 when USD is Rp15,000
+- This time, suppose a domestically made smartphone is Rp15,000,000
+- Consumers will be indifferent between importing or buying domestics: Some will import, some will buy Indonesian made.
+
+---
+
+## Real exchange rate
+
+- When IDR depreciated to Rp16,000, the imported smartphone becomes Rp16,000,000
+
+- If there's no inflation, people's decision to buy will shifts a bit: more will buy domestic because its cheaper.
+
+- However, if there's an inflation at the same rate, the local smartphone price becomes Rp16,000,000, exactly the same price as the imported product.
+
+- People becomes indifferent again, and decision to import doesn't change.
+  + It is possible people will buy less smartphone in general, but composition between buying domestic or import doesn't change.
+  
+---
+
+## Purchasing power parity (PPP)
+
+- This fact makes comparing countries' economic welfare becomes a bit harder.
+
+- We have learned that comparing Real GDP is better to compare countries' production.
+
+- However, due to different price level, it is not useful to compare standard of living.
+
+- Developing countries tend to have lower income but prices are also lower.
+  
+---
+
+## Purchasing power parity (PPP)
+
+- nasi goreng in Australia generally costs A$12, but maybe Rp12,000 in Indonesia.
+
+- if I have A$12, I can buy 1 portion of nasi goreng.
+
+- AUD is Rp11,607. If I take my A$12 to Indonesia, I can buy IDR and get Rp139,284 and buy 11 portion of nasi goreng.
+
+- In this perspective, the PPP is Rp1,000 per AUD: Rp1,000 in Indonesia buys me the same good as A$1,
+
+- PPP consider all kinds of goods: from food, durable, and services.
+
+---
+
+## Big Mac Index
+
+- Chance is, Indonesian nasi goreng and Australian nasi goreng differ in taste, quality and maybe hygine.
+
+- This is even more complicated when we consider other types of goods quality and services: healthcare, education, etc.
+
+- If we have one standard good around the world, it will be great isn't it? But does such good exist?
+
+--
+
+Thankfully we have McDonalds!
+
+---
+
+## Big Mac Index
+
+- One such good is Big Mac
+
+- Big mac is arguably the same all over the world, because the recipe is standard.
+  
+- [The Economist](https://www.economist.com/) magazine developed a Big Mac Index, basically using the price of Big Mac to compare exchange rate among countries.
+
+- Here's from their [website](https://www.economist.com/big-mac-index):
+
+> A Big Mac costs 34,000 rupiah in Indonesia and US$5.66 in the United States. The implied exchange rate is 6,007.07. The difference between this and the actual exchange rate, 14,125.00, suggests the Indonesian rupiah is 57.5% undervalued
+
+---
+
+## The role of exchange rate
+
+- As you can see, exchange rate adds a layer to international trade and finance.
+
+- Buying goods and services from abroad has exchange rate on top of it:
+  + A country may produce something cheaper than domestic products, but if their currency is expensive, then the price we pay is also higher.
+  + This means their exchange rate contributes to our domestic inflation.
+  + Higher prices leads to higher domestic supply as well.
+  
+- Demand for foreign cash appreciate their currency. But when their currency is expensive, our export becomes attractive. This settles in an equilibrium exchange rate.
+
+---
+
+class: middle, center
+
+# The End

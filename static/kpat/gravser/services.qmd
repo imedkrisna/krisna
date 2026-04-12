@@ -1,0 +1,86 @@
+---
+title: "Services value added"
+subtitle: "Adding it to the gravity model"
+author: "Krisna Gupta"
+institute: ""
+date: "2025-05-19"
+date-format: long
+
+format: 
+  revealjs:
+    theme: [simple,mytheme.scss]
+    chalkboard: true
+    incremental: false
+    transition: convex
+    background-transition: fade
+    slide-number: true
+  beamer: default
+---
+
+## Role of services
+
+- With the ever decreasing cost of trade, separating a value up to tasks level.
+
+- Feedback mechanism from the third unbundling may benefits domestic manufacturing.
+
+- In fact, exporting high-value services directly can be a good strategy for growth.
+
+- More [here](https://www.krisna.or.id/intecon/services/services#/title-slide)
+
+## Services in manufacturing
+
+- Melitz: non-trivial trade cost makes small-margin firms lose.
+
+- Services can lower this cost: brigde information gap on the market, business customs and regulations in other countries, especially for new firms entering export market
+
+- In Sweden, firms with higher services embeded in its final products increases its intensity of export
+
+- In Indonesia, 10 per cent increase in service intensity of a firm increase its productivity by 7 to 8 per cent
+
+## Today
+
+- We are going to do similar gravity regression as I show in Advanced International Economics (Ekinterla, see [here](https://imedkrisna.github.io/gravity/))
+
+- We are going to add two variables: share of foreign services and share of domestic services.
+
+- The rest, we follow the same structure as my ekinterla course.
+
+- My talk should be limited in time. Let's focus on exercises.
+
+## Gravity {.m}
+
+- [Click here for today's workshop](https://1drv.ms/f/c/acc929ca35b3a537/EoAYeK0gjzdJg6jR75NJODwBQXvFuwnjpjVohP_FrwIRGA?e=93daD2)
+
+- You will see four files:
+
+    - 2018.csv contains the ICIO file
+    
+    - gravity.R is the gravity regression file
+    
+    - gravity2018.xlsx is the BACI data i've manipulated for the course
+    
+    - service.R is the share of services extraction file
+    
+## ICIO {.m}
+
+ICIO is an international input-output table maintained by the OECD. Download [here](https://www.oecd.org/en/data/datasets/inter-country-input-output-tables.html)  and see [here](https://www.oecd.org/en/publications/development-of-the-oecd-inter-country-input-output-database-2023_5a5d0665-en.html) for explanatory notes.
+
+- The ICIO table shows you how much an industry in a country's output is used by industries in different countries.
+
+- By the same token also shows where inputs for an industry in a given country come from.
+
+## ICIO Structure
+
+![](pic1.png)
+
+## Shares
+
+![](srv.png)
+
+## Discussion
+
+- Try to replicate my results and let's discuss.
+
+- I will standby. Unmute yourself anytime or alternatively use chat. 
+
+- You can share your screen if needed.

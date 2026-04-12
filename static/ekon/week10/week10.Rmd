@@ -1,0 +1,798 @@
+---
+title: "Long-run growth and AD-AS model"
+subtitle: "Week 10"
+author: "Krisna Gupta"
+date: "26 April 2021 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: monokai
+      highlightLines: true
+      countIncrementalSlides: false
+    css: ["default","dark.css","dark-fonts.css"]
+
+---
+
+# Today
+
+- Long-run growth
+
+- AD-AS model
+
+---
+
+class: middle, center
+
+# Long-run growth
+
+---
+
+## Measuring economic growth
+
+- We've learned that there are many ways to look at GDP:
+
+  + Nominal GDP is the easiest method but not very useful.
+  + Real GDP eliminates price level.
+  
+- We calculate growth using Real GDP.
+
+$$
+\text{growth}=\frac{\text{real GDP}_2-\text{real GDP}_1}{\text{real GDP}_1} \times 100 \%
+$$
+---
+
+## Growth determinant
+
+- Advance countries usually grows at around 2% rate.
+
+- Indonesia grows somewhere around 5% these days.
+
+- Economic growth ensure the people in the country gets richer.
+  + Electricity was a luxury back in the 1940s, now we take it for granted.
+  + Only rich people use cellphones back in late 1990s.
+  
+---
+
+## Productivity growth
+
+- Increasing the number of worker can increase GDP, but it won't last long.
+
+- When we have an economic growth that is long lasting, we call it **sustained economic growth**.
+
+- We can only sustain economic growth by increasing **productivity**.
+
+- The term productivity usually refer to how much output can a country produce given the same number of labour.
+
+- We often measure them with $\frac{GDP}{labour}$
+
+---
+
+## Determinant of productivity
+
+Three main determinant of productivity:
+
+1. **Increase in physical capital**. A farmer with a tractor can plow more acres of land than with a hoe or a bull. 
+1. **Increase in human capital**. Usually measured by education and training. 
+1. **Technological progress**, such as the invention of combustion engines, internet, etc. While major invention is important, Note that it is also important to consider smaller technological progress such as a simple post-it.
+
+---
+
+### A note on education in Indonesia
+
+```{r educ1,echo=FALSE, message=FALSE, warning=FALSE}
+library(kableExtra)
+library(dplyr)
+library(ggplot2)
+library(ggdark)
+
+educ <- data.frame(
+  "educ"=c('No formal education','Not finished elementary','Elementary','Junior high','General high school','Vocational high school','Diploma','University','Total'),
+  "year1986"=c(12612237,19151150,22005947,5383600, 2523131,2828990,574248,305088,65384391),
+  "feb2008"=c(5670322,12982233,36963023,19396319,13899839,6708513,2660606,3769002,102049857),
+  "feb2020"=c(3396863,15448193,33188745,23827254,24372684,15690637,3732368,13636122,133292866)
+)
+
+educ %>%
+  kbl(align = "r", format='html', caption='Number of workers by educational attainment',
+    col.names = c("Finished education","Year 1986","Feb 2008","Feb 2020"),format.args = list(big.mark = ","),digits = 2) %>%
+  kable_styling(font_size = 18) %>%
+  column_spec(1, width = "5cm") %>%
+  add_footnote("Source: BPS")
+
+```
+
+---
+
+### A note on education in Indonesia
+
+```{r educ2,echo=FALSE, message=FALSE, warning=FALSE}
+
+educ2 <- data.frame(
+  "educ"=c('No formal education','Not finished elementary','Elementary','Junior high','General high school','Vocational high school','Diploma','University','Total'),
+  "year1986"=educ$year1986/65384391*100,
+  "feb2008"=educ$feb2008/102049857*100,
+  "feb2020"=educ$feb2020/133292866*100
+)
+
+educ2 %>%
+  kbl(align = "r", format='html',caption='Fraction of total workers by educational attainment',
+    col.names = c("Finished education","Year 1986","Feb 2008","Feb 2020"),format.args = list(big.mark = ","),digits=2) %>%
+  kable_styling(font_size = 18) %>%
+  column_spec(1, width = "5cm") %>%
+  add_footnote("Source: BPS")
+
+```
+
+---
+
+## Diminishing returns
+
+- Remember our discussion on firm's cost: capital induce decreasing returns!
+  + As we increase capital, the gain is lower.
+
+- Back to our farmer example:
+  + Having one additional tractor from zero tractor will greatly increase productivity.
+  + Adding a second tractor may not be as useful in increasing productivity as the first one.
+  
+- In a micro-perspective, the farmer may invest in something else instead of buying another tractor.
+
+---
+
+## Diminishing returns
+
+- However, in macro perspective, a country will eventually running out place to invest in.
+
+- The returns to additional physical capital is diminishing as a country grows its capital stock.
+
+- Education is the same: the number of educated citizen can only increase so much.
+
+- At the same time, technological advancement can be transferred in some ways.
+  + Being a follower actually helps in this case!
+
+- This leads to the **convergence theorem**
+
+---
+
+## Convergence theorem
+
+- Convergence theorem states that poorer countries will catch-up to advance countries living standard.
+
+  + Countries with lower starting capital theoretically grow faster.
+  
+  + free flow of capital helps advance countries' capital to flow to developing countries looking for growth.
+  
+- Does convergence theorem applies in the real world?
+
+---
+
+### East asian convergence
+
+.s[Japan caught up in 90s, Singapore in post-GFC]
+
+```{r converge1,echo=FALSE, message=FALSE, warning=FALSE, fig.width=10}
+
+
+graph<-ggplot()+
+  dark_theme_bw(base_size=22)+
+  theme(text = element_text(color='#e0e0e0'),
+        panel.border = element_blank(),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        axis.line = element_line(colour = "#e0e0e0"))
+
+graph2<-dark_theme_bw(base_size=22)+
+  theme(text = element_text(color='#e0e0e0'),
+        panel.border = element_blank(),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        axis.line = element_line(colour = "#e0e0e0"))
+
+library(WDI)
+library(lubridate)
+data<-WDI(indicator = 'NY.GDP.PCAP.KD', country = c('USA','AUS','JPN','SGP','KOR'),end=2019)
+ggplot(data, aes(year, NY.GDP.PCAP.KD)) +
+  geom_line(aes(color = country), size=1.5)+
+  labs(y='Constant 2010 USD',title='GDP per capita',caption='source: World Development Indicators')+
+  graph2
+
+```
+
+---
+
+### South-east Asia not-so-converging?
+
+.s[On the contrary, there's **divergence** in ASEAN. Why?]
+
+```{r converge2,echo=FALSE, message=FALSE, warning=FALSE, fig.width=10}
+data<-WDI(indicator = 'NY.GDP.PCAP.KD', country = c('USA','AUS','JPN','SGP','KOR','IDN','PHL','MYS','THA'),end=2019)
+ggplot(data, aes(year, NY.GDP.PCAP.KD)) +
+  geom_line(aes(color = country), size=1.5)+labs(y='Constant 2010 USD',title='GDP per capita',caption='source: World Development Indicators')+
+  graph2
+```
+
+---
+
+## Why growth rate differs?
+
+### Saving and investment spending
+
+- Some countries accumulate capital much faster than others. Where's the money come from?
+
+  + **Domestic saving**. Japan, China and Singapore's saving rate was high during their high growth time.
+  + **Foreign saving**. Or in other words, other country's saving.
+  
+- While foreign investment definitely helps, many high-performing investing countries start with high **domesting saving**.
+  
+---
+
+### Saving rate in ASEAN (and China)
+
+.s[Indonesian save less compared to peers]
+
+```{r saving1,echo=FALSE, message=FALSE, warning=FALSE, fig.width=10}
+library(gghighlight)
+data<-WDI(indicator = 'NY.GNS.ICTR.ZS', country = c('CHN','SGP','IDN','PHL','MYS','THA'),start=1975,end=2019)
+saving<-ggplot(data, aes(year, NY.GNS.ICTR.ZS)) +
+  geom_line(aes(color = country), size=1.5)+labs(y='% GDP',title='Gross saving',caption='source: World Development Indicators')+
+  graph2
+saving
+```
+
+---
+
+### Saving rate in ASEAN (and China)
+
+.s[Indonesian save less compared to peers]
+
+```{r saving2,echo=FALSE, message=FALSE, warning=FALSE, fig.height=6.5, fig.width=7.5}
+saving+
+  gghighlight(country == "Indonesia")
+```
+
+---
+
+## Why growth rate differs?
+
+### Education
+
+- Some countries catch up with education very quickly, much more so than others.
+
+### Research and development
+
+- Semiconductor technology won't be available without understanding of quantum mechanics theory in physics.
+
+- some countries are better at implementing these tech compared to others.
+
+---
+
+## Why growth rate differs?
+
+### Government have big role
+
+- Government can speed up **building high fixed cost capital** such as electricity, internet, ports, roads and so on.
+
+- Government can also **subsidize education and R&D** since it has positive externalities.
+
+- Maintaining a well-function financial system.
+
+- Protecting property rights and improve **stability** and good governance.
+
+- Devise environmentally friendly policy
+
+---
+
+class: middle, center
+
+# Aggregate Demand and Aggregate Supply
+
+---
+
+## AD-AS Framework
+
+- The AD-AS framework for macroeconomics is very similar with our perfect market framework in the first half.
+
+- We learned that demand curve is **downward sloping** , while supply curve is upward sloping.
+
+- The supply curve is a flat line in the **long run** because firms can adjust to demand in the long run by **changing fixed cost** and **entering and exiting** the market.
+
+- In AD-AS framework, there are a little bit of difference: it is representing **not one market**, but every market in **a country**.
+
+---
+
+## AD-AS Framework
+
+- In the market framework, y-axis is the price level while x-axis is the quantity produced and consumed.
+
+- In AD-AS, y-axis is the aggregate price. We usually use **GDP deflator** but can also use **CPI**.
+
+- We use **real GDP** on the x-axis.
+
+- Note that it is still Quantity and Price, but we use aggregate.
+
+- What is the implication of using aggregate?
+
+---
+
+## AD-AS Framework
+
+- In the perfect market framework, the law of demand dictates that when price increase, quantity demanded goes down: hence the negative slope.
+
+- When a good price increases, consumers tend to lower the quantity because of *ceteris paribus*
+  + if its substitute held constant, the consumer change to buying the substitute.
+  + A consumer can also choose to save if the price gets above their WTP.
+  
+---
+
+## AD-AS Framework
+
+- This does not work in aggregate:
+  + Whether you buy rice or noodle or even car, you do not change your consumption in aggregate.
+  + When you save, it is also counted as GDP.
+  
+- This is because how we calculate GDP:
+
+$$
+GDP = C+I+G+(X-M)
+$$
+
+.s[where $C$ is consumption, $I$ is investment (which comes from saving), $G$ is government expenditure (which comes mostly from taxes), and $(X-M)$ is export minus import (aka. trade balance)]
+
+---
+
+class: middle, center
+
+# Aggregate Demand
+
+---
+
+## Aggregate Demand
+
+Aggregate demand is still downward sloping. This is because when **aggregate price level increases** $P \uparrow$ :
+
+1. The aggregate number of goods and services you can purchase given your current asset level is reduced. this is called **The wealth effect**. $C \downarrow$
+
+1. You need more money to buy the same goods, which leads to less money in the bank. Less saving leads to **higher interest rate**, which increases borrowing cost and reduces investment. This is called **The interest rate effect**. $I \downarrow$
+
+$$C \downarrow + I \downarrow + G + (X-M) = GDP \downarrow$$
+
+---
+
+class: middle
+
+## Side note
+
+- I often use "saving" very liberally: any income you dont's spend is saving, even if you just keep in in your pocket.
+
+- We will learn how saving and changes in interest rate mechanism works later.
+
+- For now, the most important thing is the theoretical relationship between Aggregate Demand (measured by **Real GDP**) and **inflation**.
+
+---
+
+## What shifts AD curve?
+
+When things other than aggregate price changes, we shift the AD curve. These things are:
+
+1. **Change in expectations**. When people prepare for the worst, people stop spending and business stop investing.
+1. **Change in wealth**. When your asset prices go down, your purchasing power also go down so you consume less.
+1. **Size of physical capital**. When there are more physical capital, your current physical capital's worth declines.
+
+all of the above examples leads to movement of AD curve to the left.
+
+---
+
+## Government Policy
+
+Government policy can also move AD curve.
+
+1. Two ways using **fiscal policy**:
+  - Increasing **government spending** leads to AD moves to the right because $G \uparrow$
+  - A **tax cut** leads to more disposable income for people which leads to $C \uparrow$
+  
+--
+  
+1. **Monetary policy** is central bank's tool. They control how much money exists in the market. Adding liquidity by creating more money or lowering base rate leads to higher demand.
+
+---
+
+class: middle, center
+
+# Aggregate Supply
+
+---
+
+## Aggregate supply
+
+- Aggregate supply is a bit similar to the market analysis.
+  + There are two different AS curves: short-run and long-run
+  
+- The short-run aggregate supply (SRAS) is **upward sloping**: when aggregate price level goes down, quantity supplied goes down as well.
+
+- Profit = selling price minus production cost. When selling price changes, production cost can be hard to adjust.
+
+- This is caused by **sticky wages** in the short run.
+
+---
+
+## Sticky wage
+
+- nominal wage typically does not move in the short-run:
+  + nominal wage usually written in a contract.
+  + especially if there's minimum wage.
+
+- in the long run, minimum wage can be revised, and contracts can be renewed.
+
+- note that some wage can adjust quickly (think of Gojek's surge pricing).
+
+- However, since most are sticky, in aggregate, nominal wage is still quite sticky.
+
+---
+
+## Sticky wage 
+
+- The sticky wage forces producer to reduce output when price is decreasing.
+
+- On the other hand, when demand is strong, some firms increasing output while increasing their price as well because increasing output cannot be done quickly.
+
+- This leads to positive relationship between aggregate price level and short-run aggregate supply.
+
+---
+
+## What shifts SRAS
+
+1. **Changes in commodity prices**. Commodities (oil, CPO, minerals) are counted as inputs, so their price change are not included in the GDP. When prices of these things go up, the final goods produced is reduced and SRAS shifts to the left.
+
+1. **Changes in nominal wages**. In the long-run, nominal wage will change: when in go up, SRAS shifts to the left.
+
+1. **changes in productivity**. Any improvement to productivity shifts SRAS to the right.
+
+---
+
+## Long Run Aggregate Supply Curve (LRAS)
+
+- In the short-run, price changes is faster than changes in input prices and wages.
+
+- In the long-run, input prices and wages adjusts:
+
+  + if firms reduce output, they reduce demand for labour and inputs. In turn, prices for these things go down as well.
+  
+- What will happen when both prices of final goods and inputs reduce? The answer is **nothing**.
+
+- In the long-run, adjustment of prices leads to no change in aggregate output / GDP.
+
+---
+
+.pull-left[
+```{r grafik2,echo=FALSE, message=FALSE, warning=FALSE}
+supply <- function(x) x
+
+grafik2 <- graph +
+  stat_function(fun = supply, color="red", size=1.1)+
+  scale_y_continuous(limits=c(1,14), breaks = c(5,8), labels=c("P1","P2"))+
+  scale_x_continuous(limits=c(1,14), breaks =c(5,8),labels=c("Y1","Y2"))+
+  labs(x="Real GDP",y="Aggregate price \n (GDP deflator)", title = "Short-run Aggregate Supply Curve")+
+  annotate("text", x = 12, y = 9, label = 'SRAS' ,size=10)+
+  geom_point(aes(x=c(5,8),y=c(5,8)),color='white',size=4)+
+  geom_segment(aes(x = 1, y = 5, xend = 5, yend = 5), lty = "dotted"
+               ,size=2) +
+  geom_segment(aes(x = 5, y = 1, xend = 5, yend = 5), lty = "dotted"
+               ,size=2) +
+  geom_segment(aes(x = 1, y = 8, xend = 8, yend = 8), lty = "dotted"
+               ,size=2) +
+  geom_segment(aes(x = 8, y = 1, xend = 8, yend = 8), lty = "dotted"
+               ,size=2)
+grafik2
+```
+
+.s[In the short-run, changes in price will be followed by changes in supply because input prices are sticky]]
+
+.pull-right[
+```{r grafik1, echo=FALSE, message=FALSE, warning=FALSE}
+
+grafik1 <- graph +
+  geom_vline(xintercept=5, color="red",size=2)+
+  scale_y_continuous(limits=c(0,10), breaks =c(5,8), labels=c("P1","P2"))+
+  scale_x_continuous(limits=c(0,10), breaks = 5, labels = "Yp")+
+  labs(x="Real GDP",y="Aggregate price \n (GDP deflator)", title = "Long-Run Aggregate Supply Curve")+
+  annotate("text", x = 10, y = 4, label = "LRAS" ,size=10)+
+  geom_segment(aes(x = 0, y = 5, xend = 5, yend = 5), lty = "dotted"
+               ,size=2) +
+  geom_segment(aes(x = 0, y = 8, xend = 5, yend = 8), lty = "dotted",
+               size=2)
+grafik1
+
+```
+
+.s[In the long-run, changes in all prices do not matter to output. Only **technological progress** shifts LRAS.]]
+
+---
+
+## From SRAS to LRAS
+
+- Think of SRAS as the **business cycle**: output cycles between boom and bust.
+
+- In the long-run, **long-run economic growth** tend to stabilize and increases steadily.
+
+- We tend to say the discrepancy between recession / booming period to long-run growth path as deviation to **potential output**.
+
+- Eventually, economist believe that after a recession, the economy will slowly return to its long-run growth path and reach its potential output. This is called **self-correction mechanism**.
+
+---
+
+## Self-correction mechanism
+
+- When an economy in a recession, it produces below its potential output.
+
+- slow production where wage is sticky leads to **high unemployment rate**, or unemployment rate above the **natural unemployment rate**.
+
+- High unemployment rate leads to lower wage level in the long-run.
+
+- lower wage leads to low unemployment, which leads to increase in production and return to its potential output.
+
+---
+
+class: middle, center
+
+# AD-AS Model
+
+---
+
+## AD-AS Model
+
+- This model combines aggregate demand curve and SRAS.
+
+- The point of intersection between AD and SRAS shows the short-run equilibrium price level and GDP.
+
+---
+
+### AD-AS model
+
+```{r grafikzz,echo=FALSE, message=FALSE, warning=FALSE}
+supply <- function(x) x
+demand <- function(x) 10-x
+
+graph +
+  scale_y_continuous(limits=c(0,10), breaks = 5,
+                     labels=expression(P[E]))+
+  scale_x_continuous(limits=c(0,10), breaks = 5,
+                     labels=expression(Y[E]))+
+  labs(x="Real GDP",y="Aggregate price \n (GDP deflator)", title = "Short-run Aggregate Supply Curve")+
+  annotate("text", x = 9, y = 8, label = 'SRAS' ,size=8)+
+  annotate("text", x = 9, y = 2, label = 'AD' ,size=8)+
+  annotate("text", x = 6, y = 5, label =expression(E[SR]) ,size=8)+
+  geom_point(aes(x=5,y=5),color='white',size=5)+
+  stat_function(fun = supply, color="red", size=1.1)+
+  stat_function(fun = demand, color="cyan", size=1.1)+
+  geom_segment(aes(x = 0, y = 5, xend = 5, yend = 5), lty = "dotted"
+               ,size=2) +
+  geom_segment(aes(x = 5, y = 0, xend = 5, yend = 5), lty = "dotted"
+               ,size=2)
+```
+
+---
+
+.pull-left[
+
+```{r demshk1,echo=FALSE, message=FALSE, warning=FALSE}
+demand1 <- function(x) 12-x
+
+graph +
+  scale_y_continuous(limits=c(0,10), breaks = c(5,6),
+                     labels=c(expression(P[1]),expression(P[2])))+
+  scale_x_continuous(limits=c(1,11), breaks = c(5,6),
+                     labels=c(expression(Y[1]),expression(Y[2])))+
+  labs(x="Real GDP",y="Aggregate price \n (GDP deflator)", title = "Positive demand shock in SR")+
+  annotate("text", x = 9, y = 8, label = 'SRAS' ,size=8)+
+  annotate("text", x = 9, y = 2, label = expression(AD[1]) ,size=8)+
+  annotate("text", x = 10, y = 3, label = expression(AD[2]) ,size=8)+
+  annotate("text", x = 6, y = 5, label =expression(E[1]) ,size=8)+
+  geom_point(aes(x=5,y=5),color='white',size=5)+
+  annotate("text", x = 7, y = 6, label =expression(E[2]) ,size=8)+
+  geom_point(aes(x=6,y=6),color='white',size=5)+
+  stat_function(fun = supply, color="red", size=1.1)+
+  stat_function(fun = demand, color="cyan", size=1.1, lty=3)+
+  stat_function(fun = demand1, color="cyan", size=1.1)+
+  geom_segment(aes(x = 1, y = 5, xend = 5, yend = 5), lty = "dotted"
+               ,size=2) +
+  geom_segment(aes(x = 5, y = 0, xend = 5, yend = 5), lty = "dotted"
+               ,size=2)+
+  geom_segment(aes(x = 1, y = 6, xend = 6, yend = 6), lty = "dotted"
+               ,size=2) +
+  geom_segment(aes(x = 6, y = 0, xend = 6, yend = 6), lty = "dotted"
+               ,size=2)
+```
+.s[A **positive demand shock** (e.g. government stimulus) leads to a shifts of AD and movement along the SRAS curve, ended up with **higher output** and an **increase in aggregate prices**.]
+]
+
+.pull-right[
+```{r supshk1,echo=FALSE, message=FALSE, warning=FALSE}
+supply1<-function(x) x-2
+
+graph +
+  scale_y_continuous(limits=c(0,10), breaks = c(4,5),
+                     labels=c(expression(P[2]),expression(P[1])))+
+  scale_x_continuous(limits=c(1,11), breaks = c(5,6),
+                     labels=c(expression(Y[1]),expression(Y[2])))+
+  labs(x="Real GDP",y="Aggregate price \n (GDP deflator)", title = "Positive supply shock in SR")+
+  annotate("text", x = 9, y = 8, label = expression(SRAS[1]) ,size=8)+
+  annotate("text", x = 9, y = 2, label = 'AD' ,size=8)+
+  annotate("text", x = 10, y = 6, label = expression(SRAS[2]) ,size=8)+
+  annotate("text", x = 6, y = 5, label =expression(E[1]) ,size=8)+
+  geom_point(aes(x=5,y=5),color='white',size=5)+
+  annotate("text", x = 7, y = 4, label =expression(E[2]) ,size=8)+
+  geom_point(aes(x=6,y=4),color='white',size=5)+
+  stat_function(fun = supply, color="red", size=1.1,lty=3)+
+  stat_function(fun = demand, color="cyan", size=1.1)+
+  stat_function(fun = supply1, color="red", size=1.1)+
+  geom_segment(aes(x = 1, y = 5, xend = 5, yend = 5), lty = "dotted"
+               ,size=2) +
+  geom_segment(aes(x = 5, y = 0, xend = 5, yend = 4), lty = "dotted"
+               ,size=2)+
+  geom_segment(aes(x = 1, y = 4, xend = 6, yend = 4), lty = "dotted"
+               ,size=2) +
+  geom_segment(aes(x = 6, y = 0, xend = 6, yend = 4), lty = "dotted"
+               ,size=2)
+```
+.s[A **positive supply shock** (e.g. reduction of oil price) leads to a shifts of AS and movement along the AD curve, ended up with **higher output** and **lower prices**.]
+]
+
+---
+
+## AD-AS model
+
+.s[Negative demand shock gives you the opposite of positive demand shock. Negative supply shock gives you the opposite impact of positive supply shock.]
+
+| shock type | shifts | P | Y |
+| --- | --- | --- | --- |
+| Positive demand | $\overrightarrow{AD}$ | $\Uparrow$ | $\Uparrow$ |
+| Negative demand | $\overleftarrow{AD}$ | $\Downarrow$ | $\Downarrow$ |
+| Positive supply | $\overrightarrow{SRAS}$ | $\Downarrow$ | $\Uparrow$ |
+| Negative supply | $\overleftarrow{SRAS}$ | $\Uparrow$ | $\Downarrow$ |
+
+.s[The negative supply shock leads to a **stagflation**]
+
+---
+
+## Long-run macroeconomic equilibrium
+
+- In the long-run, supply is starting to adjust and the **self-correcting mechanism** works.
+
+- Remember that in the long-run, output will not stay low or stay high: it will eventually return to its potential long-run growth.
+
+- Therefore, in the long-run, output level will return to normal.
+
+---
+
+### Long-run macroeconomic equilibrium
+
+```{r lr,echo=FALSE, message=FALSE, warning=FALSE}
+graph +
+  scale_y_continuous(limits=c(0,10), breaks = 5,
+                     labels=expression(P[E]))+
+  scale_x_continuous(limits=c(0,10), breaks = 5,
+                     labels=expression(Y[P]))+
+  geom_vline(xintercept=5,color='orange',size=1.1)+
+  labs(x="Real GDP",y="Aggregate price \n (GDP deflator)", title = "Long-run Aggregate Supply Curve")+
+  annotate("text", x = 9, y = 8, label = 'SRAS' ,size=8)+
+  annotate("text", x = 9, y = 2, label = 'AD' ,size=8)+
+  annotate("text", x = 6, y = 9, label = 'LRAS' ,size=8)+
+  annotate("text", x = 6, y = 5, label =expression(E[LR]) ,size=8)+
+  geom_point(aes(x=5,y=5),color='white',size=5)+
+  stat_function(fun = supply, color="red", size=1.1)+
+  stat_function(fun = demand, color="cyan", size=1.1)+
+  geom_segment(aes(x = 0, y = 5, xend = 5, yend = 5), lty = "dotted"
+               ,size=2)
+```
+
+---
+
+.pull-left[
+```{r demshk5,echo=FALSE, message=FALSE, warning=FALSE}
+graph +
+  geom_vline(xintercept=5,color='orange',size=1.1)+
+  annotate("text", x = 6, y = 9, label = 'LRAS' ,size=8)+
+  scale_y_continuous(limits=c(0,10), breaks = c(5,6),
+                     labels=c(expression(P[1]),expression(P[2])))+
+  scale_x_continuous(limits=c(1,11), breaks = c(5,6),
+                     labels=c(expression(Y[1]),expression(Y[2])))+
+  labs(x="Real GDP",y="Aggregate price \n (GDP deflator)", title = "Positive demand shock in SR")+
+  annotate("text", x = 9, y = 8, label = 'SRAS' ,size=8)+
+  annotate("text", x = 9, y = 2, label = expression(AD[1]) ,size=8)+
+  annotate("text", x = 10, y = 3, label = expression(AD[2]) ,size=8)+
+  annotate("text", x = 6, y = 5, label =expression(E[1]) ,size=8)+
+  geom_point(aes(x=5,y=5),color='white',size=5)+
+  annotate("text", x = 7, y = 6, label =expression(E[2]) ,size=8)+
+  geom_point(aes(x=6,y=6),color='white',size=5)+
+  stat_function(fun = supply, color="red", size=1.1)+
+  stat_function(fun = demand, color="cyan", size=1.1, lty=3)+
+  stat_function(fun = demand1, color="cyan", size=1.1)+
+  geom_segment(aes(x = 1, y = 5, xend = 5, yend = 5), lty = "dotted"
+               ,size=2) +
+  geom_segment(aes(x = 1, y = 6, xend = 6, yend = 6), lty = "dotted"
+               ,size=2) +
+  geom_segment(aes(x = 6, y = 0, xend = 6, yend = 6), lty = "dotted"
+               ,size=2)
+```
+.s[First, **positive demand shock** leads to higher prices and output level. Firms hire more labour to meet the demand and thus **reduces unemployment** in the short run.]
+]
+
+.pull-right[
+```{r demshk6,echo=FALSE, message=FALSE, warning=FALSE}
+supply2 <- function(x) x+2
+
+graph +
+  geom_vline(xintercept=5,color='orange',size=1.1)+
+  scale_y_continuous(limits=c(0,10), breaks = c(5,6,7),
+                     labels=c(expression(P[1]),expression(P[2]),
+                              expression(P[3])))+
+  scale_x_continuous(limits=c(1,11), breaks = c(5,6),
+                     labels=c(expression(Y[1]),expression(Y[2])))+
+  labs(x="Real GDP",y="Aggregate price \n (GDP deflator)", title = "...as wage adjust, Y back to normal")+
+  annotate("text", x = 9, y = 8, label = 'SRAS' ,size=8)+
+  annotate("text", x = 9, y = 2, label = expression(AD[1]) ,size=8)+
+  annotate("text", x = 10, y = 3, label = expression(AD[2]) ,size=8)+
+  annotate("text", x = 6, y = 5, label =expression(E[1]) ,size=8)+
+  geom_point(aes(x=5,y=5),color='white',size=5)+
+  annotate("text", x = 7, y = 6, label =expression(E[2]) ,size=8)+
+  geom_point(aes(x=6,y=6),color='white',size=5)+
+  annotate("text", x = 6, y = 7, label =expression(E[3]) ,size=8)+
+  geom_point(aes(x=5,y=7),color='white',size=5)+
+  stat_function(fun = supply, color="red", size=1.1,lty=3)+
+  stat_function(fun = supply2, color="red", size=1.1)+
+  stat_function(fun = demand, color="cyan", size=1.1, lty=3)+
+  stat_function(fun = demand1, color="cyan", size=1.1)+
+  geom_segment(aes(x = 1, y = 5, xend = 5, yend = 5), lty = "dotted"
+               ,size=2) +
+  geom_segment(aes(x = 1, y = 6, xend = 6, yend = 6), lty = "dotted"
+               ,size=2) +
+  geom_segment(aes(x = 1, y = 7, xend = 5, yend = 7), lty = "dotted"
+               ,size=2) +
+  geom_segment(aes(x = 6, y = 0, xend = 6, yend = 6), lty = "dotted"
+               ,size=2)
+```
+.s[However, as unemployment falls below its natural rate, **wage begin to go up** and it adds up to the cost of production, pushing price further up. employment starts to decrease and Y falls back.]
+]
+
+---
+
+## Long-run self-correction mechanism
+
+- You can reach the similar conclusion for a long-run negative demand shock, which leads to even lower prices and the same output.
+
+- To us, price level matter less if everyone can consume the same amount of goods and services:
+  + that is, price changes do not matter if GDP stays the same.
+  + in Australia, everything is more expensive but wage level is far above Indonesia.
+  
+---
+
+## Long-run self-correction
+
+- If economy is going to return to its normal level eventually, why would we need to do anything at all? 
+
+- The answer is because a "long-run" may take some time to adjust.
+  + The world has not really go back to its potential output level after Global Financial Crisis in 2008.
+  + Indonesian growth rate never return to pre-1998 level.
+  
+---
+  
+## In long-run we all dead
+  
+- Since Keynesianism dominates economic thinking, it is believed that government policies are needed to stabilize economy.
+
+- We will learn further how government policies try to stabilize economy.
+
+- We also will learn the monetary policy and how interest rate interact with the economy.
+
+---
+
+## Sum-up
+
+- We have learned how we measure aggregate prices, unemployment and GDP.
+
+- We also learned how they are interact:
+
+  + economic expansion tends to be followed by inflation and lower unemployment.
+  + There is also a possible **stagflation** where economy stagnate, unemployment is high but also inflation.
+
+- Next-up: government policies and monetary policy.

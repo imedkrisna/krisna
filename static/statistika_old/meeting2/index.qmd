@@ -1,0 +1,213 @@
+---
+title: "Statistik deskriptif"
+subtitle: "Pertemuan 2"
+author: "Matematika Statistika"
+format: 
+  revealjs:
+    theme: [simple,../mytheme.scss]
+    chalkboard: true
+    incremental: false
+    transition: convex
+    background-transition: fade
+    slide-number: true
+---
+
+## Minggu lalu
+
+- Berbagai jenis data: kategorikal, ordinal, diskrit dan kontinyu.
+
+- survey: random dan non-random
+
+#### Minggu ini
+
+- Distribusi frekuensi dan statistik deskriptif
+
+## Distribusi frekuensi
+
+- Distribusi frekuensi adalah cara yang paling awal dilakukan untuk mendapatkan gambaran dari suatu sampel / populasi.
+
+- Kita membutuhkan distribusi frekuensi karena sebagai manusia biasa kita ga akan sanggup membaca semua data poin 1 1.
+
+- Perlu semacam alat ukur yang menggambarkan semua data yang kita punya.
+
+## Distribusi kualitatif {.scrollable}
+
+- Misalnya anda melakukan survey merk handphone yang dimiliki saat ini dengan sample 50 orang.
+
+```{r}
+library(tidyverse)
+library(kableExtra)
+sample(x=c("Apple","Samsung","Oppo","Vivo","Xiaomi","Lainnya"),
+                      prob=c(0.1,0.3,0.15,0.13,0.17,0.15),
+                      size=50,
+                      replace = TRUE)
+```
+
+- Cara mengolahnya secara manual adalah dengan menggunakan **Tally**
+
+- Informasi apa yang menarik dari tabel ini?
+
+## Distribusi kualitatif {.scrollable .s}
+
+- Gimana kalau datanya ada 1000?
+
+```{r}
+library(tidyverse)
+library(kableExtra)
+dat<-as.tibble(sample(x=c("Apple","Samsung","Oppo","Vivo","Xiaomi","Lainnya"),
+                      prob=c(0.1,0.3,0.15,0.13,0.17,0.15),
+                      size=1000,
+                      replace = TRUE))
+kbl(dat) %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"))
+```
+
+## Google sheet
+
+Step-by-step kalau pakai google sheet:
+
+1. Block data dengan `ctrl+panah`
+2. Pilih `instert` -> `pivot table`
+3. Pastikan data range benar dan pilih "new sheet". klik `create`
+4. Pilih `rows` lalu klik `brand`
+5. Pilih `values` lalu klik `brand`
+
+## Frekuensi relatif
+
+- Apa yang kita lakukan di atas adalah menghitung **frekuensi absolut**
+
+- Terkadang kita memerlukan informasi tentang frekuensi relatif.
+
+- Frekuensi relatif sebuah kelas adalah frekuensi absolut si kelas tersebut dibagi dengan total observasi.
+
+## Google sheet
+
+| Brand | freq absolut | freq relatif |
+| ----- | ----- | ----- |
+| Apple | 100 | 10% |
+| Lainnya | 153 | 15.3% |
+| Oppo | 129 | 12.9% |
+| Samsung | 310 | 31% |
+| Vivo | 136 | 13.6% |
+| Xiaomi | 172 | 17.2% |
+| Total | 1000 | 100% |
+
+- data ini dapat divisualisasikan dengan **histogram**.
+
+## Distribusi frekuensi
+
+- Anda akan lebih sering bertemu data numerik.
+
+- Data numerik lebih mudah diolah dan biasanya memiliki lebih banyak *insight*.
+
+- Data numerik juga memiliki berbagai jenis indikator.
+
+## Contoh data
+
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSdLsm-5nIFgcspOncjaLwwKX1vmGbTOvhkYVOFWdHS3h15EWmHcXDSm562eyR4MiftmPJiPom7X2RM/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+
+Data tersebut adalah nilai UTS semester sebelumnya. Dapat didownload di [sini](https://docs.google.com/spreadsheets/d/e/2PACX-1vSdLsm-5nIFgcspOncjaLwwKX1vmGbTOvhkYVOFWdHS3h15EWmHcXDSm562eyR4MiftmPJiPom7X2RM/pubhtml)
+
+## Distribusi frekueksi 
+
+- Untuk data numerik, menghitung frekuensi dengan pivot tidak praktis.
+
+- Anda perlu membuat kelas dengan interval.
+
+- Baik penentuan kelas maupun penentuan interval membutuhkan pemikiran yang cukup matang.
+
+- Slide berikutnya akan membuat tabel distribusi frekuensi dengan kelas yang arbitrari.
+
+## Google sheet
+
+1. ketik rumus `=FREQUENCY(data,class)`
+1. Isi `data` dengan data yang ingin anda buat tabel frekuensinya.
+1. Isi `class` dengan batas atas dari kelas anda.
+
+## Banyaknya kelas yang ideal
+
+- Jumlah kelas dan interval yang baik sebenarnya cukup fluid.
+
+- Secara umum, kita menginginkan pembagian distribusi yang cukup merata dan tidak ekstrim.
+
+- Interval kelas tidak harus seragam, namun biasanya anda akan sering ketemu interval kelas yang seragam.
+
+- Membuat umlah kelas dan interval kelas membutuhkan pengalaman.
+
+## Rumus jumlah kelas
+
+- Jumlah kelas dapat dibuat dengan rumus
+
+$$k=1+3.322\log(n)$$
+
+di mana:
+
+- k = jumlah kelas
+- n = jumlah observasi/sample.
+- gunakan log base 10.
+
+## Rumus interval kelas
+
+- Interval kelas dapat juga menggunakan rumus:
+
+$$c=\frac{X_n-X_1}{k}$$
+
+- $k$ didapat dari rumus sebelumnya.
+
+- $X_n$ adalah nilai observasi terbesar, $X_1$ adalah nilai observasi terkecil.
+
+- $c$ adalah lebarnya interval.
+
+## Exercise
+
+Membuat tabel distribusi frekuensi absolut dan frekuensi relatif.
+
+## Normal distribution
+
+```{r}
+ N <- 10000
+ x <- rnorm(N, 10, 5)
+ hist(x, 
+ xlim=c(min(x),max(x)), probability=T, nclass=max(x)-min(x)+1, 
+   col='lightblue', xlab=' ', ylab=' ', axes=F,
+   main='Normal distribution')
+lines(density(x,bw=1), col='red', lwd=3)
+```
+
+## Normal distribution
+
+- Sebagian besar distribusi umumnya akan mengikuti distribusi normal.
+
+- Kurva distribusi normal seringkali disebut juga dengan kurva lonceng atau _bell curve_.
+
+- Distribusi normal adalah sebuah distribusi populasi di mana observasi terbanyak akan dapat anda temui di rata-rata. Semakian jauh dari rata-rata, makin sedikit observasi yang anda temui.
+
+## Pengukuran gejala pusat
+
+- Untuk setiap data, kita umumnya perlu sebuah indikator yang menunjukkan representasi dari keseluruhan populasi.
+
+- Indikator ini kita sebut juga dengan **ukuran gejala pusat** atau *central tendency*.
+
+- Pengukuran gejala pusat dilakukan dengan melihat *Modus*, *Median*, dan *Mean*
+
+- Modus = angka yang paling sering muncul, Median = nilai tengah
+
+- Mean = rata-rata atau $\mu=\frac{\sum_iX_i}{n}$
+
+## Ukuran sebaran
+
+- Di samping ukuran gejala pusat, kita juga menggunakan beberapa indikator untuk mengukur seberapa jauh rentang data kita dari gejala pusat tersebut.
+
+- Kita menggunakan max (nilai paling tinggi), min (nilai paling kecil), dan kuartil.
+
+- Kuartil 1 adalah data paling tinggi dari 25% data terkecil, kuartil 2 = median, dan kuartil 3 adalah data paling tinggi dari 75% data terkecil.
+
+## Exercise
+
+- mendapatkan ukuran central tendency dan ukuran sebaran dengan google sheet.
+
+- Semua ukuran-ukuran ini kita sebut dengan **statistik deskriptif**.
+
+## Mingdep
+
+- probability atau more on central tendency

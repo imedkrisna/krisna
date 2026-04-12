@@ -1,0 +1,755 @@
+---
+title: "Specific factor and Income Distribution"
+subtitle: "ECES905205 pertemuan 3"
+date: "12 September 2022"
+author: "I Made Krisna Gupta"
+format: 
+  revealjs:
+    theme: [simple,../mytheme.scss]
+    chalkboard: true
+    incremental: false
+    transition: convex
+    background-transition: fade
+    slide-number: true
+  beamer: default
+---
+
+## The Repeal of the Corn Law {.m}
+
+::: columns
+::: {.column width="40%"}
+-   An effort to reduce food price (up to 80% tariff)
+-   Repealed under Robert Peel ruling in 1846.
+-   pivotal for UK manufacturing transformation.
+-   Birth of [the economist magazine](https://www.economist.com/finance-and-economics/2021/06/24/an-anniversary-for-free-traders)
+
+:::
+
+::: {.column width="60%"}
+![](cornlaw.jpg)
+:::
+:::
+
+## Last week
+
+- We learned Ricardian model, the earliest of trade model.
+
+-   *gains from trade*(in a purely economic sense) comes from specialization and comparative advantage.
+
+- This model has strong assumptions: free movement of factor between industry.
+
+    -   Today we're relaxing this assumption a bit.
+
+## Specific factor model
+
+-   2 Sectors i: Cloth (C) and Food (F)
+
+-   3 factors j: Labor (L), Terrain (T), and Capital (K).
+
+    -   Labor can move between sectors
+    -   T can only used to produce F, K only C.
+
+```{=tex}
+\begin{align}
+Q_F=F(L_F,T)  \\ 
+Q_C=C(L_C,K)   \\
+L_F+L_C=L
+\end{align}
+```
+
+## PPF {.m}
+
+-   Now that we have 2 factors each industry, we need to rethink our PPF.
+
+-   Since L is the only moving factor, the only way to increase industrial production is to increase $L$.
+
+- since total number of labour is fixed, the only way to increase $L$ in one industry is to decrease the other industry's $L$
+
+## PPF
+
+- However, since other factors ain't moving, we have a **diminishing returns to labour**.
+
+    -   Imagine your office increase no. of employee but not computers.
+
+    -   Increase no. of farmers but not land.
+
+- Meaning, labour productivity (i.e., *marginal product of labour*, MPL) goes down as $L_i$ goes up.
+
+    -   Consequently, MPL goes up in the other sector.
+
+## PPF dan MPL
+
+```{r}
+#| fig-width: 10
+#| fig-height: 4
+#| label: fig1
+#| fig-cap: "PPF dan MPL sektor C"
+#| warning: false
+library(WDI)
+library(tidyverse)
+library(patchwork)
+
+prod <- function(q) (20*q)-(q)^(2)
+mpl<- function(q) (5+0.5*q^2-2.5*q)
+
+p<-ggplot() +
+  stat_function(fun = prod,size=1.1, color='black') +
+  labs(x=expression(L[C]), y=expression(Q[C]),color=NULL,fill=NULL)+
+  annotate("text",x=2,y=60,label=expression(Q[C]==Q[c](K,L[C])))+
+  scale_x_continuous(expand=c(0,0),limits = c(0,10))+
+  scale_y_continuous(expand=c(0,0))+
+  theme_classic()+
+  theme(panel.grid=element_blank(),
+        axis.text.x=element_blank(),
+        axis.text.y=element_blank(),
+        axis.ticks.x=element_blank(),
+        axis.ticks.y=element_blank(),
+        legend.position=c(1,1),
+        legend.justification = c(1,1),
+        legend.spacing=unit(0,"cm"),
+        legend.margin=margin(0,0,0,0))
+q<-ggplot() +
+  stat_function(fun = mpl,size=1.1, color='black') +
+  labs(x=expression(L[C]), y=expression(MPL[C]),color=NULL,fill=NULL)+
+  annotate("text",x=1.9,y=1.8,label=expression(MPL[C]))+
+  scale_x_continuous(expand=c(0,0),limits = c(0,2))+
+  scale_y_continuous(expand=c(0,0),limits=c(0,5))+
+  theme_classic()+
+  theme(panel.grid=element_blank(),
+        axis.text.x=element_blank(),
+        axis.text.y=element_blank(),
+        axis.ticks.x=element_blank(),
+        axis.ticks.y=element_blank(),
+        legend.position=c(1,1),
+        legend.justification = c(1,1),
+        legend.spacing=unit(0,"cm"),
+        legend.margin=margin(0,0,0,0))
+
+p+q
+```
+
+Note: F industry is identical.
+
+## PPF
+
+-   Another 1 unit of $L_C$ increases $Q_C$ by $MPL_C$ unit.
+
+    - as $L_C$ goes up, $MPL_C$ goes down.
+    
+    - $Q_C$ will keep increasing albeit in decreasing amount.
+    
+- As $L_C$ up by 1 unit, $L_F$ down by 1 unit.
+
+    - Consequently, an increase in $Q_C$ is accompanied by decrease in $Q_F$.
+    
+    - The rate, however, varies.
+
+$$L_C+L_F=L$$
+
+## PPF
+
+-   To increase $Q_C$ by 1 unit, $Q_F$ must decrease by $\frac{MPL_F}{MPL_C}$
+
+-   From here, we can express $Q_C$ as the function of $Q_F$:
+
+$$
+\text{Slope of PPF}=-\frac{MPL_F}{MPL_C}
+$$
+
+## PPF
+
+```{r}
+
+#| label: fig2
+#| fig-cap: "PPF of an economy with specific factor"
+#| warning: false
+
+
+fppf <- function(q) (16-q^2)^(0.5)
+
+
+ppf<-ggplot() +
+  stat_function(fun = fppf,size=1.1, color='black') +
+  labs(x=expression(Q[C]), y=expression(Q[F]),color=NULL,fill=NULL)+
+  annotate("text",x=2,y=60,label=expression(Q[C]==Q[c](K,L[C])))+
+  scale_x_continuous(expand=c(0,0),limits = c(0,5))+
+  scale_y_continuous(expand=c(0,0),limits = c(0,5))+
+  theme_classic()+
+  theme(panel.grid=element_blank(),
+        axis.text.x=element_blank(),
+        axis.text.y=element_blank(),
+        axis.ticks.x=element_blank(),
+        axis.ticks.y=element_blank(),
+        legend.position=c(1,1),
+        legend.justification = c(1,1),
+        legend.spacing=unit(0,"cm"),
+        legend.margin=margin(0,0,0,0))
+ppf
+```
+
+## Firm problem
+
+-   A profit maximizing firms will want to employ until:
+
+$$ MPL_C \times P_C = w $$
+
+- At that place, an increase in $L_C$ decreases $MPL_C$
+-   If $P_C$ does not change, then $MPL_C \times P_C < w$
+    -   That is, cost will be higher than revenue since both prices and wage are fixed.
+
+## Firm problem
+
+- Since F also has the same *employment rule*, the labour market dynamics become:
+
+```{=tex}
+\begin{align}
+MPL_C \times P_C = MPL_F \times P_F = w \\ 
+\\
+-\frac{MPL_F}{MPL_C}=-\frac{P_C}{P_F}=w=\text{slope PPF}
+\end{align}
+```
+-   MPL reflects productivity / technology.
+-   Prices is also set by preferences.
+    -   Preference (by extension, prices) is given.
+
+## Production status quo
+
+```{r}
+#\ fig-height: 10
+#| fig-width: 10
+#| label: fig3
+#| fig-cap: "Production allocation"
+#| warning: false
+
+ppf+
+#  annotate("segment",x = 2.4, y = 3.7,xend = 4.1, yend = 1,size=1.1)+
+  annotate("segment",x = 1.2, y = 3.9,xend = 2.7, yend = 3.1,size=1.1)+
+#  annotate("segment",x = 0, y = 2.12,xend = 3.4, yend = 2.12,size=1.1,lty="dotted")+
+#  annotate("segment",x = 3.4, y = 0,xend = 3.4, yend = 2.12,size=1.1,lty="dotted")+
+  annotate("segment",x = 0, y = 3.5,xend = 1.9, yend = 3.5,size=1.1,lty="dotted")+
+  annotate("segment",x = 1.9, y = 0,xend = 1.9, yend = 3.5,size=1.1,lty="dotted")+
+#  annotate("point", x=3.4,y=2.12,size=4)+
+  annotate("point", x=1.9,y=3.5,size=4)+
+#  annotate("text", x=3.5,y=2.2,label="1")+
+  annotate("text", x=2,y=3.6,label="1")+
+  annotate("text", x=0.1,y=2.27,label=expression(Q[F]^1))+
+  annotate("text", x=3.55,y=0.2,label=expression(Q[C]^1))+
+  annotate("text", x=1.4,y=3.2,label=expression(paste("slope =", - bgroup("(",frac(P[C], P[F]),")")^1)))
+#  annotate("text", x=3.2,y=3.1,label=expression(paste("slope =", - bgroup("(",frac(P[C], P[F]),")")^1)))
+```
+
+## Production status quo
+
+- diminishing return leads to a non-linear ppf.
+
+- production ended-up at dot 1, where PPF tangents price ratio.
+
+- This is a bit different compared to ricardian with a linear PPF and a constant MPL.
+
+- 4-quadrant grafik is an excellent tool to visualize QF/QC relationship.
+
+## Labor market
+
+- The labour market movement depends on MPL of the two industries
+
+- An equilibrium exists where $MPL_i \times P_i$, where employment settles at some level $w$.
+- The labour market dynamics changes when MPL or price ratio changes
+
+$\left(\frac{P_C}{P_F}\right)$.
+
+## Labor market
+
+Note that L is fixed, $L_C$ is the left one.
+
+```{r}
+
+#| label: fig3
+#| fig-cap: "Labor market. Note: Food kebalik, mulai dari kanan."
+#| warning: false
+
+mplc<- function(q) (5+0.5*q^2-2.5*q)*1
+mplcc<- function(q) (5+0.5*q^2-2.5*q)*2
+mplf<- function(q) (1+0.2*q^2+2*q)*1
+mplff<- function(q) (1+0.2*q^2+2*q)*2
+
+labmar<-ggplot() +
+  geom_function(fun = mplc,color="red") +
+#  geom_function(fun = mplcc,color="red",linetype="dashed") +
+  geom_function(fun = mplf,color="blue") +
+#  geom_function(fun = mplff,color="blue",linetype="dashed") +
+  xlim(0,2)+
+  labs(x="", y="wage",color=NULL,fill=NULL)+
+  annotate("text", x =0.4, y = 1, label = expression(MPL[C] %*% P[C]^1)) +  
+  annotate("text", x =1.8, y = 1.5, label = expression(MPL[F] %*% P[F]^1)) +  
+  annotate("text", x =0.05, y = -.5, label = expression(L[C])) +  
+  annotate("text", x =1.94, y = -.5, label = expression(L[F])) +  
+  annotate("point", x =0.95, y = 3.05,color="black",size=4) +  
+  annotate("text", x =0.95, y = 3.4,label=1,size=4) +  
+  annotate("segment",arrow = arrow(length = unit(0.2, "inches")), x =1.8, y = -0.5, xend=1.6,yend=-.5) +  
+  annotate("segment",arrow = arrow(length = unit(0.2, "inches")), x =0.2, y = -0.5, xend=0.4,yend=-.5) +  
+  coord_cartesian(ylim=c(0,7),clip = "off")+
+  theme_classic()+
+  theme(panel.grid=element_blank(),
+        panel.background = element_rect(colour = "black"),
+        axis.text.x=element_blank(),
+        axis.text.y=element_blank(),
+        axis.ticks.x=element_blank(),
+        axis.ticks.y=element_blank(),
+        legend.position=c(1,1),
+        legend.justification = c(1,1),
+        legend.spacing=unit(0,"cm"),
+        legend.margin=margin(0,0,0,0))
+labmar
+```
+
+## Increase in both price
+
+- Say an inflation leads to both prices increase by 10% $P_C^*=1.1P_C$ and $P_F*=1.1P_F$
+- With a fixed MPL, increase of both curves $MPL_i \times P_i$ is in-line with increase in $P$s.
+- Since both prices go up at the same pace, labour dynamics does not change.
+
+- Prices up by also 10%, negates the impact of the inflation. No welfare changes.
+
+## Increase in both price
+
+```{r}
+
+#| label: fig4
+#| fig-cap: "Increase in both price proportion only leads to increase in wage"
+#| warning: false
+
+mplc<- function(q) (5+0.5*q^2-2.5*q)*1
+mplcc<- function(q) (5+0.5*q^2-2.5*q)*2
+mplf<- function(q) (1+0.2*q^2+2*q)*1
+mplff<- function(q) (1+0.2*q^2+2*q)*2
+
+labmar2<-ggplot() +
+  geom_function(fun = mplc,color="red") +
+  geom_function(fun = mplcc,color="red",linetype="dashed") +
+  geom_function(fun = mplf,color="blue") +
+  geom_function(fun = mplff,color="blue",linetype="dashed") +
+  xlim(0,2)+
+  labs(x="", y="wage",color=NULL,fill=NULL)+
+  annotate("text", x =0.4, y = 1, label = expression(MPL[F] %*% P[F]^1)) +  
+  annotate("text", x =1.8, y = 1.5, label = expression(MPL[C] %*% P[C]^1)) + 
+  annotate("text", x =0.11, y = 3.5, label = expression(MPL[F] %*% P[F]^2)) +  
+  annotate("text", x =1.8, y = 3.5, label = expression(MPL[C] %*% P[C]^2)) + 
+  annotate("point", x =0.95, y = 3.05,color="black",size=4) +  
+  annotate("point", x =0.95, y = 6.1,color="black",size=4) + 
+  annotate("text", x =0.95, y = 3.47,label=1,size=4) +  
+  annotate("text", x =0.95, y = 7,label=2,size=4) +  
+  annotate("text", x =0.11, y = -1.2, label = expression(L[C])) +  
+  annotate("text", x =1.9, y = -1.2, label = expression(L[F])) +  
+  annotate("segment",arrow = arrow(length = unit(0.2, "inches")), x =0.95, y = 4, xend=0.95,yend=5.7) +  
+  annotate("segment",arrow = arrow(length = unit(0.2, "inches")), x =1.8, y = -1.2, xend=1.6,yend=-1.2) +  
+  annotate("segment",arrow = arrow(length = unit(0.2, "inches")), x =0.2, y = -1.2, xend=0.4,yend=-1.2) +  
+  coord_cartesian(ylim=c(0,12),clip = "off")+
+  theme_classic()+
+  theme(panel.grid=element_blank(),
+        panel.background = element_rect(colour = "black"),
+        axis.text.x=element_blank(),
+        axis.text.y=element_blank(),
+        axis.ticks.x=element_blank(),
+        axis.ticks.y=element_blank(),
+        legend.position=c(1,1),
+        legend.justification = c(1,1),
+        legend.spacing=unit(0,"cm"),
+        legend.margin=margin(0,0,0,0))
+labmar2
+```
+
+## Change in relative price
+
+- Let this country trades, and in the global market, $P_C$ is 10% more expensive while $P_F$ is the same.
+
+-   Then price ratio changes, i.e., $\frac{P_C}{P_F} \uparrow$
+- Labour market will shift toward C, where $L_C \uparrow$ while $L_F \downarrow$
+    - Remember, total labour is fixed.
+- Wage goes up, but not as much as increase in $P_C$.
+
+## Change in relative price
+
+```{r}
+
+#| label: fig5
+#| fig-cap: "Labor allocation changes if relative price changes"
+#| warning: false
+
+mplc<- function(q) (5+0.5*q^2-2.5*q)*1
+mplcc<- function(q) (5+0.5*q^2-2.5*q)*1.6
+mplf<- function(q) (1+0.2*q^2+2*q)*1
+
+
+labmar3<-ggplot() +
+  geom_function(fun = mplc,color="red") +
+  geom_function(fun = mplcc,color="red",linetype="dashed") +
+  geom_function(fun = mplf,color="blue") +
+#  geom_function(fun = mplff,color="blue",linetype="dashed") +
+  xlim(0,2)+
+  labs(x="", y="wage",color=NULL,fill=NULL)+
+  annotate("text", x =0.4, y = 1, label = expression(MPL[F] %*% P[F]^1)) +  
+  annotate("text", x =1.8, y = 1.5, label = expression(MPL[C] %*% P[C]^1)) + 
+  annotate("text", x =1.8, y = 3.5, label = expression(MPL[C] %*% P[C]^2)) + 
+  annotate("point", x =0.95, y = 3.05,color="black",size=4) +  
+  annotate("point", x =1.35, y = 4.1,color="black",size=4) + 
+  annotate("text", x =0.95, y = 3.47,label=1,size=4) +  
+  annotate("text", x =1.35, y = 4.6,label=2,size=4) +  
+  annotate("text", x =0.11, y = -1.2, label = expression(L[C])) +  
+  annotate("text", x =1.9, y = -1.2, label = expression(L[F])) +  
+  annotate("segment",arrow = arrow(length = unit(0.2, "inches")), x =0.95, y = 4, xend=1.3,yend=5.2) +  
+  annotate("segment",arrow = arrow(length = unit(0.2, "inches")), x =1.8, y = -1.2, xend=1.6,yend=-1.2) +  
+  annotate("segment",arrow = arrow(length = unit(0.2, "inches")), x =0.2, y = -1.2, xend=0.4,yend=-1.2) +  
+  coord_cartesian(ylim=c(0,12),clip = "off")+
+  theme_classic()+
+  theme(panel.grid=element_blank(),
+        panel.background = element_rect(colour = "black"),
+        axis.text.x=element_blank(),
+        axis.text.y=element_blank(),
+        axis.ticks.x=element_blank(),
+        axis.ticks.y=element_blank(),
+        legend.position=c(1,1),
+        legend.justification = c(1,1),
+        legend.spacing=unit(0,"cm"),
+        legend.margin=margin(0,0,0,0))
+labmar3
+```
+
+## New production allocation
+
+- CHanges in price ratio leads to changes in production allocation.
+
+- Remember that production will be done such that its slope equals to price ratio.
+
+- When price ratio changes, production allocation follows.
+
+    - It will be biased toward the higher good.
+
+## New production allocation
+
+```{r}
+#| label: fig6
+#| fig-cap: "New production allocation"
+#| warning: false
+
+ppf+
+  annotate("segment",x = 2.4, y = 3.7,xend = 4.1, yend = 1,size=1.1)+
+  annotate("segment",x = 1.2, y = 3.9,xend = 2.7, yend = 3.1,size=1.1)+
+  annotate("segment",x = 0, y = 2.12,xend = 3.4, yend = 2.12,size=1.1,lty="dotted")+
+  annotate("segment",x = 3.4, y = 0,xend = 3.4, yend = 2.12,size=1.1,lty="dotted")+
+  annotate("segment",x = 0, y = 3.5,xend = 1.9, yend = 3.5,size=1.1,lty="dotted")+
+  annotate("segment",x = 1.9, y = 0,xend = 1.9, yend = 3.5,size=1.1,lty="dotted")+
+  annotate("point", x=3.4,y=2.12,size=4)+
+  annotate("point", x=1.9,y=3.5,size=4)+
+  annotate("text", x=3.5,y=2.2,label="2")+
+  annotate("text", x=2,y=3.6,label="1")+
+  annotate("text", x=0.1,y=3.6,label=expression(Q[F]^1))+
+  annotate("text", x=2,y=0.2,label=expression(Q[C]^1))+
+  annotate("text", x=0.1,y=2.27,label=expression(Q[F]^2))+
+  annotate("text", x=3.55,y=0.2,label=expression(Q[C]^2))+
+  annotate("text", x=1.4,y=3.3,label=expression(paste("slope =", - bgroup("(",frac(P[C], P[F]),")")^1)))+
+  annotate("text", x=3.2,y=3.1,label=expression(paste("slope =", - bgroup("(",frac(P[C], P[F]),")")^2)))
+```
+
+## Understanding income distribution {.m}
+
+- new allocation bear consequences: changes in income distribution.
+
+- This is a consequence of disproportional changes:
+$$
+    \Delta P_C > \Delta w > \Delta P_F
+$$
+
+$$
+\frac{w}{P_C} < \frac{w}{P_F}
+$$
+
+## Income distribution
+
+- Does labour better off? Depends on the preference:
+
+    - Both receives the same wage
+    
+    - Workers benefit if C is less important in their basket.
+
+- However, specific factor owner is decisive:
+  
+    -   Capital owners win, Land owners lose.
+    
+    -   We can show this from surplus dynamics.
+
+## Cloth Sector
+
+```{r}
+#| warning: false
+zzz<-seq(0,.81,0.01)
+ggplot() +
+  stat_function(fun = mpl,size=1.1, color='black') +
+  labs(x=expression(L[C]), y=expression(MPL[C]),color=NULL,fill=NULL)+
+  annotate("point",x=.81,y=3.3,size=4)+
+  annotate("segment",x=0,y=3.3,xend=.81,yend=3.3,lty="dotted")+
+  annotate("segment",x=.81,y=2,xend=.81,yend=3.3,lty="dotted")+
+  annotate("text",x=.2,y=4,label="capitalist income")+
+  annotate("text",x=.2,y=2.5,label="labor income")+
+  annotate("text",x=.1,y=3.38,label=expression((w/P[C])^1))+
+  annotate("text",x=.84,y=2.1,label=expression(L[C]^1))+
+  geom_ribbon(aes(x = zzz, ymax = mpl(zzz), ymin = 3.3,
+                  fill = "Capitalist surplus"), alpha = 0.25, show.legend=FALSE) +
+  geom_ribbon(aes(x = zzz, ymax = 3.3, ymin = 2,
+                  fill = "labor surplus"), alpha = 0.25, show.legend=FALSE) +
+  scale_x_continuous(expand=c(0,0),limits = c(0,2))+
+  scale_y_continuous(expand=c(0,0),limits=c(2,5))+
+  theme_classic()+
+  theme(panel.grid=element_blank(),
+        axis.text.x=element_blank(),
+        axis.text.y=element_blank(),
+        axis.ticks.x=element_blank(),
+        axis.ticks.y=element_blank(),
+        axis.title.x = element_text(hjust=1),
+        axis.title.y = element_text(hjust=1),
+        legend.position=c(1,1),
+        legend.justification = c(1,1),
+        legend.spacing=unit(0,"cm"),
+        legend.margin=margin(0,0,0,0))
+```
+
+## Increase in textile price
+
+```{r}
+#| warning: false
+zzz<-seq(0,1.15,0.01)
+ggplot() +
+  stat_function(fun = mpl,size=1.1, color='black') +
+  labs(x=expression(L[C]), y=expression(MPL[C]),color=NULL,fill=NULL)+
+  annotate("point",x=1.15,y=mpl(1.15),size=4)+
+  annotate("point",x=.81,y=3.3,size=4)+
+  annotate("text",x=1.15,y=.1+mpl(1.15),size=4,label="2")+
+  annotate("text",x=.81,y=3.4,size=4,label="1")+
+  annotate("segment",x=0,y=3.3,xend=.81,yend=3.3,lty="dotted")+
+  annotate("segment",x=.81,y=2,xend=.81,yend=3.3,lty="dotted")+
+  annotate("text",x=.2,y=4,label="capitalist income")+
+  annotate("text",x=.2,y=2.5,label="labor income")+
+  annotate("text",x=.1,y=.1+mpl(1.15),label=expression((w/P[C])^2))+
+  annotate("text",x=.1,y=3.38,label=expression((w/P[C])^1))+
+  annotate("text",x=.84,y=2.1,label=expression(L[C]^1))+
+  annotate("text",x=1.2,y=2.1,label=expression(L[C]^2))+
+  geom_ribbon(aes(x = zzz, ymax = mpl(zzz), ymin = mpl(1.15),
+                  fill = "Capitalist surplus"), alpha = 0.25, show.legend=FALSE) +
+  geom_ribbon(aes(x = zzz, ymax = mpl(1.15), ymin = 2,
+                  fill = "labor surplus"), alpha = 0.25, show.legend=FALSE) +
+  scale_x_continuous(expand=c(0,0),limits = c(0,2))+
+  scale_y_continuous(expand=c(0,0),limits=c(2,5))+
+  theme_classic()+
+  theme(panel.grid=element_blank(),
+        axis.text.x=element_blank(),
+        axis.text.y=element_blank(),
+        axis.ticks.x=element_blank(),
+        axis.ticks.y=element_blank(),
+        axis.title.x = element_text(hjust=1),
+        axis.title.y = element_text(hjust=1),
+        legend.position=c(1,1),
+        legend.justification = c(1,1),
+        legend.spacing=unit(0,"cm"),
+        legend.margin=margin(0,0,0,0))
+```
+
+## Food sector
+
+```{r}
+#| warning: false
+zzz<-seq(0,.81,0.01)
+ggplot() +
+  stat_function(fun = mpl,size=1.1, color='black') +
+  labs(x=expression(L[F]), y=expression(MPL[F]),color=NULL,fill=NULL)+
+  annotate("point",x=.81,y=3.3,size=4)+
+  annotate("segment",x=0,y=3.3,xend=.81,yend=3.3,lty="dotted")+
+  annotate("segment",x=.81,y=2,xend=.81,yend=3.3,lty="dotted")+
+  annotate("text",x=.2,y=4,label="landlord income")+
+  annotate("text",x=.2,y=2.5,label="labor income")+
+  annotate("text",x=.1,y=3.38,label=expression((w/P[F])^1))+
+  annotate("text",x=.84,y=2.1,label=expression(L[F]))+
+  geom_ribbon(aes(x = zzz, ymax = mpl(zzz), ymin = 3.3,
+                  fill = "Landlord surplus"), alpha = 0.25, show.legend=FALSE) +
+  geom_ribbon(aes(x = zzz, ymax = 3.3, ymin = 2,
+                  fill = "labor surplus"), alpha = 0.25, show.legend=FALSE) +
+  scale_fill_manual(values = c("cyan","green"))+
+  scale_x_continuous(expand=c(0,0),limits = c(0,2))+
+  scale_y_continuous(expand=c(0,0),limits=c(2,5))+
+  theme_classic()+
+  theme(panel.grid=element_blank(),
+        axis.text.x=element_blank(),
+        axis.text.y=element_blank(),
+        axis.ticks.x=element_blank(),
+        axis.ticks.y=element_blank(),
+        axis.title.x = element_text(hjust=1),
+        axis.title.y = element_text(hjust=1),
+        legend.position=c(1,1),
+        legend.justification = c(1,1),
+        legend.spacing=unit(0,"cm"),
+        legend.margin=margin(0,0,0,0))
+```
+
+## Landlord surplus
+
+```{r}
+#| warning: false
+zzz<-seq(0,.6,0.01)
+ggplot() +
+  stat_function(fun = mpl,size=1.1, color='black') +
+  labs(x=expression(L[F]), y=expression(MPL[F]),color=NULL,fill=NULL)+
+  annotate("point",x=.81,y=3.3,size=4)+
+  annotate("point",x=.6,y=mpl(.6),size=4)+
+  annotate("text",x=.81,y=3.4,size=4,label="1")+
+  annotate("text",x=.6,y=.1+mpl(.6),size=4,label="2")+
+  annotate("segment",x=0,y=3.3,xend=.81,yend=3.3,lty="dotted")+
+  annotate("segment",x=.81,y=2,xend=.81,yend=3.3,lty="dotted")+
+  annotate("text",x=.2,y=4,label="landlord income")+
+  annotate("text",x=.2,y=2.5,label="labor income")+
+  annotate("text",x=.1,y=3.38,label=expression((w/P[F])^1))+
+  annotate("text",x=.1,y=mpl(.6),label=expression((w/P[F])^2))+
+  annotate("text",x=.64,y=2.1,label=expression(L[F]^2))+
+  annotate("text",x=.84,y=2.1,label=expression(L[F]^1))+
+  geom_ribbon(aes(x = zzz, ymax = mpl(zzz), ymin = mpl(.6),
+                  fill = "Landlord surplus"), alpha = 0.25, show.legend=FALSE) +
+  geom_ribbon(aes(x = zzz, ymax = mpl(0.6), ymin = 2,
+                  fill = "labor surplus"), alpha = 0.25, show.legend=FALSE) +
+  scale_fill_manual(values = c("cyan","green"))+
+  scale_x_continuous(expand=c(0,0),limits = c(0,2))+
+  scale_y_continuous(expand=c(0,0),limits=c(2,5))+
+  theme_classic()+
+  theme(panel.grid=element_blank(),
+        axis.text.x=element_blank(),
+        axis.text.y=element_blank(),
+        axis.ticks.x=element_blank(),
+        axis.ticks.y=element_blank(),
+        axis.title.x = element_text(hjust=1),
+        axis.title.y = element_text(hjust=1),
+        legend.position=c(1,1),
+        legend.justification = c(1,1),
+        legend.spacing=unit(0,"cm"),
+        legend.margin=margin(0,0,0,0))
+```
+
+## Gains from trade
+
+> Trade benefits the factor that is specific to the export sector of each country but hurts the factor specific to the import-competing sectors, with ambiguous effect on mobile factors.
+
+- Results from trade is ambiguous in this case. Can we show that trade ALWAYS better in general?
+
+    - if this is the case, then theoretically, we can compensate the loser.
+
+## Gains from trade
+
+Without trade, consumption = production
+
+$$
+D_C=Q_C \ and \ D_F=Q_F
+$$
+
+with trade, consumption does not need to equal production, as long as:
+
+$$
+P_C \times D_C + P_F \times D_F = P_C \times Q_C + P_F \times Q_F
+$$
+
+## Gains from trade
+
+We can rearrange the budget constraint as such:
+
+$$
+D_F - Q_F = \left(\frac{P_C}{P_F}\right) \times (Q_C-D_C)
+$$
+
+That is, import of F = price ratio times C export.
+
+How much we can import depends on how much we can export.
+
+## Gains from trade
+
+```{r}
+#| label: fig7
+#| fig-cap: "Grey area is the better set"
+#| warning: false
+
+ppf+
+  annotate("segment",x = 2.4, y = 3.7,xend = 4.1, yend = 1,size=1.1)+
+  annotate("segment",x = 1.2, y = 3.9,xend = 2.7, yend = 3.1,size=1.1)+
+  annotate("segment",x = 0, y = 2.12,xend = 3.4, yend = 2.12,size=1.1,lty="dotted")+
+  annotate("segment",x = 3.4, y = 0,xend = 3.4, yend = 2.12,size=1.1,lty="dotted")+
+  annotate("segment",x = 0, y = 3.5,xend = 1.9, yend = 3.5,size=1.1,lty="dotted")+
+  annotate("segment",x = 1.9, y = 0,xend = 1.9, yend = 3.5,size=1.1,lty="dotted")+
+  geom_ribbon(aes(x = seq(1.9,3,0.01), ymax = 5, ymin = 3.5),
+              alpha = 0.25, show.legend=FALSE) +
+  annotate("point", x=3.4,y=2.12,size=4)+
+  annotate("point", x=1.9,y=3.5,size=4)+
+  annotate("text", x=3.5,y=2.2,label="2")+
+  annotate("text", x=2,y=3.6,label="1")+
+  annotate("text", x=0.1,y=3.6,label=expression(Q[F]^1))+
+  annotate("text", x=2,y=0.2,label=expression(Q[C]^1))+
+  annotate("text", x=0.1,y=2.27,label=expression(Q[F]^2))+
+  annotate("text", x=3.55,y=0.2,label=expression(Q[C]^2))+
+  annotate("text", x=1.4,y=3.3,label=expression(paste("slope =", - bgroup("(",frac(P[C], P[F]),")")^1)))+
+  annotate("text", x=3.2,y=3.1,label=expression(paste("slope =", - bgroup("(",frac(P[C], P[F]),")")^2)))
+```
+
+## Gains from trade {.m}
+
+1. Without trade, consumption = production = at the PPF.
+
+2. With trade, we have a bit more option. Of course the option that makes sense is what makes us better off: unambiguously if we can have more of both goods.
+
+3.  As long as the better set is always reachable, compensation is always an option.
+
+## Gains from trade
+
+- With trade, we have option as long as it's in the budget constraint.
+
+    - obviously this allocation includes the old set.
+    
+    - the option comes from the ability to export and import.
+
+- we can reach allocation even previously unfeasible.
+
+    - theoretically, the result can be unambiguously good.
+
+- That said, just because everyone CAN benefit doesn't mean everyone WILL.
+
+## Political economy of trade {.m}
+
+- International trade can possible make immobile factor owners worse off.
+
+    - in the real world, even workers can be somewhat immobile!
+    
+- However, this issue isn't the worse to economists:
+
+    - income distribution changes happen all the time: tech changes, pandemics, etc.
+    
+    - compensation always better than trade restriction.
+
+## Political economy of trade
+
+- In a democratic country, mobilization of the masses is extremely important.
+
+- Government intervention happens in concentrated industries.
+
+    - Large economy with small numbers of players, SOEs, etc.
+
+- When cornered, industries will have the same interest thus easier to organize.
+
+- Those who benefits from trade usually consumers who are badly organized.
+
+## Short run model
+
+- It's good to note that this model can be seen as a short-run model.
+
+- In the long-run, investment will increase the immobile factors: capital accumulations, land reclamations, deforestation, etc.
+
+- Factor may moves in the long run:
+
+    - if mining is sustainably large, people will pursue degrees in mining.
+    
+    - Sell land, buy factories.
+
+
+## Next week
+
+- The new trade theory.

@@ -1,0 +1,124 @@
+---
+title: "Lalu Lintas Pembayaran Dalam dan Luar Negeri"
+subtitle: "pertemuan 5"
+author: ""
+format: 
+  revealjs:
+    theme: [simple,../mytheme.scss]
+    chalkboard: true
+    incremental: false
+    transition: convex
+    background-transition: fade
+    slide-number: true
+---
+
+## Today
+
+- Outline points that should be on a contract 
+- Understand UCP 600, ISBP 745 impact on Documentary Credit and Incoterms on contract 
+
+
+## Contract
+
+- Kontrak jual beli tidak harus dinyatakan dalam bentuk tertulis (CISG pasal 11)
+- Tapi, kepastian akan sangat memperlancar transaksi dan melindungi kedua belah pihak jika terjadi pelanggaran 
+
+## Checklist
+
+1. Jenis dan jumlah barang
+1. Nilai yang disetujui
+1. Pengiriman barang
+1. Keamanan barang dalam proses pengiriman
+1. Customs dan administrasi lainnya
+1. Cara pembayaran
+1. Dokumen yang diperlukan
+1. Persyaratan negara eksportir/importir
+
+## Incoterms {.m}
+
+- Ingat poin-poin sebelumnya?
+- Incoterms mengatur tentang
+  - Obligations : pengiriman sampai mana; customs clearance dan dokumen yang diperlukan.
+  - Risks : siapa yang bertanggung jawab atas keamanan barang pada tiap-tiap tahap
+  - Costs : siapa yang membayar biaya yang timbul pada tiap tahap pengiriman
+
+## Incoterms
+
+- Nggak wajib, gunanya untuk mempercepat pembuatan kontrak dengan menggunakan istilah yang sudah umum diketahui dalam bidang ini.
+- Perlu paham dasar dari incoterms, tapi tidak dibahas mendalam, hanya yang dibutuhkan dalam mata kuliah ini saja.
+
+## Pengelompokan
+
+- Terdapat 2 bentuk pengelompokan:
+    - Berdasarkan moda transport
+        - Moda laut dan perairan lain
+        - Semua moda
+    - Berdasarkan komponen utama
+
+## Komponen utama
+
+- Term E : The seller must deliver by delivering the goods at the disposal of the buyer at his premises
+- Term F : The seller must hand over the goods to a nominated carrier Free of risk and expense
+- Term C : The seller must bear certain Costs after the division of the risk of loss or of damage to the goods
+- Term D : The goods must arrive at a stated Destination
+
+## Exporter Obligations : FCA
+
+- Carriage : To nominated Carrier or Person at named place
+- Clearance : Export Clearance
+- Risk : Passes to buyer at named place
+
+## Incoterms 2010
+
+![](incoterms.svg)
+
+## Incoterms 2020
+
+7 Changes:
+
+  - DAT changed into DPU
+  - Insurance in CIP uses ICC type A minimum instead of type C
+  - Regarding FCA and uses of onboard bills of lading
+  - Ability to deliver with seller’s or buyer’s own transport under FCA, DAP, DPU, dan DDP
+  - Changes that doesn’t matter (List of costs in the rules, Security related requirements, Explanatory notes.
+
+## Contract vs Documentary Credit 
+
+- Documentary credit seharusnya memiliki isi yang sama dengan kontrak
+
+- Sebelumnya yang perlu diperhatikan:
+
+  1. Cara pembayaran
+  1. Dokumen yang diperlukan
+  1. Persyaratan negara eksportir/importir
+
+-     Ini semua bisa dimasukkan dalam syarat L/C sehingga harus bisa menerjemahkan L/C
+
+## L/C di Indonesia
+
+- Permendag no 4 2015: ekspor komoditas tertentu harus menggunakan L/C, di advise Bank di Indonesia, dilaporkan menggunakan L/C pada PEB, dan diperiksa oleh Surveyor yang ditunjuk oleh kemendag.
+- The products are
+  - Mineral
+  - Coal
+  - Oil
+  - Palm Oil
+- Permendag no 94 dan 102 2018 : minus oil
+
+## UCP 600
+
+- Documents covered in UCP 600 are :
+- Commercial Invoice (Article 18)
+- Transport documents (Article 19 to 25)
+- Insurance documents (Article 28)
+- Other documents (Article )
+
+## UCP 600 {.m}
+
+Terdapat Bahasa terstruktur dalam UCP600 untuk menerjemahkan L/C dengan baik, contoh:
+
+- Kata “before” dan “after” tidak menghitung tanggal yang disebutkan namun kata “to”, “until”, “till”, “from”, dan “between” menghitung tanggal yang disebutkan
+
+- Persyaratan dokumen yang meminta harus dilegalisasi, visa, diperiksa dan sejenisnya dianggap sudah terpenuhi jika ada tanda-tangan, stempel, dan tanda lain yang memperlihatkan hal tersebut sudah dilakukan.
+
+
+## Next week

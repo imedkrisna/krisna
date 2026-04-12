@@ -1,0 +1,352 @@
+---
+title: "Deret dan Angka Indeks"
+subtitle: "Pertemuan 4"
+author: "Matematika & Statistika"
+format: 
+  revealjs:
+    theme: [simple,../mytheme.scss]
+    chalkboard: true
+    incremental: false
+    transition: convex
+    background-transition: fade
+    slide-number: true
+---
+
+## Deret
+
+- Deret adalah himpunan yang anggotanya berupa rangkaian bilangan yang tersusun secara teratur dan memenuhi kaidah-kaidah tertentu.
+
+- Berdasarkan pola perubahannya, deret bisa dibagi jadi 3, yaitu **deret hitung**, **deret ukur** dan **deret harmonik**
+
+- harmonik jarang digunakan di ekonomi dan bisnis jadi tidak kita bahas.
+
+## Deret hitung
+
+- Deret hitung ialah deret yang perubahan suku-sukunya berdasarkan penjumlahan terhadap sebuah suku sebelumnya.
+
+- Bilangan yang membedakan suku-suku dari deret disebut dengan pembeda.
+
+contoh: $7,12,17,22,32$ pembeda $=5$
+
+contoh: $93, 83, 73,63,53,43$ pembeda $=-10$
+
+## Deret hitung
+
+- Deret hitung disebut juga dengan deret aritmatika (arithmetic progression)
+
+- Bentuk umum deret:
+
+$$
+a_i=a_1+(i-1)d
+$$
+
+- $a$ adalah anggota / suku, $i$ adalah index atau suku ke-$i$, dan $d$ adalah pembeda.
+
+## Deret hitung
+
+Misalnya kita punya deret seperti ini 
+
+7, 12, 17, 22, 27, 32
+
+Dapat kita ketahui bahwa $a_1=7$ dan $d=5$.
+
+::: {.incremental}
+
+- jika ditanya suku ke 21, maka:
+
+- $a_21=a_1+(i-1)d=107$
+
+:::
+
+## Contoh
+
+::: {.incremental}
+
+- Anda berhasil menyisihkan uang jajan anda setiap bulan 500 ribu rupiah untuk menabung.Jika tabungan awal anda adalah 1 juta rupiah, berapa tabungan anda setelah 1 tahun?
+
+- diketahui $a_1=1000$ ribu rupiah, $d=500$ ribu rupiah, $n=12$
+
+- $a_12=a_1+(n-1)d=1000+12\times 500=1600$ ribu rupiah.
+
+:::
+
+## Note
+
+- Soal seperti di atas (berapa tabungan 12 bulan kemudian) lebih sering ditanyakan.
+
+- Di soal seperti itu, tabungan awal (si 1 juta rupiah) biasanya tidak dihitung sebagai anggota ke-1.
+
+- "12 bulan kemudian" mengacu ke deret ke-2 sampai ke-13. Karena itu $n=13$.
+
+- Ada juga yg anggap 1 juta bukan termasuk deret, disebut $a_0$, dan n tetap 12.
+
+$$
+a_i=a_0+id
+$$
+
+## Deret ukur
+
+- ialah deret yang perubahan suku-sukunya berdasarkan perkalian. bilangan yang membedakan suku-suku dari sebuah deret ukur adalah **pengali**.
+
+- Disebut juga dengan deret geometrik (geometric progression) atau growth/pertumbuhan.
+
+- $5,10,20,40,80$ (pengganda =2)
+
+- $512, 256, 128,64,32$ (pengganda=$\frac{1}{2}$)
+
+## Deret ukur
+
+- Bentuk umum deret ukur:
+
+$$
+a_i=a_1\times p^{n-1}, \text{atau } a_i=a_0\times p^n
+$$
+
+- Misalnya, sebuah deret dengan suku $5,10,20,40,...$, berapakah $a_6$?
+
+::: {.incremental}
+
+- $a_6=5 \times 2^5=5 \times 32=160$
+
+:::
+
+## Pertumbuhan
+
+- Pengali dalam persen $(r)$ disebut juga **pertumbuhan** (_growth rate_)
+
+- Misalnya, pertumbuhan PDB, pertumbuhan aset, dan lain-lain.
+
+- Jika anda melihat persoalan deret ukur yang diekspresikan dalam persen, rumusnya:
+
+$$
+a_i=a_1\times (1+r)^{n-1}, \text{atau } a_i=a_0 \times (1+r)^{n}
+$$
+
+- Pertumbuhan 100% = pertumbuhan 2x lipat.
+
+## Contoh
+
+- Negara Wakwaw mengalami pertumbuhan ekonomi sebesar 7% setiap tahunnya. Jika saat ini PDB negara Wakwaw adalah 1000 triliun rupiah, berapa PDB negara Wakwaw 5 tahun lagi?
+
+## Jawaban
+
+$$a_6=1000 \times (1+0.07)^5=1402,55$$
+
+| a | PDB |
+| --- | -------- |
+| 0 | 1000 |
+| 1 | 1070 |
+| 2 | 1.144,9 |
+| 3 | 1.225,043 |
+| 4 | 1.310,8 |
+| 5 | 1.402,55 |
+
+## Investment decision
+
+- Menabung pada dasarnya adalah menyimpan uang untuk dipakai nanti.
+
+- Investasi sebaliknya, meminjam uang untuk dipakai sekarang, dibayar nanti.
+
+- Dengan konsep bunga, kita dapat mengatur nabung berapa hari ini untuk dapat X rupiah di masa datang.
+
+- Sebaliknya, kita juga bisa hitung berapa harus kembalikan uang di masa datang jika kita pinjam X rupiah sekarang.
+
+## Present value {.m}
+
+- Karena menyimpan uang di aset keuangan umumnya mendapatkan bunga, maka uang yang dijanjikan di masa datang bisa kita ukur "nilai masa kini"-nya.
+
+- Present value adalah kebalikan dari pertumbuhan.
+
+$$
+PV=\frac{A}{(1+r)^t}
+$$
+
+Di mana t adalah tahun.
+
+## Contoh
+
+Ada teman ngutang 100ribu dan bilang akan dibalikin di tahun ke-3. Senilai 110ribu. Apakah anda akan meminjamkan uang tersebut jika suku bunga adalah 5%?
+
+::: {.incremental}
+
+- untuk menjawabnya, kita harus hitung apakah 110ribu di tahun ke-3 sama nilainya dengan 100ribu sekarang. Jadi perlu dihitung PV dari 110ribu.
+
+- PV=\frac{110}{(1+0,05)^3}=95,022 ribu. Berarti gak worth it.
+
+:::
+
+## Contoh
+
+Supaya worth it, berapa teman anda harus mengembalikan 100 ribu tersebut di tahun ke-3?
+
+::: {.incremental}
+
+- Kita balik PV-nya jadi future value (FV) pakai deret seperti PDB di contoh sebelumnya.
+
+- FV=100\times (1+0,05)^3=115,7625 ribu
+
+- Jika anda taruh 100ribu di deposito dengan bunga 5%, 3 tahun kemudian anda dapat 115,76 ribu. Ngapain pinjemin teman anda kalau deposito kasih return lebih?
+
+:::
+
+## Angka Index
+
+- Inflasi pada prinsipnya adalah pertumbuhan harga: Inflasi 5% berarti harga tahun ini lebih tinggi 5% dibanding tahun lalu.
+
+- Gimana ngitungnya? Kan harga barang tuh ada banyak: makanan pokok, snek, listrik, kos-kosan, mobil, sekolah, kesehatan, rokok, dst.
+
+- IHSG juga sama: Kan perusahaan di bursa efek ada banyak. Mau tau harga saham yg mana?
+
+## Angka Indeks {.m}
+
+- Angka Indeks adalah sebuah angka representatif dari sekumpulan data yang kita dapatkan dengan menggunakan metode rerata tertimbang.
+
+    - rerata tertimbang pada prinsipnya mirip expected value.
+    
+    - IHSG tertimbang market cap, CPI tertimbang konsumsi, dst.
+
+- Angka indeks biasanya kita gunakan untuk melihat perubahan harga konsumen, perubahan harga saham, dan lain sebagainya.
+
+- Angka Indeks untuk menghitung perubahan umumnya memiliki _base year_ atau **tahun dasar**, dan _current year_ atau tahun kini/**tahun berjalan**.
+
+## Angka Indeks
+
+- Untuk angka indeks yang memiliki _base year_ biasanya dihitung dengan menggunakan 3 metode berbeda:
+
+    - Indeks Laspeyres
+    
+    - Indeks Paasche
+    
+    - Indeks Fisher
+    
+- Kita ambil contoh [Consumer Price Index](https://www.bps.go.id/id/statistics-table/2/MTcwOSMy/indeks-harga-konsumen-90-kota--umum-.html) (CPI):
+
+    - merupakan indeks harga yang menimbang keranjang konsumsi masyarakat.
+    
+## Indeks harga tertimbang
+
+| Item | Q | P | QxP | Share |
+| ------ | --- | --- | ------ | --- |
+| Baju | 10 | 100 | 1000 | 0,061 |
+| Nasi | 200 | 10 | 2000 | 0,121 |
+| Ayam | 50 | 30 | 1500 | 0,091 |
+| Kosan | 12 | 1000 | 12000 | 0,727 |
+
+- Harga rata-rata = $\frac{100+10+30+1000}{4}$=285
+
+- Harga rata2 tertimbang=$\sum Share \times P$=739,93
+
+## CPI
+
+- CPI Memperhitungkan **perubahan** harga.
+
+- CPI memberi angka pertumbuhan harga tahun $t$ dibandingkan tahun dasar (tahun 0)
+
+- Misalnya CPI dengan keterangan [(2018=100)](https://www.bps.go.id/id/statistics-table/2/MTcwOSMy/indeks-harga-konsumen-90-kota--umum-.html) itu berarti tahun 2018 adalah tahun dasar.
+
+- Indeks perubahan seperti CPI biasanya terdiri dari 3 digit.
+
+## Indeks Laspeyres
+
+| Item | $Q_0$ | $P_0$ | $Q_1$ | $P_1$ | $Q_2$ | $P_2$ |
+| ------ | --- | --- | --- | --- | --- | --- |
+| Baju | 10 | 100 | 15 | 110 | 15 | 120 |
+| Nasi | 200 | 10 | 220 | 12 | 200 | 12 |
+| Ayam | 50 | 30 | 50 | 25 | 45 | 30 |
+| Kosan | 12 | 1000 | 12 | 1100 | 12 | 1200 |
+
+$$
+IL_t=\frac{\sum P_t Q_0}{\sum P_0 Q_0} \times 100 \ \ \ ; \ \ IP_t=\frac{\sum P_t Q_t}{\sum P_0 Q_t} \times 100
+$$
+
+## Indeks Laspeyres
+
+| Item | $Q_0$ | $P_0$ | $Q_1$ | $P_1$ | $Q_2$ | $P_2$ |
+| ------ | --- | --- | --- | --- | --- | --- |
+| Baju | 10 | 100 | 15 | 110 | 15 | 120 |
+| Nasi | 200 | 10 | 220 | 12 | 200 | 12 |
+| Ayam | 50 | 30 | 50 | 25 | 45 | 30 |
+| Kosan | 12 | 1000 | 12 | 1100 | 12 | 1200 |
+
+$$
+IL_1=\frac{17950}{16500}=108,79
+$$
+
+## Indeks Laspeyres
+
+| Item | $Q_0$ | $P_0$ | $Q_1$ | $P_1$ | $Q_2$ | $P_2$ |
+| ------ | --- | --- | --- | --- | --- | --- |
+| Baju | 10 | 100 | 15 | 110 | 15 | 120 |
+| Nasi | 200 | 10 | 220 | 12 | 200 | 12 |
+| Ayam | 50 | 30 | 50 | 25 | 45 | 30 |
+| Kosan | 12 | 1000 | 12 | 1100 | 12 | 1200 |
+
+$$
+IP_1=\frac{18740}{16500}=108,95
+$$
+
+## IL vs IP
+
+- Kelebihan IL: lebih murah/praktis karena kuantitasnya tetap sehingga tidak perlu survey keranjang belanja.
+
+- Kekurangan IL: karena keranjang belanja pasti berubah (substitusi, barang baru) sehingga bias atas, harga naik mungkin karena peningkatan kualitas.
+
+- Kelebihan IP: Lebih akurat dalam mempertimbangkan keranjang belanja, tidak bias atas.
+
+- Kekurangan IP: bias bawah karena pakai keranjang baru, lebih mahal karena survey keranjang dilakukan tiap saat.
+
+## Indeks Fisher
+
+- Indeks Fisher mengurangi masalah bias atas dan bawah dari IL dan IP.
+
+$$
+IF_t=\sqrt{IL_t \times IP_t}
+$$
+
+$$
+IF_1=\sqrt{108,79\times 108,95}=108,87
+$$
+
+## Tabel Lengkap
+
+| Indeks | 0 | 1 | 2 |
+| ------ | --- | --- | --- |
+| Laspeyres | 100	| 108,79 |	118,18 |
+| Paasche | 100 |	108,95 |	118,40 |
+| Fisher | 100 | 108,87 |	118,29 |
+
+- Rumus inflasi: $\frac{CPI_t-CPI_{t-1}}{CPI_{t-1}} \times 100\%$
+
+- $INF_1=\frac{108,87-100}{100}\times 100\%=8,87\%$
+
+## Mengubah tahun dasar
+
+- Ketika statistisi mengubah tahun dasar, maka perhitungan harus diulangi.
+
+- Namun bagi pengguna, kita dapat menggunakan rumus:
+
+$$
+\text{indeks}=\frac{\text{indeks tahun kiri baru}}{\text{indeks tahun dasar baru}}\times 100
+$$
+
+- misalkan gunakan tabel sebelumnya dgn tahun dasar adalah 2018, lalu tahun berikutnya 2019 dan 2020.
+
+## Mengubah tahun dasar
+
+| Indeks | 2018 | 2019 | 2020 |
+| ------ | --- | --- | --- |
+| Fisher | 100 | 108,87 |	118,29 |
+
+Di mana 2018=100. Jika kita mau ubah ke 2019=100, maka semua angka dibagi 108,87
+
+| Indeks | 2018 | 2019 | 2020 |
+| ------ | --- | --- | --- |
+| Fisher | 91.85 |	100	| 108.65 |
+
+Skrg kita bandingkan semua dengan 2019,
+
+## Latihan di rumah
+
+- Jenis soal angka indeks tidak akan terlalu bervariasi.
+
+- Coba hitung semua indeks di soal ini (IL, IP, IF) jika kita pakai 2019=100 dan 2020=100!

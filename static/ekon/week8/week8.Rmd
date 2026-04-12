@@ -1,0 +1,576 @@
+---
+title: "Intro to Macroeconomics"
+subtitle: "Week 8"
+author: "Krisna Gupta"
+date: "22 March 2021 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: monokai
+      highlightLines: true
+      countIncrementalSlides: false
+    css: ["default","dark.css","dark-fonts.css"]
+
+---
+
+## What is a macroeconomics?
+
+- We have discussed how consumer and producer makes decision: this is part of a branch of economics called **microeconomics**.
+
+- As a (small) economic agent, we make decisions based on cost and benefit. But as an aggregate, our actions will affect the whole economy.
+
+- **Macroeonomics** is the study of aggregate actions of economic agent: The economy is more than the sum of its parts.
+
+---
+
+## Paradox of thrift
+
+- When a firm and a household worry about the prospect of the future, they save and cut spending and investment.
+
+- But when all households and firms do this, there will be slowdown in consumption and capital expenditure:
+
+- some firms may even reduce their long run output by lowering capital and employment.
+
+- And when this all snowball, the 'worry about the prospect of the future' become reality: a self-fulfilling prophecy.
+
+---
+
+## The emergence of macroeconomics
+
+- Macroeconomics is relatively new. Many consider [John Maynard Keynes](https://en.wikipedia.org/wiki/John_Maynard_Keynes) as the father of macroeconomics study.
+
+- Many economist before 1930s generally study microeconomics. Economic policy prior to 1930 was relatively **self-regulating**.
+
+- [The Great Depression](https://en.wikipedia.org/wiki/Great_Depression) in 1930 changes this: **Keynesian economics** argue that the government can interfere to avoid economic crisis.
+
+---
+
+## The emergence of macroeconomics
+
+- Keynesian economics brings the importance of **monetary policy** by the central bank, and **fiscal policy** by the government into economic recovery.
+
+- With the emergence of the importance of government, macroeconomic studies attract huge attention from governments around the world.
+
+- It is also important for firms: by analyzing government's possible move, firms can react accordingly.
+
+---
+
+## Macroeconomic indicators
+
+- Some of the most important issue for macroeconomists are long run economic growth, business cycle, unemployment, inflation and trade balance.
+
+- All of those issues are important for people's welfare.
+
+- We will go through indicators that we look at to analyze these issues.
+
+---
+
+class: middle, center
+
+# Some indicators
+
+<iframe src="https://giphy.com/embed/JEfkiZHu8Y0bS" width="480" height="268" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/romy-donald-trump-JEfkiZHu8Y0bS">via GIPHY</a></p>
+
+---
+
+## Long run economic growth
+
+- What is important to people in general is access to goods and services.
+
+- It is impractical to watch all possible goods and services, so we aggregate them into one indicator.
+
+- We measure economic activity with **Gross Domestic Product** (GDP).
+
+  - Calculating GDP in detail is covered in accounting.
+  
+---
+
+## Long run economic growth
+
+- Long run economic growth indicates how rich the general population of a country becomes.
+
+- As economy of a country grows, its people get more access to goods and services.
+  - on the other hand, recession causes misery to everyone.
+
+- eg, only 50% Indonesians has access to electricity in 1990. Today it's almost 100%.
+
+- Economic growth can also be an indicator for business to investment opportunities. 
+
+---
+
+### South Korea was as poor as Indonesia in 1950s
+
+```{r grafik1,echo=FALSE, message=FALSE, warning=FALSE, fig.width=10}
+library(kableExtra)
+library(dplyr)
+library(ggplot2)
+library(ggdark)
+
+graph<-ggplot()+
+  dark_theme_bw(base_size=25)+
+  theme(text = element_text(color='#e0e0e0'),
+        panel.border = element_blank(),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        axis.line = element_line(colour = "#e0e0e0"))
+
+library(WDI)
+data<-WDI(indicator = 'NY.GDP.PCAP.KD', country = c('IDN','KOR'))
+gdp<-graph+
+  geom_line(data=data,aes(x=year,y=NY.GDP.PCAP.KD,color=country),size=2)+
+  labs(y='constant 2010 $',title='GDP per Capita, Indonesia and South Korea',caption='source: World Development Indicators')
+gdp
+```
+
+---
+
+## Business cycle
+
+- While economy in the long run generally grows, it has a small ups and downs in the short run.
+
+- This ups and downs give information on how economy in the long run will run.
+
+- This is the feature of economy: Sometimes business reach its peak and slowing down.
+
+- We generally are not worry when it's a **business cycle peak**, but recession is where the government needs to interfere.
+
+---
+
+## Employment
+
+- Since business employs people, business cycle tends to be followed by employment cycle.
+
+- We use **unemployment rate** as an indicator.
+
+- These days, the approach toward employment is rather mixed: some stimulate economy for business, some others provide various benefits to unemployed.
+
+- But in the end a state's main role is to keep its people have access to various goods and services.
+
+---
+
+## Inflation and deflation
+
+- inflation is the overall rise of price level, deflation is the overall decrease of price level.
+
+- In the firm and consumer level, we usually compare price changes **relative to other goods**.
+  - for example, we discussed how iPhone remains competitive even though it is **more expensive** than other phones.
+  
+- However, most goods and services tends to have increased level of price.
+
+- Rise in wage $\rightarrow$ rise in inflation $\rightarrow$ rise in wage.
+
+---
+
+## Inflation
+
+- Inflation tend to happen during the peak business cycle, while deflation happens during the recession
+
+  - We often hate inflation but it can be an indicator of thriving economic activity
+  
+- Inflation leads to distrust over cash because cash lost its value rather quickly (like 1998)
+
+- Deflation is the opposite: people tends to save because it will be more valuable, which may leads to less economic growth.
+
+---
+
+## Trade balance
+
+- Indonesia is a (somewhat) open economy: we trade with other states.
+
+- Indonesia generally runs **trade surplus** where it has more exports than imports.
+
+- You might have heard about how Indonesian government despise **trade deficit** and starting to say bad things about import.
+
+- In reality, trade deficit doesn't mean a bad thing. Trade deficit means a country invests more than it saves.
+
+---
+
+### Indonesia's trade balace
+
+```{r grafik2,echo=FALSE, message=FALSE, warning=FALSE, fig.width=10}
+trade<-WDI(indicator = 'NE.RSB.GNFS.CD', country = 'IDN',start=2001)
+XR<-WDI(indicator = 'PA.NUS.FCRF', country = 'IDN',start=2001)
+trade$lol<-trade$NE.RSB.GNFS.CD/1000000
+trd<-graph+
+  geom_line(data=trade,aes(x=year,y=lol),size=2, color='cyan')+
+  geom_hline(yintercept=0)+
+  labs(y='current billion $',title='Indonesian trade balance',caption='source: World Development Indicators')
+
+trd
+
+```
+
+---
+
+## Summary
+
+- Macroeconomics learn the economy as a whole since the government can help with economic cycle using fiscal and monetary policy.
+
+- issues include economic growth, business cycle, unemployment, inflation, and trade balance.
+
+- We will learn more about indicators on these macroeconomic phenomena and what institution govern them, and how.
+
+---
+
+class: center, middle
+
+# Gross Domestic Product (GDP)
+
+---
+
+## Gross Domestic Product (GDP)
+
+- A measure of economic activity is essentially **how much goods and services are produced**.
+
+- But we cannot aggregate something with different units:
+  - What is palm oil+coal+oil+cars?
+  - we can't compare Indonesia's production with other countries'.
+
+- We transform all of those production of goods and services to **currency** and essentially calculates price $\times$ quantity.
+
+---
+
+## GDP
+
+- GDP is the total **value** of all **final** goods and services produced in an economy during a given **period**, usually a year.
+
+- Understanding how it calculates help you to figure out if GDP is the correct measure for you to use.
+
+- There are 3 general ways to calculate GDP:
+  1. Adding up total value of the **final** products.
+  1. Adding up total **spending** of domestic products.
+  1. Adding up total **factor** payment.
+  
+---
+
+## GDP Accounting illustration
+
+```{r tabel1,echo=FALSE, message=FALSE, warning=FALSE}
+library(formattable)
+gedepe <- data.frame(
+  "P1"=c('Value of sales','Intermediate goods','Wages','Interest payments','Rent','Profit','Total expenditure \n by firm','Value added per firm \n = \n value of sales - cost \n of intermediate goods'),
+  "P2"=c('4,200 \n (ore)','0','2,000','1,000','200','1,000','4,200','4,200'),
+  "P3"=c('9,000 \n (steel)','4,200 \n (ore)','3,700','600','300', '200','9,000','4,800'),
+  "P4"=c('21,500 \n (car)','9,000 \n (steel)','10,000','1,000','500', '1,000','21,500','12,500'),
+  "P5"=c('-','-','15,700','2,600','1,000','2,200','-','-')
+)
+
+tabel<- kbl(gedepe, align = "r", format='html',
+    col.names = c("","Ore miner","Steel maker","Car maker","Total factor \n income"),caption="GDP in this economy is 21,500") %>%
+  kable_styling(font_size = 18) %>%
+  column_spec(1, width = "5cm")
+
+tabel
+  
+```
+
+---
+
+## 1. GDP by Final Product
+
+```{r tabel2,echo=FALSE, message=FALSE, warning=FALSE}
+#gedepe[1,"P4"]=cell_spec(gedepe[1,"P4"],color = 'red',bold=T)
+  
+tabel %>%
+  kable_styling(font_size = 15,full_width = F) %>%
+  column_spec(1, width = "5cm") %>%
+  row_spec(8, background = "blue")
+  
+```
+
+.s[We add all value added. In the ore firm, its value add=sales. But in other firms, intermediate inputs need to be subtracted from their final sales to avoid double counting. Steel buy iron ore and car buy steel. $GDP=4,200 + 4,800 + 12,500=21,500$]
+
+---
+
+## 2. GDP by total spending on domestic goods
+
+```{r tabel3,echo=FALSE, message=FALSE, warning=FALSE}
+#gedepe[1,"P4"]=cell_spec(gedepe[1,"P4"],color = 'red',bold=T)
+  
+tabel %>%
+  kable_styling(font_size = 15,full_width = F) %>%
+  column_spec(1, width = "5cm") %>%
+  column_spec(4, background = "blue")
+  
+```
+
+.s[We calculate only the final value/sales of the final product. In this case, it's car, because iron ore and steel are used to make car. This is to avoid double counting. GDP=car sales=21,500]
+
+---
+
+## 3. GDP by factor payment / Income
+
+```{r tabel4,echo=FALSE, message=FALSE, warning=FALSE}
+tabel %>%
+  kable_styling(font_size = 15,full_width = F) %>%
+  column_spec(1, width = "5cm") %>%
+  column_spec(5, background = "blue")
+  
+```
+
+.s[We calculate only income from everyone who owns factor of production: workers, capital owners, savers, and entrepreneurs. $GDP=15,700+2,600+1,000+2,200=21,500$]
+
+---
+
+## Calculating GDP
+
+- Most countries calculate using method 1 and 2.
+
+- In Indonesia, Calculating GDP is BPS' job. Method 1 is called [PDB Lapangan Usaha](https://www.bps.go.id/subject/11/produk-domestik-bruto--lapangan-usaha-.html#subjekViewTab3), while method 2 is called [PDB Pengeluaran](https://www.bps.go.id/subject/169/produk-domestik-bruto--pengeluaran-.html#subjekViewTab3)
+
+- GDP shows us the economic size of a country. However, it's not perfect.
+
+- Main reason is because the economic value is measured by **price**.
+
+---
+
+## Problem with GDP
+
+1. It discount economic activity that has **no price**. A two stay-at-home-mum A and B produce nothing. But if mum A pays mum B $100 to take care of her child and mum B pays mum A $100 to take care f child B, both generate $200 to the economy.
+
+1. Prices change. You can produce the same number of goods but have increased GDP if the prices increase. Remember, we want to calculate the actual production, not the price.
+
+In short, while price is useful, $price \neq value$ so be careful in using GDP.
+
+---
+
+## Real GDP
+
+- The second problem can be mitigated by keeping the price constant.
+
+- When When we calculate GDP using a certain year's price level, we call it **real GDP**.
+
+- GDP calculated using current year's price level is called **nominal GDP**.
+
+- To show real GDP calculation, we need to have a **base year**.
+
+---
+
+## Calculating Real GDP
+
+.pull-left[
+```{r real1,echo=FALSE, message=FALSE, warning=FALSE}
+
+realgdp <- data.frame(
+  "r1"=c("Q of cars (units)","P of cars (mill. IDR)","Q of rice (ton)","P of rice (mill. IDR)","GDP (mill. IDR)","Real GDP (mill. 2010 IDR)"),
+  "r2"=c(10,200,50,15,2750,2750),
+  "r3"=c(15,220,60,20,4500,3900)
+)
+
+rgdp<-kbl(realgdp, align = "r", format='html',
+    col.names = c("","Year 2010","Year 2011"),format.args = list(big.mark = ",")) %>%
+  kable_styling(font_size = 18) %>%
+  column_spec(1, width = "5cm")
+rgdp
+```
+.s[
+- Nominal GDP is very high in part because there is an inflation in it.
+]]
+
+.pull-right[.s[
+- Normal GDP calculation:
+$$GDP = Q_{current} \times P_{current}$$
+- Real GDP calculation:
+$$GDP= Q_{current} \times P_{base}$$
+
+- In our case, the base year is 2010.
+
+- When economists discuss GDP, normally they use Real GDP, not nominal GDP.
+
+- growth also calculated using real GDP.
+]]
+
+---
+
+## Real GDP & Nominal GDP
+
+```{r grafikgdp,echo=FALSE, message=FALSE, warning=FALSE, fig.width=10}
+library(lubridate)
+jidipi<-WDI(indicator = 'NY.GDP.MKTP.CN', country = 'IDN',start=2002)
+jidipi$legend<-'Nominal GDP'
+names(jidipi)[names(jidipi)=="NY.GDP.MKTP.CN"]<-"GDP"
+jodopo<-WDI(indicator = 'NY.GDP.MKTP.KN', country = 'IDN',start=2002)
+jodopo$legend<-'Real GDP'
+names(jodopo)[names(jodopo)=="NY.GDP.MKTP.KN"]<-"GDP"
+jdp<-rbind(jidipi,jodopo)
+jdp$year<-as.Date(ISOdate(jdp$year, 1, 1))
+jdp$year<-ymd(jdp$year)
+graph+
+  geom_line(data=jdp,aes(x=year,y=GDP, color=legend),size=2)+
+  labs(y='IDR',title='Indonesian real and nominal GDP',subtitle='note: real=nominal when current year = base year',caption='source: World Development Indicators')
+```
+
+---
+
+## More on Real GDP
+
+- Real GDP gives a better measure on the actual economic productivity because it takes out inflation.
+
+- One more thing we need to do is to eliminate the impact of population.
+
+- As we learned in week 2 and 3, number of producers and buyers shift the whole cuve.
+
+- To really capture a sense of welfare or productivity, we need to divide GDP with population to get **GDP per capita**.
+
+- It can be done for both nominal and real GDP.
+
+---
+
+## When to use which GDP?
+
+```{r banding,echo=FALSE, message=FALSE, warning=FALSE}
+banding<-WDI(indicator = 'NY.GDP.MKTP.KD', country = c('IDN','SGP'),start=2018,end=2018)
+banding$`GDP (constant mil USD)`<-banding$NY.GDP.MKTP.KD/1000000
+banding2<-WDI(indicator = 'NY.GDP.PCAP.KD', country = c('IDN','SGP'),start=2018,end=2018)
+names(banding2)[names(banding2)=="NY.GDP.PCAP.KD"]<-"GDP per capita (constant USD)"
+banding$`GDP per capita (constant USD)`<-banding2$`GDP per capita (constant USD)`
+banding<-banding[c(2,5,6)]
+banding %>%
+  kbl(format='html', align = "c", caption="Indonesia and Singapore in 2018",format.args = list(big.mark = ","),digits=2)
+```
+
+- Indonesian economy as a whole is much bigger than Singapore, which means when Indonesian government change economic policy, it will apply to much bigger economic size. This is also one reason why China is very important.
+
+- Indonesians are not very rich, however.
+
+---
+
+class: middle, center
+
+# Price Index
+
+---
+
+## Price Index
+
+- We've learned how real GDP is calculated: we take out changes in price from the GDP calculation.
+
+- In fact, we can form an index for the price increase. This is called **price index**
+
+- Like GDP, price index give us one number to make sense the overall prices condition.
+
+- price index highly depends on the **market basket** 
+
+.s[
+$$\text{Price index in a given year}=\frac{\text{expenditure in a given year}}{\text{expenditure in a base year}} \times 100$$
+]
+
+---
+
+## Calculating price index
+.pull-left[
+```{r rgdp,echo=FALSE, message=FALSE, warning=FALSE}
+realgdp2 <- data.frame(
+  "r1"=c("Q of cars (units)","P of cars (mill. IDR)","Q of rice (ton)","P of rice (mill. IDR)","2010 market basket (mill. IDR)","price index"),
+  "r2"=c(10,200,50,15,2750,100),
+  "r3"=c(15,220,60,20,3200,116)
+)
+
+kbl(realgdp2, align = "r", format='html',
+    col.names = c("","Year 2010","Year 2011"),format.args = list(big.mark = ",")) %>%
+  kable_styling(font_size = 18) %>%
+  column_spec(1, width = "5cm")
+```
+.s[
+Let 2010 be the **base year**. 
+
+First, we calculate the market basket in 2010 which exactly equals the nominal gdp
+]]
+
+.pull-right[.s[
+- We then calculate market basket for 2011 using **2011 prices** but **2010 quantity**
+
+- Since the base year is 2010, price index is 100 in the year 2010.
+
+- Price index in year 2011 is the market basket in 2011 divide with the market basket in 2010.
+
+- $Index_{2011} = \frac{3200}{2750} \times 100$
+
+]]
+
+---
+
+## Consumer Price Index (CPI)
+
+- BPS calculates the market basket for consumers monthly. It is called Indeks Harga Konsumen (IHK), which is a direct translation of CPI.
+
+- The basket consists of stuff like food, housing, electricity, clothing, healthcare, and education, among others.
+
+- BPS surveys supermarkets and the likes every month in many cities and provinces.
+
+- The content of the basket influences CPI greatly. For example, food, beverage and tobacco is important in driving inflation in Indonesia. In the U.S. it is housing.
+
+---
+
+## Inflation
+
+- CPI is used to calculate inflation.
+.s[
+$$\text{Inflation rate}=\frac{\text{Price Index}_t - \text{Price Index}_{t-1}}{\text{Price Index}_{t-1}} \times 100$$
+]
+
+- In our case:
+
+$$\text{inflation rate}=\frac{116-100}{100} \times 100 = 16 \%$$
+
+- If we have more year, the $t-1$ doesn't have to be the base year.
+
+---
+
+## Wholesale Price Index (WPI)
+
+- There is also something called **Producer Price Index** or better known as **Wholesale Price Index**.
+
+- The difference is just the basket: it contains important intermediate inputs such as oil, coal, wage rate, steel, office and building rent, etc.
+
+- BPS also collect this information, called **Indeks Harga Perdagangan Besar**.
+
+- WPI generally shows an early warning of economic condition, because WPI often respond much quicker to inflation than CPI.
+
+---
+
+## GDP deflator
+
+- GDP deflator is another price index, which contains the whole GDP as its basket.
+
+- GDP deflator is high when nominal GDP changes by a huge margin but real GDP only change a little.
+
+- In general, CPI is useful to analyze consumers while WPI is useful for firms.
+
+---
+
+```{r inflation,echo=FALSE, message=FALSE, warning=FALSE, fig.width=10}
+cpi<-WDI(indicator = 'FP.CPI.TOTL', country = 'IDN',start=2002)
+cpi$legend<-'CPI'
+names(cpi)[names(cpi)=="FP.CPI.TOTL"]<-"lul"
+wpi<-WDI(indicator = 'FP.WPI.TOTL', country = 'IDN',start=2002)
+wpi$legend<-'WPI'
+names(wpi)[names(wpi)=="FP.WPI.TOTL"]<-"lul"
+deflator<-WDI(indicator = 'NY.GDP.DEFL.ZS', country = 'IDN',start=2002)
+deflator$legend<-'GDP deflator'
+names(deflator)[names(deflator)=="NY.GDP.DEFL.ZS"]<-"lul"
+
+hah<-rbind(cpi,wpi,deflator)
+hah$year<-as.Date(ISOdate(hah$year, 1, 1))
+#jdp$year<-ymd(jdp$year)
+graph+
+  geom_line(data=hah,aes(x=year,y=lul, color=legend),size=2)+
+  labs(y='index',title='CPI, PPI, deflator in Indonesia(2010=100)',caption='source: World Development Indicators')
+```
+
+WPI is much more volatile and responsive to the global market condition.
+
+---
+
+## Next week
+
+- We will discuss about unemployment.
+
+- More analysis on inflation and long run economic growth.
+
+---
+
+class: middle, center
+
+# The End
