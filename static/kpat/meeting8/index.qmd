@@ -1,11 +1,12 @@
 ---
 title: "Kajian Perekonomian Asia Tenggara"
-subtitle: "ASEAN in the global economy"
-date: "22 April 2024"
+subtitle: "ASEAN Trade and Economic Integration"
+date: "14 April 2026"
 author: "I Made Krisna Gupta"
-format: 
+bibliography: ref.bib
+format:
   revealjs:
-    theme: [simple,../mytheme.scss]
+    theme: [simple,mytheme.scss]
     chalkboard: true
     incremental: false
     transition: convex
@@ -14,193 +15,287 @@ format:
   beamer: default
 ---
 
-## Intro
+## Today's agenda
 
-- My name is I Made Krisna, you can call me Imed.
+- **Part 1**: Theory of economic integration — stages, trade creation/diversion, Rules of Origin
 
-- Master at UI/VU, Doctor at ANU.
+- **Part 2**: ASEAN integration in practice — AFTA, AEC, RCEP, GVCs, logistics
 
-- Interested in anything trade: manufacturing growth, trade & industrial policy impact, macro impact, climate impact, and labor (in that order).
+- **Part 3**: Geopolitics and current challenges — US-China trade war, Trump tariffs, ASEAN positioning
 
-- Lectures at Politeknik APP Jakarta, a researcher at Center for Indonesian Policy Studies.
+- **Wrap-up**: Key takeaways and discussion
 
-- More at krisna.or.id dan @imedkrisna
+## Why do countries integrate?
 
-## Today++
+- Unilateral tariffs are individually rational but collectively harmful — a prisoner's dilemma
 
-- Discussing ASEAN and its economy
+- Trade agreements lock in cooperative outcomes and avoid trade wars
 
-- Challenges in the Indonesian chairmanship
+- Deeper integration reduces transaction costs beyond tariffs: standards, regulation, mobility
 
-- Ch 13 of Sonobe et al.[^1] (2024) by Ing and Markus.
+- Political dimension: peace and stability through economic interdependence [@baldwinwyplosz2020]
 
-- Will use this book going forward: digitalization, green, industry.
+## Stages of economic integration
 
-## Quick stat in 2023
+<img src="Stages Economic Integration.jpg" style="max-height:520px;">
 
-- 9% of World's population.
+## The integration ladder {.m}
 
-- 3.6% of the world's GDP
+- **Preferential Trade Area (PTA)**: partial tariff reductions among members (e.g., ASEAN PTA 1977)
 
-- 4.6% of growth, more than twice of the world's average of 2%.
+- **Free Trade Area (FTA)**: zero/near-zero tariffs among members, each keeps own external tariff (e.g., AFTA)
 
-- Hence "the epicenter of growth".
+- **Customs Union (CU)**: FTA + common external tariff (e.g., EU began here in 1968)
 
-## ASEAN then
+- **Common Market**: CU + free movement of labor and capital
 
-- ASEAN came into force on 15 December 2008.
+- **Economic/Political Union**: common policies, single currency, shared institutions (EU today)
 
-- Since then, various agreements in the ASEAN framework was established:
+::: aside
+@baldwinwyplosz2020; @verico2022
+:::
 
-![](pic1.png)
+## Trade creation vs trade diversion
 
-[^1]:Sonobe, T., Buchoud, N. J. A., Akbar, R., & Altansukh, B. (2024). Transforming ASEAN: Strategies for Achieving Inclusive and Sustainable Growth. Asian Development Bank Institute.
+- **Trade creation**: members switch from costly domestic production to cheaper partner imports — welfare gain
 
-## ASEAN
+- **Trade diversion**: members switch from efficient non-member to less efficient member — welfare loss
 
-- the main goal of ASEAN is to integrate the economy of South East Asia nation.
+- Net effect depends on: member efficiency, initial tariff levels, and complementarity of economies
 
-- First economically but also technical, educational, social, and cultural cooperation.
+- Key question for ASEAN: are member economies complements or substitutes? [@verico2022; @widyasanti2010]
 
-- in the spirit of European Union, but "the ASEAN way".
+## Rules of Origin (ROO) {.m}
 
-    - that is, not being a customs union means each country retain its sovereignty hence more flexible.
-    
----
+- In an FTA (no common external tariff), ROO prevent "tariff shopping" via the lowest-tariff member
 
-![](pic2.png)
+- Types: value-added threshold, change in tariff classification, specific process rules
 
----
+- Complex ROO increase compliance costs — act as a hidden trade barrier
 
-![](pic3.png)
+- ASEAN's ROO historically fragmented across multiple ASEAN+1 agreements
 
-## Slow integration
+- This fragmentation is called the "noodle bowl" of overlapping FTAs [@widyasanti2010]
 
-- Intra-ASEAN trade relative to the world is stagnant at around 22-23%.
+## The EU benchmark
 
-    - "shallow integration"
+- EU achieved >60% intra-regional trade share
 
-- Since extra-ASEAN trade is growing fast, intra-ASEAN trade is growing too, but point remains.
+- Customs union since 1968, single market since 1993, single currency (euro) since 1999
 
-- Contrary with EU which has >60% intra-EU trade.
+- Supranational institutions enforce compliance (European Commission, ECJ)
 
-- There are at least 3 key reasons why.
+- "The ASEAN way" (*cara ASEAN*) is deliberately different: consensus, non-interference, sovereignty retained [@baldwinwyplosz2020; @ishikawa2021]
 
-## Slow integration: why
-
-1. ASEAN countries' trade are mostly substitutes rather than complements. This is also the reason why Indonesia and Australia are "further" than gravity equation would suggests.
-
-2. Complicated rules of origins and various  trade measures (the so-called NTM). These measures are often justified by consumer protections, but can also hinder trade and investment.
-
-3. High reliance on China, Japan and South Korea for mainly technologies and scale (both input and output).
-
-EU doesn't have all these problems.
-
-## RCEP
-
-- The RCEP is the latest, basically integrating various ASEAN+1s except India.
-
-- RCEP also discusses not just tariff, but also investment and trade in services in one framework.
-
-- This has high implication on the ROO rules, because the RCEP treat all members as "one source region".
-
-- Tariff-wise not important but hopefully allows for NTM harmonizations.
-
-- Integrating GVC may allow RCEP to improve its "powerhouse" manufacturing capacity.
-
-## Revisit
+## Discussion {.m}
 
 ::: {.incremental}
 
-- Do you know why countries' join into a regional trade framework (be it FTAs or customs union)?
+- Can ASEAN ever achieve EU-level integration? What are the main obstacles?
 
-- To avoid the worst outcome in the prisoner's dilemma situation.
+- Think about: political systems, income gaps across members, cultural diversity, sovereignty preferences
 
-- Do you know why ROO matters for trade agreements? What is it anyway?
-
-- to avoid an arbitrage, basically.
+- Key insight: ASEAN chose flexibility over depth — is that a feature or a bug?
 
 :::
 
-## Rising importance
+# ASEAN Integration in Practice
 
-- East Asian countries rise its role in the world:
+## ASEAN's integration journey {.m}
 
-    - Its PDB grew from 15% of world's to 27%.
-    
-- Export oriented industrialization often cited as the reason why the 4 Asian tigers rose (Japan, South Korea, Hong Kong, Taiwan). Now China too.
+- **1967**: ASEAN founded — political and security cooperation
 
-- ASEAN rose too albeit slowly, from 1% to 3% of world GDP in 2023.
+- **1977**: ASEAN PTA — first trade preferences among members
 
-## Between 2 (or 3) giants
+- **1992**: AFTA signed — target 0-5% tariffs by 2010 (ASEAN-6) / 2015 (CLMV)
 
-- ACFTA is arguably has the largest gain amid large initial tariffs.
+- **2007**: AEC Blueprint — beyond tariffs: services, investment, skilled labor, capital flows
 
-- The US and the EU are traditionally ASEAN's main trading partners.
+- **2015**: AEC formally launched (but implementation incomplete)
 
-- As US and EU are trying to decouple with China, impacts are felt in ASEAN.
+- **2022**: RCEP enters into force — ASEAN + China, Japan, Korea, Australia, New Zealand [@ishikawa2021; @daniswararevindo2022]
 
-## Between 2 giants {.m}
+## Shallow integration
 
-- The growing trend of ASEAN’s trade and FDI at the global level also reflects the growing focus on ASEAN, along with the growing influence of Asia, particularly the PRC’s economic rise. 
+- Intra-ASEAN trade: ~22-23% of total — stagnant for two decades
 
-- Despite the rising geopolitical tension in recent years, ASEAN’s trade relations with its key partners keep growing.
+- Compare: intra-EU trade >60%, intra-NAFTA/USMCA ~40%
 
-- The tension could also serve as an opportunity for emerging markets, including ASEAN, to enhance their affluence in the global world.
+- Extra-ASEAN trade is growing fast, so absolute intra-ASEAN trade grows too — but the share does not
 
-- The growing trade and investment flows in the ASEAN region
-reflects the shift in economic power toward Asia, including ASEAN countries, that emerge as emerging major players.
+- AEC achieved tariff elimination but not deeper integration [@daniswararevindo2022; @revindo2019]
 
-## Economic strategy
+## Why "shallow integration"? {.m}
 
-- It is important for ASEAN to keep enhancing its participation in global value chains by maximizing its:
+Three key structural reasons:
 
-    - strategic location
+1. **Substitutes, not complements**: ASEAN members export similar goods (palm oil, rubber, electronics assembly) — limited gains from trading with each other
 
-    - large consumer market 
-    
-    - tapping into growing East Asia.
-    
-    - High barrier in the EU & US as benchmarks.
-    
-## ASEAN power dance
+2. **NTMs and complex ROO**: non-tariff measures proliferating even as tariffs approach zero; fragmented ASEAN+1 ROO regimes (the "noodle bowl")
 
-- It is said to be crucial for ASEAN to stay neutral in the grand scheme of things.
+3. **Heavy reliance on CJK**: China, Japan, and Korea provide technology, capital goods, and scale — ASEAN integrates more with them than with each other [@verico2022; @widyasanti2010]
 
-- a "bebas aktif" philosophy, unless of course it betrays our stance like in the Israel-Palestine situation or Rusia-Ukraine.
+## Logistics: the hidden barrier
 
-- This allow ASEAN to "main dua kaki" and probably gains from the conflict, e.g., as a redirection of trade and investment.
+- Logistics costs in ASEAN remain high and uneven across members
 
-- Singapore has been benefiting from Hong Kong situation while Vietnam captured many of Chinese capital. Indonesia too in fact.
+- Port infrastructure gaps, especially in CLMV countries (Cambodia, Laos, Myanmar, Vietnam)
 
-## ASEAN power dance
+- Customs procedures and documentation remain complex despite the ASEAN Single Window initiative
 
-- What if ASEAN is forced to pick sides, however?
+- Logistics performance strongly predicts bilateral trade flows within ASEAN
 
-- According to the State of Southeast Asia 2024 [survey](https://asia.nikkei.com/Politics/International-relations/Majority-of-ASEAN-people-favor-China-over-U.S.-survey-finds) compiled by ISEAS, 50.5% respondent would pick China over US.
+- Indonesia's archipelago geography adds unique cost challenges [@ardinerevindo2023]
 
-- While it looked 50:50, last year shows 38.9% preference for China, so the trend is moving in the Chinese favor.
+## GVC participation and the unbundling framework
 
-- Unless forced to pick, I think ASEAN will stay in the middle.
+- Kimura's 3 unbundlings: (1) production from consumption, (2) tasks from firms, (3) people from tasks via digital technology
 
-## RCEP vs IPEF
+- ASEAN's strength: the **2nd unbundling** — fragmented manufacturing across borders (electronics, automotive)
 
-- This depends on how serious US is on engaging with SEA countries.
+- But ASEAN is mostly in low-value assembly segments; moving up requires services and technology capabilities
 
-- While China has been very active with RBI, US' engagement in the region is rather low.
+- The **3rd unbundling** (digital services trade) is the new frontier for ASEAN [@kimura2018; @revindo2024]
 
-- US' format to combat China in the region, the IPEF (Indo-Pacific Economic Framework) remains unclear.
+## Supply chain resilience
 
-- US' investments are also often come with caveats like labor standard and climate-conscious, something Chinese never asked us to do.
+- COVID-19 and US-China tensions exposed concentration risk in global supply chains
 
-## Growing importance
+- Import source diversification improves resilience to supply shocks
 
-- Nevertheless, ASEAN remains a very important region for both US and China, and engaging with us is in their interest.
+- ASEAN countries with more diversified import sources recovered faster from disruptions
 
-- The questions remain: can ASEAN unite?
+- Policy implication: regional integration (especially RCEP) can help diversify away from single-source dependency [@arrafifrevindo2025]
 
-    - the flexibility of ASEAN also means its hard to commit to aa common goals.
-    
-## Next week
+## RCEP: a game changer? {.m}
 
-- Digitalization and/or climate issues.
+- RCEP unifies ASEAN+1 FTAs into one framework (ASEAN + China, Japan, Korea, Australia, New Zealand)
+
+- Key innovation: **cumulative Rules of Origin** — all 15 members count as "one source region"
+
+- Also covers: investment, services trade, e-commerce, intellectual property
+
+- Tariff impact modest (most tariffs already low) — but ROO simplification and NTM harmonization are significant
+
+- India opted out — implications for supply chain diversification strategy [@daniswararevindo2022; @revindo2019]
+
+## Quick quiz
+
+::: {.incremental}
+
+- Why is intra-ASEAN trade share stagnant at ~22% despite tariffs approaching zero?
+
+- Hint: think beyond tariffs — what are NTMs? Why does the substitutes-not-complements problem matter?
+
+- Follow-up: how might RCEP's cumulative ROO change the picture?
+
+:::
+
+# Geopolitics and Current Challenges
+
+## The US-China tariff war
+
+- Trade war escalated from 2018: tariffs imposed on ~$550 billion of bilateral trade
+
+- **Direct effect**: trade diversion benefits some ASEAN members (Vietnam, Malaysia)
+
+- **Indirect effect**: uncertainty reduces investment; supply chain restructuring is costly and slow
+
+- Net effect on ASEAN: mixed — short-term trade gains but long-term strategic risk [@riefkyetal2025]
+
+## Trade redirection: who benefits?
+
+- **Vietnam**: largest beneficiary — FDI surge, export growth to US markets
+
+- **Malaysia, Thailand**: electronics and auto parts reshoring from China
+
+- **Indonesia**: some gains in textiles and metals, but held back by logistics costs and regulatory barriers
+
+- Risk: "transshipment" scrutiny — the US is investigating Chinese goods rerouted through ASEAN members [@riefkyetal2025]
+
+## "Bebas aktif" (independent and active) {.m}
+
+- Indonesia's foreign policy doctrine: independent and active — *bebas aktif*
+
+- ASEAN consensus: stay neutral, engage both powers, avoid bloc alignment
+
+- "Playing both sides" (*main dua kaki*) to maximize economic benefit
+
+- ISEAS 2024 survey: 50.5% of ASEAN respondents would choose China over the US if forced to pick — trend shifting toward China
+
+- But forced alignment remains unlikely; ASEAN's value is precisely its neutrality
+
+## Competing frameworks
+
+- **RCEP** (2022): comprehensive, binding, includes China — trade + investment + services
+
+- **IPEF** (2021): US-led, no market access commitments, pillar-based (supply chains, clean economy, tax, anti-corruption) — status uncertain under Trump 2.0
+
+- **Bilateral FTAs**: Indonesia-UAE CEPA (2024), Indonesia-EU CEPA (ongoing negotiations)
+
+- Key tension: RCEP deepens integration with China; IPEF offers no tariff reductions; bilateral deals are piecemeal [@revindo2019; @ishikawa2021]
+
+## Free Trade Zones / KEK (*Kawasan Ekonomi Khusus*) {.m}
+
+- FTZs offer tariff and regulatory exemptions in designated areas to attract FDI
+
+- Case study: Oecusse-Ambeno (Timor-Leste) — FTZ impact on local economic growth
+
+- ASEAN examples: Batam (Indonesia), Iskandar (Malaysia), various SEZs across the region
+
+- Can bypass national-level integration barriers — but risk a "race to the bottom" on regulation [@shaohongrevindo2024]
+
+## 2026 context {.m}
+
+- Trump's "Liberation Day" tariffs (April 2025): broad reciprocal tariffs on ASEAN members
+
+- Indonesia hit with **32%** tariff (among the highest); Vietnam 46%, Thailand 36%
+
+- ASEAN response: negotiation, not retaliation — *bebas aktif* (independent and active) in action
+
+- Trade redirection accelerating: Chinese firms setting up operations in ASEAN to circumvent US tariffs
+
+- Indonesia's opportunity: attract manufacturing — but requires regulatory reform, logistics investment, and human capital upgrading
+
+## Discussion
+
+::: {.incremental}
+
+- Is ASEAN's neutrality sustainable in an increasingly polarized world?
+
+- Should Indonesia prioritize RCEP deepening, bilateral FTAs, or domestic reform?
+
+- What would "forced to choose" look like in practice — and what would it cost?
+
+:::
+
+## Key takeaways
+
+- ASEAN chose shallow, flexible integration — "the ASEAN way" — a deliberate trade-off against EU-style depth
+
+- Tariffs are mostly gone; the real barriers are NTMs, logistics, ROO complexity, and structural similarity among members
+
+- RCEP is the most significant recent development — cumulative ROO could be transformative
+
+- Geopolitical competition (US-China) creates both risks and opportunities for ASEAN
+
+- Indonesia must invest in logistics, regulatory reform, and GVC upgrading to capture these gains
+
+## Questions for next week
+
+- How can ASEAN move from "shallow" to "deep" integration without becoming the EU?
+
+- What is the optimal trade strategy for Indonesia in the current geopolitical environment?
+
+- Can digital trade (the 3rd unbundling) help ASEAN leapfrog traditional integration barriers?
+
+## Reading list {.s}
+
+- @baldwinwyplosz2020 — Ch. 1-3 (integration theory)
+- @verico2022 — ASEAN integration principles
+- @kimura2018 — unbundlings and development strategies
+- @ardinerevindo2023 — logistics and intra-ASEAN trade
+- @riefkyetal2025 — US-China tariff war impact
+- @arrafifrevindo2025 — import diversification and supply chain resilience
+
+## References
