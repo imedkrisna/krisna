@@ -45,5 +45,5 @@ projects: []
 
 links:
   - type: slides
-    url: "/slides/en/event/nitelite/nitelite_deck.html"
+    url: "/slides/en/event/nitelite/nitelite_deck.pdf"
 ---
