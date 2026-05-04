@@ -1,9 +1,9 @@
 ---
-title: "Trade policies for development"
-subtitle: "ECES905205 pertemuan 9"
-date: "10 Oktober 2022"
+title: "Trade Policy II: Beyond Tariffs, and the WTO"
+subtitle: "ECEE600017 Meeting 9"
+date: "4 May 2026"
 author: "I Made Krisna Gupta"
-format: 
+format:
   revealjs:
     theme: [simple,../mytheme.scss]
     chalkboard: true
@@ -12,290 +12,508 @@ format:
     background-transition: fade
     slide-number: true
   beamer: default
+execute:
+  echo: false
+  warning: false
+  message: false
 ---
 
-## Last Week {.m}
+```{r setup}
+#| include: false
+#| cache: true
+library(readxl)
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+library(scales)
+library(stringr)
 
-- Argument pro-trade
-    
-    - Static efficiency: specialisation, economies of scale, productivity selection.
-    
-    - Dynamic efficiency: learning-by-exporting.
-    
-- Argument against free trade:
+# Try to use DEN house style; fall back silently if ggden is not installed.
+have_ggden <- requireNamespace("ggden", quietly = TRUE)
+if (have_ggden) suppressMessages(library(ggden))
 
-    - Zero-sum-game for large countries (leads to FTAs)
-    
-    - Zero-sum-game for losers (usually better organized)
-    
-    - Market failures: externalities, infant industry.
-    
-- For any justified government intervention, domestic policies should perform better than trade policies.
+den_theme <- if (have_ggden && exists("theme_den", mode = "function")) {
+  theme_den()
+} else {
+  theme_minimal(base_size = 16) +
+    theme(panel.grid.minor = element_blank(),
+          plot.title.position = "plot",
+          plot.caption = element_text(colour = "grey40", size = 10))
+}
 
-## Trade policies for development
+gta_path <- "GTA NIPO - April 2026.xlsx"
+gta_raw <- read_excel(
+  gta_path,
+  sheet = "GTA NIPO - April 2026",
+  col_types = "text"
+)
 
-- In the government's eyes, trade policies often serves as a policy development.
+gta <- gta_raw |>
+  transmute(
+    impl   = `Implementing Jurisdiction`,
+    type   = `GTA Intervention Type`,
+    assess = `Initial Assessment (Change Relative to 1 Jan 2009)`,
+    date   = suppressWarnings(as.Date(as.numeric(`Implementation Date`), origin = "1899-12-30"))
+  ) |>
+  mutate(year = as.integer(format(date, "%Y")))
+```
 
-- While we have discussed that usually domestic policies are better, free-ish trade is not the norm.
+## Content {.m}
 
-    - Free trade only really took off after World War 2.
-    
-- Today, we discusses trade policies for development usually used by developing countries.
+- Last week: tariffs as the textbook trade-policy instrument:
+    - Small open economy: deadweight loss; producer gain < consumer loss.
+    - Large open economy: terms-of-trade gain $\rightarrow$ optimal tariff $> 0$.
+    - Prisoner's dilemma: to tariff or not to tariff?
 
-## Import Substitution Strategy
+- All non-tariff can be ad-valoremed (to an extent). But what are the tools?
 
-- Based on infant industry argument:
+## Today {.m}
 
-    - need time to compete with the global market.
-    
-    - requires a short term protection (usually tariff & quota)
+Three blocks plus the data:
 
-- was popular among developing countries pre-1970s (Asian Tigers included), but also developed countries pre-WW2.
+1. **The instruments and the logic** -- quotas, VER, LCR, standards, subsidies, anti-dumping, export restrictions; why governments reach for them.
 
-- Infant industry argument is really powerful among policy makers.
+2. **The WTO** -- why a multilateral rulebook was built, what it disciplines, and why it is in trouble.
 
-## Infant industry problem {.m}
+3. **What countries actually do** -- evidence from Global Trade Alert (53,000+ measures since 2009).
 
-- Protection against a good that the country is not comparatively good at will only resulted in higher cost.
+# Part 1 -- The instruments and the logic
 
-    - protection against capital intensive goods in a country with no capital, protection against goods reuires a certain climate.
-    
-- India & Pakistan protects heavy-manufacturing goods (e.g., cars & steel), but they ended up exporting light-manufacturing goods (e.g., textiles).
+## Import quota -- mechanics {.m}
 
-- needs to ensure that those industry exports **because** of the past protection.
+- Government caps the *quantity* that can be imported.
 
-- Needs to **separate** real infant industry that will grop up in the future with the forever infant (rent seeker)
+- Effects in a small open economy with a binding quota:
+    - Domestic price rises above the world price.
+    - Same consumer loss and producer gain triangles as a tariff.
+    - **Difference:** the rectangle that would be tariff revenue becomes a **quota rent** -- captured by whoever holds the import licence.
 
-## Infant industry justification
+- Three rent destinations:
+    1. Auctioned licences $\rightarrow$ government (= tariff).
+    2. Allocated licences $\rightarrow$ politically chosen importers.
+    3. Foreign exporters (next slide) $\rightarrow$ worst case.
 
-- If an industri is truly infant, the capital market should have no problem with providing liquidity.
+## Quota vs tariff: when do they diverge? {.m}
 
-    - Often happens: funds flow to potential industries.
-    
-- However, capital market in developing countries does not function as good as developed countries'
+Tariff and quota look equivalent in a static, perfectly-competitive textbook. They diverge when:
 
-    - Bank is not efficient, interest rate is high, stock market is shallow, domestic saving is low.
+- **Demand grows.** Quota stays fixed $\rightarrow$ implicit protection rises. Tariff rate stays fixed $\rightarrow$ protection erodes.
 
-- **Imperfect capital market justification**: if the capital cannot find its way to the infant industry, then government intervention may be able to help.
+- **Domestic firm has market power.** Quota gives the domestic monopolist a guaranteed protected market; tariff still leaves contestability from imports.
 
-## Import-substitution
+- **Rent allocation matters politically.** Quota allocations are administratively granted -- a magnet for rent-seeking.
 
-- The orientation of trade protection is inherently domestic oriented instead of export oriented.
+- **Voluntary Export Restraint (VER):** quota administered by the *exporter*. Japan-US autos, 1981. The quota rent flows abroad. Strictly worse than a tariff for the home country -- yet politically convenient. Banned by the WTO Safeguards Agreement Art. 11 (1995).
 
-- **Import substiting Industrialization (ISI)** is when a country limit import competition to replace it with domestic production.
+## Non-Tariff Measures (NTMs): the universe {.m}
 
-- Choosing ISI = choosing not to pursue export orientation growth:
+- UNCTAD MAST classification (2019) -- **16 chapters, hundreds of categories.**
+    - Technical: SPS (sanitary), TBT (technical), pre-shipment inspection.
+    - Non-technical: price controls, contingent measures (AD, CVD, safeguards), licences/quotas/bans, finance, distribution restrictions, government procurement, IP, rules of origin, subsidies, export measures.
 
-    - protection skews up prices of importing industries relative to exporting industries,
-    
-    - factor of production akan geser ke importing industries, M naik, X turun.
-    
-## ISI
+- **Stylised fact:** as average tariffs fell from ~30% (1980s) to ~10% today in developing countries, the *count* of NTMs has risen.
 
-- ISI most often ended up accompanied by increased FDI.
+- Hard to compare across countries because:
+    - Many are not notified.
+    - Tariff equivalents vary by product, firm, route.
 
-    - The trade vs FDI trade-off (market seeking).
-    
-    - Large countries (e.g., Indonesia) has advantage in attracting FDI.
-    
-    - Small markets typically encourage export-promotion strategy.
+## Local Content Requirement (LCR / TKDN) {.m}
 
-- It typically began by protecting consumer goods (food processing & automobile).
+- Mandate: a minimum share of the value (or of specified components) must be sourced domestically.
 
-- Then protects intermediate goods (steel, petrochems).
+- Indonesia uses LCRs heavily:
+    - **TKDN handsets** -- 4G/5G smartphones must meet ~35% TKDN to be sold; pushed Apple to negotiate, eventually invest.
+    - **EV batteries / EVs** -- staircase to 80% TKDN.
+    - **Solar PV, oil & gas services, government procurement.**
 
-## Does ISI work?
+- **Static cost:** forces use of more expensive / lower-quality domestic inputs $\rightarrow$ tariff-equivalent often double-digit.
 
-- The discussion on ISI vs free trade is a dynamic one.
+- **Claimed dynamic benefit:** linkages, learning, technology transfer.
 
-    - pre-80s $\rightarrow$ pro ISI.
-    
-    - 80s-2000s, $\rightarrow$ pro free trade.
+- **WTO status:** TRIMs Agreement (1995) prohibits LCRs in goods. Honoured selectively; many WTO members maintain creative variants.
 
-    - Since GFC & the rust belt, ISI is back.
-    
-- One thing remains: which one is better for welfare?
+## Standards: SPS and TBT {.m}
 
-    - ISI helped manufacturing in Latin America but not the economy in general.
-    
-## Why ISI fails?
+- Legitimate roles: information asymmetry (consumer cannot observe quality), externalities (pesticide residue, emissions), network compatibility.
 
-- It is possible the protection is given to an industry with a comparative disadvantage anyway.
+- Protectionist temptation: a strict standard *no foreign supplier can meet today* keeps competitors out, perfectly legally.
 
-    - If this is the case, then the industry will be forever infant.
-    
-- e.g., lack of skilled labor, expensive financing, bad organisation.
+- Evidence for Indonesia (Elisabeth & Verico, 2022, *JITLP*): TBT measures have a non-trivial *dampening* effect on Indonesia's manufacturing exports -- the same instruments work both ways.
 
-    - Changing these may require policies, but NOT trade policies.
-    
-## Why ISI fails?
+- Trade-off:
 
-- Protection such as quotas & LCR are <u>complicated</u> & leads to high tariff-equivalent ([49% in IDN](https://theconversation.com/jangan-dibatasi-impor-bahan-makanan-bisa-perkuat-perekonomian-dan-ketahanan-pangan-192625))
+    - Tighter standard $\rightarrow$ fewer entrants $\rightarrow$ higher minimum quality, less price competition.
+    - Optimal tightness depends on the externality, not on what protects domestic firms.
 
-- It is also harder to calculate cost & benefits than simple tariff.
+## Subsidies and the industrial-policy revival {.m}
 
-- ISI may skew incentive toward rent seeking activity instead of productivity improvement.
+- In GTA, subsidies (financial grant + state loan + state aid + trade finance) are the **single largest distortive category** by count.
 
-- ISI forces firms to limit its market, lose economies of scale.
+- Post-2020 surge driven by:
+    - **United States** -- IRA (USD 369bn, 2022), CHIPS Act (USD 52bn, 2022).
+    - **EU** -- Green Deal Industrial Plan, Net-Zero Industry Act, CBAM.
+    - **China** -- continued support to chips, EVs, batteries; "new productive forces".
+    - **Indonesia** -- tax holidays for smelters, KEK incentives, biodiesel mandate financed by the CPO Fund.
 
-    - IDN market is large but not as large as China, US or EU.
-    
-## Trade liberalization
+- WTO disciplines (SCM Agreement) cover subsidies for *goods*, but actionability is high-bar and the dispute pipeline is jammed.
 
-- Happens mostly in 1985, along with **financial liberalization**.
+## Contingent protection {.m}
 
-- This leads to higher trade activity in developing countries, and more manufacturing goods trade as opposed to agricultures & mining goods.
+The "WTO-legal" way to raise protection after the schedules are bound:
 
-- But trade liberalization, like ISI, we need to be critical on its impact on economic growth. 
+- **Anti-dumping (AD)** -- duty if foreign firm sells "below normal value" and causes injury. ~4,000 distortive measures in GTA. Procedure-heavy, easy to abuse, the most-used trade defence worldwide.
 
-- The answer is mixed: Latin American Countries' growth actually slows along with these liberalization, while India, China and The Asian Tigers were growing much more rapidly.
+- **Anti-subsidy (CVD)** -- countervailing duty against subsidised imports. ~850 measures.
 
-## Asian Growth
+- **Safeguards** -- emergency duty/quota against an *import surge* causing serious injury. Non-discriminatory in principle, time-limited, requires compensation to affected exporters.
 
-- The Asian Tigers (Taiwan, South Korea, Hong Kong and Singapore) experienced an amazing growth during these times.
+Indonesia uses all three; Indonesia is also a *target* of dozens of foreign AD cases (palm-oil derivatives, paper, steel).
 
-    - later, it's India and China.
-    
-- These countries conducted various policy changes, among them is a freer trade regime.
+## Export-side measures {.s}
 
-    - However, it is hard to attribute the success only to this policy changes.
-    
-    - Latin America and Mexico experienced similar level of liberalization with no significant economic growth.
+Export taxes, bans, licensing, price benchmarks. Why does an exporter restrict its own exports?
 
-## Recent developments
+1. **Revenue.** Easy tax base on commodities (Indonesia palm-oil export levy $\rightarrow$ BPDPKS / CPO Fund).
 
-- usually, arguments for & against trade revolves around these debates.
+2. **Domestic price stabilisation.** Crisis bans on rice, cooking-oil exports (2022).
 
-- These days, new arguments arrived: we have arrived in another flip in trade policy discussions.
+3. **Downstream development.** Indonesia nickel-ore export ban (2014, then 2020) $\rightarrow$ smelter and battery investment.
 
-- More arguments for activist trade policy: technology externality, labor issues, and environment externality.
+4. **Strategic / geopolitical.** Critical-minerals controls (rare earths, gallium, germanium).
 
-## Tech externalities
+- Welfare logic: a *large* supplier can shift world prices to its favour -- a terms-of-trade gain. A *small* supplier just loses revenue.
 
-- Knowledge activities produce technologies which can be used by everyone.
+- Downstream story works only if the downstream industry is genuinely viable -- otherwise it is a transfer to a subsidised loss-maker.
 
-    - This leads to less people want to innovate because others will free ride.
-    
-- Intelectual properties can be used, but:
+# Part 2 -- Why use NTMs at all?
 
-    - sometimes other firms can produce better products than the innovators. (think of android vs iOS)
-    
-    - Kinda limited.
-    
-- Targeting the right activity is non-trivial.
+## The political-economy answer {.m}
 
-## The tech industries
+- Tariffs sit in a public schedule -- consumers, downstream users and trade partners can read them.
 
-- In the 80s, US was losing grip with the manufacturing of Random Access Memories (RAM) to Japan (and then South Korea)
+- NTMs are **opaque**:
+    - Tariff equivalents must be estimated, often product-by-product.
+    - Compliance cost is borne by the firm, not measured in the budget.
 
-- This in turns snowball to downstream hardware industries.
+- Concentrated benefits, dispersed costs (Olson, 1965): the gainers organise, the losers do not.
 
-- US was fine because they dominates the emerged internet industries (the softwares).
+- Indonesia food-NTMs estimated **~49% tariff-equivalent** ([The Conversation, 2022](https://theconversation.com/jangan-dibatasi-impor-bahan-makanan-bisa-perkuat-perekonomian-dan-ketahanan-pangan-192625)) -- a number no parliament would approve as an explicit tariff.
 
-## The tech industries
+## The economic-rationale answer {.m}
 
-- However, the worry over control over hardware productions return.
+Some NTMs address **real market failures**:
 
-- Intel founders [Andy Grove](https://www.bloomberg.com/news/articles/2010-07-01/andy-grove-how-america-can-create-jobs?leadSource=uverify%20wall) argues the importance of having a hardware industries near the place where software industries thrives.
+- **Information** -- product standards, labelling.
 
-- In effect, he argues innovation in hardware and software are externalizing each other and should be closely linked.
+- **Externalities** -- emissions, pesticide residue, financial-stability spillovers. Carbon Border Adjustment (EU CBAM) is the canonical recent case.
 
-## The tech industries
+- **Strategic competitiveness / appropriability** -- subsidies for R&D-intensive industries where private investment under-delivers.
 
-- Our analysis pre-UTS suggests that US focusing on IT & less on hardwares should be fine.
+- **Resilience** -- post-COVID supply-chain redundancy; pandemic stockpiles; semiconductors.
 
-    - Apple and others can keep inventing in chip design because they do not have to invest in building chip factories.
-    
-- However, if it is true that having domestic chip foundries can provide externalities with the innovation as well, then it may warrant a good justification for intervention.
+The honest version of the infant-industry argument lives here too. The catch from last week still applies: a domestic policy is almost always a better instrument than a trade policy for a domestic problem.
 
-- This debate requires good number crunching to settle.
+## The geopolitical answer (post-2018) {.m}
 
-## Globalization and wage
+- US export controls on advanced semiconductors to China (2022 Oct, 2023 Oct).
 
-- low-value manufactured goods (e.g., textiles) coming from developing countries:
+- Inward FDI screening: CFIUS (US), EU FDI Regulation, UK NSI Act, Indonesia DNI revisions.
 
-    - produced by lower wage labors.
-    
-    - low standard working condition (e.g., [bangladesh plaza collapse](https://en.wikipedia.org/wiki/2013_Rana_Plaza_factory_collapse)).
-    
-- Seharusnya working standard & wage di Bangladesh mendekati AS, kan? (factor price equalisation)
+- "Friend-shoring", "de-risking", critical-minerals partnerships.
 
-## Globalization and wage
+- US 2025 tariff package (broad, escalatory, partly outside WTO process).
 
-- Menurut standard trade theory, benar bahwa pekerja di negara dengan labor yang tidak banyak akan merugi.
+- The policy paradigm has tilted from **"open by default, intervene if needed"** to **"managed by default, liberalise if convenient"**. The 2022-25 distortive count in GTA confirms it.
 
-- Namun, pekerja di negara dengan labor yang banyak masih lebih untung dibanding jika tidak globalisasi.
+# Part 3 -- The World Trade Organization
 
-    - meski wage-nya rendah, namun income dari export memberi mereka akses pada barang yang mahal jika dibuat sendiri di dalam negeri.
-    
-## Globalization & labor standard
+## Why multilateral rules? {.m}
 
-- Dorongan de-globalisasi juga datang dari argumen working condition.
+The cautionary tale of the 1930s:
 
-- Dorongan ini sudah sering muncul, tapi trigger utamanya adalah runtuhnya pabrik garmen di Bangladesh yang menewaskan 1.200 pekerja.
+- **Smoot-Hawley Tariff Act (US, 1930)** -- average tariff on dutiable imports raised to ~59%.
 
-- Negara berkembang bisa menekan cost dengan menekan labor standard $\rightarrow$ "race to the bottom"
+- Retaliation -- Canada, France, UK, others raised their tariffs in turn.
 
-- Konsumen harus tau supply chain barang konsumsinya jika ingin mengurangi _footprint_ labor standard yang buruk.
+- World trade collapsed by roughly **two-thirds, 1929-1933**.
 
-## Globalization & labor standard
+- Beggar-thy-neighbour devaluations and import controls deepened the Depression.
 
-- Sekarang, advokasi untuk membuat labor standard yang baik semakin gencar.
+- Lesson taken at Bretton Woods (1944): **tie hands collectively** so no single government's domestic politics can unleash a global trade war.
 
-- Labor standard menjadi fokus AS dalam membuat FTA baru maupun kebijakan perdagangan lainnya.
+## GATT 1947: a "provisional" treaty that lasted 47 years {.m}
 
-    - banyak perusahaan juga mensyaratkan supply chain yang bebas dari problem HAM bagi supliernya.
+- Three Bretton Woods siblings designed: IMF (money), World Bank (reconstruction), **ITO (trade)**.
 
-- _pushback_ dari developing countries: labor standard hanya akan jadi alat proteksionisme.
+- ITO Charter (Havana, 1948) was rejected by the US Senate in 1950 $\rightarrow$ ITO never born.
 
-## Globalisasi & alam
+- Its tariff-negotiation chapter survived as the **General Agreement on Tariffs and Trade (GATT)** -- signed by 23 contracting parties, applied "provisionally" from 1 January 1948.
 
-- Argumen yg sama: permintaan negara maju mendorong negara berkembang merusak alam:
+- "Provisionally" until 1995.
 
-    - praktik buka hutan yang eksesif untuk kayu, perkebunan, dan pertambangan.
-    
-- Trade membuat kapal semakin besar & sering jalan $\rightarrow$ more emission.
+## GATT core principles {.m}
 
-- **pollution haven**: Negara maju mengekspor polusi dengan membuat pabrik di negara berkembang dengan standar lingkungan yang lebih rendah (evidence untuk ini masih mixed).
+Four principles still anchor today's WTO:
 
-## Carbon tariff
+1. **Most-Favoured Nation (Art. I).** Any concession granted to one member is granted to *all* members. (Exceptions: FTAs, GSP, balance-of-payments.)
 
-- Countries with strong environmental standard + carbon trading mechanisms imposes carbon tariffs to level the playing field.
+2. **National Treatment (Art. III).** Once an import has cleared customs, it must be treated no worse than a like domestic product (taxes, regulations).
 
-- Carbon tariffs reduces the possibility of pollution haven and may encourage accepting environmental standard embedded in an FTA.
+3. **Tariff bindings.** Each member has a *schedule* of bound (ceiling) rates; applied rates can be lower but not higher.
 
-- Naturally, developing countries criticise this: developed countries will demand too high of a standard, and used as a protection.
+4. **Reciprocity.** Concessions are exchanged, not given away -- liberalisation is a negotiated political deal.
 
-## Globalisation & communities
+## From GATT rounds to the WTO {.m}
 
-- Some industries may be highly concentrated in a location in a country, it becomes a culture.
+- 8 GATT rounds, 1947-1994. Early rounds: tariff cuts on industrial goods.
 
-- This argument rise importance after the finding of [Autor et al. (2013)](https://www.aeaweb.org/articles?id=10.1257/aer.103.6.2121):
+- **Tokyo Round (1973-79):** first serious push on non-tariff measures -- voluntary "codes" on subsidies, AD, standards, government procurement, customs valuation.
 
-    - Imports from China reduces manufacturing jobs in the US.
-    
-    - While the reduction is relatively small, it is highly concentrated in a small area.
-    
-    - Those areas' demand for domestic services dies with it.
-    
-## Issues in trade
+- **Uruguay Round (1986-94):** the big bang.
+    - Agriculture brought in (AoA).
+    - Textiles brought in (ATC, phase-out of MFA).
+    - Services (GATS), intellectual property (TRIPS), TRIMs.
+    - Strengthened, binding **dispute settlement** (DSU).
+    - **WTO created, in force 1 January 1995.**
 
-- The ISI comeback
+## What the WTO actually is {.m}
 
-- Technology externalities
+- **Member-driven.** 164 members, ~98% of world trade. Indonesia is a founding member.
 
-- Labor wage and standard
+- Three legs:
+    - **GATT** (goods), **GATS** (services), **TRIPS** (intellectual property).
 
-- Environments
+- Plus a **Dispute Settlement Body** -- panels + Appellate Body, with binding rulings and authorised retaliation. For 25 years, the "crown jewel".
 
-- Communities
+- No real legislative capacity: change the rules only by member consensus.
 
-## Trade is more than numbers
+## Doha "Development" Round: the agenda {.s}
 
-- There are more issues in trade that models alone consider.
+- Launched **November 2001, Doha Ministerial** -- two months after 9/11, framed as a deliberate signal that the world could still cooperate.
 
-- However, some of these arguments are less technical with little calculation to support them.
+- Called the **"Development Round"** in response to developing-country complaints about the Uruguay outcomes:
+    - TRIPS pushed up the cost of medicines and technology.
+    - Agriculture liberalisation in rich countries had barely begun.
+    - "Implementation issues" -- promised technical assistance never materialised.
 
-- Additionally, most of these problems can be countered by good domestic policies instead of a trade policy.
+- Built on the **single undertaking** -- "nothing is agreed until everything is agreed" -- forcing cross-issue trade-offs.
 
-- next week: the new industrialisation policy.
+- Eight negotiating tracks: agriculture, NAMA (industrial tariffs), services (GATS), TRIPS & public health, Singapore issues (investment, competition, procurement, trade facilitation), rules (AD/SCM, FTAs), environment, special & differential treatment.
+
+## Doha: the slow collapse, 2003-2017 {.s}
+
+- **Cancún 2003 (MC5):** collapsed. Singapore issues + the **cotton initiative** (4 West African states demanding the end of US cotton subsidies). Birth of the **G20 trade bloc** -- Brazil, India, South Africa, China -- as a counterweight to the US-EU duopoly.
+
+- **Hong Kong 2005 (MC6):** agreed to phase out agricultural *export* subsidies.
+
+- **Geneva July 2008 mini-ministerial:** very close to a deal. Broke down over the **Special Safeguard Mechanism** (SSM): India insisted on a low trigger to protect subsistence farmers from import surges; US refused. One issue, one deal-breaker.
+
+- **Bali 2013 (MC9):** salvaged the **Trade Facilitation Agreement** -- first multilateral deal *born* under the WTO.
+
+- **Nairobi 2015 (MC10):** end of agricultural export subsidies formally agreed, but the US and EU **declined to recommit to the Doha mandate**. *Post-Doha* era begins.
+
+- Three deeper reasons for failure: (i) single undertaking made a deal infeasible; (ii) **China's 2001 accession** transformed the negotiating arithmetic; (iii) the US pivoted to mega-regionals.
+
+## Plan B: the rise of FTAs {.m}
+
+- Members responded by going **bilateral / regional**:
+    - CPTPP (2018), USMCA (2020), RCEP (2022), AfCFTA (2021), IPEF (2022).
+    - EU FTA pipeline (Mercosur, Indonesia IEU-CEPA, Vietnam, Korea, Japan).
+
+- Plurilateral **Joint Statement Initiatives** inside the WTO: e-commerce, services domestic regulation, investment facilitation.
+
+- For Indonesia: founder of ASEAN Economic Community; member of RCEP; IEU-CEPA after 19 negotiation rounds (2016-2025).
+
+- Cost of multilateral failure: a **"spaghetti bowl"** of overlapping FTAs with different rules of origin -- compliance burden falls on firms.
+
+## The WTO's current crisis {.m}
+
+- **Appellate Body paralysed since 11 December 2019.** US (under both parties) has blocked new appointments since 2017, citing judicial overreach.
+
+- Without a functioning AB, a losing party can **appeal "into the void"** and the ruling never becomes binding.
+
+- Workaround: 26 members (incl. EU, China, Australia) joined the **Multi-Party Interim Appeal Arrangement (MPIA)**. Indonesia and the US have *not* joined.
+
+- US 2025 tariff package proceeded largely outside WTO-consistent process.
+
+- The discipline that took 50 years to build is being eroded faster than it can be defended.
+
+## Indonesia at the WTO {.m}
+
+- **DS592 -- Indonesia (Nickel ore export ban), 2019 -.**
+    - EU complaint against the 2020 ore-export ban and related domestic-processing requirements.
+    - Panel report (Nov 2022): Indonesia's measures inconsistent with GATT Art. XI:1 (quantitative restrictions); justifications under Art. XX (general exceptions) rejected.
+    - Indonesia appealed -- *into the void.* No binding outcome. The ban remains in force.
+
+- Other live or recent disputes: chicken (DS484, won by Brazil), bioethanol AD, several palm-oil disputes against the EU.
+
+- Indonesia is both a beneficiary of the rules and a frequent test case for their limits.
+
+# Part 4 -- What governments actually use
+
+## Global Trade Alert (GTA / NIPO) {.m}
+
+- Independent monitoring database of unilateral trade and industrial policy interventions, run from St. Gallen.
+
+- **Scope:**
+    - Coverage starts 1 November 2008.
+    - **Discriminatory** measures only -- a uniform VAT change is excluded.
+    - **Unilateral** -- FTAs, RCEP, EU accession schedules are *not* in here.
+    - Not WTO-notified TBT/SPS, not UN sanctions, not CITES.
+    - Subsidies below USD 10M (USD 100M for SME-only) excluded.
+
+- Each record is coded by instrument, sector, affected partner, and an "initial assessment" (distortive vs liberalising).
+
+- Used today: April 2026 inventory, **53,102 measures**.
+
+## Most-used instruments, 2009--2025
+
+```{r top-tools}
+#| fig-width: 10
+#| fig-height: 5.2
+top_tools <- gta |>
+  filter(!is.na(type), year >= 2009, year <= 2025) |>
+  count(type, sort = TRUE) |>
+  slice_head(n = 12) |>
+  mutate(type = str_wrap(type, 30),
+         type = forcats::fct_reorder(type, n))
+
+ggplot(top_tools, aes(n, type)) +
+  geom_col(fill = "#26351c") +
+  geom_text(aes(label = comma(n)), hjust = -0.1, size = 4) +
+  scale_x_continuous(labels = comma, expand = expansion(mult = c(0, 0.12))) +
+  labs(x = "Number of GTA measures", y = NULL,
+       title = "Top 12 trade-policy instruments, world, 2009-2025",
+       caption = "Source: Global Trade Alert / NIPO, April 2026 inventory.") +
+  den_theme
+```
+
+::: {.s}
+Tariffs lead, but **subsidies** (financial grant + state loan + state aid + trade finance) dominate when summed. Anti-dumping is the largest single trade-defence tool.
+:::
+
+## Distortive vs liberalising over time
+
+```{r world-trend}
+#| fig-width: 10
+#| fig-height: 5.2
+trend <- gta |>
+  filter(year >= 2009, year <= 2025,
+         assess %in% c("Distortive", "Liberalising")) |>
+  count(year, assess)
+
+ggplot(trend, aes(year, n, fill = assess)) +
+  geom_col(position = "dodge") +
+  scale_fill_manual(values = c("Distortive" = "#a23b2c", "Liberalising" = "#26351c"),
+                    name = NULL) +
+  scale_x_continuous(breaks = seq(2009, 2025, 2)) +
+  scale_y_continuous(labels = comma) +
+  labs(x = NULL, y = "Number of measures",
+       title = "World trade-policy interventions, by initial assessment",
+       caption = "Source: Global Trade Alert / NIPO, April 2026.") +
+  den_theme +
+  theme(legend.position = "top")
+```
+
+::: {.s}
+Inflection points: 2009 (post-GFC), 2018 (US-China), 2020 (COVID), 2022+ (industrial-policy revival -- IRA, CHIPS, EU CBAM).
+:::
+
+## Who intervenes most?
+
+```{r top-impl}
+#| fig-width: 10
+#| fig-height: 5.2
+top_impl <- gta |>
+  filter(year >= 2009, year <= 2025) |>
+  count(impl, sort = TRUE) |>
+  slice_head(n = 15) |>
+  mutate(impl = forcats::fct_reorder(impl, n))
+
+ggplot(top_impl, aes(n, impl)) +
+  geom_col(fill = "#51483d") +
+  geom_text(aes(label = comma(n)), hjust = -0.1, size = 4) +
+  scale_x_continuous(labels = comma, expand = expansion(mult = c(0, 0.12))) +
+  labs(x = "Number of measures (any assessment)", y = NULL,
+       title = "Top 15 implementing jurisdictions, 2009-2025",
+       caption = "Source: Global Trade Alert / NIPO, April 2026.") +
+  den_theme
+```
+
+::: {.s}
+**The big interveners are big and rich, not poor.** Industrial policy is a rich-country game; developing countries follow.
+:::
+
+## Indonesia: top instruments
+
+```{r idn-tools}
+#| fig-width: 10
+#| fig-height: 5.2
+idn_tools <- gta |>
+  filter(impl == "Indonesia", !is.na(type)) |>
+  count(type, sort = TRUE) |>
+  slice_head(n = 12) |>
+  mutate(type = str_wrap(type, 32),
+         type = forcats::fct_reorder(type, n))
+
+ggplot(idn_tools, aes(n, type)) +
+  geom_col(fill = "#26351c") +
+  geom_text(aes(label = n), hjust = -0.2, size = 4) +
+  scale_x_continuous(expand = expansion(mult = c(0, 0.12))) +
+  labs(x = "Number of measures", y = NULL,
+       title = "Indonesia: top 12 instruments since 2009",
+       caption = "Source: Global Trade Alert / NIPO, April 2026.") +
+  den_theme
+```
+
+::: {.s}
+Note the **export side** -- export tax, export price benchmark, export ban, export licensing. Distinctive for a resource-exporting economy.
+:::
+
+## Indonesia: pace of intervention
+
+```{r idn-trend}
+#| fig-width: 10
+#| fig-height: 5.0
+idn_trend <- gta |>
+  filter(impl == "Indonesia", year >= 2009, year <= 2025,
+         assess %in% c("Distortive", "Liberalising")) |>
+  count(year, assess)
+
+ggplot(idn_trend, aes(year, n, fill = assess)) +
+  geom_col(position = "stack") +
+  scale_fill_manual(values = c("Distortive" = "#a23b2c", "Liberalising" = "#26351c"),
+                    name = NULL) +
+  scale_x_continuous(breaks = seq(2009, 2025, 2)) +
+  labs(x = NULL, y = "Measures implemented",
+       title = "Indonesia: implemented measures by year",
+       caption = "Source: Global Trade Alert / NIPO, April 2026.") +
+  den_theme +
+  theme(legend.position = "top")
+```
+
+::: {.s}
+Of 502 Indonesian measures since 2009: ~66% distortive, ~34% liberalising. Notable: 2009 commodity-boom export controls; 2014 mineral-ore export ban; 2020 nickel ore ban; 2024-25 hilirisasi continues.
+:::
+
+# Wrap-up
+
+## Take-aways {.m}
+
+1. **Tariffs are visible. The real action is everywhere else** -- subsidies, LCRs, standards, contingent protection, export controls.
+
+2. NTMs have **legitimate uses** (information, externalities, resilience) and **high abuse potential** (opacity, rent-seeking).
+
+3. The **WTO** was the post-war answer to 1930s-style trade collapse. Its *negotiation* function stalled in 2008; its *adjudication* function broke in 2019; its *rule-book* still binds, weakly.
+
+4. For Indonesia the question is not *whether* to intervene -- we already do, ~30 measures a year on average -- but **whether to intervene well or badly**. That is what this course is for.
+
+## Next week
+
+**Balance of Payments and the data of international economics.**
+
+- The current account, the financial account, why the BOP must balance.
+
+- Reading data: BPS, Bank Indonesia SEKI, IMF BOP, World Bank.
+
+- Hand-on: pulling and plotting Indonesia's BOP series.
