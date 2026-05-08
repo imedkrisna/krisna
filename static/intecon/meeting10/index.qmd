@@ -11,7 +11,7 @@ format:
     transition: convex
     background-transition: fade
     slide-number: true
-  beamer: default
+#  beamer: default
 ---
 
 
@@ -342,8 +342,25 @@ data %>%
 
 source: [Chinn & Ito, 2019](https://cepr.org/voxeu/columns/requiem-blame-it-beijing-interpreting-rotating-global-current-account-surpluses)
 
-## Next week
+## Global current account
 
-- Why global imbalance exists & what this means for trade
+:::: columns
+::: {.column width="50%"}
+![source: World Economic Outlook April 2026 IMF](globalcab.png)
+:::
 
-- Exchange rate & Monetary Policy
+::: {.column width="50%"}
+- overall global CA is surplus, potentially amid trade in services and digital economy prominance.
+
+- Chinese underinvoicing is also a potential (see Brad Setser exploration on Chinese CB-customs difference)
+
+- Methodological problem more prominent in investment/primary income transfers.
+:::
+
+::::
+
+## Demand for money
+
+- Next week kita akan bicarakan soal permintaan mata uang.
+
+- Bahwa mata uang didorong oleh kemampuannya untuk membeli tidak hanya barang dan jasa, tetapi juga aset finansial.
