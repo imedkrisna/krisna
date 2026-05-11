@@ -1,7 +1,7 @@
 ---
 title: "Balance of Payment & National Income"
-subtitle: "ECES905205 pertemuan 11"
-date: "12 September 2022"
+subtitle: "ECES905205 pertemuan 10"
+date: "11 Mei 2026"
 author: "I Made Krisna Gupta"
 format: 
   revealjs:
@@ -27,7 +27,7 @@ format:
 
 - National income->measure kebahagiaan penduduk secara umum.
 
-## Produk Nasional Bruto
+## Produk Nasional Bruto {.s}
 
 - Gross National Product (GNP) atau Produk Nasional Bruto (PNB): total nilai produksi oleh penduduk suatu negara di manapun ia berada.
 
@@ -49,13 +49,73 @@ $$
 
 - Gaji eksekutif Toyota Indonesia: masuk ke PDB Indonesia, bukan PDB Jepang, tapi ada di PNB Jepang dan bukan PNB Indonesia.
 
-- Lebih gampang ngitung PDB daripada PNB, not differ significantly anyway.
+- Lebih gampang ngitung PDB daripada PNB, not differ significantly anyway (for some econs).
+
+## PDB Indonesia
+
+```{r}
+library(readxl)
+library(tidyverse)
+library(scales)
+
+have_ggden <- requireNamespace("ggden", quietly = TRUE)
+if (have_ggden) suppressMessages(library(ggden))
+
+den_theme <- if (have_ggden && exists("theme_den", mode = "function")) {
+  theme_den()
+} else {
+  theme_classic(base_size = 14) +
+    theme(panel.grid.minor = element_blank())
+}
+den_fill <- if (have_ggden && exists("scale_fill_den", mode = "function")) {
+  scale_fill_den()
+} else {
+  scale_fill_brewer(palette = "Set2")
+}
+
+gdp <- read_excel("gdp.xlsx", sheet = "Sheet1") %>%
+  filter(year >= 2022, year <= 2025) %>%
+  pivot_longer(c(C, I, G, X, M), names_to = "komponen", values_to = "value") %>%
+  mutate(
+    share = value / GDP,
+    komponen = factor(komponen, levels = c("C", "I", "G", "X", "M"))
+  )
+
+ggplot(gdp, aes(x = factor(year), y = value, fill = komponen)) +
+  geom_col() +
+  geom_hline(yintercept = 0, colour = "grey30") +
+  geom_text(aes(label = percent(share, accuracy = 0.1)),
+            position = position_stack(vjust = 0.5),
+            colour = "white", size = 3.3) +
+  scale_y_continuous(labels = label_number(scale = 1e-3, suffix = " trln")) +
+  den_fill + den_theme +
+  labs(x = NULL, y = "Trilyun Rp (konstan 2010)",
+       caption = "sumber: BPS, Seri 2010 PDB Penggunaan")
+```
+
+## The larger the better?
+
+:::: columns
+
+::: {.column width="50%"}
+![](kaltara.png)
+:::
+
+::: {.column width="50%"}
+- Kaltara memiliki PDB per kapita yang tinggi. Lebih tinggi daripada Sabah.
+
+- Namun, gaya hidup masyarakatnya tidak se-mewah masyarakat Sabah.
+
+- Jawabannya: Kaltara adalah net-eksportir dengan konsumsi domestik yang sangat rendah.
+:::
+::::
 
 ## Current account
 
 $$
 CA = X - M
 $$
+
 - Sejauh ini, model kita selalu menganalisis dengan CA=0.
 
     - Ekspor sebanyak $P_C C$ diikuti impor sebanyak $P_FF$ sehingga $P_CC=P_FF$
@@ -90,7 +150,7 @@ $$
 
 - Saving juga bisa terjadi di govt jika T>G!
 
-## Indonesia's CA & IIP
+## Indonesia's CA & NIP
 
 ```{r}
 library(tidyverse)
