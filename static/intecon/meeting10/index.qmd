@@ -98,7 +98,7 @@ ggplot(gdp, aes(x = factor(year), y = value, fill = komponen)) +
 :::: columns
 
 ::: {.column width="50%"}
-![](kaltara.png)
+![](kaltara.jpg)
 :::
 
 ::: {.column width="50%"}
