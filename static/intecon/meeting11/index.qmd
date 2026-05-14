@@ -1,0 +1,1009 @@
+---
+title: "Exchange Rates & FX Market"
+subtitle: "ECES905205 pertemuan 11"
+date: "18 Mei 2026"
+author: "I Made Krisna Gupta"
+format:
+  revealjs:
+    theme: [simple,../mytheme.scss]
+    chalkboard: true
+    incremental: false
+    transition: convex
+    background-transition: fade
+    slide-number: true
+#  beamer: default
+---
+
+
+## Recap & today's plan {.s}
+
+- Pekan lalu: BoP, current account, national income — semua dalam "uang", tapi belum bahas bagaimana _harga_ uang antar negara terbentuk.
+
+- Hari ini: KOM Ch.14 (FX market) + short-run Ch.15 (money & FX).
+
+- Roadmap: definisi nilai tukar → struktur pasar FX (spot, forward, swap, options) → returns, UIP, carry trade → forward & CIP → money basics & monetary policy ke FX.
+
+## What is an exchange rate? {.s}
+
+- Nilai tukar $E$ = harga satu mata uang dalam mata uang lain.
+
+- Konvensi quotation ada dua:
+
+    - **Direct (Indonesian convention)**: Rp 16.400 per 1 USD.
+
+    - **Indirect**: USD 0,0000610 per 1 Rp.
+
+- Sepanjang kuliah kita pakai $E = Rp/USD$. Jadi $E=16.400$ berarti 1 USD = Rp 16.400.
+
+- Naik = rupiah depresiasi. Turun = rupiah apresiasi. **Ini bagian yang sering bikin bingung.**
+
+## Appreciation vs Depreciation {.s}
+
+- Misal $E$ bergerak dari 16.400 → 16.800.
+
+    - Untuk membeli 1 USD, perlu rupiah lebih banyak ⇒ **rupiah depresiasi** (terhadap dollar).
+
+    - Equivalently, dollar **appreciates** terhadap rupiah.
+
+- Persentase: $\Delta E / E = (16.800-16.400)/16.400 \approx 2{,}44\%$ depresiasi.
+
+- Direction-of-quote trap:
+
+    - "Kurs naik" di media biasanya berarti **rupiah melemah** (karena yang diquote $E=Rp/USD$).
+
+    - Kalau ditulis $E=USD/Rp$ (jarang), "naik" justru artinya rupiah menguat.
+
+- Selalu tanya: yang naik itu **angka quotation**, bukan "nilai rupiah" sendiri.
+
+## ER & relative prices {.s}
+
+- Nilai tukar menghubungkan harga domestik dengan harga luar negeri.
+
+- **Pertamina** (impor crude): Brent USD 80/barel. Pada $E=16.400$ → Rp 1,31 jt/barel. Jika $E=17.000$ → Rp 1,36 jt/barel.
+
+- **Sritex** (eksportir tekstil): jual baju USD 10. Pada $E=16.400$ → Rp 164.000. Jika $E=17.000$ → Rp 170.000.
+
+- **Eksportir senang ketika rupiah depresiasi, importir tidak.**
+
+## Who wins, who loses? {.s}
+
+|  | Rupiah depresiasi ($E \uparrow$) | Rupiah apresiasi ($E \downarrow$) |
+|---|---|---|
+| Eksportir (Sritex, kopi, nikel) | + revenue Rp | − revenue Rp |
+| Importir (BBM, pangan) | − cost naik | + cost turun |
+| Konsumen barang impor (iPhone, Avanza) | − mahal | + murah |
+| Pemegang utang USD | − beban naik | + beban turun |
+| Turis asing ke Bali | + Indonesia murah | − Indonesia mahal |
+
+- Nilai tukar bukan "selalu lebih baik kalau kuat" — tergantung stakeholder.
+
+## USD/IDR history
+
+```{r}
+#| warning: false
+#| message: false
+suppressPackageStartupMessages({
+  library(tidyverse)
+  library(scales)
+})
+
+have_ggden <- requireNamespace("ggden", quietly = TRUE)
+if (have_ggden) suppressMessages(library(ggden))
+
+den_theme <- if (have_ggden && exists("theme_den", mode = "function")) {
+  theme_den()
+} else {
+  theme_classic(base_size = 14) +
+    theme(panel.background = element_rect(fill = "#f0f1eb", colour = "#f0f1eb"),
+          plot.background = element_rect(fill = "#f0f1eb"),
+          legend.key = element_rect(fill = "#f0f1eb", linetype = "blank"),
+          legend.background = element_rect(fill = "#f0f1eb"),
+          panel.grid.minor = element_blank())
+}
+
+usdidr <- tryCatch({
+  if (requireNamespace("quantmod", quietly = TRUE)) {
+    suppressWarnings(quantmod::getSymbols("IDR=X", src = "yahoo",
+                                          from = "2010-01-01",
+                                          auto.assign = FALSE)) %>%
+      as.data.frame() %>%
+      rownames_to_column("date") %>%
+      transmute(date = as.Date(date),
+                rate = `IDR=X.Close`) %>%
+      drop_na()
+  } else stop("quantmod not installed")
+}, error = function(e) {
+  tibble(
+    date = as.Date(c("2010-01-01","2011-01-01","2012-01-01","2013-01-01",
+                     "2013-08-01","2014-01-01","2015-01-01","2016-01-01",
+                     "2017-01-01","2018-01-01","2019-01-01","2020-01-01",
+                     "2020-04-01","2021-01-01","2022-01-01","2023-01-01",
+                     "2024-01-01","2025-01-01","2026-05-01")),
+    rate = c(9200, 9000, 9100, 9700, 11400, 12200, 12500, 13800,
+             13400, 13500, 14000, 13900, 16400, 14000, 14300,
+             15500, 15700, 16100, 16400)
+  )
+})
+
+ggplot(usdidr, aes(x = date, y = rate)) +
+  geom_line(linewidth = 0.7, colour = "#26351c") +
+  scale_y_continuous(labels = comma) +
+  annotate("text", x = as.Date("2013-08-01"), y = 11700,
+           label = "2013 taper", size = 3) +
+  annotate("text", x = as.Date("2020-04-01"), y = 16700,
+           label = "COVID", size = 3) +
+  annotate("text", x = as.Date("2022-09-01"), y = 14900,
+           label = "Fed hiking", size = 3) +
+  den_theme +
+  labs(x = NULL, y = "Rp per USD",
+       caption = "sumber: Yahoo Finance (IDR=X); fallback: hardcoded snapshot")
+```
+
+## Real & effective ER {.s}
+
+- **Real exchange rate** $q$:
+
+$$
+q = \frac{E \cdot P^*}{P}
+$$
+
+    di mana $P$ = harga domestik, $P^*$ = harga luar negeri, $E$ = nominal ER (Rp/USD).
+
+- $q$ menunjukkan daya beli relatif — bukan sekadar nominal.
+
+- **Effective exchange rate** (NEER/REER): rata-rata tertimbang nilai tukar terhadap _basket_ partner dagang.
+
+    - BI mempublikasikan NEER dan REER bulanan.
+
+    - REER yang stabil ≠ nominal rate stabil; bisa nominal melemah tapi inflasi domestik tinggi → REER tetap.
+
+- Pembahasan formal PPP dan REER pekan depan (Ch.15 long-run).
+
+## Who trades FX? {.s}
+
+- Pasar FX adalah **OTC** (over-the-counter), bukan bursa.
+
+- Pelaku utama:
+
+    - **Commercial banks** — market makers (BCA, Mandiri, BNI, BRI + global).
+
+    - **Non-bank FIs** — hedge funds, asset managers, asuransi.
+
+    - **Korporasi** — eksportir/importir hedging (Pertamina, Indofood, Astra).
+
+    - **Bank Indonesia** — intervensi untuk stabilisasi.
+
+    - **Retail** — kecil tapi tumbuh.
+
+- 24 jam: Sydney → Tokyo → Singapore → London → New York.
+
+- BIS Triennial 2022: turnover global FX ≈ USD 7,5 T/hari.
+
+- Hub utama: London 38%, New York 19%, Singapore 9%, Hong Kong 7%, Tokyo 4%.
+
+
+## Spot, forward, swap
+
+- **Spot**: pengiriman T+2. Quote yang muncul di Bloomberg/Yahoo.
+
+- **Forward**: [kunci kurs](https://www.bca.co.id/id/informasi/kurs-forward) _sekarang_ untuk pengiriman tanggal masa depan. Tenor 1m, 3m, 6m, 12m.
+
+- **FX swap**: spot leg + forward leg. Equivalent dengan _collateralized lending_ antar mata uang.
+
+- Mengapa forward exists? Importir/eksportir butuh kepastian cashflow; bank butuh tools manage posisi.
+
+## FX derivatives
+
+- **FX futures**: forward terstandarisasi di bursa (CME). Marked-to-market harian. Volume IDR kecil.
+
+- **FX options**:
+
+    - **Call USD** = hak (bukan kewajiban) beli USD pada strike.
+
+    - **Put USD** = hak jual USD.
+
+    - Importir beli call USD = asuransi terhadap depresiasi rupiah.
+
+## Arbitrage & cross rates
+
+- Jika $E_{Rp/USD}=16.400$ dan $E_{JPY/USD}=150$, maka $E_{Rp/JPY} \approx 109{,}3$.
+
+- Triangular arbitrage: jika quoted cross rate ≠ implied cross rate → trader arbitrase sampai gap tertutup.
+
+- Di deep market, cross rates ≈ implied. **Tidak ada free lunch** di pasangan major.
+
+- Bank-bank market maker menjaga kondisi _no-arbitrage_ secara terus-menerus.
+
+## Asset approach to FX
+
+- KOM: **nilai tukar adalah harga aset.**
+
+- Yang dipegang trader/investor adalah _deposit_ dalam berbagai mata uang.
+
+- Yang menentukan equilibrium adalah **expected return** dari tiap deposit, bukan flow ekspor-impor saja.
+
+- Implikasi: nilai tukar bisa sangat volatile dan _overshoot_ fundamentalnya.
+
+## Returns on deposits {.s}
+
+- Dua deposit 1-tahun:
+
+    - IDR deposit: bunga $R$ (BI 7DRR ≈ 5,75%).
+
+    - USD deposit: bunga $R^*$ (Fed Funds ≈ 4,5%).
+
+- Return diukur dalam **rupiah**:
+
+    - IDR deposit: $1 + R$.
+
+    - USD deposit: $\frac{E^e}{E}(1 + R^*)$ — beli USD, tabung, jual di $E^e$ tahun depan.
+
+- Mana lebih besar? Tergantung **expected appreciation/depreciation rupiah**.
+
+## Expected appreciation {.s}
+
+- Definisi: rate of depreciation rupiah yang diekspektasikan:
+
+$$
+\frac{E^e - E}{E}
+$$
+
+    di mana $E^e$ = ekspektasi nilai tukar masa depan, $E$ = nilai tukar saat ini.
+
+- Misal $E=16.400$, $E^e=16.800$. Maka ekspektasi depresiasi $\approx 2{,}44\%$.
+
+- Jika rupiah _appreciate_ (expected): $E^e < E$, angka ini negatif.
+
+- Note konvensi: ini adalah "expected depreciation rupiah" / "expected appreciation dollar" — karena $E=Rp/USD$.
+
+## Expected return: USD vs IDR {.s}
+
+:::: columns
+
+::: {.column width="55%"}
+
+Approximation (orde-1):
+
+$$
+R^*_{\text{in Rp}} \approx R^* + \frac{E^e - E}{E}
+$$
+
+Investor bandingkan:
+
+- IDR: $R$
+
+- USD (dalam Rp): $R^* + (E^e-E)/E$
+
+Selisih:
+
+$$
+R - R^* - \frac{E^e - E}{E}
+$$
+
+:::
+
+::: {.column width="45%"}
+
+**Intuisi**:
+
+- $R \uparrow$ → tarik investor ke IDR.
+
+- $R^* \uparrow$ → tarik ke USD.
+
+- $E^e \uparrow$ → simpan USD (USD akan apresiasi).
+
+Investor neutral ketika selisih = 0.
+
+:::
+
+::::
+
+## Numerical example {.s}
+
+- Data: $R = 5{,}75\%$, $R^* = 4{,}50\%$, $E = 16.400$, $E^e = 16.800$.
+
+- Expected USD return (dalam Rp):
+
+$$
+R^* + \frac{E^e - E}{E} = 4{,}50\% + 2{,}44\% = 6{,}94\%
+$$
+
+- IDR return: $5{,}75\%$. USD deposit lebih menarik → tekanan beli USD → $E$ naik (rupiah depresiasi) sampai equilibrium.
+
+## FX equilibrium: UIP {.s}
+
+- **Uncovered Interest Parity** (UIP):
+
+$$
+R = R^* + \frac{E^e - E}{E}
+$$
+
+- Di equilibrium, return ekspektasi antar deposit (dalam mata uang sama) harus _sama_.
+
+- "Uncovered": $E^e$ adalah ekspektasi, bukan kurs yang dikunci kontrak. Investor menanggung risiko FX.
+
+- Jika UIP gagal → ada expected profit sistematis → ada risk premium (KOM abstraksikan).
+
+## UIP diagram {.m}
+
+:::: columns
+
+::: {.column width="45%"}
+
+- Horizontal: expected return (dalam Rp).
+
+- Vertical: $E$ (Rp/USD).
+
+- IDR return: vertikal di $R$ (tidak tergantung $E$).
+
+- USD return: downward sloping — semakin $E$ tinggi, semakin kecil expected depreciation.
+
+- Equilibrium $E^*$: perpotongan dua kurva.
+
+Tiga goncangan: $R \uparrow$, $R^* \uparrow$, $E^e \uparrow$.
+
+:::
+
+::: {.column width="55%"}
+
+```{r}
+#| warning: false
+#| message: false
+#| fig-width: 5
+#| fig-height: 4
+
+R_dom   <- 0.06
+R_for   <- 0.045
+Ee      <- 16700
+usd_ret <- function(r) Ee / (1 + r - R_for)
+E_star  <- usd_ret(R_dom)
+
+ggplot() +
+  stat_function(fun = usd_ret, xlim = c(0, 0.22),
+                linewidth = 1.1, colour = "#26351c") +
+  geom_segment(aes(x = R_dom, xend = R_dom, y = 13500, yend = 20000),
+               linewidth = 1.1, colour = "#8b0000") +
+  annotate("segment", x = 0, xend = R_dom, y = E_star, yend = E_star,
+           linetype = "dashed") +
+  annotate("segment", x = R_dom, xend = R_dom, y = 13500, yend = E_star,
+           linetype = "dashed") +
+  annotate("point", x = R_dom, y = E_star, size = 4) +
+  annotate("text", x = 0.19, y = 14400, label = "USD return", size = 4) +
+  annotate("text", x = R_dom + 0.005, y = 19500,
+           label = "IDR return (=R)", hjust = 0, size = 4) +
+  annotate("text", x = 0.003, y = E_star + 250, label = "E*",
+           hjust = 0, size = 4, fontface = "bold") +
+  annotate("text", x = R_dom, y = 13350, label = "R",
+           vjust = 1, size = 4, fontface = "bold") +
+  scale_x_continuous(labels = scales::percent,
+                     limits = c(0, 0.22), expand = c(0, 0)) +
+  scale_y_continuous(labels = scales::comma,
+                     limits = c(13500, 20000), expand = c(0, 0)) +
+  labs(x = "Expected return (Rp)", y = "E (Rp/USD)") +
+  den_theme
+```
+
+:::
+
+::::
+
+## Effect of BI rate hike {.s}
+
+- BI menaikkan $R$ dari 5,75% → 6,25%.
+
+- Diagram UIP: garis vertikal IDR return bergeser _ke kanan_; USD return tidak bergerak.
+
+- Equilibrium baru: $E$ turun → **rupiah apresiasi**.
+
+- Intuisi: bunga rupiah lebih tinggi → demand IDR deposit naik → IDR menguat.
+
+- Efek _instan_ pada FX, bukan via jalur kredit.
+
+## Fed rate hike (2013 taper tantrum) {.s}
+
+- Fed naikkan $R^*$ → USD return curve geser ke kanan → $E$ naik → **rupiah depresiasi**.
+
+- **Kasus 2013 taper tantrum**:
+
+    - Mei 2013: Bernanke isyaratkan pengurangan QE.
+
+    - Yield UST 10Y: 1,6% → 3% dalam 4 bulan.
+
+    - USD/IDR melemah dari ~9.700 ke ~12.000 (≈ 24%) sampai akhir 2013.
+
+- EM currencies sangat sensitif ke "monetary signal" dari Fed.
+
+## Effect of expectations (2022) {.s}
+
+- $E^e$ naik (rupiah _diharapkan_ depresiasi) → USD return geser ke kanan → $E$ naik **sekarang juga**.
+
+- **Self-fulfilling**: ekspektasi depresiasi → depresiasi aktual.
+
+- **Kasus 2022 Fed hiking**:
+
+    - Fed naikkan rate 425 bps dalam 9 bulan.
+
+    - Flight to USD safe haven.
+
+    - USD/IDR: 14.300 (Jan) → 15.700 (Okt 2022).
+
+    - BI ikut hike, tapi gap tidak cukup kompensasi ekspektasi.
+
+## Forward rates revisited {.s}
+
+- Forward rate $F$ = kurs yang dikunci _sekarang_ untuk pengiriman masa depan.
+
+- Quote USD/IDR (ilustrasi):
+
+| Tenor | Forward | Premium ann. |
+|---|---|---|
+| Spot | 16.400 | — |
+| 1m | 16.420 | ≈ 1,5% |
+| 3m | 16.490 | ≈ 2,2% |
+| 6m | 16.580 | ≈ 2,2% |
+| 12m | 16.760 | ≈ 2,2% |
+
+- Premium USD/IDR hampir selalu positif (refleksi differensial bunga).
+
+- Berapa premium yang "fair"? → CIP (slide berikutnya).
+
+## Forward premium proxy
+
+```{r}
+#| warning: false
+#| message: false
+
+ratediff <- tibble(
+  tahun = 2015:2025,
+  BI7DRR = c(7.50, 7.25, 4.75, 6.00, 5.25, 4.00, 3.50, 5.50, 5.75, 6.00, 5.75),
+  FedFunds = c(0.25, 0.50, 1.25, 2.25, 1.75, 0.25, 0.25, 4.25, 5.25, 4.75, 4.50)
+) %>%
+  mutate(
+    spread = BI7DRR - FedFunds,
+    fwd_premium = spread
+  )
+
+ratediff %>%
+  pivot_longer(c(BI7DRR, FedFunds, fwd_premium),
+               names_to = "series", values_to = "pct") %>%
+  ggplot(aes(x = tahun, y = pct, colour = series)) +
+  geom_line(linewidth = 1) + geom_point() +
+  geom_hline(yintercept = 0, colour = "grey40") +
+  scale_x_continuous(breaks = 2015:2025) +
+  den_theme +
+  labs(x = NULL, y = "% per annum",
+       caption = "BI 7DRR & Fed Funds (year-end); fwd_premium = BI − Fed (CIP proxy)")
+```
+
+## Hedging: Pertamina importer {.s}
+
+- Pertamina kontrak crude 1 juta barel × USD 80 = USD 80 jt, settle 3 bulan lagi.
+
+- **Tanpa hedge**: jika $E$ naik 16.400 → 17.000, biaya naik Rp 1,312 T → Rp 1,360 T (+Rp 48 miliar).
+
+- **Dengan forward 3m @ 16.490**: lock biaya USD 80 jt × 16.490 = Rp 1,319 T. **Risiko FX hilang.**
+
+- Trade-off: bayar premium ~Rp 7 miliar di atas spot — biaya "asuransi" FX.
+
+## Carry trade mechanics {.s}
+
+- **Carry trade** = pinjam di mata uang bunga rendah (funding currency), invest di mata uang bunga tinggi (target currency).
+
+- Klasik untuk IDR sebagai target currency:
+
+    1. Pinjam USD @ 4,5% (Fed Funds + sedikit spread).
+
+    2. Convert ke IDR pada spot $E=16.400$.
+
+    3. Beli SBN 10Y dengan yield ≈ 6,5%.
+
+    4. Setelah 1 tahun, jual SBN, convert balik ke USD, lunasi pinjaman.
+
+- Return ekspektasi (per UIP) = $R - R^* - \frac{E^e-E}{E} = 6{,}5 - 4{,}5 - 2{,}44 = -0{,}44\%$ (jika ekspektasi sesuai forward).
+
+- Tapi banyak trader bertaruh bahwa **realisasi depresiasi < ekspektasi forward** → ada profit ex-post.
+
+## When carry blows up {.s}
+
+- Saat $E$ stabil / rupiah apresiasi: spread positif = keuntungan murni.
+
+- Saat rupiah _suddenly depreciate_: keuntungan kumulatif bisa hilang dalam hitungan hari.
+
+- Episode tipikal:
+
+    - **2013 taper tantrum**: IDR depresiasi 24% dalam ~4 bulan.
+
+    - **Maret 2020 (COVID)**: IDR ke 16.500 dalam beberapa minggu.
+
+    - **2022 Fed hiking**: IDR depresiasi ~10% dalam setahun.
+
+- Karakteristik klasik: "picking up nickels in front of a steamroller."
+
+## Ex-post carry P&L
+
+```{r}
+#| warning: false
+#| message: false
+
+carry <- tibble(
+  tahun = 2015:2024,
+  BI7DRR = c(7.50, 7.25, 4.75, 6.00, 5.25, 4.00, 3.50, 5.50, 5.75, 6.00),
+  FedFunds = c(0.25, 0.50, 1.25, 2.25, 1.75, 0.25, 0.25, 4.25, 5.25, 4.75),
+  IDR_year_end = c(13800, 13400, 13500, 14400, 13900, 14100, 14200, 15600, 15400, 15700)
+) %>%
+  mutate(
+    spread = BI7DRR - FedFunds,
+    depr   = c(NA, diff(IDR_year_end)/head(IDR_year_end, -1) * 100),
+    carry_pnl = spread - depr
+  )
+
+carry %>%
+  filter(!is.na(carry_pnl)) %>%
+  ggplot(aes(x = tahun, y = carry_pnl, fill = carry_pnl > 0)) +
+  geom_col() +
+  geom_hline(yintercept = 0, colour = "grey30") +
+  scale_fill_manual(values = c("TRUE" = "#26351c", "FALSE" = "#8b0000"),
+                    guide = "none") +
+  scale_x_continuous(breaks = 2015:2024) +
+  den_theme +
+  labs(x = NULL, y = "Ex-post carry P&L (% p.a.)",
+       caption = "P&L = (BI 7DRR − Fed Funds) − %Δ USD/IDR; positif = carry untung")
+```
+
+## CIP derivation {.s}
+
+:::: columns
+
+::: {.column width="50%"}
+
+**Covered Interest Parity**:
+
+$$
+R = R^* + \frac{F - E}{E}
+$$
+
+Equivalen:
+
+$$
+\frac{F}{E} = \frac{1+R}{1+R^*}
+$$
+
+Forward premium = differensial bunga; jika tidak → arbitrase.
+
+:::
+
+::: {.column width="50%"}
+
+**Arbitrase** jika $F$ terlalu tinggi:
+
+| Step | Cashflow |
+|---|---|
+| Borrow USD 1 @ $R^*$ | $+1$ USD |
+| Convert ke Rp | $+E$ Rp |
+| Deposit Rp @ $R$ | $E(1+R)$ Rp |
+| Sell forward $F$ | $E(1+R)/F$ USD |
+| Repay USD loan | $-(1+R^*)$ |
+| Profit | $E(1+R)/F - (1+R^*)$ |
+
+Positif jika $F < E(1+R)/(1+R^*)$.
+
+:::
+
+::::
+
+## CIP vs UIP, forward bias {.s}
+
+- **CIP** holds karena _arbitrage_ — tidak butuh asumsi ekspektasi. Jika gagal, ada free money.
+
+- **UIP** butuh asumsi rasional & risk-neutral expectations. Empiris: sering gagal.
+
+- **Forward as predictor**: secara statistik, $F$ adalah _biased and noisy_ predictor untuk $E^e$.
+
+    - Forward premium puzzle: currency dengan high interest rate justru cenderung **appreciate**, bukan depreciate (kebalikan UIP).
+
+    - Implikasi: carry trade rata-rata profitable secara ex-post (dengan risiko crash).
+
+## CIP breakdown 2008 {.s}
+
+- 2007-08 Global Financial Crisis: CIP yang "selalu holds" tiba-tiba gagal.
+
+- Apa yang terjadi?
+
+    - Bank-bank tidak mau lend USD ke counterparty Eropa karena khawatir solvensi.
+
+    - Akses ke USD funding terbatas → bank Eropa harus pay premium untuk USD via swap → $F$ deviates dari teori CIP.
+
+- Pelajaran:
+
+    - CIP holds **only when** ada pasar funding yang lancar.
+
+    - "No arbitrage" mengasumsikan akses kredit yang bebas — asumsi yang gagal saat krisis.
+
+- Post-2008: CIP basis (cross-currency basis) tetap non-zero untuk banyak pasangan, refleksi regulasi & balance sheet costs perbankan.
+
+## What is money? {.s}
+
+- **Money** = aset yang diterima luas sebagai pembayaran.
+
+- Klasifikasi BI (=IMF standard):
+
+    - **M1** (narrow) = uang kartal + giro/demand deposits.
+
+    - **M2** (broad) = M1 + savings + small time deposits + e-money + uang kuasi.
+
+    - **M3** = M2 + securities lainnya.
+
+- Per April 2026 (ilustrasi): M1 ≈ Rp 5.000 T, M2 ≈ Rp 9.500 T.
+
+- BI publish bulanan di SEKI. Yang penting: **kontrol BI atas supply**, bukan kuantitasnya.
+
+## Functions of money {.s}
+
+- **Medium of exchange**: alat tukar — menggantikan barter, mengurangi cost dari "double coincidence of wants".
+
+- **Unit of account**: ukuran nilai. Kita pricing dalam Rupiah, bukan dalam beras atau emas.
+
+- **Store of value**: cara menyimpan daya beli antar waktu. Tabung sekarang, konsumsi nanti.
+
+- Pertanyaan: mengapa transaksi domestik Indonesia pakai Rupiah, bukan USD?
+
+    - Konvensi & UU mata uang (UU No. 7/2011).
+
+    - Network externality: makin banyak yang pakai, makin berguna sebagai MoE.
+
+    - Tapi fungsi store of value Rupiah bisa _terbongkar_ jika inflasi tidak terkendali — kasus berikutnya.
+
+## Case study: Indonesia 1963-66 hyperinflation {.m}
+
+:::: columns
+
+::: {.column width="50%"}
+
+**Kronologi**:
+
+- 1959-65: defisit APBN meledak (proyek Nasakom, konfrontasi Malaysia), didanai pencetakan uang via BI.
+
+- 1965: _Sanering_ — re-denominasi Rp 1.000 → Rp 1, untuk "menarik" supply uang.
+
+- 1966: inflasi tahunan ≈ 636% (estimasi BPS/BI historis).
+
+- Setelah Orde Baru (1967+): IMF stabilisasi, fiscal tightening, inflasi turun ke ~10% pada 1969.
+
+**Mengapa relevan untuk FX**:
+
+- Money supply ↑↑ → P ↑↑ → IDR collapse vs USD.
+
+- Functions of money rusak: penduduk lari ke USD, emas, atau barter.
+
+:::
+
+::: {.column width="50%"}
+
+```{r}
+#| warning: false
+#| message: false
+
+hyp <- tibble(
+  tahun = 1959:1969,
+  cpi_yoy = c(23, 23, 95, 156, 129, 109, 307, 636, 112, 85, 9)
+)
+
+ggplot(hyp, aes(x = tahun, y = cpi_yoy)) +
+  geom_col(fill = "#8b0000") +
+  geom_text(aes(label = paste0(cpi_yoy, "%")),
+            vjust = -0.3, size = 3) +
+  scale_x_continuous(breaks = 1959:1969) +
+  ylim(0, 750) +
+  den_theme +
+  labs(x = NULL, y = "Inflasi tahunan (%)",
+       caption = "estimasi historis BPS/BI (approx)")
+```
+
+:::
+
+::::
+
+## Money supply control {.s}
+
+- BI sebagai otoritas moneter. Tools utama:
+
+    - **OMO**: beli/jual SBI/SBN untuk inject/absorb likuiditas (reverse repo harian).
+
+    - **Reserve requirement (GWM)**: cadangan minimum bank di BI (≈ 9%).
+
+    - **BI 7DRR**: policy rate sejak 2016, signal ke pasar interbank.
+
+    - **Standing facilities**: deposit & lending facility = koridor di sekitar 7DRR.
+
+- Short-run: BI _sets_ $R$ (bukan $M$). Demand uang menentukan $M$ pada $R$ tersebut.
+
+## What drives money demand? {.s}
+
+- Demand uang $M^d$ secara kualitatif:
+
+    - $\downarrow$ ketika $R$ $\uparrow$: bunga deposit lebih menarik → kurang pegang cash.
+
+    - $\uparrow$ ketika $P$ $\uparrow$: butuh lebih banyak cash untuk transaksi yang sama dalam nominal.
+
+    - $\uparrow$ ketika $Y$ $\uparrow$: transaksi lebih banyak → butuh lebih banyak cash.
+
+- Model formal (KOM Ch.15): $M^d = P \cdot L(R, Y)$.
+
+- **Itu nanti pekan depan**. Hari ini cukup pakai intuisi: ketika $R$ turun, orang lebih banyak pegang cash; ketika $R$ naik, sebaliknya.
+
+## Bridge: money meets FX {.s}
+
+- Sejauh ini $R$ kita pakai sebagai _given_ di UIP. Dari mana $R$?
+
+- Versi short-run: **BI set $R$** melalui 7DRR.
+
+    - Money market: $M^s = M^d(R, P, Y)$, dengan $M^s$ "controlled" lewat OMO.
+
+    - Equilibrium: $R$ konsisten dengan target BI.
+
+- Begitu $R$ terbentuk di money market → _flows_ ke FX market via UIP.
+
+- Pekan depan: derivasi formal dengan model $M^d$.
+
+## Joint diagram: money market + FX {.m}
+
+:::: columns
+
+::: {.column width="40%"}
+
+**Money market (atas)**:
+
+- $M^s$ vertikal (BI controls).
+- $M^d$ downward sloping di $R$.
+- Equilibrium $R^*$.
+
+**FX market (bawah)**:
+
+- IDR return vertikal di $R^*$ (dari money market).
+- USD return downward sloping di $E$.
+- Equilibrium $E^*$.
+
+**Kunci**: $R^*$ dari money market → garis vertikal di FX market.
+
+:::
+
+::: {.column width="60%"}
+
+```{r}
+#| warning: false
+#| message: false
+#| fig-width: 5.5
+#| fig-height: 6
+suppressPackageStartupMessages(library(patchwork))
+
+md <- function(M) 0.15 - 0.018 * M
+mm <- ggplot() +
+  geom_function(fun = md, xlim = c(0, 8),
+                linewidth = 1.1, colour = "#26351c") +
+  geom_segment(aes(x = 5, xend = 5, y = 0, yend = 0.14),
+               linewidth = 1.1, colour = "#8b0000") +
+  annotate("segment", x = 0, xend = 5, y = 0.06, yend = 0.06,
+           linetype = "dashed") +
+  annotate("point", x = 5, y = 0.06, size = 3.5) +
+  annotate("text", x = 7.3, y = 0.025, label = "M^d",
+           parse = TRUE, size = 4) +
+  annotate("text", x = 5.3, y = 0.13, label = "M^s",
+           parse = TRUE, size = 4) +
+  annotate("text", x = 0.15, y = 0.07, label = "R*",
+           hjust = 0, size = 4) +
+  scale_x_continuous(limits = c(0, 8.5), expand = c(0, 0),
+                     name = expression(M^s/P)) +
+  scale_y_continuous(limits = c(0, 0.16), expand = c(0, 0),
+                     labels = scales::percent, name = "R") +
+  ggtitle("Money market") + den_theme
+
+R_dom <- 0.06; R_for <- 0.045; Ee <- 16700
+usd_ret <- function(r) Ee / (1 + r - R_for)
+E_star  <- usd_ret(R_dom)
+
+fx <- ggplot() +
+  stat_function(fun = usd_ret, xlim = c(0, 0.22),
+                linewidth = 1.1, colour = "#26351c") +
+  geom_segment(aes(x = R_dom, xend = R_dom, y = 13500, yend = 20000),
+               linewidth = 1.1, colour = "#8b0000") +
+  annotate("segment", x = 0, xend = R_dom, y = E_star, yend = E_star,
+           linetype = "dashed") +
+  annotate("point", x = R_dom, y = E_star, size = 3.5) +
+  annotate("text", x = 0.19, y = 14400, label = "USD return", size = 3.5) +
+  annotate("text", x = R_dom + 0.005, y = 19500,
+           label = "IDR return", hjust = 0, size = 3.5) +
+  annotate("text", x = 0.005, y = E_star + 300, label = "E*",
+           hjust = 0, size = 4) +
+  annotate("text", x = R_dom, y = 13350, label = "R*",
+           vjust = 1, size = 4) +
+  scale_x_continuous(labels = scales::percent,
+                     limits = c(0, 0.22), expand = c(0, 0),
+                     name = "Expected return (Rp)") +
+  scale_y_continuous(labels = scales::comma,
+                     limits = c(13500, 20000), expand = c(0, 0),
+                     name = "E (Rp/USD)") +
+  ggtitle("FX market") + den_theme
+
+mm / fx
+```
+
+:::
+
+::::
+
+## BI cuts rate → FX {.s}
+
+- BI turunkan 7DRR 25 bps.
+
+- Money market: $R$ turun. FX: IDR return geser _ke kiri_; USD return tidak bergerak.
+
+- Equilibrium baru: $E$ naik → **rupiah depresiasi**.
+
+- Intuisi: rate cut → investor cari yield di USD → demand IDR turun.
+
+- Mekanisme yang membuat _independent monetary policy_ ada "harga"-nya dalam floating ER.
+
+## Fed cuts → FX {.s}
+
+- Fed turunkan policy rate.
+
+- Foreign money market: $R^*$ turun. FX: USD return geser _ke kiri_; IDR return tidak.
+
+- Equilibrium baru: $E$ turun → **rupiah apresiasi**.
+
+- Simetris: dovish Fed = tailwind untuk EM currencies termasuk IDR.
+
+- Itu sebabnya pasar Indonesia sangat memperhatikan FOMC.
+
+## Short-run vs long-run {.s}
+
+- **Short-run** (yang baru saja): $P$ sticky. Yang bergerak: $R$ → $E$ → (perlahan) $P$.
+
+- **Long-run**: $P$ menyesuaikan penuh.
+
+    - $M \uparrow$ → $P \uparrow$ proporsional → $E \uparrow$ proporsional (PPP).
+
+    - "Money neutrality": real variables tidak berubah.
+
+- Gap antara short-run dan long-run → fenomena _overshooting_.
+
+## Overshooting concept {.s}
+
+- Dornbusch (1976):
+
+    1. $M \uparrow$ langsung dalam short-run.
+
+    2. $P$ sticky → $M/P \uparrow$ → $R \downarrow$.
+
+    3. UIP butuh $(E^e-E)/E < 0$ → rupiah _diharapkan_ apresiasi setelah jump awal.
+
+    4. $E$ harus _melompat melewati_ long-run level, baru perlahan apresiasi ke long-run.
+
+- **Hasilnya**: ER _overshoots_ — gerak inisial > shift fundamental.
+
+- Implikasi: FX volatility > volatility fundamental. Fitur empiris, bukan bug.
+
+## Overshooting diagram
+
+:::: columns
+
+::: {.column width="55%"}
+
+```{r}
+#| warning: false
+#| message: false
+#| fig-width: 5.5
+#| fig-height: 4.2
+
+E0      <- 16400
+E_long  <- 16800
+E_short <- 17500
+decay   <- 0.15
+
+pre  <- tibble(t = seq(-5, 0, by = 0.1), E = E0)
+post <- tibble(t = seq(0, 20, by = 0.1),
+               E = E_long + (E_short - E_long) * exp(-decay * t))
+
+ggplot() +
+  geom_hline(yintercept = E_long, linetype = "dashed", colour = "grey50") +
+  geom_hline(yintercept = E0, linetype = "dashed", colour = "grey50") +
+  geom_vline(xintercept = 0, linetype = "dotted", colour = "grey60") +
+  geom_line(data = pre,  aes(t, E),
+            linewidth = 1.1, colour = "#26351c") +
+  geom_segment(aes(x = 0, xend = 0, y = E0, yend = E_short),
+               linewidth = 1.1, colour = "#26351c") +
+  geom_line(data = post, aes(t, E),
+            linewidth = 1.1, colour = "#26351c") +
+  annotate("point", x = 0, y = E_short, size = 3.5) +
+  annotate("point", x = 0, y = E0, size = 3.5) +
+  annotate("text", x = 17, y = E_long + 90,
+           label = "long-run E", hjust = 1, size = 3.8) +
+  annotate("text", x = -4.5, y = E0 - 90,
+           label = "E[0]", parse = TRUE, hjust = 0, size = 3.8) +
+  annotate("text", x = 0.6, y = E_short - 50,
+           label = "short-run overshoot", hjust = 0, size = 3.5) +
+  annotate("text", x = 6, y = 17150,
+           label = "gradual apresiasi",
+           hjust = 0, size = 3.5, fontface = "italic") +
+  scale_x_continuous(name = "Time (relative to shock)",
+                     breaks = c(-5, 0, 5, 10, 15, 20)) +
+  scale_y_continuous(name = "E (Rp/USD)", labels = scales::comma) +
+  den_theme
+```
+
+:::
+
+::: {.column width="45%"}
+
+- $t<0$: equilibrium di $E_0$.
+
+- $t=0$: BI ekspansi moneter permanen → $E$ jump naik **melebihi** long-run.
+
+- $t>0$: $E$ perlahan apresiasi ke long-run baru (di atas $E_0$).
+
+- Magnitude overshoot tergantung _stickiness_ harga.
+
+:::
+
+::::
+
+## Takeaways {.s}
+
+- Nilai tukar adalah **harga aset**, ditentukan oleh expected return.
+
+- **UIP**: equilibrium antara $R$, $R^*$, $E$, $E^e$.
+
+- **CIP** berlaku karena arbitrase. UIP sering gagal → carry trade exist.
+
+- Forward & options = tools untuk _hedge_ (Pertamina) atau _bet_ (carry trader).
+
+- BI set $R$ via 7DRR → langsung berimplikasi ke $E$ via UIP.
+
+- Short-run: $P$ sticky → ER bisa **overshoot** fundamental.
+
+## Practice 1: UIP calculation {.s}
+
+- Diketahui: $R = 6{,}00\%$, $R^* = 4{,}25\%$, $E = 16.400$. UIP holds.
+
+- Berapa $E^e$ (1 tahun ke depan)?
+
+. . .
+
+**Solusi**:
+
+$$
+\frac{E^e - E}{E} = R - R^* = 1{,}75\%
+$$
+
+$$
+E^e = 16.400 \times 1{,}0175 \approx 16.687
+$$
+
+Pasar mengekspektasikan rupiah depresiasi ringan ke ≈ Rp 16.687/USD.
+
+## Practice 2: Carry trade P&L {.s}
+
+- Trader pinjam USD 1 jt @ 4,5% selama 1 tahun. Convert ke IDR pada $E=16.400$ → Rp 16,4 mlr. Invest di SBN @ 6,5% → Rp 17,466 mlr.
+
+- **Skenario A** ($E$ stabil 16.400): convert balik = USD 1,065 jt. Lunasi 1,045 jt → **profit USD 20.000**.
+
+- **Skenario B** ($E$ ke 17.000, depresiasi 3,7%): convert balik = USD 1,027 jt → **loss USD 18.000**.
+
+- Pelajaran: carry _bertaruh_ rupiah tidak depresiasi melebihi differensial bunga (~2%).
+
+## Practice 3: CIP arbitrage {.s}
+
+- Diketahui: $R = 6{,}00\%$, $R^* = 4{,}25\%$, $E = 16.400$, $F = 16.900$ (1Y).
+
+- Apakah ada arbitrase?
+
+. . .
+
+**Solusi**: CIP fair forward:
+
+$$
+F^* = E \cdot \frac{1+R}{1+R^*} = 16.400 \cdot \frac{1{,}06}{1{,}0425} \approx 16.675
+$$
+
+$F = 16.900 > F^* = 16.675$. Strategi: borrow USD, swap to Rp, deposit Rp, sell forward 1Y. Profit ≈ 1,37% per USD borrowed.
+
