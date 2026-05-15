@@ -1,9 +1,9 @@
 ---
-title: "Global Imbalance, exchange rate & Monetary Policy"
+title: "AA-DD: Output & Exchange Rate in the Short Run"
 subtitle: "ECES905205 pertemuan 13"
-date: "12 September 2022"
+date: "1 Juni 2026"
 author: "I Made Krisna Gupta"
-format: 
+format:
   revealjs:
     theme: [simple,../mytheme.scss]
     chalkboard: true
@@ -11,200 +11,944 @@ format:
     transition: convex
     background-transition: fade
     slide-number: true
-  beamer: default
+#  beamer: default
 ---
 
+## Recap M11-M12 & today {.s}
 
-## This week
+- M11: FX market, UIP/CIP, money basics.
 
-- To understand global imbalance, we need to understand how current account, exchange rate and monetary policy interacts.
+- M12: money market formal, PPP, monetary approach, real ER, Fisher.
 
-- Additionally, we want to note how income distribution and investment-boosting policy affects the global imbalance.
+- _Sejauh ini_ output $Y$ kita anggap _given_.
 
-- Later, we can learn that trade surplus may not equals to competitiveness, let alone welfare!
+- Hari ini (KOM Ch.17): bawa $Y$ masuk ke dalam model. Bagaimana output, ER, dan kebijakan moneter/fiskal berinteraksi dalam short run?
 
-## Miskonsepsi merkantilis
+- Framework baru: **AA-DD model**.
 
-- Ingat persamaan PDB berdasarkan konsumsi:
+## Roadmap {.s}
+
+- **Block 1**: aggregate demand di open economy ($C + I + G + CA$).
+
+- **Block 2**: DD curve (output market equilibrium).
+
+- **Block 3**: AA curve (asset market equilibrium).
+
+- **Block 4**: AA-DD intersection = short-run equilibrium.
+
+- **Block 5**: kebijakan moneter & fiskal **temporary**.
+
+- **Block 6**: kebijakan **permanent** & long-run adjustment.
+
+- **Block 7**: current account, J-curve, pass-through.
+
+- **Block 8**: liquidity trap (ZLB).
+
+```{r}
+#| warning: false
+#| message: false
+suppressPackageStartupMessages({
+  library(tidyverse)
+  library(scales)
+})
+
+have_ggden <- requireNamespace("ggden", quietly = TRUE)
+if (have_ggden) suppressMessages(library(ggden))
+
+den_theme <- if (have_ggden && exists("theme_den", mode = "function")) {
+  theme_den()
+} else {
+  theme_classic(base_size = 14) +
+    theme(panel.background = element_rect(fill = "#f0f1eb", colour = "#f0f1eb"),
+          plot.background = element_rect(fill = "#f0f1eb"),
+          legend.key = element_rect(fill = "#f0f1eb", linetype = "blank"),
+          legend.background = element_rect(fill = "#f0f1eb"),
+          panel.grid.minor = element_blank())
+}
+```
+
+## Aggregate demand di open economy {.s}
+
+- Aggregate demand:
 
 $$
-Y=C+I+G+NX
+D = C(Y^d) + I + G + CA\left(\frac{EP^*}{P}, Y^d\right)
 $$
 
-- Menurut kacamata merkantilis, menaikkan NX (dgn cara dorong ekspor, halangi impor) menyebabkan Y naik:
+    di mana:
 
+    - $C(Y^d)$ = consumption sebagai fungsi disposable income.
+    - $Y^d = Y - T$ = disposable income.
+    - $I$ = investment (exogen di model awal).
+    - $G$ = government purchases (exogen).
+    - $CA$ = current account, fungsi dari real ER dan disposable income.
+
+- Empat komponen: $C, I, G, CA$ — standard open-economy decomposition.
+
+## Determinants of consumption {.s}
+
+- $C(Y^d)$ tumbuh dengan $Y^d$, tapi _kurang dari proporsional_ (sebagian disimpan).
+
+- MPC (marginal propensity to consume) ≈ 0,6-0,9.
+
+- Indonesia: rata-rata household saving rate ~30%, sehingga MPC ~0,7.
+
+- KOM asumsi simplifikasi: real interest rate dan wealth diabaikan untuk konsumsi (model dasar).
+
+- Jadi consumption hanya bergerak dengan $Y^d$ dalam analisis kita.
+
+## Current account determinants {.s}
+
+- $CA$ depends on:
+
+    - **Real exchange rate** $q = EP^*/P$: kalau $q\uparrow$ (real depresiasi), barang domestik relatif lebih murah → ekspor naik, impor turun → $CA\uparrow$.
+
+    - **Disposable income** $Y^d$: kalau $Y^d\uparrow$, konsumen beli lebih banyak (termasuk impor) → $CA\downarrow$.
+
+- Table 17.1 (KOM):
+
+| Shock | Effect on $CA$ |
+|---|---|
+| $q\uparrow$ (real depresiasi) | $CA\uparrow$ |
+| $q\downarrow$ (real apresiasi) | $CA\downarrow$ |
+| $Y^d\uparrow$ | $CA\downarrow$ |
+| $Y^d\downarrow$ | $CA\uparrow$ |
+
+## Volume vs value effect {.s}
+
+- Kenaikan $q$ (real depresiasi) → ekspor naik, impor turun → CA naik. Tapi _ada catatan_:
+
+    - **Volume effect**: kuantitas ekspor/impor bergerak.
+
+    - **Value effect**: harga impor (dalam Rp) naik kalau $E$ naik → nilai impor _per unit_ naik.
+
+- Dalam jangka pendek, volume bisa fixed (kontrak existing) → _value effect_ dominan → CA _menurun_ (bukan naik).
+
+- Dalam jangka >1 tahun: volume effect dominan → CA naik.
+
+- Ini fenomena **J-curve** (slide nanti).
+
+- Untuk model dasar Ch.17: asumsikan volume dominan → real depresiasi menaikkan CA.
+
+## Aggregate demand vs output {.m}
+
+:::: columns
+
+::: {.column width="50%"}
+
+- KOM Fig 17.1: $D$ sebagai fungsi $Y$ (output).
+
+- $Y\uparrow$ → $Y^d\uparrow$ → $C\uparrow$ (positive slope).
+
+- $Y\uparrow$ → impor naik → $CA\downarrow$ (negative slope).
+
+- Net: $D$ naik dengan $Y$, _tapi dengan slope < 1_ (sebagian dari $Y$ disimpan, sebagian "bocor" ke impor).
+
+- 45° line: $D = Y$ → ini equilibrium output market.
+
+:::
+
+::: {.column width="50%"}
+
+```{r}
+#| warning: false
+#| message: false
+#| fig-width: 5
+#| fig-height: 4.2
+
+x <- seq(0, 10, length.out = 100)
+D <- 2 + 0.6 * x
+Y45 <- x
+
+ggplot() +
+  geom_line(aes(x = x, y = D), linewidth = 1.1, colour = "#26351c") +
+  geom_line(aes(x = x, y = Y45), linewidth = 0.8,
+            colour = "grey50", linetype = "dashed") +
+  annotate("point", x = 5, y = 5, size = 3.5, colour = "#8b0000") +
+  annotate("text", x = 9.2, y = D[length(D)] - 0.5,
+           label = "D(Y)", size = 4, colour = "#26351c") +
+  annotate("text", x = 9.2, y = 9.7, label = "45°", size = 4, colour = "grey40") +
+  annotate("text", x = 5.2, y = 4.5, label = "Y[1]", parse = TRUE, size = 4) +
+  scale_x_continuous(name = "Y (output)", limits = c(0, 10), expand = c(0, 0)) +
+  scale_y_continuous(name = "D (aggregate demand)", limits = c(0, 10), expand = c(0, 0)) +
+  den_theme
+```
+
+:::
+
+::::
+
+## Short-run output equilibrium {.s}
+
+- Output settles di titik di mana $D(Y) = Y$ (KOM Fig 17.2).
+
+- Di kiri equilibrium: $D > Y$ → firms boost production → $Y$ naik.
+
+- Di kanan: $D < Y$ → firms cut production → $Y$ turun.
+
+- Jadi equilibrium adalah _stable_ (mendekati 45° line).
+
+- Untuk $Y$ tertentu, equilibrium tergantung shifts in $D$: dari $G, T, I, E, P, P^*$.
+
+## Bagaimana $E$ mempengaruhi $D$? {.s}
+
+- $E\uparrow$ (nominal depresiasi): pada $P, P^*$ fixed → real ER $q = EP^*/P \uparrow$ → ekspor naik, impor turun → $CA\uparrow$.
+
+- Karena $CA$ adalah komponen $D$ → $D\uparrow$ pada setiap $Y$.
+
+- Equilibrium output naik.
+
+- Jadi **$E\uparrow \Rightarrow Y\uparrow$** (di output market).
+
+- Hubungan ini akan jadi dasar **DD curve**.
+
+## Deriving DD {.m}
+
+:::: columns
+
+::: {.column width="55%"}
+
+```{r}
+#| warning: false
+#| message: false
+#| fig-width: 5
+#| fig-height: 5.5
+suppressPackageStartupMessages(library(patchwork))
+
+x <- seq(0, 10, length.out = 100)
+D_low  <- 1.5 + 0.6 * x
+D_high <- 2.5 + 0.6 * x
+Y45 <- x
+
+p_upper <- ggplot() +
+  geom_line(aes(x = x, y = D_low),  linewidth = 1, colour = "#26351c") +
+  geom_line(aes(x = x, y = D_high), linewidth = 1, colour = "#8b0000") +
+  geom_line(aes(x = x, y = Y45), linewidth = 0.7, colour = "grey50", linetype = "dashed") +
+  annotate("point", x = 3.75, y = 3.75, size = 3, colour = "#26351c") +
+  annotate("point", x = 6.25, y = 6.25, size = 3, colour = "#8b0000") +
+  annotate("text", x = 9.2, y = 8.5,  label = "D(E[2])", parse = TRUE, size = 3.5, colour = "#8b0000") +
+  annotate("text", x = 9.2, y = 7.0,  label = "D(E[1])", parse = TRUE, size = 3.5, colour = "#26351c") +
+  scale_x_continuous(limits = c(0, 10), expand = c(0, 0)) +
+  scale_y_continuous(limits = c(0, 10), expand = c(0, 0), name = "D") +
+  den_theme + labs(x = NULL) + ggtitle("Upper: D vs Y at two values of E")
+
+E_vals <- c(16000, 16800)
+Y_vals <- c(3.75, 6.25)
+p_lower <- ggplot(tibble(Y = Y_vals, E = E_vals), aes(Y, E)) +
+  geom_line(linewidth = 1.1, colour = "#26351c") +
+  geom_point(size = 3.5) +
+  annotate("text", x = Y_vals[1] - 0.1, y = E_vals[1] - 100,
+           label = "(Y1, E1)", size = 3.5, hjust = 1) +
+  annotate("text", x = Y_vals[2] + 0.1, y = E_vals[2] + 100,
+           label = "(Y2, E2)", size = 3.5, hjust = 0) +
+  annotate("text", x = 9, y = 17000, label = "DD", size = 5, fontface = "bold") +
+  scale_x_continuous(limits = c(0, 10), expand = c(0, 0), name = "Y") +
+  scale_y_continuous(limits = c(15500, 17500), labels = comma, name = "E (Rp/USD)") +
+  den_theme + ggtitle("Lower: DD curve")
+
+p_upper / p_lower
+```
+
+:::
+
+::: {.column width="45%"}
+
+- **Upper panel**: di $E_1 = 16.000$, equilibrium di $Y_1 = 3{,}75$. Di $E_2 = 16.800$, equilibrium naik ke $Y_2 = 6{,}25$.
+
+- **Lower panel**: plot $(Y, E)$ pairs di mana output market clear → titik-titik DD.
+
+- DD slopes **upward**: $E\uparrow \Rightarrow Y\uparrow$.
+
+- Setiap titik di DD = output market in equilibrium.
+
+:::
+
+::::
+
+## DD curve definition {.s}
+
+- **DD curve**: kombinasi $(Y, E)$ di mana _output market_ in short-run equilibrium ($D = Y$).
+
+- Slopes **upward** (positive).
+
+- Bukan kausalitas — hanya geometric locus.
+
+- Implicit: $G, T, I, P, P^*$ tetap di kurva. Perubahan ini akan _shift_ DD.
+
+## DD shifters (KOM 23-26) {.s}
+
+| Shock | DD shift |
+|---|---|
+| $G\uparrow$ (government spending) | Right |
+| $T\downarrow$ (tax cut) | Right |
+| $I\uparrow$ (investment increase) | Right |
+| $C$ autonom $\uparrow$ (consumption optimism) | Right |
+| $P\downarrow$ (domestic prices fall) | Right |
+| $P^*\uparrow$ (foreign prices rise) | Right |
+| Pergeseran demand ke barang domestik | Right |
+
+- Semua factor yang menaikkan $D$ pada setiap $E$ → DD geser kanan (lebih banyak $Y$ pada $E$ yang sama).
+
+- Note: $E$ sendiri _movement along_ DD, bukan shift.
+
+## Numerical DD shift {.s}
+
+- Indonesia government naikkan $G$ sebesar Rp 100 triliun (~1% of GDP).
+
+- Multiplier sederhana = $1/(1-MPC+MPI)$, dengan MPC=0,7, MPI=0,2 → multiplier = $1/0{,}5 = 2$.
+
+- Direct effect: $\Delta Y \approx 200$ triliun pada setiap $E$.
+
+- Pada $E$ yang sama, DD bergeser ke kanan sebesar Rp 200 triliun.
+
+- (Catatan: ini multiplier _tanpa_ asset market response — yang ditangani AA curve nanti.)
+
+## Asset markets short-run {.s}
+
+- Dua asset markets simultaneously:
+
+    1. **FX market**: UIP holds.
+
+    $$R = R^* + \frac{E^e - E}{E}$$
+
+    2. **Money market**: equilibrium money supply/demand.
+
+    $$\frac{M^s}{P} = L(R, Y)$$
+
+- Dua persamaan, dua unknowns: $R$ dan $E$ (dengan $M^s, P, R^*, E^e, Y$ given).
+
+- Bagaimana $Y$ masuk? Lewat $L(R, Y)$.
+
+## Deriving AA: $Y$ naik {.s}
+
+- $Y\uparrow$ → $L(R, Y)\uparrow$ → demand uang naik.
+
+- Pada $M^s/P$ tetap, $R$ harus naik untuk re-equilibrate money market.
+
+- UIP: $R\uparrow$ → IDR return curve geser kanan → $E\downarrow$ (IDR apresiasi).
+
+- Jadi **$Y\uparrow \Rightarrow E\downarrow$** (di asset markets).
+
+- AA slopes **downward**.
+
+## AA curve {.m}
+
+:::: columns
+
+::: {.column width="45%"}
+
+- AA = kombinasi $(Y, E)$ di mana _asset markets_ (FX + money) in equilibrium.
+
+- Slope **downward**: $Y\uparrow \Rightarrow R\uparrow \Rightarrow E\downarrow$.
+
+- Setiap titik di AA = money market clear + UIP holds.
+
+- Implicit: $M^s, P, R^*, E^e$ tetap. Perubahan = AA shift.
+
+:::
+
+::: {.column width="55%"}
+
+```{r}
+#| warning: false
+#| message: false
+#| fig-width: 5
+#| fig-height: 4.5
+
+Y_grid <- seq(0, 10, length.out = 100)
+AA_E <- 17500 - 200 * Y_grid
+
+ggplot(tibble(Y = Y_grid, E = AA_E), aes(Y, E)) +
+  geom_line(linewidth = 1.2, colour = "#26351c") +
+  annotate("point", x = 5, y = 16500, size = 3.5) +
+  annotate("text", x = 5.3, y = 16700, label = "(Y1, E1)",
+           size = 4, hjust = 0) +
+  annotate("text", x = 9, y = 16000, label = "AA", size = 5, fontface = "bold") +
+  scale_x_continuous(limits = c(0, 10), expand = c(0, 0), name = "Y") +
+  scale_y_continuous(limits = c(15000, 18000), labels = comma, name = "E (Rp/USD)") +
+  den_theme
+```
+
+:::
+
+::::
+
+## AA shifters (KOM 32-34) {.s}
+
+| Shock | AA shift |
+|---|---|
+| $M^s\uparrow$ (monetary expansion) | Up (right) |
+| $P\downarrow$ (price drop) | Up (right) |
+| $E^e\uparrow$ (expected depreciation) | Up (right) |
+| $R^*\uparrow$ (foreign rate hike) | Up (right) |
+| $L(R,Y)$ shift turun (lower money demand) | Up (right) |
+
+- Semua factor yang **naikkan $E$ pada setiap $Y$** → AA geser ke atas.
+
+- Note: kalau $M^s$ naik, langsung shift _AA_ di asset side; kalau $G$ naik, langsung shift _DD_ di output side.
+
+## AA vs DD adjustment speed {.s}
+
+- **AA adjusts instantly**: asset prices (termasuk $E$) bergerak detik-per-detik.
+
+- **DD adjusts slowly**: output, employment, current account butuh waktu (minggu/bulan).
+
+- Implikasi dinamika: kalau ada shock, ekonomi pertama pindah _sepanjang AA_ ke arah equilibrium baru, kemudian perlahan ke perpotongan AA-DD.
+
+- KOM Fig 17.9: dari titik arbitrary, $E$ jump ke AA pertama, lalu output adjust slowly ke titik AA-DD.
+
+## AA-DD intersection {.m}
+
+:::: columns
+
+::: {.column width="55%"}
+
+```{r}
+#| warning: false
+#| message: false
+#| fig-width: 5
+#| fig-height: 4.5
+
+Y_grid <- seq(0, 10, length.out = 100)
+AA <- 17500 - 200 * Y_grid
+DD <- 15000 + 300 * Y_grid
+
+ggplot() +
+  geom_line(aes(x = Y_grid, y = AA), linewidth = 1.2, colour = "#26351c") +
+  geom_line(aes(x = Y_grid, y = DD), linewidth = 1.2, colour = "#8b0000") +
+  annotate("point", x = 5, y = 16500, size = 4) +
+  annotate("text", x = 5.3, y = 16700, label = "(Y*, E*)",
+           size = 4, hjust = 0) +
+  annotate("text", x = 9, y = 16000, label = "AA",
+           size = 5, fontface = "bold", colour = "#26351c") +
+  annotate("text", x = 9, y = 17800, label = "DD",
+           size = 5, fontface = "bold", colour = "#8b0000") +
+  scale_x_continuous(limits = c(0, 10), expand = c(0, 0), name = "Y") +
+  scale_y_continuous(limits = c(14500, 18500), labels = comma, name = "E (Rp/USD)") +
+  den_theme
+```
+
+:::
+
+::: {.column width="45%"}
+
+- Short-run equilibrium = perpotongan AA dan DD.
+
+- Di titik $(Y^*, E^*)$:
+
+    - Output market clear ($D = Y$, di DD).
+
+    - Money market clear (di AA, via $L$).
+
+    - UIP holds (di AA, via FX).
+
+- Tiga equilibrium kondisi simultan terpenuhi.
+
+:::
+
+::::
+
+## Adjustment dynamics {.s}
+
+- Kalau ekonomi tidak di equilibrium, bagaimana ia sampai?
+
+- Misal $(Y, E)$ awal di kanan-atas AA dan kanan-atas DD.
+
+- **Step 1 (instant)**: $E$ adjust → jump turun ke AA.
+
+- **Step 2 (slow)**: output adjust along AA → $Y$ turun, $E$ naik perlahan, sampai perpotongan AA-DD.
+
+- Asset markets selalu in equilibrium (di AA); output adjustments slow.
+
+- Realistic: financial news menggerakkan FX dalam detik, sementara firm hiring/firing menggerakkan output dalam bulan.
+
+## Temporary vs permanent {.s}
+
+- **Temporary policy**: ekspektasi $E^e$ _tidak_ berubah. Cukup short-run shifts in $M^s$, $G$, dll.
+
+- **Permanent policy**: ekspektasi $E^e$ berubah (people expect long-run effects). AA shifts _lebih_ karena $E^e$ ikut bergeser.
+
+- Mahasiswa sering bingung: bedanya bukan _duration_ kebijakan, tapi _apakah pasar percaya kebijakan berkelanjutan_ → mempengaruhi $E^e$.
+
+- Mari kita mulai dengan temporary, lalu lihat permanent.
+
+## Temporary $M^s\uparrow$ {.m}
+
+:::: columns
+
+::: {.column width="45%"}
+
+```{r}
+#| warning: false
+#| message: false
+#| fig-width: 4.5
+#| fig-height: 4
+
+Y_grid <- seq(0, 10, length.out = 100)
+AA1 <- 17500 - 200 * Y_grid
+AA2 <- 18200 - 200 * Y_grid
+DD  <- 15000 + 300 * Y_grid
+
+ggplot() +
+  geom_line(aes(x = Y_grid, y = AA1), linewidth = 1.1, colour = "#26351c") +
+  geom_line(aes(x = Y_grid, y = AA2), linewidth = 1.1,
+            colour = "#26351c", linetype = "dashed") +
+  geom_line(aes(x = Y_grid, y = DD), linewidth = 1.1, colour = "#8b0000") +
+  annotate("point", x = 5, y = 16500, size = 3.5) +
+  annotate("point", x = 6.4, y = 16920, size = 3.5, colour = "#8b0000") +
+  annotate("text", x = 5.0, y = 16100, label = "1", size = 4) +
+  annotate("text", x = 6.7, y = 17150, label = "2", size = 4) +
+  annotate("text", x = 9.2, y = 16100, label = "AA[1]", parse = TRUE, size = 4) +
+  annotate("text", x = 9.2, y = 16850, label = "AA[2]", parse = TRUE,
+           size = 4, colour = "#26351c") +
+  scale_x_continuous(limits = c(0, 10), expand = c(0, 0), name = "Y") +
+  scale_y_continuous(limits = c(14500, 18500), labels = comma, name = "E") +
+  den_theme
+```
+
+:::
+
+::: {.column width="55%"}
+
+**KOM Fig 17.10**: BI naikkan $M^s$ secara temporer.
+
+- AA geser ke atas dari $AA_1$ ke $AA_2$.
+
+- Equilibrium pindah dari titik 1 ke titik 2.
+
+- $E\uparrow$ (IDR depresiasi) **dan** $Y\uparrow$ (output naik).
+
+- Mekanisme: $M^s\uparrow$ → $R\downarrow$ → IDR depresiasi → $CA\uparrow$ + investment $\uparrow$ → $D\uparrow$ → $Y\uparrow$.
+
+:::
+
+::::
+
+## Temporary $G\uparrow$ {.m}
+
+:::: columns
+
+::: {.column width="45%"}
+
+```{r}
+#| warning: false
+#| message: false
+#| fig-width: 4.5
+#| fig-height: 4
+
+Y_grid <- seq(0, 10, length.out = 100)
+AA  <- 17500 - 200 * Y_grid
+DD1 <- 15000 + 300 * Y_grid
+DD2 <- 13500 + 300 * Y_grid + 300
+
+ggplot() +
+  geom_line(aes(x = Y_grid, y = AA), linewidth = 1.1, colour = "#26351c") +
+  geom_line(aes(x = Y_grid, y = DD1), linewidth = 1.1, colour = "#8b0000") +
+  geom_line(aes(x = Y_grid, y = DD2), linewidth = 1.1,
+            colour = "#8b0000", linetype = "dashed") +
+  annotate("point", x = 5, y = 16500, size = 3.5) +
+  annotate("point", x = 6.6, y = 16180, size = 3.5, colour = "#8b0000") +
+  annotate("text", x = 4.5, y = 16800, label = "1", size = 4) +
+  annotate("text", x = 7.0, y = 16500, label = "2", size = 4) +
+  annotate("text", x = 9.2, y = 17900, label = "DD[1]", parse = TRUE,
+           size = 4, colour = "#8b0000") +
+  annotate("text", x = 9.2, y = 16900, label = "DD[2]", parse = TRUE,
+           size = 4, colour = "#8b0000") +
+  scale_x_continuous(limits = c(0, 10), expand = c(0, 0), name = "Y") +
+  scale_y_continuous(limits = c(14500, 18500), labels = comma, name = "E") +
+  den_theme
+```
+
+:::
+
+::: {.column width="55%"}
+
+**KOM Fig 17.11**: pemerintah naikkan $G$ secara temporer.
+
+- DD geser ke kanan.
+
+- Equilibrium pindah ke titik 2 (kanan-bawah).
+
+- $Y\uparrow$ **tapi** $E\downarrow$ (IDR apresiasi).
+
+- Mekanisme: $G\uparrow$ → $Y\uparrow$ → demand uang naik → $R\uparrow$ → IDR apresiasi.
+
+- "Crowding out" partial: appresiasi IDR mengurangi net export.
+
+:::
+
+::::
+
+## Comparison: monetary vs fiscal {.s}
+
+| Policy | $Y$ | $E$ | CA |
+|---|---|---|---|
+| Temporary $M^s\uparrow$ | Naik | Depresiasi (Rp lemah) | Naik (via depresiasi) |
+| Temporary $G\uparrow$ | Naik | Apresiasi (Rp kuat) | Turun (via apresiasi + impor) |
+| Temporary $M^s\downarrow$ | Turun | Apresiasi | Turun |
+| Temporary $G\downarrow$ | Turun | Depresiasi | Naik |
+
+- Monetary expansion: output naik dengan _depresiasi_; fiscal expansion: output naik dengan _apresiasi_.
+
+- Pilihan mix tergantung target: kalau ER terlalu lemah, prefer fiscal; kalau ER terlalu kuat, prefer monetary.
+
+## Full employment policies {.s}
+
+- KOM Fig 17.12: andaikan ada negative demand shock (DD shift kiri) → $Y$ turun di bawah potensi.
+
+- Two restoring options:
+
+    - **Monetary expansion**: AA shift kanan → $Y$ kembali _tapi_ $E$ lebih tinggi (Rp lebih lemah).
+
+    - **Fiscal expansion**: DD shift kanan kembali → $Y$ kembali, $E$ kembali ke level awal.
+
+- Beda outcomenya di $E$ — _komposisi_ output (export vs konsumsi domestik) berbeda.
+
+- KOM Fig 17.13: kalau shock adalah money _demand_ naik (AA shift kiri); monetary expansion restorasi $E$ ke awal, sementara fiscal expansion menggeser $E$ lebih rendah.
+
+## Permanent vs temporary {.s}
+
+- **Permanent policy**: pasar tahu ini bertahan _selamanya_ → $E^e$ adjusts.
+
+- **Temporary**: pasar tahu ini reversible → $E^e$ tidak berubah.
+
+- Untuk monetary expansion permanent:
+
+    - Long-run: $P$ akan naik proporsional, $E$ akan naik proporsional (PPP).
+
+    - Jadi $E^e$ jump _ke atas_ sejak hari pertama.
+
+    - AA shift _lebih_ dari kasus temporary (dua kontribusi: $M^s\uparrow$ + $E^e\uparrow$).
+
+## Permanent $M^s\uparrow$ {.s}
+
+- KOM Fig 17.14: AA jump lebih tinggi dibanding kasus temporary.
+
+- Equilibrium short-run: $Y$ naik lebih, $E$ naik lebih.
+
+- Tapi $Y$ ini _di atas_ potential output → tidak berkelanjutan.
+
+- Long-run: $P$ naik karena upah tertekan naik (output di atas potensi).
+
+- $P\uparrow$ → $M^s/P\downarrow$ → AA shift _kembali_ ke level awal.
+
+- $P\uparrow$ → $q\downarrow$ (real apresiasi) → CA turun → DD shift kiri sedikit.
+
+- Long-run equilibrium: $Y$ kembali ke potensi, $E$ tetap lebih tinggi (proporsional ke $M^s\uparrow$), $P$ lebih tinggi.
+
+## Long-run adjustment diagram {.s}
+
+- KOM Fig 17.15: dua kurva _bergerak_ over time.
+
+- Short-run point: ($Y$ tinggi, $E$ jump tinggi).
+
+- Long-run point: ($Y$ kembali ke potensi, $E$ proporsional $M^s$ baru, $P$ proporsional).
+
+- Note overshooting (link ke M12): $E$ jump _di atas_ long-run level karena $P$ sticky di short-run.
+
+- Setelah $P$ naik perlahan, $E$ perlahan apresiasi ke long-run level.
+
+## Permanent $G\uparrow$ {.s}
+
+- KOM Fig 17.16: $G$ naik _permanently_.
+
+- Effect on DD: shift kanan (seperti temporary).
+
+- Effect on AA: shift _kiri_ — karena pasar antisipasi $Y$ lebih tinggi long-run → $R$ akan lebih tinggi → IDR akan apresiasi → $E^e\downarrow$ → AA shift kiri.
+
+- Net effect pada short-run $Y$: **nol** (kalau ekonomi mulai di full employment).
+
+- $E$ turun (IDR apresiasi).
+
+- Mekanisme: kenaikan $G$ _crowds out_ net exports sepenuhnya. Tidak ada output gain.
+
+## Permanent fiscal: crowding out {.s}
+
+- "Crowding out" complete dalam permanent fiscal expansion under floating ER.
+
+- Mengapa? Karena pasar percaya $G$ akan permanen → pasar percaya $E$ akan permanently lebih kuat → $E$ apresiasi langsung → $CA$ turun langsung.
+
+- Net $X$ loss = $G$ gain → no output effect.
+
+- Untuk Indonesia: konsekuensinya kebijakan fiscal expansion permanen tidak efektif untuk menaikkan output jangka panjang.
+
+- (Berbeda dari _temporary_ fiscal expansion yang menaikkan output sementara.)
+
+## Inflationary bias & lags {.s}
+
+- Slide praktikal (KOM 47-48):
+
+    - **Inflationary bias**: pasar antisipasi monetary expansion → naikkan upah dan harga _di awal_ → output tidak naik tapi inflasi terjadi.
+
+    - **Policy lags**: recognition lag, decision lag, implementation lag → kebijakan terlambat efektif.
+
+    - **Data uncertainty**: data PDB Indonesia keluar setelah lag 1-2 quarter; data CPI bulanan.
+
+- Akademik: full-employment policy lebih mudah di model dibanding praktik.
+
+## XX curve & current account {.m}
+
+:::: columns
+
+::: {.column width="55%"}
+
+```{r}
+#| warning: false
+#| message: false
+#| fig-width: 5
+#| fig-height: 4
+
+Y_grid <- seq(0, 10, length.out = 100)
+AA <- 17500 - 200 * Y_grid
+DD <- 15000 + 300 * Y_grid
+XX <- 15500 + 200 * Y_grid
+
+ggplot() +
+  geom_line(aes(x = Y_grid, y = AA), linewidth = 1.1, colour = "#26351c") +
+  geom_line(aes(x = Y_grid, y = DD), linewidth = 1.1, colour = "#8b0000") +
+  geom_line(aes(x = Y_grid, y = XX), linewidth = 1.1,
+            colour = "#1f78b4", linetype = "dashed") +
+  annotate("point", x = 5, y = 16500, size = 3.5) +
+  annotate("text", x = 9.2, y = 17500, label = "XX",
+           size = 4, colour = "#1f78b4") +
+  scale_x_continuous(limits = c(0, 10), expand = c(0, 0), name = "Y") +
+  scale_y_continuous(limits = c(14500, 18500), labels = comma, name = "E") +
+  den_theme
+```
+
+:::
+
+::: {.column width="45%"}
+
+**XX curve**: $(Y, E)$ di mana CA = target.
+
+- Slopes upward (seperti DD).
+
+- Lebih datar dari DD: saving rate channel — kenaikan $Y$ menaikkan saving lebih banyak dari $D$, sehingga butuh _$E$ yang lebih kecil_ untuk mempertahankan CA.
+
+- Posisi titik equilibrium relatif terhadap XX:
+
+    - Di atas XX: CA surplus.
+
+    - Di bawah XX: CA defisit.
+
+:::
+
+::::
+
+## Policy effects on CA {.s}
+
+- **Monetary expansion** (AA up): $Y\uparrow$, $E\uparrow$. Naik di atas XX → CA improves. Net export channel dominan.
+
+- **Temporary fiscal** (DD right): $Y\uparrow$, $E\downarrow$. Turun di bawah XX → CA worsens. Apresiasi + impor naik.
+
+- **Permanent fiscal** (DD right + AA left): $Y$ tetap, $E\downarrow$. Di bawah XX → CA worsens.
+
+- Implikasi: kalau pemerintah ingin kurangi defisit CA, fiscal contraction efektif. Monetary tightening _menguatkan_ ER → CA bisa _memburuk_.
+
+## J-curve {.m}
+
+:::: columns
+
+::: {.column width="55%"}
+
+```{r}
+#| warning: false
+#| message: false
+#| fig-width: 5
+#| fig-height: 4
+
+t <- seq(-1, 5, by = 0.05)
+CA <- ifelse(t < 0, 0,
+             ifelse(t < 0.6, -0.5 + 0.5 * t / 0.6,
+                    -0.5 + 0.5 + 1.5 * (1 - exp(-1.0 * (t - 0.6)))))
+CA[t < 0] <- 0
+
+ggplot(tibble(t = t, CA = CA), aes(t, CA)) +
+  geom_line(linewidth = 1.2, colour = "#26351c") +
+  geom_hline(yintercept = 0, colour = "grey40", linetype = "dashed") +
+  geom_vline(xintercept = 0, colour = "grey50", linetype = "dotted") +
+  annotate("text", x = 0.1, y = 1.4, label = "Real depresiasi\ndi t=0",
+           hjust = 0, size = 3.5) +
+  annotate("text", x = 0.4, y = -0.4,
+           label = "Short-run:\nvalue effect dominant",
+           hjust = 0, size = 3.2, colour = "#8b0000") +
+  annotate("text", x = 3.0, y = 0.8,
+           label = "Long-run:\nvolume effect dominant",
+           hjust = 0, size = 3.2, colour = "#26351c") +
+  scale_x_continuous(name = "Waktu (relative to depresiasi)") +
+  scale_y_continuous(name = "CA (deviation from baseline)") +
+  den_theme
+```
+
+:::
+
+::: {.column width="45%"}
+
+- **J-curve**: setelah real depresiasi, CA _turun_ dulu (value effect), baru _naik_ (volume effect).
+
+- Bentuk seperti huruf J.
+
+- KOM Fig 17.18.
+
+- Implikasi:
+
+    - Short-run: depresiasi _memperparah_ trade balance.
+
+    - Membutuhkan waktu (~6-12 bulan) untuk volume adjusting.
+
+- Untuk Indonesia: setelah depresiasi besar, neraca dagang sering memburuk dulu (impor capital goods Rp naik), baru ekspor manufaktur respond.
+
+:::
+
+::::
+
+## Pass-through {.s}
+
+- **Pass-through**: %perubahan harga impor (dalam Rp) per 1% perubahan $E$.
+
+- Pass-through 100% (textbook): full transmission, $P_M^{\text{Rp}}$ naik sebesar $\Delta E$.
+
+- Pass-through < 100% (realitas): firms importir absorb sebagian via margin → harga konsumen naik sedikit.
+
+- Empiris Indonesia: pass-through ke harga konsumen ~30-50% jangka pendek (BI riset).
+
+- Implikasi: J-curve effect _lebih kecil_ dibanding prediksi textbook karena $P_M$ tidak naik penuh.
+
+## Global value chains {.s}
+
+- Banyak ekspor Indonesia mengandung _import content_ (bahan baku, komponen).
+
+- Contoh: ekspor TPT (Tekstil/Produk Tekstil) Indonesia banyak menggunakan kapas/serat impor.
+
+- Kalau IDR depresiasi:
+
+    - Harga ekspor turun (Rp depresi = USD price lebih kompetitif).
+
+    - **Tapi** harga input impor _naik_ (dalam Rp).
+
+    - Net margin effect kecil → ekspor tidak mudah _surge_.
+
+- KOM slide 67: imported value added bisa 30-50% dari gross value of exports untuk negara open seperti Singapura, Malaysia.
+
+- Untuk Indonesia: lebih moderate (~20-30%), tapi tetap mengurangi efek depresiasi.
+
+## Liquidity trap setup {.s}
+
+- Kalau $R = 0$ (Zero Lower Bound, ZLB), CB tidak bisa potong lebih lanjut.
+
+- UIP di ZLB:
 
 $$
-Y \uparrow =C+I+G+NX \uparrow
+0 = R^* + \frac{E^e - E}{E} \quad\Rightarrow\quad \frac{E^e - E}{E} = -R^*
 $$
 
-## Miskonsepsi merkantilis
+- Kalau $R^* > 0$, pasar ekspektasi $E$ akan _turun_ ($E^e < E$).
 
-- Namun persamaan tersebut aslinya adalah _accounting identity_ / hubungan aritmatika, bukan hubungan fungsional / sebab akibat.
+- Jika $E^e$ fixed, ini implies $E$ saat ini sudah _di atas_ $E^e$ — hanya satu nilai $E$ yang kompatibel.
 
-- Benar bahwa setiap variabel punya hubungan fungsional masing-masing dan saling terkait, tapi tidak berarti naikin yg kanan akan **berakibat pada** naiknya yg kiri.
+## Monetary expansion fails at ZLB {.s}
 
-- Ingat bahwa Y=kapasitas ekonomi untuk produksi dan konsumsi. Jika kapasitasnya tidak meningkat, maka kenaikan NX harus diambil dari variabel yg lain.
+- BI naikkan $M^s$ di ZLB.
 
-## Miskonsepsi merkantilis {.m}
+- Normalnya: $R\downarrow$ → $E\uparrow$. Tapi $R$ tidak bisa turun di bawah 0!
 
-- Jika $Y(K,L)$ stagnan karena tidak ada perubahan fundamental pada faktor produksi maupun teknologi, maka naiknya $NX$ tidak akan mengubah $Y$.
+- Hasil: $E$ tidak naik, $Y$ tidak naik. Monetary expansion **tidak efektif**.
 
-$$
-Y=C\downarrow + I \downarrow + G \downarrow= NX \uparrow
-$$
+- AA curve menjadi _horizontal_ pada bagian dimana $R = 0$ (KOM Fig 17.20).
 
-- Naiknya NX tanpa diimbangi peningkatan Y akan mengambil porsi Y yang digunakan untuk:
-    
-    - konsumsi domestik (C dan/atau G), atau;
-    
-    - domestic saving (saving ke luar negeri).
-    
-- Artinya, mendorong NX naik berpotensi mengurangi welfare!
+- Solusi alternative: forward guidance (manage $E^e$ langsung), QE, fiscal expansion.
 
-## Miskonsepsi merkantilis
+## Liquidity trap examples {.s}
 
-- Sebaliknya, jika kita fokus ke mendorong $Y$ lewat kebijakan pro bisnis, misalnya, maka naiknya $Y$ bisa saja terdistribusi ke naiknya konsumsi domestik, belum tentu ke peningkatan NX!
+- **Great Depression US 1930s**: Fed rate hit 0.
 
-- Peran trade scr teori untuk menaikkan $Y$ melalui efisiensi sumber daya:
+- **Japan 1990s-2010s**: BoJ stuck at ZLB selama dekade, eksperimen QE/QQE/yield curve control.
 
-    - Secara teori akan mendorong Y.
-    
-    - NX belum tentu naik: ekspor naik bisa jadi diimbangi impor yang juga naik.
-    
-    - Domestic consumption akan naik juga.
-    
-##  Income distribution
+- **US 2008-2015**: Fed funds 0-0,25%, three rounds of QE.
 
-- Di pertemuan sebelum UTS, kita sudah bahas bahwa kebijakan perdagangan sangat mempengaruhi income distribution:
+- **Euro area 2014-2022**: ECB hit ZLB, eksperimen negative rates.
 
-    - di specific factor model, land owner dan capital owner terpengaruh.
-    
-    - di HO model, pemilik factor yg abundant lebih diuntungkan dari trade.
-    
-- Kebijakan makro juga sangat berpengaruh: dalam hal ini XR dan interest rate.
+- **Indonesia**: belum pernah hit ZLB. BI 7DRR terendah ~3,5% (2021).
 
-- Reminder: interest rate naik $\rightarrow$ XR terapresiasi, inflasi berkurang.
+- Lesson: ZLB lebih relevan untuk advanced economies; EM seperti Indonesia memiliki "policy room" yang lebih besar.
 
-## Income distribution
+## Takeaways {.s}
 
-- Interest rate tinggi menguntungkan pemilik aset (savers), merugikan pemilik liabilitas (borrowers).
+- **AA-DD model** = output + asset market simultaneously dalam short-run.
 
-- Siapa savers: pemilik usaha (terutama eksportir), pemilik saham, generally orang kaya (punya banyak disposable income buat ditabung).
+- **DD upward**: $E\uparrow \Rightarrow Y\uparrow$ via $CA$ channel.
 
-- Siapa borrowers: orang yang gajinya kecil, penyicil KPR, tapi juga pemilik usaha yang ekspansi.
+- **AA downward**: $Y\uparrow \Rightarrow R\uparrow \Rightarrow E\downarrow$ via money demand.
 
-- Spekulan can be in both camps tergantung bet.
+- **Temporary monetary**: $Y\uparrow$, $E\uparrow$. **Temporary fiscal**: $Y\uparrow$, $E\downarrow$.
 
-## Income distribution
+- **Permanent monetary**: short-run $Y\uparrow$ + overshooting; long-run $Y$ kembali ke potensi.
 
-- Exchange rate yang tinggi menguntungkan net eksportir dan pemilik utang dollar, merugikan net-importir dan konsumen.
+- **Permanent fiscal**: complete crowding out — $Y$ tetap, $E\downarrow$.
 
-- Siapa net-exportir: firms yang savingnya besar, professional bergaji dolar (generally orang berada), diaspora & TKI.
+- **J-curve** + pass-through < 100% → efek depresiasi pada CA tertunda dan diredam.
 
-- siapa borrower dolar: biasanya perusahaan besar, negara, BUMN karya.
+- **Liquidity trap** = ZLB → monetary expansion tidak efektif.
 
-- Siapa net-importir: masyarakat pada umumnya, pekerja (bahkan di industri ekspor).
+## Practice 1: Temporary fiscal {.s}
 
-## Income distribution {.m}
+- Indonesia dalam mild recession, $Y < $ potensi. Pemerintah naikkan $G$ Rp 50 T (temporary).
 
-- kebijakan-kebijakan pendorong supply (subsidi, tax cut, relaxed labor restriction) berpotensi mendorong income distribution ke arah producers, ceteris paribus.
+- Tunjukkan di AA-DD: arah $Y$ dan $E$?
 
-    - harapan dari supply-side intervention adalah investasi naik, employment naik atau labor share naik. Benarkah?
+. . .
 
-::: {.fragment}
+**Solusi**:
 
-- Semakin besar share pendapatan firms relative to labor, semakin mungkin sebuah negara jadi net-eksportir.
+- DD shift kanan (G naik → D naik pada setiap E).
 
-    - firms berprofit besar lebih mungkin saving daripada masyarakat / pegawai.
-    
-    - jika profitnya dibagi-bagikan ke pegawai, kemungkinan $C\uparrow$ lebih tinggi.
-    
----
+- AA tetap.
 
-Ingat, jika tidak ada perubahan fundamental di sisi supply, NX yg naik bisa terjadi karena warga biasa tidak sanggup beli (C turun)!
+- Equilibrium pindah ke kanan-bawah: $Y\uparrow$, $E\downarrow$ (IDR apresiasi).
 
-    - ingat kasus minyak goreng.
-    
----
-    
-## Role of large firms? {.m}
+- CA turun (apresiasi + Y naik = impor naik).
 
-- Temuan dari [Dao and Maggi (2018)](https://doi.org/10.5089/9781484385395.001) dari large, non-financial firms:
+- Tradeoff: stimulus _output_ achieved tapi defisit CA membesar.
 
-    - Firms di negara maju berubah dari net-borrowers jadi net-savers, mostly di negara CA surplus.
-    
-    - these firms invest less, profit more, operate in low tax countries (tax havens).
-    
-    - duitnya cukup untuk bikin financial firms sendiri.
-    
-- Bagaimana dengan Indonesia?
+## Practice 2: Permanent monetary {.s}
 
-    - exporting firms yg tidak butuh invest & labornya murah bisa jadi sama perilakunya.
-    
-    - Bisa jadi judul thesis!
-    
-## Reminder: FA role!
+- BI mengumumkan _permanent_ kenaikan target inflasi dari 3% ke 5% (implies higher $\mu$ permanently).
 
-- Ekonom jadul mengajarkan dampak CA $\rightarrow$ XR: CA surplus $\rightarrow$ XR apresiasi.
+- Short-run: arah $E$? Apakah overshoot?
 
-- Zaman sekarang, flow of funds (FA) jauh lebih cepat dari flow of goods & services (CA)!
+. . .
 
-    - demand & supply of money karena pasar uang (interest rate) akan duluan ngaruh ke XR!
-    
-    - FA $\rightarrow$ XR $\rightarrow$ CA, bukan CA $\rightarrow$ XR!
+**Solusi**:
 
-- [Irwin (2022)](http://www.nber.org/papers/w29973):
+- AA jump _lebih_ tinggi karena $E^e$ naik (long-run depresiasi expected).
 
-    - Negara menurunkan tarif karena bisa manage CA dari FA (finlib).
-    
-## Financialization
+- Short-run $E$ jump _melebihi_ long-run level → overshooting.
 
-[Chang and Andreoni (2020)](https://doi.org/10.1111/dech.12570):
+- $Y$ naik di atas potensi short-run.
 
-- Shortermism in corporate control & in investment strategy.
+- Long-run: $P$ naik → AA shift kembali, $Y$ kembali ke potensi, $E$ settle di level proporsional baru.
 
-- Increasing share buyback & dividends.
+- Magnitude overshoot tergantung _stickiness_ harga (Dornbusch).
 
-- Increasing importance of the stock market & other external financing.
+## Practice 3: J-curve & Marshall-Lerner {.s}
 
-- Increasing importance of financial activities by non-financial firms, including stock buybacks.
+- Diketahui: import volume elasticity $\eta_M = 0{,}6$, export volume elasticity $\eta_X = 0{,}4$.
 
-- Increasing size of financial sectors & institutional investors.
+- Apakah Marshall-Lerner condition holds? Yaitu, apakah real depresiasi _eventually_ memperbaiki CA?
 
-## Financialization
+. . .
 
-- [Chang and Andreoni (2020)](https://doi.org/10.1111/dech.12570) on profit-investment nexus:
+**Solusi**:
 
-    - mid 1800s-1920s: reinvesting profits & restructuring (mergers) to improve scale & pursue more profit by 
+- Marshall-Lerner condition (simplified): $\eta_X + \eta_M > 1$.
 
-    - 1980s: downsizing & distributing: emerged from shortermism from "shareholder value ideology".
-    
-    - leads to less investment on capital & labor, less share for labor, more for shareholders & CEOs!
+- $0{,}4 + 0{,}6 = 1{,}0$. **Marginal** — exactly at boundary.
 
-- The movement of financial market gets more & more important in shaping trade and firm competitiveness!
+- Kalau $> 1$: real depresiasi _eventually_ improves CA (after J-curve).
 
-## Competitiveness? {.m}
+- Kalau $\leq 1$: depresiasi _tidak_ improve CA bahkan long-run.
 
-- Makin sulit mengatakan bahwa ekspor suatu negara menandakan keunggulan kompetitif:
+- Indonesia historis: ML holds, tapi pass-through < 100% memperkecil efek.
 
-    - Negara yang secara konstan undervalue currency-nya akan otomatis tinggi ekspornya.
-    
-    - Negara yang mengurangi konsumsi domestik (melalui kebijakan supply-driven) akan tinggi ekspornya.
-    
-    - Ekspor ini diserap oleh negara dengan kebijakan demand-driven dan loose monetary supply (UK, Aus, USA).
-    
-- Tidak berarti pemerintah harus berdiam diri, namun analisis trade & industri jadi harus lebih holistik.
-
-## Competitiveness? {.m}
-
-- Seiring Indonesia meningkatkan kebijakan demand-driven (subsidi konsumen, universal healthcare), wajar jika NX $\downarrow$.
-
-- Indonesia adalah investing country. CAD in short term adalah hal yang wajar ([Gupta, Gretton & Patunru 2022](https://www.gtap.agecon.purdue.edu/resources/res_display.asp?RecordID=6583)).
-
-    - Konsumsi barang modal tinggi, tidak bisa disupply hanya dari produksi dalam negeri.
-    
-- True impact of trade should be reflected from economic growth in general, not only NX!
-
-    - trade's role is not to accumulate wealth, but to improve efficiency & living standards!
-
+- Pekan depan: kebijakan moneter & fiskal dengan **fixed exchange rate** (KOM Ch.18) — Indonesia 1997 BoP crisis.

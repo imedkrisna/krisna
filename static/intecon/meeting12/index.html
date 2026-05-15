@@ -5,13 +5,12 @@
 <script src="index_files/libs/quarto-html/popper.min.js"></script>
 <script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="index_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="index_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.0.38">
+<link href="index_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.8.27">
 
   <meta name="author" content="I Made Krisna Gupta">
-  <meta name="dcterms.date" content="2022-09-12">
-  <title>Global Imbalance, exchange rate &amp; Monetary Policy</title>
+  <title>Money, Prices &amp; Long-Run Exchange Rates</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -20,215 +19,23 @@
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
   </style>
-  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto.css" id="theme">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-6a0936f214d018485b9e1b578c23d634.css">
   <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
-  <style type="text/css">
-
-  .callout {
-    margin-top: 1em;
-    margin-bottom: 1em;  
-    border-radius: .25rem;
-  }
-
-  .callout.callout-style-simple { 
-    padding: 0em 0.5em;
-    border-left: solid #acacac .3rem;
-    border-right: solid 1px silver;
-    border-top: solid 1px silver;
-    border-bottom: solid 1px silver;
-    display: flex;
-  }
-
-  .callout.callout-style-default {
-    border-left: solid #acacac .3rem;
-    border-right: solid 1px silver;
-    border-top: solid 1px silver;
-    border-bottom: solid 1px silver;
-  }
-
-  .callout .callout-body-container {
-    flex-grow: 1;
-  }
-
-  .callout.callout-style-simple .callout-body {
-    font-size: 1rem;
-    font-weight: 400;
-  }
-
-  .callout.callout-style-default .callout-body {
-    font-size: 0.9rem;
-    font-weight: 400;
-  }
-
-  .callout.callout-captioned.callout-style-simple .callout-body {
-    margin-top: 0.2em;
-  }
-
-  .callout:not(.callout-captioned) .callout-body {
-      display: flex;
-  }
-
-  .callout:not(.no-icon).callout-captioned.callout-style-simple .callout-content {
-    padding-left: 1.6em;
-  }
-
-  .callout.callout-captioned .callout-header {
-    padding-top: 0.2em;
-    margin-bottom: -0.2em;
-  }
-
-  .callout.callout-captioned .callout-caption  p {
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-  }
-    
-  .callout.callout-captioned.callout-style-simple .callout-content  p {
-    margin-top: 0;
-  }
-
-  .callout.callout-captioned.callout-style-default .callout-content  p {
-    margin-top: 0.7em;
-  }
-
-  .callout.callout-style-simple div.callout-caption {
-    border-bottom: none;
-    font-size: .9rem;
-    font-weight: 600;
-    opacity: 75%;
-  }
-
-  .callout.callout-style-default  div.callout-caption {
-    border-bottom: none;
-    font-weight: 600;
-    opacity: 85%;
-    font-size: 0.9rem;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-  }
-
-  .callout.callout-style-default div.callout-content {
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-  }
-
-  .callout.callout-style-simple .callout-icon::before {
-    height: 1rem;
-    width: 1rem;
-    display: inline-block;
-    content: "";
-    background-repeat: no-repeat;
-    background-size: 1rem 1rem;
-  }
-
-  .callout.callout-style-default .callout-icon::before {
-    height: 0.9rem;
-    width: 0.9rem;
-    display: inline-block;
-    content: "";
-    background-repeat: no-repeat;
-    background-size: 0.9rem 0.9rem;
-  }
-
-  .callout-caption {
-    display: flex
-  }
-    
-  .callout-icon::before {
-    margin-top: 1rem;
-    padding-right: .5rem;
-  }
-
-  .callout.no-icon::before {
-    display: none !important;
-  }
-
-  .callout.callout-captioned .callout-body > .callout-content > :last-child {
-    margin-bottom: 0.5rem;
-  }
-
-  .callout.callout-captioned .callout-icon::before {
-    margin-top: .5rem;
-    padding-right: .5rem;
-  }
-
-  .callout:not(.callout-captioned) .callout-icon::before {
-    margin-top: 1rem;
-    padding-right: .5rem;
-  }
-
-  /* Callout Types */
-
-  div.callout-note {
-    border-left-color: #4582ec !important;
-  }
-
-  div.callout-note .callout-icon::before {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEU0lEQVRYCcVXTWhcVRQ+586kSUMMxkyaElstCto2SIhitS5Ek8xUKV2poatCcVHtUlFQk8mbaaziwpWgglJwVaquitBOfhQXFlqlzSJpFSpIYyXNjBNiTCck7x2/8/LeNDOZxDuEkgOXe++553zfefee+/OYLOXFk3+1LLrRdiO81yNqZ6K9cG0P3MeFaMIQjXssE8Z1JzLO9ls20MBZX7oG8w9GxB0goaPrW5aNMp1yOZIa7Wv6o2ykpLtmAPs/vrG14Z+6d4jpbSKuhdcSyq9wGMPXjonwmESXrriLzFGOdDBLB8Y6MNYBu0dRokSygMA/mrun8MGFN3behm6VVAwg4WR3i6FvYK1T7MHo9BK7ydH+1uurECoouk5MPRyVSBrBHMYwVobG2aOXM07sWrn5qgB60rc6mcwIDJtQrnrEr44kmy+UO9r0u9O5/YbkS9juQckLed3DyW2XV/qWBBB3ptvI8EUY3I9p/67OW+g967TNr3Sotn3IuVlfMLVnsBwH4fsnebJvyGm5GeIUA3jljERmrv49SizPYuq+z7c2H/jlGC+Ghhupn/hcapqmcudB9jwJ/3jvnvu6vu5lVzF1fXyZuZZ7U8nRmVzytvT+H3kilYvH09mLWrQdwFSsFEsxFVs5fK7A0g8gMZjbif4ACpKbjv7gNGaD8bUrlk8x+KRflttr22JEMRUbTUwwDQScyzPgedQHZT0xnx7ujw2jfVfExwYHwOsDTjLdJ2ebmeQIlJ7neo41s/DrsL3kl+W2lWvAga0tR3zueGr6GL78M3ifH0rGXrBC2aAR8uYcIA5gwV8zIE8onoh8u0Fca/ciF7j1uOzEnqcIm59sEXoGc0+z6+H45V1CvAvHcD7THztu669cnp+L0okAeIc6zjbM/24LgGM1gZk7jnRu1aQWoU9sfUOuhrmtaPIO3YY1KLLWZaEO5TKUbMY5zx8W9UJ6elpLwKXbsaZ4EFl7B4bMtDv0iRipKoDQT2sNQI9b1utXFdYisi+wzZ/ri/1m7QfDgEuvgUUEIJPq3DhX/5DWNqIXDOweC2wvIR90Oq3lDpdMIgD2r0dXvGdsEW5H6x6HLRJYU7C69VefO1x8Gde1ZFSJLfWS1jbCnhtOPxmpfv2LXOA2Xk2tvnwKKPFuZ/oRmwBwqRQDcKNeVQkYcOjtWVBuM/JuYw5b6isojIkYxyYAFn5K7ZBF10fea52y8QltAg6jnMqNHFBmGkQ1j+U43HMi2xMar1Nv0zGsf1s8nUsmUtPOOrbFIR8bHFDMB5zL13Gmr/kGlCkUzedTzzmzsaJXhYawnA3UmARpiYj5ooJZiUoxFRtK3X6pgNPv+IZVPcnwbOl6f+aBaO1CNvPW9n9LmCp01nuSaTRF2YxHqZ8DYQT6WsXT+RD6eUztwYLZ8rM+rcPxamv1VQzFUkzFXvkiVrySGQgJNvXHJAxiU3/NwiC03rSf05VBaPtu/Z7/B8Yn/w7eguloAAAAAElFTkSuQmCC');
-  }
-
-  div.callout-note.callout-style-default .callout-caption {
-    background-color: #dae6fb
-  }
-
-  div.callout-important {
-    border-left-color: #d9534f !important;
-  }
-
-  div.callout-important .callout-icon::before {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEKklEQVRYCcVXTWhcVRS+575MJym48A+hSRFr00ySRQhURRfd2HYjk2SSTokuBCkU2o0LoSKKraKIBTcuFCoidGFD08nkBzdREbpQ1EDNIv8qSGMFUboImMSZd4/f9zJv8ibJMC8xJQfO3HPPPef7zrvvvnvviIkpC9nsw0UttFunbUhpFzFtarSd6WJkStVMw5xyVqYTvkwfzuf/5FgtkVoB0729j1rjXwThS7Vio+Mo6DNnvLfahoZ+i/o32lULuJ3NNiz7q6+pyAUkJaFF6JwaM2lUJlV0MlnQn5aTRbEu0SEqHUa0A4AdiGuB1kFXRfVyg5d87+Dg4DL6m2TLAub60ilj7A1Ec4odSAc8X95sHh7+ZRPCFo6Fnp7HfU/fBng/hi10CjCnWnJjsxvDNxWw0NfV6Rv5GgP3I3jGWXumdTD/3cbEOP2ZbOZp69yniG3FQ9z1jD7bnBu9Fc2tKGC2q+uAJOQHBDRiZX1x36o7fWBs7J9ownbtO+n0/qWkvW7UPIfc37WgT6ZGR++EOJyeQDSb9UB+DZ1G6DdLDzyS+b/kBCYGsYgJbSQHuThGKRcw5xdeQf8YdNHsc6ePXrlSYMBuSIAFTGAtQo+VuALo4BX83N190NWZWbynBjhOHsmNfFWLeL6v+ynsA58zDvvAC8j5PkbOcXCMg2PZFk3q8MjI7WAG/Dp9AwP7jdGBOOQkAvlFUB+irtm16I1Zw9YBcpGTGXYmk3kQIC/Cds55l+iMI3jqhjAuaoe+am2Jw5GT3Nbz3CkE12NavmzN5+erJW7046n/CH1RO/RVa8lBLozXk9uqykkGAyRXLWlLv5jyp4RFsG5vGVzpDLnIjTWgnRy2Rr+tDKvRc7Y8AyZq10jj8DqXdnIRNtFZb+t/ZRtXcDiVnzpqx8mPcDWxgARUqx0W1QB9MeUZiNrV4qP+Ehc+BpNgATsTX8ozYKL2NtFYAHc84fG7ndxUPr+AR/iQSns7uSUufAymwDOb2+NjK27lEFocm/EE2WpyIy/Hi66MWuMKJn8RvxIcj87IM5Vh9663ziW36kR0HNenXuxmfaD8JC7tfKbrhFr7LiZCrMjrzTeGx+PmkosrkNzW94ObzwocJ7A1HokLolY+AvkTiD/q1H0cN48c5EL8Crkttsa/AXQVDmutfyku0E7jShx49XqV3MFK8IryDhYVbj7Sj2P2eBxwcXoe8T8idsKKPRcnZw1b+slFTubwUwhktrfnAt7J++jwQtLZcm3sr9LQrjRzz6cfMv9aLvgmnAGvpoaGLxM4mAEaLV7iAzQ3oU0IvD5x9ix3yF2RAAuYAOO2f7PEFWCXZ4C9Pb2UsgDeVnFSpbFK7/IWu7TPTvBqzbGdCHOJQSxiEjt6IyZmxQyEJHv6xyQsYk//moVFsN2zP6fRImjfq7/n/wFDguUQFNEwugAAAABJRU5ErkJggg==');
-  }
-
-  div.callout-important.callout-style-default .callout-caption {
-    background-color: #f7dddc
-  }
-
-  div.callout-warning {
-    border-left-color: #f0ad4e !important;
-  }
-
-  div.callout-warning .callout-icon::before {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAETklEQVRYCeVWW2gcVRg+58yaTUnizqbipZeX4uWhBEniBaoUX1Ioze52t7sRq6APio9V9MEaoWlVsFasRq0gltaAPuxms8lu0gcviE/FFOstVbSIxgcv6SU7EZqmdc7v9+9mJtNks51NTUH84ed889/PP+cmxP+d5FIbMJmNbpREu4WUkiTtCicKny0l1pIKmBzovF2S+hIJHX8iEu3hZJ5lNZGqyRrGSIQpq15AzF28jgpeY6yk6GVdrfFqdrD6Iw+QlB8g0YS2g7dyQmXM/IDhBhT0UCiRf59lfqmmDvzRt6kByV/m4JjtzuaujMUM2c5Z2d6JdKrRb3K2q6mA+oYVz8JnDdKPmmNthzkAk/lN63sYPgevrguc72aZX/L9C6x09GYyxBgCX4NlvyGUHOKELlm5rXeR1kchuChJt4SSwyddZRXgvwMGvYo4QSlk3/zkHD8UHxwVJA6zjZZqP8v8kK8OWLnIZtLyCAJagYC4rTGW/9Pqj92N/c+LUaAj27movwbi19tk/whRCIE7Q9vyI6yvRpftAKVTdUjOW40X3h5OXsKCdmFcx0xlLJoSuQngnrJe7Kcjm4OMq9FlC7CMmScQANuNvjfP3PjGXDBaUQmbp296S5L4DrpbrHN1T87ZVEZVCzg1FF0Ft+dKrlLukI+/c9ENo+TvlTDbYFvuKPtQ9+l052rXrgKoWkDAFnvh0wTOmYn8R5f4k/jN/fZiCM1tQx9jQQ4ANhqG4hiL0qIFTGViG9DKB7GYzgubnpofgYRwO+DFjh0Zin2m4b/97EDkXkc+f6xYAPX0KK2I/7fUQuwzuwo/L3AkcjugPNixC8cHf0FyPjWlItmLxWw4Ou9YsQCr5fijMGoD/zpdRy95HRysyXA74MWOnscpO4j2y3HAVisw85hX5+AFBRSHt4ShfLFkIMXTqyKFc46xdzQM6XbAi702a7sy04J0+feReMFKp5q9esYLCqAZYw/k14E/xcLLsFElaornTuJB0svMuJINy8xkIYuL+xPAlWRceH6+HX7THJ0djLUom46zREu7tTkxwmf/FdOZ/sh6Q8qvEAiHpm4PJ4a/doJe0gH1t+aHRgCzOvBvJedEK5OFE5jpm4AGP2a8Dxe3gGJ/pAutug9Gp6he92CsSsWBaEcxGx0FHytmIpuqGkOpldqNYQK8cSoXvd+xLxXADw0kf6UkJNFtdo5MOgaLjiQOQHcn+A6h5NuL2s0qsC2LOM75PcF3yr5STuBSAcGG+meA14K/CI21HcS4LBT6tv0QAh8Dr5l93AhZzG5ZJ4VxAqdZUEl9z7WJ4aN+svMvwHHL21UKTd1mqvChH7/Za5xzXBBKrUcB0TQ+Ulgkfbi/H/YT5EptrGzsEK7tR1B7ln9BBwckYfMiuSqklSznIuoIIOM42MQO+QnduCoFCI0bpkzjCjddHPN/F+2Yu+sd9bKNpVwHhbS3LluK/0zgfwD0xYI5dXuzlQAAAABJRU5ErkJggg==');
-  }
-
-  div.callout-warning.callout-style-default .callout-caption {
-    background-color: #fcefdc
-  }
-
-  div.callout-tip {
-    border-left-color: #02b875 !important;
-  }
-
-  div.callout-tip .callout-icon::before {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAADr0lEQVRYCe1XTWgTQRj9ZjZV8a9SPIkKgj8I1bMHsUWrqYLVg4Ue6v9BwZOxSYsIerFao7UiUryIqJcqgtpimhbBXoSCVxUFe9CTiogUrUp2Pt+3aUI2u5vdNh4dmMzOzHvvezuz8xNFM0mjnbXaNu1MvFWRXkXEyE6aYOYJpdW4IXuA4r0fo8qqSMDBU0v1HJUgVieAXxzCsdE/YJTdFcVIZQNMyhruOMJKXYFoLfIfIvVIMWdsrd+Rpd86ZmyzzjJmLStqRn0v8lzkb4rVIXvnpScOJuAn2ACC65FkPzEdEy4TPWRLJ2h7z4cArXzzaOdKlbOvKKX25Wl00jSnrwVxAg3o4dRxhO13RBSdNvH0xSARv3adTXbBdTf64IWO2vH0LT+cv4GR1DJt+DUItaQogeBX/chhbTBxEiZ6gftlDNXTrvT7co4ub5A6gp9HIcHvzTa46OS5fBeP87Qm0fQkr4FsYgVQ7Qg+ZayaDg9jhg1GkWj8RG6lkeSacrrHgDaxdoBiZPg+NXV/KifMuB6//JmYH4CntVEHy/keA6x4h4CU5oFy8GzrBS18cLJMXcljAKB6INjWsRcuZBWVaS3GDrqB7rdapVIeA+isQ57Eev9eCqzqOa81CY05VLd6SamW2wA2H3SiTbnbSxmzfp7WtKZkqy4mdyAlGx7ennghYf8voqp9cLSgKdqNfa6RdRsAAkPwRuJZNbpByn+RrJi1RXTwdi8RQF6ymDwGMAtZ6TVE+4uoKh+MYkcLsT0Hk8eAienbiGdjJHZTpmNjlbFJNKDVAp2fJlYju6IreQxQ08UJDNYdoLSl6AadO+fFuCQqVMB1NJwPm69T04Wv5WhfcWyfXQB+wXRs1pt+nCknRa0LVzSA/2B+a9+zQJadb7IyyV24YAxKp2Jqs3emZTuNnKxsah+uabKbMk7CbTgJx/zIgQYErIeTKRQ9yD9wxVof5YolPHqaWo7TD6tJlh7jQnK5z2n3+fGdggIOx2kaa2YI9QWarc5Ce1ipNWMKeSG4DysFF52KBmTNMmn5HqCFkwy34rDg05gDwgH3bBi+sgFhN/e8QvRn8kbamCOhgrZ9GJhFDgfcMHzFb6BAtjKpFhzTjwv1KCVuxHvCbsSiEz4CANnj84cwHdFXAbAOJ4LTSAawGWFn5tDhLMYz6nWeU2wJfIhmIJBefcd/A5FWQWGgrWzyORZ3Q6HuV+Jf0Bj+BTX69fm1zWgK7By1YTXchFDORywnfQ7GpzOo6S+qECrsx2ifVQAAAABJRU5ErkJggg==');
-  }
-
-  div.callout-tip.callout-style-default .callout-caption {
-    background-color: #ccf1e3
-  }
-
-  div.callout-caution {
-    border-left-color: #fd7e14 !important;
-  }
-
-  div.callout-caution .callout-icon::before {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAACV0lEQVRYCdVWzWoUQRCuqp2ICBLJXgITZL1EfQDBW/bkzUMUD7klD+ATSHBEfAIfQO+iXsWDxJsHL96EHAwhgzlkg8nBg25XWb0zIb0zs9muYYWkoKeru+vn664fBqElyZNuyh167NXJ8Ut8McjbmEraKHkd7uAnAFku+VWdb3reSmRV8PKSLfZ0Gjn3a6Xlcq9YGb6tADjn+lUfTXtVmaZ1KwBIvFI11rRXlWlatwIAAv2asaa9mlB9wwygiDX26qaw1yYPzFXg2N1GgG0FMF8Oj+VIx7E/03lHx8UhvYyNZLN7BwSPgekXXLribw7w5/c8EF+DBK5idvDVYtEEwMeYefjjLAdEyQ3M9nfOkgnPTEkYU+sxMq0BxNR6jExrAI31H1rzvLEfRIdgcv1XEdj6QTQAS2wtstEALLG1yEZ3QhH6oDX7ExBSFEkFINXH98NTrme5IOaaA7kIfiu2L8A3qhH9zRbukdCqdsA98TdElyeMe5BI8Rs2xHRIsoTSSVFfCFCWGPn9XHb4cdobRIWABNf0add9jakDjQJpJ1bTXOJXnnRXHRf+dNL1ZV1MBRCXhMbaHqGI1JkKIL7+i8uffuP6wVQAzO7+qVEbF6NbS0LJureYcWXUUhH66nLR5rYmva+2tjRFtojkM2aD76HEGAD3tPtKM309FJg5j/K682ywcWJ3PASCcycH/22u+Bh7Aa0ehM2Fu4z0SAE81HF9RkB21c5bEn4Dzw+/qNOyXr3DCTQDMBOdhi4nAgiFDGCinIa2owCEChUwD8qzd03PG+qdW/4fDzjUMcE1ZpIAAAAASUVORK5CYII=');
-  }
-
-  div.callout-caution.callout-style-default .callout-caption {
-    background-color: #ffe5d0
-  }
-
-  </style>
   <style type="text/css">
     .reveal div.sourceCode {
       margin: 0;
@@ -321,321 +128,836 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" class="center">
-  <h1 class="title">Global Imbalance, exchange rate &amp; Monetary Policy</h1>
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Money, Prices &amp; Long-Run Exchange Rates</h1>
   <p class="subtitle">ECES905205 pertemuan 12</p>
-  <p class="author">I Made Krisna Gupta</p>
-  <p class="date">12 September 2022</p>
-</section>
 
-<section id="this-week" class="slide level2">
-<h2>This week</h2>
-<ul>
-<li><p>To understand global imbalance, we need to understand how current account, exchange rate and monetary policy interacts.</p></li>
-<li><p>Additionally, we want to note how income distribution and investment-boosting policy affects the global imbalance.</p></li>
-<li><p>Later, we can learn that trade surplus may not equals to competitiveness, let alone welfare!</p></li>
-</ul>
-</section>
-<section id="mercantilism" class="slide level2">
-<h2>Mercantilism</h2>
-<ul>
-<li><p>Mercantilism adalah <a href="https://www.econlib.org/library/Enc/Mercantilism.html">paham</a> yang mendorong ekspor dan menghalang-halangi impor.</p></li>
-<li><p>Pemeluk paham merkantilis percaya bahwa expor &gt; impor (CA surplus) merupakan hal yang baik.</p></li>
-<li><p>Paham ini besar di sekitar abad 16 sampai abad 18 setelah Smith dan Ricardo mempopulerkan comparative advantage.</p></li>
-<li><p>Ketika itu, alat tukar adalah emas dan perak. Merkantilis percaya bahwa membatasi impor memperkaya suatu negara dengan memiliki banyak emas dan perak.</p></li>
-</ul>
-</section>
-<section id="mercantilist-no-more" class="slide level2 m">
-<h2>Mercantilist no more</h2>
-<ul>
-<li><p>Selain argumen comparative advantage, satu konsep penting yang membuat surplus CA tidak sustainable adalah inflasi / nilai tukar.</p></li>
-<li><p>Jumlah emas di dalam negeri jadi tinggi relatif terhadap emas di pasar internasional.</p></li>
-<li><p>Harga emas jadi murah relatif terhadap barang <span class="math inline">\(\rightarrow\)</span> inflasi.</p></li>
-<li><p>menahan impor jadi semakin sulit &amp; mahal.</p>
-<ul>
-<li>tambah argumen comparative advantage, mercantilisme makin tidak populer dalam memningkatkan kesejahteraan.</li>
-</ul></li>
-</ul>
-</section>
-<section id="exchange-rate" class="slide level2">
-<h2>Exchange rate</h2>
-<ul>
-<li><p>Mercantilism <span class="math inline">\(\rightarrow\)</span> mempertahankan CA surplus.</p></li>
-<li><p>Namun CA (secara teori) tidak bisa surplus terus menerus.</p></li>
-<li><p>Unified currency: $ P_X Q_X = P_M QM $</p>
-<ul>
-<li><p>remember ToT: <span class="math inline">\(\frac{P_X}{P_M}=\frac{Q_M}{Q_X}\)</span></p></li>
-<li><p>If <span class="math inline">\(\frac{P_X}{P_M} \uparrow\)</span> then <span class="math inline">\(\frac{Q_M}{Q_X}\)</span></p></li>
-</ul></li>
-</ul>
-</section>
-<section id="exchange-rate-1" class="slide level2">
-<h2>Exchange rate</h2>
-<ul>
-<li><p>Exchange rate: how much foreign money we can buy with domestic money.</p></li>
-<li><p>Misalnya nilai tukar=14.000 rupiah per USD:</p>
-<ul>
-<li><p>perubahan jadi 14.500 = depresiasi rupiah terhadap dolar = apresiasi dolar terhadap rupiah.</p></li>
-<li><p>sama dengan 0,0000714 USD ke 0,000069 USD.</p></li>
-</ul></li>
-</ul>
-</section>
-<section id="exchange-rate-2" class="slide level2">
-<h2>Exchange rate</h2>
-
-<img data-src="picture1.png" class="r-stretch"></section>
-<section id="xr-trade" class="slide level2">
-<h2>XR &amp; Trade</h2>
-<ul>
-<li><p>Misalnya harga CPO di = 12.000 IDR/Kg:</p>
-<ul>
-<li><p>Dengan 14.000, harga jual = 0,857 USD/Kg</p></li>
-<li><p>Dengan 14.500, harga jual = 0,827 USD/Kg</p></li>
-</ul></li>
-<li><p>Harga berubah meski tidak ada perubahan struktur pasar.</p></li>
-<li><p>Sesuai hukum pasar, harga jual yang rendah akan meningkatkan demand global.</p></li>
-<li><p>Eksportir untung karena secara rupiah untungnya sama tapi sales meningkat.</p></li>
-<li><p>Sebaliknya, nilai tukar yang lemah merugikan importir.</p></li>
-</ul>
-</section>
-<section id="xr-ca" class="slide level2">
-<h2>XR &amp; CA</h2>
-<ul>
-<li><p>Seperti hal-nya perdagangan barang biasa, uang juga tunduk pada permintaan dan penawaran.</p></li>
-<li><p>Jika permintaan akan IDR meningkat relatif terhadap permintaan akan USD, maka IDR akan terapresiasi.</p></li>
-<li><p>CA surplus <span class="math inline">\(\rightarrow\)</span> demand for IDR &gt; USD <span class="math inline">\(\rightarrow\)</span> IDR appreciates.</p></li>
-<li><p>Setelah <span class="math inline">\(\frac{IDR}{USD} \downarrow\)</span>, ekspor relatif lebih mahal dari impor <span class="math inline">\(\rightarrow\)</span> CA <span class="math inline">\(\downarrow\)</span>.</p></li>
-<li><p>Pada akhirnya CA akan diseimbangkan oleh ekuilibrium baru nilai tukar.</p></li>
-</ul>
-</section>
-<section id="xr-ca-1" class="slide level2 m">
-<h2>XR &amp; CA</h2>
-<ul>
-<li><p>Jika ekspor dipermudah dan impor dipersulit seperti paham merkantilis, maka dolar akan tersimpan di sistem keuangan.</p></li>
-<li><p>jika ditukar dengan rupiah, maka rupiah akan berkurang di pasar uang dan membanjiri pasar barang:</p>
-<ul>
-<li><p>rupiah menguat di pasar uang, tapi melemah di pasar barang (inflasi)</p></li>
-<li><p>jika tidak ditukar, dolar akan bertahan di pasar uang dan lama-lama jadi banyak (artinya rupiah tetap menguat)</p></li>
-</ul></li>
-<li><p>Artinya, surplus CA tidak sustainable. Lagipula, uang nganggur = penggunaan tidak efisien.</p></li>
-</ul>
-</section>
-<section id="xr-fa" class="slide level2">
-<h2>XR &amp; FA</h2>
-<ul>
-<li><p>Demand mata uang tidak hanya didorong oleh pasar barang, tapi juga pasar modal!</p></li>
-<li><p>Ingat IS - LM? Apa yang terjadi ketika <span class="math inline">\(r \uparrow\)</span> ?</p></li>
-</ul>
-<div>
-<ul>
-<li class="fragment"><p>naiknya r menyerap uang ke sistem perbankan.</p></li>
-<li class="fragment"><p>uang beredar berkurang, harga uang naik relatif terhadap harga barang.</p></li>
-<li class="fragment"><p>CB response to inflation: <span class="math inline">\(r \uparrow\)</span>, <span class="math inline">\(P \downarrow\)</span>.</p></li>
-</ul>
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+I Made Krisna Gupta 
 </div>
+</div>
+</div>
+
+  <p class="date">Invalid Date</p>
 </section>
-<section id="xr-fa-1" class="slide level2">
-<h2>XR &amp; FA</h2>
+<section id="recap-todays-plan" class="slide level2 s">
+<h2>Recap &amp; today’s plan</h2>
 <ul>
-<li><p>Di pasar uang, nilai tukar juga digunakan untuk mengendalikan nilai tukar.</p></li>
-<li><p>naiknya interest rate domestik akan menaikkan daya tawar aset di Indonesia.</p>
-<ul>
-<li><p>orang akan mencari rupiah untuk ditukar dengan surat berharga Indonesia.</p></li>
-<li><p>demand rupiah naik relatif terhadap mata uang asing.</p></li>
-<li><p>rupiah apresiasi -&gt; demand ekspor berkurang, demand impor naik.</p></li>
-</ul></li>
+<li><p>Pekan lalu (KOM Ch.14 + intro Ch.15): UIP punya <span class="math inline">\(R\)</span> sebagai <em>given</em>; kita juga sudah lihat preview joint money + FX dan konsep overshooting.</p></li>
+<li><p>Hari ini: derivasi formal money market → bawa <span class="math inline">\(R\)</span> ke FX market → lepas asumsi sticky <span class="math inline">\(P\)</span> → long-run (PPP, monetary approach, Fisher, real ER).</p></li>
+<li><p>Roadmap: <span class="math inline">\(M^d = P\cdot L(R,Y)\)</span> → joint money + FX → money neutrality &amp; overshooting → law of one price → PPP → monetary approach → Fisher → PPP shortcomings → real ER → real interest parity.</p></li>
 </ul>
 </section>
-<section id="xr-ca-fa" class="slide level2 m">
-<h2>XR, CA, FA</h2>
+<section id="roadmap-diagram" class="slide level2 s">
+<h2>Roadmap diagram</h2>
 <ul>
-<li><p>Kebijakan meningkatnya aktivitas pasar modal juga didorong kebijakan pemerintah.</p></li>
-<li><p>aset yang masuk ke Indonesia mendorong FA positive <span class="math inline">\(\rightarrow\)</span> CAD!</p></li>
-<li><p>CA dan XR memiliki dinamika di mana keduanya dapat saling mempengaruhi:</p>
-<ul>
-<li><p>lewat perdagangan barang, CA surplus <span class="math inline">\(\rightarrow\)</span>, XR <span class="math inline">\(\uparrow\)</span>, surplus CA berkurang.</p></li>
-<li><p>lewat perdagangan aset: demand local asset <span class="math inline">\(\rightarrow\)</span> XR <span class="math inline">\(\uparrow\)</span>, surplus CA berkurang.</p></li>
-</ul></li>
-<li><p>Merkantilis dan investasi asing ke dalam negeri negates each other!</p></li>
+<li><p><strong>Block 1</strong>: pasar uang formal (Ch.15.1).</p></li>
+<li><p><strong>Block 2</strong>: pasar uang + FX bersamaan (Ch.15.2).</p></li>
+<li><p><strong>Block 3</strong>: long-run, money neutrality, overshooting formal (Ch.15.3-15.5).</p></li>
+<li><p><strong>Block 4</strong>: Law of One Price &amp; PPP (Ch.16.1).</p></li>
+<li><p><strong>Block 5</strong>: monetary approach &amp; Fisher effect (Ch.16.2).</p></li>
+<li><p><strong>Block 6</strong>: PPP gagal — kenapa? (Ch.16.2 end).</p></li>
+<li><p><strong>Block 7</strong>: real exchange rate approach &amp; real interest parity (Ch.16.3-16.5).</p></li>
 </ul>
 </section>
-<section id="global-imbalance-why" class="slide level2">
-<h2>Global imbalance: why?</h2>
+<section id="aggregate-money-demand" class="slide level2 s">
+<h2>Aggregate money demand</h2>
 <ul>
-<li><p>baik CAS maupun CAD secara teori tidak akan sustainable.</p>
+<li>Demand uang riil per kapita (KOM Ch.15.1):</li>
+</ul>
+<p><span class="math display">\[
+\frac{M^d}{P} = L(R, Y)
+\]</span></p>
+<pre><code>di mana $M^d$ = demand uang nominal, $P$ = level harga (IHK BPS), $R$ = nominal interest rate (BI 7DRR atau JIBOR), $Y$ = pendapatan nasional riil (PDB riil).</code></pre>
 <ul>
-<li>ceteris paribus, akan ada correction mechanism melalui exchange rate.</li>
+<li><p><span class="math inline">\(L(R, Y)\)</span> menurun di <span class="math inline">\(R\)</span> (opportunity cost pegang cash) dan menaik di <span class="math inline">\(Y\)</span> (volume transaksi).</p></li>
+<li><p>Memorize: <strong>“real money demand depends negatively on <span class="math inline">\(R\)</span> and positively on <span class="math inline">\(Y\)</span>”</strong>.</p></li>
+<li><p>Untuk Indonesia: jika BI 7DRR turun, orang lebih banyak pegang giro/saldo; jika PDB tumbuh, transaksi naik → kebutuhan likuiditas naik.</p></li>
+</ul>
+</section>
+<section id="money-demand-schedule" class="slide level2 m">
+<h2>Money demand schedule</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<ul>
+<li><p>Horizontal: <span class="math inline">\(M/P\)</span> (real money balance).</p></li>
+<li><p>Vertical: <span class="math inline">\(R\)</span>.</p></li>
+<li><p>Kurva <span class="math inline">\(L(R, Y_0)\)</span> menurun: makin tinggi <span class="math inline">\(R\)</span>, makin kecil <span class="math inline">\(L\)</span>.</p></li>
+<li><p>Posisi kurva tergantung <span class="math inline">\(Y\)</span> (selanjutnya).</p></li>
+</ul>
+</div><div class="column" style="width:60%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-2-1.png" width="480"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="shift-dari-kenaikan-y" class="slide level2 s">
+<h2>Shift dari kenaikan <span class="math inline">\(Y\)</span></h2>
+<ul>
+<li><p>KOM Fig 15.2: kenaikan pendapatan nasional riil dari <span class="math inline">\(Y_0\)</span> ke <span class="math inline">\(Y_1\)</span> menggeser seluruh kurva <em>ke kanan/atas</em>.</p></li>
+<li><p>Pada setiap level <span class="math inline">\(R\)</span>, orang menginginkan lebih banyak saldo riil — karena transaksi lebih banyak.</p></li>
+<li><p>Indonesian numerik: jika PDB tumbuh 5% setahun, demand uang riil naik sekitar 5% pada <span class="math inline">\(R\)</span> konstan (asumsi income elasticity ≈ 1).</p></li>
+<li><p>Kebijakan implikasi: pertumbuhan ekonomi yang sehat butuh ekspansi monetary <em>supply</em> proporsional — jika tidak, <span class="math inline">\(R\)</span> akan naik dan <em>crowd out</em> investasi.</p></li>
+</ul>
+</section>
+<section id="money-market-equilibrium" class="slide level2 s">
+<h2>Money market equilibrium</h2>
+<ul>
+<li>Equilibrium: real money supply = real money demand:</li>
+</ul>
+<p><span class="math display">\[
+\frac{M^s}{P} = L(R, Y)
+\]</span></p>
+<ul>
+<li><p><span class="math inline">\(M^s\)</span> ditentukan BI (lewat OMO/reverse repo); <span class="math inline">\(P\)</span> dan <span class="math inline">\(Y\)</span> ditentukan di pasar barang.</p></li>
+<li><p>Persamaan ini punya satu unknown: <span class="math inline">\(R\)</span>.</p></li>
+<li><p><strong>Mekanisme</strong>: jika excess supply uang → orang pegang terlalu banyak cash → beli SBN/obligasi → harga obligasi naik → yield (<span class="math inline">\(R\)</span>) turun.</p></li>
+<li><p>Sebaliknya jika excess demand uang → jual SBN → harga turun → yield naik.</p></li>
+</ul>
+</section>
+<section id="effect-of-msuparrow" class="slide level2 m">
+<h2>Effect of <span class="math inline">\(M^s\uparrow\)</span></h2>
+<div class="columns">
+<div class="column" style="width:45%;">
+<ul>
+<li><p>KOM Fig 15.4: BI ekspansi via reverse repo → <span class="math inline">\(M^s\)</span> naik.</p></li>
+<li><p>Kurva <span class="math inline">\(M^s/P\)</span> vertikal geser ke kanan.</p></li>
+<li><p>Pada <span class="math inline">\(R\)</span> awal, sekarang ada excess supply uang.</p></li>
+<li><p>Equilibrium baru di <span class="math inline">\(R\)</span> lebih rendah.</p></li>
+<li><p>Numerik: jika <span class="math inline">\(M^s\)</span> naik 5% dengan elasticity <span class="math inline">\(L_R \approx -10\)</span>, <span class="math inline">\(R\)</span> turun dari 5,75% ke ~5,25%.</p></li>
+</ul>
+</div><div class="column" style="width:55%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-3-1.png" width="480"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="effect-of-yuparrow" class="slide level2 s">
+<h2>Effect of <span class="math inline">\(Y\uparrow\)</span></h2>
+<ul>
+<li><p>KOM Fig 15.5: jika <span class="math inline">\(Y\)</span> naik dengan <span class="math inline">\(M^s\)</span> tetap, kurva <span class="math inline">\(L(R, Y)\)</span> geser ke kanan.</p></li>
+<li><p>Pada <span class="math inline">\(R\)</span> awal, excess demand uang → jual SBN → yield naik → <span class="math inline">\(R\)</span> baru lebih tinggi.</p></li>
+<li><p>Implikasi penting: pertumbuhan ekonomi <em>otomatis</em> menaikkan <span class="math inline">\(R\)</span> kalau BI tidak menyesuaikan <span class="math inline">\(M^s\)</span>.</p></li>
+<li><p>Ini kenapa central bank di EM (termasuk BI) cenderung <em>accommodating</em>: kalau <span class="math inline">\(Y\)</span> naik, <span class="math inline">\(M^s\)</span> ditambah agar <span class="math inline">\(R\)</span> tidak naik tajam.</p></li>
+</ul>
+</section>
+<section id="m2-growth-vs-bi-7drr" class="slide level2">
+<h2>M2 growth vs BI 7DRR</h2>
+
+<img data-src="index_files/figure-revealjs/unnamed-chunk-4-1.png" width="960" class="r-stretch"></section>
+<section id="linking-money-market-ke-fx" class="slide level2 s">
+<h2>Linking money market ke FX</h2>
+<ul>
+<li><span class="math inline">\(R\)</span> yang ditentukan di money market = <em>input</em> untuk UIP:</li>
+</ul>
+<p><span class="math display">\[
+R = R^* + \frac{E^e - E}{E}
+\]</span></p>
+<ul>
+<li><p>Jadi rantainya: BI set <span class="math inline">\(M^s\)</span> → money market clear → <span class="math inline">\(R\)</span> terbentuk → UIP menentukan <span class="math inline">\(E\)</span>.</p></li>
+<li><p>Untuk Indonesia, <span class="math inline">\(R\)</span> = BI 7DRR (~5,75%), <span class="math inline">\(R^*\)</span> = Fed Funds (~4,5%), <span class="math inline">\(E^e\)</span> = ekspektasi nilai tukar masa depan, <span class="math inline">\(E\)</span> = USD/IDR spot.</p></li>
+<li><p>Kalau money market di luar negeri (US) juga bergerak, <span class="math inline">\(R^*\)</span> ikut bergerak, dan rantai kebalikan terjadi pula.</p></li>
+</ul>
+</section>
+<section id="joint-diagram-money-fx" class="slide level2 m">
+<h2>Joint diagram: money + FX</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<p><strong>Money market (atas)</strong>:</p>
+<ul>
+<li><span class="math inline">\(M^s/P\)</span> vertikal, <span class="math inline">\(L(R, Y)\)</span> menurun.</li>
+<li>Equilibrium <span class="math inline">\(R^*_{\text{ID}}\)</span> di perpotongan.</li>
+</ul>
+<p><strong>FX market (bawah)</strong>:</p>
+<ul>
+<li>IDR return vertikal di <span class="math inline">\(R^*_{\text{ID}}\)</span> (dari money market).</li>
+<li>USD return menurun di <span class="math inline">\(E\)</span>.</li>
+<li>Equilibrium <span class="math inline">\(E^*\)</span>.</li>
+</ul>
+<p><strong>Kunci</strong>: <span class="math inline">\(R^*_{\text{ID}}\)</span> dari money market menjadi anchor garis vertikal di FX.</p>
+</div><div class="column" style="width:60%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-5-1.png" width="528"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="shock-1-bi-ekspansi-moneter" class="slide level2 s">
+<h2>Shock 1: BI ekspansi moneter</h2>
+<ul>
+<li><p>BI naikkan <span class="math inline">\(M^s\)</span> (beli SBN via OMO ekspansif).</p></li>
+<li><p><strong>Money market</strong>: <span class="math inline">\(M^s/P\)</span> geser kanan → <span class="math inline">\(R\)</span> turun dari 5,75% ke (misal) 5,25%.</p></li>
+<li><p><strong>FX market</strong>: garis vertikal IDR return geser <em>kiri</em> → <span class="math inline">\(E\)</span> baru di perpotongan dengan USD return → <span class="math inline">\(E\)</span> naik.</p></li>
+<li><p><strong>Hasil</strong>: IDR <em>depresiasi</em>.</p></li>
+<li><p>Intuisi: bunga rupiah turun → investor cari yield USD → demand USD naik → IDR melemah.</p></li>
+</ul>
+</section>
+<section id="shock-2-fed-ekspansi-moneter" class="slide level2 s">
+<h2>Shock 2: Fed ekspansi moneter</h2>
+<ul>
+<li><p>Fed naikkan <span class="math inline">\(M^s_{US}\)</span> → <span class="math inline">\(R^*\)</span> (Fed Funds) turun.</p></li>
+<li><p><strong>Pasar uang Indonesia</strong>: tidak bergerak — <span class="math inline">\(M^s_{ID}\)</span>, <span class="math inline">\(P_{ID}\)</span>, <span class="math inline">\(Y_{ID}\)</span> tetap → <span class="math inline">\(R\)</span> tetap.</p></li>
+<li><p><strong>FX market</strong>: USD return curve geser <em>kiri</em> (return USD lebih rendah pada setiap <span class="math inline">\(E\)</span>).</p></li>
+<li><p>Equilibrium baru <span class="math inline">\(E\)</span> lebih rendah → <strong>IDR apresiasi</strong>.</p></li>
+<li><p>Simetris: dovish Fed = tailwind untuk EM currencies, termasuk IDR.</p></li>
+</ul>
+</section>
+<section id="asymmetry-penting" class="slide level2 s">
+<h2>Asymmetry penting</h2>
+<ul>
+<li><p>Perubahan <span class="math inline">\(M^s_{ID}\)</span> → bergerak <em>di kedua</em> market.</p></li>
+<li><p>Perubahan <span class="math inline">\(M^s_{US}\)</span> → hanya bergerak <em>di FX market</em>, money market Indonesia tidak bergeser.</p></li>
+<li><p>KOM Fig 15.9: shift ke USD return kiri, money market US tidak ada di gambar (tapi <span class="math inline">\(R^*\)</span> turun yang menyebabkan shift itu).</p></li>
+<li><p>Implikasi: efek kebijakan moneter US ke Indonesia <em>murni</em> via FX channel, bukan via domestic credit.</p></li>
+<li><p>Bandingkan dengan <em>trade channel</em> (Ch.17 nanti) yang lebih lambat.</p></li>
+</ul>
+</section>
+<section id="bi-rate-vs-usdidr" class="slide level2">
+<h2>BI rate vs USD/IDR</h2>
+
+<img data-src="index_files/figure-revealjs/unnamed-chunk-6-1.png" width="960" class="r-stretch"></section>
+<section id="short-run-vs-long-run" class="slide level2 s">
+<h2>Short-run vs long-run</h2>
+<ul>
+<li><p>Sejauh ini asumsi: <span class="math inline">\(P\)</span> <em>sticky</em> dalam short-run.</p></li>
+<li><p>Sekarang lepas asumsi itu: dalam long-run, <span class="math inline">\(P\)</span> menyesuaikan penuh.</p></li>
+<li><p><span class="math inline">\(Y\)</span> kembali ke potential output (ditentukan supply riil: tenaga kerja, kapital, teknologi).</p></li>
+<li><p><span class="math inline">\(R\)</span> riil kembali ke level natural (savings vs investment).</p></li>
+<li><p>Yang berubah dalam long-run: <span class="math inline">\(P\)</span> dan <span class="math inline">\(E\)</span> secara nominal.</p></li>
+<li><p><strong>Money neutrality</strong>: <span class="math inline">\(M\uparrow\)</span> proporsional → <span class="math inline">\(P\uparrow\)</span> proporsional → <span class="math inline">\(E\uparrow\)</span> proporsional. Real variables tidak terpengaruh.</p></li>
+</ul>
+</section>
+<section id="empirical-m-growth-vs-inflasi" class="slide level2 s">
+<h2>Empirical: M growth vs inflasi</h2>
+<ul>
+<li><p>KOM Fig 15.10: rata-rata negara Latin Amerika 1987-2014 → korelasi tinggi antara money growth dan inflasi.</p></li>
+<li><p>Untuk Indonesia long-run: hyperinflation 1965-66 (sudah dibahas M11) adalah kasus paling ekstrem.</p></li>
+<li><p>Periode stabil 2000-2025: M2 growth ≈ 8-12%/tahun, inflasi ≈ 3-5%/tahun. Gap = pertumbuhan permintaan riil uang (income effect).</p></li>
+<li><p>Lesson: hubungan <span class="math inline">\(M\)</span>-<span class="math inline">\(P\)</span> kuat <em>di rata-rata</em> jangka panjang; tidak harus tahun-per-tahun.</p></li>
+</ul>
+</section>
+<section id="mekanisme-mto-p" class="slide level2 s">
+<h2>Mekanisme <span class="math inline">\(M\to P\)</span></h2>
+<ul>
+<li><p>Bagaimana <span class="math inline">\(M\uparrow\)</span> secara fisik menaikkan <span class="math inline">\(P\)</span>?</p></li>
+<li><p>KOM mechanism:</p>
+<ul>
+<li><p>Excess demand goods: lebih banyak rupiah → demand barang dan jasa naik.</p></li>
+<li><p>Producers naikkan output via overtime → wages tertarik naik untuk kompensasi.</p></li>
+<li><p>Eventually firms naikkan harga jual untuk cover kenaikan biaya.</p></li>
 </ul></li>
-<li><p>Namun kenapa global imbalance bisa terjadi secara persistent?</p>
+<li><p><strong>Inflation expectations</strong>: kalau pekerja &amp; firms ekspektasi <span class="math inline">\(P\)</span> naik karena <span class="math inline">\(M\)</span> naik, mereka langsung negotiate upah &amp; set harga <em>sekarang</em>. Self-fulfilling.</p></li>
+<li><p>Indonesia: pengaruh inflasi expectations terlihat di consensus forecast, BI’s Persepsi Konsumen Survey (PKS).</p></li>
+</ul>
+</section>
+<section id="overshooting-formal" class="slide level2 s">
+<h2>Overshooting formal</h2>
 <ul>
-<li>Aus, NZ, US, UK vs Jerman, Jepang, China, Taiwan.</li>
+<li><p>Dornbusch (1976) derivation, dengan <span class="math inline">\(M^s\)</span> naik <em>permanen</em>:</p>
+<ol type="1">
+<li><p><span class="math inline">\(t=0\)</span>: <span class="math inline">\(M^s\)</span> naik. <span class="math inline">\(P\)</span> sticky → <span class="math inline">\(M^s/P\)</span> naik → <span class="math inline">\(R\)</span> turun.</p></li>
+<li><p>Long-run: <span class="math inline">\(P\)</span> naik proporsional → <span class="math inline">\(M^s/P\)</span> kembali → <span class="math inline">\(R\)</span> kembali ke level awal.</p></li>
+<li><p><span class="math inline">\(E^e\)</span> (ekspektasi long-run) naik proporsional ke <span class="math inline">\(M^s\)</span> baru.</p></li>
+<li><p>UIP saat ini: <span class="math inline">\(R\)</span> turun memerlukan ekspektasi <em>apresiasi</em> → <span class="math inline">\(E\)</span> harus melompat <em>ke atas</em> <span class="math inline">\(E^e\)</span>, baru perlahan apresiasi.</p></li>
+</ol></li>
+<li><p>Implikasi: <span class="math inline">\(E\)</span> <strong>overshoots</strong> — gerakan inisial lebih besar dari long-run shift.</p></li>
+</ul>
+</section>
+<section id="time-paths" class="slide level2 m">
+<h2>Time paths</h2>
+<div class="columns">
+<div class="column" style="width:55%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-7-1.png" width="480"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:45%;">
+<ul>
+<li><p><strong>Panel 1</strong>: <span class="math inline">\(M^s\)</span> naik 10% <em>permanen</em> di <span class="math inline">\(t=0\)</span>.</p></li>
+<li><p><strong>Panel 2</strong>: <span class="math inline">\(R\)</span> turun di <span class="math inline">\(t=0\)</span>, perlahan kembali ke level awal saat <span class="math inline">\(P\)</span> naik.</p></li>
+<li><p><strong>Panel 3</strong>: <span class="math inline">\(P\)</span> naik perlahan ke level baru 10% lebih tinggi.</p></li>
+<li><p><strong>Panel 4</strong>: <span class="math inline">\(E\)</span> jump <em>melebihi</em> 10% target long-run, lalu perlahan apresiasi ke target.</p></li>
+</ul>
+</div></div>
+</section>
+<section id="mengapa-overshooting-penting" class="slide level2 s">
+<h2>Mengapa overshooting penting</h2>
+<ul>
+<li><p>KOM Fig 15.12: variabilitas bulanan USD/JPY jauh lebih tinggi dari variabilitas rasio <span class="math inline">\(P_{US}/P_{JP}\)</span>.</p></li>
+<li><p>Untuk Indonesia: USD/IDR bisa bergerak 1-3% dalam seminggu, sementara CPI Indonesia/US bergerak &lt;0,5% per bulan.</p></li>
+<li><p>Implikasi:</p>
+<ul>
+<li><p>FX adalah <em>harga aset</em>, yang menyesuaikan instan terhadap berita.</p></li>
+<li><p>Harga barang (CPI) sticky karena menu costs, contract rigidities, wage stickiness.</p></li>
+<li><p>Gap ini = sumber FX volatility yang tampak <em>berlebihan</em> dibanding fundamental.</p></li>
 </ul></li>
+<li><p>Bukan bug, melainkan fitur empiris <em>open-economy macro</em>.</p></li>
+</ul>
+</section>
+<section id="law-of-one-price-loop" class="slide level2 s">
+<h2>Law of one price (LoOP)</h2>
+<ul>
+<li><p><strong>Law of one price</strong>: barang yang <em>sama</em> harus dijual dengan harga <em>sama</em> di pasar berbeda, kalau biaya transport dan barrier tidak ada.</p></li>
+<li><p>KOM example: pizza identik US$20 vs US$40 di restoran sebelahan → tidak berkelanjutan.</p></li>
+<li><p>Indonesian example: <strong>iPhone 16 Pro 256GB</strong>:</p>
+<ul>
+<li><p>Apple Store Singapore: SGD 1.799 ≈ Rp 22,2 juta.</p></li>
+<li><p>Resmi iBox Indonesia: Rp 24,9 juta (termasuk PPN 12% &amp; PPnBM).</p></li>
+<li><p>Selisih ~Rp 2,7 juta = pajak + biaya distribusi, <em>bukan</em> arbitrase profit.</p></li>
+</ul></li>
+<li><p>LoOP <em>seharusnya</em> holds untuk barang tradable yang homogen, tanpa pajak/transport cost.</p></li>
+</ul>
+</section>
+<section id="absolute-ppp" class="slide level2 s">
+<h2>Absolute PPP</h2>
+<ul>
+<li><strong>Absolute Purchasing Power Parity</strong> (PPP): LoOP diterapkan ke <em>keranjang</em> barang/jasa yang representatif:</li>
+</ul>
+<p><span class="math display">\[
+P = E \cdot P^*
+\]</span></p>
+<pre><code>$\Rightarrow E = \frac{P}{P^*}$</code></pre>
+<ul>
+<li>Jika <span class="math inline">\(P_{US} = \$200/keranjang\)</span>, <span class="math inline">\(P_{ID} = \text{Rp } 3.280.000/\text{keranjang}\)</span>:</li>
+</ul>
+<p><span class="math display">\[
+E_{Rp/USD} = \frac{3.280.000}{200} = 16.400
+\]</span></p>
+<ul>
+<li><p>Implikasi: 1 USD harus beli barang yang sama dengan Rp 16.400 di Indonesia.</p></li>
+<li><p>Empiris: hampir tidak pernah holds secara absolute.</p></li>
+</ul>
+</section>
+<section id="relative-ppp" class="slide level2 s">
+<h2>Relative PPP</h2>
+<ul>
+<li><strong>Relative PPP</strong>: perubahan <span class="math inline">\(E\)</span> = differential inflasi:</li>
+</ul>
+<p><span class="math display">\[
+\frac{E_t - E_{t-1}}{E_{t-1}} = \pi_t - \pi^*_t
+\]</span></p>
+<pre><code>di mana $\pi$, $\pi^*$ = inflasi domestik dan luar negeri.</code></pre>
+<ul>
+<li><p>Numerik: <span class="math inline">\(\pi_{ID} = 3\%\)</span>, <span class="math inline">\(\pi_{US} = 2\%\)</span> → ekspektasi <span class="math inline">\(\Delta E \approx 1\%\)</span>/tahun (depresiasi IDR).</p></li>
+<li><p>Untuk IDR 2010-2025 rata-rata: inflasi Indonesia 4,1%, US 2,4% → differential 1,7%/tahun.</p></li>
+<li><p>Aktual depresiasi USD/IDR: 9.200 (2010) → 16.400 (2026) = ~3,7%/tahun ⇒ gap dengan PPP ~2%/tahun (lebih banyak depresiasi dari prediksi PPP).</p></li>
+</ul>
+</section>
+<section id="big-mac-indonesia" class="slide level2 m">
+<h2>Big Mac Indonesia</h2>
+<div class="columns">
+<div class="column" style="width:55%;">
+<ul>
+<li><p><strong>Big Mac index</strong> (The Economist): harga Big Mac di berbagai negara, semua dalam USD ekuivalen.</p></li>
+<li><p>Asumsi: Big Mac = tradable basket sederhana.</p></li>
+<li><p>2024 data (approx):</p>
+<ul>
+<li><p>Indonesia: Rp 49.000.</p></li>
+<li><p>US: $5,99.</p></li>
+</ul></li>
+<li><p>Implied PPP rate: <span class="math inline">\(49.000/5{,}99 \approx 8.180\)</span> Rp/USD.</p></li>
+<li><p>Actual: 16.400 Rp/USD.</p></li>
+<li><p><strong>IDR ~50% undervalued</strong> vis-à-vis Big Mac PPP.</p></li>
+</ul>
+</div><div class="column" style="width:45%;">
+<p><strong>Apa artinya?</strong></p>
+<ul>
+<li><p>Big Mac di Indonesia <em>lebih murah</em> dalam USD ekuivalen.</p></li>
+<li><p>Turis dari US merasa Indonesia “murah”.</p></li>
+<li><p>Tapi ini <em>bukan</em> disequilibrium yang akan dikoreksi:</p>
+<ul>
+<li><p>Sebagian besar input Big Mac (sewa, tenaga kerja, listrik) adalah <em>nontradable</em>.</p></li>
+<li><p>Indonesia adalah middle-income country dengan upah lebih rendah.</p></li>
+</ul></li>
+<li><p>Ini foreshadow <strong>Balassa-Samuelson</strong> — slide nanti.</p></li>
+</ul>
+</div></div>
+</section>
+<section id="bakso-ppp" class="slide level2 s">
+<h2>Bakso PPP</h2>
+<ul>
+<li><p>“Indeks bakso”: semangkok bakso = Rp 20.000 (warung sederhana Jakarta).</p></li>
+<li><p>“Indeks ramen Tokyo”: ¥1.200 ≈ Rp 130.000.</p></li>
+<li><p>Implied rate: <span class="math inline">\(130.000 / 20.000 = 6{,}5\)</span> — <em>enormous</em> undervaluation IDR.</p></li>
+<li><p><strong>Tapi</strong>: ramen Tokyo dan bakso Jakarta <em>bukan</em> barang yang sama.</p></li>
+<li><p>Bakso = primarily nontradable (lokasi, juru masak, sewa Jakarta vs Tokyo).</p></li>
+<li><p>Lesson: PPP gagal untuk nontradables. Tradables (elektronik, mobil, baju) jauh lebih dekat ke PPP.</p></li>
+</ul>
+</section>
+<section id="monetary-approach-ke-er" class="slide level2 s">
+<h2>Monetary approach ke ER</h2>
+<ul>
+<li>Kombinasi <strong>PPP</strong> + <strong>money market</strong>:</li>
+</ul>
+<p><span class="math display">\[
+P = \frac{M^s}{L(R, Y)}, \quad P^* = \frac{M^{*s}}{L^*(R^*, Y^*)}
+\]</span></p>
+<ul>
+<li>PPP: <span class="math inline">\(E = P / P^*\)</span>, jadi:</li>
+</ul>
+<p><span class="math display">\[
+E = \frac{M^s / L(R, Y)}{M^{*s} / L^*(R^*, Y^*)} = \frac{M^s}{M^{*s}} \cdot \frac{L^*(R^*, Y^*)}{L(R, Y)}
+\]</span></p>
+<ul>
+<li><p>ER long-run = rasio money supplies × rasio money demands.</p></li>
+<li><p>Ini disebut <strong>monetary approach</strong> ke exchange rate.</p></li>
+</ul>
+</section>
+<section id="predictions-monetary-approach" class="slide level2 s">
+<h2>Predictions monetary approach</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Shock</th>
+<th>Domestic</th>
+<th>Effect on <span class="math inline">\(E\)</span> (Rp/USD)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(M^s_{ID}\uparrow\)</span></td>
+<td><span class="math inline">\(P_{ID}\uparrow\)</span> proporsional</td>
+<td><span class="math inline">\(E\uparrow\)</span> proporsional (IDR depresiasi)</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(M^s_{US}\uparrow\)</span></td>
+<td><span class="math inline">\(P_{US}\uparrow\)</span> proporsional</td>
+<td><span class="math inline">\(E\downarrow\)</span> proporsional (IDR apresiasi)</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(R_{ID}\uparrow\)</span> (via <span class="math inline">\(\pi^e\uparrow\)</span>)</td>
+<td><span class="math inline">\(L\downarrow \Rightarrow P_{ID}\uparrow\)</span></td>
+<td><span class="math inline">\(E\uparrow\)</span> (IDR depresiasi)</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(Y_{ID}\uparrow\)</span></td>
+<td><span class="math inline">\(L\uparrow \Rightarrow P_{ID}\downarrow\)</span></td>
+<td><span class="math inline">\(E\downarrow\)</span> (IDR apresiasi)</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p><strong>Awas trap</strong>: <span class="math inline">\(R\uparrow\)</span> di sini → IDR depresiasi (lewat ekspektasi inflasi). Berlawanan dengan short-run Ch.15 di mana <span class="math inline">\(R\uparrow\)</span> → IDR apresiasi (via UIP).</p></li>
+<li><p>Konteks beda: short-run = <span class="math inline">\(R\)</span> naik karena BI tightening; long-run monetary approach = <span class="math inline">\(R\)</span> naik karena <span class="math inline">\(\pi^e\)</span> naik.</p></li>
+</ul>
+</section>
+<section id="fisher-effect-derivation" class="slide level2 s">
+<h2>Fisher effect derivation</h2>
+<ul>
+<li><p><strong>UIP</strong>: <span class="math inline">\(R = R^* + (E^e - E)/E\)</span>.</p></li>
+<li><p><strong>Relative PPP ekspektasi</strong>: <span class="math inline">\((E^e - E)/E = \pi^e - \pi^{*e}\)</span>.</p></li>
+<li><p>Substitusi:</p></li>
+</ul>
+<p><span class="math display">\[
+R - R^* = \pi^e - \pi^{*e}
+\]</span></p>
+<ul>
+<li><p><strong>Fisher effect</strong>: perbedaan nominal rate antar negara = perbedaan ekspektasi inflasi.</p></li>
+<li><p>Atau ekuivalen: <span class="math inline">\(R = r + \pi^e\)</span> (real rate + expected inflation).</p></li>
+<li><p>Indonesia: <span class="math inline">\(R \approx 5{,}75\%\)</span>, <span class="math inline">\(\pi^e_{ID} \approx 2{,}5\%\)</span> → <span class="math inline">\(r_{ID} \approx 3{,}25\%\)</span>.</p></li>
+<li><p>US: <span class="math inline">\(R^* \approx 4{,}5\%\)</span>, <span class="math inline">\(\pi^e_{US} \approx 2{,}3\%\)</span> → <span class="math inline">\(r^*_{US} \approx 2{,}2\%\)</span>.</p></li>
+</ul>
+</section>
+<section id="indonesian-fisher-data" class="slide level2">
+<h2>Indonesian Fisher data</h2>
+
+<img data-src="index_files/figure-revealjs/unnamed-chunk-8-1.png" width="960" class="r-stretch"></section>
+<section id="permanent-kenaikan-mu" class="slide level2 s">
+<h2>Permanent kenaikan <span class="math inline">\(\mu\)</span></h2>
+<ul>
+<li><p><span class="math inline">\(\mu\)</span> = growth rate dari money supply.</p></li>
+<li><p>KOM Fig 16.1: jika BI <em>permanen</em> naikkan <span class="math inline">\(\mu\)</span> dari 5% ke 10%:</p>
+<ul>
+<li><p>Long-run inflation jump dari (misal) 3% ke 8%.</p></li>
+<li><p>Fisher: <span class="math inline">\(R\)</span> jump dari 5,75% ke 10,75% (naik 5pp matching <span class="math inline">\(\pi^e\)</span>).</p></li>
+<li><p>Higher <span class="math inline">\(R\)</span> → <span class="math inline">\(L\downarrow\)</span> → <span class="math inline">\(P\)</span> jump <em>ekstra</em> ke atas trend baru.</p></li>
+<li><p>PPP: <span class="math inline">\(E\)</span> jump <em>proporsional</em> dengan <span class="math inline">\(P\)</span>.</p></li>
+</ul></li>
+<li><p>Setelah itu, <span class="math inline">\(M\)</span>, <span class="math inline">\(P\)</span>, <span class="math inline">\(E\)</span> semua tumbuh pada <span class="math inline">\(\mu = 10\%\)</span>/tahun.</p></li>
+</ul>
+</section>
+<section id="tidak-ada-overshooting" class="slide level2 s">
+<h2>Tidak ada overshooting?</h2>
+<ul>
+<li><p>Di Ch.15 (long-run model <em>tanpa</em> PPP): <span class="math inline">\(P\)</span> sticky → <span class="math inline">\(E\)</span> jump berlebihan → overshooting.</p></li>
+<li><p>Di Ch.16 (monetary approach <em>dengan</em> PPP): <span class="math inline">\(P\)</span> jump bersamaan dengan ekspektasi → tidak ada overshooting.</p></li>
+<li><p>Mana yang benar?</p>
+<ul>
+<li><p><strong>Short horizon (bulan)</strong>: <span class="math inline">\(P\)</span> sticky → overshooting realistis.</p></li>
+<li><p><strong>Medium horizon (tahun)</strong>: PPP mulai pegang → overshooting reverses.</p></li>
+</ul></li>
+<li><p>Kedua model tidak inconsistent; mereka cover horizon berbeda.</p></li>
+</ul>
+</section>
+<section id="ppp-empirically-fails" class="slide level2 s">
+<h2>PPP empirically: fails</h2>
+<ul>
+<li><p>KOM slide 25-26: data USD/JPY 1980-2019 menunjukkan PPP <em>tidak</em> track exchange rate jangka panjang.</p></li>
+<li><p>Untuk Indonesia, mari lihat data USD/IDR vs rasio CPI Indonesia/US 1990-2025 → slide berikut.</p></li>
+<li><p><strong>Spoiler</strong>: gap besar muncul di 1997-98 (krisis Asia) dan 2013-15 (taper).</p></li>
+<li><p>Kalau PPP holds, USD/IDR akan tracking CPI ratio dengan slope = 1.</p></li>
+<li><p>Aktual: USD/IDR jauh lebih volatile dari CPI ratio.</p></li>
+</ul>
+</section>
+<section id="crisis-ppp-failure" class="slide level2 m">
+<h2>1997 crisis &amp; PPP failure</h2>
+<div class="columns">
+<div class="column" style="width:55%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-9-1.png" width="499"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:45%;">
+<p><strong>Indonesian case 1: 1997 Asian crisis</strong></p>
+<ul>
+<li><p>Pre-1997: USD/IDR ~2.300, PPP path ~3.000 (gap ~25%, slightly undervalued).</p></li>
+<li><p>1998 puncak krisis: USD/IDR jump ke 16.500. PPP path naik perlahan ke 4.000.</p></li>
+<li><p>Gap massive ~300% — PPP <em>hopeless</em> sebagai prediktor short-run.</p></li>
+<li><p>2000-an: gap perlahan menutup; USD/IDR perlahan kembali ke trajectory PPP.</p></li>
+<li><p>Lesson: PPP holds di rata-rata <em>multi-decade</em>, tapi gagal saat krisis &amp; sudden stops.</p></li>
+</ul>
+</div></div>
+</section>
+<section id="why-ppp-fails" class="slide level2 s">
+<h2>Why PPP fails</h2>
+<ul>
+<li><p>KOM 3 reasons:</p>
+<ol type="1">
+<li><p><strong>Trade barriers &amp; nontradables</strong>: ongkos kirim, tarif, atau jasa yang tidak bisa diperdagangkan (haircut, sewa apartemen, dokter).</p></li>
+<li><p><strong>Imperfect competition / pricing to market</strong>: firms set harga berbeda di pasar berbeda untuk maksimalkan profit (iPhone Singapore vs Indonesia setelah pajak).</p></li>
+<li><p><strong>Basket differences</strong>: keranjang konsumsi BPS (yang penting beras, mi instan) ≠ keranjang BLS US (yang penting daging, mobil, sewa).</p></li>
+</ol></li>
+<li><p>Implikasi: PPP rate yang “fair” sulit didefinisikan secara unik.</p></li>
+</ul>
+</section>
+<section id="nontradables-haircut" class="slide level2 s">
+<h2>Nontradables: haircut</h2>
+<ul>
+<li><p>KOM contoh persis: jasa (slide 28 c16): “haircut”.</p></li>
+<li><p><strong>Potong rambut Jakarta</strong>: tukang cukur biasa Rp 30.000.</p></li>
+<li><p><strong>Potong rambut Sydney</strong>: AUD 30-50 ≈ Rp 320.000-530.000.</p></li>
+<li><p>10x lebih mahal di Sydney untuk jasa <em>identik</em>.</p></li>
+<li><p>Mengapa tidak arbitrase? Karena <em>harus terbang ke Sydney</em> untuk potong rambut — ongkos jauh lebih mahal dari saving.</p></li>
+<li><p>Kasus inilah yang membuat CPI Indonesia <em>struktural</em> lebih rendah dari CPI Australia/US.</p></li>
+</ul>
+</section>
+<section id="balassa-samuelson" class="slide level2 m">
+<h2>Balassa-Samuelson</h2>
+<div class="columns">
+<div class="column" style="width:55%;">
+<p><strong>Teori</strong>: produktivitas labour di sektor <em>tradable</em> lebih tinggi di negara kaya dibanding negara miskin. Tapi di sektor <em>nontradable</em>, produktivitas relatif <em>sama</em>.</p>
+<p><strong>Konsekuensi</strong>:</p>
+<ul>
+<li><p>Upah di sektor tradable kaya tinggi (productivity-driven).</p></li>
+<li><p>Mobilitas labour antar sektor → upah nontradable kaya juga naik.</p></li>
+<li><p>Nontradable di negara kaya jadi mahal.</p></li>
+<li><p>CPI overall di negara kaya &gt; CPI negara miskin <em>bahkan setelah</em> konversi PPP.</p></li>
+</ul>
+</div><div class="column" style="width:45%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-10-1.png" width="441"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="implication-for-idr-undervaluation" class="slide level2 s">
+<h2>Implication for IDR “undervaluation”</h2>
+<ul>
+<li><p>Big Mac IDR “undervalued” 50% — kelihatannya disequilibrium.</p></li>
+<li><p>Tapi Balassa-Samuelson menjelaskan: Indonesia GDP per capita ~25% dari US, produktivitas tradables jauh lebih rendah → wages lebih rendah → nontradables lebih murah → CPI lebih rendah.</p></li>
+<li><p>Yang “underprice” sebenarnya komponen nontradable Big Mac (sewa, listrik, tenaga kerja).</p></li>
+<li><p>Komponen tradable Big Mac (daging beku, kotak, gandum) <strong>PPP-equivalent</strong> atau dekat.</p></li>
+<li><p>Lesson: jangan langsung simpulkan “IDR undervalued” dari Big Mac index — sebagian besar refleksi level pembangunan.</p></li>
+</ul>
+</section>
+<section id="real-exchange-rate" class="slide level2 s">
+<h2>Real exchange rate</h2>
+<ul>
+<li>Definisi:</li>
+</ul>
+<p><span class="math display">\[
+q = \frac{E \cdot P^*}{P}
+\]</span></p>
+<ul>
+<li><p>Intuisi: harga keranjang <em>US</em> dinilai dalam keranjang <em>Indonesia</em>.</p></li>
+<li><p>Jika <span class="math inline">\(q = 1\)</span>: keranjang US dan Indonesia setara → PPP holds absolute.</p></li>
+<li><p>Jika <span class="math inline">\(q &gt; 1\)</span>: keranjang US lebih mahal dari Indonesia → IDR “real undervalued”.</p></li>
+<li><p>Untuk Indonesia, <span class="math inline">\(q\)</span> historis <em>di atas</em> 1 dalam USD ekuivalen (CPI Indonesia lebih rendah).</p></li>
+<li><p>BI publish <strong>REER</strong> (Real Effective Exchange Rate): <span class="math inline">\(q\)</span> weighted average vs trading partners.</p></li>
+</ul>
+</section>
+<section id="real-appreciationdepreciation" class="slide level2 s">
+<h2>Real appreciation/depreciation</h2>
+<ul>
+<li><p><strong>Real apresiasi IDR</strong>: <span class="math inline">\(q\)</span> turun. Barang Indonesia jadi <em>mahal</em> relatif US (dalam dollar).</p></li>
+<li><p><strong>Real depresiasi IDR</strong>: <span class="math inline">\(q\)</span> naik. Barang Indonesia jadi <em>murah</em> relatif US.</p></li>
+<li><p>Hubungan dengan nominal:</p></li>
+</ul>
+<p><span class="math display">\[
+\frac{\Delta q}{q} = \frac{\Delta E}{E} + \pi^* - \pi
+\]</span></p>
+<ul>
+<li><p>Contoh 2022: USD/IDR naik 9%, <span class="math inline">\(\pi_{US}\)</span> = 8%, <span class="math inline">\(\pi_{ID}\)</span> = 5,5% → <span class="math inline">\(\Delta q/q = 9 + 8 - 5{,}5 = 11{,}5\%\)</span> (real depresiasi besar).</p></li>
+<li><p>Eksportir Indonesia 2022 dapat <em>double benefit</em>: nominal depresiasi + real depresiasi → margin Rp besar.</p></li>
+</ul>
+</section>
+<section id="nominal-decomposition" class="slide level2 s">
+<h2>Nominal decomposition</h2>
+<ul>
+<li><p><span class="math inline">\(E = q \cdot P / P^*\)</span></p></li>
+<li><p><span class="math inline">\(\Rightarrow \Delta E/E = \Delta q/q + \pi - \pi^*\)</span></p></li>
+<li><p>Dua sumber pergerakan nominal <span class="math inline">\(E\)</span>:</p>
+<ul>
+<li><p><strong>Monetary</strong> (<span class="math inline">\(\pi - \pi^*\)</span>): differensial inflasi.</p></li>
+<li><p><strong>Real</strong> (<span class="math inline">\(\Delta q/q\)</span>): real shock — produktivitas, terms of trade, demand shift.</p></li>
+</ul></li>
+<li><p>Monetary approach <em>tanpa</em> real component = sederhana tapi sering salah.</p></li>
+<li><p>Real ER approach = lebih lengkap.</p></li>
+</ul>
+</section>
+<section id="nickel-boom" class="slide level2 m">
+<h2>2022 Nickel boom</h2>
+<div class="columns">
+<div class="column" style="width:55%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-11-1.png" width="480"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:45%;">
+<p><strong>Indonesian case 2: 2022 nickel boom</strong></p>
+<ul>
+<li><p>2022 demand global EV + Russia-Ukraine → harga nikel 2x.</p></li>
+<li><p>Indonesia: produsen nikel terbesar dunia (~50% produksi global).</p></li>
+<li><p>Terms of trade Indonesia <em>membaik</em> tajam.</p></li>
+<li><p>IDR <em>real appreciate</em>: REER naik dari 95 (2020) ke 102 (2022) walaupun Fed lagi hike.</p></li>
+<li><p>Monetary approach saja tidak bisa jelaskan ini — perlu real demand shock.</p></li>
+<li><p>Lesson: untuk negara commodity-exporter seperti Indonesia, real ER bergerak kuat dengan ToT.</p></li>
+</ul>
+</div></div>
+</section>
+<section id="relative-demand-shock-formal" class="slide level2 s">
+<h2>Relative demand shock formal</h2>
+<ul>
+<li><p>KOM Fig 16.4: demand dunia untuk produk Indonesia (atau ToT membaik):</p>
+<ul>
+<li><p>Excess demand → harga relatif barang Indonesia naik (dalam dollar).</p></li>
+<li><p>Real apresiasi: <span class="math inline">\(q\)</span> turun.</p></li>
+</ul></li>
+<li><p>Mekanisme adjusting: harga Indonesia (dalam Rp) naik atau <span class="math inline">\(E\)</span> turun (atau kombinasi).</p></li>
+<li><p>Permanently lebih tinggi <span class="math inline">\(q\)</span> adalah <em>equilibrium baru</em>, bukan disequilibrium.</p></li>
+<li><p>Implikasi untuk Indonesia: commodity boom → currency <em>appreciate</em> → “Dutch disease” untuk manufaktur.</p></li>
+<li><p>Counter-policy: SWF (Sovereign Wealth Fund), saving fiscal windfall.</p></li>
+</ul>
+</section>
+<section id="relative-supply-shock-productivity" class="slide level2 s">
+<h2>Relative supply shock (productivity)</h2>
+<ul>
+<li><p>KOM Ch.16: jika produktivitas Indonesia di sektor tradable naik:</p>
+<ul>
+<li><p>Harga relatif barang Indonesia <em>turun</em> (cheaper to produce).</p></li>
+<li><p>Real <em>depresiasi</em> (<span class="math inline">\(q\)</span> naik).</p></li>
+<li><p>Tapi <span class="math inline">\(Y\)</span> naik → demand uang naik → <span class="math inline">\(P\)</span> Indonesia <em>turun</em> → ambiguous effect on nominal <span class="math inline">\(E\)</span>.</p></li>
+</ul></li>
+<li><p>Indonesian context: kebijakan hilirisasi (nikel, batubara, CPO) bertujuan menaikkan produktivitas tradable.</p></li>
+<li><p>Efek pada nominal IDR ambigu — tergantung apakah commodity price boost (demand) atau cost saving (supply) yang dominan.</p></li>
+</ul>
+</section>
+<section id="summary-table" class="slide level2 s">
+<h2>Summary table</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Shock</th>
+<th>Real ER <span class="math inline">\(q\)</span></th>
+<th>Nominal <span class="math inline">\(E_{Rp/USD}\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(M^s_{ID}\uparrow\)</span></td>
+<td>tidak berubah (long-run)</td>
+<td>naik proporsional</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(M^s_{US}\uparrow\)</span></td>
+<td>tidak berubah</td>
+<td>turun proporsional</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\mu_{ID}\uparrow\)</span> (money growth)</td>
+<td>tidak berubah</td>
+<td>naik di growth rate</td>
+</tr>
+<tr class="even">
+<td>Demand global untuk barang ID <span class="math inline">\(\uparrow\)</span></td>
+<td>turun (apresiasi real)</td>
+<td>turun (apresiasi)</td>
+</tr>
+<tr class="odd">
+<td>Demand global untuk barang US <span class="math inline">\(\uparrow\)</span></td>
+<td>naik (depresiasi real)</td>
+<td>naik (depresiasi)</td>
+</tr>
+<tr class="even">
+<td>Supply ID <span class="math inline">\(\uparrow\)</span> (produktivitas)</td>
+<td>naik (depresiasi real)</td>
+<td>ambigu</td>
+</tr>
+<tr class="odd">
+<td>Supply US <span class="math inline">\(\uparrow\)</span> (produktivitas)</td>
+<td>turun (apresiasi real)</td>
+<td>ambigu</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>Monetary shocks → nominal <span class="math inline">\(E\)</span> via PPP, tidak ubah <span class="math inline">\(q\)</span>.</p></li>
+<li><p>Real shocks → ubah <span class="math inline">\(q\)</span> langsung.</p></li>
+</ul>
+</section>
+<section id="real-interest-parity" class="slide level2 s">
+<h2>Real interest parity</h2>
+<ul>
+<li><p>Dari Fisher: <span class="math inline">\(R = r + \pi^e\)</span>, <span class="math inline">\(R^* = r^* + \pi^{*e}\)</span>.</p></li>
+<li><p>Dari UIP: <span class="math inline">\(R - R^* = (E^e - E)/E\)</span>.</p></li>
+<li><p>Dari <span class="math inline">\(E = q \cdot P/P^*\)</span>: <span class="math inline">\(\Delta E/E = \Delta q/q + \pi - \pi^*\)</span>.</p></li>
+<li><p>Combining:</p></li>
+</ul>
+<p><span class="math display">\[
+r - r^* = \frac{q^e - q}{q}
+\]</span></p>
+<ul>
+<li><p><strong>Real interest parity</strong>: differential real rate = ekspektasi perubahan real ER.</p></li>
+<li><p>Untuk Indonesia 2025: <span class="math inline">\(r_{ID} \approx 3{,}25\%\)</span>, <span class="math inline">\(r^*_{US} \approx 2{,}2\%\)</span> → <span class="math inline">\(r - r^* \approx 1\%\)</span> → pasar ekspektasi <span class="math inline">\(q\)</span> Indonesia akan <em>real depresiasi</em> ~1%/tahun.</p></li>
+</ul>
+</section>
+<section id="takeaways" class="slide level2 s">
+<h2>Takeaways</h2>
+<ul>
+<li><p>Money market: <span class="math inline">\(M^s/P = L(R, Y)\)</span> → menentukan <span class="math inline">\(R\)</span>, kemudian masuk ke UIP untuk menentukan <span class="math inline">\(E\)</span>.</p></li>
+<li><p><strong>Long-run</strong>: money neutrality — <span class="math inline">\(M\uparrow\)</span> → <span class="math inline">\(P\uparrow\)</span> → <span class="math inline">\(E\uparrow\)</span> proporsional.</p></li>
+<li><p><strong>Overshooting</strong> muncul karena <span class="math inline">\(P\)</span> sticky di short-run, <span class="math inline">\(E\)</span> adjust instant.</p></li>
+<li><p><strong>PPP</strong>: <span class="math inline">\(E = P/P^*\)</span>. Gagal empiris karena nontradables, productivity gap, basket differences.</p></li>
+<li><p><strong>Fisher</strong>: <span class="math inline">\(R - R^* = \pi^e - \pi^{*e}\)</span>. Real rate + inflation expectations.</p></li>
+<li><p><strong>Real ER</strong> <span class="math inline">\(q = EP^*/P\)</span>: jembatan antara monetary approach dan dunia nyata.</p></li>
+<li><p><strong>Real interest parity</strong>: differential real rate = ekspektasi <span class="math inline">\(\Delta q\)</span>.</p></li>
+</ul>
+</section>
+<section id="practice-1-ppp" class="slide level2 s">
+<h2>Practice 1: PPP</h2>
+<ul>
+<li><p>Diketahui: <span class="math inline">\(\pi_{ID} = 4\%\)</span>, <span class="math inline">\(\pi_{US} = 2\%\)</span>, <span class="math inline">\(E_{2025} = 16.400\)</span>, relative PPP holds.</p></li>
+<li><p>Berapa ekspektasi <span class="math inline">\(E_{2026}\)</span>?</p></li>
 </ul>
 <div class="fragment">
+<p><strong>Solusi</strong>:</p>
+<p><span class="math display">\[
+\frac{\Delta E}{E} = \pi_{ID} - \pi_{US} = 4\% - 2\% = 2\%
+\]</span></p>
+<p><span class="math display">\[
+E_{2026} = 16.400 \times 1{,}02 = 16.728
+\]</span></p>
 <ul>
-<li>Hal ini karena aktivitas Central Bank (CB)</li>
+<li>Catatan: prediksi PPP biasanya <em>underestimate</em> depresiasi IDR karena ada juga real factors (risk premium, capital flow).</li>
 </ul>
 </div>
 </section>
-<section id="central-bank" class="slide level2">
-<h2>Central Bank</h2>
+<section id="practice-2-real-er-decomposition" class="slide level2 s">
+<h2>Practice 2: Real ER decomposition</h2>
 <ul>
-<li><p>Meski dibilang bahwa uang tunduk pada supply demand seperti halnya barang, uang adalah produk monopoli,</p>
-<ul>
-<li>produksi mata uang diatur oleh CB.</li>
-</ul></li>
-<li><p>CB memiliki aktivitas yang cukup besar di pasar uang maupun ekonomi domestik.</p>
-<ul>
-<li><p>mengendalikan inflasi.</p></li>
-<li><p>menjaga nilai tukar mata uang.</p></li>
-</ul></li>
-<li><p>Kemampuan intervensi CB dapat kita observe dari balance sheetnya.</p></li>
+<li><p>Diketahui: USD/IDR <em>turun</em> 2% dalam setahun, <span class="math inline">\(\pi_{ID} = 5\%\)</span>, <span class="math inline">\(\pi_{US} = 8\%\)</span>.</p></li>
+<li><p>Berapa <span class="math inline">\(\Delta q/q\)</span>?</p></li>
 </ul>
-</section>
-<section id="balance-sheet-bi" class="slide level2">
-<h2>Balance sheet BI</h2>
-
-<img data-src="picture2.jpg" class="r-stretch quarto-figure-center"><p class="caption">Monetary indicator billion IDR</p><p>sumber: <a href="https://www.bi.go.id/en/statistik/indikator/indikator-moneter.aspx">indikator moneter BI</a></p>
-</section>
-<section id="intervention-mechanism" class="slide level2">
-<h2>Intervention mechanism</h2>
+<div class="fragment">
+<p><strong>Solusi</strong>:</p>
+<p><span class="math display">\[
+\frac{\Delta q}{q} = \frac{\Delta E}{E} + \pi^* - \pi = -2 + 8 - 5 = +1\%
+\]</span></p>
 <ul>
-<li><p>Balance sheet CB sangat mempengaruhi perekonomian domestik (in case of the Fed, PBoC, ECB &amp; BoJ, the world)</p></li>
-<li><p>pelepasan aset oleh CB <span class="math inline">\(\rightarrow\)</span> penyerapan uang beredar <span class="math inline">\(\rightarrow\)</span> mengurangi inflasi.</p></li>
-<li><p>aset purchase oleh CB <span class="math inline">\(\rightarrow\)</span> uang beredar naik <span class="math inline">\(\rightarrow\)</span> mendorong PDB &amp; inflasi.</p></li>
-<li><p>aset asing yang dimiliki CB inilah yang kita sebut cadev.</p></li>
-</ul>
-</section>
-<section id="controlling-xr" class="slide level2">
-<h2>controlling XR</h2>
-<ul>
-<li>say BI ingin apresiasi IDR terhadap USD, gimana caranya?</li>
-</ul>
-<div>
-<ul>
-<li class="fragment"><p>untuk apresiasi IDR, BI perlu mengurangi sirkulasi IDR di pasar uang.</p></li>
-<li class="fragment"><p>BI menjual aset asing (denominasi USD), lalu lepas USD nya, tukar dengan IDR.</p></li>
-<li class="fragment"><p>sebaliknya juga bisa, depresiasi IDR dilakukan dengan membeli aset asing dengan IDR.</p></li>
+<li><p>IDR <em>nominal apresiasi</em> 2%.</p></li>
+<li><p>IDR <em>real depresiasi</em> 1%.</p></li>
+<li><p>Interpretasi: walaupun nominal kuat, barang Indonesia <em>relatif lebih murah</em> dibanding US karena inflasi US jauh lebih tinggi.</p></li>
+<li><p>Implikasi: eksportir Indonesia <em>diuntungkan</em> secara real, walaupun secara nominal melihat <span class="math inline">\(E\)</span> turun.</p></li>
 </ul>
 </div>
 </section>
-<section id="kenapa-bi-intervensi" class="slide level2">
-<h2>Kenapa BI intervensi?</h2>
+<section id="practice-3-real-interest-parity" class="slide level2 s">
+<h2>Practice 3: Real interest parity</h2>
 <ul>
-<li><p>ketika BI mengumpulkan cadev, BI menarik dolar dari pasar <span class="math inline">\(\rightarrow\)</span> dolar yang dapat digunakan untuk impor jadi berkurang!</p></li>
-<li><p>Pengumpulan cadev oleh BI = menyeimbangkan CA yang surplus!</p></li>
-<li><p>Cadev yang sudah dikumpulakn dapat digunakan di masa depan sewaktu IDN membutuhkan dollar untuk menahan nilai IDR dari terdepresiasi.</p></li>
+<li><p>Diketahui: <span class="math inline">\(R_{ID} = 6{,}00\%\)</span>, <span class="math inline">\(\pi^e_{ID} = 3\%\)</span>, <span class="math inline">\(R^*_{US} = 4{,}25\%\)</span>, <span class="math inline">\(\pi^{*e}_{US} = 2\%\)</span>.</p></li>
+<li><p>Berapa ekspektasi <span class="math inline">\(\Delta q/q\)</span>?</p></li>
 </ul>
-</section>
-<section id="rezim-xr" class="slide level2">
-<h2>Rezim XR</h2>
+<div class="fragment">
+<p><strong>Solusi</strong>:</p>
+<p><span class="math display">\[
+r_{ID} = 6{,}00 - 3 = 3{,}00\%, \quad r^*_{US} = 4{,}25 - 2 = 2{,}25\%
+\]</span></p>
+<p><span class="math display">\[
+\frac{q^e - q}{q} = r_{ID} - r^*_{US} = 0{,}75\%
+\]</span></p>
 <ul>
-<li><p>gambaran XR sebelumnya adalah “clean float”, di mana nilai tukar mata uang benar-benar bebas intervensi sentralistik.</p></li>
-<li><p>tapi sangat sedikit negara yang clean float. Mostly “dirty float”: pasar tetap bekerja tapi CB intervensi from time to time.</p></li>
-<li><p>masih lebih float daripada “fixed exchange rate”.</p></li>
-<li><p>Tapi kenapa CB ingin manage nilai tukar?</p></li>
+<li><p>Pasar mengekspektasikan IDR <em>real depresiasi</em> ~0,75%/tahun.</p></li>
+<li><p>Kontekstualisasi: Indonesia menawarkan real rate lebih tinggi → kompensasi ekspektasi real depresiasi.</p></li>
+<li><p>Pekan depan: bawa <span class="math inline">\(Y\)</span> ke gambar — model <strong>AA-DD</strong> untuk output + ER short-run (KOM Ch.17).</p></li>
 </ul>
-</section>
-<section id="kenapa-intervensi-xr" class="slide level2 m">
-<h2>Kenapa intervensi XR?</h2>
-<ol type="1">
-<li><p>memiliki cadev dulu dengan merelakan tidak impor. Cadev berguna untuk intervensi ketika ada krisis. Ada rule of thumb CB memiliki cadev yang cukup untuk 3-6 bulan impor.</p></li>
-<li><p>Mendukung merkantilis: dengan menyerap dolar tiap kali CA surplus, CB bisa menjaga nilai tukar tetap rendah dan ekspor tetap tinggi!</p></li>
-<li><p>Mendukung investasi: dengan menjaga rupiah tetap stabil, pengutang dolar dapat memastikan nilai utangnya tidak membengkak akibat dampak nilai tukar.</p></li>
-<li><p>Stabilitas nilai tukar overall lebih disukai pasar -&gt; prudence!</p></li>
-</ol>
-</section>
-<section id="aktivitas-cb" class="slide level2">
-<h2>Aktivitas CB</h2>
-<iframe src="https://data.worldbank.org/share/widget?indicators=BN.RES.INCL.CD&amp;locations=MY-ID-TH-VN" width="900" height="600" frameborder="0" scrolling="no">
-</iframe>
-</section>
-<section id="aktivitas-cb-1" class="slide level2">
-<h2>AKtivitas CB</h2>
-<iframe src="https://data.worldbank.org/share/widget?indicators=BN.RES.INCL.CD&amp;locations=MY-ID-TH-VN-US" width="900" height="600" frameborder="0" scrolling="no">
-</iframe>
-</section>
-<section id="aktivitas-cb-2" class="slide level2">
-<h2>Aktivitas CB</h2>
-<iframe src="https://data.worldbank.org/share/widget?indicators=BN.RES.INCL.CD&amp;locations=MY-ID-TH-VN-US-CN" width="900" height="600" frameborder="0" scrolling="no">
-</iframe>
-</section>
-<section id="global-imbalance-why-1" class="slide level2">
-<h2>Global imbalance: why?</h2>
-<ul>
-<li><p>CB tidak mungkin intervensi terus menerus. Kenapa?</p></li>
-<li><p>Bretton woods: ketika mata uang masih di-peg ke emas, US sampai kehabisan emas karena demand dolar begitu tinggi.</p></li>
-<li><p>Dengan kata lain, mata uang asing di pasar bakal habis kalau dikumpulin terus:</p>
-<ul>
-<li><p>yang surplus terus akan kehabisan aset utk dibeli</p></li>
-<li><p>yang defisit kehabisan aset utk dijual.</p></li>
-</ul></li>
-</ul>
-</section>
-<section id="exorbitant-privilege" class="slide level2">
-<h2>Exorbitant privilege</h2>
-<ul>
-<li><p>tapi aset US sampai saat ini masih considered safe:</p>
-<ul>
-<li>seberapapun aset US dilepas, pasti bakal dibeli.</li>
-</ul></li>
-<li><p>Sejarahnya panjang, sejak bretton woods, trade dilakukan dalam USD karena USD dipeg ke emas.</p></li>
-<li><p>Tentunya juga karena US jaman dulu ekonominya sangat besar. Baik ekspor maupun impornya besar.</p>
-<ul>
-<li>aman pegang USD karena ketika negara lain berkurang tradenya, kita akan selalu bisa dagang dengan US.</li>
-</ul></li>
-</ul>
-</section>
-<section id="exorbitant-privilege-1" class="slide level2">
-<h2>Exorbitant privilege</h2>
-
-<img data-src="picture3.jpg" class="r-stretch quarto-figure-center"><p class="caption">Global CB reserves</p><p>sumber: <a href="https://data.imf.org/?sk=E6A5F467-C14B-4AA8-9F6D-5A09EC4E62A4">IMF</a></p>
-</section>
-<section id="exorbitant-privilege-2" class="slide level2">
-<h2>Exorbitant privilege</h2>
-
-<img data-src="picture4.jpg" class="r-stretch"><p>from <a href="https://www.cfr.org/backgrounder/dollar-worlds-currency">CFR</a></p>
-</section>
-<section id="competitiveness-or-currency-manipulation" class="slide level2 m">
-<h2>Competitiveness or currency manipulation?</h2>
-<ul>
-<li><p>Unsurprisingly, China dan Jepang, 2 negara paling surplus, pegang aset denominasi dolar paling banyak.</p>
-<ul>
-<li>untuk tetap surplus, mereka terus beli bonds US tanpa harus impor.</li>
-</ul></li>
-<li><p>Unsurprisingly, 2 negara tersebut mengalami boom aset, terutama konstruksi.</p>
-<ul>
-<li><p>Jepang melambat ekonominya sejak 90-an, setelah aset-asetnya ternyata ga ada returnnya.</p></li>
-<li><p>China sedang mengalami perlambatan tsb. We’ll see seperti apa landingnya.</p></li>
-</ul></li>
-</ul>
-</section>
-<section id="big-mac-index" class="slide level2">
-<h2>Big Mac Index</h2>
-<ul>
-<li><p>Fenomena ini mendorong studi tentang undervaluation / overvaluation of currency di literatur ekonomi internasional.</p></li>
-<li><p>Bahwa nilai mata uang yang ada saat ini tidak mencerminkan nilai aslinya sebagai alat tukar.</p>
-<ul>
-<li>nilai asli sebuah ekonomi tetaplah what the economy produce and consume.</li>
-</ul></li>
-<li><p>Salah satu study yang menarik adalah <a href="https://www.krisna.or.id/en/post/bigmacindex/">BigMac Index</a> dari majalah the economist.</p></li>
-</ul>
-</section>
-<section id="next-week" class="slide level2">
-<h2>Next week</h2>
-<ul>
-<li><p>Konsekuensi global imbalance pada distribusi pendapatan.</p>
-<ul>
-<li>What mercantilist got wrong</li>
-</ul></li>
-<li><p>Mulai konteks Indonesia.</p></li>
-</ul>
-<div class="footer footer-default">
 
 </div>
 </section>
     </div>
-  </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+
+</div>
+</div></div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
   <script src="index_files/libs/revealjs/dist/reveal.js"></script>
@@ -661,12 +983,12 @@
       Reveal.initialize({
 'controlsAuto': true,
 'previewLinksAuto': false,
-'smaller': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"8\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
 'chalkboard': {"buttons":true},
 'smaller': false,
  
@@ -821,7 +1143,7 @@
         margin: 0.1,
 
         math: {
-          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
           config: 'TeX-AMS_HTML-full',
           tex2jax: {
             inlineMath: [['\\(','\\)']],
@@ -847,102 +1169,250 @@
         ]
       });
     </script>
-    <script id="quarto-html-after-body" type="application/javascript">
-    window.document.addEventListener("DOMContentLoaded", function (event) {
-      const toggleBodyColorMode = (bsSheetEl) => {
-        const mode = bsSheetEl.getAttribute("data-mode");
-        const bodyEl = window.document.querySelector("body");
-        if (mode === "dark") {
-          bodyEl.classList.add("quarto-dark");
-          bodyEl.classList.remove("quarto-light");
-        } else {
-          bodyEl.classList.add("quarto-light");
-          bodyEl.classList.remove("quarto-dark");
+    
+
+    <script>
+
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+
+      // slide changes (different for each slide format).
+
+      (function () {
+
+        // dispatch for htmlwidgets
+
+        function fireSlideEnter() {
+
+          const event = window.document.createEvent("Event");
+
+          event.initEvent("slideenter", true, true);
+
+          window.document.dispatchEvent(event);
+
         }
-      }
-      const toggleBodyColorPrimary = () => {
-        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
-        if (bsSheetEl) {
-          toggleBodyColorMode(bsSheetEl);
-        }
-      }
-      toggleBodyColorPrimary();  
-      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
-      tabsets.forEach(function(tabset) {
-        const tabby = new Tabby('#' + tabset.id);
-      });
-      const clipboard = new window.ClipboardJS('.code-copy-button', {
-        target: function(trigger) {
-          return trigger.previousElementSibling;
-        }
-      });
-      clipboard.on('success', function(e) {
-        // button target
-        const button = e.trigger;
-        // don't keep focus
-        button.blur();
-        // flash "checked"
-        button.classList.add('code-copy-button-checked');
-        var currentTitle = button.getAttribute("title");
-        button.setAttribute("title", "Copied!");
-        setTimeout(function() {
-          button.setAttribute("title", currentTitle);
-          button.classList.remove('code-copy-button-checked');
-        }, 1000);
-        // clear code selection
-        e.clearSelection();
-      });
-      function tippyHover(el, contentFn) {
-        const config = {
-          allowHTML: true,
-          content: contentFn,
-          maxWidth: 500,
-          delay: 100,
-          arrow: false,
-          appendTo: function(el) {
-              return el.closest('section.slide') || el.parentElement;
-          },
-          interactive: true,
-          interactiveBorder: 10,
-          theme: 'quarto-reveal',
-          placement: 'bottom-start'
-        };
-          config['offset'] = [0,0];
-          config['maxWidth'] = 700;
-        window.tippy(el, config); 
-      }
-      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-      for (var i=0; i<noterefs.length; i++) {
-        const ref = noterefs[i];
-        tippyHover(ref, function() {
-          let href = ref.getAttribute('href');
-          try { href = new URL(href).hash; } catch {}
-          const id = href.replace(/^#\/?/, "");
-          const note = window.document.getElementById(id);
-          return note.innerHTML;
-        });
-      }
-      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-      for (var i=0; i<bibliorefs.length; i++) {
-        const ref = bibliorefs[i];
-        const cites = ref.parentNode.getAttribute('data-cites').split(' ');
-        tippyHover(ref, function() {
-          var popup = window.document.createElement('div');
-          cites.forEach(function(cite) {
-            var citeDiv = window.document.createElement('div');
-            citeDiv.classList.add('hanging-indent');
-            citeDiv.classList.add('csl-entry');
-            var biblioDiv = window.document.getElementById('ref-' + cite);
-            if (biblioDiv) {
-              citeDiv.innerHTML = biblioDiv.innerHTML;
+
+    
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+
+          fireSlideEnter();
+
+    
+
+          // dispatch for shiny
+
+          if (window.jQuery) {
+
+            if (previousSlide) {
+
+              window.jQuery(previousSlide).trigger("hidden");
+
             }
-            popup.appendChild(citeDiv);
+
+            if (currentSlide) {
+
+              window.jQuery(currentSlide).trigger("shown");
+
+            }
+
+          }
+
+        }
+
+    
+
+        // hookup for slidy
+
+        if (window.w3c_slidy) {
+
+          window.w3c_slidy.add_observer(function (slide_num) {
+
+            // slide_num starts at position 1
+
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+
           });
-          return popup.innerHTML;
-        });
-      }
-    });
+
+        }
+
+    
+
+      })();
+
     </script>
+
+    
+
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copied!");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copied!");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp('/' + window.location.host + '/');
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
     
 
 </body></html>

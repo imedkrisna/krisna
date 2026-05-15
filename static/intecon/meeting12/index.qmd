@@ -1,9 +1,9 @@
 ---
-title: "Global Imbalance, exchange rate & Monetary Policy"
+title: "Money, Prices & Long-Run Exchange Rates"
 subtitle: "ECES905205 pertemuan 12"
-date: "12 September 2022"
+date: "25 Mei 2026"
 author: "I Made Krisna Gupta"
-format: 
+format:
   revealjs:
     theme: [simple,../mytheme.scss]
     chalkboard: true
@@ -11,309 +11,1151 @@ format:
     transition: convex
     background-transition: fade
     slide-number: true
-  beamer: default
+#  beamer: default
 ---
 
+## Recap & today's plan {.s}
 
-## This week
+- Pekan lalu (KOM Ch.14 + intro Ch.15): UIP punya $R$ sebagai _given_; kita juga sudah lihat preview joint money + FX dan konsep overshooting.
 
-- To understand global imbalance, we need to understand how current account, exchange rate and monetary policy interacts.
+- Hari ini: derivasi formal money market → bawa $R$ ke FX market → lepas asumsi sticky $P$ → long-run (PPP, monetary approach, Fisher, real ER).
 
-- Additionally, we want to note how income distribution and investment-boosting policy affects the global imbalance.
+- Roadmap: $M^d = P\cdot L(R,Y)$ → joint money + FX → money neutrality & overshooting → law of one price → PPP → monetary approach → Fisher → PPP shortcomings → real ER → real interest parity.
 
-- Later, we can learn that trade surplus may not equals to competitiveness, let alone welfare!
+## Roadmap diagram {.s}
 
-## Mercantilism
+- **Block 1**: pasar uang formal (Ch.15.1).
 
-- Mercantilism adalah [paham](https://www.econlib.org/library/Enc/Mercantilism.html) yang mendorong ekspor dan menghalang-halangi impor.
+- **Block 2**: pasar uang + FX bersamaan (Ch.15.2).
 
-- Pemeluk paham merkantilis percaya bahwa expor > impor (CA surplus) merupakan hal yang baik.
+- **Block 3**: long-run, money neutrality, overshooting formal (Ch.15.3-15.5).
 
-- Paham ini besar di sekitar abad 16 sampai abad 18 setelah Smith dan Ricardo mempopulerkan comparative advantage.
+- **Block 4**: Law of One Price & PPP (Ch.16.1).
 
-- Ketika itu, alat tukar adalah emas dan perak. Merkantilis percaya bahwa membatasi impor memperkaya suatu negara dengan memiliki banyak emas dan perak.
+- **Block 5**: monetary approach & Fisher effect (Ch.16.2).
 
-## Mercantilist no more {.m}
+- **Block 6**: PPP gagal — kenapa? (Ch.16.2 end).
 
-- Selain argumen comparative advantage, satu konsep penting yang membuat surplus CA tidak sustainable adalah inflasi / nilai tukar.
+- **Block 7**: real exchange rate approach & real interest parity (Ch.16.3-16.5).
 
-- Jumlah emas di dalam negeri jadi tinggi relatif terhadap emas di pasar internasional.
+```{r}
+#| warning: false
+#| message: false
+suppressPackageStartupMessages({
+  library(tidyverse)
+  library(scales)
+})
 
-- Harga emas jadi murah relatif terhadap barang $\rightarrow$ inflasi.
+have_ggden <- requireNamespace("ggden", quietly = TRUE)
+if (have_ggden) suppressMessages(library(ggden))
 
-- menahan impor jadi semakin sulit & mahal. 
+den_theme <- if (have_ggden && exists("theme_den", mode = "function")) {
+  theme_den()
+} else {
+  theme_classic(base_size = 14) +
+    theme(panel.background = element_rect(fill = "#f0f1eb", colour = "#f0f1eb"),
+          plot.background = element_rect(fill = "#f0f1eb"),
+          legend.key = element_rect(fill = "#f0f1eb", linetype = "blank"),
+          legend.background = element_rect(fill = "#f0f1eb"),
+          panel.grid.minor = element_blank())
+}
+```
 
-    - tambah argumen comparative advantage, mercantilisme makin tidak populer dalam memningkatkan kesejahteraan.
-    
-## Exchange rate
+## Aggregate money demand {.s}
 
-- Mercantilism $\rightarrow$ mempertahankan CA surplus.
+- Demand uang riil per kapita (KOM Ch.15.1):
 
-- Namun CA (secara teori) tidak bisa surplus terus menerus.
+$$
+\frac{M^d}{P} = L(R, Y)
+$$
 
-- Unified currency: $ P_X Q_X = P_M QM $ 
+    di mana $M^d$ = demand uang nominal, $P$ = level harga (IHK BPS), $R$ = nominal interest rate (BI 7DRR atau JIBOR), $Y$ = pendapatan nasional riil (PDB riil).
 
-    - remember ToT: $\frac{P_X}{P_M}=\frac{Q_M}{Q_X}$
-    
-    - If $\frac{P_X}{P_M} \uparrow$ then $\frac{Q_M}{Q_X}$
+- $L(R, Y)$ menurun di $R$ (opportunity cost pegang cash) dan menaik di $Y$ (volume transaksi).
 
-## Exchange rate
+- Memorize: **"real money demand depends negatively on $R$ and positively on $Y$"**.
 
-- Exchange rate: how much foreign money we can buy with domestic money.
+- Untuk Indonesia: jika BI 7DRR turun, orang lebih banyak pegang giro/saldo; jika PDB tumbuh, transaksi naik → kebutuhan likuiditas naik.
 
-- Misalnya nilai tukar=14.000 rupiah per USD:
+## Money demand schedule {.m}
 
-    - perubahan jadi 14.500 = depresiasi rupiah terhadap dolar = apresiasi dolar terhadap rupiah.
-    
-    - sama dengan 0,0000714 USD ke 0,000069 USD.
+:::: columns
 
-## Exchange rate
+::: {.column width="40%"}
 
-![](picture1.png)
+- Horizontal: $M/P$ (real money balance).
 
-## XR & Trade
+- Vertical: $R$.
 
-- Misalnya harga CPO di  = 12.000 IDR/Kg:
+- Kurva $L(R, Y_0)$ menurun: makin tinggi $R$, makin kecil $L$.
 
-    - Dengan 14.000, harga jual = 0,857 USD/Kg
-    
-    - Dengan 14.500, harga jual = 0,827 USD/Kg
-    
-- Harga berubah meski tidak ada perubahan struktur pasar.
+- Posisi kurva tergantung $Y$ (selanjutnya).
 
-- Sesuai hukum pasar, harga jual yang rendah akan meningkatkan demand global.
-
-- Eksportir untung karena secara rupiah untungnya sama tapi sales meningkat.
-
-- Sebaliknya, nilai tukar yang lemah merugikan importir.
-
-## XR & CA
-
-- Seperti hal-nya perdagangan barang biasa, uang juga tunduk pada permintaan dan penawaran.
-
-- Jika permintaan akan IDR meningkat relatif terhadap permintaan akan USD, maka IDR akan terapresiasi.
-
-- CA surplus $\rightarrow$ demand for IDR > USD $\rightarrow$ IDR appreciates.
-
-- Setelah $\frac{IDR}{USD} \downarrow$, ekspor relatif lebih mahal dari impor $\rightarrow$ CA $\downarrow$.
-
-- Pada akhirnya CA akan diseimbangkan oleh ekuilibrium baru nilai tukar.
-
-## XR & CA {.m}
-
-- Jika ekspor dipermudah dan impor dipersulit seperti paham merkantilis, maka dolar akan tersimpan di sistem keuangan.
-
-- jika ditukar dengan rupiah, maka rupiah akan berkurang di pasar uang dan membanjiri pasar barang:
-
-    - rupiah menguat di pasar uang, tapi melemah di pasar barang (inflasi)
-    
-    - jika tidak ditukar, dolar akan bertahan di pasar uang dan lama-lama jadi banyak (artinya rupiah tetap menguat)
-    
-- Artinya, surplus CA tidak sustainable. Lagipula, uang nganggur = penggunaan tidak efisien.
-
-## XR & FA
-
-- Demand mata uang tidak hanya didorong oleh pasar barang, tapi juga pasar modal!
-
-- Ingat IS - LM? Apa yang terjadi ketika $r \uparrow$ ?
-
-::: {.incremental}
-- naiknya r menyerap uang ke sistem perbankan.
-
-- uang beredar berkurang, harga uang naik relatif terhadap harga barang.
-
-- CB response to inflation: $r \uparrow$, $P \downarrow$.
 :::
 
-## XR & FA
+::: {.column width="60%"}
 
-- Di pasar uang, nilai tukar juga digunakan untuk mengendalikan nilai tukar.
+```{r}
+#| warning: false
+#| message: false
+#| fig-width: 5
+#| fig-height: 4
 
-- naiknya interest rate domestik akan menaikkan daya tawar aset di Indonesia.
+ld_low  <- function(M) 0.16 - 0.020 * M
+ld_high <- function(M) 0.20 - 0.020 * M
 
-    - orang akan mencari rupiah untuk ditukar dengan surat berharga Indonesia.
-    
-    - demand rupiah naik relatif terhadap mata uang asing.
-    
-    - rupiah apresiasi -> demand ekspor berkurang, demand impor naik.
-    
-## XR, CA, FA {.m}
+ggplot() +
+  geom_function(fun = ld_low,  xlim = c(0, 8), linewidth = 1.1, colour = "#26351c") +
+  geom_function(fun = ld_high, xlim = c(0, 8), linewidth = 1.1, colour = "#8b0000",
+                linetype = "dashed") +
+  annotate("text", x = 7.4, y = 0.012, label = "L(R, Y[0])", parse = TRUE, size = 4) +
+  annotate("text", x = 7.4, y = 0.055, label = "L(R, Y[1])", parse = TRUE,
+           colour = "#8b0000", size = 4) +
+  scale_x_continuous(limits = c(0, 8.5), expand = c(0, 0), name = "M/P") +
+  scale_y_continuous(limits = c(0, 0.22), expand = c(0, 0),
+                     labels = percent, name = "R") +
+  den_theme
+```
 
-- Kebijakan meningkatnya aktivitas pasar modal juga didorong kebijakan pemerintah.
+:::
 
-- aset yang masuk ke Indonesia mendorong FA positive $\rightarrow$ CAD!
+::::
 
-- CA dan XR memiliki dinamika di mana keduanya dapat saling mempengaruhi:
+## Shift dari kenaikan $Y$ {.s}
 
-    - lewat perdagangan barang, CA surplus $\rightarrow$, XR $\uparrow$, surplus CA berkurang.
-    
-    - lewat perdagangan aset: demand local asset $\rightarrow$ XR $\uparrow$, surplus CA berkurang.
-    
-- Merkantilis dan investasi asing ke dalam negeri negates each other!
+- KOM Fig 15.2: kenaikan pendapatan nasional riil dari $Y_0$ ke $Y_1$ menggeser seluruh kurva _ke kanan/atas_.
 
-## Global imbalance: why?
+- Pada setiap level $R$, orang menginginkan lebih banyak saldo riil — karena transaksi lebih banyak.
 
-- baik CAS maupun CAD secara teori tidak akan sustainable.
+- Indonesian numerik: jika PDB tumbuh 5% setahun, demand uang riil naik sekitar 5% pada $R$ konstan (asumsi income elasticity ≈ 1).
 
-    - ceteris paribus, akan ada correction mechanism melalui exchange rate.
-    
-- Namun kenapa global imbalance bisa terjadi secara persistent?
+- Kebijakan implikasi: pertumbuhan ekonomi yang sehat butuh ekspansi monetary _supply_ proporsional — jika tidak, $R$ akan naik dan _crowd out_ investasi.
 
-    - Aus, NZ, US, UK vs Jerman, Jepang, China, Taiwan.
-    
+## Money market equilibrium {.s}
+
+- Equilibrium: real money supply = real money demand:
+
+$$
+\frac{M^s}{P} = L(R, Y)
+$$
+
+- $M^s$ ditentukan BI (lewat OMO/reverse repo); $P$ dan $Y$ ditentukan di pasar barang.
+
+- Persamaan ini punya satu unknown: $R$.
+
+- **Mekanisme**: jika excess supply uang → orang pegang terlalu banyak cash → beli SBN/obligasi → harga obligasi naik → yield ($R$) turun.
+
+- Sebaliknya jika excess demand uang → jual SBN → harga turun → yield naik.
+
+## Effect of $M^s\uparrow$ {.m}
+
+:::: columns
+
+::: {.column width="45%"}
+
+- KOM Fig 15.4: BI ekspansi via reverse repo → $M^s$ naik.
+
+- Kurva $M^s/P$ vertikal geser ke kanan.
+
+- Pada $R$ awal, sekarang ada excess supply uang.
+
+- Equilibrium baru di $R$ lebih rendah.
+
+- Numerik: jika $M^s$ naik 5% dengan elasticity $L_R \approx -10$, $R$ turun dari 5,75% ke ~5,25%.
+
+:::
+
+::: {.column width="55%"}
+
+```{r}
+#| warning: false
+#| message: false
+#| fig-width: 5
+#| fig-height: 4
+
+ld <- function(M) 0.16 - 0.020 * M
+
+ggplot() +
+  geom_function(fun = ld, xlim = c(0, 8), linewidth = 1.1, colour = "#26351c") +
+  geom_segment(aes(x = 5, xend = 5, y = 0, yend = 0.14),
+               linewidth = 1.1, colour = "#8b0000") +
+  geom_segment(aes(x = 6.5, xend = 6.5, y = 0, yend = 0.14),
+               linewidth = 1.1, colour = "#8b0000", linetype = "dashed") +
+  annotate("segment", x = 0, xend = 5,   y = 0.06, yend = 0.06, linetype = "dashed") +
+  annotate("segment", x = 0, xend = 6.5, y = 0.03, yend = 0.03, linetype = "dashed") +
+  annotate("point", x = 5,   y = 0.06, size = 3.5) +
+  annotate("point", x = 6.5, y = 0.03, size = 3.5) +
+  annotate("text", x = 7.4, y = 0.012, label = "L(R, Y)", parse = TRUE, size = 4) +
+  annotate("text", x = 5.0, y = 0.145, label = "M[0]^s/P", parse = TRUE, size = 3.5) +
+  annotate("text", x = 6.5, y = 0.145, label = "M[1]^s/P", parse = TRUE,
+           colour = "#8b0000", size = 3.5) +
+  annotate("text", x = 0.2, y = 0.067, label = "R[0]", parse = TRUE, hjust = 0, size = 4) +
+  annotate("text", x = 0.2, y = 0.037, label = "R[1]", parse = TRUE, hjust = 0, size = 4) +
+  scale_x_continuous(limits = c(0, 8.5), expand = c(0, 0), name = expression(M^s/P)) +
+  scale_y_continuous(limits = c(0, 0.16), expand = c(0, 0),
+                     labels = percent, name = "R") +
+  den_theme
+```
+
+:::
+
+::::
+
+## Effect of $Y\uparrow$ {.s}
+
+- KOM Fig 15.5: jika $Y$ naik dengan $M^s$ tetap, kurva $L(R, Y)$ geser ke kanan.
+
+- Pada $R$ awal, excess demand uang → jual SBN → yield naik → $R$ baru lebih tinggi.
+
+- Implikasi penting: pertumbuhan ekonomi _otomatis_ menaikkan $R$ kalau BI tidak menyesuaikan $M^s$.
+
+- Ini kenapa central bank di EM (termasuk BI) cenderung _accommodating_: kalau $Y$ naik, $M^s$ ditambah agar $R$ tidak naik tajam.
+
+## M2 growth vs BI 7DRR
+
+```{r}
+#| warning: false
+#| message: false
+
+m2_rate <- tibble(
+  tahun = 2015:2025,
+  M2_growth = c(9.0, 10.0, 8.3, 6.3, 6.5, 12.4, 13.9, 8.4, 3.5, 4.5, 6.0),
+  BI7DRR   = c(7.50, 7.25, 4.75, 6.00, 5.25, 4.00, 3.50, 5.50, 5.75, 6.00, 5.75)
+)
+
+m2_rate %>%
+  pivot_longer(c(M2_growth, BI7DRR), names_to = "series", values_to = "pct") %>%
+  ggplot(aes(x = tahun, y = pct, colour = series)) +
+  geom_line(linewidth = 1) + geom_point() +
+  scale_colour_manual(values = c("M2_growth" = "#26351c", "BI7DRR" = "#8b0000"),
+                      labels = c("BI 7DRR", "M2 growth YoY")) +
+  scale_x_continuous(breaks = 2015:2025) +
+  den_theme +
+  labs(x = NULL, y = "% per annum", colour = NULL,
+       caption = "sumber: BI SEKI (fallback hardcoded); BI 7DRR akhir tahun, M2 YoY")
+```
+
+## Linking money market ke FX {.s}
+
+- $R$ yang ditentukan di money market = _input_ untuk UIP:
+
+$$
+R = R^* + \frac{E^e - E}{E}
+$$
+
+- Jadi rantainya: BI set $M^s$ → money market clear → $R$ terbentuk → UIP menentukan $E$.
+
+- Untuk Indonesia, $R$ = BI 7DRR (~5,75%), $R^*$ = Fed Funds (~4,5%), $E^e$ = ekspektasi nilai tukar masa depan, $E$ = USD/IDR spot.
+
+- Kalau money market di luar negeri (US) juga bergerak, $R^*$ ikut bergerak, dan rantai kebalikan terjadi pula.
+
+## Joint diagram: money + FX {.m}
+
+:::: columns
+
+::: {.column width="40%"}
+
+**Money market (atas)**:
+
+- $M^s/P$ vertikal, $L(R, Y)$ menurun.
+- Equilibrium $R^*_{\text{ID}}$ di perpotongan.
+
+**FX market (bawah)**:
+
+- IDR return vertikal di $R^*_{\text{ID}}$ (dari money market).
+- USD return menurun di $E$.
+- Equilibrium $E^*$.
+
+**Kunci**: $R^*_{\text{ID}}$ dari money market menjadi anchor garis vertikal di FX.
+
+:::
+
+::: {.column width="60%"}
+
+```{r}
+#| warning: false
+#| message: false
+#| fig-width: 5.5
+#| fig-height: 6
+suppressPackageStartupMessages(library(patchwork))
+
+md <- function(M) 0.15 - 0.018 * M
+mm <- ggplot() +
+  geom_function(fun = md, xlim = c(0, 8),
+                linewidth = 1.1, colour = "#26351c") +
+  geom_segment(aes(x = 5, xend = 5, y = 0, yend = 0.14),
+               linewidth = 1.1, colour = "#8b0000") +
+  annotate("segment", x = 0, xend = 5, y = 0.06, yend = 0.06,
+           linetype = "dashed") +
+  annotate("point", x = 5, y = 0.06, size = 3.5) +
+  annotate("text", x = 7.3, y = 0.025, label = "L(R,Y)", parse = TRUE, size = 4) +
+  annotate("text", x = 5.3, y = 0.13, label = "M^s/P",
+           parse = TRUE, size = 4) +
+  annotate("text", x = 0.15, y = 0.07, label = "R*",
+           hjust = 0, size = 4) +
+  scale_x_continuous(limits = c(0, 8.5), expand = c(0, 0),
+                     name = expression(M^s/P)) +
+  scale_y_continuous(limits = c(0, 0.16), expand = c(0, 0),
+                     labels = scales::percent, name = "R") +
+  ggtitle("Pasar uang Indonesia") + den_theme
+
+R_dom <- 0.06; R_for <- 0.045; Ee <- 16700
+usd_ret <- function(r) Ee / (1 + r - R_for)
+E_star  <- usd_ret(R_dom)
+
+fx <- ggplot() +
+  stat_function(fun = usd_ret, xlim = c(0, 0.22),
+                linewidth = 1.1, colour = "#26351c") +
+  geom_segment(aes(x = R_dom, xend = R_dom, y = 13500, yend = 20000),
+               linewidth = 1.1, colour = "#8b0000") +
+  annotate("segment", x = 0, xend = R_dom, y = E_star, yend = E_star,
+           linetype = "dashed") +
+  annotate("point", x = R_dom, y = E_star, size = 3.5) +
+  annotate("text", x = 0.19, y = 14400, label = "USD return", size = 3.5) +
+  annotate("text", x = R_dom + 0.005, y = 19500,
+           label = "IDR return", hjust = 0, size = 3.5) +
+  annotate("text", x = 0.005, y = E_star + 300, label = "E*",
+           hjust = 0, size = 4) +
+  annotate("text", x = R_dom, y = 13350, label = "R*",
+           vjust = 1, size = 4) +
+  scale_x_continuous(labels = scales::percent,
+                     limits = c(0, 0.22), expand = c(0, 0),
+                     name = "Expected return (Rp)") +
+  scale_y_continuous(labels = scales::comma,
+                     limits = c(13500, 20000), expand = c(0, 0),
+                     name = "E (Rp/USD)") +
+  ggtitle("Pasar valas IDR/USD") + den_theme
+
+mm / fx
+```
+
+:::
+
+::::
+
+## Shock 1: BI ekspansi moneter {.s}
+
+- BI naikkan $M^s$ (beli SBN via OMO ekspansif).
+
+- **Money market**: $M^s/P$ geser kanan → $R$ turun dari 5,75% ke (misal) 5,25%.
+
+- **FX market**: garis vertikal IDR return geser _kiri_ → $E$ baru di perpotongan dengan USD return → $E$ naik.
+
+- **Hasil**: IDR _depresiasi_.
+
+- Intuisi: bunga rupiah turun → investor cari yield USD → demand USD naik → IDR melemah.
+
+## Shock 2: Fed ekspansi moneter {.s}
+
+- Fed naikkan $M^s_{US}$ → $R^*$ (Fed Funds) turun.
+
+- **Pasar uang Indonesia**: tidak bergerak — $M^s_{ID}$, $P_{ID}$, $Y_{ID}$ tetap → $R$ tetap.
+
+- **FX market**: USD return curve geser _kiri_ (return USD lebih rendah pada setiap $E$).
+
+- Equilibrium baru $E$ lebih rendah → **IDR apresiasi**.
+
+- Simetris: dovish Fed = tailwind untuk EM currencies, termasuk IDR.
+
+## Asymmetry penting {.s}
+
+- Perubahan $M^s_{ID}$ → bergerak _di kedua_ market.
+
+- Perubahan $M^s_{US}$ → hanya bergerak _di FX market_, money market Indonesia tidak bergeser.
+
+- KOM Fig 15.9: shift ke USD return kiri, money market US tidak ada di gambar (tapi $R^*$ turun yang menyebabkan shift itu).
+
+- Implikasi: efek kebijakan moneter US ke Indonesia _murni_ via FX channel, bukan via domestic credit.
+
+- Bandingkan dengan _trade channel_ (Ch.17 nanti) yang lebih lambat.
+
+## BI rate vs USD/IDR
+
+```{r}
+#| warning: false
+#| message: false
+
+rate_fx <- tibble(
+  tahun = 2015:2025,
+  BI7DRR = c(7.50, 7.25, 4.75, 6.00, 5.25, 4.00, 3.50, 5.50, 5.75, 6.00, 5.75),
+  USDIDR_avg = c(13400, 13300, 13400, 14200, 14100, 14600, 14300, 14900, 15200, 15800, 16100)
+)
+
+ggplot(rate_fx, aes(x = tahun)) +
+  geom_line(aes(y = BI7DRR * 2000 + 5000, colour = "BI 7DRR (skala kanan)"),
+            linewidth = 1) + geom_point(aes(y = BI7DRR * 2000 + 5000)) +
+  geom_line(aes(y = USDIDR_avg, colour = "USD/IDR avg"),
+            linewidth = 1) + geom_point(aes(y = USDIDR_avg)) +
+  scale_y_continuous(name = "USD/IDR",
+                     sec.axis = sec_axis(~ (. - 5000) / 2000,
+                                         name = "BI 7DRR (%)",
+                                         labels = function(x) paste0(x, "%"))) +
+  scale_colour_manual(values = c("BI 7DRR (skala kanan)" = "#8b0000",
+                                 "USD/IDR avg" = "#26351c")) +
+  scale_x_continuous(breaks = 2015:2025) +
+  den_theme +
+  labs(x = NULL, colour = NULL,
+       caption = "BI 7DRR end-of-year; USD/IDR rata-rata tahunan. 2022 break: commodity boom mengikis korelasi UIP.")
+```
+
+## Short-run vs long-run {.s}
+
+- Sejauh ini asumsi: $P$ _sticky_ dalam short-run.
+
+- Sekarang lepas asumsi itu: dalam long-run, $P$ menyesuaikan penuh.
+
+- $Y$ kembali ke potential output (ditentukan supply riil: tenaga kerja, kapital, teknologi).
+
+- $R$ riil kembali ke level natural (savings vs investment).
+
+- Yang berubah dalam long-run: $P$ dan $E$ secara nominal.
+
+- **Money neutrality**: $M\uparrow$ proporsional → $P\uparrow$ proporsional → $E\uparrow$ proporsional. Real variables tidak terpengaruh.
+
+## Empirical: M growth vs inflasi {.s}
+
+- KOM Fig 15.10: rata-rata negara Latin Amerika 1987-2014 → korelasi tinggi antara money growth dan inflasi.
+
+- Untuk Indonesia long-run: hyperinflation 1965-66 (sudah dibahas M11) adalah kasus paling ekstrem.
+
+- Periode stabil 2000-2025: M2 growth ≈ 8-12%/tahun, inflasi ≈ 3-5%/tahun. Gap = pertumbuhan permintaan riil uang (income effect).
+
+- Lesson: hubungan $M$-$P$ kuat _di rata-rata_ jangka panjang; tidak harus tahun-per-tahun.
+
+## Mekanisme $M\to P$ {.s}
+
+- Bagaimana $M\uparrow$ secara fisik menaikkan $P$?
+
+- KOM mechanism:
+
+    - Excess demand goods: lebih banyak rupiah → demand barang dan jasa naik.
+
+    - Producers naikkan output via overtime → wages tertarik naik untuk kompensasi.
+
+    - Eventually firms naikkan harga jual untuk cover kenaikan biaya.
+
+- **Inflation expectations**: kalau pekerja & firms ekspektasi $P$ naik karena $M$ naik, mereka langsung negotiate upah & set harga _sekarang_. Self-fulfilling.
+
+- Indonesia: pengaruh inflasi expectations terlihat di consensus forecast, BI's Persepsi Konsumen Survey (PKS).
+
+## Overshooting formal {.s}
+
+- Dornbusch (1976) derivation, dengan $M^s$ naik _permanen_:
+
+    1. $t=0$: $M^s$ naik. $P$ sticky → $M^s/P$ naik → $R$ turun.
+
+    2. Long-run: $P$ naik proporsional → $M^s/P$ kembali → $R$ kembali ke level awal.
+
+    3. $E^e$ (ekspektasi long-run) naik proporsional ke $M^s$ baru.
+
+    4. UIP saat ini: $R$ turun memerlukan ekspektasi _apresiasi_ → $E$ harus melompat _ke atas_ $E^e$, baru perlahan apresiasi.
+
+- Implikasi: $E$ **overshoots** — gerakan inisial lebih besar dari long-run shift.
+
+## Time paths {.m}
+
+:::: columns
+
+::: {.column width="55%"}
+
+```{r}
+#| warning: false
+#| message: false
+#| fig-width: 5
+#| fig-height: 5.5
+
+t_vec <- seq(-3, 20, by = 0.1)
+M_path <- if_else(t_vec < 0, 1.0, 1.10)
+R_path <- if_else(t_vec < 0, 0.0575,
+                  0.0575 - 0.020 * exp(-0.20 * t_vec) * (t_vec >= 0))
+P_path <- if_else(t_vec < 0, 1.0,
+                  1.0 + 0.10 * (1 - exp(-0.20 * pmax(t_vec, 0))))
+E0 <- 16400; E_long <- 16400 * 1.10; E_short <- 17700
+E_path <- if_else(t_vec < 0, E0,
+                  E_long + (E_short - E_long) * exp(-0.20 * pmax(t_vec, 0)))
+
+pmM <- ggplot(tibble(t = t_vec, M = M_path), aes(t, M)) +
+  geom_line(linewidth = 1.1, colour = "#26351c") +
+  scale_y_continuous(name = "M^s") + den_theme + labs(x = NULL) + ggtitle("Money supply (permanent jump)")
+pmR <- ggplot(tibble(t = t_vec, R = R_path), aes(t, R)) +
+  geom_line(linewidth = 1.1, colour = "#26351c") +
+  scale_y_continuous(name = "R", labels = percent) + den_theme + labs(x = NULL) + ggtitle("Interest rate")
+pmP <- ggplot(tibble(t = t_vec, P = P_path), aes(t, P)) +
+  geom_line(linewidth = 1.1, colour = "#26351c") +
+  den_theme + labs(x = NULL, y = "P") + ggtitle("Price level (slow rise)")
+pmE <- ggplot(tibble(t = t_vec, E = E_path), aes(t, E)) +
+  geom_line(linewidth = 1.1, colour = "#26351c") +
+  geom_hline(yintercept = E_long, linetype = "dashed", colour = "grey50") +
+  scale_y_continuous(name = "E (Rp/USD)", labels = comma) +
+  den_theme + labs(x = "t") + ggtitle("Exchange rate (overshoot)")
+
+(pmM / pmR / pmP / pmE) & theme(plot.title = element_text(size = 10))
+```
+
+:::
+
+::: {.column width="45%"}
+
+- **Panel 1**: $M^s$ naik 10% _permanen_ di $t=0$.
+
+- **Panel 2**: $R$ turun di $t=0$, perlahan kembali ke level awal saat $P$ naik.
+
+- **Panel 3**: $P$ naik perlahan ke level baru 10% lebih tinggi.
+
+- **Panel 4**: $E$ jump _melebihi_ 10% target long-run, lalu perlahan apresiasi ke target.
+
+:::
+
+::::
+
+## Mengapa overshooting penting {.s}
+
+- KOM Fig 15.12: variabilitas bulanan USD/JPY jauh lebih tinggi dari variabilitas rasio $P_{US}/P_{JP}$.
+
+- Untuk Indonesia: USD/IDR bisa bergerak 1-3% dalam seminggu, sementara CPI Indonesia/US bergerak <0,5% per bulan.
+
+- Implikasi:
+
+    - FX adalah _harga aset_, yang menyesuaikan instan terhadap berita.
+
+    - Harga barang (CPI) sticky karena menu costs, contract rigidities, wage stickiness.
+
+    - Gap ini = sumber FX volatility yang tampak _berlebihan_ dibanding fundamental.
+
+- Bukan bug, melainkan fitur empiris _open-economy macro_.
+
+## Law of one price (LoOP) {.s}
+
+- **Law of one price**: barang yang _sama_ harus dijual dengan harga _sama_ di pasar berbeda, kalau biaya transport dan barrier tidak ada.
+
+- KOM example: pizza identik US$20 vs US$40 di restoran sebelahan → tidak berkelanjutan.
+
+- Indonesian example: **iPhone 16 Pro 256GB**:
+
+    - Apple Store Singapore: SGD 1.799 ≈ Rp 22,2 juta.
+
+    - Resmi iBox Indonesia: Rp 24,9 juta (termasuk PPN 12% & PPnBM).
+
+    - Selisih ~Rp 2,7 juta = pajak + biaya distribusi, _bukan_ arbitrase profit.
+
+- LoOP _seharusnya_ holds untuk barang tradable yang homogen, tanpa pajak/transport cost.
+
+## Absolute PPP {.s}
+
+- **Absolute Purchasing Power Parity** (PPP): LoOP diterapkan ke _keranjang_ barang/jasa yang representatif:
+
+$$
+P = E \cdot P^*
+$$
+
+    $\Rightarrow E = \frac{P}{P^*}$
+
+- Jika $P_{US} = \$200/keranjang$, $P_{ID} = \text{Rp } 3.280.000/\text{keranjang}$:
+
+$$
+E_{Rp/USD} = \frac{3.280.000}{200} = 16.400
+$$
+
+- Implikasi: 1 USD harus beli barang yang sama dengan Rp 16.400 di Indonesia.
+
+- Empiris: hampir tidak pernah holds secara absolute.
+
+## Relative PPP {.s}
+
+- **Relative PPP**: perubahan $E$ = differential inflasi:
+
+$$
+\frac{E_t - E_{t-1}}{E_{t-1}} = \pi_t - \pi^*_t
+$$
+
+    di mana $\pi$, $\pi^*$ = inflasi domestik dan luar negeri.
+
+- Numerik: $\pi_{ID} = 3\%$, $\pi_{US} = 2\%$ → ekspektasi $\Delta E \approx 1\%$/tahun (depresiasi IDR).
+
+- Untuk IDR 2010-2025 rata-rata: inflasi Indonesia 4,1%, US 2,4% → differential 1,7%/tahun.
+
+- Aktual depresiasi USD/IDR: 9.200 (2010) → 16.400 (2026) = ~3,7%/tahun ⇒ gap dengan PPP ~2%/tahun (lebih banyak depresiasi dari prediksi PPP).
+
+## Big Mac Indonesia {.m}
+
+:::: columns
+
+::: {.column width="55%"}
+
+- **Big Mac index** (The Economist): harga Big Mac di berbagai negara, semua dalam USD ekuivalen.
+
+- Asumsi: Big Mac = tradable basket sederhana.
+
+- 2024 data (approx):
+
+    - Indonesia: Rp 49.000.
+
+    - US: $5,99.
+
+- Implied PPP rate: $49.000/5{,}99 \approx 8.180$ Rp/USD.
+
+- Actual: 16.400 Rp/USD.
+
+- **IDR ~50% undervalued** vis-à-vis Big Mac PPP.
+
+:::
+
+::: {.column width="45%"}
+
+**Apa artinya?**
+
+- Big Mac di Indonesia _lebih murah_ dalam USD ekuivalen.
+
+- Turis dari US merasa Indonesia "murah".
+
+- Tapi ini _bukan_ disequilibrium yang akan dikoreksi:
+
+    - Sebagian besar input Big Mac (sewa, tenaga kerja, listrik) adalah _nontradable_.
+
+    - Indonesia adalah middle-income country dengan upah lebih rendah.
+
+- Ini foreshadow **Balassa-Samuelson** — slide nanti.
+
+:::
+
+::::
+
+## Bakso PPP {.s}
+
+- "Indeks bakso": semangkok bakso = Rp 20.000 (warung sederhana Jakarta).
+
+- "Indeks ramen Tokyo": ¥1.200 ≈ Rp 130.000.
+
+- Implied rate: $130.000 / 20.000 = 6{,}5$ — _enormous_ undervaluation IDR.
+
+- **Tapi**: ramen Tokyo dan bakso Jakarta _bukan_ barang yang sama.
+
+- Bakso = primarily nontradable (lokasi, juru masak, sewa Jakarta vs Tokyo).
+
+- Lesson: PPP gagal untuk nontradables. Tradables (elektronik, mobil, baju) jauh lebih dekat ke PPP.
+
+## Monetary approach ke ER {.s}
+
+- Kombinasi **PPP** + **money market**:
+
+$$
+P = \frac{M^s}{L(R, Y)}, \quad P^* = \frac{M^{*s}}{L^*(R^*, Y^*)}
+$$
+
+- PPP: $E = P / P^*$, jadi:
+
+$$
+E = \frac{M^s / L(R, Y)}{M^{*s} / L^*(R^*, Y^*)} = \frac{M^s}{M^{*s}} \cdot \frac{L^*(R^*, Y^*)}{L(R, Y)}
+$$
+
+- ER long-run = rasio money supplies × rasio money demands.
+
+- Ini disebut **monetary approach** ke exchange rate.
+
+## Predictions monetary approach {.s}
+
+| Shock | Domestic | Effect on $E$ (Rp/USD) |
+|---|---|---|
+| $M^s_{ID}\uparrow$ | $P_{ID}\uparrow$ proporsional | $E\uparrow$ proporsional (IDR depresiasi) |
+| $M^s_{US}\uparrow$ | $P_{US}\uparrow$ proporsional | $E\downarrow$ proporsional (IDR apresiasi) |
+| $R_{ID}\uparrow$ (via $\pi^e\uparrow$) | $L\downarrow \Rightarrow P_{ID}\uparrow$ | $E\uparrow$ (IDR depresiasi) |
+| $Y_{ID}\uparrow$ | $L\uparrow \Rightarrow P_{ID}\downarrow$ | $E\downarrow$ (IDR apresiasi) |
+
+- **Awas trap**: $R\uparrow$ di sini → IDR depresiasi (lewat ekspektasi inflasi). Berlawanan dengan short-run Ch.15 di mana $R\uparrow$ → IDR apresiasi (via UIP).
+
+- Konteks beda: short-run = $R$ naik karena BI tightening; long-run monetary approach = $R$ naik karena $\pi^e$ naik.
+
+## Fisher effect derivation {.s}
+
+- **UIP**: $R = R^* + (E^e - E)/E$.
+
+- **Relative PPP ekspektasi**: $(E^e - E)/E = \pi^e - \pi^{*e}$.
+
+- Substitusi:
+
+$$
+R - R^* = \pi^e - \pi^{*e}
+$$
+
+- **Fisher effect**: perbedaan nominal rate antar negara = perbedaan ekspektasi inflasi.
+
+- Atau ekuivalen: $R = r + \pi^e$ (real rate + expected inflation).
+
+- Indonesia: $R \approx 5{,}75\%$, $\pi^e_{ID} \approx 2{,}5\%$ → $r_{ID} \approx 3{,}25\%$.
+
+- US: $R^* \approx 4{,}5\%$, $\pi^e_{US} \approx 2{,}3\%$ → $r^*_{US} \approx 2{,}2\%$.
+
+## Indonesian Fisher data
+
+```{r}
+#| warning: false
+#| message: false
+
+fisher <- tibble(
+  tahun = 2010:2025,
+  BI7DRR  = c(6.50, 6.00, 5.75, 7.50, 7.75, 7.50, 4.75, 4.25, 6.00,
+              5.00, 3.75, 3.50, 5.50, 6.00, 6.00, 5.75),
+  CPI_ID  = c(5.10, 5.40, 4.30, 8.40, 8.40, 3.35, 3.02, 3.61, 3.13,
+              2.72, 1.68, 1.87, 5.51, 2.61, 1.60, 2.30),
+  FedFunds = c(0.10, 0.05, 0.10, 0.10, 0.10, 0.25, 0.50, 1.25, 2.25,
+               1.75, 0.25, 0.25, 4.25, 5.25, 4.75, 4.50),
+  CPI_US   = c(1.50, 3.20, 2.10, 1.50, 1.60, 0.10, 1.30, 2.10, 2.40,
+               1.80, 1.20, 4.70, 8.00, 4.10, 2.90, 2.50)
+)
+
+fisher %>%
+  mutate(diff_R = BI7DRR - FedFunds,
+         diff_pi = CPI_ID - CPI_US) %>%
+  pivot_longer(c(diff_R, diff_pi), names_to = "series", values_to = "pct") %>%
+  ggplot(aes(x = tahun, y = pct, colour = series)) +
+  geom_line(linewidth = 1) + geom_point() +
+  geom_hline(yintercept = 0, colour = "grey40") +
+  scale_colour_manual(values = c("diff_R" = "#26351c", "diff_pi" = "#8b0000"),
+                      labels = c("R[ID] - R[US]", "pi[ID] - pi[US]")) +
+  scale_x_continuous(breaks = seq(2010, 2025, 2)) +
+  den_theme +
+  labs(x = NULL, y = "% per annum", colour = NULL,
+       caption = "Fisher: differensial nominal rate vs differensial inflasi. Sumber: BI, BPS, FRED.")
+```
+
+## Permanent kenaikan $\mu$ {.s}
+
+- $\mu$ = growth rate dari money supply.
+
+- KOM Fig 16.1: jika BI _permanen_ naikkan $\mu$ dari 5% ke 10%:
+
+    - Long-run inflation jump dari (misal) 3% ke 8%.
+
+    - Fisher: $R$ jump dari 5,75% ke 10,75% (naik 5pp matching $\pi^e$).
+
+    - Higher $R$ → $L\downarrow$ → $P$ jump _ekstra_ ke atas trend baru.
+
+    - PPP: $E$ jump _proporsional_ dengan $P$.
+
+- Setelah itu, $M$, $P$, $E$ semua tumbuh pada $\mu = 10\%$/tahun.
+
+## Tidak ada overshooting? {.s}
+
+- Di Ch.15 (long-run model _tanpa_ PPP): $P$ sticky → $E$ jump berlebihan → overshooting.
+
+- Di Ch.16 (monetary approach _dengan_ PPP): $P$ jump bersamaan dengan ekspektasi → tidak ada overshooting.
+
+- Mana yang benar?
+
+    - **Short horizon (bulan)**: $P$ sticky → overshooting realistis.
+
+    - **Medium horizon (tahun)**: PPP mulai pegang → overshooting reverses.
+
+- Kedua model tidak inconsistent; mereka cover horizon berbeda.
+
+## PPP empirically: fails {.s}
+
+- KOM slide 25-26: data USD/JPY 1980-2019 menunjukkan PPP _tidak_ track exchange rate jangka panjang.
+
+- Untuk Indonesia, mari lihat data USD/IDR vs rasio CPI Indonesia/US 1990-2025 → slide berikut.
+
+- **Spoiler**: gap besar muncul di 1997-98 (krisis Asia) dan 2013-15 (taper).
+
+- Kalau PPP holds, USD/IDR akan tracking CPI ratio dengan slope = 1.
+
+- Aktual: USD/IDR jauh lebih volatile dari CPI ratio.
+
+## 1997 crisis & PPP failure {.m}
+
+:::: columns
+
+::: {.column width="55%"}
+
+```{r}
+#| warning: false
+#| message: false
+#| fig-width: 5.2
+#| fig-height: 4.2
+
+ppp_id <- tibble(
+  tahun = c(1990, 1995, 1996, 1997, 1998, 1999, 2000, 2005, 2010,
+            2013, 2015, 2018, 2020, 2022, 2025),
+  USDIDR    = c(1843, 2308, 2383, 4650, 8025, 7100, 9595, 9830, 9200,
+                12200, 13800, 14500, 14100, 15600, 16100),
+  CPI_ratio = c(1.00, 1.30, 1.40, 1.52, 2.40, 3.00, 3.40, 4.50, 5.80,
+                6.30, 6.80, 7.50, 7.80, 8.50, 9.20)
+)
+
+ggplot(ppp_id, aes(x = tahun)) +
+  geom_line(aes(y = USDIDR, colour = "USD/IDR nominal"), linewidth = 1) +
+  geom_point(aes(y = USDIDR), colour = "#26351c") +
+  geom_line(aes(y = CPI_ratio * 1843, colour = "PPP path (1990 anchor)"),
+            linewidth = 1, linetype = "dashed") +
+  scale_y_continuous(labels = comma) +
+  scale_colour_manual(values = c("USD/IDR nominal" = "#26351c",
+                                 "PPP path (1990 anchor)" = "#8b0000")) +
+  den_theme +
+  labs(x = NULL, y = "Rp per USD", colour = NULL,
+       caption = "PPP path = E[1990] × CPI[ID]/CPI[US]. Gap = PPP failure.")
+```
+
+:::
+
+::: {.column width="45%"}
+
+**Indonesian case 1: 1997 Asian crisis**
+
+- Pre-1997: USD/IDR ~2.300, PPP path ~3.000 (gap ~25%, slightly undervalued).
+
+- 1998 puncak krisis: USD/IDR jump ke 16.500. PPP path naik perlahan ke 4.000.
+
+- Gap massive ~300% — PPP _hopeless_ sebagai prediktor short-run.
+
+- 2000-an: gap perlahan menutup; USD/IDR perlahan kembali ke trajectory PPP.
+
+- Lesson: PPP holds di rata-rata _multi-decade_, tapi gagal saat krisis & sudden stops.
+
+:::
+
+::::
+
+## Why PPP fails {.s}
+
+- KOM 3 reasons:
+
+    1. **Trade barriers & nontradables**: ongkos kirim, tarif, atau jasa yang tidak bisa diperdagangkan (haircut, sewa apartemen, dokter).
+
+    2. **Imperfect competition / pricing to market**: firms set harga berbeda di pasar berbeda untuk maksimalkan profit (iPhone Singapore vs Indonesia setelah pajak).
+
+    3. **Basket differences**: keranjang konsumsi BPS (yang penting beras, mi instan) ≠ keranjang BLS US (yang penting daging, mobil, sewa).
+
+- Implikasi: PPP rate yang "fair" sulit didefinisikan secara unik.
+
+## Nontradables: haircut {.s}
+
+- KOM contoh persis: jasa (slide 28 c16): "haircut".
+
+- **Potong rambut Jakarta**: tukang cukur biasa Rp 30.000.
+
+- **Potong rambut Sydney**: AUD 30-50 ≈ Rp 320.000-530.000.
+
+- 10x lebih mahal di Sydney untuk jasa _identik_.
+
+- Mengapa tidak arbitrase? Karena _harus terbang ke Sydney_ untuk potong rambut — ongkos jauh lebih mahal dari saving.
+
+- Kasus inilah yang membuat CPI Indonesia _struktural_ lebih rendah dari CPI Australia/US.
+
+## Balassa-Samuelson {.m}
+
+:::: columns
+
+::: {.column width="55%"}
+
+**Teori**: produktivitas labour di sektor _tradable_ lebih tinggi di negara kaya dibanding negara miskin. Tapi di sektor _nontradable_, produktivitas relatif _sama_.
+
+**Konsekuensi**:
+
+- Upah di sektor tradable kaya tinggi (productivity-driven).
+
+- Mobilitas labour antar sektor → upah nontradable kaya juga naik.
+
+- Nontradable di negara kaya jadi mahal.
+
+- CPI overall di negara kaya > CPI negara miskin _bahkan setelah_ konversi PPP.
+
+:::
+
+::: {.column width="45%"}
+
+```{r}
+#| warning: false
+#| message: false
+#| fig-width: 4.6
+#| fig-height: 4
+
+bs <- tibble(
+  country = c("ETH", "PAK", "VNM", "IND", "IDN", "PHL", "EGY", "CHN", "BRA",
+              "TUR", "MEX", "POL", "MYS", "RUS", "CHL", "KOR", "JPN", "DEU",
+              "GBR", "USA", "AUS", "SGP", "CHE"),
+  gdppc_log = c(7.0, 8.0, 8.3, 8.5, 8.6, 8.7, 8.7, 9.4, 9.5,
+                9.6, 9.7, 10.0, 10.0, 10.0, 10.2, 10.4, 10.6, 10.7,
+                10.7, 11.0, 10.9, 11.1, 11.2),
+  price_level = c(0.30, 0.30, 0.35, 0.35, 0.38, 0.40, 0.42, 0.55, 0.55,
+                  0.60, 0.65, 0.65, 0.55, 0.60, 0.70, 0.75, 0.95, 0.95,
+                  0.95, 1.00, 1.05, 1.15, 1.35)
+)
+
+ggplot(bs, aes(x = gdppc_log, y = price_level)) +
+  geom_point(size = 2.2, colour = "#26351c") +
+  geom_point(data = filter(bs, country == "IDN"),
+             size = 4, colour = "#8b0000") +
+  geom_text(data = filter(bs, country == "IDN"),
+            aes(label = "Indonesia"), vjust = -1.2, size = 3.6,
+            colour = "#8b0000") +
+  geom_smooth(method = "lm", se = FALSE, colour = "#26351c", linetype = "dashed") +
+  den_theme +
+  labs(x = "log GDP per capita (PPP, 2017 USD)",
+       y = "Price level (US=1.00)",
+       caption = "PWT 10.0; ilustrasi cross-section.")
+```
+
+:::
+
+::::
+
+## Implication for IDR "undervaluation" {.s}
+
+- Big Mac IDR "undervalued" 50% — kelihatannya disequilibrium.
+
+- Tapi Balassa-Samuelson menjelaskan: Indonesia GDP per capita ~25% dari US, produktivitas tradables jauh lebih rendah → wages lebih rendah → nontradables lebih murah → CPI lebih rendah.
+
+- Yang "underprice" sebenarnya komponen nontradable Big Mac (sewa, listrik, tenaga kerja).
+
+- Komponen tradable Big Mac (daging beku, kotak, gandum) **PPP-equivalent** atau dekat.
+
+- Lesson: jangan langsung simpulkan "IDR undervalued" dari Big Mac index — sebagian besar refleksi level pembangunan.
+
+## Real exchange rate {.s}
+
+- Definisi:
+
+$$
+q = \frac{E \cdot P^*}{P}
+$$
+
+- Intuisi: harga keranjang _US_ dinilai dalam keranjang _Indonesia_.
+
+- Jika $q = 1$: keranjang US dan Indonesia setara → PPP holds absolute.
+
+- Jika $q > 1$: keranjang US lebih mahal dari Indonesia → IDR "real undervalued".
+
+- Untuk Indonesia, $q$ historis _di atas_ 1 dalam USD ekuivalen (CPI Indonesia lebih rendah).
+
+- BI publish **REER** (Real Effective Exchange Rate): $q$ weighted average vs trading partners.
+
+## Real appreciation/depreciation {.s}
+
+- **Real apresiasi IDR**: $q$ turun. Barang Indonesia jadi _mahal_ relatif US (dalam dollar).
+
+- **Real depresiasi IDR**: $q$ naik. Barang Indonesia jadi _murah_ relatif US.
+
+- Hubungan dengan nominal:
+
+$$
+\frac{\Delta q}{q} = \frac{\Delta E}{E} + \pi^* - \pi
+$$
+
+- Contoh 2022: USD/IDR naik 9%, $\pi_{US}$ = 8%, $\pi_{ID}$ = 5,5% → $\Delta q/q = 9 + 8 - 5{,}5 = 11{,}5\%$ (real depresiasi besar).
+
+- Eksportir Indonesia 2022 dapat _double benefit_: nominal depresiasi + real depresiasi → margin Rp besar.
+
+## Nominal decomposition {.s}
+
+- $E = q \cdot P / P^*$
+
+- $\Rightarrow \Delta E/E = \Delta q/q + \pi - \pi^*$
+
+- Dua sumber pergerakan nominal $E$:
+
+    - **Monetary** ($\pi - \pi^*$): differensial inflasi.
+
+    - **Real** ($\Delta q/q$): real shock — produktivitas, terms of trade, demand shift.
+
+- Monetary approach _tanpa_ real component = sederhana tapi sering salah.
+
+- Real ER approach = lebih lengkap.
+
+## 2022 Nickel boom {.m}
+
+:::: columns
+
+::: {.column width="55%"}
+
+```{r}
+#| warning: false
+#| message: false
+#| fig-width: 5
+#| fig-height: 4
+
+nickel <- tibble(
+  tahun = c(2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025),
+  REER_BI = c(98, 97, 95, 99, 102, 100, 98, 97),
+  Nickel_idx = c(100, 95, 105, 130, 200, 175, 155, 145)
+)
+
+nickel %>%
+  pivot_longer(c(REER_BI, Nickel_idx), names_to = "series", values_to = "idx") %>%
+  ggplot(aes(x = tahun, y = idx, colour = series)) +
+  geom_line(linewidth = 1.1) + geom_point() +
+  geom_hline(yintercept = 100, colour = "grey40", linetype = "dashed") +
+  scale_colour_manual(values = c("REER_BI" = "#26351c", "Nickel_idx" = "#8b0000"),
+                      labels = c("Nickel price index (2018=100)",
+                                 "BI REER (2010=100)")) +
+  scale_x_continuous(breaks = 2018:2025) +
+  den_theme +
+  labs(x = NULL, y = "Indeks", colour = NULL,
+       caption = "Sumber: LME (nickel cash); BI REER monthly.")
+```
+
+:::
+
+::: {.column width="45%"}
+
+**Indonesian case 2: 2022 nickel boom**
+
+- 2022 demand global EV + Russia-Ukraine → harga nikel 2x.
+
+- Indonesia: produsen nikel terbesar dunia (~50% produksi global).
+
+- Terms of trade Indonesia _membaik_ tajam.
+
+- IDR _real appreciate_: REER naik dari 95 (2020) ke 102 (2022) walaupun Fed lagi hike.
+
+- Monetary approach saja tidak bisa jelaskan ini — perlu real demand shock.
+
+- Lesson: untuk negara commodity-exporter seperti Indonesia, real ER bergerak kuat dengan ToT.
+
+:::
+
+::::
+
+## Relative demand shock formal {.s}
+
+- KOM Fig 16.4: demand dunia untuk produk Indonesia (atau ToT membaik):
+
+    - Excess demand → harga relatif barang Indonesia naik (dalam dollar).
+
+    - Real apresiasi: $q$ turun.
+
+- Mekanisme adjusting: harga Indonesia (dalam Rp) naik atau $E$ turun (atau kombinasi).
+
+- Permanently lebih tinggi $q$ adalah _equilibrium baru_, bukan disequilibrium.
+
+- Implikasi untuk Indonesia: commodity boom → currency _appreciate_ → "Dutch disease" untuk manufaktur.
+
+- Counter-policy: SWF (Sovereign Wealth Fund), saving fiscal windfall.
+
+## Relative supply shock (productivity) {.s}
+
+- KOM Ch.16: jika produktivitas Indonesia di sektor tradable naik:
+
+    - Harga relatif barang Indonesia _turun_ (cheaper to produce).
+
+    - Real _depresiasi_ ($q$ naik).
+
+    - Tapi $Y$ naik → demand uang naik → $P$ Indonesia _turun_ → ambiguous effect on nominal $E$.
+
+- Indonesian context: kebijakan hilirisasi (nikel, batubara, CPO) bertujuan menaikkan produktivitas tradable.
+
+- Efek pada nominal IDR ambigu — tergantung apakah commodity price boost (demand) atau cost saving (supply) yang dominan.
+
+## Summary table {.s}
+
+| Shock | Real ER $q$ | Nominal $E_{Rp/USD}$ |
+|---|---|---|
+| $M^s_{ID}\uparrow$ | tidak berubah (long-run) | naik proporsional |
+| $M^s_{US}\uparrow$ | tidak berubah | turun proporsional |
+| $\mu_{ID}\uparrow$ (money growth) | tidak berubah | naik di growth rate |
+| Demand global untuk barang ID $\uparrow$ | turun (apresiasi real) | turun (apresiasi) |
+| Demand global untuk barang US $\uparrow$ | naik (depresiasi real) | naik (depresiasi) |
+| Supply ID $\uparrow$ (produktivitas) | naik (depresiasi real) | ambigu |
+| Supply US $\uparrow$ (produktivitas) | turun (apresiasi real) | ambigu |
+
+- Monetary shocks → nominal $E$ via PPP, tidak ubah $q$.
+
+- Real shocks → ubah $q$ langsung.
+
+## Real interest parity {.s}
+
+- Dari Fisher: $R = r + \pi^e$, $R^* = r^* + \pi^{*e}$.
+
+- Dari UIP: $R - R^* = (E^e - E)/E$.
+
+- Dari $E = q \cdot P/P^*$: $\Delta E/E = \Delta q/q + \pi - \pi^*$.
+
+- Combining:
+
+$$
+r - r^* = \frac{q^e - q}{q}
+$$
+
+- **Real interest parity**: differential real rate = ekspektasi perubahan real ER.
+
+- Untuk Indonesia 2025: $r_{ID} \approx 3{,}25\%$, $r^*_{US} \approx 2{,}2\%$ → $r - r^* \approx 1\%$ → pasar ekspektasi $q$ Indonesia akan _real depresiasi_ ~1%/tahun.
+
+## Takeaways {.s}
+
+- Money market: $M^s/P = L(R, Y)$ → menentukan $R$, kemudian masuk ke UIP untuk menentukan $E$.
+
+- **Long-run**: money neutrality — $M\uparrow$ → $P\uparrow$ → $E\uparrow$ proporsional.
+
+- **Overshooting** muncul karena $P$ sticky di short-run, $E$ adjust instant.
+
+- **PPP**: $E = P/P^*$. Gagal empiris karena nontradables, productivity gap, basket differences.
+
+- **Fisher**: $R - R^* = \pi^e - \pi^{*e}$. Real rate + inflation expectations.
+
+- **Real ER** $q = EP^*/P$: jembatan antara monetary approach dan dunia nyata.
+
+- **Real interest parity**: differential real rate = ekspektasi $\Delta q$.
+
+## Practice 1: PPP {.s}
+
+- Diketahui: $\pi_{ID} = 4\%$, $\pi_{US} = 2\%$, $E_{2025} = 16.400$, relative PPP holds.
+
+- Berapa ekspektasi $E_{2026}$?
+
 . . .
 
-- Hal ini karena aktivitas Central Bank (CB)
+**Solusi**:
 
-## Central Bank
+$$
+\frac{\Delta E}{E} = \pi_{ID} - \pi_{US} = 4\% - 2\% = 2\%
+$$
 
-- Meski dibilang bahwa uang tunduk pada supply demand seperti halnya barang, uang adalah produk monopoli,
+$$
+E_{2026} = 16.400 \times 1{,}02 = 16.728
+$$
 
-    - produksi mata uang diatur oleh CB.
-    
-- CB memiliki aktivitas yang cukup besar di pasar uang maupun ekonomi domestik.
+- Catatan: prediksi PPP biasanya _underestimate_ depresiasi IDR karena ada juga real factors (risk premium, capital flow).
 
-    - mengendalikan inflasi.
-    
-    - menjaga nilai tukar mata uang.
-    
-- Kemampuan intervensi CB dapat kita observe dari balance sheetnya.
+## Practice 2: Real ER decomposition {.s}
 
-## Balance sheet BI
+- Diketahui: USD/IDR _turun_ 2% dalam setahun, $\pi_{ID} = 5\%$, $\pi_{US} = 8\%$.
 
-![Monetary indicator billion IDR](picture2.jpg)
+- Berapa $\Delta q/q$?
 
-sumber: [indikator moneter BI](https://www.bi.go.id/en/statistik/indikator/indikator-moneter.aspx)
-    
-## Intervention mechanism
+. . .
 
-- Balance sheet CB sangat mempengaruhi perekonomian domestik (in case of the Fed, PBoC, ECB & BoJ, the world)
+**Solusi**:
 
-- pelepasan aset oleh CB $\rightarrow$ penyerapan uang beredar $\rightarrow$ mengurangi inflasi.
+$$
+\frac{\Delta q}{q} = \frac{\Delta E}{E} + \pi^* - \pi = -2 + 8 - 5 = +1\%
+$$
 
-- aset purchase oleh CB $\rightarrow$ uang beredar naik $\rightarrow$ mendorong PDB & inflasi.
+- IDR _nominal apresiasi_ 2%.
 
-- aset asing yang dimiliki CB inilah yang kita sebut cadev.
+- IDR _real depresiasi_ 1%.
 
-## controlling XR
+- Interpretasi: walaupun nominal kuat, barang Indonesia _relatif lebih murah_ dibanding US karena inflasi US jauh lebih tinggi.
 
-- say BI ingin apresiasi IDR terhadap USD, gimana caranya?
+- Implikasi: eksportir Indonesia _diuntungkan_ secara real, walaupun secara nominal melihat $E$ turun.
 
-::: {.incremental}
+## Practice 3: Real interest parity {.s}
 
-- untuk apresiasi IDR, BI perlu mengurangi sirkulasi IDR di pasar uang.
+- Diketahui: $R_{ID} = 6{,}00\%$, $\pi^e_{ID} = 3\%$, $R^*_{US} = 4{,}25\%$, $\pi^{*e}_{US} = 2\%$.
 
-- BI menjual aset asing (denominasi USD), lalu lepas USD nya, tukar dengan IDR.
+- Berapa ekspektasi $\Delta q/q$?
 
-- sebaliknya juga bisa, depresiasi IDR dilakukan dengan membeli aset asing dengan IDR.
+. . .
 
-:::
+**Solusi**:
 
+$$
+r_{ID} = 6{,}00 - 3 = 3{,}00\%, \quad r^*_{US} = 4{,}25 - 2 = 2{,}25\%
+$$
 
+$$
+\frac{q^e - q}{q} = r_{ID} - r^*_{US} = 0{,}75\%
+$$
 
-## Kenapa BI intervensi?
+- Pasar mengekspektasikan IDR _real depresiasi_ ~0,75%/tahun.
 
-- ketika BI mengumpulkan cadev, BI menarik dolar dari pasar $\rightarrow$ dolar yang dapat digunakan untuk impor jadi berkurang!
+- Kontekstualisasi: Indonesia menawarkan real rate lebih tinggi → kompensasi ekspektasi real depresiasi.
 
-- Pengumpulan cadev oleh BI = menyeimbangkan CA yang surplus!
-
-- Cadev yang sudah dikumpulakn dapat digunakan di masa depan sewaktu IDN membutuhkan dollar untuk menahan nilai IDR dari terdepresiasi.
-
-## Rezim XR
-
-- gambaran XR sebelumnya adalah "clean float", di mana nilai tukar mata uang benar-benar bebas intervensi sentralistik.
-
-- tapi sangat sedikit negara yang clean float. Mostly "dirty float": pasar tetap bekerja tapi CB intervensi from time to time.
-
-- masih lebih float daripada "fixed exchange rate".
-
-- Tapi kenapa CB ingin manage nilai tukar?
-
-## Kenapa intervensi XR? {.m}
-
-1. memiliki cadev dulu dengan merelakan tidak impor. Cadev berguna untuk intervensi ketika ada krisis. Ada rule of thumb CB memiliki cadev yang cukup untuk 3-6 bulan impor.
-
-1. Mendukung merkantilis: dengan menyerap dolar tiap kali CA surplus, CB bisa menjaga nilai tukar tetap rendah dan ekspor tetap tinggi!
-
-1. Mendukung investasi: dengan menjaga rupiah tetap stabil, pengutang dolar dapat memastikan nilai utangnya tidak membengkak akibat dampak nilai tukar.
-
-1. Stabilitas nilai tukar overall lebih disukai pasar -> prudence!
-
-## Aktivitas CB
-
-<iframe src="https://data.worldbank.org/share/widget?indicators=BN.RES.INCL.CD&locations=MY-ID-TH-VN" width='900' height='600' frameBorder='0' scrolling="no" ></iframe>
-
-## AKtivitas CB
-
-<iframe src="https://data.worldbank.org/share/widget?indicators=BN.RES.INCL.CD&locations=MY-ID-TH-VN-US" width='900' height='600' frameBorder='0' scrolling="no" ></iframe>
-
-## Aktivitas CB
-
-<iframe src="https://data.worldbank.org/share/widget?indicators=BN.RES.INCL.CD&locations=MY-ID-TH-VN-US-CN" width='900' height='600' frameBorder='0' scrolling="no" ></iframe>
-
-
-## Global imbalance: why?
-
-- CB tidak mungkin intervensi terus menerus. Kenapa?
-
-- Bretton woods: ketika mata uang masih di-peg ke emas, US sampai kehabisan emas karena demand dolar begitu tinggi.
-
-- Dengan kata lain, mata uang asing di pasar bakal habis kalau dikumpulin terus:
-
-    - yang surplus terus akan kehabisan aset utk dibeli
-    
-    - yang defisit kehabisan aset utk dijual.
-    
-## Exorbitant privilege
-
-- tapi aset US sampai saat ini masih considered safe:
-
-    - seberapapun aset US dilepas, pasti bakal dibeli.
-    
-- Sejarahnya panjang, sejak bretton woods, trade dilakukan dalam USD karena USD dipeg ke emas.
-
-- Tentunya juga karena US jaman dulu ekonominya sangat besar. Baik ekspor maupun impornya besar.
-
-    - aman pegang USD karena ketika negara lain berkurang tradenya, kita akan selalu bisa dagang dengan US.
-
-## Exorbitant privilege
-
-![Global CB reserves](picture3.jpg)
-
-sumber: [IMF](https://data.imf.org/?sk=E6A5F467-C14B-4AA8-9F6D-5A09EC4E62A4)
-
-## Exorbitant privilege
-
-![](picture4.jpg)
-
-from [CFR](https://www.cfr.org/backgrounder/dollar-worlds-currency)
-
-## Competitiveness or currency manipulation? {.m}
-
-- Unsurprisingly, China dan Jepang, 2 negara paling surplus, pegang aset denominasi dolar paling banyak.
-
-    - untuk tetap surplus, mereka terus beli bonds US tanpa harus impor.
-    
-- Unsurprisingly, 2 negara tersebut mengalami boom aset, terutama konstruksi.
-
-    - Jepang melambat ekonominya sejak 90-an, setelah aset-asetnya ternyata ga ada returnnya.
-    
-    - China sedang mengalami perlambatan tsb. We'll see seperti apa landingnya.
-    
-## Big Mac Index
-
-- Fenomena ini mendorong studi tentang undervaluation / overvaluation of currency di literatur ekonomi internasional.
-
-- Bahwa nilai mata uang yang ada saat ini tidak mencerminkan nilai aslinya sebagai alat tukar.
-
-    - nilai asli sebuah ekonomi tetaplah what the economy produce and consume.
-    
-- Salah satu study yang menarik adalah [BigMac Index](https://www.krisna.or.id/en/post/bigmacindex/) dari majalah the economist.
-
-## Next week
-
-- Konsekuensi global imbalance pada distribusi pendapatan.
-
-    - What mercantilist got wrong
-
-- Mulai konteks Indonesia.
+- Pekan depan: bawa $Y$ ke gambar — model **AA-DD** untuk output + ER short-run (KOM Ch.17).
