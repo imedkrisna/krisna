@@ -16,27 +16,9 @@ format:
 
 ## Recap & today's plan {.s}
 
-- Pekan lalu (KOM Ch.14 + intro Ch.15): UIP punya $R$ sebagai _given_; kita juga sudah lihat preview joint money + FX dan konsep overshooting.
+- Kemarin: Basic exchange rate, UIP dan CIP.
 
-- Hari ini: derivasi formal money market → bawa $R$ ke FX market → lepas asumsi sticky $P$ → long-run (PPP, monetary approach, Fisher, real ER).
-
-- Roadmap: $M^d = P\cdot L(R,Y)$ → joint money + FX → money neutrality & overshooting → law of one price → PPP → monetary approach → Fisher → PPP shortcomings → real ER → real interest parity.
-
-## Roadmap diagram {.s}
-
-- **Block 1**: pasar uang formal (Ch.15.1).
-
-- **Block 2**: pasar uang + FX bersamaan (Ch.15.2).
-
-- **Block 3**: long-run, money neutrality, overshooting formal (Ch.15.3-15.5).
-
-- **Block 4**: Law of One Price & PPP (Ch.16.1).
-
-- **Block 5**: monetary approach & Fisher effect (Ch.16.2).
-
-- **Block 6**: PPP gagal — kenapa? (Ch.16.2 end).
-
-- **Block 7**: real exchange rate approach & real interest parity (Ch.16.3-16.5).
+- Hari ini: demand for money and exchange rate in the long run.
 
 ```{r}
 #| warning: false
@@ -63,13 +45,13 @@ den_theme <- if (have_ggden && exists("theme_den", mode = "function")) {
 
 ## Aggregate money demand {.s}
 
-- Demand uang riil per kapita (KOM Ch.15.1):
+- Demand uang riil per kapita:
 
 $$
 \frac{M^d}{P} = L(R, Y)
 $$
 
-    di mana $M^d$ = demand uang nominal, $P$ = level harga (IHK BPS), $R$ = nominal interest rate (BI 7DRR atau JIBOR), $Y$ = pendapatan nasional riil (PDB riil).
+di mana $M^d$ = demand uang nominal, $P$ = level harga (IHK BPS), $R$ = nominal interest rate (BI 7DRR atau JIBOR), $Y$ = pendapatan nasional riil (PDB riil).
 
 - $L(R, Y)$ menurun di $R$ (opportunity cost pegang cash) dan menaik di $Y$ (volume transaksi).
 
@@ -121,13 +103,11 @@ ggplot() +
 
 ::::
 
-## Shift dari kenaikan $Y$ {.s}
+## Shift dari kenaikan $Y$
 
-- KOM Fig 15.2: kenaikan pendapatan nasional riil dari $Y_0$ ke $Y_1$ menggeser seluruh kurva _ke kanan/atas_.
+- Kenaikan pendapatan nasional riil dari $Y_0$ ke $Y_1$ menggeser seluruh kurva _ke kanan/atas_.
 
 - Pada setiap level $R$, orang menginginkan lebih banyak saldo riil — karena transaksi lebih banyak.
-
-- Indonesian numerik: jika PDB tumbuh 5% setahun, demand uang riil naik sekitar 5% pada $R$ konstan (asumsi income elasticity ≈ 1).
 
 - Kebijakan implikasi: pertumbuhan ekonomi yang sehat butuh ekspansi monetary _supply_ proporsional — jika tidak, $R$ akan naik dan _crowd out_ investasi.
 
@@ -232,10 +212,10 @@ m2_rate %>%
   scale_x_continuous(breaks = 2015:2025) +
   den_theme +
   labs(x = NULL, y = "% per annum", colour = NULL,
-       caption = "sumber: BI SEKI (fallback hardcoded); BI 7DRR akhir tahun, M2 YoY")
+       caption = "sumber: BI SEKI; BI 7DRR akhir tahun, M2 YoY")
 ```
 
-## Linking money market ke FX {.s}
+## Linking money market ke FX {.m}
 
 - $R$ yang ditentukan di money market = _input_ untuk UIP:
 
@@ -257,14 +237,12 @@ $$
 
 **Money market (atas)**:
 
-- $M^s/P$ vertikal, $L(R, Y)$ menurun.
-- Equilibrium $R^*_{\text{ID}}$ di perpotongan.
+$M^s/P$ vertikal, $L(R, Y)$ menurun, Equilibrium $R^*_{\text{ID}}$ di perpotongan.
 
 **FX market (bawah)**:
 
 - IDR return vertikal di $R^*_{\text{ID}}$ (dari money market).
 - USD return menurun di $E$.
-- Equilibrium $E^*$.
 
 **Kunci**: $R^*_{\text{ID}}$ dari money market menjadi anchor garis vertikal di FX.
 
@@ -333,7 +311,7 @@ mm / fx
 
 ::::
 
-## Shock 1: BI ekspansi moneter {.s}
+## Shock 1: BI ekspansi moneter
 
 - BI naikkan $M^s$ (beli SBN via OMO ekspansif).
 
@@ -345,7 +323,7 @@ mm / fx
 
 - Intuisi: bunga rupiah turun → investor cari yield USD → demand USD naik → IDR melemah.
 
-## Shock 2: Fed ekspansi moneter {.s}
+## Shock 2: Fed ekspansi moneter
 
 - Fed naikkan $M^s_{US}$ → $R^*$ (Fed Funds) turun.
 
@@ -357,7 +335,7 @@ mm / fx
 
 - Simetris: dovish Fed = tailwind untuk EM currencies, termasuk IDR.
 
-## Asymmetry penting {.s}
+## Asymmetry penting
 
 - Perubahan $M^s_{ID}$ → bergerak _di kedua_ market.
 
@@ -398,11 +376,9 @@ ggplot(rate_fx, aes(x = tahun)) +
        caption = "BI 7DRR end-of-year; USD/IDR rata-rata tahunan. 2022 break: commodity boom mengikis korelasi UIP.")
 ```
 
-## Short-run vs long-run {.s}
+## The long-run {.s}
 
-- Sejauh ini asumsi: $P$ _sticky_ dalam short-run.
-
-- Sekarang lepas asumsi itu: dalam long-run, $P$ menyesuaikan penuh.
+- Dalam jangka panjang, $P$ menyesuaikan penuh.
 
 - $Y$ kembali ke potential output (ditentukan supply riil: tenaga kerja, kapital, teknologi).
 
@@ -414,7 +390,7 @@ ggplot(rate_fx, aes(x = tahun)) +
 
 ## Empirical: M growth vs inflasi {.s}
 
-- KOM Fig 15.10: rata-rata negara Latin Amerika 1987-2014 → korelasi tinggi antara money growth dan inflasi.
+- rata-rata negara Latin Amerika 1987-2014 → korelasi tinggi antara money growth dan inflasi.
 
 - Untuk Indonesia long-run: hyperinflation 1965-66 (sudah dibahas M11) adalah kasus paling ekstrem.
 
@@ -576,7 +552,7 @@ $$
 
 - Aktual depresiasi USD/IDR: 9.200 (2010) → 16.400 (2026) = ~3,7%/tahun ⇒ gap dengan PPP ~2%/tahun (lebih banyak depresiasi dari prediksi PPP).
 
-## Big Mac Indonesia {.m}
+## Big Mac Indonesia {.s}
 
 :::: columns
 
@@ -760,7 +736,7 @@ fisher %>%
 
 - Aktual: USD/IDR jauh lebih volatile dari CPI ratio.
 
-## 1997 crisis & PPP failure {.m}
+## 1997 crisis & PPP failure {.s}
 
 :::: columns
 
@@ -790,6 +766,7 @@ ggplot(ppp_id, aes(x = tahun)) +
   scale_colour_manual(values = c("USD/IDR nominal" = "#26351c",
                                  "PPP path (1990 anchor)" = "#8b0000")) +
   den_theme +
+  theme(legend.position = "bottom") +
   labs(x = NULL, y = "Rp per USD", colour = NULL,
        caption = "PPP path = E[1990] × CPI[ID]/CPI[US]. Gap = PPP failure.")
 ```
@@ -960,7 +937,7 @@ $$
 
 - Real ER approach = lebih lengkap.
 
-## 2022 Nickel boom {.m}
+## 2022 Nickel boom {.s}
 
 :::: columns
 
@@ -988,6 +965,7 @@ nickel %>%
                                  "BI REER (2010=100)")) +
   scale_x_continuous(breaks = 2018:2025) +
   den_theme +
+  theme(legend.position = "bottom") +
   labs(x = NULL, y = "Indeks", colour = NULL,
        caption = "Sumber: LME (nickel cash); BI REER monthly.")
 ```

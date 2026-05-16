@@ -145,32 +145,19 @@ I Made Krisna Gupta
 <section id="recap-todays-plan" class="slide level2 s">
 <h2>Recap &amp; today’s plan</h2>
 <ul>
-<li><p>Pekan lalu (KOM Ch.14 + intro Ch.15): UIP punya <span class="math inline">\(R\)</span> sebagai <em>given</em>; kita juga sudah lihat preview joint money + FX dan konsep overshooting.</p></li>
-<li><p>Hari ini: derivasi formal money market → bawa <span class="math inline">\(R\)</span> ke FX market → lepas asumsi sticky <span class="math inline">\(P\)</span> → long-run (PPP, monetary approach, Fisher, real ER).</p></li>
-<li><p>Roadmap: <span class="math inline">\(M^d = P\cdot L(R,Y)\)</span> → joint money + FX → money neutrality &amp; overshooting → law of one price → PPP → monetary approach → Fisher → PPP shortcomings → real ER → real interest parity.</p></li>
-</ul>
-</section>
-<section id="roadmap-diagram" class="slide level2 s">
-<h2>Roadmap diagram</h2>
-<ul>
-<li><p><strong>Block 1</strong>: pasar uang formal (Ch.15.1).</p></li>
-<li><p><strong>Block 2</strong>: pasar uang + FX bersamaan (Ch.15.2).</p></li>
-<li><p><strong>Block 3</strong>: long-run, money neutrality, overshooting formal (Ch.15.3-15.5).</p></li>
-<li><p><strong>Block 4</strong>: Law of One Price &amp; PPP (Ch.16.1).</p></li>
-<li><p><strong>Block 5</strong>: monetary approach &amp; Fisher effect (Ch.16.2).</p></li>
-<li><p><strong>Block 6</strong>: PPP gagal — kenapa? (Ch.16.2 end).</p></li>
-<li><p><strong>Block 7</strong>: real exchange rate approach &amp; real interest parity (Ch.16.3-16.5).</p></li>
+<li><p>Kemarin: Basic exchange rate, UIP dan CIP.</p></li>
+<li><p>Hari ini: demand for money and exchange rate in the long run.</p></li>
 </ul>
 </section>
 <section id="aggregate-money-demand" class="slide level2 s">
 <h2>Aggregate money demand</h2>
 <ul>
-<li>Demand uang riil per kapita (KOM Ch.15.1):</li>
+<li>Demand uang riil per kapita:</li>
 </ul>
 <p><span class="math display">\[
 \frac{M^d}{P} = L(R, Y)
 \]</span></p>
-<pre><code>di mana $M^d$ = demand uang nominal, $P$ = level harga (IHK BPS), $R$ = nominal interest rate (BI 7DRR atau JIBOR), $Y$ = pendapatan nasional riil (PDB riil).</code></pre>
+<p>di mana <span class="math inline">\(M^d\)</span> = demand uang nominal, <span class="math inline">\(P\)</span> = level harga (IHK BPS), <span class="math inline">\(R\)</span> = nominal interest rate (BI 7DRR atau JIBOR), <span class="math inline">\(Y\)</span> = pendapatan nasional riil (PDB riil).</p>
 <ul>
 <li><p><span class="math inline">\(L(R, Y)\)</span> menurun di <span class="math inline">\(R\)</span> (opportunity cost pegang cash) dan menaik di <span class="math inline">\(Y\)</span> (volume transaksi).</p></li>
 <li><p>Memorize: <strong>“real money demand depends negatively on <span class="math inline">\(R\)</span> and positively on <span class="math inline">\(Y\)</span>”</strong>.</p></li>
@@ -199,12 +186,11 @@ I Made Krisna Gupta
 </div>
 </div></div>
 </section>
-<section id="shift-dari-kenaikan-y" class="slide level2 s">
+<section id="shift-dari-kenaikan-y" class="slide level2">
 <h2>Shift dari kenaikan <span class="math inline">\(Y\)</span></h2>
 <ul>
-<li><p>KOM Fig 15.2: kenaikan pendapatan nasional riil dari <span class="math inline">\(Y_0\)</span> ke <span class="math inline">\(Y_1\)</span> menggeser seluruh kurva <em>ke kanan/atas</em>.</p></li>
+<li><p>Kenaikan pendapatan nasional riil dari <span class="math inline">\(Y_0\)</span> ke <span class="math inline">\(Y_1\)</span> menggeser seluruh kurva <em>ke kanan/atas</em>.</p></li>
 <li><p>Pada setiap level <span class="math inline">\(R\)</span>, orang menginginkan lebih banyak saldo riil — karena transaksi lebih banyak.</p></li>
-<li><p>Indonesian numerik: jika PDB tumbuh 5% setahun, demand uang riil naik sekitar 5% pada <span class="math inline">\(R\)</span> konstan (asumsi income elasticity ≈ 1).</p></li>
 <li><p>Kebijakan implikasi: pertumbuhan ekonomi yang sehat butuh ekspansi monetary <em>supply</em> proporsional — jika tidak, <span class="math inline">\(R\)</span> akan naik dan <em>crowd out</em> investasi.</p></li>
 </ul>
 </section>
@@ -259,7 +245,7 @@ I Made Krisna Gupta
 <h2>M2 growth vs BI 7DRR</h2>
 
 <img data-src="index_files/figure-revealjs/unnamed-chunk-4-1.png" width="960" class="r-stretch"></section>
-<section id="linking-money-market-ke-fx" class="slide level2 s">
+<section id="linking-money-market-ke-fx" class="slide level2 m">
 <h2>Linking money market ke FX</h2>
 <ul>
 <li><span class="math inline">\(R\)</span> yang ditentukan di money market = <em>input</em> untuk UIP:</li>
@@ -278,15 +264,11 @@ R = R^* + \frac{E^e - E}{E}
 <div class="columns">
 <div class="column" style="width:40%;">
 <p><strong>Money market (atas)</strong>:</p>
-<ul>
-<li><span class="math inline">\(M^s/P\)</span> vertikal, <span class="math inline">\(L(R, Y)\)</span> menurun.</li>
-<li>Equilibrium <span class="math inline">\(R^*_{\text{ID}}\)</span> di perpotongan.</li>
-</ul>
+<p><span class="math inline">\(M^s/P\)</span> vertikal, <span class="math inline">\(L(R, Y)\)</span> menurun, Equilibrium <span class="math inline">\(R^*_{\text{ID}}\)</span> di perpotongan.</p>
 <p><strong>FX market (bawah)</strong>:</p>
 <ul>
 <li>IDR return vertikal di <span class="math inline">\(R^*_{\text{ID}}\)</span> (dari money market).</li>
 <li>USD return menurun di <span class="math inline">\(E\)</span>.</li>
-<li>Equilibrium <span class="math inline">\(E^*\)</span>.</li>
 </ul>
 <p><strong>Kunci</strong>: <span class="math inline">\(R^*_{\text{ID}}\)</span> dari money market menjadi anchor garis vertikal di FX.</p>
 </div><div class="column" style="width:60%;">
@@ -301,7 +283,7 @@ R = R^* + \frac{E^e - E}{E}
 </div>
 </div></div>
 </section>
-<section id="shock-1-bi-ekspansi-moneter" class="slide level2 s">
+<section id="shock-1-bi-ekspansi-moneter" class="slide level2">
 <h2>Shock 1: BI ekspansi moneter</h2>
 <ul>
 <li><p>BI naikkan <span class="math inline">\(M^s\)</span> (beli SBN via OMO ekspansif).</p></li>
@@ -311,7 +293,7 @@ R = R^* + \frac{E^e - E}{E}
 <li><p>Intuisi: bunga rupiah turun → investor cari yield USD → demand USD naik → IDR melemah.</p></li>
 </ul>
 </section>
-<section id="shock-2-fed-ekspansi-moneter" class="slide level2 s">
+<section id="shock-2-fed-ekspansi-moneter" class="slide level2">
 <h2>Shock 2: Fed ekspansi moneter</h2>
 <ul>
 <li><p>Fed naikkan <span class="math inline">\(M^s_{US}\)</span> → <span class="math inline">\(R^*\)</span> (Fed Funds) turun.</p></li>
@@ -321,7 +303,7 @@ R = R^* + \frac{E^e - E}{E}
 <li><p>Simetris: dovish Fed = tailwind untuk EM currencies, termasuk IDR.</p></li>
 </ul>
 </section>
-<section id="asymmetry-penting" class="slide level2 s">
+<section id="asymmetry-penting" class="slide level2">
 <h2>Asymmetry penting</h2>
 <ul>
 <li><p>Perubahan <span class="math inline">\(M^s_{ID}\)</span> → bergerak <em>di kedua</em> market.</p></li>
@@ -335,11 +317,10 @@ R = R^* + \frac{E^e - E}{E}
 <h2>BI rate vs USD/IDR</h2>
 
 <img data-src="index_files/figure-revealjs/unnamed-chunk-6-1.png" width="960" class="r-stretch"></section>
-<section id="short-run-vs-long-run" class="slide level2 s">
-<h2>Short-run vs long-run</h2>
+<section id="the-long-run" class="slide level2 s">
+<h2>The long-run</h2>
 <ul>
-<li><p>Sejauh ini asumsi: <span class="math inline">\(P\)</span> <em>sticky</em> dalam short-run.</p></li>
-<li><p>Sekarang lepas asumsi itu: dalam long-run, <span class="math inline">\(P\)</span> menyesuaikan penuh.</p></li>
+<li><p>Dalam jangka panjang, <span class="math inline">\(P\)</span> menyesuaikan penuh.</p></li>
 <li><p><span class="math inline">\(Y\)</span> kembali ke potential output (ditentukan supply riil: tenaga kerja, kapital, teknologi).</p></li>
 <li><p><span class="math inline">\(R\)</span> riil kembali ke level natural (savings vs investment).</p></li>
 <li><p>Yang berubah dalam long-run: <span class="math inline">\(P\)</span> dan <span class="math inline">\(E\)</span> secara nominal.</p></li>
@@ -349,7 +330,7 @@ R = R^* + \frac{E^e - E}{E}
 <section id="empirical-m-growth-vs-inflasi" class="slide level2 s">
 <h2>Empirical: M growth vs inflasi</h2>
 <ul>
-<li><p>KOM Fig 15.10: rata-rata negara Latin Amerika 1987-2014 → korelasi tinggi antara money growth dan inflasi.</p></li>
+<li><p>rata-rata negara Latin Amerika 1987-2014 → korelasi tinggi antara money growth dan inflasi.</p></li>
 <li><p>Untuk Indonesia long-run: hyperinflation 1965-66 (sudah dibahas M11) adalah kasus paling ekstrem.</p></li>
 <li><p>Periode stabil 2000-2025: M2 growth ≈ 8-12%/tahun, inflasi ≈ 3-5%/tahun. Gap = pertumbuhan permintaan riil uang (income effect).</p></li>
 <li><p>Lesson: hubungan <span class="math inline">\(M\)</span>-<span class="math inline">\(P\)</span> kuat <em>di rata-rata</em> jangka panjang; tidak harus tahun-per-tahun.</p></li>
@@ -467,7 +448,7 @@ E_{Rp/USD} = \frac{3.280.000}{200} = 16.400
 <li><p>Aktual depresiasi USD/IDR: 9.200 (2010) → 16.400 (2026) = ~3,7%/tahun ⇒ gap dengan PPP ~2%/tahun (lebih banyak depresiasi dari prediksi PPP).</p></li>
 </ul>
 </section>
-<section id="big-mac-indonesia" class="slide level2 m">
+<section id="big-mac-indonesia" class="slide level2 s">
 <h2>Big Mac Indonesia</h2>
 <div class="columns">
 <div class="column" style="width:55%;">
@@ -628,7 +609,7 @@ R - R^* = \pi^e - \pi^{*e}
 <li><p>Aktual: USD/IDR jauh lebih volatile dari CPI ratio.</p></li>
 </ul>
 </section>
-<section id="crisis-ppp-failure" class="slide level2 m">
+<section id="crisis-ppp-failure" class="slide level2 s">
 <h2>1997 crisis &amp; PPP failure</h2>
 <div class="columns">
 <div class="column" style="width:55%;">
@@ -754,7 +735,7 @@ q = \frac{E \cdot P^*}{P}
 <li><p>Real ER approach = lebih lengkap.</p></li>
 </ul>
 </section>
-<section id="nickel-boom" class="slide level2 m">
+<section id="nickel-boom" class="slide level2 s">
 <h2>2022 Nickel boom</h2>
 <div class="columns">
 <div class="column" style="width:55%;">
