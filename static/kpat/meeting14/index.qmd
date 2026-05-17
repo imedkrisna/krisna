@@ -1,9 +1,9 @@
 ---
-title: "Global Imbalance, exchange rate & Monetary Policy"
-subtitle: "ECES905205 pertemuan 13"
-date: "12 September 2022"
+title: "Extra-ASEAN Economic Relations"
+subtitle: "ASEAN di antara multilateralisme yang meluruh dan blok-blokisasi baru"
+date: today
 author: "I Made Krisna Gupta"
-format: 
+format:
   revealjs:
     theme: [simple,../mytheme.scss]
     chalkboard: true
@@ -14,197 +14,432 @@ format:
   beamer: default
 ---
 
+## Pertanyaan pembuka
 
-## This week
+Ketika payung WTO bocor, apa yang dilakukan negara kecil terbuka seperti ASEAN?
 
-- To understand global imbalance, we need to understand how current account, exchange rate and monetary policy interacts.
+. . .
 
-- Additionally, we want to note how income distribution and investment-boosting policy affects the global imbalance.
+- ASEAN berdiri di tengah dua arus besar: **erosi multilateralisme** (WTO macet) dan **kebangkitan blok-blokisasi** (RCEP, CPTPP, IPEF, BRICS).
 
-- Later, we can learn that trade surplus may not equals to competitiveness, let alone welfare!
+- Indonesia dan ASEAN harus menjawab: bergerak ke arah mana, dengan siapa, dan bagaimana melindungi welfare?
 
-## Miskonsepsi merkantilis
+## Outline
 
-- Ingat persamaan PDB berdasarkan konsumsi:
+1. Framing: postwar order vs fragmentasi (~20 menit)
+
+2. Respon ASEAN: FTA ekstra-regional (~25 menit) + **diskusi** (~10 menit)
+
+3. Multilateralisme vs minilateralisme (~15 menit)
+
+4. Tiga kasus Indonesia: EUDR, nikel, Trade War 2.0 (~20 menit)
+
+5. Sintesis (~10 menit)
+
+## Konteks: posisi ASEAN
+
+- ASEAN = ekonomi kecil-terbuka. Trade/GDP rata-rata >100% (Singapura, Malaysia, Vietnam, Thailand).
+
+- Indonesia "anomali ASEAN": trade/GDP ~40%, ekspor ke AS <10% total ekspor (TIB 2025).
+
+- Konsentrasi pasar tetap tinggi: 5 negara tujuan utama menyerap >55% ekspor non-migas Indonesia.
+
+- Implikasi: shock di sistem multilateral menyebar tidak merata di antara anggota ASEAN.
+
+# I. Framing: postwar order vs fragmentasi
+
+## The postwar deal
+
+- Bretton Woods (1944) memecahkan tiga trilemma — moneter, finansial, dan ekonomi-politik — dengan mengorbankan mobilitas modal demi ruang kebijakan domestik.
+
+- Hasilnya: **hyperglobalization** pasca-1991. Trade/GDP dunia naik dari <10% (pre-1945) ke >50% (2008).
+
+![Trade/GDP dunia 1830–2005. Sumbu-x: tahun; sumbu-y: rasio perdagangan terhadap PDB dunia. Sumber: Obstfeld (2024). Pola: pertumbuhan eksponensial pasca-1945, plateau setelah GFC.](figs/obstfeld-trade-gdp.png){width=70%}
+
+## Hegemonic shift
+
+![Pangsa PDB global 1980–2022. Sumbu-x: tahun; sumbu-y: % PDB dunia. Garis: AS, China, EMDEs. Sumber: Obstfeld (2024). Pola: AS turun dari 48% (1980) ke 32% (2022); China + EMDEs naik dari 2% ke 20%.](figs/obstfeld-gdp-shares.png){width=70%}
+
+- Pergeseran ini menggoyang basis politik sistem yang dibangun di bawah dominasi AS pasca-Perang Dunia II.
+
+## Polycrisis & backlash
+
+> "Globalization grew to the point of unleashing political and geopolitical forces that now threaten to bring global fragmentation."
+> — Obstfeld (2024)
+
+- Empat tekanan bersamaan: perubahan iklim, pandemi, perang besar (Ukraina), rivalitas AS-China.
+
+- Domestik: distribusi gain tidak merata → backlash populis di negara maju.
+
+- WTO dan UN security council deadlock pada saat dunia paling butuh koordinasi.
+
+## Slowbalization & weaponization
+
+- Pertumbuhan perdagangan dunia stagnan pasca-2012 ("slowbalization").
+
+- Tarif berubah dari instrumen ekonomi menjadi senjata geopolitik (export controls, sanctions, choke-points).
+
+- Ini bukan kembali ke abad ke-19 — *connectivity* tetap tinggi, tapi *rules* melemah.
+
+- Preview: lihat eskalasi Trade War 1.0 → 2.0 di Bagian IV.
+
+# II. Respon ASEAN: FTA ekstra-regional
+
+## ASEAN+1 FTAs
+
+Lima FTA ekstra-ASEAN aktif sejak 2008-2010, lalu RCEP 2022:
+
+| FTA | Mulai berlaku |
+|-----|---------------|
+| ASEAN-China (ACFTA) | 2010 |
+| ASEAN-Korea (AKFTA) | 2010 |
+| ASEAN-Japan (AJCEP) | 2008 |
+| ASEAN-Australia-NZ (AANZFTA) | 2010 |
+| ASEAN-India (AIFTA) | 2010 |
+| RCEP | 2022 |
+
+*Sumber: Kumari (2024).* ASEAN punya jaring perjanjian terdalam di kawasan Asia-Pasifik.
+
+## Gravity model — intuisi
+
+- Mengapa Indonesia berdagang lebih banyak dengan Singapura daripada Argentina? Karena dekat dan ekonominya cukup besar.
+
+- Persamaan dasar gravity model:
 
 $$
-Y=C+I+G+NX
+X_{ij} = G \cdot \frac{Y_i^{\alpha} Y_j^{\beta}}{D_{ij}^{\gamma}}
 $$
 
-- Menurut kacamata merkantilis, menaikkan NX (dgn cara dorong ekspor, halangi impor) menyebabkan Y naik:
+di mana $X_{ij}$ adalah nilai ekspor dari negara $i$ ke negara $j$; $Y_i, Y_j$ adalah ukuran ekonomi (PDB); $D_{ij}$ adalah jarak ekonomi (geografis + tarif + non-tarif barrier); dan $G$ konstanta.
 
+- **FTA = menurunkan $D_{ij}$** secara selektif untuk mitra terpilih.
 
-$$
-Y \uparrow =C+I+G+NX \uparrow
-$$
+## Trade Creation vs Trade Diversion
 
-## Miskonsepsi merkantilis
+::: {.columns}
+::: {.column width="50%"}
+**Trade Creation (baik)**
 
-- Namun persamaan tersebut aslinya adalah _accounting identity_ / hubungan aritmatika, bukan hubungan fungsional / sebab akibat.
+Perdagangan baru tercipta karena geser dari produsen domestik mahal ke partner FTA murah → naik efisiensi, naik welfare.
+:::
+::: {.column width="50%"}
+**Trade Diversion (ambigu)**
 
-- Benar bahwa setiap variabel punya hubungan fungsional masing-masing dan saling terkait, tapi tidak berarti naikin yg kanan akan **berakibat pada** naiknya yg kiri.
+Perdagangan geser dari produsen non-partner murah ke partner FTA hanya karena tarif preferensial → bisa turun welfare meski volume trade naik.
+:::
+:::
 
-- Ingat bahwa Y=kapasitas ekonomi untuk produksi dan konsumsi. Jika kapasitasnya tidak meningkat, maka kenaikan NX harus diambil dari variabel yg lain.
+. . .
 
-## Miskonsepsi merkantilis {.m}
+Inti: **volume trade naik bukan otomatis berarti FTA berhasil.** Yang penting komposisinya.
 
-- Jika $Y(K,L)$ stagnan karena tidak ada perubahan fundamental pada faktor produksi maupun teknologi, maka naiknya $NX$ tidak akan mengubah $Y$.
+## Bukti 1: ASEAN+6 net trade creation
 
-$$
-Y=C\downarrow + I \downarrow + G \downarrow= NX \uparrow
-$$
+![Tabel TC/TD ASEAN+6 (Handoyo et al. 2021). Kolom FTA1/FTA2/FTA3 = intra-bloc/export-creation/import-creation. Sumber: Handoyo et al. (2021) Tabel 3 hal. 10.](figs/handoyo-table3.png){width=80%}
 
-- Naiknya NX tanpa diimbangi peningkatan Y akan mengambil porsi Y yang digunakan untuk:
-    
-    - konsumsi domestik (C dan/atau G), atau;
-    
-    - domestic saving (saving ke luar negeri).
-    
-- Artinya, mendorong NX naik berpotensi mengurangi welfare!
+- Primary commodities: net TC **55-64%**.
 
-## Miskonsepsi merkantilis
+- Manufactured goods: net TC **21-37%**.
 
-- Sebaliknya, jika kita fokus ke mendorong $Y$ lewat kebijakan pro bisnis, misalnya, maka naiknya $Y$ bisa saja terdistribusi ke naiknya konsumsi domestik, belum tentu ke peningkatan NX!
+- Kesimpulan paper: ASEAN+6 secara agregat = net trade creating.
 
-- Peran trade scr teori untuk menaikkan $Y$ melalui efisiensi sumber daya:
+## Bukti 2: AIFTA — sisi gelap
 
-    - Secara teori akan mendorong Y.
-    
-    - NX belum tentu naik: ekspor naik bisa jadi diimbangi impor yang juga naik.
-    
-    - Domestic consumption akan naik juga.
-    
-##  Income distribution
+![Perdagangan India-ASEAN 2003-2019. Sumbu-x: tahun; sumbu-y: USD miliar. Sumber: Singh (2021) Tabel 1 hal. 2.](figs/singh-table1.png){width=75%}
 
-- Di pertemuan sebelum UTS, kita sudah bahas bahwa kebijakan perdagangan sangat mempengaruhi income distribution:
+- Intra-bloc trade naik **+610%** pasca AIFTA.
 
-    - di specific factor model, land owner dan capital owner terpengaruh.
-    
-    - di HO model, pemilik factor yg abundant lebih diuntungkan dari trade.
-    
-- Kebijakan makro juga sangat berpengaruh: dalam hal ini XR dan interest rate.
+- Tapi: pangsa ASEAN dalam defisit perdagangan India naik dari 5,2% (2010) ke 15% (2019).
 
-- Reminder: interest rate naik $\rightarrow$ XR terapresiasi, inflasi berkurang.
+- *Import creation* lebih dominan dari *export creation* untuk India.
 
-## Income distribution
+## Bukti 3: Konflik temuan (Kumari 2024)
 
-- Interest rate tinggi menguntungkan pemilik aset (savers), merugikan pemilik liabilitas (borrowers).
+![Estimasi structural gravity 5 FTA ASEAN. Sumber: Kumari (2024) Tabel 2 hal. 3.](figs/kumari-table2.png){width=80%}
 
-- Siapa savers: pemilik usaha (terutama eksportir), pemilik saham, generally orang kaya (punya banyak disposable income buat ditabung).
+- Saat memasukkan *intra-national trade flows* (perdagangan domestik): ASEAN-China **diverting** (-36%), ASEAN-ANZ **diverting** (-20%), AIFTA insignificant.
 
-- Siapa borrowers: orang yang gajinya kecil, penyicil KPR, tapi juga pemilik usaha yang ekspansi.
+- Bertentangan dengan temuan Handoyo dan Singh!
 
-- Spekulan can be in both camps tergantung bet.
+## Mengapa bisa berbeda?
 
-## Income distribution
+- **Spesifikasi model**: Handoyo & Singh pakai gravity sederhana; Kumari pakai structural gravity dengan time-varying country FE + intra-national trade.
 
-- Exchange rate yang tinggi menguntungkan net eksportir dan pemilik utang dollar, merugikan net-importir dan konsumen.
+- Time-varying FE menyerap variasi yang sebelumnya dianggap "efek FTA".
 
-- Siapa net-exportir: firms yang savingnya besar, professional bergaji dolar (generally orang berada), diaspora & TKI.
+- Inklusi domestic trade sebagai counterfactual mengubah baseline.
 
-- siapa borrower dolar: biasanya perusahaan besar, negara, BUMN karya.
+. . .
 
-- Siapa net-importir: masyarakat pada umumnya, pekerja (bahkan di industri ekspor).
+**Pelajaran metodologis:** hasil ekonometrika trade sangat sensitif terhadap pilihan model. *Jangan jadikan FTA "obat dewa" hanya karena satu paper bilang positif.*
 
-## Income distribution {.m}
+## Catatan untuk Indonesia
 
-- kebijakan-kebijakan pendorong supply (subsidi, tax cut, relaxed labor restriction) berpotensi mendorong income distribution ke arah producers, ceteris paribus.
+- Ekspor Indonesia ke China naik signifikan pasca-ACFTA — tapi dominan komoditas mentah (HS 27 bahan bakar mineral, HS 15 minyak nabati, HS 72 besi-baja).
 
-    - harapan dari supply-side intervention adalah investasi naik, employment naik atau labor share naik. Benarkah?
+- Impor dari China didominasi mesin (HS 84, 14%), elektronik (HS 85, 14%), kendaraan (HS 87, 6%) — barang dengan teknologi lebih tinggi.
 
-::: {.fragment}
+- Pola ini = ciri klasik trade *based on factor endowment*, bukan upgrading.
 
-- Semakin besar share pendapatan firms relative to labor, semakin mungkin sebuah negara jadi net-eksportir.
+*Sumber: TIB EUDR Juni 2023.*
 
-    - firms berprofit besar lebih mungkin saving daripada masyarakat / pegawai.
-    
-    - jika profitnya dibagi-bagikan ke pegawai, kemungkinan $C\uparrow$ lebih tinggi.
-    
+## Pertanyaan teaching
+
+Kalau FTA tidak otomatis create trade, dan kalau pola perdagangan Indonesia dengan ASEAN+ masih berbasis komoditas mentah...
+
+. . .
+
+**Apa sebenarnya yang dicari ASEAN dari FTA ekstra-regional?**
+
+. . .
+
+*Diskusi di slide berikutnya.*
+
 ---
 
-Ingat, jika tidak ada perubahan fundamental di sisi supply, NX yg naik bisa terjadi karena warga biasa tidak sanggup beli (C turun)!
+## Diskusi (10 menit)
 
-    - ingat kasus minyak goreng.
-    
----
-    
-## Role of large firms? {.m}
+> Ekspor Indonesia ke China naik berkali lipat sejak ACFTA — tetapi sebagian besar berupa komoditas mentah, sementara impor mesin & elektronik dari China juga melonjak.
+>
+> **Apakah ASEAN-China FTA "create" atau "divert" trade bagi Indonesia? Bagaimana dengan welfare?**
 
-- Temuan dari [Dao and Maggi (2018)](https://doi.org/10.5089/9781484385395.001) dari large, non-financial firms:
+Format:
 
-    - Firms di negara maju berubah dari net-borrowers jadi net-savers, mostly di negara CA surplus.
-    
-    - these firms invest less, profit more, operate in low tax countries (tax havens).
-    
-    - duitnya cukup untuk bikin financial firms sendiri.
-    
-- Bagaimana dengan Indonesia?
+- 5 menit diskusi berpasangan
+- 5 menit polling cepat (creation / diversion / tidak yakin) + 2-3 alasan
 
-    - exporting firms yg tidak butuh invest & labornya murah bisa jadi sama perilakunya.
-    
-    - Bisa jadi judul thesis!
-    
-## Reminder: FA role!
+# III. Multilateralisme vs minilateralisme
 
-- Ekonom jadul mengajarkan dampak CA $\rightarrow$ XR: CA surplus $\rightarrow$ XR apresiasi.
+## Status WTO
 
-- Zaman sekarang, flow of funds (FA) jauh lebih cepat dari flow of goods & services (CA)!
+- Tidak ada perjanjian multilateral substantif baru sejak **Trade Facilitation Agreement (2013)**.
 
-    - demand & supply of money karena pasar uang (interest rate) akan duluan ngaruh ke XR!
-    
-    - FA $\rightarrow$ XR $\rightarrow$ CA, bukan CA $\rightarrow$ XR!
+- **Appellate Body paralysis** sejak Desember 2019: AS memblokir penunjukan hakim baru.
 
-- [Irwin (2022)](http://www.nber.org/papers/w29973):
+- *Consensus rule* di WTO = veto rule: satu anggota bisa menahan keputusan 164 anggota.
 
-    - Negara menurunkan tarif karena bisa manage CA dari FA (finlib).
-    
-## Financialization
+. . .
 
-[Chang and Andreoni (2020)](https://doi.org/10.1111/dech.12570):
+Konsekuensi: negara beralih ke bilateral, RTA, plurilateral — tapi tanpa koordinasi multilateral, ini = fragmentasi.
 
-- Shortermism in corporate control & in investment strategy.
+*Sumber: Revindo et al. (2022), T20 brief.*
 
-- Increasing share buyback & dividends.
+## Tiga jalan keluar
 
-- Increasing importance of the stock market & other external financing.
+::: {.columns}
+::: {.column width="33%"}
+**(a) Reformasi WTO**
 
-- Increasing importance of financial activities by non-financial firms, including stock buybacks.
+JSI berjenjang, DSM revival, G20 sebagai inkubator
+:::
+::: {.column width="33%"}
+**(b) Minilateralisme**
 
-- Increasing size of financial sectors & institutional investors.
+Sub-grup like-minded bertindak duluan; multilateralize kemudian
+:::
+::: {.column width="33%"}
+**(c) Fragmentasi blok**
 
-## Financialization
+Dunia terbelah jadi blok-blok dagang yang bersaing
+:::
+:::
 
-- [Chang and Andreoni (2020)](https://doi.org/10.1111/dech.12570) on profit-investment nexus:
+Pertanyaan untuk ASEAN: pilih (a) atau (b), karena (c) merugikan.
 
-    - mid 1800s-1920s: reinvesting profits & restructuring (mergers) to improve scale & pursue more profit by 
+## Reformasi WTO (Revindo T20)
 
-    - 1980s: downsizing & distributing: emerged from shortermism from "shareholder value ideology".
-    
-    - leads to less investment on capital & labor, less share for labor, more for shareholders & CEOs!
+![Hierarchical JSI pyramid: Observer → Limited+S&DT → Full obligations w/ LDC exempt → Full → Multilateralization. Sumber: Revindo et al. (2022) Gambar 1 hal. 6.](figs/revindo-t20-jsi.png){width=60%}
 
-- The movement of financial market gets more & more important in shaping trade and firm competitiveness!
+- Solusi DSM: term limits 6-8 tahun, auto-launch AB selection, capacity building untuk negara berkembang.
 
-## Competitiveness? {.m}
+- Peran G20: analisis RTA untuk identifikasi elemen yang bisa di-multilateralisasi.
 
-- Makin sulit mengatakan bahwa ekspor suatu negara menandakan keunggulan kompetitif:
+## Minilateralisme ASEAN (Jin & Lee)
 
-    - Negara yang secara konstan undervalue currency-nya akan otomatis tinggi ekspornya.
-    
-    - Negara yang mengurangi konsumsi domestik (melalui kebijakan supply-driven) akan tinggi ekspornya.
-    
-    - Ekspor ini diserap oleh negara dengan kebijakan demand-driven dan loose monetary supply (UK, Aus, USA).
-    
-- Tidak berarti pemerintah harus berdiam diri, namun analisis trade & industri jadi harus lebih holistik.
+> "While the preservation of ASEAN unity is important, the regional bloc must balance the usefulness of moving together against the loss of credibility if it fails to act."
+> — Jin & Lee (2023), ISEAS
 
-## Competitiveness? {.m}
+- 82,6% responden Asia menganggap konsensus ASEAN "slow & irrelevant".
 
-- Seiring Indonesia meningkatkan kebijakan demand-driven (subsidi konsumen, universal healthcare), wajar jika NX $\downarrow$.
+- Contoh minilateral berhasil: Malacca Straits Patrol (4 negara), Sulu Sea trilateral, "Our Eyes" counterterrorism (6 → 10 negara).
 
-- Indonesia adalah investing country. CAD in short term adalah hal yang wajar ([Gupta, Gretton & Patunru 2022](https://www.gtap.agecon.purdue.edu/resources/res_display.asp?RecordID=6583)).
+- Usulan: ASEAN South China Sea Forum (4 claimants + Indonesia) untuk negosiasi Code of Conduct dari posisi blok kuat.
 
-    - Konsumsi barang modal tinggi, tidak bisa disupply hanya dari produksi dalam negeri.
-    
-- True impact of trade should be reflected from economic growth in general, not only NX!
+## Landscape minilateral di sekitar ASEAN
 
-    - trade's role is not to accumulate wealth, but to improve efficiency & living standards!
+- **RCEP** (2022): 15 negara, FTA ekonomi terbesar dunia. Indonesia anggota.
 
+- **CPTPP**: 12 negara, standar lebih tinggi (digital, labor, SOE). Indonesia belum.
+
+- **IPEF**: inisiatif AS, 14 negara, tanpa market access. Indonesia ikut.
+
+- **BRICS+**: Indonesia bergabung 2025.
+
+- **Bilateral**: IEU-CEPA (15 putaran), IUS PTA terbatas (sedang dirintis pasca TW 2.0).
+
+. . .
+
+Indonesia ada di semua meja — tapi tanpa strategi jelas, ini bukan kekuatan, ini *hedging tanpa arah*.
+
+# IV. Tiga kasus: Indonesia di bawah tekanan
+
+## Tiga peran Indonesia
+
+Saat aturan multilateral lemah, Indonesia berperan dalam tiga cara berbeda:
+
+1. **TARGET** dari aturan baru — EUDR
+
+2. **DEFENDER** kebijakan industri vs aturan WTO — larangan ekspor nikel
+
+3. **OPPORTUNIST → TARGET** dalam great-power competition — Trade War 1.0 → 2.0
+
+## Case A — EUDR
+
+- **EU Deforestation Regulation** (Des 2022, mandatory mulai 2025).
+
+- 7 komoditas: sawit, daging, kopi, kayu, kakao, karet, kedelai → harus bebas deforestasi pasca-31 Des 2020 + traceable + legal.
+
+- Indonesia harus menunjukkan dokumentasi geolokasi setiap shipment.
+
+## Eksposur Indonesia ke EUDR
+
+![Kiri: Defisit perdagangan EU vs Indonesia 2013-2022 (USD miliar). Kanan: Produk ekspor utama Indonesia ke EU 2018-2022 (USD miliar). Sumber: Revindo (2023) TIB EUDR Gambar 1 hal. 2 + Tabel 1 hal. 3.](figs/eudr-exposure.png){width=85%}
+
+- CPO (HS 1511): USD2,82 miliar (2022).
+- Turunan sawit (HS 3823): USD1,87 miliar (2022).
+- Defisit EU vs Indonesia melonjak dari -USD7,3B (2016) ke -USD21,4B (2022).
+
+## EUDR: motif sebenarnya
+
+- **Bukan murni isu lingkungan** — UE adalah importir sawit terbesar dunia dan punya substitusi domestik (rapeseed, sunflower).
+
+- **Bargaining chip** untuk negosiasi IEU-CEPA (putaran ke-14 berdekatan dengan persetujuan EUDR).
+
+- Indonesia bisa: (1) negosiasi cut-off date deforestasi, (2) tunjukkan capaian deforestasi turun 75% (2019-2020) dan 8,4% (2021-2022), (3) leverage SDG 15.
+
+- **Risiko**: kompensasi dalam IEU-CEPA — jangan korbankan kebijakan nikel/bauksit atau PBJ pemerintah.
+
+## Case B — Larangan ekspor nikel
+
+- Sejak 2020, Indonesia melarang ekspor bijih nikel mentah → memaksa pembangunan smelter di dalam negeri.
+
+- **EU menggugat di WTO** (Art. XI GATT: prohibition of quantitative restrictions).
+
+- Indonesia kalah di panel (2022); banding terhenti karena AB paralysis → status hukum: *limbo*.
+
+## Argumen Indonesia & dilema
+
+![Slide argumen WTO larangan ekspor nikel. Sumber: Revindo (2023) Hilirisasi slide 5.](figs/revindo-nickel-arguments.png){width=70%}
+
+- **Argumen internal** (kedaulatan, nilai tambah) — lemah di hadapan WTO.
+
+- **Argumen eksternal** yang dibutuhkan: pasokan dunia masih cukup; Indonesia tidak melarang ekspor bahan olahan; kebutuhan domestik (smelter FDI) signifikan.
+
+## Hilirisasi: dua model
+
+![Trade-off model hilirisasi. Sumber: Revindo (2023) Hilirisasi slide 3.](figs/revindo-hilirisasi-tradeoff.png){width=85%}
+
+- **Proteksi**: nilai tambah/unit tinggi, pasar terbatas, risiko WTO/retaliasi.
+
+- **Insentif + fasilitasi**: nilai tambah/unit kecil, pasar luas, mengarah GVC.
+
+- Indonesia perlu memilih *secara selektif per produk* — bukan satu kebijakan untuk semua mineral.
+
+## Implikasi kasus nikel
+
+- Tanpa Appellate Body yang berfungsi, gugatan EU "menggantung" → de facto Indonesia menang waktu, tapi reputasi sebagai *rule-taker* turun.
+
+- Negara lain (Filipina, Australia, Kaledonia Baru) menaikkan pangsa ekspor nikel mentah → trade diversion regional.
+
+- **Pelajaran**: kebijakan industrial unilateral butuh argumen multilateral yang kredibel — bukan sekadar "kedaulatan negara".
+
+## Case C — Trade War 1.0 (2018-2020)
+
+- Tarif AS terhadap China naik dari 3,1% (Jan 2018) ke 19,3% (Feb 2020); tarif AS atas RoW hanya naik dari 2,2% ke 3,0%.
+
+- **Indonesia diuntungkan**: estimasi GTAP-VA menunjukkan *Developing ASEAN* mengalami **+0,25%** kenaikan DVA ekspor ke AS — kenaikan terbesar di antara semua region.
+
+![Domestic value-added ekspor ke AS, skenario trade war vs baseline. Sumber: Revindo, Hasan & Sabrina (2021) Tabel 5 hal. 15.](figs/revindo-tw1-vadecomp.png){width=70%}
+
+## Skema dampak TW 1.0
+
+![Diagram alur dampak TW 1.0 pada Indonesia–China–AS–RoW–ASEAN lain. Merah = ancaman; hijau = peluang bagi Indonesia. Sumber: TIB 2025 hal. 9.](figs/tib-tw1-scheme.png){width=85%}
+
+- Indonesia substitusi sebagian produk China di pasar AS (terutama tekstil, alas kaki, agri-products).
+
+- Vietnam paling diuntungkan; Indonesia *tertinggal*.
+
+## TW 2.0 — April 2025: Indonesia kena 32%
+
+![Reciprocal tariffs Trump per 5 April 2025. Sumber: Annex-I White House Executive Orders (2025), diolah LPEM FEB UI, TIB 2025 hal. 12.](figs/tib-tw2-tariffs.png){width=75%}
+
+- Indonesia 32%, China 34%, Vietnam 46%, Kamboja 49%.
+
+- **Gap Indonesia-China hanya 2%** → strategi substitusi TW 1.0 tidak berlaku lagi.
+
+## Produk ekspor terancam
+
+![Produk ekspor utama Indonesia ke AS 2017-2024 (USD ribu). Sumber: ITC Trade Map, TIB 2025 hal. 17.](figs/tib-tw2-products.png){width=85%}
+
+- CPO, alas kaki (HS 6403, 6404), karet, smartphone (HS 8517), elektronik (HS 8543), udang & krustasea.
+
+- Nilai ekspor 2024: HS 8517 ~USD910 juta; HS 8543 ~USD1,03 miliar.
+
+## Strategi Indonesia pasca-TW 2.0
+
+- **Bilateral**: rintis PTA/FTA terbatas dengan AS; jangan terpancing retaliasi.
+
+- **Diversifikasi mitra**: akselerasi IEU-CEPA, BRICS, aksesi OECD, optimalisasi RCEP.
+
+- **Production cooperation** dengan negara low-tariff (Jepang 24%, Singapura 10%, Malaysia 24%) untuk menarik FDI intermediate goods.
+
+- **Reformasi domestik**: turunkan ICOR, perkuat anti-dumping, audit hambatan non-tarif yang kontraproduktif.
+
+- **Hati-hati**: konsesi liberalisasi punya efek asimetris bagi industri dalam negeri.
+
+# V. Sintesis
+
+## Kembali ke pertanyaan pembuka
+
+> Ketika payung WTO bocor, apa yang dilakukan negara kecil terbuka seperti ASEAN?
+
+. . .
+
+Tiga jalan: reformasi multilateral, minilateralisme, atau fragmentasi blok.
+
+ASEAN sudah memilih kombinasi (a) + (b) — tapi terus terancam (c) dari luar.
+
+## Pelajaran untuk Indonesia
+
+1. **FTA bukan obat dewa** — bukti empiris mixed; perhatikan komposisi trade, bukan hanya volume.
+
+2. **Minilateralisme realistis tapi butuh desain** — bertindak dengan koalisi *like-minded*, jangan menunggu konsensus 10 anggota.
+
+3. **Hilirisasi butuh argumen multilateral** — proteksi sektoral tanpa narasi global akan kalah di forum dispute.
+
+4. **Diversifikasi mitra dagang** — ketergantungan satu pasar (AS, China, EU) = vulnerability geopolitik.
+
+## Echo dari teori dasar
+
+- Trade *bukan* untuk akumulasi surplus — itu mitos merkantilis (ingat pertemuan tentang global imbalance).
+
+- Trade = tools untuk efisiensi alokasi sumber daya dan peningkatan welfare.
+
+- Maka ukuran sukses kebijakan trade ASEAN/Indonesia bukan "neraca surplus berapa", tapi *apakah masyarakat lebih sejahtera*.
+
+## Bacaan lanjut
+
+- Obstfeld (2024). *Globalization and Multilateralism*.
+- Jin & Lee (2023). *Minilateral Cooperation in ASEAN*. ISEAS Perspective 2023/16.
+- Revindo et al. (2022). T20 — *Effective WTO and Multilateral Trading System*.
+- Handoyo et al. (2021). *TC/TD effects: ASEAN+6 FTA*.
+- Kumari (2024). *Re-assessment of bilateral & unilateral trade effects of ASEAN FTAs*.
+- Singh (2021); Khurana — *India-ASEAN FTA*.
+- Revindo (2023). *Hilirisasi: perspektif ekonomi publik & multilateral*.
+- Revindo et al. (2023). *EUDR*. LPEM TIB Juni 2023.
+- Revindo, Hasan & Sabrina (2021). *Trade war impact on developing countries' GVC*.
+- Revindo, Riefky & Sabrina (2025). *Trade War 2.0*. LPEM TIB April 2025.
+
+## Terima kasih
+
+Pertanyaan & diskusi.
