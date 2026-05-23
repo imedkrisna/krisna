@@ -6,8 +6,8 @@
 <script src="bartik_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="bartik_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="bartik_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="bartik_files/libs/quarto-html/quarto-syntax-highlighting-ea1d7ac60288e0f1efdbc993fd8432ae.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.8.21">
+<link href="bartik_files/libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.8.27">
 
   <meta name="author" content="Imed Krisna Gupta">
   <meta name="dcterms.date" content="2025-08-26">
@@ -29,6 +29,72 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     /* CSS for citations */
     div.csl-bib-body { }
     div.csl-entry {
@@ -151,6 +217,7 @@
 
 <section id="title-slide" class="quarto-title-block center">
   <h1 class="title">Bartik Instrument</h1>
+  <p class="subtitle">Shift-share IV in trade economics</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -162,299 +229,677 @@ Imed Krisna Gupta
 
   <p class="date">August 26, 2025</p>
 </section>
-<section id="overview" class="slide level2">
-<h2>Overview</h2>
+<section id="roadmap-2-hours" class="slide level2">
+<h2>Roadmap (2 hours)</h2>
+<div class="m">
+<p><strong>Part I — Why and what (≈45 min)</strong></p>
+<ol type="1">
+<li>Recap from Krugman: HOS, SFM, gains and losers</li>
+<li>The within-country empirical problem</li>
+<li>The Bartik (shift-share) construct</li>
+<li>Identification: Goldsmith-Pinkham vs.&nbsp;Borusyak-Hull-Jaravel</li>
+<li>Diagnostics and inference</li>
+</ol>
+<p><strong>Part II — Applications and hands-on (≈75 min)</strong></p>
+<ol start="6" type="1">
+<li>Topalova (2010) — India</li>
+<li>Autor, Dorn &amp; Hanson (2013, 2016) — China shock</li>
+<li>Kis-Katos &amp; Sparrow (2015) — Indonesia</li>
+<li>Hands-on in R with <code>dat.xlsx</code></li>
+<li>Frontier and limitations</li>
+</ol>
+</div>
+</section>
+<section>
+<section id="part-i-why-and-what" class="title-slide slide level1 center">
+<h1>Part I — Why and What</h1>
+
+</section>
+<section id="from-krugman-gains-exist-distribution-is-messy" class="slide level2">
+<h2>From Krugman: gains exist, distribution is messy</h2>
 <ul>
-<li>What is the Bartik (shift-share) instrument?<br>
-</li>
-<li>Core identifying assumptions<br>
-</li>
-<li>Two canonical applications
+<li>Aggregate gains from trade are robust across HOS, Ricardian, and new-trade models.</li>
+<li><em>Who</em> gains and loses depends on factor mobility.</li>
+<li>HOS: gains accrue to the abundant factor (Stolper-Samuelson), <em>assuming factors move freely across industries.</em></li>
+<li>SFM (Specific Factor Model): in the short run, some factors are tied to a sector → clear winners and losers.</li>
+</ul>
+</section>
+<section id="the-textbook-distinction-in-one-line" class="slide level2">
+<h2>The textbook distinction in one line</h2>
 <ul>
-<li>Factor Mobility in India <span class="citation" data-cites="topalova">(<a href="#/references" role="doc-biblioref" onclick="">Topalova 2010</a>)</span></li>
-<li>The China-Shock <span class="citation" data-cites="autor">(<a href="#/references" role="doc-biblioref" onclick="">Autor, Dorn, and Hanson 2016</a>)</span></li>
+<li class="fragment">HOS: long run, perfect mobility, factor-price equalization.</li>
+<li class="fragment">SFM: short run, sector-specific factors, sectoral wage gaps.</li>
+<li class="fragment"><strong>Empirical reality:</strong> the “short run” can last a decade or more, and the location of immobile factors is <em>regional</em>.</li>
+<li class="fragment">This is what shift-share designs let us see in the data.</li>
+</ul>
+</section>
+<section id="the-within-country-problem" class="slide level2">
+<h2>The within-country problem</h2>
+<div class="m">
+<ul>
+<li>Cross-country evidence on gains from trade is settled.</li>
+<li><em>Within</em>-country evidence is mixed and politically explosive.</li>
+<li>Why? Adjustment is <strong>spatial</strong>: districts, commuting zones, and provinces specialize in different sectors and absorb shocks differently.</li>
+<li>Reasons for imperfect mobility:
+<ul>
+<li>skill mismatch (sector-specific human capital)</li>
+<li>geographic immobility (housing, family ties, language)</li>
+<li>institutional frictions (labor laws, licensing)</li>
 </ul></li>
-<li>Indonesian application <span class="citation" data-cites="sparrow">(<a href="#/references" role="doc-biblioref" onclick="">Kis-Katos and Sparrow 2015</a>)</span></li>
 </ul>
+</div>
 </section>
-<section id="why-bartik" class="slide level2">
-<h2>Why Bartik</h2>
+<section id="what-we-want-to-estimate" class="slide level2">
+<h2>What we want to estimate</h2>
+<div class="m">
+<p>We want a local causal effect of a trade shock:</p>
+<p><span class="math display">\[
+Y_\ell = \alpha + \delta\,X_\ell + \varepsilon_\ell
+\]</span></p>
 <ul>
-<li><p>Cross-country Evidence for the benefit of trade is settled.</p></li>
-<li><p>Evidence on within-country impact is, however, mixed.</p></li>
-<li><p>H-O predicts gains of trade accrues to factor abundant in the country, as long as there is a perfect factor mobility.</p></li>
-<li><p>But, within-country factor mobility is often imperfect.</p></li>
+<li><span class="math inline">\(Y_\ell\)</span> — outcome in region <span class="math inline">\(\ell\)</span> (employment, wages, poverty)</li>
+<li><span class="math inline">\(X_\ell\)</span> — local exposure to the trade shock (e.g., change in import penetration)</li>
+<li><span class="math inline">\(\delta\)</span> — the parameter we care about</li>
 </ul>
+<p><strong>Problem.</strong> <span class="math inline">\(X_\ell\)</span> is endogenous: regions that import more are also regions where productivity, demand, or politics differ in unobserved ways.</p>
+<p>→ We need an <strong>instrument</strong> for <span class="math inline">\(X_\ell\)</span>.</p>
+</div>
 </section>
-<section id="factor-mobility" class="slide level2">
-<h2>Factor mobility</h2>
+<section id="the-bartik-shift-share-idea" class="slide level2">
+<h2>The Bartik (shift-share) idea</h2>
+<div class="m">
+<p>Two ingredients:</p>
 <ul>
-<li>You have learned H-O model in Ekinter. Do you remember its setting and assumption?</li>
+<li><strong>Shares</strong> <span class="math inline">\(s_{\ell k}\)</span> — region <span class="math inline">\(\ell\)</span>’s pre-period exposure to sector <span class="math inline">\(k\)</span> (employment, output, or expenditure share)</li>
+<li><strong>Shifts</strong> <span class="math inline">\(g_{k}\)</span> — a common (national or world) shock to sector <span class="math inline">\(k\)</span></li>
 </ul>
-<ul>
-<li class="fragment"><p>One crucial element: factors are perfectly mobile between industries.</p></li>
-<li class="fragment"><p>If this is not the case, then we see immobile factor like in SFM.</p></li>
-<li class="fragment"><p>SFM predicts winner and losers.</p></li>
-</ul>
-</section>
-<section id="loser-from-trade" class="slide level2">
-<h2>Loser from trade</h2>
-<ul>
-<li><p>The promise of free trade requires some factor of production to move from “losing” sector to “winning” sector.</p>
-<ul>
-<li>this will create an all-winning equilibrium.</li>
-</ul></li>
-<li><p>However, this allocation can happen very slowly, if at all.</p></li>
-<li><p>Short-run cost of factor allocation post trade liberalization falls disproportionately on the poor.</p></li>
-<li><p>the speed of factor mobilization is different among different countries.</p></li>
-</ul>
-</section>
-<section id="factor-mobility-1" class="slide level2">
-<h2>Factor mobility</h2>
-<ul>
-<li><p>There are various reasons for imperfect factor mobility</p>
-<ul>
-<li><p>skill mismatch</p></li>
-<li><p>geographic immobility</p></li>
-<li><p>social and political barriers</p></li>
-</ul></li>
-<li><p>It is then important to investigate how trade liberalization (or restriction, for that matter) affects regional or industrial difference.</p></li>
-</ul>
-</section>
-<section id="the-bartik-instrument-idea" class="slide level2">
-<h2>The Bartik Instrument: Idea</h2>
-<p>Suppose we want to estimate the effect of a local shock <span class="math inline">\((X_\ell)\)</span> on outcome <span class="math inline">\(Y_\ell\)</span>, but <span class="math inline">\(X_\ell\)</span> is endogenous.</p>
-<p>Define:</p>
+<p>Combine into a single regional exposure measure:</p>
 <p><span class="math display">\[
 Z_\ell \;=\;\sum_k s_{\ell k}\,g_{k}
 \]</span></p>
+<p>The instrument predicts <em>how hard</em> region <span class="math inline">\(\ell\)</span> should be hit by a common shock, given its industrial structure.</p>
+</div>
+</section>
+<section id="why-call-it-bartik" class="slide level2">
+<h2>Why call it “Bartik”?</h2>
+<div class="m">
 <ul>
-<li><span class="math inline">\(s_{\ell k}\)</span>: pre-period share of region <span class="math inline">\(\ell\)</span>’s employment (or output) in sector <span class="math inline">\(k\)</span></li>
-<li><span class="math inline">\(g_{k}\)</span>: national (or global) growth rate of sector <span class="math inline">\(k\)</span></li>
+<li>Tim Bartik (1991) used national industry growth rates interacted with local industry mix to predict local labor demand growth.</li>
+<li>The construct predates him (Perloff 1957, Freeman 1980) but the name stuck after Blanchard &amp; Katz (1992) popularized it.</li>
+<li>In trade: replace national growth with <em>tariff changes</em> (Topalova) or <em>import surges</em> (ADH).</li>
+<li><span class="citation" data-cites="paulgp">Goldsmith-Pinkham, Sorkin, and Swift (<a href="#/references" role="doc-biblioref" onclick="">2020</a>)</span> formalize it as a GMM problem with the shares as instruments.</li>
 </ul>
-<p><span class="math inline">\(Z_\ell\)</span> predicts local exposure to common shocks</p>
+</div>
 </section>
-<section id="identifying-assumptions" class="slide level2">
-<h2>Identifying Assumptions</h2>
-<ol type="1">
-<li><p><strong>Exogeneity of shares</strong><br>
-Shares <span class="math inline">\(s_{\ell k}\)</span> are as good as randomly assigned with respect to omitted determinants of <span class="math inline">\(Y_\ell\)</span>.</p></li>
-<li><p><strong>No sector-specific confounders</strong><br>
-National growth rates <span class="math inline">\(g_k\)</span> are uncorrelated with region-specific errors.</p></li>
-<li><p><strong>Relevance</strong><br>
-Variation in <span class="math inline">\(g_k\)</span> combined with non-zero <span class="math inline">\(s_{\ell k}\)</span> moves <span class="math inline">\(X_\ell\)</span>.</p></li>
-</ol>
-</section>
-<section id="topalova-2010" class="slide level2">
-<h2>Topalova (2010)</h2>
-<ul>
-<li>India’s 1991 trade liberalization reduced tariffs unevenly across industries<br>
-</li>
-<li>Regional variation in pre-reform industry structure</li>
-</ul>
-<h3 id="shift-share-instrument">Shift-Share Instrument</h3>
-<p><span class="math display">\[
-\text{Predicted Tariff Shock}_\ell
-= \sum_k s_{\ell k}^{\,1987}\,\Delta\log \bigl(\text{Tariff}_k\bigr)
-\]</span></p>
-<ul>
-<li><span class="math inline">\(s_{\ell k}^{1987}\)</span>: region <span class="math inline">\(\ell\)</span>’s share in industry <span class="math inline">\(k\)</span> before reform<br>
-</li>
-<li><span class="math inline">\(\Delta\log(\text{Tariff}_k)\)</span>: national log-change in tariffs for industry <span class="math inline">\(k\)</span></li>
-</ul>
-</section>
-<section id="topalova-2010-empirical-strategy" class="slide level2">
-<h2>Topalova (2010): Empirical Strategy</h2>
-<ol type="1">
-<li>First stage:<br>
-<span class="math display">\[
-\widehat{X}_\ell
-= \alpha
-+ \beta\,
-\sum_k s_{\ell k}^{\,1987}\,\Delta\log(\text{Tariff}_k)
-+ \text{controls}
-\]</span></li>
-</ol>
-</section>
-<section id="topalova-2010-empirical-strategy-1" class="slide level2">
-<h2>Topalova (2010): Empirical Strategy</h2>
-<ol start="2" type="1">
-<li>Second stage:<br>
-<span class="math display">\[
-Y_\ell
-= \gamma
-+ \delta\,\widehat{X}_\ell
-+ \text{controls}
-+ \varepsilon_\ell
-\]</span></li>
-</ol>
-<h3 id="key-findings">Key Findings</h3>
-<ul>
-<li>Regions more “exposed” to tariff cuts saw slower factor mobility<br>
-</li>
-<li>Larger increases in regional inequality and poverty</li>
-</ul>
-</section>
-<section id="mechanism" class="slide level2">
-<h2>Mechanism</h2>
-<ul>
-<li><p>Low short-run migration rate between states (for working purpose).</p></li>
-<li><p>Impact on poverty is statistically zero in a state with flexible labor law.</p></li>
-<li><p>Rigid labor market leads to:</p>
-<ul>
-<li><p>more expensive to exit the market.</p></li>
-<li><p>reluctant to expand.</p></li>
-</ul></li>
-</ul>
-</section>
-<section id="the-china-shock" class="slide level2 m">
-<h2>The China Shock</h2>
-<h3 id="context">Context</h3>
-<ul>
-<li><span class="citation" data-cites="autor">Autor, Dorn, and Hanson (<a href="#/references" role="doc-biblioref" onclick="">2016</a>)</span> Rapid rise in Chinese imports post-2000<br>
-</li>
-<li>Large, uneven impact across U.S. commuting zones</li>
-</ul>
-<h3 id="shift-share-instrument-1">Shift-Share Instrument</h3>
-<p><span class="math display">\[
-\text{Import Exposure}_{ct}
-= \sum_k s_{c k}^{\,t_0}\,\Delta\log(\text{Imports}_{k,\text{China}})
-\]</span></p>
-<ul>
-<li><span class="math inline">\(s_{c k}^{\,t_0}\)</span>: base period employment share in commuting zone <span class="math inline">\(c\)</span>, industry <span class="math inline">\(k\)</span><br>
-</li>
-<li><span class="math inline">\(\Delta\log(\text{Imports}_{k,\text{China}})\)</span>: national import growth for industry <span class="math inline">\(k\)</span></li>
-</ul>
-</section>
-<section id="autor-dorn-hansen-2016-results" class="slide level2">
-<h2>Autor, Dorn &amp; Hansen (2016): Results</h2>
-<ol type="1">
-<li><strong>Labor Market Outcomes</strong>
-<ul>
-<li>High-exposure CZs lose more manufacturing jobs<br>
-</li>
-<li>Lower wage growth, especially among less-educated workers</li>
-</ul></li>
-<li><strong>Spillovers</strong>
-<ul>
-<li>Some reallocation into non-manufacturing partially offsets losses<br>
-</li>
-<li>Net long-run impacts remain large and persistent</li>
-</ul></li>
-</ol>
-</section>
-<section id="comparing-two-applications" class="slide level2 m">
-<h2>Comparing Two Applications</h2>
+<section id="a-first-numerical-look" class="slide level2 m">
+<h2>A first numerical look</h2>
+<div class="m">
+<p>3 regions × 2 sectors. Tariffs fall between 1987 and 1988.</p>
 <table class="caption-top">
 <colgroup>
-<col style="width: 29%">
-<col style="width: 34%">
-<col style="width: 36%">
+<col style="width: 16%">
+<col style="width: 20%">
+<col style="width: 22%">
+<col style="width: 20%">
+<col style="width: 22%">
 </colgroup>
 <thead>
 <tr class="header">
-<th>Feature</th>
-<th>Topalova (2010)</th>
-<th>Autor, Dorn &amp; Hansen (2016)</th>
+<th style="text-align: center;">region</th>
+<th style="text-align: center;"><span class="math inline">\(L_{\text{Agri}}\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(L_{\text{Manuf}}\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(s_{\text{Agri}}\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(s_{\text{Manuf}}\)</span></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Shock source</td>
-<td>Tariff reductions</td>
-<td>Chinese import surge</td>
+<td style="text-align: center;">A</td>
+<td style="text-align: center;">100</td>
+<td style="text-align: center;">9 000</td>
+<td style="text-align: center;">0.011</td>
+<td style="text-align: center;">0.989</td>
 </tr>
 <tr class="even">
-<td>Unit of analysis</td>
-<td>Indian districts/states</td>
-<td>U.S. commuting zones</td>
+<td style="text-align: center;">B</td>
+<td style="text-align: center;">1 000</td>
+<td style="text-align: center;">400</td>
+<td style="text-align: center;">0.714</td>
+<td style="text-align: center;">0.286</td>
 </tr>
 <tr class="odd">
-<td>Outcome</td>
-<td>Factor mobility, poverty</td>
-<td>Employment, wages</td>
-</tr>
-<tr class="even">
-<td>Main instrument shares</td>
-<td>Pre-reform industry shares</td>
-<td>Pre-2000 employment shares</td>
-</tr>
-<tr class="odd">
-<td>Interpretation</td>
-<td>Mobility as response to policy shock</td>
-<td>Local exposure to trade competition</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">700</td>
+<td style="text-align: center;">3 000</td>
+<td style="text-align: center;">0.189</td>
+<td style="text-align: center;">0.811</td>
 </tr>
 </tbody>
 </table>
+<p>National tariff change 1987→1988: Agri 30 → 10, Manuf 20 → 5.</p>
+<p>Bartik exposure <span class="math inline">\(Z_\ell = s_{\ell,\text{Agri}}\Delta\log t_{\text{Agri}} + s_{\ell,\text{Manuf}}\Delta\log t_{\text{Manuf}}\)</span>:</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: center;">region</th>
+<th style="text-align: center;"><span class="math inline">\(Z_\ell\)</span> (Δlog)</th>
+<th style="text-align: center;"><span class="math inline">\(Z_\ell\)</span> (Δlevel)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">A</td>
+<td style="text-align: center;">−1.38</td>
+<td style="text-align: center;">−15.1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">B</td>
+<td style="text-align: center;">−1.18</td>
+<td style="text-align: center;">−18.6</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">−1.33</td>
+<td style="text-align: center;">−15.9</td>
+</tr>
+</tbody>
+</table>
+<p>Note the <strong>ranking flips</strong>: log change makes A most exposed; level change makes B most exposed.</p>
+</div>
 </section>
-<section id="indonesian-context" class="slide level2 m">
-<h2>Indonesian context</h2>
+<section id="what-just-happened" class="slide level2">
+<h2>What just happened?</h2>
+<ul>
+<li class="fragment">Manuf had the larger <em>proportional</em> cut: <span class="math inline">\(\log(5/20)=-1.39\)</span> vs.&nbsp;<span class="math inline">\(\log(10/30)=-1.10\)</span>.</li>
+<li class="fragment">Agri had the larger <em>absolute</em> cut: <span class="math inline">\(-20\)</span> pp vs.&nbsp;<span class="math inline">\(-15\)</span> pp.</li>
+<li class="fragment">Which one matters? Depends on the <strong>outcome model</strong>: log-log specifications need <span class="math inline">\(\Delta\log t\)</span>, level specifications need <span class="math inline">\(\Delta t\)</span>.</li>
+<li class="fragment">Lesson: the Bartik is only as well-motivated as the production-side or trade-elasticity model behind it.</li>
+</ul>
+</section>
+<section id="first-stage-reduced-form-iv" class="slide level2">
+<h2>First stage, reduced form, IV</h2>
+<div class="m">
+<p>The Bartik is used as an instrument:</p>
+<p><strong>First stage</strong> <span class="math inline">\(\quad X_\ell = \pi_0 + \pi_1 Z_\ell + u_\ell\)</span></p>
+<p><strong>Reduced form</strong> <span class="math inline">\(\quad Y_\ell = \rho_0 + \rho_1 Z_\ell + v_\ell\)</span></p>
+<p><strong>2SLS</strong> <span class="math inline">\(\quad \widehat\delta_{\text{IV}} = \rho_1/\pi_1\)</span></p>
+<ul>
+<li>Many papers (ADH 2013, Topalova) report the reduced-form coefficient <span class="math inline">\(\rho_1\)</span> directly, calling <span class="math inline">\(Z_\ell\)</span> “exposure.”</li>
+<li>The 2SLS scaling requires <span class="math inline">\(\pi_1\neq 0\)</span> and the exclusion restriction <span class="math inline">\(E[Z_\ell \varepsilon_\ell]=0\)</span>.</li>
+</ul>
+</div>
+</section>
+<section id="identification-two-camps" class="slide level2">
+<h2>Identification: two camps</h2>
+<div class="m">
+<p><span class="citation" data-cites="paulgp">Goldsmith-Pinkham, Sorkin, and Swift (<a href="#/references" role="doc-biblioref" onclick="">2020</a>)</span> ask the central question: <em>which assumption makes the Bartik valid?</em></p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 54%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Camp</th>
+<th>Source of identification</th>
+<th>Champion paper</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Share-based</strong></td>
+<td>Shares <span class="math inline">\(s_{\ell k}\)</span> are exogenous to unobservables</td>
+<td>Goldsmith-Pinkham, Sorkin &amp; Swift (2020)</td>
+</tr>
+<tr class="even">
+<td><strong>Shock-based</strong></td>
+<td>Shifts <span class="math inline">\(g_k\)</span> are quasi-randomly assigned</td>
+<td>Borusyak, Hull &amp; Jaravel (2022)</td>
+</tr>
+</tbody>
+</table>
+<p>Both deliver consistent IV under different conditions. The right diagnostic depends on which assumption you lean on.</p>
+</div>
+</section>
+<section id="share-exogeneity-gp-framework" class="slide level2">
+<h2>Share exogeneity (GP framework)</h2>
+<div class="m">
+<p><span class="citation" data-cites="paulgp">Goldsmith-Pinkham, Sorkin, and Swift (<a href="#/references" role="doc-biblioref" onclick="">2020</a>)</span> prove: the Bartik 2SLS estimator equals a GMM estimator where each <strong>share</strong> <span class="math inline">\(s_{\ell k}\)</span> acts as a separate instrument, weighted by <strong>Rotemberg weights</strong> <span class="math inline">\(\alpha_k\)</span>.</p>
+<p><span class="math display">\[
+\widehat\delta_{\text{Bartik}} = \sum_k \alpha_k\,\widehat\delta_k
+\]</span></p>
+<ul>
+<li><span class="math inline">\(\widehat\delta_k\)</span> — just-identified IV using share <span class="math inline">\(s_{\cdot k}\)</span> alone</li>
+<li><span class="math inline">\(\alpha_k\)</span> — Rotemberg weight, <span class="math inline">\(\sum_k \alpha_k = 1\)</span>, can be negative</li>
+<li>A few industries usually carry most of the weight → the design hinges on the exogeneity of those few shares.</li>
+</ul>
+</div>
+</section>
+<section id="diagnostics-from-rotemberg-weights" class="slide level2">
+<h2>Diagnostics from Rotemberg weights</h2>
+<div class="m">
+<p><span class="citation" data-cites="paulgp">Goldsmith-Pinkham, Sorkin, and Swift (<a href="#/references" role="doc-biblioref" onclick="">2020</a>)</span> recommend reporting:</p>
+<ol type="1">
+<li><strong>Concentration of weights</strong> — Herfindahl of <span class="math inline">\(|\alpha_k|\)</span>. If 2–3 industries dominate, your identification is really about those industries.</li>
+<li><strong>Top-5 industries</strong> — list them and ask: are their <em>shares</em> plausibly exogenous to local outcome trends?</li>
+<li><strong>Pre-trend checks</strong> on <span class="math inline">\(Z_\ell\)</span> — does pre-shock <span class="math inline">\(Z_\ell\)</span> predict pre-shock changes in <span class="math inline">\(Y_\ell\)</span>?</li>
+<li><strong>Just-identified IV by industry</strong> — if <span class="math inline">\(\widehat\delta_k\)</span> varies wildly across top industries, the pooled estimate is fragile.</li>
+</ol>
+</div>
+</section>
+<section id="shock-exogeneity-bhj-framework" class="slide level2">
+<h2>Shock exogeneity (BHJ framework)</h2>
+<div class="m">
+<p><span class="citation" data-cites="bhj2022">Borusyak, Hull, and Jaravel (<a href="#/references" role="doc-biblioref" onclick="">2022</a>)</span> take a different route. Treat the <strong>shifts</strong> <span class="math inline">\(g_k\)</span> as random and the shares as exposure weights.</p>
+<ul>
+<li>Identification: <span class="math inline">\(g_k\)</span> is uncorrelated with sector-average residuals.</li>
+<li>Works well when shifts come from outside the system you study (e.g., supply-driven Chinese import surge from China’s TFP and WTO accession).</li>
+<li>Diagnostic: tests for shock balance — does <span class="math inline">\(g_k\)</span> correlate with pre-shock industry characteristics?</li>
+<li>The ADH “instrument with other rich countries’ imports from China” exploits exactly this — it isolates the supply-driven component of the shock.</li>
+</ul>
+</div>
+</section>
+<section id="inference-dont-use-ols-standard-errors" class="slide level2">
+<h2>Inference: don’t use OLS standard errors</h2>
+<div class="m">
+<p><span class="citation" data-cites="akm2019">Adão, Kolesár, and Morales (<a href="#/references" role="doc-biblioref" onclick="">2019</a>)</span> show that conventional cluster-robust SEs <strong>over-reject</strong> with shift-share regressors:</p>
+<ul>
+<li>Residuals are correlated across regions that share industry mix.</li>
+<li>Their fix: an exposure-robust SE that treats <em>industries</em> as the clusters of randomness.</li>
+<li>In R, you can implement AKM SEs via the <code>ShiftShareSE</code> package or replicate by IV with industry-level data.</li>
+<li>Rule of thumb for class: if you see Bartik with white SEs only, be skeptical.</li>
+</ul>
+</div>
+</section>
+<section id="limitations-to-keep-in-mind" class="slide level2">
+<h2>Limitations to keep in mind</h2>
+<ul>
+<li class="fragment"><strong>Pre-period shares can be endogenous</strong> (industries locate for a reason).</li>
+<li class="fragment"><strong>Common shocks may be heterogeneous</strong> across sub-periods → time-varying <span class="math inline">\(g_k\)</span>.</li>
+<li class="fragment"><strong>Placebo tests</strong> on pre-period <span class="math inline">\(Y\)</span> are essential.</li>
+<li class="fragment"><strong>Weighting</strong>: by region size, by inverse SE, by employment — affects which observations drive the result.</li>
+<li class="fragment"><strong>Aggregation</strong> matters: districts vs.&nbsp;provinces vs.&nbsp;commuting zones give different answers.</li>
+</ul>
+</section></section>
+<section>
+<section id="part-ii-applications-and-hands-on" class="title-slide slide level1 center">
+<h1>Part II — Applications and Hands-on</h1>
+
+</section>
+<section id="topalova-2010-india-1991" class="slide level2">
+<h2>Topalova (2010): India 1991</h2>
+<div class="m">
+<ul>
+<li>India’s 1991 liberalization cut tariffs unevenly across industries.</li>
+<li>Cross-district variation in pre-reform industry mix → cross-district variation in exposure.</li>
+<li>Difference-in-differences with Bartik exposure as the treatment.</li>
+</ul>
+<p><strong>Identification:</strong> the <em>pace</em> of tariff cuts was dictated by external (IMF) pressure and was negotiated industry-by-industry without regard to district outcomes → shocks plausibly exogenous to district trends.</p>
+</div>
+</section>
+<section id="topalova-instrument" class="slide level2">
+<h2>Topalova: instrument</h2>
+<p><span class="math display">\[
+Z_\ell^{\text{Top}} = \sum_k s_{\ell k}^{\,1987}\,\Delta\log(\text{Tariff}_k)
+\]</span></p>
+<ul>
+<li><span class="math inline">\(s_{\ell k}^{1987}\)</span> — district <span class="math inline">\(\ell\)</span>’s pre-reform employment share in industry <span class="math inline">\(k\)</span></li>
+<li><span class="math inline">\(\Delta\log(\text{Tariff}_k)\)</span> — national log-change in industry <span class="math inline">\(k\)</span>’s tariff between 1987 and 1997</li>
+</ul>
+<p><strong>Outcomes:</strong> district-level poverty headcount, poverty gap, consumption growth.</p>
+</section>
+<section id="topalova-specification" class="slide level2">
+<h2>Topalova: specification</h2>
+<div class="m">
+<p>First stage: <span class="math display">\[
+\widehat{X}_\ell = \alpha + \beta\, Z_\ell^{\text{Top}} + \mathbf{W}'_\ell\gamma + u_\ell
+\]</span></p>
+<p>Second stage (or reduced form): <span class="math display">\[
+\Delta Y_\ell = \mu + \delta\,\widehat X_\ell + \mathbf{W}'_\ell\lambda + \varepsilon_\ell
+\]</span></p>
+<p>with <span class="math inline">\(\mathbf{W}_\ell\)</span> pre-period district controls and state fixed effects.</p>
+</div>
+</section>
+<section id="topalova-findings" class="slide level2">
+<h2>Topalova: findings</h2>
+<div class="m">
+<ul>
+<li>Rural districts more exposed to tariff cuts → <strong>slower decline in poverty</strong>, lower consumption growth.</li>
+<li>Effect concentrated among the geographically immobile and least skilled.</li>
+<li><strong>Mechanism</strong>: rigid labor laws → costly to fire and to expand → factor reallocation stalls.</li>
+<li>In states with flexible labor regulation, the poverty effect of exposure is statistically zero.</li>
+</ul>
+<p><strong>Takeaway:</strong> Bartik captures <em>exposure</em>; institutions decide <em>adjustment</em>.</p>
+</div>
+</section>
+<section id="autor-dorn-hanson-2013-the-china-shock" class="slide level2">
+<h2>Autor, Dorn &amp; Hanson (2013): the China shock</h2>
+<div class="m">
+<ul>
+<li><span class="citation" data-cites="adh2013">Autor, Dorn, and Hanson (<a href="#/references" role="doc-biblioref" onclick="">2013</a>)</span> examine US commuting zones (CZs) 1990–2007.</li>
+<li>China’s WTO accession (2001) and supply-side reforms drove a sustained import surge.</li>
+<li>Variation across CZs comes from pre-shock industry mix.</li>
+</ul>
+</div>
+</section>
+<section id="adh-the-instrument" class="slide level2">
+<h2>ADH: the instrument</h2>
+<div class="m">
+<p><span class="math display">\[
+\Delta IPW_{c\tau} = \sum_k \frac{L_{ck,t_0}}{L_{k,t_0}}\cdot \frac{\Delta M^{US}_{k\tau}}{L_{c,t_0}}
+\]</span></p>
+<ul>
+<li><span class="math inline">\(L_{ck,t_0}\)</span> — start-of-period employment in CZ <span class="math inline">\(c\)</span>, industry <span class="math inline">\(k\)</span></li>
+<li><span class="math inline">\(\Delta M^{US}_{k\tau}\)</span> — change in US imports from China in industry <span class="math inline">\(k\)</span></li>
+</ul>
+<p><strong>To address shock endogeneity</strong> (US demand could pull in imports too), ADH instrument <span class="math inline">\(\Delta M^{US}\)</span> with <span class="math inline">\(\Delta M^{OTH}\)</span> — imports from China to <em>eight other rich countries.</em> This isolates the China-side supply shock.</p>
+</div>
+</section>
+<section id="adh-main-results" class="slide level2">
+<h2>ADH: main results</h2>
+<ul>
+<li class="fragment">High-exposure CZs lose more manufacturing jobs.</li>
+<li class="fragment">Wages fall, esp.&nbsp;among non-college workers.</li>
+<li class="fragment"><strong>No offsetting employment gains</strong> in other sectors at the local level.</li>
+<li class="fragment">Effects persist for at least a decade.</li>
+<li class="fragment"><span class="citation" data-cites="autor">Autor, Dorn, and Hanson (<a href="#/references" role="doc-biblioref" onclick="">2016</a>)</span> (2016 review) extends to job churning, lifetime earnings, social spending, marriage rates, mortality.</li>
+</ul>
+</section>
+<section id="why-adh-matters-methodologically" class="slide level2">
+<h2>Why ADH matters methodologically</h2>
+<div class="m">
+<ul>
+<li>Cleanest example of the <strong>shock-based</strong> identification logic in BHJ.</li>
+<li>The “other rich countries” instrument is the canonical move for purging demand-side endogeneity from a Bartik.</li>
+<li>Sparked the AKM (2019) literature on inference because their headline SEs were too tight.</li>
+<li>Their data and Stata replication files are widely used in teaching.</li>
+</ul>
+</div>
+</section>
+<section id="kis-katos-sparrow-2015-indonesia-19932002" class="slide level2 m">
+<h2>Kis-Katos &amp; Sparrow (2015): Indonesia 1993–2002</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
 <p><img data-src="Picture1.png"></p>
 </div><div class="column" style="width:50%;">
+<div class="m">
 <ul>
-<li><p><span class="citation" data-cites="sparrow">Kis-Katos and Sparrow (<a href="#/references" role="doc-biblioref" onclick="">2015</a>)</span> investigate the impact of trade liberalization on local labor markets in Indonesia in 1993-2002 episode.</p></li>
-<li><p>The Y is regional poverty levels in 259 Indonesian districts</p></li>
-<li><p>2 tariff reduction cohorts: WTO obligations (1995) and the IMF conditionality package (1999).</p></li>
+<li>259 districts; outcome is district-level poverty.</li>
+<li>Two waves of tariff cuts: WTO 1995 + IMF program 1999.</li>
+<li>Innovation: separate <strong>output</strong> and <strong>input</strong> tariff exposure using a 1990 input-output table.</li>
 </ul>
+</div>
 </div></div>
 </section>
-<section id="the-bartik" class="slide level2">
-<h2>The Bartik</h2>
-<ul>
-<li><span class="citation" data-cites="sparrow">Kis-Katos and Sparrow (<a href="#/references" role="doc-biblioref" onclick="">2015</a>)</span> use 1990 input-output table from BPS to construct the “share”.</li>
-</ul>
-<p><span class="math display">\[
-Ot_{kt}=\sum_{s=1}^S \left(\frac{Q_{sk,t=0}}{{Q_{k,t=0}}}\times t_{st}\right)
-\]</span></p>
-<p><span class="math display">\[
-It_{kt}=\sum_{s=1}^S \left(\frac{Q_{sk,t=0}}{{Q_{k,t=0}}}\times \sum_{j=1}^J \left( \frac{M_{js,1990}}{M_{s,1990}} \times t_{jt} \right)\right)
-\]</span></p>
+<section id="output-vs.-input-tariffs" class="slide level2">
+<h2>Output vs.&nbsp;input tariffs</h2>
 <div class="m">
-<p>sector (s), districtt (k), time (t), input sector (j), labor (Q), tariff (t)</p>
+<p><span class="math display">\[
+Ot_{kt}=\sum_{s=1}^S \left(\frac{Q_{sk,t=0}}{Q_{k,t=0}}\times t_{st}\right)
+\]</span></p>
+<p><span class="math display">\[
+It_{kt}=\sum_{s=1}^S \left(\frac{Q_{sk,t=0}}{Q_{k,t=0}}\times \sum_{j=1}^J \frac{M_{js,1990}}{M_{s,1990}} t_{jt} \right)
+\]</span></p>
+<div class="s">
+<p>sector <span class="math inline">\(s\)</span>, district <span class="math inline">\(k\)</span>, time <span class="math inline">\(t\)</span>, input sector <span class="math inline">\(j\)</span>, labor <span class="math inline">\(Q\)</span>, tariff <span class="math inline">\(t\)</span></p>
+</div>
+<p>The first share weights output tariffs by district industry mix; the second additionally weights through the I-O matrix to capture <em>imported intermediate inputs</em> embodied in each sector.</p>
 </div>
 </section>
-<section id="output-tariff" class="slide level2">
-<h2>Output tariff</h2>
+<section id="output-tariff-exposure" class="slide level2">
+<h2>Output tariff exposure</h2>
 
 <img data-src="Picture2.png" class="r-stretch"></section>
-<section id="input-tariff" class="slide level2">
-<h2>Input tariff</h2>
+<section id="input-tariff-exposure" class="slide level2">
+<h2>Input tariff exposure</h2>
 
 <img data-src="Picture3.png" class="r-stretch"></section>
-<section id="results" class="slide level2">
-<h2>Results</h2>
+<section id="kis-katos-sparrow-findings" class="slide level2">
+<h2>Kis-Katos &amp; Sparrow: findings</h2>
+<div class="m">
 <p><span class="math display">\[
-\Delta y_{kt}=\alpha+\beta_1 Ot_{kt} + \beta_2 It_{kt} + \gamma \Delta X'_{kt} + I'_k \theta+\lambda_{rt}+ \Delta \epsilon_{kt}
+\Delta y_{kt}=\alpha + \beta_1 Ot_{kt} + \beta_2 It_{kt} + \gamma \Delta X'_{kt} + I'_k \theta + \lambda_{rt} + \Delta \epsilon_{kt}
 \]</span></p>
-<p>where <span class="math inline">\(y\)</span> is the district level outcome variable, <span class="math inline">\(X\)</span> is time-varying district-level controls, <span class="math inline">\(I_k\)</span> is the vector of district-level initial conditions, <span class="math inline">\(\lambda_{rt}\)</span> is the region-time fixed effects.</p>
-<p>Output tariff liberalization increases poverty, but input tariff liberalization reduces poverty by more.</p>
-</section>
-<section id="application" class="slide level2">
-<h2>Application</h2>
 <ul>
-<li><p>So far we have seen a “share” component of bartik using employment share and output share.</p></li>
-<li><p>The “shift” component are mostly tariff but also import growth. An ongoing study by Pane, Massie &amp; Gupta is exploring the use of uncertainty index.</p></li>
-<li><p>With I-O table, one can differentiate between output and input share.</p></li>
-<li><p>Use the time-invariant “share” component prior to the shock studied.</p></li>
+<li><span class="math inline">\(\beta_1 &gt; 0\)</span> — output tariff cuts <strong>raise</strong> poverty (import competition story).</li>
+<li><span class="math inline">\(\beta_2 &lt; 0\)</span> and <strong>larger in magnitude</strong> — input tariff cuts <strong>reduce</strong> poverty (cheaper intermediates → firm competitiveness → low-skill work participation and middle-skill wages rise).</li>
 </ul>
+<p><strong>Net effect on Indonesian poverty is negative</strong> — but only because input tariff liberalization dominates. The distributional story matters.</p>
+</div>
 </section>
-<section id="limitations-robustness" class="slide level2">
-<h2>Limitations &amp; Robustness</h2>
+<section id="three-applications-side-by-side" class="slide level2 m">
+<h2>Three applications side by side</h2>
+<div class="m">
+<table class="caption-top">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Topalova (2010)</th>
+<th>ADH (2013)</th>
+<th>KK &amp; Sparrow (2015)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Country</td>
+<td>India</td>
+<td>US</td>
+<td>Indonesia</td>
+</tr>
+<tr class="even">
+<td>Episode</td>
+<td>1991 reform</td>
+<td>1990–2007</td>
+<td>1993–2002</td>
+</tr>
+<tr class="odd">
+<td>Unit</td>
+<td>districts</td>
+<td>commuting zones</td>
+<td>districts (259)</td>
+</tr>
+<tr class="even">
+<td>Shock</td>
+<td>tariff cuts</td>
+<td>China imports</td>
+<td>tariff cuts (2 waves)</td>
+</tr>
+<tr class="odd">
+<td>Share</td>
+<td>1987 employment</td>
+<td>start-period emp.</td>
+<td>I-O × employment</td>
+</tr>
+<tr class="even">
+<td>Outcome</td>
+<td>poverty, consumption</td>
+<td>jobs, wages</td>
+<td>poverty</td>
+</tr>
+<tr class="odd">
+<td>Direction</td>
+<td>exposure ↑ → poverty ↑</td>
+<td>exposure ↑ → jobs ↓</td>
+<td>output↑ poverty↑, input↓ poverty↓</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section></section>
+<section>
+<section id="hands-on-with-r" class="title-slide slide level1 center">
+<h1>Hands-on with R</h1>
+
+</section>
+<section id="the-dataset" class="slide level2">
+<h2>The dataset</h2>
+<div class="m">
+<p><code>dat.xlsx</code> — 3 regions, 2 sectors, 2 years. Toy data so you can verify by hand.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href=""></a><span class="fu">library</span>(readxl)</span>
+<span id="cb1-2"><a href=""></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb1-3"><a href=""></a><span class="fu">library</span>(tidyr)</span>
+<span id="cb1-4"><a href=""></a></span>
+<span id="cb1-5"><a href=""></a>dat <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"dat.xlsx"</span>)</span>
+<span id="cb1-6"><a href=""></a>dat</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<pre><code># A tibble: 12 × 5
+    year region sector tariff  labor
+   &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt;   &lt;dbl&gt;  &lt;dbl&gt;
+ 1  1987 A      Agri       30    100
+ 2  1987 B      Agri       30   1000
+ 3  1987 C      Agri       30    700
+ 4  1987 A      Manuf      20   9000
+ 5  1987 B      Manuf      20    400
+ 6  1987 C      Manuf      20   3000
+ 7  1988 A      Agri       10    110
+ 8  1988 B      Agri       10   1100
+ ...</code></pre>
+</div>
+</section>
+<section id="step-1-compute-1987-employment-shares" class="slide level2">
+<h2>Step 1 — compute 1987 employment shares</h2>
+<div class="m">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href=""></a>shares <span class="ot">&lt;-</span> dat <span class="sc">|&gt;</span></span>
+<span id="cb3-2"><a href=""></a>  <span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">1987</span>) <span class="sc">|&gt;</span></span>
+<span id="cb3-3"><a href=""></a>  <span class="fu">group_by</span>(region) <span class="sc">|&gt;</span></span>
+<span id="cb3-4"><a href=""></a>  <span class="fu">mutate</span>(<span class="at">share =</span> labor <span class="sc">/</span> <span class="fu">sum</span>(labor)) <span class="sc">|&gt;</span></span>
+<span id="cb3-5"><a href=""></a>  <span class="fu">select</span>(region, sector, share)</span>
+<span id="cb3-6"><a href=""></a></span>
+<span id="cb3-7"><a href=""></a>shares</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<pre><code># A tibble: 6 × 3
+  region sector  share
+  &lt;chr&gt;  &lt;chr&gt;   &lt;dbl&gt;
+1 A      Agri   0.0110
+2 A      Manuf  0.989
+3 B      Agri   0.714
+4 B      Manuf  0.286
+5 C      Agri   0.189
+6 C      Manuf  0.811</code></pre>
+</div>
+</section>
+<section id="step-2-compute-national-tariff-shocks" class="slide level2">
+<h2>Step 2 — compute national tariff shocks</h2>
+<div class="m">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href=""></a>shocks <span class="ot">&lt;-</span> dat <span class="sc">|&gt;</span></span>
+<span id="cb5-2"><a href=""></a>  <span class="fu">distinct</span>(year, sector, tariff) <span class="sc">|&gt;</span></span>
+<span id="cb5-3"><a href=""></a>  <span class="fu">arrange</span>(sector, year) <span class="sc">|&gt;</span></span>
+<span id="cb5-4"><a href=""></a>  <span class="fu">group_by</span>(sector) <span class="sc">|&gt;</span></span>
+<span id="cb5-5"><a href=""></a>  <span class="fu">summarise</span>(</span>
+<span id="cb5-6"><a href=""></a>    <span class="at">dlog_t =</span> <span class="fu">log</span>(<span class="fu">last</span>(tariff)) <span class="sc">-</span> <span class="fu">log</span>(<span class="fu">first</span>(tariff)),</span>
+<span id="cb5-7"><a href=""></a>    <span class="at">dlev_t =</span> <span class="fu">last</span>(tariff) <span class="sc">-</span> <span class="fu">first</span>(tariff)</span>
+<span id="cb5-8"><a href=""></a>  )</span>
+<span id="cb5-9"><a href=""></a>shocks</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<pre><code># A tibble: 2 × 3
+  sector dlog_t dlev_t
+  &lt;chr&gt;   &lt;dbl&gt;  &lt;dbl&gt;
+1 Agri    -1.10    -20
+2 Manuf   -1.39    -15</code></pre>
+</div>
+</section>
+<section id="step-3-assemble-the-bartik" class="slide level2">
+<h2>Step 3 — assemble the Bartik</h2>
+<div class="m">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href=""></a>bartik <span class="ot">&lt;-</span> shares <span class="sc">|&gt;</span></span>
+<span id="cb7-2"><a href=""></a>  <span class="fu">left_join</span>(shocks, <span class="at">by =</span> <span class="st">"sector"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb7-3"><a href=""></a>  <span class="fu">group_by</span>(region) <span class="sc">|&gt;</span></span>
+<span id="cb7-4"><a href=""></a>  <span class="fu">summarise</span>(</span>
+<span id="cb7-5"><a href=""></a>    <span class="at">Z_log =</span> <span class="fu">sum</span>(share <span class="sc">*</span> dlog_t),</span>
+<span id="cb7-6"><a href=""></a>    <span class="at">Z_lev =</span> <span class="fu">sum</span>(share <span class="sc">*</span> dlev_t)</span>
+<span id="cb7-7"><a href=""></a>  )</span>
+<span id="cb7-8"><a href=""></a>bartik</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<pre><code># A tibble: 3 × 3
+  region  Z_log  Z_lev
+  &lt;chr&gt;   &lt;dbl&gt;  &lt;dbl&gt;
+1 A       -1.38  -15.1
+2 B       -1.18  -18.6
+3 C       -1.33  -15.9</code></pre>
+<p>Region A is most exposed in log, region B most exposed in levels — same point we made earlier, now in code.</p>
+</div>
+</section>
+<section id="step-4-the-would-be-2sls" class="slide level2">
+<h2>Step 4 — the (would-be) 2SLS</h2>
+<div class="m">
+<p>With only 3 districts there’s nothing to estimate. In a real Topalova-style exercise:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href=""></a><span class="fu">library</span>(fixest)</span>
+<span id="cb9-2"><a href=""></a></span>
+<span id="cb9-3"><a href=""></a><span class="co"># pretend `panel` has many districts × years with outcome `dpov`,</span></span>
+<span id="cb9-4"><a href=""></a><span class="co"># realised exposure `Xkt`, instrument `Zkt`, controls W, state-year FE.</span></span>
+<span id="cb9-5"><a href=""></a>m <span class="ot">&lt;-</span> <span class="fu">feols</span>(</span>
+<span id="cb9-6"><a href=""></a>  dpov <span class="sc">~</span> W1 <span class="sc">+</span> W2 <span class="sc">|</span> state<span class="sc">^</span>year <span class="sc">|</span> Xkt <span class="sc">~</span> Zkt,</span>
+<span id="cb9-7"><a href=""></a>  <span class="at">data =</span> panel,</span>
+<span id="cb9-8"><a href=""></a>  <span class="at">cluster =</span> <span class="sc">~</span> industry_topshare</span>
+<span id="cb9-9"><a href=""></a>)</span>
+<span id="cb9-10"><a href=""></a><span class="fu">summary</span>(m)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>For AKM-corrected SEs, use the <code>ShiftShareSE</code> package and pass the share matrix.</p>
+</div>
+</section>
+<section id="exercise-10-min-in-pairs" class="slide level2">
+<h2>Exercise (10 min, in pairs)</h2>
+<div class="m">
+<p>Using only <code>dat.xlsx</code>:</p>
+<ol type="1">
+<li>Recompute <span class="math inline">\(Z_\ell\)</span> assuming the <em>1988</em> shares (not 1987). What’s different and why?</li>
+<li>Now compute it using <strong>employment growth</strong> as the shift instead of tariffs. Does the ranking of regions change?</li>
+<li>Region A is essentially a “manufacturing town.” If we drop A, what happens to the cross-sectional variation in <span class="math inline">\(Z\)</span>? What does that tell you about the Rotemberg-weight diagnostic in GP?</li>
+<li>Suppose we observed poverty rates falling by 5pp in A, 2pp in B, 4pp in C. Compute the reduced-form slope of <span class="math inline">\(\Delta\)</span>poverty on <span class="math inline">\(Z_\ell\)</span>. Interpret with care — what assumption are you making?</li>
+</ol>
+</div>
+</section>
+<section id="what-to-read-next" class="slide level2 m">
+<h2>What to read next</h2>
+<div class="m">
 <ul>
-<li><strong>Local confounders</strong> Pre-period shares may correlate with omitted variables</li>
-<li><strong>Non-linear dynamics</strong> Growth rates <span class="math inline">\(g_k\)</span> may vary over sub-periods</li>
-<li><strong>Placebo checks</strong> Test for pre-period trends in high-exposure regions</li>
-<li>Latest bartik see <span class="citation" data-cites="paulgp">Goldsmith-Pinkham, Sorkin, and Swift (<a href="#/references" role="doc-biblioref" onclick="">2020</a>)</span></li>
+<li><span class="citation" data-cites="paulgp">Goldsmith-Pinkham, Sorkin, and Swift (<a href="#/references" role="doc-biblioref" onclick="">2020</a>)</span> — the canonical methods paper. Tables 5–6 are the diagnostic template you should copy in your own work.</li>
+<li><span class="citation" data-cites="bhj2022">Borusyak, Hull, and Jaravel (<a href="#/references" role="doc-biblioref" onclick="">2022</a>)</span> — when shocks (not shares) carry identification.</li>
+<li><span class="citation" data-cites="akm2019">Adão, Kolesár, and Morales (<a href="#/references" role="doc-biblioref" onclick="">2019</a>)</span> — the inference paper. The R package <code>ShiftShareSE</code> implements it.</li>
+<li><span class="citation" data-cites="adh2013">Autor, Dorn, and Hanson (<a href="#/references" role="doc-biblioref" onclick="">2013</a>)</span> + <span class="citation" data-cites="autor">Autor, Dorn, and Hanson (<a href="#/references" role="doc-biblioref" onclick="">2016</a>)</span> (review) — the China shock canon.</li>
+<li><span class="citation" data-cites="topalova">Topalova (<a href="#/references" role="doc-biblioref" onclick="">2010</a>)</span> — the trade-and-poverty workhorse for developing countries.</li>
+<li><span class="citation" data-cites="sparrow">Kis-Katos and Sparrow (<a href="#/references" role="doc-biblioref" onclick="">2015</a>)</span> — the closest Indonesian benchmark for your own work.</li>
+</ul>
+</div>
+</section>
+<section id="frontier-and-indonesian-context" class="slide level2">
+<h2>Frontier and Indonesian context</h2>
+<div class="m">
+<ul>
+<li>I-O Bartik: extend KK &amp; Sparrow’s input/output split to services value-added (GVC trade).</li>
+<li><strong>Granular instruments</strong>: large firms as shock units instead of sectors (Gabaix-Koijen 2024).</li>
+<li><strong>Uncertainty as a shift</strong>: ongoing work by <strong>Pane, Massie &amp; Gupta (2025)</strong> uses a geopolitical uncertainty index in place of tariff changes — the share captures exposure to <em>uncertain</em> trading partners rather than to specific industries <span class="citation" data-cites="pane25">(<a href="#/references" role="doc-biblioref" onclick="">Pane, Massie, and Gupta 2025</a>)</span>.</li>
+<li>Whatever the shift, the identification logic is the same: argue for either share exogeneity or shock exogeneity, then <em>show diagnostics consistent with that argument.</em></li>
+</ul>
+</div>
+</section>
+<section id="wrap-up" class="slide level2">
+<h2>Wrap-up</h2>
+<ul>
+<li class="fragment">Bartik = shares × shifts → predicted regional exposure.</li>
+<li class="fragment">Two identification stories; pick one and live by it.</li>
+<li class="fragment">Always report Rotemberg weights or shock-balance tests.</li>
+<li class="fragment">Use AKM SEs, not white SEs.</li>
+<li class="fragment">The trade-policy applications (Topalova, ADH, KK &amp; Sparrow) give you a recipe you can transplant onto any Indonesian liberalization episode.</li>
 </ul>
 </section>
 <section id="references" class="slide level2 smaller scrollable">
 <h2>References</h2>
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-akm2019" class="csl-entry" role="listitem">
+Adão, Rodrigo, Michal Kolesár, and Eduardo Morales. 2019. <span>“Shift-Share Designs: Theory and Inference.”</span> <em>Quarterly Journal of Economics</em> 134 (4): 1949–2010.
+</div>
+<div id="ref-adh2013" class="csl-entry" role="listitem">
+Autor, David H., David Dorn, and Gordon H. Hanson. 2013. <span>“The <span>C</span>hina Syndrome: Local Labor Market Effects of Import Competition in the <span>U</span>nited <span>S</span>tates.”</span> <em>American Economic Review</em> 103 (6): 2121–68.
+</div>
 <div id="ref-autor" class="csl-entry" role="listitem">
-Autor, David H., David Dorn, and Gordon H. Hanson. 2016. <span>“The China Shock: Learning from Labor-Market Adjustment to Large Changes in Trade.”</span> <em>Annual Review of Economics</em> 8: 205–40. <a href="https://www.jstor.org/stable/26774368">https://www.jstor.org/stable/26774368</a>.
+———. 2016. <span>“The China Shock: Learning from Labor-Market Adjustment to Large Changes in Trade.”</span> <em>Annual Review of Economics</em> 8: 205–40. <a href="https://www.jstor.org/stable/26774368">https://www.jstor.org/stable/26774368</a>.
+</div>
+<div id="ref-bhj2022" class="csl-entry" role="listitem">
+Borusyak, Kirill, Peter Hull, and Xavier Jaravel. 2022. <span>“Quasi-Experimental Shift-Share Research Designs.”</span> <em>Review of Economic Studies</em> 89 (1): 181–213.
 </div>
 <div id="ref-paulgp" class="csl-entry" role="listitem">
 Goldsmith-Pinkham, Paul, Isaac Sorkin, and Henry Swift. 2020. <span>“Bartik Instruments: What, When, Why, and How.”</span> <em>The American Economic Review</em> 110 (8): pp. 2586–2624. <a href="https://www.jstor.org/stable/26966340">https://www.jstor.org/stable/26966340</a>.
@@ -462,11 +907,14 @@ Goldsmith-Pinkham, Paul, Isaac Sorkin, and Henry Swift. 2020. <span>“Bartik In
 <div id="ref-sparrow" class="csl-entry" role="listitem">
 Kis-Katos, Krisztina, and Robert Sparrow. 2015. <span>“Poverty, Labor Markets and Trade Liberalization in Indonesia.”</span> Journal Article. <em>Journal of Development Economics</em> 117: 94–106. https://doi.org/<a href="https://doi.org/10.1016/j.jdeveco.2015.07.005">https://doi.org/10.1016/j.jdeveco.2015.07.005</a>.
 </div>
+<div id="ref-pane25" class="csl-entry" role="listitem">
+Pane, Deasy, Nathaniel Massie, and Krisna Gupta. 2025. <span>“<a href="">Geopolitical Impacts on Global Investment and Trade Flows and Their Implications for the Indonesian Economy</a>”</span> 2.
+</div>
 <div id="ref-topalova" class="csl-entry" role="listitem">
 Topalova, Petia. 2010. <span>“Factor Immobility and Regional Impacts of Trade Liberalization: Evidence on Poverty from India.”</span> <em>American Economic Journal: Applied Economics</em> 2 (4): 1–41. <a href="http://www.jstor.org/stable/25760231">http://www.jstor.org/stable/25760231</a>.
 </div>
 </div>
-</section>
+</section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
@@ -732,13 +1180,14 @@ Topalova, Petia. 2010. <span>“Factor Immobility and Regional Impacts of Trade 
           e.clearSelection();
         }
         const getTextToCopy = function(trigger) {
-            const codeEl = trigger.previousElementSibling.cloneNode(true);
-            for (const childEl of codeEl.children) {
-              if (isCodeAnnotation(childEl)) {
-                childEl.remove();
-              }
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
             }
-            return codeEl.innerText;
+          }
+          return codeEl.innerText;
         }
         const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
           text: getTextToCopy
