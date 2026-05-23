@@ -229,45 +229,19 @@ Imed Krisna Gupta
 
   <p class="date">August 26, 2025</p>
 </section>
-<section id="roadmap-2-hours" class="slide level2">
-<h2>Roadmap (2 hours)</h2>
-<div class="m">
-<p><strong>Part I — Why and what (≈45 min)</strong></p>
-<ol type="1">
-<li>Recap from Krugman: HOS, SFM, gains and losers</li>
-<li>The within-country empirical problem</li>
-<li>The Bartik (shift-share) construct</li>
-<li>Identification: Goldsmith-Pinkham vs.&nbsp;Borusyak-Hull-Jaravel</li>
-<li>Diagnostics and inference</li>
-</ol>
-<p><strong>Part II — Applications and hands-on (≈75 min)</strong></p>
-<ol start="6" type="1">
-<li>Topalova (2010) — India</li>
-<li>Autor, Dorn &amp; Hanson (2013, 2016) — China shock</li>
-<li>Kis-Katos &amp; Sparrow (2015) — Indonesia</li>
-<li>Hands-on in R with <code>dat.xlsx</code></li>
-<li>Frontier and limitations</li>
-</ol>
-</div>
-</section>
-<section>
-<section id="part-i-why-and-what" class="title-slide slide level1 center">
-<h1>Part I — Why and What</h1>
-
-</section>
-<section id="from-krugman-gains-exist-distribution-is-messy" class="slide level2">
-<h2>From Krugman: gains exist, distribution is messy</h2>
+<section id="gains-exist-distribution-is-messy" class="slide level2">
+<h2>Gains exist, distribution is messy</h2>
 <ul>
-<li>Aggregate gains from trade are robust across HOS, Ricardian, and new-trade models.</li>
+<li>Aggregate gains from trade are robust across HO, Ricardian, and new-trade models.</li>
 <li><em>Who</em> gains and loses depends on factor mobility.</li>
-<li>HOS: gains accrue to the abundant factor (Stolper-Samuelson), <em>assuming factors move freely across industries.</em></li>
+<li>HO: gains accrue to the abundant factor (Stolper-Samuelson), <em>assuming factors move freely across industries.</em></li>
 <li>SFM (Specific Factor Model): in the short run, some factors are tied to a sector → clear winners and losers.</li>
 </ul>
 </section>
 <section id="the-textbook-distinction-in-one-line" class="slide level2">
 <h2>The textbook distinction in one line</h2>
 <ul>
-<li class="fragment">HOS: long run, perfect mobility, factor-price equalization.</li>
+<li class="fragment">HO: long run, perfect mobility, factor-price equalization.</li>
 <li class="fragment">SFM: short run, sector-specific factors, sectoral wage gaps.</li>
 <li class="fragment"><strong>Empirical reality:</strong> the “short run” can last a decade or more, and the location of immobile factors is <em>regional</em>.</li>
 <li class="fragment">This is what shift-share designs let us see in the data.</li>
@@ -476,8 +450,8 @@ Z_\ell \;=\;\sum_k s_{\ell k}\,g_{k}
 </ul>
 </div>
 </section>
-<section id="rotemberg-weights-the-formula" class="slide level2">
-<h2>Rotemberg weights: the formula</h2>
+<section id="rotemberg-weights" class="slide level2 m">
+<h2>Rotemberg weights</h2>
 <div class="m">
 <p>For each industry <span class="math inline">\(k\)</span>, the weight is</p>
 <p><span class="math display">\[
@@ -493,8 +467,8 @@ Z_\ell \;=\;\sum_k s_{\ell k}\,g_{k}
 <p>Named for Julio Rotemberg (1983), who used the same decomposition logic in a different IV setting; <span class="citation" data-cites="paulgp">Goldsmith-Pinkham, Sorkin, and Swift (<a href="#/references" role="doc-biblioref" onclick="">2020</a>)</span> formalised it for the Bartik.</p>
 </div>
 </section>
-<section id="rotemberg-weights-2-2-by-hand" class="slide level2">
-<h2>Rotemberg weights: 2 × 2 by hand</h2>
+<section id="rotemberg-weights-2x2" class="slide level2 m">
+<h2>Rotemberg weights: 2x2</h2>
 <div class="m">
 <p>Use our toy data. Set <span class="math inline">\(X_\ell = Z_\ell^{\text{lev}}\)</span> so the mechanics are visible: <span class="math inline">\(X_A=-15.1,\,X_B=-18.6,\,X_C=-15.9\)</span>, with shifts <span class="math inline">\(g_{\text{Agri}}=-20,\,g_{\text{Manuf}}=-15\)</span>.</p>
 <p>First-stage covariances:</p>
@@ -569,11 +543,6 @@ Z_\ell \;=\;\sum_k s_{\ell k}\,g_{k}
 <li class="fragment"><strong>Weighting</strong>: by region size, by inverse SE, by employment — affects which observations drive the result.</li>
 <li class="fragment"><strong>Aggregation</strong> matters: districts vs.&nbsp;provinces vs.&nbsp;commuting zones give different answers.</li>
 </ul>
-</section></section>
-<section>
-<section id="part-ii-applications-and-hands-on" class="title-slide slide level1 center">
-<h1>Part II — Applications and Hands-on</h1>
-
 </section>
 <section id="topalova-2010-india-1991" class="slide level2">
 <h2>Topalova (2010): India 1991</h2>
@@ -597,7 +566,7 @@ Z_\ell^{\text{Top}} = \sum_k s_{\ell k}^{\,1987}\,\Delta\log(\text{Tariff}_k)
 </ul>
 <p><strong>Outcomes:</strong> district-level poverty headcount, poverty gap, consumption growth.</p>
 </section>
-<section id="topalova-specification" class="slide level2">
+<section id="topalova-specification" class="slide level2 m">
 <h2>Topalova: specification</h2>
 <div class="m">
 <p>Topalova runs a <strong>panel</strong> across four NSS rounds (1983, 1987–88, 1993–94, 1999–2000):</p>
@@ -788,7 +757,7 @@ It_{kt}=\sum_{s=1}^S \left(\frac{Q_{sk,t=0}}{Q_{k,t=0}}\times \sum_{j=1}^J \frac
 </tbody>
 </table>
 </div>
-</section></section>
+</section>
 <section>
 <section id="hands-on-with-r" class="title-slide slide level1 center">
 <h1>Hands-on with R</h1>
@@ -920,7 +889,7 @@ It_{kt}=\sum_{s=1}^S \left(\frac{Q_{sk,t=0}}{Q_{k,t=0}}\times \sum_{j=1}^J \frac
 </ul>
 </div>
 </section>
-<section id="frontier-and-indonesian-context" class="slide level2">
+<section id="frontier-and-indonesian-context" class="slide level2 m">
 <h2>Frontier and Indonesian context</h2>
 <div class="m">
 <ul>
@@ -941,7 +910,7 @@ It_{kt}=\sum_{s=1}^S \left(\frac{Q_{sk,t=0}}{Q_{k,t=0}}\times \sum_{j=1}^J \frac
 <li class="fragment">The trade-policy applications (Topalova, ADH, KK &amp; Sparrow) give you a recipe you can transplant onto any Indonesian liberalization episode.</li>
 </ul>
 </section>
-<section id="references" class="slide level2 smaller scrollable">
+<section id="references" class="slide level2 s smaller scrollable">
 <h2>References</h2>
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">

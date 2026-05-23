@@ -19,39 +19,17 @@ format:
   pptx: default
 ---
 
-## Roadmap (2 hours)
+## Gains exist, distribution is messy
 
-::: {.m}
-**Part I — Why and what (≈45 min)**
-
-1. Recap from Krugman: HOS, SFM, gains and losers
-2. The within-country empirical problem
-3. The Bartik (shift-share) construct
-4. Identification: Goldsmith-Pinkham vs. Borusyak-Hull-Jaravel
-5. Diagnostics and inference
-
-**Part II — Applications and hands-on (≈75 min)**
-
-6. Topalova (2010) — India
-7. Autor, Dorn & Hanson (2013, 2016) — China shock
-8. Kis-Katos & Sparrow (2015) — Indonesia
-9. Hands-on in R with `dat.xlsx`
-10. Frontier and limitations
-:::
-
-# Part I — Why and What {.center}
-
-## From Krugman: gains exist, distribution is messy
-
-- Aggregate gains from trade are robust across HOS, Ricardian, and new-trade models.
+- Aggregate gains from trade are robust across HO, Ricardian, and new-trade models.
 - *Who* gains and loses depends on factor mobility.
-- HOS: gains accrue to the abundant factor (Stolper-Samuelson), *assuming factors move freely across industries.*
+- HO: gains accrue to the abundant factor (Stolper-Samuelson), *assuming factors move freely across industries.*
 - SFM (Specific Factor Model): in the short run, some factors are tied to a sector → clear winners and losers.
 
 ## The textbook distinction in one line
 
 ::: {.incremental}
-- HOS: long run, perfect mobility, factor-price equalization.
+- HO: long run, perfect mobility, factor-price equalization.
 - SFM: short run, sector-specific factors, sectoral wage gaps.
 - **Empirical reality:** the "short run" can last a decade or more, and the location of immobile factors is *regional*.
 - This is what shift-share designs let us see in the data.
@@ -188,7 +166,7 @@ $$
 - A few industries usually carry most of the weight → the design hinges on the exogeneity of those few shares.
 :::
 
-## Rotemberg weights: the formula
+## Rotemberg weights {.m}
 
 ::: {.m}
 For each industry $k$, the weight is
@@ -208,7 +186,7 @@ Weights **can be negative**: if $g_k$ and the first-stage covariance have opposi
 Named for Julio Rotemberg (1983), who used the same decomposition logic in a different IV setting; @paulgp formalised it for the Bartik.
 :::
 
-## Rotemberg weights: 2 × 2 by hand
+## Rotemberg weights: 2x2 {.m}
 
 ::: {.m}
 Use our toy data. Set $X_\ell = Z_\ell^{\text{lev}}$ so the mechanics are visible: $X_A=-15.1,\,X_B=-18.6,\,X_C=-15.9$, with shifts $g_{\text{Agri}}=-20,\,g_{\text{Manuf}}=-15$.
@@ -291,8 +269,6 @@ The `bartik.weight` package (GitHub: paulgp/bartik-weight) does this and produce
 - **Aggregation** matters: districts vs. provinces vs. commuting zones give different answers.
 :::
 
-# Part II — Applications and Hands-on {.center}
-
 ## Topalova (2010): India 1991
 
 ::: {.m}
@@ -314,7 +290,7 @@ $$
 
 **Outcomes:** district-level poverty headcount, poverty gap, consumption growth.
 
-## Topalova: specification
+## Topalova: specification {.m}
 
 ::: {.m}
 Topalova runs a **panel** across four NSS rounds (1983, 1987–88, 1993–94, 1999–2000):
@@ -607,7 +583,7 @@ Using only `dat.xlsx`:
 - @sparrow — the closest Indonesian benchmark for your own work.
 :::
 
-## Frontier and Indonesian context
+## Frontier and Indonesian context {.m}
 
 ::: {.m}
 - I-O Bartik: extend KK & Sparrow's input/output split to services value-added (GVC trade).
@@ -626,4 +602,4 @@ Using only `dat.xlsx`:
 - The trade-policy applications (Topalova, ADH, KK & Sparrow) give you a recipe you can transplant onto any Indonesian liberalization episode.
 :::
 
-## References
+## References {.s}
