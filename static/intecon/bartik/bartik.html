@@ -476,6 +476,54 @@ Z_\ell \;=\;\sum_k s_{\ell k}\,g_{k}
 </ul>
 </div>
 </section>
+<section id="rotemberg-weights-the-formula" class="slide level2">
+<h2>Rotemberg weights: the formula</h2>
+<div class="m">
+<p>For each industry <span class="math inline">\(k\)</span>, the weight is</p>
+<p><span class="math display">\[
+\alpha_k \;=\; \frac{g_k \cdot \sum_\ell s_{\ell k}\,X_\ell}{\sum_{k'} g_{k'} \cdot \sum_\ell s_{\ell k'}\,X_\ell},
+\qquad \sum_k \alpha_k = 1.
+\]</span></p>
+<p>Two ingredients drive <span class="math inline">\(\alpha_k\)</span>:</p>
+<ul>
+<li><strong>size of the shift</strong> <span class="math inline">\(g_k\)</span> — industries with bigger national shocks matter more.</li>
+<li><strong>first-stage covariance</strong> <span class="math inline">\(\sum_\ell s_{\ell k}\,X_\ell\)</span> — how strongly industry <span class="math inline">\(k\)</span>’s shares correlate with the endogenous regressor.</li>
+</ul>
+<p>Weights <strong>can be negative</strong>: if <span class="math inline">\(g_k\)</span> and the first-stage covariance have opposite signs, that industry pulls the Bartik in the opposite direction. A handful of industries usually carry most of the weight.</p>
+<p>Named for Julio Rotemberg (1983), who used the same decomposition logic in a different IV setting; <span class="citation" data-cites="paulgp">Goldsmith-Pinkham, Sorkin, and Swift (<a href="#/references" role="doc-biblioref" onclick="">2020</a>)</span> formalised it for the Bartik.</p>
+</div>
+</section>
+<section id="rotemberg-weights-2-2-by-hand" class="slide level2">
+<h2>Rotemberg weights: 2 × 2 by hand</h2>
+<div class="m">
+<p>Use our toy data. Set <span class="math inline">\(X_\ell = Z_\ell^{\text{lev}}\)</span> so the mechanics are visible: <span class="math inline">\(X_A=-15.1,\,X_B=-18.6,\,X_C=-15.9\)</span>, with shifts <span class="math inline">\(g_{\text{Agri}}=-20,\,g_{\text{Manuf}}=-15\)</span>.</p>
+<p>First-stage covariances:</p>
+<p><span class="math display">\[
+\textstyle\sum_\ell s_{\ell,\text{Agri}} X_\ell = 0.011(-15.1)+0.714(-18.6)+0.189(-15.9) = -16.45
+\]</span> <span class="math display">\[
+\textstyle\sum_\ell s_{\ell,\text{Manuf}} X_\ell = 0.989(-15.1)+0.286(-18.6)+0.811(-15.9) = -33.15
+\]</span></p>
+<p>Numerators: <span class="math inline">\((-20)(-16.45)=329.0\)</span> and <span class="math inline">\((-15)(-33.15)=497.2\)</span>. Denominator <span class="math inline">\(826.2\)</span>.</p>
+<p><span class="math display">\[
+\boxed{\alpha_{\text{Agri}}=0.40,\qquad \alpha_{\text{Manuf}}=0.60.}
+\]</span></p>
+<p>Manufacturing carries 60% of the Bartik. With 100+ industries in Topalova or ADH, 5–10 industries typically carry 80% of the weight — those are the shares whose exogeneity you actually need to defend.</p>
+</div>
+</section>
+<section id="rotemberg-weights-in-r" class="slide level2">
+<h2>Rotemberg weights in R</h2>
+<div class="m">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href=""></a><span class="co"># shares: L × K matrix; g: length K; X: length L</span></span>
+<span id="cb1-2"><a href=""></a>fs_cov <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(<span class="fu">t</span>(shares) <span class="sc">%*%</span> X)          <span class="co"># first-stage covariances</span></span>
+<span id="cb1-3"><a href=""></a>alpha  <span class="ot">&lt;-</span> g <span class="sc">*</span> fs_cov</span>
+<span id="cb1-4"><a href=""></a>alpha  <span class="ot">&lt;-</span> alpha <span class="sc">/</span> <span class="fu">sum</span>(alpha)                   <span class="co"># Rotemberg weights</span></span>
+<span id="cb1-5"><a href=""></a></span>
+<span id="cb1-6"><a href=""></a><span class="co"># per-industry just-identified IV</span></span>
+<span id="cb1-7"><a href=""></a>beta_k <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(<span class="fu">t</span>(shares) <span class="sc">%*%</span> Y) <span class="sc">/</span> fs_cov</span>
+<span id="cb1-8"><a href=""></a><span class="fu">sum</span>(alpha <span class="sc">*</span> beta_k)                            <span class="co"># = Bartik 2SLS estimate</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The <code>bartik.weight</code> package (GitHub: paulgp/bartik-weight) does this and produces the <span class="citation" data-cites="paulgp">Goldsmith-Pinkham, Sorkin, and Swift (<a href="#/references" role="doc-biblioref" onclick="">2020</a>)</span> Table 5 diagnostic panel directly.</p>
+</div>
+</section>
 <section id="diagnostics-from-rotemberg-weights" class="slide level2">
 <h2>Diagnostics from Rotemberg weights</h2>
 <div class="m">
@@ -552,13 +600,21 @@ Z_\ell^{\text{Top}} = \sum_k s_{\ell k}^{\,1987}\,\Delta\log(\text{Tariff}_k)
 <section id="topalova-specification" class="slide level2">
 <h2>Topalova: specification</h2>
 <div class="m">
-<p>First stage: <span class="math display">\[
-\widehat{X}_\ell = \alpha + \beta\, Z_\ell^{\text{Top}} + \mathbf{W}'_\ell\gamma + u_\ell
+<p>Topalova runs a <strong>panel</strong> across four NSS rounds (1983, 1987–88, 1993–94, 1999–2000):</p>
+<p><span class="math display">\[
+Y_{dt} = \alpha_d + \gamma_{st} + \delta\,\text{Tariff}_{dt} + \mathbf{W}'_{dt}\lambda + \varepsilon_{dt}
 \]</span></p>
-<p>Second stage (or reduced form): <span class="math display">\[
-\Delta Y_\ell = \mu + \delta\,\widehat X_\ell + \mathbf{W}'_\ell\lambda + \varepsilon_\ell
+<p>with district tariff constructed Bartik-style,</p>
+<p><span class="math display">\[
+\text{Tariff}_{dt} = \sum_k s_{dk,1987}\cdot \text{Tariff}_{kt}
 \]</span></p>
-<p>with <span class="math inline">\(\mathbf{W}_\ell\)</span> pre-period district controls and state fixed effects.</p>
+<ul>
+<li><span class="math inline">\(\alpha_d\)</span> — district FE (kill all time-invariant district traits)</li>
+<li><span class="math inline">\(\gamma_{st}\)</span> — state × year FE (absorb state-wide trends)</li>
+<li>shares <strong>frozen at 1987</strong>; national tariffs <span class="math inline">\(\text{Tariff}_{kt}\)</span> vary year-by-year</li>
+<li>IV: instrument <em>realised</em> tariffs with the <em>scheduled</em> tariff reduction path</li>
+</ul>
+<p>Under two-way FE this is numerically equivalent to a long-difference regression on <span class="math inline">\(\Delta Y_d\)</span> vs.&nbsp;<span class="math inline">\(\Delta\text{Tariff}_d\)</span> — which is why ADH-style papers (and teaching slides) often present Bartik in differences.</p>
 </div>
 </section>
 <section id="topalova-findings" class="slide level2">
@@ -742,12 +798,12 @@ It_{kt}=\sum_{s=1}^S \left(\frac{Q_{sk,t=0}}{Q_{k,t=0}}\times \sum_{j=1}^J \frac
 <h2>The dataset</h2>
 <div class="m">
 <p><code>dat.xlsx</code> — 3 regions, 2 sectors, 2 years. Toy data so you can verify by hand.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href=""></a><span class="fu">library</span>(readxl)</span>
-<span id="cb1-2"><a href=""></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb1-3"><a href=""></a><span class="fu">library</span>(tidyr)</span>
-<span id="cb1-4"><a href=""></a></span>
-<span id="cb1-5"><a href=""></a>dat <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"dat.xlsx"</span>)</span>
-<span id="cb1-6"><a href=""></a>dat</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href=""></a><span class="fu">library</span>(readxl)</span>
+<span id="cb2-2"><a href=""></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb2-3"><a href=""></a><span class="fu">library</span>(tidyr)</span>
+<span id="cb2-4"><a href=""></a></span>
+<span id="cb2-5"><a href=""></a>dat <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"dat.xlsx"</span>)</span>
+<span id="cb2-6"><a href=""></a>dat</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <pre><code># A tibble: 12 × 5
     year region sector tariff  labor
    &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt;   &lt;dbl&gt;  &lt;dbl&gt;
@@ -765,13 +821,13 @@ It_{kt}=\sum_{s=1}^S \left(\frac{Q_{sk,t=0}}{Q_{k,t=0}}\times \sum_{j=1}^J \frac
 <section id="step-1-compute-1987-employment-shares" class="slide level2">
 <h2>Step 1 — compute 1987 employment shares</h2>
 <div class="m">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href=""></a>shares <span class="ot">&lt;-</span> dat <span class="sc">|&gt;</span></span>
-<span id="cb3-2"><a href=""></a>  <span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">1987</span>) <span class="sc">|&gt;</span></span>
-<span id="cb3-3"><a href=""></a>  <span class="fu">group_by</span>(region) <span class="sc">|&gt;</span></span>
-<span id="cb3-4"><a href=""></a>  <span class="fu">mutate</span>(<span class="at">share =</span> labor <span class="sc">/</span> <span class="fu">sum</span>(labor)) <span class="sc">|&gt;</span></span>
-<span id="cb3-5"><a href=""></a>  <span class="fu">select</span>(region, sector, share)</span>
-<span id="cb3-6"><a href=""></a></span>
-<span id="cb3-7"><a href=""></a>shares</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href=""></a>shares <span class="ot">&lt;-</span> dat <span class="sc">|&gt;</span></span>
+<span id="cb4-2"><a href=""></a>  <span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">1987</span>) <span class="sc">|&gt;</span></span>
+<span id="cb4-3"><a href=""></a>  <span class="fu">group_by</span>(region) <span class="sc">|&gt;</span></span>
+<span id="cb4-4"><a href=""></a>  <span class="fu">mutate</span>(<span class="at">share =</span> labor <span class="sc">/</span> <span class="fu">sum</span>(labor)) <span class="sc">|&gt;</span></span>
+<span id="cb4-5"><a href=""></a>  <span class="fu">select</span>(region, sector, share)</span>
+<span id="cb4-6"><a href=""></a></span>
+<span id="cb4-7"><a href=""></a>shares</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <pre><code># A tibble: 6 × 3
   region sector  share
   &lt;chr&gt;  &lt;chr&gt;   &lt;dbl&gt;
@@ -786,15 +842,15 @@ It_{kt}=\sum_{s=1}^S \left(\frac{Q_{sk,t=0}}{Q_{k,t=0}}\times \sum_{j=1}^J \frac
 <section id="step-2-compute-national-tariff-shocks" class="slide level2">
 <h2>Step 2 — compute national tariff shocks</h2>
 <div class="m">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href=""></a>shocks <span class="ot">&lt;-</span> dat <span class="sc">|&gt;</span></span>
-<span id="cb5-2"><a href=""></a>  <span class="fu">distinct</span>(year, sector, tariff) <span class="sc">|&gt;</span></span>
-<span id="cb5-3"><a href=""></a>  <span class="fu">arrange</span>(sector, year) <span class="sc">|&gt;</span></span>
-<span id="cb5-4"><a href=""></a>  <span class="fu">group_by</span>(sector) <span class="sc">|&gt;</span></span>
-<span id="cb5-5"><a href=""></a>  <span class="fu">summarise</span>(</span>
-<span id="cb5-6"><a href=""></a>    <span class="at">dlog_t =</span> <span class="fu">log</span>(<span class="fu">last</span>(tariff)) <span class="sc">-</span> <span class="fu">log</span>(<span class="fu">first</span>(tariff)),</span>
-<span id="cb5-7"><a href=""></a>    <span class="at">dlev_t =</span> <span class="fu">last</span>(tariff) <span class="sc">-</span> <span class="fu">first</span>(tariff)</span>
-<span id="cb5-8"><a href=""></a>  )</span>
-<span id="cb5-9"><a href=""></a>shocks</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href=""></a>shocks <span class="ot">&lt;-</span> dat <span class="sc">|&gt;</span></span>
+<span id="cb6-2"><a href=""></a>  <span class="fu">distinct</span>(year, sector, tariff) <span class="sc">|&gt;</span></span>
+<span id="cb6-3"><a href=""></a>  <span class="fu">arrange</span>(sector, year) <span class="sc">|&gt;</span></span>
+<span id="cb6-4"><a href=""></a>  <span class="fu">group_by</span>(sector) <span class="sc">|&gt;</span></span>
+<span id="cb6-5"><a href=""></a>  <span class="fu">summarise</span>(</span>
+<span id="cb6-6"><a href=""></a>    <span class="at">dlog_t =</span> <span class="fu">log</span>(<span class="fu">last</span>(tariff)) <span class="sc">-</span> <span class="fu">log</span>(<span class="fu">first</span>(tariff)),</span>
+<span id="cb6-7"><a href=""></a>    <span class="at">dlev_t =</span> <span class="fu">last</span>(tariff) <span class="sc">-</span> <span class="fu">first</span>(tariff)</span>
+<span id="cb6-8"><a href=""></a>  )</span>
+<span id="cb6-9"><a href=""></a>shocks</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <pre><code># A tibble: 2 × 3
   sector dlog_t dlev_t
   &lt;chr&gt;   &lt;dbl&gt;  &lt;dbl&gt;
@@ -805,14 +861,14 @@ It_{kt}=\sum_{s=1}^S \left(\frac{Q_{sk,t=0}}{Q_{k,t=0}}\times \sum_{j=1}^J \frac
 <section id="step-3-assemble-the-bartik" class="slide level2">
 <h2>Step 3 — assemble the Bartik</h2>
 <div class="m">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href=""></a>bartik <span class="ot">&lt;-</span> shares <span class="sc">|&gt;</span></span>
-<span id="cb7-2"><a href=""></a>  <span class="fu">left_join</span>(shocks, <span class="at">by =</span> <span class="st">"sector"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb7-3"><a href=""></a>  <span class="fu">group_by</span>(region) <span class="sc">|&gt;</span></span>
-<span id="cb7-4"><a href=""></a>  <span class="fu">summarise</span>(</span>
-<span id="cb7-5"><a href=""></a>    <span class="at">Z_log =</span> <span class="fu">sum</span>(share <span class="sc">*</span> dlog_t),</span>
-<span id="cb7-6"><a href=""></a>    <span class="at">Z_lev =</span> <span class="fu">sum</span>(share <span class="sc">*</span> dlev_t)</span>
-<span id="cb7-7"><a href=""></a>  )</span>
-<span id="cb7-8"><a href=""></a>bartik</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href=""></a>bartik <span class="ot">&lt;-</span> shares <span class="sc">|&gt;</span></span>
+<span id="cb8-2"><a href=""></a>  <span class="fu">left_join</span>(shocks, <span class="at">by =</span> <span class="st">"sector"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb8-3"><a href=""></a>  <span class="fu">group_by</span>(region) <span class="sc">|&gt;</span></span>
+<span id="cb8-4"><a href=""></a>  <span class="fu">summarise</span>(</span>
+<span id="cb8-5"><a href=""></a>    <span class="at">Z_log =</span> <span class="fu">sum</span>(share <span class="sc">*</span> dlog_t),</span>
+<span id="cb8-6"><a href=""></a>    <span class="at">Z_lev =</span> <span class="fu">sum</span>(share <span class="sc">*</span> dlev_t)</span>
+<span id="cb8-7"><a href=""></a>  )</span>
+<span id="cb8-8"><a href=""></a>bartik</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <pre><code># A tibble: 3 × 3
   region  Z_log  Z_lev
   &lt;chr&gt;   &lt;dbl&gt;  &lt;dbl&gt;
@@ -826,16 +882,16 @@ It_{kt}=\sum_{s=1}^S \left(\frac{Q_{sk,t=0}}{Q_{k,t=0}}\times \sum_{j=1}^J \frac
 <h2>Step 4 — the (would-be) 2SLS</h2>
 <div class="m">
 <p>With only 3 districts there’s nothing to estimate. In a real Topalova-style exercise:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href=""></a><span class="fu">library</span>(fixest)</span>
-<span id="cb9-2"><a href=""></a></span>
-<span id="cb9-3"><a href=""></a><span class="co"># pretend `panel` has many districts × years with outcome `dpov`,</span></span>
-<span id="cb9-4"><a href=""></a><span class="co"># realised exposure `Xkt`, instrument `Zkt`, controls W, state-year FE.</span></span>
-<span id="cb9-5"><a href=""></a>m <span class="ot">&lt;-</span> <span class="fu">feols</span>(</span>
-<span id="cb9-6"><a href=""></a>  dpov <span class="sc">~</span> W1 <span class="sc">+</span> W2 <span class="sc">|</span> state<span class="sc">^</span>year <span class="sc">|</span> Xkt <span class="sc">~</span> Zkt,</span>
-<span id="cb9-7"><a href=""></a>  <span class="at">data =</span> panel,</span>
-<span id="cb9-8"><a href=""></a>  <span class="at">cluster =</span> <span class="sc">~</span> industry_topshare</span>
-<span id="cb9-9"><a href=""></a>)</span>
-<span id="cb9-10"><a href=""></a><span class="fu">summary</span>(m)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href=""></a><span class="fu">library</span>(fixest)</span>
+<span id="cb10-2"><a href=""></a></span>
+<span id="cb10-3"><a href=""></a><span class="co"># pretend `panel` has many districts × years with outcome `dpov`,</span></span>
+<span id="cb10-4"><a href=""></a><span class="co"># realised exposure `Xkt`, instrument `Zkt`, controls W, state-year FE.</span></span>
+<span id="cb10-5"><a href=""></a>m <span class="ot">&lt;-</span> <span class="fu">feols</span>(</span>
+<span id="cb10-6"><a href=""></a>  dpov <span class="sc">~</span> W1 <span class="sc">+</span> W2 <span class="sc">|</span> state<span class="sc">^</span>year <span class="sc">|</span> Xkt <span class="sc">~</span> Zkt,</span>
+<span id="cb10-7"><a href=""></a>  <span class="at">data =</span> panel,</span>
+<span id="cb10-8"><a href=""></a>  <span class="at">cluster =</span> <span class="sc">~</span> industry_topshare</span>
+<span id="cb10-9"><a href=""></a>)</span>
+<span id="cb10-10"><a href=""></a><span class="fu">summary</span>(m)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>For AKM-corrected SEs, use the <code>ShiftShareSE</code> package and pass the share matrix.</p>
 </div>
 </section>

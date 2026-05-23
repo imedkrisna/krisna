@@ -188,6 +188,66 @@ $$
 - A few industries usually carry most of the weight → the design hinges on the exogeneity of those few shares.
 :::
 
+## Rotemberg weights: the formula
+
+::: {.m}
+For each industry $k$, the weight is
+
+$$
+\alpha_k \;=\; \frac{g_k \cdot \sum_\ell s_{\ell k}\,X_\ell}{\sum_{k'} g_{k'} \cdot \sum_\ell s_{\ell k'}\,X_\ell},
+\qquad \sum_k \alpha_k = 1.
+$$
+
+Two ingredients drive $\alpha_k$:
+
+- **size of the shift** $g_k$ — industries with bigger national shocks matter more.
+- **first-stage covariance** $\sum_\ell s_{\ell k}\,X_\ell$ — how strongly industry $k$'s shares correlate with the endogenous regressor.
+
+Weights **can be negative**: if $g_k$ and the first-stage covariance have opposite signs, that industry pulls the Bartik in the opposite direction. A handful of industries usually carry most of the weight.
+
+Named for Julio Rotemberg (1983), who used the same decomposition logic in a different IV setting; @paulgp formalised it for the Bartik.
+:::
+
+## Rotemberg weights: 2 × 2 by hand
+
+::: {.m}
+Use our toy data. Set $X_\ell = Z_\ell^{\text{lev}}$ so the mechanics are visible: $X_A=-15.1,\,X_B=-18.6,\,X_C=-15.9$, with shifts $g_{\text{Agri}}=-20,\,g_{\text{Manuf}}=-15$.
+
+First-stage covariances:
+
+$$
+\textstyle\sum_\ell s_{\ell,\text{Agri}} X_\ell = 0.011(-15.1)+0.714(-18.6)+0.189(-15.9) = -16.45
+$$
+$$
+\textstyle\sum_\ell s_{\ell,\text{Manuf}} X_\ell = 0.989(-15.1)+0.286(-18.6)+0.811(-15.9) = -33.15
+$$
+
+Numerators: $(-20)(-16.45)=329.0$ and $(-15)(-33.15)=497.2$. Denominator $826.2$.
+
+$$
+\boxed{\alpha_{\text{Agri}}=0.40,\qquad \alpha_{\text{Manuf}}=0.60.}
+$$
+
+Manufacturing carries 60% of the Bartik. With 100+ industries in Topalova or ADH, 5–10 industries typically carry 80% of the weight — those are the shares whose exogeneity you actually need to defend.
+:::
+
+## Rotemberg weights in R
+
+::: {.m}
+```r
+# shares: L × K matrix; g: length K; X: length L
+fs_cov <- as.numeric(t(shares) %*% X)          # first-stage covariances
+alpha  <- g * fs_cov
+alpha  <- alpha / sum(alpha)                   # Rotemberg weights
+
+# per-industry just-identified IV
+beta_k <- as.numeric(t(shares) %*% Y) / fs_cov
+sum(alpha * beta_k)                            # = Bartik 2SLS estimate
+```
+
+The `bartik.weight` package (GitHub: paulgp/bartik-weight) does this and produces the @paulgp Table 5 diagnostic panel directly.
+:::
+
 ## Diagnostics from Rotemberg weights
 
 ::: {.m}
@@ -257,17 +317,24 @@ $$
 ## Topalova: specification
 
 ::: {.m}
-First stage:
+Topalova runs a **panel** across four NSS rounds (1983, 1987–88, 1993–94, 1999–2000):
+
 $$
-\widehat{X}_\ell = \alpha + \beta\, Z_\ell^{\text{Top}} + \mathbf{W}'_\ell\gamma + u_\ell
+Y_{dt} = \alpha_d + \gamma_{st} + \delta\,\text{Tariff}_{dt} + \mathbf{W}'_{dt}\lambda + \varepsilon_{dt}
 $$
 
-Second stage (or reduced form):
+with district tariff constructed Bartik-style,
+
 $$
-\Delta Y_\ell = \mu + \delta\,\widehat X_\ell + \mathbf{W}'_\ell\lambda + \varepsilon_\ell
+\text{Tariff}_{dt} = \sum_k s_{dk,1987}\cdot \text{Tariff}_{kt}
 $$
 
-with $\mathbf{W}_\ell$ pre-period district controls and state fixed effects.
+- $\alpha_d$ — district FE (kill all time-invariant district traits)
+- $\gamma_{st}$ — state × year FE (absorb state-wide trends)
+- shares **frozen at 1987**; national tariffs $\text{Tariff}_{kt}$ vary year-by-year
+- IV: instrument *realised* tariffs with the *scheduled* tariff reduction path
+
+Under two-way FE this is numerically equivalent to a long-difference regression on $\Delta Y_d$ vs. $\Delta\text{Tariff}_d$ — which is why ADH-style papers (and teaching slides) often present Bartik in differences.
 :::
 
 ## Topalova: findings
