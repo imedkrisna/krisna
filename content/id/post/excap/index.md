@@ -51,6 +51,7 @@ It takes two to tango. Hanya karena beberapa negara surplus terus tidak berarti 
 AS juga menuduhkan konsumsi rendah sebagai overproduction. Grafik di bawah ini merupakan trade surplus dan final consumption (termasuk pemerintah) dalam %PDB. Memang terlihat adanya tren negatif: negara yang konsumsinya rendah biasanya punya trade surplus.
 
 
+{{< rawhtml >}}
 <script type="text/javascript">
 window.PlotlyConfig = {MathJaxConfig: 'local'};
 if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}
@@ -86,6 +87,7 @@ if (outputEl) {
 }
 
                         })                };            </script>        </div>
+{{< /rawhtml >}}
 
 
 Tapi itu tidak berarti negara dengan trade surplus mendorong surplusnya dengan menekan konsumsi. Negara dengan final consumption paling rendah adalah Irlandia dan Singapura, dua negara yang terkenal merupakan negara safe haven. Mereka menyerap banyak investasi asing (dan domestik) sehingga konsumsinya rendah relatif terhadap PDB, dan ekspor jasanya juga tinggi karena jasa keuangan yang kuat. Negara dengan konsumsi akhir tinggi biasanya juga defisit neraca perdagangan karena mengandalkan bantuan dan transfer luar negeri.
