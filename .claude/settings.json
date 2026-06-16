@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(& \"C:\\\\Users\\\\imedk\\\\anaconda3\\\\python.exe\" -c \"import wbdata; [print\\(i['id'],'|',i['name']\\) for q in ['investment, net \\(BoP','other investment','financial account'] for i in wbdata.search_indicators\\(q\\)]\")"
+    ]
+  }
+}
