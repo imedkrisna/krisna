@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "PowerShell(& \"C:\\\\Users\\\\imedk\\\\anaconda3\\\\python.exe\" -c \"import wbdata; [print\\(i['id'],'|',i['name']\\) for q in ['investment, net \\(BoP','other investment','financial account'] for i in wbdata.search_indicators\\(q\\)]\")"
+      "PowerShell(& \"C:\\\\Users\\\\imedk\\\\anaconda3\\\\python.exe\" -c \"import wbdata; [print\\(i['id'],'|',i['name']\\) for q in ['investment, net \\(BoP','other investment','financial account'] for i in wbdata.search_indicators\\(q\\)]\")",
+      "PowerShell(python -c \"import pandas as pd; url='https://www.matteoiacoviello.com/gpr_files/data_gpr_export.xls'; df=pd.read_excel\\(url\\); print\\(df.shape\\); cols=list\\(df.columns\\); print\\('first', cols[:5]\\); print\\('IDN', [c for c in cols if 'IDN' in c.upper\\(\\)]\\); print\\('GPRplain', [c for c in cols if c.upper\\(\\) in \\('GPR','GPRH','GPRHC_IDN'\\)]\\); print\\(df[['month']].tail\\(2\\) if 'month' in cols else cols[:3]\\)\")"
     ]
   }
 }
