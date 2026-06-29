@@ -126,14 +126,18 @@ fig, (axV, axC) = den.subplots(1, 2, figsize=(13, 5.5))
 for ax in (axV, axC):
     ax.set_facecolor(BG)
     ax.axvline(2016, color=GRID, ls=":", lw=1, alpha=0.9)
-    ax.text(2016, ax.get_ylim()[1], " 2016", va="top", ha="left",
-            fontsize=8, color=FG, alpha=0.6)
 
 for t, (lab, col) in TXN.items():
     sV = geo.dropna(subset=[f"GeoV_{t}"])
     axV.plot(sV.year, sV[f"GeoV_{t}"], marker="o", ms=3, lw=2.3, color=col, label=lab)
     sC = geo.dropna(subset=[f"GeoC_{t}"])
     axC.plot(sC.year, sC[f"GeoC_{t}"], marker="o", ms=3, lw=2.3, color=col, label=lab)
+
+# tandai 2016 di pojok atas tiap panel (setelah data diplot agar posisinya pas)
+for ax in (axV, axC):
+    ax.annotate("2016", xy=(2016, 1), xycoords=("data", "axes fraction"),
+                xytext=(3, -3), textcoords="offset points",
+                va="top", ha="left", fontsize=8, color=FG, alpha=0.6)
 
 den.label(axV, title="GeoV — keterpaparan ke mitra yang jauh (posisi ideal-point)",
           xlabel="Tahun", ylabel="GeoV")
