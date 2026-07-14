@@ -7,7 +7,9 @@
       "Bash(hugo mod:*)",
       "Bash(/c/Users/imedk/hugo/hugo mod:*)",
       "Bash(/c/Users/imedk/hugo/hugo:*)",
-      "Bash(echo \"EXIT: $?\")"
+      "Bash(echo \"EXIT: $?\")",
+      "WebFetch(domain:www.idnfinancials.com)",
+      "WebFetch(domain:kek.go.id)"
     ]
   }
 }
