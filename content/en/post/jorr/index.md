@@ -28,7 +28,7 @@ image:
 projects: []
 ---
 
-This article is originally appears [here on my medium blog](https://medium.com/@imedkrisna/application-of-infrastructure-development-problem-long-chu-style-to-indonesias-toll-road-7ccdc68ee817). I remake it in this blog because here I can use $$\LaTeX$$ !! yay!! I don't change anything so if you've red this in my medium domain then skip this. 
+This article is originally appears [here on my medium blog](https://medium.com/@imedkrisna/application-of-infrastructure-development-problem-long-chu-style-to-indonesias-toll-road-7ccdc68ee817). I remake it in this blog because here I can use $\LaTeX$ !! yay!! I don't change anything so if you've red this in my medium domain then skip this. 
 
 I’ve been ranting a lot about stuff in this blog. This time, let me share what I have learned from my study at ANU. Particularly the master’s microeconomics course, IDEC8064[^1]. Long Chu is the teacher’s name. There is this one problem called “Infrastructure Development Problem”, which is extremely relevant to lots of developing countries’ problem of public provision of services. This time I will present Indonesia’s current case: Jakarta Outer Ring Road (JORR) increased tariff.
 Most Jakartans must know this, that JORR have changed their tariff to a one-off payment of 15,000 IDR (Indonesian currency) every entry (for car. Other heavier vehicles face scarier tariff). This leads to increased cost for people who travel a short distance, but reduced cost for long distance travelers. This leads to a question “how much we should charge for toll service”, especially after taking Long Chu’s Final Exam a couple of days ago. If you also took long’s final exam, think of this as the answer to Question 3… xD
@@ -58,7 +58,7 @@ $$
 Q(P)=1,736,384.07*P^{-0.72}
 $$
 
-Next we find the Dead Weight Loss (DWL) of having such tariff. To do this, we need to find the willingness to pay to get the normal, non-breakdown level of capacity. Let’s use $VCR=0.77$, then we will get $Q=1550$. Now estimate $$P$$ with $Q=1550$,
+Next we find the Dead Weight Loss (DWL) of having such tariff. To do this, we need to find the willingness to pay to get the normal, non-breakdown level of capacity. Let’s use $VCR=0.77$, then we will get $Q=1550$. Now estimate $P$ with $Q=1550$,
 
 $$
 1550=1,736,384.07*P^{-0.72}
