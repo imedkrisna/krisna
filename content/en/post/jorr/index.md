@@ -38,7 +38,7 @@ So I try to do some google, and found this good paper by Hermawan et al (2013)[^
 Next, we need to have capacity. Unlike water provision in Long’s example, capacity of toll roads can be a big debate. Hermawan et al (2013) uses Highway Capacity Manual (2010) to tackle this situation. According to the manual (table 1 in Hermawan et al), we can calculate a (debatable) capacity of a toll road with something called Volume to Capacity Ratio 
 
 $$
-VCR = \frac{Q}{C} \label{1}
+VCR = \frac{Q}{C} \tag{1}
 $$ 
 
 This ratio says if $\frac{Q}{C}=1$, then it meets its capacity. at $\frac{Q}{C}=1$, we will see 2000 vehicles per hour, with the speed of less than equal to 30 mph (around 48 kph). This measure makes me laugh. JORR is definitely well over its capacity.
