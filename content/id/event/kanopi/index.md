@@ -21,7 +21,7 @@ date_end: 2026-08-29T11:15:00+07:00
 all_day: false
 
 # Schedule page publish date (NOT event date).
-publishDate: 2026-08-29T08:00:00+07:00
+publishDate: 2026-08-29T02:00:00+07:00
 
 authors: [admin]
 tags: [kebijakan publik, analisis kebijakan, ekonomi politik, fiskal, moneter, industri]
