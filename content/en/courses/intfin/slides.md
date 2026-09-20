@@ -18,3 +18,4 @@ slides:
 - {{% staticref "/intfin/meeting6/index.html" "newtab" %}}Meeting 6: Gains from asset trade {{% /staticref %}}
 - {{% staticref "/intfin/meeting7/index.html" "newtab" %}}Meeting 7: IS-LM-FX model {{% /staticref %}}
 - {{% staticref "/intfin/islmfx/islmfx.html" "newtab" %}}a very light ISLMFX model{{% /staticref %}}
+- {{% staticref "/intfin/currency_crisis/currency_crisis.html" "newtab" %}}currency crisis{{% /staticref %}}
