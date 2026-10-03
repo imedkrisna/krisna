@@ -1,23 +1,21 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-<script src="index_files/libs/clipboard/clipboard.min.js"></script>
-<script src="index_files/libs/quarto-html/tabby.min.js"></script>
-<script src="index_files/libs/quarto-html/popper.min.js"></script>
-<script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
-<link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="index_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="index_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="index_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.5.57">
+<html lang="id"><head>
+<script src="gravity1_files/libs/clipboard/clipboard.min.js"></script>
+<script src="gravity1_files/libs/quarto-html/tabby.min.js"></script>
+<script src="gravity1_files/libs/quarto-html/popper.min.js"></script>
+<script src="gravity1_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="gravity1_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="gravity1_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="gravity1_files/libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.8.27">
 
-  <meta name="author" content="I Made Krisna Gupta">
-  <meta name="dcterms.date" content="2025-02-25">
-  <title>The theory of the gravity equation</title>
+  <meta name="author" content="Krisna Gupta">
+  <title>Model Gravity dan PPML</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="index_files/libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="index_files/libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="gravity1_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="gravity1_files/libs/revealjs/dist/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -31,211 +29,13 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto.css">
-  <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="index_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
-  <link href="index_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
-  <link href="index_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
-  <style type="text/css">
-
-  .callout {
-    margin-top: 1em;
-    margin-bottom: 1em;  
-    border-radius: .25rem;
-  }
-
-  .callout.callout-style-simple { 
-    padding: 0em 0.5em;
-    border-left: solid #acacac .3rem;
-    border-right: solid 1px silver;
-    border-top: solid 1px silver;
-    border-bottom: solid 1px silver;
-    display: flex;
-  }
-
-  .callout.callout-style-default {
-    border-left: solid #acacac .3rem;
-    border-right: solid 1px silver;
-    border-top: solid 1px silver;
-    border-bottom: solid 1px silver;
-  }
-
-  .callout .callout-body-container {
-    flex-grow: 1;
-  }
-
-  .callout.callout-style-simple .callout-body {
-    font-size: 1rem;
-    font-weight: 400;
-  }
-
-  .callout.callout-style-default .callout-body {
-    font-size: 0.9rem;
-    font-weight: 400;
-  }
-
-  .callout.callout-titled.callout-style-simple .callout-body {
-    margin-top: 0.2em;
-  }
-
-  .callout:not(.callout-titled) .callout-body {
-      display: flex;
-  }
-
-  .callout:not(.no-icon).callout-titled.callout-style-simple .callout-content {
-    padding-left: 1.6em;
-  }
-
-  .callout.callout-titled .callout-header {
-    padding-top: 0.2em;
-    margin-bottom: -0.2em;
-  }
-
-  .callout.callout-titled .callout-title  p {
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-  }
-    
-  .callout.callout-titled.callout-style-simple .callout-content  p {
-    margin-top: 0;
-  }
-
-  .callout.callout-titled.callout-style-default .callout-content  p {
-    margin-top: 0.7em;
-  }
-
-  .callout.callout-style-simple div.callout-title {
-    border-bottom: none;
-    font-size: .9rem;
-    font-weight: 600;
-    opacity: 75%;
-  }
-
-  .callout.callout-style-default  div.callout-title {
-    border-bottom: none;
-    font-weight: 600;
-    opacity: 85%;
-    font-size: 0.9rem;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-  }
-
-  .callout.callout-style-default div.callout-content {
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-  }
-
-  .callout.callout-style-simple .callout-icon::before {
-    height: 1rem;
-    width: 1rem;
-    display: inline-block;
-    content: "";
-    background-repeat: no-repeat;
-    background-size: 1rem 1rem;
-  }
-
-  .callout.callout-style-default .callout-icon::before {
-    height: 0.9rem;
-    width: 0.9rem;
-    display: inline-block;
-    content: "";
-    background-repeat: no-repeat;
-    background-size: 0.9rem 0.9rem;
-  }
-
-  .callout-title {
-    display: flex
-  }
-    
-  .callout-icon::before {
-    margin-top: 1rem;
-    padding-right: .5rem;
-  }
-
-  .callout.no-icon::before {
-    display: none !important;
-  }
-
-  .callout.callout-titled .callout-body > .callout-content > :last-child {
-    padding-bottom: 0.5rem;
-    margin-bottom: 0;
-  }
-
-  .callout.callout-titled .callout-icon::before {
-    margin-top: .5rem;
-    padding-right: .5rem;
-  }
-
-  .callout:not(.callout-titled) .callout-icon::before {
-    margin-top: 1rem;
-    padding-right: .5rem;
-  }
-
-  /* Callout Types */
-
-  div.callout-note {
-    border-left-color: #4582ec !important;
-  }
-
-  div.callout-note .callout-icon::before {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEU0lEQVRYCcVXTWhcVRQ+586kSUMMxkyaElstCto2SIhitS5Ek8xUKV2poatCcVHtUlFQk8mbaaziwpWgglJwVaquitBOfhQXFlqlzSJpFSpIYyXNjBNiTCck7x2/8/LeNDOZxDuEkgOXe++553zfefee+/OYLOXFk3+1LLrRdiO81yNqZ6K9cG0P3MeFaMIQjXssE8Z1JzLO9ls20MBZX7oG8w9GxB0goaPrW5aNMp1yOZIa7Wv6o2ykpLtmAPs/vrG14Z+6d4jpbSKuhdcSyq9wGMPXjonwmESXrriLzFGOdDBLB8Y6MNYBu0dRokSygMA/mrun8MGFN3behm6VVAwg4WR3i6FvYK1T7MHo9BK7ydH+1uurECoouk5MPRyVSBrBHMYwVobG2aOXM07sWrn5qgB60rc6mcwIDJtQrnrEr44kmy+UO9r0u9O5/YbkS9juQckLed3DyW2XV/qWBBB3ptvI8EUY3I9p/67OW+g967TNr3Sotn3IuVlfMLVnsBwH4fsnebJvyGm5GeIUA3jljERmrv49SizPYuq+z7c2H/jlGC+Ghhupn/hcapqmcudB9jwJ/3jvnvu6vu5lVzF1fXyZuZZ7U8nRmVzytvT+H3kilYvH09mLWrQdwFSsFEsxFVs5fK7A0g8gMZjbif4ACpKbjv7gNGaD8bUrlk8x+KRflttr22JEMRUbTUwwDQScyzPgedQHZT0xnx7ujw2jfVfExwYHwOsDTjLdJ2ebmeQIlJ7neo41s/DrsL3kl+W2lWvAga0tR3zueGr6GL78M3ifH0rGXrBC2aAR8uYcIA5gwV8zIE8onoh8u0Fca/ciF7j1uOzEnqcIm59sEXoGc0+z6+H45V1CvAvHcD7THztu669cnp+L0okAeIc6zjbM/24LgGM1gZk7jnRu1aQWoU9sfUOuhrmtaPIO3YY1KLLWZaEO5TKUbMY5zx8W9UJ6elpLwKXbsaZ4EFl7B4bMtDv0iRipKoDQT2sNQI9b1utXFdYisi+wzZ/ri/1m7QfDgEuvgUUEIJPq3DhX/5DWNqIXDOweC2wvIR90Oq3lDpdMIgD2r0dXvGdsEW5H6x6HLRJYU7C69VefO1x8Gde1ZFSJLfWS1jbCnhtOPxmpfv2LXOA2Xk2tvnwKKPFuZ/oRmwBwqRQDcKNeVQkYcOjtWVBuM/JuYw5b6isojIkYxyYAFn5K7ZBF10fea52y8QltAg6jnMqNHFBmGkQ1j+U43HMi2xMar1Nv0zGsf1s8nUsmUtPOOrbFIR8bHFDMB5zL13Gmr/kGlCkUzedTzzmzsaJXhYawnA3UmARpiYj5ooJZiUoxFRtK3X6pgNPv+IZVPcnwbOl6f+aBaO1CNvPW9n9LmCp01nuSaTRF2YxHqZ8DYQT6WsXT+RD6eUztwYLZ8rM+rcPxamv1VQzFUkzFXvkiVrySGQgJNvXHJAxiU3/NwiC03rSf05VBaPtu/Z7/B8Yn/w7eguloAAAAAElFTkSuQmCC');
-  }
-
-  div.callout-note.callout-style-default .callout-title {
-    background-color: #dae6fb
-  }
-
-  div.callout-important {
-    border-left-color: #d9534f !important;
-  }
-
-  div.callout-important .callout-icon::before {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEKklEQVRYCcVXTWhcVRS+575MJym48A+hSRFr00ySRQhURRfd2HYjk2SSTokuBCkU2o0LoSKKraKIBTcuFCoidGFD08nkBzdREbpQ1EDNIv8qSGMFUboImMSZd4/f9zJv8ibJMC8xJQfO3HPPPef7zrvvvnvviIkpC9nsw0UttFunbUhpFzFtarSd6WJkStVMw5xyVqYTvkwfzuf/5FgtkVoB0729j1rjXwThS7Vio+Mo6DNnvLfahoZ+i/o32lULuJ3NNiz7q6+pyAUkJaFF6JwaM2lUJlV0MlnQn5aTRbEu0SEqHUa0A4AdiGuB1kFXRfVyg5d87+Dg4DL6m2TLAub60ilj7A1Ec4odSAc8X95sHh7+ZRPCFo6Fnp7HfU/fBng/hi10CjCnWnJjsxvDNxWw0NfV6Rv5GgP3I3jGWXumdTD/3cbEOP2ZbOZp69yniG3FQ9z1jD7bnBu9Fc2tKGC2q+uAJOQHBDRiZX1x36o7fWBs7J9ownbtO+n0/qWkvW7UPIfc37WgT6ZGR++EOJyeQDSb9UB+DZ1G6DdLDzyS+b/kBCYGsYgJbSQHuThGKRcw5xdeQf8YdNHsc6ePXrlSYMBuSIAFTGAtQo+VuALo4BX83N190NWZWbynBjhOHsmNfFWLeL6v+ynsA58zDvvAC8j5PkbOcXCMg2PZFk3q8MjI7WAG/Dp9AwP7jdGBOOQkAvlFUB+irtm16I1Zw9YBcpGTGXYmk3kQIC/Cds55l+iMI3jqhjAuaoe+am2Jw5GT3Nbz3CkE12NavmzN5+erJW7046n/CH1RO/RVa8lBLozXk9uqykkGAyRXLWlLv5jyp4RFsG5vGVzpDLnIjTWgnRy2Rr+tDKvRc7Y8AyZq10jj8DqXdnIRNtFZb+t/ZRtXcDiVnzpqx8mPcDWxgARUqx0W1QB9MeUZiNrV4qP+Ehc+BpNgATsTX8ozYKL2NtFYAHc84fG7ndxUPr+AR/iQSns7uSUufAymwDOb2+NjK27lEFocm/EE2WpyIy/Hi66MWuMKJn8RvxIcj87IM5Vh9663ziW36kR0HNenXuxmfaD8JC7tfKbrhFr7LiZCrMjrzTeGx+PmkosrkNzW94ObzwocJ7A1HokLolY+AvkTiD/q1H0cN48c5EL8Crkttsa/AXQVDmutfyku0E7jShx49XqV3MFK8IryDhYVbj7Sj2P2eBxwcXoe8T8idsKKPRcnZw1b+slFTubwUwhktrfnAt7J++jwQtLZcm3sr9LQrjRzz6cfMv9aLvgmnAGvpoaGLxM4mAEaLV7iAzQ3oU0IvD5x9ix3yF2RAAuYAOO2f7PEFWCXZ4C9Pb2UsgDeVnFSpbFK7/IWu7TPTvBqzbGdCHOJQSxiEjt6IyZmxQyEJHv6xyQsYk//moVFsN2zP6fRImjfq7/n/wFDguUQFNEwugAAAABJRU5ErkJggg==');
-  }
-
-  div.callout-important.callout-style-default .callout-title {
-    background-color: #f7dddc
-  }
-
-  div.callout-warning {
-    border-left-color: #f0ad4e !important;
-  }
-
-  div.callout-warning .callout-icon::before {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAETklEQVRYCeVWW2gcVRg+58yaTUnizqbipZeX4uWhBEniBaoUX1Ioze52t7sRq6APio9V9MEaoWlVsFasRq0gltaAPuxms8lu0gcviE/FFOstVbSIxgcv6SU7EZqmdc7v9+9mJtNks51NTUH84ed889/PP+cmxP+d5FIbMJmNbpREu4WUkiTtCicKny0l1pIKmBzovF2S+hIJHX8iEu3hZJ5lNZGqyRrGSIQpq15AzF28jgpeY6yk6GVdrfFqdrD6Iw+QlB8g0YS2g7dyQmXM/IDhBhT0UCiRf59lfqmmDvzRt6kByV/m4JjtzuaujMUM2c5Z2d6JdKrRb3K2q6mA+oYVz8JnDdKPmmNthzkAk/lN63sYPgevrguc72aZX/L9C6x09GYyxBgCX4NlvyGUHOKELlm5rXeR1kchuChJt4SSwyddZRXgvwMGvYo4QSlk3/zkHD8UHxwVJA6zjZZqP8v8kK8OWLnIZtLyCAJagYC4rTGW/9Pqj92N/c+LUaAj27movwbi19tk/whRCIE7Q9vyI6yvRpftAKVTdUjOW40X3h5OXsKCdmFcx0xlLJoSuQngnrJe7Kcjm4OMq9FlC7CMmScQANuNvjfP3PjGXDBaUQmbp296S5L4DrpbrHN1T87ZVEZVCzg1FF0Ft+dKrlLukI+/c9ENo+TvlTDbYFvuKPtQ9+l052rXrgKoWkDAFnvh0wTOmYn8R5f4k/jN/fZiCM1tQx9jQQ4ANhqG4hiL0qIFTGViG9DKB7GYzgubnpofgYRwO+DFjh0Zin2m4b/97EDkXkc+f6xYAPX0KK2I/7fUQuwzuwo/L3AkcjugPNixC8cHf0FyPjWlItmLxWw4Ou9YsQCr5fijMGoD/zpdRy95HRysyXA74MWOnscpO4j2y3HAVisw85hX5+AFBRSHt4ShfLFkIMXTqyKFc46xdzQM6XbAi702a7sy04J0+feReMFKp5q9esYLCqAZYw/k14E/xcLLsFElaornTuJB0svMuJINy8xkIYuL+xPAlWRceH6+HX7THJ0djLUom46zREu7tTkxwmf/FdOZ/sh6Q8qvEAiHpm4PJ4a/doJe0gH1t+aHRgCzOvBvJedEK5OFE5jpm4AGP2a8Dxe3gGJ/pAutug9Gp6he92CsSsWBaEcxGx0FHytmIpuqGkOpldqNYQK8cSoXvd+xLxXADw0kf6UkJNFtdo5MOgaLjiQOQHcn+A6h5NuL2s0qsC2LOM75PcF3yr5STuBSAcGG+meA14K/CI21HcS4LBT6tv0QAh8Dr5l93AhZzG5ZJ4VxAqdZUEl9z7WJ4aN+svMvwHHL21UKTd1mqvChH7/Za5xzXBBKrUcB0TQ+Ulgkfbi/H/YT5EptrGzsEK7tR1B7ln9BBwckYfMiuSqklSznIuoIIOM42MQO+QnduCoFCI0bpkzjCjddHPN/F+2Yu+sd9bKNpVwHhbS3LluK/0zgfwD0xYI5dXuzlQAAAABJRU5ErkJggg==');
-  }
-
-  div.callout-warning.callout-style-default .callout-title {
-    background-color: #fcefdc
-  }
-
-  div.callout-tip {
-    border-left-color: #02b875 !important;
-  }
-
-  div.callout-tip .callout-icon::before {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAADr0lEQVRYCe1XTWgTQRj9ZjZV8a9SPIkKgj8I1bMHsUWrqYLVg4Ue6v9BwZOxSYsIerFao7UiUryIqJcqgtpimhbBXoSCVxUFe9CTiogUrUp2Pt+3aUI2u5vdNh4dmMzOzHvvezuz8xNFM0mjnbXaNu1MvFWRXkXEyE6aYOYJpdW4IXuA4r0fo8qqSMDBU0v1HJUgVieAXxzCsdE/YJTdFcVIZQNMyhruOMJKXYFoLfIfIvVIMWdsrd+Rpd86ZmyzzjJmLStqRn0v8lzkb4rVIXvnpScOJuAn2ACC65FkPzEdEy4TPWRLJ2h7z4cArXzzaOdKlbOvKKX25Wl00jSnrwVxAg3o4dRxhO13RBSdNvH0xSARv3adTXbBdTf64IWO2vH0LT+cv4GR1DJt+DUItaQogeBX/chhbTBxEiZ6gftlDNXTrvT7co4ub5A6gp9HIcHvzTa46OS5fBeP87Qm0fQkr4FsYgVQ7Qg+ZayaDg9jhg1GkWj8RG6lkeSacrrHgDaxdoBiZPg+NXV/KifMuB6//JmYH4CntVEHy/keA6x4h4CU5oFy8GzrBS18cLJMXcljAKB6INjWsRcuZBWVaS3GDrqB7rdapVIeA+isQ57Eev9eCqzqOa81CY05VLd6SamW2wA2H3SiTbnbSxmzfp7WtKZkqy4mdyAlGx7ennghYf8voqp9cLSgKdqNfa6RdRsAAkPwRuJZNbpByn+RrJi1RXTwdi8RQF6ymDwGMAtZ6TVE+4uoKh+MYkcLsT0Hk8eAienbiGdjJHZTpmNjlbFJNKDVAp2fJlYju6IreQxQ08UJDNYdoLSl6AadO+fFuCQqVMB1NJwPm69T04Wv5WhfcWyfXQB+wXRs1pt+nCknRa0LVzSA/2B+a9+zQJadb7IyyV24YAxKp2Jqs3emZTuNnKxsah+uabKbMk7CbTgJx/zIgQYErIeTKRQ9yD9wxVof5YolPHqaWo7TD6tJlh7jQnK5z2n3+fGdggIOx2kaa2YI9QWarc5Ce1ipNWMKeSG4DysFF52KBmTNMmn5HqCFkwy34rDg05gDwgH3bBi+sgFhN/e8QvRn8kbamCOhgrZ9GJhFDgfcMHzFb6BAtjKpFhzTjwv1KCVuxHvCbsSiEz4CANnj84cwHdFXAbAOJ4LTSAawGWFn5tDhLMYz6nWeU2wJfIhmIJBefcd/A5FWQWGgrWzyORZ3Q6HuV+Jf0Bj+BTX69fm1zWgK7By1YTXchFDORywnfQ7GpzOo6S+qECrsx2ifVQAAAABJRU5ErkJggg==');
-  }
-
-  div.callout-tip.callout-style-default .callout-title {
-    background-color: #ccf1e3
-  }
-
-  div.callout-caution {
-    border-left-color: #fd7e14 !important;
-  }
-
-  div.callout-caution .callout-icon::before {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAACV0lEQVRYCdVWzWoUQRCuqp2ICBLJXgITZL1EfQDBW/bkzUMUD7klD+ATSHBEfAIfQO+iXsWDxJsHL96EHAwhgzlkg8nBg25XWb0zIb0zs9muYYWkoKeru+vn664fBqElyZNuyh167NXJ8Ut8McjbmEraKHkd7uAnAFku+VWdb3reSmRV8PKSLfZ0Gjn3a6Xlcq9YGb6tADjn+lUfTXtVmaZ1KwBIvFI11rRXlWlatwIAAv2asaa9mlB9wwygiDX26qaw1yYPzFXg2N1GgG0FMF8Oj+VIx7E/03lHx8UhvYyNZLN7BwSPgekXXLribw7w5/c8EF+DBK5idvDVYtEEwMeYefjjLAdEyQ3M9nfOkgnPTEkYU+sxMq0BxNR6jExrAI31H1rzvLEfRIdgcv1XEdj6QTQAS2wtstEALLG1yEZ3QhH6oDX7ExBSFEkFINXH98NTrme5IOaaA7kIfiu2L8A3qhH9zRbukdCqdsA98TdElyeMe5BI8Rs2xHRIsoTSSVFfCFCWGPn9XHb4cdobRIWABNf0add9jakDjQJpJ1bTXOJXnnRXHRf+dNL1ZV1MBRCXhMbaHqGI1JkKIL7+i8uffuP6wVQAzO7+qVEbF6NbS0LJureYcWXUUhH66nLR5rYmva+2tjRFtojkM2aD76HEGAD3tPtKM309FJg5j/K682ywcWJ3PASCcycH/22u+Bh7Aa0ehM2Fu4z0SAE81HF9RkB21c5bEn4Dzw+/qNOyXr3DCTQDMBOdhi4nAgiFDGCinIa2owCEChUwD8qzd03PG+qdW/4fDzjUMcE1ZpIAAAAASUVORK5CYII=');
-  }
-
-  div.callout-caution.callout-style-default .callout-title {
-    background-color: #ffe5d0
-  }
-
-  </style>
+  <link rel="stylesheet" href="gravity1_files/libs/revealjs/dist/theme/quarto-6a0936f214d018485b9e1b578c23d634.css">
+  <link href="gravity1_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="gravity1_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="gravity1_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="gravity1_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="gravity1_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="gravity1_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
     .reveal div.sourceCode {
       margin: 0;
@@ -329,335 +129,886 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">The theory of the gravity equation</h1>
-  <p class="subtitle">Advanced International Economics</p>
+  <h1 class="title">Model Gravity dan PPML</h1>
+  <p class="subtitle">Pertemuan 1: Teori, Perkembangan, dan Kasus Indonesia</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-I Made Krisna Gupta 
+Krisna Gupta <a href="https://orcid.org/0000-0001-8695-0514" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a>
 </div>
+<div class="quarto-title-author-email">
+<a href="mailto:krisna@dewanekonomi.go.id">krisna@dewanekonomi.go.id</a>
 </div>
+        <p class="quarto-title-affiliation">
+            Dewan Ekonomi Nasional
+          </p>
+    </div>
 </div>
 
-  <p class="date">2025-02-25</p>
+  <p class="date">2 Oktober 2026</p>
 </section>
-<section id="intro" class="slide level2">
-<h2>Intro</h2>
-<ul>
-<li><p>We learn on the theoretical model of gravity equation: from theory to empirics.</p></li>
-<li><p>some development of problems and how to tackle ’em</p></li>
-<li><p>Preparation on practicing with gravity model.</p></li>
-<li><p>main text is Yotov et al.&nbsp;(2016) chapter I</p></li>
-</ul>
-</section>
-<section id="why-gravity-model" class="slide level2">
-<h2>Why gravity model</h2>
-<ul>
-<li><p>Gravity model is very intuitive.</p></li>
-<li><p>It has a strong theoretical foundation.</p></li>
-<li><p>Structure is pretty flexible. Can be applied to labor market, investment, environment, etc.</p></li>
-<li><p>Remarkable predictive power (with some caveats).</p></li>
-<li><p>fit for your empirical thesis.</p></li>
-</ul>
-</section>
-<section id="setting" class="slide level2">
-<h2>Setting</h2>
-<p>Now let <span class="math inline">\(Q_i\)</span> be the supply of a good from country <span class="math inline">\(i\)</span> which is fixed with factory gate <span class="math inline">\(i\)</span>.</p>
-<p>The value of a domestic production in a country <span class="math inline">\(i\)</span> thus</p>
-<p><span class="math display">\[
-Y_i=p_iQ_i
-\]</span></p>
-<p><span class="math inline">\(Y_i\)</span> is also the nominal income of the country i.</p>
-</section>
-<section id="setting-1" class="slide level2">
-<h2>Setting</h2>
-<p>Meanwhile, let <span class="math inline">\(E_i=\phi_iY_i\)</span> be the total expenditure of the country i. <span class="math inline">\(0 &lt; \phi_i &lt; 1\)</span> would represent a fraction of <span class="math inline">\(Y_i\)</span> that is spent to be consumed. Therefore, a <span class="math inline">\((1-\phi_i)Y_i\)</span> is a net export.</p>
-<p>Consequently, <span class="math inline">\(\phi&gt;1\)</span> would suggest a net-import economy (i.e., trade deficit).</p>
-<p>We can add a time index <span class="math inline">\(t\)</span> if needed. Maybe later.</p>
-</section>
-<section id="setting-2" class="slide level2">
-<h2>Setting</h2>
-<p>Suppose consumers in a country j have a representative CES-utility function</p>
-<p><span class="math display">\[
-\left\{ \sum_i \alpha_i^{\frac{1-\sigma}{\sigma}} c_{ij}^{\frac{\sigma-1}{\sigma}} \right\}^{\frac{\sigma}{\sigma-1}}
-\]</span></p>
-<p>Where <span class="math inline">\(\sigma&gt;1\)</span> is the elasticity of substitution among varieties of goods from country i. <span class="math inline">\(\alpha_i&gt;0\)</span> is a CES preference parameter for good from country <span class="math inline">\(i\)</span>.</p>
-</section>
-<section id="setting-3" class="slide level2">
-<h2>Setting</h2>
-<p>Consumer maximize its utility with a budget constraint</p>
-<p><span class="math display">\[
-\sum_i p_{ij}c_{ij}=E_j
-\]</span></p>
-<p>Where <span class="math inline">\(E_j\)</span> is a total expenditure of a country <span class="math inline">\(j\)</span>.</p>
-<p>Meanwhile, <span class="math inline">\(p_{ij}=p_it_{ij}\)</span> reflects a price in country i times its trade cost <span class="math inline">\(t_{ij}\geq 1\)</span>.</p>
-<p>Think of the trade cost as an “iceberg” cost: to deliver 1 unit of its variety to country j, country i must ship <span class="math inline">\(t_{ij} \geq 1\)</span> units, i.e.&nbsp;<span class="math inline">\(1/t_{ij}\)</span> of the initial shipment melts “en route”.</p>
-</section>
-<section id="demand-funtion" class="slide level2">
-<h2>Demand funtion</h2>
-<p>Optimization on <span class="math inline">\(c_{ij}\)</span> would result in</p>
-<p><span class="math display">\[
-X_{ij}=\left( \frac{\alpha_i p_i t_{ij}}{P_j} \right)^{1-\sigma} E_{j}
-\]</span></p>
-<p>where <span class="math inline">\(X_{ij}\)</span> is the export from origin <span class="math inline">\(i\)</span> to destination <span class="math inline">\(j\)</span>. <span class="math inline">\(P_j\)</span> can be interpreted as a CES consumer price index:</p>
-<p><span class="math display">\[
-P_j=\left( \sum_j (\alpha_ip_it_{ij})^{1-\sigma} \right)^{\frac{1}{1-\sigma}}
-\]</span></p>
-</section>
-<section id="interpretation" class="slide level2">
-<h2>Interpretation</h2>
-<p>expenditure in country <span class="math inline">\(j\)</span> on goods from source <span class="math inline">\(i\)</span>, <span class="math inline">\(X_{ij}\)</span>, is:</p>
+<section id="outline" class="slide level2">
+<h2>Outline</h2>
 <ol type="1">
-<li><p>Proportional to <span class="math inline">\(E_j\)</span>. i.e., countries with large expenditure buys more from many countries.</p></li>
-<li><p>inversely related to the (delivered) prices of varieties from origin <span class="math inline">\(i\)</span> to destination <span class="math inline">\(j\)</span>. Its not just <span class="math inline">\(p_i\)</span> but also <span class="math inline">\(t_{ij}\)</span>.</p></li>
-<li><p>Directly related to price index <span class="math inline">\(P_j\)</span>, which is a substitution effect.</p></li>
-<li><p>A high <span class="math inline">\(\sigma\)</span> will magnify the substition effect.</p></li>
+<li>Motivasi: gravity dalam data Indonesia</li>
+<li>Naive gravity dan structural gravity</li>
+<li>Empat masalah estimasi dan PPML</li>
+<li>Interpretasi koefisien</li>
+<li>Kasus Indonesia</li>
+<li>Persiapan lab</li>
 </ol>
+<div class="s">
+<p>Bahan utama: WTO/UNCTAD <em>A Practical Guide to Trade Policy Analysis</em> (2012), Bab 3; Yotov, Piermartini, Monteiro &amp; Larch, <em>An Advanced Guide to Trade Policy Analysis: The Structural Gravity Model</em> (2016), Bab 1–2; WTO/UNCTAD <em>A Practical Guide to Non-Tariff Measures</em> (2012), Bab 3.</p>
+</div>
 </section>
-<section id="market-clearance" class="slide level2">
-<h2>Market clearance</h2>
-<p>We then clears the market with:</p>
-<p><span class="math display">\[
-Y_i=\sum_j \left( \frac{\alpha_i p_it_{ij}}{P_j} \right)^{1-\sigma} E_j
-\]</span> WHich means all trade conducted by a country <span class="math inline">\(i\)</span> (including with itself) must be equal to its total production. (i.e., <span class="math inline">\(Y_i \equiv \sum_j X_{ij} \forall i\)</span>)</p>
-<p>If we define <span class="math inline">\(Y=\sum_i Y_i\)</span> which is the global market, divide both equations with it, then:</p>
+<section>
+<section id="motivasi" class="title-slide slide level1 center" data-background-color="#51483d">
+<h1>Motivasi</h1>
+
 </section>
-<section id="structural-gravity" class="slide level2">
-<h2>Structural gravity</h2>
+<section id="ekspor-dan-jarak" class="slide level2">
+<h2>Ekspor dan jarak</h2>
+<div class="s">
+<p>Scatterplot jarak bilateral (sumbu-x, km) terhadap ekspor Indonesia per negara tujuan (sumbu-y, ribu USD), 2019, skala log. Garis merah: fitted line OLS log-log. Sumber: CEPII Gravity V202211 (BACI).</p>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="fig_idn_dist.png" class="quarto-figure quarto-figure-center" height="440"></p>
+</figure>
+</div>
+</section>
+<section id="ekspor-dan-jarak-1" class="slide level2">
+<h2>Ekspor dan jarak</h2>
+<ul>
+<li>Hubungan negatif yang jelas: elastisitas sekitar −1,5.</li>
+<li>Dispersinya besar: AS dan Tiongkok jauh di atas garis.</li>
+<li>Timor-Leste dekat, tetapi di bawah garis.</li>
+</ul>
+<p>→ Ukuran ekonomi tujuan belum dikontrol.</p>
+</section>
+<section id="ekspor-dan-pdb-tujuan" class="slide level2">
+<h2>Ekspor dan PDB tujuan</h2>
+<div class="s">
+<p>Scatterplot PDB negara tujuan (sumbu-x, ribu USD) terhadap ekspor Indonesia per negara tujuan (sumbu-y, ribu USD), 2019, skala log. Sumber: CEPII Gravity V202211 (BACI, WDI).</p>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="fig_idn_gdp.png" class="quarto-figure quarto-figure-center" height="440"></p>
+</figure>
+</div>
+</section>
+<section id="ekspor-dan-pdb-tujuan-1" class="slide level2">
+<h2>Ekspor dan PDB tujuan</h2>
+<ul>
+<li>Elastisitas terhadap PDB tujuan ≈ 1.</li>
+<li><strong>Ukuran</strong> menarik perdagangan, <strong>jarak</strong> menahannya.</li>
+<li>Analogi Newton: <span class="math inline">\(F = G\,\dfrac{M_1 M_2}{D^2}\)</span></li>
+</ul>
+</section></section>
+<section>
+<section id="structural-gravity" class="title-slide slide level1 center" data-background-color="#51483d">
+<h1>Structural gravity</h1>
+
+</section>
+<section id="naive-gravity" class="slide level2">
+<h2>Naive gravity</h2>
 <p><span class="math display">\[
-(\alpha_i p_i)^{1-\sigma}=\frac{\frac{Y_i}{Y}}{\sum_j \left(\frac{t_{ij}}{P_j} \right)^{1-\sigma} \frac{E_j}{Y}}
+\ln X_{ij} = \beta_0 + \beta_1 \ln Y_i + \beta_2 \ln Y_j + \beta_3 \ln DIST_{ij} + \varepsilon_{ij}
 \]</span></p>
-<p>We substitute a <span class="math inline">\(\Pi_j^{1-\sigma}\equiv \sum_j (t_{ij}/P_j)^{1-\sigma}E_j/Y\)</span>, then we get</p>
-<p><span class="math display">\[
-(\alpha_i p_i)^{1-\sigma}=\frac{Y_i/Y}{\Pi_i^{1-\sigma}}
-\]</span></p>
-<p>We now plug this into our <span class="math inline">\(X_{ij}\)</span> to get:</p>
+<div class="m">
+<p>di mana <span class="math inline">\(X_{ij}\)</span> adalah ekspor bilateral eksportir <span class="math inline">\(i\)</span> dengan tujuan <span class="math inline">\(j\)</span>, <span class="math inline">\(Y_i\)</span> dan <span class="math inline">\(Y_j\)</span> adalah PDB eksportir dan importir, <span class="math inline">\(DIST_{ij}\)</span> adalah jarak bilateral, dan <span class="math inline">\(\varepsilon_{ij}\)</span> adalah error term (Tinbergen, 1962).</p>
+<ul>
+<li>Fit empirisnya baik, tetapi tanpa fondasi teori.</li>
+<li>Perdagangan <span class="math inline">\(i\)</span>–<span class="math inline">\(j\)</span> juga bergantung pada <strong>semua negara lain</strong>.</li>
+</ul>
+</div>
+</section>
+<section id="intuisi-resistensi-multilateral" class="slide level2">
+<h2>Intuisi: resistensi multilateral</h2>
+<div class="m">
+<ul>
+<li>Australia–NZ dan Indonesia–Malaysia berjarak mirip.</li>
+<li>Australia &amp; NZ terisolasi: mitra alternatifnya sedikit dan jauh, sehingga keduanya banyak berdagang satu sama lain.</li>
+<li>Indonesia &amp; Malaysia dikelilingi banyak mitra dekat.</li>
+</ul>
+<p>→ Yang penting adalah biaya <strong>relatif</strong>: biaya <span class="math inline">\(i\)</span>–<span class="math inline">\(j\)</span> dibanding biaya dengan semua mitra lain.</p>
+</div>
 </section>
 <section id="structural-gravity-1" class="slide level2">
 <h2>Structural gravity</h2>
-<p><span class="math display">\[\begin{align*}
-X_{ij}&amp;=\frac{Y_iE_j}{Y}\left(\frac{t_{ij}}{\Pi_i P_j}\right)^{1-\sigma} \\
-\Pi_{i}^{1-\sigma}&amp;=\sum_j \left(\frac{t_{ij}}{P_j}\right)^{1-\sigma}\frac{E_j}{Y} \\
-P_{ij}&amp;=\sum_i \left( \frac{t_{ij}}{\Pi_i} \right)^{1-\sigma} \frac{Y_i}{Y}
-\end{align*}\]</span></p>
-<p>We can decompose <span class="math inline">\(X_{ij}\)</span> into two term: the size term (<span class="math inline">\(Y_iE_j/Y\)</span>) and the trade cost term (<span class="math inline">\((t_{ij}/(\Pi_iP_j))^{1-\sigma}\)</span>)</p>
+<p><span class="math display">\[
+X_{ij} = \frac{Y_i E_j}{Y}\left(\frac{t_{ij}}{\Pi_i P_j}\right)^{1-\sigma}
+\]</span></p>
+<div class="m">
+<p>di mana <span class="math inline">\(Y_i\)</span> adalah output eksportir <span class="math inline">\(i\)</span>, <span class="math inline">\(E_j\)</span> adalah total belanja importir <span class="math inline">\(j\)</span>, <span class="math inline">\(Y\)</span> adalah output dunia, <span class="math inline">\(t_{ij} \geq 1\)</span> adalah faktor biaya dagang bilateral, dan <span class="math inline">\(\sigma &gt; 1\)</span> adalah elastisitas substitusi antar negara asal (Anderson &amp; van Wincoop, 2003).</p>
+</div>
 </section>
-<section id="size-effect" class="slide level2">
-<h2>Size effect</h2>
+<section id="multilateral-resistance" class="slide level2">
+<h2>Multilateral resistance</h2>
+<p><span class="math display">\[
+\Pi_i^{1-\sigma} = \sum_j \left(\frac{t_{ij}}{P_j}\right)^{1-\sigma}\frac{E_j}{Y}
+\]</span></p>
+<p><span class="math display">\[
+P_j^{1-\sigma} = \sum_i \left(\frac{t_{ij}}{\Pi_i}\right)^{1-\sigma}\frac{Y_i}{Y}
+\]</span></p>
+<div class="m">
 <ul>
-<li><p>The size term can be interpreted as a hypothetical trade flow if there is no trade cost (ie frictionless trade).</p></li>
-<li><p>That is, customers face same factory-gate price no matter where they are.</p></li>
-<li><p>The size effect provides us with the intuition that:</p>
+<li><span class="math inline">\(\Pi_i\)</span>: <em>outward MR</em>, seberapa sulit <span class="math inline">\(i\)</span> menjual di pasar dunia.</li>
+<li><span class="math inline">\(P_j\)</span>: <em>inward MR</em>, seberapa sulit dunia menjual di pasar <span class="math inline">\(j\)</span> (≈ indeks harga).</li>
+</ul>
+</div>
+</section>
+<section id="derivasi-preferensi" class="slide level2">
+<h2>Derivasi: preferensi</h2>
+<p><span class="math display">\[
+\max_{\{c_{ij}\}} \left(\sum_i \beta_i^{\frac{1-\sigma}{\sigma}} c_{ij}^{\frac{\sigma-1}{\sigma}}\right)^{\frac{\sigma}{\sigma-1}}
+\quad \text{s.t.} \quad \sum_i p_{ij}\, c_{ij} = E_j
+\]</span></p>
+<div class="m">
+<p>di mana <span class="math inline">\(c_{ij}\)</span> adalah konsumsi di <span class="math inline">\(j\)</span> atas barang asal <span class="math inline">\(i\)</span> (barang dibedakan menurut negara asal, asumsi Armington), <span class="math inline">\(\beta_i &gt; 0\)</span> adalah parameter preferensi CES, <span class="math inline">\(p_{ij} = p_i t_{ij}\)</span> adalah harga yang dibayar konsumen di <span class="math inline">\(j\)</span>, dan <span class="math inline">\(p_i\)</span> adalah harga pabrik (<em>factory-gate</em>) di <span class="math inline">\(i\)</span>. Biaya dagang berbentuk <em>iceberg</em>: agar 1 unit tiba di <span class="math inline">\(j\)</span>, <span class="math inline">\(i\)</span> harus mengirim <span class="math inline">\(t_{ij}\)</span> unit.</p>
+</div>
+</section>
+<section id="derivasi-permintaan" class="slide level2">
+<h2>Derivasi: permintaan</h2>
+<p><span class="math display">\[
+X_{ij} \equiv p_{ij} c_{ij} = \left(\frac{\beta_i p_i t_{ij}}{P_j}\right)^{1-\sigma} E_j
+\]</span></p>
+<p><span class="math display">\[
+P_j = \left[\sum_i \left(\beta_i p_i t_{ij}\right)^{1-\sigma}\right]^{\frac{1}{1-\sigma}}
+\]</span></p>
+<div class="m">
+<p>di mana <span class="math inline">\(X_{ij}\)</span> adalah nilai ekspor <span class="math inline">\(i\)</span> ke <span class="math inline">\(j\)</span> dan <span class="math inline">\(P_j\)</span> adalah indeks harga CES di <span class="math inline">\(j\)</span>. Belanja ke <span class="math inline">\(i\)</span> turun jika harga relatif <span class="math inline">\(p_{ij}/P_j\)</span> naik, dengan elastisitas <span class="math inline">\(1-\sigma &lt; 0\)</span>.</p>
+</div>
+</section>
+<section id="derivasi-market-clearing" class="slide level2">
+<h2>Derivasi: market clearing</h2>
+<p><span class="math display">\[
+Y_i = \sum_j X_{ij} = \left(\beta_i p_i\right)^{1-\sigma} \sum_j \left(\frac{t_{ij}}{P_j}\right)^{1-\sigma} E_j
+\]</span></p>
+<div class="m">
+<p>Seluruh output <span class="math inline">\(i\)</span> terjual di semua pasar, termasuk pasar domestik (<span class="math inline">\(j = i\)</span>). Dengan biaya <em>iceberg</em>, nilai di tujuan sama dengan nilai kiriman pada harga pabrik, sehingga <span class="math inline">\(Y_i = \sum_j X_{ij}\)</span>.</p>
+</div>
+</section>
+<section id="derivasi-harga-pabrik" class="slide level2">
+<h2>Derivasi: harga pabrik</h2>
+<p>Definisikan <em>outward MR</em>:</p>
+<p><span class="math display">\[
+\Pi_i^{1-\sigma} \equiv \sum_j \left(\frac{t_{ij}}{P_j}\right)^{1-\sigma}\frac{E_j}{Y}
+\quad\Rightarrow\quad
+\left(\beta_i p_i\right)^{1-\sigma} = \frac{Y_i/Y}{\Pi_i^{1-\sigma}}
+\]</span></p>
+<div class="m">
+<p>di mana <span class="math inline">\(Y = \sum_i Y_i\)</span> adalah output dunia. Harga pabrik <span class="math inline">\(p_i\)</span> tidak teramati; market clearing memungkinkan <span class="math inline">\(p_i\)</span> dinyatakan dalam <span class="math inline">\(Y_i\)</span> dan <span class="math inline">\(\Pi_i\)</span>.</p>
+</div>
+</section>
+<section id="derivasi-substitusi" class="slide level2">
+<h2>Derivasi: substitusi</h2>
+<p>Substitusi <span class="math inline">\((\beta_i p_i)^{1-\sigma}\)</span> ke permintaan:</p>
+<p><span class="math display">\[
+X_{ij} = \frac{Y_i E_j}{Y}\left(\frac{t_{ij}}{\Pi_i P_j}\right)^{1-\sigma}
+\]</span></p>
+<p>Substitusi ke indeks harga:</p>
+<p><span class="math display">\[
+P_j^{1-\sigma} = \sum_i \left(\frac{t_{ij}}{\Pi_i}\right)^{1-\sigma}\frac{Y_i}{Y}
+\]</span></p>
+</section>
+<section id="mengapa-saling-bergantung" class="slide level2">
+<h2>Mengapa saling bergantung?</h2>
+<div class="m">
 <ul>
-<li><p>large producers will export more to all destinations</p></li>
-<li><p>big/rich markets will import more from all sources</p></li>
-<li><p>trade flows between simiarly-sized countries will be larger.</p></li>
-</ul></li>
+<li><span class="math inline">\(\Pi_i\)</span> berasal dari market clearing (sisi penjual), <span class="math inline">\(P_j\)</span> dari indeks harga (sisi pembeli). Keduanya terhubung lewat <span class="math inline">\(p_i\)</span>.</li>
+<li>Setelah <span class="math inline">\(p_i\)</span> disubstitusi, terbentuk sistem <span class="math inline">\(2N\)</span> persamaan dengan <span class="math inline">\(2N\)</span> unknown <span class="math inline">\(\{\Pi_i, P_j\}\)</span> yang diselesaikan <strong>bersamaan</strong> (<em>fixed point</em>), diberikan <span class="math inline">\(\{t_{ij}, Y_i, E_j\}\)</span>.</li>
+<li>Hanya <span class="math inline">\(\Pi_i P_j\)</span> yang teridentifikasi: perlu normalisasi, misalnya <span class="math inline">\(P_{\text{ref}} = 1\)</span>.</li>
+<li>Intuisi: <span class="math inline">\(P_j\)</span> tinggi (pasar <span class="math inline">\(j\)</span> kurang kompetitif) → <span class="math inline">\(i\)</span> lebih mudah menjual → <span class="math inline">\(\Pi_i\)</span> turun.</li>
+</ul>
+</div>
+</section>
+<section id="biaya-dagang" class="slide level2">
+<h2>Biaya dagang</h2>
+<p><span class="math display">\[
+\begin{aligned}
+t_{ij}^{1-\sigma} = \exp\big(&amp;\beta_1 \ln DIST_{ij} + \beta_2 CNTG_{ij} + \beta_3 LANG_{ij} \\
+&amp;+ \beta_4 CLNY_{ij} + \beta_5 RTA_{ij}\big)
+\end{aligned}
+\]</span></p>
+<div class="m">
+<p>di mana <span class="math inline">\(CNTG_{ij}\)</span>, <span class="math inline">\(LANG_{ij}\)</span>, <span class="math inline">\(CLNY_{ij}\)</span>, dan <span class="math inline">\(RTA_{ij}\)</span> bernilai 1 jika <span class="math inline">\(i\)</span> dan <span class="math inline">\(j\)</span> berbatasan darat, berbahasa resmi sama, pernah berhubungan kolonial, dan terikat perjanjian dagang.</p>
+</div>
+</section>
+<section id="biaya-dagang-1" class="slide level2">
+<h2>Biaya dagang</h2>
+<ul>
+<li><span class="math inline">\(t_{ij}\)</span> tidak teramati, sehingga diproksi.</li>
+<li>Kebijakan (tarif, RTA, NTM) masuk lewat <span class="math inline">\(t_{ij}\)</span>.</li>
+<li>Koefisien = efek terhadap <span class="math inline">\(t_{ij}\)</span> <strong>dikali</strong> <span class="math inline">\(1-\sigma\)</span>.</li>
 </ul>
 </section>
-<section id="trade-cost" class="slide level2 m">
-<h2>Trade cost</h2>
+<section id="perkembangan-literatur-1" class="slide level2">
+<h2>Perkembangan literatur (1)</h2>
+<div class="m">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Tahun</th>
+<th>Kontribusi</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1962</td>
+<td>Tinbergen: regularitas empiris</td>
+</tr>
+<tr class="even">
+<td>1979</td>
+<td>Anderson: fondasi teori (Armington)</td>
+</tr>
+<tr class="odd">
+<td>2002</td>
+<td>Eaton &amp; Kortum: gravity dalam model Ricardian</td>
+</tr>
+<tr class="even">
+<td>2003</td>
+<td>Anderson &amp; van Wincoop: multilateral resistance</td>
+</tr>
+<tr class="odd">
+<td>2006</td>
+<td>Santos Silva &amp; Tenreyro: PPML</td>
+</tr>
+<tr class="even">
+<td>2007</td>
+<td>Baier &amp; Bergstrand: pair fixed effects</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="perkembangan-literatur-2" class="slide level2">
+<h2>Perkembangan literatur (2)</h2>
+<div class="m">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Tahun</th>
+<th>Kontribusi</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2008</td>
+<td>Helpman, Melitz &amp; Rubinstein: zero flows</td>
+</tr>
+<tr class="even">
+<td>2012</td>
+<td>Arkolakis, Costinot &amp; Rodríguez-Clare: welfare</td>
+</tr>
+<tr class="odd">
+<td>2014</td>
+<td>Head &amp; Mayer: <em>toolkit and cookbook</em></td>
+</tr>
+<tr class="even">
+<td>2015</td>
+<td>Fally: PPML + FE = structural gravity</td>
+</tr>
+<tr class="odd">
+<td>2016</td>
+<td>Yotov et al.: <em>Advanced Guide</em>, GE PPML</td>
+</tr>
+<tr class="even">
+<td>2020</td>
+<td>Correia, Guimarães &amp; Zylkin: <code>ppmlhdfe</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Banyak model mikro menghasilkan persamaan gravity yang <strong>sama</strong>.</p>
+</section>
+<section id="mengapa-gravity-populer" class="slide level2">
+<h2>Mengapa gravity populer?</h2>
+<div class="m">
+<ul>
+<li><strong>Fit empiris kuat</strong>: meta-analisis atas 1.467 estimasi menemukan elastisitas jarak rata-rata ≈ −0,9 (Disdier &amp; Head, 2008).</li>
+<li><strong>Fondasi teori luas</strong>: Armington, Ricardian (Eaton &amp; Kortum, 2002), dan <em>firm heterogeneity</em> (Chaney, 2008) menghasilkan bentuk yang sama.</li>
+<li><strong>Mudah diterapkan</strong>: data bilateral tersedia (CEPII), estimasi cepat (<code>ppmlhdfe</code>, <code>fixest</code>).</li>
+<li><strong>Relevan untuk kebijakan</strong>: efek FTA, tarif, NTM, hingga <em>counterfactual</em> GE dan welfare (ACR, 2012).</li>
+</ul>
+</div>
+</section>
+<section id="penggunaan-terus-meluas" class="slide level2">
+<h2>Penggunaan terus meluas</h2>
+<div class="m">
+<ul>
+<li><strong>Selain perdagangan barang</strong>: jasa, FDI (Head &amp; Ries, 2008), aliran portofolio (Portes &amp; Rey, 2005), migrasi (Beine et al., 2016).</li>
+<li><strong>Isu baru</strong>: sanksi ekonomi (Felbermayr et al., 2020), geopolitik dan <em>friend-shoring</em>, rantai nilai global.</li>
+<li><strong>Model kuantitatif</strong>: structural gravity menjadi <em>building block</em> model GE multisektor (Caliendo &amp; Parro, 2015).</li>
+<li><strong>Evaluasi kebijakan Indonesia</strong>: FTA, hilirisasi, dampak tarif mitra dagang.</li>
+</ul>
+</div>
+</section></section>
+<section>
+<section id="empat-masalah" class="title-slide slide level1 center" data-background-color="#51483d">
+<h1>Empat masalah</h1>
+
+</section>
+<section id="multilateral-resistance-1" class="slide level2">
+<h2>1: Multilateral resistance</h2>
+<ul>
+<li><span class="math inline">\(\Pi_i\)</span> dan <span class="math inline">\(P_j\)</span> tidak teramati.</li>
+<li>Jika diabaikan: <em>omitted variable bias</em>.</li>
+<li>Solusi: FE <strong>eksportir-tahun</strong> dan <strong>importir-tahun</strong>.</li>
+</ul>
+</section>
+<section id="multilateral-resistance-2" class="slide level2">
+<h2>1: Multilateral resistance</h2>
+<p><span class="math display">\[
+X_{ijt} = \exp\left(\pi_{it} + \chi_{jt} + \beta' \mathbf{z}_{ijt}\right)\varepsilon_{ijt}
+\]</span></p>
+<div class="m">
+<p>di mana <span class="math inline">\(\pi_{it}\)</span> menyerap <span class="math inline">\(\ln Y_{it} - (1-\sigma)\ln \Pi_{it}\)</span>, <span class="math inline">\(\chi_{jt}\)</span> menyerap <span class="math inline">\(\ln E_{jt} - (1-\sigma)\ln P_{jt}\)</span>, <span class="math inline">\(\mathbf{z}_{ijt}\)</span> adalah vektor variabel biaya dagang bilateral, dan <span class="math inline">\(\varepsilon_{ijt}\)</span> adalah error term.</p>
+</div>
+</section>
+<section id="mengapa-fe-menyerap-mr" class="slide level2">
+<h2>Mengapa FE menyerap MR?</h2>
+<p>Log structural gravity untuk tahun <span class="math inline">\(t\)</span>:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\ln X_{ijt} = \; &amp; \underbrace{\ln Y_{it} - (1-\sigma)\ln \Pi_{it}}_{\pi_{it}} \\
+&amp; + \underbrace{\ln E_{jt} - (1-\sigma)\ln P_{jt}}_{\chi_{jt}} \\
+&amp; - \ln Y_t + (1-\sigma)\ln t_{ijt}
+\end{aligned}
+\]</span></p>
+</section>
+<section id="membaca-derivasi" class="slide level2">
+<h2>Membaca derivasi</h2>
+<div class="m">
+<ul>
+<li>Semua suku yang hanya bergantung pada <span class="math inline">\(i,t\)</span> digabung menjadi satu dummy <span class="math inline">\(\pi_{it}\)</span>; yang hanya bergantung pada <span class="math inline">\(j,t\)</span> menjadi <span class="math inline">\(\chi_{jt}\)</span>.</li>
+<li><span class="math inline">\(\ln Y_t\)</span> (output dunia) ikut terserap oleh FE.</li>
+<li>Yang tersisa untuk diestimasi hanya biaya bilateral <span class="math inline">\((1-\sigma)\ln t_{ijt}\)</span>.</li>
+</ul>
+</div>
+</section>
+<section id="mengapa-bias-jika-diabaikan" class="slide level2">
+<h2>Mengapa bias jika diabaikan?</h2>
+<div class="m">
+<ul>
+<li><span class="math inline">\(\Pi_i\)</span> dan <span class="math inline">\(P_j\)</span> adalah fungsi dari <strong>semua</strong> <span class="math inline">\(t_{ij}\)</span>, termasuk jarak.</li>
+<li>Negara yang terpencil (Australia, NZ) punya <span class="math inline">\(\Pi_i\)</span> dan <span class="math inline">\(P_j\)</span> tinggi: biaya relatif dengan mitra terdekat menjadi lebih rendah.</li>
+<li>Jika MR dihilangkan, ia masuk ke error dan berkorelasi dengan <span class="math inline">\(\ln DIST_{ij}\)</span> → koefisien jarak bias.</li>
+<li>Contoh klasik: <em>border puzzle</em> McCallum (1995). Efek perbatasan Kanada–AS jauh lebih kecil setelah MR dikontrol (Anderson &amp; van Wincoop, 2003).</li>
+</ul>
+</div>
+</section>
+<section id="mengapa-fe-harus-per-tahun" class="slide level2">
+<h2>Mengapa FE harus per tahun?</h2>
+<div class="m">
+<ul>
+<li>MR berubah setiap kali <strong>ada</strong> <span class="math inline">\(t_{ij}\)</span> yang berubah, di mana pun di dunia.</li>
+<li>Contoh: ACFTA menurunkan biaya Tiongkok–ASEAN. Bagi Jepang, pasar Indonesia menjadi relatif lebih sulit ditembus → <span class="math inline">\(P_{IDN}\)</span> berubah.</li>
+<li>Inilah <em>trade diversion</em>: perjanjian pihak lain memengaruhi perdagangan Indonesia–Jepang.</li>
+<li>FE tanpa dimensi waktu (<span class="math inline">\(\pi_i\)</span>, <span class="math inline">\(\chi_j\)</span>) tidak menangkap perubahan ini dalam data panel.</li>
+</ul>
+</div>
+</section>
+<section id="alternatif-selain-fe" class="slide level2">
+<h2>Alternatif selain FE</h2>
+<div class="m">
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Pendekatan</th>
+<th>Catatan</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><em>Remoteness index</em> <span class="math inline">\(REM_i = \sum_j DIST_{ij} / (Y_j / Y)\)</span></td>
+<td>Mudah, tetapi tidak konsisten dengan teori</td>
+</tr>
+<tr class="even">
+<td>Nonlinear least squares (Anderson &amp; van Wincoop, 2003)</td>
+<td>Konsisten, tetapi rumit dan butuh semua <span class="math inline">\(t_{ij}\)</span></td>
+</tr>
+<tr class="odd">
+<td><strong>FE eksportir-tahun &amp; importir-tahun</strong></td>
+<td>Sederhana dan konsisten; dengan PPML, FE = MR (Fally, 2015)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Harga FE: variabel yang hanya bervariasi di <span class="math inline">\(i,t\)</span> atau <span class="math inline">\(j,t\)</span> (PDB, populasi) <strong>tidak bisa</strong> diestimasi.</p>
+</section>
+<section id="zero-flows" class="slide level2">
+<h2>2: Zero flows</h2>
+<div class="s">
+<p>Persentase pasangan negara (sumbu-y) yang tidak berdagang per tahun (sumbu-x), di antara negara yang tercatat di BACI. BACI tidak mencatat nol, sehingga aliran yang hilang dianggap nol. Sumber: CEPII Gravity V202211.</p>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="fig_zeros.png" class="quarto-figure quarto-figure-center" height="400"></p>
+</figure>
+</div>
+</section>
+<section id="zero-flows-1" class="slide level2">
+<h2>2: Zero flows</h2>
+<ul>
+<li>35–45% pasangan negara tidak berdagang.</li>
+<li><span class="math inline">\(\ln 0\)</span> tidak terdefinisi, sehingga OLS log membuangnya.</li>
+<li>Akibatnya: <em>selection bias</em>.</li>
+<li>Lonjakan 2020: COVID dan/atau data yang belum lengkap.</li>
+</ul>
+</section>
+<section id="heteroskedastisitas" class="slide level2">
+<h2>3: Heteroskedastisitas</h2>
+<p><span class="math display">\[
+X_{ij} = \exp(\mathbf{x}_{ij}'\beta)\,\eta_{ij}, \qquad E[\eta_{ij} \mid \mathbf{x}_{ij}] = 1
+\]</span></p>
+<p><span class="math display">\[
+\ln X_{ij} = \mathbf{x}_{ij}'\beta + \ln \eta_{ij}
+\]</span></p>
+<div class="m">
+<p>di mana <span class="math inline">\(\mathbf{x}_{ij}\)</span> adalah vektor regressor dan <span class="math inline">\(\eta_{ij}\)</span> adalah error multiplikatif.</p>
+</div>
+</section>
+<section id="arti-eeta_ij-mid-mathbfx_ij-1" class="slide level2">
+<h2>Arti <span class="math inline">\(E[\eta_{ij} \mid \mathbf{x}_{ij}] = 1\)</span></h2>
+<div class="m">
+<ul>
+<li>Versi multiplikatif dari asumsi <span class="math inline">\(E[\varepsilon \mid \mathbf{x}] = 0\)</span>: karena error <strong>dikalikan</strong>, nilai netralnya 1, bukan 0.</li>
+<li>Rata-rata error sama dengan 1 untuk setiap nilai regressor, sehingga</li>
+</ul>
+<p><span class="math display">\[
+E[X_{ij} \mid \mathbf{x}_{ij}] = \exp(\mathbf{x}_{ij}'\beta)\cdot E[\eta_{ij} \mid \mathbf{x}_{ij}] = \exp(\mathbf{x}_{ij}'\beta)
+\]</span></p>
+<ul>
+<li>Artinya <span class="math inline">\(\exp(\mathbf{x}_{ij}'\beta)\)</span> adalah <strong>conditional mean</strong> perdagangan. Ini syarat identifikasi (eksogenitas) sekaligus normalisasi.</li>
+</ul>
+</div>
+</section>
+<section id="masalahnya-setelah-di-log" class="slide level2">
+<h2>Masalahnya setelah di-log</h2>
+<p>OLS log butuh <span class="math inline">\(E[\ln \eta_{ij} \mid \mathbf{x}_{ij}]\)</span> konstan. Tetapi (aproksimasi orde kedua; eksak jika <span class="math inline">\(\eta\)</span> lognormal):</p>
+<p><span class="math display">\[
+E[\ln \eta_{ij} \mid \mathbf{x}_{ij}] \approx -\tfrac{1}{2}\,\mathrm{Var}(\eta_{ij} \mid \mathbf{x}_{ij})
+\]</span></p>
+<div class="m">
+<ul>
+<li>Heteroskedastis: varians bergantung pada <span class="math inline">\(\mathbf{x}_{ij}\)</span> (mis. pasangan jauh/kecil lebih bervariasi).</li>
+<li>Maka <span class="math inline">\(E[\ln \eta_{ij} \mid \mathbf{x}_{ij}]\)</span> ikut berubah, masuk ke error, dan berkorelasi dengan regressor.</li>
+<li><strong>OLS log tidak konsisten</strong>: koefisiennya bias, bukan hanya SE.</li>
+<li>PPML hanya butuh <span class="math inline">\(E[\eta_{ij} \mid \mathbf{x}_{ij}] = 1\)</span> (Santos Silva &amp; Tenreyro, 2006).</li>
+</ul>
+</div>
+</section>
+<section id="solusi-ppml" class="slide level2">
+<h2>Solusi: PPML</h2>
+<p>Estimasi dalam <strong>level</strong>:</p>
+<p><span class="math display">\[
+X_{ij} = \exp(\mathbf{x}_{ij}'\beta) + e_{ij}
+\]</span></p>
+<p>First-order condition:</p>
+<p><span class="math display">\[
+\sum_{i,j} \left[X_{ij} - \exp(\mathbf{x}_{ij}'\hat\beta)\right]\mathbf{x}_{ij} = 0
+\]</span></p>
+</section>
+<section id="sifat-ppml" class="slide level2">
+<h2>Sifat PPML</h2>
+<ul>
+<li>Konsisten jika <span class="math inline">\(E[X_{ij} \mid \mathbf{x}_{ij}] = \exp(\mathbf{x}_{ij}'\beta)\)</span>.</li>
+<li><span class="math inline">\(X_{ij}\)</span> <strong>tidak</strong> harus Poisson atau bilangan bulat.</li>
+<li>Zero flows ikut diestimasi.</li>
+<li>Fally (2015): dengan FE eksportir &amp; importir, <span class="math inline">\(\sum_j \hat X_{ij} = Y_i\)</span> dan <span class="math inline">\(\sum_i \hat X_{ij} = E_j\)</span>, sehingga FE = MR.</li>
+</ul>
+</section>
+<section id="endogenitas-kebijakan" class="slide level2">
+<h2>4: Endogenitas kebijakan</h2>
+<ul>
+<li>FTA dibuat dengan mitra yang <strong>sudah</strong> banyak berdagang.</li>
+<li>Akibatnya <span class="math inline">\(RTA_{ij}\)</span> berkorelasi dengan error.</li>
+<li>Solusi: panel + <strong>pair FE</strong> (Baier &amp; Bergstrand, 2007).</li>
+</ul>
+</section>
+<section id="endogenitas-kebijakan-1" class="slide level2">
+<h2>4: Endogenitas kebijakan</h2>
+<p><span class="math display">\[
+X_{ijt} = \exp\left(\pi_{it} + \chi_{jt} + \mu_{ij} + \beta\,RTA_{ijt}\right)\varepsilon_{ijt}
+\]</span></p>
+<div class="m">
+<p>di mana <span class="math inline">\(\mu_{ij}\)</span> adalah pair FE yang menyerap semua biaya bilateral yang tetap (jarak, bahasa, kolonial), dan <span class="math inline">\(RTA_{ijt}\)</span> = 1 jika perjanjian berlaku pada tahun <span class="math inline">\(t\)</span>.</p>
+<ul>
+<li><span class="math inline">\(\beta\)</span> diidentifikasi dari variasi <strong>within-pair</strong>: sebelum vs sesudah FTA.</li>
+</ul>
+</div>
+</section>
+<section id="rekomendasi-praktis" class="slide level2">
+<h2>Rekomendasi praktis</h2>
+<div class="m">
 <ol type="1">
-<li><p>Bilateral trade cost between partners i and j, tij , is typically approximated in the literature by various geographic and trade policy variables, such as bilateral distance, tariffs and the presence of regional trade agreements (RTAs) between partners i and j.</p></li>
-<li><p>The structural term Pj , coined by Anderson and van Wincoop (2003) as inward multilateral resistance represents importer j’s ease of market access.</p></li>
-<li><p>The structural term Πi , defined as outward multilateral resistances by Anderson and van Wincoop (2003), measures exporter i’s ease of market access.</p></li>
+<li>Data <strong>panel</strong>, interval 3–5 tahun.</li>
+<li><strong>PPML</strong> dalam level, termasuk zero flows.</li>
+<li>FE <strong>eksportir-tahun</strong> dan <strong>importir-tahun</strong>.</li>
+<li><strong>Pair FE</strong> untuk kebijakan bilateral.</li>
+<li>Sertakan <strong>aliran domestik</strong> <span class="math inline">\(X_{ii}\)</span> jika ada.</li>
+<li><em>Cluster</em> SE per <strong>pasangan negara</strong>.</li>
 </ol>
+</div>
+<div class="s">
+<p>Sumber: Yotov et al.&nbsp;(2016), Bab 1.</p>
+</div>
+</section></section>
+<section>
+<section id="interpretasi" class="title-slide slide level1 center" data-background-color="#51483d">
+<h1>Interpretasi</h1>
+
 </section>
-<section id="gravity-equation" class="slide level2">
-<h2>Gravity equation</h2>
-<p>We log-linearized <span class="math inline">\(X_ij\)</span> to get the following:</p>
-<p><span class="math display">\[\begin{align*}
-\ln X_{ij,t}&amp;=\ln E_{j,t}+\ln Y_{i,t}-\ln Y_t \\
-&amp;+(1-\sigma) \ln t_{ij,t}-(1-\sigma)\ln P_{j,t} \\
-&amp;-(1-\sigma) \ln \Pi_{i,t}+\varepsilon_{ij,t}
-\end{align*}\]</span></p>
-<p>This equation is so popular. Despite that, most students often conduct a consequential mistakes that can be easily remedied with Stata (or R) command. We learn it today so your thesis is safe.</p>
-</section>
-<section id="gravity-2-disciplines" class="slide level2 m">
-<h2>Gravity: 2 disciplines</h2>
-<div class="columns">
-<div class="column" style="width:49%;">
-<p><span class="math display">\[
-F_{ij}=G \frac{M_iM_j}{D^2_{ij}}
-\]</span></p>
-<p>where F=force, G=constant, M=mass, D=distance</p>
-</div><div class="column" style="width:49%;">
-<p><span class="math display">\[
-X_{ij}=\tilde{G} \frac{Y_iE_j}{T_{ij}^\theta}
-\]</span></p>
-<p>where <span class="math inline">\(\tilde{G}\equiv 1/Y\)</span> inverse of the world production, <span class="math inline">\(Y_i\)</span> is the exporter’s production capacity, <span class="math inline">\(E_J\)</span> is the importer’s expenditure.</p>
-<p><span class="math inline">\(T_{ij}\)</span> is the total trade cost <span class="math inline">\((t_{ij}/(\Pi_iP_j))^{\sigma-1}\)</span></p>
-</div></div>
-</section>
-<section id="multilateral-resistance-mr" class="slide level2 m">
-<h2>Multilateral resistance (MR)</h2>
+<section id="membaca-koefisien" class="slide level2">
+<h2>Membaca koefisien</h2>
 <ul>
-<li><p>obviously the main challenge comes from dissecting the multilateral resistance <span class="math inline">\(P_{j,t}\)</span> and <span class="math inline">\(\Pi_{i,t}\)</span> which are inherently observable.</p></li>
-<li><p>Anderson and Wincoop (2003) conducted a nonlinear OLS by estimating a predicted trade without MR, then construct MR to account for difference with the real world trade.</p></li>
-<li><p>These days, Olivero and Yotov (2016) shows that we can use <em>exporter-time</em> and <em>importer-time fixed effect</em> to account for the MR.</p></li>
-<li><p>Note that these FE will absorb many all unobservables that varies by country-time, including GDP, distance, XR and policies.</p></li>
-</ul>
-</section>
-<section id="zero-trade-flows" class="slide level2">
-<h2>Zero trade flows</h2>
-<ul>
-<li><p>The nice thing about linearizing the gravity equation is that we can use OLS.</p></li>
-<li><p>Unfortunately, this will lead us to forefully drop zero trade.</p>
-<ul>
-<li>obviously zero trade is not random.</li>
-</ul></li>
-<li><p>Typical easy solution is to assign an arbitrary number to the zero trade flow (typically log 1), but this leads to a inconsistent estimate.</p></li>
-<li><p>The best solution for now is the PPML approach.</p></li>
-</ul>
-</section>
-<section id="heteroscedasticity" class="slide level2">
-<h2>Heteroscedasticity</h2>
-<ul>
-<li><p>Trade data is heteroscedastic: variance of larger countries are structurally differ than that of the smaller countries.</p></li>
-<li><p>An OLS would bias the estimated trade policy and MR. It also inconsistent with the theory.</p></li>
-<li><p>You can remedy this by weighting the trade data, but the better way is to do PPML.</p>
-<ul>
-<li>PPML is more convinient and also fixes zero-trade problem.</li>
-</ul></li>
-</ul>
-</section>
-<section id="bilateral-trade-cost" class="slide level2">
-<h2>Bilateral trade cost</h2>
-<ul>
-<li><p>This is crucial to properly model a partial and general equilibrium effect of trade.</p></li>
-<li><p>The standard practice to proxy the bilateral trade cost <span class="math inline">\(t_{ij}\)</span> is to use the following:</p></li>
-</ul>
-<p><span class="math display">\[\begin{align*}
-(1-\sigma) \ln t_{ij}&amp;=\beta_1 \ln D_{ij}+\beta_2 \ln CNTG_{ij} +\beta_3 \ln LANG_{ij} \\
-&amp;+\beta_4 \ln CLNY_{ij} + \beta_5 RTA_{ij,t} + \beta_6 \tilde{\tau}_{ij,t}
-\end{align*}\]</span></p>
-<ul>
-<li>D=distance, while Contiguity, same language, and ex colonies are dummy variables.</li>
-</ul>
-</section>
-<section id="trade-policies" class="slide level2">
-<h2>Trade policies</h2>
-<ul>
-<li><p>RTA is a dummy noting whether both countries are a member of a trade agreement.</p></li>
-<li><p><span class="math inline">\(\tilde{\tau}\)</span> is a bilateral tariff <span class="math inline">\(\ln (1+tariff_{ij,t})\)</span></p></li>
-<li><p>Since tariff is a price shifter, which can be expressed as a terms of the trade elasticity of substitution. (i.e., <span class="math inline">\(\beta_6=-\sigma\)</span>)</p></li>
-</ul>
-<p>This is the part where we can also add more trade policy that represents trade costs. However, the next problem is prolly the most important for trade policy enthusiasts.</p>
-</section>
-<section id="the-endogeneity-of-policies" class="slide level2">
-<h2>The endogeneity of policies</h2>
-<ul>
-<li><p>Trade policies (like any policies really) are typically non-random/endogeneous.</p></li>
-<li><p>Potential reverse causality problem:</p>
-<ul>
-<li><p>a country would propose a trade agreements with its closest neighbor and its largest trading partner first.</p></li>
-<li><p>Industry with large trade deficit would lobby for protectionist policies.</p></li>
-</ul></li>
-</ul>
-</section>
-<section id="policy-endogeneity" class="slide level2">
-<h2>Policy endogeneity</h2>
-<ul>
-<li><p>It is hard to propose an instrumental variable since we can hardly find good instruments for trade policies.</p></li>
-<li><p>An approach like first difference (or GMM in general) can also be used, but we still have the problem of zero trade.</p></li>
-<li><p>The most practical way is to have a country-pair fixed effects to count for unobserved variables that affect trade policies.</p></li>
-</ul>
-</section>
-<section id="non-discriminatory-trade-policies" class="slide level2">
-<h2>Non-discriminatory trade policies</h2>
-<ul>
-<li><p>This is a policy that does not discriminate trade partners (e.g., unilateral MFN tariffs or subsidies).</p></li>
-<li><p>Meaning, it will be absorbed by exporter-time or importer-time fixed effects.</p></li>
-<li><p>If your variable of interest is a non-discriminatory trade policies by other countries, then an approach like building “remoteness index” to absorb MR instead of country-time FE can be the solution.</p></li>
-<li><p>See Anderson and Yotov (2016) &amp; Head and Mayer (2014)</p></li>
-</ul>
-</section>
-<section id="adjustment-to-shock" class="slide level2">
-<h2>Adjustment to shock</h2>
-<ul>
-<li><p>Sometimes trade patterns take time to adjust to a policy change.</p></li>
-<li><p>Therefore, it’s not ideal to use annual data since we would assume the change in trade policy happens in the same year (or even month)</p></li>
-<li><p>Trefler (2004) uses 3-year inter vals, Anderson and Yotov (2016) use 4-year intervals, and Baier and Bergstrand (2007) use 5-year intervals.</p></li>
-<li><p>Olivero and Yotov (2012) provide empirical evidence that gravity estimates obtained with 3-year and 5-year interval trade data are very similar.</p></li>
-</ul>
-</section>
-<section id="sectoral-gravity" class="slide level2">
-<h2>Sectoral gravity</h2>
-<ul>
-<li><p>Students (and myself) often estimate gravity at sectoral level because we care about specific sectoral policies.</p></li>
-<li><p>Gravity estimation is separable: if we separate a sector from the general economy, it retains a gravity-like structure. i.e.:</p></li>
+<li><strong>Variabel log</strong> (jarak, PDB): <span class="math inline">\(\beta\)</span> = elastisitas.</li>
+<li><span class="math inline">\(\beta_{DIST} = -0{,}9\)</span>: jarak +1%, perdagangan −0,9%.</li>
+<li><strong>Variabel dummy</strong> (RTA, bahasa): efeknya</li>
 </ul>
 <p><span class="math display">\[
-X^k_{ij,t}=\frac{Y^k_{i,t}E^k_{j,t}}{Y^k_t}\left( \frac{t^k_{ij,t}}{P^k_{j,t}\Pi^k_{i,t}} \right)^{1-\sigma_k}
+\left(e^{\beta} - 1\right) \times 100\%
 \]</span></p>
 </section>
-<section id="sectoral-gravity-1" class="slide level2">
-<h2>Sectoral gravity</h2>
+<section id="dummy-jangan-beta-times-100" class="slide level2">
+<h2>Dummy: jangan <span class="math inline">\(\beta \times 100\)</span></h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th><span class="math inline">\(\hat\beta\)</span></th>
+<th><span class="math inline">\(\hat\beta \times 100\)</span></th>
+<th><span class="math inline">\((e^{\hat\beta}-1)\times 100\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0,10</td>
+<td>10%</td>
+<td>10,5%</td>
+</tr>
+<tr class="even">
+<td>0,50</td>
+<td>50%</td>
+<td><strong>64,9%</strong></td>
+</tr>
+<tr class="odd">
+<td>1,00</td>
+<td>100%</td>
+<td><strong>171,8%</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Aproksimasi hanya berlaku untuk <span class="math inline">\(\beta\)</span> kecil.</p>
+</section>
+<section id="tarif-dalam-gravity" class="slide level2">
+<h2>Tarif dalam gravity</h2>
+<p><span class="math display">\[
+X_{ij} = \exp\left(\dots + \beta_\tau \ln(1+\tau_{ij})\right)
+\]</span></p>
+<div class="m">
+<p>di mana <span class="math inline">\(\tau_{ij}\)</span> adalah tarif ad valorem yang dikenakan <span class="math inline">\(j\)</span> atas impor asal <span class="math inline">\(i\)</span>.</p>
 <ul>
-<li><p>the nice feature of the this is that bilateral trade cost (which includes policy) is sector specific.</p></li>
-<li><p>It can also be estimated across sectors with importer-product-time FE and exporter-product-time FE.</p></li>
-<li><p>We can have a specific sector MR / policy or be pooled accross some sectors with a sleight of coding.</p></li>
+<li><span class="math inline">\(\beta_\tau = 1 - \sigma = -\theta\)</span>: <strong>trade elasticity</strong>.</li>
+<li>Literatur: umumnya −4 sampai −8 (Head &amp; Mayer, 2014).</li>
+<li>Dipakai untuk simulasi GE (Advanced Guide, Bab 2).</li>
+</ul>
+</div>
+</section>
+<section id="apa-yang-diserap-fe" class="slide level2">
+<h2>Apa yang diserap FE?</h2>
+<div class="m">
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>FE</th>
+<th>Menyerap</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(\pi_{it}\)</span></td>
+<td>PDB <span class="math inline">\(i\)</span>, kebijakan <span class="math inline">\(i\)</span> terhadap <strong>semua</strong> mitra</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\chi_{jt}\)</span></td>
+<td>PDB <span class="math inline">\(j\)</span>, tarif MFN <span class="math inline">\(j\)</span>, kebijakan <span class="math inline">\(j\)</span> terhadap semua mitra</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\mu_{ij}\)</span></td>
+<td>Jarak, bahasa, kolonial, perbatasan</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Yang tersisa: variabel yang bervariasi di <strong>pasangan × waktu</strong> (<span class="math inline">\(RTA_{ijt}\)</span>, tarif preferensial, sanksi).</p>
+</section>
+<section id="jebakan-kebijakan-unilateral" class="slide level2">
+<h2>Jebakan: kebijakan unilateral</h2>
+<ul>
+<li>Larangan ekspor nikel, perizinan impor, TKDN: berlaku untuk <strong>semua</strong> mitra.</li>
+<li>Akibatnya kolinear dengan <span class="math inline">\(\pi_{it}\)</span> atau <span class="math inline">\(\chi_{jt}\)</span>.</li>
+<li>Koefisien di-<em>drop</em> atau tidak teridentifikasi.</li>
 </ul>
 </section>
-<section id="practical-recommendation" class="slide level2">
-<h2>Practical recommendation</h2>
+<section id="solusi-aliran-domestik" class="slide level2">
+<h2>Solusi: aliran domestik</h2>
+<p><span class="math display">\[
+\begin{aligned}
+X_{ijt} = \exp\big(&amp;\pi_{it} + \chi_{jt} + \mu_{ij} \\
+&amp;+ \beta\,INTL_{ij} \times POLICY_{jt}\big)\,\varepsilon_{ijt}
+\end{aligned}
+\]</span></p>
+<div class="m">
+<p>di mana sampel mencakup aliran domestik <span class="math inline">\(X_{iit}\)</span>, <span class="math inline">\(INTL_{ij} = 1\)</span> jika <span class="math inline">\(i \neq j\)</span>, dan <span class="math inline">\(POLICY_{jt}\)</span> adalah kebijakan negara <span class="math inline">\(j\)</span> pada tahun <span class="math inline">\(t\)</span> (Heid, Larch &amp; Yotov, 2021).</p>
+<ul>
+<li>Latihan: Advanced Guide Bab 1, Exercise 2.</li>
+</ul>
+</div>
+</section></section>
+<section>
+<section id="kasus-indonesia" class="title-slide slide level1 center" data-background-color="#51483d">
+<h1>Kasus Indonesia</h1>
+
+</section>
+<section id="mitra-fta-indonesia" class="slide level2">
+<h2>Mitra FTA Indonesia</h2>
+<div class="s">
+<p>Jumlah negara mitra (sumbu-y) yang memiliki perjanjian dagang berlaku dengan Indonesia per tahun (sumbu-x), berdasarkan notifikasi WTO. Sumber: CEPII Gravity V202211 (<code>fta_wto</code>), data sampai 2021.</p>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="fig_idn_fta.png" class="quarto-figure quarto-figure-center" height="400"></p>
+</figure>
+</div>
+</section>
+<section id="mitra-fta-indonesia-1" class="slide level2">
+<h2>Mitra FTA Indonesia</h2>
+<div class="m">
+<ul>
+<li>2000: ASEAN (9); 2005: Tiongkok; 2008: Jepang; 2010: Australia, NZ, India, Korea; 2019: Hong Kong; 2020: Chile.</li>
+<li>RCEP (2023) dan IEU-CEPA belum tercakup.</li>
+<li>Satu mitra bisa dicakup beberapa perjanjian (Australia: AANZFTA, IA-CEPA).</li>
+<li><code>fta_wto</code> tidak membedakan kedalaman perjanjian.</li>
+</ul>
+</div>
+</section>
+<section id="studi-kasus-sedrakyan-2023" class="slide level2">
+<h2>Studi kasus: Sedrakyan (2023)</h2>
+<div class="m">
+<ul>
+<li>Pertanyaan: apakah RTA Indonesia menaikkan ekspor dan impor?</li>
+<li>Data: perdagangan Indonesia dengan 42 mitra, 1989–2019, agregat dan 9 kelompok produk.</li>
+<li>Metode: PPML; RTA dibedakan menjadi AFTA, ASEAN-Plus, <em>partial scope agreement</em>, dan keanggotaan WTO.</li>
+<li>Temuan: AFTA <strong>tidak</strong> menaikkan ekspor Indonesia, tetapi menaikkan impor. Format ASEAN-Plus berasosiasi negatif dengan ekspor.</li>
+</ul>
+</div>
+<div class="s">
+<p>Sedrakyan, G. S. (2023). <em>The impact of preferential trade agreements on trade in Indonesia</em>. USITC Economics Working Paper 2023-12-A.</p>
+</div>
+</section>
+<section id="sampel-hanya-indonesia" class="slide level2">
+<h2>Sampel hanya Indonesia</h2>
+<div class="m">
+<ul>
+<li>Semua pasangan melibatkan Indonesia → FE eksportir/importir untuk Indonesia = konstanta, ikut ter-<em>drop</em>.</li>
+<li>Sedrakyan memakai <em>remoteness index</em> sebagai pengganti MR (lihat slide “Alternatif selain FE”).</li>
+<li>Alternatif yang konsisten dengan teori: pakai <strong>sampel dunia</strong> (semua pasangan negara), FE <span class="math inline">\(\pi_{it}, \chi_{jt}, \mu_{ij}\)</span>, lalu</li>
+</ul>
+<p><span class="math display">\[
+\beta_1 RTA_{ijt} + \beta_2 \left(RTA_{ijt} \times IDN_{ij}\right)
+\]</span></p>
+<p>di mana <span class="math inline">\(IDN_{ij} = 1\)</span> jika Indonesia adalah eksportir atau importir. Ini yang kita lakukan di lab.</p>
+</div>
+</section>
+<section id="pertanyaan-dan-spesifikasi-1" class="slide level2">
+<h2>Pertanyaan dan spesifikasi (1)</h2>
+<div class="m">
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Pertanyaan</th>
+<th>Spesifikasi</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Efek ACFTA / IJEPA / IA-CEPA?</td>
+<td>Panel PPML, FE <span class="math inline">\(\pi_{it}, \chi_{jt}, \mu_{ij}\)</span>, <span class="math inline">\(RTA_{ijt}\)</span></td>
+</tr>
+<tr class="even">
+<td>Efek FTA khusus Indonesia?</td>
+<td><span class="math inline">\(RTA_{ijt} \times IDN_{ij}\)</span></td>
+</tr>
+<tr class="odd">
+<td>Efek tarif AS / Indonesia–US ART?</td>
+<td><span class="math inline">\(\ln(1+\tau_{ijt})\)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="pertanyaan-dan-spesifikasi-2" class="slide level2">
+<h2>Pertanyaan dan spesifikasi (2)</h2>
+<div class="m">
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Pertanyaan</th>
+<th>Spesifikasi</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Larangan ekspor nikel, perizinan impor?</td>
+<td><span class="math inline">\(X_{ii}\)</span> + <span class="math inline">\(INTL_{ij} \times POLICY_{jt}\)</span></td>
+</tr>
+<tr class="even">
+<td><em>Ad valorem equivalent</em> NTM?</td>
+<td>Gravity tingkat produk (NTM Guide, Bab 3)</td>
+</tr>
+<tr class="odd">
+<td>Efek terhadap welfare / PDB riil?</td>
+<td>GE PPML (Advanced Guide, Bab 2)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="ex-post-vs-ex-ante" class="slide level2">
+<h2>Ex post vs ex ante</h2>
+<div class="m">
+<ul>
+<li><strong>Ex post</strong> (lab): FTA sudah berlaku; estimasi <span class="math inline">\(\beta_{RTA}\)</span>.</li>
+<li><strong>Ex ante</strong> (mis. IEU-CEPA): simulasi
 <ol type="1">
-<li><p>Always use panel data when available.</p></li>
-<li><p>Experiment with lagged trade cost / policy variable.</p></li>
-<li><p>Use intra-national trade if possible. It really helps with border trade cost.</p></li>
-<li><p>Use fixed effects as discussed in previous slides.</p></li>
-<li><p>Use PPML. (4+5=use PPMLHDFE)</p></li>
-</ol>
-</section>
-<section id="ppml-construction" class="slide level2">
-<h2>PPML construction</h2>
-<p>for example:</p>
-<p><span class="math display">\[
-X_{ij,t}=exp[\pi_{i,t}+\chi_{j,t}+\beta_1D_{ij,t}+\beta_2RTA_{ij,t}]\times \varepsilon_{ij,t}
-\]</span></p>
-<p><span class="math inline">\(D_{ij,t}\)</span> is a log distance. <span class="math inline">\(\beta_1&lt;0\)</span> can be interpreted as an increase in D by 1% would reduce trade flow by <span class="math inline">\(\beta_1\)</span> percent, <em>ceteris paribus</em></p>
-<p><span class="math inline">\(RTA_{ij,t}\)</span> is a dummy variable=1 if an RTA exists. We interpret <span class="math inline">\(\beta_2&gt;0\)</span> as a country would trade <span class="math inline">\(\left[e^{\beta_2}-1\right]\times 100\)</span> more if there is a trade agreement, <em>ceteris paribus</em>.</p>
-</section>
-<section id="next-week" class="slide level2">
-<h2>Next week</h2>
-<p>Please have a look at <a href="https://imedkrisna.github.io/misc.html">imedkrisna.github.io/misc</a>. Choose whether you want to use R or Stata.</p>
-<p>Complete the preparation of installing R &amp; RStudio or Stata.</p>
-<p>Download everything in <a href="https://1drv.ms/f/s!AjelszXKKcmskMsKLZRRwRJq1a2MnA?e=xsdpxL">here</a>. Be mindful of the size of the dataset.</p>
-<p>Bring your laptop. We will conduct an exercise of replicating Silva &amp; Tenreyro (2006) but also a sectoral gravity regression.</p>
-</section>
-<section id="references" class="slide level2 s">
-<h2>References</h2>
-<ul>
-<li><p>Silva, Santos, and Silvana Tenreyro. 2006. “The Log of Gravity.” The Review of Economics and Statistics 88 (4): 19.</p></li>
-<li><p>Yotov, Yoto. 2022. <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4037001.">“Gravity at Sixty: The Workhorse Model of Trade.”</a> CESifo Working Papers 9584.</p></li>
-<li><p>Yotov, Yoto, Roberta Piermartini, Jose-Antonio Monteiro, and Mario Larch. 2016. <a href="https://www.wto.org/english/res_e/publications_e/advancedguide2016_e.htm">“An Advanced Guide to Trade Policy Analysis: The Structural Gravity Model”</a>. WTO and UNCTAD.</p></li>
-<li><p>Correia, Sergio, Paulo Guimarães, and Tom Zylkin. 2020. <a href="https://doi.org/10.1177/1536867x20909691.">“Fast Poisson Estimation with High-Dimensional Fixed Effects.”</a> The Stata Journal 20 (1): 95–115.</p></li>
+<li>Estimasi koefisien biaya dagang (PPML).</li>
+<li>Ubah <span class="math inline">\(t_{ij}\)</span> sesuai skenario.</li>
+<li>Hitung ulang <span class="math inline">\(\Pi_i\)</span>, <span class="math inline">\(P_j\)</span>, output: efek GE.</li>
+</ol></li>
+<li>Koefisien saja ≠ efek total: ada diversi dagang dan perubahan harga.</li>
 </ul>
-<div class="quarto-auto-generated-content">
+</div>
+</section>
+<section id="keterbatasan-1" class="slide level2">
+<h2>Keterbatasan (1)</h2>
+<div class="m">
+<ul>
+<li><strong>Identifikasi</strong>: pair FE hanya mengatasi endogenitas <em>time-invariant</em>. Antisipasi: uji <em>lead</em> <span class="math inline">\(RTA_{ij,t+k}\)</span>.</li>
+<li><strong>Efek bertahap</strong>: FTA di-<em>phase in</em>; sertakan <em>lag</em> <span class="math inline">\(RTA_{ij,t-k}\)</span>.</li>
+<li><strong>Incidental parameter bias</strong>: PPML tiga dimensi FE, SE bias di sampel kecil (Weidner &amp; Zylkin, 2021).</li>
+</ul>
+</div>
+</section>
+<section id="keterbatasan-2" class="slide level2">
+<h2>Keterbatasan (2)</h2>
+<div class="m">
+<ul>
+<li><strong>Konvergensi</strong>: data HS6 + banyak FE sering gagal konvergen atau <em>separation</em>; <code>ppmlhdfe</code> mendeteksinya.</li>
+<li><strong>Data domestik</strong>: <span class="math inline">\(X_{ii}\)</span> jarang tersedia untuk Indonesia, sehingga diproksi (output bruto − ekspor).</li>
+</ul>
+</div>
+</section></section>
+<section>
+<section id="persiapan-lab" class="title-slide slide level1 center" data-background-color="#51483d">
+<h1>Persiapan lab</h1>
+
+</section>
+<section id="pertemuan-2-lab-ppml" class="slide level2">
+<h2>Pertemuan 2: Lab PPML</h2>
+<div class="m">
+<ol type="1">
+<li>Cross-section 2019: OLS log vs PPML, dengan/tanpa FE.</li>
+<li>Panel: FE eksportir-tahun, importir-tahun, pasangan; koefisien FTA.</li>
+<li>Latihan Indonesia: efek FTA, interpretasi <span class="math inline">\((e^\beta - 1)\)</span>.</li>
+</ol>
+</div>
+</section>
+<section id="persiapan" class="slide level2">
+<h2>Persiapan</h2>
+<div class="m">
+<ul>
+<li>Data: CEPII Gravity (Conte, Cotterlaz &amp; Mayer, 2022).</li>
+<li>R: <code>fixest::fepois()</code>; Stata: <code>ppmlhdfe</code>.</li>
+<li>Materi: <a href="https://imedkrisna.github.io/gravity/">imedkrisna.github.io/gravity</a> (R), <a href="https://imedkrisna.github.io/statagravity/">imedkrisna.github.io/statagravity</a> (Stata).</li>
+<li><strong>Instal software dan unduh data sebelum kelas.</strong></li>
+</ul>
+</div>
+</section>
+<section id="referensi-1" class="slide level2">
+<h2>Referensi (1)</h2>
+<div class="xs">
+<p>Anderson, J. E. (1979). A theoretical foundation for the gravity equation. <em>American Economic Review</em>, 69(1), 106–116.</p>
+<p>Anderson, J. E., &amp; van Wincoop, E. (2003). Gravity with gravitas: A solution to the border puzzle. <em>American Economic Review</em>, 93(1), 170–192.</p>
+<p>Arkolakis, C., Costinot, A., &amp; Rodríguez-Clare, A. (2012). New trade models, same old gains? <em>American Economic Review</em>, 102(1), 94–130.</p>
+<p>Baier, S. L., &amp; Bergstrand, J. H. (2007). Do free trade agreements actually increase members’ international trade? <em>Journal of International Economics</em>, 71(1), 72–95.</p>
+<p>Beine, M., Bertoli, S., &amp; Fernández-Huertas Moraga, J. (2016). A practitioners’ guide to gravity models of international migration. <em>The World Economy</em>, 39(4), 496–512.</p>
+<p>Caliendo, L., &amp; Parro, F. (2015). Estimates of the trade and welfare effects of NAFTA. <em>Review of Economic Studies</em>, 82(1), 1–44.</p>
+<p>Chaney, T. (2008). Distorted gravity: The intensive and extensive margins of international trade. <em>American Economic Review</em>, 98(4), 1707–1721.</p>
+<p>Conte, M., Cotterlaz, P., &amp; Mayer, T. (2022). The CEPII Gravity database. CEPII Working Paper 2022-05.</p>
+<p>Correia, S., Guimarães, P., &amp; Zylkin, T. (2020). Fast Poisson estimation with high-dimensional fixed effects. <em>Stata Journal</em>, 20(1), 95–115.</p>
+<p>Disdier, A.-C., &amp; Head, K. (2008). The puzzling persistence of the distance effect on bilateral trade. <em>Review of Economics and Statistics</em>, 90(1), 37–48.</p>
+<p>Eaton, J., &amp; Kortum, S. (2002). Technology, geography, and trade. <em>Econometrica</em>, 70(5), 1741–1779.</p>
+<p>Fally, T. (2015). Structural gravity and fixed effects. <em>Journal of International Economics</em>, 97(1), 76–85.</p>
+</div>
+</section>
+<section id="referensi-2" class="slide level2">
+<h2>Referensi (2)</h2>
+<div class="xs">
+<p>Felbermayr, G., Kirilakha, A., Syropoulos, C., Yalcin, E., &amp; Yotov, Y. V. (2020). The global sanctions data base. <em>European Economic Review</em>, 129, 103561.</p>
+<p>Head, K., &amp; Mayer, T. (2014). Gravity equations: Workhorse, toolkit, and cookbook. In <em>Handbook of International Economics</em>, Vol. 4, 131–195.</p>
+<p>Head, K., &amp; Ries, J. (2008). FDI as an outcome of the market for corporate control: Theory and evidence. <em>Journal of International Economics</em>, 74(1), 2–20.</p>
+<p>Heid, B., Larch, M., &amp; Yotov, Y. V. (2021). Estimating the effects of non-discriminatory trade policies within structural gravity models. <em>Canadian Journal of Economics</em>, 54(1), 376–409.</p>
+<p>Helpman, E., Melitz, M., &amp; Rubinstein, Y. (2008). Estimating trade flows: Trading partners and trading volumes. <em>Quarterly Journal of Economics</em>, 123(2), 441–487.</p>
+<p>McCallum, J. (1995). National borders matter: Canada–U.S. regional trade patterns. <em>American Economic Review</em>, 85(3), 615–623.</p>
+<p>Portes, R., &amp; Rey, H. (2005). The determinants of cross-border equity flows. <em>Journal of International Economics</em>, 65(2), 269–296.</p>
+<p>Santos Silva, J. M. C., &amp; Tenreyro, S. (2006). The log of gravity. <em>Review of Economics and Statistics</em>, 88(4), 641–658.</p>
+<p>Sedrakyan, G. S. (2023). The impact of preferential trade agreements on trade in Indonesia. USITC Economics Working Paper 2023-12-A.</p>
+<p>Tinbergen, J. (1962). <em>Shaping the World Economy</em>. Twentieth Century Fund.</p>
+<p>Weidner, M., &amp; Zylkin, T. (2021). Bias and consistency in three-way gravity models. <em>Journal of International Economics</em>, 132, 103513.</p>
+<p>Yotov, Y. V., Piermartini, R., Monteiro, J.-A., &amp; Larch, M. (2016). <em>An Advanced Guide to Trade Policy Analysis: The Structural Gravity Model</em>. WTO/UNCTAD.</p>
+</div>
+
+</section></section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
 
 </div>
-</div>
-</section>
-    </div>
-  </div>
+</div></div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="index_files/libs/revealjs/dist/reveal.js"></script>
+  <script src="gravity1_files/libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="index_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="index_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="index_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
-  <script src="index_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="gravity1_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="gravity1_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="gravity1_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="gravity1_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="gravity1_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="gravity1_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="index_files/libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="index_files/libs/revealjs/plugin/search/search.js"></script>
-  <script src="index_files/libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="index_files/libs/revealjs/plugin/math/math.js"></script>
+  <script src="gravity1_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="gravity1_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="gravity1_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="gravity1_files/libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>
@@ -671,7 +1022,8 @@ X_{ij,t}=exp[\pi_{i,t}+\chi_{j,t}+\beta_1D_{ij,t}+\beta_2RTA_{ij,t}]\times \vare
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"8\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
 'chalkboard': {"buttons":true},
 'smaller': false,
  
@@ -826,7 +1178,7 @@ X_{ij,t}=exp[\pi_{i,t}+\chi_{j,t}+\beta_1D_{ij,t}+\beta_2RTA_{ij,t}]\times \vare
         margin: 0.1,
 
         math: {
-          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js',
           config: 'TeX-AMS_HTML-full',
           tex2jax: {
             inlineMath: [['\\(','\\)']],
@@ -853,192 +1205,173 @@ X_{ij,t}=exp[\pi_{i,t}+\chi_{j,t}+\beta_1D_{ij,t}+\beta_2RTA_{ij,t}]\times \vare
       });
     </script>
     <script id="quarto-html-after-body" type="application/javascript">
-    window.document.addEventListener("DOMContentLoaded", function (event) {
-      const toggleBodyColorMode = (bsSheetEl) => {
-        const mode = bsSheetEl.getAttribute("data-mode");
-        const bodyEl = window.document.querySelector("body");
-        if (mode === "dark") {
-          bodyEl.classList.add("quarto-dark");
-          bodyEl.classList.remove("quarto-light");
-        } else {
-          bodyEl.classList.add("quarto-light");
-          bodyEl.classList.remove("quarto-dark");
-        }
-      }
-      const toggleBodyColorPrimary = () => {
-        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
-        if (bsSheetEl) {
-          toggleBodyColorMode(bsSheetEl);
-        }
-      }
-      toggleBodyColorPrimary();  
-      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
-      tabsets.forEach(function(tabset) {
-        const tabby = new Tabby('#' + tabset.id);
-      });
-      const isCodeAnnotation = (el) => {
-        for (const clz of el.classList) {
-          if (clz.startsWith('code-annotation-')) {                     
-            return true;
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
           }
+          return false;
         }
-        return false;
-      }
-      const onCopySuccess = function(e) {
-        // button target
-        const button = e.trigger;
-        // don't keep focus
-        button.blur();
-        // flash "checked"
-        button.classList.add('code-copy-button-checked');
-        var currentTitle = button.getAttribute("title");
-        button.setAttribute("title", "Copied!");
-        let tooltip;
-        if (window.bootstrap) {
-          button.setAttribute("data-bs-toggle", "tooltip");
-          button.setAttribute("data-bs-placement", "left");
-          button.setAttribute("data-bs-title", "Copied!");
-          tooltip = new bootstrap.Tooltip(button, 
-            { trigger: "manual", 
-              customClass: "code-copy-button-tooltip",
-              offset: [0, -8]});
-          tooltip.show();    
-        }
-        setTimeout(function() {
-          if (tooltip) {
-            tooltip.hide();
-            button.removeAttribute("data-bs-title");
-            button.removeAttribute("data-bs-toggle");
-            button.removeAttribute("data-bs-placement");
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Disalin!");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Disalin!");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
           }
-          button.setAttribute("title", currentTitle);
-          button.classList.remove('code-copy-button-checked');
-        }, 1000);
-        // clear code selection
-        e.clearSelection();
-      }
-      const getTextToCopy = function(trigger) {
-          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
           for (const childEl of codeEl.children) {
             if (isCodeAnnotation(childEl)) {
               childEl.remove();
             }
           }
           return codeEl.innerText;
-      }
-      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-        text: getTextToCopy
-      });
-      clipboard.on('success', onCopySuccess);
-      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-        // For code content inside modals, clipBoardJS needs to be initialized with a container option
-        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
-        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-          text: getTextToCopy,
-          container: window.document.getElementById('quarto-embedded-source-code-modal')
-        });
-        clipboardModal.on('success', onCopySuccess);
-      }
-        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-        var mailtoRegex = new RegExp(/^mailto:/);
-          var filterRegex = new RegExp('/' + window.location.host + '/');
-        var isInternal = (href) => {
-            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
         }
-        // Inspect non-navigation links and adorn them if external
-     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
-        for (var i=0; i<links.length; i++) {
-          const link = links[i];
-          if (!isInternal(link.href)) {
-            // undo the damage that might have been done by quarto-nav.js in the case of
-            // links that we want to consider external
-            if (link.dataset.originalHref !== undefined) {
-              link.href = link.dataset.originalHref;
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp('/' + window.location.host + '/');
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
             }
           }
-        }
-      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
-        const config = {
-          allowHTML: true,
-          maxWidth: 500,
-          delay: 100,
-          arrow: false,
-          appendTo: function(el) {
-              return el.closest('section.slide') || el.parentElement;
-          },
-          interactive: true,
-          interactiveBorder: 10,
-          theme: 'light-border',
-          placement: 'bottom-start',
-        };
-        if (contentFn) {
-          config.content = contentFn;
-        }
-        if (onTriggerFn) {
-          config.onTrigger = onTriggerFn;
-        }
-        if (onUntriggerFn) {
-          config.onUntrigger = onUntriggerFn;
-        }
-          config['offset'] = [0,0];
-          config['maxWidth'] = 700;
-        window.tippy(el, config); 
-      }
-      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-      for (var i=0; i<noterefs.length; i++) {
-        const ref = noterefs[i];
-        tippyHover(ref, function() {
-          // use id or data attribute instead here
-          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
-          try { href = new URL(href).hash; } catch {}
-          const id = href.replace(/^#\/?/, "");
-          const note = window.document.getElementById(id);
-          if (note) {
-            return note.innerHTML;
-          } else {
-            return "";
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
           }
-        });
-      }
-      const findCites = (el) => {
-        const parentEl = el.parentElement;
-        if (parentEl) {
-          const cites = parentEl.dataset.cites;
-          if (cites) {
-            return {
-              el,
-              cites: cites.split(' ')
-            };
-          } else {
-            return findCites(el.parentElement)
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
           }
-        } else {
-          return undefined;
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
         }
-      };
-      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-      for (var i=0; i<bibliorefs.length; i++) {
-        const ref = bibliorefs[i];
-        const citeInfo = findCites(ref);
-        if (citeInfo) {
-          tippyHover(citeInfo.el, function() {
-            var popup = window.document.createElement('div');
-            citeInfo.cites.forEach(function(cite) {
-              var citeDiv = window.document.createElement('div');
-              citeDiv.classList.add('hanging-indent');
-              citeDiv.classList.add('csl-entry');
-              var biblioDiv = window.document.getElementById('ref-' + cite);
-              if (biblioDiv) {
-                citeDiv.innerHTML = biblioDiv.innerHTML;
-              }
-              popup.appendChild(citeDiv);
-            });
-            return popup.innerHTML;
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
           });
         }
-      }
-    });
-    </script>
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
     
 
 </body></html>

@@ -52,14 +52,7 @@ locale:
   date_format: 'Jan 2, 2006'
   time_format: '3:04 PM'
 
-# Site features
-features:
-  math:
-    enable: true
-  privacy_pack:
-    enable: false
-
-# Security
+# Site features and security
 hugoblox:
   # Font file is self-hosted at assets/dist/font/PlusJakartaSans.var.woff2
   typography:
@@ -68,6 +61,9 @@ hugoblox:
       body: 'Plus Jakarta Sans'
     leading:
       body: 1.7
+  content:
+    math:
+      enable: true
   security:
     csp:
       policy: ""
