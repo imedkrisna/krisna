@@ -6,7 +6,6 @@
 appearance:
   mode: system
   color: emerald
-  font: serif
 
 # SEO
 marketing:
@@ -62,6 +61,13 @@ features:
 
 # Security
 hugoblox:
+  # Font file is self-hosted at assets/dist/font/PlusJakartaSans.var.woff2
+  typography:
+    families:
+      heading: 'Plus Jakarta Sans'
+      body: 'Plus Jakarta Sans'
+    leading:
+      body: 1.7
   security:
     csp:
       policy: ""
