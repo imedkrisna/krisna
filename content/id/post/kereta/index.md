@@ -36,7 +36,7 @@ Spoiler: yang bayar anker, alias anak kereta.
 
 ## TKDN di kasus INKA
 
-Strukturnya begini. Di Indonesia, produsen sarana kereta **domestik** ya cuma INKA (BUMN). Jadi di pasar dalam negeri INKA adalah monopoli, dan pesaingnya cuma impor. Pembeli utamanya KAI dan anak usahanya, KAI Commuter (KCI), yang mengoperasikan KRL. Selama ini KCI menambal kebutuhan armada dengan **KRL bekas dari Jepang**, yang murah dan datengnya cepet.
+Di Indonesia, produsen sarana kereta **domestik** ya cuma INKA (BUMN). Jadi di pasar dalam negeri INKA adalah monopoli, dan pesaingnya cuma impor. Pembeli utamanya KAI dan anak usahanya, KAI Commuter (KCI), yang mengoperasikan KRL. Selama ini KCI menambal kebutuhan armada dengan **KRL bekas dari Jepang**, yang murah dan datengnya cepet.
 
 Namun tahun 2023, jalur impor tersebut ditutup. KCI mengajukan impor 348 unit KRL bekas seri E217. Kemenperin [menolak memberi rekomendasi teknis](https://www.cnnindonesia.com/ekonomi/20230302082911-92-919704/alasan-kemenperin-tolak-beri-rekomendasi-izin-impor-krl-bekas-jepang) karena barang modal bukan baru itu tidak memenuhi syarat TKDN dan tidak sejalan dengan program Peningkatan Penggunaan Produk Dalam Negeri (P3DN). BPKP lalu mengaudit dan [juga tidak merekomendasikan impor](https://www.liputan6.com/bisnis/read/5253748/tok-impor-krl-bekas-jepang-resmi-ditolak). Alasan BPKP bukan cuma soal produksi dalam negeri: [biaya _handling_ dan pengapalan yang diajukan KCI dinilai tidak bisa diyakini](https://www.suara.com/bisnis/2023/04/06/124026/bpkp-temukan-kejanggalan-biaya-impor-krl-bekas), dan [armada yang ada (1.114 unit) dinilai masih cukup](https://nasional.kontan.co.id/news/hasil-review-bpkp-impor-krl-bekas-tak-direkomendasikan) karena penumpang 2023 masih jauh di bawah 2019. Jadi TKDN/P3DN adalah bagian dari konteks kebijakannya, bukan satu-satunya alasan. Opsi yang tersisa adalah retrofit KRL lama di INKA dan menunggu KRL baru buatan INKA ([kronologinya di sini](https://id.wikipedia.org/wiki/Polemik_impor_KRL_bekas_tahun_2023)). Akhirnya KCI memesan 16 rangkaian (_trainset_) baru dan retrofit dari INKA. Belakangan KCI juga diizinkan mengimpor KRL **baru** dari [CRRC (Tiongkok)](https://www.tempo.co/ekonomi/kai-klaim-92-persen-pengadaan-krl-bekerja-sama-dengan-inka-total-investasi-rp6-06-triliun-89355).
 
@@ -159,7 +159,7 @@ $$
 L^{atas} = DWL + (p^{*} - \bar{p})\,K
 $$
 
-Gambar 1 menggambarkan dua besaran ini seperti di buku teks. Sumbu horizontal adalah jumlah perjalanan KRL per hari $Q$, sumbu vertikal adalah tarif per perjalanan $p$ dalam Rupiah. Kurva hitam adalah permintaan $Q(p)$ dengan $\varepsilon = -0{,}3$, dikalibrasi dari asumsi di atas (tarif rata-rata Rp4.570 pada 1 juta perjalanan per hari). Garis vertikal tebal adalah kapasitas $K$ dengan 89 trainset. Sumbunya sengaja dipotong, tidak mulai dari nol, supaya bidang-bidangnya kelihatan, dan angkanya ilustratif dari model di atas, bukan data. Sumber: hitungan penulis.
+Gambar 1 mengilustrasikan batas atas dan bawah dari kerugian yang dibayar konsumen. Sumbu horizontal adalah jumlah perjalanan KRL per hari $Q$, sumbu vertikal adalah tarif per perjalanan $p$ dalam Rupiah. Kurva hitam adalah permintaan $Q(p)$ dengan $\varepsilon = -0{,}3$, dikalibrasi dari asumsi di atas (tarif rata-rata Rp4.570 pada 1 juta perjalanan per hari). Garis vertikal tebal adalah kapasitas $K$ dengan 89 trainset. Sumbunya tidak mulai dari 0 supaya bidang-bidangnya kelihatan.
 
 
 ```python
@@ -238,11 +238,11 @@ plt.show()
     
 
 
-Titik A adalah yang "diminta" pasar pada tarif resmi: dengan tarif $\bar{p}$, orang mau naik $Q_0$ = 1 juta perjalanan per hari, yang butuh 105 trainset. Titik B adalah harga yang menyamakan permintaan dengan kapasitas yang ada: kalau tarif bebas bergerak, ia naik ke $p^{*} \approx$ Rp7.930 dan kelebihan permintaan hilang. Yang terjadi di dunia nyata adalah titik C: tarif tetap $\bar{p}$, tapi layanan standar cuma $K$, sehingga ada kelebihan permintaan $Q_0 - K \approx$ 152 ribu perjalanan per hari.
+Titik A adalah yang "diminta" pasar pada tarif resmi: dengan tarif $\bar{p}$, orang mau naik $Q_0$ = 1 juta perjalanan per hari, yang butuh 105 trainset. Titik B adalah harga yang menyamakan permintaan dengan kapasitas yang ada: kalau tarif bebas bergerak, ia naik ke $p^{*} \approx$ Rp7.930 dan kelebihan permintaan hilang. Yang terjadi di dunia nyata adalah titik C: tarif tetap $\bar{p}$ karena diatur negara, tapi layanan standar cuma $K$, sehingga ada kelebihan permintaan $Q_0 - K \approx$ 152 ribu perjalanan per hari.
 
-Di pasar biasa, kelebihan permintaan seperti ini dijawab lewat kuantitas: garis kapasitas bergeser ke kanan menuju $Q_0$. Di sini kuantitas tidak bisa menyesuaikan karena dua hal sekaligus. Impor KRL bekas dilarang, dan INKA tidak mampu mengirim trainset secepat yang dibutuhkan (3 dari target 8 per tahun). Jadi garis kapasitasnya macet di 89 trainset, harganya macet di $\bar{p}$, dan penyesuaiannya terpaksa lewat penjatahan.
+Di pasar normal, kelebihan permintaan seperti ini dijawab lewat kuantitas: garis kapasitas bergeser ke kanan menuju $Q_0$. Di sini kuantitas tidak bisa menyesuaikan karena dua hal sekaligus. Impor KRL bekas dilarang, dan INKA tidak mampu mengirim trainset secepat yang dibutuhkan (3 dari target 8 per tahun). Jadi garis kapasitasnya macet di 89 trainset, harganya macet di $\bar{p}$, dan penyesuaiannya terpaksa lewat penjatahan.
 
-Segitiga merah adalah $DWL$: surplus dari perjalanan antara $K$ dan $Q_0$ yang hilang begitu saja dan tidak pindah ke siapa pun. Ini batas bawahnya. Persegi panjang biru bergaris adalah rente $(p^{*}-\bar{p})\,K$: surplus yang seharusnya dinikmati penumpang yang masih terlayani, tapi di bawah penjatahan lewat antre dan desak-desakan bisa habis terbakar. Batas atas $L^{atas}$ adalah jumlah keduanya. Kode di bawah menghitung luas kedua bidang itu untuk tiga nilai elastisitas.
+Segitiga merah adalah klasik $DWL$ di kuliah mikroekonomi dasar: surplus dari perjalanan antara $K$ dan $Q_0$ yang hilang begitu saja dan tidak pindah ke siapa pun. Ini batas bawahnya. Persegi panjang biru bergaris adalah rente $(p^{*}-\bar{p})\,K$: surplus yang seharusnya dinikmati penumpang yang masih terlayani, tapi di bawah penjatahan lewat antre dan desak-desakan bisa habis terbakar. Batas atas $L^{atas}$ adalah jumlah keduanya. Kode di bawah menghitung luas kedua bidang itu untuk tiga nilai elastisitas.
 
 
 ```python
