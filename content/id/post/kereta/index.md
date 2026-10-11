@@ -159,6 +159,91 @@ $$
 L^{atas} = DWL + (p^{*} - \bar{p})\,K
 $$
 
+Gambar 1 menggambarkan dua besaran ini seperti di buku teks. Sumbu horizontal adalah jumlah perjalanan KRL per hari $Q$, sumbu vertikal adalah tarif per perjalanan $p$ dalam Rupiah. Kurva hitam adalah permintaan $Q(p)$ dengan $\varepsilon = -0{,}3$, dikalibrasi dari asumsi di atas (tarif rata-rata Rp4.570 pada 1 juta perjalanan per hari). Garis vertikal tebal adalah kapasitas $K$ dengan 89 trainset. Sumbunya sengaja dipotong, tidak mulai dari nol, supaya bidang-bidangnya kelihatan, dan angkanya ilustratif dari model di atas, bukan data. Sumber: hitungan penulis.
+
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+eps, p, Q0, x = -0.3, 4570, 1e6, 89 / 105
+K = x * Q0
+pstar = p * x ** (1 / eps)
+P = lambda q: p * (q / Q0) ** (1 / eps)          # kurva permintaan invers
+
+ink, merah, biru = "#222222", "#c0392b", "#2c6fbb"
+qlo, qhi, plo, phi = 0.78 * Q0, 1.08 * Q0, 2000, 11500
+q = np.linspace(qlo, qhi, 400)
+
+fig, ax = plt.subplots(figsize=(8, 5.6))
+ax.plot(q / 1e3, P(q), color=ink, lw=2)
+
+qd = np.linspace(K, Q0, 200)
+ax.fill_between(qd / 1e3, p, P(qd), color=merah, alpha=0.6, lw=0)
+ax.fill_between([qlo / 1e3, K / 1e3], p, pstar, color=biru, alpha=0.15, lw=0)
+ax.fill_between([qlo / 1e3, K / 1e3], p, pstar, facecolor="none", edgecolor=biru,
+                hatch="//", lw=0, alpha=0.6)
+
+ax.axvline(K / 1e3, color=ink, lw=2.5)
+ax.plot([Q0 / 1e3, Q0 / 1e3], [plo, p], color=ink, lw=1, ls="--")
+ax.plot([qlo / 1e3, Q0 / 1e3], [p, p], color=ink, lw=1, ls="--")
+ax.plot([qlo / 1e3, K / 1e3], [pstar, pstar], color=ink, lw=1, ls="--")
+
+for X, Y, lab, dx, dy in [(Q0, p, "A", 6, -420), (K, pstar, "B", 5, 250), (K, p, "C", -16, -520)]:
+    ax.plot(X / 1e3, Y, "o", color=ink, ms=7, mec="white", mew=1.5)
+    ax.text(X / 1e3 + dx, Y + dy, lab, fontsize=12, fontweight="bold", color=ink)
+
+fs = 10
+ax.text(qlo / 1e3 + 3, p + 120, r"$\bar{p}$ = Rp4.570" "\n(tarif resmi)", fontsize=fs, color=ink)
+ax.text(qlo / 1e3 + 3, pstar + 120, r"$p^{*}\approx$ Rp7.930" "\n(harga bayangan)", fontsize=fs, color=ink)
+ax.text(K / 1e3 - 6, plo + 150, r"$K\approx$ 848 rb" "\n(89 trainset)", fontsize=fs, color=ink, ha="right")
+ax.text(Q0 / 1e3 + 6, plo + 150, r"$Q_0$ = 1 juta" "\n(105 trainset)", fontsize=fs, color=ink, ha="left")
+ax.text(qhi / 1e3 - 2, 3400, "Permintaan\n" r"$Q(p)=Ap^{\varepsilon}$, $\varepsilon=-0{,}3$",
+        fontsize=fs, color=ink, ha="right", va="top")
+
+ax.annotate("DWL (batas bawah):\nsurplus perjalanan yang\nhilang antara $K$ dan $Q_0$",
+            xy=((K + 0.35 * (Q0 - K)) / 1e3, p + 0.3 * (P(K + 0.35 * (Q0 - K)) - p)),
+            xytext=(0.99 * Q0 / 1e3, 7600), fontsize=fs, color=ink, ha="left",
+            arrowprops=dict(arrowstyle="-", color=ink, lw=0.8))
+ax.text(qlo / 1e3 + 3, (p + pstar) / 2 + 150,
+        r"Rente $(p^{*}-\bar{p})\,K$:" "\nterbakar lewat antre\ndan sesak (batas atas)",
+        fontsize=fs, color=ink, va="center")
+
+ax.annotate("", xy=(Q0 / 1e3 - 4, 10400), xytext=(K / 1e3 + 4, 10400),
+            arrowprops=dict(arrowstyle="-|>", color=merah, lw=1.8, ls="--"))
+ax.text((K + Q0) / 2 / 1e3, 10450, "✕", fontsize=16, color=merah, ha="center", va="bottom",
+        fontweight="bold")
+ax.text(K / 1e3 + 6, 10300, "Kapasitas tidak bisa bergeser ke $Q_0$:\n"
+        "impor KRL bekas dilarang, dan INKA\nhanya mengirim ~3 trainset per tahun",
+        fontsize=fs, color=ink, ha="left", va="top")
+
+ax.set_xlim(qlo / 1e3, qhi / 1e3)
+ax.set_ylim(plo, phi)
+ax.set_xticks([]); ax.set_yticks([])
+ax.grid(False)
+for s in ("top", "right"):
+    ax.spines[s].set_visible(False)
+for s in ("left", "bottom"):
+    ax.spines[s].set_color(ink)
+ax.set_xlabel("Perjalanan KRL per hari, $Q$", fontsize=11, color=ink, loc="right")
+ax.set_ylabel("Tarif per perjalanan, $p$", fontsize=11, color=ink, loc="top")
+fig.tight_layout()
+plt.show()
+
+```
+
+
+    
+![png](index_files/index_3_0.png)
+    
+
+
+Titik A adalah yang "diminta" pasar pada tarif resmi: dengan tarif $\bar{p}$, orang mau naik $Q_0$ = 1 juta perjalanan per hari, yang butuh 105 trainset. Titik B adalah harga yang menyamakan permintaan dengan kapasitas yang ada: kalau tarif bebas bergerak, ia naik ke $p^{*} \approx$ Rp7.930 dan kelebihan permintaan hilang. Yang terjadi di dunia nyata adalah titik C: tarif tetap $\bar{p}$, tapi layanan standar cuma $K$, sehingga ada kelebihan permintaan $Q_0 - K \approx$ 152 ribu perjalanan per hari.
+
+Di pasar biasa, kelebihan permintaan seperti ini dijawab lewat kuantitas: garis kapasitas bergeser ke kanan menuju $Q_0$. Di sini kuantitas tidak bisa menyesuaikan karena dua hal sekaligus. Impor KRL bekas dilarang, dan INKA tidak mampu mengirim trainset secepat yang dibutuhkan (3 dari target 8 per tahun). Jadi garis kapasitasnya macet di 89 trainset, harganya macet di $\bar{p}$, dan penyesuaiannya terpaksa lewat penjatahan.
+
+Segitiga merah adalah $DWL$: surplus dari perjalanan antara $K$ dan $Q_0$ yang hilang begitu saja dan tidak pindah ke siapa pun. Ini batas bawahnya. Persegi panjang biru bergaris adalah rente $(p^{*}-\bar{p})\,K$: surplus yang seharusnya dinikmati penumpang yang masih terlayani, tapi di bawah penjatahan lewat antre dan desak-desakan bisa habis terbakar. Batas atas $L^{atas}$ adalah jumlah keduanya. Kode di bawah menghitung luas kedua bidang itu untuk tiga nilai elastisitas.
+
 
 ```python
 def biaya(eps, p=4570, Q0=1e6, x=89/105):
