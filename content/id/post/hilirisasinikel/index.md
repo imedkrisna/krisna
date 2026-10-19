@@ -28,13 +28,27 @@ image:
 projects: []
 ---
 
-Udah lama ga nulis tentang hilirisasi nikel. Dulu saya nulis beberapa kali soal hilirisasi nikel di [blog ini]({{< relref "/post/stainlesssteel" >}}), di [The Conversation Indonesia](https://theconversation.com/klaim-sukses-hilirisasi-nikel-berbasis-larangan-ekspor-masih-memiliki-segudang-masalah-177735), dan di [East Asia Forum](https://eastasiaforum.org/2023/12/07/indonesia-doubles-down-on-nickel-export-bans-and-downstreaming/). Salah satu hal yang saya angkat adalah bahwa menggunakan nilai ekspor turunan nikel sebagai indikator keberhasilan nilai tambah domestik itu kurang tepat. Nilai ekspor produk turunan nikel itu angka **kotor** (_gross_). Di dalamnya menempel (_embodied_) banyak barang lain selain bijih nikel: batubara untuk listrik, ferokrom impor untuk baja nirkarat, sulfur/belerang impor untuk MHP, dan modal milik investor asing. Jadi kalau mau tahu hilirisasi berhasil atau tidak, nilai-nilai itu harus dikurangi dulu, lalu sisanya dibandingkan dengan _opportunity cost_-nya: berapa yang akan kita dapat kalau bijihnya (dan batubara serta barang lain) diekspor langsung.
+## Pendahuluan
 
-bertahun-tahun berlalu, angka yang beredar tetap angka kotor. Ekspor produk hilir nikel sekarang sekitar **34 miliar dolar** setahun, dan angka ini sering dipakai sebagai bukti keberhasilan: dari 1,7 miliar dolar ekspor bijih di puncaknya jadi 34, naik 20 kali lipat!
+Belakangan dunia persmelteran lagi geger soal RKAB. Kuota produksi bijih nikel 2026 dipangkas ke kisaran 250–270 juta ton, dari 379 juta ton di 2025 ([Bisnis](https://ekonomi.bisnis.com/read/20260328/44/1962743/esdm-restui-rkab-nikel-2026-di-atas-150-juta-ton)). Smelter mengeluh kekurangan bijih ([Nikel.co.id](https://nikel.co.id/2026/04/20/pemangkasan-kuota-rkab-2026-picu-defisit-bahan-baku-smelter-terancam-kekurangan-pasokan/)), dan ekspor nikel tahun ini diperkirakan bisa hilang sampai 5 juta ton ([CNBC Indonesia](https://www.cnbcindonesia.com/news/20260806143615-4-757146/ekspor-nikel-ri-di-2026-diramal-hilang-5-juta-ton-gegara-hal-ini)). Hal ini karena pemerintah ingin menaikkan harga nikel yang dirasa terlalu rendah. Sejak awal 2025 Menteri ESDM sudah bilang kuota RKAB dihitung supaya harga tidak anjlok ([Investortrust](https://investortrust.id/business/52165/bahlil-masih-hitung-kuota-produksi-nikel-2025-agar-harga-tak-anjlok)). Harga yang rendah memang merugikan kita. Harga patokan bijih (HPM) dan royalti dipatok ke harga nikel dunia, jadi kalau harga nikel turun, pembayaran ke penambang dan ke negara ikut turun. Padahal, seperti yang akan kita lihat di bawah, pembayaran bijih inilah bagian terbesar dari nilai tambah yang tertahan di Indonesia.
 
-Teorinya, larangan ekspor membuat harga bijih di dalam negeri tertekan, sehingga penambang domestik (banyak BUMN dan pengusaha lokal) dapat lebih sedikit. Sementara itu, nilai tambah dari pengolahan banyak mengalir ke pemilik modal asing, karena sebagian besar smelter dimiliki investor asing. Belum lagi barang lain yang aslinya bisa diekspor (batubara) maupun barang lain yang tidak kita impor andai ga hilirisasi (bijih Filipina, sulfur). Kalau dihitung bersih, jangan-jangan yang tertahan di Indonesia tidak lebih besar dari kalau kita ekspor bijihnya saja.
+Pemangkasan RKAB adalah bagian dari agenda yang lebih besar, yaitu mengatasi kelebihan kapasitas (_overcapacity_). Di 2024 Kementerian ESDM dan Kementerian Perindustrian sepakat menyetop izin smelter RKEF baru ([Bisnis](https://ekonomi.bisnis.com/read/20240803/44/1787889/pemerintah-sepakat-moratorium-smelter-nikel-rkef-baru-ini-alasannya)). PP 28/2025 kemudian membatasi izin usaha industri untuk smelter baru yang membuat NPI, feronikel, matte, dan MHP ([Kontan](https://industri.kontan.co.id/news/pp-282025-terbit-investasi-baru-sektor-smelter-nikel-dibatasi)). Awal bulan ini, Pak Bahlil membuka peluang moratorium yang lebih luas untuk smelter produk setengah jadi ([Katadata](https://katadata.co.id/berita/industri/6ac62da35dbe7/bahlil-buka-peluang-moratorium-pembangunan-smelter-produk-setengah-jadi)).
 
-Post ini mencoba menghitungnya secara kasar buat iseng-iseng. Meski iseng, logikanya benar. Semua kode ada di bawah, dan bisa diperbaiki jika ada yang ternyata serius mau menghitungnya.
+Dari kacamata hilirisasi, ini sebenarnya aneh. Kenapa membatasi manufaktur produk hilir, yang justru jadi alasan larangan ekspor bijih? Kalau masalahnya bijih kurang, smelter masih bisa impor, dan itu sudah terjadi: Indonesia mengimpor hampir 16 juta ton bijih nikel dari Filipina di 2025 (lihat di bawah). Kalau masalahnya harga NPI jatuh karena kebanyakan pasokan, itu risiko bisnis pemilik smelter. Jadi masalahnya di mana?
+
+Petunjuknya ada di perubahan perhitungan royalti. Maret 2026, Pak Bahlil bilang HPM nikel akan dinaikkan karena skema yang ada belum memberi manfaat maksimal bagi negara ([Katadata](https://katadata.co.id/berita/energi/69c48e396e3fa/bahlil-berencana-naikkan-harga-patokan-nikel-demi-tingkatkan-penerimaan-negara)). Sebulan kemudian formula HPM diganti, dan basis royalti bijih naik cukup jauh. Pesannya: yang ingin dinaikkan pemerintah adalah **nilai tambah domestik**, bukan sekadar volume atau nilai ekspor.
+
+Lucunya, ini adalah sesuatu yang emang saya tulis dari dulu.
+
+Ini nyambung dengan yang dulu saya tulis beberapa kali soal hilirisasi nikel di [blog ini]({{< relref "/post/stainlesssteel" >}}), di [The Conversation Indonesia](https://theconversation.com/klaim-sukses-hilirisasi-nikel-berbasis-larangan-ekspor-masih-memiliki-segudang-masalah-177735), dan di [East Asia Forum](https://eastasiaforum.org/2023/12/07/indonesia-doubles-down-on-nickel-export-bans-and-downstreaming/). Di situ ada beberapa hal yang saya angkat:
+
+Pertama adalah soal penggunaan nilai ekspor sebagai indikator keberhasilan peningkatan nilai tambah domestik yang menurut saya kurang tepat. Nilai ekspor produk turunan nikel itu angka **kotor** (_gross_). Di dalamnya menempel (_embodied_) banyak barang lain selain bijih nikel: batubara untuk listrik, ferokrom impor untuk baja nirkarat, sulfur/belerang impor untuk MHP, dan modal milik investor asing. Jadi kalau mau tahu hilirisasi berhasil atau tidak, nilai-nilai itu harus dikurangi dulu, lalu sisanya dibandingkan dengan _opportunity cost_-nya: berapa yang akan kita dapat kalau bijihnya (dan batubara serta barang lain) diekspor langsung.  Bertahun-tahun berlalu, angka yang beredar tetap angka kotor. Ekspor produk hilir nikel sekarang sekitar **34 miliar dolar** setahun, dan angka ini sering dipakai sebagai bukti keberhasilan: dari 1,7 miliar dolar ekspor bijih di puncaknya jadi 34, naik 20 kali lipat!
+
+Ke-2, Belum tentu nikel export ban diperlukan. Pertama, waktu itu memang lagi ramai soal strategi diversifikasi _China+1_ di mana perusahaan Tiongkok pada pindah, utamanya ke Vietnam. Di samping itu juga ada kawasan industri yang berstatus PSN, yang merupakan berkah bagi investor yang acapkali merasakan ketidakpastian akibat regulasi yang ruwet. Semua ini (_for better or worse_) di-_bypass_ (_more or less_) dengan status PSN tersebut (dan emang in general banyak insentif extra di kawasan). Insentif ini ditambah dengan harga batubara Indonesia yang relatif kompetitif sebenarnya sudah cukup menarik meski tanpa ekspor ban. Di situasi kaya gini, ekspor ban cuma akan merugikan penambang. Teorinya, larangan ekspor membuat harga bijih di dalam negeri tertekan, sehingga penambang domestik (banyak BUMN dan pengusaha lokal) dapat lebih sedikit. Sementara itu, nilai tambah dari pengolahan banyak mengalir ke pemilik modal asing, karena sebagian besar smelter dimiliki investor asing. Belum lagi barang lain yang aslinya bisa diekspor (batubara) maupun barang lain yang tidak kita impor andai ga hilirisasi (bijih Filipina, sulfur). Kalau dihitung bersih, jangan-jangan yang tertahan di Indonesia tidak lebih besar dari kalau kita ekspor bijihnya saja.
+
+Nah, di kesempatan yang baik ini, saya mencoba menghitungnya secara kasar buat iseng-iseng. Meski iseng, logikanya benar. Semua kode ada di bawah, dan bisa diperbaiki jika ada yang ternyata serius mau menghitungnya.
+
+## Plot 
 
 Pertama kita coba plot dulu manufacturing value added di beberapa industri dan daerah terkait. Sebagai penanda waktu, beberapa gambar di bawah memakai garis putus-putus bernomor:
 
@@ -71,7 +85,7 @@ def garis_peristiwa(ax):
                 fontsize=8, color=abu)
 ```
 
-## Apa kata PDB?
+### Apa kata PDB?
 
 Kita mulai dari data PDB. Gambar 1 menunjukkan nilai tambah bruto (NTB) tiga lapangan usaha menurut harga konstan 2010, dalam triliun Rupiah, 2010–2025. Sumbu horizontal adalah tahun dan sumbu vertikal adalah NTB riil. Panel (a) adalah angka nasional dari PDB BPS. Panel (b) adalah PDRB gabungan Sulawesi Tengah (Morowali, IMIP) dan Maluku Utara (Weda Bay dan Obi), dua provinsi yang paling didominasi nikel. Data Sulawesi Tengah dihitung dari tabel distribusi persentase dikali total PDRB. Garis putus-putus bernomor adalah peristiwa di daftar atas.
 
@@ -84,7 +98,7 @@ pdb = pdb.pivot(index="tahun", columns="sektor", values="nilai") / 1e3      # tr
 pdrb = pd.read_csv("pdrb_nikel.csv").query("harga == 'ADHK'")
 pdrb = pdrb.groupby(["tahun", "sektor"]).nilai.sum().unstack() / 1e3         # Sulteng + Malut
 
-fig, ax = plt.subplots(1, 2, figsize=(11, 4.3))
+figs, ax = zip(*[plt.subplots(figsize=(8, 4.6)) for _ in range(2)])
 seri = [("Pertambangan Bijih Logam", "Pertambangan bijih logam", merah, "-"),
         ("Industri Logam Dasar", "Industri logam dasar", biru, "-"),
         ("Industri Barang Logam, Elektronik, Peralatan Listrik",
@@ -99,14 +113,22 @@ for a in ax:
     a.set_xlim(2010, 2025.6)
     garis_peristiwa(a)
     a.set_ylabel("Triliun Rp, harga konstan 2010")
-ax[0].legend(frameon=False, fontsize=9, loc="upper left")
-fig.tight_layout()
+for a in ax:
+    a.legend(frameon=False, fontsize=9, loc="upper left")
+for f_ in figs:
+    f_.tight_layout()
 plt.show()
 ```
 
 
     
 ![png](index_files/index_3_0.png)
+    
+
+
+
+    
+![png](index_files/index_3_1.png)
     
 
 
@@ -118,7 +140,7 @@ Perlu dicatat bahwa tren kenaikan logam dasar di Sulteng dan Malut tidak dimulai
 
 Tapi NTB harga konstan itu pada dasarnya indeks **volume**. Ia tidak bisa menjawab pertanyaan kita: berapa **harga** yang diterima penambang, dan **siapa** yang menikmati nilai tambahnya. Untuk itu kita perlu data perdagangan dan sedikit hitungan.
 
-## Ekspor kotor
+### Ekspor kotor
 
 Gambar 2 adalah nilai ekspor Indonesia (miliar dolar AS, nilai FOB) untuk bijih nikel dan produk hilirnya, 2010–2025, dari UN Comtrade dengan Indonesia sebagai pelapor. Sumbu horizontal adalah tahun, sumbu vertikal adalah nilai ekspor yang ditumpuk per kelompok produk. Kodenya: bijih (HS 2604), feronikel/NPI (720260), baja nirkarat (7218, 7219, 7220), nikel matte (750110), MHP dan produk antara (750120), nikel olahan lain (7502, nikel sulfat 283324, kobalt oksida 2822), dan baterai Li-ion (850760). Angka 2020 sama persis dengan post 2022: feronikel USD4,74 miliar dan baja nirkarat ingot (7218) USD1,63 miliar.
 
@@ -266,7 +288,7 @@ print("Rasio harga per satuan Ni, bijih Indonesia di RRT vs bijih Filipina, 2017
 print("Rasio FOB ekspor RI (data RI) / CIF RRT dari RI:",
       (fob_ri / h.cif_idn).reindex([2010, 2011, 2012, 2013, 2014, 2017, 2018, 2019]).round(2).to_dict())
 
-fig, ax = plt.subplots(1, 2, figsize=(12, 4.8))
+figs, ax = zip(*[plt.subplots(figsize=(8, 5)) for _ in range(2)])
 ax[0].plot(h.index, h.batubara, color=ink, lw=2, label="Newcastle (Pink Sheet)")
 ax[0].plot(h.index, h.bb_cif_rrt, color=biru, lw=2, ls=":", label="Impor RRT dari Indonesia (CIF)")
 ax[0].plot(h.index, h.bb_fob, color=merah, lw=2, label="Ekspor Indonesia, kalori rendah (FOB)")
@@ -301,7 +323,8 @@ for a in ax:
     a.legend(frameon=False, fontsize=7.5, loc="upper left")
 ax[0].set_ylim(0, 420)
 ax[1].set_ylim(0, 155)
-fig.tight_layout()
+for f_ in figs:
+    f_.tight_layout()
 plt.show()
 print(pd.concat([hb, h[["bb_fob", "sulfur"]], esdm_th[["hba", "hba_1", "hba_2", "hba_3"]]], axis=1).loc[2019:2025].round(1))
 ```
@@ -313,6 +336,12 @@ print(pd.concat([hb, h[["bb_fob", "sulfur"]], esdm_th[["hba", "hba_1", "hba_2", 
 
     
 ![png](index_files/index_8_1.png)
+    
+
+
+
+    
+![png](index_files/index_8_2.png)
     
 
 
@@ -343,7 +372,7 @@ Lalu ceritanya berbalik. Sejak 2024 harga domestik malah **di atas** batas A. In
 
 ## Isi satu ton nikel
 
-Sekarang kita bongkar isi produk hilirnya. Saya mengukur semua produk dalam **ton nikel yang dikandung** (_contained nickel_), yaitu berat ekspor dikali kadar nikel. Kadar yang saya pakai adalah hitungan kasar: feronikel/NPI 11,5% ([Nickel Industries](https://announcements.asx.com.au/asxpdf/20260223/pdf/06wm4x116x1lxg.pdf) melaporkan 11,8% di 2025), matte 72%, MHP 23% (basis basah), nikel sulfat 22%, nikel tidak tempa 99,8%, dan baja nirkarat rata-rata 6% (campuran seri 300 dengan nikel 8% dan seri 200/400 yang lebih rendah). Hasilnya sekitar 2,4 juta ton Ni di 2025.
+Sekarang kita bongkar isi produk hilirnya. Saya mengukur semua produk dalam **ton nikel yang dikandung** (_contained nickel_), yaitu berat ekspor dikali kadar nikel. Kadar yang saya pakai adalah [hitungan kasar]: feronikel/NPI 11,5% ([Nickel Industries](https://announcements.asx.com.au/asxpdf/20260223/pdf/06wm4x116x1lxg.pdf) melaporkan 11,8% di 2025), matte 72%, MHP 23% (basis basah), nikel sulfat 22%, nikel tidak tempa 99,8%, dan baja nirkarat rata-rata 6% (campuran seri 300 dengan nikel 8% dan seri 200/400 yang lebih rendah). Hasilnya sekitar 2,4 juta ton Ni di 2025.
 
 Ada dua jalur produksi utama. **RKEF** (_rotary kiln–electric furnace_) melebur bijih saprolit menjadi NPI/feronikel. Sebagian NPI lalu dijadikan matte atau baja nirkarat. **HPAL** (_high pressure acid leach_) melarutkan bijih limonit dengan asam sulfat menjadi MHP, bahan baku baterai.
 
@@ -1453,13 +1482,15 @@ Pajak ekspor bijih punya beberapa kelebihan dibanding larangan ekspor + RKAB + H
 - **Smelter tetap bisa beroperasi, tapi harus bersaing** dengan pembeli bijih di luar negeri. Smelter yang memang efisien tetap untung karena hemat ongkos kapal. Smelter yang cuma hidup dari bijih murah akan tersaring.
 - **Penambang dapat harga dunia dikurangi pajak**, bukan harga yang ditentukan segelintir pembeli. Insentif untuk menyelundup ke Tiongkok juga berkurang.
 
-Tentu ada kelemahannya: pajak ekspor yang terlalu tinggi bisa menurunkan volume, dan harus dirancang supaya tidak gampang diakali dengan _under-invoicing_ (yang, seperti terlihat di data ekspor bijih sebelum 2014, sangat mungkin terjadi). Pemerintah sendiri sempat berencana mengenakan bea keluar untuk produk nikel olahan mulai April 2026, lalu menundanya ([Mysteel](https://www.mysteel.net/news/5117812-flash-indonesia-postpones-implementation-of-coal-and-nickel-export-duties)). Ironisnya, yang mau dipajaki justru produk olahannya, bukan bijihnya.
+Tentu ada kelemahannya: pajak ekspor yang terlalu tinggi bisa menurunkan volume, dan harus dirancang supaya tidak gampang diakali dengan _under-invoicing_ (yang, seperti terlihat di data ekspor bijih sebelum 2014, sangat mungkin terjadi). Pemerintah sendiri sempat berencana mengenakan bea keluar untuk produk nikel olahan mulai April 2026, [lalu menundanya](https://www.mysteel.net/news/5117812-flash-indonesia-postpones-implementation-of-coal-and-nickel-export-duties). Ironisnya, yang mau dipajaki justru produk olahannya, bukan bijihnya.
 
-Jangan lupa juga bahwa sekarang sudah terlambat untuk pajak ekspor nikel karena kapasitas smelter domestik sudah sangat besar. Pembelian domestik saat inipun sudah kompetitif bahkan sampai smelter-smelter ini bisa bersaing dengan pasar global dalam membeli ores dari Filipina.
+Saya dulu pernah argue soal penggunaan export tax vis-a-vis ban utk maksimalkan nilai tambah domestik. Tapi ya gitu deh. Kalau sekarang sudah terlambat untuk pajak ekspor nikel karena kapasitas smelter domestik sudah sangat besar. Pembelian domestik saat inipun sudah kompetitif bahkan sampai smelter-smelter ini bisa bersaing dengan pasar global dalam membeli ores dari Filipina.
 
-Jadi, teori saya **salah** di pertanyaan utamanya, tapi benar di beberapa hal penting:
+## Kesimpulan hasil perhitungan
 
-1. **Hilirisasi tetap lebih baik dari ekspor bijih, tapi angka "1,7 jadi 34 miliar dolar" menyesatkan.** Nilai tambah dari pengolahan yang tertahan di Indonesia sekitar 24–33% dari ekspor. Tambahan bersihnya dibanding skenario ekspor bijih sekitar 19–26% dari ekspor kotor kumulatif, dan bisa jauh lebih kecil kalau biaya kas lain ternyata banyak yang impor.
+Tapi yang jelas, kalkulasi cepat di atas kira-kira gini:
+
+1. **Hilirisasi tetap memberikan domestic value lebih baik dari ekspor bijih, meskipun angka "1,7 jadi 34 miliar dolar" menyesatkan.** Nilai tambah dari pengolahan yang tertahan di Indonesia sekitar **24–33% dari ekspor**. Tambahan bersihnya dibanding skenario ekspor bijih sekitar 19–26% dari ekspor kotor kumulatif, dan bisa jauh lebih kecil kalau biaya kas lain ternyata banyak yang impor.
 2. **Di awal larangan (2020–2021), manfaat bersihnya tipis**, sekitar USD1 miliar per tahun, jauh lebih kecil dari transfer penambang ke smelter (sekitar USD5–10 miliar selama 2020–2022). Kalau biaya kas lain kebanyakan impor, manfaatnya malah negatif.
 3. **Manfaat bersih membesar ketika harga bijih domestik mengejar harga dunia**, dan di 2026 negara secara eksplisit menagih sewa bijih lewat RKAB dan HPM baru. Sekitar separuh dari yang tertahan di Indonesia di 2025 adalah pembayaran bijih. Nilai tambah domestik terbesar memang ada di bijihnya.
 
@@ -1471,7 +1502,7 @@ Ada banyak hal yang **belum** masuk hitungan, dan sebagian besar bisa menggeser 
 4. **_Tax holiday_.** $\Pi_t$ di atas sudah termasuk PPh badan, yang saya anggap nol. Smelter yang masuk kategori industri pionir kemungkinan bisa mendapat pengurangan PPh badan 100% selama 5–20 tahun, tergantung nilai investasinya, ditambah pengurangan 50% selama dua tahun sesudahnya (PMK 130/2020). Saya tidak menemukan angka berapa yang benar-benar dinikmati smelter nikel. Sebagai gambaran kasar: kalau laba kena pajak sekitar 40–60% dari $\Pi_t$ (sisanya penyusutan dan bunga), PPh yang tidak dipungut sekitar USD0,5–1,6 miliar per tahun di 2020–2025. Karena 75% laba itu milik asing, tanpa _tax holiday_ $D_t$ akan lebih besar sekitar USD3,5–5 miliar secara kumulatif. Tidak semua smelter mendapat fasilitas ini, jadi anggap ini batas atas.
 5. **Transfer pricing.** Eventually barang setengah jadinya kan diekspor ke utamanya Tiongkok. Kalau ekspor ini ternyata adalah bagian dari _vertical integration_ dengan induk perusahaan dan Kalau harga ekspor ke induk di Tiongkok tersebut ada di bawah harga pasar, maka $X_t$ dan $\Pi_t$ di Indonesia sama-sama lebih kecil dari yang seharusnya. Nilai tambah yang benar-benar diciptakan lebih besar, tapi yang lari juga lebih besar.
 6. **Manfaat dinamis.** _Learning-by-doing_, teknologi, dan ekosistem baterai sama sekali tidak terhitung. Ini argumen terkuat pendukung hilirisasi. Literatur _infant industry_ bilang proteksi **bisa** menguntungkan kalau pembelajarannya nyata dan industrinya akhirnya mandiri[^1]. Tapi dengan 83% nikel masih masuk ke baja nirkarat, LG yang mundur, dan HPAL yang kini rugi begitu harga belerang naik, buktinya sejauh ini masih tipis.
-7. Ini **hitungan akuntansi statis**, bukan model keseimbangan umum. Efeknya ke harga nikel dunia, nilai tukar, dan sektor lain tidak dimodelkan. Semua dianggap _ceteris paribus_, wicis ga bener.
+7. Ini **hitungan akuntansi statis**, bukan model keseimbangan umum. Efeknya ke harga nikel dunia, nilai tukar, dan sektor lain tidak dimodelkan. Semua dianggap _ceteris paribus_, wicis ga bener. Justru di sini yang sangat penting, karena perubahan-perubahan _counterfactual_-nya sangat tergantung dari elastisitas dan hal-hal non _ceteris paribus_ di demand nikel.
 
 Tapi poin utamanya tetap. Pertanyaan yang benar bukan "berapa ekspornya", tapi "berapa yang **nilai tambah yang tertangkap** di sini, dibanding kalau kita tidak melakukan apa-apa". Selama yang dilaporkan cuma nilai ekspor kotor, kita tidak akan pernah tahu apakah sebuah kebijakan industri berhasil. Sama seperti [TKDN kereta]({{< relref "/post/kereta" >}}), kebijakan ini juga tidak gratis: di 2020–2022 ongkosnya dibayar penambang lewat harga bijih yang ditekan, dan sepanjang waktu dibayar warga sekitar smelter lewat udara dan laut yang tercemar. Ongkos ini tidak muncul di angka ekspor.
 
