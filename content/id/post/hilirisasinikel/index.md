@@ -363,7 +363,7 @@ Tabel 1 merangkum koefisien input per ton nikel. Sebagian besar angkanya adalah 
 
 Ada beberapa asumsi lain:
 - **Harga input.** Batubara dinilai dengan harga ekspor batubara kalori rendah Indonesia dari Gambar 3. Belerang memakai harga impor menurut data ekspor-impor BPS, yaitu nilai dibagi berat, sekitar USD83 per ton di 2020, USD298 di 2022, dan USD300 di 2025. Ferokrom memakai harga impor dari Comtrade.
-- **Baja nirkarat.** Per ton baja saya hitung 0,06 t Ni (lewat NPI, dihitung di jalur RKEF), 0,33 t ferokrom (sebagian besar krom memang diimpor dari Afrika Selatan, baik sebagai ferokrom maupun bijih krom), 0,6 t batubara, upah USD60 (USD35 WNI, USD25 TKA), dan biaya lain USD120.
+- **Baja nirkarat.** Per ton baja saya hitung 0,06 t Ni (lewat NPI, dihitung di jalur RKEF), 0,33 t ferokrom (sebagian besar krom memang diimpor dari Afrika Selatan, baik sebagai ferokrom maupun bijih krom), 0,6 t batubara, upah USD60 (USD35 WNI, USD25 TKA), dan biaya lain USD120. Besinya sebagian besar sudah ikut di NPI (NPI kadar 11,5% Ni isinya sekitar 85% besi) dan sebagian kecil di ferokrom. Karena baja nirkarat isinya sekitar 70% besi, masih kurang sekitar 0,14 t besi per ton baja. Kekurangan ini saya tutup dengan impor bijih besi yang masuk lewat pelabuhan kawasan nikel (Morowali, Kolonodale, Weda, Pulau Obi, Kendari, dan Poso) menurut data ekspor-impor BPS, paling banyak sebesar kebutuhannya, dan sisanya saya anggap besi domestik. Keduanya dinilai dengan harga bijih besi Pink Sheet. Ternyata sejak 2020 impor bijih besi ke kawasan nikel (2–9 juta ton per tahun) jauh melebihi kebutuhan baja nirkarat, jadi praktis seluruh besinya terhitung impor. Kelebihannya kemungkinan besar dipakai pabrik baja karbon di kawasan yang sama, yang produknya tidak masuk hitungan saya. Mangan untuk baja seri 200 belum saya hitung terpisah. Semua ini hitungan kasar, tapi nilainya kecil, sekitar USD0,1 miliar per tahun.
 - **Upah.** Saya perkirakan dari IMIP: sekitar 110 ribu pekerja Indonesia (termasuk kontraktor) dengan penghasilan sekitar Rp6,5 juta per bulan, dan 16 ribu TKA ([Rest of World](https://restofworld.org/2025/nickel-ev-batteries-indonesia-layoffs/)). Dengan anggapan IMIP memproduksi sekitar 1 juta ton Ni, ini setara sekitar USD550 per ton Ni untuk upah WNI dan USD400 untuk TKA (sekitar USD25 ribu per orang per tahun).
 - **Biaya kas lain RKEF** (elektroda, pemeliharaan, jasa, dan lain-lain) saya kalibrasi supaya total biaya kas 2025 sama dengan yang dilaporkan [Nickel Industries](https://announcements.asx.com.au/asxpdf/20260223/pdf/06wm4x116x1lxg.pdf), yaitu USD10.042 per ton Ni.
 
@@ -385,9 +385,21 @@ fecr_ss, bb_ss, upah_dom_ss, upah_tka_ss, lain_ss = 0.33, 0.6, 35, 25, 120
 lain_rkef = 10042 - (bijih_rkef * hb.loc[2025, "domestik"] + bb_rkef * h.loc[2025, "bb_fob"]
                      + upah_dom + upah_tka)
 print(f"bijih per t Ni: RKEF {bijih_rkef:.0f} t, HPAL {bijih_hpal:.0f} t; biaya lain RKEF USD{lain_rkef:,.0f}/t Ni")
+
+# besi baja nirkarat di luar NPI dan ferokrom: baja ~70% Fe, NPI ~85% Fe, ferokrom ~35% Fe
+fe_ss = 0.70 - 0.06 / KADAR["720260"] * 0.85 - fecr_ss * 0.35          # t Fe per t baja
+FE = {"2601": 0.62, "7201": 0.94, "7203": 0.88, "7204": 0.95}           # kandungan Fe
+PELABUHAN_NIKEL = ["MOROWALI", "KOLONODALE", "WEDA", "OBI ISLAND", "KENDARI", "POSO"]
+besi = pd.read_csv("bps_impor_besi.csv", dtype={"hs": str})
+besi = besi[besi.pelabuhan.isin(PELABUHAN_NIKEL) & besi.hs.str[:4].isin(FE)]
+imp_fe = (besi.assign(fe=besi.berat / 1000 * besi.hs.str[:4].map(FE)).groupby("tahun")[["nilai", "fe"]].sum()
+          .reindex(h.index, fill_value=0))
+h["fe"] = h.bijih_besi / 0.62                                              # USD per t Fe, Pink Sheet 62% Fe
+print(f"kebutuhan besi di luar NPI dan ferokrom: {fe_ss:.2f} t Fe per t baja")
 ```
 
     bijih per t Ni: RKEF 101 t, HPAL 138 t; biaya lain RKEF USD1,990/t Ni
+    kebutuhan besi di luar NPI dan ferokrom: 0.14 t Fe per t baja
     
 
 Dengan koefisien itu, nilai ekspor produk hilir setiap tahun bisa dipecah menjadi:
@@ -400,7 +412,7 @@ di mana:
 - $X_t$ adalah nilai ekspor produk hilir di tahun $t$;
 - $B_t$ adalah pembayaran bijih ke penambang **dalam negeri** dengan harga domestik, termasuk royalti bijih;
 - $E_t$ adalah batubara untuk listrik dan reduktan;
-- $M_t$ adalah input impor: belerang, ferokrom, dan bijih yang diimpor dari Filipina, yang uangnya jelas lari ke penambang Filipina;
+- $M_t$ adalah input impor: belerang, ferokrom, bijih besi, dan bijih nikel yang diimpor dari Filipina, yang uangnya jelas lari ke penambang Filipina;
 - $L_t$ adalah biaya kas lain;
 - $W^{d}_t$ dan $W^{f}_t$ adalah upah pekerja Indonesia dan TKA;
 - $R_t$ adalah royalti atas produk olahan;
@@ -451,10 +463,14 @@ def dekomposisi(theta=0.75, kadar_ph=0.014, l_dom=1.0):
         d["B"] = sap_dom * hb.loc[t, "domestik"] + ni_hpal * bijih_hpal * hb.loc[t, "limonit"]
         d["bb_ton"] = ni_rkef * bb_rkef + ni_matte * bb_matte + ni_hpal * bb_hpal + t_baja * bb_ss
         d["E"] = d["bb_ton"] * pb
+        # besi baja: impor lewat pelabuhan kawasan nikel (maksimal sebesar kebutuhan), sisanya besi domestik
+        fe_perlu = t_baja * fe_ss
+        fe_impor = min(fe_perlu, imp_fe.loc[t, "fe"])
+        d["fe_impor"], d["fe_dom"] = fe_impor, fe_perlu - fe_impor
         d["M"] = (ni_hpal * s_hpal * h.loc[t, "sulfur"] + t_baja * fecr_ss * h.loc[t, "fecr"]
-                  + imp_bijih.loc[t, "nilai"])
+                  + imp_bijih.loc[t, "nilai"] + fe_impor * h.loc[t, "fe"])
         d["L"] = (ni_rkef * lain_rkef + ni_matte * konverter + ni_hpal * (lain_hpal + kapur_hpal)
-                  + t_baja * lain_ss)
+                  + t_baja * lain_ss + d["fe_dom"] * h.loc[t, "fe"])
         d["Wd"] = (ni_rkef + ni_hpal) * upah_dom + t_baja * upah_dom_ss
         d["Wf"] = (ni_rkef + ni_hpal) * upah_tka + t_baja * upah_tka_ss
         d["Rb"] = roy_bijih[t] * d["B"]
@@ -481,7 +497,10 @@ print("Transfer penambang ke smelter 2020-2022 (miliar USD): A =",
       round(df.loc[2020:2022, "transfer_A"].sum() / 1e9, 1), ", B =",
       round(df.loc[2020:2022, "transfer_B"].sum() / 1e9, 1))
 print("Batubara untuk produk ekspor (juta t):", (df.bb_ton.loc[[2019, 2025]] / 1e6).round(1).to_dict())
-tabel = df.loc[2017:].drop(columns=["ni_rkef", "ni_hpal", "bb_ton", "transfer_A", "transfer_B"]) / 1e9
+print("Besi baja nirkarat (ribu t Fe), impor / domestik:\n",
+      (df.loc[2017:, ["fe_impor", "fe_dom"]] / 1e3).round(0).T.to_string())
+tabel = df.loc[2017:].drop(columns=["ni_rkef", "ni_hpal", "bb_ton", "fe_impor", "fe_dom",
+                                    "transfer_A", "transfer_B"]) / 1e9
 tabel.insert(0, "Ni (ribu t)", (df.ni_rkef + df.ni_hpal).loc[2017:] / 1e3)
 tabel.round(1).T
 ```
@@ -489,6 +508,10 @@ tabel.round(1).T
     faktor kalibrasi royalti k = 0.40
     Transfer penambang ke smelter 2020-2022 (miliar USD): A = 9.9 , B = 5.1
     Batubara untuk produk ekspor (juta t): {2019: 12.6, 2025: 62.3}
+    Besi baja nirkarat (ribu t Fe), impor / domestik:
+     tahun     2017   2018   2019   2020   2021   2022   2023   2024   2025
+    fe_impor   0.0  272.0   16.0  411.0  673.0  658.0  587.0  661.0  661.0
+    fe_dom    96.0    0.0  303.0    0.0    0.0    0.0    0.0    0.0    0.0
     
 
 
@@ -578,11 +601,11 @@ tabel.round(1).T
       <td>0.7</td>
       <td>0.8</td>
       <td>0.9</td>
+      <td>2.3</td>
+      <td>2.7</td>
       <td>2.1</td>
-      <td>2.6</td>
-      <td>2.0</td>
-      <td>3.0</td>
-      <td>4.3</td>
+      <td>3.1</td>
+      <td>4.5</td>
     </tr>
     <tr>
       <th>L</th>
@@ -671,26 +694,26 @@ tabel.round(1).T
     <tr>
       <th>Pi</th>
       <td>1.0</td>
-      <td>2.1</td>
+      <td>2.0</td>
       <td>2.9</td>
-      <td>5.2</td>
-      <td>9.0</td>
-      <td>12.5</td>
-      <td>10.9</td>
-      <td>8.7</td>
-      <td>7.7</td>
+      <td>5.1</td>
+      <td>8.8</td>
+      <td>12.3</td>
+      <td>10.8</td>
+      <td>8.6</td>
+      <td>7.6</td>
     </tr>
     <tr>
       <th>Pi_f</th>
       <td>0.8</td>
       <td>1.5</td>
       <td>2.2</td>
-      <td>3.9</td>
-      <td>6.8</td>
-      <td>9.3</td>
-      <td>8.2</td>
-      <td>6.5</td>
-      <td>5.8</td>
+      <td>3.8</td>
+      <td>6.6</td>
+      <td>9.2</td>
+      <td>8.1</td>
+      <td>6.4</td>
+      <td>5.7</td>
     </tr>
     <tr>
       <th>Pi_d</th>
@@ -698,10 +721,10 @@ tabel.round(1).T
       <td>0.5</td>
       <td>0.7</td>
       <td>1.3</td>
-      <td>2.3</td>
+      <td>2.2</td>
       <td>3.1</td>
       <td>2.7</td>
-      <td>2.2</td>
+      <td>2.1</td>
       <td>1.9</td>
     </tr>
     <tr>
@@ -710,8 +733,8 @@ tabel.round(1).T
       <td>2.4</td>
       <td>3.3</td>
       <td>4.4</td>
-      <td>7.6</td>
-      <td>13.7</td>
+      <td>7.5</td>
+      <td>13.6</td>
       <td>15.9</td>
       <td>16.6</td>
       <td>19.8</td>
@@ -725,19 +748,19 @@ tabel.round(1).T
       <td>1.2</td>
       <td>3.6</td>
       <td>5.4</td>
-      <td>8.1</td>
-      <td>9.9</td>
+      <td>8.0</td>
+      <td>9.8</td>
     </tr>
     <tr>
       <th>G_B</th>
       <td>0.7</td>
       <td>1.4</td>
       <td>1.9</td>
-      <td>2.0</td>
+      <td>1.9</td>
       <td>2.8</td>
       <td>6.0</td>
-      <td>7.9</td>
-      <td>9.9</td>
+      <td>7.8</td>
+      <td>9.8</td>
       <td>11.9</td>
     </tr>
   </tbody>
@@ -751,7 +774,7 @@ Gambar 4 memvisualisasikan Tabel 2 untuk 2017–2025. Setiap batang adalah nilai
 
 ```python
 blok = [("B", "Bijih (harga domestik)", merah), ("E", "Batubara/energi", ink),
-        ("M", "Input impor (belerang, ferokrom, bijih)", abu), ("L", "Biaya kas lain (dianggap domestik)", "#cccccc"),
+        ("M", "Input impor (belerang, ferokrom, bijih nikel & besi)", abu), ("L", "Biaya kas lain (dianggap domestik)", "#cccccc"),
         ("Wd", "Upah pekerja Indonesia", emas), ("Wf", "Upah TKA", "#f0d78c"),
         ("R", "Royalti produk", hijau), ("Pi_d", "Modal & laba: porsi domestik", biru),
         ("Pi_f", "Modal & laba: porsi asing", "#a9c4e8")]
@@ -839,37 +862,37 @@ cek.round(1)
       <th>2020</th>
       <td>8.3</td>
       <td>3.1</td>
-      <td>6.0</td>
+      <td>5.9</td>
     </tr>
     <tr>
       <th>2021</th>
       <td>9.6</td>
       <td>5.5</td>
-      <td>10.2</td>
+      <td>10.0</td>
     </tr>
     <tr>
       <th>2022</th>
       <td>11.3</td>
       <td>8.6</td>
-      <td>14.3</td>
+      <td>14.2</td>
     </tr>
     <tr>
       <th>2023</th>
       <td>12.9</td>
       <td>9.5</td>
-      <td>13.1</td>
+      <td>13.0</td>
     </tr>
     <tr>
       <th>2024</th>
       <td>14.3</td>
       <td>10.0</td>
-      <td>11.3</td>
+      <td>11.2</td>
     </tr>
     <tr>
       <th>2025</th>
       <td>16.6</td>
       <td>11.5</td>
-      <td>10.8</td>
+      <td>10.7</td>
     </tr>
   </tbody>
 </table>
@@ -895,28 +918,28 @@ print(nt_hilir.loc[2019:].round(1).to_string())
 ```
 
     Dari setiap USD100 ekspor produk hilir nikel tahun 2025:
-    Bijih (harga domestik)                     31.7
-    Batubara/energi                            10.3
-    Input impor (belerang, ferokrom, bijih)    12.6
-    Biaya kas lain (dianggap domestik)         14.2
-    Upah pekerja Indonesia                      4.3
-    Upah TKA                                    3.1
-    Royalti produk                              1.5
-    Modal & laba: porsi domestik                5.6
-    Modal & laba: porsi asing                  16.7
+    Bijih (harga domestik)                                  31.7
+    Batubara/energi                                         10.3
+    Input impor (belerang, ferokrom, bijih nikel & besi)    12.9
+    Biaya kas lain (dianggap domestik)                      14.2
+    Upah pekerja Indonesia                                   4.3
+    Upah TKA                                                 3.1
+    Royalti produk                                           1.5
+    Modal & laba: porsi domestik                             5.5
+    Modal & laba: porsi asing                               16.4
     
     Nilai tambah hilirisasi yang tertahan (L + Wd + R + Pi_d), % ekspor:
     tahun
-    2019    31.0
-    2020    33.2
-    2021    27.5
-    2022    24.4
-    2023    26.2
-    2024    26.8
+    2019    31.5
+    2020    33.0
+    2021    27.3
+    2022    24.3
+    2023    26.1
+    2024    26.7
     2025    25.6
     
 
-Dari setiap USD100 ekspor produk hilir nikel di 2025, sekitar USD32 adalah bijih domestik, USD10 batubara, USD13 input impor (termasuk bijih Filipina), dan USD14 biaya kas lain (yang saya anggap belanja domestik). Upah pekerja Indonesia cuma sekitar USD4, royalti produk sekitar USD1,5, dan porsi domestik dari pendapatan modal sekitar USD6. Pendapatan modal yang mengalir ke pemilik asing sekitar USD17, ditambah USD3 upah TKA.
+Dari setiap USD100 ekspor produk hilir nikel di 2025, sekitar USD32 adalah bijih domestik, USD10 batubara, USD13 input impor (termasuk bijih Filipina), dan USD14 biaya kas lain (yang saya anggap belanja domestik). Upah pekerja Indonesia cuma sekitar USD4, royalti produk sekitar USD1,5, dan porsi domestik dari pendapatan modal sekitar USD6. Pendapatan modal yang mengalir ke pemilik asing sekitar USD16, ditambah USD3 upah TKA.
 
 Jadi nilai tambah **dari pengolahan** yang tertahan di Indonesia ($L_t + W^d_t + R_t + (1-\theta)\Pi_t$) sekitar **24–33% dari nilai ekspor**, dan cenderung turun dari tahun ke tahun. Lebih dari separuhnya adalah biaya kas lain. Kalau biaya kas lain ternyata banyak yang impor, porsinya bisa turun sampai 11–18%. Klaim Faisal Basri (alm.) bahwa 90% nilai tambah lari ke Tiongkok mungkin berlebihan. Tapi kalau "nilai tambah" yang dimaksud adalah semua yang di atas bijih, porsi yang disumberkan dari luar (pendapatan modal asing, upah TKA, dan input impor) memang besar.
 
@@ -1003,9 +1026,9 @@ hasil
 ```
 
     E dengan HBA II dikurangi E dasar (miliar USD): {2023: -0.49, 2024: -0.72, 2025: -0.61}
-    Kumulatif 2020-2025, miliar USD: {'θ=0.6, batas A': 37.5, 'θ=0.6, batas B': 48.6, 'θ=0.75, batas A': 29.3, 'θ=0.75, batas B': 40.5, 'θ=0.9, batas A': 21.4, 'θ=0.9, batas B': 32.5, 'θ=0.75, batas A, kadar Filipina 1.3%': 25.4, 'θ=0.75, batas A, kadar Filipina 1.5%': 32.8, 'θ=0.75, batas A, batubara HBA II': 31.5, 'θ=0.75, batas A, 50% L domestik': 19.5, 'θ=0.75, batas A, 0% L domestik': 9.6}
+    Kumulatif 2020-2025, miliar USD: {'θ=0.6, batas A': 37.2, 'θ=0.6, batas B': 48.2, 'θ=0.75, batas A': 29.1, 'θ=0.75, batas B': 40.2, 'θ=0.9, batas A': 21.3, 'θ=0.9, batas B': 32.4, 'θ=0.75, batas A, kadar Filipina 1.3%': 25.4, 'θ=0.75, batas A, kadar Filipina 1.5%': 32.6, 'θ=0.75, batas A, batubara HBA II': 31.3, 'θ=0.75, batas A, 50% L domestik': 19.2, 'θ=0.75, batas A, 0% L domestik': 9.4}
     Ekspor produk hilir kumulatif 2020-2025, miliar USD: 155.3
-    PPh hilang (laba kena pajak 40% Pi), miliar USD: {2020: 0.5, 2021: 0.8, 2022: 1.1, 2023: 1.0, 2024: 0.8, 2025: 0.7} | tambahan D = θ x PPh, kumulatif: 3.6
+    PPh hilang (laba kena pajak 40% Pi), miliar USD: {2020: 0.4, 2021: 0.8, 2022: 1.1, 2023: 0.9, 2024: 0.8, 2025: 0.7} | tambahan D = θ x PPh, kumulatif: 3.5
     PPh hilang (laba kena pajak 60% Pi), miliar USD: {2020: 0.7, 2021: 1.2, 2022: 1.6, 2023: 1.4, 2024: 1.1, 2025: 1.0} | tambahan D = θ x PPh, kumulatif: 5.3
     
 
@@ -1063,19 +1086,19 @@ hasil
       <td>1.9</td>
       <td>2.7</td>
       <td>1.1</td>
-      <td>2.0</td>
+      <td>1.9</td>
       <td>0.4</td>
       <td>1.2</td>
       <td>0.8</td>
       <td>1.4</td>
-      <td>1.3</td>
-      <td>0.4</td>
+      <td>1.2</td>
+      <td>0.3</td>
       <td>-0.4</td>
     </tr>
     <tr>
       <th>2021</th>
-      <td>2.6</td>
-      <td>4.2</td>
+      <td>2.5</td>
+      <td>4.1</td>
       <td>1.2</td>
       <td>2.8</td>
       <td>-0.1</td>
@@ -1083,7 +1106,7 @@ hasil
       <td>0.7</td>
       <td>1.7</td>
       <td>1.4</td>
-      <td>0.2</td>
+      <td>0.1</td>
       <td>-0.9</td>
     </tr>
     <tr>
@@ -1095,44 +1118,44 @@ hasil
       <td>1.8</td>
       <td>4.2</td>
       <td>2.8</td>
-      <td>4.4</td>
+      <td>4.3</td>
       <td>3.9</td>
       <td>2.1</td>
-      <td>0.6</td>
+      <td>0.5</td>
     </tr>
     <tr>
       <th>2023</th>
-      <td>7.1</td>
-      <td>9.5</td>
+      <td>7.0</td>
+      <td>9.4</td>
       <td>5.4</td>
-      <td>7.9</td>
+      <td>7.8</td>
       <td>3.8</td>
       <td>6.2</td>
       <td>4.6</td>
-      <td>6.2</td>
-      <td>5.9</td>
+      <td>6.1</td>
+      <td>5.8</td>
       <td>3.5</td>
       <td>1.6</td>
     </tr>
     <tr>
       <th>2024</th>
-      <td>9.4</td>
-      <td>11.2</td>
-      <td>8.1</td>
-      <td>9.9</td>
-      <td>6.8</td>
-      <td>8.6</td>
+      <td>9.3</td>
+      <td>11.1</td>
+      <td>8.0</td>
+      <td>9.8</td>
+      <td>6.7</td>
+      <td>8.5</td>
       <td>7.4</td>
       <td>8.6</td>
       <td>8.6</td>
-      <td>5.9</td>
+      <td>5.8</td>
       <td>3.7</td>
     </tr>
     <tr>
       <th>2025</th>
       <td>11.0</td>
-      <td>13.1</td>
-      <td>9.9</td>
+      <td>13.0</td>
+      <td>9.8</td>
       <td>11.9</td>
       <td>8.7</td>
       <td>10.8</td>
@@ -1140,7 +1163,7 @@ hasil
       <td>10.5</td>
       <td>10.4</td>
       <td>7.4</td>
-      <td>5.0</td>
+      <td>4.9</td>
     </tr>
   </tbody>
 </table>
@@ -1152,8 +1175,8 @@ Jawabannya ternyata: **hilirisasi tetap lebih baik dari ekspor bijih, tapi tamba
 
 - **2020–2021**: dengan harga bijih dunia (batas A) dan $\theta$ = 0,75, manfaat bersih larangan ekspor positif tapi tipis, sekitar 1,1 dan 1,2 miliar dolar, padahal ekspor produk hilirnya 10–19 miliar dolar. Dengan $\theta$ = 0,9, angka 2021 sudah nyaris nol. Di periode ini penambang mensubsidi smelter lewat harga bijih yang ditekan (transfer sekitar USD5–10 miliar selama 2020–2022), dan sebagian besar subsidi itu jatuh ke pemilik modal asing. Teori saya hampir benar di sini, tapi tidak sampai negatif.
 - **2022–2025**: manfaat bersihnya membesar, sekitar USD4–10 miliar per tahun di batas A dan USD6–12 miliar di batas B. Tapi lihat dari mana asalnya. Sebagian besar kenaikan ini muncul karena **harga bijih domestik mengejar, lalu melampaui, harga dunia** ketika kuota diperketat dan bijih jadi langka, bukan karena smelter makin efisien. Manfaatnya membesar setelah penambang berhenti mensubsidi smelter.
-- Secara kumulatif 2020–2025, manfaat bersihnya sekitar **USD29 miliar (batas A) sampai USD41 miliar (batas B)**, sementara ekspor produk hilir kumulatifnya USD155 miliar. Kalau kadar bijih Filipina sebenarnya 1,3%, angka batas A turun ke sekitar USD25 miliar. Kalau 1,5%, naik ke sekitar USD33 miliar. Kalau batubara dinilai dengan HBA II, angkanya naik sedikit ke USD31,5 miliar. Batubara yang lebih murah tidak mengubah total biaya kas RKEF (dikunci ke laporan Nickel Industries), jadi selisihnya pindah ke biaya kas lain, yang di sini dianggap domestik.
-- Yang paling sensitif adalah anggapan soal biaya kas lain ($L_t$). Saya menganggap seluruhnya belanja domestik, dan ini murah hati: sebagian besar isi $L_t$ (elektroda, suku cadang, reagen) diimpor dari Tiongkok, sebagian pekerja kontraktor sudah masuk perkiraan upah $W^d_t$, dan $L_t$ untuk RKEF sendiri adalah sisa kalibrasi, bukan hasil pengukuran. Kalau hanya separuhnya yang domestik, manfaat kumulatif di batas A turun ke sekitar USD20 miliar. Kalau tidak ada sama sekali, tinggal USD10 miliar, dan 2020–2021 jadi negatif (−0,4 dan −0,9 miliar dolar).
+- Secara kumulatif 2020–2025, manfaat bersihnya sekitar **USD29 miliar (batas A) sampai USD40 miliar (batas B)**, sementara ekspor produk hilir kumulatifnya USD155 miliar. Kalau kadar bijih Filipina sebenarnya 1,3%, angka batas A turun ke sekitar USD25 miliar. Kalau 1,5%, naik ke sekitar USD33 miliar. Kalau batubara dinilai dengan HBA II, angkanya naik sedikit ke USD31 miliar. Batubara yang lebih murah tidak mengubah total biaya kas RKEF (dikunci ke laporan Nickel Industries), jadi selisihnya pindah ke biaya kas lain, yang di sini dianggap domestik.
+- Yang paling sensitif adalah anggapan soal biaya kas lain ($L_t$). Saya menganggap seluruhnya belanja domestik, dan ini murah hati: sebagian besar isi $L_t$ (elektroda, suku cadang, reagen) diimpor dari Tiongkok, sebagian pekerja kontraktor sudah masuk perkiraan upah $W^d_t$, dan $L_t$ untuk RKEF sendiri adalah sisa kalibrasi, bukan hasil pengukuran. Kalau hanya separuhnya yang domestik, manfaat kumulatif di batas A turun ke sekitar USD19 miliar. Kalau tidak ada sama sekali, tinggal USD9 miliar, dan 2020–2021 jadi negatif (−0,4 dan −0,9 miliar dolar).
 - Artinya, tambahan buat Indonesia dibanding skenario ekspor bijih sekitar **19–26%** dari angka ekspor kotor, dan bisa serendah 6% kalau biaya kas lain ternyata kebanyakan impor. Bukan 20 kali lipat.
 
 ## 2026: negara mulai menagih sewa bijih nikel
