@@ -1,7 +1,7 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: "MSCI dan drama yang ga perlu dari pemotongan ekspor gas ke Singapura"
+title: "Drama ekspor gas: a long game perspective"
 subtitle: ""
 summary: "Indonesia memangkas ekspor gas pipa ke Singapura 31 BBTUD sambil bilang 'jangan ajari Indonesia soal kontrak'. Buat Singapura potongan ini kecil. Buat Indonesia, ongkosnya ada di reputasi sebagai pemasok, sesuatu yang dibutuhkan untuk membiayai proyek gas berikutnya."
 authors: [admin]
