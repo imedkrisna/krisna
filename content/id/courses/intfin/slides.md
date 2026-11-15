@@ -19,3 +19,4 @@ slides:
 - {{% staticref "/intfin/meeting7/index.html" "newtab" %}}Meeting 7: IS-LM-FX model {{% /staticref %}}
 - {{% staticref "/intfin/islmfx/islmfx.html" "newtab" %}}a very light ISLMFX model{{% /staticref %}}
 - {{% staticref "/intfin/currency_crisis/currency_crisis.html" "newtab" %}}currency crisis{{% /staticref %}}
+- {{% staticref "/intfin/var/var.html" "newtab" %}}Vector Autoregressions: Stock and Watson (2001) with Indonesian data{{% /staticref %}} ({{% staticref "/intfin/var/var_idn.R" "newtab" %}}R{{% /staticref %}}, {{% staticref "/intfin/var/var_idn.do" "newtab" %}}Stata{{% /staticref %}}, {{% staticref "/intfin/var/data/idn_macro.csv" "newtab" %}}data{{% /staticref %}})
