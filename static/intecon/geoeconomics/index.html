@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<html lang="id"><head>
+<script src="geoeconomics_files/libs/clipboard/clipboard.min.js"></script>
+<script src="geoeconomics_files/libs/quarto-html/tabby.min.js"></script>
+<script src="geoeconomics_files/libs/quarto-html/popper.min.js"></script>
+<script src="geoeconomics_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="geoeconomics_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="geoeconomics_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="geoeconomics_files/libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.8.27">
+
+  <meta name="author" content="Krisna Gupta">
+  <meta name="dcterms.date" content="2026-11-20">
+  <title>Perang Dagang dan Geoekonomi</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="geoeconomics_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="geoeconomics_files/libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+      margin-bottom: 0em;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
+  <link rel="stylesheet" href="geoeconomics_files/libs/revealjs/dist/theme/quarto-c3209b752b5aa584f05ee4d3ba6f798b.css">
+  <link href="geoeconomics_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="geoeconomics_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="geoeconomics_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="geoeconomics_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="geoeconomics_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="geoeconomics_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Perang Dagang dan Geoekonomi</h1>
+  <p class="subtitle">Ekonomi Internasional Lanjutan</p>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Krisna Gupta <a href="https://orcid.org/0000-0001-8695-0514" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a>
+</div>
+<div class="quarto-title-author-email">
+<a href="mailto:krisna@dewanekonomi.go.id">krisna@dewanekonomi.go.id</a>
+</div>
+        <p class="quarto-title-affiliation">
+            Dewan Ekonomi Nasional
+          </p>
+    </div>
+</div>
+
+  <p class="date">20 November 2026</p>
+</section>
+<section id="hari-ini" class="slide level2">
+<h2>Hari ini</h2>
+<ol type="1">
+<li>Apa itu geoekonomi, dan mengapa kembali</li>
+<li>Teori perang dagang</li>
+<li>Bukti perang dagang, 2018–2026</li>
+<li>Kekuasaan, koersi, dan blok</li>
+<li>Mengukur kerentanan</li>
+<li>Implikasi untuk Indonesia</li>
+</ol>
+</section>
+<section>
+<section id="geoekonomi" class="title-slide slide level1 center" data-background-color="#51483d">
+<h1>Geoekonomi</h1>
+
+</section>
+<section id="definisi" class="slide level2">
+<h2>Definisi</h2>
+<div class="m">
+<ul>
+<li><strong>Geoekonomi</strong>: studi keterkaitan geopolitik dan ekonomi; bagaimana rivalitas politik internasional membentuk kebijakan dan hasil ekonomi <span class="citation" data-cites="mohr2025">(<a href="#/referensi" role="doc-biblioref" onclick="">Mohr dan Trebesch 2025</a>)</span>.</li>
+<li>Negara memakai kekuatan finansial dan ekonominya untuk mengekstrak surplus ekonomi dan politik dari negara lain <span class="citation" data-cites="clayton2026">(<a href="#/referensi" role="doc-biblioref" onclick="">Clayton, Maggiori, dan Schreger 2026</a>)</span>.</li>
+<li><strong>Risiko geopolitik</strong>: ancaman, realisasi, dan eskalasi perang, terorisme, dan ketegangan antarnegara <span class="citation" data-cites="caldara2022">(<a href="#/referensi" role="doc-biblioref" onclick="">Caldara dan Iacoviello 2022</a>)</span>.</li>
+<li><strong>Fragmentasi geoekonomi</strong>: pembalikan integrasi ekonomi global yang didorong kebijakan dan pertimbangan strategis <span class="citation" data-cites="aiyar2023sdn">(<a href="#/referensi" role="doc-biblioref" onclick="">Aiyar dkk. 2023</a>)</span>.</li>
+</ul>
+</div>
+</section>
+<section id="instrumen-geoekonomi" class="slide level2">
+<h2>Instrumen geoekonomi</h2>
+<div class="cols">
+<div class="card">
+<div class="card-title">
+Perdagangan
+</div>
+<p>Tarif, embargo, kontrol ekspor, perjanjian dagang bersyarat.</p>
+</div>
+<div class="card">
+<div class="card-title">
+Keuangan &amp; investasi
+</div>
+<p>Sanksi finansial, pembekuan cadangan, penyaringan investasi.</p>
+</div>
+<div class="plain wide">
+<p>Juga: bantuan luar negeri, spionase dan serangan siber <span class="citation" data-cites="mohr2025">(<a href="#/referensi" role="doc-biblioref" onclick="">Mohr dan Trebesch 2025</a>)</span>.</p>
+</div>
+</div>
+</section>
+<section id="konsep-lama" class="slide level2">
+<h2>Konsep lama</h2>
+<ul>
+<li>1915: Inggris menekan Italia masuk Perang Dunia I dengan ancaman memutus pasokan batu bara.</li>
+<li><span class="citation" data-cites="hirschman1945">Hirschman (<a href="#/referensi" role="doc-biblioref" onclick="">1945</a>)</span>: struktur perdagangan adalah struktur kekuasaan; ketergantungan dagang bisa dikonversi menjadi pengaruh politik.</li>
+<li>Yang baru hari ini: skala integrasi dan kedalaman rantai pasok.</li>
+</ul>
+</section>
+<section id="liberalis-vs-realis" class="slide level2">
+<h2>Liberalis vs realis</h2>
+<div class="cols">
+<div class="card">
+<div class="card-title">
+Liberalis
+</div>
+<p>Integrasi menaikkan <em>opportunity cost</em> perang; damai lebih menguntungkan.</p>
+</div>
+<div class="card">
+<div class="card-title">
+Realis
+</div>
+<p>Integrasi menciptakan ketergantungan yang bisa dijadikan senjata.</p>
+</div>
+<div class="plain wide">
+<p>Bukti: globalisasi menekan perang besar, tetapi konflik kecil makin sering.</p>
+</div>
+</div>
+</section>
+<section id="risiko-geopolitik" class="slide level2">
+<h2>Risiko geopolitik</h2>
+<div class="desc">
+<p>Indeks risiko geopolitik (GPR) bulanan, 1985–2026. Sumbu x: waktu; sumbu y: indeks berbasis frekuensi berita (rata-rata 1985–2019 = 100). Sumber: <span class="citation" data-cites="caldara2022">Caldara dan Iacoviello (<a href="#/referensi" role="doc-biblioref" onclick="">2022</a>)</span>.</p>
+</div>
+<p><img data-src="figures/gpr.png" height="420"></p>
+</section>
+<section id="membaca-gpr" class="slide level2">
+<h2>Membaca GPR</h2>
+<ul>
+<li>Lonjakan terbesar: 9/11 dan perang Irak.</li>
+<li>Sejak 2022 level dasarnya naik: Ukraina, Gaza, lalu krisis Hormuz (Maret 2026, ~330).</li>
+<li>Risiko kini datang berkelompok, bukan satu kejutan lalu reda.</li>
+</ul>
+</section>
+<section id="pemerintah-makin-aktif" class="slide level2">
+<h2>Pemerintah makin aktif</h2>
+<div class="desc">
+<p>Jumlah intervensi kebijakan industri baru di dunia per tahun pengumuman, 2009–2025, dipisah distortif dan liberalisasi. Sumbu x: tahun; sumbu y: jumlah intervensi. Sumber: GTA New Industrial Policy Observatory (NIPO), April 2026.</p>
+</div>
+<p><img data-src="figures/nipo.png" height="420"></p>
+</section>
+<section id="membaca-nipo" class="slide level2">
+<h2>Membaca NIPO</h2>
+<ul>
+<li>Rata-rata ~4.600 intervensi/tahun pada 2020–2025 vs ~2.200 pada 2010–2019: <strong>2,1×</strong>.</li>
+<li>81% gelombang pasca-2020 bersifat distortif.</li>
+<li>Sasaran: produk <em>dual-use</em>, teknologi maju, rendah karbon, mineral kritis.</li>
+<li>Motif utama: keamanan nasional dan ketahanan rantai pasok, bukan kegagalan pasar klasik <span class="citation" data-cites="evenett2024">(<a href="#/referensi" role="doc-biblioref" onclick="">Evenett dkk. 2024</a>)</span>.</li>
+</ul>
+</section></section>
+<section>
+<section id="teori" class="title-slide slide level1 center" data-background-color="#51483d">
+<h1>Teori</h1>
+
+</section>
+<section id="kembali-ke-negara-besar" class="slide level2">
+<h2>Kembali ke negara besar</h2>
+<ul>
+<li>Negara kecil: tarif selalu menurunkan kesejahteraan.</li>
+<li>Negara besar: tarif menekan harga dunia barang impor, sehingga <em>terms of trade</em> membaik.</li>
+<li>Ada trade-off: keuntungan <em>terms of trade</em> vs <em>deadweight loss</em>.</li>
+<li>Keuntungan Home adalah kerugian mitra: inilah eksternalitas yang memicu perang dagang.</li>
+</ul>
+</section>
+<section id="tarif-optimal" class="slide level2">
+<h2>Tarif optimal</h2>
+<p><span class="math display">\[
+t^{*} = \frac{1}{\varepsilon^{*}}
+\]</span></p>
+<div class="where">
+<p>di mana <span class="math inline">\(t^{*}\)</span> adalah tarif <em>ad valorem</em> yang memaksimalkan kesejahteraan Home, dan <span class="math inline">\(\varepsilon^{*}\)</span> adalah elastisitas penawaran ekspor mitra terhadap harga yang diterimanya. Makin tidak elastis penawaran mitra, makin besar tarif optimal.</p>
+</div>
+</section>
+<section id="tarif-optimal-ilustrasi" class="slide level2">
+<h2>Tarif optimal: ilustrasi</h2>
+<div class="desc">
+<p>Simulasi keseimbangan parsial: permintaan impor Home linear, penawaran ekspor mitra dengan elastisitas konstan <span class="math inline">\(\varepsilon^{*}=2\)</span>. Sumbu x: tarif Home (%); sumbu y: perubahan kesejahteraan relatif terhadap perdagangan bebas. Sumber: perhitungan sendiri.</p>
+</div>
+<p><img data-src="figures/optimal_tariff.png" height="420"></p>
+</section>
+<section id="membaca-ilustrasi" class="slide level2">
+<h2>Membaca ilustrasi</h2>
+<ul>
+<li>Kesejahteraan Home naik sampai <span class="math inline">\(t^{*}=50\%\)</span>, lalu turun.</li>
+<li>Kesejahteraan dunia turun sejak tarif pertama: keuntungan Home &lt; kerugian mitra.</li>
+<li>Jadi tarif optimal bersifat <em>beggar-thy-neighbour</em>.</li>
+<li>Pertanyaan: apa yang dilakukan mitra?</li>
+</ul>
+</section>
+<section id="retaliasi" class="slide level2">
+<h2>Retaliasi</h2>
+<p><span class="math display">\[
+\begin{aligned}
+t_H &amp;= R_H(t_F) \\
+t_F &amp;= R_F(t_H)
+\end{aligned}
+\]</span></p>
+<div class="where">
+<p>di mana <span class="math inline">\(t_H\)</span> dan <span class="math inline">\(t_F\)</span> adalah tarif Home dan Foreign, sedangkan <span class="math inline">\(R_H(\cdot)\)</span> dan <span class="math inline">\(R_F(\cdot)\)</span> adalah fungsi <em>best response</em>: tarif yang memaksimalkan kesejahteraan sendiri, diberikan tarif lawan. Keseimbangan Nash <span class="math inline">\((t_H^N, t_F^N)\)</span> adalah titik potong keduanya.</p>
+</div>
+</section>
+<section id="dilema-tahanan" class="slide level2">
+<h2>Dilema tahanan</h2>
+<div class="m">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: center;"><strong>F: bebas</strong></th>
+<th style="text-align: center;"><strong>F: tarif</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>H: bebas</strong></td>
+<td style="text-align: center;">(10, 10)</td>
+<td style="text-align: center;">(6, 12)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>H: tarif</strong></td>
+<td style="text-align: center;">(12, 6)</td>
+<td style="text-align: center;"><strong>(8, 8)</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="takeaway">
+<p>Tarif adalah strategi dominan bagi keduanya; hasil Nash (8, 8) lebih buruk dari perdagangan bebas (10, 10). Angka ilustratif.</p>
+</div>
+</section>
+<section id="bisakah-menang" class="slide level2">
+<h2>Bisakah menang?</h2>
+<ul>
+<li><span class="citation" data-cites="johnson1953">Johnson (<a href="#/referensi" role="doc-biblioref" onclick="">1953</a>)</span>: bisa, bila elastisitas atau ukuran ekonomi sangat asimetris.</li>
+<li>Negara yang jauh lebih besar bisa tetap untung walau dibalas.</li>
+<li>Tetapi dunia secara keseluruhan selalu rugi.</li>
+<li>Ini salah satu alasan negara besar tergoda memakai tarif sebagai alat tawar.</li>
+</ul>
+</section>
+<section id="mengapa-ada-gattwto" class="slide level2">
+<h2>Mengapa ada GATT/WTO?</h2>
+<ul>
+<li><span class="citation" data-cites="bagwell1999">Bagwell dan Staiger (<a href="#/referensi" role="doc-biblioref" onclick="">1999</a>)</span>: perjanjian dagang ada untuk menetralkan eksternalitas <em>terms of trade</em>.</li>
+<li><strong>Resiprositas</strong>: konsesi saling dibalas, sehingga harga dunia tidak bergeser.</li>
+<li><strong>MFN</strong>: konsesi untuk satu mitra berlaku untuk semua, sehingga tidak ada insentif diskriminasi.</li>
+<li>WTO = mekanisme keluar dari dilema tahanan.</li>
+</ul>
+</section>
+<section id="seberapa-besar-dengan-data" class="slide level2">
+<h2>Seberapa besar dengan data?</h2>
+<ul>
+<li><span class="citation" data-cites="ossa2014">Ossa (<a href="#/referensi" role="doc-biblioref" onclick="">2014</a>)</span> mengkalibrasi model dengan motif <em>terms of trade</em>, <em>new trade</em>, dan politik-ekonomi.</li>
+<li>Tarif optimal unilateral rata-rata <strong>62%</strong>.</li>
+<li>Tarif perang dagang dunia rata-rata <strong>63%</strong>.</li>
+<li>Runtuhnya kerja sama: kesejahteraan pemerintah turun rata-rata <strong>2,9%</strong>.</li>
+</ul>
+</section></section>
+<section>
+<section id="bukti" class="title-slide slide level1 center" data-background-color="#51483d">
+<h1>Bukti</h1>
+
+</section>
+<section id="smoothawley-1930" class="slide level2">
+<h2>Smoot–Hawley, 1930</h2>
+<ul>
+<li>AS menaikkan bea masuk untuk melindungi petani di tengah Depresi Besar.</li>
+<li>Mitra membalas; impor AS turun ~40% pada 1929–1932.</li>
+<li>Sebagian besar penurunan karena depresi, tetapi tarif dan retaliasi memperparah <span class="citation" data-cites="irwin2011">(<a href="#/referensi" role="doc-biblioref" onclick="">Irwin 2011</a>)</span>.</li>
+<li>Pelajaran ini melahirkan GATT 1947.</li>
+</ul>
+</section>
+<section id="astiongkok-20182019" class="slide level2">
+<h2>AS–Tiongkok, 2018–2019</h2>
+<ul>
+<li>Tarif AS diteruskan <strong>penuh</strong> ke harga impor; eksportir asing tidak menyerap <span class="citation" data-cites="amiti2019">(<a href="#/referensi" role="doc-biblioref" onclick="">Amiti, Redding, dan Weinstein 2019</a>)</span>.</li>
+<li>Kerugian konsumen dan perusahaan AS: US$51 miliar (0,27% PDB).</li>
+<li>Setelah penerimaan tarif dan keuntungan produsen: neto −US$7,2 miliar <span class="citation" data-cites="fajgelbaum2020">(<a href="#/referensi" role="doc-biblioref" onclick="">P. D. Fajgelbaum dkk. 2020</a>)</span>.</li>
+</ul>
+<div class="takeaway">
+<p>Prediksi <em>terms of trade</em> tidak terbukti untuk AS: harga dunia tidak turun.</p>
+</div>
+</section>
+<section id="siapa-diuntungkan" class="slide level2">
+<h2>Siapa diuntungkan?</h2>
+<ul>
+<li>Negara <em>bystander</em> menaikkan ekspor produk yang dikenai tarif, tidak hanya ke AS tetapi ke seluruh dunia <span class="citation" data-cites="fajgelbaum2024">(<a href="#/referensi" role="doc-biblioref" onclick="">P. Fajgelbaum dkk. 2024</a>)</span>.</li>
+<li>Pemenang: negara yang ekspornya mensubstitusi AS/Tiongkok dan kurva penawarannya miring ke bawah (skala ekonomi).</li>
+<li>Vietnam termasuk pemenang terbesar.</li>
+<li>Pertanyaan untuk kelas: mengapa Indonesia relatif tertinggal?</li>
+</ul>
+</section>
+<section id="tarif-as-20252026" class="slide level2">
+<h2>Tarif AS, 2025–2026</h2>
+<div class="desc">
+<p>Tarif impor efektif AS (rata-rata tertimbang perdagangan, skala log), 20 Januari 2025 – 20 November 2026. Sumbu x: tanggal; sumbu y: tarif (%). Sumber: GTA US Tariff Estimates (estimasi model, 1.000 arus terbesar), diolah.</p>
+</div>
+<p><img data-src="figures/us_tariff.png" height="420"></p>
+</section>
+<section id="kronologi-singkat" class="slide level2">
+<h2>Kronologi singkat</h2>
+<div class="s">
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Tanggal</th>
+<th style="text-align: left;">Peristiwa</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">2 Apr 2025</td>
+<td style="text-align: left;"><em>Liberation Day</em>: tarif resiprokal (IEEPA); Indonesia 32%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Jul–Agu 2025</td>
+<td style="text-align: left;">Kesepakatan: Indonesia turun ke 19%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">19 Feb 2026</td>
+<td style="text-align: left;">Indonesia–AS menandatangani ART</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">20 Feb 2026</td>
+<td style="text-align: left;">Mahkamah Agung AS membatalkan tarif IEEPA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">24 Feb 2026</td>
+<td style="text-align: left;">Tarif global Section 122 (maks. 150 hari)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">24 Jul 2026</td>
+<td style="text-align: left;">S122 habis; diganti tarif Section 301 <em>forced labor</em> 10–12,5%</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="membaca-grafik-tarif" class="slide level2">
+<h2>Membaca grafik tarif</h2>
+<ul>
+<li>Tarif efektif dunia naik dari 1,7% menjadi puncak ~19% (April 2025); kini ~9%.</li>
+<li>Indonesia kini ~15%, di atas Vietnam (~13%).</li>
+<li>Basis hukum terus berganti: IEEPA, S122, S301; investigasi S301 <em>overcapacity</em> (termasuk Indonesia) masih berjalan.</li>
+<li>Ketidakpastian kebijakan itu sendiri adalah biaya.</li>
+</ul>
+</section></section>
+<section>
+<section id="kekuasaan-blok" class="title-slide slide level1 center" data-background-color="#51483d">
+<h1>Kekuasaan &amp; blok</h1>
+
+</section>
+<section id="weaponized-interdependence" class="slide level2">
+<h2><em>Weaponized interdependence</em></h2>
+<ul>
+<li>Jaringan ekonomi global berbentuk <em>hub-and-spoke</em>, bukan datar <span class="citation" data-cites="farrell2019">(<a href="#/referensi" role="doc-biblioref" onclick="">Farrell dan Newman 2019</a>)</span>.</li>
+<li><strong>Efek panopticon</strong>: negara yang menguasai hub bisa memantau arus (SWIFT, kliring dolar).</li>
+<li><strong>Efek chokepoint</strong>: negara tersebut bisa memutus akses lawan.</li>
+<li>Contoh: sanksi Iran 2018, Rusia 2022, kontrol chip ke Tiongkok 2022.</li>
+</ul>
+</section>
+<section id="teori-koersi-hegemon" class="slide level2">
+<h2>Teori koersi hegemon</h2>
+<ul>
+<li><span class="citation" data-cites="clayton2026">Clayton, Maggiori, dan Schreger (<a href="#/referensi" role="doc-biblioref" onclick="">2026</a>)</span>: hegemon menggabungkan ancaman lintas hubungan (finansial, teknologi, input) sebagai alat penegakan.</li>
+<li>Sektor makin koersif bila banyak dipakai, bernilai tambah tinggi, dan sulit disubstitusi.</li>
+<li>Lewat keterkaitan input-output, hegemon membentuk ekuilibrium global, bukan hanya target.</li>
+<li><span class="citation" data-cites="broner2025">Broner dkk. (<a href="#/referensi" role="doc-biblioref" onclick="">2025</a>)</span>: dunia unipolar mendorong integrasi; dua hegemon yang tidak selaras memicu blok.</li>
+</ul>
+</section>
+<section id="geopolitik-sebagai-jaringan" class="slide level2">
+<h2>Geopolitik sebagai jaringan</h2>
+<p><span class="math display">\[
+\mathbf{a} = (1-\beta)\,(\mathbf{I} - \beta \mathbf{G})^{-1} \boldsymbol{\theta}
+\]</span></p>
+<div class="where">
+<p>di mana <span class="math inline">\(\mathbf{a}\)</span> adalah vektor tindakan geopolitik negara (mis. pola voting PBB), <span class="math inline">\(\boldsymbol{\theta}\)</span> adalah vektor kepentingan domestik, <span class="math inline">\(\mathbf{G}\)</span> adalah matriks keterhubungan antarnegara, dan <span class="math inline">\(\beta\)</span> adalah bobot insentif untuk selaras dengan mitra. Versi sederhana dari kerangka <span class="citation" data-cites="liu2026">Liu dkk. (<a href="#/referensi" role="doc-biblioref" onclick="">2026</a>)</span>.</p>
+</div>
+</section>
+<section id="membaca-model-jaringan" class="slide level2">
+<h2>Membaca model jaringan</h2>
+<ul>
+<li>Tindakan negara = kepentingan domestik + tarikan dari mitra yang terhubung, diperbesar oleh invers Leontief jaringan.</li>
+<li><span class="citation" data-cites="liu2026">Liu dkk. (<a href="#/referensi" role="doc-biblioref" onclick="">2026</a>)</span> memulihkan <span class="math inline">\(\mathbf{G}\)</span> dari voting PBB dan orientasi demokrasi.</li>
+<li>Jaringan cukup dijelaskan oleh sedikit dimensi (<em>cleavage</em>), dan selaras dengan aliansi historis.</li>
+<li>Memungkinkan kuantifikasi “kekuasaan geopolitik” dan counterfactual.</li>
+</ul>
+</section>
+<section id="blok-menurut-voting-pbb" class="slide level2">
+<h2>Blok menurut voting PBB</h2>
+<div class="desc">
+<p><em>Ideal point</em> lima negara dari voting Majelis Umum PBB, 1946–2025. Sumbu x: tahun; sumbu y: ideal point (makin tinggi makin selaras dengan tatanan liberal pimpinan AS). Sumber: <span class="citation" data-cites="bailey2017">Bailey, Strezhnev, dan Voeten (<a href="#/referensi" role="doc-biblioref" onclick="">2017</a>)</span>.</p>
+</div>
+<p><img data-src="figures/ideal_points.png" height="420"></p>
+</section>
+<section id="membaca-ideal-points" class="slide level2">
+<h2>Membaca ideal points</h2>
+<ul>
+<li>Indonesia stabil di sekitar −1 sejak 1950-an, dekat Tiongkok.</li>
+<li>Rusia bergerak paling besar: mendekat ke Barat pasca-1991, lalu menjauh lagi.</li>
+<li>2025: AS melompat menjauh dari semua negara, termasuk Australia.</li>
+<li>Jarak ideal point <span class="math inline">\(d_{ij}=|p_i-p_j|\)</span> menjadi bahan baku ukuran fragmentasi.</li>
+</ul>
+</section>
+<section id="sudah-terbelah" class="slide level2">
+<h2>Sudah terbelah?</h2>
+<ul>
+<li><span class="citation" data-cites="gopinath2025">Gopinath dkk. (<a href="#/referensi" role="doc-biblioref" onclick="">2025</a>)</span>, gravity PPML: sejak perang Ukraina, perdagangan antar-blok <strong>11%</strong> dan FDI <strong>12%</strong> lebih rendah dibanding intra-blok.</li>
+<li>Perang Dingin: perdagangan antar-blok jatuh jauh lebih dalam; masih banyak ruang memburuk.</li>
+<li>Beda utama: negara nonblok (<em>connector</em>) tidak mengalami penurunan.</li>
+</ul>
+</section>
+<section id="biaya-friend-shoring" class="slide level2">
+<h2>Biaya <em>friend-shoring</em></h2>
+<div class="m">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Skenario antar-blok</th>
+<th style="text-align: center;">Rugi PDB</th>
+<th style="text-align: left;">Paling rugi</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Tarif +20%</td>
+<td style="text-align: center;">0,1–2,3%</td>
+<td style="text-align: left;">Kazakhstan, Maroko</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Biaya dagang +20%</td>
+<td style="text-align: center;">0,6–4,6%</td>
+<td style="text-align: left;">Maroko, Asia Tenggara (−2,9%)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="takeaway">
+<p>Tidak ada pemenang; Asia Tenggara termasuk yang paling rugi <span class="citation" data-cites="javorcik2023">(<a href="#/referensi" role="doc-biblioref" onclick="">Javorcik dkk. 2023</a>)</span>.</p>
+</div>
+</section></section>
+<section>
+<section id="kerentanan" class="title-slide slide level1 center" data-background-color="#51483d">
+<h1>Kerentanan</h1>
+
+</section>
+<section id="konsentrasi-mitra-hhi" class="slide level2">
+<h2>Konsentrasi mitra: HHI</h2>
+<p><span class="math display">\[
+HHI = 10.000 \sum_{j} s_{j}^{2}
+\]</span></p>
+<div class="where">
+<p>di mana <span class="math inline">\(s_j\)</span> adalah pangsa mitra <span class="math inline">\(j\)</span> dalam total impor (konsentrasi pemasok) atau ekspor (konsentrasi pasar) Indonesia. Rentang 0–10.000; makin tinggi makin terkonsentrasi.</p>
+</div>
+</section>
+<section id="hhi-indonesia" class="slide level2">
+<h2>HHI Indonesia</h2>
+<div class="desc">
+<p>HHI mitra dagang Indonesia untuk impor dan ekspor, 2000–2024. Sumbu x: tahun; sumbu y: HHI (0–10.000). Sumber: UN Comtrade, diolah.</p>
+</div>
+<p><img data-src="figures/hhi.png" height="420"></p>
+</section>
+<section id="membaca-hhi" class="slide level2">
+<h2>Membaca HHI</h2>
+<ul>
+<li>Impor makin terkonsentrasi: ~900 (2016) menjadi ~1.250 (2024).</li>
+<li>Pendorong: pangsa Tiongkok dalam impor naik dari ~23% (2016) ke ~36% (2025).</li>
+<li>Ekspor lebih terdiversifikasi, walau naik sejak 2016.</li>
+<li>Sebagian kenaikan didorong harga komoditas: HHI dihitung atas nilai.</li>
+</ul>
+</section>
+<section id="konsentrasi-produk-2025" class="slide level2">
+<h2>Konsentrasi produk, 2025</h2>
+<div class="s">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Produk (HS6)</th>
+<th style="text-align: right;">Impor (US$ M)</th>
+<th style="text-align: left;">Pemasok utama</th>
+<th style="text-align: right;">Pangsa</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">BTS telekomunikasi</td>
+<td style="text-align: right;">2,98</td>
+<td style="text-align: left;">Tiongkok</td>
+<td style="text-align: right;">99,9%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Laptop</td>
+<td style="text-align: right;">1,50</td>
+<td style="text-align: left;">Tiongkok</td>
+<td style="text-align: right;">98,6%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Silicon wafer</td>
+<td style="text-align: right;">1,65</td>
+<td style="text-align: left;">Tiongkok</td>
+<td style="text-align: right;">88,0%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Kedelai</td>
+<td style="text-align: right;">1,19</td>
+<td style="text-align: left;">AS</td>
+<td style="text-align: right;">86,8%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Kendaraan listrik</td>
+<td style="text-align: right;">2,60</td>
+<td style="text-align: left;">Tiongkok</td>
+<td style="text-align: right;">79,3%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Bijih besi</td>
+<td style="text-align: right;">1,28</td>
+<td style="text-align: left;">Australia</td>
+<td style="text-align: right;">70,4%</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="takeaway">
+<p>M = miliar. Hasil awal DEN Economic Lab dari UN Comtrade/WITS; jangan dikutip.</p>
+</div>
+</section>
+<section id="konsentrasi-kerentanan" class="slide level2">
+<h2>Konsentrasi ≠ kerentanan</h2>
+<div class="cols">
+<div class="card">
+<div class="card-title">
+Saringan statistik
+</div>
+<p>Pangsa pemasok, pangsa ekspor dunia, substitusi <span class="citation" data-cites="arjona2023 pc2021">(<a href="#/referensi" role="doc-biblioref" onclick="">Arjona, Connell, dan Herghelegiu 2023</a>; <a href="#/referensi" role="doc-biblioref" onclick="">Productivity Commission 2021</a>)</span>.</p>
+</div>
+<div class="card">
+<div class="card-title">
+Jaringan &amp; input-output
+</div>
+<p>Paparan tidak langsung lewat hub dan rantai multi-tier <span class="citation" data-cites="korniyenko2017 baldwin2025">(<a href="#/referensi" role="doc-biblioref" onclick="">Korniyenko, Pinat, dan Dew 2017</a>; <a href="#/referensi" role="doc-biblioref" onclick="">Baldwin, Freeman, dan Theodorakopoulos 2025</a>)</span>.</p>
+</div>
+<div class="plain wide">
+<p>Bergantung pada mitra bersahabat berbeda dengan bergantung pada mitra yang mampu koersi.</p>
+</div>
+</div>
+</section>
+<section id="saringan-pc-2021" class="slide level2">
+<h2>Saringan PC (2021)</h2>
+<ol type="1">
+<li>Pemasok utama &gt; 80% impor nasional.</li>
+<li>Eksportir utama &gt; 50% ekspor dunia.</li>
+<li>Pemasok utama = eksportir utama dunia.</li>
+</ol>
+<div class="takeaway">
+<p>Lolos tiga filter = rentan; lalu diuji apakah dipakai industri esensial <span class="citation" data-cites="pc2021">(<a href="#/referensi" role="doc-biblioref" onclick="">Productivity Commission 2021</a>)</span>.</p>
+</div>
+</section>
+<section id="geov-kerentanan-geoekonomi" class="slide level2">
+<h2>GeoV: kerentanan geoekonomi</h2>
+<p><span class="math display">\[
+GeoV_i = \sum_{j} w_{ij}\, d_{ij}
+\]</span></p>
+<div class="where">
+<p>di mana <span class="math inline">\(w_{ij}\)</span> adalah pangsa transaksi negara <span class="math inline">\(i\)</span> (mis. ekspor) ke mitra <span class="math inline">\(j\)</span>, dengan <span class="math inline">\(\sum_j w_{ij}=1\)</span>, dan <span class="math inline">\(d_{ij}\)</span> adalah jarak ideal point antara <span class="math inline">\(i\)</span> dan <span class="math inline">\(j\)</span>. GeoV tinggi: transaksi terkonsentrasi pada mitra yang jauh secara politik <span class="citation" data-cites="aiyar2024">(<a href="#/referensi" role="doc-biblioref" onclick="">Aiyar dan Ohnsorge 2024</a>)</span>.</p>
+</div>
+</section>
+<section id="geoc-keterhubungan" class="slide level2">
+<h2>GeoC: keterhubungan</h2>
+<p><span class="math display">\[
+GeoC_i = \sqrt{\frac{N}{N-1}\sum_{j} w_{ij}\,(d_{ij}-GeoV_i)^2}
+\]</span></p>
+<div class="where">
+<p>di mana <span class="math inline">\(N\)</span> adalah jumlah mitra, dan notasi lain sama seperti GeoV. GeoC adalah simpangan baku tertimbang jarak geopolitik: GeoC tinggi berarti berdagang dengan kedua sisi spektrum, yaitu negara <em>connector</em>.</p>
+</div>
+</section>
+<section id="geov-geoc-indonesia" class="slide level2">
+<h2>GeoV &amp; GeoC Indonesia</h2>
+<div class="desc">
+<p>GeoV dan GeoC ekspor Indonesia, 2002–2024; garis putus = 2016. Sumbu x: tahun; sumbu y: nilai indeks. Sumber: database <span class="citation" data-cites="aiyar2024">Aiyar dan Ohnsorge (<a href="#/referensi" role="doc-biblioref" onclick="">2024</a>)</span>.</p>
+</div>
+<p><img data-src="figures/geovc.png" height="420"></p>
+</section>
+<section id="membaca-geov-geoc" class="slide level2">
+<h2>Membaca GeoV &amp; GeoC</h2>
+<ul>
+<li>GeoV turun: ekspor makin mengalir ke mitra yang dekat secara politik (Tiongkok dkk.).</li>
+<li>Tetapi GeoC ikut turun: spektrum mitra menyempit.</li>
+<li>Memotong mitra jauh selalu menurunkan GeoV, tetapi bisa menurunkan GeoC.</li>
+<li>Status <em>connector</em> Indonesia ikut tergerus; konsisten dengan temuan HHI.</li>
+</ul>
+</section></section>
+<section>
+<section id="indonesia" class="title-slide slide level1 center" data-background-color="#51483d">
+<h1>Indonesia</h1>
+
+</section>
+<section id="art-indonesiaas" class="slide level2">
+<h2>ART Indonesia–AS</h2>
+<ul>
+<li>Tarif resiprokal turun 32% → 19%, dengan pengecualian 1.819 pos HS.</li>
+<li>Ada klausul “<em>poison pill</em>”: AS dapat meninjau bila Indonesia membuat perjanjian dengan negara yang dianggap mengancam kepentingan AS.</li>
+<li>Putusan Mahkamah Agung AS menghapus dasar IEEPA sehari setelah ART ditandatangani.</li>
+<li>Pertanyaan: apa nilai sebuah perjanjian bila basis hukum lawan terus berubah?</li>
+</ul>
+</section>
+<section id="peluang-connector-urea" class="slide level2">
+<h2>Peluang <em>connector</em>: urea</h2>
+<ul>
+<li>Krisis Hormuz awal 2026: ~63% impor urea Australia lewat Hormuz.</li>
+<li>22 Juni 2026: MV Medi Luna membawa 47.250 ton urea Pupuk Indonesia ke Brisbane, di bawah IA-CEPA.</li>
+<li>Kapasitas urea Indonesia 7,8 juta ton vs kebutuhan domestik 6,3 juta ton.</li>
+<li>Pola umum: petakan <em>chokepoint</em> mitra, cocokkan dengan surplus kapasitas sendiri.</li>
+</ul>
+</section>
+<section id="strategi-tiga-lapis" class="slide level2">
+<h2>Strategi tiga lapis</h2>
+<div class="cols">
+<div class="card">
+<div class="card-title">
+Jangka pendek
+</div>
+<p>Negosiasi dengan AS; kelola tarif dan <em>excess capacity</em> Tiongkok.</p>
+</div>
+<div class="card">
+<div class="card-title">
+Jangka menengah
+</div>
+<p>Deregulasi dan reformasi domestik agar menyerap relokasi.</p>
+</div>
+<div class="plain wide">
+<p>Jangka panjang: integrasi regional (ASEAN, RCEP) dan aturan multilateral. Sumber: Pangestu.</p>
+</div>
+</div>
+</section>
+<section id="diskusi" class="slide level2">
+<h2>Diskusi</h2>
+<ul>
+<li>Apakah Indonesia sebaiknya memilih blok, atau mempertahankan status <em>connector</em>?</li>
+<li>Retaliasi atau negosiasi: apa yang dikatakan teori, dan apa yang dikatakan data?</li>
+<li>Ketergantungan pada Tiongkok: masalah kerentanan atau sekadar konsentrasi?</li>
+<li>Indikator apa yang perlu dipantau pemerintah?</li>
+</ul>
+</section>
+<section id="ringkasan" class="slide level2">
+<h2>Ringkasan</h2>
+<ul>
+<li>Perang dagang adalah dilema tahanan: tarif rasional secara individual, merugikan secara kolektif.</li>
+<li>Bukti 2018–2019: biaya ditanggung negara pengenaan tarif; <em>bystander</em> bisa untung.</li>
+<li>Geoekonomi melampaui tarif: koersi lewat hub dan jaringan.</li>
+<li>Ukur, jangan menebak: HHI, GeoV/GeoC, dan saringan kerentanan.</li>
+</ul>
+</section>
+<section id="referensi" class="slide level2 smaller scrollable">
+<h2>Referensi</h2>
+<div class="xs">
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-aiyar2023sdn" class="csl-entry" role="listitem">
+Aiyar, Shekhar dkk. 2023. <span>“Geoeconomic Fragmentation and the Future of Multilateralism.”</span> Staff Discussion Note SDN/2023/001. International Monetary Fund.
+</div>
+<div id="ref-aiyar2024" class="csl-entry" role="listitem">
+Aiyar, Shekhar, dan Franziska Ohnsorge. 2024. <span>“Geoeconomic Fragmentation and <span>‘Connector’</span> Countries.”</span> Working Paper 173. NCAER.
+</div>
+<div id="ref-amiti2019" class="csl-entry" role="listitem">
+Amiti, Mary, Stephen J. Redding, dan David E. Weinstein. 2019. <span>“The Impact of the 2018 Tariffs on Prices and Welfare.”</span> <em>Journal of Economic Perspectives</em> 33 (4): 187–210.
+</div>
+<div id="ref-arjona2023" class="csl-entry" role="listitem">
+Arjona, Román, William Connell, dan Cristina Herghelegiu. 2023. <span>“An Enhanced Methodology to Monitor the <span>EU</span>’s Strategic Dependencies and Vulnerabilities.”</span> Single Market Economics Papers. European Commission, DG GROW.
+</div>
+<div id="ref-bagwell1999" class="csl-entry" role="listitem">
+Bagwell, Kyle, dan Robert W. Staiger. 1999. <span>“An Economic Theory of <span>GATT</span>.”</span> <em>American Economic Review</em> 89 (1): 215–48.
+</div>
+<div id="ref-bailey2017" class="csl-entry" role="listitem">
+Bailey, Michael A., Anton Strezhnev, dan Erik Voeten. 2017. <span>“Estimating Dynamic State Preferences from United Nations Voting Data.”</span> <em>Journal of Conflict Resolution</em> 61 (2): 430–56.
+</div>
+<div id="ref-baldwin2025" class="csl-entry" role="listitem">
+Baldwin, Richard, Rebecca Freeman, dan Angelos Theodorakopoulos. 2025. <span>“Assessing Risk: A Toolkit for Measuring Regional Supply-Chain Exposure to Global Shocks.”</span> Staff Working Paper 1159. Bank of England.
+</div>
+<div id="ref-broner2025" class="csl-entry" role="listitem">
+Broner, Fernando, Alberto Martı́n, Josefin Meyer, dan Christoph Trebesch. 2025. <span>“Hegemonic Globalization.”</span>
+</div>
+<div id="ref-caldara2022" class="csl-entry" role="listitem">
+Caldara, Dario, dan Matteo Iacoviello. 2022. <span>“Measuring Geopolitical Risk.”</span> <em>American Economic Review</em> 112 (4): 1194–1225.
+</div>
+<div id="ref-clayton2026" class="csl-entry" role="listitem">
+Clayton, Christopher, Matteo Maggiori, dan Jesse Schreger. 2026. <span>“A Framework for Geoeconomics.”</span> <em>Econometrica</em> 94 (1): 105–36. <a href="https://doi.org/10.3982/ECTA23206">https://doi.org/10.3982/ECTA23206</a>.
+</div>
+<div id="ref-evenett2024" class="csl-entry" role="listitem">
+Evenett, Simon, Adam Jakubik, Fernando Martı́n, dan Michele Ruta. 2024. <span>“The Return of Industrial Policy in Data.”</span> <em>The World Economy</em> 47 (7).
+</div>
+<div id="ref-fajgelbaum2020" class="csl-entry" role="listitem">
+Fajgelbaum, Pablo D., Pinelopi K. Goldberg, Patrick J. Kennedy, dan Amit K. Khandelwal. 2020. <span>“The Return to Protectionism.”</span> <em>Quarterly Journal of Economics</em> 135 (1): 1–55.
+</div>
+<div id="ref-fajgelbaum2024" class="csl-entry" role="listitem">
+Fajgelbaum, Pablo, Pinelopi Goldberg, Patrick Kennedy, Amit Khandelwal, dan Daria Taglioni. 2024. <span>“The <span>US-China</span> Trade War and Global Reallocations.”</span> <em>American Economic Review: Insights</em> 6 (2): 295–312.
+</div>
+<div id="ref-farrell2019" class="csl-entry" role="listitem">
+Farrell, Henry, dan Abraham L. Newman. 2019. <span>“Weaponized Interdependence: How Global Economic Networks Shape State Coercion.”</span> <em>International Security</em> 44 (1): 42–79.
+</div>
+<div id="ref-gopinath2025" class="csl-entry" role="listitem">
+Gopinath, Gita, Pierre-Olivier Gourinchas, Andrea F. Presbitero, dan Petia Topalova. 2025. <span>“Changing Global Linkages: A New Cold War?”</span> <em>Journal of International Economics</em> 153: 104042.
+</div>
+<div id="ref-hirschman1945" class="csl-entry" role="listitem">
+Hirschman, Albert O. 1945. <em>National Power and the Structure of Foreign Trade</em>. University of California Press.
+</div>
+<div id="ref-irwin2011" class="csl-entry" role="listitem">
+Irwin, Douglas A. 2011. <em>Peddling Protectionism: Smoot-Hawley and the Great Depression</em>. Princeton University Press.
+</div>
+<div id="ref-javorcik2023" class="csl-entry" role="listitem">
+Javorcik, Beata S., Lucas Kitzmüller, Helena Schweiger, dan Muhammed A. Yıldırım. 2023. <span>“Economic Costs of Friend-Shoring.”</span> Dalam <em>Geoeconomic Fragmentation: The Economic Risks from a Fractured World Economy</em>, disunting oleh Shekhar Aiyar, Andrea F. Presbitero, dan Michele Ruta, 29–38. CEPR Press.
+</div>
+<div id="ref-johnson1953" class="csl-entry" role="listitem">
+Johnson, Harry G. 1953. <span>“Optimum Tariffs and Retaliation.”</span> <em>Review of Economic Studies</em> 21 (2): 142–53.
+</div>
+<div id="ref-korniyenko2017" class="csl-entry" role="listitem">
+Korniyenko, Yevgeniya, Magali Pinat, dan Brian Dew. 2017. <span>“Assessing the Fragility of Global Trade: The Impact of Localized Supply Shocks Using Network Analysis.”</span> Working Paper WP/17/30. International Monetary Fund.
+</div>
+<div id="ref-liu2026" class="csl-entry" role="listitem">
+Liu, Ernest, Stephen J. Redding, Bennett Smith-Worthington, dan David Y. Yang. 2026. <span>“A Network Approach to Geopolitics.”</span> Discussion Paper DP22048. CEPR.
+</div>
+<div id="ref-mohr2025" class="csl-entry" role="listitem">
+Mohr, Cathrin, dan Christoph Trebesch. 2025. <span>“Geoeconomics.”</span> <em>Annual Review of Economics</em> 17: 563–87. <a href="https://doi.org/10.1146/annurev-economics-092424-111952">https://doi.org/10.1146/annurev-economics-092424-111952</a>.
+</div>
+<div id="ref-ossa2014" class="csl-entry" role="listitem">
+Ossa, Ralph. 2014. <span>“Trade Wars and Trade Talks with Data.”</span> <em>American Economic Review</em> 104 (12): 4104–46.
+</div>
+<div id="ref-pc2021" class="csl-entry" role="listitem">
+Productivity Commission. 2021. <span>“Vulnerable Supply Chains.”</span> Study Report. Australian Government.
+</div>
+</div>
+</div>
+
+</section></section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="geoeconomics_files/libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="geoeconomics_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="geoeconomics_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="geoeconomics_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="geoeconomics_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="geoeconomics_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="geoeconomics_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="geoeconomics_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="geoeconomics_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="geoeconomics_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="geoeconomics_files/libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"8\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'chalkboard': {"buttons":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'convex',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'fade',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Disalin!");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Disalin!");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp('/' + window.location.host + '/');
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    
+
+</body></html>
